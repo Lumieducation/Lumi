@@ -1,0 +1,285 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "LumiRun API",
+    "version" : "1.0.0",
+    "title" : "LumiRun",
+    "contact" : {
+      "email" : "jps@Lumi.education"
+    },
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "tags" : [ {
+    "name" : "H5P"
+  }, {
+    "name" : "Analytics"
+  }, {
+    "name" : "Static"
+  } ],
+  "paths" : {
+    "/v0/h5p/render" : {
+      "get" : {
+        "tags" : [ "H5P" ],
+        "summary" : "Renders H5P",
+        "description" : "Renders H5P\n",
+        "operationId" : "runh5p",
+        "produces" : [ "text/html" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "description" : "H5P id",
+          "required" : true,
+          "type" : "integer"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Rendered H5P Page"
+          },
+          "404" : {
+            "description" : "H5P not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/v0/h5p" : {
+      "get" : {
+        "tags" : [ "H5P" ],
+        "summary" : "returns H5P parameters and metadata",
+        "description" : "returns H5P parameters and metadata\n",
+        "operationId" : "geth5p",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "description" : "H5P id",
+          "required" : true,
+          "type" : "integer"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "H5P metadata and parameters",
+            "schema" : {
+              "$ref" : "#/definitions/H5P"
+            }
+          },
+          "404" : {
+            "description" : "H5P not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "H5P" ],
+        "summary" : "Upload a H5P",
+        "description" : "Upload a valid H5P to Lumi Run",
+        "operationId" : "addh5p",
+        "consumes" : [ "multipart/form-data" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "h5p",
+          "in" : "formData",
+          "description" : "The file to upload.",
+          "required" : false,
+          "type" : "file"
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "H5P added",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_201"
+            }
+          },
+          "400" : {
+            "description" : "invalid H5P",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/v0/analytics" : {
+      "get" : {
+        "tags" : [ "Analytics" ],
+        "summary" : "Returns analytics for a H5P",
+        "description" : "Returns analytics\n",
+        "operationId" : "getAnalytics",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "description" : "Analytics id",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Rendered H5P Page",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200"
+            }
+          },
+          "404" : {
+            "description" : "Analytics not found",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Analytics" ],
+        "summary" : "Saves data to analytics",
+        "description" : "Returns analytics\n",
+        "operationId" : "postAnalytics",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "h5p_id",
+          "in" : "query",
+          "description" : "H5P id",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Analytics"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Analytics processed"
+          },
+          "404" : {
+            "description" : "H5P does not exist",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Analytics" : {
+      "type" : "object",
+      "required" : [ "contentId", "finished", "maxScore", "opened", "score" ],
+      "properties" : {
+        "contentId" : {
+          "type" : "string",
+          "example" : "klmdfg"
+        },
+        "score" : {
+          "type" : "string",
+          "example" : "0"
+        },
+        "maxScore" : {
+          "type" : "string",
+          "example" : "1"
+        },
+        "opened" : {
+          "type" : "string",
+          "example" : "1577049015"
+        },
+        "finished" : {
+          "type" : "string",
+          "example" : "1577049017"
+        }
+      }
+    },
+    "H5P" : {
+      "type" : "object",
+      "required" : [ "id", "metadata", "parameters" ],
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "uuid",
+          "example" : 123456
+        },
+        "metadata" : {
+          "type" : "object",
+          "example" : "TBD",
+          "properties" : { }
+        },
+        "parameters" : {
+          "type" : "object",
+          "example" : "TBD",
+          "properties" : { }
+        }
+      }
+    },
+    "Error" : {
+      "type" : "object",
+      "required" : [ "code", "message", "status" ],
+      "properties" : {
+        "code" : {
+          "type" : "string",
+          "example" : "h5p-not-found"
+        },
+        "status" : {
+          "type" : "integer",
+          "example" : 404
+        },
+        "message" : {
+          "type" : "string",
+          "example" : "H5P was not found"
+        }
+      }
+    },
+    "inline_response_201" : {
+      "type" : "object",
+      "properties" : {
+        "analytics_id" : {
+          "type" : "string",
+          "format" : "uuid",
+          "example" : "aY64Fg"
+        },
+        "h5p_id" : {
+          "type" : "integer",
+          "format" : "uuid",
+          "example" : 123456
+        }
+      }
+    },
+    "inline_response_200" : {
+      "type" : "object",
+      "properties" : {
+        "_id" : {
+          "type" : "string",
+          "format" : "uuid",
+          "example" : "aY64Fg"
+        },
+        "accessed_at" : {
+          "type" : "number",
+          "format" : "Date",
+          "example" : 1.34459459E8
+        },
+        "created_at" : {
+          "type" : "number",
+          "format" : "Date",
+          "example" : 1.32445645E8
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Analytics"
+          }
+        },
+        "h5p_id" : {
+          "type" : "integer",
+          "format" : "uuid",
+          "example" : 125486
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+name: Release
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    release:
+        runs-on: macOS-latest
+
+        strategy:
+            matrix:
+                node-version: [10.x]
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: install
+              run: npm ci
+            - name: Release
+              run: npm run semantic-release || true
+              env:
+                  CI: true
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - name: Build
+              run: npm run build
+            - name: Publish macOS
+              run: npm run publish:mac
+              env:
+                  CI: true
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  CSC_LINK: ${{ secrets.mac_certs }}
+                  CSC_KEY_PASSWORD: ${{ secrets.mac_certs_password }}
+                  APPLEID: ${{ secrets.apple_id }}
+                  APPLEIDPASSWORD: ${{ secrets.apple_id_password }}
+            - name: Publish Windows
+              run: npm run publish:win
+              env:
+                  CI: true
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

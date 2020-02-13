@@ -1,0 +1,303 @@
+{
+    "name": "lumi",
+    "version": "0.0.0",
+    "main": "build/main.js",
+    "dependencies": {
+        "@sentry/electron": "1.2.0",
+        "@sentry/node": "5.10.2",
+        "body-parser": "1.19.0",
+        "crc": "3.8.0",
+        "debug": "4.1.1",
+        "directory-tree": "2.2.4",
+        "electron-log": "4.0.4",
+        "electron-osx-sign": "0.4.15",
+        "electron-updater": "4.2.0",
+        "express": "4.17.1",
+        "express-fileupload": "1.1.6",
+        "fs-extra": "8.1.0",
+        "glob-promise": "3.4.0",
+        "h5p-nodejs-library": "0.10.8",
+        "nucleus-nodejs": "3.0.3",
+        "mkdirp": "0.5.1",
+        "promisepipe": "3.0.0",
+        "rimraf": "3.0.0",
+        "socket.io": "2.3.0",
+        "string-hash": "1.1.3",
+        "swagger-express-middleware": "2.0.5"
+    },
+    "scripts": {
+        "build": "npm run build:client && npm run build:server",
+        "build:all": "npm run build && ./node_modules/.bin/electron-builder --mac --win --linux",
+        "build:all:dev": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run build:all",
+        "build:client": "node scripts/build.js",
+        "build:mac": "npm run build && ./node_modules/.bin/electron-builder --mac",
+        "build:mac:dev": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run build:mac",
+        "build:sentry": "RELEASE=true npm run build:client",
+        "build:server": "npx tsc --project tsconfig.server.json",
+        "build:win": "npm run build && ./node_modules/.bin/electron-builder --win",
+        "ci": "npm run lint && npm run format:check && npm run build && npm run test",
+        "clean": "rm -rf build/",
+        "format": "npx prettier --write \"{src,test}/**/*.ts\"",
+        "format:check": "npx prettier --check \"{src,test}/**/*.ts\"",
+        "lint": "./node_modules/.bin/tslint --project tsconfig.json --config tslint.json",
+        "update:api": "node scripts/api.js && npm run format",
+        "publish:mac": "npx --no-install electron-builder --mac --publish always",
+        "publish:win": "npx --no-install electron-builder --win --publish always",
+        "postinstall": "sh scripts/install.sh 1.24 && sh scripts/install.sh 1.24.1",
+        "start": "node scripts/start.js",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:mac": "npx jest --config jest.mac.config.js",
+        "test:e2e:win": "npx jest --config ./test/e2e/win/jest.config.js",
+        "semantic-release": "semantic-release",
+        "uninstall": "rm -rf build/ && rm -rf node_modules/"
+    },
+    "publishConfig": {
+        "access": "restricted"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/core": "7.8.4",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "@fortawesome/fontawesome-svg-core": "1.2.26",
+        "@fortawesome/free-brands-svg-icons": "5.12.0",
+        "@fortawesome/free-solid-svg-icons": "5.12.0",
+        "@fortawesome/react-fontawesome": "0.1.8",
+        "@hot-loader/react-dom": "16.11.0",
+        "@material-ui/core": "4.9.0",
+        "@material-ui/icons": "4.5.1",
+        "@material-ui/lab": "4.0.0-alpha.40",
+        "@material-ui/styles": "4.9.0",
+        "@semantic-release/git": "9.0.0",
+        "@sentry/browser": "5.10.2",
+        "@sentry/webpack-plugin": "1.9.3",
+        "@svgr/webpack": "5.1.0",
+        "@types/body-parser": "1.17.1",
+        "@types/debug": "4.1.5",
+        "@types/electron": "1.6.10",
+        "@types/express": "4.17.2",
+        "@types/history": "4.7.4",
+        "@types/jest": "24.9.1",
+        "@types/lodash": "4.14.149",
+        "@types/moment": "2.13.0",
+        "@types/node": "12.12.26",
+        "@types/query-string": "6.3.0",
+        "@types/react": "16.9.19",
+        "@types/react-dom": "16.9.5",
+        "@types/react-redux": "7.1.5",
+        "@types/react-router-dom": "5.1.3",
+        "@types/recharts": "1.8.5",
+        "@types/redux-logger": "3.0.7",
+        "@types/redux-mock-store": "1.0.1",
+        "@types/redux-sentry-middleware": "0.1.1",
+        "@types/shortid": "0.0.29",
+        "@types/socket.io": "2.1.4",
+        "@types/socket.io-client": "1.4.32",
+        "@types/string-hash": "1.1.1",
+        "@types/superagent": "4.1.4",
+        "@types/supertest": "2.0.8",
+        "@typescript-eslint/eslint-plugin": "2.17.0",
+        "@typescript-eslint/parser": "2.17.0",
+        "babel-eslint": "10.0.3",
+        "babel-jest": "24.9.0",
+        "babel-loader": "8.0.6",
+        "babel-plugin-named-asset-import": "0.3.5",
+        "babel-preset-react-app": "9.1.0",
+        "camelcase": "5.3.1",
+        "case-sensitive-paths-webpack-plugin": "2.3.0",
+        "clsx": "1.0.4",
+        "connected-react-router": "6.6.1",
+        "css-loader": "3.4.2",
+        "dotenv": "8.2.0",
+        "dotenv-expand": "5.1.0",
+        "electron": "7.1.10",
+        "electron-builder": "22.3.2",
+        "electron-notarize": "0.2.1",
+        "eslint": "6.8.0",
+        "eslint-config-react-app": "5.1.0",
+        "eslint-loader": "3.0.3",
+        "eslint-plugin-flowtype": "4.6.0",
+        "eslint-plugin-import": "2.20.0",
+        "eslint-plugin-jsx-a11y": "6.2.3",
+        "eslint-plugin-react": "7.18.0",
+        "eslint-plugin-react-hooks": "2.3.0",
+        "file-loader": "5.0.2",
+        "history": "4.10.1",
+        "html-webpack-plugin": "4.0.0-beta.11",
+        "identity-obj-proxy": "3.0.0",
+        "is-wsl": "2.1.1",
+        "jest": "24.9.0",
+        "jest-environment-jsdom-fourteen": "1.0.1",
+        "jest-resolve": "24.9.0",
+        "jest-watch-typeahead": "0.4.2",
+        "lodash": "4.17.15",
+        "mini-css-extract-plugin": "0.9.0",
+        "moment": "2.24.0",
+        "notistack": "0.9.7",
+        "optimize-css-assets-webpack-plugin": "5.0.3",
+        "pnp-webpack-plugin": "1.5.0",
+        "postcss-flexbugs-fixes": "4.1.0",
+        "postcss-loader": "3.0.0",
+        "postcss-normalize": "8.0.1",
+        "postcss-preset-env": "6.7.0",
+        "postcss-safe-parser": "4.0.1",
+        "prettier": "1.19.1",
+        "puppeteer": "2.1.0",
+        "query-string": "6.10.1",
+        "react": "16.12.0",
+        "react-app-polyfill": "1.0.5",
+        "react-dev-utils": "10.0.0",
+        "react-dom": "16.12.0",
+        "react-dropzone": "10.2.1",
+        "react-hot-loader": "4.12.19",
+        "react-particles-js": "2.7.0",
+        "react-perfect-scrollbar": "1.5.3",
+        "react-redux": "7.1.1",
+        "react-router": "5.1.2",
+        "react-router-dom": "5.1.2",
+        "react-spring": "8.0.27",
+        "recharts": "2.0.0-beta.1",
+        "redux": "4.0.5",
+        "redux-logger": "3.0.6",
+        "redux-mock-store": "1.5.4",
+        "redux-sentry-middleware": "0.1.3",
+        "redux-thunk": "2.3.0",
+        "resolve": "1.15.0",
+        "resolve-url-loader": "3.1.1",
+        "sass-loader": "8.0.2",
+        "semantic-release": "17.0.1",
+        "semver": "7.1.1",
+        "shortid": "2.2.15",
+        "socket.io-client": "2.3.0",
+        "spectron": "9.0.0",
+        "style-loader": "1.1.3",
+        "superagent": "5.2.1",
+        "supertest": "4.0.2",
+        "swagger-typescript-codegen": "3.0.3",
+        "terser-webpack-plugin": "2.3.4",
+        "ts-jest": "24.3.0",
+        "ts-pnp": "1.1.5",
+        "tslint": "5.20.1",
+        "tslint-config-airbnb": "5.11.2",
+        "tslint-config-prettier": "1.18.0",
+        "tslint-react": "4.1.0",
+        "typescript": "3.7.5",
+        "url-loader": "3.0.0",
+        "webpack": "4.41.5",
+        "webpack-dev-server": "3.10.1",
+        "webpack-manifest-plugin": "2.2.0",
+        "workbox-webpack-plugin": "4.3.1"
+    },
+    "proxy": "http://localhost:3001",
+    "jest": {
+        "roots": [
+            "<rootDir>/src"
+        ],
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx,ts,tsx}",
+            "!src/**/*.d.ts"
+        ],
+        "setupFiles": [
+            "react-app-polyfill/jsdom"
+        ],
+        "setupFilesAfterEnv": [],
+        "testMatch": [
+            "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+            "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+        ],
+        "testEnvironment": "jest-environment-jsdom-fourteen",
+        "transform": {
+            "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+            "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+            "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+        },
+        "transformIgnorePatterns": [
+            "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+            "^.+\\.module\\.(css|sass|scss)$"
+        ],
+        "modulePaths": [],
+        "moduleNameMapper": {
+            "^react-native$": "react-native-web",
+            "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+        },
+        "moduleFileExtensions": [
+            "web.js",
+            "js",
+            "web.ts",
+            "ts",
+            "web.tsx",
+            "tsx",
+            "json",
+            "web.jsx",
+            "jsx",
+            "node"
+        ],
+        "watchPlugins": [
+            "jest-watch-typeahead/filename",
+            "jest-watch-typeahead/testname"
+        ]
+    },
+    "babel": {
+        "presets": [
+            "react-app"
+        ]
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JPSchellenberg/Lumi.git"
+    },
+    "build": {
+        "appId": "education.lumi.lumi",
+        "productName": "Lumi",
+        "asar": false,
+        "icon": "electron/assets/lumi.icns",
+        "files": [
+            "build/**/*",
+            "node_modules/**/*",
+            "package.json",
+            "h5p/**/*",
+            "electron/**/*"
+        ],
+        "mac": {
+            "category": "education.lumi.lumi",
+            "gatekeeperAssess": false,
+            "entitlements": "electron/mac/entitlements.mac.plist",
+            "entitlementsInherit": "electron/mac/entitlements.mac.plist",
+            "fileAssociations": {
+                "ext": "h5p",
+                "name": "H5P"
+            },
+            "target": [
+                "zip",
+                "dmg"
+            ],
+            "hardenedRuntime": true
+        },
+        "afterSign": "scripts/notarize.js",
+        "win": {
+            "icon": "electron/assets/lumi.png"
+        },
+        "dmg": {
+            "sign": false
+        },
+        "publish": {
+            "provider": "github",
+            "releaseType": "release"
+        }
+    }
+}
