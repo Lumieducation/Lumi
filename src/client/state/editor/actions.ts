@@ -4,7 +4,7 @@ import * as notifications from 'lib/notifications/actions';
 import * as tabs from 'lib/tabs/actions';
 import * as UI from 'lib/ui/actions';
 
-import * as Track from 'lib/track';
+import { track } from 'lib/track/actions';
 
 import Tab from 'lib/tabs/model';
 
@@ -16,6 +16,7 @@ import { IState, selectors } from '../';
 
 export function closeTab(tabId: string): any {
     return async (dispatch: any, getState: () => IState) => {
+        track('tabs', 'click', 'close');
         dispatch(
             tabs.updateTab(tabId, {
                 loadingIndicator: true,
@@ -34,6 +35,7 @@ export function closeTab(tabId: string): any {
 
 export function filetreeCreateFile(path: string, name: string): any {
     return async (dispatch: any) => {
+        track('file_tree', 'click', 'create_file');
         const tab = new Tab(name);
 
         dispatch(UI.changeMode(Modes.edit));
@@ -64,6 +66,7 @@ export function filetreeCreateFile(path: string, name: string): any {
 
 export function filetreeCreateDirectory(path: string, name: string): any {
     return async (dispatch: any) => {
+        track('file_tree', 'click', 'create_directory');
         const createAction = await dispatch(
             FS.actions.createFS(path, name, 'directory')
         );
@@ -86,7 +89,6 @@ export function filetreeCreateDirectory(path: string, name: string): any {
 
 export function clickOnCreateH5P(): any {
     return async (dispatch: any) => {
-        dispatch(Track.actions.track('create_h5p'));
         const tab = new Tab('new H5P');
 
         dispatch(UI.changeMode(Modes.edit));
@@ -101,9 +103,9 @@ export function clickOnCreateH5P(): any {
 
 export function clickOnFileInFiletree(name: string, path: string): any {
     return async (dispatch: any) => {
-        dispatch(Track.actions.track('open_h5p'));
-
         const tab = new Tab(name, path);
+
+        track('file_tree', 'click', 'import');
 
         dispatch(tabs.openTab(tab));
 
@@ -155,7 +157,7 @@ export function clickOnSaveButton(
     path?: string
 ): any {
     return async (dispatch: any) => {
-        dispatch(Track.actions.track('save_h5p'));
+        track('save_button', 'click');
 
         dispatch(
             tabs.updateTab(tabId, {
@@ -242,7 +244,6 @@ export function updateH5PInTab(
         if (!params || !params.params || !params.metadata) {
             return;
         }
-        dispatch(Track.actions.track('update_h5p'));
 
         const updateAction = await dispatch(
             H5P.actions.updateH5P(

@@ -6,6 +6,8 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
+import { track } from 'lib/track/actions';
+
 export default function EditorStartPage(props: {
     primaryButtonClick: () => void;
     secondaryButtonClick: () => void;
@@ -36,7 +38,10 @@ export default function EditorStartPage(props: {
                     <Grid item={true}>
                         <Button
                             id="editor-startpage-primaryButton"
-                            onClick={props.primaryButtonClick}
+                            onClick={() => {
+                                track('start_page', 'click', 'primary_button');
+                                props.primaryButtonClick();
+                            }}
                             variant="contained"
                             color="primary"
                         >
@@ -46,7 +51,14 @@ export default function EditorStartPage(props: {
                     <Grid item={true}>
                         <Button
                             id="editor-startpage-secondaryButton"
-                            onClick={props.secondaryButtonClick}
+                            onClick={() => {
+                                track(
+                                    'start_page',
+                                    'click',
+                                    'secondary_button'
+                                );
+                                props.secondaryButtonClick();
+                            }}
                             variant="outlined"
                             color="primary"
                         >

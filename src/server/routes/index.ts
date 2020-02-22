@@ -3,6 +3,7 @@ import express from 'express';
 import fsRoutes from './fs';
 import h5pRoutes from './h5p';
 import lumiH5PRoutes from './lumi-h5p';
+import trackRoutes from './track';
 
 import Logger from '../helper/Logger';
 const log = new Logger('routes');
@@ -13,6 +14,8 @@ export default function(): express.Router {
     log.info('setting up routes');
 
     router.use('/api/v1/fs', fsRoutes());
+
+    router.use('/api/track/v0', trackRoutes());
 
     router.use('/api/v0/h5p', h5pRoutes());
 

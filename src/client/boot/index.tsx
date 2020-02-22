@@ -21,13 +21,10 @@ import App from '../views';
 
 import SnackbarProvider from '../theme/Snackbar';
 
-import { track } from 'lib/track/actions';
-
 const log = new Logger('root');
 
 log.info(`booting v${process.env.VERSION}`);
 Sentry.captureMessage('start');
-track('start');
 
 declare var window: any;
 

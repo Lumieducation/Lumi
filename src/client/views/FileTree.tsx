@@ -14,6 +14,8 @@ import * as FS from 'lib/fs';
 
 import OpenFolder from 'lib/components/OpenFolder';
 
+import { track } from 'lib/track/actions';
+
 const log = new Logger('container:FileTree');
 
 interface IPassedProps {}
@@ -65,6 +67,7 @@ export class FileTreeContainer extends React.Component<
 
     private openFolder(): void {
         log.info(`clicking on open folder`);
+        track('file_tree', 'click', 'open_folder');
         this.props.getFileTree();
     }
 

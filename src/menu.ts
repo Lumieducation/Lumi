@@ -1,4 +1,6 @@
 import electron from 'electron';
+import nucleus from 'nucleus-nodejs';
+
 import websocket from './server/websocket';
 
 export default (window: electron.BrowserWindow) => [
@@ -19,6 +21,7 @@ export default (window: electron.BrowserWindow) => [
             {
                 accelerator: 'CmdOrCtrl+N',
                 click: () => {
+                    nucleus.track('menu/click/new_h5p');
                     websocket.emit('action', {
                         payload: {
                             contentId: Math.round(Math.random() * 100000)
@@ -43,6 +46,7 @@ export default (window: electron.BrowserWindow) => [
                             properties: ['openDirectory']
                         })
                         .then(({ filePaths }) => {
+                            nucleus.track('menu/click/open_folder');
                             websocket.emit('action', {
                                 payload: {
                                     path: filePaths[0]
@@ -57,6 +61,7 @@ export default (window: electron.BrowserWindow) => [
             {
                 accelerator: 'CmdOrCtrl+S',
                 click: () => {
+                    nucleus.track('menu/click/save');
                     websocket.emit('action', {
                         type: 'SAVE'
                     });
@@ -66,6 +71,7 @@ export default (window: electron.BrowserWindow) => [
             {
                 accelerator: 'Shift+CmdOrCtrl+S',
                 click: () => {
+                    nucleus.track('menu/click/save_as');
                     websocket.emit('action', {
                         type: 'SAVE_AS'
                     });
@@ -79,6 +85,7 @@ export default (window: electron.BrowserWindow) => [
         submenu: [
             {
                 click: () => {
+                    nucleus.track('menu/click/report_issue');
                     websocket.emit('action', {
                         type: 'REPORT_ISSUE'
                     });
@@ -88,6 +95,7 @@ export default (window: electron.BrowserWindow) => [
             { type: 'separator' } as any,
             {
                 click: () => {
+                    nucleus.track('menu/click/open_devtools');
                     window.webContents.openDevTools();
                 },
                 label: 'Toggle Developer Tools'
@@ -95,6 +103,7 @@ export default (window: electron.BrowserWindow) => [
             { type: 'separator' } as any,
             {
                 click: () => {
+                    nucleus.track('menu/click/open_twitter');
                     electron.shell.openExternal(
                         'https://www.twitter.com/Lumieducation'
                     );

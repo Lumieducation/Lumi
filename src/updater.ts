@@ -1,5 +1,6 @@
 import { dialog } from 'electron';
 import { autoUpdater } from 'electron-updater';
+import nucleus from 'nucleus-nodejs';
 
 export default function boot(): void {
     autoUpdater.on('update-downloaded', async () => {
@@ -10,6 +11,8 @@ export default function boot(): void {
         });
 
         setTimeout(() => {
+            nucleus.track('system/updated');
+
             autoUpdater.quitAndInstall();
         }, 5000);
     });

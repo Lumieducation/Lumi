@@ -1,13 +1,20 @@
-// import nucleus from 'nucleus-nodejs';
+import * as api from './api';
 
-export function track(event: string, payload?: any): any {
-    // nucleus.track(event, payload);
-
-    return {
-        payload: {
-            event,
-            payload
-        },
-        type: 'TRACK'
-    };
+export function track(
+    category: string,
+    action: string,
+    name?: string,
+    value?: string
+): any {
+    return api.track(category, action, name, value).then(() => {
+        return {
+            payload: {
+                action,
+                category,
+                name,
+                value
+            },
+            type: 'TRACK'
+        };
+    });
 }

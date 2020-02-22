@@ -23,6 +23,8 @@ import { actions, IState, selectors } from '../state';
 import Editor from '../helpers/Editor';
 import Target from '../helpers/Target';
 
+import { track } from 'lib/track/actions';
+
 const log = new Logger('container:tab');
 
 interface IPassedProps {}
@@ -164,6 +166,7 @@ export class TabContainer extends React.Component<IProps, IComponentState> {
     }
 
     private changeMode(mode: Modes): void {
+        track('tab', 'click', 'change_mode');
         this.update()
             .then(() => {
                 this.props.changeMode(mode);

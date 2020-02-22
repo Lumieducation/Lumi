@@ -18,8 +18,6 @@ import Tabs from './Tabs';
 
 import { actions, IState, selectors } from '../state';
 
-import { track } from 'lib/track/actions';
-
 import { ITab } from 'lib/tabs/types';
 
 const log = new Logger('container:app');
@@ -35,7 +33,6 @@ interface IStateProps extends IPassedProps {
 }
 
 interface IDispatchProps {
-    closeLeftDrawer: typeof actions.ui.closeLeftDrawer;
     createDirectory: typeof actions.core.filetreeCreateDirectory;
     createFile: typeof actions.core.filetreeCreateFile;
     createH5P: typeof actions.core.clickOnCreateH5P;
@@ -53,7 +50,6 @@ export class EditorContainer extends React.Component<IProps, IComponentState> {
 
         this.state = {};
 
-        this.closeLeftDrawer = this.closeLeftDrawer.bind(this);
         this.openLeftDrawer = this.openLeftDrawer.bind(this);
         this.createDirectory = this.createDirectory.bind(this);
         this.createFile = this.createFile.bind(this);
@@ -61,15 +57,8 @@ export class EditorContainer extends React.Component<IProps, IComponentState> {
         this.refresh = this.refresh.bind(this);
     }
 
-    public closeLeftDrawer(): void {
-        log.info(`closing left-drawer`);
-        track('close_left_drawer');
-        this.props.closeLeftDrawer();
-    }
-
     public openLeftDrawer(): void {
         log.info(`opening left-drawer`);
-        track('open_left_drawer');
         this.props.openLeftDrawer();
     }
 
@@ -140,7 +129,6 @@ function mapStateToProps(state: IState, ownProps: IPassedProps): IStateProps {
 function mapDispatchToProps(dispatch: any): IDispatchProps {
     return bindActionCreators(
         {
-            closeLeftDrawer: actions.ui.closeLeftDrawer,
             createDirectory: actions.core.filetreeCreateDirectory,
             createFile: actions.core.filetreeCreateFile,
             createH5P: actions.core.clickOnCreateH5P,

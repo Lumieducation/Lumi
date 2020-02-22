@@ -16,6 +16,8 @@ import { ITab } from 'lib/tabs/types';
 
 import { actions, IState, selectors } from '../state';
 
+import { track } from 'lib/track/actions';
+
 const log = new Logger('container:Tabs');
 
 interface IPassedProps {}
@@ -99,6 +101,7 @@ export class TabsContainer extends React.Component<IProps, IComponentState> {
     }
 
     private create(): void {
+        track('tab', 'click', 'create_h5p');
         this.props.createH5P();
     }
 
