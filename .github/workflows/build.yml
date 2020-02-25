@@ -1,0 +1,37 @@
+name: Build
+
+ on: [pull_request]
+
+ jobs:
+     build:
+         runs-on: macOS-latest
+
+         strategy:
+             matrix:
+                 node-version: [10.x]
+
+         steps:
+             - uses: actions/checkout@v2
+             - name: Use Node.js ${{ matrix.node-version }}
+               uses: actions/setup-node@v1
+               with:
+                   node-version: ${{ matrix.node-version }}
+             - name: install
+               run: npm ci
+             - name: Build macOS
+               run: npm run build:mac:dev
+             - run: rm -rf dist/mac/
+             - name: Upload macOS artifacts
+               uses: actions/upload-artifact@v1
+               with:
+                   name: macOS
+                   path: dist/
+             - run: rm -rf dist/
+             - name: Build Windows
+               run: npm run build:win
+             - run: rm -rf dist/win-unpacked
+             - name: Upload Windows artifacts
+               uses: actions/upload-artifact@v1
+               with:
+                   name: Windows
+                   path: dist/
