@@ -15,8 +15,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 import H5PAvatar from 'lib/components/H5PAvatar';
 
+import AddIcon from '@material-ui/icons/Add';
 import CloseIcon from '@material-ui/icons/Close';
-import PlusIcon from '@material-ui/icons/Add';
 
 import { ITab } from 'lib/tabs/types';
 
@@ -110,7 +110,7 @@ export class TabsContainer extends React.Component<IProps, IComponentState> {
                     <Divider />
                     <ListItem onClick={this.openFiles}>
                         <ListItemAvatar>
-                            <PlusIcon />
+                            <AddIcon />
                         </ListItemAvatar>
                         <ListItemText
                             primary={'Open H5P Files'}

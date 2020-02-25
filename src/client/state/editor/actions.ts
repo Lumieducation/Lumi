@@ -6,7 +6,7 @@ import * as UI from 'lib/ui/actions';
 
 import superagent from 'superagent';
 
-import path from 'path';
+import _path from 'path';
 
 import { track } from 'lib/track/actions';
 
@@ -24,7 +24,7 @@ export function openH5P(): any {
             const files = response.body;
 
             files.forEach((file: string) => {
-                dispatch(clickOnFileInFiletree(path.basename(file), file));
+                dispatch(clickOnFileInFiletree(_path.basename(file), file));
             });
         });
 
