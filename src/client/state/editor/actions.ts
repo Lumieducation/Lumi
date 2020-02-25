@@ -4,6 +4,10 @@ import * as notifications from 'lib/notifications/actions';
 import * as tabs from 'lib/tabs/actions';
 import * as UI from 'lib/ui/actions';
 
+import superagent from 'superagent';
+
+import path from 'path';
+
 import { track } from 'lib/track/actions';
 
 import Tab from 'lib/tabs/model';
@@ -13,6 +17,20 @@ import { ContentId } from 'lib/h5p/types';
 import { Modes } from 'lib/ui/types';
 
 import { IState, selectors } from '../';
+
+export function openH5P(): any {
+    return (dispatch: any) => {
+        superagent.get('/api/v1/h5p/open_files').then(response => {
+            const files = response.body;
+
+            files.forEach((file: string) => {
+                dispatch(clickOnFileInFiletree(path.basename(file), file));
+            });
+        });
+
+        return dispatch;
+    };
+}
 
 export function closeTab(tabId: string): any {
     return async (dispatch: any, getState: () => IState) => {
@@ -136,6 +154,7 @@ export function clickOnFileInFiletree(name: string, path: string): any {
                         mainLibrary: h5p.library.split(' ')[0]
                     })
                 );
+                dispatch(UI.openLeftDrawer());
             }
         } catch (error) {
             dispatch(notifications.notify('fatal-error', 'error'));
