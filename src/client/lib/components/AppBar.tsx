@@ -14,6 +14,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 import { drawerWidth } from '../../theme';
 
+import { track } from 'lib/track/actions';
+
 export default function AppBar(props: {
     leftDrawerOpen: boolean;
     openLeftDrawer?: () => void;
@@ -32,7 +34,12 @@ export default function AppBar(props: {
                 <IconButton
                     color="inherit"
                     aria-label="open drawer"
-                    onClick={openLeftDrawer}
+                    onClick={() => {
+                        track('app_bar', 'click', 'menu_icon');
+                        if (openLeftDrawer) {
+                            openLeftDrawer();
+                        }
+                    }}
                     edge="start"
                     className={clsx(
                         classes.menuButton,

@@ -9,6 +9,8 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
 import { drawerWidth } from '../../theme';
 
+import { track } from 'lib/track/actions';
+
 export default function LeftDrawer(props: {
     children?: React.ReactNode;
     closeLeftDrawer: () => void;
@@ -29,7 +31,12 @@ export default function LeftDrawer(props: {
             }}
         >
             <div className={classes.drawerHeader}>
-                <IconButton onClick={closeLeftDrawer}>
+                <IconButton
+                    onClick={() => {
+                        track('left_drawer', 'click', 'close');
+                        closeLeftDrawer();
+                    }}
+                >
                     <ChevronLeftIcon />
                 </IconButton>
             </div>
