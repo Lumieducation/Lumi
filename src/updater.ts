@@ -2,19 +2,41 @@ import { dialog } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import nucleus from 'nucleus-nodejs';
 
-export default function boot(): void {
+import websocket from './server/websocket';
+
+let updateAvailable: boolean = false;
+let updating: boolean = false;
+
+export default function boot(app: Electron.App): void {
     autoUpdater.on('update-downloaded', async () => {
-        dialog.showMessageBox({
-            message:
-                'Update downloaded, application will be quit for update...',
-            title: 'Install Updates'
+        updateAvailable = true;
+
+        websocket.emit('action', {
+            payload: {
+                message: 'update-downloaded',
+                type: 'info'
+            },
+            type: 'MESSAGE'
         });
+    });
 
-        setTimeout(() => {
-            nucleus.track('system/updated');
+    app.on('will-quit', event => {
+        if (updateAvailable && !updating) {
+            event.preventDefault();
 
-            autoUpdater.quitAndInstall();
-        }, 5000);
+            dialog.showMessageBox({
+                message:
+                    'Update is available. The application will install the update and restart.',
+                title: 'Install Updates'
+            });
+
+            setTimeout(() => {
+                nucleus.track('system/updated');
+
+                updating = true;
+                autoUpdater.quitAndInstall();
+            }, 5000);
+        }
     });
 
     autoUpdater.checkForUpdates();
