@@ -85,6 +85,14 @@ export class WebsocketContainer extends React.Component<
                 case 'REPORT_ISSUE':
                     Sentry.showReportDialog();
                     break;
+
+                case 'MESSAGE':
+                    dispatch(
+                        actions.notifications.notify(
+                            action.payload.message,
+                            action.payload.type
+                        )
+                    );
             }
         });
     }
