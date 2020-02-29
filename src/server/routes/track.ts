@@ -12,6 +12,7 @@ export default function(): express.Router {
         ) => {
             const body = req.body;
             nucleus.track(`${body.category}/${body.action}/${body.name}`);
+            res.status(200).end();
         }
     );
 

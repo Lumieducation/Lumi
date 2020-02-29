@@ -4,6 +4,23 @@ import controller from '../controller/lumi-h5p';
 
 export default function(): express.Router {
     const router = express.Router();
+
+    router.get(
+        '/open_files',
+        (
+            req: express.Request,
+            res: express.Response,
+            next: express.NextFunction
+        ) => {
+            controller
+                .open()
+                .then(result => {
+                    res.status(200).json(result);
+                })
+                .catch(error => next(error));
+        }
+    );
+
     router.post(
         `/`,
         (
