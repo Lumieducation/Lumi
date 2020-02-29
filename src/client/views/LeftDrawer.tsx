@@ -12,6 +12,8 @@ import LeftDrawer from 'lib/components/LeftDrawer';
 
 import FileTree from './FileTree';
 
+import OpenedH5PList from './OpenedH5PList';
+
 import { actions, IState, selectors } from '../state';
 
 const log = new Logger('container:app');
@@ -78,20 +80,7 @@ export class LeftDrawerContainer extends React.Component<
                     leftDrawerOpen={leftDrawerOpen}
                     closeLeftDrawer={closeLeftDrawer}
                 >
-                    {root && root !== '' ? (
-                        <LumiFS.Toolbar
-                            createDirectory={(name: string) => {
-                                this.createDirectory(currentDirectory, name);
-                            }}
-                            createFile={(name: string) => {
-                                this.createFile(currentDirectory, name);
-                            }}
-                            currentDirectory={currentDirectory}
-                            refresh={this.refresh}
-                        />
-                    ) : null}
-                    <Divider />
-                    <FileTree />
+                    <OpenedH5PList />
                 </LeftDrawer>
             </div>
         );
