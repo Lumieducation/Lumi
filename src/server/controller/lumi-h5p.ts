@@ -107,6 +107,20 @@ export class H5PController {
         };
     }
 
+    public async open(): Promise<string[]> {
+        const response = await dialog.showOpenDialog({
+            filters: [
+                {
+                    extensions: ['h5p'],
+                    name: 'HTML 5 Package'
+                }
+            ],
+            properties: ['openFile', 'multiSelections']
+        });
+
+        return response.filePaths;
+    }
+
     public async update(
         parameters: any,
         metadata: H5P.IContentMetadata,
