@@ -5,7 +5,7 @@ import Logger from '../../helpers/Logger';
 
 import H5PView from './H5PView';
 
-import { Modes } from 'lib/ui/types';
+import { Modes } from 'state/ui/types';
 
 declare var window: any, H5PEditor: any, H5P: any, H5PIntegration: any;
 

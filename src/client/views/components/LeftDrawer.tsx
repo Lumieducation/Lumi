@@ -9,7 +9,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
 import { drawerWidth } from '../../theme';
 
-import { track } from 'lib/track/actions';
+import { track } from 'state/track/actions';
 
 export default function LeftDrawer(props: {
     children?: React.ReactNode;

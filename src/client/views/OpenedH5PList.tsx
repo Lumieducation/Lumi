@@ -13,16 +13,16 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 
-import H5PAvatar from 'lib/components/H5PAvatar';
+import H5PAvatar from 'components/H5PAvatar';
 
 import AddIcon from '@material-ui/icons/Add';
 import CloseIcon from '@material-ui/icons/Close';
 
-import { ITab } from 'lib/tabs/types';
+import { ITab } from 'state/tabs/types';
 
 import { actions, IState, selectors } from '../state';
 
-import { track } from 'lib/track/actions';
+import { track } from 'state/track/actions';
 
 const log = new Logger('container:Tabs');
 

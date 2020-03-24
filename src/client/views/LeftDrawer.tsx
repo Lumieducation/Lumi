@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import Logger from '../helpers/Logger';
 
-import LeftDrawer from 'lib/components/LeftDrawer';
+import LeftDrawer from 'components/LeftDrawer';
 
 import OpenedH5PList from './OpenedH5PList';
 

@@ -14,7 +14,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 import { drawerWidth } from '../../theme';
 
-import { track } from 'lib/track/actions';
+import { track } from 'state/track/actions';
 
 export default function AppBar(props: {
     leftDrawerOpen: boolean;

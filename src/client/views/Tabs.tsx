@@ -10,13 +10,13 @@ import Tabs from '@material-ui/core/Tabs';
 
 import AddIcon from '@material-ui/icons/Add';
 
-import TabButton from 'lib/components/TabButton';
+import TabButton from 'components/TabButton';
 
-import { ITab } from 'lib/tabs/types';
+import { ITab } from 'state/tabs/types';
 
 import { actions, IState, selectors } from '../state';
 
-import { track } from 'lib/track/actions';
+import { track } from 'state/track/actions';
 
 const log = new Logger('container:Tabs');
 

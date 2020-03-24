@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
-import { track } from 'lib/track/actions';
+import { track } from 'state/track/actions';
 
 export default function EditorStartPage(props: {
     primaryButtonClick: () => void;

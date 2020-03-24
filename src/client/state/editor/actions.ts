@@ -1,20 +1,20 @@
-import * as FS from 'lib/fs';
-import * as H5P from 'lib/h5p';
-import * as notifications from 'lib/notifications/actions';
-import * as tabs from 'lib/tabs/actions';
-import * as UI from 'lib/ui/actions';
+import * as FS from 'state/fs';
+import * as H5P from 'state/h5p';
+import * as notifications from 'state/notifications/actions';
+import * as tabs from 'state/tabs/actions';
+import * as UI from 'state/ui/actions';
 
 import superagent from 'superagent';
 
 import _path from 'path';
 
-import { track } from 'lib/track/actions';
+import { track } from 'state/track/actions';
 
-import Tab from 'lib/tabs/model';
+import Tab from 'state/tabs/model';
 
-import { ContentId } from 'lib/h5p/types';
+import { ContentId } from 'state/h5p/types';
 
-import { Modes } from 'lib/ui/types';
+import { Modes } from 'state/ui/types';
 
 import { IState, selectors } from '../';
 

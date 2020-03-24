@@ -6,18 +6,18 @@ import Logger from '../helpers/Logger';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import AppBar from 'lib/components/AppBar';
-import EditorStartPage from 'lib/components/EditorStartPage';
-import ErrorBoundary from 'lib/components/ErrorBoundary';
-import Main from 'lib/components/Main';
-import Root from 'lib/components/Root';
+import AppBar from 'components/AppBar';
+import EditorStartPage from 'components/EditorStartPage';
+import ErrorBoundary from 'components/ErrorBoundary';
+import Main from 'components/Main';
+import Root from 'components/Root';
 
 import LeftDrawer from './LeftDrawer';
 import Tab from './Tab';
 
 import { actions, IState, selectors } from '../state';
 
-import { ITab } from 'lib/tabs/types';
+import { ITab } from 'state/tabs/types';
 
 const log = new Logger('container:app');
 

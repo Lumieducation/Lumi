@@ -6,24 +6,23 @@ import Logger from '../helpers/Logger';
 
 import Grid from '@material-ui/core/Grid';
 
-import ContentPaper from 'lib/components/ContentPaper';
-import ErrorBoundary from 'lib/components/ErrorBoundary';
-import Loading from 'lib/components/LoadingPage';
-import ModeTab from 'lib/components/ModeTab';
-import SaveButton from 'lib/components/SaveButton';
+import ContentPaper from 'components/ContentPaper';
+import ErrorBoundary from 'components/ErrorBoundary';
+import Loading from 'components/LoadingPage';
+import ModeTab from 'components/ModeTab';
+import SaveButton from 'components/SaveButton';
 
-import CreateFileDialog from 'lib/components/fs/CreateFileDialog';
-import H5P from 'lib/components/H5P';
+import H5P from 'components/H5P';
 
-import { ITab } from 'lib/tabs/types';
-import { Modes } from 'lib/ui/types';
+import { ITab } from 'state/tabs/types';
+import { Modes } from 'state/ui/types';
 
 import { actions, IState, selectors } from '../state';
 
 import Editor from '../helpers/Editor';
 import Target from '../helpers/Target';
 
-import { track } from 'lib/track/actions';
+import { track } from 'state/track/actions';
 
 const log = new Logger('container:tab');
 
@@ -93,7 +92,7 @@ export class TabContainer extends React.Component<IProps, IComponentState> {
     public render(): JSX.Element {
         log.info(`rendering`);
 
-        const { activeTab, currentDirectory, mode } = this.props;
+        const { activeTab, mode } = this.props;
 
         if (activeTab.loadingIndicator) {
             return <Loading />;
@@ -142,19 +141,6 @@ export class TabContainer extends React.Component<IProps, IComponentState> {
                                     return undefined;
                             }
                         })()}
-                    />
-                ) : null}
-                {this.state.showCreateFileDialog ? (
-                    <CreateFileDialog
-                        cancel={() =>
-                            this.setState({ showCreateFileDialog: false })
-                        }
-                        type="file"
-                        create={(name: string) => {
-                            this.exportH5P(`${currentDirectory}/${name}`);
-                            this.setState({ showCreateFileDialog: false });
-                        }}
-                        path={currentDirectory}
                     />
                 ) : null}
             </div>

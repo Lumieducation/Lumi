@@ -3,11 +3,11 @@ import { combineReducers } from 'redux';
 
 import * as Core from './editor';
 
-import * as FS from 'lib/fs';
-import * as Notifications from 'lib/notifications';
-import * as Run from 'lib/run';
-import * as Tabs from 'lib/tabs';
-import * as UI from 'lib/ui';
+import * as FS from 'state/fs';
+import * as Notifications from 'state/notifications';
+import * as Run from 'state/run';
+import * as Tabs from 'state/tabs';
+import * as UI from 'state/ui';
 
 // state - reducer
 const rootReducer = (history: any) =>
