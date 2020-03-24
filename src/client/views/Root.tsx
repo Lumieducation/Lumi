@@ -14,7 +14,6 @@ import Root from 'lib/components/Root';
 
 import LeftDrawer from './LeftDrawer';
 import Tab from './Tab';
-import Tabs from './Tabs';
 
 import { actions, IState, selectors } from '../state';
 

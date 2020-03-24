@@ -70,7 +70,7 @@ export class WebsocketContainer extends React.Component<
                     break;
 
                 case 'OPEN_H5P':
-                    action.payload.paths.map((file: any) => {
+                    action.payload.paths.forEach((file: any) => {
                         dispatch(
                             actions.core.clickOnFileInFiletree(
                                 path.basename(file),

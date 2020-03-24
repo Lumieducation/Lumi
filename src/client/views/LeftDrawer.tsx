@@ -4,13 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import Logger from '../helpers/Logger';
 
-import Divider from '@material-ui/core/Divider';
-
-import * as LumiFS from 'lib/components/fs';
-
 import LeftDrawer from 'lib/components/LeftDrawer';
-
-import FileTree from './FileTree';
 
 import OpenedH5PList from './OpenedH5PList';
 
@@ -68,12 +62,7 @@ export class LeftDrawerContainer extends React.Component<
     public render(): JSX.Element {
         log.info(`rendering`);
 
-        const {
-            closeLeftDrawer,
-            currentDirectory,
-            leftDrawerOpen,
-            root
-        } = this.props;
+        const { closeLeftDrawer, leftDrawerOpen } = this.props;
         return (
             <div id="editor-leftdrawer">
                 <LeftDrawer
