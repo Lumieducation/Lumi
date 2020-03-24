@@ -30,7 +30,6 @@ interface IPassedProps {}
 
 interface IStateProps extends IPassedProps {
     activeTab: ITab;
-    currentDirectory: string;
     mode: Modes;
 }
 
@@ -201,7 +200,6 @@ export class TabContainer extends React.Component<IProps, IComponentState> {
 function mapStateToProps(state: IState, ownProps: IPassedProps): IStateProps {
     return {
         activeTab: selectors.tabs.activeTab(state),
-        currentDirectory: selectors.fileTree.currentDirectory(state),
         mode: selectors.ui.mode(state)
     };
 }

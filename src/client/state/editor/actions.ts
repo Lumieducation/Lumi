@@ -1,4 +1,3 @@
-import * as FS from 'state/fs';
 import * as H5P from 'state/h5p';
 import * as notifications from 'state/notifications/actions';
 import * as tabs from 'state/tabs/actions';
@@ -48,60 +47,6 @@ export function closeTab(tabId: string): any {
         }
 
         dispatch(tabs.closeTab(tabId));
-    };
-}
-
-export function filetreeCreateFile(path: string, name: string): any {
-    return async (dispatch: any) => {
-        track('file_tree', 'click', 'create_file');
-        const tab = new Tab(name);
-
-        dispatch(UI.changeMode(Modes.edit));
-        dispatch(tabs.openTab(tab));
-        const createAction = await dispatch(
-            FS.actions.createFS(path, name, 'file')
-        );
-
-        if (createAction.error) {
-            dispatch(notifications.notify('fs-create-file-error', 'error'));
-            dispatch(
-                tabs.updateTab(tab.id, {
-                    loadingIndicator: false,
-                    state: 'error'
-                })
-            );
-            return;
-        }
-        dispatch(
-            tabs.updateTab(tab.id, {
-                loadingIndicator: false,
-                path: createAction.payload.path,
-                state: 'success'
-            })
-        );
-    };
-}
-
-export function filetreeCreateDirectory(path: string, name: string): any {
-    return async (dispatch: any) => {
-        track('file_tree', 'click', 'create_directory');
-        const createAction = await dispatch(
-            FS.actions.createFS(path, name, 'directory')
-        );
-
-        if (createAction.error) {
-            dispatch(
-                notifications.notify(
-                    `fs-create-directory-error: ${createAction.error.message}`,
-                    'error'
-                )
-            );
-            return;
-        }
-
-        dispatch(
-            notifications.notify('fs-create-directory-success', 'success')
-        );
     };
 }
 
