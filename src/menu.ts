@@ -43,19 +43,19 @@ export default (window: electron.BrowserWindow) => [
                                     name: 'HTML 5 Package'
                                 }
                             ],
-                            properties: ['openDirectory']
+                            properties: ['openFile', 'multiSelections']
                         })
                         .then(({ filePaths }) => {
                             nucleus.track('menu/click/open_folder');
                             websocket.emit('action', {
                                 payload: {
-                                    path: filePaths[0]
+                                    paths: filePaths
                                 },
-                                type: 'OPEN_FOLDER'
+                                type: 'OPEN_H5P'
                             });
                         });
                 },
-                label: 'Open Folder'
+                label: 'Open H5P'
             },
             { type: 'separator' } as any,
             {

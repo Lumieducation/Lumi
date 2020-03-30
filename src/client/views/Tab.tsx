@@ -103,6 +103,9 @@ export class TabContainer extends React.Component<IProps, IComponentState> {
         }
         return (
             <div id="editor-tab">
+                {activeTab.state !== 'opening' ? (
+                    <ModeTab mode={mode} changeMode={this.changeMode} />
+                ) : null}
                 <div>
                     <Grid container={true} spacing={2}>
                         <Grid item={true} xs={10}>
@@ -121,14 +124,7 @@ export class TabContainer extends React.Component<IProps, IComponentState> {
                                 </ContentPaper>
                             </ErrorBoundary>
                         </Grid>
-                        <Grid item={true} xs={2}>
-                            {activeTab.state !== 'opening' ? (
-                                <ModeTab
-                                    mode={mode}
-                                    changeMode={this.changeMode}
-                                />
-                            ) : null}
-                        </Grid>
+                        <Grid item={true} xs={2} />
                     </Grid>
                 </div>
                 {activeTab.state !== 'opening' ? (

@@ -37,6 +37,7 @@ interface IDispatchProps {
     createFile: typeof actions.core.filetreeCreateFile;
     createH5P: typeof actions.core.clickOnCreateH5P;
     getFileTree: typeof actions.fileTree.getFileTree;
+    openFiles: typeof actions.core.openH5P;
     openLeftDrawer: typeof actions.ui.openLeftDrawer;
 }
 
@@ -51,10 +52,15 @@ export class EditorContainer extends React.Component<IProps, IComponentState> {
         this.state = {};
 
         this.openLeftDrawer = this.openLeftDrawer.bind(this);
+        this.openFiles = this.openFiles.bind(this);
         this.createDirectory = this.createDirectory.bind(this);
         this.createFile = this.createFile.bind(this);
         this.createH5P = this.createH5P.bind(this);
         this.refresh = this.refresh.bind(this);
+    }
+
+    public openFiles(): void {
+        this.props.openFiles();
     }
 
     public openLeftDrawer(): void {
@@ -83,12 +89,12 @@ export class EditorContainer extends React.Component<IProps, IComponentState> {
                         <ErrorBoundary>
                             {noActiveTabs ? (
                                 <EditorStartPage
-                                    primaryButtonClick={this.openLeftDrawer}
+                                    primaryButtonClick={this.openFiles}
                                     secondaryButtonClick={this.createH5P}
                                 />
                             ) : (
                                 <div>
-                                    <Tabs />
+                                    {/* <Tabs /> */}
                                     <Tab key={activeTab.id} />
                                 </div>
                             )}
@@ -133,6 +139,7 @@ function mapDispatchToProps(dispatch: any): IDispatchProps {
             createFile: actions.core.filetreeCreateFile,
             createH5P: actions.core.clickOnCreateH5P,
             getFileTree: actions.fileTree.getFileTree,
+            openFiles: actions.core.openH5P,
             openLeftDrawer: actions.ui.openLeftDrawer
         },
         dispatch

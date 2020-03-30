@@ -107,7 +107,7 @@ app.on('activate', () => {
 
 // create main BrowserWindow when electron is ready
 app.on('ready', async () => {
-    update();
+    update(app);
 
     log.info('app is ready');
 

@@ -18,9 +18,6 @@ const useStyles = makeStyles((theme: Theme) => ({
         backgroundColor: theme.palette.background.paper,
         display: 'fixed',
         flexGrow: 1
-    },
-    tabs: {
-        borderLeft: `1px solid ${theme.palette.divider}`
     }
 }));
 
@@ -37,14 +34,7 @@ export default function VerticalTabs(props: {
 
     return (
         <div className={classes.root}>
-            <Tabs
-                orientation="vertical"
-                variant="scrollable"
-                value={mode}
-                onChange={handleChange}
-                aria-label="Vertical tabs example"
-                className={classes.tabs}
-            >
+            <Tabs value={mode} onChange={handleChange} variant="fullWidth">
                 <Tab label="View" {...a11yProps(0)} />
                 <Tab label="Edit" {...a11yProps(1)} />
             </Tabs>

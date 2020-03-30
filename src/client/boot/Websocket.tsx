@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import path from 'path';
+
 import * as Sentry from '@sentry/browser';
 
 import SocketIOClient from 'socket.io-client';
@@ -67,11 +69,15 @@ export class WebsocketContainer extends React.Component<
                     this.props.dispatch(actions.core.clickOnCreateH5P());
                     break;
 
-                case 'OPEN_FOLDER':
-                    dispatch(
-                        actions.fileTree.updateFileTreeRoot(action.payload.path)
-                    );
-                    dispatch(actions.fileTree.getFileTree(action.payload.path));
+                case 'OPEN_H5P':
+                    action.payload.paths.map((file: any) => {
+                        dispatch(
+                            actions.core.clickOnFileInFiletree(
+                                path.basename(file),
+                                file
+                            )
+                        );
+                    });
                     break;
 
                 case 'SAVE':
@@ -85,6 +91,14 @@ export class WebsocketContainer extends React.Component<
                 case 'REPORT_ISSUE':
                     Sentry.showReportDialog();
                     break;
+
+                case 'MESSAGE':
+                    dispatch(
+                        actions.notifications.notify(
+                            action.payload.message,
+                            action.payload.type
+                        )
+                    );
             }
         });
     }
