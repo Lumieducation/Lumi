@@ -4,9 +4,7 @@ import express from 'express';
 import fileUpload from 'express-fileupload';
 
 import Routes from './Routes';
-// import swagger from './swagger';
 
-// export default async function(): Promise<express.Application> {
 const app = express();
 app.use(Sentry.Handlers.requestHandler());
 
@@ -24,8 +22,6 @@ app.use(
     })
 );
 
-// await swagger(app);
-
 Routes(app);
 
 app.use(Sentry.Handlers.errorHandler());
@@ -40,6 +36,3 @@ app.use((error, req, res, next) => {
 });
 
 export default app;
-
-//     return app;
-// }

@@ -1,5 +1,3 @@
-'use strict';
-
 const fs = require('fs');
 const isWsl = require('is-wsl');
 const path = require('path');
@@ -309,7 +307,15 @@ module.exports = function(webpackEnv) {
                 .map(ext => `.${ext}`)
                 .filter(ext => useTypeScript || !ext.includes('ts')),
             alias: {
-                lib: path.join(__dirname, '..', 'src', 'client', 'lib'),
+                state: path.join(__dirname, '..', 'src', 'client', 'state'),
+                components: path.join(
+                    __dirname,
+                    '..',
+                    'src',
+                    'client',
+                    'views',
+                    'components'
+                ),
                 // Support React Native Web
                 // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
                 'react-native': 'react-native-web',

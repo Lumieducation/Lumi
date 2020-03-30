@@ -8,11 +8,13 @@ import Logger from '../helpers/Logger';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { createStyles, Theme, withStyles } from '@material-ui/core/styles';
 
-import ErrorBoundary from 'lib/components/ErrorBoundary';
-import Notifications from 'lib/container/Notifications';
+import ErrorBoundary from 'components/ErrorBoundary';
+
+import Notifications from './Notifications';
+
 import Websocket from '../boot/Websocket';
 
-import Editor from './Root';
+import Editor from './Editor';
 
 import { IState } from '../state';
 

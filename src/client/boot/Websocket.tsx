@@ -9,7 +9,7 @@ import SocketIOClient from 'socket.io-client';
 
 import Logger from '../helpers/Logger';
 
-import { ITab } from 'lib/tabs/types';
+import { ITab } from 'state/tabs/types';
 
 import { actions, IState, selectors } from '../state';
 
@@ -70,7 +70,7 @@ export class WebsocketContainer extends React.Component<
                     break;
 
                 case 'OPEN_H5P':
-                    action.payload.paths.map((file: any) => {
+                    action.payload.paths.forEach((file: any) => {
                         dispatch(
                             actions.core.clickOnFileInFiletree(
                                 path.basename(file),

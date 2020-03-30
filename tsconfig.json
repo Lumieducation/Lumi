@@ -15,7 +15,8 @@
         "target": "es5",
         "baseUrl": "src",
         "paths": {
-            "lib/*": ["client/lib/*"]
+            "state/*": ["client/state/*"],
+            "components/*": ["client/views/components/*"]
         }
     },
     "include": ["src/client"]

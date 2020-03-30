@@ -3,9 +3,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { INotification } from '../notifications/types';
+import { INotification } from '../state/notifications/types';
 
-import { actions, selectors } from '../notifications';
+import { actions, selectors } from '../state/notifications';
 
 interface IPassedProps {
     enqueueSnackbar: (message: string, options: any) => void;

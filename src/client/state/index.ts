@@ -3,11 +3,9 @@ import { combineReducers } from 'redux';
 
 import * as Core from './editor';
 
-import * as FS from 'lib/fs';
-import * as Notifications from 'lib/notifications';
-import * as Run from 'lib/run';
-import * as Tabs from 'lib/tabs';
-import * as UI from 'lib/ui';
+import * as Notifications from 'state/notifications';
+import * as Tabs from 'state/tabs';
+import * as UI from 'state/ui';
 
 // state - reducer
 const rootReducer = (history: any) =>
@@ -16,13 +14,10 @@ const rootReducer = (history: any) =>
         tabs: Tabs.reducer,
         ui: UI.reducer,
         // tslint:disable-next-line: object-literal-sort-keys
-        fs: FS.reducer,
-        // tslint:disable-next-line: object-literal-sort-keys
-        run: Run.reducer,
         router: connectRouter(history)
     });
 
-export interface IState extends FS.types.IState, Run.types.IState {
+export interface IState {
     notifications: Notifications.types.INotificationsState;
     router: {
         location: {
@@ -38,17 +33,13 @@ export interface IState extends FS.types.IState, Run.types.IState {
 
 export const actions = {
     core: Core.actions,
-    fileTree: FS.actions,
     notifications: Notifications.actions,
-    run: Run.actions,
     tabs: Tabs.actions,
     ui: UI.actions
 };
 
 export const selectors = {
-    fileTree: FS.selectors,
     notifications: Notifications.selectors,
-    run: Run.selectors,
     tabs: Tabs.selectors,
     ui: UI.selectors
 };

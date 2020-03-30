@@ -1,20 +1,19 @@
-import * as FS from 'lib/fs';
-import * as H5P from 'lib/h5p';
-import * as notifications from 'lib/notifications/actions';
-import * as tabs from 'lib/tabs/actions';
-import * as UI from 'lib/ui/actions';
+import * as H5P from 'state/h5p';
+import * as notifications from 'state/notifications/actions';
+import * as tabs from 'state/tabs/actions';
+import * as UI from 'state/ui/actions';
 
 import superagent from 'superagent';
 
 import _path from 'path';
 
-import { track } from 'lib/track/actions';
+import { track } from 'state/track/actions';
 
-import Tab from 'lib/tabs/model';
+import Tab from 'state/tabs/model';
 
-import { ContentId } from 'lib/h5p/types';
+import { ContentId } from 'state/h5p/types';
 
-import { Modes } from 'lib/ui/types';
+import { Modes } from 'state/ui/types';
 
 import { IState, selectors } from '../';
 
@@ -48,60 +47,6 @@ export function closeTab(tabId: string): any {
         }
 
         dispatch(tabs.closeTab(tabId));
-    };
-}
-
-export function filetreeCreateFile(path: string, name: string): any {
-    return async (dispatch: any) => {
-        track('file_tree', 'click', 'create_file');
-        const tab = new Tab(name);
-
-        dispatch(UI.changeMode(Modes.edit));
-        dispatch(tabs.openTab(tab));
-        const createAction = await dispatch(
-            FS.actions.createFS(path, name, 'file')
-        );
-
-        if (createAction.error) {
-            dispatch(notifications.notify('fs-create-file-error', 'error'));
-            dispatch(
-                tabs.updateTab(tab.id, {
-                    loadingIndicator: false,
-                    state: 'error'
-                })
-            );
-            return;
-        }
-        dispatch(
-            tabs.updateTab(tab.id, {
-                loadingIndicator: false,
-                path: createAction.payload.path,
-                state: 'success'
-            })
-        );
-    };
-}
-
-export function filetreeCreateDirectory(path: string, name: string): any {
-    return async (dispatch: any) => {
-        track('file_tree', 'click', 'create_directory');
-        const createAction = await dispatch(
-            FS.actions.createFS(path, name, 'directory')
-        );
-
-        if (createAction.error) {
-            dispatch(
-                notifications.notify(
-                    `fs-create-directory-error: ${createAction.error.message}`,
-                    'error'
-                )
-            );
-            return;
-        }
-
-        dispatch(
-            notifications.notify('fs-create-directory-success', 'success')
-        );
     };
 }
 
