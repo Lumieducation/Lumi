@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import Logger from '../helpers/Logger';
+import Logger from 'client/helpers/Logger';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 
@@ -15,7 +15,7 @@ import Root from 'components/Root';
 import LeftDrawer from './LeftDrawer';
 import Tab from './Tab';
 
-import { actions, IState, selectors } from '../state';
+import { actions, IState, selectors } from '../../state';
 
 import { ITab } from 'state/tabs/types';
 

@@ -1,6 +1,5 @@
 import express from 'express';
 
-import fsRoutes from './fs';
 import h5pRoutes from './h5p';
 import lumiH5PRoutes from './lumi-h5p';
 import trackRoutes from './track';
@@ -12,8 +11,6 @@ export default function(): express.Router {
     const router = express.Router();
 
     log.info('setting up routes');
-
-    router.use('/api/v1/fs', fsRoutes());
 
     router.use('/api/track/v0', trackRoutes());
 

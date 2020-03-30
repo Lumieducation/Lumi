@@ -27,11 +27,6 @@ const theme = createMuiTheme({
                 background: gradientBackground
             }
         }
-        // MuiTab: {
-        //     style: {
-        //         color: 'white'
-        //     }
-        // }
     }
 });
 

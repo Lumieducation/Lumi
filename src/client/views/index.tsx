@@ -10,11 +10,11 @@ import { createStyles, Theme, withStyles } from '@material-ui/core/styles';
 
 import ErrorBoundary from 'components/ErrorBoundary';
 
-import Notifications from 'client/views/Notifications';
+import Notifications from './Notifications';
 
 import Websocket from '../boot/Websocket';
 
-import Editor from './Root';
+import Editor from './Editor';
 
 import { IState } from '../state';
 

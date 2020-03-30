@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import Logger from '../helpers/Logger';
+import Logger from '../../helpers/Logger';
 
 import Grid from '@material-ui/core/Grid';
 
@@ -17,10 +17,10 @@ import H5P from 'components/H5P';
 import { ITab } from 'state/tabs/types';
 import { Modes } from 'state/ui/types';
 
-import { actions, IState, selectors } from '../state';
+import { actions, IState, selectors } from '../../state';
 
-import Editor from '../helpers/Editor';
-import Target from '../helpers/Target';
+import Editor from 'client/helpers/Editor';
+import Target from 'client/helpers/Target';
 
 import { track } from 'state/track/actions';
 

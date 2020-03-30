@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import Logger from '../helpers/Logger';
+import Logger from 'client/helpers/Logger';
 
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
@@ -20,7 +20,7 @@ import CloseIcon from '@material-ui/icons/Close';
 
 import { ITab } from 'state/tabs/types';
 
-import { actions, IState, selectors } from '../state';
+import { actions, IState, selectors } from 'client/state';
 
 import { track } from 'state/track/actions';
 

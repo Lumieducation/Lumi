@@ -2,13 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import Logger from '../helpers/Logger';
+import Logger from 'client/helpers/Logger';
 
 import LeftDrawer from 'components/LeftDrawer';
 
 import OpenedH5PList from './OpenedH5PList';
 
-import { actions, IState, selectors } from '../state';
+import { actions, IState, selectors } from 'client/state';
 
 const log = new Logger('container:app');
 
