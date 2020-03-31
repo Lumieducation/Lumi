@@ -7,7 +7,7 @@ import LumiError from '../helper/Error';
 
 import h5p from '../h5p';
 
-import config from '../config/config';
+import config from '../config/app-config';
 
 import * as H5P from 'h5p-nodejs-library';
 
@@ -60,8 +60,6 @@ export class H5PController {
 
         const packageExporter = new H5P.PackageExporter(
             this.h5p.libraryManager,
-            this.h5p.translationService,
-            this.h5p.config,
             this.h5p.contentManager
         );
 
@@ -86,7 +84,7 @@ export class H5PController {
             new User()
         );
 
-        const id = await this.h5p.saveH5P(
+        const id = await this.h5p.saveOrUpdateContent(
             undefined,
             parameters,
             metadata,
@@ -149,7 +147,7 @@ export class H5PController {
             }
         }
 
-        const contentId = await this.h5p.saveH5P(
+        const contentId = await this.h5p.saveOrUpdateContent(
             id,
             parameters,
             metadata,
