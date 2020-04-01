@@ -17,10 +17,11 @@ import { drawerWidth } from '../../theme';
 import { track } from 'state/track/actions';
 
 export default function AppBar(props: {
+    closeLeftDrawer?: () => void;
     leftDrawerOpen: boolean;
     openLeftDrawer?: () => void;
 }): JSX.Element {
-    const { leftDrawerOpen, openLeftDrawer } = props;
+    const { closeLeftDrawer, leftDrawerOpen, openLeftDrawer } = props;
     const classes = useStyles();
 
     return (
@@ -56,6 +57,9 @@ export default function AppBar(props: {
                     aria-label="report an issue"
                     color="inherit"
                     onClick={() => {
+                        if (closeLeftDrawer) {
+                            closeLeftDrawer();
+                        }
                         Sentry.showReportDialog();
                     }}
                 >
