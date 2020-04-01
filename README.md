@@ -12,6 +12,17 @@ Download the latest version [here](https://github.com/Lumieducation/Lumi/release
 It’s built with TypeScript – a [nodejs](https://nodejs.org/) plus [express](https://expressjs.com/) and [socket.io](http://socket.io) server, [React.js](https://reactjs.org/), [Redux](https://redux.js.org/) and [Material-ui](https://www.material-ui.com).
 It runs as a [Electron](https://electronjs.org)-Standalone App on Mac OS X, Windows and Linux.
 
+## Development
+
+You can start the development environment on your local machine by following these steps:
+
+1. Make sure you have [`git`](https://git-scm.com/), [`node`](https://nodejs.org/), and [`npm`](https://www.npmjs.com/get-npm) installed.
+2. Clone this repository locally.
+3. Execute `npm install` from the root directory of the repository.
+4. Execute `npm start` from the root directory of the repository.
+
+This will launch the webpack-dev-server along with an instance of electron & the backend-server.
+
 ## Contributing
 
 Lumi tries to improve education wherever it is possible by providing a software that connects teachers with their students. But Lumi is in a very early development stage. Every help is appreciated and welcome. You can contribute in many ways. You can help reporting, testing, and detailing bugs, and also test and suggest new features.
