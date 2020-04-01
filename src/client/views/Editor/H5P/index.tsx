@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import Logger from '../../helpers/Logger';
+import Logger from 'client/helpers/Logger';
 
 import Grid from '@material-ui/core/Grid';
 
@@ -12,12 +12,12 @@ import Loading from 'components/LoadingPage';
 import ModeTab from 'components/ModeTab';
 import SaveButton from 'components/SaveButton';
 
-import H5P from 'components/H5P';
+import H5P from './H5P';
 
 import { ITab } from 'state/tabs/types';
 import { Modes } from 'state/ui/types';
 
-import { actions, IState, selectors } from '../../state';
+import { actions, IState, selectors } from 'client/state';
 
 import Editor from 'client/helpers/Editor';
 import Target from 'client/helpers/Target';
@@ -46,7 +46,7 @@ interface IComponentState {
 
 interface IProps extends IStateProps, IDispatchProps {}
 
-export class TabContainer extends React.Component<IProps, IComponentState> {
+export class H5PContainer extends React.Component<IProps, IComponentState> {
     constructor(props: IProps) {
         super(props);
 
@@ -219,4 +219,4 @@ function mapDispatchToProps(dispatch: any): IDispatchProps {
 export default connect<IStateProps, IDispatchProps, IPassedProps, IState>(
     mapStateToProps,
     mapDispatchToProps
-)(TabContainer);
+)(H5PContainer);
