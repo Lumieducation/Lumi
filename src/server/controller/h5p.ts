@@ -11,7 +11,6 @@ const log = new Logger('controller:h5p');
 export default class H5PController {
     constructor(private h5pLibrary: H5P.H5PEditor) {
         log.info(`initialize`);
-        this.h5pLibrary = h5pLibrary;
     }
 
     public loadPackage = (
