@@ -90,7 +90,10 @@ export default (window: electron.BrowserWindow) => [
             },
             {
                 label: 'Redo',
-                accelerator: 'Shift+CmdOrCtrl+Z',
+                accelerator:
+                    process.platform !== 'darwin'
+                        ? 'CmdOrCtrl+Y'
+                        : 'Shift+CmdOrCtrl+Z',
                 selector: 'redo:'
             },
             {
