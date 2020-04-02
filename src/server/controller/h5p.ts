@@ -2,23 +2,17 @@ import express from 'express';
 import fsExtra from 'fs-extra';
 import path from 'path';
 
-import config from '../config/config';
-
-// tslint:disable-next-line: import-name
 import * as H5P from 'h5p-nodejs-library';
-// tslint:disable-next-line: no-submodule-imports
-import H5PEditor from 'h5p-nodejs-library/build/src/H5PEditor';
 
+import appConfig from '../config/app-config';
 import PlayerRenderer from '../h5p/Player.renderer';
-
 import Logger from '../helper/Logger';
-
 import User from '../h5p/User';
 
 const log = new Logger('controller:h5p');
 
 export class H5PController {
-    constructor(h5pLibrary: any) {
+    constructor(h5pLibrary: H5P.H5PEditor) {
         log.info(`initialize`);
         this.h5pLibrary = h5pLibrary;
 
@@ -31,7 +25,7 @@ export class H5PController {
         this.renderPackage = this.renderPackage.bind(this);
     }
 
-    private h5pLibrary: H5PEditor;
+    private h5pLibrary: H5P.H5PEditor;
 
     public getAjax(req: express.Request, res: express.Response): void {
         try {
@@ -107,7 +101,7 @@ export class H5PController {
         req: express.Request,
         res: express.Response
     ): Promise<void> {
-        const stream = this.h5pLibrary.libraryManager.getFileStream(
+        const stream = await this.h5pLibrary.getLibraryFileStream(
             H5P.LibraryName.fromUberName(req.params.uberName),
             req.params.file
         );
@@ -137,7 +131,7 @@ export class H5PController {
 
         log.info(`loading package with contentId ${contentId}`);
         this.h5pLibrary
-            .loadH5P(contentId)
+            .getContent(contentId)
             .then(content => {
                 log.info(`sending package-data for contentId ${contentId} `);
                 res.status(200).json(content);
@@ -168,7 +162,7 @@ export class H5PController {
                 break;
 
             case 'translations':
-                const translationsResponse = await this.h5pLibrary.getLibraryLanguageFiles(
+                const translationsResponse = await this.h5pLibrary.listLibraryLanguageFiles(
                     req.body.libraries,
                     req.query.language
                 );
@@ -208,7 +202,7 @@ export class H5PController {
                     return res.status(400).end();
                 }
                 this.h5pLibrary
-                    .installLibrary(id, new User())
+                    .installLibraryFromHub(id, new User())
                     .then(() => {
                         log.info(
                             `installation of library ${id} successful - getting content type cache`
@@ -283,31 +277,20 @@ export class H5PController {
 
         log.info(`rendering package with contentId ${contentId}`);
 
-        const libraryLoader = (machineName, majorVersion, minorVersion) =>
-            require(`${config.librariesPath}/${machineName}-${majorVersion}.${minorVersion}/library.json`);
-
         const player = new H5P.H5PPlayer(
-            libraryLoader,
-            {
-                baseUrl: '/api/v0/h5p',
-                downloadUrl: '/api/v0/h5p/download',
-                libraryUrl: `/api/v0/h5p/libraries`,
-                scriptUrl: `/api/v0/h5p/core/js`,
-                stylesUrl: `/api/v0/h5p/core/styles`
-            },
-            null,
-            null
+            this.h5pLibrary.libraryStorage,
+            this.h5pLibrary.contentStorage,
+            this.h5pLibrary.config
         );
-
-        player.useRenderer(PlayerRenderer);
+        player.setRenderer(PlayerRenderer);
 
         try {
             const h5pObject = await fsExtra.readFile(
-                `${config.workingCachePath}/${contentId}/h5p.json`,
+                `${appConfig.workingCachePath}/${contentId}/h5p.json`,
                 'utf8'
             );
             const contentObject = await fsExtra.readFile(
-                `${config.workingCachePath}/${contentId}/content.json`,
+                `${appConfig.workingCachePath}/${contentId}/content.json`,
                 'utf8'
             );
 

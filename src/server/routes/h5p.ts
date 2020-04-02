@@ -1,7 +1,6 @@
 import express from 'express';
 
-import config from '../config/config';
-
+import appConfig from '../config/app-config';
 import H5PController from '../controller/h5p';
 import h5p from '../h5p';
 
@@ -22,15 +21,15 @@ export default function(): express.Router {
     router.get(`/libraries/:uberName/:file(*)`, h5pController.getLibraryFile); // <--
     router.get(`/content/:id/content/:file(*)`, h5pController.getContentFile); // <--
     router.get(
-        `${h5p.config.temporaryFilesPath}/:file(*)`,
+        `${h5p.config.temporaryFilesUrl}/:file(*)`,
         h5pController.getTemporaryFile
     ); // <--
 
     router.get('/package/:contentId', h5pController.loadPackage); // <--
     router.get('/package/:contentId/render', h5pController.renderPackage); // <--
 
-    router.use('/content', express.static(`${config.workingCachePath}`)); // <--
-    router.use('/libraries', express.static(`${config.librariesPath}`)); // <--
+    router.use('/content', express.static(`${appConfig.workingCachePath}`)); // <--
+    router.use('/libraries', express.static(`${appConfig.librariesPath}`)); // <--
 
     const h5pCore = `${__dirname}/../../../h5p/core`;
 

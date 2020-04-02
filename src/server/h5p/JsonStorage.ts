@@ -3,13 +3,13 @@ import * as fsExtra from 'fs-extra';
 import mkdirp from 'mkdirp';
 import path from 'path';
 
-import InMemoryStorage from './InMemoryStorage';
+import { fsImplementations } from 'h5p-nodejs-library';
 
 /**
  * Reads key-value pairs from a JSON file and writes them back.
  * It is recommended to create it with the static create(...) factory instead of the sync constructor.
  */
-export default class JsonStorage extends InMemoryStorage {
+export default class JsonStorage extends fsImplementations.InMemoryStorage {
     /**
      * Initializes the JsonStorage. It's advised to use the async static factory method create(...) instead.
      * @param {string} file Path to the JSON file (must be read- and writable)
