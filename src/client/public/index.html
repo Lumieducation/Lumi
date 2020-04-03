@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="theme-color" content="#000000" />
-        <!--
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-        <!--
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -22,203 +20,429 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-        <title>Lumi</title>
-        <!-- Fonts to support Material Design -->
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-        />
-        <script>
-            window.H5PIntegration = {
-                libraryUrl: '/api/v0/h5p/core/js',
-                pluginCacheBuster: '',
-                url: '/api/v0/h5p',
-                postUserStatistics: false,
-                saveFreq: false,
-                hubIsEnabled: true,
-                l10n: {
-                    H5P: {
-                        fullscreen: 'Fullscreen',
-                        disableFullscreen: 'Disable fullscreen',
-                        download: 'Download',
-                        copyrights: 'Rights of use',
-                        embed: 'Embed',
-                        size: 'Size',
-                        showAdvanced: 'Show advanced',
-                        hideAdvanced: 'Hide advanced',
-                        advancedHelp:
-                            'Include this script on your website if you want dynamic sizing of the embedded content:',
-                        copyrightInformation: 'Rights of use',
-                        close: 'Close',
-                        title: 'Title',
-                        author: 'Author',
-                        year: 'Year',
-                        source: 'Source',
-                        license: 'License',
-                        thumbnail: 'Thumbnail',
-                        noCopyrights:
-                            'No copyright information available for this content.',
-                        downloadDescription:
-                            'Download this content as a H5P file.',
-                        copyrightsDescription:
-                            'View copyright information for this content.',
-                        embedDescription:
-                            'View the embed code for this content.',
-                        h5pDescription:
-                            'Visit H5P.org to check out more cool content.',
-                        contentChanged:
-                            'This content has changed since you last used it.',
-                        startingOver: "You'll be starting over.",
-                        by: 'by',
-                        showMore: 'Show more',
-                        showLess: 'Show less',
-                        subLevel: 'Sublevel',
-                        confirmDialogHeader: 'Confirm action',
-                        confirmDialogBody:
-                            'Please confirm that you wish to proceed. This action is not reversible.',
-                        cancelLabel: 'Cancel',
-                        confirmLabel: 'Confirm',
-                        licenseU: 'Undisclosed',
-                        licenseCCBY: 'Attribution',
-                        licenseCCBYSA: 'Attribution-ShareAlike',
-                        licenseCCBYND: 'Attribution-NoDerivs',
-                        licenseCCBYNC: 'Attribution-NonCommercial',
-                        licenseCCBYNCSA: 'Attribution-NonCommercial-ShareAlike',
-                        licenseCCBYNCND: 'Attribution-NonCommercial-NoDerivs',
-                        licenseCC40: '4.0 International',
-                        licenseCC30: '3.0 Unported',
-                        licenseCC25: '2.5 Generic',
-                        licenseCC20: '2.0 Generic',
-                        licenseCC10: '1.0 Generic',
-                        licenseGPL: 'General Public License',
-                        licenseV3: 'Version 3',
-                        licenseV2: 'Version 2',
-                        licenseV1: 'Version 1',
-                        licensePD: 'Public Domain',
-                        licenseCC010:
-                            'CC0 1.0 Universal (CC0 1.0) Public Domain Dedication',
-                        licensePDM: 'Public Domain Mark',
-                        licenseC: 'Copyright',
-                        contentType: 'Content Type',
-                        licenseExtras: 'License Extras',
-                        changes: 'Changelog'
-                    }
+    <title>Lumi</title>
+    <!-- Fonts to support Material Design -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <script>
+        window.H5PIntegration = {
+            libraryUrl: '/api/v0/h5p/core/js',
+            pluginCacheBuster: '',
+            url: '/api/v0/h5p',
+            postUserStatistics: false,
+            saveFreq: false,
+            hubIsEnabled: true,
+            l10n: {
+                H5P: {
+                    fullscreen: 'Fullscreen',
+                    disableFullscreen: 'Disable fullscreen',
+                    download: 'Download',
+                    copyrights: 'Rights of use',
+                    embed: 'Embed',
+                    size: 'Size',
+                    showAdvanced: 'Show advanced',
+                    hideAdvanced: 'Hide advanced',
+                    advancedHelp:
+                        'Include this script on your website if you want dynamic sizing of the embedded content:',
+                    copyrightInformation: 'Rights of use',
+                    close: 'Close',
+                    title: 'Title',
+                    author: 'Author',
+                    year: 'Year',
+                    source: 'Source',
+                    license: 'License',
+                    thumbnail: 'Thumbnail',
+                    noCopyrights:
+                        'No copyright information available for this content.',
+                    downloadDescription:
+                        'Download this content as a H5P file.',
+                    copyrightsDescription:
+                        'View copyright information for this content.',
+                    embedDescription:
+                        'View the embed code for this content.',
+                    h5pDescription:
+                        'Visit H5P.org to check out more cool content.',
+                    contentChanged:
+                        'This content has changed since you last used it.',
+                    startingOver: "You'll be starting over.",
+                    by: 'by',
+                    showMore: 'Show more',
+                    showLess: 'Show less',
+                    subLevel: 'Sublevel',
+                    confirmDialogHeader: 'Confirm action',
+                    confirmDialogBody:
+                        'Please confirm that you wish to proceed. This action is not reversible.',
+                    cancelLabel: 'Cancel',
+                    confirmLabel: 'Confirm',
+                    licenseU: 'Undisclosed',
+                    licenseCCBY: 'Attribution',
+                    licenseCCBYSA: 'Attribution-ShareAlike',
+                    licenseCCBYND: 'Attribution-NoDerivs',
+                    licenseCCBYNC: 'Attribution-NonCommercial',
+                    licenseCCBYNCSA: 'Attribution-NonCommercial-ShareAlike',
+                    licenseCCBYNCND: 'Attribution-NonCommercial-NoDerivs',
+                    licenseCC40: '4.0 International',
+                    licenseCC30: '3.0 Unported',
+                    licenseCC25: '2.5 Generic',
+                    licenseCC20: '2.0 Generic',
+                    licenseCC10: '1.0 Generic',
+                    licenseGPL: 'General Public License',
+                    licenseV3: 'Version 3',
+                    licenseV2: 'Version 2',
+                    licenseV1: 'Version 1',
+                    licensePD: 'Public Domain',
+                    licenseCC010:
+                        'CC0 1.0 Universal (CC0 1.0) Public Domain Dedication',
+                    licensePDM: 'Public Domain Mark',
+                    licenseC: 'Copyright',
+                    contentType: 'Content Type',
+                    licenseExtras: 'License Extras',
+                    changes: 'Changelog'
+                }
+            },
+            editor: {
+                assets: {
+                    css: [
+                        '/api/v0/h5p/core/styles/h5p.css',
+                        '/api/v0/h5p/core/styles/h5p-confirmation-dialog.css',
+                        '/api/v0/h5p/core/styles/h5p-core-button.css',
+                        '/api/v0/h5p/editor/libs/darkroom.css',
+                        '/api/v0/h5p/editor/styles/css/h5p-hub-client.css',
+                        '/api/v0/h5p/editor/styles/css/fonts.css',
+                        '/api/v0/h5p/editor/styles/css/application.css',
+                        '/api/v0/h5p/editor/styles/css/libs/zebra_datepicker.min.css',
+                    ],
+                    js: [
+                        '/api/v0/h5p/core/js/jquery.js',
+                        '/api/v0/h5p/core/js/h5p.js',
+                        '/api/v0/h5p/core/js/h5p-event-dispatcher.js',
+                        '/api/v0/h5p/core/js/h5p-x-api-event.js',
+                        '/api/v0/h5p/core/js/h5p-x-api.js',
+                        '/api/v0/h5p/core/js/h5p-content-type.js',
+                        '/api/v0/h5p/core/js/h5p-confirmation-dialog.js',
+                        '/api/v0/h5p/core/js/h5p-action-bar.js',
+                        '/api/v0/h5p/editor/scripts/h5p-hub-client.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor.js',
+                        '/api/v0/h5p/editor/language/en.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-semantic-structure.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-library-selector.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-form.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-text.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-html.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-number.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-textarea.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-file-uploader.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-file.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-image.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-image-popup.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-av.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-group.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-boolean.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-list.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-list-editor.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-library.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-library-list-cache.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-select.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-selector-hub.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-selector-legacy.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-dimensions.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-coordinates.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-none.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-metadata.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-metadata-author-widget.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-metadata-changelog-widget.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-pre-save.js',
+                        '/api/v0/h5p/editor/ckeditor/ckeditor.js'
+                    ]
                 },
-                editor: {
-                    assets: {
-                        css: [
-                            '/api/v0/h5p/core/styles/h5p.css',
-                            '/api/v0/h5p/core/styles/h5p-confirmation-dialog.css',
-                            '/api/v0/h5p/core/styles/h5p-core-button.css',
-                            '/api/v0/h5p/editor/libs/darkroom.css',
-                            '/api/v0/h5p/editor/styles/css/h5p-hub-client.css',
-                            '/api/v0/h5p/editor/styles/css/fonts.css',
-                            '/api/v0/h5p/editor/styles/css/application.css',
-                            '/api/v0/h5p/editor/styles/css/libs/zebra_datepicker.min.css'
-                        ],
-                        js: [
-                            '/api/v0/h5p/core/js/jquery.js',
-                            '/api/v0/h5p/core/js/h5p.js',
-                            '/api/v0/h5p/core/js/h5p-event-dispatcher.js',
-                            '/api/v0/h5p/core/js/h5p-x-api-event.js',
-                            '/api/v0/h5p/core/js/h5p-x-api.js',
-                            '/api/v0/h5p/core/js/h5p-content-type.js',
-                            '/api/v0/h5p/core/js/h5p-confirmation-dialog.js',
-                            '/api/v0/h5p/core/js/h5p-action-bar.js',
-                            '/api/v0/h5p/editor/scripts/h5p-hub-client.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor.js',
-                            '/api/v0/h5p/editor/language/en.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-semantic-structure.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-library-selector.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-form.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-text.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-html.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-number.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-textarea.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-file-uploader.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-file.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-image.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-image-popup.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-av.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-group.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-boolean.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-list.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-list-editor.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-library.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-library-list-cache.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-select.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-selector-hub.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-selector-legacy.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-dimensions.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-coordinates.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-none.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-metadata.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-metadata-author-widget.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-metadata-changelog-widget.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-pre-save.js',
-                            '/api/v0/h5p/editor/ckeditor/ckeditor.js'
-                        ]
-                    },
-                    filesPath: '/api/v0/h5p/content',
-                    fileIcon: {
-                        path:
-                            'http://lumi.education/api/v0/h5p/editor/images/binary-file.png',
-                        width: 50,
-                        height: 50
-                    },
-                    ajaxPath: '/api/v0/h5p/ajax?action=',
-                    libraryUrl: '/api/v0/h5p/editor/',
-                    copyrightSemantics: {
-                        name: 'copyright',
-                        type: 'group',
-                        label: 'Copyright information',
-                        fields: [
-                            {
-                                name: 'title',
-                                type: 'text',
-                                label: 'Title',
-                                placeholder: 'La Gioconda',
-                                optional: true
-                            },
-                            {
-                                name: 'author',
-                                type: 'text',
-                                label: 'Author',
-                                placeholder: 'Leonardo da Vinci',
-                                optional: true
-                            },
-                            {
-                                name: 'year',
-                                type: 'text',
-                                label: 'Year(s)',
-                                placeholder: '1503 - 1517',
-                                optional: true
-                            },
-                            {
-                                name: 'source',
-                                type: 'text',
-                                label: 'Source',
-                                placeholder:
-                                    'http://en.wikipedia.org/wiki/Mona_Lisa',
-                                optional: true,
-                                regexp: {
-                                    pattern: '^http[s]?://.+',
-                                    modifiers: 'i'
+                filesPath: '/api/v0/h5p/content',
+                fileIcon: {
+                    path:
+                        'http://lumi.education/api/v0/h5p/editor/images/binary-file.png',
+                    width: 50,
+                    height: 50
+                },
+                ajaxPath: '/api/v0/h5p/ajax?action=',
+                libraryUrl: '/api/v0/h5p/editor/',
+                copyrightSemantics: {
+                    name: 'copyright',
+                    type: 'group',
+                    label: 'Copyright information',
+                    fields: [
+                        {
+                            name: 'title',
+                            type: 'text',
+                            label: 'Title',
+                            placeholder: 'La Gioconda',
+                            optional: true
+                        },
+                        {
+                            name: 'author',
+                            type: 'text',
+                            label: 'Author',
+                            placeholder: 'Leonardo da Vinci',
+                            optional: true
+                        },
+                        {
+                            name: 'year',
+                            type: 'text',
+                            label: 'Year(s)',
+                            placeholder: '1503 - 1517',
+                            optional: true
+                        },
+                        {
+                            name: 'source',
+                            type: 'text',
+                            label: 'Source',
+                            placeholder:
+                                'http://en.wikipedia.org/wiki/Mona_Lisa',
+                            optional: true,
+                            regexp: {
+                                pattern: '^http[s]?://.+',
+                                modifiers: 'i'
+                            }
+                        },
+                        {
+                            name: 'license',
+                            type: 'select',
+                            label: 'License',
+                            default: 'U',
+                            options: [
+                                {
+                                    value: 'U',
+                                    label: 'Undisclosed'
+                                },
+                                {
+                                    value: 'CC BY',
+                                    label: 'Attribution',
+                                    versions: [
+                                        {
+                                            value: '4.0',
+                                            label: '4.0 International'
+                                        },
+                                        {
+                                            value: '3.0',
+                                            label: '3.0 Unported'
+                                        },
+                                        {
+                                            value: '2.5',
+                                            label: '2.5 Generic'
+                                        },
+                                        {
+                                            value: '2.0',
+                                            label: '2.0 Generic'
+                                        },
+                                        {
+                                            value: '1.0',
+                                            label: '1.0 Generic'
+                                        }
+                                    ]
+                                },
+                                {
+                                    value: 'CC BY-SA',
+                                    label: 'Attribution-ShareAlike',
+                                    versions: [
+                                        {
+                                            value: '4.0',
+                                            label: '4.0 International'
+                                        },
+                                        {
+                                            value: '3.0',
+                                            label: '3.0 Unported'
+                                        },
+                                        {
+                                            value: '2.5',
+                                            label: '2.5 Generic'
+                                        },
+                                        {
+                                            value: '2.0',
+                                            label: '2.0 Generic'
+                                        },
+                                        {
+                                            value: '1.0',
+                                            label: '1.0 Generic'
+                                        }
+                                    ]
+                                },
+                                {
+                                    value: 'CC BY-ND',
+                                    label: 'Attribution-NoDerivs',
+                                    versions: [
+                                        {
+                                            value: '4.0',
+                                            label: '4.0 International'
+                                        },
+                                        {
+                                            value: '3.0',
+                                            label: '3.0 Unported'
+                                        },
+                                        {
+                                            value: '2.5',
+                                            label: '2.5 Generic'
+                                        },
+                                        {
+                                            value: '2.0',
+                                            label: '2.0 Generic'
+                                        },
+                                        {
+                                            value: '1.0',
+                                            label: '1.0 Generic'
+                                        }
+                                    ]
+                                },
+                                {
+                                    value: 'CC BY-NC',
+                                    label: 'Attribution-NonCommercial',
+                                    versions: [
+                                        {
+                                            value: '4.0',
+                                            label: '4.0 International'
+                                        },
+                                        {
+                                            value: '3.0',
+                                            label: '3.0 Unported'
+                                        },
+                                        {
+                                            value: '2.5',
+                                            label: '2.5 Generic'
+                                        },
+                                        {
+                                            value: '2.0',
+                                            label: '2.0 Generic'
+                                        },
+                                        {
+                                            value: '1.0',
+                                            label: '1.0 Generic'
+                                        }
+                                    ]
+                                },
+                                {
+                                    value: 'CC BY-NC-SA',
+                                    label:
+                                        'Attribution-NonCommercial-ShareAlike',
+                                    versions: [
+                                        {
+                                            value: '4.0',
+                                            label: '4.0 International'
+                                        },
+                                        {
+                                            value: '3.0',
+                                            label: '3.0 Unported'
+                                        },
+                                        {
+                                            value: '2.5',
+                                            label: '2.5 Generic'
+                                        },
+                                        {
+                                            value: '2.0',
+                                            label: '2.0 Generic'
+                                        },
+                                        {
+                                            value: '1.0',
+                                            label: '1.0 Generic'
+                                        }
+                                    ]
+                                },
+                                {
+                                    value: 'CC BY-NC-ND',
+                                    label:
+                                        'Attribution-NonCommercial-NoDerivs',
+                                    versions: [
+                                        {
+                                            value: '4.0',
+                                            label: '4.0 International'
+                                        },
+                                        {
+                                            value: '3.0',
+                                            label: '3.0 Unported'
+                                        },
+                                        {
+                                            value: '2.5',
+                                            label: '2.5 Generic'
+                                        },
+                                        {
+                                            value: '2.0',
+                                            label: '2.0 Generic'
+                                        },
+                                        {
+                                            value: '1.0',
+                                            label: '1.0 Generic'
+                                        }
+                                    ]
+                                },
+                                {
+                                    value: 'GNU GPL',
+                                    label: 'General Public License',
+                                    versions: [
+                                        {
+                                            value: 'v3',
+                                            label: 'Version 3'
+                                        },
+                                        {
+                                            value: 'v2',
+                                            label: 'Version 2'
+                                        },
+                                        {
+                                            value: 'v1',
+                                            label: 'Version 1'
+                                        }
+                                    ]
+                                },
+                                {
+                                    value: 'PD',
+                                    label: 'Public Domain',
+                                    versions: [
+                                        {
+                                            value: '-',
+                                            label: '-'
+                                        },
+                                        {
+                                            value: 'CC0 1.0',
+                                            label: 'CC0 1.0 Universal'
+                                        },
+                                        {
+                                            value: 'CC PDM',
+                                            label: 'Public Domain Mark'
+                                        }
+                                    ]
+                                },
+                                {
+                                    value: 'C',
+                                    label: 'Copyright'
                                 }
+                            ]
+                        },
+                        {
+                            name: 'version',
+                            type: 'select',
+                            label: 'License Version',
+                            options: []
+                        }
+                    ]
+                },
+                metadataSemantics: [
+                    {
+                        name: 'title',
+                        type: 'text',
+                        label: 'Title',
+                        placeholder: 'La Gioconda'
+                    },
+                    {
+                        name: 'license',
+                        type: 'select',
+                        label: 'License',
+                        default: 'U',
+                        options: [
+                            {
+                                value: 'U',
+                                label: 'Undisclosed'
                             },
                             {
-                                name: 'license',
-                                type: 'select',
-                                label: 'License',
-                                default: 'U',
+                                type: 'optgroup',
+                                label: 'Creative Commons',
                                 options: [
                                     {
-                                        value: 'U',
-                                        label: 'Undisclosed'
-                                    },
-                                    {
                                         value: 'CC BY',
-                                        label: 'Attribution',
+                                        label: 'Attribution (CC BY)',
                                         versions: [
                                             {
                                                 value: '4.0',
@@ -244,7 +468,8 @@
                                     },
                                     {
                                         value: 'CC BY-SA',
-                                        label: 'Attribution-ShareAlike',
+                                        label:
+                                            'Attribution-ShareAlike (CC BY-SA)',
                                         versions: [
                                             {
                                                 value: '4.0',
@@ -270,7 +495,8 @@
                                     },
                                     {
                                         value: 'CC BY-ND',
-                                        label: 'Attribution-NoDerivs',
+                                        label:
+                                            'Attribution-NoDerivs (CC BY-ND)',
                                         versions: [
                                             {
                                                 value: '4.0',
@@ -296,7 +522,8 @@
                                     },
                                     {
                                         value: 'CC BY-NC',
-                                        label: 'Attribution-NonCommercial',
+                                        label:
+                                            'Attribution-NonCommercial (CC BY-NC)',
                                         versions: [
                                             {
                                                 value: '4.0',
@@ -323,7 +550,7 @@
                                     {
                                         value: 'CC BY-NC-SA',
                                         label:
-                                            'Attribution-NonCommercial-ShareAlike',
+                                            'Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)',
                                         versions: [
                                             {
                                                 value: '4.0',
@@ -350,7 +577,7 @@
                                     {
                                         value: 'CC BY-NC-ND',
                                         label:
-                                            'Attribution-NonCommercial-NoDerivs',
+                                            'Attribution-NonCommercial-NoDerivs (CC BY-NC-ND)',
                                         versions: [
                                             {
                                                 value: '4.0',
@@ -375,526 +602,302 @@
                                         ]
                                     },
                                     {
-                                        value: 'GNU GPL',
-                                        label: 'General Public License',
-                                        versions: [
-                                            {
-                                                value: 'v3',
-                                                label: 'Version 3'
-                                            },
-                                            {
-                                                value: 'v2',
-                                                label: 'Version 2'
-                                            },
-                                            {
-                                                value: 'v1',
-                                                label: 'Version 1'
-                                            }
-                                        ]
+                                        value: 'CC0 1.0',
+                                        label:
+                                            'Public Domain Dedication (CC0)'
                                     },
                                     {
-                                        value: 'PD',
-                                        label: 'Public Domain',
-                                        versions: [
-                                            {
-                                                value: '-',
-                                                label: '-'
-                                            },
-                                            {
-                                                value: 'CC0 1.0',
-                                                label: 'CC0 1.0 Universal'
-                                            },
-                                            {
-                                                value: 'CC PDM',
-                                                label: 'Public Domain Mark'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        value: 'C',
-                                        label: 'Copyright'
+                                        value: 'CC PDM',
+                                        label: 'Public Domain Mark (PDM)'
                                     }
                                 ]
                             },
                             {
-                                name: 'version',
-                                type: 'select',
-                                label: 'License Version',
-                                options: []
+                                value: 'GNU GPL',
+                                label: 'General Public License v3'
+                            },
+                            {
+                                value: 'PD',
+                                label: 'Public Domain'
+                            },
+                            {
+                                value: 'ODC PDDL',
+                                label:
+                                    'Public Domain Dedication and Licence'
+                            },
+                            {
+                                value: 'C',
+                                label: 'Copyright'
                             }
                         ]
                     },
-                    metadataSemantics: [
-                        {
-                            name: 'title',
-                            type: 'text',
-                            label: 'Title',
-                            placeholder: 'La Gioconda'
-                        },
-                        {
-                            name: 'license',
-                            type: 'select',
-                            label: 'License',
-                            default: 'U',
-                            options: [
+                    {
+                        name: 'licenseVersion',
+                        type: 'select',
+                        label: 'License Version',
+                        options: [
+                            {
+                                value: '4.0',
+                                label: '4.0 International'
+                            },
+                            {
+                                value: '3.0',
+                                label: '3.0 Unported'
+                            },
+                            {
+                                value: '2.5',
+                                label: '2.5 Generic'
+                            },
+                            {
+                                value: '2.0',
+                                label: '2.0 Generic'
+                            },
+                            {
+                                value: '1.0',
+                                label: '1.0 Generic'
+                            }
+                        ],
+                        optional: true
+                    },
+                    {
+                        name: 'yearFrom',
+                        type: 'number',
+                        label: 'Years (from)',
+                        placeholder: '1991',
+                        min: '-9999',
+                        max: '9999',
+                        optional: true
+                    },
+                    {
+                        name: 'yearTo',
+                        type: 'number',
+                        label: 'Years (to)',
+                        placeholder: '1992',
+                        min: '-9999',
+                        max: '9999',
+                        optional: true
+                    },
+                    {
+                        name: 'source',
+                        type: 'text',
+                        label: 'Source',
+                        placeholder: 'https://',
+                        optional: true
+                    },
+                    {
+                        name: 'authors',
+                        type: 'list',
+                        field: {
+                            name: 'author',
+                            type: 'group',
+                            fields: [
                                 {
-                                    value: 'U',
-                                    label: 'Undisclosed'
+                                    label: "Author's name",
+                                    name: 'name',
+                                    optional: true,
+                                    type: 'text'
                                 },
                                 {
-                                    type: 'optgroup',
-                                    label: 'Creative Commons',
+                                    name: 'role',
+                                    type: 'select',
+                                    label: "Author's role",
+                                    default: 'Author',
                                     options: [
                                         {
-                                            value: 'CC BY',
-                                            label: 'Attribution (CC BY)',
-                                            versions: [
-                                                {
-                                                    value: '4.0',
-                                                    label: '4.0 International'
-                                                },
-                                                {
-                                                    value: '3.0',
-                                                    label: '3.0 Unported'
-                                                },
-                                                {
-                                                    value: '2.5',
-                                                    label: '2.5 Generic'
-                                                },
-                                                {
-                                                    value: '2.0',
-                                                    label: '2.0 Generic'
-                                                },
-                                                {
-                                                    value: '1.0',
-                                                    label: '1.0 Generic'
-                                                }
-                                            ]
+                                            value: 'Author',
+                                            label: 'Author'
                                         },
                                         {
-                                            value: 'CC BY-SA',
-                                            label:
-                                                'Attribution-ShareAlike (CC BY-SA)',
-                                            versions: [
-                                                {
-                                                    value: '4.0',
-                                                    label: '4.0 International'
-                                                },
-                                                {
-                                                    value: '3.0',
-                                                    label: '3.0 Unported'
-                                                },
-                                                {
-                                                    value: '2.5',
-                                                    label: '2.5 Generic'
-                                                },
-                                                {
-                                                    value: '2.0',
-                                                    label: '2.0 Generic'
-                                                },
-                                                {
-                                                    value: '1.0',
-                                                    label: '1.0 Generic'
-                                                }
-                                            ]
+                                            value: 'Editor',
+                                            label: 'Editor'
                                         },
                                         {
-                                            value: 'CC BY-ND',
-                                            label:
-                                                'Attribution-NoDerivs (CC BY-ND)',
-                                            versions: [
-                                                {
-                                                    value: '4.0',
-                                                    label: '4.0 International'
-                                                },
-                                                {
-                                                    value: '3.0',
-                                                    label: '3.0 Unported'
-                                                },
-                                                {
-                                                    value: '2.5',
-                                                    label: '2.5 Generic'
-                                                },
-                                                {
-                                                    value: '2.0',
-                                                    label: '2.0 Generic'
-                                                },
-                                                {
-                                                    value: '1.0',
-                                                    label: '1.0 Generic'
-                                                }
-                                            ]
+                                            value: 'Licensee',
+                                            label: 'Licensee'
                                         },
                                         {
-                                            value: 'CC BY-NC',
-                                            label:
-                                                'Attribution-NonCommercial (CC BY-NC)',
-                                            versions: [
-                                                {
-                                                    value: '4.0',
-                                                    label: '4.0 International'
-                                                },
-                                                {
-                                                    value: '3.0',
-                                                    label: '3.0 Unported'
-                                                },
-                                                {
-                                                    value: '2.5',
-                                                    label: '2.5 Generic'
-                                                },
-                                                {
-                                                    value: '2.0',
-                                                    label: '2.0 Generic'
-                                                },
-                                                {
-                                                    value: '1.0',
-                                                    label: '1.0 Generic'
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            value: 'CC BY-NC-SA',
-                                            label:
-                                                'Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)',
-                                            versions: [
-                                                {
-                                                    value: '4.0',
-                                                    label: '4.0 International'
-                                                },
-                                                {
-                                                    value: '3.0',
-                                                    label: '3.0 Unported'
-                                                },
-                                                {
-                                                    value: '2.5',
-                                                    label: '2.5 Generic'
-                                                },
-                                                {
-                                                    value: '2.0',
-                                                    label: '2.0 Generic'
-                                                },
-                                                {
-                                                    value: '1.0',
-                                                    label: '1.0 Generic'
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            value: 'CC BY-NC-ND',
-                                            label:
-                                                'Attribution-NonCommercial-NoDerivs (CC BY-NC-ND)',
-                                            versions: [
-                                                {
-                                                    value: '4.0',
-                                                    label: '4.0 International'
-                                                },
-                                                {
-                                                    value: '3.0',
-                                                    label: '3.0 Unported'
-                                                },
-                                                {
-                                                    value: '2.5',
-                                                    label: '2.5 Generic'
-                                                },
-                                                {
-                                                    value: '2.0',
-                                                    label: '2.0 Generic'
-                                                },
-                                                {
-                                                    value: '1.0',
-                                                    label: '1.0 Generic'
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            value: 'CC0 1.0',
-                                            label:
-                                                'Public Domain Dedication (CC0)'
-                                        },
-                                        {
-                                            value: 'CC PDM',
-                                            label: 'Public Domain Mark (PDM)'
+                                            value: 'Originator',
+                                            label: 'Originator'
                                         }
                                     ]
-                                },
-                                {
-                                    value: 'GNU GPL',
-                                    label: 'General Public License v3'
-                                },
-                                {
-                                    value: 'PD',
-                                    label: 'Public Domain'
-                                },
-                                {
-                                    value: 'ODC PDDL',
-                                    label:
-                                        'Public Domain Dedication and Licence'
-                                },
-                                {
-                                    value: 'C',
-                                    label: 'Copyright'
                                 }
                             ]
-                        },
-                        {
-                            name: 'licenseVersion',
-                            type: 'select',
-                            label: 'License Version',
-                            options: [
-                                {
-                                    value: '4.0',
-                                    label: '4.0 International'
-                                },
-                                {
-                                    value: '3.0',
-                                    label: '3.0 Unported'
-                                },
-                                {
-                                    value: '2.5',
-                                    label: '2.5 Generic'
-                                },
-                                {
-                                    value: '2.0',
-                                    label: '2.0 Generic'
-                                },
-                                {
-                                    value: '1.0',
-                                    label: '1.0 Generic'
-                                }
-                            ],
-                            optional: true
-                        },
-                        {
-                            name: 'yearFrom',
-                            type: 'number',
-                            label: 'Years (from)',
-                            placeholder: '1991',
-                            min: '-9999',
-                            max: '9999',
-                            optional: true
-                        },
-                        {
-                            name: 'yearTo',
-                            type: 'number',
-                            label: 'Years (to)',
-                            placeholder: '1992',
-                            min: '-9999',
-                            max: '9999',
-                            optional: true
-                        },
-                        {
-                            name: 'source',
-                            type: 'text',
-                            label: 'Source',
-                            placeholder: 'https://',
-                            optional: true
-                        },
-                        {
-                            name: 'authors',
-                            type: 'list',
-                            field: {
-                                name: 'author',
-                                type: 'group',
-                                fields: [
-                                    {
-                                        label: "Author's name",
-                                        name: 'name',
-                                        optional: true,
-                                        type: 'text'
-                                    },
-                                    {
-                                        name: 'role',
-                                        type: 'select',
-                                        label: "Author's role",
-                                        default: 'Author',
-                                        options: [
-                                            {
-                                                value: 'Author',
-                                                label: 'Author'
-                                            },
-                                            {
-                                                value: 'Editor',
-                                                label: 'Editor'
-                                            },
-                                            {
-                                                value: 'Licensee',
-                                                label: 'Licensee'
-                                            },
-                                            {
-                                                value: 'Originator',
-                                                label: 'Originator'
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            name: 'licenseExtras',
-                            type: 'text',
-                            widget: 'textarea',
-                            label: 'License Extras',
-                            optional: true,
-                            description:
-                                'Any additional information about the license'
-                        },
-                        {
-                            name: 'changes',
-                            type: 'list',
-                            field: {
-                                name: 'change',
-                                type: 'group',
-                                label: 'Changelog',
-                                fields: [
-                                    {
-                                        name: 'date',
-                                        type: 'text',
-                                        label: 'Date',
-                                        optional: true
-                                    },
-                                    {
-                                        name: 'author',
-                                        type: 'text',
-                                        label: 'Changed by',
-                                        optional: true
-                                    },
-                                    {
-                                        name: 'log',
-                                        type: 'text',
-                                        widget: 'textarea',
-                                        label: 'Description of change',
-                                        placeholder:
-                                            'Photo cropped, text changed, etc.',
-                                        optional: true
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            name: 'authorComments',
-                            type: 'text',
-                            widget: 'textarea',
-                            label: 'Author comments',
-                            description:
-                                'Comments for the editor of the content (This text will not be published as a part of copyright info)',
-                            optional: true
-                        },
-                        {
-                            name: 'contentType',
-                            type: 'text',
-                            widget: 'none'
                         }
-                    ],
-                    assets: {
-                        css: [
-                            '/api/v0/h5p/core/styles/h5p.css',
-                            '/api/v0/h5p/core/styles/h5p-confirmation-dialog.css',
-                            '/api/v0/h5p/core/styles/h5p-core-button.css',
-                            '/api/v0/h5p/editor/libs/darkroom.css',
-                            '/api/v0/h5p/editor/styles/css/h5p-hub-client.css',
-                            '/api/v0/h5p/editor/styles/css/fonts.css',
-                            '/api/v0/h5p/editor/styles/css/application.css',
-                            '/api/v0/h5p/editor/styles/css/libs/zebra_datepicker.min.css'
-                        ],
-                        js: [
-                            '/api/v0/h5p/core/js/jquery.js',
-                            '/api/v0/h5p/core/js/h5p.js',
-                            '/api/v0/h5p/core/js/h5p-event-dispatcher.js',
-                            '/api/v0/h5p/core/js/h5p-x-api-event.js',
-                            '/api/v0/h5p/core/js/h5p-x-api.js',
-                            '/api/v0/h5p/core/js/h5p-content-type.js',
-                            '/api/v0/h5p/core/js/h5p-confirmation-dialog.js',
-                            '/api/v0/h5p/core/js/h5p-action-bar.js',
-                            '/api/v0/h5p/editor/scripts/h5p-hub-client.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor.js',
-                            '/api/v0/h5p/editor/language/en.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-semantic-structure.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-library-selector.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-form.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-text.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-html.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-number.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-textarea.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-file-uploader.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-file.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-image.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-image-popup.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-av.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-group.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-boolean.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-list.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-list-editor.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-library.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-library-list-cache.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-select.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-selector-hub.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-selector-legacy.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-dimensions.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-coordinates.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-none.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-metadata.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-metadata-author-widget.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-metadata-changelog-widget.js',
-                            '/api/v0/h5p/editor/scripts/h5peditor-pre-save.js',
-                            '/api/v0/h5p/editor/ckeditor/ckeditor.js'
-                        ]
                     },
-                    deleteMessage:
-                        'Are you sure you wish to delete this content?',
-                    apiVersion: {
-                        majorVersion: 1,
-                        minorVersion: 24
+                    {
+                        name: 'licenseExtras',
+                        type: 'text',
+                        widget: 'textarea',
+                        label: 'License Extras',
+                        optional: true,
+                        description:
+                            'Any additional information about the license'
+                    },
+                    {
+                        name: 'changes',
+                        type: 'list',
+                        field: {
+                            name: 'change',
+                            type: 'group',
+                            label: 'Changelog',
+                            fields: [
+                                {
+                                    name: 'date',
+                                    type: 'text',
+                                    label: 'Date',
+                                    optional: true
+                                },
+                                {
+                                    name: 'author',
+                                    type: 'text',
+                                    label: 'Changed by',
+                                    optional: true
+                                },
+                                {
+                                    name: 'log',
+                                    type: 'text',
+                                    widget: 'textarea',
+                                    label: 'Description of change',
+                                    placeholder:
+                                        'Photo cropped, text changed, etc.',
+                                    optional: true
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        name: 'authorComments',
+                        type: 'text',
+                        widget: 'textarea',
+                        label: 'Author comments',
+                        description:
+                            'Comments for the editor of the content (This text will not be published as a part of copyright info)',
+                        optional: true
+                    },
+                    {
+                        name: 'contentType',
+                        type: 'text',
+                        widget: 'none'
                     }
+                ],
+                assets: {
+                    css: [
+                        '/api/v0/h5p/core/styles/h5p.css',
+                        '/api/v0/h5p/core/styles/h5p-confirmation-dialog.css',
+                        '/api/v0/h5p/core/styles/h5p-core-button.css',
+                        '/api/v0/h5p/editor/libs/darkroom.css',
+                        '/api/v0/h5p/editor/styles/css/h5p-hub-client.css',
+                        '/api/v0/h5p/editor/styles/css/fonts.css',
+                        '/api/v0/h5p/editor/styles/css/application.css',
+                        '/api/v0/h5p/editor/styles/css/libs/zebra_datepicker.min.css',
+                        '/assets/h5p/h5p-overrides.css' // the override adds custom stylesheets that apply in the editor
+                    ],
+                    js: [
+                        '/api/v0/h5p/core/js/jquery.js',
+                        '/api/v0/h5p/core/js/h5p.js',
+                        '/api/v0/h5p/core/js/h5p-event-dispatcher.js',
+                        '/api/v0/h5p/core/js/h5p-x-api-event.js',
+                        '/api/v0/h5p/core/js/h5p-x-api.js',
+                        '/api/v0/h5p/core/js/h5p-content-type.js',
+                        '/api/v0/h5p/core/js/h5p-confirmation-dialog.js',
+                        '/api/v0/h5p/core/js/h5p-action-bar.js',
+                        '/api/v0/h5p/editor/scripts/h5p-hub-client.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor.js',
+                        '/api/v0/h5p/editor/language/en.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-semantic-structure.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-library-selector.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-form.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-text.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-html.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-number.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-textarea.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-file-uploader.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-file.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-image.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-image-popup.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-av.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-group.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-boolean.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-list.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-list-editor.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-library.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-library-list-cache.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-select.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-selector-hub.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-selector-legacy.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-dimensions.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-coordinates.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-none.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-metadata.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-metadata-author-widget.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-metadata-changelog-widget.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-pre-save.js',
+                        '/api/v0/h5p/editor/ckeditor/ckeditor.js'
+                    ]
+                },
+                deleteMessage:
+                    'Are you sure you wish to delete this content?',
+                apiVersion: {
+                    majorVersion: 1,
+                    minorVersion: 24
                 }
-            };
-        </script>
+            }
+        };
+    </script>
 
-        <script src="/api/v0/h5p/core/js/jquery.js"></script>
-        <script src="/api/v0/h5p/core/js/h5p.js"></script>
-        <script src="/api/v0/h5p/core/js/h5p-version.js"></script>
-        <script src="/api/v0/h5p/core/js/h5p-event-dispatcher.js"></script>
-        <script src="/api/v0/h5p/core/js/h5p-x-api-event.js"></script>
-        <script src="/api/v0/h5p/core/js/h5p-x-api.js"></script>
-        <script src="/api/v0/h5p/core/js/h5p-content-type.js"></script>
-        <script src="/api/v0/h5p/core/js/h5p-confirmation-dialog.js"></script>
-        <script src="/api/v0/h5p/core/js/h5p-action-bar.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5p-hub-client.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-editor.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-semantic-structure.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-library-selector.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-form.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-text.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-html.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-number.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-textarea.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-file-uploader.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-file.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-image.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-image-popup.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-av.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-group.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-boolean.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-list.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-list-editor.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-library.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-library-list-cache.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-select.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-selector-hub.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-selector-legacy.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-dimensions.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-coordinates.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-none.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-metadata.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-metadata-author-widget.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-metadata-changelog-widget.js"></script>
-        <script src="/api/v0/h5p/editor/scripts/h5peditor-pre-save.js"></script>
-        <script src="/api/v0/h5p/editor/ckeditor/ckeditor.js"></script>
-    </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
-        <!--
+    <script src="/api/v0/h5p/core/js/jquery.js"></script>
+    <script src="/api/v0/h5p/core/js/h5p.js"></script>
+    <script src="/api/v0/h5p/core/js/h5p-version.js"></script>
+    <script src="/api/v0/h5p/core/js/h5p-event-dispatcher.js"></script>
+    <script src="/api/v0/h5p/core/js/h5p-x-api-event.js"></script>
+    <script src="/api/v0/h5p/core/js/h5p-x-api.js"></script>
+    <script src="/api/v0/h5p/core/js/h5p-content-type.js"></script>
+    <script src="/api/v0/h5p/core/js/h5p-confirmation-dialog.js"></script>
+    <script src="/api/v0/h5p/core/js/h5p-action-bar.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5p-hub-client.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-editor.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-semantic-structure.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-library-selector.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-form.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-text.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-html.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-number.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-textarea.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-file-uploader.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-file.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-image.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-image-popup.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-av.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-group.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-boolean.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-list.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-list-editor.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-library.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-library-list-cache.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-select.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-selector-hub.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-selector-legacy.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-dimensions.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-coordinates.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-none.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-metadata.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-metadata-author-widget.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-metadata-changelog-widget.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-pre-save.js"></script>
+    <script src="/api/v0/h5p/editor/ckeditor/ckeditor.js"></script>
+
+    <style>
+        .form-manager-fullscreen {
+            visibility: collapse !important;
+        }
+    </style>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -903,5 +906,7 @@
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
-    --></body>
+    -->
+</body>
+
 </html>
