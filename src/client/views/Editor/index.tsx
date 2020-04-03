@@ -14,6 +14,7 @@ import Root from 'components/Root';
 
 import LeftDrawer from './LeftDrawer';
 import H5P from './H5P';
+import Settings from './Settings';
 
 import { actions, IState, selectors } from '../../state';
 
@@ -91,6 +92,7 @@ export class EditorContainer extends React.Component<IProps, IComponentState> {
                             )}
                         </ErrorBoundary>
                     </Main>
+                    <Settings />
                 </Root>
             </div>
         );
