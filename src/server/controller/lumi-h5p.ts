@@ -18,6 +18,7 @@ import nucleus from 'nucleus-nodejs';
 export class H5PController {
     constructor() {
         this.h5p = h5p;
+        h5p.contentTypeCache.updateIfNecessary();
     }
 
     private h5p: H5P.H5PEditor;
