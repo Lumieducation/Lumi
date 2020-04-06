@@ -44,6 +44,9 @@ export default class Editor extends React.Component<IProps, IComponentState> {
 
         (function($) {
             H5PEditor.init = function() {
+                // disables full screen in the editor
+                ns.Editor.prototype.semiFullscreen = undefined;    
+
                 H5PEditor.$ = H5P.jQuery;
                 H5PEditor.basePath = H5PIntegration.editor.libraryUrl;
                 H5PEditor.fileIcon = H5PIntegration.editor.fileIcon;
