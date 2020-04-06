@@ -21,7 +21,7 @@ You can start the development environment on your local machine by following the
 3. Execute `npm install` from the root directory of the repository.
 4. Execute `npm start` from the root directory of the repository.
 
-This will launch the webpack-dev-server along with an instance of electron & the backend-server.
+This will launch the an instance of electron & the backend-server.
 
 ## Contributing
 
