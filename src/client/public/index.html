@@ -109,7 +109,7 @@
                         '/api/v0/h5p/editor/styles/css/h5p-hub-client.css',
                         '/api/v0/h5p/editor/styles/css/fonts.css',
                         '/api/v0/h5p/editor/styles/css/application.css',
-                        '/api/v0/h5p/editor/styles/css/libs/zebra_datepicker.min.css',
+                        '/api/v0/h5p/editor/styles/css/libs/zebra_datepicker.min.css'
                     ],
                     js: [
                         '/api/v0/h5p/core/js/jquery.js',
@@ -120,11 +120,13 @@
                         '/api/v0/h5p/core/js/h5p-content-type.js',
                         '/api/v0/h5p/core/js/h5p-confirmation-dialog.js',
                         '/api/v0/h5p/core/js/h5p-action-bar.js',
-                        '/api/v0/h5p/editor/scripts/h5p-hub-client.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-editor.js',
                         '/api/v0/h5p/editor/scripts/h5peditor.js',
                         '/api/v0/h5p/editor/language/en.js',
+                        '/api/v0/h5p/editor/scripts/h5p-hub-client.js',
                         '/api/v0/h5p/editor/scripts/h5peditor-semantic-structure.js',
                         '/api/v0/h5p/editor/scripts/h5peditor-library-selector.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-fullscreen-bar.js',
                         '/api/v0/h5p/editor/scripts/h5peditor-form.js',
                         '/api/v0/h5p/editor/scripts/h5peditor-text.js',
                         '/api/v0/h5p/editor/scripts/h5peditor-html.js',
@@ -801,11 +803,13 @@
                         '/api/v0/h5p/core/js/h5p-content-type.js',
                         '/api/v0/h5p/core/js/h5p-confirmation-dialog.js',
                         '/api/v0/h5p/core/js/h5p-action-bar.js',
-                        '/api/v0/h5p/editor/scripts/h5p-hub-client.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-editor.js',
                         '/api/v0/h5p/editor/scripts/h5peditor.js',
                         '/api/v0/h5p/editor/language/en.js',
+                        '/api/v0/h5p/editor/scripts/h5p-hub-client.js',
                         '/api/v0/h5p/editor/scripts/h5peditor-semantic-structure.js',
                         '/api/v0/h5p/editor/scripts/h5peditor-library-selector.js',
+                        '/api/v0/h5p/editor/scripts/h5peditor-fullscreen-bar.js',
                         '/api/v0/h5p/editor/scripts/h5peditor-form.js',
                         '/api/v0/h5p/editor/scripts/h5peditor-text.js',
                         '/api/v0/h5p/editor/scripts/h5peditor-html.js',
@@ -854,11 +858,13 @@
     <script src="/api/v0/h5p/core/js/h5p-content-type.js"></script>
     <script src="/api/v0/h5p/core/js/h5p-confirmation-dialog.js"></script>
     <script src="/api/v0/h5p/core/js/h5p-action-bar.js"></script>
-    <script src="/api/v0/h5p/editor/scripts/h5p-hub-client.js"></script>
     <script src="/api/v0/h5p/editor/scripts/h5peditor-editor.js"></script>
     <script src="/api/v0/h5p/editor/scripts/h5peditor.js"></script>
+    <script src="/api/v0/h5p/editor/language/en.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5p-hub-client.js"></script>
     <script src="/api/v0/h5p/editor/scripts/h5peditor-semantic-structure.js"></script>
     <script src="/api/v0/h5p/editor/scripts/h5peditor-library-selector.js"></script>
+    <script src="/api/v0/h5p/editor/scripts/h5peditor-fullscreen-bar.js"></script>
     <script src="/api/v0/h5p/editor/scripts/h5peditor-form.js"></script>
     <script src="/api/v0/h5p/editor/scripts/h5peditor-text.js"></script>
     <script src="/api/v0/h5p/editor/scripts/h5peditor-html.js"></script>
@@ -886,12 +892,6 @@
     <script src="/api/v0/h5p/editor/scripts/h5peditor-metadata-changelog-widget.js"></script>
     <script src="/api/v0/h5p/editor/scripts/h5peditor-pre-save.js"></script>
     <script src="/api/v0/h5p/editor/ckeditor/ckeditor.js"></script>
-
-    <style>
-        .form-manager-fullscreen {
-            visibility: collapse !important;
-        }
-    </style>
 </head>
 
 <body>
