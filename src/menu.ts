@@ -5,17 +5,6 @@ import websocket from './server/websocket';
 
 export default (window: electron.BrowserWindow) => [
     {
-        label: 'Menu',
-        submenu: [
-            { role: 'about' },
-            // { label: 'Check for Updates...', click: updater },
-            { type: 'separator' } as any,
-            {
-                role: 'quit'
-            } as any
-        ]
-    },
-    {
         label: 'File',
         submenu: [
             {
@@ -77,7 +66,11 @@ export default (window: electron.BrowserWindow) => [
                     });
                 },
                 label: 'Save as...'
-            }
+            },
+            { type: 'separator' } as any,
+            {
+                role: 'quit'
+            } as any
         ]
     },
     {
@@ -86,7 +79,7 @@ export default (window: electron.BrowserWindow) => [
             {
                 label: 'Undo',
                 accelerator: 'CmdOrCtrl+Z',
-                selector: 'undo:'
+                role: 'undo'
             },
             {
                 label: 'Redo',
@@ -94,7 +87,7 @@ export default (window: electron.BrowserWindow) => [
                     process.platform !== 'darwin'
                         ? 'CmdOrCtrl+Y'
                         : 'Shift+CmdOrCtrl+Z',
-                selector: 'redo:'
+                role: 'redo'
             },
             {
                 type: 'separator'
@@ -102,22 +95,22 @@ export default (window: electron.BrowserWindow) => [
             {
                 label: 'Cut',
                 accelerator: 'CmdOrCtrl+X',
-                selector: 'cut:'
+                role: 'cut'
             },
             {
                 label: 'Copy',
                 accelerator: 'CmdOrCtrl+C',
-                selector: 'copy:'
+                role: 'copy'
             },
             {
                 label: 'Paste',
                 accelerator: 'CmdOrCtrl+V',
-                selector: 'paste:'
+                role: 'paste'
             },
             {
                 label: 'Select All',
                 accelerator: 'CmdOrCtrl+A',
-                selector: 'selectAll:'
+                role: 'selectAll'
             }
         ]
     },
@@ -150,7 +143,9 @@ export default (window: electron.BrowserWindow) => [
                     );
                 },
                 label: 'Follow Us on Twitter'
-            }
+            },
+            // { label: 'Check for Updates...', click: updater },
+            { role: 'about' }
         ]
     }
 ];
