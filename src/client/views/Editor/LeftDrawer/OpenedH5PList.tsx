@@ -108,7 +108,7 @@ export class TabsContainer extends React.Component<IProps, IComponentState> {
                         </ListItem>
                     ) : null}
                     <Divider />
-                    <ListItem onClick={this.openFiles}>
+                    <ListItem onClick={this.openFiles} button={true}>
                         <ListItemAvatar>
                             <AddIcon />
                         </ListItemAvatar>
