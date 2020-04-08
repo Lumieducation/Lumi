@@ -4,17 +4,13 @@ import * as tabs from 'state/tabs/actions';
 import * as UI from 'state/ui/actions';
 
 import superagent from 'superagent';
-
 import _path from 'path';
+import upath from 'upath';
 
 import { track } from 'state/track/actions';
-
 import Tab from 'state/tabs/model';
-
 import { ContentId } from 'state/h5p/types';
-
 import { Modes } from 'state/ui/types';
-
 import { IState, selectors } from '../';
 
 export function openH5P(): any {
@@ -23,7 +19,12 @@ export function openH5P(): any {
             const files = response.body;
 
             files.forEach((file: string) => {
-                dispatch(clickOnFileInFiletree(_path.basename(file), file));
+                dispatch(
+                    clickOnFileInFiletree(
+                        _path.basename(upath.normalize(file)),
+                        file
+                    )
+                );
             });
         });
 
@@ -182,6 +183,9 @@ export function clickOnSaveButton(
         dispatch(
             tabs.updateTab(tabId, {
                 mainLibrary: library.split(' ')[0],
+                name: _path.basename(
+                    upath.normalize(exportAction.payload.path)
+                ),
                 path: exportAction.payload.path,
                 state: 'savingSuccess'
             })

@@ -12,6 +12,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import H5PAvatar from 'components/H5PAvatar';
 
@@ -76,29 +77,42 @@ export class TabsContainer extends React.Component<IProps, IComponentState> {
                                         : '#FFFFFF'
                             }}
                         >
-                            <ListItem onClick={() => this.selectTab(index)}>
-                                <ListItemAvatar>
-                                    <H5PAvatar mainLibrary={tab.mainLibrary} />
-                                </ListItemAvatar>
-                                <ListItemText
-                                    primary={tab.name}
-                                    secondary={tab.mainLibrary}
-                                    // secondary={tab.path}
-                                />
-                                <ListItemSecondaryAction>
-                                    <IconButton
-                                        edge="end"
-                                        onClick={() =>
-                                            this.closeTab(index, tab.id)
-                                        }
-                                    >
-                                        <CloseIcon />
-                                    </IconButton>
-                                </ListItemSecondaryAction>
-                            </ListItem>
+                            <Tooltip title={tab.path || ''} enterDelay={1000}>
+                                <ListItem
+                                    onClick={() => this.selectTab(index)}
+                                    button={true}
+                                >
+                                    <ListItemAvatar>
+                                        <H5PAvatar
+                                            mainLibrary={tab.mainLibrary}
+                                        />
+                                    </ListItemAvatar>
+                                    <ListItemText
+                                        primary={tab.name}
+                                        secondary={tab.mainLibrary}
+                                        style={{
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis'
+                                        }}
+                                        primaryTypographyProps={{
+                                            noWrap: true
+                                        }}
+                                    />
+                                    <ListItemSecondaryAction>
+                                        <IconButton
+                                            edge="end"
+                                            onClick={() =>
+                                                this.closeTab(index, tab.id)
+                                            }
+                                        >
+                                            <CloseIcon />
+                                        </IconButton>
+                                    </ListItemSecondaryAction>
+                                </ListItem>
+                            </Tooltip>
                             {tab.loadingIndicator ? <LinearProgress /> : null}
                             {index !== tabs.length - 1 ? (
-                                <Divider variant="inset" component="li" />
+                                <Divider component="li" />
                             ) : null}
                         </div>
                     ))}
