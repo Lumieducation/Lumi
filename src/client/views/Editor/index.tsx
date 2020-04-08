@@ -13,7 +13,7 @@ import Main from 'components/Main';
 import Root from 'components/Root';
 
 import LeftDrawer from './LeftDrawer';
-import Tab from './Tab';
+import H5P from './H5P';
 
 import { actions, IState, selectors } from '../../state';
 
@@ -94,7 +94,7 @@ export class EditorContainer extends React.Component<IProps, IComponentState> {
                             ) : (
                                 <div>
                                     {/* <Tabs /> */}
-                                    <Tab key={activeTab.id} />
+                                    <H5P key={activeTab.id} />
                                 </div>
                             )}
                         </ErrorBoundary>

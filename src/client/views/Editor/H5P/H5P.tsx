@@ -1,9 +1,9 @@
 // tslint:disable
 import * as React from 'react';
 
-import Logger from '../../helpers/Logger';
+import Logger from 'client/helpers/Logger';
 
-import H5PView from './H5PView';
+import H5PView from 'client/views/components/H5PView';
 
 import { Modes } from 'state/ui/types';
 
@@ -44,6 +44,9 @@ export default class Editor extends React.Component<IProps, IComponentState> {
 
         (function($) {
             H5PEditor.init = function() {
+                // disables full screen in the editor
+                ns.Editor.prototype.semiFullscreen = undefined;    
+
                 H5PEditor.$ = H5P.jQuery;
                 H5PEditor.basePath = H5PIntegration.editor.libraryUrl;
                 H5PEditor.fileIcon = H5PIntegration.editor.fileIcon;
@@ -89,6 +92,8 @@ export default class Editor extends React.Component<IProps, IComponentState> {
                         );
                     }
                 });
+
+                H5P.jQuery('.tab-button').hide();
             };
 
             H5PEditor.getAjaxUrl = function(action: any, parameters: any) {

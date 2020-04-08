@@ -87,6 +87,11 @@ function createMainWindow(): electron.BrowserWindow {
         });
     });
 
+    window.webContents.on('will-navigate', (e, url) => {
+        e.preventDefault();
+        require('electron').shell.openExternal(url);
+    });
+
     return window;
 }
 
