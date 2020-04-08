@@ -5,17 +5,6 @@ import websocket from './server/websocket';
 
 export default (window: electron.BrowserWindow) => [
     {
-        label: 'Menu',
-        submenu: [
-            { role: 'about' },
-            // { label: 'Check for Updates...', click: updater },
-            { type: 'separator' } as any,
-            {
-                role: 'quit'
-            } as any
-        ]
-    },
-    {
         label: 'File',
         submenu: [
             {
@@ -77,6 +66,51 @@ export default (window: electron.BrowserWindow) => [
                     });
                 },
                 label: 'Save as...'
+            },
+            { type: 'separator' } as any,
+            {
+                role: 'quit'
+            } as any
+        ]
+    },
+    {
+        label: 'Edit',
+        submenu: [
+            {
+                label: 'Undo',
+                accelerator: 'CmdOrCtrl+Z',
+                role: 'undo'
+            },
+            {
+                label: 'Redo',
+                accelerator:
+                    process.platform !== 'darwin'
+                        ? 'CmdOrCtrl+Y'
+                        : 'Shift+CmdOrCtrl+Z',
+                role: 'redo'
+            },
+            {
+                type: 'separator'
+            },
+            {
+                label: 'Cut',
+                accelerator: 'CmdOrCtrl+X',
+                role: 'cut'
+            },
+            {
+                label: 'Copy',
+                accelerator: 'CmdOrCtrl+C',
+                role: 'copy'
+            },
+            {
+                label: 'Paste',
+                accelerator: 'CmdOrCtrl+V',
+                role: 'paste'
+            },
+            {
+                label: 'Select All',
+                accelerator: 'CmdOrCtrl+A',
+                role: 'selectAll'
             }
         ]
     },
@@ -109,7 +143,9 @@ export default (window: electron.BrowserWindow) => [
                     );
                 },
                 label: 'Follow Us on Twitter'
-            }
+            },
+            // { label: 'Check for Updates...', click: updater },
+            { role: 'about' }
         ]
     }
 ];
