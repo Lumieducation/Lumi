@@ -139,7 +139,7 @@ export class H5PController {
         if (id) {
             const contentPath = _path.join(config.workingCachePath, `${id}`);
 
-            if (!(await fs.exists(contentPath))) {
+            if (!(await fs.pathExists(contentPath))) {
                 throw new LumiError(
                     'h5p-not-found',
                     'contentId not found',
