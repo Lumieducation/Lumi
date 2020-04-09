@@ -19,7 +19,8 @@ You can start the development environment on your local machine by following the
 1. Make sure you have [`git`](https://git-scm.com/), [`node`](https://nodejs.org/), and [`npm`](https://www.npmjs.com/get-npm) installed.
 2. Clone this repository locally.
 3. Execute `npm install` from the root directory of the repository.
-4. Execute `npm start` from the root directory of the repository.
+4. Execute `npm run client` from the root directory of the repository.
+5. Open a second termilnal and execute `npm run server` from the root directory of the repository.
 
 This will launch the an instance of electron & the backend-server.
 
