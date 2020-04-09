@@ -23,7 +23,7 @@ jobs:
               run: npm ci
             - name: Build macOS
               run: npm run build:mac:dev
-              with:
+              env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             - run: rm -rf dist/mac/
             - name: Upload macOS artifacts
@@ -34,7 +34,7 @@ jobs:
             - run: rm -rf dist/
             - name: Build Windows
               run: npm run build:win
-              with:
+              env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             - run: rm -rf dist/win-unpacked
             - name: Upload Windows artifacts
