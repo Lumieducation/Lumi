@@ -57,6 +57,8 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 function createMainWindow(): electron.BrowserWindow {
     const window = new BrowserWindow({
         height: 800,
+        minHeight: 600,
+        minWidth: 500,
         width: 1000
     });
 
