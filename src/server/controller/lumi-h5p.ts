@@ -43,8 +43,14 @@ export class H5PController {
         let path = pathArg;
 
         if (!path) {
-            path = await dialog.showSaveDialogSync({
+            path = dialog.showSaveDialogSync({
                 defaultPath: '.h5p',
+                filters: [
+                    {
+                        extensions: ['h5p'],
+                        name: 'HTML 5 Package'
+                    }
+                ],
                 title: 'Save H5P'
             });
         }
