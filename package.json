@@ -1,6 +1,8 @@
 {
     "name": "lumi",
     "version": "0.2.4",
+    "description": "A tool to create and display interactive content with H5P",
+    "author": "J.P. Schellenberg",
     "main": "build/main.js",
     "dependencies": {
         "@sentry/electron": "1.2.1",
@@ -41,6 +43,7 @@
         "update:api": "node scripts/api.js && npm run format",
         "publish:mac": "npx --no-install electron-builder --mac --publish always",
         "publish:win": "npx --no-install electron-builder --win --publish always",
+        "publish:linux": "npx --no-install electron-builder --linux --publish always",
         "postinstall": "sh scripts/install.sh 1.24 && sh scripts/install.sh 1.24.1",
         "start": "node scripts/start.js",
         "test": "jest",
@@ -299,6 +302,13 @@
         "afterSign": "scripts/notarize.js",
         "win": {
             "icon": "electron/assets/lumi.png"
+        },
+        "linux": {
+            "category": "Utility",
+            "target": [
+              "AppImage",
+              "snap"
+            ]
         },
         "dmg": {
             "sign": false
