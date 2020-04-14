@@ -1,9 +1,8 @@
 name: Release
 
 on:
-    push:
-        branches:
-            - master
+    schedule:
+        - cron: '0 5 * * 1'
 jobs:
     release:
         runs-on: macos-latest
