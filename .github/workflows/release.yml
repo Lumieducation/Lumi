@@ -42,6 +42,7 @@ jobs:
                   CI: true
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     release-linux:
+        needs: release
         runs-on: ubuntu-latest
        
         strategy:
