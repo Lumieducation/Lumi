@@ -6,7 +6,7 @@ on:
             - master
 jobs:
     release:
-        runs-on: macOS-latest
+        runs-on: macos-latest
 
         strategy:
             matrix:
@@ -42,6 +42,29 @@ jobs:
               env:
                   CI: true
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    release-linux:
+        runs-on: ubuntu-latest
+       
+        strategy:
+            matrix:
+                node-version: [10.x]
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: install
+              run: npm ci
+            - name: Release
+              run: npm run semantic-release || true
+              env:
+                  CI: true
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - name: Build
+              run: npm run build
             - name: Install Snapcraft
               uses: samuelmeuli/action-snapcraft@v1
               with:
