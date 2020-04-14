@@ -45,7 +45,7 @@ export default class Editor extends React.Component<IProps, IComponentState> {
         (function($) {
             H5PEditor.init = function() {
                 // disables full screen in the editor
-                ns.Editor.prototype.semiFullscreen = undefined;    
+                ns.Editor.prototype.semiFullscreen = undefined;
 
                 H5PEditor.$ = H5P.jQuery;
                 H5PEditor.basePath = H5PIntegration.editor.libraryUrl;
@@ -113,6 +113,16 @@ export default class Editor extends React.Component<IProps, IComponentState> {
 
             $(document).ready(H5PEditor.init);
         })(H5P.jQuery);
+    }
+
+    public componentDidUpdate(prevProps: IProps) {
+        // We trigger a resize event on the iframe if the editor is shown to make sure the contents are fully displayed
+        if (
+            prevProps.mode !== this.props.mode &&
+            this.props.mode === Modes.edit
+        ) {
+            H5P?.jQuery('.h5p-editor-iframe')?.resize();
+        }
     }
 
     public render(): JSX.Element {
