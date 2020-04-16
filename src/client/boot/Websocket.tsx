@@ -94,6 +94,13 @@ export class WebsocketContainer extends React.Component<
                             action.payload.type
                         )
                     );
+                    break;
+
+                default:
+                    dispatch({
+                        payload: action.payload,
+                        type: action.type
+                    });
             }
         });
     }

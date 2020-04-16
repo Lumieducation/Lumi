@@ -6,6 +6,7 @@ import * as Core from './editor';
 import * as Notifications from 'state/notifications';
 import * as Tabs from 'state/tabs';
 import * as UI from 'state/ui';
+import * as Updates from 'state/updates';
 
 // state - reducer
 const rootReducer = (history: any) =>
@@ -13,6 +14,7 @@ const rootReducer = (history: any) =>
         notifications: Notifications.reducer,
         tabs: Tabs.reducer,
         ui: UI.reducer,
+        updates: Updates.reducer,
         // tslint:disable-next-line: object-literal-sort-keys
         router: connectRouter(history)
     });
@@ -29,6 +31,7 @@ export interface IState {
     };
     tabs: Tabs.types.ITabState;
     ui: UI.types.IUIState;
+    updates: Updates.types.IState;
 }
 
 export const actions = {

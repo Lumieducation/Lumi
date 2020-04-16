@@ -54,7 +54,7 @@ let port: number;
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
-function createMainWindow(): electron.BrowserWindow {
+async function createMainWindow(): Promise<electron.BrowserWindow> {
     const window = new BrowserWindow({
         height: 800,
         minHeight: 600,
@@ -114,8 +114,6 @@ app.on('activate', () => {
 
 // create main BrowserWindow when electron is ready
 app.on('ready', async () => {
-    update(app);
-
     log.info('app is ready');
 
     const server = await boot();
@@ -126,7 +124,10 @@ app.on('ready', async () => {
 
     log.info(`port is ${port}`);
 
-    mainWindow = createMainWindow();
-
+    mainWindow = await createMainWindow();
     log.info('window created');
+
+    setTimeout(() => {
+        update(app);
+    }, 5000);
 });
