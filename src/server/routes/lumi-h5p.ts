@@ -45,7 +45,9 @@ export default function(): express.Router {
             next: express.NextFunction
         ) => {
             controller
-                .export(req.query.contentId, req.query.path)
+                // the casts assume we don't get arrays of complex objects from
+                // the client
+                .export(req.query.contentId as string, req.query.path as string)
                 .then(result => {
                     res.status(200).json(result);
                 })
@@ -79,7 +81,9 @@ export default function(): express.Router {
         ) => {
             const { contentId } = req.query;
             controller
-                .delete(contentId)
+                // the cast assumes we don't get arrays of complex objects from
+                // the client
+                .delete(contentId as string)
                 .then(result => {
                     res.status(200).json(result);
                 })

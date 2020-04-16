@@ -3,10 +3,11 @@ name: Release
 on:
     push:
         branches:
-            - release
+          - master
+ 
 jobs:
     release:
-        runs-on: macOS-latest
+        runs-on: macos-latest
 
         strategy:
             matrix:
@@ -39,6 +40,39 @@ jobs:
                   APPLEIDPASSWORD: ${{ secrets.apple_id_password }}
             - name: Publish Windows
               run: npm run publish:win
+              env:
+                  CI: true
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    release-linux:
+        needs: release
+        runs-on: ubuntu-latest
+       
+        strategy:
+            matrix:
+                node-version: [10.x]
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: install
+              run: npm ci
+            - name: Release
+              run: npm run semantic-release || true
+              env:
+                  CI: true
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - name: Build
+              run: npm run build
+            - name: Install Snapcraft
+              uses: samuelmeuli/action-snapcraft@v1
+              with:
+                snapcraft_token: ${{ secrets.snapcraft_token }}
+            - name: Publish Linux
+              run: npm run publish:linux
               env:
                   CI: true
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

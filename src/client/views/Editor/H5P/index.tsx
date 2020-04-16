@@ -105,24 +105,20 @@ export class H5PContainer extends React.Component<IProps, IComponentState> {
                     <ModeTab mode={mode} changeMode={this.changeMode} />
                 ) : null}
                 <div>
-                    <Grid container={true} spacing={2}>
-                        <Grid item={true} xs={10}>
-                            <ErrorBoundary>
-                                <ContentPaper>
-                                    <H5P
-                                        key={activeTab.contentId}
-                                        contentId={activeTab.contentId}
-                                        tabId={activeTab.id}
-                                        mode={mode}
-                                        update={(
-                                            params: any,
-                                            library: string
-                                        ) => this.update()}
-                                    />
-                                </ContentPaper>
-                            </ErrorBoundary>
-                        </Grid>
-                        <Grid item={true} xs={2} />
+                    <Grid style={{ marginRight: '72px' }}>
+                        <ErrorBoundary>
+                            <ContentPaper>
+                                <H5P
+                                    key={activeTab.contentId}
+                                    contentId={activeTab.contentId}
+                                    tabId={activeTab.id}
+                                    mode={mode}
+                                    update={(params: any, library: string) =>
+                                        this.update()
+                                    }
+                                />
+                            </ContentPaper>
+                        </ErrorBoundary>
                     </Grid>
                 </div>
                 {activeTab.state !== 'opening' ? (

@@ -6,7 +6,7 @@ import Logger from 'client/helpers/Logger';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import AppBar from 'components/AppBar';
+import AppBar from './AppBar';
 import EditorStartPage from 'components/EditorStartPage';
 import ErrorBoundary from 'components/ErrorBoundary';
 import Main from 'components/Main';
@@ -31,6 +31,7 @@ interface IStateProps extends IPassedProps {
 }
 
 interface IDispatchProps {
+    closeLeftDrawer: typeof actions.ui.closeLeftDrawer;
     createH5P: typeof actions.core.clickOnCreateH5P;
     openFiles: typeof actions.core.openH5P;
     openLeftDrawer: typeof actions.ui.openLeftDrawer;
@@ -46,9 +47,15 @@ export class EditorContainer extends React.Component<IProps, IComponentState> {
 
         this.state = {};
 
+        this.closeLeftDrawer = this.closeLeftDrawer.bind(this);
+        this.createH5P = this.createH5P.bind(this);
         this.openLeftDrawer = this.openLeftDrawer.bind(this);
         this.openFiles = this.openFiles.bind(this);
-        this.createH5P = this.createH5P.bind(this);
+    }
+
+    public closeLeftDrawer(): void {
+        log.info(`closing left-drawer`);
+        this.props.closeLeftDrawer();
     }
 
     public openFiles(): void {
@@ -72,6 +79,7 @@ export class EditorContainer extends React.Component<IProps, IComponentState> {
                         <AppBar
                             leftDrawerOpen={leftDrawerOpen}
                             openLeftDrawer={this.openLeftDrawer}
+                            closeLeftDrawer={this.closeLeftDrawer}
                         />
                     </ErrorBoundary>
                     <ErrorBoundary>
@@ -114,6 +122,7 @@ function mapStateToProps(state: IState, ownProps: IPassedProps): IStateProps {
 function mapDispatchToProps(dispatch: any): IDispatchProps {
     return bindActionCreators(
         {
+            closeLeftDrawer: actions.ui.closeLeftDrawer,
             createH5P: actions.core.clickOnCreateH5P,
             openFiles: actions.core.openH5P,
             openLeftDrawer: actions.ui.openLeftDrawer

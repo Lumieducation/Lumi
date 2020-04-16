@@ -1,18 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import path from 'path';
-
 import * as Sentry from '@sentry/browser';
-
 import SocketIOClient from 'socket.io-client';
+import upath from 'upath';
 
 import Logger from '../helpers/Logger';
-
 import { ITab } from 'state/tabs/types';
-
 import { actions, IState, selectors } from '../state';
-
 import Editor from '../helpers/Editor';
 
 declare var window: any;
@@ -73,7 +68,7 @@ export class WebsocketContainer extends React.Component<
                     action.payload.paths.forEach((file: any) => {
                         dispatch(
                             actions.core.clickOnFileInFiletree(
-                                path.basename(file),
+                                path.basename(upath.normalize(file)),
                                 file
                             )
                         );
