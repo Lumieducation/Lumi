@@ -9,7 +9,8 @@ import Logger from './helper/Logger';
 const log = new Logger('websocket');
 
 log.info('booting');
-const io = SocketIO(process.env.NODE_ENV === 'development' ? 3002 : server);
+const io =
+    process.env.NODE_ENV === 'development' ? SocketIO(3002) : SocketIO(server);
 
 io.on('connection', () => {
     log.info('new connection');
