@@ -1,7 +1,7 @@
 import * as selectors from '../selectors';
 
 describe('all()', () => {
-    it('returns all tabs', done => {
+    it('returns all tabs', (done) => {
         const testList = [{ test: 'data' }, { test: 'data2' }];
         const state = {
             tabs: {
@@ -13,7 +13,7 @@ describe('all()', () => {
         done();
     });
 
-    it('returns an empty array, if state is corrupt', done => {
+    it('returns an empty array, if state is corrupt', (done) => {
         const state = {
             tabs: {}
         };
@@ -22,7 +22,7 @@ describe('all()', () => {
         done();
     });
 
-    it('returns an empty array, if something goes wrong', done => {
+    it('returns an empty array, if something goes wrong', (done) => {
         const state = {};
 
         expect(selectors.all(state as any)).toEqual([]);
@@ -31,7 +31,7 @@ describe('all()', () => {
 });
 
 describe('activeTabIndex', () => {
-    it('returns the activeTabIndex', done => {
+    it('returns the activeTabIndex', (done) => {
         const activeTabIndex = 1337;
         expect(
             selectors.activeTabIndex({
@@ -43,7 +43,7 @@ describe('activeTabIndex', () => {
         done();
     });
 
-    it('returns 0 if state is corrupt', done => {
+    it('returns 0 if state is corrupt', (done) => {
         expect(
             selectors.activeTabIndex({
                 tabs: {}
@@ -52,14 +52,14 @@ describe('activeTabIndex', () => {
         done();
     });
 
-    it('returns 0 if an error is thrown', done => {
+    it('returns 0 if an error is thrown', (done) => {
         expect(selectors.activeTabIndex({} as any)).toBe(0);
         done();
     });
 });
 
 describe('activeTab', () => {
-    it('returns the activeTab', done => {
+    it('returns the activeTab', (done) => {
         const activeTabIndex = 1;
         const testList = [{ test: 'data' }, { test: 'data2' }];
 
@@ -74,7 +74,7 @@ describe('activeTab', () => {
         done();
     });
 
-    it('returns error-tab if state is corrupt', done => {
+    it('returns error-tab if state is corrupt', (done) => {
         expect(
             selectors.activeTab({
                 tabs: {}
@@ -83,14 +83,14 @@ describe('activeTab', () => {
         done();
     });
 
-    it('returns error-tab if an error is thrown', done => {
+    it('returns error-tab if an error is thrown', (done) => {
         expect(selectors.activeTab({} as any)).toEqual(selectors.errorObject);
         done();
     });
 });
 
 describe('noActiveTabs(): boolean', () => {
-    it('returns true if there are no active tabs', done => {
+    it('returns true if there are no active tabs', (done) => {
         const testList: any = [];
 
         expect(
@@ -103,7 +103,7 @@ describe('noActiveTabs(): boolean', () => {
         done();
     });
 
-    it('returns false if there are active tabs', done => {
+    it('returns false if there are active tabs', (done) => {
         const testList = [{ test: 'data' }, { test: 'data2' }];
 
         expect(

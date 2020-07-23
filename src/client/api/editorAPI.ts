@@ -198,7 +198,7 @@ export class LumiEditorAPI {
             // see superagent error handling: https://github.com/visionmedia/superagent/blob/master/docs/index.md#error-handling
             if (error) {
                 reject(error);
-                this.errorHandlers.forEach(handler => handler(error));
+                this.errorHandlers.forEach((handler) => handler(error));
             } else {
                 resolve(response);
             }
@@ -274,7 +274,7 @@ export class LumiEditorAPI {
                 ? '?' +
                   keys
                       .map(
-                          key =>
+                          (key) =>
                               key +
                               '=' +
                               encodeURIComponent(queryParameters[key])
@@ -389,7 +389,7 @@ export class LumiEditorAPI {
                 ? '?' +
                   keys
                       .map(
-                          key =>
+                          (key) =>
                               key +
                               '=' +
                               encodeURIComponent(queryParameters[key])
@@ -502,7 +502,7 @@ export class LumiEditorAPI {
                 ? '?' +
                   keys
                       .map(
-                          key =>
+                          (key) =>
                               key +
                               '=' +
                               encodeURIComponent(queryParameters[key])
@@ -618,7 +618,7 @@ export class LumiEditorAPI {
                 ? '?' +
                   keys
                       .map(
-                          key =>
+                          (key) =>
                               key +
                               '=' +
                               encodeURIComponent(queryParameters[key])
@@ -729,7 +729,7 @@ export class LumiEditorAPI {
                 ? '?' +
                   keys
                       .map(
-                          key =>
+                          (key) =>
                               key +
                               '=' +
                               encodeURIComponent(queryParameters[key])
@@ -827,7 +827,7 @@ export class LumiEditorAPI {
                 ? '?' +
                   keys
                       .map(
-                          key =>
+                          (key) =>
                               key +
                               '=' +
                               encodeURIComponent(queryParameters[key])
@@ -937,7 +937,7 @@ export class LumiEditorAPI {
                 ? '?' +
                   keys
                       .map(
-                          key =>
+                          (key) =>
                               key +
                               '=' +
                               encodeURIComponent(queryParameters[key])
@@ -1053,7 +1053,7 @@ export class LumiEditorAPI {
                 ? '?' +
                   keys
                       .map(
-                          key =>
+                          (key) =>
                               key +
                               '=' +
                               encodeURIComponent(queryParameters[key])

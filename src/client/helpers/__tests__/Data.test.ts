@@ -1,7 +1,7 @@
 import { pieReduce } from '../Data';
 
 describe('pieReduce', () => {
-    it('transforms H5P data into Rechart readable pieChart data', done => {
+    it('transforms H5P data into Rechart readable pieChart data', (done) => {
         const data = [
             {
                 contentId: 'j2BzrOIUc',

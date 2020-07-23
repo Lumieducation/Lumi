@@ -22,11 +22,11 @@ export default class H5PController {
         log.info(`loading package with contentId ${contentId}`);
         this.h5pLibrary
             .getContent(contentId)
-            .then(content => {
+            .then((content) => {
                 log.info(`sending package-data for contentId ${contentId} `);
                 res.status(200).json(content);
             })
-            .catch(error => {
+            .catch((error) => {
                 log.warn(error);
                 res.status(404).end();
             });
@@ -61,10 +61,10 @@ export default class H5PController {
             const h5p = JSON.parse(h5pObject);
             player
                 .render(contentId, content, h5p)
-                .then(h5pPage => {
+                .then((h5pPage) => {
                     res.status(200).end(h5pPage);
                 })
-                .catch(error => {
+                .catch((error) => {
                     log.error(error);
                     res.status(404).end();
                 });
