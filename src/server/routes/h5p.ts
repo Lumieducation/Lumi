@@ -10,7 +10,7 @@ import Logger from '../helper/Logger';
 
 const log = new Logger('routes:h5p');
 
-export default function(): express.Router {
+export default function (): express.Router {
     const router = express.Router();
 
     const defaultH5PController = new adapters.expressController(h5p);

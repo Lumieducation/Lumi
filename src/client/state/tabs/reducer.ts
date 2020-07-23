@@ -30,13 +30,15 @@ export default function tabReducer(
                 return {
                     ...state,
                     activeTabIndex: 0,
-                    list: state.list.filter(tab => tab.id !== action.payload.id)
+                    list: state.list.filter(
+                        (tab) => tab.id !== action.payload.id
+                    )
                 };
 
             case TABS_OPEN_TAB:
                 if (
                     state.list.some(
-                        tab => tab.path === action.payload.tab.path
+                        (tab) => tab.path === action.payload.tab.path
                     ) &&
                     action.payload.tab.path
                 ) {
@@ -44,7 +46,7 @@ export default function tabReducer(
                         ...state,
                         activeTabIndex: findIndex(
                             state.list,
-                            tab => tab.path === action.payload.tab.path
+                            (tab) => tab.path === action.payload.tab.path
                         )
                     };
                 }
@@ -57,7 +59,7 @@ export default function tabReducer(
             case TABS_RESET_SAVINGSTATE:
                 return {
                     ...state,
-                    list: state.list.map(tab =>
+                    list: state.list.map((tab) =>
                         tab.contentId === action.payload.contentId
                             ? {
                                   ...tab,
@@ -76,7 +78,7 @@ export default function tabReducer(
             case TABS_UPDATE_TAB:
                 return {
                     ...state,
-                    list: state.list.map(tab =>
+                    list: state.list.map((tab) =>
                         tab.id === action.payload.tabId
                             ? { ...tab, ...action.payload.update }
                             : tab

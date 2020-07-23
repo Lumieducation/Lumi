@@ -1,7 +1,7 @@
 import * as selectors from '../selectors';
 
 describe('notifications()', () => {
-    it('returns all notifications', done => {
+    it('returns all notifications', (done) => {
         const testList = [{ test: 'data' }, { test: 'data2' }];
         const state = {
             notifications: {

@@ -20,7 +20,7 @@ export default function boot(app: Electron.App): void {
         });
     });
 
-    app.on('will-quit', event => {
+    app.on('will-quit', (event) => {
         if (updateAvailable && !updating) {
             event.preventDefault();
 

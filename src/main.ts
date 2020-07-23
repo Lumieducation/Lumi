@@ -21,7 +21,7 @@ import boot from './server/boot';
 
 import menuTemplate from './menu';
 
-process.on('uncaughtException', error => {
+process.on('uncaughtException', (error) => {
     log.error(error);
 });
 

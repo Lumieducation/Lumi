@@ -7,7 +7,7 @@ import trackRoutes from './track';
 import Logger from '../helper/Logger';
 const log = new Logger('routes');
 
-export default function(): express.Router {
+export default function (): express.Router {
     const router = express.Router();
 
     log.info('setting up routes');

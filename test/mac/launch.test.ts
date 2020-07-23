@@ -3,7 +3,7 @@ import { Application } from 'spectron';
 
 describe('Application launch', () => {
     let app: any;
-    beforeAll(async done => {
+    beforeAll(async (done) => {
         app = new Application({
             env: {
                 USERDATA: path.join(__dirname, 'data')
@@ -24,12 +24,12 @@ describe('Application launch', () => {
         done();
     });
 
-    afterAll(async done => {
+    afterAll(async (done) => {
         await app.stop();
         done();
     });
 
-    it('shows an initial window', async done => {
+    it('shows an initial window', async (done) => {
         const count = await app.client.getWindowCount();
         expect(count).toBeGreaterThan(0);
         done();

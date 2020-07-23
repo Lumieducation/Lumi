@@ -8,7 +8,7 @@ import {
 } from '../types';
 
 describe('initialState', () => {
-    it('returns the initial state', done => {
+    it('returns the initial state', (done) => {
         const state = reducer(undefined, { type: 'init' } as any);
 
         expect(state).toEqual(initialState);
@@ -17,7 +17,7 @@ describe('initialState', () => {
 });
 
 describe('UI_CLOSE_LEFT_DRAWER', () => {
-    it('closes the left drawer', done => {
+    it('closes the left drawer', (done) => {
         const state = reducer(
             {
                 leftDrawerOpen: true
@@ -33,7 +33,7 @@ describe('UI_CLOSE_LEFT_DRAWER', () => {
 });
 
 describe('UI_OPEN_LEFT_DRAWER', () => {
-    it('opens the left-drawer', done => {
+    it('opens the left-drawer', (done) => {
         const state = reducer(
             {
                 leftDrawerOpen: false
@@ -50,7 +50,7 @@ describe('UI_OPEN_LEFT_DRAWER', () => {
 });
 
 describe('UI_CHANGE_MODE', () => {
-    it('changes the mode', done => {
+    it('changes the mode', (done) => {
         const state = reducer(
             {
                 mode: Modes.view

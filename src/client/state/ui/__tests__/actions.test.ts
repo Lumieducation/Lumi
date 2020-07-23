@@ -14,7 +14,7 @@ const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
 describe('openLeftDrawer', () => {
-    it('dispatches the correct actions-types', done => {
+    it('dispatches the correct actions-types', (done) => {
         const expectedActions = [
             {
                 type: UI_OPEN_LEFT_DRAWER
@@ -29,7 +29,7 @@ describe('openLeftDrawer', () => {
 });
 
 describe('closeLeftDrawer', () => {
-    it('dispatches the correct actions-types', done => {
+    it('dispatches the correct actions-types', (done) => {
         const expectedActions = [
             {
                 type: UI_CLOSE_LEFT_DRAWER
@@ -44,7 +44,7 @@ describe('closeLeftDrawer', () => {
 });
 
 describe('changeMode', () => {
-    it('dispatches the correct actions-types', done => {
+    it('dispatches the correct actions-types', (done) => {
         const mode = Modes.view;
         const expectedActions = [
             {

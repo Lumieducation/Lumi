@@ -14,7 +14,7 @@ const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
 describe('closeSnackbar', () => {
-    it('dispatches the correct actions-types', done => {
+    it('dispatches the correct actions-types', (done) => {
         const key = '1337';
 
         const expectedActions = [
@@ -34,7 +34,7 @@ describe('closeSnackbar', () => {
 });
 
 describe('removeSnackbar', () => {
-    it('dispatches the correct actions-types', done => {
+    it('dispatches the correct actions-types', (done) => {
         const key = '1337';
 
         const expectedActions = [

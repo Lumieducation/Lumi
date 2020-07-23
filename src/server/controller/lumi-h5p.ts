@@ -27,7 +27,7 @@ export class H5PController {
         return new Promise((resolve, reject) => {
             const contentPath = _path.join(config.workingCachePath, contentId);
 
-            rimraf(contentPath, error => {
+            rimraf(contentPath, (error) => {
                 if (error) {
                     return reject();
                 }
@@ -173,7 +173,7 @@ export class H5PController {
 
     private getUbernameFromH5pJson(h5pJson: H5P.IContentMetadata): string {
         const library = (h5pJson.preloadedDependencies || []).find(
-            dependency => dependency.machineName === h5pJson.mainLibrary
+            (dependency) => dependency.machineName === h5pJson.mainLibrary
         );
         if (!library) {
             return '';

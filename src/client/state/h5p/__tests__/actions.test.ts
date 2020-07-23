@@ -8,7 +8,7 @@ const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
 describe.skip('updateH5P', () => {
-    it('dispatches the correct actions', async done => {
+    it('dispatches the correct actions', async (done) => {
         const h5p = {
             id: undefined,
             library: 'H5P.Test 1.0',

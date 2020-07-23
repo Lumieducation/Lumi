@@ -16,7 +16,7 @@ io.on('connection', () => {
     log.info('new connection');
 });
 
-io.on('error', error => {
+io.on('error', (error) => {
     Sentry.captureException(error);
 });
 

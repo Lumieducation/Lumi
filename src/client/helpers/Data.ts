@@ -4,7 +4,7 @@ export function pieReduce(data?: any[]): any[] {
     }
     const o: any = {};
 
-    data.forEach(d => {
+    data.forEach((d) => {
         const p = d.score / d.maxScore;
 
         // tslint:disable-next-line
@@ -29,7 +29,7 @@ export function pieReduce(data?: any[]): any[] {
 }
 
 export function convert(data: any[]): any[] {
-    return data.map(d => {
+    return data.map((d) => {
         return {
             ...d,
             finished: parseInt(d.finished, 10) * 1000,
