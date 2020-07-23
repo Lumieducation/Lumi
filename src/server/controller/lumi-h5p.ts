@@ -66,8 +66,11 @@ export class H5PController {
         const stream = fs.createWriteStream(path);
 
         const packageExporter = new H5P.PackageExporter(
-            this.h5p.libraryManager,
-            this.h5p.contentManager
+            this.h5p.libraryStorage,
+            this.h5p.contentStorage,
+            {
+                exportMaxContentPathLength: 255
+            }
         );
 
         await packageExporter.createPackage(contentId, stream, new User());
