@@ -60,9 +60,7 @@
         "hooks": {
             "pre-commit": "npm run lint && npm run format:check",
             "pre-push": "npm run ci",
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-            "post-merge": "rm -rf node_modules && npm install && npm run ci",
-            "post-checkout": "rm -rf node_modules && npm install"
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
     },
     "browserslist": {
@@ -149,9 +147,9 @@
         "husky": "4.2.5",
         "identity-obj-proxy": "3.0.0",
         "is-wsl": "2.2.0",
-        "jest": "25.5.4",
+        "jest": "26.1.0",
         "jest-environment-jsdom-fourteen": "1.0.1",
-        "jest-resolve": "25.5.1",
+        "jest-resolve": "26.1.0",
         "jest-watch-typeahead": "0.6.0",
         "lodash": "4.17.19",
         "mini-css-extract-plugin": "0.9.0",
