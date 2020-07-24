@@ -3,7 +3,6 @@ import { adapters } from 'h5p-nodejs-library';
 
 import h5pConfig from '../../config/h5p-config';
 import h5pEditor from '../h5p';
-import h5pRoutes from './h5p';
 import lumiH5PRoutes from './lumi-h5p';
 import trackRoutes from './track';
 
@@ -32,8 +31,6 @@ export default function (): express.Router {
             `${__dirname}/../../../h5p/editor`
         )
     );
-
-    router.use(h5pConfig.baseUrl, h5pRoutes());
 
     router.use('/api/lumi-h5p/v1', lumiH5PRoutes());
 
