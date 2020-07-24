@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import h5pConfig from '../../../config/h5p-config';
 import Logger from '../../helpers/Logger';
 
 const log = new Logger('components:H5PView');
