@@ -1,7 +1,7 @@
 import express from 'express';
-
 import { adapters } from 'h5p-nodejs-library';
 
+import h5pConfig from '../../config/h5p-config';
 import h5pEditor from '../h5p';
 import h5pRoutes from './h5p';
 import lumiH5PRoutes from './lumi-h5p';
@@ -25,7 +25,7 @@ export default function (): express.Router {
     });
 
     router.use(
-        '/api/h5p/v1',
+        h5pConfig.baseUrl,
         adapters.express(
             h5pEditor,
             `${__dirname}/../../../h5p/core`,
@@ -33,7 +33,7 @@ export default function (): express.Router {
         )
     );
 
-    router.use('/api/h5p/v1', h5pRoutes());
+    router.use(h5pConfig.baseUrl, h5pRoutes());
 
     router.use('/api/lumi-h5p/v1', lumiH5PRoutes());
 

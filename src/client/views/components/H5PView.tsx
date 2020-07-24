@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import h5pConfig from '../../../config/h5p-config';
 import Logger from '../../helpers/Logger';
 
 const log = new Logger('components:H5PView');
@@ -23,7 +24,7 @@ export default function H5PView(props: IProps): JSX.Element {
             frameBorder={0}
             width="100%"
             height="800px"
-            src={`/api/h5p/v1/package/${contentId}/render`}
+            src={`${h5pConfig.baseUrl}/package/${contentId}/render`}
         />
     );
 }

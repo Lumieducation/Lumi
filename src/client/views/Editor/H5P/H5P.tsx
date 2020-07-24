@@ -2,10 +2,9 @@
 import * as React from 'react';
 
 import Logger from 'client/helpers/Logger';
-
 import H5PView from 'client/views/components/H5PView';
-
 import { Modes } from 'state/ui/types';
+import h5pConfig from '../../../../config/h5p-config';
 
 declare var window: any, H5PEditor: any, H5P: any, H5PIntegration: any;
 
@@ -63,10 +62,10 @@ export default class Editor extends React.Component<IProps, IComponentState> {
                 // Required styles and scripts for the editor
                 H5PEditor.assets = H5PIntegration.editor.assets;
 
-                H5PEditor.filesPath = `/api/h5p/v1/content/${self.props.contentId}`;
+                H5PEditor.filesPath = `${h5pConfig.baseUrl}${h5pConfig.contentFilesUrl}${self.props.contentId}`;
 
                 // Required for assets
-                H5PEditor.baseUrl = '/api/h5p/v1';
+                H5PEditor.baseUrl = h5pConfig.baseUrl;
 
                 if (H5PIntegration.editor.nodeVersionId !== undefined) {
                     H5PEditor.contentId = H5PIntegration.editor.nodeVersionId;
@@ -76,7 +75,7 @@ export default class Editor extends React.Component<IProps, IComponentState> {
 
                 $.ajax({
                     type: 'GET',
-                    url: '/api/h5p/v1/package/' + self.props.contentId,
+                    url: `${h5pConfig.baseUrl}/package/` + self.props.contentId,
                     success: function (res: any) {
                         window.editor[self.props.tabId] = new ns.Editor(
                             res.library,
