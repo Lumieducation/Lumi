@@ -1,12 +1,14 @@
 import express from 'express';
+import { H5PEditor } from 'h5p-nodejs-library';
 
-import lumiController from '../controllers/lumi-h5p';
+import LumiController from '../controllers/LumiController';
 import Logger from '../helpers/Logger';
 
 const log = new Logger('routes:lumi-h5p');
 
-export default function (): express.Router {
+export default function (h5pEditor: H5PEditor): express.Router {
     const router = express.Router();
+    const lumiController = new LumiController(h5pEditor);
 
     router.get(
         '/package/:contentId',

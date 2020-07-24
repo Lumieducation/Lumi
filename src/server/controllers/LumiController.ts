@@ -5,20 +5,16 @@ import nucleus from 'nucleus-nodejs';
 
 import PlayerRenderer from '../h5pImplementations/Player.renderer';
 import LumiError from '../helpers/LumiError';
-import h5p from '../h5pImplementations';
 import * as H5P from 'h5p-nodejs-library';
 import User from '../h5pImplementations/User';
 import Logger from '../helpers/Logger';
 
 const log = new Logger('controller:lumi-h5p');
 
-export class H5PController {
-    constructor() {
-        this.h5pEditor = h5p;
-        h5p.contentTypeCache.updateIfNecessary();
+export default class LumiController {
+    constructor(private h5pEditor: H5P.H5PEditor) {
+        h5pEditor.contentTypeCache.updateIfNecessary();
     }
-
-    private h5pEditor: H5P.H5PEditor;
 
     public async delete(contentId: string): Promise<void> {
         return this.h5pEditor.deleteContent(contentId, new User());
@@ -190,5 +186,3 @@ export class H5PController {
         return H5P.LibraryName.toUberName(library, { useWhitespace: true });
     }
 }
-
-export default new H5PController();
