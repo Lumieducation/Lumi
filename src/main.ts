@@ -1,14 +1,11 @@
 /* eslint-disable import/first */
 import log from 'electron-log';
-
 import * as Sentry from '@sentry/electron';
 import * as SentryNode from '@sentry/node';
+import nucleus from 'nucleus-nodejs';
+import electron from 'electron';
 
 import info from './info';
-
-import nucleus from 'nucleus-nodejs';
-
-import electron from 'electron';
 
 const app = electron.app;
 process.env.USERDATA = process.env.USERDATA || `${app.getPath('userData')}`;
@@ -17,7 +14,7 @@ import os from 'os';
 import path from 'path';
 import update from './updater';
 
-import boot from './server/boot';
+import httpServer from './server/httpServer';
 
 import menuTemplate from './menu';
 
@@ -118,7 +115,7 @@ app.on('ready', async () => {
 
     log.info('app is ready');
 
-    const server = await boot();
+    const server = await httpServer();
 
     log.info('server booted');
 

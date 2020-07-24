@@ -1,12 +1,12 @@
 import express from 'express';
 import { adapters } from 'h5p-nodejs-library';
 
-import h5pConfig from '../../config/h5p-config';
+import h5pConfig from '../../config/h5pConfig';
 import h5pEditor from '../h5pImplementations';
 import lumiH5PRoutes from './lumi-h5p';
 import trackRoutes from './track';
 
-import Logger from '../helper/Logger';
+import Logger from '../helpers/Logger';
 import User from '../h5pImplementations/User';
 const log = new Logger('routes');
 

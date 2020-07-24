@@ -1,13 +1,13 @@
 import * as H5P from 'h5p-nodejs-library';
 
-import appConfig from '../config/app-config';
-import h5pConfig from '../../config/h5p-config';
+import serverConfig from '../../config/serverConfig';
+import h5pConfig from '../../config/h5pConfig';
 
 import DirectoryTemporaryFileStorage from './DirectoryTemporaryFileStorage';
 import JsonStorage from './JsonStorage';
 
 export default new H5P.H5PEditor(
-    new JsonStorage(appConfig.cache),
+    new JsonStorage(serverConfig.cache),
     new H5P.H5PConfig(
         new H5P.fsImplementations.InMemoryStorage(),
         new H5P.H5PConfig(
@@ -15,7 +15,7 @@ export default new H5P.H5PEditor(
             h5pConfig
         )
     ),
-    new H5P.fsImplementations.FileLibraryStorage(appConfig.librariesPath),
-    new H5P.fsImplementations.FileContentStorage(appConfig.workingCachePath),
-    new DirectoryTemporaryFileStorage(appConfig.temporaryStoragePath)
+    new H5P.fsImplementations.FileLibraryStorage(serverConfig.librariesPath),
+    new H5P.fsImplementations.FileContentStorage(serverConfig.workingCachePath),
+    new DirectoryTemporaryFileStorage(serverConfig.temporaryStoragePath)
 );

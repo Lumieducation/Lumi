@@ -4,11 +4,11 @@ import _path from 'path';
 import nucleus from 'nucleus-nodejs';
 
 import PlayerRenderer from '../h5pImplementations/Player.renderer';
-import LumiError from '../helper/LumiError';
+import LumiError from '../helpers/LumiError';
 import h5p from '../h5pImplementations';
 import * as H5P from 'h5p-nodejs-library';
 import User from '../h5pImplementations/User';
-import Logger from '../helper/Logger';
+import Logger from '../helpers/Logger';
 
 const log = new Logger('controller:lumi-h5p');
 

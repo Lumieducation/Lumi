@@ -1,7 +1,7 @@
 import express from 'express';
 
-import lumiController from '../controller/lumi-h5p';
-import Logger from '../helper/Logger';
+import lumiController from '../controllers/lumi-h5p';
+import Logger from '../helpers/Logger';
 
 const log = new Logger('routes:lumi-h5p');
 

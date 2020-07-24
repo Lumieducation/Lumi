@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import express from 'express';
 import fileUpload from 'express-fileupload';
 
-import h5pConfig from '../../config/h5p-config';
+import h5pConfig from '../../config/h5pConfig';
 import routes from '../routes';
 
 const app = express();

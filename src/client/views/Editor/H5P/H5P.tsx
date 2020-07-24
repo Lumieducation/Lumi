@@ -4,7 +4,7 @@ import * as React from 'react';
 import Logger from 'client/helpers/Logger';
 import H5PView from 'client/views/components/H5PView';
 import { Modes } from 'state/ui/types';
-import h5pConfig from '../../../../config/h5p-config';
+import h5pConfig from '../../../../config/h5pConfig';
 
 declare var window: any, H5PEditor: any, H5P: any, H5PIntegration: any;
 
