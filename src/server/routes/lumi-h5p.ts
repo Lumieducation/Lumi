@@ -3,6 +3,7 @@ import express from 'express';
 import lumiController from '../controller/lumi-h5p';
 import Logger from '../helper/Logger';
 import h5p from '../h5p';
+import { IUser } from 'h5p-nodejs-library';
 
 const log = new Logger('routes:lumi-h5p');
 
@@ -106,7 +107,7 @@ export default function (): express.Router {
 
     router.delete(
         '/',
-        (
+        async (
             req: express.Request,
             res: express.Response,
             next: express.NextFunction

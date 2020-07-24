@@ -1,11 +1,8 @@
 import { dialog } from 'electron';
 import fs from 'fs-extra';
 import _path from 'path';
-import rimraf from 'rimraf';
 import nucleus from 'nucleus-nodejs';
-import fsExtra from 'fs-extra';
 
-import appConfig from '../config/app-config';
 import PlayerRenderer from '../h5p/Player.renderer';
 import LumiError from '../helper/Error';
 import h5p from '../h5p';
@@ -17,26 +14,14 @@ const log = new Logger('controller:lumi-h5p');
 
 export class H5PController {
     constructor() {
-        this.h5p = h5p;
+        this.h5pEditor = h5p;
         h5p.contentTypeCache.updateIfNecessary();
     }
 
-    private h5p: H5P.H5PEditor;
+    private h5pEditor: H5P.H5PEditor;
 
     public async delete(contentId: string): Promise<void> {
-        return new Promise((resolve, reject) => {
-            const contentPath = _path.join(
-                appConfig.workingCachePath,
-                contentId
-            );
-
-            rimraf(contentPath, (error) => {
-                if (error) {
-                    return reject();
-                }
-                resolve();
-            });
-        });
+        return this.h5pEditor.deleteContent(contentId, new User());
     }
 
     public async export(
@@ -67,15 +52,13 @@ export class H5PController {
         }
 
         const stream = fs.createWriteStream(path);
-
         const packageExporter = new H5P.PackageExporter(
-            this.h5p.libraryStorage,
-            this.h5p.contentStorage,
+            this.h5pEditor.libraryStorage,
+            this.h5pEditor.contentStorage,
             {
                 exportMaxContentPathLength: 255
             }
         );
-
         await packageExporter.createPackage(contentId, stream, new User());
 
         nucleus.track('export');
@@ -92,12 +75,12 @@ export class H5PController {
     }> {
         const buffer = await fs.readFile(path);
 
-        const { metadata, parameters } = await this.h5p.uploadPackage(
+        const { metadata, parameters } = await this.h5pEditor.uploadPackage(
             buffer,
             new User()
         );
 
-        const id = await this.h5p.saveOrUpdateContent(
+        const id = await this.h5pEditor.saveOrUpdateContent(
             undefined,
             parameters,
             metadata,
@@ -113,14 +96,22 @@ export class H5PController {
             id,
             metadata,
             parameters,
-            // tslint:disable-next-line: object-literal-sort-keys
             library: this.getUbernameFromH5pJson(metadata)
         };
     }
 
-    public async loadPackage(contentId: string) {
+    public async loadPackage(
+        contentId: string
+    ): Promise<{
+        h5p: H5P.IContentMetadata;
+        library: string;
+        params: {
+            metadata: H5P.IContentMetadata;
+            params: H5P.ContentParameters;
+        };
+    }> {
         log.info(`loading package with contentId ${contentId}`);
-        return this.h5p.getContent(contentId);
+        return this.h5pEditor.getContent(contentId);
     }
 
     public async open(): Promise<string[]> {
@@ -141,9 +132,9 @@ export class H5PController {
         log.info(`rendering package with contentId ${contentId}`);
 
         const player = new H5P.H5PPlayer(
-            this.h5p.libraryStorage,
-            this.h5p.contentStorage,
-            this.h5p.config
+            this.h5pEditor.libraryStorage,
+            this.h5pEditor.contentStorage,
+            this.h5pEditor.config
         );
         player.setRenderer(PlayerRenderer);
 
@@ -171,19 +162,11 @@ export class H5PController {
             id = argId;
         }
 
-        if (id) {
-            const contentPath = _path.join(appConfig.workingCachePath, `${id}`);
-
-            if (!(await fs.pathExists(contentPath))) {
-                throw new LumiError(
-                    'h5p-not-found',
-                    'contentId not found',
-                    404
-                );
-            }
+        if (id && !(await this.h5pEditor.contentManager.contentExists(id))) {
+            throw new LumiError('h5p-not-found', 'content not found', 404);
         }
 
-        const contentId = await this.h5p.saveOrUpdateContent(
+        const contentId = await this.h5pEditor.saveOrUpdateContent(
             id,
             parameters,
             metadata,
@@ -195,7 +178,6 @@ export class H5PController {
             library,
             metadata,
             parameters,
-            // tslint:disable-next-line: object-literal-sort-keys
             id: contentId
         };
     }
