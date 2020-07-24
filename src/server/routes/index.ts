@@ -2,12 +2,12 @@ import express from 'express';
 import { adapters } from 'h5p-nodejs-library';
 
 import h5pConfig from '../../config/h5p-config';
-import h5pEditor from '../h5p';
+import h5pEditor from '../h5pImplementations';
 import lumiH5PRoutes from './lumi-h5p';
 import trackRoutes from './track';
 
 import Logger from '../helper/Logger';
-import User from '../h5p/User';
+import User from '../h5pImplementations/User';
 const log = new Logger('routes');
 
 export default function (): express.Router {
