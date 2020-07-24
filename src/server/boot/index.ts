@@ -1,7 +1,5 @@
 import Logger from '../helper/Logger';
-
 import server from '../';
-
 import setup from './setup';
 
 const log = new Logger('boot');

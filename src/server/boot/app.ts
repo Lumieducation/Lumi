@@ -3,26 +3,27 @@ import bodyParser from 'body-parser';
 import express from 'express';
 import fileUpload from 'express-fileupload';
 
-import Routes from './Routes';
+import h5pConfig from '../../config/h5p-config';
+import routes from '../routes';
 
 const app = express();
 app.use(Sentry.Handlers.requestHandler());
 
-app.use(bodyParser.json({ limit: '50mb' }));
+app.use(bodyParser.json({ limit: h5pConfig.maxTotalSize }));
 app.use(
     bodyParser.urlencoded({
         extended: true,
-        limit: '50mb'
+        limit: h5pConfig.maxTotalSize
     })
 );
 
 app.use(
     fileUpload({
-        limits: { fileSize: 50 * 1024 * 1024 }
+        limits: { fileSize: h5pConfig.maxTotalSize }
     })
 );
 
-Routes(app);
+app.use('/', routes());
 
 app.use(Sentry.Handlers.errorHandler());
 

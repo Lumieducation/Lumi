@@ -1,9 +1,7 @@
 import SocketIO from 'socket.io';
-
-import server from '.';
-
 import * as Sentry from '@sentry/node';
 
+import server from '.';
 import Logger from './helper/Logger';
 
 const log = new Logger('websocket');

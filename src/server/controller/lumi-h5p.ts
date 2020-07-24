@@ -4,7 +4,7 @@ import _path from 'path';
 import nucleus from 'nucleus-nodejs';
 
 import PlayerRenderer from '../h5pImplementations/Player.renderer';
-import LumiError from '../helper/Error';
+import LumiError from '../helper/LumiError';
 import h5p from '../h5pImplementations';
 import * as H5P from 'h5p-nodejs-library';
 import User from '../h5pImplementations/User';
@@ -55,9 +55,7 @@ export class H5PController {
         const packageExporter = new H5P.PackageExporter(
             this.h5pEditor.libraryStorage,
             this.h5pEditor.contentStorage,
-            {
-                exportMaxContentPathLength: 255
-            }
+            this.h5pEditor.config
         );
         await packageExporter.createPackage(contentId, stream, new User());
 
