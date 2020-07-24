@@ -2,18 +2,18 @@ import { dialog } from 'electron';
 import fs from 'fs-extra';
 import _path from 'path';
 import rimraf from 'rimraf';
-
-import LumiError from '../helper/Error';
-
-import h5p from '../h5p';
-
-import config from '../config/app-config';
-
-import * as H5P from 'h5p-nodejs-library';
-
-import User from '../h5p/User';
-
 import nucleus from 'nucleus-nodejs';
+import fsExtra from 'fs-extra';
+
+import appConfig from '../config/app-config';
+import PlayerRenderer from '../h5p/Player.renderer';
+import LumiError from '../helper/Error';
+import h5p from '../h5p';
+import * as H5P from 'h5p-nodejs-library';
+import User from '../h5p/User';
+import Logger from '../helper/Logger';
+
+const log = new Logger('controller:lumi-h5p');
 
 export class H5PController {
     constructor() {
@@ -25,7 +25,10 @@ export class H5PController {
 
     public async delete(contentId: string): Promise<void> {
         return new Promise((resolve, reject) => {
-            const contentPath = _path.join(config.workingCachePath, contentId);
+            const contentPath = _path.join(
+                appConfig.workingCachePath,
+                contentId
+            );
 
             rimraf(contentPath, (error) => {
                 if (error) {
@@ -115,6 +118,11 @@ export class H5PController {
         };
     }
 
+    public async loadPackage(contentId: string) {
+        log.info(`loading package with contentId ${contentId}`);
+        return this.h5p.getContent(contentId);
+    }
+
     public async open(): Promise<string[]> {
         const response = await dialog.showOpenDialog({
             filters: [
@@ -127,6 +135,24 @@ export class H5PController {
         });
 
         return response.filePaths;
+    }
+
+    public async render(contentId: string): Promise<any> {
+        log.info(`rendering package with contentId ${contentId}`);
+
+        const player = new H5P.H5PPlayer(
+            this.h5p.libraryStorage,
+            this.h5p.contentStorage,
+            this.h5p.config
+        );
+        player.setRenderer(PlayerRenderer);
+
+        try {
+            return player.render(contentId);
+        } catch (error) {
+            log.warn(error);
+            throw new LumiError('h5p-not-found', error.message, 404);
+        }
     }
 
     public async update(
@@ -146,7 +172,7 @@ export class H5PController {
         }
 
         if (id) {
-            const contentPath = _path.join(config.workingCachePath, `${id}`);
+            const contentPath = _path.join(appConfig.workingCachePath, `${id}`);
 
             if (!(await fs.pathExists(contentPath))) {
                 throw new LumiError(

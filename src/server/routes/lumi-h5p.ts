@@ -1,15 +1,41 @@
 import express from 'express';
 
-import H5PController from '../controller/h5p';
 import lumiController from '../controller/lumi-h5p';
+import Logger from '../helper/Logger';
 import h5p from '../h5p';
+
+const log = new Logger('routes:lumi-h5p');
 
 export default function (): express.Router {
     const router = express.Router();
-    const h5pController = new H5PController(h5p);
 
-    router.get('/package/:contentId', h5pController.loadPackage); // <--
-    router.get('/package/:contentId/render', h5pController.renderPackage); // <--
+    router.get(
+        '/package/:contentId',
+        async (req: express.Request, res: express.Response) => {
+            const { contentId } = req.params;
+            try {
+                const content = await lumiController.loadPackage(contentId);
+                log.info(`sending package-data for contentId ${contentId} `);
+                res.status(200).json(content);
+            } catch (error) {
+                log.warn(error);
+                res.status(404).end();
+            }
+        }
+    );
+
+    router.get(
+        '/package/:contentId/render',
+        async (req: express.Request, res: express.Response) => {
+            const { contentId } = req.params;
+            try {
+                const h5pPage = await lumiController.render(contentId);
+                res.status(200).end(h5pPage);
+            } catch {
+                res.status(404).end();
+            }
+        }
+    );
 
     router.get(
         '/open_files',
