@@ -42,8 +42,8 @@ export default class Editor extends React.Component<IProps, IComponentState> {
         const self = this;
         var ns = H5PEditor;
 
-        (function($) {
-            H5PEditor.init = function() {
+        (function ($) {
+            H5PEditor.init = function () {
                 // disables full screen in the editor
                 ns.Editor.prototype.semiFullscreen = undefined;
 
@@ -63,10 +63,10 @@ export default class Editor extends React.Component<IProps, IComponentState> {
                 // Required styles and scripts for the editor
                 H5PEditor.assets = H5PIntegration.editor.assets;
 
-                H5PEditor.filesPath = `/api/v0/h5p/content/${self.props.contentId}/content`;
+                H5PEditor.filesPath = `/api/h5p/v1/content/${self.props.contentId}`;
 
                 // Required for assets
-                H5PEditor.baseUrl = '/api/v0/h5p';
+                H5PEditor.baseUrl = '/api/h5p/v1';
 
                 if (H5PIntegration.editor.nodeVersionId !== undefined) {
                     H5PEditor.contentId = H5PIntegration.editor.nodeVersionId;
@@ -76,15 +76,15 @@ export default class Editor extends React.Component<IProps, IComponentState> {
 
                 $.ajax({
                     type: 'GET',
-                    url: '/api/v0/h5p/package/' + self.props.contentId,
-                    success: function(res: any) {
+                    url: '/api/h5p/v1/package/' + self.props.contentId,
+                    success: function (res: any) {
                         window.editor[self.props.tabId] = new ns.Editor(
                             res.library,
                             JSON.stringify(res.params),
                             $editor[0]
                         );
                     },
-                    error: function(res: any) {
+                    error: function (res: any) {
                         window.editor[self.props.tabId] = new ns.Editor(
                             undefined,
                             undefined,
@@ -96,7 +96,7 @@ export default class Editor extends React.Component<IProps, IComponentState> {
                 H5P.jQuery('.tab-button').hide();
             };
 
-            H5PEditor.getAjaxUrl = function(action: any, parameters: any) {
+            H5PEditor.getAjaxUrl = function (action: any, parameters: any) {
                 var url = H5PIntegration.editor.ajaxPath + action;
 
                 if (parameters !== undefined) {
