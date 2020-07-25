@@ -1,9 +1,9 @@
-// import { IUser } from 'h5p-nodejs-library';
+import { IUser } from 'h5p-nodejs-library';
 
 /**
  * Example user object
  */
-export default class User /* implements IUser */ {
+export default class User implements IUser {
     constructor() {
         this.id = '1';
         this.name = 'Firstname Surname';

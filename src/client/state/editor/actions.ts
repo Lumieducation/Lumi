@@ -15,7 +15,7 @@ import { IState, selectors } from '../';
 
 export function openH5P(): any {
     return (dispatch: any) => {
-        superagent.get('/api/v1/h5p/open_files').then((response) => {
+        superagent.get('/api/v1/lumi/open_files').then((response) => {
             const files = response.body;
 
             files.forEach((file: string) => {

@@ -23,7 +23,7 @@ export default function H5PView(props: IProps): JSX.Element {
             frameBorder={0}
             width="100%"
             height="800px"
-            src={`/api/v0/h5p/package/${contentId}/render`}
+            src={`/api/v1/lumi/package/${contentId}/render`}
         />
     );
 }

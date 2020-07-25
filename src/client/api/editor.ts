@@ -235,7 +235,7 @@ export class LumiEditorAPI {
     ): string {
         let queryParameters: QueryParameters = {};
         const domain = parameters.$domain ? parameters.$domain : this.domain;
-        let path = '/h5p';
+        let path = '/';
         if (parameters.$path) {
             path =
                 typeof parameters.$path === 'function'
@@ -300,7 +300,7 @@ export class LumiEditorAPI {
         ResponseWithBody<200, inline_response_200> | ResponseWithBody<403, void>
     > {
         const domain = parameters.$domain ? parameters.$domain : this.domain;
-        let path = '/h5p';
+        let path = '/';
         if (parameters.$path) {
             path =
                 typeof parameters.$path === 'function'
@@ -369,7 +369,7 @@ export class LumiEditorAPI {
     ): string {
         let queryParameters: QueryParameters = {};
         const domain = parameters.$domain ? parameters.$domain : this.domain;
-        let path = '/h5p';
+        let path = '/';
         if (parameters.$path) {
             path =
                 typeof parameters.$path === 'function'
@@ -420,7 +420,7 @@ export class LumiEditorAPI {
         | ResponseWithBody<406, void>
     > {
         const domain = parameters.$domain ? parameters.$domain : this.domain;
-        let path = '/h5p';
+        let path = '/';
         if (parameters.$path) {
             path =
                 typeof parameters.$path === 'function'
@@ -475,7 +475,7 @@ export class LumiEditorAPI {
     ): string {
         let queryParameters: QueryParameters = {};
         const domain = parameters.$domain ? parameters.$domain : this.domain;
-        let path = '/h5p';
+        let path = '/';
         if (parameters.$path) {
             path =
                 typeof parameters.$path === 'function'
@@ -533,7 +533,7 @@ export class LumiEditorAPI {
         | ResponseWithBody<500, void>
     > {
         const domain = parameters.$domain ? parameters.$domain : this.domain;
-        let path = '/h5p';
+        let path = '/';
         if (parameters.$path) {
             path =
                 typeof parameters.$path === 'function'
@@ -591,7 +591,7 @@ export class LumiEditorAPI {
     ): string {
         let queryParameters: QueryParameters = {};
         const domain = parameters.$domain ? parameters.$domain : this.domain;
-        let path = '/h5p';
+        let path = '/';
         if (parameters.$path) {
             path =
                 typeof parameters.$path === 'function'
@@ -648,7 +648,7 @@ export class LumiEditorAPI {
         } & CommonRequestOptions
     ): Promise<ResponseWithBody<200, H5P> | ResponseWithBody<400, void>> {
         const domain = parameters.$domain ? parameters.$domain : this.domain;
-        let path = '/h5p';
+        let path = '/';
         if (parameters.$path) {
             path =
                 typeof parameters.$path === 'function'
