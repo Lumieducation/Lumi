@@ -30,10 +30,6 @@ if (process.env.NODE_ENV !== 'development') {
         dsn: 'https://02e4da31636d479f86a17a6ef749278c@sentry.io/1876151',
         release: info.version
     });
-    SentryNode.init({
-        dsn: 'https://02e4da31636d479f86a17a6ef749278c@sentry.io/1876151',
-        release: info.version
-    });
 }
 
 if (process.env.NODE_ENV !== 'development') {
