@@ -75,7 +75,7 @@ export default class Editor extends React.Component<IProps, IComponentState> {
 
                 $.ajax({
                     type: 'GET',
-                    url: `/api/lumi-h5p/v1/package/` + self.props.contentId,
+                    url: `/api/v1/lumi/package/` + self.props.contentId,
                     success: function (res: any) {
                         window.editor[self.props.tabId] = new ns.Editor(
                             res.library,

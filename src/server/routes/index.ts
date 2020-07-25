@@ -31,7 +31,7 @@ export default function (h5pEditor: H5PEditor): express.Router {
         )
     );
 
-    router.use('/api/lumi-h5p/v1', lumiRoutes(h5pEditor));
+    router.use('/api/v1/lumi', lumiRoutes(h5pEditor));
 
     router.get('*', express.static(`${__dirname}/../../client`));
 

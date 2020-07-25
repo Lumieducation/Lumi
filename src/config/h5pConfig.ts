@@ -1,6 +1,6 @@
 export default {
     ajaxUrl: '/ajax',
-    baseUrl: '/api/h5p/v1',
+    baseUrl: '/api/v1/h5p',
     contentFilesUrl: '/content',
     coreUrl: '/core',
     downloadUrl: '/download',
