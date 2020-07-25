@@ -14,7 +14,7 @@ export default function (h5pEditor: H5PEditor): express.Router {
 
     log.info('setting up routes');
 
-    router.use('/api/track/v0', trackingRoutes());
+    router.use('/api/v1/track', trackingRoutes());
 
     // Adding dummy user to make sure all requests can be handled
     router.use((req, res, next) => {

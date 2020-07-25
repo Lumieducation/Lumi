@@ -6,7 +6,7 @@ export function track(
     name?: string,
     value?: string
 ): Promise<superagent.Response> {
-    return superagent.post('/api/track/v0').send({
+    return superagent.post('/api/v1/track').send({
         action,
         category,
         name,
