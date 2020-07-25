@@ -46,7 +46,7 @@ export default (serverConfig: IServerConfig) => {
         })
     );
 
-    app.use('/', routes(h5pEditor));
+    app.use('/', routes(h5pEditor, serverConfig));
 
     app.use(Sentry.Handlers.errorHandler());
 
