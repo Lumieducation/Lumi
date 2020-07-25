@@ -1,13 +1,15 @@
 import { dialog } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import nucleus from 'nucleus-nodejs';
-
-import websocket from './server/websocket';
+import SocketIO from 'socket.io';
 
 let updateAvailable: boolean = false;
 let updating: boolean = false;
 
-export default function boot(app: Electron.App): void {
+export default function boot(
+    app: Electron.App,
+    websocket: SocketIO.Server
+): void {
     autoUpdater.on('update-downloaded', async () => {
         updateAvailable = true;
 

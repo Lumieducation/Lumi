@@ -1,8 +1,10 @@
-const userData = process.env.USERDATA;
+import IServerConfig from './IServerConfig';
 
-export default {
-    librariesPath: `${userData}/libraries`,
-    cache: `${userData}/store.json`,
-    temporaryStoragePath: `${userData}/tmp`,
-    workingCachePath: `${userData}/workingCache`
+export default (userData: string): IServerConfig => {
+    return {
+        librariesPath: `${userData}/libraries`,
+        cache: `${userData}/store.json`,
+        temporaryStoragePath: `${userData}/tmp`,
+        workingCachePath: `${userData}/workingCache`
+    };
 };

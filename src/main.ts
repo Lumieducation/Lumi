@@ -1,22 +1,25 @@
-/* eslint-disable import/first */
-import log from 'electron-log';
 import * as Sentry from '@sentry/electron';
 import * as SentryNode from '@sentry/node';
-import nucleus from 'nucleus-nodejs';
 import electron from 'electron';
-
-import info from './info';
-
-const app = electron.app;
-process.env.USERDATA = process.env.USERDATA || `${app.getPath('userData')}`;
-
+import log from 'electron-log';
+import nucleus from 'nucleus-nodejs';
 import os from 'os';
 import path from 'path';
-import update from './updater';
+import SocketIO from 'socket.io';
 
-import httpServer from './server/httpServer';
-
+import httpServerFactory from './server/httpServer';
+import info from './info';
 import menuTemplate from './menu';
+import updater from './updater';
+import websocketFactory from './server/websocket';
+import serverConfigFactory from './config/serverConfig';
+
+const app = electron.app;
+let websocket: SocketIO.Server;
+let mainWindow: electron.BrowserWindow;
+let port: number;
+const isDevelopment = process.env.NODE_ENV === 'development';
+const BrowserWindow = electron.BrowserWindow;
 
 process.on('uncaughtException', (error) => {
     log.error(error);
@@ -44,14 +47,9 @@ if (process.env.NODE_ENV !== 'development') {
     );
 }
 
-const BrowserWindow = electron.BrowserWindow;
-
-let mainWindow;
-let port: number;
-
-const isDevelopment = process.env.NODE_ENV === 'development';
-
-function createMainWindow(): electron.BrowserWindow {
+function createMainWindow(
+    websocketArg: SocketIO.Server
+): electron.BrowserWindow {
     const window = new BrowserWindow({
         height: 800,
         minHeight: 600,
@@ -59,7 +57,9 @@ function createMainWindow(): electron.BrowserWindow {
         width: 1000
     });
 
-    const menu = electron.Menu.buildFromTemplate(menuTemplate(window));
+    const menu = electron.Menu.buildFromTemplate(
+        menuTemplate(window, websocketArg)
+    );
     electron.Menu.setApplicationMenu(menu);
 
     if (isDevelopment) {
@@ -105,25 +105,28 @@ app.on('window-all-closed', () => {
 app.on('activate', () => {
     // on macOS it is common to re-create a window even after all windows have been closed
     if (mainWindow === null) {
-        mainWindow = createMainWindow();
+        mainWindow = createMainWindow(websocket);
     }
 });
 
 // create main BrowserWindow when electron is ready
 app.on('ready', async () => {
-    update(app);
-
     log.info('app is ready');
 
-    const server = await httpServer();
-
+    const server = await httpServerFactory(
+        serverConfigFactory(process.env.USERDATA || app.getPath('userData'))
+    );
     log.info('server booted');
 
     port = (server.address() as any).port;
-
     log.info(`port is ${port}`);
 
-    mainWindow = createMainWindow();
+    websocket = websocketFactory(server);
+    log.info('websocket created');
 
+    updater(app, websocket);
+    log.info('updater started');
+
+    mainWindow = createMainWindow(websocket);
     log.info('window created');
 });

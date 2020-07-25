@@ -1,9 +1,11 @@
 import mkdirp from 'mkdirp';
 import * as Sentry from '@sentry/node';
 
-import serverConfig from '../../config/serverConfig';
+import IServerConfig from '../../config/IServerConfig';
 
-export default async function setup(): Promise<void> {
+export default async function setup(
+    serverConfig: IServerConfig
+): Promise<void> {
     try {
         mkdirp.sync(serverConfig.workingCachePath);
         mkdirp.sync(serverConfig.librariesPath);

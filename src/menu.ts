@@ -1,9 +1,8 @@
 import electron from 'electron';
 import nucleus from 'nucleus-nodejs';
+import SocketIO from 'socket.io';
 
-import websocket from './server/websocket';
-
-export default (window: electron.BrowserWindow) => [
+export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
     {
         label: 'File',
         submenu: [
