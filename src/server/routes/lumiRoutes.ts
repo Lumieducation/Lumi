@@ -30,7 +30,7 @@ export default function (h5pEditor: H5PEditor): express.Router {
         async (req: express.Request, res: express.Response) => {
             const { contentId } = req.params;
             try {
-                const h5pPage = await lumiController.render(contentId);
+                const h5pPage = await lumiController.renderPlayer(contentId);
                 res.status(200).end(h5pPage);
             } catch {
                 res.status(404).end();

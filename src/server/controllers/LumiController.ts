@@ -122,7 +122,7 @@ export default class LumiController {
         return response.filePaths;
     }
 
-    public async render(contentId: string): Promise<any> {
+    public async renderPlayer(contentId: string): Promise<any> {
         log.info(`rendering package with contentId ${contentId}`);
 
         const player = new H5P.H5PPlayer(
