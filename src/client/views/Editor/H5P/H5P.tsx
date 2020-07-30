@@ -62,8 +62,6 @@ export default class Editor extends React.Component<IProps, IComponentState> {
                 // Required styles and scripts for the editor
                 H5PEditor.assets = H5PIntegration.editor.assets;
 
-                H5PEditor.filesPath = `${h5pConfig.baseUrl}${h5pConfig.contentFilesUrl}${self.props.contentId}`;
-
                 // Required for assets
                 H5PEditor.baseUrl = h5pConfig.baseUrl;
 
