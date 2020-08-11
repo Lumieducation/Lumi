@@ -1,5 +1,6 @@
 import express from 'express';
-import { adapters, H5PEditor } from 'h5p-nodejs-library';
+import { H5PEditor } from 'h5p-nodejs-library';
+import h5pAjaxExpressRouter from 'h5p-nodejs-library/build/src/adapters/H5PAjaxRouter/H5PAjaxExpressRouter';
 
 import h5pConfig from '../../config/h5pConfig';
 import lumiRoutes from './lumiRoutes';
@@ -40,7 +41,7 @@ export default function (
 
     router.use(
         h5pConfig.baseUrl,
-        adapters.express(
+        h5pAjaxExpressRouter(
             h5pEditor,
             `${__dirname}/../../../h5p/core`,
             `${__dirname}/../../../h5p/editor`,
