@@ -11,8 +11,21 @@ export default (model) => `<!doctype html>
         .join('\n    ')}
 
     <script>
-        H5PIntegration = ${JSON.stringify(model.integration, null, 2)};
-    </script>${model.customScripts}
+        H5PIntegration = ${JSON.stringify(model.integration, null, 2)};        
+        let timeout = null;
+        window.onresize = () => {
+            if(timeout){
+                clearTimeout(timeout);
+            }
+            timeout = setTimeout( () => {
+                H5P.instances.forEach((instance) => {
+                    instance.trigger('resize');
+                });          
+                timeout = null;
+          }, 250);
+        };
+    </script>
+    ${model.customScripts}
 </head>
 <body>
     <div class="h5p-content" data-content-id="${model.contentId}"></div>
