@@ -8,6 +8,12 @@ export type TabState =
     | 'opening'
     | 'success';
 
+export const TABS_OPEN_TAB = 'TABS_OPEN_TAB';
+export const TABS_CLOSE_TAB = 'TABS_CLOSE_TAB';
+export const TABS_SELECT_TAB = 'TABS_SELECT_TAB';
+export const TABS_RESET_SAVINGSTATE = 'TABS_RESET_SAVINGSTATE';
+export const TABS_UPDATE_TAB = 'TABS_UPDATE_TAB';
+
 export interface ITab {
     contentId?: ContentId;
     id: string;
@@ -65,9 +71,3 @@ export type TabActionTypes =
     | IOpenTabAction
     | ISelectTabAction
     | ITabUpdateAction;
-
-export const TABS_OPEN_TAB = 'TABS_OPEN_TAB';
-export const TABS_CLOSE_TAB = 'TABS_CLOSE_TAB';
-export const TABS_SELECT_TAB = 'TABS_SELECT_TAB';
-export const TABS_RESET_SAVINGSTATE = 'TABS_RESET_SAVINGSTATE';
-export const TABS_UPDATE_TAB = 'TABS_UPDATE_TAB';
