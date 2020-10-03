@@ -5,6 +5,10 @@ export type NotificationTypes =
     | 'warning'
     | 'info';
 
+export const ENQUEUE_SNACKBAR = 'ENQUEUE_SNACKBAR';
+export const CLOSE_SNACKBAR = 'CLOSE_SNACKBAR';
+export const REMOVE_SNACKBAR = 'REMOVE_SNACKBAR';
+
 export interface INotification {
     dismissed?: boolean;
     key: string;
@@ -38,7 +42,3 @@ export type NotificationActionTypes =
     | INotifyAction
     | ICloseSnackbar
     | IRemoveSnackbar;
-
-export const ENQUEUE_SNACKBAR = 'ENQUEUE_SNACKBAR';
-export const CLOSE_SNACKBAR = 'CLOSE_SNACKBAR';
-export const REMOVE_SNACKBAR = 'REMOVE_SNACKBAR';

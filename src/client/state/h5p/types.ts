@@ -17,9 +17,23 @@ export interface IH5P {
 }
 
 // state (reducer)
-export interface IH5P {}
 
 export interface IState {}
+
+// constants
+
+export const H5P_DELETE_ERROR = 'H5P_DELETE_ERROR';
+export const H5P_DELETE_REQUEST = 'H5P_DELETE_REQUEST';
+export const H5P_DELETE_SUCCESS = 'H5P_DELETE_SUCCESS';
+export const H5P_EXPORT_ERROR = 'H5P_EXPORT_ERROR';
+export const H5P_EXPORT_REQUEST = 'H5P_EXPORT_REQUEST';
+export const H5P_EXPORT_SUCCESS = 'H5P_EXPORT_SUCCESS';
+export const H5P_IMPORT_ERROR = 'H5P_IMPORT_ERROR';
+export const H5P_IMPORT_REQUEST = 'H5P_IMPORT_REQUEST';
+export const H5P_IMPORT_SUCCESS = 'H5P_IMPORT_SUCCESS';
+export const H5P_UPDATE_ERROR = 'H5P_UPDATE_ERROR';
+export const H5P_UPDATE_REQUEST = 'H5P_UPDATE_REQUEST';
+export const H5P_UPDATE_SUCCESS = 'H5P_UPDATE_SUCCESS';
 
 // actions
 
@@ -122,21 +136,6 @@ export interface IH5PUpdateSuccessAction {
     };
     type: typeof H5P_UPDATE_SUCCESS;
 }
-
-// constants
-
-export const H5P_DELETE_ERROR = 'H5P_DELETE_ERROR';
-export const H5P_DELETE_REQUEST = 'H5P_DELETE_REQUEST';
-export const H5P_DELETE_SUCCESS = 'H5P_DELETE_SUCCESS';
-export const H5P_EXPORT_ERROR = 'H5P_EXPORT_ERROR';
-export const H5P_EXPORT_REQUEST = 'H5P_EXPORT_REQUEST';
-export const H5P_EXPORT_SUCCESS = 'H5P_EXPORT_SUCCESS';
-export const H5P_IMPORT_ERROR = 'H5P_IMPORT_ERROR';
-export const H5P_IMPORT_REQUEST = 'H5P_IMPORT_REQUEST';
-export const H5P_IMPORT_SUCCESS = 'H5P_IMPORT_SUCCESS';
-export const H5P_UPDATE_ERROR = 'H5P_UPDATE_ERROR';
-export const H5P_UPDATE_REQUEST = 'H5P_UPDATE_REQUEST';
-export const H5P_UPDATE_SUCCESS = 'H5P_UPDATE_SUCCESS';
 
 // api
 
