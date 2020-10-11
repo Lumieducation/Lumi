@@ -1,4 +1,6 @@
-export default (model) => `<!doctype html>
+import { IPlayerModel } from 'h5p-nodejs-library';
+
+export default (model: IPlayerModel) => `<!doctype html>
 <html class="h5p-iframe">
 <head>
     <meta charset="utf-8">
@@ -25,7 +27,6 @@ export default (model) => `<!doctype html>
           }, 250);
         };
     </script>
-    ${model.customScripts}
 </head>
 <body>
     <div class="h5p-content" data-content-id="${model.contentId}"></div>
