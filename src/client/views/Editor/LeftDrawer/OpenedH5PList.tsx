@@ -16,6 +16,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 import H5PAvatar from 'components/H5PAvatar';
 
+import InsertDriveFileOutlinedIcon from '@material-ui/icons/InsertDriveFileOutlined';
 import AddIcon from '@material-ui/icons/Add';
 import CloseIcon from '@material-ui/icons/Close';
 
@@ -124,12 +125,15 @@ export class TabsContainer extends React.Component<IProps, IComponentState> {
                     <Divider />
                     <ListItem onClick={this.openFiles} button={true}>
                         <ListItemAvatar>
+                            <InsertDriveFileOutlinedIcon />
+                        </ListItemAvatar>
+                        <ListItemText primary={'Open H5P File'} />
+                    </ListItem>
+                    <ListItem onClick={this.create} button={true}>
+                        <ListItemAvatar>
                             <AddIcon />
                         </ListItemAvatar>
-                        <ListItemText
-                            primary={'Open H5P Files'}
-                            // secondary={tab.path}
-                        />
+                        <ListItemText primary={'New H5P file'} />
                     </ListItem>
                 </List>
             </div>

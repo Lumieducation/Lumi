@@ -1,10 +1,13 @@
 import * as React from 'react';
 
+import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import InsertDriveFileOutlinedIcon from '@material-ui/icons/InsertDriveFileOutlined';
+import AddIcon from '@material-ui/icons/Add';
 
 import { track } from 'state/track/actions';
 
@@ -44,6 +47,7 @@ export default function EditorStartPage(props: {
                             }}
                             variant="contained"
                             color="primary"
+                            startIcon={<InsertDriveFileOutlinedIcon />}
                         >
                             Open existing H5P
                         </Button>
@@ -61,6 +65,7 @@ export default function EditorStartPage(props: {
                             }}
                             variant="outlined"
                             color="primary"
+                            startIcon={<AddIcon />}
                         >
                             Create new H5P
                         </Button>
