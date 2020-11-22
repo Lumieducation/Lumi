@@ -27,7 +27,7 @@ jobs:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             - run: rm -rf dist/mac/
             - name: Upload macOS artifacts
-              uses: actions/upload-artifact@v1
+              uses: actions/upload-artifact@v2
               with:
                   name: macOS
                   path: dist/
@@ -38,7 +38,7 @@ jobs:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             - run: rm -rf dist/win-unpacked
             - name: Upload Windows artifacts
-              uses: actions/upload-artifact@v1
+              uses: actions/upload-artifact@v2
               with:
                   name: Windows
                   path: dist/
