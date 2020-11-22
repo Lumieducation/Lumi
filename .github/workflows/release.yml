@@ -8,11 +8,9 @@ on:
 jobs:
     release:
         runs-on: macos-latest
-
         strategy:
             matrix:
                 node-version: [10.x]
-
         steps:
             - uses: actions/checkout@v2
             - name: Use Node.js ${{ matrix.node-version }}
@@ -38,19 +36,42 @@ jobs:
                   CSC_KEY_PASSWORD: ${{ secrets.mac_certs_password }}
                   APPLEID: ${{ secrets.apple_id }}
                   APPLEIDPASSWORD: ${{ secrets.apple_id_password }}
+    
+    release-windows:
+        needs: release
+        runs-on: windows-latest
+        strategy:
+            matrix:
+                node-version: [10.x]
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  ref: 'release'
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: install
+              run: npm ci            
+            - name: Build
+              run: npm run build
             - name: Publish Windows
               run: npm run publish:win
               env:
                   CI: true
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  APPX_APPLICATION_ID: ${{ secrets.APPX_APPLICATION_ID }}
+                  APPX_DISPLAY_NAME: ${{ secrets.APPX_DISPLAY_NAME }}
+                  APPX_IDENTITY_NAME: ${{ secrets.APPX_IDENTITY_NAME }}
+                  APPX_PUBLISHER: ${{ secrets.APPX_PUBLISHER }}
+                  APPX_PUBLISHER_DISPLAY_NAME: ${{ secrets.APPX_PUBLISHER_DISPLAY_NAME }}
+
     release-linux:
         needs: release
         runs-on: ubuntu-latest
-
         strategy:
             matrix:
                 node-version: [10.x]
-
         steps:
             - uses: actions/checkout@v2
               with:
@@ -61,12 +82,6 @@ jobs:
                   node-version: ${{ matrix.node-version }}
             - name: install
               run: npm ci
-            - name: Release
-              run: npm run semantic-release || true
-              env:
-                  CI: true
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: Build
               run: npm run build
             - name: Install Snapcraft
