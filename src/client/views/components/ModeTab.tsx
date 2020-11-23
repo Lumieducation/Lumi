@@ -3,6 +3,8 @@ import React from 'react';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
+import VisibilityOutlinedIcon from '@material-ui/icons/VisibilityOutlined';
+import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
 
 import { Modes } from 'state/ui/types';
 
@@ -35,8 +37,28 @@ export default function VerticalTabs(props: {
     return (
         <div className={classes.root}>
             <Tabs value={mode} onChange={handleChange} variant="fullWidth">
-                <Tab label="View" {...a11yProps(0)} />
-                <Tab label="Edit" {...a11yProps(1)} />
+                <Tab
+                    label={
+                        <div>
+                            <VisibilityOutlinedIcon
+                                style={{ verticalAlign: 'middle' }}
+                            />{' '}
+                            View
+                        </div>
+                    }
+                    {...a11yProps(0)}
+                />
+                <Tab
+                    label={
+                        <div>
+                            <EditOutlinedIcon
+                                style={{ verticalAlign: 'middle' }}
+                            />{' '}
+                            Edit
+                        </div>
+                    }
+                    {...a11yProps(1)}
+                />
             </Tabs>
         </div>
     );
