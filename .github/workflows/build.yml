@@ -6,8 +6,8 @@ on:
             - master
 
 jobs:
-    build:
-        runs-on: macOS-latest
+    build-mac:
+        runs-on: macos-latest
 
         strategy:
             matrix:
@@ -27,18 +27,33 @@ jobs:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             - run: rm -rf dist/mac/
             - name: Upload macOS artifacts
-              uses: actions/upload-artifact@v1
+              uses: actions/upload-artifact@v2
               with:
                   name: macOS
                   path: dist/
-            - run: rm -rf dist/
+
+    build-win:
+        runs-on: windows-latest
+
+        strategy:
+            matrix:
+                node-version: [10.x]
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: install
+              run: npm ci
             - name: Build Windows
               run: npm run build:win
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            - run: rm -rf dist/win-unpacked
+            - run: Remove-Item 'dist\win-unpacked' -Recurse -Force 
             - name: Upload Windows artifacts
-              uses: actions/upload-artifact@v1
+              uses: actions/upload-artifact@v2
               with:
                   name: Windows
-                  path: dist/
+                  path: dist
