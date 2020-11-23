@@ -51,9 +51,9 @@ jobs:
               run: npm run build:win
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            - run: rm -rf dist/win-unpacked
+            - run: rmdir /s/q dist\win-unpacked
             - name: Upload Windows artifacts
               uses: actions/upload-artifact@v2
               with:
                   name: Windows
-                  path: dist/
+                  path: dist
