@@ -51,7 +51,7 @@ jobs:
               run: npm run build:win
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            - run: rmdir /s/q dist\win-unpacked
+            - run: Remove-Item 'dist\win-unpacked' -Recurse -Force 
             - name: Upload Windows artifacts
               uses: actions/upload-artifact@v2
               with:
