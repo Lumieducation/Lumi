@@ -6,8 +6,8 @@ on:
             - master
 
 jobs:
-    build:
-        runs-on: macOS-latest
+    build-mac:
+        runs-on: macos-latest
 
         strategy:
             matrix:
@@ -31,7 +31,22 @@ jobs:
               with:
                   name: macOS
                   path: dist/
-            - run: rm -rf dist/
+
+    build-win:
+        runs-on: windows-latest
+
+        strategy:
+            matrix:
+                node-version: [10.x]
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: install
+              run: npm ci
             - name: Build Windows
               run: npm run build:win
               env:
