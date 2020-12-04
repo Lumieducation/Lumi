@@ -155,6 +155,9 @@ export class H5PContainer extends React.Component<IProps, IComponentState> {
 
     private clickOnSave(): void {
         const { activeTab } = this.props;
+        if (!(window as any).editor[this.props.activeTab.id].isMainTitleSet()) {
+            return;
+        }
         if (!activeTab.path && Target.get() === 'platform') {
             this.setState({ showCreateFileDialog: true });
         } else {
