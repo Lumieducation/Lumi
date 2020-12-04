@@ -106,6 +106,12 @@ export class WebsocketContainer extends React.Component<
     private saveAs(): void {
         try {
             const { activeTab, dispatch } = this.props;
+            
+            window.focus();
+            if (!(window as any).editor[activeTab.id].isMainTitleSet()) {
+                return;
+            }
+
             log.info(`saving ${activeTab.contentId}`);
             if (activeTab.state === 'success') {
                 dispatch(
@@ -125,6 +131,12 @@ export class WebsocketContainer extends React.Component<
     private updateAndSave(): void {
         try {
             const { activeTab, dispatch } = this.props;
+
+            window.focus();
+            if (!(window as any).editor[activeTab.id].isMainTitleSet()) {
+                return;
+            }
+
             log.info(`saving ${activeTab.contentId}`);
             if (activeTab.state === 'success') {
                 dispatch(
