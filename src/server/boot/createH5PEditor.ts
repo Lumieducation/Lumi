@@ -1,17 +1,10 @@
 import * as H5P from 'h5p-nodejs-library';
-import dbImplementations from 'h5p-nodejs-library/build/src/implementation/db';
 
 /**
  * Create a H5PEditor object.
  * Which storage classes are used depends on the configuration values set in
  * the environment variables. If you set no environment variables, the local
  * filesystem storage classes will be used.
- *
- * CONTENTSTORAGE=mongos3 Uses MongoDB/S3 backend for content storage
- * CONTENT_MONGO_COLLECTION Specifies the collection name for content storage
- * CONTENT_AWS_S3_BUCKET Specifies the bucket name for content storage
- * TEMPORARYSTORAGE=s3 Uses S3 backend for temporary file storage
- * TEMPORARY_AWS_S3_BUCKET Specifies the bucket name for temporary file storage
  *
  * Further environment variables to set up MongoDB and S3 can be found in
  * docs/mongo-s3-content-storage.md and docs/s3-temporary-file-storage.md!
@@ -35,58 +28,12 @@ export default async function createH5PEditor(
         new H5P.fsImplementations.InMemoryStorage(), // this is a general-purpose cache
         config,
         new H5P.fsImplementations.FileLibraryStorage(localLibraryPath),
-        process.env.CONTENTSTORAGE !== 'mongos3'
-            ? new H5P.fsImplementations.FileContentStorage(localContentPath)
-            : new dbImplementations.MongoS3ContentStorage(
-                  dbImplementations.initS3({
-                      s3ForcePathStyle: true,
-                      signatureVersion: 'v4'
-                  }),
-                  (await dbImplementations.initMongo()).collection(
-                      process.env.CONTENT_MONGO_COLLECTION
-                  ),
-                  {
-                      s3Bucket: process.env.CONTENT_AWS_S3_BUCKET,
-                      maxKeyLength: process.env.AWS_S3_MAX_FILE_LENGTH
-                          ? Number.parseInt(
-                                process.env.AWS_S3_MAX_FILE_LENGTH,
-                                10
-                            )
-                          : undefined
-                  }
-              ),
-        process.env.TEMPORARYSTORAGE === 's3'
-            ? new dbImplementations.S3TemporaryFileStorage(
-                  dbImplementations.initS3({
-                      s3ForcePathStyle: true,
-                      signatureVersion: 'v4'
-                  }),
-                  {
-                      s3Bucket: process.env.TEMPORARY_AWS_S3_BUCKET,
-                      maxKeyLength: process.env.AWS_S3_MAX_FILE_LENGTH
-                          ? Number.parseInt(
-                                process.env.AWS_S3_MAX_FILE_LENGTH,
-                                10
-                            )
-                          : undefined
-                  }
-              )
-            : new H5P.fsImplementations.DirectoryTemporaryFileStorage(
-                  localTemporaryPath
-              ),
+        new H5P.fsImplementations.FileContentStorage(localContentPath),
+        new H5P.fsImplementations.DirectoryTemporaryFileStorage(
+            localTemporaryPath
+        ),
         translationCallback
     );
-
-    // Set bucket lifecycle configuration for S3 temporary storage to make
-    // sure temporary files expire.
-    if (
-        h5pEditor.temporaryStorage instanceof
-        dbImplementations.S3TemporaryFileStorage
-    ) {
-        await (h5pEditor.temporaryStorage as any).setBucketLifecycleConfiguration(
-            h5pEditor.config
-        );
-    }
 
     return h5pEditor;
 }
