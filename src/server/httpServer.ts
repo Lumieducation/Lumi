@@ -10,7 +10,7 @@ const log = new Logger('boot');
 export default async (serverConfig: IServerConfig) => {
     await setup(serverConfig);
     const app = appFactory(serverConfig);
-    const server = http.createServer(app);
+    const server = http.createServer(await app);
     return server.listen(process.env.PORT || 0, () => {
         log.info(`server booted on port ${(server.address() as any).port}`);
     });

@@ -26,7 +26,7 @@ export default class LumiController {
     ): Promise<{ path: string }> {
         let path = pathArg;
 
-        if (!path) {
+        if (!path || path === 'undefined') {
             path = dialog.showSaveDialogSync({
                 defaultPath: '.h5p',
                 filters: [
