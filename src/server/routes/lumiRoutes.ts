@@ -26,19 +26,6 @@ export default function (h5pEditor: H5PEditor): express.Router {
     );
 
     router.get(
-        '/package/:contentId/render',
-        async (req: express.Request, res: express.Response) => {
-            const { contentId } = req.params;
-            try {
-                const h5pPage = await lumiController.renderPlayer(contentId);
-                res.status(200).end(h5pPage);
-            } catch {
-                res.status(404).end();
-            }
-        }
-    );
-
-    router.get(
         '/open_files',
         (
             req: express.Request,

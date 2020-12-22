@@ -3,11 +3,11 @@ import fs from 'fs-extra';
 import _path from 'path';
 import nucleus from 'nucleus-nodejs';
 
-import PlayerRenderer from '../h5pImplementations/Player.renderer';
 import LumiError from '../helpers/LumiError';
 import * as H5P from 'h5p-nodejs-library';
-import User from '../h5pImplementations/User';
 import Logger from '../helpers/Logger';
+
+import User from '../User';
 
 const log = new Logger('controller:lumi-h5p');
 
@@ -120,24 +120,6 @@ export default class LumiController {
         });
 
         return response.filePaths;
-    }
-
-    public async renderPlayer(contentId: string): Promise<any> {
-        log.info(`rendering package with contentId ${contentId}`);
-
-        const player = new H5P.H5PPlayer(
-            this.h5pEditor.libraryStorage,
-            this.h5pEditor.contentStorage,
-            this.h5pEditor.config
-        );
-        player.setRenderer(PlayerRenderer);
-
-        try {
-            return player.render(contentId);
-        } catch (error) {
-            log.warn(error);
-            throw new LumiError('h5p-not-found', error.message, 404);
-        }
     }
 
     public async update(

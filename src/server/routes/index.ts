@@ -8,9 +8,10 @@ import h5pConfig from '../../config/h5pConfig';
 import lumiRoutes from './lumiRoutes';
 import trackingRoutes from './trackingRoutes';
 import Logger from '../helpers/Logger';
-import User from '../h5pImplementations/User';
 import IServerConfig from '../../config/IServerConfig';
 import h5pRoutes from './h5pRoutes';
+
+import User from '../User';
 
 const log = new Logger('routes');
 
@@ -59,19 +60,6 @@ export default function (
             // to use the language detected by the i18next language detector.
         )
     );
-
-    // router.use(
-    //     h5pConfig.baseUrl,
-    //     h5pAjaxExpressRouter(
-    //         h5pEditor,
-    //         `${__dirname}/../../../h5p/core`,
-    //         `${__dirname}/../../../h5p/editor`,
-    //         {
-    //             routeGetContentFile: false,
-    //             routeGetLibraryFile: false
-    //         }
-    //     )
-    // );
 
     // The expressRoutes are routes that create pages for these actions:
     // - Creating new content
