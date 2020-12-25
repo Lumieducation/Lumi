@@ -128,11 +128,11 @@ export default function (
         const contentIds = await h5pEditor.contentManager.listContent();
         const contentObjects = await Promise.all(
             contentIds.map(async (id) => ({
+                id,
                 content: await h5pEditor.contentManager.getContentMetadata(
                     id,
                     req.user
-                ),
-                id
+                )
             }))
         );
 
