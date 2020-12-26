@@ -202,7 +202,13 @@ export class H5PEditorH5PComponent extends React.Component<{
 
     private changeMode = async (event: React.ChangeEvent<{}>, mode: number) => {
         try {
-            if (await this.h5pEditor.current?.save()) {
+            if (mode === Modes.view) {
+                if (await this.h5pEditor.current?.save()) {
+                    this.props.updateTab(this.props.tab.id, {
+                        mode
+                    });
+                }
+            } else {
                 this.props.updateTab(this.props.tab.id, {
                     mode
                 });
