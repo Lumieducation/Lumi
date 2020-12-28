@@ -27,7 +27,10 @@ export default function AppBar(props: {
             // })}
         >
             <Toolbar>
-                <Link to="/">
+                <Link
+                    to="/"
+                    style={{ color: 'inherit', textDecoration: 'inherit' }}
+                >
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"

@@ -72,7 +72,13 @@ export default function MediaCard() {
                             </CardActionArea>
                             <CardActions>
                                 <Button size="small" color="primary">
-                                    <Link to="/h5peditor">
+                                    <Link
+                                        to="/h5peditor"
+                                        style={{
+                                            color: 'inherit',
+                                            textDecoration: 'inherit'
+                                        }}
+                                    >
                                         {I18n.t('editor.startPage.start')}
                                     </Link>
                                 </Button>
