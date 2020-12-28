@@ -24,7 +24,10 @@ import upath from 'upath';
 import { track } from '../track/actions';
 import { IState } from '..';
 import * as selectors from './H5PEditorSelectors';
+import * as h5pActions from '../h5p/H5PActions';
 import shortid from 'shortid';
+
+import store from '../index';
 
 const log = new Logger('actions:tabs');
 
@@ -300,12 +303,19 @@ export function openTab(tab?: Partial<ITab>): TabActionTypes {
     };
 }
 
-export function closeTab(id: string): TabActionTypes {
+export function closeTab(id: string): any {
     log.info(`closing tab with id ${id}`);
+    return async (dispatch: any) => {
+        const tab = selectors.tab(store.getState(), id);
 
-    return {
-        payload: { id },
-        type: H5PEDITOR_CLOSE_TAB
+        if (tab && tab.contentId) {
+            dispatch(h5pActions.deleteH5P(tab.contentId));
+        }
+
+        dispatch({
+            payload: { id },
+            type: H5PEDITOR_CLOSE_TAB
+        });
     };
 }
 
