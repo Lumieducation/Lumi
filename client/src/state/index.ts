@@ -9,10 +9,16 @@ import {
 
 import translations from '../i18n';
 
-import * as Notifications from './Notifications';
-import * as H5PEditor from './H5PEditor';
-import * as H5P from './h5p';
+import * as NotificationsActions from './Notifications/NotificationsActions';
+import NotificationsReducer from './Notifications/NotificationsReducer';
+import * as H5PEditorActions from './H5PEditor/H5PEditorActions';
+import * as H5PEditorTypes from './H5PEditor/H5PEditorTypes';
+import H5PEditorReducer from './H5PEditor/H5PEditorReducer';
+import * as NotificationsSelectors from './Notifications/NotificationsSelectors';
+import * as H5PEditorSelectors from './H5PEditor/H5PEditorSelectors';
+import * as H5PActions from './h5p/H5PActions';
 
+import * as NotificationsTypes from './Notifications/NotificationsTypes';
 import thunk from 'redux-thunk';
 
 import Logger from '../helpers/Logger';
@@ -31,8 +37,8 @@ const middleWares = [thunk /*createSentryMiddleware(Sentry)*/];
 // state - reducer
 const rootReducer = () =>
     combineReducers({
-        notifications: Notifications.reducer,
-        h5peditor: H5PEditor.reducer,
+        notifications: NotificationsReducer,
+        h5peditor: H5PEditorReducer,
         i18n: i18nReducer
     });
 
@@ -42,20 +48,19 @@ const store = createStore(
     composeEnhancers(applyMiddleware(...middleWares))
 );
 
-export interface IState {
-    notifications: Notifications.types.INotificationsState;
-    h5peditor: H5PEditor.types.IH5PEditorState;
-}
+export interface IState
+    extends H5PEditorTypes.IState,
+        NotificationsTypes.IState {}
 
 export const actions = {
-    notifications: Notifications.actions,
-    h5p: H5P.actions,
-    h5peditor: H5PEditor.actions
+    notifications: NotificationsActions,
+    h5p: H5PActions,
+    h5peditor: H5PEditorActions
 };
 
 export const selectors = {
-    notifications: Notifications.selectors,
-    h5peditor: H5PEditor.selectors
+    notifications: NotificationsSelectors,
+    h5peditor: H5PEditorSelectors
 };
 
 syncTranslationWithStore(store);

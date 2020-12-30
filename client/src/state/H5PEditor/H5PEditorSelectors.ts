@@ -1,6 +1,7 @@
 import Logger from '../../helpers/Logger';
 
-import { IState, ITab, Modes, SaveButtonState } from './H5PEditorTypes';
+import { ITab, Modes, SaveButtonState } from './H5PEditorTypes';
+import { IState } from '../';
 
 const log = new Logger('selectors:tabs');
 

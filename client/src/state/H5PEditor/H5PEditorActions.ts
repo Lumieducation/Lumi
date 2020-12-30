@@ -1,4 +1,4 @@
-import * as H5P from '../h5p';
+import * as H5PActions from '../h5p/H5PActions';
 import * as notifications from '../Notifications/NotificationsActions';
 
 import Logger from '../../helpers/Logger';
@@ -96,7 +96,7 @@ export function clickOnCloseTab(tabId: string): any {
         const contentId = selectors.tab(getState(), tabId).contentId;
 
         if (contentId) {
-            await dispatch(H5P.actions.deleteH5P(contentId));
+            await dispatch(H5PActions.deleteH5P(contentId));
         }
 
         dispatch(closeTab(tabId));
@@ -124,7 +124,7 @@ export function clickOnFileInFiletree(name: string, path: string): any {
         // dispatch(openTab(tab));
 
         try {
-            const importAction = await dispatch(H5P.actions.importH5P(path));
+            const importAction = await dispatch(H5PActions.importH5P(path));
 
             if (importAction.error) {
                 dispatch(
@@ -187,7 +187,7 @@ export function clickOnSaveButton(
         );
 
         const updateAction = await dispatch(
-            H5P.actions.updateH5P(
+            H5PActions.updateH5P(
                 params.params,
                 params.metadata,
                 library,
@@ -208,7 +208,7 @@ export function clickOnSaveButton(
         const updatedH5P = updateAction.payload;
 
         const exportAction = await dispatch(
-            H5P.actions.exportH5P(updatedH5P.id, path)
+            H5PActions.exportH5P(updatedH5P.id, path)
         );
 
         if (exportAction.error) {
@@ -270,7 +270,7 @@ export function updateH5PInTab(
         }
 
         const updateAction = await dispatch(
-            H5P.actions.updateH5P(
+            H5PActions.updateH5P(
                 params.params,
                 params.metadata,
                 library,

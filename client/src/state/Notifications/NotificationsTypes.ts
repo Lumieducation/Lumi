@@ -19,6 +19,10 @@ export interface INotification {
     };
 }
 
+export interface IState {
+    notifications: INotificationsState;
+}
+
 export interface INotificationsState {
     notifications: INotification[];
 }
