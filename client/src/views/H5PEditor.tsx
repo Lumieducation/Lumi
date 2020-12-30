@@ -47,39 +47,6 @@ export class H5PEditor extends React.Component<{
     openFiles: typeof actions.h5peditor.openH5P;
     selectTab: typeof actions.h5peditor.selectTab;
 }> {
-    constructor(props: {
-        activeTab: ITab;
-        // mode: Modes;
-        tabs: ITab[];
-        activeTabIndex: number;
-        noActiveTab: boolean;
-        saveButtonState: SaveButtonState;
-        viewDisabled: boolean;
-
-        classes: any;
-
-        // changeMode: typeof actions.ui.changeMode;
-        exportH5P: typeof actions.h5p.exportH5P;
-        updateH5P: typeof actions.h5peditor.updateH5PInTab;
-        updateTab: typeof actions.h5peditor.updateTab;
-
-        loadPlayerContent: typeof actions.h5p.loadPlayerContent;
-        loadEditorContent: typeof actions.h5p.loadEditorContent;
-        saveContent: typeof actions.h5p.saveContent;
-
-        editorLoaded: typeof actions.h5peditor.editorLoaded;
-        editorSaved: typeof actions.h5peditor.editorSaved;
-        editorSaveError: typeof actions.h5peditor.editorSaveError;
-        playerInitialized: typeof actions.h5peditor.playerInitialized;
-
-        closeTab: typeof actions.h5peditor.closeTab;
-        createH5P: typeof actions.h5peditor.clickOnCreateH5P;
-        openFiles: typeof actions.h5peditor.openH5P;
-        selectTab: typeof actions.h5peditor.selectTab;
-    }) {
-        super(props);
-    }
-
     public render(): React.ReactNode {
         if (this.props.noActiveTab) {
             return (
