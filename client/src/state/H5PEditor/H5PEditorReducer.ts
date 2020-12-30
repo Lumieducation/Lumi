@@ -80,12 +80,10 @@ export default function tabReducer(
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
-                        parseInt(tab.contentId || '') ===
-                        parseInt(action.payload.contentId)
+                        tab.id === action.payload.tabId
                             ? {
                                   ...tab,
-                                  mainLibrary: (action.payload
-                                      .content as any).library.split(' ')[0]
+                                  loadingIndicator: false
                               }
                             : tab
                     )
