@@ -8,7 +8,6 @@ import path from 'path';
 import SocketIO from 'socket.io';
 
 import httpServerFactory from './httpServer';
-import info from './info';
 import menuTemplate from './menu';
 import updater from './updater';
 import websocketFactory from './websocket';
@@ -28,7 +27,7 @@ process.on('uncaughtException', (error) => {
 if (process.env.NODE_ENV !== 'development') {
     Sentry.init({
         dsn: 'https://02e4da31636d479f86a17a6ef749278c@sentry.io/1876151',
-        release: info.version
+        release: app.getVersion()
     });
 }
 
@@ -37,7 +36,7 @@ if (process.env.NODE_ENV !== 'development') {
     nucleus.appStarted();
     nucleus.setProps(
         {
-            version: info.version
+            version: app.getVersion()
         },
         false
     );
@@ -108,7 +107,6 @@ app.on('activate', () => {
 // create main BrowserWindow when electron is ready
 app.on('ready', async () => {
     log.info('app is ready');
-
     const server = await httpServerFactory(
         serverConfigFactory(process.env.USERDATA || app.getPath('userData'))
     );
