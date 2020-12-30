@@ -16,7 +16,6 @@ import * as H5PEditorTypes from './H5PEditor/H5PEditorTypes';
 import H5PEditorReducer from './H5PEditor/H5PEditorReducer';
 import * as NotificationsSelectors from './Notifications/NotificationsSelectors';
 import * as H5PEditorSelectors from './H5PEditor/H5PEditorSelectors';
-import * as H5PActions from './h5p/H5PActions';
 
 import * as NotificationsTypes from './Notifications/NotificationsTypes';
 import thunk from 'redux-thunk';
@@ -54,7 +53,6 @@ export interface IState
 
 export const actions = {
     notifications: NotificationsActions,
-    h5p: H5PActions,
     h5peditor: H5PEditorActions
 };
 

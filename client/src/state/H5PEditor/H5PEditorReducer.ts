@@ -8,10 +8,6 @@ import {
     H5PEDITOR_SELECT_TAB,
     H5PEDITOR_UPDATE_TAB,
     H5PEDITOR_LOADED,
-    Modes
-} from './H5PEditorTypes';
-
-import {
     H5P_LOADEDITORCONTENT_SUCCESS,
     H5P_LOADPLAYERCONTENT_REQUEST,
     H5P_LOADPLAYERCONTENT_SUCCESS,
@@ -19,8 +15,9 @@ import {
     H5P_SAVECONTENT_REQUEST,
     H5P_EXPORT_REQUEST,
     H5P_EXPORT_SUCCESS,
-    H5P_EXPORT_ERROR
-} from '../h5p/H5PTypes';
+    H5P_EXPORT_ERROR,
+    Modes
+} from './H5PEditorTypes';
 
 export const initialState: IH5PEditorState = {
     activeTabIndex: 0,

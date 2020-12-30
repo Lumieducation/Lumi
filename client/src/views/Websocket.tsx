@@ -112,7 +112,7 @@ export class WebsocketContainer extends React.Component<
             const data = await window.h5peditor.current?.save();
 
             if (data) {
-                dispatch(actions.h5p.exportH5P(data.contentId));
+                dispatch(actions.h5peditor.exportH5P(data.contentId));
             }
         } catch (error) {
             log.error(error);
@@ -127,7 +127,9 @@ export class WebsocketContainer extends React.Component<
             const data = await window.h5peditor.current?.save();
 
             if (data) {
-                dispatch(actions.h5p.exportH5P(data.contentId, activeTab.path));
+                dispatch(
+                    actions.h5peditor.exportH5P(data.contentId, activeTab.path)
+                );
             }
         } catch (error) {
             log.error(error);

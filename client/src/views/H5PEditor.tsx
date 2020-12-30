@@ -29,13 +29,13 @@ export class H5PEditor extends React.Component<{
 
     classes: any;
 
-    exportH5P: typeof actions.h5p.exportH5P;
+    exportH5P: typeof actions.h5peditor.exportH5P;
     updateH5P: typeof actions.h5peditor.updateH5PInTab;
     updateTab: typeof actions.h5peditor.updateTab;
 
-    loadPlayerContent: typeof actions.h5p.loadPlayerContent;
-    loadEditorContent: typeof actions.h5p.loadEditorContent;
-    saveContent: typeof actions.h5p.saveContent;
+    loadPlayerContent: typeof actions.h5peditor.loadPlayerContent;
+    loadEditorContent: typeof actions.h5peditor.loadEditorContent;
+    saveContent: typeof actions.h5peditor.saveContent;
 
     editorLoaded: typeof actions.h5peditor.editorLoaded;
     editorSaved: typeof actions.h5peditor.editorSaved;
@@ -101,13 +101,13 @@ function mapStateToProps(state: any, ownProps: any): any {
 function mapDispatchToProps(dispatch: any): any {
     return bindActionCreators(
         {
-            exportH5P: actions.h5p.exportH5P,
+            exportH5P: actions.h5peditor.exportH5P,
             updateH5P: actions.h5peditor.updateH5PInTab,
             updateTab: actions.h5peditor.updateTab,
 
-            loadPlayerContent: actions.h5p.loadPlayerContent,
-            loadEditorContent: actions.h5p.loadEditorContent,
-            saveContent: actions.h5p.saveContent,
+            loadPlayerContent: actions.h5peditor.loadPlayerContent,
+            loadEditorContent: actions.h5peditor.loadEditorContent,
+            saveContent: actions.h5peditor.saveContent,
 
             editorLoaded: actions.h5peditor.editorLoaded,
             editorSaved: actions.h5peditor.editorSaved,

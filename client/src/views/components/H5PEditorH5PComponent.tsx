@@ -43,13 +43,13 @@ export class H5PEditorH5PComponent extends React.Component<{
 
     classes: any;
 
-    exportH5P: typeof actions.h5p.exportH5P;
+    exportH5P: typeof actions.h5peditor.exportH5P;
     updateH5P: typeof actions.h5peditor.updateH5PInTab;
     updateTab: typeof actions.h5peditor.updateTab;
 
-    loadPlayerContent: typeof actions.h5p.loadPlayerContent;
-    loadEditorContent: typeof actions.h5p.loadEditorContent;
-    saveContent: typeof actions.h5p.saveContent;
+    loadPlayerContent: typeof actions.h5peditor.loadPlayerContent;
+    loadEditorContent: typeof actions.h5peditor.loadEditorContent;
+    saveContent: typeof actions.h5peditor.saveContent;
 
     editorLoaded: typeof actions.h5peditor.editorLoaded;
     editorSaved: typeof actions.h5peditor.editorSaved;
@@ -63,13 +63,13 @@ export class H5PEditorH5PComponent extends React.Component<{
         classes: any;
 
         // changeMode: typeof actions.ui.changeMode;
-        exportH5P: typeof actions.h5p.exportH5P;
+        exportH5P: typeof actions.h5peditor.exportH5P;
         updateH5P: typeof actions.h5peditor.updateH5PInTab;
         updateTab: typeof actions.h5peditor.updateTab;
 
-        loadPlayerContent: typeof actions.h5p.loadPlayerContent;
-        loadEditorContent: typeof actions.h5p.loadEditorContent;
-        saveContent: typeof actions.h5p.saveContent;
+        loadPlayerContent: typeof actions.h5peditor.loadPlayerContent;
+        loadEditorContent: typeof actions.h5peditor.loadEditorContent;
+        saveContent: typeof actions.h5peditor.saveContent;
 
         editorLoaded: typeof actions.h5peditor.editorLoaded;
         editorSaved: typeof actions.h5peditor.editorSaved;
@@ -270,7 +270,10 @@ export class H5PEditorH5PComponent extends React.Component<{
             this.h5pEditor.current.loadContentCallback = async (
                 contentId: string
             ) => {
-                return (await this.props.loadEditorContent(contentId)) as any;
+                return (await this.props.loadEditorContent(
+                    this.props.tab.id,
+                    contentId
+                )) as any;
             };
 
             this.h5pEditor.current.saveContentCallback = (
