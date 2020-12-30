@@ -14,7 +14,7 @@ import Notifications from './Notifications';
 
 import H5PEditor from './H5PEditor';
 import Analytics from './Analytics';
-import Launchpad from './Launchpad';
+// import Launchpad from './Launchpad';
 
 import Websocket from './Websocket';
 
@@ -60,7 +60,7 @@ export class AppContainer extends React.Component<IProps, IComponentState> {
                             path="/analytics"
                             component={Analytics}
                         />
-                        <Route path="/" component={Launchpad} />
+                        <Route path="/" component={H5PEditor} />
                     </Switch>
                 </Router>
                 <Notifications />
