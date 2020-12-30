@@ -182,7 +182,7 @@ export default function tabReducer(
                             saveButtonState: 'hidden',
                             viewDisabled: true,
                             mainLibrary: '',
-                            name: 'missing title',
+                            name: 'new H5P',
                             path: undefined,
                             state: 'success',
                             mode: Modes.edit,
