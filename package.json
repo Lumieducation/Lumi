@@ -48,7 +48,8 @@
         "test:mac": "npx jest --config jest.mac.config.js",
         "test:e2e:win": "npx jest --config ./test/e2e/win/jest.config.js",
         "semantic-release": "semantic-release",
-        "uninstall": "rm -rf build/ && rm -rf node_modules/"
+        "uninstall": "rm -rf build/ && rm -rf node_modules/",
+        "postinstall": "sh scripts/install.sh 1.24 && sh scripts/install.sh 1.24.1 && npm install --prefix client"
     },
     "publishConfig": {
         "access": "restricted"
