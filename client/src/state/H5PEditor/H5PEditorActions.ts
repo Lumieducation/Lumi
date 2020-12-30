@@ -42,7 +42,6 @@ import {
     H5P_LOADEDITORCONTENT_SUCCESS
 } from './H5PEditorTypes';
 
-import superagent from 'superagent';
 import _path from 'path';
 import upath from 'upath';
 
@@ -94,7 +93,7 @@ export interface IEditorLoadedAction {
 
 export function openH5P(): any {
     return (dispatch: any) => {
-        superagent.get('/api/v1/h5p/open_files').then((response) => {
+        api.openFiles().then((response) => {
             const files = response.body;
 
             files.forEach((file: string) => {

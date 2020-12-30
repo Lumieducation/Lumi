@@ -57,3 +57,7 @@ export function updateH5P(
         .patch(`/api/v1/lumi?contentId=${contentId}`)
         .send(content);
 }
+
+export function openFiles(): Promise<superagent.Response> {
+    return superagent.get('/api/v1/lumi/open_files');
+}
