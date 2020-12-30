@@ -91,7 +91,7 @@ export default function (
         contentTypeCacheExpressRouter(h5pEditor.contentTypeCache)
     );
 
-    router.use('/api/v1/h5p', lumiRoutes(h5pEditor));
+    router.use('/api/v1/lumi', lumiRoutes(h5pEditor));
 
     router.get('*', express.static(`${__dirname}/../../client`));
 

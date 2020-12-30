@@ -13,12 +13,14 @@ export default async function setup(
         mkdirp.sync(serverConfig.librariesPath);
         mkdirp.sync(serverConfig.temporaryStoragePath);
 
+        // we might need to update settings here and run upgrade scripts when for example the baseUrl changes
+
         if (!(await fsExtra.existsSync(serverConfig.configFile))) {
             fsExtra.writeFileSync(
                 serverConfig.configFile,
                 JSON.stringify({
                     fetchingDisabled: 0,
-                    baseUrl: '/h5p',
+                    baseUrl: '/api/v1/h5p',
                     uuid: '8de62c47-f335-42f6-909d-2d8f4b7fb7f5',
                     siteType: 'local',
                     sendUsageStatistics: false,
