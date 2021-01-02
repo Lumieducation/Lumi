@@ -167,7 +167,7 @@ export class H5PEditorH5PComponent extends React.Component<{
                             }}
                         >
                             <H5PEditorUI
-                                contentId={this.props.tab.contentId}
+                                contentId={this.props.tab.contentId ?? 'new'}
                                 loadContentCallback={async (
                                     contentId: string
                                 ) => {
