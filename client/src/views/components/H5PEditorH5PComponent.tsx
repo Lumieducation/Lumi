@@ -10,11 +10,13 @@ import ContentPaper from './ContentPaper';
 
 import { createStyles, Theme, withStyles } from '@material-ui/core/styles';
 
-import {
-    defineElements,
-    H5PEditorComponent,
-    H5PPlayerComponent
-} from 'h5p-webcomponents';
+// import {
+//     defineElements,
+//     H5PEditorComponent,
+//     H5PPlayerComponent
+// } from 'h5p-webcomponents';
+
+import { H5PPlayerUI, H5PEditorUI } from '@lumieducation/h5p-react';
 
 import SaveButton from './SaveButton';
 import Tab from '@material-ui/core/Tab';
@@ -26,7 +28,7 @@ import { actions } from '../../state';
 import { Modes } from '../../state/H5PEditor/H5PEditorTypes';
 import { ITab } from '../../state/H5PEditor/H5PEditorTypes';
 
-defineElements();
+// defineElements();
 
 declare var window: any;
 
@@ -79,23 +81,23 @@ export class H5PEditorH5PComponent extends React.Component<{
         super(props);
 
         this.h5pEditor = React.createRef();
-        this.h5pPlayer = React.createRef();
+        // this.h5pPlayer = React.createRef();
     }
 
-    private h5pPlayer: React.RefObject<H5PPlayerComponent>;
-    private h5pEditor: React.RefObject<H5PEditorComponent>;
+    // private h5pPlayer: React.RefObject<H5PPlayerComponent>;
+    private h5pEditor: React.RefObject<H5PEditorUI>;
 
-    public componentDidMount() {
-        this.registerEvents();
-        this.setServiceCallbacks();
-    }
+    // public componentDidMount() {
+    //     this.registerEvents();
+    //     this.setServiceCallbacks();
+    // }
 
-    public getSnapshotBeforeUpdate() {
-        // Should the old editor instance be destroyed, we unregister from it...
-        this.unregisterEvents();
+    // public getSnapshotBeforeUpdate() {
+    //     // Should the old editor instance be destroyed, we unregister from it...
+    //     this.unregisterEvents();
 
-        return null;
-    }
+    //     return null;
+    // }
 
     public componentDidUpdate(prevProps: any) {
         if (
@@ -103,8 +105,8 @@ export class H5PEditorH5PComponent extends React.Component<{
             (prevProps.tab.mode !== this.props.tab.mode &&
                 this.props.tab.mode === Modes.view)
         ) {
-            this.registerEvents();
-            this.setServiceCallbacks();
+            // this.registerEvents();
+            // this.setServiceCallbacks();
         }
 
         if (this.props.show) {
@@ -113,7 +115,7 @@ export class H5PEditorH5PComponent extends React.Component<{
     }
 
     public componentWillUnmount() {
-        this.unregisterEvents();
+        // this.unregisterEvents();
     }
 
     public render(): React.ReactNode {
@@ -164,10 +166,30 @@ export class H5PEditorH5PComponent extends React.Component<{
                                         : 'none'
                             }}
                         >
-                            <h5p-editor
-                                ref={this.h5pEditor}
-                                content-id={this.props.tab.contentId || 'new'}
-                            ></h5p-editor>
+                            <H5PEditorUI
+                                contentId={this.props.tab.contentId}
+                                loadContentCallback={async (
+                                    contentId: string
+                                ) => {
+                                    return (await this.props.loadEditorContent(
+                                        this.props.tab.id,
+                                        contentId
+                                    )) as any;
+                                }}
+                                saveContentCallback={async (
+                                    contentId: string,
+                                    requestBody: {
+                                        library: string;
+                                        params: any;
+                                    }
+                                ) =>
+                                    this.props.saveContent(
+                                        this.props.tab.id,
+                                        contentId,
+                                        requestBody
+                                    ) as any
+                                }
+                            />
                         </div>
                         <div
                             style={{
@@ -177,10 +199,20 @@ export class H5PEditorH5PComponent extends React.Component<{
                                         : 'none'
                             }}
                         >
-                            <h5p-player
-                                ref={this.h5pPlayer}
-                                content-id={this.props.tab.contentId}
-                            ></h5p-player>
+                            {this.props.tab.mode === Modes.view &&
+                            this.props.tab.contentId ? (
+                                <H5PPlayerUI
+                                    contentId={this.props.tab.contentId}
+                                    loadContentCallback={async (
+                                        contentId: string
+                                    ) => {
+                                        return (await this.props.loadEditorContent(
+                                            this.props.tab.id,
+                                            contentId
+                                        )) as any;
+                                    }}
+                                />
+                            ) : null}
                         </div>
                     </ContentPaper>
                 </Grid>
@@ -193,13 +225,11 @@ export class H5PEditorH5PComponent extends React.Component<{
     }
 
     private export = async () => {
-        const data = await this.h5pEditor.current?.save();
-
-        if (data) {
-            this.props.exportH5P(data?.contentId || 'new', this.props.tab.path);
-        }
+        //     const data = await this.h5pEditor.current?.save();
+        //     if (data) {
+        //         this.props.exportH5P(data?.contentId || 'new', this.props.tab.path);
+        //     }
     };
-
     private changeMode = async (event: React.ChangeEvent<{}>, mode: number) => {
         try {
             if (mode === Modes.view) {
@@ -232,68 +262,68 @@ export class H5PEditorH5PComponent extends React.Component<{
         this.props.playerInitialized(this.props.tab.id);
     };
 
-    private registerEvents() {
-        this.h5pEditor.current?.addEventListener('saved', this.editorSaved);
-        this.h5pEditor.current?.addEventListener('editorloaded', () =>
-            this.props.editorLoaded(this.props.tab.id)
-        );
-        this.h5pEditor.current?.addEventListener(
-            'save-error',
-            this.editorSaveError
-        );
+    // private registerEvents() {
+    //     this.h5pEditor.current?.addEventListener('saved', this.editorSaved);
+    //     this.h5pEditor.current?.addEventListener('editorloaded', () =>
+    //         this.props.editorLoaded(this.props.tab.id)
+    //     );
+    //     this.h5pEditor.current?.addEventListener(
+    //         'save-error',
+    //         this.editorSaveError
+    //     );
 
-        this.h5pPlayer.current?.addEventListener(
-            'initialized',
-            this.playerInitialized
-        );
-    }
+    //     this.h5pPlayer.current?.addEventListener(
+    //         'initialized',
+    //         this.playerInitialized
+    //     );
+    // }
 
-    private unregisterEvents() {
-        this.h5pEditor.current?.removeEventListener('saved', this.editorSaved);
-        this.h5pEditor.current?.removeEventListener(
-            'editorloaded',
-            this.editorLoaded
-        );
-        this.h5pEditor.current?.removeEventListener(
-            'save-error',
-            this.editorSaveError
-        );
+    // private unregisterEvents() {
+    //     this.h5pEditor.current?.removeEventListener('saved', this.editorSaved);
+    //     this.h5pEditor.current?.removeEventListener(
+    //         'editorloaded',
+    //         this.editorLoaded
+    //     );
+    //     this.h5pEditor.current?.removeEventListener(
+    //         'save-error',
+    //         this.editorSaveError
+    //     );
 
-        this.h5pPlayer.current?.removeEventListener(
-            'initialized',
-            this.playerInitialized
-        );
-    }
+    //     this.h5pPlayer.current?.removeEventListener(
+    //         'initialized',
+    //         this.playerInitialized
+    //     );
+    // }
 
-    private setServiceCallbacks() {
-        if (this.h5pEditor.current) {
-            this.h5pEditor.current.loadContentCallback = async (
-                contentId: string
-            ) => {
-                return (await this.props.loadEditorContent(
-                    this.props.tab.id,
-                    contentId
-                )) as any;
-            };
+    // private setServiceCallbacks() {
+    //     if (this.h5pEditor.current) {
+    //         this.h5pEditor.current.loadContentCallback = async (
+    //             contentId: string
+    //         ) => {
+    //             return (await this.props.loadEditorContent(
+    //                 this.props.tab.id,
+    //                 contentId
+    //             )) as any;
+    //         };
 
-            this.h5pEditor.current.saveContentCallback = (
-                contentId: string,
-                requestBody: { library: string; params: any }
-            ) =>
-                this.props.saveContent(
-                    this.props.tab.id,
-                    contentId,
-                    requestBody
-                ) as any;
-        }
-        if (this.h5pPlayer.current) {
-            this.h5pPlayer.current.loadContentCallback = async (
-                contentId: string
-            ) => {
-                return (await this.props.loadPlayerContent(contentId)) as any;
-            };
-        }
-    }
+    //         this.h5pEditor.current.saveContentCallback = (
+    //             contentId: string,
+    //             requestBody: { library: string; params: any }
+    //         ) =>
+    //             this.props.saveContent(
+    //                 this.props.tab.id,
+    //                 contentId,
+    //                 requestBody
+    //             ) as any;
+    //     }
+    //     if (this.h5pPlayer.current) {
+    //         this.h5pPlayer.current.loadContentCallback = async (
+    //             contentId: string
+    //         ) => {
+    //             return (await this.props.loadPlayerContent(contentId)) as any;
+    //         };
+    //     }
+    // }
 }
 
 const styles = (theme: Theme) =>
