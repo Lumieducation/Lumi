@@ -8,6 +8,9 @@ import {
     H5PEDITOR_SELECT_TAB,
     H5PEDITOR_UPDATE_TAB,
     H5PEDITOR_LOADED,
+    H5PEDITOR_EXPORTHTML_REQUEST,
+    H5PEDITOR_EXPORTHTML_SUCCESS,
+    H5PEDITOR_EXPORTHTML_ERROR,
     H5P_LOADEDITORCONTENT_SUCCESS,
     H5P_LOADPLAYERCONTENT_REQUEST,
     H5P_LOADPLAYERCONTENT_SUCCESS,
@@ -130,6 +133,48 @@ export default function tabReducer(
                                   saveButtonState: 'default',
                                   exportButtonState: 'default',
                                   viewDisabled: false,
+                                  loadingIndicator: false
+                              }
+                            : tab
+                    )
+                };
+
+            case H5PEDITOR_EXPORTHTML_REQUEST:
+                return {
+                    ...state,
+                    tabList: state.tabList.map((tab, index) =>
+                        tab.contentId === action.payload.contentId
+                            ? {
+                                  ...tab,
+                                  exportButtonState: 'loading',
+                                  loadingIndicator: true
+                              }
+                            : tab
+                    )
+                };
+
+            case H5PEDITOR_EXPORTHTML_SUCCESS:
+                return {
+                    ...state,
+                    tabList: state.tabList.map((tab, index) =>
+                        tab.contentId === action.payload.contentId
+                            ? {
+                                  ...tab,
+                                  exportButtonState: 'success',
+                                  loadingIndicator: false
+                              }
+                            : tab
+                    )
+                };
+
+            case H5PEDITOR_EXPORTHTML_ERROR:
+                return {
+                    ...state,
+                    tabList: state.tabList.map((tab, index) =>
+                        tab.contentId === action.payload.contentId
+                            ? {
+                                  ...tab,
+                                  exportButtonState: 'error',
                                   loadingIndicator: false
                               }
                             : tab
