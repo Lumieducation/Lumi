@@ -51,7 +51,7 @@
         "test:e2e:win": "npx jest --config ./test/e2e/win/jest.config.js",
         "semantic-release": "semantic-release",
         "uninstall": "rm -rf build/ && rm -rf node_modules/",
-        "postinstall": "sh scripts/install.sh 1.24 && sh scripts/install.sh 1.24.1 && npm install --prefix client"
+        "postinstall": "sh scripts/install.sh 1.24 && sh scripts/install.sh 1.24.1 && (cd client && npm install)"
     },
     "publishConfig": {
         "access": "restricted"
