@@ -1,5 +1,9 @@
 import express from 'express';
 
+import { dialog } from 'electron';
+
+import fsExtra from 'fs-extra';
+
 import * as H5P from '@lumieducation/h5p-server';
 import {
     IRequestWithUser,
@@ -28,6 +32,40 @@ export default function (
         } catch (error) {
             res.status(500).end(error.message);
         }
+    });
+
+    const htmlExporter = new H5P.HtmlExporter(
+        h5pEditor.libraryStorage,
+        h5pEditor.contentStorage,
+        h5pEditor.config,
+        `${__dirname}/../../../h5p/core`,
+        `${__dirname}/../../../h5p/editor`
+    );
+
+    router.get(`/:contentId/html`, async (req: IRequestWithUser, res) => {
+        const path = dialog.showSaveDialogSync({
+            defaultPath: '',
+            filters: [
+                {
+                    extensions: ['html'],
+                    name: 'Export H5P as html'
+                }
+            ],
+            title: 'Export H5P as html'
+        });
+
+        const html = await htmlExporter.createSingleBundle(
+            req.params.contentId,
+            req.user
+        );
+
+        try {
+            await fsExtra.writeFileSync(path, html);
+        } catch (error) {
+            return res.status(500).end();
+        }
+
+        res.status(200).end();
     });
 
     router.get('/:contentId/edit', async (req: IRequestWithLanguage, res) => {
