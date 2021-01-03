@@ -2,7 +2,7 @@
     "name": "lumi",
     "version": "0.3.1",
     "description": "A tool to create and display interactive content with H5P",
-    "author": "J.P. Schellenberg",
+    "author": "J.P. Schellenberg <c@Lumi.education>",
     "main": "build/main.js",
     "dependencies": {
         "@sentry/electron": "2.0.4",
@@ -26,6 +26,8 @@
         "build:all": "npm run build && ./node_modules/.bin/electron-builder --config builder.config.js --mac --win --linux --publish never",
         "build:all:dev": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run build:all",
         "build:client": "node scripts/build.js",
+        "build:linux": "npm run build && ./node_modules/.bin/electron-builder --config builder.config.js --linux --publish never",
+        "build:linux:dev": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run build:linux",
         "build:mac": "npm run build && ./node_modules/.bin/electron-builder --config builder.config.js --mac --publish never",
         "build:mac:dev": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run build:mac",
         "build:sentry": "RELEASE=true npm run build:client",
