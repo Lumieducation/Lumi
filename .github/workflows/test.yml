@@ -24,10 +24,10 @@ jobs:
               run: npm ci
             - name: lint
               run: npm run lint
-            - name: build:client
-              run: npm run build:client
             - name: build:server
               run: npm run build:server
+            - name: build:client
+              run: npm run build:client
             - name: unit-tests
               run: npm run test
               env:
