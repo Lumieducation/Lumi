@@ -36,7 +36,7 @@ module.exports = {
     },
     linux: {
         category: 'Utility',
-        target: ['AppImage', 'snap']
+        target: ['AppImage', 'snap', 'deb', 'pacman']
     },
     dmg: {
         sign: false
