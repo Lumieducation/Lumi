@@ -16,9 +16,12 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
-            - uses: filipstefansson/set-npm-token-action@v1
-              with:
-                  token: ${{ secrets.NPM_TOKEN }}
+            - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+              env:
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - attach_workspace:
+                  at: .
+
             - name: install
               run: npm ci
             - name: lint
