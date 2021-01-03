@@ -19,6 +19,9 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
+            - uses: filipstefansson/set-npm-token-action@v1
+              with:
+                  token: ${{ secrets.NPM_TOKEN }}
             - name: install
               run: npm ci
             - name: Build macOS
@@ -45,13 +48,16 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
+            - uses: filipstefansson/set-npm-token-action@v1
+              with:
+                  token: ${{ secrets.NPM_TOKEN }}
             - name: install
               run: npm ci
             - name: Build Windows
               run: npm run build:win
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            - run: Remove-Item 'dist\win-unpacked' -Recurse -Force 
+            - run: Remove-Item 'dist\win-unpacked' -Recurse -Force
             - name: Upload Windows artifacts
               uses: actions/upload-artifact@v2
               with:
