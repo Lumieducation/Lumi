@@ -87,6 +87,7 @@ export interface ITab {
     id: string;
     loadingIndicator: boolean;
     saveButtonState: SaveButtonState;
+    exportButtonState: SaveButtonState;
     viewDisabled: boolean;
     mainLibrary: string;
     name: string;

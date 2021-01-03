@@ -128,6 +128,7 @@ export default function tabReducer(
                             ? {
                                   ...tab,
                                   saveButtonState: 'default',
+                                  exportButtonState: 'default',
                                   viewDisabled: false,
                                   loadingIndicator: false
                               }
@@ -180,6 +181,7 @@ export default function tabReducer(
                             id: action.payload.id,
                             loadingIndicator: true,
                             saveButtonState: 'hidden',
+                            exportButtonState: 'hidden',
                             viewDisabled: true,
                             mainLibrary: '',
                             name: 'new H5P',
