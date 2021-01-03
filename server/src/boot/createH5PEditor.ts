@@ -1,4 +1,4 @@
-import * as H5P from 'h5p-nodejs-library';
+import * as H5P from '@lumieducation/h5p-server';
 
 /**
  * Create a H5PEditor object.

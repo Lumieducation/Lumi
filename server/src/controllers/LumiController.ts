@@ -4,7 +4,7 @@ import _path from 'path';
 import nucleus from 'nucleus-nodejs';
 
 import LumiError from '../helpers/LumiError';
-import * as H5P from 'h5p-nodejs-library';
+import * as H5P from '@lumieducation/h5p-server';
 import Logger from '../helpers/Logger';
 
 import User from '../User';
@@ -49,7 +49,7 @@ export default class LumiController {
 
         const stream = fs.createWriteStream(path);
         const packageExporter = new H5P.PackageExporter(
-            this.h5pEditor.libraryStorage,
+            this.h5pEditor.libraryManager,
             this.h5pEditor.contentStorage,
             this.h5pEditor.config
         );

@@ -1,5 +1,5 @@
 import express from 'express';
-import { H5PEditor } from 'h5p-nodejs-library';
+import { H5PEditor } from '@lumieducation/h5p-server';
 
 import LumiController from '../controllers/LumiController';
 import Logger from '../helpers/Logger';

@@ -1,4 +1,4 @@
-import * as H5P from 'h5p-nodejs-library';
+import * as H5P from '@lumieducation/h5p-server';
 import * as Sentry from '@sentry/node';
 import bodyParser from 'body-parser';
 import express from 'express';
@@ -27,7 +27,7 @@ export default async (serverConfig: IServerConfig) => {
         .init({
             backend: {
                 loadPath:
-                    'node_modules/h5p-nodejs-library/build/assets/translations/{{ns}}/{{lng}}.json'
+                    'node_modules/@lumieducation/h5p-server/build/assets/translations/{{ns}}/{{lng}}.json'
             },
             debug: process.env.DEBUG && process.env.DEBUG.includes('i18n'),
             defaultNS: 'server',
@@ -49,7 +49,7 @@ export default async (serverConfig: IServerConfig) => {
         new H5P.fsImplementations.JsonStorage(serverConfig.configFile)
     ).load();
 
-    // The H5PEditor object is central to all operations of h5p-nodejs-library
+    // The H5PEditor object is central to all operations of @lumieducation/h5p-server
     // if you want to user the editor component.
     //
     // To create the H5PEditor object, we call a helper function, which

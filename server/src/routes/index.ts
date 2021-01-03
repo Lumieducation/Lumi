@@ -1,8 +1,8 @@
 import express from 'express';
-import { H5PEditor, H5PPlayer } from 'h5p-nodejs-library';
-import h5pAjaxExpressRouter from 'h5p-nodejs-library/build/src/adapters/H5PAjaxRouter/H5PAjaxExpressRouter';
-import libraryAdministrationExpressRouter from 'h5p-nodejs-library/build/src/adapters/LibraryAdministrationRouter/LibraryAdministrationExpressRouter';
-import contentTypeCacheExpressRouter from 'h5p-nodejs-library/build/src/adapters/ContentTypeCacheRouter/ContentTypeCacheExpressRouter';
+import { H5PEditor, H5PPlayer } from '@lumieducation/h5p-server';
+import h5pAjaxExpressRouter from '@lumieducation/h5p-server/build/src/adapters/H5PAjaxRouter/H5PAjaxExpressRouter';
+import libraryAdministrationExpressRouter from '@lumieducation/h5p-server/build/src/adapters/LibraryAdministrationRouter/LibraryAdministrationExpressRouter';
+import contentTypeCacheExpressRouter from '@lumieducation/h5p-server/build/src/adapters/ContentTypeCacheRouter/ContentTypeCacheExpressRouter';
 
 // import h5pConfig from '../../config/h5pConfig';
 import lumiRoutes from './lumiRoutes';

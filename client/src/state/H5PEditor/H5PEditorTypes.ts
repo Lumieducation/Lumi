@@ -2,7 +2,7 @@ import {
     IPlayerModel,
     IEditorModel,
     IContentMetadata
-} from 'h5p-nodejs-library';
+} from '@lumieducation/h5p-server';
 
 // eslint-disable-next-line
 import Superagent from 'superagent';

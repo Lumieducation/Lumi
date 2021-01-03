@@ -1,4 +1,4 @@
-import { IUser } from 'h5p-nodejs-library';
+import { IUser } from '@lumieducation/h5p-server';
 
 /**
  * Example user object
