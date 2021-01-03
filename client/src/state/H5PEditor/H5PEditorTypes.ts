@@ -143,7 +143,34 @@ export type TabActionTypes =
     | IEditorLoadedAction
     | IH5PExportRequestAction
     | IH5PExportSuccessAction
-    | IH5PExportErrorAction;
+    | IH5PExportErrorAction
+    | IH5PEditorExportHtmlActions;
+
+export interface IH5PEditorExportHtmlRequestAction {
+    payload: {
+        contentId: string;
+    };
+    type: typeof H5PEDITOR_EXPORTHTML_REQUEST;
+}
+
+export interface IH5PEditorExportHtmlSuccessAction {
+    payload: {
+        contentId: string;
+    };
+    type: typeof H5PEDITOR_EXPORTHTML_SUCCESS;
+}
+
+export interface IH5PEditorExportHtmlErrorAction {
+    payload: {
+        contentId: string;
+    };
+    type: typeof H5PEDITOR_EXPORTHTML_ERROR;
+}
+
+export type IH5PEditorExportHtmlActions =
+    | IH5PEditorExportHtmlRequestAction
+    | IH5PEditorExportHtmlSuccessAction
+    | IH5PEditorExportHtmlErrorAction;
 
 export interface IH5PLoadEditorContentRequestAction {
     payload: {
