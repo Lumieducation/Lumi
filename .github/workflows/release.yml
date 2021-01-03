@@ -17,6 +17,10 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
+            - name: NPM Setup
+              run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+              env:
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: install
               run: npm ci
             - name: Release
@@ -36,7 +40,7 @@ jobs:
                   CSC_KEY_PASSWORD: ${{ secrets.mac_certs_password }}
                   APPLEID: ${{ secrets.apple_id }}
                   APPLEIDPASSWORD: ${{ secrets.apple_id_password }}
-    
+
     release-windows:
         needs: release
         runs-on: windows-latest
@@ -51,8 +55,12 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
+            - name: NPM Setup
+              run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+              env:
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: install
-              run: npm ci            
+              run: npm ci
             - name: Build
               run: npm run build
             - name: Publish Windows
@@ -80,6 +88,10 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
+            - name: NPM Setup
+              run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+              env:
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: install
               run: npm ci
             - name: Build

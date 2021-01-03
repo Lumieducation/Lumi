@@ -19,6 +19,10 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
+            - name: NPM Setup
+              run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+              env:
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: install
               run: npm ci
             - name: Build macOS
@@ -45,13 +49,17 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
+            - name: NPM Setup
+              run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+              env:
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: install
               run: npm ci
             - name: Build Windows
               run: npm run build:win
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            - run: Remove-Item 'dist\win-unpacked' -Recurse -Force 
+            - run: Remove-Item 'dist\win-unpacked' -Recurse -Force
             - name: Upload Windows artifacts
               uses: actions/upload-artifact@v2
               with:
