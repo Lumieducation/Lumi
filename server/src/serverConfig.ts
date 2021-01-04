@@ -1,11 +1,12 @@
+import path from 'path';
 import IServerConfig from './IServerConfig';
 
 export default (userData: string): IServerConfig => {
     return {
-        librariesPath: `${userData}/libraries`,
-        cache: `${userData}/store.json`,
-        temporaryStoragePath: `${userData}/tmp`,
-        workingCachePath: `${userData}/workingCache`,
-        configFile: `${userData}/config.json`
+        librariesPath: path.join(userData, 'libraries'),
+        cache: path.join(userData, 'store.json'),
+        temporaryStoragePath: path.join(userData, 'tmp'),
+        workingCachePath: path.join(userData, 'workingCache'),
+        configFile: path.join(userData, 'config.json')
     };
 };
