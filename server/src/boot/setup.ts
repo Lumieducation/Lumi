@@ -15,7 +15,7 @@ export default async function setup(
 
         // we might need to update settings here and run upgrade scripts when for example the baseUrl changes
 
-        if (!(await fsExtra.existsSync(serverConfig.configFile))) {
+        if (!fsExtra.existsSync(serverConfig.configFile)) {
             fsExtra.writeFileSync(
                 serverConfig.configFile,
                 JSON.stringify({
