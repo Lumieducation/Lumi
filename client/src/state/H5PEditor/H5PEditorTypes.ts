@@ -73,6 +73,10 @@ export const H5P_SAVECONTENT_REQUEST = 'H5P_SAVECONTENT_REQUEST';
 export const H5P_SAVECONTENT_SUCCESS = 'H5P_SAVECONTENT_SUCCESS';
 export const H5P_SAVECONTENT_ERROR = 'H5P_SAVECONTENT_ERROR';
 
+export const H5PEDITOR_EXPORTHTML_REQUEST = 'H5PEDITOR_EXPORTHTML_REQUEST';
+export const H5PEDITOR_EXPORTHTML_SUCCESS = 'H5PEDITOR_EXPORTHTML_SUCCESS';
+export const H5PEDITOR_EXPORTHTML_ERROR = 'H5PEDITOR_EXPORTHTML_ERROR';
+
 export enum Modes {
     view,
     edit
@@ -83,6 +87,7 @@ export interface ITab {
     id: string;
     loadingIndicator: boolean;
     saveButtonState: SaveButtonState;
+    exportButtonState: SaveButtonState;
     viewDisabled: boolean;
     mainLibrary: string;
     name: string;
@@ -139,7 +144,34 @@ export type TabActionTypes =
     | IEditorLoadedAction
     | IH5PExportRequestAction
     | IH5PExportSuccessAction
-    | IH5PExportErrorAction;
+    | IH5PExportErrorAction
+    | IH5PEditorExportHtmlActions;
+
+export interface IH5PEditorExportHtmlRequestAction {
+    payload: {
+        contentId: string;
+    };
+    type: typeof H5PEDITOR_EXPORTHTML_REQUEST;
+}
+
+export interface IH5PEditorExportHtmlSuccessAction {
+    payload: {
+        contentId: string;
+    };
+    type: typeof H5PEDITOR_EXPORTHTML_SUCCESS;
+}
+
+export interface IH5PEditorExportHtmlErrorAction {
+    payload: {
+        contentId: string;
+    };
+    type: typeof H5PEDITOR_EXPORTHTML_ERROR;
+}
+
+export type IH5PEditorExportHtmlActions =
+    | IH5PEditorExportHtmlRequestAction
+    | IH5PEditorExportHtmlSuccessAction
+    | IH5PEditorExportHtmlErrorAction;
 
 export interface IH5PLoadEditorContentRequestAction {
     payload: {

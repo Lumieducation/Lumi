@@ -13,6 +13,8 @@ import { createStyles, Theme, withStyles } from '@material-ui/core/styles';
 import { H5PPlayerUI, H5PEditorUI } from '@lumieducation/h5p-react';
 
 import SaveButton from './SaveButton';
+import ExportAsHtmlButton from './ExportAsHtmlButton';
+
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 
@@ -44,6 +46,7 @@ interface IH5PEditorH5PComponent {
     loadPlayerContent: typeof actions.h5peditor.loadPlayerContent;
     loadEditorContent: typeof actions.h5peditor.loadEditorContent;
     saveContent: typeof actions.h5peditor.saveContent;
+    exportAsHtml: typeof actions.h5peditor.exportAsHtml;
 
     editorLoaded: typeof actions.h5peditor.editorLoaded;
     editorSaved: typeof actions.h5peditor.editorSaved;
@@ -136,6 +139,10 @@ export class H5PEditorH5PComponent extends React.Component<IH5PEditorH5PComponen
                         </div>
                     </ContentPaper>
                 </Grid>
+                <ExportAsHtmlButton
+                    onClick={this.exportAsHtml}
+                    state={this.props.tab.exportButtonState}
+                />
                 <SaveButton
                     onClick={this.export}
                     state={this.props.tab.saveButtonState}
@@ -166,6 +173,14 @@ export class H5PEditorH5PComponent extends React.Component<IH5PEditorH5PComponen
             this.props.exportH5P(data?.contentId || 'new', this.props.tab.path);
         }
     };
+
+    private exportAsHtml = async () => {
+        const data = await this.h5pEditor.current?.save();
+        if (data) {
+            this.props.exportAsHtml(data?.contentId);
+        }
+    };
+
     private changeMode = async (event: React.ChangeEvent<{}>, mode: number) => {
         try {
             if (mode === Modes.view) {
