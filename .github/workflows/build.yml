@@ -64,6 +64,11 @@ jobs:
               run: npm run build:win
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  APPX_APPLICATION_ID: ${{ secrets.APPX_APPLICATION_ID }}
+                  APPX_DISPLAY_NAME: ${{ secrets.APPX_DISPLAY_NAME }}
+                  APPX_IDENTITY_NAME: ${{ secrets.APPX_IDENTITY_NAME }}
+                  APPX_PUBLISHER: ${{ secrets.APPX_PUBLISHER }}
+                  APPX_PUBLISHER_DISPLAY_NAME: ${{ secrets.APPX_PUBLISHER_DISPLAY_NAME }}
             - run: Remove-Item 'dist\win-unpacked' -Recurse -Force
             - name: Upload Windows artifacts
               uses: actions/upload-artifact@v2
