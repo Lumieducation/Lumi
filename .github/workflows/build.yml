@@ -10,16 +10,12 @@ jobs:
     build-mac:
         runs-on: macos-latest
 
-        strategy:
-            matrix:
-                node-version: [10.x]
-
         steps:
             - uses: actions/checkout@v2
-            - name: Use Node.js ${{ matrix.node-version }}
+            - name: Use Node.js 10.x
               uses: actions/setup-node@v1
               with:
-                  node-version: ${{ matrix.node-version }}
+                  node-version: 10.x
             - name: NPM Setup
               run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
               env:
@@ -40,16 +36,12 @@ jobs:
     build-win:
         runs-on: windows-latest
 
-        strategy:
-            matrix:
-                node-version: [10.x]
-
         steps:
             - uses: actions/checkout@v2
-            - name: Use Node.js ${{ matrix.node-version }}
+            - name: Use Node.js 10.x
               uses: actions/setup-node@v1
               with:
-                  node-version: ${{ matrix.node-version }}
+                  node-version: 10.x
             - name: NPM Setup
               uses: filipstefansson/set-npm-token-action@v1
               with:
@@ -83,16 +75,12 @@ jobs:
     build-linux:
         runs-on: ubuntu-latest
 
-        strategy:
-            matrix:
-                node-version: [10.x]
-
         steps:
             - uses: actions/checkout@v2
-            - name: Use Node.js ${{ matrix.node-version }}
+            - name: Use Node.js 10.x
               uses: actions/setup-node@v1
               with:
-                  node-version: ${{ matrix.node-version }}
+                  node-version: 10.x
             - name: NPM Setup
               run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
               env:
