@@ -8,21 +8,18 @@ on:
 jobs:
     release:
         runs-on: macos-latest
-        strategy:
-            matrix:
-                node-version: [10.x]
         steps:
             - uses: actions/checkout@v2
-            - name: Use Node.js ${{ matrix.node-version }}
+            - name: Use Node.js 10.x
               uses: actions/setup-node@v1
               with:
-                  node-version: ${{ matrix.node-version }}
+                  node-version: 10.x
             - name: NPM Setup
               run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
               env:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: install
-              run: npm ci
+              run: npm ci && (cd client && npm ci)
             - name: Release
               run: npm run semantic-release || true
               env:
@@ -44,23 +41,28 @@ jobs:
     release-windows:
         needs: release
         runs-on: windows-latest
-        strategy:
-            matrix:
-                node-version: [10.x]
         steps:
             - uses: actions/checkout@v2
               with:
                   ref: 'release'
-            - name: Use Node.js ${{ matrix.node-version }}
+            - name: Use Node.js 10.x
               uses: actions/setup-node@v1
               with:
-                  node-version: ${{ matrix.node-version }}
+                  node-version: 10.x
             - name: NPM Setup
-              run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-              env:
-                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-            - name: install
+              uses: filipstefansson/set-npm-token-action@v1
+              with:
+                  token: ${{ secrets.NPM_TOKEN }}
+            - name: install server
               run: npm ci
+              env:
+                  NPM_TOKEN: $${ secrets.NPM_TOKEN }
+            - name: Copy NPM config
+              run: cp ./.npmrc ./client/.npmrc
+            - name: install client
+              run: cd client && npm ci
+              env:
+                  NPM_TOKEN: $${ secrets.NPM_TOKEN }
             - name: Build
               run: npm run build
             - name: Publish Windows
@@ -77,23 +79,20 @@ jobs:
     release-linux:
         needs: release
         runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                node-version: [10.x]
         steps:
             - uses: actions/checkout@v2
               with:
                   ref: 'release'
-            - name: Use Node.js ${{ matrix.node-version }}
+            - name: Use Node.js 10.x
               uses: actions/setup-node@v1
               with:
-                  node-version: ${{ matrix.node-version }}
+                  node-version: 10.x
             - name: NPM Setup
               run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
               env:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: install
-              run: npm ci
+              run: npm ci && (cd client && npm ci)
             - name: Build
               run: npm run build
             - name: Install Snapcraft
