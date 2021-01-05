@@ -14,6 +14,7 @@ export const errorObject: ITab = {
     state: 'error',
     mode: Modes.edit,
     saveButtonState: 'hidden',
+    exportButtonState: 'hidden',
     viewDisabled: true
 };
 

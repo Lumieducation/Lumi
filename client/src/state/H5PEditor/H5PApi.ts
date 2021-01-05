@@ -6,6 +6,10 @@ export function loadPlayerContent(
     return superagent.get(`/api/v1/h5p/${contentId}/play`);
 }
 
+export function exportAsHtml(contentId: string): Promise<superagent.Response> {
+    return superagent.get(`/api/v1/h5p/${contentId}/html`);
+}
+
 export function loadEditorContent(
     contentId: string
 ): Promise<superagent.Response> {

@@ -39,7 +39,10 @@ import {
     H5P_SAVECONTENT_SUCCESS,
     H5P_SAVECONTENT_ERROR,
     H5P_LOADEDITORCONTENT_REQUEST,
-    H5P_LOADEDITORCONTENT_SUCCESS
+    H5P_LOADEDITORCONTENT_SUCCESS,
+    H5PEDITOR_EXPORTHTML_REQUEST,
+    H5PEDITOR_EXPORTHTML_SUCCESS,
+    H5PEDITOR_EXPORTHTML_ERROR
 } from './H5PEditorTypes';
 
 import _path from 'path';
@@ -89,6 +92,29 @@ export interface IEditorLoadedAction {
         tabId: string;
     };
     type: typeof H5PEDITOR_LOADED;
+}
+
+export function exportAsHtml(contentId: string): any {
+    return async (dispatch: any) => {
+        dispatch({
+            payload: { contentId },
+            type: H5PEDITOR_EXPORTHTML_REQUEST
+        });
+
+        try {
+            await api.exportAsHtml(contentId);
+
+            dispatch({
+                payload: { contentId },
+                type: H5PEDITOR_EXPORTHTML_SUCCESS
+            });
+        } catch (error) {
+            dispatch({
+                payload: { contentId },
+                type: H5PEDITOR_EXPORTHTML_ERROR
+            });
+        }
+    };
 }
 
 export function openH5P(): any {

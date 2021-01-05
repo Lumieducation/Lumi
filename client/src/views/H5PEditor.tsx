@@ -36,6 +36,7 @@ export class H5PEditor extends React.Component<{
     loadPlayerContent: typeof actions.h5peditor.loadPlayerContent;
     loadEditorContent: typeof actions.h5peditor.loadEditorContent;
     saveContent: typeof actions.h5peditor.saveContent;
+    exportAsHtml: typeof actions.h5peditor.exportAsHtml;
 
     editorLoaded: typeof actions.h5peditor.editorLoaded;
     editorSaved: typeof actions.h5peditor.editorSaved;
@@ -108,6 +109,7 @@ function mapDispatchToProps(dispatch: any): any {
             loadPlayerContent: actions.h5peditor.loadPlayerContent,
             loadEditorContent: actions.h5peditor.loadEditorContent,
             saveContent: actions.h5peditor.saveContent,
+            exportAsHtml: actions.h5peditor.exportAsHtml,
 
             editorLoaded: actions.h5peditor.editorLoaded,
             editorSaved: actions.h5peditor.editorSaved,
