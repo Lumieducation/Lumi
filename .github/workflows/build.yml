@@ -96,7 +96,7 @@ jobs:
             - name: install
               run: npm ci && (cd client && npm ci)
             - name: Build Linux
-              run: npm run build:linux:dev
+              run: npm run build:linux
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             - name: Upload Linux artifacts
