@@ -42,6 +42,7 @@
         "lint": "./node_modules/.bin/tslint --project tsconfig.json --config tslint.json",
         "publish:mac": "npx --no-install electron-builder --config builder.config.js --mac --publish always",
         "publish:win": "cp -r electron/assets/appx build && npx --no-install electron-builder --config builder.config.js --win --publish always && rm -rf build/appx",
+        "build:linux:dev": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run build:linux",
         "publish:linux": "npx --no-install electron-builder --config builder.config.js --linux --publish always",
         "start": "DEBUG=* PORT=8080 NODE_ENV=development ./node_modules/.bin/electron .",
         "test": "jest",

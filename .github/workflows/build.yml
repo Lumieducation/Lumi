@@ -85,10 +85,12 @@ jobs:
               run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
               env:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - name: install labarchive-tools
+              run: sudo apt install libarchive-tools
             - name: install
               run: npm ci && (cd client && npm ci)
             - name: Build Linux
-              run: npm run build:linux
+              run: npm run build:linux:dev
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             - name: Upload Linux artifacts
