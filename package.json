@@ -44,7 +44,7 @@
         "publish:mac": "npx --no-install electron-builder --config builder.config.js --mac --publish always",
         "publish:win": "cp -r electron/assets/appx build && npx --no-install electron-builder --config builder.config.js --win --publish always && rm -rf build/appx",
         "publish:linux": "npx --no-install electron-builder --config builder.config.js --linux --publish always",
-        "start": "concurrently \"NODE_ENV=development DEBUG=* PORT=8080 ./node_modules/.bin/electron .\" \"cd client && npm start\"",
+        "start": "concurrently \"NODE_ENV=development DEBUG=lumi:* PORT=8080 ./node_modules/.bin/electron .\" \"cd client && npm start\"",
         "test": "jest",
         "test:watch": "jest --watch",
         "test:mac": "npx jest --config jest.mac.config.js",
