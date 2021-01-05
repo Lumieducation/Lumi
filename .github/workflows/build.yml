@@ -21,7 +21,7 @@ jobs:
               env:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: install
-              run: npm ci
+              run: npm ci && (cd client && npm ci)
             - name: Build macOS
               run: npm run build:mac:dev
               env:
@@ -51,7 +51,7 @@ jobs:
               with:
                   token: ${{ secrets.NPM_TOKEN }}
             - name: install
-              run: npm ci
+              run: npm ci && (cd client && npm ci)
             - name: Build Windows
               run: npm run build:win
               env:
@@ -81,7 +81,7 @@ jobs:
               env:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: install
-              run: npm ci
+              run: npm ci && (cd client && npm ci)
             - name: Build Linux
               run: npm run build:linux:dev
               env:
