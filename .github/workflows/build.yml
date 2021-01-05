@@ -60,3 +60,32 @@ jobs:
               with:
                   name: Windows
                   path: dist
+
+    build-linux:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [10.x]
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: NPM Setup
+              run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+              env:
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - name: install
+              run: npm ci
+            - name: Build Linux
+              run: npm run build:linux:dev
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: Upload Linux artifacts
+              uses: actions/upload-artifact@v2
+              with:
+                  name: Linux
+                  path: dist/
