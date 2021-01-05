@@ -98,3 +98,33 @@ jobs:
               with:
                   name: Linux
                   path: dist/
+
+    e2e:
+        needs: build-mac
+        runs-on: macos-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js 15.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 15.x
+            - uses: actions/download-artifact@v2
+              with:
+                  name: macOS
+                  path: test/macOS
+            - name: Display structure of downloaded files
+              run: ls -R
+              working-directory: test/macOS
+            - name: NPM Setup
+              uses: filipstefansson/set-npm-token-action@v1
+              with:
+                  token: ${{ secrets.NPM_TOKEN }}
+            - name: install server
+              run: npm ci
+              env:
+                  NPM_TOKEN: $${ secrets.NPM_TOKEN }
+            - name: e2e-test
+              run: npm run test:e2e
+              env:
+                  CI: true
