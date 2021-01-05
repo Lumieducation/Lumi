@@ -1,7 +1,7 @@
 import express from 'express';
 import nucleus from 'nucleus-nodejs';
 
-export default function (): express.Router {
+export default function(): express.Router {
     const router = express.Router();
     router.post(
         `/`,

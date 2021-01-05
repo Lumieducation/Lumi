@@ -17,7 +17,7 @@ import {
  * language set by a language detector in the req.language property.
  * (recommended)
  */
-export default function (
+export default function(
     h5pEditor: H5P.H5PEditor,
     h5pPlayer: H5P.H5PPlayer,
     languageOverride: string | 'auto' = 'auto'
@@ -101,7 +101,9 @@ export default function (
             !req.body.library ||
             !req.user
         ) {
-            res.status(400).send('Malformed request').end();
+            res.status(400)
+                .send('Malformed request')
+                .end();
             return;
         }
         const {
@@ -127,7 +129,9 @@ export default function (
             !req.body.library ||
             !req.user
         ) {
-            res.status(400).send('Malformed request').end();
+            res.status(400)
+                .send('Malformed request')
+                .end();
             return;
         }
         const {
@@ -165,7 +169,7 @@ export default function (
 
         const contentIds = await h5pEditor.contentManager.listContent();
         const contentObjects = await Promise.all(
-            contentIds.map(async (id) => ({
+            contentIds.map(async id => ({
                 id,
                 content: await h5pEditor.contentManager.getContentMetadata(
                     id,
@@ -175,7 +179,7 @@ export default function (
         );
 
         res.status(200).send(
-            contentObjects.map((o) => {
+            contentObjects.map(o => {
                 return {
                     contentId: o.id,
                     title: o.content.title,

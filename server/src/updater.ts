@@ -22,7 +22,7 @@ export default function boot(
         });
     });
 
-    app.on('will-quit', (event) => {
+    app.on('will-quit', event => {
         if (updateAvailable && !updating) {
             event.preventDefault();
 

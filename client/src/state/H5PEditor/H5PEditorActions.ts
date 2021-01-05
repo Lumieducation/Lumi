@@ -119,7 +119,7 @@ export function exportAsHtml(contentId: string): any {
 
 export function openH5P(): any {
     return (dispatch: any) => {
-        api.openFiles().then((response) => {
+        api.openFiles().then(response => {
             const files = response.body;
 
             files.forEach((file: string) => {
@@ -500,13 +500,13 @@ export function deleteH5P(
 
         return api
             .deleteH5P(contentId)
-            .then((response) => {
+            .then(response => {
                 return dispatch({
                     payload: { contentId },
                     type: H5P_DELETE_SUCCESS
                 });
             })
-            .catch((error) => {
+            .catch(error => {
                 return dispatch({
                     error,
                     payload: { contentId },

@@ -6,7 +6,7 @@ import Logger from './helpers/Logger';
 
 const log = new Logger('websocket');
 
-export default function (server: http.Server): SocketIO.Server {
+export default function(server: http.Server): SocketIO.Server {
     log.info('booting');
     const io =
         process.env.NODE_ENV === 'development'
@@ -17,7 +17,7 @@ export default function (server: http.Server): SocketIO.Server {
         log.info('new connection');
     });
 
-    io.on('error', (error) => {
+    io.on('error', error => {
         Sentry.captureException(error);
     });
     return io;

@@ -12,7 +12,7 @@ import {
 } from '../H5PEditorTypes';
 
 describe('initialState', () => {
-    it('returns the initial state', (done) => {
+    it('returns the initial state', done => {
         const state = reducer(undefined, { type: 'init' } as any);
 
         expect(state).toEqual(initialState);
@@ -35,7 +35,7 @@ const testTab: ITab = {
 };
 
 describe('H5P_LOADEDITORCONTENT_SUCCESS', () => {
-    it('sets the loadingIndicator to false', (done) => {
+    it('sets the loadingIndicator to false', done => {
         const state = reducer(
             {
                 activeTabIndex: 0,
@@ -61,7 +61,7 @@ describe('H5P_LOADEDITORCONTENT_SUCCESS', () => {
 });
 
 describe('H5PEDITOR_LOADED', () => {
-    it('sets the exportButtonState to default', (done) => {
+    it('sets the exportButtonState to default', done => {
         const state = reducer(
             {
                 activeTabIndex: 0,
@@ -103,12 +103,12 @@ describe('H5PEDITOR_EXPORTHTML_REQUEST', () => {
         }
     );
 
-    it('sets the exportButtonState to loading', (done) => {
+    it('sets the exportButtonState to loading', done => {
         expect(state.tabList[0].exportButtonState).toBe('loading');
         done();
     });
 
-    it('sets the loadingIndicator to true', (done) => {
+    it('sets the loadingIndicator to true', done => {
         expect(state.tabList[0].loadingIndicator).toBeTruthy();
         done();
     });
@@ -134,12 +134,12 @@ describe('H5PEDITOR_EXPORTHTML_SUCCESS', () => {
         }
     );
 
-    it('sets the exportButtonState to success', (done) => {
+    it('sets the exportButtonState to success', done => {
         expect(state.tabList[0].exportButtonState).toBe('success');
         done();
     });
 
-    it('sets the loadingIndicator to false', (done) => {
+    it('sets the loadingIndicator to false', done => {
         expect(state.tabList[0].loadingIndicator).toBeFalsy();
         done();
     });
@@ -165,12 +165,12 @@ describe('H5PEDITOR_EXPORTHTML_ERROR', () => {
         }
     );
 
-    it('sets the exportButtonState to error', (done) => {
+    it('sets the exportButtonState to error', done => {
         expect(state.tabList[0].exportButtonState).toBe('error');
         done();
     });
 
-    it('sets the loadingIndicator to false', (done) => {
+    it('sets the loadingIndicator to false', done => {
         expect(state.tabList[0].loadingIndicator).toBeFalsy();
         done();
     });

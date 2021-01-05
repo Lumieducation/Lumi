@@ -20,7 +20,7 @@ let port: number;
 const isDevelopment = process.env.NODE_ENV === 'development';
 const BrowserWindow = electron.BrowserWindow;
 
-process.on('uncaughtException', (error) => {
+process.on('uncaughtException', error => {
     log.error(error);
 });
 

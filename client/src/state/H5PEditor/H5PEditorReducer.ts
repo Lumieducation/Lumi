@@ -184,7 +184,7 @@ export default function tabReducer(
             case H5P_LOADPLAYERCONTENT_REQUEST:
                 return {
                     ...state,
-                    tabList: state.tabList.map((tab) =>
+                    tabList: state.tabList.map(tab =>
                         tab.contentId === action.payload.contentId
                             ? {
                                   ...tab,
@@ -197,7 +197,7 @@ export default function tabReducer(
             case H5P_LOADPLAYERCONTENT_SUCCESS:
                 return {
                     ...state,
-                    tabList: state.tabList.map((tab) =>
+                    tabList: state.tabList.map(tab =>
                         tab.contentId === action.payload.contentId
                             ? {
                                   ...tab,
@@ -212,7 +212,7 @@ export default function tabReducer(
                     ...state,
                     activeTabIndex: 0,
                     tabList: state.tabList.filter(
-                        (tab) => tab.id !== action.payload.id
+                        tab => tab.id !== action.payload.id
                     )
                 };
 
@@ -266,7 +266,7 @@ export default function tabReducer(
             case H5PEDITOR_UPDATE_TAB:
                 return {
                     ...state,
-                    tabList: state.tabList.map((tab) =>
+                    tabList: state.tabList.map(tab =>
                         tab.id === action.payload.tabId
                             ? { ...tab, ...action.payload.update }
                             : tab

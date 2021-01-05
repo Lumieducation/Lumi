@@ -15,7 +15,7 @@ import User from '../User';
 
 const log = new Logger('routes');
 
-export default function (
+export default function(
     h5pEditor: H5PEditor,
     h5pPlayer: H5PPlayer,
     serverConfig: IServerConfig

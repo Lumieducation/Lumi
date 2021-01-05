@@ -62,7 +62,7 @@ export function noActiveTabs(state: IState): boolean {
 
 export function tab(state: IState, tabId: string): ITab {
     return state.h5peditor.tabList.filter(
-        (tabInList) => tabInList.id === tabId
+        tabInList => tabInList.id === tabId
     )[0];
 }
 
