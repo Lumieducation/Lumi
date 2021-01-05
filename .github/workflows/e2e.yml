@@ -15,10 +15,10 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
-            - name: Use Node.js 10.x
+            - name: Use Node.js 15.x
               uses: actions/setup-node@v1
               with:
-                  node-version: 10.x
+                  node-version: 15.x
             - name: NPM Setup
               uses: filipstefansson/set-npm-token-action@v1
               with:
