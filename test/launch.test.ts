@@ -18,7 +18,7 @@ describe('Application launch', () => {
             args: [path.join(__dirname, '..')]
         });
         return app.start();
-    });
+    }, 30000);
 
     afterAll(() => {
         if (app && app.isRunning()) {
