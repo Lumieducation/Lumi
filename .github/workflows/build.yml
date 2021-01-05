@@ -1,6 +1,6 @@
 name: Build
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
     build-mac:
@@ -46,10 +46,12 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
+            - name: NPM Setup
+              uses: filipstefansson/set-npm-token-action@v1
+              with:
+                  token: ${{ secrets.NPM_TOKEN }}
             - name: install
               run: npm ci
-              env:
-                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: Build Windows
               run: npm run build:win
               env:
