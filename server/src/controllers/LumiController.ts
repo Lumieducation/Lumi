@@ -160,7 +160,7 @@ export default class LumiController {
 
     private getUbernameFromH5pJson(h5pJson: H5P.IContentMetadata): string {
         const library = (h5pJson.preloadedDependencies || []).find(
-            dependency => dependency.machineName === h5pJson.mainLibrary
+            (dependency) => dependency.machineName === h5pJson.mainLibrary
         );
         if (!library) {
             return '';

@@ -7,7 +7,7 @@ import {
 } from '../NotificationsTypes';
 
 describe('initialState', () => {
-    it('returns the initial state', done => {
+    it('returns the initial state', (done) => {
         const state = reducer(undefined, { type: 'init' } as any);
 
         expect(state).toEqual(initialState);
@@ -16,7 +16,7 @@ describe('initialState', () => {
 });
 
 describe('ENQUEUE_SNACKBAR', () => {
-    it('adds a new notification to the notifications-list', done => {
+    it('adds a new notification to the notifications-list', (done) => {
         const notification: INotification = {
             key: 'a',
             message: 'test',
@@ -41,7 +41,7 @@ describe('ENQUEUE_SNACKBAR', () => {
 });
 
 describe('CLOSE_SNACKBAR', () => {
-    it('dismisses a notification', done => {
+    it('dismisses a notification', (done) => {
         const notification: INotification = {
             key: 'a',
             message: 'test',
@@ -67,7 +67,7 @@ describe('CLOSE_SNACKBAR', () => {
 });
 
 describe('REMOVE_SNACKBAR', () => {
-    it('removes a notification from the notifications-list', done => {
+    it('removes a notification from the notifications-list', (done) => {
         const notification: INotification = {
             key: 'a',
             message: 'test',

@@ -69,7 +69,7 @@ export default async (serverConfig: IServerConfig) => {
         }
     );
 
-    h5pEditor.setRenderer(model => model);
+    h5pEditor.setRenderer((model) => model);
 
     const h5pPlayer = new H5P.H5PPlayer(
         h5pEditor.libraryStorage,
@@ -77,7 +77,7 @@ export default async (serverConfig: IServerConfig) => {
         config
     );
 
-    h5pPlayer.setRenderer(model => model);
+    h5pPlayer.setRenderer((model) => model);
 
     // const h5pEditor = new H5P.H5PEditor(
     //     new JsonStorage(serverConfig.cache),

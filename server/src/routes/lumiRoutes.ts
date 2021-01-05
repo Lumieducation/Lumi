@@ -6,7 +6,7 @@ import Logger from '../helpers/Logger';
 
 const log = new Logger('routes:lumi-h5p');
 
-export default function(h5pEditor: H5PEditor): express.Router {
+export default function (h5pEditor: H5PEditor): express.Router {
     const router = express.Router();
     const lumiController = new LumiController(h5pEditor);
 
@@ -34,10 +34,10 @@ export default function(h5pEditor: H5PEditor): express.Router {
         ) => {
             lumiController
                 .open()
-                .then(result => {
+                .then((result) => {
                     res.status(200).json(result);
                 })
-                .catch(error => next(error));
+                .catch((error) => next(error));
         }
     );
 
@@ -50,10 +50,10 @@ export default function(h5pEditor: H5PEditor): express.Router {
         ) => {
             lumiController
                 .import(req.body.path)
-                .then(result => {
+                .then((result) => {
                     res.status(200).json(result);
                 })
-                .catch(error => next(error));
+                .catch((error) => next(error));
         }
     );
 
@@ -68,10 +68,10 @@ export default function(h5pEditor: H5PEditor): express.Router {
                 // the casts assume we don't get arrays of complex objects from
                 // the client
                 .export(req.query.contentId as string, req.query.path as string)
-                .then(result => {
+                .then((result) => {
                     res.status(200).json(result);
                 })
-                .catch(error => next(error));
+                .catch((error) => next(error));
         }
     );
 
@@ -85,10 +85,10 @@ export default function(h5pEditor: H5PEditor): express.Router {
             const { parameters, metadata, library, id } = req.body;
             lumiController
                 .update(parameters, metadata, library, id)
-                .then(result => {
+                .then((result) => {
                     res.status(200).json(result);
                 })
-                .catch(error => next(error));
+                .catch((error) => next(error));
         }
     );
 
@@ -104,10 +104,10 @@ export default function(h5pEditor: H5PEditor): express.Router {
                 // the cast assumes we don't get arrays of complex objects from
                 // the client
                 .delete(contentId as string)
-                .then(result => {
+                .then((result) => {
                     res.status(200).json(result);
                 })
-                .catch(error => next(error));
+                .catch((error) => next(error));
         }
     );
 

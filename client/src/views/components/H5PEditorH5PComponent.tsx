@@ -54,9 +54,7 @@ interface IH5PEditorH5PComponent {
     playerInitialized: typeof actions.h5peditor.playerInitialized;
 }
 
-export class H5PEditorH5PComponent extends React.Component<
-    IH5PEditorH5PComponent
-> {
+export class H5PEditorH5PComponent extends React.Component<IH5PEditorH5PComponent> {
     constructor(props: IH5PEditorH5PComponent) {
         super(props);
 
