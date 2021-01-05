@@ -28,7 +28,6 @@
         "build:all:dev": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run build:all",
         "build:client": "npm run build --prefix client && mv client/build build/client",
         "build:linux": "npm run build && ./node_modules/.bin/electron-builder --config builder.config.js --linux --publish never",
-        "build:linux:dev": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run build:linux",
         "build:mac": "npm run build && ./node_modules/.bin/electron-builder --config builder.config.js --mac --publish never",
         "build:mac:dev": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run build:mac",
         "build:sentry": "RELEASE=true npm run build:client",
@@ -41,6 +40,7 @@
         "lint": "./node_modules/.bin/tslint --project tsconfig.json --config tslint.json",
         "publish:mac": "npx --no-install electron-builder --config builder.config.js --mac --publish always",
         "publish:win": "cp -r electron/assets/appx build && npx --no-install electron-builder --config builder.config.js --win --publish always && rm -rf build/appx",
+        "build:linux:dev": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run build:linux",
         "publish:linux": "npx --no-install electron-builder --config builder.config.js --linux --publish always",
         "start": "DEBUG=* PORT=8080 NODE_ENV=development ./node_modules/.bin/electron .",
         "test": "jest",
@@ -49,7 +49,7 @@
         "test:e2e:win": "npx jest --config ./test/e2e/win/jest.config.js",
         "semantic-release": "semantic-release",
         "uninstall": "rm -rf build/ && rm -rf node_modules/",
-        "postinstall": "sh scripts/install.sh 1.24 && sh scripts/install.sh 1.24.1 && (cd client && npm install)"
+        "postinstall": "sh scripts/install.sh 1.24 && sh scripts/install.sh 1.24.1"
     },
     "publishConfig": {
         "access": "restricted"
@@ -76,7 +76,8 @@
         "tslint-config-airbnb": "5.11.2",
         "tslint-config-prettier": "1.18.0",
         "tslint-react": "5.0.0",
-        "typescript": "4.1.3"
+        "typescript": "4.1.3",
+        "y18n": "5.0.5"
     },
     "repository": {
         "type": "git",
