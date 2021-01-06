@@ -43,8 +43,7 @@ export default function tabReducer(
                         index === state.activeTabIndex
                             ? {
                                   ...tab,
-                                  loadingIndicator: true,
-                                  saveButtonState: 'loading'
+                                  loadingIndicator: true
                               }
                             : tab
                     )
@@ -58,7 +57,6 @@ export default function tabReducer(
                             ? {
                                   ...tab,
                                   loadingIndicator: false,
-                                  saveButtonState: 'success',
                                   path: action.payload.path
                               }
                             : tab
@@ -72,8 +70,7 @@ export default function tabReducer(
                         index === state.activeTabIndex
                             ? {
                                   ...tab,
-                                  loadingIndicator: false,
-                                  saveButtonState: 'error'
+                                  loadingIndicator: false
                               }
                             : tab
                     )
@@ -130,8 +127,6 @@ export default function tabReducer(
                         tab.id === action.payload.tabId
                             ? {
                                   ...tab,
-                                  saveButtonState: 'default',
-                                  exportButtonState: 'default',
                                   viewDisabled: false,
                                   loadingIndicator: false
                               }
@@ -146,7 +141,6 @@ export default function tabReducer(
                         tab.contentId === action.payload.contentId
                             ? {
                                   ...tab,
-                                  exportButtonState: 'loading',
                                   loadingIndicator: true
                               }
                             : tab
@@ -160,7 +154,6 @@ export default function tabReducer(
                         tab.contentId === action.payload.contentId
                             ? {
                                   ...tab,
-                                  exportButtonState: 'success',
                                   loadingIndicator: false
                               }
                             : tab
@@ -174,7 +167,6 @@ export default function tabReducer(
                         tab.contentId === action.payload.contentId
                             ? {
                                   ...tab,
-                                  exportButtonState: 'error',
                                   loadingIndicator: false
                               }
                             : tab
@@ -225,8 +217,6 @@ export default function tabReducer(
                         {
                             id: action.payload.id,
                             loadingIndicator: true,
-                            saveButtonState: 'hidden',
-                            exportButtonState: 'hidden',
                             viewDisabled: true,
                             mainLibrary: '',
                             name: 'new H5P',

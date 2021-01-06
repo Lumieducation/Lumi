@@ -16,7 +16,6 @@ import H5PEditorH5PComponent from './components/H5PEditorH5PComponent';
 
 import { actions, selectors } from '../state';
 
-import { SaveButtonState } from '../state/H5PEditor/H5PEditorTypes';
 import { ITab } from '../state/H5PEditor/H5PEditorTypes';
 
 export class H5PEditor extends React.Component<{
@@ -24,7 +23,6 @@ export class H5PEditor extends React.Component<{
     tabs: ITab[];
     activeTabIndex: number;
     noActiveTab: boolean;
-    saveButtonState: SaveButtonState;
     viewDisabled: boolean;
 
     classes: any;
@@ -94,7 +92,6 @@ function mapStateToProps(state: any, ownProps: any): any {
         activeTabIndex: selectors.h5peditor.activeTabIndex(state),
         tabs: selectors.h5peditor.all(state),
         noActiveTab: selectors.h5peditor.noActiveTabs(state),
-        saveButtonState: selectors.h5peditor.saveButtonState(state),
         viewDisabled: selectors.h5peditor.viewDisabled(state)
     };
 }

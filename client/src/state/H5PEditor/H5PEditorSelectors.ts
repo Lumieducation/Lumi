@@ -1,6 +1,6 @@
 import Logger from '../../helpers/Logger';
 
-import { ITab, Modes, SaveButtonState } from './H5PEditorTypes';
+import { ITab, Modes } from './H5PEditorTypes';
 import { IState } from '../';
 
 const log = new Logger('selectors:tabs');
@@ -13,8 +13,6 @@ export const errorObject: ITab = {
     name: 'error',
     state: 'error',
     mode: Modes.edit,
-    saveButtonState: 'hidden',
-    exportButtonState: 'hidden',
     viewDisabled: true
 };
 
@@ -64,15 +62,6 @@ export function tab(state: IState, tabId: string): ITab {
     return state.h5peditor.tabList.filter(
         (tabInList) => tabInList.id === tabId
     )[0];
-}
-
-export function saveButtonState(state: IState): SaveButtonState {
-    try {
-        return state.h5peditor.tabList[state.h5peditor.activeTabIndex]
-            .saveButtonState;
-    } catch (error) {
-        return 'hidden';
-    }
 }
 
 export function viewDisabled(state: IState): boolean {

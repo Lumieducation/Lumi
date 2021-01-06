@@ -12,9 +12,6 @@ import { createStyles, Theme, withStyles } from '@material-ui/core/styles';
 
 import { H5PPlayerUI, H5PEditorUI } from '@lumieducation/h5p-react';
 
-import SaveButton from './SaveButton';
-import ExportAsHtmlButton from './ExportAsHtmlButton';
-
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 
@@ -107,7 +104,7 @@ export class H5PEditorH5PComponent extends React.Component<IH5PEditorH5PComponen
                     <LoadingProgressBar />
                 ) : null}
 
-                <Grid style={{ marginRight: '72px' }}>
+                <Grid>
                     <ContentPaper>
                         <div
                             style={{
@@ -139,14 +136,6 @@ export class H5PEditorH5PComponent extends React.Component<IH5PEditorH5PComponen
                         </div>
                     </ContentPaper>
                 </Grid>
-                <ExportAsHtmlButton
-                    onClick={this.exportAsHtml}
-                    state={this.props.tab.exportButtonState}
-                />
-                <SaveButton
-                    onClick={this.export}
-                    state={this.props.tab.saveButtonState}
-                />
             </div>
         );
     }
@@ -166,20 +155,6 @@ export class H5PEditorH5PComponent extends React.Component<IH5PEditorH5PComponen
 
     private loadPlayerContent = async (contentId: string) =>
         this.props.loadPlayerContent(contentId) as any;
-
-    private export = async () => {
-        const data = await this.h5pEditor.current?.save();
-        if (data) {
-            this.props.exportH5P(data?.contentId || 'new', this.props.tab.path);
-        }
-    };
-
-    private exportAsHtml = async () => {
-        const data = await this.h5pEditor.current?.save();
-        if (data) {
-            this.props.exportAsHtml(data?.contentId);
-        }
-    };
 
     private changeMode = async (event: React.ChangeEvent<{}>, mode: number) => {
         try {

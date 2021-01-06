@@ -31,13 +31,6 @@ export type TabState =
     | 'opening'
     | 'success';
 
-export type SaveButtonState =
-    | 'default'
-    | 'hidden'
-    | 'success'
-    | 'loading'
-    | 'error';
-
 export const H5PEDITOR_OPEN_TAB = 'H5PEDITOR_OPEN_TAB';
 export const H5PEDITOR_CLOSE_TAB = 'H5PEDITOR_CLOSE_TAB';
 export const H5PEDITOR_SELECT_TAB = 'H5PEDITOR_SELECT_TAB';
@@ -86,8 +79,6 @@ export interface ITab {
     contentId?: ContentId;
     id: string;
     loadingIndicator: boolean;
-    saveButtonState: SaveButtonState;
-    exportButtonState: SaveButtonState;
     viewDisabled: boolean;
     mainLibrary: string;
     name: string;
