@@ -26,7 +26,6 @@ jobs:
               run: npm run build:mac:dev
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            - run: rm -rf dist/mac/
             - name: Upload macOS artifacts
               uses: actions/upload-artifact@v2
               with:
