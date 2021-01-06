@@ -42,7 +42,7 @@
         "publish:win": "cp -r electron/assets/appx build && npx --no-install electron-builder --config builder.config.js --win --publish always && rm -rf build/appx",
         "build:linux:dev": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run build:linux",
         "publish:linux": "npx --no-install electron-builder --config builder.config.js --linux --publish always",
-        "start": "NODE_ENV=development DEBUG=lumi:* PORT=8080 ./node_modules/.bin/electron",
+        "start": "NODE_ENV=development DEBUG=lumi:* PORT=8080 ./node_modules/.bin/electron .",
         "test": "jest",
         "test:watch": "jest --watch",
         "test:mac": "npx jest --config jest.mac.config.js",
