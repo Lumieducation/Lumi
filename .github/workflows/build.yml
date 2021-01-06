@@ -100,7 +100,7 @@ jobs:
                   path: dist/
 
     e2e-macOS:
-        needs: build-mac
+        needs: build-macOS
         runs-on: macos-latest
 
         steps:
