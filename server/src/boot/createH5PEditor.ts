@@ -34,7 +34,15 @@ export default async function createH5PEditor(
         new H5P.fsImplementations.DirectoryTemporaryFileStorage(
             localTemporaryPath
         ),
-        translationCallback
+        translationCallback,
+        undefined,
+        {
+            customization: {
+                global: {
+                    styles: ['/assets/h5p/h5p-editor-overrides.css']
+                }
+            }
+        }
     );
 
     return h5pEditor;
