@@ -96,21 +96,6 @@ export default function notificationsReducer(
                 ]
             };
 
-        case H5P_EXPORT_ERROR:
-            return {
-                ...state,
-                notifications: [
-                    ...state.notifications,
-                    {
-                        key: shortid(),
-                        message: 'notification.export.error',
-                        options: {
-                            variant: 'error'
-                        }
-                    }
-                ]
-            };
-
         case ENQUEUE_SNACKBAR:
             return {
                 ...state,
