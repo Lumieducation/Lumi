@@ -98,33 +98,3 @@ jobs:
               with:
                   name: Linux
                   path: dist/
-
-    e2e-macOS:
-        needs: build-macOS
-        runs-on: macos-latest
-
-        steps:
-            - uses: actions/checkout@v2
-            - name: Use Node.js 15.x
-              uses: actions/setup-node@v1
-              with:
-                  node-version: 15.x
-            - uses: actions/download-artifact@v2
-              with:
-                  name: macOS
-                  path: e2e-test/macOS
-            - name: Unzip artifacts
-              run: tar xopf e2e-test/macOS/Lumi-0.3.1-mac.zip
-            - name: NPM Setup
-              uses: filipstefansson/set-npm-token-action@v1
-              with:
-                  token: ${{ secrets.NPM_TOKEN }}
-            - name: install server
-              run: npm ci
-              env:
-                  NPM_TOKEN: $${ secrets.NPM_TOKEN }
-            - name: e2e-test
-              run: npm run test:e2e
-              env:
-                  CI: true
-                  BINARY: Lumi.app/Contents/MacOS/Lumi

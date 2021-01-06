@@ -8,7 +8,14 @@ describe('Application launch', () => {
             env: {
                 USERDATA: path.join(__dirname, 'data')
             },
-            path: process.env.BINARY
+            path: path.join(
+                __dirname,
+                '..',
+                'node_modules',
+                '.bin',
+                'electron'
+            ),
+            args: [path.join(__dirname, '..')]
         });
         return app.start();
     }, 30000);
