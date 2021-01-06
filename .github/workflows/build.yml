@@ -98,7 +98,7 @@ jobs:
                   name: Linux
                   path: dist/
 
-    e2e:
+    e2e-macOS:
         needs: build-mac
         runs-on: macos-latest
 
@@ -111,10 +111,7 @@ jobs:
             - uses: actions/download-artifact@v2
               with:
                   name: macOS
-                  path: test/macOS
-            - name: Display structure of downloaded files
-              run: ls -R
-              working-directory: test/macOS
+                  path: e2e-test/macOS
             - name: NPM Setup
               uses: filipstefansson/set-npm-token-action@v1
               with:
@@ -127,3 +124,4 @@ jobs:
               run: npm run test:e2e
               env:
                   CI: true
+                  BINARY: e2e-test/macOS/mac/Lumi.app/Contents/MacOS/Lumi
