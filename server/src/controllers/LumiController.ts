@@ -32,7 +32,15 @@ export default class LumiController {
                 filters: [
                     {
                         extensions: ['h5p'],
-                        name: 'HTML 5 Package'
+                        name: 'H5P'
+                    },
+                    {
+                        name: 'HTML (inline resources)',
+                        extensions: ['html-inline']
+                    },
+                    {
+                        name: 'HTML (external resources)',
+                        extensions: ['html-external']
                     }
                 ],
                 title: 'Save H5P'
