@@ -68,6 +68,16 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
             },
             { type: 'separator' } as any,
             {
+                click: () => {
+                    nucleus.track('menu/click/export_as_html');
+                    websocket.emit('action', {
+                        type: 'EXPORT_AS_HTML'
+                    });
+                },
+                label: 'Export as HTML'
+            },
+            { type: 'separator' } as any,
+            {
                 role: 'quit'
             } as any
         ]

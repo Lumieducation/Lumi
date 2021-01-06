@@ -87,6 +87,14 @@ export class WebsocketContainer extends React.Component<
                     Sentry.showReportDialog();
                     break;
 
+                case 'EXPORT_AS_HTML':
+                    dispatch(
+                        actions.h5peditor.exportAsHtml(
+                            this.props.activeTab.contentId || ''
+                        )
+                    );
+                    break;
+
                 case 'MESSAGE':
                     dispatch(
                         actions.notifications.notify(
