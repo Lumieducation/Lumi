@@ -10,7 +10,13 @@ import {
 
 import {
     H5P_EXPORT_SUCCESS,
-    IH5PExportSuccessAction
+    H5P_EXPORT_ERROR,
+    H5PEDITOR_EXPORTHTML_SUCCESS,
+    H5PEDITOR_EXPORTHTML_ERROR,
+    IH5PExportSuccessAction,
+    IH5PExportErrorAction,
+    IH5PEditorExportHtmlErrorAction,
+    IH5PEditorExportHtmlSuccessAction
 } from '../H5PEditor/H5PEditorTypes';
 import shortid from 'shortid';
 
@@ -25,6 +31,9 @@ export default function notificationsReducer(
         | ICloseSnackbar
         | IRemoveSnackbar
         | IH5PExportSuccessAction
+        | IH5PExportErrorAction
+        | IH5PEditorExportHtmlErrorAction
+        | IH5PEditorExportHtmlSuccessAction
 ): INotificationsState {
     switch (action.type) {
         case H5P_EXPORT_SUCCESS:
@@ -37,6 +46,66 @@ export default function notificationsReducer(
                         message: 'notification.export.success',
                         options: {
                             variant: 'success'
+                        }
+                    }
+                ]
+            };
+
+        case H5P_EXPORT_ERROR:
+            return {
+                ...state,
+                notifications: [
+                    ...state.notifications,
+                    {
+                        key: shortid(),
+                        message: 'notification.export.error',
+                        options: {
+                            variant: 'error'
+                        }
+                    }
+                ]
+            };
+
+        case H5PEDITOR_EXPORTHTML_SUCCESS:
+            return {
+                ...state,
+                notifications: [
+                    ...state.notifications,
+                    {
+                        key: shortid(),
+                        message: 'notification.exporthtml.success',
+                        options: {
+                            variant: 'success'
+                        }
+                    }
+                ]
+            };
+
+        case H5PEDITOR_EXPORTHTML_ERROR:
+            return {
+                ...state,
+                notifications: [
+                    ...state.notifications,
+                    {
+                        key: shortid(),
+                        message: 'notification.exporthtml.error',
+                        options: {
+                            variant: 'error'
+                        }
+                    }
+                ]
+            };
+
+        case H5P_EXPORT_ERROR:
+            return {
+                ...state,
+                notifications: [
+                    ...state.notifications,
+                    {
+                        key: shortid(),
+                        message: 'notification.export.error',
+                        options: {
+                            variant: 'error'
                         }
                     }
                 ]
