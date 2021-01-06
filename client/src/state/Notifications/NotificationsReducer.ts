@@ -2,9 +2,17 @@ import {
     CLOSE_SNACKBAR,
     ENQUEUE_SNACKBAR,
     INotificationsState,
-    NotificationActionTypes,
-    REMOVE_SNACKBAR
+    REMOVE_SNACKBAR,
+    INotifyAction,
+    ICloseSnackbar,
+    IRemoveSnackbar
 } from './NotificationsTypes';
+
+import {
+    H5P_EXPORT_SUCCESS,
+    IH5PExportSuccessAction
+} from '../H5PEditor/H5PEditorTypes';
+import shortid from 'shortid';
 
 export const initialState: INotificationsState = {
     notifications: []
@@ -12,9 +20,28 @@ export const initialState: INotificationsState = {
 
 export default function notificationsReducer(
     state: INotificationsState = initialState,
-    action: NotificationActionTypes
+    action:
+        | INotifyAction
+        | ICloseSnackbar
+        | IRemoveSnackbar
+        | IH5PExportSuccessAction
 ): INotificationsState {
     switch (action.type) {
+        case H5P_EXPORT_SUCCESS:
+            return {
+                ...state,
+                notifications: [
+                    ...state.notifications,
+                    {
+                        key: shortid(),
+                        message: 'notification.export.success',
+                        options: {
+                            variant: 'success'
+                        }
+                    }
+                ]
+            };
+
         case ENQUEUE_SNACKBAR:
             return {
                 ...state,
