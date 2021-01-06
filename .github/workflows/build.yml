@@ -7,7 +7,7 @@ on:
     pull_request:
 
 jobs:
-    build-mac:
+    build-macOS:
         runs-on: macos-latest
 
         steps:
@@ -26,6 +26,7 @@ jobs:
               run: npm run build:mac:dev
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - run: rm -rf dist/mac/
             - name: Upload macOS artifacts
               uses: actions/upload-artifact@v2
               with:
@@ -112,6 +113,8 @@ jobs:
               with:
                   name: macOS
                   path: e2e-test/macOS
+            - name: Unzip artifacts
+              run: tar xopf e2e-test/macOS/Lumi-0.3.1-mac.zip
             - name: NPM Setup
               uses: filipstefansson/set-npm-token-action@v1
               with:
@@ -124,4 +127,4 @@ jobs:
               run: npm run test:e2e
               env:
                   CI: true
-                  BINARY: e2e-test/macOS/mac/Lumi.app/Contents/MacOS/Lumi
+                  BINARY: e2e-test/macOS/Lumi.app/Contents/MacOS/Lumi
