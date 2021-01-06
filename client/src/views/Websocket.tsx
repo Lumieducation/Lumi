@@ -37,13 +37,7 @@ export class WebsocketContainer extends React.Component<
 
         this.state = {};
 
-        this.socket = SocketIOClient(
-            `${window.location.protocol}//${window.location.hostname}${
-                process.env.NODE_ENV === 'development'
-                    ? ':3002'
-                    : `:${window.location.port}`
-            }`
-        );
+        this.socket = SocketIOClient();
 
         this.saveAs = this.saveAs.bind(this);
         this.updateAndSave = this.updateAndSave.bind(this);
