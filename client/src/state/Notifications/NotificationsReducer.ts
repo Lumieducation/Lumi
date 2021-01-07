@@ -17,7 +17,7 @@ import {
     IH5PEditorSaveSuccessAction,
     IH5PEditorSaveErrorAction,
     IH5PEditorExportErrorAction,
-    IH5PEditorExportSuccessAction
+    IH5PEditorExportSuccessAction,
     IH5PEditorError
 } from '../H5PEditor/H5PEditorTypes';
 import shortid from 'shortid';

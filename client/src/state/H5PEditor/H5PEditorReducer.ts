@@ -2,7 +2,7 @@ import Logger from '../../helpers/Logger';
 
 import {
     IH5PEditorState,
-    TabActionTypes,
+    H5PEditorActionTypes,
     H5PEDITOR_CLOSE_TAB,
     H5PEDITOR_OPEN_TAB,
     H5PEDITOR_SELECT_TAB,
@@ -33,7 +33,7 @@ const log = new Logger('reducer:tabs');
 
 export default function tabReducer(
     state: IH5PEditorState = initialState,
-    action: TabActionTypes
+    action: H5PEditorActionTypes
 ): IH5PEditorState {
     try {
         log.debug(`reducing ${action.type}`);

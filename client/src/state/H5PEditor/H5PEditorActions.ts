@@ -7,7 +7,7 @@ import Logger from '../../helpers/Logger';
 import {
     ContentId,
     ITab,
-    TabActionTypes,
+    H5PEditorActionTypes,
     H5PEDITOR_CLOSE_TAB,
     H5PEDITOR_OPEN_TAB,
     H5PEDITOR_SELECT_TAB,
@@ -19,7 +19,7 @@ import {
     DeleteActions,
     LoadPlayerContentActions,
     LoadEditorContentActions,
-    SaveContentActions,
+    UpdateContentActions,
     SaveActions,
     H5P_DELETE_ERROR,
     H5P_DELETE_REQUEST,
@@ -186,7 +186,7 @@ export function clickOnFileInFiletree(name: string, path: string): any {
     };
 }
 
-export function openTab(tab?: Partial<ITab>): TabActionTypes {
+export function openTab(tab?: Partial<ITab>): H5PEditorActionTypes {
     log.info(`opening tab`);
     return {
         payload: {
@@ -213,7 +213,7 @@ export function closeTab(id: string): any {
     };
 }
 
-export function selectTab(value: number): TabActionTypes {
+export function selectTab(value: number): H5PEditorActionTypes {
     log.info(`selecting tab ${value}`);
     return {
         payload: { value },
@@ -224,7 +224,7 @@ export function selectTab(value: number): TabActionTypes {
 export function updateTab(
     tabId: string,
     update: Partial<ITab>
-): TabActionTypes {
+): H5PEditorActionTypes {
     return {
         payload: { tabId, update },
         type: H5PEDITOR_UPDATE_TAB
@@ -235,8 +235,10 @@ export function updateContent(
     tabId: string,
     contentId: string,
     requestBody: { library: string; params: any }
-): ThunkAction<void, null, null, SaveContentActions> {
-    return async (dispatch: ThunkDispatch<null, null, SaveContentActions>) => {
+): ThunkAction<void, null, null, UpdateContentActions> {
+    return async (
+        dispatch: ThunkDispatch<null, null, UpdateContentActions>
+    ) => {
         dispatch({
             payload: {
                 tabId,

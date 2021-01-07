@@ -40,31 +40,6 @@ export const H5PEDITOR_LOADED = 'H5PEDITOR_LOADED';
 export const H5PEDITOR_SAVED = 'H5PEDITOR_SAVED';
 export const H5PPLAYER_INITIALIZED = 'H5PPLAYER_INITIALIZED';
 
-export const H5P_DELETE_ERROR = 'H5P_DELETE_ERROR';
-export const H5P_DELETE_REQUEST = 'H5P_DELETE_REQUEST';
-export const H5P_DELETE_SUCCESS = 'H5P_DELETE_SUCCESS';
-
-export const H5P_IMPORT_ERROR = 'H5P_IMPORT_ERROR';
-export const H5P_IMPORT_REQUEST = 'H5P_IMPORT_REQUEST';
-export const H5P_IMPORT_SUCCESS = 'H5P_IMPORT_SUCCESS';
-
-export const H5P_LOADPLAYERCONTENT_REQUEST = 'H5P_LOADPLAYERCONTENT_REQUEST';
-export const H5P_LOADPLAYERCONTENT_SUCCESS = 'H5P_LOADPLAYERCONTENT_SUCCESS';
-export const H5P_LOADPLAYERCONTENT_ERROR = 'H5P_LOADPLAYERCONTENT_ERROR';
-
-export const H5P_LOADEDITORCONTENT_REQUEST = 'H5P_LOADEDITORCONTENT_REQUEST';
-export const H5P_LOADEDITORCONTENT_SUCCESS = 'H5P_LOADEDITORCONTENT_SUCCESS';
-export const H5P_LOADEDITORCONTENT_ERROR = 'H5P_LOADEDITORCONTENT_ERROR';
-
-export const H5PEDITOR_UPDATE_REQUEST = 'H5PEDITOR_UPDATE_REQUEST';
-export const H5PEDITOR_UPDATE_SUCCESS = 'H5PEDITOR_UPDATE_SUCCESS';
-export const H5PEDITOR_UPDATE_ERROR = 'H5PEDITOR_UPDATE_ERROR';
-
-export const H5PEDITOR_EXPORT_REQUEST = 'H5PEDITOR_EXPORT_REQUEST';
-export const H5PEDITOR_EXPORT_SUCCESS = 'H5PEDITOR_EXPORT_SUCCESS';
-export const H5PEDITOR_EXPORT_ERROR = 'H5PEDITOR_EXPORT_ERROR';
-export const H5PEDITOR_EXPORT_CANCEL = 'H5PEDITOR_EXPORT_CANCEL';
-
 export enum Modes {
     view,
     edit
@@ -89,6 +64,7 @@ export interface IH5PEditorState {
 export interface IState {
     h5peditor: IH5PEditorState;
 }
+
 export interface IOpenTabAction {
     payload: {
         id: string;
@@ -117,7 +93,7 @@ export interface ISelectTabAction {
     };
     type: typeof H5PEDITOR_SELECT_TAB;
 }
-export type TabActionTypes =
+export type H5PEditorActionTypes =
     | ICloseTabAction
     | IOpenTabAction
     | ISelectTabAction
@@ -125,14 +101,16 @@ export type TabActionTypes =
     | IH5PLoadPlayerContentRequestAction
     | IH5PLoadPlayerContentSuccessAction
     | IH5PLoadEditorContentSuccessAction
-    | IH5PSaveContentSuccessAction
-    | IH5PSaveContentRequestAction
+    | IH5PUpdateContentSuccessAction
+    | IH5PUpdateContentRequestAction
     | IEditorLoadedAction
     | IH5PEditorSaveRequestAction
     | IH5PEditorSaveSuccessAction
     | IH5PEditorSaveCancelAction
     | IH5PEditorSaveErrorAction
     | IH5PEditorExportActions;
+
+//
 
 export const H5PEDITOR_ERROR = 'H5PEDITOR_ERROR';
 
@@ -143,6 +121,13 @@ export interface IH5PEditorError {
     };
     type: typeof H5PEDITOR_ERROR;
 }
+
+// Export
+export const H5PEDITOR_EXPORT_REQUEST = 'H5PEDITOR_EXPORT_REQUEST';
+export const H5PEDITOR_EXPORT_SUCCESS = 'H5PEDITOR_EXPORT_SUCCESS';
+export const H5PEDITOR_EXPORT_ERROR = 'H5PEDITOR_EXPORT_ERROR';
+export const H5PEDITOR_EXPORT_CANCEL = 'H5PEDITOR_EXPORT_CANCEL';
+
 export interface IH5PEditorExportRequestAction {
     payload: {
         contentId: string;
@@ -177,6 +162,11 @@ export type IH5PEditorExportActions =
     | IH5PEditorExportErrorAction
     | IH5PEditorExportCancelAction;
 
+// LoadEditorContent
+export const H5P_LOADEDITORCONTENT_REQUEST = 'H5P_LOADEDITORCONTENT_REQUEST';
+export const H5P_LOADEDITORCONTENT_SUCCESS = 'H5P_LOADEDITORCONTENT_SUCCESS';
+export const H5P_LOADEDITORCONTENT_ERROR = 'H5P_LOADEDITORCONTENT_ERROR';
+
 export interface IH5PLoadEditorContentRequestAction {
     payload: {
         contentId: string;
@@ -206,7 +196,11 @@ export type LoadEditorContentActions =
     | IH5PLoadEditorContentRequestAction
     | IH5PLoadEditorContentSuccessAction;
 
-export interface IH5PSaveContentRequestAction {
+export const H5PEDITOR_UPDATE_REQUEST = 'H5PEDITOR_UPDATE_REQUEST';
+export const H5PEDITOR_UPDATE_SUCCESS = 'H5PEDITOR_UPDATE_SUCCESS';
+export const H5PEDITOR_UPDATE_ERROR = 'H5PEDITOR_UPDATE_ERROR';
+
+export interface IH5PUpdateContentRequestAction {
     payload: {
         tabId: string;
         library: string;
@@ -215,7 +209,7 @@ export interface IH5PSaveContentRequestAction {
     type: typeof H5PEDITOR_UPDATE_REQUEST;
 }
 
-export interface IH5PSaveContentSuccessAction {
+export interface IH5PUpdateContentSuccessAction {
     payload: {
         tabId: string;
         contentId: string;
@@ -224,17 +218,21 @@ export interface IH5PSaveContentSuccessAction {
     type: typeof H5PEDITOR_UPDATE_SUCCESS;
 }
 
-export interface IH5PSaveContentErrorAction {
+export interface IH5PUpdateContentErrorAction {
     payload: {
         tabId: string;
     };
     type: typeof H5PEDITOR_UPDATE_ERROR;
 }
 
-export type SaveContentActions =
-    | IH5PSaveContentRequestAction
-    | IH5PSaveContentSuccessAction
-    | IH5PSaveContentErrorAction;
+export type UpdateContentActions =
+    | IH5PUpdateContentRequestAction
+    | IH5PUpdateContentSuccessAction
+    | IH5PUpdateContentErrorAction;
+
+export const H5P_LOADPLAYERCONTENT_REQUEST = 'H5P_LOADPLAYERCONTENT_REQUEST';
+export const H5P_LOADPLAYERCONTENT_SUCCESS = 'H5P_LOADPLAYERCONTENT_SUCCESS';
+export const H5P_LOADPLAYERCONTENT_ERROR = 'H5P_LOADPLAYERCONTENT_ERROR';
 
 export interface IH5PLoadPlayerContentRequestAction {
     payload: {
@@ -263,6 +261,10 @@ export type LoadPlayerContentActions =
     | IH5PLoadPlayerContentRequestAction
     | IH5PLoadPlayerContentSuccessAction;
 
+export const H5P_DELETE_ERROR = 'H5P_DELETE_ERROR';
+export const H5P_DELETE_REQUEST = 'H5P_DELETE_REQUEST';
+export const H5P_DELETE_SUCCESS = 'H5P_DELETE_SUCCESS';
+
 export interface IH5PDeleteRequestAction {
     payload: {
         contentId: ContentId;
@@ -289,6 +291,8 @@ export type DeleteActions =
     | IH5PDeleteErrorAction
     | IH5PDeleteRequestAction
     | IH5PDeleteSuccessAction;
+
+// Save
 
 export const H5PEDITOR_SAVE_ERROR = 'H5PEDITOR_SAVE_ERROR';
 export const H5PEDITOR_SAVE_REQUEST = 'H5PEDITOR_SAVE_REQUEST';
@@ -330,6 +334,12 @@ export type SaveActions =
     | IH5PEditorSaveRequestAction
     | IH5PEditorSaveSuccessAction
     | IH5PEditorSaveCancelAction;
+
+// Import
+
+export const H5P_IMPORT_ERROR = 'H5P_IMPORT_ERROR';
+export const H5P_IMPORT_REQUEST = 'H5P_IMPORT_REQUEST';
+export const H5P_IMPORT_SUCCESS = 'H5P_IMPORT_SUCCESS';
 
 export interface IH5PImportErrorAction {
     payload: {
