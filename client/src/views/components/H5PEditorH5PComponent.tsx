@@ -36,14 +36,11 @@ interface IH5PEditorH5PComponent {
 
     classes: any;
 
-    exportH5P: typeof actions.h5peditor.exportH5P;
-    updateH5P: typeof actions.h5peditor.updateH5PInTab;
     updateTab: typeof actions.h5peditor.updateTab;
 
     loadPlayerContent: typeof actions.h5peditor.loadPlayerContent;
     loadEditorContent: typeof actions.h5peditor.loadEditorContent;
-    saveContent: typeof actions.h5peditor.saveContent;
-    exportAsHtml: typeof actions.h5peditor.exportAsHtml;
+    updateContent: typeof actions.h5peditor.updateContent;
 
     editorLoaded: typeof actions.h5peditor.editorLoaded;
     editorSaved: typeof actions.h5peditor.editorSaved;
@@ -118,7 +115,7 @@ export class H5PEditorH5PComponent extends React.Component<IH5PEditorH5PComponen
                                 ref={this.h5pEditor}
                                 contentId={this.props.tab.contentId ?? 'new'}
                                 loadContentCallback={this.loadEditorContent}
-                                saveContentCallback={this.saveEditorContent}
+                                saveContentCallback={this.updateEditorContent}
                                 onLoaded={this.editorLoaded}
                                 onSaved={this.editorSaved}
                                 onSaveError={this.editorSaveError}
@@ -143,11 +140,11 @@ export class H5PEditorH5PComponent extends React.Component<IH5PEditorH5PComponen
     private loadEditorContent = async (contentId: string) =>
         this.props.loadEditorContent(this.props.tab.id, contentId) as any;
 
-    private saveEditorContent = async (
+    private updateEditorContent = async (
         contentId: string,
         requestBody: { library: string; params: any }
     ) =>
-        this.props.saveContent(
+        this.props.updateContent(
             this.props.tab.id,
             contentId,
             requestBody

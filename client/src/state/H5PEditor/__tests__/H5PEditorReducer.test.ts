@@ -5,9 +5,9 @@ import {
     ITab,
     Modes,
     H5P_LOADEDITORCONTENT_SUCCESS,
-    H5PEDITOR_EXPORTHTML_REQUEST,
-    H5PEDITOR_EXPORTHTML_SUCCESS,
-    H5PEDITOR_EXPORTHTML_ERROR
+    H5PEDITOR_EXPORT_REQUEST,
+    H5PEDITOR_EXPORT_SUCCESS,
+    H5PEDITOR_EXPORT_ERROR
 } from '../H5PEditorTypes';
 
 describe('initialState', () => {
@@ -57,7 +57,7 @@ describe('H5P_LOADEDITORCONTENT_SUCCESS', () => {
     });
 });
 
-describe('H5PEDITOR_EXPORTHTML_REQUEST', () => {
+describe('H5PEDITOR_EXPORT_REQUEST', () => {
     const state = reducer(
         {
             activeTabIndex: 0,
@@ -71,7 +71,7 @@ describe('H5PEDITOR_EXPORTHTML_REQUEST', () => {
             payload: {
                 contentId: testTab.contentId || ''
             },
-            type: H5PEDITOR_EXPORTHTML_REQUEST
+            type: H5PEDITOR_EXPORT_REQUEST
         }
     );
 
@@ -81,7 +81,7 @@ describe('H5PEDITOR_EXPORTHTML_REQUEST', () => {
     });
 });
 
-describe('H5PEDITOR_EXPORTHTML_SUCCESS', () => {
+describe('H5PEDITOR_EXPORT_SUCCESS', () => {
     const state = reducer(
         {
             activeTabIndex: 0,
@@ -96,7 +96,7 @@ describe('H5PEDITOR_EXPORTHTML_SUCCESS', () => {
             payload: {
                 contentId: testTab.contentId || ''
             },
-            type: H5PEDITOR_EXPORTHTML_SUCCESS
+            type: H5PEDITOR_EXPORT_SUCCESS
         }
     );
 
@@ -106,7 +106,7 @@ describe('H5PEDITOR_EXPORTHTML_SUCCESS', () => {
     });
 });
 
-describe('H5PEDITOR_EXPORTHTML_ERROR', () => {
+describe('H5PEDITOR_EXPORT_ERROR', () => {
     const state = reducer(
         {
             activeTabIndex: 0,
@@ -121,7 +121,7 @@ describe('H5PEDITOR_EXPORTHTML_ERROR', () => {
             payload: {
                 contentId: testTab.contentId || ''
             },
-            type: H5PEDITOR_EXPORTHTML_ERROR
+            type: H5PEDITOR_EXPORT_ERROR
         }
     );
 

@@ -9,14 +9,14 @@ import {
 } from './NotificationsTypes';
 
 import {
-    H5P_EXPORT_SUCCESS,
-    H5P_EXPORT_ERROR,
-    H5PEDITOR_EXPORTHTML_SUCCESS,
-    H5PEDITOR_EXPORTHTML_ERROR,
-    IH5PExportSuccessAction,
-    IH5PExportErrorAction,
-    IH5PEditorExportHtmlErrorAction,
-    IH5PEditorExportHtmlSuccessAction
+    H5PEDITOR_SAVE_SUCCESS,
+    H5PEDITOR_SAVE_ERROR,
+    H5PEDITOR_EXPORT_SUCCESS,
+    H5PEDITOR_EXPORT_ERROR,
+    IH5PEditorSaveSuccessAction,
+    IH5PEditorSaveErrorAction,
+    IH5PEditorExportErrorAction,
+    IH5PEditorExportSuccessAction
 } from '../H5PEditor/H5PEditorTypes';
 import shortid from 'shortid';
 
@@ -30,13 +30,13 @@ export default function notificationsReducer(
         | INotifyAction
         | ICloseSnackbar
         | IRemoveSnackbar
-        | IH5PExportSuccessAction
-        | IH5PExportErrorAction
-        | IH5PEditorExportHtmlErrorAction
-        | IH5PEditorExportHtmlSuccessAction
+        | IH5PEditorSaveSuccessAction
+        | IH5PEditorSaveErrorAction
+        | IH5PEditorExportErrorAction
+        | IH5PEditorExportSuccessAction
 ): INotificationsState {
     switch (action.type) {
-        case H5P_EXPORT_SUCCESS:
+        case H5PEDITOR_SAVE_SUCCESS:
             return {
                 ...state,
                 notifications: [
@@ -51,7 +51,7 @@ export default function notificationsReducer(
                 ]
             };
 
-        case H5P_EXPORT_ERROR:
+        case H5PEDITOR_SAVE_ERROR:
             return {
                 ...state,
                 notifications: [
@@ -66,7 +66,7 @@ export default function notificationsReducer(
                 ]
             };
 
-        case H5PEDITOR_EXPORTHTML_SUCCESS:
+        case H5PEDITOR_EXPORT_SUCCESS:
             return {
                 ...state,
                 notifications: [
@@ -81,7 +81,7 @@ export default function notificationsReducer(
                 ]
             };
 
-        case H5PEDITOR_EXPORTHTML_ERROR:
+        case H5PEDITOR_EXPORT_ERROR:
             return {
                 ...state,
                 notifications: [

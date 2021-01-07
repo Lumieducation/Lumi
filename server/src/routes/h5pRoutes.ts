@@ -48,18 +48,26 @@ export default function (
             filters: [
                 {
                     extensions: ['html'],
-                    name: 'Export H5P as html'
+                    name: 'html with inline-resources'
                 }
+                // {
+                //     extensions: ['zip'],
+                //     name: 'zip (html with external resources)'
+                // }
             ],
-            title: 'Export H5P as html'
+            title: 'Export H5P as ...'
         });
 
-        const html = await htmlExporter.createSingleBundle(
-            req.params.contentId,
-            req.user
-        );
+        if (!path) {
+            return res.status(499).end();
+        }
 
         try {
+            const html = await htmlExporter.createSingleBundle(
+                req.params.contentId,
+                req.user
+            );
+
             await fsExtra.writeFileSync(path, html);
         } catch (error) {
             return res.status(500).end();

@@ -74,7 +74,7 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
                         type: 'EXPORT_AS_HTML'
                     });
                 },
-                label: 'Export as HTML'
+                label: 'Export...'
             },
             { type: 'separator' } as any,
             {

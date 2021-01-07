@@ -55,7 +55,7 @@ export class WebsocketContainer extends React.Component<
         this.socket.on('action', (action: any) => {
             switch (action.type) {
                 case 'NEW_H5P':
-                    this.props.dispatch(actions.h5peditor.clickOnCreateH5P());
+                    this.props.dispatch(actions.h5peditor.openTab());
                     break;
 
                 case 'OPEN_H5P':
@@ -82,11 +82,7 @@ export class WebsocketContainer extends React.Component<
                     break;
 
                 case 'EXPORT_AS_HTML':
-                    dispatch(
-                        actions.h5peditor.exportAsHtml(
-                            this.props.activeTab.contentId || ''
-                        )
-                    );
+                    dispatch(actions.h5peditor.exportH5P());
                     break;
 
                 case 'MESSAGE':
@@ -114,7 +110,7 @@ export class WebsocketContainer extends React.Component<
             const data = await window.h5peditor.current?.save();
 
             if (data) {
-                dispatch(actions.h5peditor.exportH5P(data.contentId));
+                dispatch(actions.h5peditor.save(data.contentId));
             }
         } catch (error) {
             log.error(error);
@@ -130,7 +126,7 @@ export class WebsocketContainer extends React.Component<
 
             if (data) {
                 dispatch(
-                    actions.h5peditor.exportH5P(data.contentId, activeTab.path)
+                    actions.h5peditor.save(data.contentId, activeTab.path)
                 );
             }
         } catch (error) {

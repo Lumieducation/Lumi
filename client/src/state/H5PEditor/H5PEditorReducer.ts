@@ -8,17 +8,17 @@ import {
     H5PEDITOR_SELECT_TAB,
     H5PEDITOR_UPDATE_TAB,
     H5PEDITOR_LOADED,
-    H5PEDITOR_EXPORTHTML_REQUEST,
-    H5PEDITOR_EXPORTHTML_SUCCESS,
-    H5PEDITOR_EXPORTHTML_ERROR,
+    H5PEDITOR_EXPORT_REQUEST,
+    H5PEDITOR_EXPORT_SUCCESS,
+    H5PEDITOR_EXPORT_ERROR,
     H5P_LOADEDITORCONTENT_SUCCESS,
     H5P_LOADPLAYERCONTENT_REQUEST,
     H5P_LOADPLAYERCONTENT_SUCCESS,
-    H5P_SAVECONTENT_SUCCESS,
-    H5P_SAVECONTENT_REQUEST,
-    H5P_EXPORT_REQUEST,
-    H5P_EXPORT_SUCCESS,
-    H5P_EXPORT_ERROR,
+    H5PEDITOR_UPDATE_SUCCESS,
+    H5PEDITOR_UPDATE_REQUEST,
+    H5PEDITOR_SAVE_REQUEST,
+    H5PEDITOR_SAVE_SUCCESS,
+    H5PEDITOR_SAVE_ERROR,
     Modes
 } from './H5PEditorTypes';
 
@@ -36,7 +36,7 @@ export default function tabReducer(
     try {
         log.debug(`reducing ${action.type}`);
         switch (action.type) {
-            case H5P_EXPORT_REQUEST:
+            case H5PEDITOR_SAVE_REQUEST:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
@@ -49,7 +49,7 @@ export default function tabReducer(
                     )
                 };
 
-            case H5P_EXPORT_SUCCESS:
+            case H5PEDITOR_SAVE_SUCCESS:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
@@ -63,7 +63,7 @@ export default function tabReducer(
                     )
                 };
 
-            case H5P_EXPORT_ERROR:
+            case H5PEDITOR_SAVE_ERROR:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
@@ -89,7 +89,7 @@ export default function tabReducer(
                     )
                 };
 
-            case H5P_SAVECONTENT_REQUEST:
+            case H5PEDITOR_UPDATE_REQUEST:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
@@ -102,7 +102,7 @@ export default function tabReducer(
                     )
                 };
 
-            case H5P_SAVECONTENT_SUCCESS:
+            case H5PEDITOR_UPDATE_SUCCESS:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
@@ -134,7 +134,7 @@ export default function tabReducer(
                     )
                 };
 
-            case H5PEDITOR_EXPORTHTML_REQUEST:
+            case H5PEDITOR_EXPORT_REQUEST:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
@@ -147,7 +147,7 @@ export default function tabReducer(
                     )
                 };
 
-            case H5PEDITOR_EXPORTHTML_SUCCESS:
+            case H5PEDITOR_EXPORT_SUCCESS:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
@@ -160,7 +160,7 @@ export default function tabReducer(
                     )
                 };
 
-            case H5PEDITOR_EXPORTHTML_ERROR:
+            case H5PEDITOR_EXPORT_ERROR:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>

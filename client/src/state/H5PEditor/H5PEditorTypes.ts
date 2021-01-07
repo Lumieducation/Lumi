@@ -38,21 +38,18 @@ export const H5PEDITOR_RESET_SAVINGSTATE = 'H5PEDITOR_RESET_SAVINGSTATE';
 export const H5PEDITOR_UPDATE_TAB = 'H5PEDITOR_UPDATE_TAB';
 export const H5PEDITOR_LOADED = 'H5PEDITOR_LOADED';
 export const H5PEDITOR_SAVED = 'H5PEDITOR_SAVED';
-export const H5PEDITOR_SAVE_ERROR = 'H5PEDITOR_SAVE_ERROR';
+export const H5PEDITOR_SAVED_ERROR = 'H5PEDITOR_SAVED_ERROR';
 export const H5PPLAYER_INITIALIZED = 'H5PPLAYER_INITIALIZED';
 
 export const H5P_DELETE_ERROR = 'H5P_DELETE_ERROR';
 export const H5P_DELETE_REQUEST = 'H5P_DELETE_REQUEST';
 export const H5P_DELETE_SUCCESS = 'H5P_DELETE_SUCCESS';
-export const H5P_EXPORT_ERROR = 'H5P_EXPORT_ERROR';
-export const H5P_EXPORT_REQUEST = 'H5P_EXPORT_REQUEST';
-export const H5P_EXPORT_SUCCESS = 'H5P_EXPORT_SUCCESS';
+export const H5PEDITOR_SAVE_ERROR = 'H5PEDITOR_SAVE_ERROR';
+export const H5PEDITOR_SAVE_REQUEST = 'H5PEDITOR_SAVE_REQUEST';
+export const H5PEDITOR_SAVE_SUCCESS = 'H5PEDITOR_SAVE_SUCCESS';
 export const H5P_IMPORT_ERROR = 'H5P_IMPORT_ERROR';
 export const H5P_IMPORT_REQUEST = 'H5P_IMPORT_REQUEST';
 export const H5P_IMPORT_SUCCESS = 'H5P_IMPORT_SUCCESS';
-export const H5P_UPDATE_ERROR = 'H5P_UPDATE_ERROR';
-export const H5P_UPDATE_REQUEST = 'H5P_UPDATE_REQUEST';
-export const H5P_UPDATE_SUCCESS = 'H5P_UPDATE_SUCCESS';
 
 export const H5P_LOADPLAYERCONTENT_REQUEST = 'H5P_LOADPLAYERCONTENT_REQUEST';
 export const H5P_LOADPLAYERCONTENT_SUCCESS = 'H5P_LOADPLAYERCONTENT_SUCCESS';
@@ -62,13 +59,13 @@ export const H5P_LOADEDITORCONTENT_REQUEST = 'H5P_LOADEDITORCONTENT_REQUEST';
 export const H5P_LOADEDITORCONTENT_SUCCESS = 'H5P_LOADEDITORCONTENT_SUCCESS';
 export const H5P_LOADEDITORCONTENT_ERROR = 'H5P_LOADEDITORCONTENT_ERROR';
 
-export const H5P_SAVECONTENT_REQUEST = 'H5P_SAVECONTENT_REQUEST';
-export const H5P_SAVECONTENT_SUCCESS = 'H5P_SAVECONTENT_SUCCESS';
-export const H5P_SAVECONTENT_ERROR = 'H5P_SAVECONTENT_ERROR';
+export const H5PEDITOR_UPDATE_REQUEST = 'H5PEDITOR_UPDATE_REQUEST';
+export const H5PEDITOR_UPDATE_SUCCESS = 'H5PEDITOR_UPDATE_SUCCESS';
+export const H5PEDITOR_UPDATE_ERROR = 'H5PEDITOR_UPDATE_ERROR';
 
-export const H5PEDITOR_EXPORTHTML_REQUEST = 'H5PEDITOR_EXPORTHTML_REQUEST';
-export const H5PEDITOR_EXPORTHTML_SUCCESS = 'H5PEDITOR_EXPORTHTML_SUCCESS';
-export const H5PEDITOR_EXPORTHTML_ERROR = 'H5PEDITOR_EXPORTHTML_ERROR';
+export const H5PEDITOR_EXPORT_REQUEST = 'H5PEDITOR_EXPORT_REQUEST';
+export const H5PEDITOR_EXPORT_SUCCESS = 'H5PEDITOR_EXPORT_SUCCESS';
+export const H5PEDITOR_EXPORT_ERROR = 'H5PEDITOR_EXPORT_ERROR';
 
 export enum Modes {
     view,
@@ -133,36 +130,36 @@ export type TabActionTypes =
     | IH5PSaveContentSuccessAction
     | IH5PSaveContentRequestAction
     | IEditorLoadedAction
-    | IH5PExportRequestAction
-    | IH5PExportSuccessAction
-    | IH5PExportErrorAction
-    | IH5PEditorExportHtmlActions;
+    | IH5PEditorSaveRequestAction
+    | IH5PEditorSaveSuccessAction
+    | IH5PEditorSaveErrorAction
+    | IH5PEditorExportActions;
 
-export interface IH5PEditorExportHtmlRequestAction {
+export interface IH5PEditorExportRequestAction {
     payload: {
         contentId: string;
     };
-    type: typeof H5PEDITOR_EXPORTHTML_REQUEST;
+    type: typeof H5PEDITOR_EXPORT_REQUEST;
 }
 
-export interface IH5PEditorExportHtmlSuccessAction {
+export interface IH5PEditorExportSuccessAction {
     payload: {
         contentId: string;
     };
-    type: typeof H5PEDITOR_EXPORTHTML_SUCCESS;
+    type: typeof H5PEDITOR_EXPORT_SUCCESS;
 }
 
-export interface IH5PEditorExportHtmlErrorAction {
+export interface IH5PEditorExportErrorAction {
     payload: {
         contentId: string;
     };
-    type: typeof H5PEDITOR_EXPORTHTML_ERROR;
+    type: typeof H5PEDITOR_EXPORT_ERROR;
 }
 
-export type IH5PEditorExportHtmlActions =
-    | IH5PEditorExportHtmlRequestAction
-    | IH5PEditorExportHtmlSuccessAction
-    | IH5PEditorExportHtmlErrorAction;
+export type IH5PEditorExportActions =
+    | IH5PEditorExportRequestAction
+    | IH5PEditorExportSuccessAction
+    | IH5PEditorExportErrorAction;
 
 export interface IH5PLoadEditorContentRequestAction {
     payload: {
@@ -199,7 +196,7 @@ export interface IH5PSaveContentRequestAction {
         library: string;
         params: any;
     };
-    type: typeof H5P_SAVECONTENT_REQUEST;
+    type: typeof H5PEDITOR_UPDATE_REQUEST;
 }
 
 export interface IH5PSaveContentSuccessAction {
@@ -208,14 +205,14 @@ export interface IH5PSaveContentSuccessAction {
         contentId: string;
         metadata: any;
     };
-    type: typeof H5P_SAVECONTENT_SUCCESS;
+    type: typeof H5PEDITOR_UPDATE_SUCCESS;
 }
 
 export interface IH5PSaveContentErrorAction {
     payload: {
         tabId: string;
     };
-    type: typeof H5P_SAVECONTENT_ERROR;
+    type: typeof H5PEDITOR_UPDATE_ERROR;
 }
 
 export type SaveContentActions =
@@ -277,35 +274,35 @@ export type DeleteActions =
     | IH5PDeleteRequestAction
     | IH5PDeleteSuccessAction;
 
-export interface IH5PExportErrorAction {
+export interface IH5PEditorSaveErrorAction {
     payload: {
         id: string;
         path: string;
         response: Superagent.Response;
     };
-    type: typeof H5P_EXPORT_ERROR;
+    type: typeof H5PEDITOR_SAVE_ERROR;
 }
-export interface IH5PExportRequestAction {
+export interface IH5PEditorSaveRequestAction {
     payload: {
         id: string;
         path: string;
     };
-    type: typeof H5P_EXPORT_REQUEST;
+    type: typeof H5PEDITOR_SAVE_REQUEST;
 }
 
-export interface IH5PExportSuccessAction {
+export interface IH5PEditorSaveSuccessAction {
     payload: {
         h5p: IH5P;
         id: string;
         path: string;
     };
-    type: typeof H5P_EXPORT_SUCCESS;
+    type: typeof H5PEDITOR_SAVE_SUCCESS;
 }
 
-export type ExportActions =
-    | IH5PExportErrorAction
-    | IH5PExportRequestAction
-    | IH5PExportSuccessAction;
+export type SaveActions =
+    | IH5PEditorSaveErrorAction
+    | IH5PEditorSaveRequestAction
+    | IH5PEditorSaveSuccessAction;
 
 export interface IH5PImportErrorAction {
     payload: {
@@ -327,37 +324,4 @@ export interface IH5PImportSuccessAction {
         path: string;
     };
     type: typeof H5P_IMPORT_SUCCESS;
-}
-
-export interface IH5PUpdateErrorAction {
-    payload: {
-        h5p: IH5P;
-        response: Superagent.Response;
-    };
-    type: typeof H5P_UPDATE_ERROR;
-}
-export interface IH5PUpdateRequestAction {
-    payload: {
-        h5p: IH5P;
-    };
-    type: typeof H5P_UPDATE_REQUEST;
-}
-
-export interface IH5PUpdateSuccessAction {
-    payload: {
-        h5p: IH5P;
-    };
-    type: typeof H5P_UPDATE_SUCCESS;
-}
-
-// api
-
-export type exportH5P = (id: string, path: string) => Promise<{ path: string }>;
-export type importH5P = (path: string) => Promise<IH5P>;
-export type updateH5P = (h5p: IH5P) => Promise<IH5P>;
-
-export interface IAPI {
-    export: exportH5P;
-    import: importH5P;
-    update: updateH5P;
 }

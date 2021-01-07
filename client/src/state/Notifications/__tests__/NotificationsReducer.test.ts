@@ -7,10 +7,10 @@ import {
 } from '../NotificationsTypes';
 
 import {
-    H5P_EXPORT_SUCCESS,
-    H5P_EXPORT_ERROR,
-    H5PEDITOR_EXPORTHTML_SUCCESS,
-    H5PEDITOR_EXPORTHTML_ERROR
+    H5PEDITOR_SAVE_SUCCESS,
+    H5PEDITOR_SAVE_ERROR,
+    H5PEDITOR_EXPORT_SUCCESS,
+    H5PEDITOR_EXPORT_ERROR
 } from '../../H5PEditor/H5PEditorTypes';
 
 describe('initialState', () => {
@@ -99,14 +99,14 @@ describe('REMOVE_SNACKBAR', () => {
 });
 
 describe('Notifications', () => {
-    it('shows a success notification on H5P_EXPORT_SUCCESS', (done) => {
+    it('shows a success notification on H5PEDITOR_SAVE_SUCCESS', (done) => {
         const state = reducer(
             {
                 notifications: []
             },
             {
                 payload: {} as any,
-                type: H5P_EXPORT_SUCCESS
+                type: H5PEDITOR_SAVE_SUCCESS
             }
         );
 
@@ -115,14 +115,14 @@ describe('Notifications', () => {
         done();
     });
 
-    it('shows a error notification on H5P_EXPORT_ERROR', (done) => {
+    it('shows a error notification on H5PEDITOR_SAVE_ERROR', (done) => {
         const state = reducer(
             {
                 notifications: []
             },
             {
                 payload: {} as any,
-                type: H5P_EXPORT_ERROR
+                type: H5PEDITOR_SAVE_ERROR
             }
         );
 
@@ -131,14 +131,14 @@ describe('Notifications', () => {
         done();
     });
 
-    it('shows a success notification on H5PEDITOR_EXPORTHTML_SUCCESS', (done) => {
+    it('shows a success notification on H5PEDITOR_EXPORT_SUCCESS', (done) => {
         const state = reducer(
             {
                 notifications: []
             },
             {
                 payload: {} as any,
-                type: H5PEDITOR_EXPORTHTML_SUCCESS
+                type: H5PEDITOR_EXPORT_SUCCESS
             }
         );
 
@@ -147,14 +147,14 @@ describe('Notifications', () => {
         done();
     });
 
-    it('shows a error notification on H5PEDITOR_EXPORTHTML_ERROR', (done) => {
+    it('shows a error notification on H5PEDITOR_EXPORT_ERROR', (done) => {
         const state = reducer(
             {
                 notifications: []
             },
             {
                 payload: {} as any,
-                type: H5PEDITOR_EXPORTHTML_ERROR
+                type: H5PEDITOR_EXPORT_ERROR
             }
         );
 

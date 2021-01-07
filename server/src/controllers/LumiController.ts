@@ -33,14 +33,6 @@ export default class LumiController {
                     {
                         extensions: ['h5p'],
                         name: 'H5P'
-                    },
-                    {
-                        name: 'HTML (inline resources)',
-                        extensions: ['html-inline']
-                    },
-                    {
-                        name: 'HTML (external resources)',
-                        extensions: ['html-external']
                     }
                 ],
                 title: 'Save H5P'
