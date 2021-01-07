@@ -12,15 +12,27 @@ export default async function setup(
         await fsExtra.remove(serverConfig.workingCachePath);
         await fsExtra.remove(serverConfig.temporaryStoragePath);
 
+        // Make sure required directories exist
         await fsExtra.mkdirp(serverConfig.workingCachePath);
         await fsExtra.mkdirp(serverConfig.librariesPath);
         await fsExtra.mkdirp(serverConfig.temporaryStoragePath);
 
-        // we might need to update settings here and run upgrade scripts when for example the baseUrl changes
-        if (!(await fsExtra.pathExists(serverConfig.configFile))) {
+        // Check if current config exists and is read- and parsable
+        let configOk = false;
+        try {
+            if (await fsExtra.pathExists(serverConfig.configFile)) {
+                await fsExtra.readJSON(serverConfig.configFile);
+                configOk = true;
+            }
+        } catch (error) {
+            configOk = false;
+        }
+        // Create a new configuration if needed
+        if (!configOk) {
             // We write configuration values that are not automatically saved
             // when calling h5pConfig.save()
             await fsExtra.writeJSON(serverConfig.configFile, {
+                // we might need to update settings here and run upgrade scripts when for example the baseUrl changes
                 baseUrl: '/api/v1/h5p',
                 editorAddons: {
                     'H5P.CoursePresentation': ['H5P.MathDisplay'],
