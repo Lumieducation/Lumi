@@ -26,7 +26,12 @@ export default function (
 
     router.get(`/:contentId/play`, async (req, res) => {
         try {
-            const content = await h5pPlayer.render(req.params.contentId);
+            const content = (await h5pPlayer.render(
+                req.params.contentId
+            )) as H5P.IPlayerModel;
+            // We override the embed types to make sure content always resizes
+            // properly.
+            content.embedTypes = ['iframe'];
             res.send(content);
             res.status(200).end();
         } catch (error) {
