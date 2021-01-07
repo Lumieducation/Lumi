@@ -66,6 +66,7 @@ export const H5PEDITOR_UPDATE_ERROR = 'H5PEDITOR_UPDATE_ERROR';
 export const H5PEDITOR_EXPORT_REQUEST = 'H5PEDITOR_EXPORT_REQUEST';
 export const H5PEDITOR_EXPORT_SUCCESS = 'H5PEDITOR_EXPORT_SUCCESS';
 export const H5PEDITOR_EXPORT_ERROR = 'H5PEDITOR_EXPORT_ERROR';
+export const H5PEDITOR_EXPORT_CANCEL = 'H5PEDITOR_EXPORT_CANCEL';
 
 export enum Modes {
     view,
@@ -156,10 +157,18 @@ export interface IH5PEditorExportErrorAction {
     type: typeof H5PEDITOR_EXPORT_ERROR;
 }
 
+export interface IH5PEditorExportCancelAction {
+    payload: {
+        contentId: string;
+    };
+    type: typeof H5PEDITOR_EXPORT_CANCEL;
+}
+
 export type IH5PEditorExportActions =
     | IH5PEditorExportRequestAction
     | IH5PEditorExportSuccessAction
-    | IH5PEditorExportErrorAction;
+    | IH5PEditorExportErrorAction
+    | IH5PEditorExportCancelAction;
 
 export interface IH5PLoadEditorContentRequestAction {
     payload: {

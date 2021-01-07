@@ -39,7 +39,8 @@ import {
     H5P_LOADEDITORCONTENT_SUCCESS,
     H5PEDITOR_EXPORT_REQUEST,
     H5PEDITOR_EXPORT_SUCCESS,
-    H5PEDITOR_EXPORT_ERROR
+    H5PEDITOR_EXPORT_ERROR,
+    H5PEDITOR_EXPORT_CANCEL
 } from './H5PEditorTypes';
 
 import _path from 'path';
@@ -98,7 +99,6 @@ export function exportH5P(): any {
     return async (dispatch: any) => {
         try {
             const data = await window.h5peditor.current?.save(); // this dispatches updateContent()
-
             dispatch({
                 payload: { contentId: data.contentId },
                 type: H5PEDITOR_EXPORT_REQUEST
@@ -112,14 +112,26 @@ export function exportH5P(): any {
                     type: H5PEDITOR_EXPORT_SUCCESS
                 });
             } catch (error) {
-                dispatch({
-                    payload: { contentId: data.contentId },
-                    type: H5PEDITOR_EXPORT_ERROR
-                });
+                if (error.status === 499) {
+                    // dispatched if the user cancel the system's save dialog.
+                    dispatch({
+                        payload: {
+                            contentId: data.contentId
+                        },
+                        type: H5PEDITOR_EXPORT_CANCEL
+                    });
+                } else {
+                    dispatch({
+                        payload: { error, contentId: data.contentId },
+                        type: H5PEDITOR_EXPORT_ERROR
+                    });
+                }
             }
         } catch (error) {
             dispatch({
-                payload: {},
+                payload: {
+                    error
+                },
                 type: H5PEDITOR_EXPORT_ERROR
             });
         }

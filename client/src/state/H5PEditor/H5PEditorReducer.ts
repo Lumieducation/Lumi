@@ -19,7 +19,8 @@ import {
     H5PEDITOR_SAVE_REQUEST,
     H5PEDITOR_SAVE_SUCCESS,
     H5PEDITOR_SAVE_ERROR,
-    Modes
+    Modes,
+    H5PEDITOR_EXPORT_CANCEL
 } from './H5PEditorTypes';
 
 export const initialState: IH5PEditorState = {
@@ -148,6 +149,19 @@ export default function tabReducer(
                 };
 
             case H5PEDITOR_EXPORT_SUCCESS:
+                return {
+                    ...state,
+                    tabList: state.tabList.map((tab, index) =>
+                        tab.contentId === action.payload.contentId
+                            ? {
+                                  ...tab,
+                                  loadingIndicator: false
+                              }
+                            : tab
+                    )
+                };
+
+            case H5PEDITOR_EXPORT_CANCEL:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
