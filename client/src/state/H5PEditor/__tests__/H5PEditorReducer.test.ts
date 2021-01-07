@@ -27,7 +27,6 @@ const testTab: ITab = {
     mainLibrary: 'library',
     name: 'test',
     path: '',
-    state: 'closing',
     mode: Modes.view
 };
 

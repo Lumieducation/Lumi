@@ -249,7 +249,6 @@ export default function tabReducer(
                             mainLibrary: '',
                             name: 'new H5P',
                             path: undefined,
-                            state: 'success',
                             mode: Modes.edit,
                             ...action.payload.tab
                         }

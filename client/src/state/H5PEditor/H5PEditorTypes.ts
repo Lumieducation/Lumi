@@ -22,15 +22,6 @@ export interface IH5P {
     };
 }
 
-export type TabState =
-    | 'savingSuccess'
-    | 'savingError'
-    | 'saving'
-    | 'error'
-    | 'closing'
-    | 'opening'
-    | 'success';
-
 export const H5PEDITOR_OPEN_TAB = 'H5PEDITOR_OPEN_TAB';
 export const H5PEDITOR_CLOSE_TAB = 'H5PEDITOR_CLOSE_TAB';
 export const H5PEDITOR_SELECT_TAB = 'H5PEDITOR_SELECT_TAB';
@@ -53,9 +44,9 @@ export interface ITab {
     mainLibrary: string;
     name: string;
     path?: string;
-    state: TabState;
     mode: Modes;
 }
+
 export interface IH5PEditorState {
     activeTabIndex: number;
     tabList: ITab[];

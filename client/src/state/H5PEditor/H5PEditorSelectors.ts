@@ -11,7 +11,6 @@ export const errorObject: ITab = {
     loadingIndicator: false,
     mainLibrary: '',
     name: 'error',
-    state: 'error',
     mode: Modes.edit,
     viewDisabled: true
 };
