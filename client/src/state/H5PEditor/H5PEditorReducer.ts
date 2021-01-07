@@ -19,6 +19,7 @@ import {
     H5PEDITOR_SAVE_REQUEST,
     H5PEDITOR_SAVE_SUCCESS,
     H5PEDITOR_SAVE_ERROR,
+    H5P_IMPORT_SUCCESS,
     Modes,
     H5PEDITOR_EXPORT_CANCEL,
     H5PEDITOR_SAVE_CANCEL
@@ -234,6 +235,27 @@ export default function tabReducer(
                     tabList: state.tabList.filter(
                         (tab) => tab.id !== action.payload.id
                     )
+                };
+
+            case H5P_IMPORT_SUCCESS:
+                return {
+                    ...state,
+                    activeTabIndex: state.tabList.length,
+                    tabList: [
+                        ...state.tabList,
+                        {
+                            id: action.payload.tabId,
+                            path: action.payload.path,
+                            contentId: action.payload.h5p.id,
+                            loadingIndicator: false,
+                            viewDisabled: false,
+                            mainLibrary: action.payload.h5p.library.split(
+                                ' '
+                            )[0],
+                            name: action.payload.h5p.metadata.title,
+                            mode: Modes.edit
+                        }
+                    ]
                 };
 
             case H5PEDITOR_OPEN_TAB:

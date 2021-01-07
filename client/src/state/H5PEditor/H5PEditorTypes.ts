@@ -16,10 +16,8 @@ export type ContentId = string;
 export interface IH5P {
     id: ContentId;
     library: string;
-    params: {
-        metadata: IContentMetadata;
-        params: any;
-    };
+    metadata: IContentMetadata;
+    parameters: any;
 }
 
 export const H5PEDITOR_OPEN_TAB = 'H5PEDITOR_OPEN_TAB';
@@ -99,7 +97,9 @@ export type H5PEditorActionTypes =
     | IH5PEditorSaveSuccessAction
     | IH5PEditorSaveCancelAction
     | IH5PEditorSaveErrorAction
-    | IH5PEditorExportActions;
+    | IH5PEditorExportActions
+    | IH5PImportRequestAction
+    | IH5PImportSuccessAction;
 
 //
 
@@ -334,6 +334,7 @@ export const H5P_IMPORT_SUCCESS = 'H5P_IMPORT_SUCCESS';
 
 export interface IH5PImportErrorAction {
     payload: {
+        tabId: string;
         path: string;
         response: Superagent.Response;
     };
@@ -341,6 +342,7 @@ export interface IH5PImportErrorAction {
 }
 export interface IH5PImportRequestAction {
     payload: {
+        tabId: string;
         path: string;
     };
     type: typeof H5P_IMPORT_REQUEST;
@@ -348,6 +350,7 @@ export interface IH5PImportRequestAction {
 
 export interface IH5PImportSuccessAction {
     payload: {
+        tabId: string;
         h5p: IH5P;
         path: string;
     };

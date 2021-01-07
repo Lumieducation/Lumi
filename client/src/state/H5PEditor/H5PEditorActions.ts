@@ -1,7 +1,5 @@
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 
-import * as notifications from '../Notifications/NotificationsActions';
-
 import Logger from '../../helpers/Logger';
 
 import {
@@ -44,10 +42,6 @@ import {
     H5PEDITOR_SAVE_CANCEL
 } from './H5PEditorTypes';
 
-import _path from 'path';
-import upath from 'upath';
-
-import { track } from '../track/actions';
 import * as selectors from './H5PEditorSelectors';
 import shortid from 'shortid';
 
@@ -145,44 +139,10 @@ export function openH5P(): any {
             const files = response.body;
 
             files.forEach((file: string) => {
-                dispatch(
-                    clickOnFileInFiletree(
-                        _path.basename(upath.normalize(file)),
-                        file
-                    )
-                );
+                dispatch(importH5P(file));
             });
         });
         return dispatch;
-    };
-}
-
-export function clickOnFileInFiletree(name: string, path: string): any {
-    return async (dispatch: any) => {
-        track('file_tree', 'click', 'import');
-        try {
-            const importAction = await dispatch(importH5P(path));
-
-            if (importAction.error) {
-                dispatch(
-                    notifications.notify(
-                        `h5p-import-error: ${importAction.error.response.body.message}`,
-                        'error'
-                    )
-                );
-            } else {
-                const h5p = importAction.payload.h5p;
-                dispatch(
-                    openTab({
-                        name,
-                        path,
-                        contentId: h5p.id
-                    })
-                );
-            }
-        } catch (error) {
-            dispatch(notifications.notify('fatal-error', 'error'));
-        }
     };
 }
 
@@ -412,19 +372,21 @@ export function importH5P(
     path: string
 ): ThunkAction<void, null, null, SaveActions> {
     return (dispatch: any) => {
+        const tabId = shortid();
+
         dispatch({
-            payload: { path },
+            payload: { tabId, path },
             type: H5P_IMPORT_REQUEST
         });
 
         return api
             .importH5P(path)
-            .then(({ body }) =>
+            .then(({ body }) => {
                 dispatch({
-                    payload: { path, h5p: body },
+                    payload: { tabId, path, h5p: body },
                     type: H5P_IMPORT_SUCCESS
-                })
-            )
+                });
+            })
             .catch((error: Error) =>
                 dispatch({
                     error,
