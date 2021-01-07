@@ -40,7 +40,8 @@ import {
     H5PEDITOR_EXPORT_REQUEST,
     H5PEDITOR_EXPORT_SUCCESS,
     H5PEDITOR_EXPORT_ERROR,
-    H5PEDITOR_EXPORT_CANCEL
+    H5PEDITOR_EXPORT_CANCEL,
+    H5PEDITOR_SAVE_CANCEL
 } from './H5PEditorTypes';
 
 import _path from 'path';
@@ -374,28 +375,34 @@ export function save(
     contentId: ContentId,
     path?: string
 ): ThunkAction<void, null, null, SaveActions> {
-    return (dispatch: any) => {
+    return async (dispatch: any) => {
         dispatch({
             payload: { id: contentId, path },
             type: H5PEDITOR_SAVE_REQUEST
         });
 
-        return api
-            .exportH5P(contentId, path)
-            .then(({ body }) =>
+        try {
+            const response = await api.exportH5P(contentId, path);
+
+            dispatch({
+                // tslint:disable-next-line: object-shorthand-properties-first
+                payload: { id: contentId, ...response.body },
+                type: H5PEDITOR_SAVE_SUCCESS
+            });
+        } catch (error) {
+            if (error.status === 499) {
                 dispatch({
-                    // tslint:disable-next-line: object-shorthand-properties-first
-                    payload: { id: contentId, ...body },
-                    type: H5PEDITOR_SAVE_SUCCESS
-                })
-            )
-            .catch((error: Error) =>
+                    payload: {},
+                    type: H5PEDITOR_SAVE_CANCEL
+                });
+            } else {
                 dispatch({
                     error,
                     payload: { id: contentId, path },
                     type: H5PEDITOR_SAVE_ERROR
-                })
-            );
+                });
+            }
+        }
     };
 }
 

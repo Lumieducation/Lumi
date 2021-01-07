@@ -40,7 +40,8 @@ export default class LumiController {
         }
 
         if (!path) {
-            throw new LumiError('user-abort', 'Aborted by user', 400);
+            throw new LumiError('user-abort', 'Aborted by user', 499);
+            return;
         }
 
         if (_path.extname(path) !== '.h5p') {

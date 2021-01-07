@@ -44,9 +44,7 @@ export const H5PPLAYER_INITIALIZED = 'H5PPLAYER_INITIALIZED';
 export const H5P_DELETE_ERROR = 'H5P_DELETE_ERROR';
 export const H5P_DELETE_REQUEST = 'H5P_DELETE_REQUEST';
 export const H5P_DELETE_SUCCESS = 'H5P_DELETE_SUCCESS';
-export const H5PEDITOR_SAVE_ERROR = 'H5PEDITOR_SAVE_ERROR';
-export const H5PEDITOR_SAVE_REQUEST = 'H5PEDITOR_SAVE_REQUEST';
-export const H5PEDITOR_SAVE_SUCCESS = 'H5PEDITOR_SAVE_SUCCESS';
+
 export const H5P_IMPORT_ERROR = 'H5P_IMPORT_ERROR';
 export const H5P_IMPORT_REQUEST = 'H5P_IMPORT_REQUEST';
 export const H5P_IMPORT_SUCCESS = 'H5P_IMPORT_SUCCESS';
@@ -133,6 +131,7 @@ export type TabActionTypes =
     | IEditorLoadedAction
     | IH5PEditorSaveRequestAction
     | IH5PEditorSaveSuccessAction
+    | IH5PEditorSaveCancelAction
     | IH5PEditorSaveErrorAction
     | IH5PEditorExportActions;
 
@@ -283,6 +282,11 @@ export type DeleteActions =
     | IH5PDeleteRequestAction
     | IH5PDeleteSuccessAction;
 
+export const H5PEDITOR_SAVE_ERROR = 'H5PEDITOR_SAVE_ERROR';
+export const H5PEDITOR_SAVE_REQUEST = 'H5PEDITOR_SAVE_REQUEST';
+export const H5PEDITOR_SAVE_SUCCESS = 'H5PEDITOR_SAVE_SUCCESS';
+export const H5PEDITOR_SAVE_CANCEL = 'H5PEDITOR_SAVE_CANCEL';
+
 export interface IH5PEditorSaveErrorAction {
     payload: {
         id: string;
@@ -308,10 +312,16 @@ export interface IH5PEditorSaveSuccessAction {
     type: typeof H5PEDITOR_SAVE_SUCCESS;
 }
 
+export interface IH5PEditorSaveCancelAction {
+    payload: {};
+    type: typeof H5PEDITOR_SAVE_CANCEL;
+}
+
 export type SaveActions =
     | IH5PEditorSaveErrorAction
     | IH5PEditorSaveRequestAction
-    | IH5PEditorSaveSuccessAction;
+    | IH5PEditorSaveSuccessAction
+    | IH5PEditorSaveCancelAction;
 
 export interface IH5PImportErrorAction {
     payload: {
