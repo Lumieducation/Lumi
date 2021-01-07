@@ -6,6 +6,13 @@ import {
     REMOVE_SNACKBAR
 } from '../NotificationsTypes';
 
+import {
+    H5P_EXPORT_SUCCESS,
+    H5P_EXPORT_ERROR,
+    H5PEDITOR_EXPORTHTML_SUCCESS,
+    H5PEDITOR_EXPORTHTML_ERROR
+} from '../../H5PEditor/H5PEditorTypes';
+
 describe('initialState', () => {
     it('returns the initial state', (done) => {
         const state = reducer(undefined, { type: 'init' } as any);
@@ -87,6 +94,72 @@ describe('REMOVE_SNACKBAR', () => {
         );
 
         expect(state.notifications.length).toBe(0);
+        done();
+    });
+});
+
+describe('Notifications', () => {
+    it('shows a success notification on H5P_EXPORT_SUCCESS', (done) => {
+        const state = reducer(
+            {
+                notifications: []
+            },
+            {
+                payload: {} as any,
+                type: H5P_EXPORT_SUCCESS
+            }
+        );
+
+        expect(state.notifications.length).toBe(1);
+        expect(state.notifications[0].options.variant).toBe('success');
+        done();
+    });
+
+    it('shows a error notification on H5P_EXPORT_ERROR', (done) => {
+        const state = reducer(
+            {
+                notifications: []
+            },
+            {
+                payload: {} as any,
+                type: H5P_EXPORT_ERROR
+            }
+        );
+
+        expect(state.notifications.length).toBe(1);
+        expect(state.notifications[0].options.variant).toBe('error');
+        done();
+    });
+
+    it('shows a success notification on H5PEDITOR_EXPORTHTML_SUCCESS', (done) => {
+        const state = reducer(
+            {
+                notifications: []
+            },
+            {
+                payload: {} as any,
+                type: H5PEDITOR_EXPORTHTML_SUCCESS
+            }
+        );
+
+        expect(state.notifications.length).toBe(1);
+        expect(state.notifications[0].options.variant).toBe('success');
+        done();
+    });
+
+    it('shows a error notification on H5PEDITOR_EXPORTHTML_ERROR', (done) => {
+        const state = reducer(
+            {
+                notifications: []
+            },
+            {
+                payload: {} as any,
+                type: H5PEDITOR_EXPORTHTML_ERROR
+            }
+        );
+
+        expect(state.notifications.length).toBe(1);
+        expect(state.notifications[0].options.variant).toBe('error');
         done();
     });
 });

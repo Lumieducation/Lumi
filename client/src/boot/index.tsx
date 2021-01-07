@@ -5,9 +5,7 @@ import Logger from '../helpers/Logger';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/styles';
 
-// import { hot } from 'react-hot-loader/root';
-
-// import { ConnectedRouter } from 'connected-react-router';
+import { SnackbarProvider } from 'notistack';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -34,7 +32,15 @@ function boot() {
             <ThemeProvider theme={theme}>
                 {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
                 <CssBaseline />
-                <App />
+                <SnackbarProvider
+                    anchorOrigin={{
+                        vertical: 'bottom',
+                        horizontal: 'center'
+                    }}
+                    maxSnack={3}
+                >
+                    <App />
+                </SnackbarProvider>
             </ThemeProvider>
             {/* </ConnectedRouter> */}
         </Provider>,
