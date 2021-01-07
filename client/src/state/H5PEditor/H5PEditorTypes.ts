@@ -38,7 +38,6 @@ export const H5PEDITOR_RESET_SAVINGSTATE = 'H5PEDITOR_RESET_SAVINGSTATE';
 export const H5PEDITOR_UPDATE_TAB = 'H5PEDITOR_UPDATE_TAB';
 export const H5PEDITOR_LOADED = 'H5PEDITOR_LOADED';
 export const H5PEDITOR_SAVED = 'H5PEDITOR_SAVED';
-export const H5PEDITOR_SAVED_ERROR = 'H5PEDITOR_SAVED_ERROR';
 export const H5PPLAYER_INITIALIZED = 'H5PPLAYER_INITIALIZED';
 
 export const H5P_DELETE_ERROR = 'H5P_DELETE_ERROR';
@@ -135,6 +134,15 @@ export type TabActionTypes =
     | IH5PEditorSaveErrorAction
     | IH5PEditorExportActions;
 
+export const H5PEDITOR_ERROR = 'H5PEDITOR_ERROR';
+
+export interface IH5PEditorError {
+    payload: {
+        tabId: string;
+        message: string;
+    };
+    type: typeof H5PEDITOR_ERROR;
+}
 export interface IH5PEditorExportRequestAction {
     payload: {
         contentId: string;

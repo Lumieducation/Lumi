@@ -15,7 +15,7 @@ import {
     H5PEDITOR_LOADED,
     H5PEDITOR_SAVED,
     H5PPLAYER_INITIALIZED,
-    H5PEDITOR_SAVED_ERROR,
+    H5PEDITOR_ERROR,
     DeleteActions,
     LoadPlayerContentActions,
     LoadEditorContentActions,
@@ -75,10 +75,10 @@ export function editorSaved(tabId: string): any {
     };
 }
 
-export function editorSaveError(tabId: string): any {
+export function editorSaveError(tabId: string, message: string): any {
     return {
-        payload: { tabId },
-        type: H5PEDITOR_SAVED_ERROR
+        payload: { tabId, message },
+        type: H5PEDITOR_ERROR
     };
 }
 

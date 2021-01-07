@@ -177,8 +177,8 @@ export class H5PEditorH5PComponent extends React.Component<IH5PEditorH5PComponen
         this.props.editorLoaded(this.props.tab.id);
     };
 
-    private editorSaveError = () => {
-        this.props.editorSaveError(this.props.tab.id);
+    private editorSaveError = (message: string) => {
+        this.props.editorSaveError(this.props.tab.id, message);
     };
 
     private playerInitialized = () => {
