@@ -20,7 +20,7 @@
         "i18next-http-middleware": "^3.0.6",
         "nucleus-nodejs": "3.0.7",
         "promisepipe": "3.0.0",
-        "socket.io": "2.4.0"
+        "socket.io": "2.4.1"
     },
     "scripts": {
         "build": "npm run build:server && npm run build:client",
@@ -45,8 +45,7 @@
         "start": "NODE_ENV=development DEBUG=lumi:* PORT=8080 ./node_modules/.bin/electron .",
         "test": "jest",
         "test:watch": "jest --watch",
-        "test:mac": "npx jest --config jest.mac.config.js",
-        "test:e2e:win": "npx jest --config ./test/e2e/win/jest.config.js",
+        "test:e2e": "npx jest --config jest.e2e.config.js",
         "semantic-release": "semantic-release",
         "uninstall": "rm -rf build/ && rm -rf node_modules/",
         "postinstall": "sh scripts/install.sh 1.24 && sh scripts/install.sh 1.24.1"
@@ -71,7 +70,7 @@
         "electron-notarize": "1.0.0",
         "husky": "4.3.7",
         "jest": "26.6.0",
-        "prettier": "^2.2.1",
+        "prettier": "2.2.1",
         "spectron": "13.0.0",
         "ts-jest": "26.4.4",
         "tslint": "6.1.3",
