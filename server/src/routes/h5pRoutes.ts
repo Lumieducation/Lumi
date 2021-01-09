@@ -4,6 +4,8 @@ import { dialog } from 'electron';
 
 import fsExtra from 'fs-extra';
 
+import _path from 'path';
+
 import * as H5P from '@lumieducation/h5p-server';
 import {
     IRequestWithUser,
@@ -48,8 +50,8 @@ export default function (
     );
 
     router.get(`/:contentId/html`, async (req: IRequestWithUser, res) => {
-        const path = dialog.showSaveDialogSync({
-            defaultPath: '',
+        let path = dialog.showSaveDialogSync({
+            defaultPath: '.html',
             filters: [
                 {
                     extensions: ['html'],
@@ -68,6 +70,10 @@ export default function (
         }
 
         try {
+            if (_path.extname(path) !== '.html') {
+                path = `${path}.html`;
+            }
+
             const html = await htmlExporter.createSingleBundle(
                 req.params.contentId,
                 req.user
