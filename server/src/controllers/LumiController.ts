@@ -56,7 +56,7 @@ export default class LumiController {
         );
         await packageExporter.createPackage(contentId, stream, new User());
 
-        nucleus.track('export');
+        nucleus.track('save');
         return { path };
     }
 

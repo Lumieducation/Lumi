@@ -1,5 +1,5 @@
 import * as H5P from '@lumieducation/h5p-server';
-import * as Sentry from '@sentry/node';
+// import * as Sentry from '@sentry/node';
 import bodyParser from 'body-parser';
 import express from 'express';
 import fileUpload from 'express-fileupload';
@@ -98,7 +98,7 @@ export default async (serverConfig: IServerConfig) => {
     // );
 
     const app = express();
-    app.use(Sentry.Handlers.requestHandler());
+    // app.use(Sentry.Handlers.requestHandler());
 
     app.use(bodyParser.json({ limit: h5pEditor.config.maxTotalSize }));
     app.use(
@@ -132,10 +132,10 @@ export default async (serverConfig: IServerConfig) => {
 
     app.use('/', routes(h5pEditor, h5pPlayer, serverConfig));
 
-    app.use(Sentry.Handlers.errorHandler());
+    // app.use(Sentry.Handlers.errorHandler());
 
     app.use((error, req, res, next) => {
-        Sentry.captureException(error);
+        // Sentry.captureException(error);
         res.status(error.status || 500).json({
             code: error.code,
             message: error.message,
