@@ -8,10 +8,6 @@ export default async function setup(
     serverConfig: IServerConfig
 ): Promise<void> {
     try {
-        // Remove old leftovers
-        await fsExtra.remove(serverConfig.workingCachePath);
-        await fsExtra.remove(serverConfig.temporaryStoragePath);
-
         // Make sure required directories exist
         await fsExtra.mkdirp(serverConfig.workingCachePath);
         await fsExtra.mkdirp(serverConfig.librariesPath);
