@@ -1,4 +1,4 @@
-import * as Sentry from '@sentry/node';
+// import * as Sentry from '@sentry/node';
 import fsExtra from 'fs-extra';
 
 import IServerConfig from '../IServerConfig';
@@ -47,7 +47,7 @@ export default async function setup(
             await h5pConfig.save();
         }
     } catch (error) {
-        Sentry.captureException(error);
+        // Sentry.captureException(error);
         throw error;
     }
 }
