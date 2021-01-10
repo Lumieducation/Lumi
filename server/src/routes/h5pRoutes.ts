@@ -4,6 +4,8 @@ import { dialog } from 'electron';
 
 import fsExtra from 'fs-extra';
 
+import _path from 'path';
+
 import * as H5P from '@lumieducation/h5p-server';
 import {
     IRequestWithUser,
@@ -48,23 +50,35 @@ export default function (
     );
 
     router.get(`/:contentId/html`, async (req: IRequestWithUser, res) => {
-        const path = dialog.showSaveDialogSync({
-            defaultPath: '',
+        let path = dialog.showSaveDialogSync({
+            defaultPath: '.html',
             filters: [
                 {
                     extensions: ['html'],
-                    name: 'Export H5P as html'
+                    name: 'html with inline-resources'
                 }
+                // {
+                //     extensions: ['zip'],
+                //     name: 'zip (html with external resources)'
+                // }
             ],
-            title: 'Export H5P as html'
+            title: 'Export H5P as ...'
         });
 
-        const html = await htmlExporter.createSingleBundle(
-            req.params.contentId,
-            req.user
-        );
+        if (!path) {
+            return res.status(499).end();
+        }
 
         try {
+            if (_path.extname(path) !== '.html') {
+                path = `${path}.html`;
+            }
+
+            const html = await htmlExporter.createSingleBundle(
+                req.params.contentId,
+                req.user
+            );
+
             await fsExtra.writeFileSync(path, html);
         } catch (error) {
             return res.status(500).end();

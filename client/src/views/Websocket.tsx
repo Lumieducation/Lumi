@@ -1,14 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import path from 'path';
 import * as Sentry from '@sentry/browser';
 import SocketIOClient from 'socket.io-client';
-import upath from 'upath';
 
 import Logger from '../helpers/Logger';
 import { ITab } from '../state/H5PEditor/H5PEditorTypes';
 import { actions, IState, selectors } from '../state';
-// import Editor from '../helpers/Editor';
 
 declare var window: any;
 
@@ -37,13 +34,7 @@ export class WebsocketContainer extends React.Component<
 
         this.state = {};
 
-        this.socket = SocketIOClient(
-            `${window.location.protocol}//${window.location.hostname}${
-                process.env.NODE_ENV === 'development'
-                    ? ':3002'
-                    : `:${window.location.port}`
-            }`
-        );
+        this.socket = SocketIOClient();
 
         this.saveAs = this.saveAs.bind(this);
         this.updateAndSave = this.updateAndSave.bind(this);
@@ -61,17 +52,12 @@ export class WebsocketContainer extends React.Component<
         this.socket.on('action', (action: any) => {
             switch (action.type) {
                 case 'NEW_H5P':
-                    this.props.dispatch(actions.h5peditor.clickOnCreateH5P());
+                    this.props.dispatch(actions.h5peditor.openTab());
                     break;
 
                 case 'OPEN_H5P':
                     action.payload.paths.forEach((file: any) => {
-                        dispatch(
-                            actions.h5peditor.clickOnFileInFiletree(
-                                path.basename(upath.normalize(file)),
-                                file
-                            )
-                        );
+                        dispatch(actions.h5peditor.importH5P(file));
                     });
                     break;
 
@@ -85,6 +71,10 @@ export class WebsocketContainer extends React.Component<
 
                 case 'REPORT_ISSUE':
                     Sentry.showReportDialog();
+                    break;
+
+                case 'EXPORT_AS_HTML':
+                    dispatch(actions.h5peditor.exportH5P());
                     break;
 
                 case 'MESSAGE':
@@ -112,7 +102,7 @@ export class WebsocketContainer extends React.Component<
             const data = await window.h5peditor.current?.save();
 
             if (data) {
-                dispatch(actions.h5peditor.exportH5P(data.contentId));
+                dispatch(actions.h5peditor.save(data.contentId));
             }
         } catch (error) {
             log.error(error);
@@ -128,7 +118,7 @@ export class WebsocketContainer extends React.Component<
 
             if (data) {
                 dispatch(
-                    actions.h5peditor.exportH5P(data.contentId, activeTab.path)
+                    actions.h5peditor.save(data.contentId, activeTab.path)
                 );
             }
         } catch (error) {

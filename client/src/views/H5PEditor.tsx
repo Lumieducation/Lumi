@@ -16,7 +16,6 @@ import H5PEditorH5PComponent from './components/H5PEditorH5PComponent';
 
 import { actions, selectors } from '../state';
 
-import { SaveButtonState } from '../state/H5PEditor/H5PEditorTypes';
 import { ITab } from '../state/H5PEditor/H5PEditorTypes';
 
 export class H5PEditor extends React.Component<{
@@ -24,19 +23,15 @@ export class H5PEditor extends React.Component<{
     tabs: ITab[];
     activeTabIndex: number;
     noActiveTab: boolean;
-    saveButtonState: SaveButtonState;
     viewDisabled: boolean;
 
     classes: any;
 
-    exportH5P: typeof actions.h5peditor.exportH5P;
-    updateH5P: typeof actions.h5peditor.updateH5PInTab;
     updateTab: typeof actions.h5peditor.updateTab;
 
     loadPlayerContent: typeof actions.h5peditor.loadPlayerContent;
     loadEditorContent: typeof actions.h5peditor.loadEditorContent;
-    saveContent: typeof actions.h5peditor.saveContent;
-    exportAsHtml: typeof actions.h5peditor.exportAsHtml;
+    updateContent: typeof actions.h5peditor.updateContent;
 
     editorLoaded: typeof actions.h5peditor.editorLoaded;
     editorSaved: typeof actions.h5peditor.editorSaved;
@@ -44,7 +39,7 @@ export class H5PEditor extends React.Component<{
     playerInitialized: typeof actions.h5peditor.playerInitialized;
 
     closeTab: typeof actions.h5peditor.closeTab;
-    createH5P: typeof actions.h5peditor.clickOnCreateH5P;
+    openTab: typeof actions.h5peditor.openTab;
     openFiles: typeof actions.h5peditor.openH5P;
     selectTab: typeof actions.h5peditor.selectTab;
 }> {
@@ -53,7 +48,7 @@ export class H5PEditor extends React.Component<{
             return (
                 <H5PEditorStartPage
                     primaryButtonClick={() => this.props.openFiles()}
-                    secondaryButtonClick={() => this.props.createH5P()}
+                    secondaryButtonClick={() => this.props.openTab()}
                 />
             );
         }
@@ -63,7 +58,7 @@ export class H5PEditor extends React.Component<{
                     <H5PEditorOpenH5PSidebar
                         tabs={this.props.tabs}
                         activeTabIndex={this.props.activeTabIndex}
-                        create={() => this.props.createH5P()}
+                        create={() => this.props.openTab()}
                         openFiles={() => this.props.openFiles()}
                         selectTab={(index: number) =>
                             this.props.selectTab(index)
@@ -94,7 +89,6 @@ function mapStateToProps(state: any, ownProps: any): any {
         activeTabIndex: selectors.h5peditor.activeTabIndex(state),
         tabs: selectors.h5peditor.all(state),
         noActiveTab: selectors.h5peditor.noActiveTabs(state),
-        saveButtonState: selectors.h5peditor.saveButtonState(state),
         viewDisabled: selectors.h5peditor.viewDisabled(state)
     };
 }
@@ -102,14 +96,11 @@ function mapStateToProps(state: any, ownProps: any): any {
 function mapDispatchToProps(dispatch: any): any {
     return bindActionCreators(
         {
-            exportH5P: actions.h5peditor.exportH5P,
-            updateH5P: actions.h5peditor.updateH5PInTab,
             updateTab: actions.h5peditor.updateTab,
 
             loadPlayerContent: actions.h5peditor.loadPlayerContent,
             loadEditorContent: actions.h5peditor.loadEditorContent,
-            saveContent: actions.h5peditor.saveContent,
-            exportAsHtml: actions.h5peditor.exportAsHtml,
+            updateContent: actions.h5peditor.updateContent,
 
             editorLoaded: actions.h5peditor.editorLoaded,
             editorSaved: actions.h5peditor.editorSaved,
@@ -117,7 +108,7 @@ function mapDispatchToProps(dispatch: any): any {
             playerInitialized: actions.h5peditor.playerInitialized,
 
             closeTab: actions.h5peditor.closeTab,
-            createH5P: actions.h5peditor.clickOnCreateH5P,
+            openTab: actions.h5peditor.openTab,
             openFiles: actions.h5peditor.openH5P,
             selectTab: actions.h5peditor.selectTab
         },

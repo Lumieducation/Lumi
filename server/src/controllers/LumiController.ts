@@ -32,7 +32,7 @@ export default class LumiController {
                 filters: [
                     {
                         extensions: ['h5p'],
-                        name: 'HTML 5 Package'
+                        name: 'H5P'
                     }
                 ],
                 title: 'Save H5P'
@@ -40,7 +40,8 @@ export default class LumiController {
         }
 
         if (!path) {
-            throw new LumiError('user-abort', 'Aborted by user', 400);
+            throw new LumiError('user-abort', 'Aborted by user', 499);
+            return;
         }
 
         if (_path.extname(path) !== '.h5p') {
