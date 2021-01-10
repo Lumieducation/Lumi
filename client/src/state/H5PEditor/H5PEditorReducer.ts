@@ -2,24 +2,27 @@ import Logger from '../../helpers/Logger';
 
 import {
     IH5PEditorState,
-    TabActionTypes,
+    H5PEditorActionTypes,
     H5PEDITOR_CLOSE_TAB,
     H5PEDITOR_OPEN_TAB,
     H5PEDITOR_SELECT_TAB,
     H5PEDITOR_UPDATE_TAB,
     H5PEDITOR_LOADED,
-    H5PEDITOR_EXPORTHTML_REQUEST,
-    H5PEDITOR_EXPORTHTML_SUCCESS,
-    H5PEDITOR_EXPORTHTML_ERROR,
+    H5PEDITOR_EXPORT_REQUEST,
+    H5PEDITOR_EXPORT_SUCCESS,
+    H5PEDITOR_EXPORT_ERROR,
     H5P_LOADEDITORCONTENT_SUCCESS,
     H5P_LOADPLAYERCONTENT_REQUEST,
     H5P_LOADPLAYERCONTENT_SUCCESS,
-    H5P_SAVECONTENT_SUCCESS,
-    H5P_SAVECONTENT_REQUEST,
-    H5P_EXPORT_REQUEST,
-    H5P_EXPORT_SUCCESS,
-    H5P_EXPORT_ERROR,
-    Modes
+    H5PEDITOR_UPDATE_SUCCESS,
+    H5PEDITOR_UPDATE_REQUEST,
+    H5PEDITOR_SAVE_REQUEST,
+    H5PEDITOR_SAVE_SUCCESS,
+    H5PEDITOR_SAVE_ERROR,
+    H5P_IMPORT_SUCCESS,
+    Modes,
+    H5PEDITOR_EXPORT_CANCEL,
+    H5PEDITOR_SAVE_CANCEL
 } from './H5PEditorTypes';
 
 export const initialState: IH5PEditorState = {
@@ -31,26 +34,25 @@ const log = new Logger('reducer:tabs');
 
 export default function tabReducer(
     state: IH5PEditorState = initialState,
-    action: TabActionTypes
+    action: H5PEditorActionTypes
 ): IH5PEditorState {
     try {
         log.debug(`reducing ${action.type}`);
         switch (action.type) {
-            case H5P_EXPORT_REQUEST:
+            case H5PEDITOR_SAVE_REQUEST:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
                         index === state.activeTabIndex
                             ? {
                                   ...tab,
-                                  loadingIndicator: true,
-                                  saveButtonState: 'loading'
+                                  loadingIndicator: true
                               }
                             : tab
                     )
                 };
 
-            case H5P_EXPORT_SUCCESS:
+            case H5PEDITOR_SAVE_SUCCESS:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
@@ -58,22 +60,33 @@ export default function tabReducer(
                             ? {
                                   ...tab,
                                   loadingIndicator: false,
-                                  saveButtonState: 'success',
                                   path: action.payload.path
                               }
                             : tab
                     )
                 };
 
-            case H5P_EXPORT_ERROR:
+            case H5PEDITOR_SAVE_ERROR:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
                         index === state.activeTabIndex
                             ? {
                                   ...tab,
-                                  loadingIndicator: false,
-                                  saveButtonState: 'error'
+                                  loadingIndicator: false
+                              }
+                            : tab
+                    )
+                };
+
+            case H5PEDITOR_SAVE_CANCEL:
+                return {
+                    ...state,
+                    tabList: state.tabList.map((tab, index) =>
+                        index === state.activeTabIndex
+                            ? {
+                                  ...tab,
+                                  loadingIndicator: false
                               }
                             : tab
                     )
@@ -92,7 +105,7 @@ export default function tabReducer(
                     )
                 };
 
-            case H5P_SAVECONTENT_REQUEST:
+            case H5PEDITOR_UPDATE_REQUEST:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
@@ -105,7 +118,7 @@ export default function tabReducer(
                     )
                 };
 
-            case H5P_SAVECONTENT_SUCCESS:
+            case H5PEDITOR_UPDATE_SUCCESS:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
@@ -130,8 +143,6 @@ export default function tabReducer(
                         tab.id === action.payload.tabId
                             ? {
                                   ...tab,
-                                  saveButtonState: 'default',
-                                  exportButtonState: 'default',
                                   viewDisabled: false,
                                   loadingIndicator: false
                               }
@@ -139,42 +150,52 @@ export default function tabReducer(
                     )
                 };
 
-            case H5PEDITOR_EXPORTHTML_REQUEST:
+            case H5PEDITOR_EXPORT_REQUEST:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
                         tab.contentId === action.payload.contentId
                             ? {
                                   ...tab,
-                                  exportButtonState: 'loading',
                                   loadingIndicator: true
                               }
                             : tab
                     )
                 };
 
-            case H5PEDITOR_EXPORTHTML_SUCCESS:
+            case H5PEDITOR_EXPORT_SUCCESS:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
                         tab.contentId === action.payload.contentId
                             ? {
                                   ...tab,
-                                  exportButtonState: 'success',
                                   loadingIndicator: false
                               }
                             : tab
                     )
                 };
 
-            case H5PEDITOR_EXPORTHTML_ERROR:
+            case H5PEDITOR_EXPORT_CANCEL:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
                         tab.contentId === action.payload.contentId
                             ? {
                                   ...tab,
-                                  exportButtonState: 'error',
+                                  loadingIndicator: false
+                              }
+                            : tab
+                    )
+                };
+
+            case H5PEDITOR_EXPORT_ERROR:
+                return {
+                    ...state,
+                    tabList: state.tabList.map((tab, index) =>
+                        tab.contentId === action.payload.contentId
+                            ? {
+                                  ...tab,
                                   loadingIndicator: false
                               }
                             : tab
@@ -216,6 +237,27 @@ export default function tabReducer(
                     )
                 };
 
+            case H5P_IMPORT_SUCCESS:
+                return {
+                    ...state,
+                    activeTabIndex: state.tabList.length,
+                    tabList: [
+                        ...state.tabList,
+                        {
+                            id: action.payload.tabId,
+                            path: action.payload.path,
+                            contentId: action.payload.h5p.id,
+                            loadingIndicator: false,
+                            viewDisabled: false,
+                            mainLibrary: action.payload.h5p.library.split(
+                                ' '
+                            )[0],
+                            name: action.payload.h5p.metadata.title,
+                            mode: Modes.edit
+                        }
+                    ]
+                };
+
             case H5PEDITOR_OPEN_TAB:
                 return {
                     ...state,
@@ -225,13 +267,10 @@ export default function tabReducer(
                         {
                             id: action.payload.id,
                             loadingIndicator: true,
-                            saveButtonState: 'hidden',
-                            exportButtonState: 'hidden',
                             viewDisabled: true,
                             mainLibrary: '',
                             name: 'new H5P',
                             path: undefined,
-                            state: 'success',
                             mode: Modes.edit,
                             ...action.payload.tab
                         }
