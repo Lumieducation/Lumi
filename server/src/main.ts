@@ -1,5 +1,5 @@
-import * as Sentry from '@sentry/electron';
-import * as SentryNode from '@sentry/node';
+// import * as Sentry from '@sentry/electron';
+// import * as SentryNode from '@sentry/node';
 import electron from 'electron';
 import log from 'electron-log';
 import nucleus from 'nucleus-nodejs';
@@ -24,12 +24,12 @@ process.on('uncaughtException', (error) => {
     log.error(error);
 });
 
-if (process.env.NODE_ENV !== 'development') {
-    Sentry.init({
-        dsn: 'https://02e4da31636d479f86a17a6ef749278c@sentry.io/1876151',
-        release: app.getVersion()
-    });
-}
+// if (process.env.NODE_ENV !== 'development') {
+//     Sentry.init({
+//         dsn: 'https://02e4da31636d479f86a17a6ef749278c@sentry.io/1876151',
+//         release: app.getVersion()
+//     });
+// }
 
 if (process.env.NODE_ENV !== 'development') {
     nucleus.init('5e284c9a73aa9c0115e0d1d6');
