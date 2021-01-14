@@ -74,6 +74,11 @@ export class WebsocketContainer extends React.Component<
                     break;
 
                 case 'EXPORT_AS_HTML':
+                    const focusedElement = window.document.activeElement;
+                    // We remove the focus from the current element to make H5P save all
+                    // changes in text fields
+                    focusedElement.blur();
+
                     dispatch(actions.h5peditor.exportH5P());
                     break;
 
@@ -99,6 +104,11 @@ export class WebsocketContainer extends React.Component<
 
             log.info(`saving ${activeTab.contentId}`);
 
+            const focusedElement = window.document.activeElement;
+            // We remove the focus from the current element to make H5P save all
+            // changes in text fields
+            focusedElement.blur();
+
             const data = await window.h5peditor.current?.save();
 
             if (data) {
@@ -114,6 +124,11 @@ export class WebsocketContainer extends React.Component<
             const { activeTab, dispatch } = this.props;
 
             log.info(`saving ${activeTab.contentId}`);
+            const focusedElement = window.document.activeElement;
+            // We remove the focus from the current element to make H5P save all
+            // changes in text fields
+            focusedElement.blur();
+
             const data = await window.h5peditor.current?.save();
 
             if (data) {
