@@ -3,6 +3,7 @@ import * as H5P from '@lumieducation/h5p-server';
 import bodyParser from 'body-parser';
 import express from 'express';
 import fileUpload from 'express-fileupload';
+import path from 'path';
 
 import i18next from 'i18next';
 import i18nextHttpMiddleware from 'i18next-http-middleware';
@@ -26,8 +27,12 @@ export default async (serverConfig: IServerConfig) => {
         // to add a detector if you only want to use one language.
         .init({
             backend: {
-                loadPath:
+                loadPath: path.resolve(
+                    process.env.NODE_ENV === 'development'
+                        ? ''
+                        : 'resources/app',
                     'node_modules/@lumieducation/h5p-server/build/assets/translations/{{ns}}/{{lng}}.json'
+                )
             },
             debug: process.env.DEBUG && process.env.DEBUG.includes('i18n'),
             defaultNS: 'server',
