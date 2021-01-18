@@ -20,6 +20,8 @@ export interface IH5P {
     parameters: any;
 }
 
+export const H5PEDITOR_BLURACTIVEELEMENT = 'H5P_BLURACTIVELEMENT';
+
 export const H5PEDITOR_OPEN_TAB = 'H5PEDITOR_OPEN_TAB';
 export const H5PEDITOR_CLOSE_TAB = 'H5PEDITOR_CLOSE_TAB';
 export const H5PEDITOR_SELECT_TAB = 'H5PEDITOR_SELECT_TAB';
@@ -28,6 +30,9 @@ export const H5PEDITOR_UPDATE_TAB = 'H5PEDITOR_UPDATE_TAB';
 export const H5PEDITOR_LOADED = 'H5PEDITOR_LOADED';
 export const H5PEDITOR_SAVED = 'H5PEDITOR_SAVED';
 export const H5PPLAYER_INITIALIZED = 'H5PPLAYER_INITIALIZED';
+
+export const H5PEDITOR_UPDATE_CONTENT_SERVER =
+    'H5PEDITOR_UPDATE_CONTENT_SERVER';
 
 export enum Modes {
     view,
@@ -52,6 +57,14 @@ export interface IH5PEditorState {
 
 export interface IState {
     h5peditor: IH5PEditorState;
+}
+
+export interface IUpdateContentOnServerAction {
+    type: typeof H5PEDITOR_UPDATE_CONTENT_SERVER;
+}
+
+export interface IBlurActiveElementAction {
+    type: typeof H5PEDITOR_BLURACTIVEELEMENT;
 }
 
 export interface IOpenTabAction {
@@ -217,6 +230,7 @@ export interface IH5PUpdateContentErrorAction {
 }
 
 export type UpdateContentActions =
+    | IBlurActiveElementAction
     | IH5PUpdateContentRequestAction
     | IH5PUpdateContentSuccessAction
     | IH5PUpdateContentErrorAction;
