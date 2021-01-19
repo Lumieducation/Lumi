@@ -9,8 +9,14 @@ const log = new Logger('websocket');
 export default function (server: http.Server): SocketIO.Server {
     log.info('booting');
     const io: SocketIO.Server = SocketIO(server);
-    io.on('connection', () => {
+    io.on('connection', (socket: SocketIO.Socket) => {
         log.info('new connection');
+
+        socket.on('dispatch', (action) => {
+            log.info(action);
+
+            io.emit('action', action);
+        });
     });
 
     // io.on('error', (error) => {

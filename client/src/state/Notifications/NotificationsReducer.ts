@@ -11,6 +11,7 @@ import {
 import {
     H5PEDITOR_SAVE_SUCCESS,
     H5PEDITOR_SAVE_ERROR,
+    H5P_IMPORT_ERROR,
     H5PEDITOR_EXPORT_SUCCESS,
     H5PEDITOR_EXPORT_ERROR,
     H5PEDITOR_ERROR,
@@ -18,7 +19,8 @@ import {
     IH5PEditorSaveErrorAction,
     IH5PEditorExportErrorAction,
     IH5PEditorExportSuccessAction,
-    IH5PEditorError
+    IH5PEditorError,
+    IH5PImportErrorAction
 } from '../H5PEditor/H5PEditorTypes';
 import shortid from 'shortid';
 
@@ -37,6 +39,7 @@ export default function notificationsReducer(
         | IH5PEditorExportErrorAction
         | IH5PEditorExportSuccessAction
         | IH5PEditorError
+        | IH5PImportErrorAction
 ): INotificationsState {
     switch (action.type) {
         case H5PEDITOR_ERROR:
@@ -77,6 +80,23 @@ export default function notificationsReducer(
                     {
                         key: shortid(),
                         message: 'notification.export.error',
+                        options: {
+                            variant: 'error'
+                        }
+                    }
+                ]
+            };
+
+        case H5P_IMPORT_ERROR:
+            return {
+                ...state,
+                notifications: [
+                    ...state.notifications,
+                    {
+                        key: shortid(),
+                        message:
+                            action.error.response.body.message ||
+                            'notification.import.error',
                         options: {
                             variant: 'error'
                         }
