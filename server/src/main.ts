@@ -59,12 +59,14 @@ function createMainWindow(
 
     if (isDevelopment) {
         window.webContents.openDevTools();
-        BrowserWindow.addDevToolsExtension(
-            path.join(
-                os.homedir(),
-                `/Library/Application Support/Google/Chrome/Default/Extensions/lmhkpmbekcpmknklioeibfkpmmfibljd/2.17.0_0`
-            )
-        );
+        if (process.env.REDUX_EXTENSION) {
+            BrowserWindow.addDevToolsExtension(
+                path.join(
+                    os.homedir(),
+                    `/Library/Application Support/Google/Chrome/Default/Extensions/lmhkpmbekcpmknklioeibfkpmmfibljd/2.17.0_0`
+                )
+            );
+        }
         window.loadURL('http://localhost:3000');
     } else {
         window.loadURL(`http://localhost:${port}`);
