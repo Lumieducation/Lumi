@@ -31,7 +31,7 @@ process.on('uncaughtException', (error) => {
 //     });
 // }
 
-if (process.env.NODE_ENV !== 'development') {
+if (process.env.NODE_ENV !== 'development' && process.env.NODE_ENV !== 'CI') {
     nucleus.init('5e284c9a73aa9c0115e0d1d6');
     nucleus.appStarted();
     nucleus.setProps(

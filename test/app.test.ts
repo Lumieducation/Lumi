@@ -10,7 +10,8 @@ describe('App', () => {
         app = new Application({
             env: {
                 USERDATA: path.join(__dirname, 'data'),
-                PORT: PORT
+                PORT: PORT,
+                NODE_ENV: 'CI'
             },
             path: path.join(
                 __dirname,
