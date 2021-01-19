@@ -123,19 +123,24 @@ export default function (
             res.status(400).send('Malformed request').end();
             return;
         }
-        const {
-            id: contentId,
-            metadata
-        } = await h5pEditor.saveOrUpdateContentReturnMetaData(
-            undefined,
-            req.body.params.params,
-            req.body.params.metadata,
-            req.body.library,
-            req.user
-        );
-
-        res.send(JSON.stringify({ contentId, metadata }));
-        res.status(200).end();
+        try {
+            const {
+                id: contentId,
+                metadata
+            } = await h5pEditor.saveOrUpdateContentReturnMetaData(
+                undefined,
+                req.body.params.params,
+                req.body.params.metadata,
+                req.body.library,
+                req.user
+            );
+            res.send(JSON.stringify({ contentId, metadata }));
+            res.status(200).end();
+        } catch (error) {
+            if (error instanceof H5P.H5pError) {
+                res.status(error.httpStatusCode).send(error.message).end();
+            }
+        }
     });
 
     router.patch('/:contentId', async (req: IRequestWithUser, res) => {
@@ -149,19 +154,25 @@ export default function (
             res.status(400).send('Malformed request').end();
             return;
         }
-        const {
-            id: contentId,
-            metadata
-        } = await h5pEditor.saveOrUpdateContentReturnMetaData(
-            req.params.contentId.toString(),
-            req.body.params.params,
-            req.body.params.metadata,
-            req.body.library,
-            req.user
-        );
+        try {
+            const {
+                id: contentId,
+                metadata
+            } = await h5pEditor.saveOrUpdateContentReturnMetaData(
+                req.params.contentId.toString(),
+                req.body.params.params,
+                req.body.params.metadata,
+                req.body.library,
+                req.user
+            );
 
-        res.send(JSON.stringify({ contentId, metadata }));
-        res.status(200).end();
+            res.send(JSON.stringify({ contentId, metadata }));
+            res.status(200).end();
+        } catch (error) {
+            if (error instanceof H5P.H5pError) {
+                res.status(error.httpStatusCode).send(error.message).end();
+            }
+        }
     });
 
     router.delete('/:contentId', async (req: IRequestWithUser, res) => {
