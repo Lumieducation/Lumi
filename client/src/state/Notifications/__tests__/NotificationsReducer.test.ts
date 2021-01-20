@@ -10,7 +10,8 @@ import {
     H5PEDITOR_SAVE_SUCCESS,
     H5PEDITOR_SAVE_ERROR,
     H5PEDITOR_EXPORT_SUCCESS,
-    H5PEDITOR_EXPORT_ERROR
+    H5PEDITOR_EXPORT_ERROR,
+    H5P_IMPORT_ERROR
 } from '../../H5PEditor/H5PEditorTypes';
 
 describe('initialState', () => {
@@ -155,6 +156,29 @@ describe('Notifications', () => {
             {
                 payload: {} as any,
                 type: H5PEDITOR_EXPORT_ERROR
+            }
+        );
+
+        expect(state.notifications.length).toBe(1);
+        expect(state.notifications[0].options.variant).toBe('error');
+        done();
+    });
+
+    it('shows a error notification on H5P_IMPORT_ERROR', (done) => {
+        const state = reducer(
+            {
+                notifications: []
+            },
+            {
+                error: {
+                    response: {
+                        body: {
+                            message: 'test'
+                        }
+                    }
+                } as any,
+                payload: {} as any,
+                type: H5P_IMPORT_ERROR
             }
         );
 

@@ -99,7 +99,8 @@ export type H5PEditorActionTypes =
     | IH5PEditorSaveErrorAction
     | IH5PEditorExportActions
     | IH5PImportRequestAction
-    | IH5PImportSuccessAction;
+    | IH5PImportSuccessAction
+    | IH5PImportErrorAction;
 
 //
 
@@ -333,10 +334,10 @@ export const H5P_IMPORT_REQUEST = 'H5P_IMPORT_REQUEST';
 export const H5P_IMPORT_SUCCESS = 'H5P_IMPORT_SUCCESS';
 
 export interface IH5PImportErrorAction {
+    error: { response: Superagent.Response };
     payload: {
         tabId: string;
         path: string;
-        response: Superagent.Response;
     };
     type: typeof H5P_IMPORT_ERROR;
 }
