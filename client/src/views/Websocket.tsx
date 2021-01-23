@@ -7,8 +7,6 @@ import Logger from '../helpers/Logger';
 import { ITab } from '../state/H5PEditor/H5PEditorTypes';
 import { actions, IState, selectors } from '../state';
 
-declare var window: any;
-
 const log = new Logger('container:websocket');
 
 interface IPassedProps {}
@@ -96,14 +94,8 @@ export class WebsocketContainer extends React.Component<
     private async saveAs(): Promise<void> {
         try {
             const { activeTab, dispatch } = this.props;
-
             log.info(`saving ${activeTab.contentId}`);
-
-            const data = await window.h5peditor.current?.save();
-
-            if (data) {
-                dispatch(actions.h5peditor.save(data.contentId));
-            }
+            dispatch(actions.h5peditor.save());
         } catch (error) {
             log.error(error);
         }
@@ -112,15 +104,8 @@ export class WebsocketContainer extends React.Component<
     private async updateAndSave(): Promise<void> {
         try {
             const { activeTab, dispatch } = this.props;
-
             log.info(`saving ${activeTab.contentId}`);
-            const data = await window.h5peditor.current?.save();
-
-            if (data) {
-                dispatch(
-                    actions.h5peditor.save(data.contentId, activeTab.path)
-                );
-            }
+            dispatch(actions.h5peditor.save(activeTab.path));
         } catch (error) {
             log.error(error);
         }

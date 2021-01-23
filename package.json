@@ -43,7 +43,7 @@
         "build:linux:dev": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run build:linux",
         "publish:linux": "npx --no-install electron-builder --config builder.config.js --linux --publish always",
         "start": "NODE_ENV=development DEBUG=lumi:* PORT=8080 ./node_modules/.bin/electron .",
-        "test": "jest",
+        "test": "npm run test --prefix client/",
         "test:watch": "jest --watch",
         "test:e2e": "npx jest --config jest.e2e.config.js",
         "semantic-release": "semantic-release",

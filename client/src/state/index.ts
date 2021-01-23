@@ -62,6 +62,6 @@ export const selectors = {
 };
 
 syncTranslationWithStore(store);
-store.dispatch(loadTranslations(translations));
-store.dispatch(setLocale('en'));
+store.dispatch(loadTranslations(translations) as any);
+store.dispatch(setLocale('en') as any);
 export default store;
