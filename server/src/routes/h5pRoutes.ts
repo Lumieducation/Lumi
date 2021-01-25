@@ -12,6 +12,10 @@ import {
     IRequestWithLanguage
 } from '@lumieducation/h5p-server/build/src/adapters/expressTypes';
 
+import HtmlExporter from '@lumieducation/h5p-html-exporter';
+
+import createReporter from '../helpers/createRepoter';
+
 /**
  * @param h5pEditor
  * @param h5pPlayer
@@ -41,15 +45,48 @@ export default function (
         }
     });
 
-    const htmlExporter = new H5P.HtmlExporter(
-        h5pEditor.libraryStorage,
-        h5pEditor.contentStorage,
-        h5pEditor.config,
-        `${__dirname}/../../../h5p/core`,
-        `${__dirname}/../../../h5p/editor`
-    );
-
     router.get(`/:contentId/html`, async (req: IRequestWithUser, res) => {
+        const reporterClient = await fsExtra.readFileSync(
+            `${__dirname}/../../../reporter-client/build/static/js/2.chunk.js`,
+            {
+                encoding: 'utf-8'
+            }
+        );
+
+        const reporterMain = await fsExtra.readFileSync(
+            `${__dirname}/../../../reporter-client/build/static/js/main.chunk.js`,
+            {
+                encoding: 'utf-8'
+            }
+        );
+
+        const htmlExporter = new HtmlExporter(
+            h5pEditor.libraryStorage,
+            h5pEditor.contentStorage,
+            h5pEditor.config,
+            `${__dirname}/../../../h5p/core`,
+            `${__dirname}/../../../h5p/editor`,
+            (
+                integration: string,
+                scriptsBundle: string,
+                stylesBundle: string,
+                contentId: string
+            ) => `<!doctype html>
+            <html class="h5p-iframe">
+            <head>
+                <meta charset="utf-8">                    
+                <script>H5PIntegration = ${integration};
+                ${scriptsBundle}</script>
+                <style>${stylesBundle}</style>
+            </head>
+            <body>
+            <div id="root"></div>
+            ${createReporter(reporterClient, reporterMain)}
+                <div style="margin: 20px auto; max-width: 840px; box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)" class="h5p-content lag" data-content-id="${contentId}"></div>                
+            </body>
+            </html>`
+        );
+
         let path = dialog.showSaveDialogSync({
             defaultPath: '.html',
             filters: [

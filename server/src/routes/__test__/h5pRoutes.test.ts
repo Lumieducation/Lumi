@@ -1,0 +1,69 @@
+import request from 'supertest';
+import bootApp from '../../boot/app';
+import path from 'path';
+import { dialog } from 'electron';
+import express from 'express';
+import fsExtra from 'fs-extra';
+
+describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
+    let app: express.Application;
+
+    beforeAll(async () => {
+        app = await bootApp({
+            cache: path.resolve('test', 'data'),
+            configFile: path.resolve('test', 'data', 'config.json'),
+            librariesPath: path.resolve('test', 'data', `libraries`),
+            temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
+            workingCachePath: path.resolve('test', 'data', 'workingCache')
+        });
+
+        return app;
+    });
+
+    it('exports a html file', async (done) => {
+        dialog.showSaveDialogSync = jest.fn((c) => {
+            return path.resolve('test', 'data', 'test.html');
+        });
+
+        const contentId = 740522043;
+
+        const res = await request(app).get(`/api/v1/h5p/${contentId}/html`);
+        expect(res.statusCode).toEqual(200);
+
+        expect(
+            await fsExtra.stat(path.resolve('test', 'data', 'test.html'))
+        ).toBeTruthy();
+
+        done();
+    });
+
+    it('appends .html if no extension is defined', async (done) => {
+        dialog.showSaveDialogSync = jest.fn((c) => {
+            return path.resolve('test', 'data', 'test2');
+        });
+
+        const contentId = 740522043;
+
+        const res = await request(app).get(`/api/v1/h5p/${contentId}/html`);
+        expect(res.statusCode).toEqual(200);
+
+        expect(
+            await fsExtra.stat(path.resolve('test', 'data', 'test2.html'))
+        ).toBeTruthy();
+
+        done();
+    });
+
+    it('returns 499 if canceled by user', async (done) => {
+        dialog.showSaveDialogSync = jest.fn((c) => {
+            return undefined;
+        });
+
+        const contentId = 740522043;
+
+        const res = await request(app).get(`/api/v1/h5p/${contentId}/html`);
+        expect(res.statusCode).toEqual(499);
+
+        done();
+    }, 30000);
+});
