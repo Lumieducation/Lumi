@@ -21,7 +21,7 @@ jobs:
               env:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: install
-              run: npm ci && (cd client && npm ci)
+              run: npm ci && (cd client && npm ci) && (cd ../reporter-client && npm ci)
             - name: Build macOS
               run: npm run build:mac:dev
               env:
@@ -52,8 +52,8 @@ jobs:
                   NPM_TOKEN: $${ secrets.NPM_TOKEN }
             - name: Copy NPM config
               run: cp ./.npmrc ./client/.npmrc
-            - name: install client
-              run: cd client && npm ci
+            - name: install client(s)
+              run: (cd client && npm ci) && (cd ../reporter-client && npm ci)
               env:
                   NPM_TOKEN: $${ secrets.NPM_TOKEN }
             - name: Build Windows
@@ -88,7 +88,7 @@ jobs:
             - name: install labarchive-tools
               run: sudo apt install libarchive-tools
             - name: install
-              run: npm ci && (cd client && npm ci)
+              run: npm ci && (cd client && npm ci) && (cd ../reporter-client && npm ci)
             - name: Build Linux
               run: npm run build:linux:dev
               env:
