@@ -28,9 +28,10 @@ const useStyles = makeStyles((theme: Theme) =>
             color: theme.palette.text.secondary
         },
         card: {
-            margin: '20px'
+            margin: '20px',
             // maxWidth: 345,
             // minWidth: 345
+            minHeight: '340px'
         },
         media: {
             height: 140,
@@ -59,9 +60,15 @@ export default function MediaCard() {
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image="/assets/h5p/h5p.png"
-                                    title="Contemplative Reptile"
-                                />
+                                    // image="/assets/h5p-logo.svg"
+                                    title="H5P Editor"
+                                >
+                                    <img
+                                        src="/assets/h5p-logo.svg"
+                                        alt="logo"
+                                        className={classes.analyticsIcon}
+                                    />
+                                </CardMedia>
                                 <CardContent>
                                     <Typography
                                         gutterBottom
@@ -113,7 +120,7 @@ export default function MediaCard() {
                                         variant="h5"
                                         component="h2"
                                     >
-                                        Analytics
+                                        Lumi Analytics
                                     </Typography>
                                     <Typography
                                         variant="body2"
@@ -121,7 +128,7 @@ export default function MediaCard() {
                                         component="p"
                                     >
                                         {I18n.t(
-                                            'editor.startPage.welcomeMessage'
+                                            'analytics.startPage.welcomeMessage'
                                         )}
                                     </Typography>
                                 </CardContent>
@@ -135,7 +142,7 @@ export default function MediaCard() {
                                             textDecoration: 'inherit'
                                         }}
                                     >
-                                        {I18n.t('editor.startPage.start')}
+                                        {I18n.t('analytics.startPage.start')}
                                     </Link>
                                 </Button>
                             </CardActions>

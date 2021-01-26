@@ -22,7 +22,7 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
 
     it('exports a html file', async (done) => {
         dialog.showSaveDialogSync = jest.fn((c) => {
-            return path.resolve('test', 'data', 'test.html');
+            return path.resolve('test', 'build', 'test.html');
         });
 
         const contentId = 740522043;
@@ -31,7 +31,7 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
         expect(res.statusCode).toEqual(200);
 
         expect(
-            await fsExtra.stat(path.resolve('test', 'data', 'test.html'))
+            await fsExtra.stat(path.resolve('test', 'build', 'test.html'))
         ).toBeTruthy();
 
         done();
@@ -39,7 +39,7 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
 
     it('appends .html if no extension is defined', async (done) => {
         dialog.showSaveDialogSync = jest.fn((c) => {
-            return path.resolve('test', 'data', 'test2');
+            return path.resolve('test', 'build', 'test2');
         });
 
         const contentId = 740522043;
@@ -48,11 +48,11 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
         expect(res.statusCode).toEqual(200);
 
         expect(
-            await fsExtra.stat(path.resolve('test', 'data', 'test2.html'))
+            await fsExtra.stat(path.resolve('test', 'build', 'test2.html'))
         ).toBeTruthy();
 
         done();
-    });
+    }, 30000);
 
     it('returns 499 if canceled by user', async (done) => {
         dialog.showSaveDialogSync = jest.fn((c) => {
