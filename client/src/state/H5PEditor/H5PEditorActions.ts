@@ -14,6 +14,8 @@ import {
     H5PEDITOR_SAVED,
     H5PPLAYER_INITIALIZED,
     H5PEDITOR_ERROR,
+    H5PEDITOR_BLURACTIVEELEMENT,
+    IBlurActiveElementAction,
     DeleteActions,
     LoadPlayerContentActions,
     LoadEditorContentActions,
@@ -39,7 +41,8 @@ import {
     H5PEDITOR_EXPORT_SUCCESS,
     H5PEDITOR_EXPORT_ERROR,
     H5PEDITOR_EXPORT_CANCEL,
-    H5PEDITOR_SAVE_CANCEL
+    H5PEDITOR_SAVE_CANCEL,
+    H5PEDITOR_UPDATE_CONTENT_SERVER
 } from './H5PEditorTypes';
 
 import * as selectors from './H5PEditorSelectors';
@@ -53,6 +56,11 @@ const log = new Logger('actions:tabs');
 
 declare var window: {
     h5peditor: any;
+    document: {
+        activeElement: {
+            blur: () => void;
+        };
+    };
 };
 
 export function editorLoaded(tabId: string): any {
@@ -90,9 +98,18 @@ export interface IEditorLoadedAction {
     type: typeof H5PEDITOR_LOADED;
 }
 
+export function blurActiveElement(): IBlurActiveElementAction {
+    window.document.activeElement?.blur();
+    return {
+        type: H5PEDITOR_BLURACTIVEELEMENT
+    };
+}
+
 export function exportH5P(): any {
     return async (dispatch: any) => {
         try {
+            await dispatch(updateContentOnServer());
+
             const data = await window.h5peditor.current?.save(); // this dispatches updateContent()
             dispatch({
                 payload: { contentId: data.contentId },
@@ -188,6 +205,25 @@ export function updateTab(
     return {
         payload: { tabId, update },
         type: H5PEDITOR_UPDATE_TAB
+    };
+}
+
+export function updateContentOnServer(): any {
+    return async (dispatch: any) => {
+        // We remove the focus from the current element to make H5P save all
+        // changes in text fields
+        dispatch(blurActiveElement());
+
+        dispatch({
+            type: H5PEDITOR_UPDATE_CONTENT_SERVER
+        });
+
+        try {
+            const data = await window.h5peditor.current?.save();
+            return data;
+        } catch (error) {
+            return;
+        }
     };
 }
 
@@ -334,21 +370,22 @@ export function deleteH5P(
 }
 
 export function save(
-    contentId: ContentId,
     path?: string
 ): ThunkAction<void, null, null, SaveActions> {
     return async (dispatch: any) => {
-        dispatch({
-            payload: { id: contentId, path },
-            type: H5PEDITOR_SAVE_REQUEST
-        });
-
         try {
-            const response = await api.exportH5P(contentId, path);
+            const data = await dispatch(updateContentOnServer());
+
+            dispatch({
+                payload: { id: data.contentId, path },
+                type: H5PEDITOR_SAVE_REQUEST
+            });
+
+            const response = await api.exportH5P(data.contentId, path);
 
             dispatch({
                 // tslint:disable-next-line: object-shorthand-properties-first
-                payload: { id: contentId, ...response.body },
+                payload: { id: data.contentId, ...response.body },
                 type: H5PEDITOR_SAVE_SUCCESS
             });
         } catch (error) {
@@ -360,7 +397,7 @@ export function save(
             } else {
                 dispatch({
                     error,
-                    payload: { id: contentId, path },
+                    payload: { path },
                     type: H5PEDITOR_SAVE_ERROR
                 });
             }

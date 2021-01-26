@@ -12,8 +12,7 @@ A clear and concise description of what the bug is.
 
 **Environment (please complete the following information):**
  - OS: [e.g. macOS]
- - Browser [e.g. chrome, safari]
- - Nodejs-Version [e.g. 22]
+ - Lumi Version
 
 **To Reproduce**
 Steps to reproduce the behavior:
