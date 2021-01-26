@@ -35,7 +35,7 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
         ).toBeTruthy();
 
         done();
-    });
+    }, 30000);
 
     it('appends .html if no extension is defined', async (done) => {
         dialog.showSaveDialogSync = jest.fn((c) => {
