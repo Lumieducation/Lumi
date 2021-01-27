@@ -3,6 +3,8 @@ import { dialog } from 'electron';
 import fs from 'fs';
 import recursiveReaddir from 'recursive-readdir';
 
+import objectHash from 'object-hash';
+
 import {
     getInteractions,
     IInteraction,
@@ -42,7 +44,9 @@ export default function (): express.Router {
                     }
                     const userStatements = {};
                     let contentJson;
-                    let library;
+                    let library: string;
+                    let error: boolean = false;
+
                     files.forEach((f) => {
                         const d = JSON.parse(
                             fs.readFileSync(f, { encoding: 'utf-8' })
@@ -50,10 +54,25 @@ export default function (): express.Router {
 
                         userStatements[_path.basename(f, '.lumi')] = d.xapi;
 
+                        if (contentJson && d.contentJson) {
+                            if (
+                                objectHash(contentJson) !==
+                                objectHash(d.contentJson)
+                            ) {
+                                error = true;
+                                res.status(400).json({
+                                    message: `${f} is from a different content`
+                                });
+                            }
+                        }
+
                         contentJson = d.contentJson;
                         library = d.library;
                     });
 
+                    if (error) {
+                        return;
+                    }
                     const interactions: IInteraction[] = [];
 
                     try {

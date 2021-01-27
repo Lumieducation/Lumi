@@ -59,7 +59,8 @@ export default function notificationsReducer(
                     ...state.notifications,
                     {
                         key: shortid(),
-                        message: `No valid data found`,
+                        message:
+                            action.payload.message || `No valid data found`,
                         options: {
                             variant: 'error'
                         }

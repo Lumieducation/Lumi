@@ -83,4 +83,25 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
 
         done();
     });
+
+    it('should return 400 if imported data is from different contents', async (done) => {
+        dialog.showOpenDialog = jest.fn(async (c) => {
+            return {
+                canceled: false,
+                filePaths: [
+                    path.resolve(
+                        'test',
+                        'data',
+                        'analytics',
+                        'different_content'
+                    )
+                ]
+            };
+        });
+
+        const res = await request(app).get('/api/v1/analytics');
+        expect(res.statusCode).toEqual(400);
+
+        done();
+    });
 });

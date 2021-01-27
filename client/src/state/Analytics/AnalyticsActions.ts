@@ -21,10 +21,17 @@ export function importAnalytics(): any {
                 type: ANALYTICS_IMPORT_SUCCESS
             });
         } catch (error) {
-            dispatch({
-                payload: { message: error },
-                type: ANALYTICS_IMPORT_ERROR
-            });
+            try {
+                dispatch({
+                    payload: { message: error.response.body.message },
+                    type: ANALYTICS_IMPORT_ERROR
+                });
+            } catch (error) {
+                dispatch({
+                    payload: { message: error },
+                    type: ANALYTICS_IMPORT_ERROR
+                });
+            }
         }
     };
 }
