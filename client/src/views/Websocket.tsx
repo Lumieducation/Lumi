@@ -49,6 +49,10 @@ export class WebsocketContainer extends React.Component<
 
         this.socket.on('action', (action: any) => {
             switch (action.type) {
+                case 'IMPORT_ANALYTICS':
+                    this.props.dispatch(actions.analytics.importAnalytics());
+                    break;
+
                 case 'NEW_H5P':
                     this.props.dispatch(actions.h5peditor.openTab());
                     break;
