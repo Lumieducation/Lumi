@@ -46,6 +46,8 @@ export default function (
     });
 
     router.get(`/:contentId/html`, async (req: IRequestWithUser, res) => {
+        const includeReporter = req.query.includeReporter === 'true';
+
         const reporterClient = await fsExtra.readFileSync(
             `${__dirname}/../../../reporter-client/build/static/js/2.chunk.js`,
             {
@@ -66,12 +68,13 @@ export default function (
             h5pEditor.config,
             `${__dirname}/../../../h5p/core`,
             `${__dirname}/../../../h5p/editor`,
-            (
-                integration: string,
-                scriptsBundle: string,
-                stylesBundle: string,
-                contentId: string
-            ) => `<!doctype html>
+            includeReporter
+                ? (
+                      integration: string,
+                      scriptsBundle: string,
+                      stylesBundle: string,
+                      contentId: string
+                  ) => `<!doctype html>
             <html class="h5p-iframe">
             <head>
                 <meta charset="utf-8">                    
@@ -85,6 +88,7 @@ export default function (
                 <div style="margin: 20px auto; max-width: 840px; box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)" class="h5p-content lag" data-content-id="${contentId}"></div>                
             </body>
             </html>`
+                : undefined
         );
 
         let path = dialog.showSaveDialogSync({
@@ -94,7 +98,7 @@ export default function (
                     extensions: ['html'],
                     name: 'html with inline-resources'
                 }
-                // {
+                // {a
                 //     extensions: ['zip'],
                 //     name: 'zip (html with external resources)'
                 // }

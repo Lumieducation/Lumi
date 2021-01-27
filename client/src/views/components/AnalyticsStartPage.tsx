@@ -33,7 +33,13 @@ export default function AnalyticsStartPage(props: {
                     color="textSecondary"
                     paragraph={true}
                 >
-                    {I18n.t('analytics.startPage.welcomeMessage')}
+                    {I18n.t('analytics.startPage.welcomeMessage')}{' '}
+                    <a
+                        href="https://lumieducation.gitbook.io/lumi/v/en/analytics/what-is-lumi-analytics"
+                        target="_blank"
+                    >
+                        learn more
+                    </a>
                 </Typography>
                 <div className={classes.heroButtons}>
                     <Grid container={true} spacing={2} justify="center">

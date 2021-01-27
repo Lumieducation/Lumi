@@ -72,7 +72,7 @@ export class WebsocketContainer extends React.Component<
                     break;
 
                 case 'EXPORT_AS_HTML':
-                    dispatch(actions.h5peditor.exportH5P());
+                    dispatch(actions.h5peditor.openExportDialog());
                     break;
 
                 case 'MESSAGE':

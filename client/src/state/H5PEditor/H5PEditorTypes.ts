@@ -30,7 +30,6 @@ export const H5PEDITOR_UPDATE_TAB = 'H5PEDITOR_UPDATE_TAB';
 export const H5PEDITOR_LOADED = 'H5PEDITOR_LOADED';
 export const H5PEDITOR_SAVED = 'H5PEDITOR_SAVED';
 export const H5PPLAYER_INITIALIZED = 'H5PPLAYER_INITIALIZED';
-
 export const H5PEDITOR_UPDATE_CONTENT_SERVER =
     'H5PEDITOR_UPDATE_CONTENT_SERVER';
 
@@ -53,6 +52,7 @@ export interface ITab {
 export interface IH5PEditorState {
     activeTabIndex: number;
     tabList: ITab[];
+    showExportDialog: boolean;
 }
 
 export interface IState {
@@ -113,7 +113,8 @@ export type H5PEditorActionTypes =
     | IH5PEditorExportActions
     | IH5PImportRequestAction
     | IH5PImportSuccessAction
-    | IH5PImportErrorAction;
+    | IH5PImportErrorAction
+    | IH5PEditorOpenExportDialogAction;
 
 //
 
@@ -128,10 +129,16 @@ export interface IH5PEditorError {
 }
 
 // Export
+export const H5PEDITOR_OPEN_EXPORT_DIALOG = 'H5PEDITOR_OPEN_EXPORT_DIALOG';
 export const H5PEDITOR_EXPORT_REQUEST = 'H5PEDITOR_EXPORT_REQUEST';
 export const H5PEDITOR_EXPORT_SUCCESS = 'H5PEDITOR_EXPORT_SUCCESS';
 export const H5PEDITOR_EXPORT_ERROR = 'H5PEDITOR_EXPORT_ERROR';
 export const H5PEDITOR_EXPORT_CANCEL = 'H5PEDITOR_EXPORT_CANCEL';
+
+export interface IH5PEditorOpenExportDialogAction {
+    payload: {};
+    type: typeof H5PEDITOR_OPEN_EXPORT_DIALOG;
+}
 
 export interface IH5PEditorExportRequestAction {
     payload: {
