@@ -38,6 +38,16 @@ declare var window: {
     };
 };
 
+function removeFile(obj: any) {
+    for (let key in obj) {
+        if (key === 'file' || key === 'files') {
+            delete obj[key];
+        } else if (typeof obj[key] === 'object') {
+            removeFile(obj[key]);
+        }
+    }
+}
+
 export default function App() {
     const classes = useStyles();
 
@@ -59,8 +69,12 @@ export default function App() {
             window.H5PIntegration.contents
         );
 
-        const contentJson =
-            window.H5PIntegration.contents[contentIds[0]].jsonContent;
+        let contentJson = JSON.parse(
+            window.H5PIntegration.contents[contentIds[0]].jsonContent
+        );
+
+        removeFile(contentJson);
+
         const library = window.H5PIntegration.contents[contentIds[0]].library;
 
         element.setAttribute(
@@ -70,7 +84,7 @@ export default function App() {
                     JSON.stringify({
                         name,
                         xapi: window.lumi_xapi,
-                        contentJson: JSON.parse(contentJson),
+                        contentJson: contentJson,
                         library
                     })
                 )
