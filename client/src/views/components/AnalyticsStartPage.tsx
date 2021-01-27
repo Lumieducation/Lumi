@@ -37,6 +37,7 @@ export default function AnalyticsStartPage(props: {
                     <a
                         href="https://lumieducation.gitbook.io/lumi/v/en/analytics/what-is-lumi-analytics"
                         target="_blank"
+                        rel="noreferrer"
                     >
                         learn more
                     </a>

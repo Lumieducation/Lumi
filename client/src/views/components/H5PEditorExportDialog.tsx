@@ -10,7 +10,6 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
 import { actions, IState } from '../../state';
-import { truncateSync } from 'fs-extra';
 
 export default function H5PEditorExportDialog() {
     // const { open, yesCallback, noCallback } = props;
@@ -35,6 +34,7 @@ export default function H5PEditorExportDialog() {
                         <a
                             href="https://lumieducation.gitbook.io/lumi/analytics/reporter"
                             target="_blank"
+                            rel="noreferrer"
                         >
                             here
                         </a>
