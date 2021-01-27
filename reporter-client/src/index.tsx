@@ -13,7 +13,10 @@ declare var window: any;
 window.lumi_xapi = window.lumi_xapi || [];
 if (window.H5P) {
     window.H5P.externalDispatcher.on('xAPI', (event: any) => {
-        window.lumi_xapi.push(event.data.statement);
+        window.lumi_xapi.push({
+            ...event.data.statement,
+            timeStamp: new Date().getTime()
+        });
     });
 }
 
