@@ -27,7 +27,7 @@ jobs:
             - name: build:server
               run: npm run build:server
             - name: build:client
-              run: npm run build:client
+              run: npm run build:client && npm run build:reporter-client
             - name: unit-tests
               run: npm run test
               env:
