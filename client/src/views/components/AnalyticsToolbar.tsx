@@ -108,7 +108,7 @@ export default function AnalyticsToolbar(props: {
                             <SearchIcon />
                         </div>
                         <InputBase
-                            placeholder="Search…"
+                            placeholder="Search student names…"
                             classes={{
                                 root: classes.inputRoot,
                                 input: classes.inputInput
