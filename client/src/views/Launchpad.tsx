@@ -57,37 +57,45 @@ export default function MediaCard() {
                 <Grid container spacing={3}>
                     <Grid item xs={4}>
                         <Card className={classes.card}>
-                            <CardActionArea>
-                                <CardMedia
-                                    className={classes.media}
-                                    // image="/assets/h5p-logo.svg"
-                                    title="H5P Editor"
-                                >
-                                    <img
-                                        src="/assets/h5p-logo.svg"
-                                        alt="logo"
-                                        className={classes.analyticsIcon}
-                                    />
-                                </CardMedia>
-                                <CardContent>
-                                    <Typography
-                                        gutterBottom
-                                        variant="h5"
-                                        component="h2"
+                            <Link
+                                to="/h5peditor"
+                                style={{
+                                    color: 'inherit',
+                                    textDecoration: 'inherit'
+                                }}
+                            >
+                                <CardActionArea>
+                                    <CardMedia
+                                        className={classes.media}
+                                        // image="/assets/h5p-logo.svg"
+                                        title="H5P Editor"
                                     >
-                                        H5P Editor
-                                    </Typography>
-                                    <Typography
-                                        variant="body2"
-                                        color="textSecondary"
-                                        component="p"
-                                    >
-                                        {I18n.t(
-                                            'editor.startPage.welcomeMessage'
-                                        )}
-                                    </Typography>
-                                </CardContent>
-                            </CardActionArea>
+                                        <img
+                                            src="/assets/h5p-logo.svg"
+                                            alt="logo"
+                                            className={classes.analyticsIcon}
+                                        />
+                                    </CardMedia>
+                                    <CardContent>
+                                        <Typography
+                                            gutterBottom
+                                            variant="h5"
+                                            component="h2"
+                                        >
+                                            H5P Editor
+                                        </Typography>
+                                        <Typography
+                                            variant="body2"
+                                            color="textSecondary"
+                                            component="p"
+                                        >
+                                            {I18n.t(
+                                                'editor.startPage.welcomeMessage'
+                                            )}
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                            </Link>
                             <CardActions>
                                 <Button size="small" color="primary">
                                     <Link
@@ -105,34 +113,42 @@ export default function MediaCard() {
                     </Grid>
                     <Grid item xs={4}>
                         <Card className={classes.card}>
-                            <CardActionArea>
-                                <CardMedia
-                                    className={classes.media}
-                                    title="Lumi Analytics"
-                                >
-                                    <AnalyticsIcon
-                                        className={classes.analyticsIcon}
-                                    />
-                                </CardMedia>
-                                <CardContent>
-                                    <Typography
-                                        gutterBottom
-                                        variant="h5"
-                                        component="h2"
+                            <Link
+                                to="/analytics"
+                                style={{
+                                    color: 'inherit',
+                                    textDecoration: 'inherit'
+                                }}
+                            >
+                                <CardActionArea>
+                                    <CardMedia
+                                        className={classes.media}
+                                        title="Lumi Analytics"
                                     >
-                                        Lumi Analytics
-                                    </Typography>
-                                    <Typography
-                                        variant="body2"
-                                        color="textSecondary"
-                                        component="p"
-                                    >
-                                        {I18n.t(
-                                            'analytics.startPage.welcomeMessage'
-                                        )}
-                                    </Typography>
-                                </CardContent>
-                            </CardActionArea>
+                                        <AnalyticsIcon
+                                            className={classes.analyticsIcon}
+                                        />
+                                    </CardMedia>
+                                    <CardContent>
+                                        <Typography
+                                            gutterBottom
+                                            variant="h5"
+                                            component="h2"
+                                        >
+                                            Lumi Analytics
+                                        </Typography>
+                                        <Typography
+                                            variant="body2"
+                                            color="textSecondary"
+                                            component="p"
+                                        >
+                                            {I18n.t(
+                                                'analytics.startPage.welcomeMessage'
+                                            )}
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                            </Link>
                             <CardActions>
                                 <Button size="small" color="primary">
                                     <Link
