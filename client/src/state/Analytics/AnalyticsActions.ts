@@ -28,7 +28,7 @@ export function importAnalytics(): any {
                 });
             } catch (error) {
                 dispatch({
-                    payload: { message: error },
+                    payload: { message: 'no valid data' },
                     type: ANALYTICS_IMPORT_ERROR
                 });
             }
