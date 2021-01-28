@@ -38,7 +38,11 @@ export default function Analytics() {
                     <LumixAPIViewer
                         interactions={interactions}
                         users={users.filter(
-                            (user) => user.name.indexOf(searchText) > -1
+                            (user) =>
+                                user.name
+                                    .toLocaleLowerCase()
+                                    .indexOf(searchText.toLocaleLowerCase()) >
+                                -1
                         )}
                     />
                 </div>
