@@ -29,7 +29,7 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
         const res = await request(app).get('/api/v1/analytics');
         expect(res.statusCode).toEqual(200);
         expect(res.body).toStrictEqual({
-            interactions: [{ name: 'H5P.MultiChoice 1.14', id: 'skip' }],
+            interactions: [{ name: 'MultiChoice', id: 'skip' }],
             users: [
                 {
                     name: 'test',

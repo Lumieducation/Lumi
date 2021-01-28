@@ -83,7 +83,7 @@ export default function (): express.Router {
 
                     if (interactions.length === 0) {
                         interactions.push({
-                            name: library,
+                            name: library.replace('H5P.', '').split(' ')[0],
                             id: 'skip'
                         });
                     }
