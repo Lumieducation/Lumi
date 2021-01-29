@@ -138,6 +138,11 @@ export default function App() {
                             fullWidth
                             value={name}
                             onChange={(e) => setName(e.target.value)}
+                            onKeyUp={(event) => {
+                                if (event.key === 'Enter') {
+                                    handleSubmit();
+                                }
+                            }}
                         />
                     </DialogContent>
                     <DialogActions>
