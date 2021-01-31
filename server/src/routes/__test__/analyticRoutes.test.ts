@@ -22,7 +22,9 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
         dialog.showOpenDialog = jest.fn(async (c) => {
             return {
                 canceled: false,
-                filePaths: [path.resolve('test', 'data', 'analytics', 'valid')]
+                filePaths: [
+                    path.resolve('test', 'data', 'analytics', 'valid.test')
+                ]
             };
         });
 
@@ -55,7 +57,7 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
                         'test',
                         'data',
                         'analytics',
-                        'valid',
+                        'valid.test',
                         'test.lumi'
                     )
                 ]
@@ -86,14 +88,14 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
                         'test',
                         'data',
                         'analytics',
-                        'valid',
+                        'valid.test',
                         'test.lumi'
                     ),
                     path.resolve(
                         'test',
                         'data',
                         'analytics',
-                        'valid',
+                        'valid.test',
                         'test2.lumi'
                     )
                 ]
