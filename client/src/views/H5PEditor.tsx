@@ -14,6 +14,8 @@ import H5PEditorStartPage from './components/H5PEditorStartPage';
 
 import H5PEditorH5PComponent from './components/H5PEditorH5PComponent';
 
+import H5PEditorExportDialog from './components/H5PEditorExportDialog';
+
 import { actions, selectors } from '../state';
 
 import { ITab } from '../state/H5PEditor/H5PEditorTypes';
@@ -78,6 +80,7 @@ export class H5PEditor extends React.Component<{
                         ))}
                     </MainSection>
                 </Root>
+                <H5PEditorExportDialog />
             </div>
         );
     }

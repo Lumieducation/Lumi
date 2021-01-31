@@ -14,6 +14,11 @@ import {
     H5P_IMPORT_ERROR
 } from '../../H5PEditor/H5PEditorTypes';
 
+import {
+    ANALYTICS_IMPORT_ERROR,
+    ANALYTICS_IMPORT_SUCCESS
+} from '../../Analytics/AnalyticsTypes';
+
 describe('initialState', () => {
     it('returns the initial state', (done) => {
         const state = reducer(undefined, { type: 'init' } as any);
@@ -184,6 +189,40 @@ describe('Notifications', () => {
 
         expect(state.notifications.length).toBe(1);
         expect(state.notifications[0].options.variant).toBe('error');
+        done();
+    });
+
+    it('shows a error notification on ANALYTICS_IMPORT_ERROR', (done) => {
+        const state = reducer(
+            {
+                notifications: []
+            },
+            {
+                payload: {} as any,
+                type: ANALYTICS_IMPORT_ERROR
+            }
+        );
+
+        expect(state.notifications.length).toBe(1);
+        expect(state.notifications[0].options.variant).toBe('error');
+        done();
+    });
+
+    it('shows a success notification on ANALYTICS_IMPORT_SUCCESS', (done) => {
+        const state = reducer(
+            {
+                notifications: []
+            },
+            {
+                payload: {
+                    users: []
+                } as any,
+                type: ANALYTICS_IMPORT_SUCCESS
+            }
+        );
+
+        expect(state.notifications.length).toBe(1);
+        expect(state.notifications[0].options.variant).toBe('success');
         done();
     });
 });

@@ -22,6 +22,14 @@ import {
     IH5PEditorError,
     IH5PImportErrorAction
 } from '../H5PEditor/H5PEditorTypes';
+
+import {
+    ANALYTICS_IMPORT_SUCCESS,
+    ANALYTICS_IMPORT_ERROR,
+    IAnalyticsImportSuccessAction,
+    IAnalyticsImportErrorAction
+} from '../Analytics/AnalyticsTypes';
+
 import shortid from 'shortid';
 
 export const initialState: INotificationsState = {
@@ -40,8 +48,41 @@ export default function notificationsReducer(
         | IH5PEditorExportSuccessAction
         | IH5PEditorError
         | IH5PImportErrorAction
+        | IAnalyticsImportSuccessAction
+        | IAnalyticsImportErrorAction
 ): INotificationsState {
     switch (action.type) {
+        case ANALYTICS_IMPORT_ERROR:
+            return {
+                ...state,
+                notifications: [
+                    ...state.notifications,
+                    {
+                        key: shortid(),
+                        message:
+                            action.payload.message || `No valid data found`,
+                        options: {
+                            variant: 'error'
+                        }
+                    }
+                ]
+            };
+
+        case ANALYTICS_IMPORT_SUCCESS:
+            return {
+                ...state,
+                notifications: [
+                    ...state.notifications,
+                    {
+                        key: shortid(),
+                        message: `Imported ${action.payload.users.length} user reponses`,
+                        options: {
+                            variant: 'success'
+                        }
+                    }
+                ]
+            };
+
         case H5PEDITOR_ERROR:
             return {
                 ...state,

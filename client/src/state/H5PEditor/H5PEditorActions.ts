@@ -42,7 +42,9 @@ import {
     H5PEDITOR_EXPORT_ERROR,
     H5PEDITOR_EXPORT_CANCEL,
     H5PEDITOR_SAVE_CANCEL,
-    H5PEDITOR_UPDATE_CONTENT_SERVER
+    H5PEDITOR_UPDATE_CONTENT_SERVER,
+    IH5PEditorOpenExportDialogAction,
+    H5PEDITOR_OPEN_EXPORT_DIALOG
 } from './H5PEditorTypes';
 
 import * as selectors from './H5PEditorSelectors';
@@ -98,6 +100,13 @@ export interface IEditorLoadedAction {
     type: typeof H5PEDITOR_LOADED;
 }
 
+export function openExportDialog(): IH5PEditorOpenExportDialogAction {
+    return {
+        payload: {},
+        type: H5PEDITOR_OPEN_EXPORT_DIALOG
+    };
+}
+
 export function blurActiveElement(): IBlurActiveElementAction {
     window.document.activeElement?.blur();
     return {
@@ -105,22 +114,22 @@ export function blurActiveElement(): IBlurActiveElementAction {
     };
 }
 
-export function exportH5P(): any {
+export function exportH5P(includeReporter: boolean): any {
     return async (dispatch: any) => {
         try {
             await dispatch(updateContentOnServer());
 
             const data = await window.h5peditor.current?.save(); // this dispatches updateContent()
             dispatch({
-                payload: { contentId: data.contentId },
+                payload: { contentId: data.contentId, includeReporter },
                 type: H5PEDITOR_EXPORT_REQUEST
             });
 
             try {
-                await api.exportAsHtml(data.contentId);
+                await api.exportAsHtml(data.contentId, includeReporter);
 
                 dispatch({
-                    payload: { contentId: data.contentId },
+                    payload: { contentId: data.contentId, includeReporter },
                     type: H5PEDITOR_EXPORT_SUCCESS
                 });
             } catch (error) {
@@ -128,13 +137,18 @@ export function exportH5P(): any {
                     // dispatched if the user cancel the system's save dialog.
                     dispatch({
                         payload: {
-                            contentId: data.contentId
+                            contentId: data.contentId,
+                            includeReporter
                         },
                         type: H5PEDITOR_EXPORT_CANCEL
                     });
                 } else {
                     dispatch({
-                        payload: { error, contentId: data.contentId },
+                        payload: {
+                            error,
+                            contentId: data.contentId,
+                            includeReporter
+                        },
                         type: H5PEDITOR_EXPORT_ERROR
                     });
                 }

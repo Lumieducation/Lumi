@@ -10,6 +10,7 @@ import trackingRoutes from './trackingRoutes';
 import Logger from '../helpers/Logger';
 import IServerConfig from '../IServerConfig';
 import h5pRoutes from './h5pRoutes';
+import analyticRoutes from './analyticRoutes';
 
 import User from '../User';
 
@@ -25,6 +26,7 @@ export default function (
     log.info('setting up routes');
 
     router.use('/api/v1/track', trackingRoutes());
+    router.use('/api/v1/analytics', analyticRoutes());
 
     // Adding dummy user to make sure all requests can be handled
     router.use((req, res, next) => {
@@ -71,7 +73,7 @@ export default function (
         h5pRoutes(
             h5pEditor,
             h5pPlayer,
-            'auto' // You can change the language of the editor here by setting
+            'auto' // You can change the language of the editor here by sett
             // the language code you need here. 'auto' means the route will try
             // to use the language detected by the i18next language detector.
         )

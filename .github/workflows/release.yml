@@ -19,7 +19,7 @@ jobs:
               env:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: install
-              run: npm ci && (cd client && npm ci)
+              run: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
             - name: Release
               run: npm run semantic-release || true
               env:
@@ -58,9 +58,9 @@ jobs:
               env:
                   NPM_TOKEN: $${ secrets.NPM_TOKEN }
             - name: Copy NPM config
-              run: cp ./.npmrc ./client/.npmrc
+              run: cp ./.npmrc ./client/.npmrc && cp ./.npmrc ./reporter-client/.npmrc
             - name: install client
-              run: cd client && npm ci
+              run: (cd client && npm ci) && (cd reporter-client && npm ci)
               env:
                   NPM_TOKEN: $${ secrets.NPM_TOKEN }
             - name: Build
@@ -94,7 +94,7 @@ jobs:
             - name: install labarchive-tools
               run: sudo apt install libarchive-tools
             - name: install
-              run: npm ci && (cd client && npm ci)
+              run: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
             - name: Build
               run: npm run build
             - name: Install Snapcraft

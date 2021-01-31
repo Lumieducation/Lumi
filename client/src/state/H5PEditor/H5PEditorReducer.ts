@@ -22,12 +22,14 @@ import {
     H5P_IMPORT_SUCCESS,
     Modes,
     H5PEDITOR_EXPORT_CANCEL,
-    H5PEDITOR_SAVE_CANCEL
+    H5PEDITOR_SAVE_CANCEL,
+    H5PEDITOR_OPEN_EXPORT_DIALOG
 } from './H5PEditorTypes';
 
 export const initialState: IH5PEditorState = {
     activeTabIndex: 0,
-    tabList: []
+    tabList: [],
+    showExportDialog: false
 };
 
 const log = new Logger('reducer:tabs');
@@ -39,6 +41,12 @@ export default function tabReducer(
     try {
         log.debug(`reducing ${action.type}`);
         switch (action.type) {
+            case H5PEDITOR_OPEN_EXPORT_DIALOG:
+                return {
+                    ...state,
+                    showExportDialog: true
+                };
+
             case H5PEDITOR_SAVE_REQUEST:
                 return {
                     ...state,
@@ -160,7 +168,8 @@ export default function tabReducer(
                                   loadingIndicator: true
                               }
                             : tab
-                    )
+                    ),
+                    showExportDialog: false
                 };
 
             case H5PEDITOR_EXPORT_SUCCESS:

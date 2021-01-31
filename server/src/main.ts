@@ -6,9 +6,9 @@ import nucleus from 'nucleus-nodejs';
 import os from 'os';
 import path from 'path';
 import SocketIO from 'socket.io';
-
+import { URL } from 'url';
 import httpServerFactory from './httpServer';
-import menuTemplate from './menu';
+import updateMenu from './menu';
 import updater from './updater';
 import websocketFactory from './websocket';
 import serverConfigFactory from './serverConfig';
@@ -52,10 +52,11 @@ function createMainWindow(
         width: 1000
     });
 
-    const menu = electron.Menu.buildFromTemplate(
-        menuTemplate(window, websocketArg)
-    );
-    electron.Menu.setApplicationMenu(menu);
+    window.webContents.on('did-navigate-in-page', (event, url) => {
+        updateMenu(new URL(url).pathname, window, websocketArg);
+    });
+
+    updateMenu('/', window, websocketArg);
 
     if (isDevelopment) {
         window.webContents.openDevTools();

@@ -6,6 +6,7 @@ module.exports = {
     files: [
         'build/**/*',
         'node_modules/**/*',
+        'reporter-client/build/static/js/**/*',
         'package.json',
         'h5p/**/*',
         'electron/**/*'

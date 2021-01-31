@@ -18,6 +18,11 @@ import * as NotificationsSelectors from './Notifications/NotificationsSelectors'
 import * as H5PEditorSelectors from './H5PEditor/H5PEditorSelectors';
 
 import * as NotificationsTypes from './Notifications/NotificationsTypes';
+
+import AnalyticsReducer from './Analytics/AnalyticsReducer';
+import * as AnalyticsTypes from './Analytics/AnalyticsTypes';
+import * as AnalyticsActions from './Analytics/AnalyticsActions';
+
 import thunk from 'redux-thunk';
 
 import Logger from '../helpers/Logger';
@@ -38,6 +43,7 @@ const rootReducer = () =>
     combineReducers({
         notifications: NotificationsReducer,
         h5peditor: H5PEditorReducer,
+        analytics: AnalyticsReducer,
         i18n: i18nReducer
     });
 
@@ -49,11 +55,13 @@ const store = createStore(
 
 export interface IState
     extends H5PEditorTypes.IState,
-        NotificationsTypes.IState {}
+        NotificationsTypes.IState,
+        AnalyticsTypes.IState {}
 
 export const actions = {
     notifications: NotificationsActions,
-    h5peditor: H5PEditorActions
+    h5peditor: H5PEditorActions,
+    analytics: AnalyticsActions
 };
 
 export const selectors = {
