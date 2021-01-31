@@ -56,7 +56,7 @@ export default function MediaCard() {
             <MainSection>
                 <Grid container spacing={3}>
                     <Grid item xs={4}>
-                        <Card className={classes.card}>
+                        <Card id="launchpad-h5peditor" className={classes.card}>
                             <Link
                                 to="/h5peditor"
                                 style={{
@@ -112,7 +112,7 @@ export default function MediaCard() {
                         </Card>
                     </Grid>
                     <Grid item xs={4}>
-                        <Card className={classes.card}>
+                        <Card id="launchpad-analytics" className={classes.card}>
                             <Link
                                 to="/analytics"
                                 style={{
