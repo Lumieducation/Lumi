@@ -38,22 +38,19 @@ describe('App', () => {
             done();
         });
 
-        it('shows the Lumi H5P Editor text', async (done) => {
-            const headline = await app.client.$('h1');
-            const text = await headline.getText();
+        it('shows the H5P Editor pad', async (done) => {
+            const h5peditor = await app.client.$('launchpad-h5peditor');
 
-            expect(text).toBe('Lumi H5P Editor');
+            expect(h5peditor).toBeTruthy();
             done();
-        });
+        }, 30000);
 
-        it('has the editor-startpage secondary button', async (done) => {
-            const button = await app.client.$(
-                '#editor-startpage-secondaryButton'
-            );
+        it('shows the Analytics pad', async (done) => {
+            const analytics = await app.client.$('launchpad-analytics');
 
-            expect(button).toBeTruthy();
+            expect(analytics).toBeTruthy();
             done();
-        });
+        }, 30000);
     });
 
     describe('Import H5P file', () => {
