@@ -59,8 +59,8 @@ jobs:
                   NPM_TOKEN: $${ secrets.NPM_TOKEN }
             - name: Copy NPM config
               run: cp ./.npmrc ./client/.npmrc && cp ./.npmrc ./reporter-client/.npmrc
-            - name: install client
-              run: (cd client && npm ci) && (cd reporter-client && npm ci)
+            - name: install client(s)
+              run: (cd client && npm ci) && (cd ../reporter-client && npm ci)
               env:
                   NPM_TOKEN: $${ secrets.NPM_TOKEN }
             - name: Build
