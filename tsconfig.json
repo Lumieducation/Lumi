@@ -9,7 +9,8 @@
         "noImplicitAny": false,
         "allowJs": true,
         "resolveJsonModule": true,
-        "outDir": "./build/server"
+        "outDir": "./build/server",
+        "sourceMap": true
     },
     "exclude": ["node_modules"],
     "include": ["server/src/**/*.ts"],
