@@ -38,7 +38,7 @@ export default function (): express.Router {
                 if (_path.extname(filePath) === '.lumi') {
                     files.push(filePath);
                 }
-                if (_path.extname(filePath) === '') {
+                if (fs.statSync(filePath).isDirectory()) {
                     const f = await recursiveReaddir(filePath, ['!*.lumi']);
                     files = [...files, ...f];
                 }

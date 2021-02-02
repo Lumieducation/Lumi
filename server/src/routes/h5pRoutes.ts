@@ -10,7 +10,7 @@ import * as H5P from '@lumieducation/h5p-server';
 import {
     IRequestWithUser,
     IRequestWithLanguage
-} from '@lumieducation/h5p-server/build/src/adapters/expressTypes';
+} from '@lumieducation/h5p-express';
 
 import HtmlExporter from '@lumieducation/h5p-html-exporter';
 

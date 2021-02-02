@@ -7,25 +7,17 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 import AppIcon from '@material-ui/icons/Apps';
+import BackIcon from '@material-ui/icons/ArrowBack';
 
 import { Link } from 'react-router-dom';
 
-export default function AppBar(props: {
-    // closeLeftDrawer?: () => void;
-    // leftDrawerOpen: boolean;
-    // openLeftDrawer?: () => void;
-}): JSX.Element {
-    // const { closeLeftDrawer, leftDrawerOpen, openLeftDrawer } = props;
-    const classes = useStyles();
+import { useRouteMatch } from 'react-router-dom';
 
+export default function AppBar(props: {}): JSX.Element {
+    let match = useRouteMatch();
+    const classes = useStyles();
     return (
-        <MAppBar
-            position="fixed"
-            className={classes.appBar}
-            // className={clsx(classes.appBar, {
-            //     [classes.appBarShift]: leftDrawerOpen
-            // })}
-        >
+        <MAppBar position="fixed" className={classes.appBar}>
             <Toolbar>
                 <Link
                     to="/"
@@ -34,37 +26,15 @@ export default function AppBar(props: {
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
-                        // onClick={() => {
-                        //     track('app_bar', 'click', 'menu_icon');
-                        //     if (openLeftDrawer) {
-                        //         openLeftDrawer();
-                        //     }
-                        // }}
                         edge="start"
-                        // className={clsx(
-                        //     classes.menuButton,
-                        //     leftDrawerOpen && classes.hide
-                        // )}
                     >
-                        <AppIcon />
+                        {match.isExact ? <AppIcon /> : <BackIcon />}
                     </IconButton>
                 </Link>
                 <Typography variant="h6" noWrap={true}>
                     Lumi
                 </Typography>
                 <div className={classes.grow} />
-                {/* <IconButton
-                    aria-label="report an issue"
-                    color="inherit"
-                    onClick={() => {
-                        if (closeLeftDrawer) {
-                            closeLeftDrawer();
-                        }
-                        Sentry.showReportDialog();
-                    }}
-                >
-                    <BugReport />
-                </IconButton> */}
             </Toolbar>
         </MAppBar>
     );
