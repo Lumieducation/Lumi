@@ -121,9 +121,7 @@ export default function (
             );
 
             await fsExtra.writeFileSync(path, html);
-        } catch (error) {
-            return res.status(500).end();
-        }
+        } catch (error) {}
 
         res.status(200).end();
     });
