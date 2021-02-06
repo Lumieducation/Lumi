@@ -34,6 +34,8 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
             await fsExtra.stat(path.resolve('test', 'build', 'test.html'))
         ).toBeTruthy();
 
+        fsExtra.removeSync(path.resolve('test', 'build', 'test.html'));
+
         done();
     }, 30000);
 
@@ -50,6 +52,8 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
         expect(
             await fsExtra.stat(path.resolve('test', 'build', 'test2.html'))
         ).toBeTruthy();
+
+        fsExtra.removeSync(path.resolve('test', 'build', 'test2.html'));
 
         done();
     }, 30000);
