@@ -40,7 +40,12 @@ declare var window: {
 
 function removeFile(obj: any) {
     for (let key in obj) {
-        if (key === 'file' || key === 'files') {
+        if (
+            key === 'file' ||
+            key === 'files' ||
+            key === 'imageSlideBackground' ||
+            key === 'background'
+        ) {
             delete obj[key];
         } else if (typeof obj[key] === 'object') {
             removeFile(obj[key]);
