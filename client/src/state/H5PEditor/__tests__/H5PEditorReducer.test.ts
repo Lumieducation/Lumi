@@ -1,3 +1,4 @@
+import { showReportDialog } from '@sentry/browser';
 import shortid from 'shortid';
 
 import { default as reducer, initialState } from '../H5PEditorReducer';
@@ -114,7 +115,8 @@ describe('H5PEDITOR_EXPORT_ERROR', () => {
                     ...testTab,
                     loadingIndicator: true
                 }
-            ]
+            ],
+            showExportDialog: true
         },
         {
             payload: {
@@ -126,6 +128,11 @@ describe('H5PEDITOR_EXPORT_ERROR', () => {
 
     it('sets the loadingIndicator to false', (done) => {
         expect(state.tabList[0].loadingIndicator).toBeFalsy();
+        done();
+    });
+
+    it('closes the export Dialog', (done) => {
+        expect(state.showExportDialog).toBeFalsy();
         done();
     });
 });

@@ -208,7 +208,8 @@ export default function tabReducer(
                                   loadingIndicator: false
                               }
                             : tab
-                    )
+                    ),
+                    showExportDialog: false
                 };
 
             case H5P_LOADPLAYERCONTENT_REQUEST:
