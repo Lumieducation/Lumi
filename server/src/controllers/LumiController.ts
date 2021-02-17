@@ -1,7 +1,6 @@
 import { dialog } from 'electron';
 import fs from 'fs-extra';
 import _path from 'path';
-import nucleus from 'nucleus-nodejs';
 
 import LumiError from '../helpers/LumiError';
 import * as H5P from '@lumieducation/h5p-server';
@@ -56,7 +55,6 @@ export default class LumiController {
         );
         await packageExporter.createPackage(contentId, stream, new User());
 
-        nucleus.track('save');
         return { path };
     }
 
@@ -82,10 +80,6 @@ export default class LumiController {
             this.getUbernameFromH5pJson(metadata),
             new User()
         );
-
-        nucleus.track('import', {
-            library: this.getUbernameFromH5pJson(metadata)
-        });
 
         return {
             id,

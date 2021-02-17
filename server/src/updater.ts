@@ -1,6 +1,5 @@
 import { dialog } from 'electron';
 import { autoUpdater } from 'electron-updater';
-import nucleus from 'nucleus-nodejs';
 import SocketIO from 'socket.io';
 
 let updateAvailable: boolean = false;
@@ -33,8 +32,6 @@ export default function boot(
             });
 
             setTimeout(() => {
-                nucleus.track('system/updated');
-
                 updating = true;
                 autoUpdater.quitAndInstall();
             }, 5000);
