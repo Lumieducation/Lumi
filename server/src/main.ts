@@ -2,7 +2,6 @@
 // import * as SentryNode from '@sentry/node';
 import electron from 'electron';
 import log from 'electron-log';
-import nucleus from 'nucleus-nodejs';
 import os from 'os';
 import path from 'path';
 import SocketIO from 'socket.io';
@@ -30,17 +29,6 @@ process.on('uncaughtException', (error) => {
 //         release: app.getVersion()
 //     });
 // }
-
-if (process.env.NODE_ENV !== 'development' && process.env.NODE_ENV !== 'CI') {
-    nucleus.init('5e284c9a73aa9c0115e0d1d6');
-    nucleus.appStarted();
-    nucleus.setProps(
-        {
-            version: app.getVersion()
-        },
-        false
-    );
-}
 
 function createMainWindow(
     websocketArg: SocketIO.Server

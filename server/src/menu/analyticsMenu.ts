@@ -1,5 +1,4 @@
 import electron from 'electron';
-import nucleus from 'nucleus-nodejs';
 import SocketIO from 'socket.io';
 
 import helpMenu from './helpMenu';
@@ -11,7 +10,6 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
             {
                 accelerator: 'CmdOrCtrl+O',
                 click: () => {
-                    nucleus.track('menu/click/analytics/import');
                     websocket.emit('action', {
                         payload: {},
                         type: 'IMPORT_ANALYTICS'

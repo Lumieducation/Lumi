@@ -1,5 +1,4 @@
 import electron from 'electron';
-import nucleus from 'nucleus-nodejs';
 import SocketIO from 'socket.io';
 
 export default function (
@@ -11,7 +10,6 @@ export default function (
         submenu: [
             {
                 click: () => {
-                    nucleus.track('menu/click/report_issue');
                     websocket.emit('action', {
                         type: 'REPORT_ISSUE'
                     });
@@ -21,7 +19,6 @@ export default function (
             { type: 'separator' } as any,
             {
                 click: () => {
-                    nucleus.track('menu/click/open_devtools');
                     window.webContents.openDevTools();
                 },
                 label: 'Toggle Developer Tools'
@@ -29,7 +26,6 @@ export default function (
             { type: 'separator' } as any,
             {
                 click: () => {
-                    nucleus.track('menu/click/open_twitter');
                     electron.shell.openExternal(
                         'https://www.twitter.com/Lumieducation'
                     );
