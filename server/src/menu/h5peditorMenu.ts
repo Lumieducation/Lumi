@@ -1,5 +1,4 @@
 import electron from 'electron';
-import nucleus from 'nucleus-nodejs';
 import SocketIO from 'socket.io';
 
 import helpMenu from './helpMenu';
@@ -11,7 +10,6 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
             {
                 accelerator: 'CmdOrCtrl+N',
                 click: () => {
-                    nucleus.track('menu/click/new_h5p');
                     websocket.emit('action', {
                         payload: {
                             contentId: Math.round(Math.random() * 100000)
@@ -36,7 +34,6 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
                             properties: ['openFile', 'multiSelections']
                         })
                         .then(({ filePaths }) => {
-                            nucleus.track('menu/click/open_folder');
                             websocket.emit('action', {
                                 payload: {
                                     paths: filePaths
@@ -51,7 +48,6 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
             {
                 accelerator: 'CmdOrCtrl+S',
                 click: () => {
-                    nucleus.track('menu/click/save');
                     websocket.emit('action', {
                         type: 'SAVE'
                     });
@@ -61,7 +57,6 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
             {
                 accelerator: 'Shift+CmdOrCtrl+S',
                 click: () => {
-                    nucleus.track('menu/click/save_as');
                     websocket.emit('action', {
                         type: 'SAVE_AS'
                     });
@@ -71,7 +66,6 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
             { type: 'separator' } as any,
             {
                 click: () => {
-                    nucleus.track('menu/click/export_as_html');
                     websocket.emit('action', {
                         type: 'EXPORT_AS_HTML'
                     });

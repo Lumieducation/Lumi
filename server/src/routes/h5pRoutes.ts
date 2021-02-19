@@ -98,10 +98,6 @@ export default function (
                     extensions: ['html'],
                     name: 'html with inline-resources'
                 }
-                // {a
-                //     extensions: ['zip'],
-                //     name: 'zip (html with external resources)'
-                // }
             ],
             title: 'Export H5P as ...'
         });
@@ -122,7 +118,7 @@ export default function (
 
             await fsExtra.writeFileSync(path, html);
         } catch (error) {
-            return res.status(500).end();
+            res.status(500).json(error);
         }
 
         res.status(200).end();
