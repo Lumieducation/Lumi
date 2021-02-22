@@ -1,4 +1,4 @@
-// import * as Sentry from '@sentry/electron';
+import * as Sentry from '@sentry/electron';
 // import * as SentryNode from '@sentry/node';
 import electron from 'electron';
 import log from 'electron-log';
@@ -20,15 +20,16 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 const BrowserWindow = electron.BrowserWindow;
 
 process.on('uncaughtException', (error) => {
+    Sentry.captureException(error);
     log.error(error);
 });
 
-// if (process.env.NODE_ENV !== 'development') {
-//     Sentry.init({
-//         dsn: 'https://02e4da31636d479f86a17a6ef749278c@sentry.io/1876151',
-//         release: app.getVersion()
-//     });
-// }
+if (process.env.NODE_ENV !== 'development') {
+    Sentry.init({
+        dsn: 'http://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
+        release: app.getVersion()
+    });
+}
 
 function createMainWindow(
     websocketArg: SocketIO.Server

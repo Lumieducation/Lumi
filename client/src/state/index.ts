@@ -1,5 +1,5 @@
 import { combineReducers, applyMiddleware, compose, createStore } from 'redux';
-
+import * as Sentry from '@sentry/react';
 import {
     loadTranslations,
     setLocale,
@@ -36,7 +36,11 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 log.info(`initializing store`);
 
-const middleWares = [thunk /*createSentryMiddleware(Sentry)*/];
+const sentryReduxEnhancer = Sentry.createReduxEnhancer({
+    // Optionally pass options listed below
+});
+
+const middleWares = [thunk];
 
 // state - reducer
 const rootReducer = () =>
@@ -50,7 +54,7 @@ const rootReducer = () =>
 const store = createStore(
     rootReducer(),
     persistentState,
-    composeEnhancers(applyMiddleware(...middleWares))
+    composeEnhancers(applyMiddleware(...middleWares), sentryReduxEnhancer)
 );
 
 export interface IState
