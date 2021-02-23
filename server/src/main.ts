@@ -1,5 +1,4 @@
 import * as Sentry from '@sentry/electron';
-// import * as SentryNode from '@sentry/node';
 import electron from 'electron';
 import log from 'electron-log';
 import os from 'os';
@@ -12,6 +11,8 @@ import updater from './updater';
 import websocketFactory from './websocket';
 import serverConfigFactory from './serverConfig';
 
+import bootSentry from './boot/sentry';
+
 const app = electron.app;
 let websocket: SocketIO.Server;
 let mainWindow: electron.BrowserWindow;
@@ -19,17 +20,14 @@ let port: number;
 const isDevelopment = process.env.NODE_ENV === 'development';
 const BrowserWindow = electron.BrowserWindow;
 
+bootSentry(
+    serverConfigFactory(process.env.USERDATA || app.getPath('userData'))
+);
+
 process.on('uncaughtException', (error) => {
     Sentry.captureException(error);
     log.error(error);
 });
-
-if (process.env.NODE_ENV !== 'development') {
-    Sentry.init({
-        dsn: 'http://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
-        release: app.getVersion()
-    });
-}
 
 function createMainWindow(
     websocketArg: SocketIO.Server
@@ -100,7 +98,8 @@ app.on('activate', () => {
 app.on('ready', async () => {
     log.info('app is ready');
     const server = await httpServerFactory(
-        serverConfigFactory(process.env.USERDATA || app.getPath('userData'))
+        serverConfigFactory(process.env.USERDATA || app.getPath('userData')),
+        mainWindow
     );
     log.info('server booted');
 

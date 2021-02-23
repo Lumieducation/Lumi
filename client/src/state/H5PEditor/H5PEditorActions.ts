@@ -1,5 +1,5 @@
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
-
+import * as Sentry from '@sentry/browser';
 import Logger from '../../helpers/Logger';
 
 import {
@@ -143,6 +143,8 @@ export function exportH5P(includeReporter: boolean): any {
                         type: H5PEDITOR_EXPORT_CANCEL
                     });
                 } else {
+                    Sentry.captureException(error);
+
                     dispatch({
                         payload: {
                             error,
@@ -154,6 +156,8 @@ export function exportH5P(includeReporter: boolean): any {
                 }
             }
         } catch (error) {
+            Sentry.captureException(error);
+
             dispatch({
                 payload: {
                     error
@@ -166,13 +170,15 @@ export function exportH5P(includeReporter: boolean): any {
 
 export function openH5P(): any {
     return (dispatch: any) => {
-        api.openFiles().then((response) => {
-            const files = response.body;
+        api.openFiles()
+            .then((response) => {
+                const files = response.body;
 
-            files.forEach((file: string) => {
-                dispatch(importH5P(file));
-            });
-        });
+                files.forEach((file: string) => {
+                    dispatch(importH5P(file));
+                });
+            })
+            .catch((error) => Sentry.captureException(error));
         return dispatch;
     };
 }
@@ -236,6 +242,7 @@ export function updateContentOnServer(): any {
             const data = await window.h5peditor.current?.save();
             return data;
         } catch (error) {
+            Sentry.captureException(error);
             return;
         }
     };
@@ -290,6 +297,7 @@ export function updateContent(
 
             return response;
         } catch (error) {
+            Sentry.captureException(error);
             dispatch({
                 payload: {
                     tabId
@@ -324,6 +332,8 @@ export function loadEditorContent(
 
             return content;
         } catch (error) {
+            Sentry.captureException(error);
+
             throw new Error(error);
         }
     };
@@ -374,6 +384,8 @@ export function deleteH5P(
                 });
             })
             .catch((error) => {
+                Sentry.captureException(error);
+
                 return dispatch({
                     error,
                     payload: { contentId },
@@ -409,6 +421,8 @@ export function save(
                     type: H5PEDITOR_SAVE_CANCEL
                 });
             } else {
+                Sentry.captureException(error);
+
                 dispatch({
                     error,
                     payload: { path },
@@ -438,14 +452,16 @@ export function importH5P(
                     type: H5P_IMPORT_SUCCESS
                 });
             })
-            .catch((error: Error) =>
+            .catch((error: Error) => {
+                Sentry.captureException(error);
+
                 dispatch({
                     error,
                     payload: {
                         path
                     },
                     type: H5P_IMPORT_ERROR
-                })
-            );
+                });
+            });
     };
 }

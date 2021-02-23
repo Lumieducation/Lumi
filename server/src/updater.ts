@@ -1,6 +1,7 @@
 import { dialog } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import SocketIO from 'socket.io';
+import * as Sentry from '@sentry/electron';
 
 let updateAvailable: boolean = false;
 let updating: boolean = false;
@@ -19,6 +20,10 @@ export default function boot(
             },
             type: 'MESSAGE'
         });
+    });
+
+    autoUpdater.on('error', (error) => {
+        Sentry.captureException(error);
     });
 
     app.on('will-quit', (event) => {

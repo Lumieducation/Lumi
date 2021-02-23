@@ -1,5 +1,6 @@
 import express from 'express';
 import { dialog } from 'electron';
+import * as Sentry from '@sentry/electron';
 import fs from 'fs';
 import recursiveReaddir from 'recursive-readdir';
 
@@ -80,6 +81,7 @@ export default function (): express.Router {
             try {
                 getInteractions(contentJson, interactions);
             } catch (error) {
+                Sentry.captureException(error);
                 return res.status(500).json(error);
             }
 
@@ -113,7 +115,8 @@ export default function (): express.Router {
             //     }
             // );
         } catch (error) {
-            res.status(500).json(error);
+            Sentry.captureException(error);
+            // res.status(500).json(error);
         }
     });
 

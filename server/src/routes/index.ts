@@ -1,4 +1,5 @@
 import express from 'express';
+import electron from 'electron';
 import { H5PEditor, H5PPlayer } from '@lumieducation/h5p-server';
 import {
     h5pAjaxExpressRouter,
@@ -13,6 +14,7 @@ import Logger from '../helpers/Logger';
 import IServerConfig from '../IServerConfig';
 import h5pRoutes from './h5pRoutes';
 import analyticRoutes from './analyticRoutes';
+import settingsRoutes from './settingsRoutes';
 
 import User from '../User';
 
@@ -21,7 +23,8 @@ const log = new Logger('routes');
 export default function (
     h5pEditor: H5PEditor,
     h5pPlayer: H5PPlayer,
-    serverConfig: IServerConfig
+    serverConfig: IServerConfig,
+    browserWindow: electron.BrowserWindow
 ): express.Router {
     const router = express.Router();
 
@@ -35,6 +38,8 @@ export default function (
         (req as any).user = new User();
         next();
     });
+
+    router.use('/api/v1/settings', settingsRoutes(serverConfig, browserWindow));
 
     // // Directly serving the library and content files statically speeds up
     // // loading times and there is no security issue, as Lumi never is a

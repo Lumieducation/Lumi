@@ -47,6 +47,10 @@ export class WebsocketContainer extends React.Component<
             log.info('connected');
         });
 
+        this.socket.on('error', (error: any) => {
+            Sentry.captureException(error);
+        });
+
         this.socket.on('action', (action: any) => {
             switch (action.type) {
                 case 'IMPORT_ANALYTICS':
@@ -101,6 +105,8 @@ export class WebsocketContainer extends React.Component<
             log.info(`saving ${activeTab.contentId}`);
             dispatch(actions.h5peditor.save());
         } catch (error) {
+            Sentry.captureException(error);
+
             log.error(error);
         }
     }
@@ -111,6 +117,8 @@ export class WebsocketContainer extends React.Component<
             log.info(`saving ${activeTab.contentId}`);
             dispatch(actions.h5peditor.save(activeTab.path));
         } catch (error) {
+            Sentry.captureException(error);
+
             log.error(error);
         }
     }

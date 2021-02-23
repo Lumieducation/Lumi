@@ -1,3 +1,5 @@
+import * as Sentry from '@sentry/browser';
+
 import {
     ANALYTICS_IMPORT_REQUEST,
     ANALYTICS_IMPORT_SUCCESS,
@@ -21,12 +23,15 @@ export function importAnalytics(): any {
                 type: ANALYTICS_IMPORT_SUCCESS
             });
         } catch (error) {
+            Sentry.captureException(error);
             try {
                 dispatch({
                     payload: { message: error.response.body.message },
                     type: ANALYTICS_IMPORT_ERROR
                 });
             } catch (error) {
+                Sentry.captureException(error);
+
                 dispatch({
                     payload: { message: 'no valid data' },
                     type: ANALYTICS_IMPORT_ERROR

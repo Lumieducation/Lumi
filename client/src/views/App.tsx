@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import { useDispatch } from 'react-redux';
 import Logger from '../helpers/Logger';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -13,12 +13,21 @@ import H5PEditor from './H5PEditor';
 import Analytics from './Analytics';
 import Launchpad from './Launchpad';
 
+import SetupDialog from './components/SetupDialog';
+
 import Websocket from './Websocket';
+
+import { actions } from '../state';
 
 const log = new Logger('container:app');
 
-export default function AppContaine() {
+export default function AppContainer() {
     log.info(`rendering`);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(actions.settings.getSettings());
+    });
     return (
         <div id="app">
             <CssBaseline />
@@ -39,6 +48,7 @@ export default function AppContaine() {
                     <Route path="/" component={Launchpad} />
                 </Switch>
             </Router>
+            <SetupDialog />
             <Notifications />
         </div>
     );
