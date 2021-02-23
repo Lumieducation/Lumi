@@ -3,7 +3,7 @@ import { app } from 'electron';
 import fsExtra from 'fs-extra';
 import IServerConfig from '../IServerConfig';
 
-export default async function boot(serverConfig: IServerConfig) {
+export default async function boot(serverConfig: IServerConfig): void {
     if (process.env.NODE_ENV !== 'development') {
         if (await fsExtra.pathExists(serverConfig.settingsFile)) {
             const settings = await fsExtra.readJSON(serverConfig.settingsFile);

@@ -13,13 +13,7 @@ import Slide from '@material-ui/core/Slide';
 import { TransitionProps } from '@material-ui/core/transitions';
 import SettingsIcon from '@material-ui/icons/Settings';
 
-import BugReportIcon from '@material-ui/icons/BugReport';
-
-import Accordion from '@material-ui/core/Accordion';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import BugReportSettings from './components/BugReportSettings';
 
@@ -66,14 +60,14 @@ export default function FullScreenDialog() {
     const dispatch = useDispatch();
     const settings = useSelector((state: IState) => state.settings);
     const [open, setOpen] = React.useState(false);
-    const [expanded, setExpanded] = React.useState<string | false>(false);
+    // const [expanded, setExpanded] = React.useState<string | false>(false);
 
-    const handleChange = (panel: string) => (
-        event: React.ChangeEvent<{}>,
-        isExpanded: boolean
-    ) => {
-        setExpanded(isExpanded ? panel : false);
-    };
+    // const handleChange = (panel: string) => (
+    //     event: React.ChangeEvent<{}>,
+    //     isExpanded: boolean
+    // ) => {
+    //     setExpanded(isExpanded ? panel : false);
+    // };
 
     const handleClickOpen = () => {
         setOpen(true);
