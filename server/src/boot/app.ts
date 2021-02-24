@@ -93,7 +93,10 @@ export default async (
 
     const app = express();
 
-    if (process.env.NODE_ENV !== 'development') {
+    if (
+        process.env.NODE_ENV !== 'development' &&
+        process.env.NODE_ENV !== 'CI'
+    ) {
         if (await fsExtra.pathExists(serverConfig.settingsFile)) {
             const settings = await fsExtra.readJSON(serverConfig.settingsFile);
 
