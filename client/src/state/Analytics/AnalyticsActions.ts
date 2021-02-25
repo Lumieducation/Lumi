@@ -6,6 +6,8 @@ import {
     ANALYTICS_IMPORT_ERROR
 } from './AnalyticsTypes';
 
+import { track } from '../track/actions';
+
 import * as API from './AnalyticsAPI';
 
 export function importAnalytics(): any {
@@ -15,8 +17,15 @@ export function importAnalytics(): any {
             type: ANALYTICS_IMPORT_REQUEST
         });
 
+        track('Analytics', 'import');
         try {
             const { users, interactions } = await API.importAnalytics();
+            track(
+                'Analytics',
+                'import',
+                'content-types',
+                `${interactions.map((i) => i.name)}`
+            );
 
             dispatch({
                 payload: { users, interactions },

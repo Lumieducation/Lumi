@@ -31,7 +31,7 @@ export default function (
 
     log.info('setting up routes');
 
-    router.use('/api/v1/track', trackingRoutes());
+    router.use('/api/v1/track', trackingRoutes(serverConfig));
     router.use('/api/v1/analytics', analyticRoutes());
 
     // Adding dummy user to make sure all requests can be handled

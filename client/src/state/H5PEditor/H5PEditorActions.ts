@@ -50,6 +50,8 @@ import {
 import * as selectors from './H5PEditorSelectors';
 import shortid from 'shortid';
 
+import { track } from '../track/actions';
+
 import store from '../index';
 
 import * as api from './H5PApi';
@@ -128,6 +130,7 @@ export function exportH5P(includeReporter: boolean): any {
             try {
                 await api.exportAsHtml(data.contentId, includeReporter);
 
+                track('H5P', 'export', 'tracker', `${includeReporter}`);
                 dispatch({
                     payload: { contentId: data.contentId, includeReporter },
                     type: H5PEDITOR_EXPORT_SUCCESS
@@ -409,6 +412,12 @@ export function save(
 
             const response = await api.exportH5P(data.contentId, path);
 
+            try {
+                track('H5P', 'save');
+            } catch (error) {
+                Sentry.captureException(error);
+            }
+
             dispatch({
                 // tslint:disable-next-line: object-shorthand-properties-first
                 payload: { id: data.contentId, ...response.body },
@@ -447,6 +456,17 @@ export function importH5P(
         return api
             .importH5P(path)
             .then(({ body }) => {
+                try {
+                    track(
+                        'H5P',
+                        'import',
+                        'content-type',
+                        body.metadata.mainLibrary
+                    );
+                } catch (error) {
+                    Sentry.captureException(error);
+                }
+
                 dispatch({
                     payload: { tabId, path, h5p: body },
                     type: H5P_IMPORT_SUCCESS

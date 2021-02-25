@@ -11,6 +11,8 @@ import updater from './updater';
 import websocketFactory from './websocket';
 import serverConfigFactory from './serverConfig';
 import fsExtra from 'fs-extra';
+import matomo from './matomo';
+import { machineId } from 'node-machine-id';
 
 const app = electron.app;
 let websocket: SocketIO.Server;
@@ -124,4 +126,26 @@ app.on('ready', async () => {
 
     mainWindow = createMainWindow(websocket);
     log.info('window created');
+
+    try {
+        if (
+            (await fsExtra.readJSON(serverConfig.settingsFile)).usageStatistics
+        ) {
+            console.log(os.type());
+
+            const data = {
+                url: '/Lumi',
+                _id: await machineId(),
+                uid: await machineId(),
+                e_c: 'App',
+                e_a: 'start',
+                lang: electron.app.getLocale(),
+                country: electron.app.getLocaleCountryCode(),
+                ua: os.type()
+            };
+            matomo.track(data);
+        }
+    } catch (error) {
+        Sentry.captureException(error);
+    }
 });
