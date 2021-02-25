@@ -6,6 +6,9 @@ import fsExtra from 'fs-extra';
 import electron from 'electron';
 import * as os from 'os';
 import { machineId } from 'node-machine-id';
+import cryptoRandomString from 'crypto-random-string';
+
+const id = cryptoRandomString({ length: 16 });
 
 export default function (serverConfig: IServerConfig): express.Router {
     const router = express.Router();
@@ -25,7 +28,7 @@ export default function (serverConfig: IServerConfig): express.Router {
                     const { action, category, name, value } = req.body;
                     const data = {
                         url: '/Lumi',
-                        _id: await machineId(),
+                        _id: id,
                         uid: await machineId(),
                         e_c: category,
                         e_a: action,
