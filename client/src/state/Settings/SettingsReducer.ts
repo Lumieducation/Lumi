@@ -10,7 +10,10 @@ import {
 export const initialState: ISettingsState = {
     firstOpen: false,
     lastVersion: '',
-    bugTracking: false
+    bugTracking: false,
+    usageStatistics: false,
+    privacyPolicyConsent: false,
+    autoUpdates: false
 };
 
 export default function settingsReducer(
@@ -20,6 +23,15 @@ export default function settingsReducer(
     try {
         switch (action.type) {
             case SETTINGS_GET_SETTINGS_SUCCESS:
+                if (action.payload.firstOpen) {
+                    return {
+                        ...action.payload,
+                        privacyPolicyConsent: true,
+                        usageStatistics: true,
+                        bugTracking: true,
+                        autoUpdates: true
+                    };
+                }
                 return action.payload;
 
             case SETTINGS_CHANGE:

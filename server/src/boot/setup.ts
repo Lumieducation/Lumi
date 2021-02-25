@@ -3,8 +3,7 @@ import fsExtra from 'fs-extra';
 
 import IServerConfig from '../IServerConfig';
 import { fsImplementations, H5PConfig } from '@lumieducation/h5p-server';
-
-import { app } from 'electron';
+import defaultSettings from './defaultSettings';
 
 export default async function setup(
     serverConfig: IServerConfig
@@ -27,11 +26,7 @@ export default async function setup(
         }
 
         if (!settingOk) {
-            await fsExtra.writeJSON(serverConfig.settingsFile, {
-                bugTracking: true,
-                firstOpen: true,
-                lastVersion: app.getVersion()
-            });
+            await fsExtra.writeJSON(serverConfig.settingsFile, defaultSettings);
         }
 
         // Check if current config exists and is read- and parsable

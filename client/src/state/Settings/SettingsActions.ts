@@ -55,6 +55,10 @@ export function updateSettings(settings: ISettingsState): any {
                 payload: settings,
                 type: SETTINGS_UPDATE_SUCCESS
             });
+
+            if (settings.privacyPolicyConsent) {
+                await API.updateContentTypeCache();
+            }
         } catch (error) {
             Sentry.captureException(error);
 

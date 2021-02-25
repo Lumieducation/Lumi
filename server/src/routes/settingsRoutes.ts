@@ -6,7 +6,8 @@ import IServerConfig from '../IServerConfig';
 
 export default function (
     serverConfig: IServerConfig,
-    browserWindow: electron.BrowserWindow
+    browserWindow: electron.BrowserWindow,
+    app: express.Application
 ): express.Router {
     const router = express.Router();
     router.get(
@@ -38,33 +39,12 @@ export default function (
         ) => {
             try {
                 if (req.body) {
+                    await fsExtra.readJSON(serverConfig.settingsFile);
+
                     await fsExtra.writeJSON(
                         serverConfig.settingsFile,
                         req.body
                     );
-
-                    enum Answers {
-                        Restart,
-                        Later
-                    }
-
-                    const messageBox = await electron.dialog.showMessageBox(
-                        browserWindow,
-                        {
-                            title: 'Settings changed',
-                            message:
-                                'You have changed your settings. The settings will be active after the next restart.',
-                            buttons: ['Restart now', 'Later'],
-                            icon: electron.nativeImage.createFromPath(
-                                `${__dirname}/../../../electron/assets/lumi.png`
-                            )
-                        }
-                    );
-
-                    if (messageBox.response === Answers.Restart) {
-                        electron.app.relaunch();
-                        electron.app.exit();
-                    }
 
                     res.status(200).json(req.body);
                 }

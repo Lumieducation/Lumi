@@ -24,7 +24,8 @@ export default function (
     h5pEditor: H5PEditor,
     h5pPlayer: H5PPlayer,
     serverConfig: IServerConfig,
-    browserWindow: electron.BrowserWindow
+    browserWindow: electron.BrowserWindow,
+    app: express.Application
 ): express.Router {
     const router = express.Router();
 
@@ -39,7 +40,10 @@ export default function (
         next();
     });
 
-    router.use('/api/v1/settings', settingsRoutes(serverConfig, browserWindow));
+    router.use(
+        '/api/v1/settings',
+        settingsRoutes(serverConfig, browserWindow, app)
+    );
 
     // // Directly serving the library and content files statically speeds up
     // // loading times and there is no security issue, as Lumi never is a
@@ -100,7 +104,7 @@ export default function (
         contentTypeCacheExpressRouter(h5pEditor.contentTypeCache)
     );
 
-    router.use('/api/v1/lumi', lumiRoutes(h5pEditor));
+    router.use('/api/v1/lumi', lumiRoutes(h5pEditor, serverConfig));
 
     router.get('*', express.static(`${__dirname}/../../client`));
 

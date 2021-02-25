@@ -6,6 +6,9 @@ export interface ISettingsState {
     bugTracking: boolean;
     firstOpen: boolean;
     lastVersion: string;
+    privacyPolicyConsent: boolean;
+    usageStatistics: boolean;
+    autoUpdates: boolean;
 }
 
 export const SETTINGS_GET_SETTINGS_REQUEST = 'SETTINGS_GET_SETTINGS_REQUEST';
@@ -32,7 +35,6 @@ export interface IGetSettingsSuccessAction {
     payload: ISettingsState;
     type: typeof SETTINGS_GET_SETTINGS_SUCCESS;
 }
-
 export interface IGetSettingsErrorAction {
     payload: {
         error: string;
@@ -48,9 +50,8 @@ export interface IUpdateSettingsRequestAction {
 }
 
 export interface IUpdateSettingsSuccessAction {
-    payload: {
-        update: Partial<ISettingsState>;
-    };
+    payload: ISettingsState;
+
     type: typeof SETTINGS_UPDATE_SUCCESS;
 }
 

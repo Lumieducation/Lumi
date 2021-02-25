@@ -10,8 +10,7 @@ import updateMenu from './menu';
 import updater from './updater';
 import websocketFactory from './websocket';
 import serverConfigFactory from './serverConfig';
-
-import bootSentry from './boot/sentry';
+import fsExtra from 'fs-extra';
 
 const app = electron.app;
 let websocket: SocketIO.Server;
@@ -20,9 +19,20 @@ let port: number;
 const isDevelopment = process.env.NODE_ENV === 'development';
 const BrowserWindow = electron.BrowserWindow;
 
-bootSentry(
-    serverConfigFactory(process.env.USERDATA || app.getPath('userData'))
+const serverConfig = serverConfigFactory(
+    process.env.USERDATA || app.getPath('userData')
 );
+Sentry.init({
+    dsn: 'http://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
+    release: app.getVersion(),
+    environment: process.env.NODE_ENV,
+    beforeSend: async (event: Sentry.Event) => {
+        if (await fsExtra.readJSON(serverConfig.settingsFile)) {
+            return event;
+        }
+        return null;
+    }
+});
 
 process.on('uncaughtException', (error) => {
     Sentry.captureException(error);
@@ -109,7 +119,7 @@ app.on('ready', async () => {
     websocket = websocketFactory(server);
     log.info('websocket created');
 
-    updater(app, websocket);
+    updater(app, websocket, serverConfig);
     log.info('updater started');
 
     mainWindow = createMainWindow(websocket);

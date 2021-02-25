@@ -3,12 +3,16 @@ import { H5PEditor } from '@lumieducation/h5p-server';
 import * as Sentry from '@sentry/node';
 import LumiController from '../controllers/LumiController';
 import Logger from '../helpers/Logger';
+import IServerConfig from '../IServerConfig';
 
 const log = new Logger('routes:lumi-h5p');
 
-export default function (h5pEditor: H5PEditor): express.Router {
+export default function (
+    h5pEditor: H5PEditor,
+    serverConfig: IServerConfig
+): express.Router {
     const router = express.Router();
-    const lumiController = new LumiController(h5pEditor);
+    const lumiController = new LumiController(h5pEditor, serverConfig);
 
     router.get(
         '/package/:contentId',

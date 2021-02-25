@@ -8,6 +8,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
 import BugReportIcon from '@material-ui/icons/BugReport';
 
@@ -75,6 +76,17 @@ export default function BugReportSettingsCard() {
                     }
                     label="Allow"
                 />
+                <a
+                    href="https://next.lumi.education/app/privacy-policy"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                        color: 'inherit',
+                        textDecoration: 'inherit'
+                    }}
+                >
+                    <Button size="small">Privacy Policy</Button>
+                </a>
             </CardActions>
         </Card>
     );

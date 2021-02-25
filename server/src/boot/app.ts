@@ -93,10 +93,7 @@ export default async (
 
     const app = express();
 
-    if (
-        process.env.NODE_ENV !== 'development' &&
-        process.env.NODE_ENV !== 'CI'
-    ) {
+    if (process.env.NODE_ENV !== 'development') {
         if (await fsExtra.pathExists(serverConfig.settingsFile)) {
             const settings = await fsExtra.readJSON(serverConfig.settingsFile);
 
@@ -106,6 +103,15 @@ export default async (
                         'http://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
                     release: electron.app.getVersion(),
                     environment: process.env.NODE_ENV,
+                    beforeSend: async (event: Sentry.Event) => {
+                        if (
+                            (await fsExtra.readJSON(serverConfig.settingsFile))
+                                .bugTracking
+                        ) {
+                            return event;
+                        }
+                        return null;
+                    },
                     integrations: [
                         // enable HTTP calls tracing
                         new Sentry.Integrations.Http({ tracing: true }),
@@ -158,7 +164,10 @@ export default async (
     // (H5P.adapters.express) to function properly.
     app.use(i18nextHttpMiddleware.handle(i18next));
 
-    app.use('/', routes(h5pEditor, h5pPlayer, serverConfig, browserWindow));
+    app.use(
+        '/',
+        routes(h5pEditor, h5pPlayer, serverConfig, browserWindow, app)
+    );
 
     // The error handler must be before any other error middleware and after all controllers
     app.use(Sentry.Handlers.errorHandler());
