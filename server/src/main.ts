@@ -131,8 +131,6 @@ app.on('ready', async () => {
         if (
             (await fsExtra.readJSON(serverConfig.settingsFile)).usageStatistics
         ) {
-            console.log(os.type());
-
             const data = {
                 url: '/Lumi',
                 _id: await machineId(),
