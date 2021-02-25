@@ -24,7 +24,6 @@ export default function (serverConfig: IServerConfig): express.Router {
                     (await fsExtra.readJSON(serverConfig.settingsFile))
                         .usageStatistics
                 ) {
-                    console.log(os.type());
                     const { action, category, name, value } = req.body;
                     const data = {
                         url: '/Lumi',
@@ -35,7 +34,6 @@ export default function (serverConfig: IServerConfig): express.Router {
                         e_n: name,
                         e_v: value,
                         lang: electron.app.getLocale(),
-                        country: electron.app.getLocaleCountryCode(),
                         ua: os.type()
                     };
                     matomo.track(data);
