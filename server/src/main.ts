@@ -138,7 +138,6 @@ app.on('ready', async () => {
                 e_c: 'App',
                 e_a: 'start',
                 lang: electron.app.getLocale(),
-                country: electron.app.getLocaleCountryCode(),
                 ua: os.type()
             };
             matomo.track(data);
