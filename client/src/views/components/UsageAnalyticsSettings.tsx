@@ -10,7 +10,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
-import BugReportIcon from '@material-ui/icons/BugReport';
+import InsertChartIcon from '@material-ui/icons/InsertChart';
 
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
@@ -36,7 +36,7 @@ const useStyles = makeStyles({
     }
 });
 
-export default function BugReportSettingsCard() {
+export default function UsageStatisticsSettingsCard() {
     const classes = useStyles();
     const settings = useSelector((state: IState) => state.settings);
     const dispatch = useDispatch();
@@ -45,11 +45,11 @@ export default function BugReportSettingsCard() {
         <Card className={classes.root}>
             <CardActionArea>
                 <CardMedia className={classes.media} title="Lumi Analytics">
-                    <BugReportIcon className={classes.analyticsIcon} />
+                    <InsertChartIcon className={classes.analyticsIcon} />
                 </CardMedia>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Bug & Crash Reports
+                        Usage Statistics
                     </Typography>
                     <Typography
                         variant="body2"
@@ -57,7 +57,7 @@ export default function BugReportSettingsCard() {
                         component="p"
                     >
                         Help us improve our software and services by sending
-                        anonymous crash & bug reports.
+                        anonymous usage statistics.
                     </Typography>
                 </CardContent>
             </CardActionArea>
@@ -65,11 +65,11 @@ export default function BugReportSettingsCard() {
                 <FormControlLabel
                     control={
                         <Switch
-                            checked={settings.bugTracking}
+                            checked={settings.usageStatistics}
                             onChange={() =>
                                 dispatch(
                                     actions.settings.changeSetting({
-                                        bugTracking: !settings.bugTracking
+                                        usageStatistics: !settings.usageStatistics
                                     })
                                 )
                             }

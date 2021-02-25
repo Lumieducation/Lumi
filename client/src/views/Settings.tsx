@@ -16,8 +16,10 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import Typography from '@material-ui/core/Typography';
 
 import BugReportSettings from './components/BugReportSettings';
+import UpdateSettings from './components/UpdateSettngs';
 
 import { actions, IState } from '../state';
+import UsageStatisticsSettingsCard from './components/UsageAnalyticsSettings';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -130,6 +132,8 @@ export default function FullScreenDialog() {
                         <AccordionDetails> */}
                     <div className={classes.center}>
                         <BugReportSettings />
+                        <UsageStatisticsSettingsCard />
+                        <UpdateSettings />
                     </div>
                     {/* </AccordionDetails>
                     </Accordion> */}
