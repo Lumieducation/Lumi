@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import AnalyticsIcon from '@material-ui/icons/ShowChart';
-
+import RunIcon from '@material-ui/icons/CloudUpload';
 import { I18n } from 'react-redux-i18n';
 
 import MainSection from './components/MainSection';
@@ -153,6 +153,59 @@ export default function MediaCard() {
                                 <Button size="small" color="primary">
                                     <Link
                                         to="/analytics"
+                                        style={{
+                                            color: 'inherit',
+                                            textDecoration: 'inherit'
+                                        }}
+                                    >
+                                        {I18n.t('analytics.startPage.start')}
+                                    </Link>
+                                </Button>
+                            </CardActions>
+                        </Card>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Card id="launchpad-run" className={classes.card}>
+                            <Link
+                                to="/run"
+                                style={{
+                                    color: 'inherit',
+                                    textDecoration: 'inherit'
+                                }}
+                            >
+                                <CardActionArea>
+                                    <CardMedia
+                                        className={classes.media}
+                                        title="Lumi Run"
+                                    >
+                                        <RunIcon
+                                            className={classes.analyticsIcon}
+                                        />
+                                    </CardMedia>
+                                    <CardContent>
+                                        <Typography
+                                            gutterBottom
+                                            variant="h5"
+                                            component="h2"
+                                        >
+                                            Lumi Run
+                                        </Typography>
+                                        <Typography
+                                            variant="body2"
+                                            color="textSecondary"
+                                            component="p"
+                                        >
+                                            {I18n.t(
+                                                'analytics.startPage.welcomeMessage'
+                                            )}
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                            </Link>
+                            <CardActions>
+                                <Button size="small" color="primary">
+                                    <Link
+                                        to="/run"
                                         style={{
                                             color: 'inherit',
                                             textDecoration: 'inherit'

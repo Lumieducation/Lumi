@@ -1,0 +1,297 @@
+{
+  "semantics": [
+    {
+      "label": "时间轴",
+      "fields": [
+        {
+          "label": "标题文字",
+          "description": "主要时间轴的标题（显示在第一页）。"
+        },
+        {
+          "label": "内文文字",
+          "description": "主要时间轴的内文（显示在第一页）。"
+        },
+        {
+          "label": "预设缩放等级",
+          "description": "这将调整预设缩放等级，等同点击放大或缩小按钮所指定的层级。负数代表缩小，初始值为 0。"
+        },
+        {
+          "label": "背景图片",
+          "description": "用来当做时间轴背景的图片。"
+        },
+        {
+          "label": "高度",
+          "description": "时间轴的显示高度，单位为像素（px）"
+        },
+        {
+          "label": "资料来源",
+          "description": "你可以添加一个资料来源说明，这会在时间轴主页上显示。",
+          "fields": [
+            {
+              "label": "媒体",
+              "description": "来源位址连接（目前支持 Twitter、YouTube、Flickr、Vimeo、Google Maps、SoundCloud）。"
+            },
+            {
+              "label": "致谢",
+              "description": "感谢此媒体的制作，或是版权的提供。"
+            },
+            {
+              "label": "说明",
+              "description": "关于媒体的说明文字。"
+            }
+          ]
+        },
+        {
+          "label": "时间轴内容",
+          "description": "添加要在时间轴上显示的日期还有文字等内容。",
+          "field": {
+            "label": "日期",
+            "description": "日期",
+            "fields": [
+              {
+                "label": "开始日期",
+                "description": "年月日格式为 YYYY,MM,DD，至少要有年，可用负数表示公元前。"
+              },
+              {
+                "label": "结束日期",
+                "description": "年月日格式为 YYYY,MM,DD，至少要有年，可用负数表示公元前。"
+              },
+              {
+                "label": "标题文字",
+                "description": "这段期间要显示的标题。"
+              },
+              {
+                "label": "内文文字",
+                "description": "这段期间要显示的内文。"
+              },
+              {
+                "label": "分类标签",
+                "description": "非必要项，可输入标签作为分类。"
+              },
+              {
+                "label": "资料来源",
+                "description": "",
+                "fields": [
+                  {
+                    "label": "媒体",
+                    "description": "来源位址连接（目前支持 Twitter、YouTube、Flickr、Vimeo、Google Maps、SoundCloud）。"
+                  },
+                  {
+                    "label": "缩图",
+                    "description": "如果需要的话，可以添加一个尺寸为 32x32 的缩图。"
+                  },
+                  {
+                    "label": "致谢",
+                    "description": "感谢此媒体的制作，或是版权的提供。"
+                  },
+                  {
+                    "label": "说明",
+                    "description": "关于媒体的说明文字。"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "时代",
+          "description": "额外为时间轴添加划时代的分隔线，可以有很多的分类形式，例如 宋朝、罗马帝国、19世纪、工业时代、90后…等等。",
+          "field": {
+            "label": "时代",
+            "description": "",
+            "fields": [
+              {
+                "label": "开始日期",
+                "description": "年月日格式为 YYYY,MM,DD，至少要有年，可用负数表示公元前。"
+              },
+              {
+                "label": "结束日期",
+                "description": "年月日格式为 YYYY,MM,DD，至少要有年，可用负数表示公元前。"
+              },
+              {
+                "label": "标题文字",
+                "description": "这个期间要显示的标题。"
+              },
+              {
+                "label": "内文文字",
+                "description": "这个期间要显示的内文。"
+              },
+              {
+                "label": "分类标签",
+                "description": "非必填项，可输入标签作为分类。"
+              }
+            ]
+          }
+        },
+        {
+          "label": "语言",
+          "description": "时间轴界面显示的语言。",
+          "options": [
+            {
+              "label": "南非荷兰语"
+            },
+            {
+              "label": "阿拉伯语"
+            },
+            {
+              "label": "亚美尼亚语"
+            },
+            {
+              "label": "巴斯克语"
+            },
+            {
+              "label": "保加利亚语"
+            },
+            {
+              "label": "加泰罗尼亚语"
+            },
+            {
+              "label": "中文"
+            },
+            {
+              "label": "克罗地亚语 / 克罗埃西亚语"
+            },
+            {
+              "label": "捷克语"
+            },
+            {
+              "label": "丹麦语"
+            },
+            {
+              "label": "荷兰语"
+            },
+            {
+              "label": "英语"
+            },
+            {
+              "label": "英语 (24小时制)"
+            },
+            {
+              "label": "世界语"
+            },
+            {
+              "label": "爱沙尼亚语"
+            },
+            {
+              "label": "法罗群岛"
+            },
+            {
+              "label": "波斯语"
+            },
+            {
+              "label": "芬兰语"
+            },
+            {
+              "label": "法语"
+            },
+            {
+              "label": "加利西亚语"
+            },
+            {
+              "label": "格鲁吉亚语"
+            },
+            {
+              "label": "德语 / 德语"
+            },
+            {
+              "label": "希腊语"
+            },
+            {
+              "label": "希伯来语"
+            },
+            {
+              "label": "匈牙利语"
+            },
+            {
+              "label": "冰岛语"
+            },
+            {
+              "label": "印度尼西亚语"
+            },
+            {
+              "label": "意大利语"
+            },
+            {
+              "label": "日语"
+            },
+            {
+              "label": "韩语"
+            },
+            {
+              "label": "拉脱维亚语"
+            },
+            {
+              "label": "立陶宛语"
+            },
+            {
+              "label": "卢森堡语"
+            },
+            {
+              "label": "马来语"
+            },
+            {
+              "label": "尼泊尔语"
+            },
+            {
+              "label": "挪威语"
+            },
+            {
+              "label": "波兰语"
+            },
+            {
+              "label": "葡萄牙语"
+            },
+            {
+              "label": "葡萄牙语（巴西）"
+            },
+            {
+              "label": "罗曼什语"
+            },
+            {
+              "label": "俄语"
+            },
+            {
+              "label": "塞尔维亚语 - 斯拉夫语"
+            },
+            {
+              "label": "塞尔维亚语 - 拉丁语"
+            },
+            {
+              "label": "僧伽罗语"
+            },
+            {
+              "label": "斯洛伐克语"
+            },
+            {
+              "label": "斯洛文尼亚语"
+            },
+            {
+              "label": "西班牙语"
+            },
+            {
+              "label": "瑞典语"
+            },
+            {
+              "label": "他加禄语"
+            },
+            {
+              "label": "泰米尔语"
+            },
+            {
+              "label": "台湾话"
+            },
+            {
+              "label": "泰卢固语"
+            },
+            {
+              "label": "土耳其语"
+            },
+            {
+              "label": "乌克兰语"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "semantics": [
+    {
+      "label": "タイムライン",
+      "fields": [
+        {
+          "label": "見出し",
+          "description": "メインのタイムライン上の見出しはここ (最初のページ)"
+        },
+        {
+          "label": "本文テキスト",
+          "description": "メインのタイムライン上の本文はここ (最初のページ)"
+        },
+        {
+          "label": "既定のズーム レベル",
+          "description": "これは、既定のズーム レベルを微調整します。指定した回数だけズームインまたはズームアウトボタンを押すのと同じことです。負の数はズームアウトします。デフォルトは0です。"
+        },
+        {
+          "label": "背景画像",
+          "description": "背景として表示する画像。"
+        },
+        {
+          "label": "高さ",
+          "description": "高さ（ピクセル単位）"
+        },
+        {
+          "label": "アセット",
+          "description": "タイムラインの「フロントページ」にアセットを追加できます。",
+          "fields": [
+            {
+              "label": "メディア",
+              "description": "メディアの URL へのリンク（Twitter、YouTube、Flickr、Vimeo、Google マップ、SoundCloud が現在サポートされています）"
+            },
+            {
+              "label": "クレジット",
+              "description": "メディアのクレジット"
+            },
+            {
+              "label": "キャプション",
+              "description": "キャプションの説明がここに入ります"
+            }
+          ]
+        },
+        {
+          "label": "日付",
+          "description": "タイムラインにいくつかの日付を追加 !",
+          "field": {
+            "label": "日付",
+            "description": "日付",
+            "fields": [
+              {
+                "label": "開始日",
+                "description": "YYYY.MM.DD (YYYYは必須)"
+              },
+              {
+                "label": "終了日",
+                "description": "YYYY.MM.DD (YYYYは必須)"
+              },
+              {
+                "label": "見出し",
+                "description": "日付エントリの見出し"
+              },
+              {
+                "label": "本文テキスト",
+                "description": "日付エントリの本文"
+              },
+              {
+                "label": "タグ",
+                "description": "タグを入力（カテゴリ）"
+              },
+              {
+                "label": "アセット",
+                "description": "",
+                "fields": [
+                  {
+                    "label": "メディア",
+                    "description": "メディアの URL へのリンク（Twitter、YouTube、Vimeo、Wikipedia、Google マップ、SoundCloud が現在サポートされています）"
+                  },
+                  {
+                    "label": "サムネイル",
+                    "description": "必要なら32x32のサムネイルを追加してください。"
+                  },
+                  {
+                    "label": "クレジット",
+                    "description": "メディアのクレジット"
+                  },
+                  {
+                    "label": "キャプション",
+                    "description": "キャプションテキスト"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "時代",
+          "description": "タイムラインに時代を追加",
+          "field": {
+            "label": "時代",
+            "description": "",
+            "fields": [
+              {
+                "label": "開始日",
+                "description": "YYYY.MM.DD (YYYYは必須)"
+              },
+              {
+                "label": "終了日",
+                "description": "YYYY.MM.DD (YYYYは必須)"
+              },
+              {
+                "label": "見出し",
+                "description": "時代の見出し"
+              },
+              {
+                "label": "テキスト",
+                "description": "時代の本文"
+              },
+              {
+                "label": "タグ",
+                "description": "時代のタグ（カテゴリ）"
+              }
+            ]
+          }
+        },
+        {
+          "label": "言語",
+          "description": "ユーザーインターフェイスの言語",
+          "options": [
+            {
+              "label": "アフリカーンス語"
+            },
+            {
+              "label": "アラビア語"
+            },
+            {
+              "label": "アルメニア語"
+            },
+            {
+              "label": "バスク語"
+            },
+            {
+              "label": "ブルガリア語"
+            },
+            {
+              "label": "カタロニア語"
+            },
+            {
+              "label": "中国語"
+            },
+            {
+              "label": "クロアチア語 / ウルグアイアン"
+            },
+            {
+              "label": "チェコ語"
+            },
+            {
+              "label": "デンマーク語"
+            },
+            {
+              "label": "オランダ語"
+            },
+            {
+              "label": "英語"
+            },
+            {
+              "label": "英語（24 時間）"
+            },
+            {
+              "label": "エスペラント語"
+            },
+            {
+              "label": "エストニア語"
+            },
+            {
+              "label": "フェロー語"
+            },
+            {
+              "label": "ペルシア語"
+            },
+            {
+              "label": "フィンランド語"
+            },
+            {
+              "label": "フランス語"
+            },
+            {
+              "label": "ガリシア語"
+            },
+            {
+              "label": "グルジア語"
+            },
+            {
+              "label": "ドイツ語"
+            },
+            {
+              "label": "ギリシャ語"
+            },
+            {
+              "label": "ヘブライ語"
+            },
+            {
+              "label": "ハンガリー語"
+            },
+            {
+              "label": "アイスランド語"
+            },
+            {
+              "label": "インドネシア語"
+            },
+            {
+              "label": "イタリア語"
+            },
+            {
+              "label": "日本語"
+            },
+            {
+              "label": "韓国語"
+            },
+            {
+              "label": "ラトビア語"
+            },
+            {
+              "label": "リトアニア語"
+            },
+            {
+              "label": "ルクセンブルク語"
+            },
+            {
+              "label": "マレーシア語"
+            },
+            {
+              "label": "ネパール語"
+            },
+            {
+              "label": "ノルウェー語"
+            },
+            {
+              "label": "ポーランド語"
+            },
+            {
+              "label": "ポルトガル語"
+            },
+            {
+              "label": "ポルトガル語 (ブラジル語)"
+            },
+            {
+              "label": "ロマンシュ語"
+            },
+            {
+              "label": "ロシア語"
+            },
+            {
+              "label": "セルビア語 (キリル文字)"
+            },
+            {
+              "label": "セルビア語（ラテン）"
+            },
+            {
+              "label": "シンハラ語"
+            },
+            {
+              "label": "スロバキア語"
+            },
+            {
+              "label": "スロベニア語"
+            },
+            {
+              "label": "スペイン語"
+            },
+            {
+              "label": "スウェーデン語"
+            },
+            {
+              "label": "タガログ語"
+            },
+            {
+              "label": "タミール語"
+            },
+            {
+              "label": "台湾語"
+            },
+            {
+              "label": "テルグ語"
+            },
+            {
+              "label": "トルコ語"
+            },
+            {
+              "label": "ウクライナ語"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -15,6 +15,7 @@ import Launchpad from './Launchpad';
 
 import SetupDialog from './components/SetupDialog';
 
+import RunPage from './Run';
 import Websocket from './Websocket';
 
 import { actions } from '../state';
@@ -45,6 +46,7 @@ export default function AppContainer() {
                         path="/analytics"
                         component={Analytics}
                     />
+                    <Route exact={true} path="/run" component={RunPage} />
                     <Route path="/" component={Launchpad} />
                 </Switch>
             </Router>
