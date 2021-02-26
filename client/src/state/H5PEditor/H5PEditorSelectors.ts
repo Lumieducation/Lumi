@@ -1,4 +1,5 @@
 import Logger from '../../helpers/Logger';
+import * as Sentry from '@sentry/browser';
 
 import { ITab, Modes } from './H5PEditorTypes';
 import { IState } from '../';
@@ -20,6 +21,8 @@ export function all(state: IState): ITab[] {
         log.debug(`selecting tab-list`);
         return state.h5peditor.tabList || [];
     } catch (error) {
+        Sentry.captureException(error);
+
         log.error(error);
         return [];
     }
@@ -30,6 +33,8 @@ export function activeTabIndex(state: IState): number {
         log.debug(`selecting activeTabIndex`);
         return state.h5peditor.activeTabIndex || 0;
     } catch (error) {
+        Sentry.captureException(error);
+
         log.error(error);
         return 0;
     }
@@ -43,6 +48,8 @@ export function activeTab(state: IState): ITab {
             errorObject
         );
     } catch (error) {
+        Sentry.captureException(error);
+
         log.error(error);
         return errorObject;
     }
@@ -52,6 +59,8 @@ export function noActiveTabs(state: IState): boolean {
     try {
         return state.h5peditor.tabList.length === 0;
     } catch (error) {
+        Sentry.captureException(error);
+
         log.error(error);
         return false;
     }
@@ -68,6 +77,8 @@ export function viewDisabled(state: IState): boolean {
         return state.h5peditor.tabList[state.h5peditor.activeTabIndex]
             .viewDisabled;
     } catch (error) {
+        Sentry.captureException(error);
+
         return true;
     }
 }

@@ -1,4 +1,5 @@
 import express from 'express';
+import electron from 'electron';
 import { H5PEditor, H5PPlayer } from '@lumieducation/h5p-server';
 import {
     h5pAjaxExpressRouter,
@@ -13,6 +14,7 @@ import Logger from '../helpers/Logger';
 import IServerConfig from '../IServerConfig';
 import h5pRoutes from './h5pRoutes';
 import analyticRoutes from './analyticRoutes';
+import settingsRoutes from './settingsRoutes';
 
 import User from '../User';
 
@@ -21,13 +23,15 @@ const log = new Logger('routes');
 export default function (
     h5pEditor: H5PEditor,
     h5pPlayer: H5PPlayer,
-    serverConfig: IServerConfig
+    serverConfig: IServerConfig,
+    browserWindow: electron.BrowserWindow,
+    app: express.Application
 ): express.Router {
     const router = express.Router();
 
     log.info('setting up routes');
 
-    router.use('/api/v1/track', trackingRoutes());
+    router.use('/api/v1/track', trackingRoutes(serverConfig));
     router.use('/api/v1/analytics', analyticRoutes());
 
     // Adding dummy user to make sure all requests can be handled
@@ -35,6 +39,11 @@ export default function (
         (req as any).user = new User();
         next();
     });
+
+    router.use(
+        '/api/v1/settings',
+        settingsRoutes(serverConfig, browserWindow, app)
+    );
 
     // // Directly serving the library and content files statically speeds up
     // // loading times and there is no security issue, as Lumi never is a
@@ -95,7 +104,7 @@ export default function (
         contentTypeCacheExpressRouter(h5pEditor.contentTypeCache)
     );
 
-    router.use('/api/v1/lumi', lumiRoutes(h5pEditor));
+    router.use('/api/v1/lumi', lumiRoutes(h5pEditor, serverConfig));
 
     router.get('*', express.static(`${__dirname}/../../client`));
 

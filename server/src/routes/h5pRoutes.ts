@@ -1,4 +1,5 @@
 import express from 'express';
+import * as Sentry from '@sentry/node';
 
 import { dialog } from 'electron';
 
@@ -41,6 +42,7 @@ export default function (
             res.send(content);
             res.status(200).end();
         } catch (error) {
+            Sentry.captureException(error);
             res.status(500).end(error.message);
         }
     });
@@ -118,6 +120,7 @@ export default function (
 
             await fsExtra.writeFileSync(path, html);
         } catch (error) {
+            Sentry.captureException(error);
             res.status(500).json(error);
         }
 
@@ -157,6 +160,7 @@ export default function (
             !req.body.library ||
             !req.user
         ) {
+            Sentry.captureMessage('Malformed request');
             res.status(400).send('Malformed request').end();
             return;
         }
@@ -174,6 +178,7 @@ export default function (
             res.send(JSON.stringify({ contentId, metadata }));
             res.status(200).end();
         } catch (error) {
+            Sentry.captureException(error);
             if (error instanceof H5P.H5pError) {
                 res.status(error.httpStatusCode).send(error.message).end();
             }
@@ -206,6 +211,7 @@ export default function (
             res.send(JSON.stringify({ contentId, metadata }));
             res.status(200).end();
         } catch (error) {
+            Sentry.captureException(error);
             if (error instanceof H5P.H5pError) {
                 res.status(error.httpStatusCode).send(error.message).end();
             }
@@ -216,6 +222,7 @@ export default function (
         try {
             await h5pEditor.deleteContent(req.params.contentId, req.user);
         } catch (error) {
+            Sentry.captureException(error);
             res.send(
                 `Error deleting content with id ${req.params.contentId}: ${error.message}`
             );

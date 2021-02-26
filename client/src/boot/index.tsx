@@ -1,4 +1,4 @@
-// import Sentry from './Sentry';
+import Sentry from './Sentry';
 
 import Logger from '../helpers/Logger';
 
@@ -19,8 +19,7 @@ import App from '../views/App';
 const log = new Logger('root');
 
 log.info(`booting v${process.env.VERSION}`);
-// Sentry.captureMessage('start');
-
+Sentry.captureMessage('start');
 declare var window: any;
 
 window.editor = {};

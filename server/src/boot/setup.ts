@@ -3,6 +3,7 @@ import fsExtra from 'fs-extra';
 
 import IServerConfig from '../IServerConfig';
 import { fsImplementations, H5PConfig } from '@lumieducation/h5p-server';
+import defaultSettings from './defaultSettings';
 
 export default async function setup(
     serverConfig: IServerConfig
@@ -12,6 +13,21 @@ export default async function setup(
         await fsExtra.mkdirp(serverConfig.workingCachePath);
         await fsExtra.mkdirp(serverConfig.librariesPath);
         await fsExtra.mkdirp(serverConfig.temporaryStoragePath);
+
+        // Check if current settings exists and is read- and parsable
+        let settingOk = false;
+        try {
+            if (await fsExtra.pathExists(serverConfig.settingsFile)) {
+                await fsExtra.readJSON(serverConfig.settingsFile);
+                settingOk = true;
+            }
+        } catch (error) {
+            settingOk = false;
+        }
+
+        if (!settingOk) {
+            await fsExtra.writeJSON(serverConfig.settingsFile, defaultSettings);
+        }
 
         // Check if current config exists and is read- and parsable
         let configOk = false;

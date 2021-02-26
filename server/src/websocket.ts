@@ -1,5 +1,5 @@
 import SocketIO from 'socket.io';
-// import * as Sentry from '@sentry/node';
+import * as Sentry from '@sentry/node';
 import http from 'http';
 
 import Logger from './helpers/Logger';
@@ -19,8 +19,8 @@ export default function (server: http.Server): SocketIO.Server {
         });
     });
 
-    // io.on('error', (error) => {
-    //     Sentry.captureException(error);
-    // });
+    io.on('error', (error) => {
+        Sentry.captureException(error);
+    });
     return io;
 }

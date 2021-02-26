@@ -1,5 +1,4 @@
-// import * as Sentry from '@sentry/electron';
-// import * as SentryNode from '@sentry/node';
+import * as Sentry from '@sentry/electron';
 import electron from 'electron';
 import log from 'electron-log';
 import os from 'os';
@@ -11,6 +10,9 @@ import updateMenu from './menu';
 import updater from './updater';
 import websocketFactory from './websocket';
 import serverConfigFactory from './serverConfig';
+import fsExtra from 'fs-extra';
+import matomo from './matomo';
+import { machineId } from 'node-machine-id';
 
 const app = electron.app;
 let websocket: SocketIO.Server;
@@ -19,16 +21,25 @@ let port: number;
 const isDevelopment = process.env.NODE_ENV === 'development';
 const BrowserWindow = electron.BrowserWindow;
 
-process.on('uncaughtException', (error) => {
-    log.error(error);
+const serverConfig = serverConfigFactory(
+    process.env.USERDATA || app.getPath('userData')
+);
+Sentry.init({
+    dsn: 'http://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
+    release: app.getVersion(),
+    environment: process.env.NODE_ENV,
+    beforeSend: async (event: Sentry.Event) => {
+        if (await fsExtra.readJSON(serverConfig.settingsFile)) {
+            return event;
+        }
+        return null;
+    }
 });
 
-// if (process.env.NODE_ENV !== 'development') {
-//     Sentry.init({
-//         dsn: 'https://02e4da31636d479f86a17a6ef749278c@sentry.io/1876151',
-//         release: app.getVersion()
-//     });
-// }
+process.on('uncaughtException', (error) => {
+    Sentry.captureException(error);
+    log.error(error);
+});
 
 function createMainWindow(
     websocketArg: SocketIO.Server
@@ -99,7 +110,8 @@ app.on('activate', () => {
 app.on('ready', async () => {
     log.info('app is ready');
     const server = await httpServerFactory(
-        serverConfigFactory(process.env.USERDATA || app.getPath('userData'))
+        serverConfigFactory(process.env.USERDATA || app.getPath('userData')),
+        mainWindow
     );
     log.info('server booted');
 
@@ -109,9 +121,28 @@ app.on('ready', async () => {
     websocket = websocketFactory(server);
     log.info('websocket created');
 
-    updater(app, websocket);
+    updater(app, websocket, serverConfig);
     log.info('updater started');
 
     mainWindow = createMainWindow(websocket);
     log.info('window created');
+
+    try {
+        if (
+            (await fsExtra.readJSON(serverConfig.settingsFile)).usageStatistics
+        ) {
+            const data = {
+                url: '/Lumi',
+                _id: await machineId(),
+                uid: await machineId(),
+                e_c: 'App',
+                e_a: 'start',
+                lang: electron.app.getLocale(),
+                ua: os.type()
+            };
+            matomo.track(data);
+        }
+    } catch (error) {
+        Sentry.captureException(error);
+    }
 });
