@@ -27,6 +27,9 @@ import * as SettingsTypes from './Settings/SettingsTypes';
 import SettingsReducer from './Settings/SettingsReducer';
 import * as SettingsActions from './Settings/SettingsActions';
 
+import RunReducer from './Run/RunReducer';
+import * as RunTypes from './Run/RunTypes';
+import * as RunActions from './Run/RunActions';
 import thunk from 'redux-thunk';
 
 import Logger from '../helpers/Logger';
@@ -53,6 +56,7 @@ const rootReducer = () =>
         h5peditor: H5PEditorReducer,
         analytics: AnalyticsReducer,
         settings: SettingsReducer,
+        run: RunReducer,
         i18n: i18nReducer
     });
 
@@ -66,13 +70,15 @@ export interface IState
     extends H5PEditorTypes.IState,
         NotificationsTypes.IState,
         AnalyticsTypes.IState,
-        SettingsTypes.IState {}
+        SettingsTypes.IState,
+        RunTypes.IState {}
 
 export const actions = {
     notifications: NotificationsActions,
     h5peditor: H5PEditorActions,
     analytics: AnalyticsActions,
-    settings: SettingsActions
+    settings: SettingsActions,
+    run: RunActions
 };
 
 export const selectors = {

@@ -14,6 +14,7 @@ import Analytics from './Analytics';
 import Launchpad from './Launchpad';
 
 import SetupDialog from './components/SetupDialog';
+import RunUploadDialog from './components/RunUploadDialog';
 
 import RunPage from './Run';
 import Websocket from './Websocket';
@@ -51,6 +52,7 @@ export default function AppContainer() {
                 </Switch>
             </Router>
             <SetupDialog />
+            <RunUploadDialog />
             <Notifications />
         </div>
     );

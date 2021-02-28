@@ -23,7 +23,8 @@ import User from '../User';
 
 export default async (
     serverConfig: IServerConfig,
-    browserWindow: electron.BrowserWindow
+    browserWindow: electron.BrowserWindow,
+    websocket: SocketIO.Server
 ) => {
     const translationFunction = await i18next
         .use(i18nextFsBackend)
@@ -166,7 +167,14 @@ export default async (
 
     app.use(
         '/',
-        routes(h5pEditor, h5pPlayer, serverConfig, browserWindow, app)
+        routes(
+            h5pEditor,
+            h5pPlayer,
+            serverConfig,
+            browserWindow,
+            app,
+            websocket
+        )
     );
 
     // The error handler must be before any other error middleware and after all controllers
