@@ -195,9 +195,8 @@ export default function MediaCard() {
                                             color="textSecondary"
                                             component="p"
                                         >
-                                            {I18n.t(
-                                                'analytics.startPage.welcomeMessage'
-                                            )}
+                                            Lumi Run allows you to upload H5P to
+                                            Lumi.run and host your H5P online.
                                         </Typography>
                                     </CardContent>
                                 </CardActionArea>

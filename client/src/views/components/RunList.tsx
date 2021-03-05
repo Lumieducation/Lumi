@@ -44,6 +44,11 @@ export default function FolderList(props: {
             subheader={<ListSubheader>Uploaded H5P</ListSubheader>}
             className={classes.root}
         >
+            {runs.length === 0 && (
+                <ListItem>
+                    <ListItemText primary={'no uploaded H5P'}></ListItemText>
+                </ListItem>
+            )}
             {runs.map((run) => (
                 <div key={run.id}>
                     <Divider variant="inset" component="li" />

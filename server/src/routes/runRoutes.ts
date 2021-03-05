@@ -398,6 +398,11 @@ export default function (
 
                 res.status(200).json(response);
             } catch (error) {
+                if (error.status === 404) {
+                    const run = await fs.readJSON(serverConfig.runFile);
+                    run.runs = run.runs.filter((r) => r.id !== req.params.id);
+                    await fs.writeJSON(serverConfig.runFile, run);
+                }
                 Sentry.captureException(error);
                 res.status(500).end();
             }
