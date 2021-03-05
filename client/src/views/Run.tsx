@@ -53,7 +53,11 @@ export default function FolderList() {
 
     return (
         <div>
-            <RunList />
+            <RunList
+                deleteCallback={(id: string, secret: string) =>
+                    dispatch(actions.run.deleteFromRun(id, secret))
+                }
+            />
 
             <Grid container={true} spacing={2} justify="center">
                 <Grid item={true}>

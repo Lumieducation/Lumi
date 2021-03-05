@@ -35,7 +35,9 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-export default function FolderList() {
+export default function FolderList(props: {
+    deleteCallback: (id: string, secret: string) => void;
+}) {
     const classes = useStyles();
     const runs = useSelector((state: IState) => state.run.runs);
 
@@ -65,7 +67,13 @@ export default function FolderList() {
                             </form>
                         </div>
                         <ListItemSecondaryAction>
-                            <IconButton edge="end" aria-label="delete">
+                            <IconButton
+                                onClick={() =>
+                                    props.deleteCallback(run.id, run.secret)
+                                }
+                                edge="end"
+                                aria-label="delete"
+                            >
                                 <DeleteIcon />
                             </IconButton>
                         </ListItemSecondaryAction>

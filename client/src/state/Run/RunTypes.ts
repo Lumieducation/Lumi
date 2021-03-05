@@ -78,6 +78,29 @@ export interface IRunUploadErrorAction {
     type: typeof RUN_UPLOAD_ERROR;
 }
 
+export const RUN_DELETE_REQUEST = 'RUN_DELETE_REQUEST';
+export const RUN_DELETE_SUCCESS = 'RUN_DELETE_SUCCESS';
+export const RUN_DELETE_ERROR = 'RUN_DELETE_ERROR';
+
+export interface IDeleteRunRequestAction {
+    payload: {
+        id: string;
+        secret: string;
+    };
+    type: typeof RUN_DELETE_REQUEST;
+}
+
+export interface IDeleteRunSuccessAction {
+    payload: IRunState;
+    type: typeof RUN_DELETE_SUCCESS;
+}
+export interface IDeleteRunErrorAction {
+    payload: {
+        error: string;
+    };
+    type: typeof RUN_DELETE_ERROR;
+}
+
 export type RunActionTypes =
     | IGetRunsRequestAction
     | IGetRunsSuccessAction
@@ -85,4 +108,7 @@ export type RunActionTypes =
     | IRunUploadRequestAction
     | IRunUploadSuccessAction
     | IRunUploadErrorAction
-    | IRunUpdateState;
+    | IRunUpdateState
+    | IDeleteRunRequestAction
+    | IDeleteRunSuccessAction
+    | IDeleteRunErrorAction;

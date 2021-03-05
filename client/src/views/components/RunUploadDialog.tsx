@@ -29,6 +29,7 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import CodeIcon from '@material-ui/icons/Code';
 import DoneIcon from '@material-ui/icons/Done';
 import ImportExportIcon from '@material-ui/icons/ImportExport';
+import ErrorIcon from '@material-ui/icons/Error';
 import { IState } from '../../state';
 import CircularProgress, {
     CircularProgressProps
@@ -183,7 +184,7 @@ function uploadStateIcon(
         case 'error':
             return (
                 <IconButton>
-                    <DoneIcon />
+                    <ErrorIcon />
                 </IconButton>
             );
     }

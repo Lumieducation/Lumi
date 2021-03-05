@@ -152,6 +152,7 @@ export default function (
                     }
                 });
             } catch (error) {
+                Sentry.captureException(error);
                 return websocket.emit('action', {
                     type: 'action',
                     payload: {
@@ -176,7 +177,7 @@ export default function (
             }
 
             try {
-                const includeReporter = req.query.includeReporter === 'true';
+                const includeReporter = true; //= req.query.includeReporter === 'true';
 
                 const reporterClient = await fsExtra.readFileSync(
                     `${__dirname}/../../../reporter-client/build/static/js/2.chunk.js`,
@@ -254,6 +255,7 @@ export default function (
                     }
                 });
             } catch (error) {
+                Sentry.captureException(error);
                 return websocket.emit('action', {
                     type: 'action',
                     payload: {
@@ -321,7 +323,7 @@ export default function (
 
                 await fs.remove(htmlFilePath);
                 await fs.remove(
-                    path.join(serverConfig.workingCachePath, contentId)
+                    path.join(serverConfig.workingCachePath, `${contentId}`)
                 );
 
                 websocket.emit('action', {
@@ -346,6 +348,7 @@ export default function (
                     }
                 });
             } catch (error) {
+                Sentry.captureException(error);
                 return websocket.emit('action', {
                     type: 'action',
                     payload: {
@@ -370,6 +373,30 @@ export default function (
             }
 
             res.status(200).json(run);
+        }
+    );
+
+    router.delete(
+        '/:id',
+        async (
+            req: express.Request,
+            res: express.Response,
+            next: express.NextFunction
+        ) => {
+            try {
+                const response = await superagent.delete(
+                    `http://lumi.run/${req.params.id}?secret=${req.query.secret}`
+                );
+
+                const run = await fs.readJSON(serverConfig.runFile);
+                run.runs = run.runs.filter((r) => r.id !== req.params.id);
+                await fs.writeJSON(serverConfig.runFile, run);
+
+                res.status(200).json(response);
+            } catch (error) {
+                Sentry.captureException(error);
+                res.status(500).end();
+            }
         }
     );
 

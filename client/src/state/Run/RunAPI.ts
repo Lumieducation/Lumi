@@ -10,13 +10,9 @@ export async function upload(): Promise<IRunState> {
     return (await superagent.post(`/api/v1/run/upload`)).body;
 }
 
-// export async function updateSettings(
-//     settings: ISettingsState
-// ): Promise<ISettingsState> {
-//     return (await await superagent.patch(`/api/v1/settings`).send(settings))
-//         .body;
-// }
-
-// export async function updateContentTypeCache(): Promise<superagent.Response> {
-//     return superagent.get(`/api/v1/h5p/content-type-cache/update`);
-// }
+export async function deleteFromRun(
+    id: string,
+    secret: string
+): Promise<superagent.Response> {
+    return await superagent.delete(`/api/v1/run/${id}?secret=${secret}`);
+}
