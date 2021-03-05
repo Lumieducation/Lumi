@@ -9,7 +9,10 @@ import {
     RUN_UPLOAD_ERROR,
     RUN_DELETE_REQUEST,
     RUN_DELETE_SUCCESS,
-    RUN_DELETE_ERROR
+    RUN_DELETE_ERROR,
+    IRunUpdateState,
+    RUN_UPDATE_STATE,
+    IRunState
 } from './RunTypes';
 
 import * as API from './RunAPI';
@@ -99,5 +102,12 @@ export function deleteFromRun(id: string, secret: string): any {
         } catch (error) {
             Sentry.captureException(error);
         }
+    };
+}
+
+export function updateState(payload: Partial<IRunState>): IRunUpdateState {
+    return {
+        payload,
+        type: RUN_UPDATE_STATE
     };
 }

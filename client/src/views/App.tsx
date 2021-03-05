@@ -50,9 +50,9 @@ export default function AppContainer() {
                     <Route exact={true} path="/run" component={RunPage} />
                     <Route path="/" component={Launchpad} />
                 </Switch>
+                <SetupDialog />
+                <RunUploadDialog />
             </Router>
-            <SetupDialog />
-            <RunUploadDialog />
             <Notifications />
         </div>
     );

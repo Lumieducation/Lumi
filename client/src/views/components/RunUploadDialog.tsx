@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import {
     createStyles,
@@ -21,20 +21,18 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import Switch from '@material-ui/core/Switch';
-import WifiIcon from '@material-ui/icons/Wifi';
-import BluetoothIcon from '@material-ui/icons/Bluetooth';
+
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import CodeIcon from '@material-ui/icons/Code';
 import DoneIcon from '@material-ui/icons/Done';
 import ImportExportIcon from '@material-ui/icons/ImportExport';
 import ErrorIcon from '@material-ui/icons/Error';
-import { IState } from '../../state';
+import { actions, IState } from '../../state';
 import CircularProgress, {
     CircularProgressProps
 } from '@material-ui/core/CircularProgress';
 import Box from '@material-ui/core/Box';
+import { Link } from 'react-router-dom';
 
 const styles = (theme: Theme) =>
     createStyles({
@@ -93,16 +91,29 @@ export default function CustomizedDialogs() {
     const uploadProgress = useSelector(
         (state: IState) => state.run.uploadProgress
     );
+    const dispatch = useDispatch();
 
     return (
         <Dialog
-            onClose={() => console.log('no')}
+            onClose={() =>
+                dispatch(
+                    actions.run.updateState({
+                        showDialog: false
+                    })
+                )
+            }
             aria-labelledby="customized-dialog-title"
             open={showDialog}
         >
             <DialogTitle
                 id="customized-dialog-title"
-                onClose={() => console.log('no')}
+                onClose={() =>
+                    dispatch(
+                        actions.run.updateState({
+                            showDialog: false
+                        })
+                    )
+                }
             >
                 Lumi Run
             </DialogTitle>
@@ -150,10 +161,28 @@ export default function CustomizedDialogs() {
                 </List>
             </DialogContent>
             <DialogActions>
-                <Button autoFocus color="secondary">
-                    Go to Run
-                </Button>
-                <Button autoFocus color="primary">
+                <Link
+                    to="/run"
+                    style={{
+                        color: 'inherit',
+                        textDecoration: 'inherit'
+                    }}
+                >
+                    <Button autoFocus color="secondary">
+                        Go to Run
+                    </Button>
+                </Link>
+                <Button
+                    onClick={() =>
+                        dispatch(
+                            actions.run.updateState({
+                                showDialog: false
+                            })
+                        )
+                    }
+                    autoFocus
+                    color="primary"
+                >
                     Ok
                 </Button>
             </DialogActions>
