@@ -86,6 +86,10 @@ export default function (
                 filePath = filePaths[0];
             }
 
+            if (!filePath) {
+                return res.status(499).end();
+            }
+
             let htmlFilePath;
             let contentId;
             let meta;
