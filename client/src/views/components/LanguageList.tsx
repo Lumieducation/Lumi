@@ -67,6 +67,7 @@ export default function LanguageList() {
                 <MenuItem value={'ru'}>русский</MenuItem>
                 <MenuItem value={'sl'}>slovenski jezik</MenuItem>
                 <MenuItem value={'sv'}>Svenska</MenuItem>
+                <MenuItem value={'tr'}>Türkçe</MenuItem>
                 <MenuItem value={'zh'}>中文 (Zhōngwén), 汉语, 漢語</MenuItem>
                 {/* <MenuItem value={'af'}>Afrikaans</MenuItem>
                 <MenuItem value={'sq'}>Shqip</MenuItem>
