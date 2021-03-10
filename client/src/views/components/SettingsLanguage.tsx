@@ -1,6 +1,5 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useTranslation } from 'react-i18next';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -9,14 +8,17 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import TranslateIcon from '@material-ui/icons/Translate';
 
-import UpdateIcon from '@material-ui/icons/Update';
+import { useTranslation } from 'react-i18next';
 
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Switch from '@material-ui/core/Switch';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
 import { IState, actions } from '../../state';
+import LanguageList from './LanguageList';
 
 const useStyles = makeStyles({
     root: {
@@ -34,61 +36,39 @@ const useStyles = makeStyles({
         margin: 'auto',
         height: 120,
         width: 120
+    },
+    formControl: {
+        width: '100%'
     }
 });
 
-export default function UsageStatisticsSettingsCard() {
+export default function BugReportSettingsCard() {
     const classes = useStyles();
-    const settings = useSelector((state: IState) => state.settings);
+    const language = useSelector((state: IState) => state.settings.language);
     const dispatch = useDispatch();
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     return (
         <Card className={classes.root}>
             <CardActionArea>
                 <CardMedia className={classes.media} title="Lumi Analytics">
-                    <UpdateIcon className={classes.analyticsIcon} />
+                    <TranslateIcon className={classes.analyticsIcon} />
                 </CardMedia>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        {t('updates.title')}
+                        {t('language.title')}
                     </Typography>
                     <Typography
                         variant="body2"
                         color="textSecondary"
                         component="p"
                     >
-                        {t('updates.description')}
+                        {t('language.description')}
                     </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <FormControlLabel
-                    control={
-                        <Switch
-                            checked={settings.autoUpdates}
-                            onChange={() =>
-                                dispatch(
-                                    actions.settings.changeSetting({
-                                        autoUpdates: !settings.autoUpdates
-                                    })
-                                )
-                            }
-                        />
-                    }
-                    label={t('settings.enable')}
-                />
-                <a
-                    href="https://next.lumi.education/app/privacy-policy"
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{
-                        color: 'inherit',
-                        textDecoration: 'inherit'
-                    }}
-                >
-                    <Button size="small">{t('privacy_policy.title')}</Button>
-                </a>
+                <LanguageList />
             </CardActions>
         </Card>
     );

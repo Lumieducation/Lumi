@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Logger from '../helpers/Logger';
@@ -14,6 +14,7 @@ import Analytics from './Analytics';
 import Launchpad from './Launchpad';
 
 import SetupDialog from './components/SetupDialog';
+import LoadingScreen from './components/LoadingScreen';
 
 import Websocket from './Websocket';
 
@@ -28,28 +29,31 @@ export default function AppContainer() {
     useEffect(() => {
         dispatch(actions.settings.getSettings());
     });
+
     return (
         <div id="app">
-            <CssBaseline />
-            <Websocket />
-            <Router>
-                <AppBar />
-                <Switch>
-                    <Route
-                        exact={true}
-                        path="/h5peditor"
-                        component={H5PEditor}
-                    />
-                    <Route
-                        exact={true}
-                        path="/analytics"
-                        component={Analytics}
-                    />
-                    <Route path="/" component={Launchpad} />
-                </Switch>
-            </Router>
-            <SetupDialog />
-            <Notifications />
+            <Suspense fallback={<LoadingScreen />}>
+                <CssBaseline />
+                <Websocket />
+                <Router>
+                    <AppBar />
+                    <Switch>
+                        <Route
+                            exact={true}
+                            path="/h5peditor"
+                            component={H5PEditor}
+                        />
+                        <Route
+                            exact={true}
+                            path="/analytics"
+                            component={Analytics}
+                        />
+                        <Route path="/" component={Launchpad} />
+                    </Switch>
+                </Router>
+                <SetupDialog />
+                <Notifications />
+            </Suspense>
         </div>
     );
 }

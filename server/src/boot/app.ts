@@ -44,6 +44,7 @@ export default async (
             debug: process.env.DEBUG && process.env.DEBUG.includes('i18n'),
             defaultNS: 'server',
             fallbackLng: 'en',
+            lng: (await fsExtra.readJSON(serverConfig.settingsFile)).language,
             ns: [
                 'client',
                 'copyright-semantics',

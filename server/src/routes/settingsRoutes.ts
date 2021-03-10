@@ -3,6 +3,7 @@ import fsExtra from 'fs-extra';
 import electron from 'electron';
 import * as Sentry from '@sentry/node';
 import IServerConfig from '../IServerConfig';
+import i18next from 'i18next';
 
 export default function (
     serverConfig: IServerConfig,
@@ -39,12 +40,22 @@ export default function (
         ) => {
             try {
                 if (req.body) {
-                    await fsExtra.readJSON(serverConfig.settingsFile);
+                    const settings = await fsExtra.readJSON(
+                        serverConfig.settingsFile
+                    );
 
                     await fsExtra.writeJSON(
                         serverConfig.settingsFile,
                         req.body
                     );
+
+                    if (
+                        req.body.language &&
+                        req.body.language !== settings.language
+                    ) {
+                        await i18next.loadLanguages(req.body.language);
+                        await i18next.changeLanguage(req.body.language);
+                    }
 
                     res.status(200).json(req.body);
                 }

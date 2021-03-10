@@ -16,6 +16,8 @@ import theme from '../theme';
 import { default as store } from '../state';
 import App from '../views/App';
 
+import './i18n';
+
 const log = new Logger('root');
 
 log.info(`booting v${process.env.VERSION}`);

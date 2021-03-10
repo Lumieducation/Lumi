@@ -1,5 +1,6 @@
 // import * as Sentry from '@sentry/node';
 import fsExtra from 'fs-extra';
+import { app } from 'electron';
 
 import IServerConfig from '../IServerConfig';
 import { fsImplementations, H5PConfig } from '@lumieducation/h5p-server';
@@ -26,7 +27,10 @@ export default async function setup(
         }
 
         if (!settingOk) {
-            await fsExtra.writeJSON(serverConfig.settingsFile, defaultSettings);
+            await fsExtra.writeJSON(serverConfig.settingsFile, {
+                ...defaultSettings,
+                language: app.getLocale()
+            });
         }
 
         // Check if current config exists and is read- and parsable

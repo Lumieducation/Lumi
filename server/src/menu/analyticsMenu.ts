@@ -1,11 +1,12 @@
 import electron from 'electron';
 import SocketIO from 'socket.io';
+import i18next from 'i18next';
 
 import helpMenu from './helpMenu';
 
 export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
     {
-        label: 'File',
+        label: i18next.t('menu.file.label'),
         submenu: [
             {
                 accelerator: 'CmdOrCtrl+O',
@@ -15,7 +16,7 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
                         type: 'IMPORT_ANALYTICS'
                     });
                 },
-                label: 'Open Analytic Files'
+                label: i18next.t('menu.file.open')
             },
             { type: 'separator' } as any,
             {
@@ -24,15 +25,15 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
         ]
     },
     {
-        label: 'Edit',
+        label: i18next.t('menu.file.edit'),
         submenu: [
             {
-                label: 'Undo',
+                label: i18next.t('menu.file.undo'),
                 accelerator: 'CmdOrCtrl+Z',
                 role: 'undo'
             },
             {
-                label: 'Redo',
+                label: i18next.t('menu.file.redo'),
                 accelerator:
                     process.platform !== 'darwin'
                         ? 'CmdOrCtrl+Y'
@@ -43,22 +44,22 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
                 type: 'separator'
             },
             {
-                label: 'Cut',
+                label: i18next.t('menu.file.cut'),
                 accelerator: 'CmdOrCtrl+X',
                 role: 'cut'
             },
             {
-                label: 'Copy',
+                label: i18next.t('menu.file.copy'),
                 accelerator: 'CmdOrCtrl+C',
                 role: 'copy'
             },
             {
-                label: 'Paste',
+                label: i18next.t('menu.file.paste'),
                 accelerator: 'CmdOrCtrl+V',
                 role: 'paste'
             },
             {
-                label: 'Select All',
+                label: i18next.t('menu.file.select_all'),
                 accelerator: 'CmdOrCtrl+A',
                 role: 'selectAll'
             }

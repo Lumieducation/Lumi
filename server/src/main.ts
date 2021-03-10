@@ -13,11 +13,15 @@ import serverConfigFactory from './serverConfig';
 import fsExtra from 'fs-extra';
 import matomo from './matomo';
 import { machineId } from 'node-machine-id';
+import boot_i18n from './boot/i18n';
+import i18next from 'i18next';
 
 const app = electron.app;
 let websocket: SocketIO.Server;
+let t;
 let mainWindow: electron.BrowserWindow;
 let port: number;
+let currentPath: string = '/';
 const isDevelopment = process.env.NODE_ENV === 'development';
 const BrowserWindow = electron.BrowserWindow;
 
@@ -52,7 +56,12 @@ function createMainWindow(
     });
 
     window.webContents.on('did-navigate-in-page', (event, url) => {
-        updateMenu(new URL(url).pathname, window, websocketArg);
+        currentPath = new URL(url).pathname;
+        updateMenu(currentPath, window, websocketArg);
+    });
+
+    i18next.on('languageChanged', (lng) => {
+        updateMenu(currentPath, window, websocketArg);
     });
 
     updateMenu('/', window, websocketArg);
@@ -114,6 +123,10 @@ app.on('ready', async () => {
         mainWindow
     );
     log.info('server booted');
+
+    t = await boot_i18n(
+        serverConfigFactory(process.env.USERDATA || app.getPath('userData'))
+    );
 
     port = (server.address() as any).port;
     log.info(`port is ${port}`);

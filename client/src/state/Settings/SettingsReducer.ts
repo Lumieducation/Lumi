@@ -1,4 +1,6 @@
 import * as Sentry from '@sentry/browser';
+import i18next from 'i18next';
+
 import {
     ISettingsActionTypes,
     ISettingsState,
@@ -13,7 +15,8 @@ export const initialState: ISettingsState = {
     bugTracking: false,
     usageStatistics: false,
     privacyPolicyConsent: false,
-    autoUpdates: false
+    autoUpdates: false,
+    language: 'en'
 };
 
 export default function settingsReducer(
@@ -23,6 +26,9 @@ export default function settingsReducer(
     try {
         switch (action.type) {
             case SETTINGS_GET_SETTINGS_SUCCESS:
+                // i18next.loadLanguages(action.payload.language);
+                // i18next.changeLanguage(action.payload.language);
+
                 if (action.payload.firstOpen) {
                     return {
                         ...action.payload,
