@@ -33,6 +33,15 @@ export default async function setup(
             });
         }
 
+        const settings = await fsExtra.readJSON(serverConfig.settingsFile);
+
+        if (!settings.language) {
+            fsExtra.writeJSON(serverConfig.settingsFile, {
+                ...settings,
+                language: app.getLocale()
+            });
+        }
+
         // Check if current config exists and is read- and parsable
         let configOk = false;
         try {
