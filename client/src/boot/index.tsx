@@ -7,7 +7,7 @@ import { ThemeProvider } from '@material-ui/styles';
 
 import { SnackbarProvider } from 'notistack';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
@@ -15,6 +15,7 @@ import theme from '../theme';
 
 import { default as store } from '../state';
 import App from '../views/App';
+import LoadingScreen from '../views/components/LoadingScreen';
 
 import './i18n';
 
@@ -40,7 +41,9 @@ function boot() {
                     }}
                     maxSnack={3}
                 >
-                    <App />
+                    <Suspense fallback={<LoadingScreen />}>
+                        <App />
+                    </Suspense>
                 </SnackbarProvider>
             </ThemeProvider>
             {/* </ConnectedRouter> */}

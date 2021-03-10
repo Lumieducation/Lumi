@@ -44,7 +44,31 @@ export default function LanguageList() {
                     i18n.changeLanguage(event.target.value as string);
                 }}
             >
-                <MenuItem value={'af'}>Afrikaans</MenuItem>
+                <MenuItem value={'bg'}>български език</MenuItem>
+                <MenuItem value={'bs'}>bosanski jezik</MenuItem>
+                <MenuItem value={'ca'}>català, valencià</MenuItem>
+                <MenuItem value={'cs'}>čeština, český jazyk</MenuItem>
+                <MenuItem value={'de'}>Deutsch</MenuItem>
+                <MenuItem value={'el'}>ελληνικά</MenuItem>
+                <MenuItem value={'en'}>Englisch</MenuItem>
+                <MenuItem value={'en-GB'}>Englisch (British)</MenuItem>
+                <MenuItem value={'es'}>Spanish</MenuItem>
+                <MenuItem value={'et'}>eesti, eesti keel</MenuItem>
+                <MenuItem value={'eu'}>euskara, euskera</MenuItem>
+                <MenuItem value={'fi'}>suomi, suomen kieli</MenuItem>
+                <MenuItem value={'fr'}>français</MenuItem>
+                <MenuItem value={'it'}>Italiano</MenuItem>
+                <MenuItem value={'km'}>ខ្មែរ, ខេមរភាសា, ភាសាខ្មែរ</MenuItem>
+                <MenuItem value={'ko'}>한국어</MenuItem>
+                <MenuItem value={'nb'}>Norsk Bokmål</MenuItem>
+                <MenuItem value={'nl'}>Nederlands</MenuItem>
+                <MenuItem value={'nn'}>Norsk Nynorsk</MenuItem>
+                <MenuItem value={'pt'}>Português</MenuItem>
+                <MenuItem value={'ru'}>русский</MenuItem>
+                <MenuItem value={'sl'}>slovenski jezik</MenuItem>
+                <MenuItem value={'sv'}>Svenska</MenuItem>
+                <MenuItem value={'zh'}>中文 (Zhōngwén), 汉语, 漢語</MenuItem>
+                {/* <MenuItem value={'af'}>Afrikaans</MenuItem>
                 <MenuItem value={'sq'}>Shqip</MenuItem>
                 <MenuItem value={'am'}>አማርኛ</MenuItem>
                 <MenuItem value={'ar'}>العربية</MenuItem>
@@ -53,10 +77,10 @@ export default function LanguageList() {
                 <MenuItem value={'eu'}>euskara</MenuItem>
                 <MenuItem value={'be'}>беларуская мова</MenuItem>
 
-                <MenuItem value={'de'}>Deutsch</MenuItem>
+               
                 <MenuItem value={'en'}>Englisch</MenuItem>
                 <MenuItem value={'en-GB'}>Englisch (British)</MenuItem>
-                <MenuItem value={'es'}>Spanish</MenuItem>
+                */}
             </Select>
         </FormControl>
     );

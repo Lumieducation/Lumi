@@ -1,6 +1,8 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+
 import Logger from '../helpers/Logger';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -14,46 +16,49 @@ import Analytics from './Analytics';
 import Launchpad from './Launchpad';
 
 import SetupDialog from './components/SetupDialog';
-import LoadingScreen from './components/LoadingScreen';
 
 import Websocket from './Websocket';
 
-import { actions } from '../state';
+import { actions, IState } from '../state';
 
 const log = new Logger('container:app');
 
 export default function AppContainer() {
     log.info(`rendering`);
     const dispatch = useDispatch();
-
+    const { i18n } = useTranslation();
+    let lock = false;
     useEffect(() => {
-        dispatch(actions.settings.getSettings());
-    });
+        dispatch(actions.settings.getSettings()).then(
+            async ({ language }: { language: string }) => {
+                await i18n.loadLanguages(language);
+                i18n.changeLanguage(language);
+            }
+        );
+    }, []);
 
     return (
         <div id="app">
-            <Suspense fallback={<LoadingScreen />}>
-                <CssBaseline />
-                <Websocket />
-                <Router>
-                    <AppBar />
-                    <Switch>
-                        <Route
-                            exact={true}
-                            path="/h5peditor"
-                            component={H5PEditor}
-                        />
-                        <Route
-                            exact={true}
-                            path="/analytics"
-                            component={Analytics}
-                        />
-                        <Route path="/" component={Launchpad} />
-                    </Switch>
-                </Router>
-                <SetupDialog />
-                <Notifications />
-            </Suspense>
+            <CssBaseline />
+            <Websocket />
+            <Router>
+                <AppBar />
+                <Switch>
+                    <Route
+                        exact={true}
+                        path="/h5peditor"
+                        component={H5PEditor}
+                    />
+                    <Route
+                        exact={true}
+                        path="/analytics"
+                        component={Analytics}
+                    />
+                    <Route path="/" component={Launchpad} />
+                </Switch>
+            </Router>
+            <SetupDialog />
+            <Notifications />
         </div>
     );
 }

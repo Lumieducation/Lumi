@@ -29,6 +29,7 @@ export function getSettings(): any {
                     payload: settings,
                     type: SETTINGS_GET_SETTINGS_SUCCESS
                 });
+                return settings;
             } catch (error) {
                 Sentry.captureException(error);
 
