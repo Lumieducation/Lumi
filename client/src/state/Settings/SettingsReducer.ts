@@ -1,5 +1,4 @@
 import * as Sentry from '@sentry/browser';
-import i18next from 'i18next';
 
 import {
     ISettingsActionTypes,
@@ -26,9 +25,6 @@ export default function settingsReducer(
     try {
         switch (action.type) {
             case SETTINGS_GET_SETTINGS_SUCCESS:
-                // i18next.loadLanguages(action.payload.language);
-                // i18next.changeLanguage(action.payload.language);
-
                 if (action.payload.firstOpen) {
                     return {
                         ...action.payload,

@@ -1,5 +1,4 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -12,12 +11,6 @@ import TranslateIcon from '@material-ui/icons/Translate';
 
 import { useTranslation } from 'react-i18next';
 
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-
-import { IState, actions } from '../../state';
 import LanguageList from './LanguageList';
 
 const useStyles = makeStyles({
@@ -44,9 +37,7 @@ const useStyles = makeStyles({
 
 export default function BugReportSettingsCard() {
     const classes = useStyles();
-    const language = useSelector((state: IState) => state.settings.language);
-    const dispatch = useDispatch();
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <Card className={classes.root}>
