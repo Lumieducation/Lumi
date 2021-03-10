@@ -165,6 +165,13 @@ export default async (
     // (H5P.adapters.express) to function properly.
     app.use(i18nextHttpMiddleware.handle(i18next));
 
+    app.use(async (req: any, res: any, next: express.NextFunction) => {
+        const languageCode = (await fsExtra.readJSON(serverConfig.settingsFile))
+            .language;
+        req.language = languageCode;
+        req.languages = [languageCode, 'en'];
+        next();
+    });
     app.use(
         '/',
         routes(h5pEditor, h5pPlayer, serverConfig, browserWindow, app)
