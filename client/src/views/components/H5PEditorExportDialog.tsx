@@ -19,7 +19,7 @@ export default function H5PEditorExportDialog() {
     );
 
     const dispatch = useDispatch();
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <div>
@@ -39,7 +39,7 @@ export default function H5PEditorExportDialog() {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            here
+                            {t('export_as_html.dialog.here')}
                         </a>
                         .
                     </DialogContentText>
