@@ -1,5 +1,6 @@
 {
     "editor": {
+        "default_name": "new H5P",
         "tab": {
             "view": "View",
             "edit": "Edit"
@@ -85,6 +86,42 @@
             "report_issue": "Report Issue",
             "toggle_developer_tools": "Toggle Developer Tools",
             "follow_us_on_twitter": "Follow Us on Twitter"
+        }
+    },
+    "notifications": {
+        "analytics": {
+            "import": {
+                "error": "No valid files found",
+                "success": "Imported report files"
+            }
+        },
+        "h5peditor": {
+            "save": {
+                "success": "H5P saved!",
+                "error": "H5P could not be saved."
+            },
+            "open": {
+                "error": "Could not open H5P."
+            },
+            "export_as_html": {
+                "success": "H5P successfully exported as HTML",
+                "error": "Could not export H5P as HTML"
+            },
+            "library": {
+                "The main title of the content hasn't been set.": "The main title of the content hasn't been set.",
+                "The parameters entered by the user are invalid.": "The parameters entered by the user are invalid.",
+                "saveContentCallback of H5P Editor Web Component not defined.": "saveContentCallback of H5P Editor Web Component not defined.",
+                "editorInstance of h5p editor not defined.": "editorInstance of h5p editor not defined."
+            }
+        },
+        "export_as_html": {
+            "dialog": {
+                "title": "Lumi reporter",
+                "description": "Do you want to include a reporter in your html? Learn more about it",
+                "yes": "yes",
+                "no": "no",
+                "here": "here"
+            }
         }
     }
 }

@@ -69,19 +69,6 @@ export default function LanguageList() {
                 <MenuItem value={'sv'}>Svenska</MenuItem>
                 <MenuItem value={'tr'}>Türkçe</MenuItem>
                 <MenuItem value={'zh'}>中文 (Zhōngwén), 汉语, 漢語</MenuItem>
-                {/* <MenuItem value={'af'}>Afrikaans</MenuItem>
-                <MenuItem value={'sq'}>Shqip</MenuItem>
-                <MenuItem value={'am'}>አማርኛ</MenuItem>
-                <MenuItem value={'ar'}>العربية</MenuItem>
-                <MenuItem value={'hy'}>Հայերեն</MenuItem>
-                <MenuItem value={'az'}>azərbaycan dili</MenuItem>
-                <MenuItem value={'eu'}>euskara</MenuItem>
-                <MenuItem value={'be'}>беларуская мова</MenuItem>
-
-               
-                <MenuItem value={'en'}>Englisch</MenuItem>
-                <MenuItem value={'en-GB'}>Englisch (British)</MenuItem>
-                */}
             </Select>
         </FormControl>
     );
