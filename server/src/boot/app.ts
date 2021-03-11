@@ -21,6 +21,8 @@ import createH5PEditor from './createH5PEditor';
 
 import User from '../User';
 
+import settingsCache from '../settingsCache';
+
 export default async (
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow
@@ -166,8 +168,7 @@ export default async (
     app.use(i18nextHttpMiddleware.handle(i18next));
 
     app.use(async (req: any, res: any, next: express.NextFunction) => {
-        const languageCode = (await fsExtra.readJSON(serverConfig.settingsFile))
-            .language;
+        const languageCode = settingsCache.getSettings().language;
         req.language = languageCode;
         req.languages = [languageCode, 'en'];
         next();

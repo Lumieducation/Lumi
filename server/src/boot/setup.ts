@@ -1,10 +1,12 @@
-// import * as Sentry from '@sentry/node';
+import * as Sentry from '@sentry/electron';
 import fsExtra from 'fs-extra';
 import { app } from 'electron';
 
 import IServerConfig from '../IServerConfig';
 import { fsImplementations, H5PConfig } from '@lumieducation/h5p-server';
 import defaultSettings from './defaultSettings';
+
+import settingsCache from '../settingsCache';
 
 export default async function setup(
     serverConfig: IServerConfig
@@ -33,11 +35,11 @@ export default async function setup(
             });
         }
 
-        const settings = await fsExtra.readJSON(serverConfig.settingsFile);
+        const checkSettings = await fsExtra.readJSON(serverConfig.settingsFile);
 
-        if (!settings.language) {
+        if (!checkSettings.language) {
             fsExtra.writeJSON(serverConfig.settingsFile, {
-                ...settings,
+                ...checkSettings,
                 language: app.getLocale()
             });
         }
@@ -75,8 +77,12 @@ export default async function setup(
             );
             await h5pConfig.save();
         }
+
+        settingsCache.setSettings(
+            await fsExtra.readJSON(serverConfig.settingsFile)
+        );
     } catch (error) {
-        // Sentry.captureException(error);
+        Sentry.captureException(error);
         throw error;
     }
 }

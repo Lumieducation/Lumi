@@ -5,6 +5,8 @@ import * as Sentry from '@sentry/node';
 import IServerConfig from '../IServerConfig';
 import i18next from 'i18next';
 
+import settingsCache from '../settingsCache';
+
 export default function (
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow,
@@ -56,6 +58,8 @@ export default function (
                         await i18next.loadLanguages(req.body.language);
                         await i18next.changeLanguage(req.body.language);
                     }
+
+                    settingsCache.setSettings(req.body);
 
                     res.status(200).json(req.body);
                 }

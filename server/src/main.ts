@@ -16,6 +16,8 @@ import { machineId } from 'node-machine-id';
 import boot_i18n from './boot/i18n';
 import i18next from 'i18next';
 
+import settingsCache from './settingsCache';
+
 const app = electron.app;
 let websocket: SocketIO.Server;
 let t;
@@ -33,7 +35,7 @@ Sentry.init({
     release: app.getVersion(),
     environment: process.env.NODE_ENV,
     beforeSend: async (event: Sentry.Event) => {
-        if (await fsExtra.readJSON(serverConfig.settingsFile)) {
+        if (settingsCache.getSettings().bugTracking) {
             return event;
         }
         return null;
@@ -141,9 +143,7 @@ app.on('ready', async () => {
     log.info('window created');
 
     try {
-        if (
-            (await fsExtra.readJSON(serverConfig.settingsFile)).usageStatistics
-        ) {
+        if (settingsCache.getSettings().usageStatistics) {
             const data = {
                 url: '/Lumi',
                 _id: await machineId(),
