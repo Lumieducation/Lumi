@@ -22,6 +22,8 @@ export default async function boot(
     const t = await i18next.use(i18nextBackend).init({
         lng: languageCode,
         fallbackLng: 'en',
+        debug: true,
+        load: 'languageOnly',
         backend: {
             loadPath: `${__dirname}/../../../locales/{{lng}}.json`
         }

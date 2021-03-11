@@ -10,19 +10,18 @@ import updateMenu from './menu';
 import updater from './updater';
 import websocketFactory from './websocket';
 import serverConfigFactory from './serverConfig';
-import fsExtra from 'fs-extra';
 import matomo from './matomo';
 import { machineId } from 'node-machine-id';
 import boot_i18n from './boot/i18n';
-import i18next from 'i18next';
+import i18next, { TFunction } from 'i18next';
 
 import settingsCache from './settingsCache';
 
 const app = electron.app;
 let websocket: SocketIO.Server;
-let t;
 let mainWindow: electron.BrowserWindow;
 let port: number;
+let t: TFunction;
 let currentPath: string = '/';
 const isDevelopment = process.env.NODE_ENV === 'development';
 const BrowserWindow = electron.BrowserWindow;
@@ -59,14 +58,14 @@ function createMainWindow(
 
     window.webContents.on('did-navigate-in-page', (event, url) => {
         currentPath = new URL(url).pathname;
-        updateMenu(currentPath, window, websocketArg);
+        updateMenu(currentPath, window, websocketArg, t);
     });
 
     i18next.on('languageChanged', (lng) => {
-        updateMenu(currentPath, window, websocketArg);
+        updateMenu(currentPath, window, websocketArg, t);
     });
 
-    updateMenu('/', window, websocketArg);
+    updateMenu('/', window, websocketArg, t);
 
     if (isDevelopment) {
         window.webContents.openDevTools();
