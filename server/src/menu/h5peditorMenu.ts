@@ -6,7 +6,7 @@ import helpMenu from './helpMenu';
 
 export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
     {
-        label: i18next.t('menu.file.file'),
+        label: i18next.t('menu.file.label'),
         submenu: [
             {
                 accelerator: 'CmdOrCtrl+N',
