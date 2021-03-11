@@ -97,9 +97,7 @@ export default function notificationsReducer(
                         ...state.notifications,
                         {
                             key: shortid(),
-                            message: i18next.t(
-                                `notifications.h5peditor.error."${action.payload.message}`
-                            ),
+                            message: action.payload.message,
                             options: {
                                 variant: 'warning'
                             }

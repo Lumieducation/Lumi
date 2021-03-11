@@ -1,9 +1,7 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 
 import AppBar from '@material-ui/core/AppBar';
@@ -20,7 +18,6 @@ import BugReportSettings from './components/BugReportSettings';
 import UpdateSettings from './components/UpdateSettngs';
 import SettingsLanguage from './components/SettingsLanguage';
 
-import { actions, IState } from '../state';
 import UsageStatisticsSettingsCard from './components/UsageAnalyticsSettings';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -61,8 +58,6 @@ const Transition = React.forwardRef(function Transition(
 
 export default function FullScreenDialog() {
     const classes = useStyles();
-    const dispatch = useDispatch();
-    const settings = useSelector((state: IState) => state.settings);
     const [open, setOpen] = React.useState(false);
     const { t } = useTranslation();
 
@@ -72,12 +67,6 @@ export default function FullScreenDialog() {
 
     const handleClose = () => {
         setOpen(false);
-    };
-
-    const handleSave = () => {
-        dispatch(actions.settings.updateSettings(settings));
-
-        handleClose();
     };
 
     return (
@@ -104,9 +93,6 @@ export default function FullScreenDialog() {
                         <Typography variant="h6" className={classes.title}>
                             {t('settings.appbar.label')}
                         </Typography>
-                        <Button autoFocus color="inherit" onClick={handleSave}>
-                            {t('settings.appbar.save')}
-                        </Button>
                     </Toolbar>
                 </AppBar>
                 <div className={classes.root}>

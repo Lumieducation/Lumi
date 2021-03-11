@@ -29,17 +29,17 @@ export default function H5PEditorExportDialog() {
                 aria-describedby="alert-dialog-description"
             >
                 <DialogTitle id="alert-dialog-title">
-                    {t('export_as_html.dialog.title')}
+                    {t('notifications.export_as_html.dialog.title')}
                 </DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-description">
-                        {t('export_as_html.dialog.description')}
+                        {t('notifications.export_as_html.dialog.description')}
                         <a
                             href="https://lumieducation.gitbook.io/lumi/analytics/reporter"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            {t('export_as_html.dialog.here')}
+                            {t('notifications.export_as_html.dialog.here')}
                         </a>
                         .
                     </DialogContentText>
@@ -51,7 +51,7 @@ export default function H5PEditorExportDialog() {
                         }
                         color="primary"
                     >
-                        {t('export_as_html.dialog.no')}
+                        {t('notifications.export_as_html.dialog.no')}
                     </Button>
                     <Button
                         onClick={() =>
@@ -60,7 +60,7 @@ export default function H5PEditorExportDialog() {
                         color="primary"
                         autoFocus
                     >
-                        {t('export_as_html.dialog.yes')}
+                        {t('notifications.export_as_html.dialog.yes')}
                     </Button>
                 </DialogActions>
             </Dialog>
