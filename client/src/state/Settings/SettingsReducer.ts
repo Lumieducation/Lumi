@@ -43,10 +43,7 @@ export default function settingsReducer(
                 };
 
             case SETTINGS_UPDATE_SUCCESS:
-                return {
-                    ...state,
-                    firstOpen: false
-                };
+                return action.payload;
 
             default:
                 return state;
