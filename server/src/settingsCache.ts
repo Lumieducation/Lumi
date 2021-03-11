@@ -8,7 +8,12 @@ interface ISettingsState {
     usageStatistics: boolean;
 }
 
+import defaultSettings from './boot/defaultSettings';
+
 class SettingsStorage {
+    constructor() {
+        this.settings = defaultSettings;
+    }
     public settings: ISettingsState;
 
     getSettings(): ISettingsState {

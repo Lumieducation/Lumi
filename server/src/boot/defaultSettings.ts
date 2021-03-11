@@ -5,6 +5,7 @@ export default {
     firstOpen: true,
     privacyPolicyConsent: false,
     usageStatistics: false,
-    lastVersion: app.getVersion(),
-    autoUpdates: false
+    lastVersion: app ? app.getVersion() : 'test',
+    autoUpdates: false,
+    language: 'en'
 };
