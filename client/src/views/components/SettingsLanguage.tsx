@@ -8,6 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import TranslateIcon from '@material-ui/icons/Translate';
+import Button from '@material-ui/core/Button';
 
 import { useTranslation } from 'react-i18next';
 
@@ -60,6 +61,17 @@ export default function BugReportSettingsCard() {
             </CardActionArea>
             <CardActions>
                 <LanguageList />
+                <a
+                    href="https://translate-h5p.tk/weblate/projects/lumi-education/"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                        color: 'inherit',
+                        textDecoration: 'inherit'
+                    }}
+                >
+                    <Button size="small">{t('language.help_translate')}</Button>
+                </a>
             </CardActions>
         </Card>
     );
