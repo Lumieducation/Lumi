@@ -24,6 +24,7 @@ export default (
             },
             { type: 'separator' } as any,
             {
+                label: t('menu.quit'),
                 role: 'quit'
             } as any
         ]

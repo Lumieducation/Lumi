@@ -218,6 +218,7 @@ async function test() {
       language: {
         title: "Language",
         description: "Change the language of the application.",
+        help_translate: "Help us translate!",
       },
       privacy_policy: {
         title: "Privacy Policy",
@@ -231,6 +232,7 @@ async function test() {
           "You need to at least consent to the privacy policy to use this application.",
       },
       menu: {
+        quit: "Quit",
         file: {
           label: "File",
           open: "Open Analytic Files",
@@ -275,22 +277,12 @@ async function test() {
             success: "H5P successfully exported as HTML",
             error: "Could not export H5P as HTML",
           },
-          library: {
-            "The main title of the content hasn't been set.":
-              "The main title of the content hasn't been set.",
-            "The parameters entered by the user are invalid.":
-              "The parameters entered by the user are invalid.",
-            "saveContentCallback of H5P Editor Web Component not defined.":
-              "saveContentCallback of H5P Editor Web Component not defined.",
-            "editorInstance of h5p editor not defined.":
-              "editorInstance of h5p editor not defined.",
-          },
         },
         export_as_html: {
           dialog: {
             title: "Lumi reporter",
             description:
-              "  Do you want to include a reporter in your html? Learn more about it",
+              "Do you want to include a reporter in your html? Learn more about it",
             yes: "yes",
             no: "no",
             here: "here",
