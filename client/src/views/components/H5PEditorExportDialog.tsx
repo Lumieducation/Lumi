@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -18,6 +19,7 @@ export default function H5PEditorExportDialog() {
     );
 
     const dispatch = useDispatch();
+    const { t } = useTranslation();
 
     return (
         <div>
@@ -26,17 +28,18 @@ export default function H5PEditorExportDialog() {
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
             >
-                <DialogTitle id="alert-dialog-title">Lumi reporter</DialogTitle>
+                <DialogTitle id="alert-dialog-title">
+                    {t('notifications.export_as_html.dialog.title')}
+                </DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-description">
-                        Do you want to include a reporter in your html? <br />
-                        Learn more about it{' '}
+                        {t('notifications.export_as_html.dialog.description')}
                         <a
                             href="https://lumieducation.gitbook.io/lumi/analytics/reporter"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            here
+                            {t('notifications.export_as_html.dialog.here')}
                         </a>
                         .
                     </DialogContentText>
@@ -48,7 +51,7 @@ export default function H5PEditorExportDialog() {
                         }
                         color="primary"
                     >
-                        No
+                        {t('notifications.export_as_html.dialog.no')}
                     </Button>
                     <Button
                         onClick={() =>
@@ -57,7 +60,7 @@ export default function H5PEditorExportDialog() {
                         color="primary"
                         autoFocus
                     >
-                        Yes
+                        {t('notifications.export_as_html.dialog.yes')}
                     </Button>
                 </DialogActions>
             </Dialog>

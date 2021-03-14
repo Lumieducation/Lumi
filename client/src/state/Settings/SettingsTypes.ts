@@ -9,6 +9,7 @@ export interface ISettingsState {
     privacyPolicyConsent: boolean;
     usageStatistics: boolean;
     autoUpdates: boolean;
+    language: string;
 }
 
 export const SETTINGS_GET_SETTINGS_REQUEST = 'SETTINGS_GET_SETTINGS_REQUEST';

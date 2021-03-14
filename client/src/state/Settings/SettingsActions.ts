@@ -1,5 +1,6 @@
 import * as Sentry from '@sentry/browser';
 
+import store from '../../state';
 import {
     SETTINGS_GET_SETTINGS_REQUEST,
     SETTINGS_GET_SETTINGS_ERROR,
@@ -8,8 +9,7 @@ import {
     SETTINGS_UPDATE_SUCCESS,
     SETTINGS_UPDATE_ERROR,
     SETTINGS_CHANGE,
-    ISettingsState,
-    IChangeSettingsAction
+    ISettingsState
 } from './SettingsTypes';
 
 import * as API from './SettingsAPI';
@@ -29,6 +29,7 @@ export function getSettings(): any {
                     payload: settings,
                     type: SETTINGS_GET_SETTINGS_SUCCESS
                 });
+                return settings;
             } catch (error) {
                 Sentry.captureException(error);
 
@@ -70,11 +71,17 @@ export function updateSettings(settings: ISettingsState): any {
     };
 }
 
-export function changeSetting(
-    payload: Partial<ISettingsState>
-): IChangeSettingsAction {
-    return {
-        payload,
-        type: SETTINGS_CHANGE
+export function changeSetting(payload: Partial<ISettingsState>): any {
+    return async (dispatch: any) => {
+        try {
+            dispatch({
+                payload,
+                type: SETTINGS_CHANGE
+            });
+
+            dispatch(updateSettings(store.getState().settings));
+        } catch (error) {
+            Sentry.captureException(error);
+        }
     };
 }

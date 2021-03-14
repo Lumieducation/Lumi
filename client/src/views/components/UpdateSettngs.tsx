@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -40,6 +41,7 @@ export default function UsageStatisticsSettingsCard() {
     const classes = useStyles();
     const settings = useSelector((state: IState) => state.settings);
     const dispatch = useDispatch();
+    const { t } = useTranslation();
 
     return (
         <Card className={classes.root}>
@@ -49,14 +51,14 @@ export default function UsageStatisticsSettingsCard() {
                 </CardMedia>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Automatic Updates
+                        {t('updates.title')}
                     </Typography>
                     <Typography
                         variant="body2"
                         color="textSecondary"
                         component="p"
                     >
-                        Get the latest version automatically.
+                        {t('updates.description')}
                     </Typography>
                 </CardContent>
             </CardActionArea>
@@ -74,7 +76,7 @@ export default function UsageStatisticsSettingsCard() {
                             }
                         />
                     }
-                    label="Enable"
+                    label={t('settings.enable')}
                 />
                 <a
                     href="https://next.lumi.education/app/privacy-policy"
@@ -85,7 +87,7 @@ export default function UsageStatisticsSettingsCard() {
                         textDecoration: 'inherit'
                     }}
                 >
-                    <Button size="small">Privacy Policy</Button>
+                    <Button size="small">{t('privacy_policy.title')}</Button>
                 </a>
             </CardActions>
         </Card>

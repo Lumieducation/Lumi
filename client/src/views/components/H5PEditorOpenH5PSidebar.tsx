@@ -2,7 +2,7 @@ import React from 'react';
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 
-import { I18n } from 'react-redux-i18n';
+import { useTranslation } from 'react-i18next';
 
 import Toolbar from '@material-ui/core/Toolbar';
 
@@ -65,6 +65,8 @@ export default function H5PEditorLeftDrawerView(props: {
         tabs
     } = props;
     const classes = useStyles();
+
+    const { t } = useTranslation();
 
     return (
         <Drawer
@@ -135,9 +137,7 @@ export default function H5PEditorLeftDrawerView(props: {
                         {tabs.length === 0 ? (
                             <ListItem>
                                 <ListItemText
-                                    primary={I18n.t(
-                                        'editor.sidebar.noOpenFiles'
-                                    )}
+                                    primary={t('editor.sidebar.noOpenFiles')}
                                 />
                             </ListItem>
                         ) : null}
@@ -146,16 +146,14 @@ export default function H5PEditorLeftDrawerView(props: {
                             <ListItemAvatar>
                                 <InsertDriveFileOutlinedIcon />
                             </ListItemAvatar>
-                            <ListItemText
-                                primary={I18n.t('editor.sidebar.open')}
-                            />
+                            <ListItemText primary={t('editor.sidebar.open')} />
                         </ListItem>
                         <ListItem onClick={create} button={true}>
                             <ListItemAvatar>
                                 <AddIcon />
                             </ListItemAvatar>
                             <ListItemText
-                                primary={I18n.t('editor.sidebar.create')}
+                                primary={t('editor.sidebar.create')}
                             />
                         </ListItem>
                     </List>

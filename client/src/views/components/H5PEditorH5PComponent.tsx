@@ -1,6 +1,5 @@
 import React from 'react';
-
-import { I18n } from 'react-redux-i18n';
+import i18next from 'i18next';
 
 import VisibilityOutlinedIcon from '@material-ui/icons/VisibilityOutlined';
 import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
@@ -79,7 +78,7 @@ export class H5PEditorH5PComponent extends React.Component<IH5PEditorH5PComponen
                                 <VisibilityOutlinedIcon
                                     style={{ verticalAlign: 'middle' }}
                                 />{' '}
-                                {I18n.t('editor.tab.view')}
+                                {i18next.t('editor.tab.view')}
                             </div>
                         }
                         disabled={this.props.tab.viewDisabled}
@@ -91,7 +90,7 @@ export class H5PEditorH5PComponent extends React.Component<IH5PEditorH5PComponen
                                 <EditOutlinedIcon
                                     style={{ verticalAlign: 'middle' }}
                                 />{' '}
-                                {I18n.t('editor.tab.edit')}
+                                {i18next.t('editor.tab.edit')}
                             </div>
                         }
                         {...a11yProps(1)}

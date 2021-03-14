@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { I18n } from 'react-redux-i18n';
+import { useTranslation } from 'react-i18next';
 
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
@@ -17,6 +17,7 @@ export default function EditorStartPage(props: {
     secondaryButtonClick: () => void;
 }): JSX.Element {
     const classes = useStyles();
+    const { t } = useTranslation();
     return (
         <ContentPaper>
             <Container maxWidth="sm" className={classes.heroContent}>
@@ -27,7 +28,7 @@ export default function EditorStartPage(props: {
                     color="textPrimary"
                     gutterBottom={true}
                 >
-                    Lumi H5P Editor
+                    {t('editor.startPage.title')}
                 </Typography>
                 <Typography
                     variant="h5"
@@ -35,7 +36,7 @@ export default function EditorStartPage(props: {
                     color="textSecondary"
                     paragraph={true}
                 >
-                    {I18n.t('editor.startPage.welcomeMessage')}
+                    {t('editor.startPage.welcomeMessage')}
                 </Typography>
                 <div className={classes.heroButtons}>
                     <Grid container={true} spacing={2} justify="center">
@@ -49,7 +50,7 @@ export default function EditorStartPage(props: {
                                 color="primary"
                                 startIcon={<InsertDriveFileOutlinedIcon />}
                             >
-                                {I18n.t('editor.startPage.open')}
+                                {t('editor.startPage.open')}
                             </Button>
                         </Grid>
                         <Grid item={true}>
@@ -62,7 +63,7 @@ export default function EditorStartPage(props: {
                                 color="primary"
                                 startIcon={<AddIcon />}
                             >
-                                {I18n.t('editor.startPage.create')}
+                                {t('editor.startPage.create')}
                             </Button>
                         </Grid>
                     </Grid>

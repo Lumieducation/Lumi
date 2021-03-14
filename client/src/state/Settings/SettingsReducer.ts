@@ -1,4 +1,5 @@
 import * as Sentry from '@sentry/browser';
+
 import {
     ISettingsActionTypes,
     ISettingsState,
@@ -13,7 +14,8 @@ export const initialState: ISettingsState = {
     bugTracking: false,
     usageStatistics: false,
     privacyPolicyConsent: false,
-    autoUpdates: false
+    autoUpdates: false,
+    language: 'en'
 };
 
 export default function settingsReducer(
@@ -41,10 +43,7 @@ export default function settingsReducer(
                 };
 
             case SETTINGS_UPDATE_SUCCESS:
-                return {
-                    ...state,
-                    firstOpen: false
-                };
+                return action.payload;
 
             default:
                 return state;

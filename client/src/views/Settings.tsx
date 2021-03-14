@@ -1,8 +1,7 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 
 import AppBar from '@material-ui/core/AppBar';
@@ -17,8 +16,8 @@ import Typography from '@material-ui/core/Typography';
 
 import BugReportSettings from './components/BugReportSettings';
 import UpdateSettings from './components/UpdateSettngs';
+import SettingsLanguage from './components/SettingsLanguage';
 
-import { actions, IState } from '../state';
 import UsageStatisticsSettingsCard from './components/UsageAnalyticsSettings';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -59,17 +58,8 @@ const Transition = React.forwardRef(function Transition(
 
 export default function FullScreenDialog() {
     const classes = useStyles();
-    const dispatch = useDispatch();
-    const settings = useSelector((state: IState) => state.settings);
     const [open, setOpen] = React.useState(false);
-    // const [expanded, setExpanded] = React.useState<string | false>(false);
-
-    // const handleChange = (panel: string) => (
-    //     event: React.ChangeEvent<{}>,
-    //     isExpanded: boolean
-    // ) => {
-    //     setExpanded(isExpanded ? panel : false);
-    // };
+    const { t } = useTranslation();
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -77,12 +67,6 @@ export default function FullScreenDialog() {
 
     const handleClose = () => {
         setOpen(false);
-    };
-
-    const handleSave = () => {
-        dispatch(actions.settings.updateSettings(settings));
-
-        handleClose();
     };
 
     return (
@@ -107,36 +91,17 @@ export default function FullScreenDialog() {
                             <CloseIcon />
                         </IconButton>
                         <Typography variant="h6" className={classes.title}>
-                            Settings
+                            {t('settings.appbar.label')}
                         </Typography>
-                        <Button autoFocus color="inherit" onClick={handleSave}>
-                            save
-                        </Button>
                     </Toolbar>
                 </AppBar>
                 <div className={classes.root}>
-                    {/* <Accordion
-                        expanded={expanded === 'panel1'}
-                        onChange={handleChange('panel1')}
-                    >
-                        <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
-                            aria-controls="panel1bh-content"
-                            id="panel1bh-header"
-                        >
-                            <BugReportIcon />
-                            <Typography className={classes.heading}>
-                                Bug & Crash Reports
-                            </Typography>
-                        </AccordionSummary>
-                        <AccordionDetails> */}
                     <div className={classes.center}>
                         <BugReportSettings />
                         <UsageStatisticsSettingsCard />
                         <UpdateSettings />
+                        <SettingsLanguage />
                     </div>
-                    {/* </AccordionDetails>
-                    </Accordion> */}
                 </div>
             </Dialog>
         </div>

@@ -1,13 +1,5 @@
 import { combineReducers, applyMiddleware, compose, createStore } from 'redux';
 import * as Sentry from '@sentry/react';
-import {
-    loadTranslations,
-    setLocale,
-    syncTranslationWithStore,
-    i18nReducer
-} from 'react-redux-i18n';
-
-import translations from '../i18n';
 
 import * as NotificationsActions from './Notifications/NotificationsActions';
 import NotificationsReducer from './Notifications/NotificationsReducer';
@@ -52,8 +44,7 @@ const rootReducer = () =>
         notifications: NotificationsReducer,
         h5peditor: H5PEditorReducer,
         analytics: AnalyticsReducer,
-        settings: SettingsReducer,
-        i18n: i18nReducer
+        settings: SettingsReducer
     });
 
 const store = createStore(
@@ -80,7 +71,4 @@ export const selectors = {
     h5peditor: H5PEditorSelectors
 };
 
-syncTranslationWithStore(store);
-store.dispatch(loadTranslations(translations) as any);
-store.dispatch(setLocale('en') as any);
 export default store;

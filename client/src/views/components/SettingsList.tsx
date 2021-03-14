@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
@@ -14,8 +15,10 @@ import PolicyIcon from '@material-ui/icons/Policy';
 import BugReportIcon from '@material-ui/icons/BugReport';
 import InsertChartIcon from '@material-ui/icons/InsertChart';
 import UpdateIcon from '@material-ui/icons/Update';
+import TranslateIcon from '@material-ui/icons/Translate';
 
 import { actions, IState } from '../../state';
+import LanguageList from './LanguageList';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -32,9 +35,13 @@ export default function SwitchListSecondary() {
     const dispatch = useDispatch();
     const settings = useSelector((state: IState) => state.settings);
 
+    const { t } = useTranslation();
+
     return (
         <List
-            subheader={<ListSubheader>Settings</ListSubheader>}
+            subheader={
+                <ListSubheader>{t('settings.appbar.label')}</ListSubheader>
+            }
             className={classes.root}
         >
             <ListItem>
@@ -43,8 +50,8 @@ export default function SwitchListSecondary() {
                 </ListItemIcon>
                 <ListItemText
                     id="switch-list-label-privacy-policy"
-                    primary="Privacy Policy"
-                    secondary="I have read and consent to the privacy policy."
+                    primary={t('privacy_policy.title')}
+                    secondary={t('privacy_policy.consent')}
                 />
                 <ListItemSecondaryAction>
                     <Switch
@@ -70,8 +77,8 @@ export default function SwitchListSecondary() {
                 </ListItemIcon>
                 <ListItemText
                     id="switch-list-label-bluetooth"
-                    primary="Bug & Crash Reports"
-                    secondary="I allow this application to send bug & crash reports."
+                    primary={t('bug_report.title')}
+                    secondary={t('bug_report.consent')}
                 />
                 <ListItemSecondaryAction>
                     <Switch
@@ -96,8 +103,8 @@ export default function SwitchListSecondary() {
                 </ListItemIcon>
                 <ListItemText
                     id="switch-list-label-bluetooth"
-                    primary="Usage statistics"
-                    secondary="I allow this application to send anonymous usage statistics."
+                    primary={t('usage_statistics.title')}
+                    secondary={t('usage_statistics.consent')}
                 />
                 <ListItemSecondaryAction>
                     <Switch
@@ -122,8 +129,8 @@ export default function SwitchListSecondary() {
                 </ListItemIcon>
                 <ListItemText
                     id="switch-list-label-updates"
-                    primary="Automatic Updates"
-                    secondary="I allow this application to automatically check for updates."
+                    primary={t('updates.title')}
+                    secondary={t('updates.consent')}
                 />
                 <ListItemSecondaryAction>
                     <Switch
@@ -141,6 +148,19 @@ export default function SwitchListSecondary() {
                         }}
                     />
                 </ListItemSecondaryAction>
+            </ListItem>
+            <ListItem>
+                <ListItemIcon>
+                    <TranslateIcon />
+                </ListItemIcon>
+                <ListItemText
+                    id="switch-list-label-updates"
+                    primary={t('language.title')}
+                    secondary={t('language.description')}
+                />
+            </ListItem>
+            <ListItem>
+                <LanguageList />
             </ListItem>
         </List>
     );

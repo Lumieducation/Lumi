@@ -1,5 +1,6 @@
 import express from 'express';
 import electron from 'electron';
+
 import { H5PEditor, H5PPlayer } from '@lumieducation/h5p-server';
 import {
     h5pAjaxExpressRouter,
@@ -7,7 +8,6 @@ import {
     contentTypeCacheExpressRouter
 } from '@lumieducation/h5p-express';
 
-// import h5pConfig from '../../config/h5pConfig';
 import lumiRoutes from './lumiRoutes';
 import trackingRoutes from './trackingRoutes';
 import Logger from '../helpers/Logger';
@@ -73,6 +73,26 @@ export default function (
             // to use the language detected by the i18next language detector.
         )
     );
+
+    router.use('/locales', express.static(`${__dirname}/../../../locales`));
+
+    // async (req, res) => {
+    //     try {
+    //         const languageCode = (
+    //             await fsExtra.readJSON(serverConfig.settingsFile)
+    //         ).language;
+    //         const locale = await fsExtra.readJSON(
+    //             `${__dirname}/../../../locales/${languageCode}.json`
+    //         );
+    //         res.status(200).json(locale);
+    //     } catch (error) {
+    //         Sentry.captureException(error);
+    //         const locale = await fsExtra.readJSON(
+    //             `${__dirname}/../../../locales/en.json`
+    //         );
+    //         res.status(200).json(locale);
+    //     }
+    // });
 
     // The expressRoutes are routes that create pages for these actions:
     // - Creating new content

@@ -9,7 +9,8 @@ module.exports = {
         'reporter-client/build/static/js/**/*',
         'package.json',
         'h5p/**/*',
-        'electron/**/*'
+        'electron/**/*',
+        'locales/**/*'
     ],
     mac: {
         category: 'education.lumi.lumi',

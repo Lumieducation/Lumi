@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+
 import Logger from '../helpers/Logger';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -24,10 +26,17 @@ const log = new Logger('container:app');
 export default function AppContainer() {
     log.info(`rendering`);
     const dispatch = useDispatch();
+    const { i18n } = useTranslation();
 
     useEffect(() => {
-        dispatch(actions.settings.getSettings());
-    });
+        dispatch(actions.settings.getSettings()).then(
+            async ({ language }: { language: string }) => {
+                await i18n.loadLanguages(language);
+                i18n.changeLanguage(language);
+            }
+        );
+    }, [dispatch, i18n]);
+
     return (
         <div id="app">
             <CssBaseline />

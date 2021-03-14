@@ -9,6 +9,7 @@ import {
 import Typography from '@material-ui/core/Typography';
 
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -71,6 +72,7 @@ export default function CustomizedDialogs() {
     const dispatch = useDispatch();
     const settings = useSelector((state: IState) => state.settings);
     const classes = useStyles();
+    const { t } = useTranslation();
 
     const handleSave = () => {
         dispatch(
@@ -86,11 +88,7 @@ export default function CustomizedDialogs() {
         >
             <DialogContent dividers>
                 <Typography variant="body2" gutterBottom>
-                    Protecting the individual's privacy is important for us. We
-                    only collect the information you choose to give us, and we
-                    process it with your consent. We want to be as transparent
-                    as possible. However Lumi relies on some connections and
-                    data transfers to work.
+                    {t('setup_dialog.description')}
                 </Typography>
 
                 <a
@@ -105,7 +103,7 @@ export default function CustomizedDialogs() {
                         className={classes.button}
                         startIcon={<PolicyIcon />}
                     >
-                        Privacy Policy
+                        {t('privacy_policy.title')}
                     </Button>
                 </a>
                 <a
@@ -130,8 +128,7 @@ export default function CustomizedDialogs() {
                         variant="body2"
                         gutterBottom
                     >
-                        You need to at least consent to the privacy policy to
-                        use this application.
+                        {t('setup_dialog.consent_warning')}
                     </Typography>
                 )}
             </DialogContent>
@@ -142,7 +139,7 @@ export default function CustomizedDialogs() {
                     color="primary"
                     disabled={!settings.privacyPolicyConsent}
                 >
-                    Save
+                    {t('setup_dialog.save')}
                 </Button>
             </DialogActions>
         </Dialog>
