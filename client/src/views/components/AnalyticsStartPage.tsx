@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { I18n } from 'react-redux-i18n';
+import { useTranslation } from 'react-i18next';
 
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
@@ -15,6 +15,7 @@ export default function AnalyticsStartPage(props: {
     primaryButtonClick: () => void;
 }): JSX.Element {
     const classes = useStyles();
+    const { t } = useTranslation();
     return (
         <ContentPaper>
             <Container maxWidth="sm" className={classes.heroContent}>
@@ -25,7 +26,7 @@ export default function AnalyticsStartPage(props: {
                     color="textPrimary"
                     gutterBottom={true}
                 >
-                    Lumi Analytics
+                    {t('analytics.startPage.title')}
                 </Typography>
                 <Typography
                     variant="h5"
@@ -33,13 +34,13 @@ export default function AnalyticsStartPage(props: {
                     color="textSecondary"
                     paragraph={true}
                 >
-                    {I18n.t('analytics.startPage.welcomeMessage')}{' '}
+                    {t('analytics.startPage.welcomeMessage')}{' '}
                     <a
                         href="https://lumieducation.gitbook.io/lumi/v/en/analytics/what-is-lumi-analytics"
                         target="_blank"
                         rel="noreferrer"
                     >
-                        learn more
+                        {t('analytics.startPage.learn_more')}
                     </a>
                 </Typography>
                 <div className={classes.heroButtons}>
@@ -54,7 +55,7 @@ export default function AnalyticsStartPage(props: {
                                 color="primary"
                                 startIcon={<InsertDriveFileOutlinedIcon />}
                             >
-                                {I18n.t('analytics.startPage.open')}
+                                {t('analytics.startPage.open')}
                             </Button>
                         </Grid>
                     </Grid>

@@ -9,13 +9,17 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
     let app: express.Application;
 
     beforeAll(async () => {
-        app = await bootApp({
-            cache: path.resolve('test', 'data'),
-            configFile: path.resolve('test', 'data', 'config.json'),
-            librariesPath: path.resolve('test', 'data', `libraries`),
-            temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
-            workingCachePath: path.resolve('test', 'data', 'workingCache')
-        });
+        app = await bootApp(
+            {
+                cache: path.resolve('test', 'data'),
+                configFile: path.resolve('test', 'data', 'config.json'),
+                librariesPath: path.resolve('test', 'data', `libraries`),
+                temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
+                workingCachePath: path.resolve('test', 'data', 'workingCache'),
+                settingsFile: path.resolve('test', 'data', 'settings.json')
+            },
+            null
+        );
 
         return app;
     });

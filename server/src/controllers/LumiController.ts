@@ -7,12 +7,17 @@ import * as H5P from '@lumieducation/h5p-server';
 import Logger from '../helpers/Logger';
 
 import User from '../User';
+import IServerConfig from '../IServerConfig';
 
 const log = new Logger('controller:lumi-h5p');
 
 export default class LumiController {
-    constructor(private h5pEditor: H5P.H5PEditor) {
-        h5pEditor.contentTypeCache.updateIfNecessary();
+    constructor(private h5pEditor: H5P.H5PEditor, serverConfig: IServerConfig) {
+        fs.readJSON(serverConfig.settingsFile).then((settings) => {
+            if (settings.privacyPolicyConsent) {
+                h5pEditor.contentTypeCache.updateIfNecessary();
+            }
+        });
     }
 
     public async delete(contentId: string): Promise<void> {

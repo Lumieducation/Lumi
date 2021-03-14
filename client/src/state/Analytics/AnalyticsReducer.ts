@@ -1,4 +1,5 @@
 import Logger from '../../helpers/Logger';
+import * as Sentry from '@sentry/browser';
 
 import {
     IAnalyticsState,
@@ -30,6 +31,8 @@ export default function analyticsReducer(
                 return state;
         }
     } catch (error) {
+        Sentry.captureException(error);
+
         log.error(error);
         return state;
     }

@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/browser';
 import {
     CLOSE_SNACKBAR,
     ENQUEUE_SNACKBAR,
@@ -30,6 +31,8 @@ import {
     IAnalyticsImportErrorAction
 } from '../Analytics/AnalyticsTypes';
 
+import i18next from 'i18next';
+
 import shortid from 'shortid';
 
 export const initialState: INotificationsState = {
@@ -51,160 +54,177 @@ export default function notificationsReducer(
         | IAnalyticsImportSuccessAction
         | IAnalyticsImportErrorAction
 ): INotificationsState {
-    switch (action.type) {
-        case ANALYTICS_IMPORT_ERROR:
-            return {
-                ...state,
-                notifications: [
-                    ...state.notifications,
-                    {
-                        key: shortid(),
-                        message:
-                            action.payload.message || `No valid data found`,
-                        options: {
-                            variant: 'error'
+    try {
+        switch (action.type) {
+            case ANALYTICS_IMPORT_ERROR:
+                return {
+                    ...state,
+                    notifications: [
+                        ...state.notifications,
+                        {
+                            key: shortid(),
+                            message: i18next.t(
+                                'notifications.analytics.import.error'
+                            ),
+                            options: {
+                                variant: 'error'
+                            }
                         }
-                    }
-                ]
-            };
+                    ]
+                };
 
-        case ANALYTICS_IMPORT_SUCCESS:
-            return {
-                ...state,
-                notifications: [
-                    ...state.notifications,
-                    {
-                        key: shortid(),
-                        message: `Imported ${action.payload.users.length} user reponses`,
-                        options: {
-                            variant: 'success'
+            case ANALYTICS_IMPORT_SUCCESS:
+                return {
+                    ...state,
+                    notifications: [
+                        ...state.notifications,
+                        {
+                            key: shortid(),
+                            message: i18next.t(
+                                'notifications.analytics.import.success'
+                            ),
+                            options: {
+                                variant: 'success'
+                            }
                         }
-                    }
-                ]
-            };
+                    ]
+                };
 
-        case H5PEDITOR_ERROR:
-            return {
-                ...state,
-                notifications: [
-                    ...state.notifications,
-                    {
-                        key: shortid(),
-                        message: action.payload.message,
-                        options: {
-                            variant: 'warning'
+            case H5PEDITOR_ERROR:
+                return {
+                    ...state,
+                    notifications: [
+                        ...state.notifications,
+                        {
+                            key: shortid(),
+                            message: action.payload.message,
+                            options: {
+                                variant: 'warning'
+                            }
                         }
-                    }
-                ]
-            };
+                    ]
+                };
 
-        case H5PEDITOR_SAVE_SUCCESS:
-            return {
-                ...state,
-                notifications: [
-                    ...state.notifications,
-                    {
-                        key: shortid(),
-                        message: 'notification.export.success',
-                        options: {
-                            variant: 'success'
+            case H5PEDITOR_SAVE_SUCCESS:
+                return {
+                    ...state,
+                    notifications: [
+                        ...state.notifications,
+                        {
+                            key: shortid(),
+                            message: i18next.t(
+                                'notifications.h5peditor.save.success'
+                            ),
+                            options: {
+                                variant: 'success'
+                            }
                         }
-                    }
-                ]
-            };
+                    ]
+                };
 
-        case H5PEDITOR_SAVE_ERROR:
-            return {
-                ...state,
-                notifications: [
-                    ...state.notifications,
-                    {
-                        key: shortid(),
-                        message: 'notification.export.error',
-                        options: {
-                            variant: 'error'
+            case H5PEDITOR_SAVE_ERROR:
+                return {
+                    ...state,
+                    notifications: [
+                        ...state.notifications,
+                        {
+                            key: shortid(),
+                            message: i18next.t(
+                                'notifications.h5peditor.save.error'
+                            ),
+                            options: {
+                                variant: 'error'
+                            }
                         }
-                    }
-                ]
-            };
+                    ]
+                };
 
-        case H5P_IMPORT_ERROR:
-            return {
-                ...state,
-                notifications: [
-                    ...state.notifications,
-                    {
-                        key: shortid(),
-                        message:
-                            action.error.response.body.message ||
-                            'notification.import.error',
-                        options: {
-                            variant: 'error'
+            case H5P_IMPORT_ERROR:
+                return {
+                    ...state,
+                    notifications: [
+                        ...state.notifications,
+                        {
+                            key: shortid(),
+                            message: i18next.t(
+                                'notifications.h5peditor.open.error'
+                            ),
+                            options: {
+                                variant: 'error'
+                            }
                         }
-                    }
-                ]
-            };
+                    ]
+                };
 
-        case H5PEDITOR_EXPORT_SUCCESS:
-            return {
-                ...state,
-                notifications: [
-                    ...state.notifications,
-                    {
-                        key: shortid(),
-                        message: 'notification.exporthtml.success',
-                        options: {
-                            variant: 'success'
+            case H5PEDITOR_EXPORT_SUCCESS:
+                return {
+                    ...state,
+                    notifications: [
+                        ...state.notifications,
+                        {
+                            key: shortid(),
+                            message: i18next.t(
+                                'notifications.h5peditor.export_as_html.success'
+                            ),
+                            options: {
+                                variant: 'success'
+                            }
                         }
-                    }
-                ]
-            };
+                    ]
+                };
 
-        case H5PEDITOR_EXPORT_ERROR:
-            return {
-                ...state,
-                notifications: [
-                    ...state.notifications,
-                    {
-                        key: shortid(),
-                        message: 'notification.exporthtml.error',
-                        options: {
-                            variant: 'error'
+            case H5PEDITOR_EXPORT_ERROR:
+                return {
+                    ...state,
+                    notifications: [
+                        ...state.notifications,
+                        {
+                            key: shortid(),
+                            message: i18next.t(
+                                'notifications.h5peditor.export_as_html.error'
+                            ),
+                            options: {
+                                variant: 'error'
+                            }
                         }
-                    }
-                ]
-            };
+                    ]
+                };
 
-        case ENQUEUE_SNACKBAR:
-            return {
-                ...state,
-                notifications: [
-                    ...state.notifications,
-                    {
-                        ...action.notification
-                    }
-                ]
-            };
+            case ENQUEUE_SNACKBAR:
+                return {
+                    ...state,
+                    notifications: [
+                        ...state.notifications,
+                        {
+                            ...action.notification
+                        }
+                    ]
+                };
 
-        case CLOSE_SNACKBAR:
-            return {
-                ...state,
-                notifications: state.notifications.map((notification: any) =>
-                    action.dismissAll || notification.key === action.key
-                        ? { ...notification, dismissed: true }
-                        : { ...notification }
-                )
-            };
+            case CLOSE_SNACKBAR:
+                return {
+                    ...state,
+                    notifications: state.notifications.map(
+                        (notification: any) =>
+                            action.dismissAll || notification.key === action.key
+                                ? { ...notification, dismissed: true }
+                                : { ...notification }
+                    )
+                };
 
-        case REMOVE_SNACKBAR:
-            return {
-                ...state,
-                notifications: state.notifications.filter(
-                    (notification: any) => notification.key !== action.key
-                )
-            };
+            case REMOVE_SNACKBAR:
+                return {
+                    ...state,
+                    notifications: state.notifications.filter(
+                        (notification: any) => notification.key !== action.key
+                    )
+                };
 
-        default:
-            return state;
+            default:
+                return state;
+        }
+    } catch (error) {
+        Sentry.captureException(error);
+        return state;
     }
 }

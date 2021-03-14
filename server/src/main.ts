@@ -1,5 +1,4 @@
-// import * as Sentry from '@sentry/electron';
-// import * as SentryNode from '@sentry/node';
+import * as Sentry from '@sentry/electron';
 import electron from 'electron';
 import log from 'electron-log';
 import os from 'os';
@@ -11,24 +10,39 @@ import updateMenu from './menu';
 import updater from './updater';
 import websocketFactory from './websocket';
 import serverConfigFactory from './serverConfig';
+import matomo from './matomo';
+import { machineId } from 'node-machine-id';
+import i18next from 'i18next';
+
+import settingsCache from './settingsCache';
 
 const app = electron.app;
 let websocket: SocketIO.Server;
 let mainWindow: electron.BrowserWindow;
 let port: number;
+let currentPath: string = '/';
 const isDevelopment = process.env.NODE_ENV === 'development';
 const BrowserWindow = electron.BrowserWindow;
 
-process.on('uncaughtException', (error) => {
-    log.error(error);
+const serverConfig = serverConfigFactory(
+    process.env.USERDATA || app.getPath('userData')
+);
+Sentry.init({
+    dsn: 'http://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
+    release: app.getVersion(),
+    environment: process.env.NODE_ENV,
+    beforeSend: async (event: Sentry.Event) => {
+        if (settingsCache.getSettings().bugTracking) {
+            return event;
+        }
+        return null;
+    }
 });
 
-// if (process.env.NODE_ENV !== 'development') {
-//     Sentry.init({
-//         dsn: 'https://02e4da31636d479f86a17a6ef749278c@sentry.io/1876151',
-//         release: app.getVersion()
-//     });
-// }
+process.on('uncaughtException', (error) => {
+    Sentry.captureException(error);
+    log.error(error);
+});
 
 function createMainWindow(
     websocketArg: SocketIO.Server
@@ -41,7 +55,12 @@ function createMainWindow(
     });
 
     window.webContents.on('did-navigate-in-page', (event, url) => {
-        updateMenu(new URL(url).pathname, window, websocketArg);
+        currentPath = new URL(url).pathname;
+        updateMenu(currentPath, window, websocketArg);
+    });
+
+    i18next.on('languageChanged', (lng) => {
+        updateMenu(currentPath, window, websocketArg);
     });
 
     updateMenu('/', window, websocketArg);
@@ -99,7 +118,8 @@ app.on('activate', () => {
 app.on('ready', async () => {
     log.info('app is ready');
     const server = await httpServerFactory(
-        serverConfigFactory(process.env.USERDATA || app.getPath('userData'))
+        serverConfigFactory(process.env.USERDATA || app.getPath('userData')),
+        mainWindow
     );
     log.info('server booted');
 
@@ -109,9 +129,26 @@ app.on('ready', async () => {
     websocket = websocketFactory(server);
     log.info('websocket created');
 
-    updater(app, websocket);
+    updater(app, websocket, serverConfig);
     log.info('updater started');
 
     mainWindow = createMainWindow(websocket);
     log.info('window created');
+
+    try {
+        if (settingsCache.getSettings().usageStatistics) {
+            const data = {
+                url: '/Lumi',
+                _id: await machineId(),
+                uid: await machineId(),
+                e_c: 'App',
+                e_a: 'start',
+                lang: electron.app.getLocale(),
+                ua: os.type()
+            };
+            matomo.track(data);
+        }
+    } catch (error) {
+        Sentry.captureException(error);
+    }
 });

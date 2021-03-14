@@ -4,7 +4,7 @@ import analyticsMenu from './analyticsMenu';
 import h5peditorMenu from './h5peditorMenu';
 import launchpadMenu from './launchpadMenu';
 
-export default function menuHandler(
+export default function menuFactory(
     path: string,
     window: electron.BrowserWindow,
     webSocket: SocketIO.Server

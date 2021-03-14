@@ -1,4 +1,6 @@
 import express from 'express';
+import electron from 'electron';
+
 import { H5PEditor, H5PPlayer } from '@lumieducation/h5p-server';
 import {
     h5pAjaxExpressRouter,
@@ -6,13 +8,13 @@ import {
     contentTypeCacheExpressRouter
 } from '@lumieducation/h5p-express';
 
-// import h5pConfig from '../../config/h5pConfig';
 import lumiRoutes from './lumiRoutes';
 import trackingRoutes from './trackingRoutes';
 import Logger from '../helpers/Logger';
 import IServerConfig from '../IServerConfig';
 import h5pRoutes from './h5pRoutes';
 import analyticRoutes from './analyticRoutes';
+import settingsRoutes from './settingsRoutes';
 
 import User from '../User';
 
@@ -21,13 +23,15 @@ const log = new Logger('routes');
 export default function (
     h5pEditor: H5PEditor,
     h5pPlayer: H5PPlayer,
-    serverConfig: IServerConfig
+    serverConfig: IServerConfig,
+    browserWindow: electron.BrowserWindow,
+    app: express.Application
 ): express.Router {
     const router = express.Router();
 
     log.info('setting up routes');
 
-    router.use('/api/v1/track', trackingRoutes());
+    router.use('/api/v1/track', trackingRoutes(serverConfig));
     router.use('/api/v1/analytics', analyticRoutes());
 
     // Adding dummy user to make sure all requests can be handled
@@ -35,6 +39,11 @@ export default function (
         (req as any).user = new User();
         next();
     });
+
+    router.use(
+        '/api/v1/settings',
+        settingsRoutes(serverConfig, browserWindow, app)
+    );
 
     // // Directly serving the library and content files statically speeds up
     // // loading times and there is no security issue, as Lumi never is a
@@ -64,6 +73,26 @@ export default function (
             // to use the language detected by the i18next language detector.
         )
     );
+
+    router.use('/locales', express.static(`${__dirname}/../../../locales`));
+
+    // async (req, res) => {
+    //     try {
+    //         const languageCode = (
+    //             await fsExtra.readJSON(serverConfig.settingsFile)
+    //         ).language;
+    //         const locale = await fsExtra.readJSON(
+    //             `${__dirname}/../../../locales/${languageCode}.json`
+    //         );
+    //         res.status(200).json(locale);
+    //     } catch (error) {
+    //         Sentry.captureException(error);
+    //         const locale = await fsExtra.readJSON(
+    //             `${__dirname}/../../../locales/en.json`
+    //         );
+    //         res.status(200).json(locale);
+    //     }
+    // });
 
     // The expressRoutes are routes that create pages for these actions:
     // - Creating new content
@@ -95,7 +124,7 @@ export default function (
         contentTypeCacheExpressRouter(h5pEditor.contentTypeCache)
     );
 
-    router.use('/api/v1/lumi', lumiRoutes(h5pEditor));
+    router.use('/api/v1/lumi', lumiRoutes(h5pEditor, serverConfig));
 
     router.get('*', express.static(`${__dirname}/../../client`));
 

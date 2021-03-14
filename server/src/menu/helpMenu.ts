@@ -1,12 +1,13 @@
 import electron from 'electron';
 import SocketIO from 'socket.io';
+import i18next from 'i18next';
 
 export default function (
     window: electron.BrowserWindow,
     websocket: SocketIO.Server
 ): any {
     return {
-        label: 'Help',
+        label: i18next.t('menu.help.label'),
         submenu: [
             {
                 click: () => {
@@ -14,14 +15,14 @@ export default function (
                         type: 'REPORT_ISSUE'
                     });
                 },
-                label: 'Report Issue'
+                label: i18next.t('menu.help.report_issue')
             },
             { type: 'separator' } as any,
             {
                 click: () => {
                     window.webContents.openDevTools();
                 },
-                label: 'Toggle Developer Tools'
+                label: i18next.t('menu.help.toggle_developer_tools')
             },
             { type: 'separator' } as any,
             {
@@ -30,10 +31,10 @@ export default function (
                         'https://www.twitter.com/Lumieducation'
                     );
                 },
-                label: 'Follow Us on Twitter'
+                label: i18next.t('menu.help.follow_us_on_twitter')
             },
             // { label: 'Check for Updates...', click: updater },
-            { role: 'about' }
+            { label: i18next.t('menu.help.about'), role: 'about' }
         ]
     };
 }

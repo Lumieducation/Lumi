@@ -1,14 +1,18 @@
 import { dialog } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import SocketIO from 'socket.io';
+import * as Sentry from '@sentry/electron';
+import fsExtra from 'fs-extra';
+import IServerConfig from './IServerConfig';
 
 let updateAvailable: boolean = false;
 let updating: boolean = false;
 
-export default function boot(
+export default async function boot(
     app: Electron.App,
-    websocket: SocketIO.Server
-): void {
+    websocket: SocketIO.Server,
+    serverConfig: IServerConfig
+): Promise<void> {
     autoUpdater.on('update-downloaded', async () => {
         updateAvailable = true;
 
@@ -19,6 +23,10 @@ export default function boot(
             },
             type: 'MESSAGE'
         });
+    });
+
+    autoUpdater.on('error', (error) => {
+        Sentry.captureException(error);
     });
 
     app.on('will-quit', (event) => {
@@ -38,5 +46,7 @@ export default function boot(
         }
     });
 
-    autoUpdater.checkForUpdates();
+    if ((await fsExtra.readJSON(serverConfig.settingsFile)).autoUpdates) {
+        autoUpdater.checkForUpdates();
+    }
 }

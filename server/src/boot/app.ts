@@ -1,13 +1,15 @@
 import * as H5P from '@lumieducation/h5p-server';
-// import * as Sentry from '@sentry/node';
+import electron from 'electron';
+import * as Sentry from '@sentry/node';
+import * as Tracing from '@sentry/tracing';
 import bodyParser from 'body-parser';
 import express from 'express';
 import fileUpload from 'express-fileupload';
-import path from 'path';
+
+import fsExtra from 'fs-extra';
 
 import i18next from 'i18next';
 import i18nextHttpMiddleware from 'i18next-http-middleware';
-import i18nextFsBackend from 'i18next-fs-backend';
 
 import routes from '../routes';
 
@@ -17,42 +19,19 @@ import createH5PEditor from './createH5PEditor';
 
 import User from '../User';
 
-export default async (serverConfig: IServerConfig) => {
-    const translationFunction = await i18next
-        .use(i18nextFsBackend)
-        .use(i18nextHttpMiddleware.LanguageDetector) // This will add the
-        // properties language and languages to the req object.
-        // See https://github.com/i18next/i18next-http-middleware#adding-own-detection-functionality
-        // how to detect language in your own fashion. You can also choose not
-        // to add a detector if you only want to use one language.
-        .init({
-            backend: {
-                loadPath: path.resolve(
-                    process.env.NODE_ENV === 'development'
-                        ? ''
-                        : 'resources/app',
-                    'node_modules/@lumieducation/h5p-server/build/assets/translations/{{ns}}/{{lng}}.json'
-                )
-            },
-            debug: process.env.DEBUG && process.env.DEBUG.includes('i18n'),
-            defaultNS: 'server',
-            fallbackLng: 'en',
-            ns: [
-                'client',
-                'copyright-semantics',
-                'metadata-semantics',
-                'mongo-s3-content-storage',
-                's3-temporary-storage',
-                'server',
-                'storage-file-implementations'
-            ],
-            preload: ['en', 'de'] // If you don't use a language detector of
-            // i18next, you must preload all languages you want to use!
-        });
+import settingsCache from '../settingsCache';
 
+import boot_i18n from './i18n';
+
+export default async (
+    serverConfig: IServerConfig,
+    browserWindow: electron.BrowserWindow
+) => {
     const config = await new H5P.H5PConfig(
         new H5P.fsImplementations.JsonStorage(serverConfig.configFile)
     ).load();
+
+    await boot_i18n(serverConfig);
 
     // The H5PEditor object is central to all operations of @lumieducation/h5p-server
     // if you want to user the editor component.
@@ -70,7 +49,7 @@ export default async (serverConfig: IServerConfig) => {
         serverConfig.workingCachePath, // the path on the local disc where content is stored. Only used / necessary if you use the local filesystem content storage class.
         serverConfig.temporaryStoragePath, // the path on the local disc where temporary files (uploads) should be stored. Only used / necessary if you use the local filesystem temporary storage class.
         (key, language) => {
-            return translationFunction(key, { lng: language });
+            return key; // translationFunction(key, { lng: language });
         }
     );
 
@@ -84,26 +63,48 @@ export default async (serverConfig: IServerConfig) => {
 
     h5pPlayer.setRenderer((model) => model);
 
-    // const h5pEditor = new H5P.H5PEditor(
-    //     new JsonStorage(serverConfig.cache),
-    //     new H5P.H5PConfig(
-    //         new H5P.fsImplementations.InMemoryStorage(),
-    //         new H5P.H5PConfig(
-    //             new H5P.fsImplementations.InMemoryStorage(),
-    //             h5pConfig
-    //         )
-    //     ),
-    //     new H5P.fsImplementations.FileLibraryStorage(
-    //         serverConfig.librariesPath
-    //     ),
-    //     new H5P.fsImplementations.FileContentStorage(
-    //         serverConfig.workingCachePath
-    //     ),
-    //     new DirectoryTemporaryFileStorage(serverConfig.temporaryStoragePath)
-    // );
-
     const app = express();
-    // app.use(Sentry.Handlers.requestHandler());
+
+    if (process.env.NODE_ENV !== 'development') {
+        if (await fsExtra.pathExists(serverConfig.settingsFile)) {
+            const settings = await fsExtra.readJSON(serverConfig.settingsFile);
+
+            if (settings.bugTracking) {
+                Sentry.init({
+                    dsn:
+                        'http://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
+                    release: electron.app.getVersion(),
+                    environment: process.env.NODE_ENV,
+                    beforeSend: async (event: Sentry.Event) => {
+                        if (
+                            (await fsExtra.readJSON(serverConfig.settingsFile))
+                                .bugTracking
+                        ) {
+                            return event;
+                        }
+                        return null;
+                    },
+                    integrations: [
+                        // enable HTTP calls tracing
+                        new Sentry.Integrations.Http({ tracing: true }),
+                        // enable Express.js middleware tracing
+                        new Tracing.Integrations.Express({ app })
+                    ],
+
+                    // We recommend adjusting this value in production, or using tracesSampler
+                    // for finer control
+                    tracesSampleRate: 1.0
+                });
+                Sentry.setTag('type', 'server');
+            }
+        }
+    }
+
+    // RequestHandler creates a separate execution context using domains, so that every
+    // transaction/span/breadcrumb is attached to its own Hub instance
+    app.use(Sentry.Handlers.requestHandler());
+    // TracingHandler creates a trace for every incoming request
+    app.use(Sentry.Handlers.tracingHandler());
 
     app.use(bodyParser.json({ limit: h5pEditor.config.maxTotalSize }));
     app.use(
@@ -135,12 +136,22 @@ export default async (serverConfig: IServerConfig) => {
     // (H5P.adapters.express) to function properly.
     app.use(i18nextHttpMiddleware.handle(i18next));
 
-    app.use('/', routes(h5pEditor, h5pPlayer, serverConfig));
+    app.use(async (req: any, res: any, next: express.NextFunction) => {
+        const languageCode = settingsCache.getSettings().language;
+        req.language = languageCode;
+        req.languages = [languageCode, 'en'];
+        next();
+    });
+    app.use(
+        '/',
+        routes(h5pEditor, h5pPlayer, serverConfig, browserWindow, app)
+    );
 
-    // app.use(Sentry.Handlers.errorHandler());
+    // The error handler must be before any other error middleware and after all controllers
+    app.use(Sentry.Handlers.errorHandler());
 
     app.use((error, req, res, next) => {
-        // Sentry.captureException(error);
+        Sentry.captureException(error);
         res.status(error.status || 500).json({
             code: error.code,
             message: error.message,

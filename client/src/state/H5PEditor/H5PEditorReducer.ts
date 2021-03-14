@@ -1,4 +1,6 @@
 import Logger from '../../helpers/Logger';
+import * as Sentry from '@sentry/browser';
+import i18next from 'i18next';
 
 import {
     IH5PEditorState,
@@ -279,7 +281,7 @@ export default function tabReducer(
                             loadingIndicator: true,
                             viewDisabled: true,
                             mainLibrary: '',
-                            name: 'new H5P',
+                            name: i18next.t('editor.default_name'),
                             path: undefined,
                             mode: Modes.edit,
                             ...action.payload.tab
@@ -326,6 +328,8 @@ export default function tabReducer(
                 return state;
         }
     } catch (error) {
+        Sentry.captureException(error);
+
         log.error(error);
         return state;
     }

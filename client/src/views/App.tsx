@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import Logger from '../helpers/Logger';
 
@@ -13,12 +15,28 @@ import H5PEditor from './H5PEditor';
 import Analytics from './Analytics';
 import Launchpad from './Launchpad';
 
+import SetupDialog from './components/SetupDialog';
+
 import Websocket from './Websocket';
+
+import { actions } from '../state';
 
 const log = new Logger('container:app');
 
-export default function AppContaine() {
+export default function AppContainer() {
     log.info(`rendering`);
+    const dispatch = useDispatch();
+    const { i18n } = useTranslation();
+
+    useEffect(() => {
+        dispatch(actions.settings.getSettings()).then(
+            async ({ language }: { language: string }) => {
+                await i18n.loadLanguages(language);
+                i18n.changeLanguage(language);
+            }
+        );
+    }, [dispatch, i18n]);
+
     return (
         <div id="app">
             <CssBaseline />
@@ -39,6 +57,7 @@ export default function AppContaine() {
                     <Route path="/" component={Launchpad} />
                 </Switch>
             </Router>
+            <SetupDialog />
             <Notifications />
         </div>
     );

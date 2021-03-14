@@ -1,4 +1,5 @@
 import Logger from '../../helpers/Logger';
+import * as Sentry from '@sentry/browser';
 
 import { INotification } from './NotificationsTypes';
 
@@ -9,6 +10,8 @@ export function notifications(state: any): INotification[] {
         log.debug(`selecting notifications`);
         return state.notifications.notifications || [];
     } catch (error) {
+        Sentry.captureException(error);
+
         log.error(error);
         return [];
     }

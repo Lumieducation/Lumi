@@ -1,5 +1,5 @@
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
-
+import * as Sentry from '@sentry/browser';
 import Logger from '../../helpers/Logger';
 
 import {
@@ -49,6 +49,8 @@ import {
 
 import * as selectors from './H5PEditorSelectors';
 import shortid from 'shortid';
+
+import { track } from '../track/actions';
 
 import store from '../index';
 
@@ -128,6 +130,7 @@ export function exportH5P(includeReporter: boolean): any {
             try {
                 await api.exportAsHtml(data.contentId, includeReporter);
 
+                track('H5P', 'export', 'tracker', `${includeReporter}`);
                 dispatch({
                     payload: { contentId: data.contentId, includeReporter },
                     type: H5PEDITOR_EXPORT_SUCCESS
@@ -143,6 +146,8 @@ export function exportH5P(includeReporter: boolean): any {
                         type: H5PEDITOR_EXPORT_CANCEL
                     });
                 } else {
+                    Sentry.captureException(error);
+
                     dispatch({
                         payload: {
                             error,
@@ -154,6 +159,8 @@ export function exportH5P(includeReporter: boolean): any {
                 }
             }
         } catch (error) {
+            Sentry.captureException(error);
+
             dispatch({
                 payload: {
                     error
@@ -166,13 +173,15 @@ export function exportH5P(includeReporter: boolean): any {
 
 export function openH5P(): any {
     return (dispatch: any) => {
-        api.openFiles().then((response) => {
-            const files = response.body;
+        api.openFiles()
+            .then((response) => {
+                const files = response.body;
 
-            files.forEach((file: string) => {
-                dispatch(importH5P(file));
-            });
-        });
+                files.forEach((file: string) => {
+                    dispatch(importH5P(file));
+                });
+            })
+            .catch((error) => Sentry.captureException(error));
         return dispatch;
     };
 }
@@ -236,6 +245,7 @@ export function updateContentOnServer(): any {
             const data = await window.h5peditor.current?.save();
             return data;
         } catch (error) {
+            Sentry.captureException(error);
             return;
         }
     };
@@ -290,6 +300,7 @@ export function updateContent(
 
             return response;
         } catch (error) {
+            Sentry.captureException(error);
             dispatch({
                 payload: {
                     tabId
@@ -324,6 +335,8 @@ export function loadEditorContent(
 
             return content;
         } catch (error) {
+            Sentry.captureException(error);
+
             throw new Error(error);
         }
     };
@@ -374,6 +387,8 @@ export function deleteH5P(
                 });
             })
             .catch((error) => {
+                Sentry.captureException(error);
+
                 return dispatch({
                     error,
                     payload: { contentId },
@@ -397,6 +412,12 @@ export function save(
 
             const response = await api.exportH5P(data.contentId, path);
 
+            try {
+                track('H5P', 'save');
+            } catch (error) {
+                Sentry.captureException(error);
+            }
+
             dispatch({
                 // tslint:disable-next-line: object-shorthand-properties-first
                 payload: { id: data.contentId, ...response.body },
@@ -409,6 +430,8 @@ export function save(
                     type: H5PEDITOR_SAVE_CANCEL
                 });
             } else {
+                Sentry.captureException(error);
+
                 dispatch({
                     error,
                     payload: { path },
@@ -433,19 +456,32 @@ export function importH5P(
         return api
             .importH5P(path)
             .then(({ body }) => {
+                try {
+                    track(
+                        'H5P',
+                        'import',
+                        'content-type',
+                        body.metadata.mainLibrary
+                    );
+                } catch (error) {
+                    Sentry.captureException(error);
+                }
+
                 dispatch({
                     payload: { tabId, path, h5p: body },
                     type: H5P_IMPORT_SUCCESS
                 });
             })
-            .catch((error: Error) =>
+            .catch((error: Error) => {
+                Sentry.captureException(error);
+
                 dispatch({
                     error,
                     payload: {
                         path
                     },
                     type: H5P_IMPORT_ERROR
-                })
-            );
+                });
+            });
     };
 }
