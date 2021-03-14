@@ -4,20 +4,17 @@ import analyticsMenu from './analyticsMenu';
 import h5peditorMenu from './h5peditorMenu';
 import launchpadMenu from './launchpadMenu';
 
-import { TFunction } from 'i18next';
-
 export default function menuFactory(
     path: string,
     window: electron.BrowserWindow,
-    webSocket: SocketIO.Server,
-    t: TFunction
+    webSocket: SocketIO.Server
 ): void {
     switch (path) {
         case '/':
         default:
             electron.Menu.setApplicationMenu(
                 electron.Menu.buildFromTemplate(
-                    launchpadMenu(window, webSocket, t)
+                    launchpadMenu(window, webSocket)
                 )
             );
             break;
@@ -25,7 +22,7 @@ export default function menuFactory(
         case '/h5peditor':
             electron.Menu.setApplicationMenu(
                 electron.Menu.buildFromTemplate(
-                    h5peditorMenu(window, webSocket, t)
+                    h5peditorMenu(window, webSocket)
                 )
             );
             break;
@@ -33,7 +30,7 @@ export default function menuFactory(
         case '/analytics':
             electron.Menu.setApplicationMenu(
                 electron.Menu.buildFromTemplate(
-                    analyticsMenu(window, webSocket, t)
+                    analyticsMenu(window, webSocket)
                 )
             );
             break;

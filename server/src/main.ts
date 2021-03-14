@@ -12,8 +12,7 @@ import websocketFactory from './websocket';
 import serverConfigFactory from './serverConfig';
 import matomo from './matomo';
 import { machineId } from 'node-machine-id';
-import boot_i18n from './boot/i18n';
-import i18next, { TFunction } from 'i18next';
+import i18next from 'i18next';
 
 import settingsCache from './settingsCache';
 
@@ -21,7 +20,6 @@ const app = electron.app;
 let websocket: SocketIO.Server;
 let mainWindow: electron.BrowserWindow;
 let port: number;
-let t: TFunction;
 let currentPath: string = '/';
 const isDevelopment = process.env.NODE_ENV === 'development';
 const BrowserWindow = electron.BrowserWindow;
@@ -58,14 +56,14 @@ function createMainWindow(
 
     window.webContents.on('did-navigate-in-page', (event, url) => {
         currentPath = new URL(url).pathname;
-        updateMenu(currentPath, window, websocketArg, t);
+        updateMenu(currentPath, window, websocketArg);
     });
 
     i18next.on('languageChanged', (lng) => {
-        updateMenu(currentPath, window, websocketArg, t);
+        updateMenu(currentPath, window, websocketArg);
     });
 
-    updateMenu('/', window, websocketArg, t);
+    updateMenu('/', window, websocketArg);
 
     if (isDevelopment) {
         window.webContents.openDevTools();
@@ -124,10 +122,6 @@ app.on('ready', async () => {
         mainWindow
     );
     log.info('server booted');
-
-    t = await boot_i18n(
-        serverConfigFactory(process.env.USERDATA || app.getPath('userData'))
-    );
 
     port = (server.address() as any).port;
     log.info(`port is ${port}`);

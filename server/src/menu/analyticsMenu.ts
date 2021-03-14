@@ -1,16 +1,12 @@
 import electron from 'electron';
 import SocketIO from 'socket.io';
-import { TFunction } from 'i18next';
+import i18next from 'i18next';
 
 import helpMenu from './helpMenu';
 
-export default (
-    window: electron.BrowserWindow,
-    websocket: SocketIO.Server,
-    t: TFunction
-) => [
+export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
     {
-        label: t('menu.file.label'),
+        label: i18next.t('menu.file.label'),
         submenu: [
             {
                 accelerator: 'CmdOrCtrl+O',
@@ -20,25 +16,25 @@ export default (
                         type: 'IMPORT_ANALYTICS'
                     });
                 },
-                label: t('menu.file.open')
+                label: i18next.t('menu.file.open')
             },
             { type: 'separator' } as any,
             {
-                label: t('menu.quit'),
+                label: i18next.t('menu.quit'),
                 role: 'quit'
             } as any
         ]
     },
     {
-        label: t('menu.file.edit'),
+        label: i18next.t('menu.file.edit'),
         submenu: [
             {
-                label: t('menu.file.undo'),
+                label: i18next.t('menu.file.undo'),
                 accelerator: 'CmdOrCtrl+Z',
                 role: 'undo'
             },
             {
-                label: t('menu.file.redo'),
+                label: i18next.t('menu.file.redo'),
                 accelerator:
                     process.platform !== 'darwin'
                         ? 'CmdOrCtrl+Y'
@@ -49,26 +45,26 @@ export default (
                 type: 'separator'
             },
             {
-                label: t('menu.file.cut'),
+                label: i18next.t('menu.file.cut'),
                 accelerator: 'CmdOrCtrl+X',
                 role: 'cut'
             },
             {
-                label: t('menu.file.copy'),
+                label: i18next.t('menu.file.copy'),
                 accelerator: 'CmdOrCtrl+C',
                 role: 'copy'
             },
             {
-                label: t('menu.file.paste'),
+                label: i18next.t('menu.file.paste'),
                 accelerator: 'CmdOrCtrl+V',
                 role: 'paste'
             },
             {
-                label: t('menu.file.select_all'),
+                label: i18next.t('menu.file.select_all'),
                 accelerator: 'CmdOrCtrl+A',
                 role: 'selectAll'
             }
         ]
     },
-    helpMenu(window, websocket, t)
+    helpMenu(window, websocket)
 ];

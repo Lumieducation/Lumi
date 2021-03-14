@@ -5,13 +5,11 @@ import * as Tracing from '@sentry/tracing';
 import bodyParser from 'body-parser';
 import express from 'express';
 import fileUpload from 'express-fileupload';
-import path from 'path';
 
 import fsExtra from 'fs-extra';
 
 import i18next from 'i18next';
 import i18nextHttpMiddleware from 'i18next-http-middleware';
-import i18nextFsBackend from 'i18next-fs-backend';
 
 import routes from '../routes';
 
@@ -23,47 +21,17 @@ import User from '../User';
 
 import settingsCache from '../settingsCache';
 
+import boot_i18n from './i18n';
+
 export default async (
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow
 ) => {
-    // const translationFunction = await i18next
-    //     .use(i18nextFsBackend)
-    //     .use(i18nextHttpMiddleware.LanguageDetector) // This will add the
-    //     // properties language and languages to the req object.
-    //     // See https://github.com/i18next/i18next-http-middleware#adding-own-detection-functionality
-    //     // how to detect language in your own fashion. You can also choose not
-    //     // to add a detector if you only want to use one language.
-    //     .init({
-    //         backend: {
-    //             loadPath: path.resolve(
-    //                 process.env.NODE_ENV === 'development'
-    //                     ? ''
-    //                     : 'resources/app',
-    //                 'node_modules/@lumieducation/h5p-server/build/assets/translations/{{ns}}/{{lng}}.json'
-    //             )
-    //         },
-    //         debug: process.env.DEBUG && process.env.DEBUG.includes('i18n'),
-    //         defaultNS: 'server',
-    //         fallbackLng: 'en',
-    //         load: 'languageOnly',
-    //         lng: (await fsExtra.readJSON(serverConfig.settingsFile)).language,
-    //         ns: [
-    //             'client',
-    //             'copyright-semantics',
-    //             'metadata-semantics',
-    //             'mongo-s3-content-storage',
-    //             's3-temporary-storage',
-    //             'server',
-    //             'storage-file-implementations'
-    //         ],
-    //         preload: ['en', 'de'] // If you don't use a language detector of
-    //         // i18next, you must preload all languages you want to use!
-    //     });
-
     const config = await new H5P.H5PConfig(
         new H5P.fsImplementations.JsonStorage(serverConfig.configFile)
     ).load();
+
+    await boot_i18n(serverConfig);
 
     // The H5PEditor object is central to all operations of @lumieducation/h5p-server
     // if you want to user the editor component.
@@ -183,7 +151,7 @@ export default async (
     app.use(Sentry.Handlers.errorHandler());
 
     app.use((error, req, res, next) => {
-        // Sentry.captureException(error);
+        Sentry.captureException(error);
         res.status(error.status || 500).json({
             code: error.code,
             message: error.message,

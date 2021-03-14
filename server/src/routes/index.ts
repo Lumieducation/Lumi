@@ -1,8 +1,5 @@
 import express from 'express';
 import electron from 'electron';
-import fsExtra from 'fs-extra';
-
-import * as Sentry from '@sentry/node';
 
 import { H5PEditor, H5PPlayer } from '@lumieducation/h5p-server';
 import {
@@ -11,7 +8,6 @@ import {
     contentTypeCacheExpressRouter
 } from '@lumieducation/h5p-express';
 
-// import h5pConfig from '../../config/h5pConfig';
 import lumiRoutes from './lumiRoutes';
 import trackingRoutes from './trackingRoutes';
 import Logger from '../helpers/Logger';
