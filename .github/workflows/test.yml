@@ -7,14 +7,14 @@ on:
     pull_request:
 
 jobs:
-    build:
+    build_test:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - name: Use Node.js 15.x
+            - name: Use Node.js 14.x
               uses: actions/setup-node@v1
               with:
-                  node-version: 15.x
+                  node-version: 14.x
             - name: NPM Setup
               run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
               env:
@@ -23,41 +23,19 @@ jobs:
               run: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
             - name: lint
               run: npm run lint
-            - name: build:server
+            - name: build
               run: npm run build:server
             - name: build:client
-              run: npm run build:client && npm run build:reporter-client
+              run: npm run build:client
+            - name: build:reporter-client
+              run: npm run build:reporter-client
             - name: unit-tests
               run: npm run test
               env:
                   CI: true
-            - uses: actions/upload-artifact@v2
-              with:
-                  name: build-artifacts
-                  path: |
-                      node_modules/
-                      client/node_modules/
-                      reporter-client/node_modules/
-                      reporter-client/build/
-                      build/
-                      h5p/            
-    e2e:      
-        needs: build  
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v2
-            - name: Use Node.js 15.x
-              uses: actions/setup-node@v1
-              with:
-                  node-version: 15.x
-            - uses: actions/download-artifact@v2
-              with:
-                name: build-artifacts
             - name: e2e-test
               uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30
               with:
                   args: npm run test:e2e
               env:
-                  CI: true
-              
-
+                  CI: true    
