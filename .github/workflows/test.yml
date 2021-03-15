@@ -40,9 +40,9 @@ jobs:
                       reporter-client/node_modules/
                       reporter-client/build/
                       build/
-                      h5p/
-            
-    e2e:
+                      h5p/            
+    e2e:      
+        needs: build  
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
@@ -54,7 +54,7 @@ jobs:
               with:
                 name: build-artifacts
             - name: e2e-test
-              uses: ianwalter/puppeteer-container@4.0.0
+              uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30
               with:
                   args: npm run test:e2e
               env:
