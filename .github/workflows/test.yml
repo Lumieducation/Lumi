@@ -20,34 +20,25 @@ jobs:
               env:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: install
-              uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30  
-              with:
-                  args: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
+              run: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
             - name: lint
-              uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30  
-              with:
-                  args: npm run lint
+              run: npm run lint
             - name: build
-              uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30  
-              with:
-                  args: npm run build:server
+              run: npm run build:server
             - name: build:client
-              uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30  
-              with:
-                  args: npm run build:client
+              run: npm run build:client
             - name: build:reporter-client
-              uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30  
-              with:
-                  args: npm run build:reporter-client
+              run: npm run build:reporter-client
             - name: unit-tests
-              uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30  
-              with:
-                  args: npm run test
+              run: npm run test
               env:
                   CI: true
+            - uses: nanasess/setup-chromedriver@master
+            - run: |
+                  export DISPLAY=:99
+                  chromedriver --url-base=/wd/hub &
+                  sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
             - name: e2e-test
-              uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30
-              with:
-                  args: npm run test:e2e
+              run: npm run test:e2e
               env:
-                  CI: true    
+                  CI: true
