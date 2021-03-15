@@ -1,4 +1,4 @@
-name: Test
+name: Build + Tests
 
 on:
     push:
@@ -9,13 +9,12 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-
         steps:
             - uses: actions/checkout@v2
-            - name: Use Node.js 10.x
+            - name: Use Node.js 15.x
               uses: actions/setup-node@v1
               with:
-                  node-version: 10.x
+                  node-version: 15.x
             - name: NPM Setup
               run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
               env:
@@ -32,3 +31,31 @@ jobs:
               run: npm run test
               env:
                   CI: true
+            - uses: actions/upload-artifact@v2
+              with:
+                  name: build-artifacts
+                  path: |
+                      node_modules/
+                      client/node_modules/
+                      reporter-client/node_modules/
+                      reporter-client/build/
+                      build/
+                      h5p/
+            
+    e2e:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js 15.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 15.x
+            - uses: actions/download-artifact@v2
+              with:
+                name: build-artifacts
+            - name: e2e-test
+              uses: ianwalter/puppeteer-container@4.0.0
+              run: npm run test:e2e
+              env:
+                  CI: true
+
