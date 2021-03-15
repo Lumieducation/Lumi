@@ -33,12 +33,9 @@ jobs:
               run: npm run test
               env:
                   CI: true
-            - uses: nanasess/setup-chromedriver@master
-            - run: |
-                  export DISPLAY=:99
-                  chromedriver --url-base=/wd/hub &
-                  sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
             - name: e2e-test
-              run: npm run test:e2e
+              run: |
+                  sudo apt-get install libgbm1
+                  "xvfb-run --auto-servernum --server-args='-screen 0, 1600x900x24' npm run test:e2e"
               env:
                   CI: true
