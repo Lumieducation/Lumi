@@ -33,9 +33,11 @@ jobs:
               run: npm run test
               env:
                   CI: true
-            - name: e2e-test
+            - name: Install libgbm1 (Linux)          
               run: |
-                  sudo apt-get install libgbm1
-                  "xvfb-run --auto-servernum --server-args='-screen 0, 1600x900x24' npm run test:e2e"
+                sudo apt-get update
+                sudo apt-get install xvfb libgbm1 libxss1 libnss3 libgtk-3-dev libasound2-dev unzip
+            - name: e2e-test
+              run: xvfb-run --auto-servernum --server-args='-screen 0, 1600x900x24' npm run test:e2e
               env:
                   CI: true
