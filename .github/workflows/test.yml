@@ -20,7 +20,9 @@ jobs:
               env:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: install
-              run: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
+              uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30  
+              with:
+                  args: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
             - name: lint
               run: npm run lint
             - name: build
