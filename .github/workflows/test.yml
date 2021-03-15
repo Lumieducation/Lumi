@@ -24,15 +24,25 @@ jobs:
               with:
                   args: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
             - name: lint
-              run: npm run lint
+              uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30  
+              with:
+                  args: npm run lint
             - name: build
-              run: npm run build:server
+              uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30  
+              with:
+                  args: npm run build:server
             - name: build:client
-              run: npm run build:client
+              uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30  
+              with:
+                  args: npm run build:client
             - name: build:reporter-client
-              run: npm run build:reporter-client
+              uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30  
+              with:
+                  args: npm run build:reporter-client
             - name: unit-tests
-              run: npm run test
+              uses: ianwalter/puppeteer-container@afefc4bee7341a77baa94503da684e2895ea5d30  
+              with:
+                  args: npm run test
               env:
                   CI: true
             - name: e2e-test
