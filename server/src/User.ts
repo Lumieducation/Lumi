@@ -16,8 +16,8 @@ export default class User implements IUser {
     public canCreateRestricted: boolean;
     public canInstallRecommended: boolean;
     public canUpdateAndInstallLibraries: boolean;
+    public email: 'user@lumi.education';
     public id: string;
     public name: string;
     public type: 'local';
-    public email: 'user@lumi.education';
 }
