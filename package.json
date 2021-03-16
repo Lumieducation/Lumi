@@ -60,7 +60,8 @@
         "test:e2e": "npx jest --config jest.e2e.config.js",
         "semantic-release": "semantic-release",
         "uninstall": "rm -rf build/ && rm -rf node_modules/",
-        "postinstall": "sh scripts/install.sh 1.24 && sh scripts/install.sh 1.24.1"
+        "postinstall": "sh scripts/install.sh 1.24 && sh scripts/install.sh 1.24.1",
+        "prepare": "husky install"
     },
     "publishConfig": {
         "access": "restricted"
