@@ -8,7 +8,7 @@ const log = new Logger('websocket');
 
 export default function (server: http.Server): SocketIO.Server {
     log.info('booting');
-    const io = new SocketIO.Server(server);
+    const io: SocketIO.Server = SocketIO(server);
     io.on('connection', (socket: SocketIO.Socket) => {
         log.info('new connection');
 
