@@ -20,12 +20,7 @@ export function importAnalytics(): any {
         track('Analytics', 'import');
         try {
             const { users, interactions } = await API.importAnalytics();
-            track(
-                'Analytics',
-                'import',
-                'content-types',
-                `${interactions.map((i) => i.name)}`
-            );
+            track('Analytics', 'import', `${interactions.map((i) => i.name)}`);
 
             dispatch({
                 payload: { users, interactions },
