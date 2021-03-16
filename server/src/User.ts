@@ -19,4 +19,5 @@ export default class User implements IUser {
     public id: string;
     public name: string;
     public type: 'local';
+    public email: 'user@lumi.education';
 }
