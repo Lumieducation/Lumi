@@ -1,4 +1,5 @@
 import electron from 'electron';
+import SocketIO from 'socket.io';
 
 import analyticsMenu from './analyticsMenu';
 import h5peditorMenu from './h5peditorMenu';

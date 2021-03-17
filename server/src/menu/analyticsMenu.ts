@@ -6,7 +6,7 @@ import helpMenu from './helpMenu';
 
 export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
     {
-        label: i18next.t('menu.file.label'),
+        label: i18next.t('lumi:menu.file.label'),
         submenu: [
             {
                 accelerator: 'CmdOrCtrl+O',
@@ -16,25 +16,25 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
                         type: 'IMPORT_ANALYTICS'
                     });
                 },
-                label: i18next.t('menu.file.open')
+                label: i18next.t('lumi:menu.file.open')
             },
             { type: 'separator' } as any,
             {
-                label: i18next.t('menu.quit'),
+                label: i18next.t('lumi:menu.quit'),
                 role: 'quit'
             } as any
         ]
     },
     {
-        label: i18next.t('menu.file.edit'),
+        label: i18next.t('lumi:menu.file.edit'),
         submenu: [
             {
-                label: i18next.t('menu.file.undo'),
+                label: i18next.t('lumi:menu.file.undo'),
                 accelerator: 'CmdOrCtrl+Z',
                 role: 'undo'
             },
             {
-                label: i18next.t('menu.file.redo'),
+                label: i18next.t('lumi:menu.file.redo'),
                 accelerator:
                     process.platform !== 'darwin'
                         ? 'CmdOrCtrl+Y'
@@ -45,22 +45,22 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
                 type: 'separator'
             },
             {
-                label: i18next.t('menu.file.cut'),
+                label: i18next.t('lumi:menu.file.cut'),
                 accelerator: 'CmdOrCtrl+X',
                 role: 'cut'
             },
             {
-                label: i18next.t('menu.file.copy'),
+                label: i18next.t('lumi:menu.file.copy'),
                 accelerator: 'CmdOrCtrl+C',
                 role: 'copy'
             },
             {
-                label: i18next.t('menu.file.paste'),
+                label: i18next.t('lumi:menu.file.paste'),
                 accelerator: 'CmdOrCtrl+V',
                 role: 'paste'
             },
             {
-                label: i18next.t('menu.file.select_all'),
+                label: i18next.t('lumi:menu.file.select_all'),
                 accelerator: 'CmdOrCtrl+A',
                 role: 'selectAll'
             }

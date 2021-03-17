@@ -8,24 +8,22 @@ export default async function boot(
 ): Promise<TFunction> {
     const languageCode = (await fsExtra.readJSON(serverConfig.settingsFile))
         .language;
-    let locales;
-    try {
-        locales = await fsExtra.readJSON(
-            `${__dirname}/../../../locales/${languageCode}.json`
-        );
-    } catch (error) {
-        locales = await fsExtra.readJSON(
-            `${__dirname}/../../../locales/en.json`
-        );
-    }
 
     const t = await i18next.use(i18nextBackend).init({
         lng: languageCode,
         fallbackLng: 'en',
-        debug: true,
+        ns: [
+            'client',
+            'copyright-semantics',
+            'metadata-semantics',
+            'server',
+            'storage-file-implementations',
+            'lumi'
+        ],
         load: 'languageOnly',
+        defaultNS: 'server',
         backend: {
-            loadPath: `${__dirname}/../../../locales/{{lng}}.json`
+            loadPath: `${__dirname}/../../../locales/{{ns}}/{{lng}}.json`
         }
     });
 

@@ -1,21 +1,17 @@
 import express from 'express';
 import * as Sentry from '@sentry/node';
-
 import { dialog } from 'electron';
-
 import fsExtra from 'fs-extra';
-
 import _path from 'path';
-
 import * as H5P from '@lumieducation/h5p-server';
 import {
     IRequestWithUser,
     IRequestWithLanguage
 } from '@lumieducation/h5p-express';
-
 import HtmlExporter from '@lumieducation/h5p-html-exporter';
 
 import createReporter from '../helpers/createRepoter';
+import User from '../User';
 
 /**
  * @param h5pEditor
@@ -34,7 +30,8 @@ export default function (
     router.get(`/:contentId/play`, async (req, res) => {
         try {
             const content = (await h5pPlayer.render(
-                req.params.contentId
+                req.params.contentId,
+                new User()
             )) as H5P.IPlayerModel;
             // We override the embed types to make sure content always resizes
             // properly.
@@ -136,7 +133,8 @@ export default function (
                 : req.params.contentId,
             languageOverride === 'auto'
                 ? req.language ?? 'en'
-                : languageOverride
+                : languageOverride,
+            new User()
         )) as H5P.IEditorModel;
         if (!req.params.contentId || req.params.contentId === 'undefined') {
             res.send(editorModel);
