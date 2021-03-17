@@ -1,5 +1,10 @@
-import { IInteraction, IUser } from '@lumieducation/xapi-viewer';
+import { IInteraction } from '@lumieducation/xapi-aggregator';
 
+interface IUser {
+    id: string;
+    name: string;
+    results: number[];
+}
 // state
 
 export interface IAnalyticsState {
