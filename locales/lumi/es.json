@@ -1,5 +1,6 @@
 {
     "editor": {
+        "default_name": "nuevo H5P",
         "tab": { "view": "Vista", "edit": "Editar" },
         "sidebar": {
             "open": "Abrir archivo H5P",
@@ -25,7 +26,9 @@
             "open": "Importar archivos .lumi",
             "start": "Comienzo",
             "learn_more": "aprende más"
-        }
+        },
+        "name": "Nombre",
+        "average": "Promedio"
     },
     "bug_report": {
         "title": "Informes de fallos y errores",
@@ -44,7 +47,8 @@
     },
     "language": {
         "title": "Idioma",
-        "description": "Cambia el idioma de la aplicación."
+        "description": "Cambia el idioma de la aplicación.",
+        "help_translate": "¡Ayúdanos a traducir!"
     },
     "privacy_policy": {
         "title": "Política de privacidad",
@@ -56,6 +60,7 @@
         "consent_warning": "Necesita al menos dar su consentimiento a la política de privacidad para usar esta aplicación."
     },
     "menu": {
+        "quit": "Renunciar",
         "file": {
             "label": "Archivo",
             "open": "Abrir archivos analíticos",
@@ -75,7 +80,36 @@
             "label": "Ayuda",
             "report_issue": "Informar problema",
             "toggle_developer_tools": "Alternar herramientas para desarrolladores",
-            "follow_us_on_twitter": "Síguenos en Twitter"
+            "follow_us_on_twitter": "Síguenos en Twitter",
+            "about": "Sobre"
+        }
+    },
+    "notifications": {
+        "analytics": {
+            "import": {
+                "error": "No se encontraron archivos válidos",
+                "success": "Archivos de informes importados"
+            }
+        },
+        "h5peditor": {
+            "save": {
+                "success": "¡H5P guardado!",
+                "error": "No se pudo guardar H5P."
+            },
+            "open": { "error": "No se pudo abrir H5P." },
+            "export_as_html": {
+                "success": "H5P exportado correctamente como HTML",
+                "error": "No se pudo exportar H5P como HTML"
+            }
+        },
+        "export_as_html": {
+            "dialog": {
+                "title": "Reportero de nieve",
+                "description": "¿Quieres incluir un reportero en tu html? Aprenda más sobre esto",
+                "yes": "sí",
+                "no": "No",
+                "here": "aquí"
+            }
         }
     }
 }
