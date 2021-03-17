@@ -8,6 +8,8 @@ import * as os from 'os';
 import { machineId } from 'node-machine-id';
 import cryptoRandomString from 'crypto-random-string';
 
+import settingsCache from '../settingsCache';
+
 const id = cryptoRandomString({ length: 16 });
 
 export default function (serverConfig: IServerConfig): express.Router {
@@ -20,10 +22,7 @@ export default function (serverConfig: IServerConfig): express.Router {
             next: express.NextFunction
         ) => {
             try {
-                if (
-                    (await fsExtra.readJSON(serverConfig.settingsFile))
-                        .usageStatistics
-                ) {
+                if (settingsCache.getSettings().usageStatistics) {
                     const { action, category, name, value } = req.body;
                     const data = {
                         url: '/Lumi',

@@ -1,4 +1,4 @@
-name: Test
+name: Build + Tests
 
 on:
     push:
@@ -7,15 +7,14 @@ on:
     pull_request:
 
 jobs:
-    build:
+    build_test:
         runs-on: ubuntu-latest
-
         steps:
             - uses: actions/checkout@v2
-            - name: Use Node.js 10.x
+            - name: Use Node.js 14.x
               uses: actions/setup-node@v1
               with:
-                  node-version: 10.x
+                  node-version: 14.x
             - name: NPM Setup
               run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
               env:
@@ -24,11 +23,21 @@ jobs:
               run: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
             - name: lint
               run: npm run lint
-            - name: build:server
+            - name: build
               run: npm run build:server
             - name: build:client
-              run: npm run build:client && npm run build:reporter-client
+              run: npm run build:client
+            - name: build:reporter-client
+              run: npm run build:reporter-client
             - name: unit-tests
               run: npm run test
+              env:
+                  CI: true
+            - name: Install libgbm1 (Linux)          
+              run: |
+                sudo apt-get update
+                sudo apt-get install xvfb libgbm1 libxss1 libnss3 libgtk-3-dev libasound2-dev unzip
+            - name: e2e-test
+              run: xvfb-run --auto-servernum --server-args='-screen 0, 1600x900x24' npm run test:e2e
               env:
                   CI: true

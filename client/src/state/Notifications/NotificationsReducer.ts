@@ -31,6 +31,8 @@ import {
     IAnalyticsImportErrorAction
 } from '../Analytics/AnalyticsTypes';
 
+import i18next from 'i18next';
+
 import shortid from 'shortid';
 
 export const initialState: INotificationsState = {
@@ -61,8 +63,9 @@ export default function notificationsReducer(
                         ...state.notifications,
                         {
                             key: shortid(),
-                            message:
-                                action.payload.message || `No valid data found`,
+                            message: i18next.t(
+                                'notifications.analytics.import.error'
+                            ),
                             options: {
                                 variant: 'error'
                             }
@@ -77,7 +80,9 @@ export default function notificationsReducer(
                         ...state.notifications,
                         {
                             key: shortid(),
-                            message: `Imported ${action.payload.users.length} user reponses`,
+                            message: i18next.t(
+                                'notifications.analytics.import.success'
+                            ),
                             options: {
                                 variant: 'success'
                             }
@@ -107,7 +112,9 @@ export default function notificationsReducer(
                         ...state.notifications,
                         {
                             key: shortid(),
-                            message: 'notification.export.success',
+                            message: i18next.t(
+                                'notifications.h5peditor.save.success'
+                            ),
                             options: {
                                 variant: 'success'
                             }
@@ -122,7 +129,9 @@ export default function notificationsReducer(
                         ...state.notifications,
                         {
                             key: shortid(),
-                            message: 'notification.export.error',
+                            message: i18next.t(
+                                'notifications.h5peditor.save.error'
+                            ),
                             options: {
                                 variant: 'error'
                             }
@@ -137,9 +146,9 @@ export default function notificationsReducer(
                         ...state.notifications,
                         {
                             key: shortid(),
-                            message:
-                                action.error.response.body.message ||
-                                'notification.import.error',
+                            message: i18next.t(
+                                'notifications.h5peditor.open.error'
+                            ),
                             options: {
                                 variant: 'error'
                             }
@@ -154,7 +163,9 @@ export default function notificationsReducer(
                         ...state.notifications,
                         {
                             key: shortid(),
-                            message: 'notification.exporthtml.success',
+                            message: i18next.t(
+                                'notifications.h5peditor.export_as_html.success'
+                            ),
                             options: {
                                 variant: 'success'
                             }
@@ -169,7 +180,9 @@ export default function notificationsReducer(
                         ...state.notifications,
                         {
                             key: shortid(),
-                            message: 'notification.exporthtml.error',
+                            message: i18next.t(
+                                'notifications.h5peditor.export_as_html.error'
+                            ),
                             options: {
                                 variant: 'error'
                             }

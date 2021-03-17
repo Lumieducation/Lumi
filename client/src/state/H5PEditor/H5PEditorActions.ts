@@ -130,7 +130,11 @@ export function exportH5P(includeReporter: boolean): any {
             try {
                 await api.exportAsHtml(data.contentId, includeReporter);
 
-                track('H5P', 'export', 'tracker', `${includeReporter}`);
+                track(
+                    'H5P',
+                    'export_as_single_html',
+                    `${includeReporter ? 'with_reporter' : 'without_reporter'}`
+                );
                 dispatch({
                     payload: { contentId: data.contentId, includeReporter },
                     type: H5PEDITOR_EXPORT_SUCCESS
@@ -413,7 +417,7 @@ export function save(
             const response = await api.exportH5P(data.contentId, path);
 
             try {
-                track('H5P', 'save');
+                track('H5P', 'save', data.metadata?.mainLibrary);
             } catch (error) {
                 Sentry.captureException(error);
             }
@@ -457,12 +461,7 @@ export function importH5P(
             .importH5P(path)
             .then(({ body }) => {
                 try {
-                    track(
-                        'H5P',
-                        'import',
-                        'content-type',
-                        body.metadata.mainLibrary
-                    );
+                    track('H5P', 'open', body.metadata.mainLibrary);
                 } catch (error) {
                     Sentry.captureException(error);
                 }

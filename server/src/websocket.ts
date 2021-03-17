@@ -12,7 +12,7 @@ export { io };
 
 export default function (server: http.Server): SocketIO.Server {
     log.info('booting');
-    io = SocketIO(server);
+    const io = new SocketIO.Server(server);
     io.on('connection', (socket: SocketIO.Socket) => {
         log.info('new connection');
 
@@ -21,10 +21,10 @@ export default function (server: http.Server): SocketIO.Server {
 
             io.emit('action', action);
         });
+        socket.on('error', (error) => {
+            Sentry.captureException(error);
+        });
     });
 
-    io.on('error', (error) => {
-        Sentry.captureException(error);
-    });
     return io;
 }

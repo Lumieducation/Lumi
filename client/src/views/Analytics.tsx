@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import AnalyticsStartPage from './components/AnalyticsStartPage';
 import AnalyticsToolbar from './components/AnalyticsToolbar';
 
-import LumixAPIViewer from '@lumieducation/xapi-viewer';
+import LumixAPIViewer from './components/AnalyticsTable';
 
 import { actions, IState } from '../state';
 

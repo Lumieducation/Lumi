@@ -1,10 +1,8 @@
 import superagent from 'superagent';
 
-import { IInteraction, IUser } from '@lumieducation/xapi-viewer';
-
 export async function importAnalytics(): Promise<{
-    users: IUser[];
-    interactions: IInteraction[];
+    users: any[];
+    interactions: any[];
 }> {
     const response = await superagent.get('/api/v1/analytics');
 

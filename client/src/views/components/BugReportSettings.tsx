@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -40,6 +41,7 @@ export default function BugReportSettingsCard() {
     const classes = useStyles();
     const settings = useSelector((state: IState) => state.settings);
     const dispatch = useDispatch();
+    const { t } = useTranslation();
 
     return (
         <Card className={classes.root}>
@@ -49,15 +51,14 @@ export default function BugReportSettingsCard() {
                 </CardMedia>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Bug & Crash Reports
+                        {t('bug_report.title')}
                     </Typography>
                     <Typography
                         variant="body2"
                         color="textSecondary"
                         component="p"
                     >
-                        Help us improve our software and services by sending
-                        anonymous crash & bug reports.
+                        {t('bug_report.description')}
                     </Typography>
                 </CardContent>
             </CardActionArea>
@@ -75,7 +76,7 @@ export default function BugReportSettingsCard() {
                             }
                         />
                     }
-                    label="Enable"
+                    label={t('settings.enable')}
                 />
                 <a
                     href="https://next.lumi.education/app/privacy-policy"
@@ -86,7 +87,7 @@ export default function BugReportSettingsCard() {
                         textDecoration: 'inherit'
                     }}
                 >
-                    <Button size="small">Privacy Policy</Button>
+                    <Button size="small">{t('privacy_policy.title')}</Button>
                 </a>
             </CardActions>
         </Card>
