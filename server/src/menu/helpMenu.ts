@@ -7,22 +7,22 @@ export default function (
     websocket: SocketIO.Server
 ): any {
     return {
-        label: i18next.t('menu.help.label'),
+        label: i18next.t('lumi:menu.help.label'),
         submenu: [
             {
                 click: () => {
-                    websocket.emit('action', {
+                    websocket.emit('lumi:action', {
                         type: 'REPORT_ISSUE'
                     });
                 },
-                label: i18next.t('menu.help.report_issue')
+                label: i18next.t('lumi:menu.help.report_issue')
             },
             { type: 'separator' } as any,
             {
                 click: () => {
                     window.webContents.openDevTools();
                 },
-                label: i18next.t('menu.help.toggle_developer_tools')
+                label: i18next.t('lumi:menu.help.toggle_developer_tools')
             },
             { type: 'separator' } as any,
             {
@@ -31,10 +31,10 @@ export default function (
                         'https://www.twitter.com/Lumieducation'
                     );
                 },
-                label: i18next.t('menu.help.follow_us_on_twitter')
+                label: i18next.t('lumi:menu.help.follow_us_on_twitter')
             },
             // { label: 'Check for Updates...', click: updater },
-            { label: i18next.t('menu.help.about'), role: 'about' }
+            { label: i18next.t('lumi:menu.help.about'), role: 'about' }
         ]
     };
 }

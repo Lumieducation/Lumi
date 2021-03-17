@@ -31,7 +31,7 @@ export default async (
         new H5P.fsImplementations.JsonStorage(serverConfig.configFile)
     ).load();
 
-    await boot_i18n(serverConfig);
+    const translationFunction = await boot_i18n(serverConfig);
 
     // The H5PEditor object is central to all operations of @lumieducation/h5p-server
     // if you want to user the editor component.
@@ -48,9 +48,7 @@ export default async (
         serverConfig.librariesPath, // the path on the local disc where libraries should be stored)
         serverConfig.workingCachePath, // the path on the local disc where content is stored. Only used / necessary if you use the local filesystem content storage class.
         serverConfig.temporaryStoragePath, // the path on the local disc where temporary files (uploads) should be stored. Only used / necessary if you use the local filesystem temporary storage class.
-        (key, language) => {
-            return key; // translationFunction(key, { lng: language });
-        }
+        (key, language) => translationFunction(key, { lng: language })
     );
 
     h5pEditor.setRenderer((model) => model);
