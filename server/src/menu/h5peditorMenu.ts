@@ -11,7 +11,7 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
             {
                 accelerator: 'CmdOrCtrl+N',
                 click: () => {
-                    websocket.emit('lumi:action', {
+                    websocket.emit('action', {
                         payload: {
                             contentId: Math.round(Math.random() * 100000)
                         },
@@ -35,7 +35,7 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
                             properties: ['openFile', 'multiSelections']
                         })
                         .then(({ filePaths }) => {
-                            websocket.emit('lumi:action', {
+                            websocket.emit('action', {
                                 payload: {
                                     paths: filePaths
                                 },
@@ -49,7 +49,7 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
             {
                 accelerator: 'CmdOrCtrl+S',
                 click: () => {
-                    websocket.emit('lumi:action', {
+                    websocket.emit('action', {
                         type: 'SAVE'
                     });
                 },
@@ -58,7 +58,7 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
             {
                 accelerator: 'Shift+CmdOrCtrl+S',
                 click: () => {
-                    websocket.emit('lumi:action', {
+                    websocket.emit('action', {
                         type: 'SAVE_AS'
                     });
                 },
@@ -67,7 +67,7 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
             { type: 'separator' } as any,
             {
                 click: () => {
-                    websocket.emit('lumi:action', {
+                    websocket.emit('action', {
                         type: 'EXPORT_AS_HTML'
                     });
                 },

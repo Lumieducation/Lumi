@@ -11,7 +11,7 @@ export default function (
         submenu: [
             {
                 click: () => {
-                    websocket.emit('lumi:action', {
+                    websocket.emit('action', {
                         type: 'REPORT_ISSUE'
                     });
                 },

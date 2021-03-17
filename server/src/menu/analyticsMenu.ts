@@ -11,7 +11,7 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
             {
                 accelerator: 'CmdOrCtrl+O',
                 click: () => {
-                    websocket.emit('lumi:action', {
+                    websocket.emit('action', {
                         payload: {},
                         type: 'IMPORT_ANALYTICS'
                     });
