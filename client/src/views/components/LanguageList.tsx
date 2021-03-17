@@ -44,6 +44,7 @@ export default function LanguageList() {
                     i18n.changeLanguage(event.target.value as string);
                 }}
             >
+                <MenuItem value={'af'}>Afrikaans</MenuItem>
                 <MenuItem value={'bg'}>български език</MenuItem>
                 <MenuItem value={'bs'}>bosanski jezik</MenuItem>
                 <MenuItem value={'ca'}>català, valencià</MenuItem>
