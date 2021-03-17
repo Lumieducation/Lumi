@@ -132,7 +132,7 @@ export function exportH5P(includeReporter: boolean): any {
 
                 track(
                     'H5P',
-                    'export_as_html',
+                    'export_as_single_html',
                     `${includeReporter ? 'with_reporter' : 'without_reporter'}`
                 );
                 dispatch({
