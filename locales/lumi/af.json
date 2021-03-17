@@ -1,6 +1,9 @@
 {
     "editor": {
-        "tab": { "view": "Beskou", "edit": "Wysig" },
+        "tab": {
+            "view": "Beskou",
+            "edit": "Wysig"
+        },
         "sidebar": {
             "open": "Maak die H5P-lêer oop",
             "create": "Nuwe H5P-lêer",
@@ -12,25 +15,31 @@
             "open": "Maak bestaande H5P oop",
             "create": "skep nuwe H5P",
             "start": "begin"
-        }
+        },
+        "default_name": "nuwe H5P"
     },
     "settings": {
-        "appbar": { "label": "Instellings", "save": "Stoor" },
+        "appbar": {
+            "label": "Instellings",
+            "save": "Stoor"
+        },
         "enable": "Aktiveer"
     },
     "analytics": {
         "startPage": {
-            "title": "Lumi Analytics",
-            "welcomeMessage": "Met die Analytics-instrument van Lumi kan u gebruikersverslae invoer en dit vir u visualiseer",
+            "title": "Lumi Analise",
+            "welcomeMessage": "Met die Analitiese-instrument van Lumi kan jy gebruikersverslae invoer en dit vir jouself visualiseer",
             "open": "Voer .lumi-lêers in",
             "start": "Begin",
             "learn_more": "leer meer"
-        }
+        },
+        "average": "Gemiddeld",
+        "name": "Naam"
     },
     "bug_report": {
         "title": "Foutverslae",
-        "description": "Help ons om ons sagteware en dienste te verbeter deur anonieme crash & bug verslae te stuur.",
-        "consent": "Ek laat toe dat hierdie aansoek bug- en crashverslae stuur."
+        "description": "Help ons om ons sagteware en dienste te verbeter deur anonieme foutverslae verslae te stuur.",
+        "consent": "Ek laat toe dat hierdie toepassing foutverslae stuur."
     },
     "usage_statistics": {
         "title": "Gebruiksstatistieke",
@@ -40,42 +49,78 @@
     "updates": {
         "title": "Outomatiese opdaterings",
         "description": "Kry die nuutste weergawe outomaties.",
-        "consent": "Ek laat toe dat hierdie aansoek outomaties op updates kyk."
+        "consent": "Ek laat toe dat hierdie aansoek outomaties vir opdaterings kyk."
     },
     "language": {
         "title": "Taal",
-        "description": "Verander die taal van die aansoek."
+        "description": "Verander die taal van die aansoek.",
+        "help_translate": "Help ons vertaal!"
     },
     "privacy_policy": {
         "title": "Privaatheidsbeleid",
         "consent": "Ek het die privaatheidsbeleid gelees en ingestem."
     },
     "setup_dialog": {
-        "description": "Dit is vir ons belangrik om die privaatheid van die individu te beskerm. Ons versamel slegs die inligting wat u kies om vir ons te gee, en ons verwerk dit met u toestemming. Ons wil so deursigtig moontlik wees. Lumi maak egter staat op sommige verbindings en data-oordragte om te werk.",
+        "description": "Dit is vir ons belangrik om die privaatheid van die individu te beskerm. Ons versamel slegs die inligting wat jy kies om vir ons te gee, en ons verwerk dit met jou toestemming. Ons wil so deursigtig moontlik wees. Lumi maak egter staat op sommige verbindings en data-oordragte om te werk.",
         "save": "Stoor",
         "consent_warning": "U moet ten minste toestemming gee vir die privaatheidsbeleid om hierdie aansoek te gebruik."
     },
     "menu": {
         "file": {
-            "label": "lêer",
+            "label": "Lêer",
             "open": "Maak analitiese lêers oop",
             "save": "Stoor",
             "save_as": "Stoor as ...",
             "export": "Voer uit ...",
             "edit": "Wysig",
             "undo": "Ontdoen",
-            "redo": "Gereed",
+            "redo": "Herhaal",
             "cut": "Sny",
             "copy": "Kopieer",
             "paste": "Plak",
             "select_all": "Kies Alles"
         },
-        "h5peditor": { "new": "Nuwe H5P", "open": "Maak H5P oop" },
+        "h5peditor": {
+            "new": "Nuwe H5P",
+            "open": "Maak H5P oop"
+        },
         "help": {
             "label": "Hulp",
-            "report_issue": "Verslagkwessie",
+            "report_issue": "Rapporteer kwessie",
             "toggle_developer_tools": "Skakel ontwikkelaarhulpmiddels",
-            "follow_us_on_twitter": "Volg ons op Twitter"
+            "follow_us_on_twitter": "Volg ons op Twitter",
+            "about": "Oor"
+        },
+        "quit": "Verlaat"
+    },
+    "notifications": {
+        "export_as_html": {
+            "dialog": {
+                "here": "hier",
+                "no": "nee",
+                "yes": "ja",
+                "description": "Wil jy verslae in jou html insluit? Leer meer hieroor",
+                "title": "Lumi verslae"
+            }
+        },
+        "h5peditor": {
+            "export_as_html": {
+                "error": "Kon nie H5P as 'n HTML uitvoer nie",
+                "success": "H5P is suksesvol as 'n HTML uitgevoer"
+            },
+            "open": {
+                "error": "Kon nie H5P oopmaak nie."
+            },
+            "save": {
+                "error": "H5P kon nie gestoor word nie.",
+                "success": "H5P gestoor!"
+            }
+        },
+        "analytics": {
+            "import": {
+                "success": "Voer verslaglêers in",
+                "error": "Geen geldige lêer gevind nie"
+            }
         }
     }
 }
