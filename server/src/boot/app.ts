@@ -49,7 +49,7 @@ export default async (
         new H5P.fsImplementations.JsonStorage(serverConfig.configFile)
     ).load();
 
-    await increaseMaxFileSize();
+    await increaseMaxFileSize(config);
 
     const translationFunction = await boot_i18n(serverConfig);
 
