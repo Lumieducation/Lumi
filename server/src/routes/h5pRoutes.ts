@@ -115,7 +115,7 @@ export default function (
                 req.user
             );
 
-            await fsExtra.writeFileSync(path, html);
+            await fsExtra.writeFile(path, html);
         } catch (error) {
             Sentry.captureException(error);
             res.status(500).json(error);

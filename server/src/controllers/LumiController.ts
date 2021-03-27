@@ -59,6 +59,14 @@ export default class LumiController {
             this.h5pEditor.config
         );
         await packageExporter.createPackage(contentId, stream, new User());
+        // We also need to wait for the stream to finish before returning, so
+        // that the user is notified correctly about fact that saving is still
+        // going on.
+        await new Promise<void>((y, n) => {
+            stream.on('finish', () => {
+                y();
+            });
+        });
 
         return { path };
     }
