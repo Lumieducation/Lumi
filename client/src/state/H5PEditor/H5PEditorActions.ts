@@ -416,6 +416,10 @@ export function save(
 
             const response = await api.exportH5P(data.contentId, path);
 
+            if (response.status !== 200) {
+                throw new Error(`Error while saving H5P: ${response.text}`);
+            }
+
             try {
                 track('H5P', 'save', data.metadata?.mainLibrary);
             } catch (error) {

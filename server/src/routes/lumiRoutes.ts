@@ -83,6 +83,7 @@ export default function (
                     res.status(200).json(result);
                 })
                 .catch((error) => {
+                    log.error(`Error while saving H5P: ${error}`);
                     Sentry.captureException(error);
                     next(error);
                 });

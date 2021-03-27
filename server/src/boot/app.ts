@@ -23,6 +23,24 @@ import settingsCache from '../settingsCache';
 
 import boot_i18n from './i18n';
 
+/**
+ * Increases the maximum file size if it is still at the default value.
+ */
+const increaseMaxFileSize = async (config: H5P.IH5PConfig) => {
+    let updatedConfig = false;
+    if (!config.maxFileSize || config.maxFileSize === 16 * 1024 * 1024) {
+        config.maxFileSize = 2048 * 1024 * 1024;
+        updatedConfig = true;
+    }
+    if (!config.maxTotalSize || config.maxTotalSize === 64 * 1024 * 1024) {
+        config.maxTotalSize = 2048 * 1024 * 1024;
+        updatedConfig = true;
+    }
+    if (updatedConfig) {
+        await config.save();
+    }
+};
+
 export default async (
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow
@@ -30,6 +48,8 @@ export default async (
     const config = await new H5P.H5PConfig(
         new H5P.fsImplementations.JsonStorage(serverConfig.configFile)
     ).load();
+
+    await increaseMaxFileSize();
 
     const translationFunction = await boot_i18n(serverConfig);
 
