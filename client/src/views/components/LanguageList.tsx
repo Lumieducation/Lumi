@@ -51,9 +51,10 @@ export default function LanguageList() {
                 <MenuItem value={'cs'}>čeština, český jazyk</MenuItem>
                 <MenuItem value={'de'}>Deutsch</MenuItem>
                 <MenuItem value={'el'}>ελληνικά</MenuItem>
-                <MenuItem value={'en'}>Englisch</MenuItem>
-                <MenuItem value={'en-GB'}>Englisch (British)</MenuItem>
-                <MenuItem value={'es'}>Spanish</MenuItem>
+                <MenuItem value={'en'}>English</MenuItem>
+                <MenuItem value={'en-GB'}>English (British)</MenuItem>
+                <MenuItem value={'es'}>español</MenuItem>
+                <MenuItem value={'es-MX'}>español mexicano</MenuItem>
                 <MenuItem value={'et'}>eesti, eesti keel</MenuItem>
                 <MenuItem value={'eu'}>euskara, euskera</MenuItem>
                 <MenuItem value={'fi'}>suomi, suomen kieli</MenuItem>
