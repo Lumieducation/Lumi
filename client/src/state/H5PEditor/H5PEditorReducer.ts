@@ -31,7 +31,8 @@ import {
 export const initialState: IH5PEditorState = {
     activeTabIndex: 0,
     tabList: [],
-    showExportDialog: false
+    showExportDialog: false,
+    lockDisplay: false
 };
 
 const log = new Logger('reducer:tabs');
@@ -59,7 +60,8 @@ export default function tabReducer(
                                   loadingIndicator: true
                               }
                             : tab
-                    )
+                    ),
+                    lockDisplay: true
                 };
 
             case H5PEDITOR_SAVE_SUCCESS:
@@ -73,7 +75,8 @@ export default function tabReducer(
                                   path: action.payload.path
                               }
                             : tab
-                    )
+                    ),
+                    lockDisplay: false
                 };
 
             case H5PEDITOR_SAVE_ERROR:
@@ -86,7 +89,8 @@ export default function tabReducer(
                                   loadingIndicator: false
                               }
                             : tab
-                    )
+                    ),
+                    lockDisplay: false
                 };
 
             case H5PEDITOR_SAVE_CANCEL:
@@ -99,7 +103,8 @@ export default function tabReducer(
                                   loadingIndicator: false
                               }
                             : tab
-                    )
+                    ),
+                    lockDisplay: false
                 };
 
             case H5P_LOADEDITORCONTENT_SUCCESS:
@@ -171,7 +176,8 @@ export default function tabReducer(
                               }
                             : tab
                     ),
-                    showExportDialog: false
+                    showExportDialog: false,
+                    lockDisplay: true
                 };
 
             case H5PEDITOR_EXPORT_SUCCESS:
@@ -184,7 +190,8 @@ export default function tabReducer(
                                   loadingIndicator: false
                               }
                             : tab
-                    )
+                    ),
+                    lockDisplay: false
                 };
 
             case H5PEDITOR_EXPORT_CANCEL:
@@ -197,7 +204,8 @@ export default function tabReducer(
                                   loadingIndicator: false
                               }
                             : tab
-                    )
+                    ),
+                    lockDisplay: false
                 };
 
             case H5PEDITOR_EXPORT_ERROR:
@@ -211,7 +219,8 @@ export default function tabReducer(
                               }
                             : tab
                     ),
-                    showExportDialog: false
+                    showExportDialog: false,
+                    lockDisplay: false
                 };
 
             case H5P_LOADPLAYERCONTENT_REQUEST:

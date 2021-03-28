@@ -16,7 +16,7 @@ import Analytics from './Analytics';
 import Launchpad from './Launchpad';
 
 import SetupDialog from './components/SetupDialog';
-
+import Backdrop from './components/Backdrop';
 import Websocket from './Websocket';
 
 import { actions } from '../state';
@@ -59,6 +59,7 @@ export default function AppContainer() {
             </Router>
             <SetupDialog />
             <Notifications />
+            <Backdrop />
         </div>
     );
 }
