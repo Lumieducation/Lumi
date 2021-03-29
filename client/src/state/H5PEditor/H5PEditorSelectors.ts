@@ -77,8 +77,6 @@ export function viewDisabled(state: IState): boolean {
         return state.h5peditor.tabList[state.h5peditor.activeTabIndex]
             .viewDisabled;
     } catch (error) {
-        Sentry.captureException(error);
-
         return true;
     }
 }
