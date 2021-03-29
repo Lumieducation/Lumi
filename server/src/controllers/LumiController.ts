@@ -71,8 +71,9 @@ export default class LumiController {
             await new Promise<void>((y, n) => {
                 stream.on('finish', () => {
                     y();
-                    electronState.setState({ blockKeyboard: false });
                 });
+            }).finally(() => {
+                electronState.setState({ blockKeyboard: false });
             });
 
             return { path };
