@@ -32,7 +32,7 @@ export default function (serverConfig: IServerConfig): express.Router {
                         e_a: action,
                         e_n: name,
                         e_v: value,
-                        lang: electron.app.getLocale(),
+                        lang: electron.app.getLocale().substring(0, 2),
                         ua: os.type()
                     };
                     matomo.track(data);

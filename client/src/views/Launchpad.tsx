@@ -1,4 +1,6 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -14,6 +16,8 @@ import { useTranslation } from 'react-i18next';
 
 import MainSection from './components/MainSection';
 import { Link } from 'react-router-dom';
+
+import { track } from '../state/track/actions';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -51,6 +55,7 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function Launchpad() {
     const classes = useStyles();
     const { t } = useTranslation();
+    const dispatch = useDispatch();
 
     return (
         <div className={classes.root}>
@@ -64,6 +69,11 @@ export default function Launchpad() {
                                     color: 'inherit',
                                     textDecoration: 'inherit'
                                 }}
+                                onClick={() =>
+                                    dispatch(
+                                        track('Launchpad', 'click', 'H5PEditor')
+                                    )
+                                }
                             >
                                 <CardActionArea>
                                     <CardMedia
@@ -100,6 +110,15 @@ export default function Launchpad() {
                             <CardActions>
                                 <Button size="small" color="primary">
                                     <Link
+                                        onClick={() =>
+                                            dispatch(
+                                                track(
+                                                    'Launchpad',
+                                                    'click',
+                                                    'H5PEditor'
+                                                )
+                                            )
+                                        }
                                         to="/h5peditor"
                                         style={{
                                             color: 'inherit',
@@ -120,6 +139,11 @@ export default function Launchpad() {
                                     color: 'inherit',
                                     textDecoration: 'inherit'
                                 }}
+                                onClick={() =>
+                                    dispatch(
+                                        track('Launchpad', 'click', 'Analytics')
+                                    )
+                                }
                             >
                                 <CardActionArea>
                                     <CardMedia
@@ -158,6 +182,15 @@ export default function Launchpad() {
                                             color: 'inherit',
                                             textDecoration: 'inherit'
                                         }}
+                                        onClick={() =>
+                                            dispatch(
+                                                track(
+                                                    'Launchpad',
+                                                    'click',
+                                                    'Analytics'
+                                                )
+                                            )
+                                        }
                                     >
                                         {t('analytics.startPage.start')}
                                     </Link>
