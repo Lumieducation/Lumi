@@ -47,6 +47,7 @@ export interface ITab {
     name: string;
     path?: string;
     mode: Modes;
+    opening: boolean;
 }
 
 export interface IH5PEditorState {

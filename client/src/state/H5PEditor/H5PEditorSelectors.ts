@@ -13,7 +13,8 @@ export const errorObject: ITab = {
     mainLibrary: '',
     name: 'error',
     mode: Modes.edit,
-    viewDisabled: true
+    viewDisabled: true,
+    opening: false
 };
 
 export function all(state: IState): ITab[] {
