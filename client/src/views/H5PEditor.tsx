@@ -15,7 +15,7 @@ import H5PEditorStartPage from './components/H5PEditorStartPage';
 import H5PEditorH5PComponent from './components/H5PEditorH5PComponent';
 
 import H5PEditorExportDialog from './components/H5PEditorExportDialog';
-import LoadingScreen from './components/LoadingScreen';
+import LoadingPage from './components/LoadingPage';
 import { actions, selectors } from '../state';
 
 import { ITab } from '../state/H5PEditor/H5PEditorTypes';
@@ -82,7 +82,7 @@ export class H5PEditor extends React.Component<{
                                                 : 'none'
                                     }}
                                 >
-                                    <LoadingScreen key={tab.id} />
+                                    <LoadingPage />
                                 </div>
                             ) : (
                                 <H5PEditorH5PComponent
