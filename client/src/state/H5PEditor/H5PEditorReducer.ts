@@ -1,6 +1,7 @@
 import Logger from '../../helpers/Logger';
 import * as Sentry from '@sentry/browser';
 import i18next from 'i18next';
+import path from 'path';
 
 import {
     IH5PEditorState,
@@ -21,6 +22,7 @@ import {
     H5PEDITOR_SAVE_REQUEST,
     H5PEDITOR_SAVE_SUCCESS,
     H5PEDITOR_SAVE_ERROR,
+    H5P_IMPORT_REQUEST,
     H5P_IMPORT_SUCCESS,
     Modes,
     H5PEDITOR_EXPORT_CANCEL,
@@ -258,7 +260,7 @@ export default function tabReducer(
                     )
                 };
 
-            case H5P_IMPORT_SUCCESS:
+            case H5P_IMPORT_REQUEST:
                 return {
                     ...state,
                     activeTabIndex: state.tabList.length,
@@ -267,16 +269,36 @@ export default function tabReducer(
                         {
                             id: action.payload.tabId,
                             path: action.payload.path,
-                            contentId: action.payload.h5p.id,
-                            loadingIndicator: false,
-                            viewDisabled: false,
-                            mainLibrary: action.payload.h5p.library.split(
-                                ' '
-                            )[0],
-                            name: action.payload.h5p.metadata.title,
-                            mode: Modes.edit
+                            loadingIndicator: true,
+                            viewDisabled: true,
+                            mainLibrary: '',
+                            name: path.basename(action.payload.path),
+                            mode: Modes.edit,
+                            opening: true
                         }
                     ]
+                };
+
+            case H5P_IMPORT_SUCCESS:
+                return {
+                    ...state,
+                    tabList: state.tabList.map((tab) =>
+                        tab.id === action.payload.tabId
+                            ? {
+                                  id: action.payload.tabId,
+                                  path: action.payload.path,
+                                  contentId: action.payload.h5p.id,
+                                  loadingIndicator: false,
+                                  viewDisabled: false,
+                                  mainLibrary: action.payload.h5p.library.split(
+                                      ' '
+                                  )[0],
+                                  name: action.payload.h5p.metadata.title,
+                                  mode: Modes.edit,
+                                  opening: false
+                              }
+                            : tab
+                    )
                 };
 
             case H5PEDITOR_OPEN_TAB:
@@ -293,29 +315,11 @@ export default function tabReducer(
                             name: i18next.t('editor.default_name'),
                             path: undefined,
                             mode: Modes.edit,
+                            opening: true,
                             ...action.payload.tab
                         }
                     ]
                 };
-            // if (
-            //     state.tabList.some(
-            //         (tab) => tab.path === action.payload.tab.path
-            //     ) &&
-            //     action.payload.tab.path
-            // ) {
-            //     return {
-            //         ...state,
-            //         activeTabIndex: findIndex(
-            //             state.tabList,
-            //             (tab) => tab.path === action.payload.tab.path
-            //         )
-            //     };
-            // }
-            // return {
-            //     ...state,
-            //     activeTabIndex: state.tabList.length,
-            //     tabList: [...state.tabList, action.payload.tab]
-            // };
 
             case H5PEDITOR_SELECT_TAB:
                 return {
