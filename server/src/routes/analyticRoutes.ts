@@ -25,26 +25,16 @@ export default function (): express.Router {
                     name: 'Lumi Report'
                 }
             ],
-            properties: ['openDirectory', 'openFile', 'multiSelections']
+            properties: ['openDirectory']
         });
 
         if (openDialog.canceled) {
             return res.status(499).end();
         }
 
-        let files: string[] = [];
+        const filePath = openDialog.filePaths[0];
 
-        await Promise.all(
-            openDialog.filePaths.map(async (filePath) => {
-                if (_path.extname(filePath) === '.lumi') {
-                    files.push(filePath);
-                }
-                if (fs.statSync(filePath).isDirectory()) {
-                    const f = await recursiveReaddir(filePath, ['!*.lumi']);
-                    files = [...files, ...f];
-                }
-            })
-        );
+        const files = await recursiveReaddir(filePath, ['!*.lumi']);
 
         try {
             if (files.length === 0) {
@@ -112,11 +102,8 @@ export default function (): express.Router {
                 interactions,
                 users
             });
-            //     }
-            // );
         } catch (error) {
             Sentry.captureException(error);
-            // res.status(500).json(error);
         }
     });
 
