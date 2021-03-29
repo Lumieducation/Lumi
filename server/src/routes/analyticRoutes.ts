@@ -34,7 +34,7 @@ export default function (): express.Router {
 
         const filePath = openDialog.filePaths[0];
 
-        const files = await recursiveReaddir(filePath, ['!*.lumi']);
+        const files = await recursiveReaddir(filePath, ['!*.lumi*']);
 
         try {
             if (files.length === 0) {
