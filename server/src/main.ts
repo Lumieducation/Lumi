@@ -15,6 +15,7 @@ import { machineId } from 'node-machine-id';
 import i18next from 'i18next';
 
 import settingsCache from './settingsCache';
+import electronState from './electronState';
 
 const app = electron.app;
 let websocket: SocketIO.Server;
@@ -94,6 +95,12 @@ function createMainWindow(
     window.webContents.on('will-navigate', (e, url) => {
         e.preventDefault();
         require('electron').shell.openExternal(url);
+    });
+
+    window.webContents.on('before-input-event', (event, input) => {
+        if (electronState.getState().blockKeyboard) {
+            event.preventDefault();
+        }
     });
 
     return window;

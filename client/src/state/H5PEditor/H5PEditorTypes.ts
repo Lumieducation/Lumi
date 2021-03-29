@@ -53,6 +53,7 @@ export interface IH5PEditorState {
     activeTabIndex: number;
     tabList: ITab[];
     showExportDialog: boolean;
+    lockDisplay: boolean;
 }
 
 export interface IState {
