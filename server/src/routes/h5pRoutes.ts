@@ -10,6 +10,8 @@ import {
 } from '@lumieducation/h5p-express';
 import HtmlExporter from '@lumieducation/h5p-html-exporter';
 
+import electronState from '../electronState';
+
 import createReporter from '../helpers/createRepoter';
 import User from '../User';
 
@@ -110,13 +112,16 @@ export default function (
                 path = `${path}.html`;
             }
 
+            electronState.setState({ blockKeyboard: true });
             const html = await htmlExporter.createSingleBundle(
                 req.params.contentId,
                 req.user
             );
 
             await fsExtra.writeFile(path, html);
+            electronState.setState({ blockKeyboard: false });
         } catch (error) {
+            electronState.setState({ blockKeyboard: false });
             Sentry.captureException(error);
             res.status(500).json(error);
         }
