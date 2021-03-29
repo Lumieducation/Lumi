@@ -11,6 +11,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 import { IState, actions } from '../../state';
+import { track } from '../../state/track/actions';
 
 const useStyles = makeStyles({
     formControl: {
@@ -39,6 +40,13 @@ export default function LanguageList() {
                         actions.settings.changeSetting({
                             language: event.target.value as string
                         })
+                    );
+                    dispatch(
+                        track(
+                            'Settings',
+                            'change_language',
+                            event.target.value as string
+                        )
                     );
                     await i18n.loadLanguages(event.target.value as string);
                     i18n.changeLanguage(event.target.value as string);

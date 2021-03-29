@@ -6,8 +6,9 @@ export function track(
     name?: string,
     value?: number
 ): any {
-    return api.track(category, action, name, value).then(() => {
-        return {
+    return async (dispatch: any) => {
+        await api.track(category, action, name, value);
+        dispatch({
             payload: {
                 action,
                 category,
@@ -15,6 +16,6 @@ export function track(
                 value
             },
             type: 'TRACK'
-        };
-    });
+        });
+    };
 }

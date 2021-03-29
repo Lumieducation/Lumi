@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
 
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
@@ -19,6 +20,8 @@ import UpdateSettings from './components/UpdateSettngs';
 import SettingsLanguage from './components/SettingsLanguage';
 
 import UsageStatisticsSettingsCard from './components/UsageAnalyticsSettings';
+
+import { track } from '../state/track/actions';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -60,13 +63,16 @@ export default function FullScreenDialog() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
     const { t } = useTranslation();
+    const dispatch = useDispatch();
 
     const handleClickOpen = () => {
         setOpen(true);
+        dispatch(track('Settings', 'click', 'open'));
     };
 
     const handleClose = () => {
         setOpen(false);
+        dispatch(track('Settings', 'click', 'close'));
     };
 
     return (

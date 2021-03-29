@@ -17,10 +17,17 @@ export function importAnalytics(): any {
             type: ANALYTICS_IMPORT_REQUEST
         });
 
-        track('Analytics', 'import');
+        dispatch(track('Analytics', 'import'));
         try {
             const { users, interactions } = await API.importAnalytics();
-            track('Analytics', 'import', `content-types`, interactions.length);
+            dispatch(
+                track(
+                    'Analytics',
+                    'import',
+                    `content-types`,
+                    interactions.length
+                )
+            );
 
             dispatch({
                 payload: { users, interactions },

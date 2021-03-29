@@ -130,10 +130,16 @@ export function exportH5P(includeReporter: boolean): any {
             try {
                 await api.exportAsHtml(data.contentId, includeReporter);
 
-                track(
-                    'H5P',
-                    'export_as_single_html',
-                    `${includeReporter ? 'with_reporter' : 'without_reporter'}`
+                dispatch(
+                    track(
+                        'H5P',
+                        'export_as_single_html',
+                        `${
+                            includeReporter
+                                ? 'with_reporter'
+                                : 'without_reporter'
+                        }`
+                    )
                 );
                 dispatch({
                     payload: { contentId: data.contentId, includeReporter },
@@ -190,14 +196,24 @@ export function openH5P(): any {
     };
 }
 
-export function openTab(tab?: Partial<ITab>): H5PEditorActionTypes {
+export function openTab(tab?: Partial<ITab>): any {
     log.info(`opening tab`);
-    return {
-        payload: {
-            id: shortid(),
-            tab
-        },
-        type: H5PEDITOR_OPEN_TAB
+    return async (dispatch: any) => {
+        dispatch(
+            track(
+                'H5PEditor',
+                'openTab',
+                tab?.path ? 'existing h5p' : 'new h5p'
+            )
+        );
+
+        dispatch({
+            payload: {
+                id: shortid(),
+                tab
+            },
+            type: H5PEDITOR_OPEN_TAB
+        });
     };
 }
 
@@ -205,7 +221,7 @@ export function closeTab(id: string): any {
     log.info(`closing tab with id ${id}`);
     return async (dispatch: any) => {
         const tab = selectors.tab(store.getState(), id);
-
+        dispatch(track('H5PEditor', 'closeTab'));
         if (tab && tab.contentId) {
             dispatch(deleteH5P(tab.contentId));
         }
@@ -417,7 +433,7 @@ export function save(
             const response = await api.exportH5P(data.contentId, path);
 
             try {
-                track('H5P', 'save', data.metadata?.mainLibrary);
+                dispatch(track('H5P', 'save', data.metadata?.mainLibrary));
             } catch (error) {
                 Sentry.captureException(error);
             }
@@ -461,7 +477,7 @@ export function importH5P(
             .importH5P(path)
             .then(({ body }) => {
                 try {
-                    track('H5P', 'open', body.metadata.mainLibrary);
+                    dispatch(track('H5P', 'open', body.metadata.mainLibrary));
                 } catch (error) {
                     Sentry.captureException(error);
                 }

@@ -114,6 +114,25 @@ app.on('activate', () => {
     }
 });
 
+app.on('before-quit', async () => {
+    try {
+        if (settingsCache.getSettings().usageStatistics) {
+            const data = {
+                url: '/Lumi',
+                _id: await machineId(),
+                uid: await machineId(),
+                e_c: 'App',
+                e_a: 'quit',
+                lang: electron.app.getLocale(),
+                ua: os.type()
+            };
+            matomo.track(data);
+        }
+    } catch (error) {
+        Sentry.captureException(error);
+    }
+});
+
 // create main BrowserWindow when electron is ready
 app.on('ready', async () => {
     log.info('app is ready');
