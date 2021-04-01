@@ -1,6 +1,4 @@
-import express, { response } from 'express';
-import fsExtra from 'fs-extra';
-import electron from 'electron';
+import express from 'express';
 import * as Sentry from '@sentry/node';
 import IServerConfig from '../IServerConfig';
 import { dialog } from 'electron';
@@ -11,16 +9,12 @@ import superagent from 'superagent';
 
 import * as H5P from '@lumieducation/h5p-server';
 import HtmlExporter from '@lumieducation/h5p-html-exporter';
-import SocketIO from 'socket.io';
 
 import { io as websocket } from '../websocket';
 
-import createReporter from '../helpers/createRepoter';
-
 export default function (
     serverConfig: IServerConfig,
-    h5pEditor: H5P.H5PEditor,
-    websocket_: SocketIO.Server
+    h5pEditor: H5P.H5PEditor
 ): express.Router {
     const router = express.Router();
     router.get(
@@ -31,7 +25,7 @@ export default function (
             next: express.NextFunction
         ) => {
             try {
-                const run = await fsExtra.readJSON(serverConfig.runFile);
+                const run = await fs.readJSON(serverConfig.runFile);
 
                 res.status(200).json(run);
             } catch (error) {
@@ -50,9 +44,9 @@ export default function (
         ) => {
             try {
                 if (req.body) {
-                    await fsExtra.readJSON(serverConfig.runFile);
+                    await fs.readJSON(serverConfig.runFile);
 
-                    await fsExtra.writeJSON(serverConfig.runFile, req.body);
+                    await fs.writeJSON(serverConfig.runFile, req.body);
 
                     res.status(200).json(req.body);
                 }
@@ -181,49 +175,12 @@ export default function (
             }
 
             try {
-                const includeReporter = true; //= req.query.includeReporter === 'true';
-
-                const reporterClient = await fsExtra.readFileSync(
-                    `${__dirname}/../../../reporter-client/build/static/js/2.chunk.js`,
-                    {
-                        encoding: 'utf-8'
-                    }
-                );
-
-                const reporterMain = await fsExtra.readFileSync(
-                    `${__dirname}/../../../reporter-client/build/static/js/main.chunk.js`,
-                    {
-                        encoding: 'utf-8'
-                    }
-                );
-
                 const htmlExporter = new HtmlExporter(
                     h5pEditor.libraryStorage,
                     h5pEditor.contentStorage,
                     h5pEditor.config,
                     `${__dirname}/../../../h5p/core`,
-                    `${__dirname}/../../../h5p/editor`,
-                    includeReporter
-                        ? (
-                              integration: string,
-                              scriptsBundle: string,
-                              stylesBundle: string,
-                              contentId: string
-                          ) => `<!doctype html>
-                    <html class="h5p-iframe">
-                    <head>
-                        <meta charset="utf-8">                    
-                        <script>H5PIntegration = ${integration};
-                        ${scriptsBundle}</script>
-                        <style>${stylesBundle}</style>
-                    </head>
-                    <body>
-                    <div id="root"></div>
-                    ${createReporter(reporterClient, reporterMain)}
-                        <div style="margin: 20px auto; padding: 20px;  max-width: 840px; box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)" class="h5p-content lag" data-content-id="${contentId}"></div>                
-                    </body>
-                    </html>`
-                        : undefined
+                    `${__dirname}/../../../h5p/editor`
                 );
 
                 const html = await htmlExporter.createSingleBundle(
@@ -235,7 +192,7 @@ export default function (
                     serverConfig.workingCachePath,
                     `${contentId}.html`
                 );
-                await fsExtra.writeFileSync(htmlFilePath, html);
+                await fs.writeFileSync(htmlFilePath, html);
 
                 websocket.emit('action', {
                     type: 'action',
