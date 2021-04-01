@@ -1,12 +1,9 @@
 import * as H5P from '@lumieducation/h5p-server';
 import electron from 'electron';
 import * as Sentry from '@sentry/node';
-import * as Tracing from '@sentry/tracing';
 import bodyParser from 'body-parser';
 import express from 'express';
 import fileUpload from 'express-fileupload';
-
-import fsExtra from 'fs-extra';
 
 import i18next from 'i18next';
 import i18nextHttpMiddleware from 'i18next-http-middleware';
@@ -23,6 +20,24 @@ import settingsCache from '../settingsCache';
 
 import boot_i18n from './i18n';
 
+/**
+ * Increases the maximum file size if it is still at the default value.
+ */
+const increaseMaxFileSize = async (config: H5P.IH5PConfig) => {
+    let updatedConfig = false;
+    if (!config.maxFileSize || config.maxFileSize === 16 * 1024 * 1024) {
+        config.maxFileSize = 2048 * 1024 * 1024;
+        updatedConfig = true;
+    }
+    if (!config.maxTotalSize || config.maxTotalSize === 64 * 1024 * 1024) {
+        config.maxTotalSize = 2048 * 1024 * 1024;
+        updatedConfig = true;
+    }
+    if (updatedConfig) {
+        await config.save();
+    }
+};
+
 export default async (
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow
@@ -30,6 +45,8 @@ export default async (
     const config = await new H5P.H5PConfig(
         new H5P.fsImplementations.JsonStorage(serverConfig.configFile)
     ).load();
+
+    await increaseMaxFileSize(config);
 
     const translationFunction = await boot_i18n(serverConfig);
 
@@ -64,38 +81,19 @@ export default async (
     const app = express();
 
     if (process.env.NODE_ENV !== 'development') {
-        if (await fsExtra.pathExists(serverConfig.settingsFile)) {
-            const settings = await fsExtra.readJSON(serverConfig.settingsFile);
-
-            if (settings.bugTracking) {
-                Sentry.init({
-                    dsn:
-                        'http://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
-                    release: electron.app.getVersion(),
-                    environment: process.env.NODE_ENV,
-                    beforeSend: async (event: Sentry.Event) => {
-                        if (
-                            (await fsExtra.readJSON(serverConfig.settingsFile))
-                                .bugTracking
-                        ) {
-                            return event;
-                        }
-                        return null;
-                    },
-                    integrations: [
-                        // enable HTTP calls tracing
-                        new Sentry.Integrations.Http({ tracing: true }),
-                        // enable Express.js middleware tracing
-                        new Tracing.Integrations.Express({ app })
-                    ],
-
-                    // We recommend adjusting this value in production, or using tracesSampler
-                    // for finer control
-                    tracesSampleRate: 1.0
-                });
-                Sentry.setTag('type', 'server');
+        Sentry.init({
+            dsn:
+                'http://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
+            release: electron.app.getVersion(),
+            environment: process.env.NODE_ENV,
+            beforeSend: async (event: Sentry.Event) => {
+                if (settingsCache.getSettings().bugTracking) {
+                    return event;
+                }
+                return null;
             }
-        }
+        });
+        Sentry.setTag('type', 'server');
     }
 
     // RequestHandler creates a separate execution context using domains, so that every

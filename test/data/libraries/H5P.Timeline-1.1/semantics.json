@@ -1,0 +1,513 @@
+[
+  {
+    "name": "timeline",
+    "label": "Timeline",
+    "importance": "high",
+    "type": "group",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "headline",
+        "type": "text",
+        "label": "Headline",
+        "importance": "high",
+        "description": "Main timeline heading goes here (first page)"
+      },
+      {
+        "name": "text",
+        "type": "text",
+        "label": "Body Text",
+        "importance": "medium",
+        "widget": "html",
+        "description": "The main timeline body goes here (first page).",
+        "optional": true,
+        "tags": [
+          "strong",
+          "em",
+          "del",
+          "a",
+          "ul",
+          "ol",
+          "hr",
+          "code"
+        ]
+      },
+      {
+        "name": "defaultZoomLevel",
+        "type": "text",
+        "label": "Default zoom level",
+        "importance": "low",
+        "default": "0",
+        "optional": true,
+        "description": "This will tweak the default zoom level. Equivilent to pressing the zoom in or zoom out button the specified number of times. Negative numbers zoom out. default is 0"
+      },
+      {
+        "name": "backgroundImage",
+        "type": "image",
+        "label": "Background image",
+        "importance": "low",
+        "optional": true,
+        "description": "An image to display as background."
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "label": "Height",
+        "importance": "low",
+        "description": "The height in pixels",
+        "default": 600
+      },
+      {
+        "name": "asset",
+        "type": "group",
+        "label": "Asset",
+        "importance": "low",
+        "description": "Here you can add an asset to your timeline \"front page\"",
+        "optional": true,
+        "fields": [
+          {
+            "name": "media",
+            "type": "text",
+            "label": "Media",
+            "importance": "low",
+            "description": "Link to media URL (Twitter, YouTube, Flickr, Vimeo, Google Maps and SoundCloud are currently supported)",
+            "optional": true
+          },
+          {
+            "name": "credit",
+            "type": "text",
+            "label": "Credits",
+            "importance": "low",
+            "description": "Credits to the media",
+            "optional": true
+          },
+          {
+            "name": "caption",
+            "type": "text",
+            "label": "Caption",
+            "importance": "low",
+            "description": "Caption description goes here",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "name": "date",
+        "type": "list",
+        "label": "Dates",
+        "importance": "medium",
+        "min": 1,
+        "description": "Add some dates to your timeline!",
+        "field": {
+          "name": "adate",
+          "type": "group",
+          "label": "Date",
+          "importance": "medium",
+          "description": "Date",
+          "fields": [
+            {
+              "name": "startDate",
+              "type": "text",
+              "label": "Start date",
+              "importance": "medium",
+              "description": "YYYY,MM,DD (Minimum YYYY required)",
+              "regexp": {
+                "pattern": "^-?\\d{1,}(,(1[012]|[0]?[1-9])(,([12][0-9]|3[01]|[0]?[1-9]))?)?$"
+              }
+            },
+            {
+              "name": "endDate",
+              "type": "text",
+              "label": "End date",
+              "importance": "medium",
+              "description": "YYYY,MM,DD (Minimum YYYY required)",
+              "optional": true,
+              "regexp": {
+                "pattern": "^-?\\d{1,}(,(1[012]|[0]?[1-9])(,([12][0-9]|3[01]|[0]?[1-9]))?)?$"
+              }
+            },
+            {
+              "name": "headline",
+              "type": "text",
+              "label": "Headline",
+              "importance": "medium",
+              "description": "Headline for the date entry"
+            },
+            {
+              "name": "text",
+              "type": "text",
+              "label": "Body text",
+              "importance": "medium",
+              "widget": "html",
+              "optional": true,
+              "description": "Body for the date entry",
+              "tags": [
+                "strong",
+                "em",
+                "del",
+                "a",
+                "ul",
+                "ol",
+                "h2",
+                "h3",
+                "hr",
+                "pre",
+                "code"
+              ]
+            },
+            {
+              "name": "tag",
+              "type": "text",
+              "label": "Tags",
+              "importance": "medium",
+              "description": "Enter Tags (categories)",
+              "optional": true
+            },
+            {
+              "name": "asset",
+              "type": "group",
+              "label": "Asset",
+              "importance": "low",
+              "description": "",
+              "optional": true,
+              "fields": [
+                {
+                  "name": "media",
+                  "type": "text",
+                  "label": "Media",
+                  "importance": "low",
+                  "description": "URL to the media (Twitter, YouTube, Flickr, Vimeo, Wikipedia, Google Maps and SoundCloud are currently supported).",
+                  "optional": true
+                },
+                {
+                  "name": "thumbnail",
+                  "type": "image",
+                  "label": "Thumbnail",
+                  "importance": "low",
+                  "description": "Add a thumbnail if needed, 32x32",
+                  "optional": true
+                },
+                {
+                  "name": "credit",
+                  "type": "text",
+                  "label": "Credit",
+                  "importance": "low",
+                  "description": "Credits to the media",
+                  "optional": true
+                },
+                {
+                  "name": "caption",
+                  "type": "text",
+                  "label": "Caption",
+                  "importance": "low",
+                  "description": "Caption text",
+                  "optional": true
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "era",
+        "type": "list",
+        "label": "Eras",
+        "importance": "medium",
+        "description": "Add an era to your timeline",
+        "min": 0,
+        "optional": true,
+        "field": {
+          "name": "anera",
+          "type": "group",
+          "label": "Era",
+          "importance": "medium",
+          "description": "",
+          "fields": [
+            {
+              "name": "startDate",
+              "type": "text",
+              "label": "Start date",
+              "importance": "medium",
+              "description": "YYYY,MM,DD (Minimum YYYY required)",
+              "regexp": {
+                "pattern": "^-?\\d{1,}(,(1[012]|[0]?[1-9])(,([12][0-9]|3[01]|[0]?[1-9]))?)?$"
+              }
+            },
+            {
+              "name": "endDate",
+              "type": "text",
+              "label": "End date",
+              "importance": "medium",
+              "description": "YYYY,MM,DD (Minimum YYYY required)",
+              "optional": true,
+              "regexp": {
+                "pattern": "^-?\\d{1,}(,(1[012]|[0]?[1-9])(,([12][0-9]|3[01]|[0]?[1-9]))?)?$"
+              }
+            },
+            {
+              "name": "headline",
+              "type": "text",
+              "label": "Headline",
+              "importance": "medium",
+              "description": "Era headline"
+            },
+            {
+              "name": "text",
+              "type": "text",
+              "label": "Text",
+              "importance": "medium",
+              "widget": "html",
+              "optional": true,
+              "description": "Era body",
+              "tags": [
+                "strong",
+                "em",
+                "del",
+                "a",
+                "ul",
+                "ol",
+                "hr",
+                "code"
+              ]
+            },
+            {
+              "name": "tag",
+              "type": "text",
+              "label": "Tag",
+              "importance": "medium",
+              "description": "Era tags (categories)",
+              "optional": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "language",
+        "type": "select",
+        "label": "Language",
+        "importance": "medium",
+        "optional": true,
+        "description": "The language of the user interface",
+        "options": [
+          {
+            "value": "af",
+            "label": "Afrikaans"
+          },
+          {
+            "value": "ar",
+            "label": "Arabic"
+          },
+          {
+            "value": "hy",
+            "label": "Armenian"
+          },
+          {
+            "value": "eu",
+            "label": "Basque"
+          },
+          {
+            "value": "bg",
+            "label": "Bulgarian"
+          },
+          {
+            "value": "ca",
+            "label": "Catalan"
+          },
+          {
+            "value": "zh-cn",
+            "label": "Chinese"
+          },
+          {
+            "value": "hr",
+            "label": "Croatian / Hrvatski"
+          },
+          {
+            "value": "cz",
+            "label": "Czech"
+          },
+          {
+            "value": "da",
+            "label": "Danish"
+          },
+          {
+            "value": "nl",
+            "label": "Dutch"
+          },
+          {
+            "value": "en",
+            "label": "English"
+          },
+          {
+            "value": "en-24hr",
+            "label": "English (24-hour time)"
+          },
+          {
+            "value": "eo",
+            "label": "Esperanto"
+          },
+          {
+            "value": "et",
+            "label": "Estonian"
+          },
+          {
+            "value": "fo",
+            "label": "Faroese"
+          },
+          {
+            "value": "fa",
+            "label": "Farsi"
+          },
+          {
+            "value": "fi",
+            "label": "Finnish"
+          },
+          {
+            "value": "fr",
+            "label": "French"
+          },
+          {
+            "value": "gl",
+            "label": "Galician"
+          },
+          {
+            "value": "ka",
+            "label": "Georgian"
+          },
+          {
+            "value": "de",
+            "label": "German / Deutsch"
+          },
+          {
+            "value": "el",
+            "label": "Greek"
+          },
+          {
+            "value": "he",
+            "label": "Hebrew"
+          },
+          {
+            "value": "hu",
+            "label": "Hungarian"
+          },
+          {
+            "value": "is",
+            "label": "Icelandic"
+          },
+          {
+            "value": "id",
+            "label": "Indonesian"
+          },
+          {
+            "value": "it",
+            "label": "Italian"
+          },
+          {
+            "value": "ja",
+            "label": "Japanese"
+          },
+          {
+            "value": "ko",
+            "label": "Korean"
+          },
+          {
+            "value": "lv",
+            "label": "Latvian"
+          },
+          {
+            "value": "lt",
+            "label": "Lithuanian"
+          },
+          {
+            "value": "lb",
+            "label": "Luxembourgish"
+          },
+          {
+            "value": "ms",
+            "label": "Malay"
+          },
+          {
+            "value": "ne",
+            "label": "Nepali"
+          },
+          {
+            "value": "no",
+            "label": "Norwegian"
+          },
+          {
+            "value": "pl",
+            "label": "Polish"
+          },
+          {
+            "value": "pt",
+            "label": "Portuguese"
+          },
+          {
+            "value": "pt-br",
+            "label": "Portuguese (Brazilian)"
+          },
+          {
+            "value": "rm",
+            "label": "Romansh"
+          },
+          {
+            "value": "ru",
+            "label": "Russian"
+          },
+          {
+            "value": "sr-cy",
+            "label": "Serbian - Cyrillic"
+          },
+          {
+            "value": "sr",
+            "label": "Serbian - Latin"
+          },
+          {
+            "value": "si",
+            "label": "Sinhalese"
+          },
+          {
+            "value": "sk",
+            "label": "Slovak"
+          },
+          {
+            "value": "sl",
+            "label": "Slovenian"
+          },
+          {
+            "value": "es",
+            "label": "Spanish"
+          },
+          {
+            "value": "sv",
+            "label": "Swedish"
+          },
+          {
+            "value": "tl",
+            "label": "Tagalog"
+          },
+          {
+            "value": "ta",
+            "label": "Tamil"
+          },
+          {
+            "value": "zh-tw",
+            "label": "Taiwanese"
+          },
+          {
+            "value": "te",
+            "label": "Telugu"
+          },
+          {
+            "value": "tr",
+            "label": "Turkish"
+          },
+          {
+            "value": "uk",
+            "label": "Ukrainian"
+          }
+        ],
+        "default": "en"
+      }
+    ]
+  }
+]

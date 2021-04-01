@@ -41,7 +41,9 @@ describe('H5P_LOADEDITORCONTENT_SUCCESS', () => {
                         ...testTab,
                         loadingIndicator: true
                     }
-                ]
+                ],
+                lockDisplay: false,
+                showExportDialog: false
             },
             {
                 payload: {
@@ -61,6 +63,8 @@ describe('H5PEDITOR_EXPORT_REQUEST', () => {
     const state = reducer(
         {
             activeTabIndex: 0,
+            lockDisplay: false,
+            showExportDialog: true,
             tabList: [
                 {
                     ...testTab
@@ -79,6 +83,16 @@ describe('H5PEDITOR_EXPORT_REQUEST', () => {
         expect(state.tabList[0].loadingIndicator).toBeTruthy();
         done();
     });
+
+    it('locks the display', (done) => {
+        expect(state.lockDisplay).toBeTruthy();
+        done();
+    });
+
+    it('hides the export dialog', (done) => {
+        expect(state.showExportDialog).toBeFalsy();
+        done();
+    });
 });
 
 describe('H5PEDITOR_EXPORT_SUCCESS', () => {
@@ -90,7 +104,9 @@ describe('H5PEDITOR_EXPORT_SUCCESS', () => {
                     ...testTab,
                     loadingIndicator: true
                 }
-            ]
+            ],
+            showExportDialog: true,
+            lockDisplay: true
         },
         {
             payload: {
@@ -102,6 +118,11 @@ describe('H5PEDITOR_EXPORT_SUCCESS', () => {
 
     it('sets the loadingIndicator to false', (done) => {
         expect(state.tabList[0].loadingIndicator).toBeFalsy();
+        done();
+    });
+
+    it('unlocks the display', (done) => {
+        expect(state.lockDisplay).toBeFalsy();
         done();
     });
 });
@@ -116,7 +137,8 @@ describe('H5PEDITOR_EXPORT_ERROR', () => {
                     loadingIndicator: true
                 }
             ],
-            showExportDialog: true
+            showExportDialog: true,
+            lockDisplay: true
         },
         {
             payload: {
@@ -133,6 +155,11 @@ describe('H5PEDITOR_EXPORT_ERROR', () => {
 
     it('closes the export Dialog', (done) => {
         expect(state.showExportDialog).toBeFalsy();
+        done();
+    });
+
+    it('unlocks the display', (done) => {
+        expect(state.lockDisplay).toBeFalsy();
         done();
     });
 });

@@ -15,6 +15,7 @@ describe('GET /settings', () => {
                 configFile: path.resolve('test', 'data', 'config.json'),
                 librariesPath: path.resolve('test', 'data', `libraries`),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
+                runFile: path.resolve('test', 'data', 'run.json'),
                 workingCachePath: path.resolve('test', 'data', 'workingCache'),
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
@@ -45,6 +46,8 @@ describe('PATCH /settings', () => {
                 configFile: path.resolve('test', 'data', 'config.json'),
                 librariesPath: path.resolve('test', 'data', `libraries`),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
+                runFile: path.resolve('test', 'data', 'run.json'),
+
                 workingCachePath: path.resolve('test', 'data', 'workingCache'),
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },

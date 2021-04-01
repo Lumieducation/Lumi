@@ -1,5 +1,6 @@
 import React from 'react';
 
+import LinearProgress from '@material-ui/core/LinearProgress';
 import Logo from './Logo';
 
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
@@ -20,6 +21,7 @@ export default function SwitchListSecondary() {
     return (
         <div className={classes.root}>
             <Logo />
+            <LinearProgress />
         </div>
     );
 }

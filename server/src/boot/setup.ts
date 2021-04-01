@@ -5,6 +5,7 @@ import { app } from 'electron';
 import IServerConfig from '../IServerConfig';
 import { fsImplementations, H5PConfig } from '@lumieducation/h5p-server';
 import defaultSettings from './defaultSettings';
+import defaultRun from './defaultRun';
 
 import settingsCache from '../settingsCache';
 
@@ -42,6 +43,21 @@ export default async function setup(
                 ...checkSettings,
                 language: app.getLocale()
             });
+        }
+
+        // Check if current runsexists and is read- and parsable
+        let runOk = false;
+        try {
+            if (await fsExtra.pathExists(serverConfig.runFile)) {
+                await fsExtra.readJSON(serverConfig.runFile);
+                runOk = true;
+            }
+        } catch (error) {
+            runOk = false;
+        }
+
+        if (!runOk) {
+            await fsExtra.writeJSON(serverConfig.runFile, defaultRun);
         }
 
         // Check if current config exists and is read- and parsable
