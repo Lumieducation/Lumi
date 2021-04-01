@@ -11,6 +11,10 @@ import AppBar from './components/AppBar';
 
 import Notifications from './Notifications';
 
+import RunPage from './Run';
+
+import RunUploadDialog from './components/RunUploadDialog';
+
 import H5PEditor from './H5PEditor';
 import Analytics from './Analytics';
 import Launchpad from './Launchpad';

@@ -5,6 +5,8 @@ import bodyParser from 'body-parser';
 import express from 'express';
 import fileUpload from 'express-fileupload';
 
+import SocketIO from 'socket.io';
+
 import i18next from 'i18next';
 import i18nextHttpMiddleware from 'i18next-http-middleware';
 

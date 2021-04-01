@@ -55,18 +55,18 @@ export class WebsocketContainer extends React.Component<
         this.socket.on('action', (action: any) => {
             if (!this.props.lockDisplay) {
                 switch (action.type) {
+                    case 'action':
+                        this.props.dispatch({
+                            payload: action.payload.payload,
+                            type: action.payload.type
+                        });
+                        break;
+
                     case 'IMPORT_ANALYTICS':
                         this.props.dispatch(
                             actions.analytics.importAnalytics()
                         );
                         break;
-                case 'action':
-                    this.props.dispatch({
-                        payload: action.payload.payload,
-                        type: action.payload.type
-                    break;
-                    });
-
 
                     case 'NEW_H5P':
                         this.props.dispatch(actions.h5peditor.openTab());
