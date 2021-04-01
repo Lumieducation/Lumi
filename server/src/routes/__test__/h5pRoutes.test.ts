@@ -20,7 +20,6 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
                 workingCachePath: path.resolve('test', 'data', 'workingCache'),
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
-            null,
             null
         );
 

@@ -18,7 +18,6 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
                 workingCachePath: path.resolve('test', 'data', 'workingCache'),
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
-            null,
             null
         );
 

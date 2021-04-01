@@ -19,7 +19,6 @@ describe('GET /settings', () => {
                 workingCachePath: path.resolve('test', 'data', 'workingCache'),
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
-            null,
             null
         );
 
@@ -52,7 +51,6 @@ describe('PATCH /settings', () => {
                 workingCachePath: path.resolve('test', 'data', 'workingCache'),
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
-            null,
             null
         );
 
