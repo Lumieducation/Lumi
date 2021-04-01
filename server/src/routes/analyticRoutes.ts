@@ -20,12 +20,6 @@ export default function (): express.Router {
     router.get('/', async (req: express.Request, res) => {
         try {
             const openDialog = await dialog.showOpenDialog({
-                filters: [
-                    {
-                        extensions: ['lumi'],
-                        name: 'Lumi Report'
-                    }
-                ],
                 properties: ['openDirectory']
             });
 
