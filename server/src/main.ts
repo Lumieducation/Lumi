@@ -145,8 +145,7 @@ app.on('ready', async () => {
     log.info('app is ready');
     const server = await httpServerFactory(
         serverConfigFactory(process.env.USERDATA || app.getPath('userData')),
-        mainWindow,
-        websocket
+        mainWindow
     );
     log.info('server booted');
 

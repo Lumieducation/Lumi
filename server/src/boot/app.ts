@@ -5,8 +5,6 @@ import bodyParser from 'body-parser';
 import express from 'express';
 import fileUpload from 'express-fileupload';
 
-import SocketIO from 'socket.io';
-
 import i18next from 'i18next';
 import i18nextHttpMiddleware from 'i18next-http-middleware';
 
@@ -42,8 +40,7 @@ const increaseMaxFileSize = async (config: H5P.IH5PConfig) => {
 
 export default async (
     serverConfig: IServerConfig,
-    browserWindow: electron.BrowserWindow,
-    websocket: SocketIO.Server
+    browserWindow: electron.BrowserWindow
 ) => {
     const config = await new H5P.H5PConfig(
         new H5P.fsImplementations.JsonStorage(serverConfig.configFile)
@@ -143,14 +140,7 @@ export default async (
     });
     app.use(
         '/',
-        routes(
-            h5pEditor,
-            h5pPlayer,
-            serverConfig,
-            browserWindow,
-            app,
-            websocket
-        )
+        routes(h5pEditor, h5pPlayer, serverConfig, browserWindow, app)
     );
 
     // The error handler must be before any other error middleware and after all controllers

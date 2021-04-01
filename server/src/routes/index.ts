@@ -16,7 +16,6 @@ import h5pRoutes from './h5pRoutes';
 import analyticRoutes from './analyticRoutes';
 import settingsRoutes from './settingsRoutes';
 import runRoutes from './runRoutes';
-import SocketIO from 'socket.io';
 
 import User from '../User';
 
@@ -27,8 +26,7 @@ export default function (
     h5pPlayer: H5PPlayer,
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow,
-    app: express.Application,
-    websocket: SocketIO.Server
+    app: express.Application
 ): express.Router {
     const router = express.Router();
 
@@ -48,7 +46,7 @@ export default function (
         settingsRoutes(serverConfig, browserWindow, app)
     );
 
-    router.use('/api/v1/run', runRoutes(serverConfig, h5pEditor, websocket));
+    router.use('/api/v1/run', runRoutes(serverConfig, h5pEditor));
 
     // // Directly serving the library and content files statically speeds up
     // // loading times and there is no security issue, as Lumi never is a
