@@ -11,6 +11,10 @@ import AppBar from './components/AppBar';
 
 import Notifications from './Notifications';
 
+import RunPage from './Run';
+
+import RunUploadDialog from './components/RunUploadDialog';
+
 import H5PEditor from './H5PEditor';
 import Analytics from './Analytics';
 import Launchpad from './Launchpad';
@@ -54,10 +58,12 @@ export default function AppContainer() {
                         path="/analytics"
                         component={Analytics}
                     />
+                    <Route exact={true} path="/run" component={RunPage} />
                     <Route path="/" component={Launchpad} />
                 </Switch>
+                <SetupDialog />
+                <RunUploadDialog />
             </Router>
-            <SetupDialog />
             <Notifications />
             <Backdrop />
         </div>

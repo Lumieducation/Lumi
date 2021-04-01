@@ -11,7 +11,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import AnalyticsIcon from '@material-ui/icons/ShowChart';
-
+// import RunIcon from '@material-ui/icons/CloudUpload';
 import { useTranslation } from 'react-i18next';
 
 import MainSection from './components/MainSection';
@@ -198,6 +198,58 @@ export default function Launchpad() {
                             </CardActions>
                         </Card>
                     </Grid>
+                    {/* <Grid item xs={4}>
+                        <Card id="launchpad-run" className={classes.card}>
+                            <Link
+                                to="/run"
+                                style={{
+                                    color: 'inherit',
+                                    textDecoration: 'inherit'
+                                }}
+                            >
+                                <CardActionArea>
+                                    <CardMedia
+                                        className={classes.media}
+                                        title="Lumi Run"
+                                    >
+                                        <RunIcon
+                                            className={classes.analyticsIcon}
+                                        />
+                                    </CardMedia>
+                                    <CardContent>
+                                        <Typography
+                                            gutterBottom
+                                            variant="h5"
+                                            component="h2"
+                                        >
+                                            Lumi Run
+                                        </Typography>
+                                        <Typography
+                                            variant="body2"
+                                            color="textSecondary"
+                                            component="p"
+                                        >
+                                            Lumi Run allows you to upload H5P to
+                                            Lumi.run and host your H5P online.
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                            </Link>
+                            <CardActions>
+                                <Button size="small" color="primary">
+                                    <Link
+                                        to="/run"
+                                        style={{
+                                            color: 'inherit',
+                                            textDecoration: 'inherit'
+                                        }}
+                                    >
+                                        {t('analytics.startPage.start')}
+                                    </Link>
+                                </Button>
+                            </CardActions>
+                        </Card>
+                    </Grid> */}
                 </Grid>
             </MainSection>
         </div>

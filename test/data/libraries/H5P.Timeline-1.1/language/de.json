@@ -1,0 +1,297 @@
+{
+  "semantics": [
+    {
+      "label": "Zeitstrahl",
+      "fields": [
+        {
+          "label": "Überschrift",
+          "description": "Dies ist die Überschrift der Startseite des Zeitstrahls."
+        },
+        {
+          "label": "Inhaltstext",
+          "description": "Dieser Text wird auf der Startseite des Zeitstrahls angezeigt."
+        },
+        {
+          "label": "Standard-Zoomstufe",
+          "description": "Der Zahlenwert enstpricht dem mehrmaligen Drücken des Buttons zum Hinein- oder Herauszoomen. Negative Zahlen zoomen heraus. Voreinstellung ist 0."
+        },
+        {
+          "label": "Hintergrundbild",
+          "description": "Dieses Bild wird als Hintergrund für den gesamten Zeitstrahl verwendet."
+        },
+        {
+          "label": "Höhe des Textbereichs",
+          "description": "Die Höhe des Bereichs über dem Zeitstrahl, in dem die Textinformationen angezeigt werden (in Pixeln)"
+        },
+        {
+          "label": "Medium auf der Startseite",
+          "description": "Hier kannst du der Startseite Inhalte hinzufügen.",
+          "fields": [
+            {
+              "label": "URL des Mediums",
+              "description": "Füge hier den Link zum Medium ein (derzeit werden Twitter, YouTube, Flickr, Vimeo, Google Maps und SoundCloud unterstützt)"
+            },
+            {
+              "label": "Quellenangabe",
+              "description": "Füge hier die Quellenangabe für das Medium ein"
+            },
+            {
+              "label": "Beschriftung",
+              "description": "Füge hier die Beschriftung des Mediums ein"
+            }
+          ]
+        },
+        {
+          "label": "Daten",
+          "description": "Füge hier Daten zu deinem Zeitstrahl hinzu.",
+          "field": {
+            "label": "Datum",
+            "description": "Datum",
+            "fields": [
+              {
+                "label": "Startdatum",
+                "description": "JJJJ,MM,TT (Mindestens JJJJ erforderlich)"
+              },
+              {
+                "label": "Enddatum",
+                "description": "JJJJ,MM,TT (Mindestens JJJJ erforderlich)"
+              },
+              {
+                "label": "Überschrift",
+                "description": "Überschrift des Datumseintrags"
+              },
+              {
+                "label": "Inhaltstext",
+                "description": "Der Text, der angezeigt wird, wenn der Nutzer auf das Datum klickt"
+              },
+              {
+                "label": "Kategorie",
+                "description": "Mit Kategorien können Datumseinträge in Zeilen sortiert werden. Es muss keine Kategorie angegeben werden."
+              },
+              {
+                "label": "Medium",
+                "description": "",
+                "fields": [
+                  {
+                    "label": "URL des Mediums",
+                    "description": "Füge hier den Link zum Medium ein (derzeit werden Twitter, YouTube, Flickr, Vimeo, Google Maps und SoundCloud unterstützt)."
+                  },
+                  {
+                    "label": "Vorschaubild",
+                    "description": "Füge ein Vorschaubild hinzu, falls benötigt (32px mal 32px)."
+                  },
+                  {
+                    "label": "Quellenangabe",
+                    "description": "Füge hier die Quellenangabe für das Medium ein."
+                  },
+                  {
+                    "label": "Beschriftung",
+                    "description": "Beschriftungstext"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Epochen",
+          "description": "Epochen sind farblich markierte Zeitabschnitte, die hinter den Datumseinträgen in der Zeitleiste angezeigt werden",
+          "field": {
+            "label": "Epoche",
+            "description": "",
+            "fields": [
+              {
+                "label": "Startdatum",
+                "description": "JJJJ,MM,TT (Mindestens JJJJ erforderlich)"
+              },
+              {
+                "label": "Enddatum",
+                "description": "JJJJ,MM,TT (Mindestens JJJJ erforderlich)"
+              },
+              {
+                "label": "Überschrift",
+                "description": "Überschrift der Epoche"
+              },
+              {
+                "label": "Inhaltstext",
+                "description": "Inhaltstext für die Epoche"
+              },
+              {
+                "label": "Kategorie",
+                "description": "Wenn eine Kategorie eingegeben wird, wird die Epoche nur in der jeweiligen Zeile angezeigt.  Es muss keine Kategorie angegeben werden."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Sprache",
+          "description": "Die Sprache der Benutzeroberfläche",
+          "options": [
+            {
+              "label": "Afrikaans"
+            },
+            {
+              "label": "Arabisch"
+            },
+            {
+              "label": "Armenisch"
+            },
+            {
+              "label": "Baskisch"
+            },
+            {
+              "label": "Bulgarisch"
+            },
+            {
+              "label": "Katalanisch"
+            },
+            {
+              "label": "Chinesisch"
+            },
+            {
+              "label": "Kroatisch"
+            },
+            {
+              "label": "Tschechisch"
+            },
+            {
+              "label": "Dänisch"
+            },
+            {
+              "label": "Niederländisch"
+            },
+            {
+              "label": "Englisch"
+            },
+            {
+              "label": "Englisch (24-Stunden-Zeitformat)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estnisch"
+            },
+            {
+              "label": "Färöisch"
+            },
+            {
+              "label": "Farsi"
+            },
+            {
+              "label": "Finnisch"
+            },
+            {
+              "label": "Französisch"
+            },
+            {
+              "label": "Galicisch"
+            },
+            {
+              "label": "Georgisch"
+            },
+            {
+              "label": "Deutsch"
+            },
+            {
+              "label": "Griechisch"
+            },
+            {
+              "label": "Hebräisch"
+            },
+            {
+              "label": "Ungarisch"
+            },
+            {
+              "label": "Isländisch"
+            },
+            {
+              "label": "Indonesisch"
+            },
+            {
+              "label": "Italienisch"
+            },
+            {
+              "label": "Japanisch"
+            },
+            {
+              "label": "Koreanisch"
+            },
+            {
+              "label": "Lettisch"
+            },
+            {
+              "label": "Litauisch"
+            },
+            {
+              "label": "Luxembourgisch"
+            },
+            {
+              "label": "Malayisch"
+            },
+            {
+              "label": "Nepalesisch"
+            },
+            {
+              "label": "Norwegisch"
+            },
+            {
+              "label": "Polnisch"
+            },
+            {
+              "label": "Portugiesisch"
+            },
+            {
+              "label": "Portugiesisch (Brasilien)"
+            },
+            {
+              "label": "Rumänisch"
+            },
+            {
+              "label": "Russisch"
+            },
+            {
+              "label": "Serbisch - kyrillische Schrift"
+            },
+            {
+              "label": "Serbisch - lateinische Schrift"
+            },
+            {
+              "label": "Singhalesisch"
+            },
+            {
+              "label": "Slowakisch"
+            },
+            {
+              "label": "Slowenisch"
+            },
+            {
+              "label": "Spanisch"
+            },
+            {
+              "label": "Schwedisch"
+            },
+            {
+              "label": "Tagalog"
+            },
+            {
+              "label": "Tamil"
+            },
+            {
+              "label": "Taiwanesisch"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Türkisch"
+            },
+            {
+              "label": "Ukrainisch"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

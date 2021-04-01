@@ -1,0 +1,297 @@
+{
+  "semantics": [
+    {
+      "label": "Časovnica",
+      "fields": [
+        {
+          "label": "Naslov časovnice",
+          "description": "Naslov bo zapisan na prvi strani časovnice."
+        },
+        {
+          "label": "Vsebina časovnice",
+          "description": "Besedilo bo zapisano na prvi strani časovnice."
+        },
+        {
+          "label": "Privzeta raven povečave",
+          "description": "Nastavitev spremeni privzeto stopnjo povečave in je enakovredna številu klikov gumba za povečavo ali pomanjšanje časovnice. Privzeta vrednost je 0."
+        },
+        {
+          "label": "Slika ozadja",
+          "description": "Slika je prikazana v ozadju nad časovnico."
+        },
+        {
+          "label": "Višina",
+          "description": "Vrednost v slikovnih pikah (pikslih)."
+        },
+        {
+          "label": "Sredstva",
+          "description": "Besedilo bo zapisano na prvi strani časovnice.",
+          "fields": [
+            {
+              "label": "Medij",
+              "description": "Spletna povezava (URL). Podprte so povezave za Twitter, YouTube, Flickr, Vimeo, Google Maps in SoundCloud."
+            },
+            {
+              "label": "Zasluge",
+              "description": "Zasluge za medij"
+            },
+            {
+              "label": "Napis",
+              "description": "Napis za medij"
+            }
+          ]
+        },
+        {
+          "label": "Datumi",
+          "description": "Dodajanje datumov z dogodki na časovnico.",
+          "field": {
+            "label": "Datum",
+            "description": "Datum",
+            "fields": [
+              {
+                "label": "Začetek",
+                "description": "YYYY,MM,DD (zahtevano vsaj leto - YYYY)"
+              },
+              {
+                "label": "Konec",
+                "description": "YYYY,MM,DD (zahtevano vsaj leto - YYYY)"
+              },
+              {
+                "label": "Naslov",
+                "description": "Naslov dogodka."
+              },
+              {
+                "label": "Opis",
+                "description": "Besedilo za opis dogodka."
+              },
+              {
+                "label": "Oznaka",
+                "description": "Vnos oznake za dogodek in uvrstitev v ločeno kategorijo na časovnici."
+              },
+              {
+                "label": "Sredstva",
+                "description": "",
+                "fields": [
+                  {
+                    "label": "Medij",
+                    "description": "Spletna povezava (URL). Podprte so povezave za Twitter, YouTube, Flickr, Vimeo, Google Maps in SoundCloud."
+                  },
+                  {
+                    "label": "Sličica",
+                    "description": "Sličica dogodka v velikosti 32x32 slikovnih točk za prikaz na časovnici."
+                  },
+                  {
+                    "label": "Zasluge",
+                    "description": "Zasluge za medij."
+                  },
+                  {
+                    "label": "Napis",
+                    "description": "Napis za medij."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Obdobja",
+          "description": "Dodajanje obdobja na časovnico.",
+          "field": {
+            "label": "Obdobje",
+            "description": "",
+            "fields": [
+              {
+                "label": "Začetek",
+                "description": "YYYY,MM,DD (zahtevano vsaj leto - YYYY)"
+              },
+              {
+                "label": "Konec",
+                "description": "YYYY,MM,DD (zahtevano vsaj leto - YYYY)"
+              },
+              {
+                "label": "Naslov",
+                "description": "Naslov obdobja."
+              },
+              {
+                "label": "Opis",
+                "description": "Besedilo za opis obdobja."
+              },
+              {
+                "label": "Oznaka",
+                "description": "Vnos oznake za obdobje in uvrstitev v ločeno kategorijo na časovnici."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Jezik",
+          "description": "Izbira jezika uporabniškega vmesnika za udeležence.",
+          "options": [
+            {
+              "label": "Afrikaans"
+            },
+            {
+              "label": "Arabic"
+            },
+            {
+              "label": "Armenian"
+            },
+            {
+              "label": "Basque"
+            },
+            {
+              "label": "Bulgarian"
+            },
+            {
+              "label": "Catalan"
+            },
+            {
+              "label": "Chinese"
+            },
+            {
+              "label": "Croatian / Hrvatski"
+            },
+            {
+              "label": "Czech"
+            },
+            {
+              "label": "Danish"
+            },
+            {
+              "label": "Dutch"
+            },
+            {
+              "label": "English"
+            },
+            {
+              "label": "English (24-hour time)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estonian"
+            },
+            {
+              "label": "Faroese"
+            },
+            {
+              "label": "Farsi"
+            },
+            {
+              "label": "Finnish"
+            },
+            {
+              "label": "French"
+            },
+            {
+              "label": "Galician"
+            },
+            {
+              "label": "Georgian"
+            },
+            {
+              "label": "German / Deutsch"
+            },
+            {
+              "label": "Greek"
+            },
+            {
+              "label": "Hebrew"
+            },
+            {
+              "label": "Hungarian"
+            },
+            {
+              "label": "Icelandic"
+            },
+            {
+              "label": "Indonesian"
+            },
+            {
+              "label": "Italian"
+            },
+            {
+              "label": "Japanese"
+            },
+            {
+              "label": "Korean"
+            },
+            {
+              "label": "Latvian"
+            },
+            {
+              "label": "Lithuanian"
+            },
+            {
+              "label": "Luxembourgish"
+            },
+            {
+              "label": "Malay"
+            },
+            {
+              "label": "Nepali"
+            },
+            {
+              "label": "Norwegian"
+            },
+            {
+              "label": "Polish"
+            },
+            {
+              "label": "Portuguese"
+            },
+            {
+              "label": "Portuguese (Brazilian)"
+            },
+            {
+              "label": "Romansh"
+            },
+            {
+              "label": "Russian"
+            },
+            {
+              "label": "Serbian - Cyrillic"
+            },
+            {
+              "label": "Serbian - Latin"
+            },
+            {
+              "label": "Sinhalese"
+            },
+            {
+              "label": "Slovak"
+            },
+            {
+              "label": "Slovenščina"
+            },
+            {
+              "label": "Spanish"
+            },
+            {
+              "label": "Swedish"
+            },
+            {
+              "label": "Tagalog"
+            },
+            {
+              "label": "Tamil"
+            },
+            {
+              "label": "Taiwanese"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Turkish"
+            },
+            {
+              "label": "Ukrainian"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

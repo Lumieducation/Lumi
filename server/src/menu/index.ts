@@ -4,6 +4,7 @@ import SocketIO from 'socket.io';
 import analyticsMenu from './analyticsMenu';
 import h5peditorMenu from './h5peditorMenu';
 import launchpadMenu from './launchpadMenu';
+import runMenu from './runMenu';
 
 export default function menuFactory(
     path: string,
@@ -25,6 +26,12 @@ export default function menuFactory(
                 electron.Menu.buildFromTemplate(
                     h5peditorMenu(window, webSocket)
                 )
+            );
+            break;
+
+        case '/run':
+            electron.Menu.setApplicationMenu(
+                electron.Menu.buildFromTemplate(runMenu(window, webSocket))
             );
             break;
 
