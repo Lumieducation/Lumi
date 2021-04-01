@@ -15,7 +15,7 @@ import H5PEditorStartPage from './components/H5PEditorStartPage';
 import H5PEditorH5PComponent from './components/H5PEditorH5PComponent';
 
 import H5PEditorExportDialog from './components/H5PEditorExportDialog';
-
+import LoadingPage from './components/LoadingPage';
 import { actions, selectors } from '../state';
 
 import { ITab } from '../state/H5PEditor/H5PEditorTypes';
@@ -48,10 +48,12 @@ export class H5PEditor extends React.Component<{
     public render(): React.ReactNode {
         if (this.props.noActiveTab) {
             return (
-                <H5PEditorStartPage
-                    primaryButtonClick={() => this.props.openFiles()}
-                    secondaryButtonClick={() => this.props.openTab()}
-                />
+                <div>
+                    <H5PEditorStartPage
+                        primaryButtonClick={() => this.props.openFiles()}
+                        secondaryButtonClick={() => this.props.openTab()}
+                    />
+                </div>
             );
         }
         return (
@@ -70,14 +72,27 @@ export class H5PEditor extends React.Component<{
                         }
                     />
                     <MainSection>
-                        {this.props.tabs.map((tab, index) => (
-                            <H5PEditorH5PComponent
-                                show={index === this.props.activeTabIndex}
-                                key={tab.id}
-                                tab={tab}
-                                {...this.props}
-                            />
-                        ))}
+                        {this.props.tabs.map((tab, index) =>
+                            tab.opening ? (
+                                <div
+                                    style={{
+                                        display:
+                                            index === this.props.activeTabIndex
+                                                ? 'block'
+                                                : 'none'
+                                    }}
+                                >
+                                    <LoadingPage />
+                                </div>
+                            ) : (
+                                <H5PEditorH5PComponent
+                                    show={index === this.props.activeTabIndex}
+                                    key={tab.id}
+                                    tab={tab}
+                                    {...this.props}
+                                />
+                            )
+                        )}
                     </MainSection>
                 </Root>
                 <H5PEditorExportDialog />

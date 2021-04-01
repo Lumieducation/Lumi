@@ -15,6 +15,7 @@ import { machineId } from 'node-machine-id';
 import i18next from 'i18next';
 
 import settingsCache from './settingsCache';
+import electronState from './electronState';
 
 const app = electron.app;
 let websocket: SocketIO.Server;
@@ -96,6 +97,12 @@ function createMainWindow(
         require('electron').shell.openExternal(url);
     });
 
+    window.webContents.on('before-input-event', (event, input) => {
+        if (electronState.getState().blockKeyboard) {
+            event.preventDefault();
+        }
+    });
+
     return window;
 }
 
@@ -111,6 +118,25 @@ app.on('activate', () => {
     // on macOS it is common to re-create a window even after all windows have been closed
     if (mainWindow === null) {
         mainWindow = createMainWindow(websocket);
+    }
+});
+
+app.on('before-quit', async () => {
+    try {
+        if (settingsCache.getSettings().usageStatistics) {
+            const data = {
+                url: '/Lumi',
+                _id: await machineId(),
+                uid: await machineId(),
+                e_c: 'App',
+                e_a: 'quit',
+                lang: electron.app.getLocale(),
+                ua: os.type()
+            };
+            matomo.track(data);
+        }
+    } catch (error) {
+        Sentry.captureException(error);
     }
 });
 

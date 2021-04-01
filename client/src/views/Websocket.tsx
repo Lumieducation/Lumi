@@ -13,6 +13,7 @@ interface IPassedProps {}
 
 interface IStateProps extends IPassedProps {
     activeTab: ITab;
+    lockDisplay: boolean;
 }
 
 interface IDispatchProps {
@@ -52,51 +53,55 @@ export class WebsocketContainer extends React.Component<
         });
 
         this.socket.on('action', (action: any) => {
-            switch (action.type) {
+            if (!this.props.lockDisplay) {
+                switch (action.type) {
+                    case 'IMPORT_ANALYTICS':
+                        this.props.dispatch(
+                            actions.analytics.importAnalytics()
+                        );
+                        break;
                 case 'action':
                     this.props.dispatch({
                         payload: action.payload.payload,
                         type: action.payload.type
+                    break;
                     });
-                    break;
 
-                case 'IMPORT_ANALYTICS':
-                    this.props.dispatch(actions.analytics.importAnalytics());
-                    break;
 
-                case 'NEW_H5P':
-                    this.props.dispatch(actions.h5peditor.openTab());
-                    break;
+                    case 'NEW_H5P':
+                        this.props.dispatch(actions.h5peditor.openTab());
+                        break;
 
-                case 'OPEN_H5P':
-                    action.payload.paths.forEach((file: any) => {
-                        dispatch(actions.h5peditor.importH5P(file));
-                    });
-                    break;
+                    case 'OPEN_H5P':
+                        action.payload.paths.forEach((file: any) => {
+                            dispatch(actions.h5peditor.importH5P(file));
+                        });
+                        break;
 
-                case 'SAVE':
-                    this.updateAndSave();
-                    break;
+                    case 'SAVE':
+                        this.updateAndSave();
+                        break;
 
-                case 'SAVE_AS':
-                    this.saveAs();
-                    break;
+                    case 'SAVE_AS':
+                        this.saveAs();
+                        break;
 
-                case 'REPORT_ISSUE':
-                    Sentry.showReportDialog();
-                    break;
+                    case 'REPORT_ISSUE':
+                        Sentry.showReportDialog();
+                        break;
 
-                case 'EXPORT_AS_HTML':
-                    dispatch(actions.h5peditor.openExportDialog());
-                    break;
+                    case 'EXPORT_AS_HTML':
+                        dispatch(actions.h5peditor.openExportDialog());
+                        break;
 
-                case 'MESSAGE':
-                    dispatch(
-                        actions.notifications.notify(
-                            action.payload.message,
-                            action.payload.type
-                        )
-                    );
+                    case 'MESSAGE':
+                        dispatch(
+                            actions.notifications.notify(
+                                action.payload.message,
+                                action.payload.type
+                            )
+                        );
+                }
             }
         });
     }
@@ -133,7 +138,8 @@ export class WebsocketContainer extends React.Component<
 
 function mapStateToProps(state: IState, ownProps: IPassedProps): IStateProps {
     return {
-        activeTab: selectors.h5peditor.activeTab(state)
+        activeTab: selectors.h5peditor.activeTab(state),
+        lockDisplay: state.h5peditor.lockDisplay
     };
 }
 
