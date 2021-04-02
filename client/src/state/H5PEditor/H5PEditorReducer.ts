@@ -315,7 +315,7 @@ export default function tabReducer(
                             name: i18next.t('editor.default_name'),
                             path: undefined,
                             mode: Modes.edit,
-                            opening: true,
+                            opening: false,
                             ...action.payload.tab
                         }
                     ]
