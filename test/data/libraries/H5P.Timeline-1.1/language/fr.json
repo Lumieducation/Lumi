@@ -1,0 +1,297 @@
+{
+  "semantics": [
+    {
+      "label": "Chronologie",
+      "fields": [
+        {
+          "label": "Titre",
+          "description": "Entrez ici le titre principal de la chronologie (première page)"
+        },
+        {
+          "label": "Corps du texte",
+          "description": "Entrez ici le corps de texte principal de la chronologie (première page)."
+        },
+        {
+          "label": "Niveau de zoom par défaut",
+          "description": "Cela va modifier le niveau de zoom par défaut. Equivalent à appuyer sur le bouton zoom avant ou zoom arrière le nombre de fois spécifié. Les nombres négatifs effectuent un zoom arrière. La valeur par défaut est 0."
+        },
+        {
+          "label": "Image d'arrière-plan'",
+          "description": "Affiche une image de fond."
+        },
+        {
+          "label": "Hauteur",
+          "description": "La hauteur en pixels"
+        },
+        {
+          "label": "Média",
+          "description": "Here you can add an asset to your timeline \"front page\"",
+          "fields": [
+            {
+              "label": "Adresse URL du média",
+              "description": "Lien vers l'URL du fichier média (Twitter, YouTube, Flickr, Vimeo, Google Maps et SoundCloud sont autorisés à l'heure actuelle)"
+            },
+            {
+              "label": "Crédits",
+              "description": "Crédits du fichier média"
+            },
+            {
+              "label": "Légende",
+              "description": "Saisissez ici la légende du fichier média"
+            }
+          ]
+        },
+        {
+          "label": "Dates",
+          "description": "Ajoutez des dates à votre chronologie !",
+          "field": {
+            "label": "Date",
+            "description": "Date",
+            "fields": [
+              {
+                "label": "Date de début",
+                "description": "AAAA,MM,JJ (AAAA est un minimum obligatoire)"
+              },
+              {
+                "label": "Date de fin",
+                "description": "AAAA,MM,JJ (AAAA est un minimum obligatoire)"
+              },
+              {
+                "label": "Titre",
+                "description": "Titre de l'événement"
+              },
+              {
+                "label": "Texte",
+                "description": "Texte associé à l'événement"
+              },
+              {
+                "label": "Etiquettes",
+                "description": "Saisissez les étiquettes (catégories)"
+              },
+              {
+                "label": "Média",
+                "description": "",
+                "fields": [
+                  {
+                    "label": "Adresse URL du média",
+                    "description": "Lien vers l'URL du fichier média (Twitter, YouTube, Flickr, Vimeo, Wikipedia, Google Maps et SoundCloud sont autorisés à l'heure actuelle)."
+                  },
+                  {
+                    "label": "Image miniature",
+                    "description": "Ajoutez au besoin une miniature 32x32"
+                  },
+                  {
+                    "label": "Crédits",
+                    "description": "Crédits du fichier média"
+                  },
+                  {
+                    "label": "Légende",
+                    "description": "Légende du fichier média"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Périodes",
+          "description": "Ajoutez une période à votre chronologie",
+          "field": {
+            "label": "Période",
+            "description": "",
+            "fields": [
+              {
+                "label": "Date de début",
+                "description": "AAAA,MM,JJ (AAAA est un minimum obligatoire)"
+              },
+              {
+                "label": "Date de fin",
+                "description": "AAAA,MM,JJ (AAAA est un minimum obligatoire)"
+              },
+              {
+                "label": "Titre",
+                "description": "Titre de la période"
+              },
+              {
+                "label": "Contenu",
+                "description": "Contenu de la période"
+              },
+              {
+                "label": "Etiquette",
+                "description": "Etiquettes de la période (catégories)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Langue",
+          "description": "Choisissez la langue de l'interface",
+          "options": [
+            {
+              "label": "Afrikaans"
+            },
+            {
+              "label": "Arabe"
+            },
+            {
+              "label": "Arménien"
+            },
+            {
+              "label": "Basque"
+            },
+            {
+              "label": "Bulgare"
+            },
+            {
+              "label": "Catalan"
+            },
+            {
+              "label": "Chinois"
+            },
+            {
+              "label": "Croate/ Hrvatski"
+            },
+            {
+              "label": "Tchèque"
+            },
+            {
+              "label": "Danois"
+            },
+            {
+              "label": "Allemand"
+            },
+            {
+              "label": "Anglais"
+            },
+            {
+              "label": "Anglais (24 heures)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estonien"
+            },
+            {
+              "label": "Faroese"
+            },
+            {
+              "label": "Farsi"
+            },
+            {
+              "label": "Finnois"
+            },
+            {
+              "label": "Français"
+            },
+            {
+              "label": "Galicien"
+            },
+            {
+              "label": "Géorgien"
+            },
+            {
+              "label": "Allemand / Deutsch"
+            },
+            {
+              "label": "Grec"
+            },
+            {
+              "label": "Hébreu"
+            },
+            {
+              "label": "Hongrois"
+            },
+            {
+              "label": "Islandais"
+            },
+            {
+              "label": "Indonésien"
+            },
+            {
+              "label": "Italien"
+            },
+            {
+              "label": "Japonais"
+            },
+            {
+              "label": "Coréen"
+            },
+            {
+              "label": "Letton"
+            },
+            {
+              "label": "Lituanien"
+            },
+            {
+              "label": "Luxembourgeois"
+            },
+            {
+              "label": "Malay"
+            },
+            {
+              "label": "Nepali"
+            },
+            {
+              "label": "Norvégien"
+            },
+            {
+              "label": "Polonais"
+            },
+            {
+              "label": "Portugais"
+            },
+            {
+              "label": "Portugais (Brésilien)"
+            },
+            {
+              "label": "Roumain"
+            },
+            {
+              "label": "Russe"
+            },
+            {
+              "label": "Serbe - Cyrillic"
+            },
+            {
+              "label": "Serbe - Latin"
+            },
+            {
+              "label": "Cinghalese"
+            },
+            {
+              "label": "Slovaque"
+            },
+            {
+              "label": "Slovène"
+            },
+            {
+              "label": "Espagnol"
+            },
+            {
+              "label": "Suédois"
+            },
+            {
+              "label": "Tagalog"
+            },
+            {
+              "label": "Tamoul"
+            },
+            {
+              "label": "Taiwanais"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Turc"
+            },
+            {
+              "label": "Ukrainien"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

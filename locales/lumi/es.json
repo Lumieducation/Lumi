@@ -1,7 +1,10 @@
 {
     "editor": {
         "default_name": "nuevo H5P",
-        "tab": { "view": "Vista", "edit": "Editar" },
+        "tab": {
+            "view": "Vista",
+            "edit": "Editar"
+        },
         "sidebar": {
             "open": "Abrir archivo H5P",
             "create": "Nuevo archivo H5P",
@@ -9,23 +12,26 @@
         },
         "startPage": {
             "title": "Editor de H5P",
-            "welcomeMessage": "Lumi's H5P Editor es una aplicación independiente que le permite ver, editar y crear H5P.",
+            "welcomeMessage": "El Editor H5P de Lumi es una aplicación independiente que le permite ver, editar y crear H5P.",
             "open": "Abrir H5P existente",
             "create": "crear nuevo H5P",
-            "start": "comienzo"
+            "start": "comenzar"
         }
     },
     "settings": {
-        "appbar": { "label": "Ajustes", "save": "Salvar" },
+        "appbar": {
+            "label": "Ajustes",
+            "save": "Guardar"
+        },
         "enable": "Habilitar"
     },
     "analytics": {
         "startPage": {
-            "title": "Lumi Analytics",
+            "title": "Lumi Analítica",
             "welcomeMessage": "La herramienta de análisis de Lumi le permite importar informes de usuario y visualizarlos por usted",
-            "open": "Importar archivos .lumi",
             "start": "Comienzo",
-            "learn_more": "aprende más"
+            "learn_more": "aprende más",
+            "open": "Elija carpeta con archivos .lumi"
         },
         "name": "Nombre",
         "average": "Promedio"
@@ -56,7 +62,7 @@
     },
     "setup_dialog": {
         "description": "Proteger la privacidad del individuo es importante para nosotros. Solo recopilamos la información que usted elige darnos y la procesamos con su consentimiento. Queremos ser lo más transparentes posible. Sin embargo, Lumi depende de algunas conexiones y transferencias de datos para funcionar.",
-        "save": "Salvar",
+        "save": "Guardar",
         "consent_warning": "Necesita al menos dar su consentimiento a la política de privacidad para usar esta aplicación."
     },
     "menu": {
@@ -64,24 +70,27 @@
         "file": {
             "label": "Archivo",
             "open": "Abrir archivos analíticos",
-            "save": "Salvar",
+            "save": "Guardar",
             "save_as": "Guardar como...",
             "export": "Exportar...",
             "edit": "Editar",
             "undo": "Deshacer",
-            "redo": "Listo",
-            "cut": "Corte",
-            "copy": "Dupdo",
+            "redo": "Re-hacer",
+            "cut": "Cortar",
+            "copy": "Copiar",
             "paste": "Pegar",
             "select_all": "Seleccionar todo"
         },
-        "h5peditor": { "new": "Nuevo H5P", "open": "Abra H5P" },
+        "h5peditor": {
+            "new": "Nuevo H5P",
+            "open": "Abrir H5P"
+        },
         "help": {
             "label": "Ayuda",
             "report_issue": "Informar problema",
             "toggle_developer_tools": "Alternar herramientas para desarrolladores",
             "follow_us_on_twitter": "Síguenos en Twitter",
-            "about": "Sobre"
+            "about": "Acerca de"
         }
     },
     "notifications": {
@@ -96,7 +105,9 @@
                 "success": "¡H5P guardado!",
                 "error": "No se pudo guardar H5P."
             },
-            "open": { "error": "No se pudo abrir H5P." },
+            "open": {
+                "error": "No se pudo abrir H5P."
+            },
             "export_as_html": {
                 "success": "H5P exportado correctamente como HTML",
                 "error": "No se pudo exportar H5P como HTML"
@@ -104,7 +115,7 @@
         },
         "export_as_html": {
             "dialog": {
-                "title": "Reportero de nieve",
+                "title": "Reportero de Lumi",
                 "description": "¿Quieres incluir un reportero en tu html? Aprenda más sobre esto",
                 "yes": "sí",
                 "no": "No",

@@ -1,0 +1,297 @@
+{
+  "semantics": [
+    {
+      "label": "Timeline",
+      "fields": [
+        {
+          "label": "Títol",
+          "description": "Títol principal de la línia del temps (primera pàgina)"
+        },
+        {
+          "label": "Cos del Text",
+          "description": "El cos de text principal va aquí (primera pàgina)."
+        },
+        {
+          "label": "Nivell de zoom per defecte",
+          "description": "This will tweak the default zoom level. Equivilent to pressing the zoom in or zoom out button the specified number of times. Negative numbers zoom out. default is 0"
+        },
+        {
+          "label": "Imatge de fons",
+          "description": "Imatge que es mostrarà al fons."
+        },
+        {
+          "label": "Alçària",
+          "description": "L'alçària en píxels."
+        },
+        {
+          "label": "Recurs",
+          "description": "Aquí pots afegir recursos multimèdia a la línia del temps (primera pàgina).",
+          "fields": [
+            {
+              "label": "Contingut",
+              "description": "Enllaç al recurs (Actualment s'accepten enllaços de: Twitter, YouTube, Flickr, Vimeo, Google Maps i SoundCloud)."
+            },
+            {
+              "label": "Crèdits",
+              "description": "Crèdits del recurs."
+            },
+            {
+              "label": "Peu",
+              "description": "El text de peu pel recurs va aquí."
+            }
+          ]
+        },
+        {
+          "label": "Dates",
+          "description": "Afegeix dates a la teva línia del temps!",
+          "field": {
+            "label": "Data",
+            "description": "Data",
+            "fields": [
+              {
+                "label": "Data d'inici",
+                "description": "AAAA,MM,DD (Com a mínim, l'any, AAAA, és obligatori)"
+              },
+              {
+                "label": "Data d'acabament",
+                "description": "AAAA,MM,DD (Com a mínim, l'any, AAAA, és obligatori)"
+              },
+              {
+                "label": "Títol",
+                "description": "Títol de l'esdeveniment."
+              },
+              {
+                "label": "Cos de text",
+                "description": "Cos de text de l'esdeveniment."
+              },
+              {
+                "label": "Etiquetes",
+                "description": "Introdueix etiquetes (categories)."
+              },
+              {
+                "label": "Recurs",
+                "description": "",
+                "fields": [
+                  {
+                    "label": "Contingut",
+                    "description": "Enllaç al recurs (Actualment, s'accepten recursos de: Twitter, YouTube, Flickr, Vimeo, Wikipedia, Google Maps i SoundCloud)."
+                  },
+                  {
+                    "label": "Imatge prèvia",
+                    "description": "Afegeix una imatge de previsualització, si és necessària: 32x32"
+                  },
+                  {
+                    "label": "Crèdits",
+                    "description": "Crèdits del recurs"
+                  },
+                  {
+                    "label": "Peu de recurs",
+                    "description": "Peu de text pel recurs"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Eres",
+          "description": "Afegeix una era a la teva línia del temps.",
+          "field": {
+            "label": "Era",
+            "description": "",
+            "fields": [
+              {
+                "label": "Data d'inici",
+                "description": "AAAA,MM,DD (Com a mínim, l'any, AAAA, és obligatori)"
+              },
+              {
+                "label": "Data d'acabament",
+                "description": "AAAA,MM,DD (Com a mínim, l'any, AAAA, és obligatori)"
+              },
+              {
+                "label": "Títol",
+                "description": "Títol del període"
+              },
+              {
+                "label": "Text",
+                "description": "Cos de text pel període"
+              },
+              {
+                "label": "Etiqueta",
+                "description": "Etiquetes pel període (categories)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Idioma",
+          "description": "Idioma de la inferfície de l'usuari",
+          "options": [
+            {
+              "label": "Afrikaans"
+            },
+            {
+              "label": "Àrab"
+            },
+            {
+              "label": "Armeni"
+            },
+            {
+              "label": "Èuscar"
+            },
+            {
+              "label": "Bulgar"
+            },
+            {
+              "label": "Català"
+            },
+            {
+              "label": "Xinès"
+            },
+            {
+              "label": "Croat"
+            },
+            {
+              "label": "Txec"
+            },
+            {
+              "label": "Danès"
+            },
+            {
+              "label": "Neerlandès"
+            },
+            {
+              "label": "Anglès"
+            },
+            {
+              "label": "Anglès (24-hour time)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estonià"
+            },
+            {
+              "label": "Feroès"
+            },
+            {
+              "label": "Persa"
+            },
+            {
+              "label": "Finès"
+            },
+            {
+              "label": "Francès"
+            },
+            {
+              "label": "Gallec"
+            },
+            {
+              "label": "Georgià"
+            },
+            {
+              "label": "Alemany"
+            },
+            {
+              "label": "Grec"
+            },
+            {
+              "label": "Hebreu"
+            },
+            {
+              "label": "Hongarès"
+            },
+            {
+              "label": "Islandès"
+            },
+            {
+              "label": "Indonesi"
+            },
+            {
+              "label": "Italià"
+            },
+            {
+              "label": "Japonès"
+            },
+            {
+              "label": "Coreà"
+            },
+            {
+              "label": "Letó"
+            },
+            {
+              "label": "Lituà"
+            },
+            {
+              "label": "Luxemburguès"
+            },
+            {
+              "label": "Malai"
+            },
+            {
+              "label": "Nepalès"
+            },
+            {
+              "label": "Noruec"
+            },
+            {
+              "label": "Polonès"
+            },
+            {
+              "label": "Portuguès"
+            },
+            {
+              "label": "Portuguès (Brasil)"
+            },
+            {
+              "label": "Retoromànic"
+            },
+            {
+              "label": "Rus"
+            },
+            {
+              "label": "Serbi - Ciríl·lic"
+            },
+            {
+              "label": "Serbi - Llatí"
+            },
+            {
+              "label": "Sinalès"
+            },
+            {
+              "label": "Eslovac"
+            },
+            {
+              "label": "Eslovè"
+            },
+            {
+              "label": "Castellà"
+            },
+            {
+              "label": "Suec"
+            },
+            {
+              "label": "Tagàlog"
+            },
+            {
+              "label": "Tàmil"
+            },
+            {
+              "label": "Twi"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Turc"
+            },
+            {
+              "label": "Ucraïnès"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

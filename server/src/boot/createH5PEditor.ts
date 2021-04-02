@@ -41,7 +41,9 @@ export default async function createH5PEditor(
                 global: {
                     styles: ['/assets/h5p/h5p-editor-overrides.css']
                 }
-            }
+            },
+            enableHubLocalization: true,
+            enableLibraryNameLocalization: true
         }
     );
 

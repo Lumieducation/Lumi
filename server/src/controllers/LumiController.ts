@@ -2,12 +2,15 @@ import { dialog } from 'electron';
 import fs from 'fs-extra';
 import _path from 'path';
 
+import Sentry from '@sentry/node';
 import LumiError from '../helpers/LumiError';
 import * as H5P from '@lumieducation/h5p-server';
 import Logger from '../helpers/Logger';
 
 import User from '../User';
 import IServerConfig from '../IServerConfig';
+
+import electronState from '../electronState';
 
 const log = new Logger('controller:lumi-h5p');
 
@@ -28,39 +31,56 @@ export default class LumiController {
         contentId: string,
         pathArg?: string
     ): Promise<{ path: string }> {
-        let path = pathArg;
+        try {
+            let path = pathArg;
 
-        if (!path || path === 'undefined') {
-            path = dialog.showSaveDialogSync({
-                defaultPath: '.h5p',
-                filters: [
-                    {
-                        extensions: ['h5p'],
-                        name: 'H5P'
-                    }
-                ],
-                title: 'Save H5P'
+            if (!path || path === 'undefined') {
+                path = dialog.showSaveDialogSync({
+                    defaultPath: '.h5p',
+                    filters: [
+                        {
+                            extensions: ['h5p'],
+                            name: 'H5P'
+                        }
+                    ],
+                    title: 'Save H5P'
+                });
+            }
+
+            if (!path) {
+                throw new LumiError('user-abort', 'Aborted by user', 499);
+                return;
+            }
+
+            if (_path.extname(path) !== '.h5p') {
+                path = `${path}.h5p`;
+            }
+
+            electronState.setState({ blockKeyboard: true });
+
+            const stream = fs.createWriteStream(path);
+            const packageExporter = new H5P.PackageExporter(
+                this.h5pEditor.libraryManager,
+                this.h5pEditor.contentStorage,
+                this.h5pEditor.config
+            );
+            await packageExporter.createPackage(contentId, stream, new User());
+            // We also need to wait for the stream to finish before returning, so
+            // that the user is notified correctly about fact that saving is still
+            // going on.
+            await new Promise<void>((y, n) => {
+                stream.on('finish', () => {
+                    y();
+                });
+            }).finally(() => {
+                electronState.setState({ blockKeyboard: false });
             });
+
+            return { path };
+        } catch (error) {
+            electronState.setState({ blockKeyboard: false });
+            Sentry.captureException(error);
         }
-
-        if (!path) {
-            throw new LumiError('user-abort', 'Aborted by user', 499);
-            return;
-        }
-
-        if (_path.extname(path) !== '.h5p') {
-            path = `${path}.h5p`;
-        }
-
-        const stream = fs.createWriteStream(path);
-        const packageExporter = new H5P.PackageExporter(
-            this.h5pEditor.libraryManager,
-            this.h5pEditor.contentStorage,
-            this.h5pEditor.config
-        );
-        await packageExporter.createPackage(contentId, stream, new User());
-
-        return { path };
     }
 
     public async import(

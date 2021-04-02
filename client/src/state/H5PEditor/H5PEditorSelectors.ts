@@ -13,7 +13,8 @@ export const errorObject: ITab = {
     mainLibrary: '',
     name: 'error',
     mode: Modes.edit,
-    viewDisabled: true
+    viewDisabled: true,
+    opening: false
 };
 
 export function all(state: IState): ITab[] {
@@ -77,8 +78,6 @@ export function viewDisabled(state: IState): boolean {
         return state.h5peditor.tabList[state.h5peditor.activeTabIndex]
             .viewDisabled;
     } catch (error) {
-        Sentry.captureException(error);
-
         return true;
     }
 }

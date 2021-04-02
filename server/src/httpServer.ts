@@ -8,13 +8,16 @@ import IServerConfig from './IServerConfig';
 
 const log = new Logger('boot');
 
+let server: http.Server;
+
+export { server };
 export default async (
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow
 ) => {
     await setup(serverConfig);
     const app = appFactory(serverConfig, browserWindow);
-    const server = http.createServer(await app);
+    server = http.createServer(await app);
     return server.listen(process.env.PORT || 0, () => {
         log.info(`server booted on port ${(server.address() as any).port}`);
     });

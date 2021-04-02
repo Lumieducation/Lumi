@@ -15,6 +15,7 @@ import IServerConfig from '../IServerConfig';
 import h5pRoutes from './h5pRoutes';
 import analyticRoutes from './analyticRoutes';
 import settingsRoutes from './settingsRoutes';
+import runRoutes from './runRoutes';
 
 import User from '../User';
 
@@ -44,6 +45,8 @@ export default function (
         '/api/v1/settings',
         settingsRoutes(serverConfig, browserWindow, app)
     );
+
+    router.use('/api/v1/run', runRoutes(serverConfig, h5pEditor));
 
     // // Directly serving the library and content files statically speeds up
     // // loading times and there is no security issue, as Lumi never is a

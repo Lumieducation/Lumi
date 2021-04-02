@@ -14,6 +14,7 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
                 configFile: path.resolve('test', 'data', 'config.json'),
                 librariesPath: path.resolve('test', 'data', `libraries`),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
+                runFile: path.resolve('test', 'data', 'run.json'),
                 workingCachePath: path.resolve('test', 'data', 'workingCache'),
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
@@ -28,80 +29,6 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
                 canceled: false,
                 filePaths: [
                     path.resolve('test', 'data', 'analytics', 'valid.test')
-                ]
-            };
-        });
-
-        const res = await request(app).get('/api/v1/analytics');
-        expect(res.statusCode).toEqual(200);
-        expect(res.body).toStrictEqual({
-            interactions: [{ name: 'MultiChoice', id: 'skip' }],
-            users: [
-                {
-                    name: 'test',
-                    id: '43ce1094-a6e0-43f8-9368-5aac8352c357',
-                    results: [1]
-                },
-                {
-                    id: '43ce1094-a6e0-43f8-9368-5aac8352c357',
-                    name: 'test2',
-                    results: [1]
-                }
-            ]
-        });
-        done();
-    });
-
-    it('should return the correct data when a file is selected', async (done) => {
-        dialog.showOpenDialog = jest.fn(async (c) => {
-            return {
-                canceled: false,
-                filePaths: [
-                    path.resolve(
-                        'test',
-                        'data',
-                        'analytics',
-                        'valid.test',
-                        'test.lumi'
-                    )
-                ]
-            };
-        });
-
-        const res = await request(app).get('/api/v1/analytics');
-        expect(res.statusCode).toEqual(200);
-        expect(res.body).toStrictEqual({
-            interactions: [{ name: 'MultiChoice', id: 'skip' }],
-            users: [
-                {
-                    name: 'test',
-                    id: '43ce1094-a6e0-43f8-9368-5aac8352c357',
-                    results: [1]
-                }
-            ]
-        });
-        done();
-    });
-
-    it('should return the correct data when multiple files are selected', async (done) => {
-        dialog.showOpenDialog = jest.fn(async (c) => {
-            return {
-                canceled: false,
-                filePaths: [
-                    path.resolve(
-                        'test',
-                        'data',
-                        'analytics',
-                        'valid.test',
-                        'test.lumi'
-                    ),
-                    path.resolve(
-                        'test',
-                        'data',
-                        'analytics',
-                        'valid.test',
-                        'test2.lumi'
-                    )
                 ]
             };
         });

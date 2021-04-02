@@ -15,10 +15,12 @@ export default async function boot(
         ns: [
             'client',
             'copyright-semantics',
+            'hub',
+            'library-metadata',
+            'lumi',
             'metadata-semantics',
             'server',
-            'storage-file-implementations',
-            'lumi'
+            'storage-file-implementations'
         ],
         load: 'languageOnly',
         defaultNS: 'server',

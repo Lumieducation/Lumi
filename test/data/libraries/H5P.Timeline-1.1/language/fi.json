@@ -1,0 +1,297 @@
+{
+  "semantics": [
+    {
+      "label": "Aikajana",
+      "fields": [
+        {
+          "label": "Otsikko",
+          "description": "Ensimmäisen ruudun otsikko."
+        },
+        {
+          "label": "Leipäteksti",
+          "description": "Anna ensimmäisen sivun varsinainen sisältö."
+        },
+        {
+          "label": "Zoomin alkutaso",
+          "description": "Voit muuttaa zoomauksen oletustasoa. Arvo vastaa zoomausnapin painallusta. Negatiivinen arvo vastaa loitonnusta ja positiivinen lähennystä. Oletusarvo on 0."
+        },
+        {
+          "label": "Taustakuva",
+          "description": "Taustakuva"
+        },
+        {
+          "label": "Korkeus",
+          "description": "Korkeus pikseleinä"
+        },
+        {
+          "label": "Media",
+          "description": "Voit laittaa \"etusivulle\" mediaa.",
+          "fields": [
+            {
+              "label": "Media",
+              "description": "Linkki median URL-osoitteeseen (tällä hetkellä tuettuna Twitter, YouTube, Flickr, Vimeo, Wikipedia, Google Maps ja SoundCloud)."
+            },
+            {
+              "label": "Lähdetiedot",
+              "description": "Median lähdetiedot."
+            },
+            {
+              "label": "Kuvateksti",
+              "description": "Anna medialle kuvaus."
+            }
+          ]
+        },
+        {
+          "label": "Päivämäärät",
+          "description": "Lisää päivämääriä aikajanalle.",
+          "field": {
+            "label": "Päivämäärä",
+            "description": "Päivämäärä",
+            "fields": [
+              {
+                "label": "Alkupäivämäärä",
+                "description": "VVVV,KK,PP (Anna vähintään VVVV)."
+              },
+              {
+                "label": "Loppupäivämäärä",
+                "description": "VVVV,KK,PP (Anna vähintään VVVV)."
+              },
+              {
+                "label": "Otsikko",
+                "description": "Anna päivämäärälle otsikko."
+              },
+              {
+                "label": "Leipäteksti",
+                "description": "Anna päivämäärälle sisältö."
+              },
+              {
+                "label": "Avainsanat",
+                "description": "Anna avainsanat (kategoriat)."
+              },
+              {
+                "label": "Media",
+                "description": "",
+                "fields": [
+                  {
+                    "label": "Media",
+                    "description": "Linkki median URL-osoitteeseen (tällä hetkellä tuettuna Twitter, YouTube, Flickr, Vimeo, Wikipedia, Google Maps ja SoundCloud)."
+                  },
+                  {
+                    "label": "Esikatselukuva",
+                    "description": "Anna tarvittaessa esikatselukuva, 32x32"
+                  },
+                  {
+                    "label": "Lähdetiedot",
+                    "description": "Median lähdetiedot."
+                  },
+                  {
+                    "label": "Kuvateksti",
+                    "description": "Anna medialle kuvaus."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Aikakaudet",
+          "description": "Lisää aikakausi aikajanalle.",
+          "field": {
+            "label": "Aikakausi",
+            "description": "",
+            "fields": [
+              {
+                "label": "Alkupäivämäärä",
+                "description": "VVVV,KK,PP (Anna vähintään VVVV)."
+              },
+              {
+                "label": "Loppupäivämäärä",
+                "description": "VVVV,KK,PP (Anna vähintään VVVV)."
+              },
+              {
+                "label": "Otsikko",
+                "description": "Aikakauden otsikko."
+              },
+              {
+                "label": "Teksti",
+                "description": "Aikakauden sisältöteksti"
+              },
+              {
+                "label": "Avainsana",
+                "description": "Aikakauden avainsanat (kategoria)."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Kieli",
+          "description": "Käyttöliittymän kieli.",
+          "options": [
+            {
+              "label": "Afrikaansin kieli"
+            },
+            {
+              "label": "Arabia"
+            },
+            {
+              "label": "Armenian kieli"
+            },
+            {
+              "label": "Baskin kieli"
+            },
+            {
+              "label": "Bulgarian kieli"
+            },
+            {
+              "label": "Katalaanin kieli"
+            },
+            {
+              "label": "Kiina"
+            },
+            {
+              "label": "Kroatia / Hrvatski"
+            },
+            {
+              "label": "Tšekin kieli"
+            },
+            {
+              "label": "Tanska"
+            },
+            {
+              "label": "Hollanti"
+            },
+            {
+              "label": "Englanti"
+            },
+            {
+              "label": "Englanti (24-tuntia aikaformaatti)"
+            },
+            {
+              "label": "Esperanton kieli"
+            },
+            {
+              "label": "Viron kieli"
+            },
+            {
+              "label": "Fäärin kieli"
+            },
+            {
+              "label": "Farsin kieli"
+            },
+            {
+              "label": "Suomi"
+            },
+            {
+              "label": "Ranska"
+            },
+            {
+              "label": "Galicial"
+            },
+            {
+              "label": "Georgian kieli"
+            },
+            {
+              "label": "Saksa / Saksan kieli"
+            },
+            {
+              "label": "Kreikka"
+            },
+            {
+              "label": "Heprea"
+            },
+            {
+              "label": "Unkarin kieli"
+            },
+            {
+              "label": "Islanti"
+            },
+            {
+              "label": "Indonesian kieli"
+            },
+            {
+              "label": "Italian kieli"
+            },
+            {
+              "label": "Japani"
+            },
+            {
+              "label": "Korean kieli"
+            },
+            {
+              "label": "Latvian kieli"
+            },
+            {
+              "label": "Liettuan kieli"
+            },
+            {
+              "label": "Luxemburin kieli"
+            },
+            {
+              "label": "Malaijin kieli"
+            },
+            {
+              "label": "Nepalin kieli"
+            },
+            {
+              "label": "Norja"
+            },
+            {
+              "label": "Puola"
+            },
+            {
+              "label": "Portugalin kieli"
+            },
+            {
+              "label": "Portugali (Brasilia)"
+            },
+            {
+              "label": "Retoromaanin kieli"
+            },
+            {
+              "label": "Venäjä"
+            },
+            {
+              "label": "Serbian kieli - Kyrillinen"
+            },
+            {
+              "label": "Serbian kieli - Latina"
+            },
+            {
+              "label": "Singaleesin kieli"
+            },
+            {
+              "label": "Slovakian kieli"
+            },
+            {
+              "label": "Slovenian kieli"
+            },
+            {
+              "label": "Espanja"
+            },
+            {
+              "label": "Ruotsi"
+            },
+            {
+              "label": "Tagalogin kieli"
+            },
+            {
+              "label": "Tamilin kieli"
+            },
+            {
+              "label": "Taiwanin kieli"
+            },
+            {
+              "label": "Telugun kieli"
+            },
+            {
+              "label": "Turkki"
+            },
+            {
+              "label": "Ukrainan kieli"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
