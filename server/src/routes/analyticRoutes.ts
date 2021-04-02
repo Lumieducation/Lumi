@@ -18,38 +18,23 @@ export default function (): express.Router {
     const router = express.Router();
 
     router.get('/', async (req: express.Request, res) => {
-        const openDialog = await dialog.showOpenDialog({
-            filters: [
-                {
-                    extensions: ['lumi'],
-                    name: 'Lumi Report'
-                }
-            ],
-            properties: ['openDirectory', 'openFile', 'multiSelections']
-        });
-
-        if (openDialog.canceled) {
-            return res.status(499).end();
-        }
-
-        let files: string[] = [];
-
-        await Promise.all(
-            openDialog.filePaths.map(async (filePath) => {
-                if (_path.extname(filePath) === '.lumi') {
-                    files.push(filePath);
-                }
-                if (fs.statSync(filePath).isDirectory()) {
-                    const f = await recursiveReaddir(filePath, ['!*.lumi']);
-                    files = [...files, ...f];
-                }
-            })
-        );
-
         try {
+            const openDialog = await dialog.showOpenDialog({
+                properties: ['openDirectory']
+            });
+
+            if (openDialog.canceled) {
+                return res.status(499).end();
+            }
+
+            const filePath = openDialog.filePaths[0];
+
+            const files = await recursiveReaddir(filePath, ['!*.lumi']);
+
             if (files.length === 0) {
                 return res.status(404).end();
             }
+
             const userStatements = {};
             let contentJson;
             let library: string;
@@ -74,6 +59,7 @@ export default function (): express.Router {
             });
 
             if (error) {
+                res.status(500).end();
                 return;
             }
             const interactions: IInteraction[] = [];
@@ -95,7 +81,10 @@ export default function (): express.Router {
             const users = Object.keys(userStatements).map((key) => {
                 return {
                     name: key,
-                    id: userStatements[key][0].actor.account.name,
+                    id:
+                        userStatements[key][0]?.actor?.account?.name ||
+                        userStatements[key][0]?.actor?.name ||
+                        key,
                     results: interactions.map(
                         (interaction) =>
                             getResult(
@@ -112,11 +101,9 @@ export default function (): express.Router {
                 interactions,
                 users
             });
-            //     }
-            // );
         } catch (error) {
+            res.status(500).end();
             Sentry.captureException(error);
-            // res.status(500).json(error);
         }
     });
 

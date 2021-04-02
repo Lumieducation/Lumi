@@ -1,6 +1,9 @@
 {
     "editor": {
-        "tab": { "view": "አሳይ", "edit": "አርትዕ" },
+        "tab": {
+            "view": "አሳይ",
+            "edit": "አርትዕ"
+        },
         "sidebar": {
             "open": "H5P ፋይልን ይክፈቱ",
             "create": "አዲስ H5P ፋይል",
@@ -12,20 +15,26 @@
             "open": "አሁን ያለውን H5P ይክፈቱ",
             "create": "አዲስ H5P ይፍጠሩ",
             "start": "ጀምር"
-        }
+        },
+        "default_name": "አዲስ H5P"
     },
     "settings": {
-        "appbar": { "label": "ቅንብሮች", "save": "አስቀምጥ" },
+        "appbar": {
+            "label": "ቅንብሮች",
+            "save": "አስቀምጥ"
+        },
         "enable": "አንቃ"
     },
     "analytics": {
         "startPage": {
             "title": "Lumi ትንታኔዎች",
             "welcomeMessage": "የሉሚ አናሌቲክስ መሣሪያ የተጠቃሚ ሪፖርቶችን ከውጭ እንዲያስገቡ ያደርግዎታል እንዲሁም በዓይነ ሕሊናዎ እንዲታዩ ያደርጋቸዋል",
-            "open": ".Lumi ፋይሎችን አስመጣ",
             "start": "ጀምር",
-            "learn_more": "ተጨማሪ እወቅ"
-        }
+            "learn_more": "ተጨማሪ እወቅ",
+            "open": ".Lumi ፋይሎችን የያዘ አቃፊ ይምረጡ"
+        },
+        "name": "ስም",
+        "average": "አማካይ"
     },
     "bug_report": {
         "title": "የሳንካ እና የስንክል ሪፖርቶች",
@@ -42,7 +51,11 @@
         "description": "የቅርብ ጊዜውን ስሪት በራስ-ሰር ያግኙ።",
         "consent": "ይህ መተግበሪያ ዝመናዎችን በራስ-ሰር እንዲያረጋግጥ ፈቅጃለሁ።"
     },
-    "language": { "title": "ቋንቋ", "description": "የማመልከቻውን ቋንቋ ይቀይሩ።" },
+    "language": {
+        "title": "ቋንቋ",
+        "description": "የማመልከቻውን ቋንቋ ይቀይሩ።",
+        "help_translate": "እንድንተረጎም ይርዱን!"
+    },
     "privacy_policy": {
         "title": "የ ግል የሆነ",
         "consent": "ለግላዊነት ፖሊሲው አንብቤ ተስማምቻለሁ ፡፡"
@@ -67,12 +80,47 @@
             "paste": "ለጥፍ",
             "select_all": "ሁሉንም ምረጥ"
         },
-        "h5peditor": { "new": "አዲስ H5P", "open": "H5P ን ይክፈቱ" },
+        "h5peditor": {
+            "new": "አዲስ H5P",
+            "open": "H5P ን ይክፈቱ"
+        },
         "help": {
             "label": "እገዛ",
             "report_issue": "ሪፖርት ያድርጉ",
             "toggle_developer_tools": "የገንቢ መሣሪያዎችን ይቀያይሩ",
-            "follow_us_on_twitter": "በትዊተር ላይ ይከተሉን"
+            "follow_us_on_twitter": "በትዊተር ላይ ይከተሉን",
+            "about": "ስለ"
+        },
+        "quit": "አቁም"
+    },
+    "notifications": {
+        "analytics": {
+            "import": {
+                "error": "ትክክለኛ ፋይሎች አልተገኙም",
+                "success": "ከውጭ የመጡ የሪፖርት ፋይሎች"
+            }
+        },
+        "h5peditor": {
+            "save": {
+                "success": "ኤች 5 ፒ ተቀምጧል!",
+                "error": "H5P ሊቀመጥ አልቻለም።"
+            },
+            "open": {
+                "error": "H5P ን መክፈት አልተቻለም።"
+            },
+            "export_as_html": {
+                "success": "ኤች 5 ፒ በተሳካ ሁኔታ እንደ ኤችቲኤምኤል ተልኳል",
+                "error": "H5P ን እንደ HTML መላክ አልተቻለም"
+            }
+        },
+        "export_as_html": {
+            "dialog": {
+                "title": "የሎሚ ዘጋቢ",
+                "description": "ሪፖርተርን በኤችቲኤምኤልዎ ውስጥ ማካተት ይፈልጋሉ? ስለዚህ ጉዳይ የበለጠ ይረዱ",
+                "yes": "አዎ",
+                "no": "አይ",
+                "here": "እዚህ"
+            }
         }
     }
 }

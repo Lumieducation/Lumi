@@ -1,6 +1,9 @@
 {
     "editor": {
-        "tab": { "view": "رأي", "edit": "يحرر" },
+        "tab": {
+            "view": "رأي",
+            "edit": "يحرر"
+        },
         "sidebar": {
             "open": "افتح ملف H5P",
             "create": "ملف H5P جديد",
@@ -12,20 +15,26 @@
             "open": "افتح H5P الموجود",
             "create": "إنشاء H5P جديد",
             "start": "بداية"
-        }
+        },
+        "default_name": "H5P جديد"
     },
     "settings": {
-        "appbar": { "label": "إعدادات", "save": "يحفظ" },
+        "appbar": {
+            "label": "إعدادات",
+            "save": "يحفظ"
+        },
         "enable": "يمكن"
     },
     "analytics": {
         "startPage": {
             "title": "تحليلات لومي",
             "welcomeMessage": "تتيح لك أداة Lumi's Analytics استيراد تقارير المستخدمين وتصورها لك",
-            "open": "استيراد ملفات .lumi",
             "start": "بداية",
-            "learn_more": "يتعلم أكثر"
-        }
+            "learn_more": "يتعلم أكثر",
+            "open": "اختر مجلدًا يحتوي على ملفات .lumi"
+        },
+        "name": "اسم",
+        "average": "متوسط"
     },
     "bug_report": {
         "title": "تقارير الأخطاء والأعطال",
@@ -42,7 +51,11 @@
         "description": "احصل على أحدث إصدار تلقائيًا.",
         "consent": "أسمح لهذا التطبيق بالبحث تلقائيًا عن التحديثات."
     },
-    "language": { "title": "لغة", "description": "تغيير لغة التطبيق." },
+    "language": {
+        "title": "لغة",
+        "description": "تغيير لغة التطبيق.",
+        "help_translate": "ساعدنا في الترجمة!"
+    },
     "privacy_policy": {
         "title": "سياسة خاصة",
         "consent": "لقد قرأت ووافقت على سياسة الخصوصية."
@@ -67,12 +80,47 @@
             "paste": "معجون",
             "select_all": "اختر الكل"
         },
-        "h5peditor": { "new": "H5P جديد", "open": "افتح H5P" },
+        "h5peditor": {
+            "new": "H5P جديد",
+            "open": "افتح H5P"
+        },
         "help": {
             "label": "مساعدة",
             "report_issue": "قضية تقرير",
             "toggle_developer_tools": "تبديل أدوات المطور",
-            "follow_us_on_twitter": "تابعنا على تويتر"
+            "follow_us_on_twitter": "تابعنا على تويتر",
+            "about": "حول"
+        },
+        "quit": "استقال"
+    },
+    "notifications": {
+        "analytics": {
+            "import": {
+                "error": "لم يتم العثور على ملفات صالحة",
+                "success": "ملفات التقارير المستوردة"
+            }
+        },
+        "h5peditor": {
+            "save": {
+                "success": "تم حفظ H5P!",
+                "error": "تعذر حفظ H5P."
+            },
+            "open": {
+                "error": "تعذر فتح H5P."
+            },
+            "export_as_html": {
+                "success": "تم تصدير H5P بنجاح بتنسيق HTML",
+                "error": "تعذر تصدير H5P بتنسيق HTML"
+            }
+        },
+        "export_as_html": {
+            "dialog": {
+                "title": "مراسل لومي",
+                "description": "هل تريد تضمين مراسل في لغة تأشير النص الفائق الخاصة بك؟ تعرف على المزيد حول هذا الموضوع",
+                "yes": "نعم",
+                "no": "لا",
+                "here": "هنا"
+            }
         }
     }
 }
