@@ -48,7 +48,7 @@ const rootReducer = () =>
         h5peditor: H5PEditorReducer,
         analytics: AnalyticsReducer,
         run: RunReducer,
-        settings: SettingsReducer,
+        settings: SettingsReducer
     });
 
 const store = createStore(
