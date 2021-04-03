@@ -14,6 +14,8 @@ import AnalyticsIcon from '@material-ui/icons/ShowChart';
 // import RunIcon from '@material-ui/icons/CloudUpload';
 import { useTranslation } from 'react-i18next';
 
+import Auth from './Auth';
+
 import MainSection from './components/MainSection';
 import { Link } from 'react-router-dom';
 
@@ -251,6 +253,7 @@ export default function Launchpad() {
                         </Card>
                     </Grid> */}
                 </Grid>
+                <Auth />
             </MainSection>
         </div>
     );

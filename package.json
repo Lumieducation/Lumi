@@ -19,6 +19,7 @@
         "electron-updater": "4.3.8",
         "express": "4.17.1",
         "express-fileupload": "1.2.1",
+        "express-http-proxy": "1.6.2",
         "fs-extra": "9.1.0",
         "i18next": "20.1.0",
         "i18next-fs-backend": "1.1.1",
@@ -29,8 +30,8 @@
         "object-hash": "2.1.1",
         "promisepipe": "3.0.0",
         "recursive-readdir": "2.2.2",
-        "superagent": "6.1.0",
-        "socket.io": "4.0.1"
+        "socket.io": "4.0.1",
+        "superagent": "6.1.0"
     },
     "scripts": {
         "build": "npm run build:server && npm run build:client && npm run build:reporter-client",
