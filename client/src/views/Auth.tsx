@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
 
 import {
     withStyles,
@@ -19,6 +20,9 @@ import Container from '@material-ui/core/Container';
 import superagent from 'superagent';
 
 import Logo from './components/Logo';
+
+import { actions, IState } from '../state';
+
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
@@ -74,6 +78,7 @@ const CssTextField = withStyles({
 export default function FormDialog() {
     const classes = useStyles();
     const { t } = useTranslation();
+    const dispatch = useDispatch();
 
     const [open, setOpen] = React.useState(false);
     const [email, setEmail] = React.useState('');
@@ -95,9 +100,11 @@ export default function FormDialog() {
     };
 
     const handleVerification = async () => {
-        await superagent.post(`/api/v1/auth/login`).send({
+        const { body } = await superagent.post(`/api/v1/auth/login`).send({
             code
         });
+
+        dispatch(actions.settings.changeSetting({ email, token: body.token }));
     };
 
     return (

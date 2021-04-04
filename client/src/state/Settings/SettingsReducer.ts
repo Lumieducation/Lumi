@@ -15,7 +15,9 @@ export const initialState: ISettingsState = {
     usageStatistics: false,
     privacyPolicyConsent: false,
     autoUpdates: false,
-    language: 'en'
+    language: 'en',
+    email: '',
+    token: ''
 };
 
 export default function settingsReducer(

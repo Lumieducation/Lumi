@@ -10,6 +10,8 @@ export interface ISettingsState {
     usageStatistics: boolean;
     autoUpdates: boolean;
     language: string;
+    email: string;
+    token: string;
 }
 
 export const SETTINGS_GET_SETTINGS_REQUEST = 'SETTINGS_GET_SETTINGS_REQUEST';
