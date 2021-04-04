@@ -1,5 +1,4 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
@@ -13,8 +12,6 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import Button from '@material-ui/core/Button';
 
 import EmailIcon from '@material-ui/icons/Email';
-
-import { IState } from '../../state';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
