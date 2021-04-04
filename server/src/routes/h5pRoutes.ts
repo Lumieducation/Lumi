@@ -142,9 +142,8 @@ export default function (
                 );
                 await fsExtra.writeFile(path, html);
                 for (const filename of contentFiles) {
-                    const outputStream = fsExtra.createWriteStream(
-                        _path.join(dir, filename)
-                    );
+                    const fn = _path.join(dir, filename);
+                    const outputStream = fsExtra.createWriteStream(fn);
                     await promisePipe(
                         await h5pEditor.contentStorage.getFileStream(
                             req.params.contentId,
@@ -153,6 +152,7 @@ export default function (
                         ),
                         outputStream
                     );
+                    outputStream.close();
                 }
             }
         } catch (error) {
