@@ -105,6 +105,15 @@ export default function FormDialog() {
         });
 
         dispatch(actions.settings.changeSetting({ email, token: body.token }));
+
+        setOpen(false);
+
+        dispatch(
+            actions.notifications.notify(
+                t('auth.notification.success'),
+                'success'
+            )
+        );
     };
 
     return (
