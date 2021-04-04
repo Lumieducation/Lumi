@@ -21,7 +21,7 @@ import superagent from 'superagent';
 
 import Logo from './components/Logo';
 
-import { actions, IState } from '../state';
+import { actions } from '../state';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
