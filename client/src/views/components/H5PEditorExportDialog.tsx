@@ -30,7 +30,7 @@ export default function H5PEditorExportDialog() {
     const [includeReporter, setIncludeReporter] = useState<boolean>(true);
 
     const dispatch = useDispatch();
-    const { t } = useTranslation();
+    // const { t } = useTranslation();
 
     return (
         <div>
