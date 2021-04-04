@@ -131,19 +131,24 @@ export default function (
                 await fsExtra.writeFile(path, html);
             } else if (format === 'external') {
                 const dir = _path.dirname(path);
-                const basename = _path.basename(path);
+                const basename = _path.basename(path, actualExtension);
 
                 const {
                     html,
                     contentFiles
                 } = await htmlExporter.createBundleWithExternalContentResources(
                     req.params.contentId,
-                    req.user
+                    req.user,
+                    basename
                 );
                 await fsExtra.writeFile(path, html);
                 for (const filename of contentFiles) {
-                    const fn = _path.join(dir, filename);
-                    const outputStream = fsExtra.createWriteStream(fn);
+                    const fn = _path.join(dir, basename, filename);
+                    console.log(`Saving to ${fn}`);
+                    await fsExtra.mkdirp(_path.dirname(fn));
+                    const outputStream = fsExtra.createWriteStream(fn, {
+                        autoClose: true
+                    });
                     await promisePipe(
                         await h5pEditor.contentStorage.getFileStream(
                             req.params.contentId,
