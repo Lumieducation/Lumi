@@ -9,6 +9,8 @@ import {
     IRequestWithLanguage
 } from '@lumieducation/h5p-express';
 import HtmlExporter from '@lumieducation/h5p-html-exporter';
+import i18next from 'i18next';
+import * as yazl from 'yazl';
 
 import electronState from '../electronState';
 
@@ -97,10 +99,16 @@ export default function (
             filters: [
                 {
                     extensions: ['html'],
-                    name: 'html with inline-resources'
+                    name: i18next.t('lumi:editor.exportDialog.htmlBundled')
+                },
+                {
+                    extensions: ['zip'],
+                    name: i18next.t(
+                        'lumi:editor.exportDialog.htmlExternalResources'
+                    )
                 }
             ],
-            title: 'Export H5P as ...'
+            title: i18next.t('lumi:editor.exportDialog.button')
         });
 
         if (!path) {
@@ -108,17 +116,49 @@ export default function (
         }
 
         try {
-            if (_path.extname(path) !== '.html') {
+            let extension = _path.extname(path);
+            if (extension !== '.html' && extension !== '.zip') {
                 path = `${path}.html`;
+                extension = '.html';
             }
 
             electronState.setState({ blockKeyboard: true });
-            const html = await htmlExporter.createSingleBundle(
-                req.params.contentId,
-                req.user
-            );
-
-            await fsExtra.writeFile(path, html);
+            if (extension === '.html') {
+                const html = await htmlExporter.createSingleBundle(
+                    req.params.contentId,
+                    req.user
+                );
+                await fsExtra.writeFile(path, html);
+            } else if (extension === '.zip') {
+                const {
+                    html,
+                    contentFiles
+                } = await htmlExporter.createBundleWithExternalContentResources(
+                    req.params.contentId,
+                    req.user
+                );
+                await new Promise(async (y, n) => {
+                    const outStream = fsExtra.createWriteStream(path);
+                    outStream.on('close', y).on('error', n);
+                    const outputZipFile = new yazl.ZipFile();
+                    outputZipFile.outputStream.pipe(outStream);
+                    outputZipFile.addBuffer(
+                        Buffer.from(html),
+                        `${_path.basename(path)}.html`
+                    );
+                    for (const filename of contentFiles) {
+                        outputZipFile.addReadStream(
+                            await h5pEditor.contentStorage.getFileStream(
+                                req.params.contentId,
+                                filename,
+                                req.user
+                            ),
+                            filename
+                        );
+                    }
+                    outputZipFile.end();
+                });
+            }
             electronState.setState({ blockKeyboard: false });
         } catch (error) {
             electronState.setState({ blockKeyboard: false });

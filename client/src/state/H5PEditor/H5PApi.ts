@@ -8,10 +8,11 @@ export function loadPlayerContent(
 
 export function exportAsHtml(
     contentId: string,
-    includeReporter: boolean
+    includeReporter: boolean,
+    format: 'bundle' | 'external' | 'scorm'
 ): Promise<superagent.Response> {
     return superagent.get(
-        `/api/v1/h5p/${contentId}/html?includeReporter=${includeReporter}`
+        `/api/v1/h5p/${contentId}/html?includeReporter=${includeReporter}&format=${format}`
     );
 }
 

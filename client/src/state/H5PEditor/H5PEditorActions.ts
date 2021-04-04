@@ -116,20 +116,24 @@ export function blurActiveElement(): IBlurActiveElementAction {
     };
 }
 
-export function exportH5P(includeReporter: boolean): any {
+export function exportH5P(
+    includeReporter: boolean,
+    format: 'bundle' | 'external' | 'scorm'
+): any {
     return async (dispatch: any) => {
         try {
             await dispatch(updateContentOnServer());
 
             const data = await window.h5peditor.current?.save(); // this dispatches updateContent()
             dispatch({
-                payload: { contentId: data.contentId, includeReporter },
+                payload: { contentId: data.contentId, includeReporter, format },
                 type: H5PEDITOR_EXPORT_REQUEST
             });
 
             try {
-                await api.exportAsHtml(data.contentId, includeReporter);
+                await api.exportAsHtml(data.contentId, includeReporter, format);
 
+                // TOOD: chang tracking
                 dispatch(
                     track(
                         'H5P',
@@ -142,7 +146,11 @@ export function exportH5P(includeReporter: boolean): any {
                     )
                 );
                 dispatch({
-                    payload: { contentId: data.contentId, includeReporter },
+                    payload: {
+                        contentId: data.contentId,
+                        includeReporter,
+                        format
+                    },
                     type: H5PEDITOR_EXPORT_SUCCESS
                 });
             } catch (error) {
@@ -150,8 +158,7 @@ export function exportH5P(includeReporter: boolean): any {
                     // dispatched if the user cancel the system's save dialog.
                     dispatch({
                         payload: {
-                            contentId: data.contentId,
-                            includeReporter
+                            contentId: data.contentId
                         },
                         type: H5PEDITOR_EXPORT_CANCEL
                     });
@@ -161,8 +168,7 @@ export function exportH5P(includeReporter: boolean): any {
                     dispatch({
                         payload: {
                             error,
-                            contentId: data.contentId,
-                            includeReporter
+                            contentId: data.contentId
                         },
                         type: H5PEDITOR_EXPORT_ERROR
                     });
