@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
