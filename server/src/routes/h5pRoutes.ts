@@ -16,6 +16,13 @@ import electronState from '../electronState';
 
 import createReporter from '../helpers/createRepoter';
 import User from '../User';
+import { withDir } from 'tmp-promise';
+import scopackager from 'simple-scorm-packager';
+
+const cleanAndTrim = (text) => {
+    const textClean = text.replace(/[^a-zA-Z\d\s]/g, '');
+    return textClean.replace(/\s/g, '');
+};
 
 /**
  * @param h5pEditor
@@ -72,7 +79,7 @@ export default function (
             h5pEditor.config,
             `${__dirname}/../../../h5p/core`,
             `${__dirname}/../../../h5p/editor`,
-            includeReporter
+            includeReporter && format !== 'scorm'
                 ? (
                       integration: string,
                       scriptsBundle: string,
@@ -92,6 +99,26 @@ export default function (
                 <div style="margin: 20px auto; padding: 20px;  max-width: 840px; box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)" class="h5p-content lag" data-content-id="${contentId}"></div>                
             </body>
             </html>`
+                : format === 'scorm'
+                ? (
+                      integration: string,
+                      scriptsBundle: string,
+                      stylesBundle: string,
+                      contentId: string
+                  ) => `<!doctype html>
+                <html class="h5p-iframe">
+                <head>
+                    <meta charset="utf-8">                    
+                    <script>H5PIntegration = ${integration};
+                    ${scriptsBundle}</script>
+                    <script type="text/javascript" src="SCORM_API_wrapper.js"></script>
+                    <script type="text/javascript" src="h5p-adaptor.js"></script>
+                    <style>${stylesBundle}</style>
+                </head>
+                <body>
+                    <div class="h5p-content lag" data-content-id="${contentId}"></div>                
+                </body>
+                </html>`
                 : undefined
         );
 
@@ -158,6 +185,102 @@ export default function (
                     );
                     outputStream.close();
                 }
+            } else if (format === 'scorm') {
+                await withDir(
+                    async ({ path: tmpDir }) => {
+                        await fsExtra.copyFile(
+                            `${__dirname}/../../../scorm-client/h5p-adaptor.js`,
+                            _path.join(tmpDir, 'h5p-adaptor.js')
+                        );
+                        await fsExtra.copyFile(
+                            `${__dirname}/../../../scorm-client/SCORM_API_wrapper.js`,
+                            _path.join(tmpDir, 'SCORM_API_wrapper.js')
+                        );
+
+                        const {
+                            html,
+                            contentFiles
+                        } = await htmlExporter.createBundleWithExternalContentResources(
+                            req.params.contentId,
+                            req.user
+                        );
+                        await fsExtra.writeFile(
+                            _path.join(tmpDir, 'index.html'),
+                            html
+                        );
+                        for (const filename of contentFiles) {
+                            const fn = _path.join(tmpDir, filename);
+                            await fsExtra.mkdirp(_path.dirname(fn));
+                            const outputStream = fsExtra.createWriteStream(fn, {
+                                autoClose: true
+                            });
+                            await promisePipe(
+                                await h5pEditor.contentStorage.getFileStream(
+                                    req.params.contentId,
+                                    filename,
+                                    req.user
+                                ),
+                                outputStream
+                            );
+                            outputStream.close();
+                        }
+
+                        const contentMetadata = await h5pEditor.contentManager.getContentMetadata(
+                            req.params.contentId,
+                            req.user
+                        );
+
+                        const temporaryFilename = await new Promise<string>(
+                            (resolve, reject) => {
+                                const options = {
+                                    version: '1.2',
+                                    organization:
+                                        contentMetadata.authors &&
+                                        contentMetadata.authors[0]
+                                            ? contentMetadata.authors[0].name
+                                            : 'H5P Author',
+                                    title:
+                                        contentMetadata.title || 'H5P Content',
+                                    language: 'en-EN',
+                                    identifier: '00',
+                                    masteryScore: 100, // TODO; change
+                                    startingPage: 'index.html',
+                                    source: tmpDir,
+                                    package: {
+                                        version: '1.0.0',
+                                        zip: true,
+                                        outputFolder: _path.dirname(path),
+                                        date: new Date()
+                                            .toISOString()
+                                            .slice(0, 10)
+                                    }
+                                };
+                                scopackager(options, () => {
+                                    resolve(
+                                        `${cleanAndTrim(options.title)}_v${
+                                            options.package.version
+                                        }_${options.package.date}.zip`
+                                    );
+                                });
+                            }
+                        );
+                        try {
+                            await fsExtra.rename(
+                                _path.join(
+                                    _path.dirname(path),
+                                    temporaryFilename
+                                ),
+                                path
+                            );
+                        } catch (error) {
+                            await fsExtra.remove(temporaryFilename);
+                        }
+                    },
+                    {
+                        keep: false,
+                        unsafeCleanup: true
+                    }
+                );
             }
         } catch (error) {
             Sentry.captureException(error);

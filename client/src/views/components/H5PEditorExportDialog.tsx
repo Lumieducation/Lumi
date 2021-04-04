@@ -130,7 +130,9 @@ export default function H5PEditorExportDialog() {
                         onClick={() =>
                             dispatch(
                                 actions.h5peditor.exportH5P(
-                                    includeReporter,
+                                    formatChoice !== 'scorm'
+                                        ? includeReporter
+                                        : false,
                                     formatChoice
                                 )
                             )
