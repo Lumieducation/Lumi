@@ -144,7 +144,6 @@ export default function (
                 await fsExtra.writeFile(path, html);
                 for (const filename of contentFiles) {
                     const fn = _path.join(dir, basename, filename);
-                    console.log(`Saving to ${fn}`);
                     await fsExtra.mkdirp(_path.dirname(fn));
                     const outputStream = fsExtra.createWriteStream(fn, {
                         autoClose: true
