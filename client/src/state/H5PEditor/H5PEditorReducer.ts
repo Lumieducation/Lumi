@@ -207,7 +207,8 @@ export default function tabReducer(
                               }
                             : tab
                     ),
-                    lockDisplay: false
+                    lockDisplay: false,
+                    showExportDialog: false
                 };
 
             case H5PEDITOR_EXPORT_ERROR:

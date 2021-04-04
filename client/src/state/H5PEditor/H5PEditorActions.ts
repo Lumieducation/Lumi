@@ -116,6 +116,16 @@ export function blurActiveElement(): IBlurActiveElementAction {
     };
 }
 
+export function cancelExportH5P() {
+    log.info(`canceling export`);
+    return async (dispatch: any) => {
+        dispatch({
+            payload: {},
+            type: H5PEDITOR_EXPORT_CANCEL
+        });
+    };
+}
+
 export function exportH5P(
     includeReporter: boolean,
     format: 'bundle' | 'external' | 'scorm'

@@ -38,6 +38,7 @@ export default function H5PEditorExportDialog() {
                 open={open}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
+                onClose={() => dispatch(actions.h5peditor.cancelExportH5P())}
             >
                 <DialogTitle id="alert-dialog-title">
                     Export settings
@@ -116,7 +117,13 @@ export default function H5PEditorExportDialog() {
                     </FormControl>
                 </DialogContent>
                 <DialogActions>
-                    <Button color="secondary">Cancel</Button>
+                    <Button
+                        onClick={() =>
+                            dispatch(actions.h5peditor.cancelExportH5P())
+                        }
+                    >
+                        Cancel
+                    </Button>
                     <Button
                         color="primary"
                         autoFocus
