@@ -4,24 +4,35 @@ import { useDispatch } from 'react-redux';
 
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
 import { TransitionProps } from '@material-ui/core/transitions';
-import SettingsIcon from '@material-ui/icons/Settings';
-
+import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
-import BugReportSettings from './components/BugReportSettings';
-import UpdateSettings from './components/UpdateSettngs';
-import SettingsLanguage from './components/SettingsLanguage';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 
-import UsageStatisticsSettingsCard from './components/UsageAnalyticsSettings';
+import CloseIcon from '@material-ui/icons/Close';
+import SettingsIcon from '@material-ui/icons/Settings';
+import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
+
+import SettingsList from './components/SettingsList';
+import AccountSettingsList from './components/AccountSettingsList';
+import SettingsLibraryManagement from './components/SettingsLibraryManagement';
 
 import { track } from '../state/track/actions';
+
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -34,7 +45,8 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         root: {
             width: '100%',
-            display: 'flex'
+            display: 'flex',
+            marginLeft: '100px'
         },
         heading: {
             fontSize: theme.typography.pxToRem(15),
@@ -48,7 +60,22 @@ const useStyles = makeStyles((theme: Theme) =>
         center: {
             padding: 20,
             margin: 'auto'
-        }
+        },
+        bg: {
+            background: '#f1f3f4'
+        },
+        paper: {
+            minWidth: '640px'
+        },
+        drawer: {
+            width: drawerWidth,
+            flexShrink: 0
+        },
+        drawerPaper: {
+            width: drawerWidth,
+            marginTop: '64px'
+        },
+        toolbar: {}
     })
 );
 
@@ -64,6 +91,8 @@ export default function FullScreenDialog() {
     const [open, setOpen] = React.useState(false);
     const { t } = useTranslation();
     const dispatch = useDispatch();
+
+    const [section, setSection] = React.useState('general');
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -81,7 +110,7 @@ export default function FullScreenDialog() {
                 <SettingsIcon />
             </IconButton>
             <Dialog
-                fullScreen
+                fullScreen={true}
                 open={open}
                 onClose={handleClose}
                 TransitionComponent={Transition}
@@ -101,14 +130,78 @@ export default function FullScreenDialog() {
                         </Typography>
                     </Toolbar>
                 </AppBar>
-                <div className={classes.root}>
-                    <div className={classes.center}>
-                        <BugReportSettings />
-                        <UsageStatisticsSettingsCard />
-                        <UpdateSettings />
-                        <SettingsLanguage />
+                <Drawer
+                    className={classes.drawer}
+                    variant="permanent"
+                    classes={{
+                        paper: classes.drawerPaper
+                    }}
+                    anchor="left"
+                >
+                    <div className={classes.toolbar} />
+                    <Divider />
+                    <List>
+                        <ListItem
+                            button
+                            key="general"
+                            onClick={() => setSection('general')}
+                        >
+                            <ListItemIcon>
+                                <SettingsIcon />
+                            </ListItemIcon>
+                            <ListItemText
+                                primary={t('settings.menu.general')}
+                            />
+                        </ListItem>
+                        <ListItem
+                            button
+                            key="h5p-libraries"
+                            onClick={() => setSection('h5p-libraries')}
+                        >
+                            <ListItemIcon>
+                                <LibraryBooksIcon />
+                            </ListItemIcon>
+                            <ListItemText
+                                primary={t('settings.menu.h5p-libraries')}
+                            />
+                        </ListItem>
+                        <ListItem
+                            button
+                            key="account"
+                            onClick={() => setSection('account')}
+                        >
+                            <ListItemIcon>
+                                <AccountBoxIcon />
+                            </ListItemIcon>
+                            <ListItemText
+                                primary={t('settings.menu.account')}
+                            />
+                        </ListItem>
+                    </List>
+                </Drawer>
+                <DialogContent className={classes.bg}>
+                    <div className={classes.root}>
+                        <div className={classes.center}>
+                            <Paper className={classes.paper}>
+                                {(() => {
+                                    switch (section) {
+                                        case 'general':
+                                        default:
+                                            return <SettingsList />;
+
+                                        case 'h5p-libraries':
+                                            return (
+                                                <SettingsLibraryManagement />
+                                            );
+
+                                        case 'account':
+                                            return <AccountSettingsList />;
+                                    }
+                                })()}
+                            </Paper>
+                        </div>
                     </div>
-                </div>
+                </DialogContent>
             </Dialog>
         </div>
     );
