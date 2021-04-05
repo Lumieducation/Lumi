@@ -116,11 +116,11 @@ export function blurActiveElement(): IBlurActiveElementAction {
     };
 }
 
-export function cancelExportH5P() {
+export function cancelExportH5P(contentId?: string) {
     log.info(`canceling export`);
     return async (dispatch: any) => {
         dispatch({
-            payload: {},
+            payload: { contentId },
             type: H5PEDITOR_EXPORT_CANCEL
         });
     };
@@ -153,8 +153,8 @@ export function exportH5P(
                 dispatch(
                     track(
                         'H5P',
-                        'export_as_single_html',
-                        `${
+                        'export',
+                        `${format}-${
                             includeReporter
                                 ? 'with_reporter'
                                 : 'without_reporter'
@@ -172,12 +172,7 @@ export function exportH5P(
             } catch (error) {
                 if (error.status === 499) {
                     // dispatched if the user cancel the system's save dialog.
-                    dispatch({
-                        payload: {
-                            contentId: data.contentId
-                        },
-                        type: H5PEDITOR_EXPORT_CANCEL
-                    });
+                    dispatch(cancelExportH5P(data.contentId));
                 } else {
                     Sentry.captureException(error);
 
