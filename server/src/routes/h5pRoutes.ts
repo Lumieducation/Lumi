@@ -111,82 +111,97 @@ export default function (
         }
     });
 
-    router.get(`/:contentId/export`, async (req: IRequestWithUser, res) => {
-        const includeReporter = req.query.includeReporter === 'true';
-        const format: 'bundle' | 'external' | 'scorm' = req.query.format as any;
-        const expectedExtension = format === 'scorm' ? 'zip' : 'html';
-
-        let path = dialog.showSaveDialogSync({
-            defaultPath: `.${expectedExtension}`,
-            filters: [
+    router.get(
+        `/:contentId/export`,
+        async (
+            req: express.Request<
+                { contentId: string },
+                any,
+                { scormOptions: { masteryScore: number } },
                 {
-                    extensions: [expectedExtension],
-                    name: i18next.t(
-                        `lumi:editor.exportDialog.formatNames.${format}`
-                    )
+                    format: 'bundle' | 'external' | 'scorm';
+                    includeReporter: string;
                 }
-            ],
-            title: i18next.t('lumi:editor.exportDialog.button')
-        });
+            > & { user: H5P.IUser },
+            res
+        ) => {
+            const includeReporter = req.query.includeReporter === 'true';
+            const format: 'bundle' | 'external' | 'scorm' = req.query.format;
+            const expectedExtension = format === 'scorm' ? 'zip' : 'html';
 
-        if (!path) {
-            return res.status(499).end();
-        }
+            let path = dialog.showSaveDialogSync({
+                defaultPath: `.${expectedExtension}`,
+                filters: [
+                    {
+                        extensions: [expectedExtension],
+                        name: i18next.t(
+                            `lumi:editor.exportDialog.formatNames.${format}`
+                        )
+                    }
+                ],
+                title: i18next.t('lumi:editor.exportDialog.button')
+            });
 
-        try {
-            electronState.setState({ blockKeyboard: true });
-
-            let actualExtension = _path.extname(path);
-            if (actualExtension !== `.${expectedExtension}`) {
-                path = `${path}.${expectedExtension}`;
-                actualExtension = `.${expectedExtension}`;
+            if (!path) {
+                return res.status(499).end();
             }
 
-            const htmlExporter = new HtmlExporter(
-                h5pEditor.libraryStorage,
-                h5pEditor.contentStorage,
-                h5pEditor.config,
-                `${__dirname}/../../../h5p/core`,
-                `${__dirname}/../../../h5p/editor`,
-                includeReporter && format !== 'scorm'
-                    ? reporterTemplate
-                    : format === 'scorm'
-                    ? scormTemplate
-                    : undefined
-            );
+            try {
+                electronState.setState({ blockKeyboard: true });
 
-            if (format === 'bundle') {
-                const html = await htmlExporter.createSingleBundle(
-                    req.params.contentId,
-                    req.user
+                let actualExtension = _path.extname(path);
+                if (actualExtension !== `.${expectedExtension}`) {
+                    path = `${path}.${expectedExtension}`;
+                    actualExtension = `.${expectedExtension}`;
+                }
+
+                const htmlExporter = new HtmlExporter(
+                    h5pEditor.libraryStorage,
+                    h5pEditor.contentStorage,
+                    h5pEditor.config,
+                    `${__dirname}/../../../h5p/core`,
+                    `${__dirname}/../../../h5p/editor`,
+                    includeReporter && format !== 'scorm'
+                        ? reporterTemplate
+                        : format === 'scorm'
+                        ? scormTemplate
+                        : undefined
                 );
-                await fsExtra.writeFile(path, html);
-            } else if (format === 'external') {
-                await exportHtmlExternal(
-                    htmlExporter,
-                    h5pEditor,
-                    path,
-                    req.params.contentId,
-                    req.user
-                );
-            } else if (format === 'scorm') {
-                await exportScorm(
-                    htmlExporter,
-                    h5pEditor,
-                    path,
-                    req.params.contentId,
-                    req.user
-                );
+
+                if (format === 'bundle') {
+                    const html = await htmlExporter.createSingleBundle(
+                        req.params.contentId,
+                        req.user
+                    );
+                    await fsExtra.writeFile(path, html);
+                } else if (format === 'external') {
+                    await exportHtmlExternal(
+                        htmlExporter,
+                        h5pEditor,
+                        path,
+                        req.params.contentId,
+                        req.user
+                    );
+                } else if (format === 'scorm') {
+                    await exportScorm(
+                        htmlExporter,
+                        h5pEditor,
+                        path,
+                        req.params.contentId,
+                        req.user,
+                        req.body.scormOptions
+                    );
+                }
+            } catch (error) {
+                Sentry.captureException(error);
+                res.status(500).json(error);
+            } finally {
+                electronState.setState({ blockKeyboard: false });
             }
-        } catch (error) {
-            Sentry.captureException(error);
-            res.status(500).json(error);
-        } finally {
-            electronState.setState({ blockKeyboard: false });
-        }
 
-        res.status(200).end();
-    });
+            res.status(200).end();
+        }
+    );
 
     router.get('/:contentId/edit', async (req: IRequestWithLanguage, res) => {
         // This route merges the render and the /ajax/params routes to avoid a
@@ -324,12 +339,16 @@ export default function (
     return router;
 }
 
+/**
+ * Creates a SCORM package.
+ */
 async function exportScorm(
     htmlExporter: HtmlExporter,
     h5pEditor: H5P.H5PEditor,
     path: string,
     contentId: string,
-    user: H5P.IUser
+    user: H5P.IUser,
+    scormOptions: { masteryScore: number }
 ): Promise<void> {
     await withDir(
         async ({ path: tmpDir }) => {
@@ -380,11 +399,17 @@ async function exportScorm(
                             contentMetadata.authors &&
                             contentMetadata.authors[0]
                                 ? contentMetadata.authors[0].name
-                                : 'H5P Author',
-                        title: contentMetadata.title || 'H5P Content',
+                                : i18next.t(
+                                      'lumi:editor.exportDialog.defaults.authorName'
+                                  ),
+                        title:
+                            contentMetadata.title ||
+                            i18next.t(
+                                'lumi:editor.exportDialog.defaults.title'
+                            ),
                         language: contentMetadata.language || 'en-EN',
                         identifier: '00',
-                        masteryScore: 100,
+                        masteryScore: scormOptions.masteryScore,
                         startingPage: 'index.html',
                         source: tmpDir,
                         package: {
@@ -419,6 +444,9 @@ async function exportScorm(
     );
 }
 
+/**
+ * Exports the content to a HTML file and stores media resources in extra files.
+ */
 async function exportHtmlExternal(
     htmlExporter: HtmlExporter,
     h5pEditor: H5P.H5PEditor,
