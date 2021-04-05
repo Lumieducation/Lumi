@@ -4,15 +4,21 @@ import * as Sentry from '@sentry/node';
 import LumiController from '../controllers/LumiController';
 import Logger from '../helpers/Logger';
 import IServerConfig from '../IServerConfig';
+import { BrowserWindow } from 'electron';
 
 const log = new Logger('routes:lumi-h5p');
 
 export default function (
     h5pEditor: H5PEditor,
-    serverConfig: IServerConfig
+    serverConfig: IServerConfig,
+    browserWindow: BrowserWindow
 ): express.Router {
     const router = express.Router();
-    const lumiController = new LumiController(h5pEditor, serverConfig);
+    const lumiController = new LumiController(
+        h5pEditor,
+        serverConfig,
+        browserWindow
+    );
 
     router.get(
         '/package/:contentId',
