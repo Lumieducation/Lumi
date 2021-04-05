@@ -17,7 +17,7 @@ import InsertChartIcon from '@material-ui/icons/InsertChart';
 import UpdateIcon from '@material-ui/icons/Update';
 import TranslateIcon from '@material-ui/icons/Translate';
 
-import { actions, IState } from '../../state';
+import { actions, IState } from '../../../state';
 import LanguageList from './LanguageList';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-export default function SwitchListSecondary() {
+export default function SettingsGeneralSettingsList() {
     const classes = useStyles();
 
     const dispatch = useDispatch();

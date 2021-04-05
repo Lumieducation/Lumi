@@ -26,9 +26,9 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 
-import SettingsList from './components/SettingsList';
-import AccountSettingsList from './components/AccountSettingsList';
-import SettingsLibraryManagement from './components/SettingsLibraryManagement';
+import SettingsList from './components/Settings/GeneralSettingsList';
+import AccountSettingsList from './components/Settings/AccountSettingsList';
+import SettingsLibraryManagement from './components/Settings/LibraryManagement';
 
 import { track } from '../state/track/actions';
 
@@ -153,7 +153,7 @@ export default function FullScreenDialog() {
                                 primary={t('settings.menu.general')}
                             />
                         </ListItem>
-                        <ListItem
+                        {/* <ListItem
                             button
                             key="h5p-libraries"
                             onClick={() => setSection('h5p-libraries')}
@@ -176,7 +176,7 @@ export default function FullScreenDialog() {
                             <ListItemText
                                 primary={t('settings.menu.account')}
                             />
-                        </ListItem>
+                        </ListItem> */}
                     </List>
                 </Drawer>
                 <DialogContent className={classes.bg}>

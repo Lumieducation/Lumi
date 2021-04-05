@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-export default function AccountSettingsList() {
+export default function SettingsAccountSettingsList() {
     const classes = useStyles();
 
     const { t } = useTranslation();

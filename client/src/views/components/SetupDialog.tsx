@@ -16,7 +16,7 @@ import Dialog from '@material-ui/core/Dialog';
 import MuiDialogContent from '@material-ui/core/DialogContent';
 import MuiDialogActions from '@material-ui/core/DialogActions';
 
-import SettingsList from './SettingsList';
+import SettingsList from './Settings/GeneralSettingsList';
 
 import PolicyIcon from '@material-ui/icons/Policy';
 import GitHubIcon from '@material-ui/icons/GitHub';
