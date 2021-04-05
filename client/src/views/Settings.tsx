@@ -23,8 +23,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 import CloseIcon from '@material-ui/icons/Close';
 import SettingsIcon from '@material-ui/icons/Settings';
-import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
-import AccountBoxIcon from '@material-ui/icons/AccountBox';
+// import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
+// import AccountBoxIcon from '@material-ui/icons/AccountBox';
 
 import SettingsList from './components/Settings/GeneralSettingsList';
 import AccountSettingsList from './components/Settings/AccountSettingsList';
