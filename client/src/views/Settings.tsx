@@ -23,7 +23,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 import CloseIcon from '@material-ui/icons/Close';
 import SettingsIcon from '@material-ui/icons/Settings';
-// import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
+import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 // import AccountBoxIcon from '@material-ui/icons/AccountBox';
 
 import SettingsList from './components/Settings/GeneralSettingsList';
@@ -153,7 +153,7 @@ export default function FullScreenDialog() {
                                 primary={t('settings.menu.general')}
                             />
                         </ListItem>
-                        {/* <ListItem
+                        <ListItem
                             button
                             key="h5p-libraries"
                             onClick={() => setSection('h5p-libraries')}
@@ -165,7 +165,7 @@ export default function FullScreenDialog() {
                                 primary={t('settings.menu.h5p-libraries')}
                             />
                         </ListItem>
-                        <ListItem
+                        {/*} <ListItem
                             button
                             key="account"
                             onClick={() => setSection('account')}
@@ -191,7 +191,7 @@ export default function FullScreenDialog() {
 
                                         case 'h5p-libraries':
                                             return (
-                                                <SettingsLibraryManagement />
+                                                <SettingsLibraryManagement endpointUrl="/api/v1/h5p/libraries" />
                                             );
 
                                         case 'account':
