@@ -16,7 +16,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import Switch from '@material-ui/core/Switch';
 
 import { actions, IState } from '../../state';
-import { FormHelperText } from '@material-ui/core';
+import { Box, FormHelperText, TextField } from '@material-ui/core';
 
 export default function H5PEditorExportDialog() {
     // const { open, yesCallback, noCallback } = props;
@@ -28,6 +28,9 @@ export default function H5PEditorExportDialog() {
         'bundle' | 'external' | 'scorm'
     >('bundle');
     const [includeReporter, setIncludeReporter] = useState<boolean>(true);
+    const [masteryScore, setMasteryScore] = useState<string>('70');
+    const [masteryScoreError, setMasteryScoreError] = useState<string>();
+    const [isValid, setIsValid] = useState<boolean>(true);
 
     const dispatch = useDispatch();
     // const { t } = useTranslation();
@@ -44,77 +47,124 @@ export default function H5PEditorExportDialog() {
                     Export settings
                 </DialogTitle>
                 <DialogContent>
-                    <FormControl>
-                        <FormLabel>Format</FormLabel>
-                        <RadioGroup
-                            name="exportformat"
-                            value={formatChoice}
-                            onChange={(e, val) => setFormatChoice(val as any)}
-                        >
-                            <FormControlLabel
-                                value="bundle"
-                                control={<Radio />}
-                                label="All-in-one HTML file"
-                            />
-                            {formatChoice === 'bundle' && (
-                                <FormHelperText>
-                                    The file can grow too big for some computers
-                                    if you include lots of media files.
-                                </FormHelperText>
-                            )}
-                            <FormControlLabel
-                                value="external"
-                                control={<Radio />}
-                                label="One HTML file and several media files"
-                            />
-                            {formatChoice === 'external' && (
-                                <FormHelperText>
-                                    You will be asked for a name for the HTML
-                                    file in the next step. The media files will
-                                    be put into folders that start with the same
-                                    name as the file.
-                                </FormHelperText>
-                            )}
-                            <FormControlLabel
-                                value="scorm"
-                                control={<Radio />}
-                                label="SCORM package"
-                            />
-                        </RadioGroup>
-                    </FormControl>
-                    <FormControl>
-                        <FormLabel>Reporter</FormLabel>
-                        <FormHelperText>
-                            If you add the reporter, students can save a file
-                            with their progress and send it to you.{' '}
-                            <a
-                                href="https://lumieducation.gitbook.io/lumi/analytics/reporter"
-                                target="_blank"
-                                rel="noreferrer"
+                    <Box paddingBottom={4}>
+                        <FormControl>
+                            <FormLabel>Format</FormLabel>
+                            <RadioGroup
+                                name="exportformat"
+                                value={formatChoice}
+                                onChange={(e, val) =>
+                                    setFormatChoice(val as any)
+                                }
                             >
-                                Learn more about it here.
-                            </a>
-                        </FormHelperText>
-                        <FormControlLabel
-                            control={<Switch />}
-                            checked={
-                                formatChoice === 'scorm'
-                                    ? false
-                                    : includeReporter
-                            }
-                            onChange={(e, checked) =>
-                                setIncludeReporter(checked)
-                            }
-                            disabled={formatChoice === 'scorm'}
-                            name="includeReporter"
-                            label="Include reporter"
-                        />
-                        {formatChoice === 'scorm' && (
+                                <FormControlLabel
+                                    value="bundle"
+                                    control={<Radio />}
+                                    label="All-in-one HTML file"
+                                />
+                                {formatChoice === 'bundle' && (
+                                    <FormHelperText>
+                                        The file can grow too big for some
+                                        computers if you include lots of media
+                                        files.
+                                    </FormHelperText>
+                                )}
+                                <FormControlLabel
+                                    value="external"
+                                    control={<Radio />}
+                                    label="One HTML file and several media files"
+                                />
+                                {formatChoice === 'external' && (
+                                    <FormHelperText>
+                                        You will be asked for a name for the
+                                        HTML file in the next step. The media
+                                        files will be put into folders that
+                                        start with the same name as the file.
+                                    </FormHelperText>
+                                )}
+                                <FormControlLabel
+                                    value="scorm"
+                                    control={<Radio />}
+                                    label="SCORM package"
+                                />
+                                {formatChoice === 'scorm' && (
+                                    <Box marginLeft={2}>
+                                        <TextField
+                                            label="Mastery score (in %)"
+                                            value={masteryScore}
+                                            error={
+                                                masteryScoreError !== undefined
+                                            }
+                                            helperText={masteryScoreError}
+                                            onChange={(event) => {
+                                                const parsed = Number.parseFloat(
+                                                    event.target.value
+                                                );
+                                                if (isNaN(parsed)) {
+                                                    setMasteryScoreError(
+                                                        'Entered value is not a number'
+                                                    );
+                                                    setIsValid(false);
+                                                } else if (
+                                                    parsed < 0 ||
+                                                    parsed > 100
+                                                ) {
+                                                    setMasteryScoreError(
+                                                        'The value must be between 0 and 100'
+                                                    );
+                                                    setIsValid(false);
+                                                } else {
+                                                    setMasteryScoreError(
+                                                        undefined
+                                                    );
+                                                    setIsValid(true);
+                                                }
+                                                setMasteryScore(
+                                                    event.target.value
+                                                );
+                                            }}
+                                        />
+                                    </Box>
+                                )}
+                            </RadioGroup>
+                        </FormControl>
+                    </Box>
+                    <Box>
+                        <FormControl>
+                            <FormLabel>Reporter</FormLabel>
                             <FormHelperText>
-                                The reporter cannot be added to SCORM packages.
+                                If you add the reporter, students can save a
+                                file with their progress and send it to you.
+                                <a
+                                    href="https://lumieducation.gitbook.io/lumi/analytics/reporter"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    Learn more about it here.
+                                </a>
                             </FormHelperText>
-                        )}
-                    </FormControl>
+                            <FormControlLabel
+                                control={<Switch />}
+                                checked={
+                                    formatChoice === 'scorm'
+                                        ? false
+                                        : includeReporter
+                                }
+                                onChange={(e, checked) =>
+                                    setIncludeReporter(checked)
+                                }
+                                disabled={formatChoice === 'scorm'}
+                                name="includeReporter"
+                                label="Include reporter"
+                            />
+                            {formatChoice === 'scorm' && (
+                                <FormHelperText>
+                                    The reporter cannot be added to SCORM
+                                    packages.
+                                </FormHelperText>
+                            )}
+                        </FormControl>
+                    </Box>
                 </DialogContent>
                 <DialogActions>
                     <Button
@@ -133,10 +183,17 @@ export default function H5PEditorExportDialog() {
                                     formatChoice !== 'scorm'
                                         ? includeReporter
                                         : false,
-                                    formatChoice
+                                    formatChoice,
+                                    {
+                                        masteryScore:
+                                            formatChoice === 'scorm'
+                                                ? masteryScore
+                                                : undefined
+                                    }
                                 )
                             )
                         }
+                        disabled={formatChoice === 'scorm' && !isValid}
                     >
                         Export now
                     </Button>

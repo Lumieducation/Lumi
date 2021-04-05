@@ -128,7 +128,8 @@ export function cancelExportH5P() {
 
 export function exportH5P(
     includeReporter: boolean,
-    format: 'bundle' | 'external' | 'scorm'
+    format: 'bundle' | 'external' | 'scorm',
+    options: { masteryScore?: string }
 ): any {
     return async (dispatch: any) => {
         try {
@@ -141,7 +142,12 @@ export function exportH5P(
             });
 
             try {
-                await api.exportAsHtml(data.contentId, includeReporter, format);
+                await api.exportContent(
+                    data.contentId,
+                    includeReporter,
+                    format,
+                    options
+                );
 
                 // TOOD: chang tracking
                 dispatch(

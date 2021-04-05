@@ -117,10 +117,11 @@ export default function (
             req: express.Request<
                 { contentId: string },
                 any,
-                { scormOptions: { masteryScore: number } },
+                any,
                 {
                     format: 'bundle' | 'external' | 'scorm';
                     includeReporter: string;
+                    masteryScore: string;
                 }
             > & { user: H5P.IUser },
             res
@@ -189,7 +190,11 @@ export default function (
                         path,
                         req.params.contentId,
                         req.user,
-                        req.body.scormOptions
+                        {
+                            masteryScore: Number.parseFloat(
+                                req.query.masteryScore
+                            )
+                        }
                     );
                 }
             } catch (error) {

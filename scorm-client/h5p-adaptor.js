@@ -59,7 +59,6 @@ var onCompleted = function (result) {
 };
 
 H5P.externalDispatcher.on('xAPI', function (event) {
-    console.log('xAPI event: ' + JSON.stringify(event));
     if (event.data.statement.result) {
         onCompleted(event.data.statement.result);
     }
