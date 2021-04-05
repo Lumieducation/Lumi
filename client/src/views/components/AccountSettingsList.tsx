@@ -41,7 +41,11 @@ export default function AccountSettingsList() {
                 <ListItemText
                     id="switch-list-label-privacy-policy"
                     primary={t('settings.account.email.title')}
-                    secondary={'test@lumi.education' /*settings.email */}
+                    secondary={
+                        /* settings.email || */ t(
+                            'settings.account.email.not-set'
+                        )
+                    }
                 />
                 <ListItemSecondaryAction>
                     <Button variant="contained">
