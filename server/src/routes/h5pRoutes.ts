@@ -1,6 +1,6 @@
 import express from 'express';
 import * as Sentry from '@sentry/node';
-import { dialog } from 'electron';
+import { BrowserWindow, dialog } from 'electron';
 import fsExtra from 'fs-extra';
 import _path from 'path';
 import * as H5P from '@lumieducation/h5p-server';
@@ -11,13 +11,12 @@ import {
 import HtmlExporter from '@lumieducation/h5p-html-exporter';
 import i18next from 'i18next';
 import promisePipe from 'promisepipe';
-
-import electronState from '../electronState';
-
-import createReporter from '../helpers/createRepoter';
-import User from '../User';
 import { withDir } from 'tmp-promise';
 import scopackager from 'simple-scorm-packager';
+
+import electronState from '../electronState';
+import createReporter from '../helpers/createRepoter';
+import User from '../User';
 
 const cleanAndTrim = (text) => {
     const textClean = text.replace(/[^a-zA-Z\d\s]/g, '');
@@ -90,7 +89,8 @@ const scormTemplate = (
 export default function (
     h5pEditor: H5P.H5PEditor,
     h5pPlayer: H5P.H5PPlayer,
-    languageOverride: string | 'auto' = 'auto'
+    languageOverride: string | 'auto' = 'auto',
+    browserWindow: BrowserWindow
 ): express.Router {
     const router = express.Router();
 
@@ -130,7 +130,7 @@ export default function (
             const format: 'bundle' | 'external' | 'scorm' = req.query.format;
             const expectedExtension = format === 'scorm' ? 'zip' : 'html';
 
-            let path = dialog.showSaveDialogSync({
+            const result = await dialog.showSaveDialog(browserWindow, {
                 defaultPath: `.${expectedExtension}`,
                 filters: [
                     {
@@ -140,12 +140,15 @@ export default function (
                         )
                     }
                 ],
-                title: i18next.t('lumi:editor.exportDialog.button')
+                title: i18next.t('lumi:editor.exportDialog.title'),
+                buttonLabel: i18next.t('lumi:editor.exportDialog.button'),
+                properties: ['showOverwriteConfirmation']
             });
 
-            if (!path) {
+            if (result.canceled) {
                 return res.status(499).end();
             }
+            let path = result.filePath;
 
             try {
                 electronState.setState({ blockKeyboard: true });
