@@ -148,7 +148,7 @@ export default function H5PEditorExportDialog() {
                                 {t('editor.exportDialog.reporter.title')}
                             </FormLabel>
                             <FormHelperText>
-                                {t('editor.exportDialog.reporter.hint')}
+                                {t('editor.exportDialog.reporter.hint')}{' '}
                                 <a
                                     href="https://lumieducation.gitbook.io/lumi/analytics/reporter"
                                     target="_blank"
