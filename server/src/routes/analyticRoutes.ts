@@ -1,5 +1,5 @@
 import express from 'express';
-import { dialog } from 'electron';
+import { BrowserWindow, dialog } from 'electron';
 import * as Sentry from '@sentry/electron';
 import fs from 'fs';
 import recursiveReaddir from 'recursive-readdir';
@@ -14,12 +14,12 @@ import {
 
 import _path from 'path';
 
-export default function (): express.Router {
+export default function (browserWindow: BrowserWindow): express.Router {
     const router = express.Router();
 
     router.get('/', async (req: express.Request, res) => {
         try {
-            const openDialog = await dialog.showOpenDialog({
+            const openDialog = await dialog.showOpenDialog(browserWindow, {
                 properties: ['openDirectory']
             });
 

@@ -16,7 +16,45 @@
             "create": "إنشاء H5P جديد",
             "start": "بداية"
         },
-        "default_name": "H5P جديد"
+        "default_name": "H5P جديد",
+        "exportDialog": {
+            "title": "إعدادات التصدير",
+            "format": {
+                "title": "شكل",
+                "bundleLabel": "ملف HTML الكل في واحد",
+                "bundleHint": "يمكن أن يصبح الملف كبيرًا جدًا بالنسبة لبعض أجهزة الكمبيوتر إذا قمت بتضمين الكثير من ملفات الوسائط.",
+                "externalLabel": "ملف HTML واحد والعديد من ملفات الوسائط",
+                "externalHint": "سيُطلب منك اسم ملف HTML في الخطوة التالية. سيتم وضع ملفات الوسائط في مجلدات تبدأ بنفس اسم الملف.",
+                "scorm": {
+                    "label": "حزمة SCORM",
+                    "masteryScoreLabel": "درجة الإتقان (٪)",
+                    "errorNaN": "القيمة التي تم إدخالها ليست رقمًا",
+                    "errorRange": "يجب أن تكون القيمة بين 0 و 100"
+                }
+            },
+            "reporter": {
+                "title": "مراسل",
+                "hint": "إذا قمت بإضافة المراسل ، يمكن للطلاب حفظ ملف مع تقدمهم وإرساله إليك.",
+                "switchLabel": "تشمل المراسل",
+                "learnMoreLink": "تعلم المزيد عن ذلك هنا.",
+                "scormHint": "لا يمكن إضافة المراسل إلى حزم SCORM."
+            },
+            "cancelButton": "يلغي",
+            "exportButton": "تصدير الآن",
+            "filePicker": {
+                "title": "تصدير كـ ...",
+                "buttonLabel": "يصدر",
+                "formatNames": {
+                    "bundle": "ملف HTML الكل في واحد (.html)",
+                    "external": "ملف HTML (.html)",
+                    "scorm": "ملف SCORM (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "مؤلف H5P",
+                "title": "محتوى H5P"
+            }
+        }
     },
     "settings": {
         "appbar": {
@@ -109,17 +147,8 @@
                 "error": "تعذر فتح H5P."
             },
             "export_as_html": {
-                "success": "تم تصدير H5P بنجاح بتنسيق HTML",
-                "error": "تعذر تصدير H5P بتنسيق HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "مراسل لومي",
-                "description": "هل تريد تضمين مراسل في لغة تأشير النص الفائق الخاصة بك؟ تعرف على المزيد حول هذا الموضوع",
-                "yes": "نعم",
-                "no": "لا",
-                "here": "هنا"
+                "success": "تم تصدير H5P بنجاح",
+                "error": "تعذر تصدير H5P"
             }
         }
     }

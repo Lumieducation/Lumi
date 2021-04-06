@@ -16,6 +16,44 @@
             "open": "Odprite obstoječi H5P",
             "create": "ustvarite nov H5P",
             "start": "začetek"
+        },
+        "exportDialog": {
+            "title": "Izvozi nastavitve",
+            "format": {
+                "title": "Oblika",
+                "bundleLabel": "Datoteka HTML v enem",
+                "bundleHint": "Datoteka lahko za nekatere računalnike postane prevelika, če vključite veliko predstavnostnih datotek.",
+                "externalLabel": "Ena datoteka HTML in več predstavnostnih datotek",
+                "externalHint": "V naslednjem koraku boste morali vnesti ime datoteke HTML. Predstavnostne datoteke bodo shranjene v mape, ki se začnejo z istim imenom.",
+                "scorm": {
+                    "label": "Paket SCORM",
+                    "masteryScoreLabel": "Ocena mojstrstva (v%)",
+                    "errorNaN": "Vnesena vrednost ni število",
+                    "errorRange": "Vrednost mora biti med 0 in 100"
+                }
+            },
+            "reporter": {
+                "title": "Poročevalec",
+                "hint": "Če dodate poročevalca, lahko študentje shranijo datoteko z napredkom in vam jo pošljejo.",
+                "switchLabel": "Vključi poročevalca",
+                "learnMoreLink": "Več o tem lahko preberete tukaj.",
+                "scormHint": "Poročevalca ni mogoče dodati v pakete SCORM."
+            },
+            "cancelButton": "Prekliči",
+            "exportButton": "Izvozi zdaj",
+            "filePicker": {
+                "title": "Izvozi kot ...",
+                "buttonLabel": "Izvozi",
+                "formatNames": {
+                    "bundle": "Vse-v-enem datoteka HTML (.html)",
+                    "external": "Datoteka HTML (.html)",
+                    "scorm": "Datoteka SCORM (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P Avtor",
+                "title": "Vsebina H5P"
+            }
         }
     },
     "settings": {
@@ -109,17 +147,8 @@
                 "error": "H5P ni bilo mogoče odpreti."
             },
             "export_as_html": {
-                "success": "H5P je bil uspešno izvožen kot HTML",
-                "error": "H5P ni bilo mogoče izvoziti kot HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Poročevalec snega",
-                "description": "Ali želite v svoj html vključiti poročevalca? Več o tem",
-                "yes": "ja",
-                "no": "št",
-                "here": "tukaj"
+                "success": "H5P je bil uspešno izvožen",
+                "error": "H5P ni bilo mogoče izvoziti"
             }
         }
     }

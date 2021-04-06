@@ -16,6 +16,44 @@
             "open": "Ein vorhandenes H5P öffnen",
             "create": "Ein neues H5P erstellen",
             "start": "Start"
+        },
+        "exportDialog": {
+            "title": "Exporteinstellungen",
+            "format": {
+                "title": "Format",
+                "bundleLabel": "All-in-One-HTML-Datei",
+                "bundleHint": "Die Datei kann für manche Computer zu groß werden, wenn du viele Mediendateien einfügst.",
+                "externalLabel": "Eine HTML-Datei und zusätzliche Mediendateien",
+                "externalHint": "Im nächsten Schritt wirst du nach dem Namen für die HTML-Datei gefragt. Die Mediendateien werden in Ordnern abgelegt, die mit demselben Namen wie die Datei beginnen.",
+                "scorm": {
+                    "label": "SCORM-Paket",
+                    "masteryScoreLabel": "Bestehens-Schwellenwert (in %)",
+                    "errorNaN": "Der eingegebene Wert ist keine Zahl",
+                    "errorRange": "Der Wert muss zwischen 0 und 100 liegen"
+                }
+            },
+            "reporter": {
+                "title": "Reporter",
+                "hint": "Wenn du den Reporter hinzufügst, können die Lernenden eine Datei mit ihrem Fortschritt speichern und an dich schicken.",
+                "switchLabel": "Reporter hinzufügen",
+                "learnMoreLink": "Erfahre hier mehr darüber.",
+                "scormHint": "Der Reporter kann nicht zu SCORM-Paketen hinzugefügt werden."
+            },
+            "cancelButton": "Abbrechen",
+            "exportButton": "Jetzt exportieren",
+            "filePicker": {
+                "title": "Exportieren als ...",
+                "buttonLabel": "Exportieren",
+                "formatNames": {
+                    "bundle": "All-in-One-HTML-Datei (.html)",
+                    "external": "HTML-Datei (.html)",
+                    "scorm": "SCORM-Datei (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P Autor",
+                "title": "H5P-Inhalt"
+            }
         }
     },
     "settings": {
@@ -72,7 +110,7 @@
             "open": "Analytics-Dateien öffnen",
             "save": "Speichern",
             "save_as": "Speichern als...",
-            "export": "Export...",
+            "export": "Exportieren...",
             "edit": "Bearbeiten",
             "undo": "Rückgängig machen",
             "redo": "Wiederherstellen",
@@ -109,17 +147,8 @@
                 "error": "H5P konnte nicht geöffnet werden."
             },
             "export_as_html": {
-                "success": "H5P erfolgreich als HTML exportiert",
-                "error": "H5P konnte nicht als HTML exportiert werden"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Lumi Reporter",
-                "description": "Möchtest du einen Reporter in dein HTML aufnehmen? Erfahre hier mehr darüber",
-                "yes": "Ja, Reporter hinzufügen",
-                "no": "Nein",
-                "here": "hier"
+                "success": "H5P erfolgreich exportiert",
+                "error": "H5P konnte nicht exportiert werden"
             }
         }
     }

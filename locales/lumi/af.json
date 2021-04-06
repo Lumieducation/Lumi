@@ -16,7 +16,45 @@
             "create": "skep nuwe H5P",
             "start": "begin"
         },
-        "default_name": "nuwe H5P"
+        "default_name": "nuwe H5P",
+        "exportDialog": {
+            "title": "Voer instellings uit",
+            "format": {
+                "title": "Formaat",
+                "bundleLabel": "Alles-in-een HTML-lêer",
+                "bundleHint": "Die lêer kan te groot word vir sommige rekenaars as u baie medialêers insluit.",
+                "externalLabel": "Een HTML-lêer en verskeie medialêers",
+                "externalHint": "U sal in die volgende stap gevra word vir 'n naam vir die HTML-lêer. Die mediabestande sal in vouers geplaas word wat met dieselfde naam as die lêer begin.",
+                "scorm": {
+                    "label": "SCORM pakket",
+                    "masteryScoreLabel": "Bemeestertelling (in%)",
+                    "errorNaN": "Ingevoerde waarde is nie 'n getal nie",
+                    "errorRange": "Die waarde moet tussen 0 en 100 wees"
+                }
+            },
+            "reporter": {
+                "title": "Verslaggewer",
+                "hint": "As u die verslaggewer byvoeg, kan studente 'n lêer met hul vordering stoor en dit aan u stuur.",
+                "switchLabel": "Sluit verslaggewer in",
+                "learnMoreLink": "Lees meer hieroor.",
+                "scormHint": "Die verslaggewer kan nie by SCORM-pakkette gevoeg word nie."
+            },
+            "cancelButton": "Kanselleer",
+            "exportButton": "Voer nou uit",
+            "filePicker": {
+                "title": "Voer uit as ...",
+                "buttonLabel": "Uitvoer",
+                "formatNames": {
+                    "bundle": "Alles-in-een HTML-lêer (.html)",
+                    "external": "HTML-lêer (.html)",
+                    "scorm": "SCORM-lêer (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P Skrywer",
+                "title": "H5P-inhoud"
+            }
+        }
     },
     "settings": {
         "appbar": {
@@ -94,26 +132,17 @@
         "quit": "Verlaat"
     },
     "notifications": {
-        "export_as_html": {
-            "dialog": {
-                "here": "hier",
-                "no": "nee",
-                "yes": "ja",
-                "description": "Wil jy verslae in jou html insluit? Leer meer hieroor",
-                "title": "Lumi verslae"
-            }
-        },
         "h5peditor": {
-            "export_as_html": {
-                "error": "Kon nie H5P as 'n HTML uitvoer nie",
-                "success": "H5P is suksesvol as 'n HTML uitgevoer"
-            },
             "open": {
                 "error": "Kon nie H5P oopmaak nie."
             },
             "save": {
                 "error": "H5P kon nie gestoor word nie.",
                 "success": "H5P gestoor!"
+            },
+            "export_as_html": {
+                "success": "H5P suksesvol uitgevoer",
+                "error": "Kon nie H5P uitvoer nie"
             }
         },
         "analytics": {

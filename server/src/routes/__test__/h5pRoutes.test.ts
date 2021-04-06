@@ -16,7 +16,6 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
                 librariesPath: path.resolve('test', 'data', `libraries`),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
                 runFile: path.resolve('test', 'data', 'run.json'),
-
                 workingCachePath: path.resolve('test', 'data', 'workingCache'),
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
@@ -27,13 +26,16 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
     });
 
     it('exports a html file', async (done) => {
-        dialog.showSaveDialogSync = jest.fn((c) => {
-            return path.resolve('test', 'build', 'test.html');
-        });
+        dialog.showSaveDialog = jest.fn(async (c) => ({
+            canceled: false,
+            filePath: path.resolve('test', 'build', 'test.html')
+        }));
 
         const contentId = 740522043;
 
-        const res = await request(app).get(`/api/v1/h5p/${contentId}/html`);
+        const res = await request(app).get(
+            `/api/v1/h5p/${contentId}/export?format=bundle`
+        );
         expect(res.statusCode).toEqual(200);
 
         expect(
@@ -46,13 +48,16 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
     }, 30000);
 
     it('appends .html if no extension is defined', async (done) => {
-        dialog.showSaveDialogSync = jest.fn((c) => {
-            return path.resolve('test', 'build', 'test2');
-        });
+        dialog.showSaveDialog = jest.fn(async (c) => ({
+            canceled: false,
+            filePath: path.resolve('test', 'build', 'test2')
+        }));
 
         const contentId = 740522043;
 
-        const res = await request(app).get(`/api/v1/h5p/${contentId}/html`);
+        const res = await request(app).get(
+            `/api/v1/h5p/${contentId}/export?format=bundle`
+        );
         expect(res.statusCode).toEqual(200);
 
         expect(
@@ -65,13 +70,16 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
     }, 30000);
 
     it('returns 499 if canceled by user', async (done) => {
-        dialog.showSaveDialogSync = jest.fn((c) => {
-            return undefined;
-        });
+        dialog.showSaveDialog = jest.fn(async (c) => ({
+            canceled: true,
+            filePath: undefined
+        }));
 
         const contentId = 740522043;
 
-        const res = await request(app).get(`/api/v1/h5p/${contentId}/html`);
+        const res = await request(app).get(
+            `/api/v1/h5p/${contentId}/export?format=bundle`
+        );
         expect(res.statusCode).toEqual(499);
 
         done();

@@ -16,6 +16,44 @@
             "open": "Abrir H5P existente",
             "create": "crear nuevo H5P",
             "start": "comenzar"
+        },
+        "exportDialog": {
+            "title": "Exportar configuraciones",
+            "format": {
+                "title": "Formato",
+                "bundleLabel": "Archivo HTML todo en uno",
+                "bundleHint": "El archivo puede crecer demasiado para algunas computadoras si incluye muchos archivos multimedia.",
+                "externalLabel": "Un archivo HTML y varios archivos multimedia",
+                "externalHint": "Se le pedirá un nombre para el archivo HTML en el siguiente paso. Los archivos multimedia se colocarán en carpetas que comienzan con el mismo nombre que el archivo.",
+                "scorm": {
+                    "label": "Paquete SCORM",
+                    "masteryScoreLabel": "Puntuación de dominio (en%)",
+                    "errorNaN": "El valor ingresado no es un número",
+                    "errorRange": "El valor debe estar entre 0 y 100"
+                }
+            },
+            "reporter": {
+                "title": "Reportero",
+                "hint": "Si agrega al reportero, los estudiantes pueden guardar un archivo con su progreso y enviárselo.",
+                "switchLabel": "Incluir reportero",
+                "learnMoreLink": "Obtenga más información al respecto aquí.",
+                "scormHint": "El reportero no se puede agregar a los paquetes SCORM."
+            },
+            "cancelButton": "Cancelar",
+            "exportButton": "Exportar ahora",
+            "filePicker": {
+                "title": "Exportar cómo...",
+                "buttonLabel": "Exportar",
+                "formatNames": {
+                    "bundle": "Archivo HTML todo en uno (.html)",
+                    "external": "Archivo HTML (.html)",
+                    "scorm": "Archivo SCORM (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "Autor de H5P",
+                "title": "Contenido de H5P"
+            }
         }
     },
     "settings": {
@@ -109,17 +147,8 @@
                 "error": "No se pudo abrir H5P."
             },
             "export_as_html": {
-                "success": "H5P exportado correctamente como HTML",
-                "error": "No se pudo exportar H5P como HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Reportero de Lumi",
-                "description": "¿Quieres incluir un reportero en tu html? Aprenda más sobre esto",
-                "yes": "sí",
-                "no": "No",
-                "here": "aquí"
+                "success": "H5P exportado con éxito",
+                "error": "No se pudo exportar H5P"
             }
         }
     }

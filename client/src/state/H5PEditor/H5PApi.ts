@@ -6,12 +6,16 @@ export function loadPlayerContent(
     return superagent.get(`/api/v1/h5p/${contentId}/play`);
 }
 
-export function exportAsHtml(
+export function exportContent(
     contentId: string,
-    includeReporter: boolean
+    includeReporter: boolean,
+    format: 'bundle' | 'external' | 'scorm',
+    options: { masteryScore?: string }
 ): Promise<superagent.Response> {
     return superagent.get(
-        `/api/v1/h5p/${contentId}/html?includeReporter=${includeReporter}`
+        `/api/v1/h5p/${contentId}/export?includeReporter=${includeReporter}&format=${format}${
+            options.masteryScore ? `&masteryScore=${options.masteryScore}` : ''
+        }`
     );
 }
 

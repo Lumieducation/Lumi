@@ -1,4 +1,6 @@
 import React from 'react';
+import classnames from 'classnames';
+
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 
@@ -24,11 +26,14 @@ import ListItemText from '@material-ui/core/ListItemText';
 import CloseIcon from '@material-ui/icons/Close';
 import SettingsIcon from '@material-ui/icons/Settings';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
-// import AccountBoxIcon from '@material-ui/icons/AccountBox';
+// import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import UpdateIcon from '@material-ui/icons/Update';
 
 import SettingsList from './components/Settings/GeneralSettingsList';
 import AccountSettingsList from './components/Settings/AccountSettingsList';
 import SettingsLibraryManagement from './components/Settings/LibraryManagement';
+import UpdateSettings from './components/Settings/UpdatesSettings';
 
 import { track } from '../state/track/actions';
 
@@ -44,7 +49,6 @@ const useStyles = makeStyles((theme: Theme) =>
             flex: 1
         },
         root: {
-            width: '100%',
             display: 'flex',
             marginLeft: '100px'
         },
@@ -62,7 +66,7 @@ const useStyles = makeStyles((theme: Theme) =>
             margin: 'auto'
         },
         bg: {
-            background: '#f1f3f4'
+            background: theme.palette.background.default
         },
         paper: {
             minWidth: '640px'
@@ -75,7 +79,10 @@ const useStyles = makeStyles((theme: Theme) =>
             width: drawerWidth,
             marginTop: '64px'
         },
-        toolbar: {}
+        selected: {
+            backgroundColor: theme.palette.background.default,
+            color: theme.palette.primary.main
+        }
     })
 );
 
@@ -138,13 +145,15 @@ export default function FullScreenDialog() {
                     }}
                     anchor="left"
                 >
-                    <div className={classes.toolbar} />
                     <Divider />
                     <List>
                         <ListItem
                             button
                             key="general"
                             onClick={() => setSection('general')}
+                            className={classnames({
+                                [classes.selected]: section === 'general'
+                            })}
                         >
                             <ListItemIcon>
                                 <SettingsIcon />
@@ -155,8 +164,30 @@ export default function FullScreenDialog() {
                         </ListItem>
                         <ListItem
                             button
+                            key="updates"
+                            onClick={() => setSection('updates')}
+                            className={classnames({
+                                [classes.selected]: section === 'updates'
+                            })}
+                        >
+                            <ListItemIcon>
+                                <UpdateIcon />
+                            </ListItemIcon>
+                            <ListItemText
+                                primary={t('settings.menu.updates')}
+                            />
+                        </ListItem>
+                        {/* <ListItem
+                            button
                             key="h5p-libraries"
                             onClick={() => setSection('h5p-libraries')}
+                               style={{
+                                backgroundColor:
+                                    section === 'general'
+                                        ? '#EFEFEF'
+                                        : '#FFFFFF',
+                                color: '#3498db'
+                            }}
                         >
                             <ListItemIcon>
                                 <LibraryBooksIcon />
@@ -165,10 +196,14 @@ export default function FullScreenDialog() {
                                 primary={t('settings.menu.h5p-libraries')}
                             />
                         </ListItem>
-                        {/*} <ListItem
+                        */}
+                        <ListItem
                             button
                             key="account"
                             onClick={() => setSection('account')}
+                            className={classnames({
+                                [classes.selected]: section === 'account'
+                            })}
                         >
                             <ListItemIcon>
                                 <AccountBoxIcon />
@@ -176,7 +211,7 @@ export default function FullScreenDialog() {
                             <ListItemText
                                 primary={t('settings.menu.account')}
                             />
-                        </ListItem> */}
+                        </ListItem>
                     </List>
                 </Drawer>
                 <DialogContent className={classes.bg}>
@@ -188,6 +223,9 @@ export default function FullScreenDialog() {
                                         case 'general':
                                         default:
                                             return <SettingsList />;
+
+                                        case 'updates':
+                                            return <UpdateSettings />;
 
                                         case 'h5p-libraries':
                                             return (
