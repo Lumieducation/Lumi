@@ -63,7 +63,8 @@
         "semantic-release": "semantic-release",
         "uninstall": "rm -rf build/ && rm -rf node_modules/",
         "postinstall": "sh scripts/install.sh 1.24 && sh scripts/install.sh 1.24.1",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "ci:all": "npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)"
     },
     "publishConfig": {
         "access": "restricted"
