@@ -105,7 +105,10 @@ export default function H5PEditorLeftDrawerView(props: {
                                         </ListItemAvatar>
                                         <ListItemText
                                             primary={tab.name}
-                                            secondary={tab.mainLibrary}
+                                            secondary={tab.mainLibraryName}
+                                            secondaryTypographyProps={{
+                                                noWrap: true
+                                            }}
                                             style={{
                                                 overflow: 'hidden',
                                                 textOverflow: 'ellipsis'
