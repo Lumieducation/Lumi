@@ -44,7 +44,6 @@ const useStyles = makeStyles((theme: Theme) =>
             flex: 1
         },
         root: {
-            width: '100%',
             display: 'flex',
             marginLeft: '100px'
         },
