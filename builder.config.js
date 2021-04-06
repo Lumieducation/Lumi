@@ -7,6 +7,7 @@ module.exports = {
         'build/**/*',
         'node_modules/**/*',
         'reporter-client/build/static/js/**/*',
+        'scorm-client/**/*',
         'package.json',
         'h5p/**/*',
         'electron/**/*',

@@ -16,6 +16,44 @@
             "open": "Open bestaande H5P",
             "create": "maak nieuwe H5P",
             "start": "begin"
+        },
+        "exportDialog": {
+            "title": "Exporteer instellingen",
+            "format": {
+                "title": "Formaat",
+                "bundleLabel": "Alles-in-één HTML-bestand",
+                "bundleHint": "Het bestand kan voor sommige computers te groot worden als u veel mediabestanden opneemt.",
+                "externalLabel": "Een HTML-bestand en verschillende mediabestanden",
+                "externalHint": "In de volgende stap wordt u om een naam voor het HTML-bestand gevraagd. De mediabestanden worden in mappen geplaatst die beginnen met dezelfde naam als het bestand.",
+                "scorm": {
+                    "label": "SCORM-pakket",
+                    "masteryScoreLabel": "Beheersingsscore (in%)",
+                    "errorNaN": "De ingevoerde waarde is geen getal",
+                    "errorRange": "De waarde moet tussen 0 en 100 liggen"
+                }
+            },
+            "reporter": {
+                "title": "Verslaggever",
+                "hint": "Als u de verslaggever toevoegt, kunnen studenten een bestand met hun voortgang opslaan en naar u opsturen.",
+                "switchLabel": "Inclusief verslaggever",
+                "learnMoreLink": "Lees er hier meer over.",
+                "scormHint": "De reporter kan niet worden toegevoegd aan SCORM-pakketten."
+            },
+            "cancelButton": "Annuleer",
+            "exportButton": "Nu exporteren",
+            "filePicker": {
+                "title": "Exporteren als ...",
+                "buttonLabel": "Exporteren",
+                "formatNames": {
+                    "bundle": "Alles-in-één HTML-bestand (.html)",
+                    "external": "HTML-bestand (.html)",
+                    "scorm": "SCORM-bestand (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P Auteur",
+                "title": "H5P-inhoud"
+            }
         }
     },
     "settings": {
@@ -109,17 +147,8 @@
                 "error": "Kan H5P niet openen."
             },
             "export_as_html": {
-                "success": "H5P is succesvol geëxporteerd als HTML",
-                "error": "Kan H5P niet exporteren als HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Sneeuwverslaggever",
-                "description": "Wilt u een verslaggever opnemen in uw html? Leer er meer over",
-                "yes": "Ja",
-                "no": "Nee",
-                "here": "hier"
+                "success": "H5P is succesvol geëxporteerd",
+                "error": "Kan H5P niet exporteren"
             }
         }
     }

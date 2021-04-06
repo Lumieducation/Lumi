@@ -16,6 +16,44 @@
             "open": "Öppna befintlig H5P",
             "create": "skapa ny H5P",
             "start": "Start"
+        },
+        "exportDialog": {
+            "title": "Exportera inställningar",
+            "format": {
+                "title": "Formatera",
+                "bundleLabel": "Allt-i-ett HTML-fil",
+                "bundleHint": "Filen kan växa för stor för vissa datorer om du inkluderar massor av mediefiler.",
+                "externalLabel": "En HTML-fil och flera mediefiler",
+                "externalHint": "Du kommer att bli ombedd att ange ett namn för HTML-filen i nästa steg. Mediefilerna läggs i mappar som börjar med samma namn som filen.",
+                "scorm": {
+                    "label": "SCORM-paket",
+                    "masteryScoreLabel": "Behärskningspoäng (i%)",
+                    "errorNaN": "Inmatat värde är inte ett tal",
+                    "errorRange": "Värdet måste vara mellan 0 och 100"
+                }
+            },
+            "reporter": {
+                "title": "Reporter",
+                "hint": "Om du lägger till reportern kan eleverna spara en fil med deras framsteg och skicka den till dig.",
+                "switchLabel": "Inkludera reporter",
+                "learnMoreLink": "Läs mer om det här.",
+                "scormHint": "Reportern kan inte läggas till i SCORM-paket."
+            },
+            "cancelButton": "Avbryt",
+            "exportButton": "Exportera nu",
+            "filePicker": {
+                "title": "Exportera som ...",
+                "buttonLabel": "Exportera",
+                "formatNames": {
+                    "bundle": "Allt-i-ett HTML-fil (.html)",
+                    "external": "HTML-fil (.html)",
+                    "scorm": "SCORM-fil (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P Författare",
+                "title": "H5P-innehåll"
+            }
         }
     },
     "settings": {
@@ -109,17 +147,8 @@
                 "error": "Det gick inte att öppna H5P."
             },
             "export_as_html": {
-                "success": "H5P exporterades framgångsrikt som HTML",
-                "error": "Det gick inte att exportera H5P som HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Snörapporter",
-                "description": "Vill du inkludera en reporter i din html? Läs mer om det",
-                "yes": "ja",
-                "no": "Nej",
-                "here": "här"
+                "success": "H5P har exporterats",
+                "error": "Det gick inte att exportera H5P"
             }
         }
     }

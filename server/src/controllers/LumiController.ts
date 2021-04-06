@@ -1,4 +1,4 @@
-import { dialog } from 'electron';
+import { BrowserWindow, dialog } from 'electron';
 import fs from 'fs-extra';
 import _path from 'path';
 
@@ -15,7 +15,11 @@ import electronState from '../electronState';
 const log = new Logger('controller:lumi-h5p');
 
 export default class LumiController {
-    constructor(private h5pEditor: H5P.H5PEditor, serverConfig: IServerConfig) {
+    constructor(
+        private h5pEditor: H5P.H5PEditor,
+        serverConfig: IServerConfig,
+        private browserWindow: BrowserWindow
+    ) {
         fs.readJSON(serverConfig.settingsFile).then((settings) => {
             if (settings.privacyPolicyConsent) {
                 h5pEditor.contentTypeCache.updateIfNecessary();
@@ -35,7 +39,7 @@ export default class LumiController {
             let path = pathArg;
 
             if (!path || path === 'undefined') {
-                path = dialog.showSaveDialogSync({
+                const result = await dialog.showSaveDialog(this.browserWindow, {
                     defaultPath: '.h5p',
                     filters: [
                         {
@@ -43,8 +47,10 @@ export default class LumiController {
                             name: 'H5P'
                         }
                     ],
-                    title: 'Save H5P'
+                    title: 'Save H5P',
+                    properties: ['showOverwriteConfirmation']
                 });
+                path = result.filePath;
             }
 
             if (!path) {
@@ -129,7 +135,7 @@ export default class LumiController {
     }
 
     public async open(): Promise<string[]> {
-        const response = await dialog.showOpenDialog({
+        const response = await dialog.showOpenDialog(this.browserWindow, {
             filters: [
                 {
                     extensions: ['h5p'],

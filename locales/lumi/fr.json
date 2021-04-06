@@ -16,6 +16,44 @@
             "open": "Ouvrir le H5P existant",
             "create": "créer un nouveau H5P",
             "start": "début"
+        },
+        "exportDialog": {
+            "title": "Exporter les paramètres",
+            "format": {
+                "title": "Format",
+                "bundleLabel": "Fichier HTML tout-en-un",
+                "bundleHint": "Le fichier peut devenir trop volumineux pour certains ordinateurs si vous incluez de nombreux fichiers multimédias.",
+                "externalLabel": "Un fichier HTML et plusieurs fichiers multimédias",
+                "externalHint": "Il vous sera demandé un nom pour le fichier HTML à l'étape suivante. Les fichiers multimédias seront placés dans des dossiers commençant par le même nom que le fichier.",
+                "scorm": {
+                    "label": "Paquet SCORM",
+                    "masteryScoreLabel": "Score de maîtrise (en%)",
+                    "errorNaN": "La valeur saisie n'est pas un nombre",
+                    "errorRange": "La valeur doit être comprise entre 0 et 100"
+                }
+            },
+            "reporter": {
+                "title": "Journaliste",
+                "hint": "Si vous ajoutez le journaliste, les étudiants peuvent enregistrer un fichier avec leur progression et vous l'envoyer.",
+                "switchLabel": "Inclure le journaliste",
+                "learnMoreLink": "Apprenez-en plus ici.",
+                "scormHint": "Le rapporteur ne peut pas être ajouté aux packages SCORM."
+            },
+            "cancelButton": "Annuler",
+            "exportButton": "Exportez maintenant",
+            "filePicker": {
+                "title": "Exporter sous ...",
+                "buttonLabel": "Exportation",
+                "formatNames": {
+                    "bundle": "Fichier HTML tout-en-un (.html)",
+                    "external": "Fichier HTML (.html)",
+                    "scorm": "Fichier SCORM (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "Auteur H5P",
+                "title": "Contenu H5P"
+            }
         }
     },
     "settings": {
@@ -109,17 +147,8 @@
                 "error": "Impossible d'ouvrir H5P."
             },
             "export_as_html": {
-                "success": "H5P exporté avec succès au format HTML",
-                "error": "Impossible d'exporter H5P au format HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Journaliste de neige",
-                "description": "Voulez-vous inclure un journaliste dans votre html? En savoir plus",
-                "yes": "Oui",
-                "no": "non",
-                "here": "ici"
+                "success": "H5P exporté avec succès",
+                "error": "Impossible d'exporter H5P"
             }
         }
     }

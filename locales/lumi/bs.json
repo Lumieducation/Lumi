@@ -16,6 +16,44 @@
             "open": "Otvorite postojeći H5P",
             "create": "stvoriti novi H5P",
             "start": "start"
+        },
+        "exportDialog": {
+            "title": "Izvoz postavki",
+            "format": {
+                "title": "Format",
+                "bundleLabel": "Sve u jednom HTML datoteka",
+                "bundleHint": "Datoteka može postati prevelika za neka računala ako uključite puno medijskih datoteka.",
+                "externalLabel": "Jedna HTML datoteka i nekoliko medijskih datoteka",
+                "externalHint": "U sljedećem koraku zatražit ćete ime za HTML datoteku. Medijske datoteke stavit će se u mape koje započinju istim imenom kao i datoteka.",
+                "scorm": {
+                    "label": "SCORM paket",
+                    "masteryScoreLabel": "Ocjena majstorstva (u%)",
+                    "errorNaN": "Unesena vrijednost nije broj",
+                    "errorRange": "Vrijednost mora biti između 0 i 100"
+                }
+            },
+            "reporter": {
+                "title": "Reporter",
+                "hint": "Ako dodate izvjestitelja, studenti mogu spremiti datoteku sa svojim napretkom i poslati vam je.",
+                "switchLabel": "Uključi reportera",
+                "learnMoreLink": "Saznajte više o tome ovdje.",
+                "scormHint": "Reporter se ne može dodati u SCORM pakete."
+            },
+            "cancelButton": "Otkaži",
+            "exportButton": "Izvezi odmah",
+            "filePicker": {
+                "title": "Izvezi kao ...",
+                "buttonLabel": "Izvoz",
+                "formatNames": {
+                    "bundle": "Sve u jednom HTML datoteka (.html)",
+                    "external": "HTML datoteka (.html)",
+                    "scorm": "SCORM datoteka (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P Autor",
+                "title": "H5P Sadržaj"
+            }
         }
     },
     "settings": {
@@ -109,17 +147,8 @@
                 "error": "Nije moguće otvoriti H5P."
             },
             "export_as_html": {
-                "success": "H5P je uspješno izvezen kao HTML",
-                "error": "Nije moguće izvesti H5P kao HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Izvjestitelj o snijegu",
-                "description": "Da li želite uključiti izvjestitelja u svoj html? Saznajte više o tome",
-                "yes": "da",
-                "no": "br",
-                "here": "ovdje"
+                "success": "H5P je uspješno izvezen",
+                "error": "Nije moguće izvesti H5P"
             }
         }
     }

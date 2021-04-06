@@ -16,6 +16,44 @@
             "open": "Avaa olemassa oleva H5P",
             "create": "luo uusi H5P",
             "start": "alkaa"
+        },
+        "exportDialog": {
+            "title": "Vie asetukset",
+            "format": {
+                "title": "Muoto",
+                "bundleLabel": "All-in-one HTML-tiedosto",
+                "bundleHint": "Tiedosto voi kasvaa liian suureksi joillekin tietokoneille, jos sisällytät paljon mediatiedostoja.",
+                "externalLabel": "Yksi HTML-tiedosto ja useita mediatiedostoja",
+                "externalHint": "Sinulta pyydetään nimeä HTML-tiedostolle seuraavassa vaiheessa. Mediatiedostot sijoitetaan kansioihin, jotka alkavat samalla nimellä kuin tiedosto.",
+                "scorm": {
+                    "label": "SCORM-paketti",
+                    "masteryScoreLabel": "Hallintapisteet (%)",
+                    "errorNaN": "Annettu arvo ei ole numero",
+                    "errorRange": "Arvon on oltava välillä 0–100"
+                }
+            },
+            "reporter": {
+                "title": "Reportteri",
+                "hint": "Jos lisäät reportterin, opiskelijat voivat tallentaa edistymisensä tiedoston ja lähettää sen sinulle.",
+                "switchLabel": "Sisällytä toimittaja",
+                "learnMoreLink": "Lue lisää täältä.",
+                "scormHint": "Toimittajaa ei voi lisätä SCORM-paketteihin."
+            },
+            "cancelButton": "Peruuttaa",
+            "exportButton": "Vie nyt",
+            "filePicker": {
+                "title": "Vie nimellä ...",
+                "buttonLabel": "Viedä",
+                "formatNames": {
+                    "bundle": "Kaikki yhdessä HTML-tiedosto (.html)",
+                    "external": "HTML-tiedosto (.html)",
+                    "scorm": "SCORM-tiedosto (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P-kirjailija",
+                "title": "H5P-sisältö"
+            }
         }
     },
     "settings": {
@@ -109,17 +147,8 @@
                 "error": "H5P: tä ei voitu avata."
             },
             "export_as_html": {
-                "success": "H5P on viety HTML-muodossa",
-                "error": "H5P: tä ei voitu viedä HTML-muodossa"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Lumireporter",
-                "description": "Haluatko sisällyttää reportterin html-tiedostoosi? Lisätietoja siitä",
-                "yes": "Joo",
-                "no": "ei",
-                "here": "tässä"
+                "success": "H5P: n vienti onnistui",
+                "error": "H5P: n vienti epäonnistui"
             }
         }
     }
