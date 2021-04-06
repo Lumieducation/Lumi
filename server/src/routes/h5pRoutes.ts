@@ -23,6 +23,8 @@ const cleanAndTrim = (text) => {
     return textClean.replace(/\s/g, '');
 };
 
+const t = i18next.getFixedT(null, 'lumi');
+
 const reporterTemplate = (
     integration: string,
     scriptsBundle: string,
@@ -135,13 +137,13 @@ export default function (
                 filters: [
                     {
                         extensions: [expectedExtension],
-                        name: i18next.t(
-                            `lumi:editor.exportDialog.formatNames.${format}`
+                        name: t(
+                            `editor.exportDialog.filePicker.formatNames.${format}`
                         )
                     }
                 ],
-                title: i18next.t('lumi:editor.exportDialog.title'),
-                buttonLabel: i18next.t('lumi:editor.exportDialog.button'),
+                title: t('editor.exportDialog.filePicker.title'),
+                buttonLabel: t('editor.exportDialog.filePicker.buttonLabel'),
                 properties: ['showOverwriteConfirmation']
             });
 
@@ -407,14 +409,10 @@ async function exportScorm(
                             contentMetadata.authors &&
                             contentMetadata.authors[0]
                                 ? contentMetadata.authors[0].name
-                                : i18next.t(
-                                      'lumi:editor.exportDialog.defaults.authorName'
-                                  ),
+                                : t('editor.exportDialog.defaults.authorName'),
                         title:
                             contentMetadata.title ||
-                            i18next.t(
-                                'lumi:editor.exportDialog.defaults.title'
-                            ),
+                            t('editor.exportDialog.defaults.title'),
                         language: contentMetadata.language || 'en-EN',
                         identifier: '00',
                         masteryScore: scormOptions.masteryScore,

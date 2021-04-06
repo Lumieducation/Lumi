@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -19,11 +19,14 @@ import { actions, IState } from '../../state';
 import { Box, FormHelperText, TextField } from '@material-ui/core';
 
 export default function H5PEditorExportDialog() {
-    // const { open, yesCallback, noCallback } = props;
+    const dispatch = useDispatch();
+    const { t } = useTranslation('lumi');
+
+    // State from Redux
     const open = useSelector(
         (state: IState) => state.h5peditor.showExportDialog
     );
-
+    // Internal State
     const [formatChoice, setFormatChoice] = useState<
         'bundle' | 'external' | 'scorm'
     >('bundle');
@@ -31,9 +34,6 @@ export default function H5PEditorExportDialog() {
     const [masteryScore, setMasteryScore] = useState<string>('70');
     const [masteryScoreError, setMasteryScoreError] = useState<string>();
     const [isValid, setIsValid] = useState<boolean>(true);
-
-    const dispatch = useDispatch();
-    // const { t } = useTranslation();
 
     return (
         <div>
@@ -44,12 +44,14 @@ export default function H5PEditorExportDialog() {
                 onClose={() => dispatch(actions.h5peditor.cancelExportH5P())}
             >
                 <DialogTitle id="alert-dialog-title">
-                    Export settings
+                    {t('editor.exportDialog.title')}
                 </DialogTitle>
                 <DialogContent>
                     <Box paddingBottom={4}>
                         <FormControl>
-                            <FormLabel>Format</FormLabel>
+                            <FormLabel>
+                                {t('editor.exportDialog.format.title')}
+                            </FormLabel>
                             <RadioGroup
                                 name="exportformat"
                                 value={formatChoice}
@@ -60,37 +62,44 @@ export default function H5PEditorExportDialog() {
                                 <FormControlLabel
                                     value="bundle"
                                     control={<Radio />}
-                                    label="All-in-one HTML file"
+                                    label={t(
+                                        'editor.exportDialog.format.bundleLabel'
+                                    )}
                                 />
                                 {formatChoice === 'bundle' && (
                                     <FormHelperText>
-                                        The file can grow too big for some
-                                        computers if you include lots of media
-                                        files.
+                                        {t(
+                                            'editor.exportDialog.format.bundleHint'
+                                        )}
                                     </FormHelperText>
                                 )}
                                 <FormControlLabel
                                     value="external"
                                     control={<Radio />}
-                                    label="One HTML file and several media files"
+                                    label={t(
+                                        'editor.exportDialog.format.externalLabel'
+                                    )}
                                 />
                                 {formatChoice === 'external' && (
                                     <FormHelperText>
-                                        You will be asked for a name for the
-                                        HTML file in the next step. The media
-                                        files will be put into folders that
-                                        start with the same name as the file.
+                                        {t(
+                                            'editor.exportDialog.format.externalHint'
+                                        )}
                                     </FormHelperText>
                                 )}
                                 <FormControlLabel
                                     value="scorm"
                                     control={<Radio />}
-                                    label="SCORM package"
+                                    label={t(
+                                        'editor.exportDialog.format.scorm.label'
+                                    )}
                                 />
                                 {formatChoice === 'scorm' && (
                                     <Box marginLeft={2}>
                                         <TextField
-                                            label="Mastery score (in %)"
+                                            label={t(
+                                                'editor.exportDialog.format.scorm.masteryScoreLabel'
+                                            )}
                                             value={masteryScore}
                                             error={
                                                 masteryScoreError !== undefined
@@ -102,7 +111,9 @@ export default function H5PEditorExportDialog() {
                                                 );
                                                 if (isNaN(parsed)) {
                                                     setMasteryScoreError(
-                                                        'Entered value is not a number'
+                                                        t(
+                                                            'editor.exportDialog.format.scorm.errorNaN'
+                                                        )
                                                     );
                                                     setIsValid(false);
                                                 } else if (
@@ -110,7 +121,9 @@ export default function H5PEditorExportDialog() {
                                                     parsed > 100
                                                 ) {
                                                     setMasteryScoreError(
-                                                        'The value must be between 0 and 100'
+                                                        t(
+                                                            'editor.exportDialog.format.scorm.errorRange'
+                                                        )
                                                     );
                                                     setIsValid(false);
                                                 } else {
@@ -131,16 +144,19 @@ export default function H5PEditorExportDialog() {
                     </Box>
                     <Box>
                         <FormControl>
-                            <FormLabel>Reporter</FormLabel>
+                            <FormLabel>
+                                {t('editor.exportDialog.reporter.title')}
+                            </FormLabel>
                             <FormHelperText>
-                                If you add the reporter, students can save a
-                                file with their progress and send it to you.
+                                {t('editor.exportDialog.reporter.hint')}
                                 <a
                                     href="https://lumieducation.gitbook.io/lumi/analytics/reporter"
                                     target="_blank"
                                     rel="noreferrer"
                                 >
-                                    Learn more about it here.
+                                    {t(
+                                        'editor.exportDialog.reporter.learnMoreLink'
+                                    )}
                                 </a>
                             </FormHelperText>
                             <FormControlLabel
@@ -155,12 +171,15 @@ export default function H5PEditorExportDialog() {
                                 }
                                 disabled={formatChoice === 'scorm'}
                                 name="includeReporter"
-                                label="Include reporter"
+                                label={t(
+                                    'editor.exportDialog.reporter.switchLabel'
+                                )}
                             />
                             {formatChoice === 'scorm' && (
                                 <FormHelperText>
-                                    The reporter cannot be added to SCORM
-                                    packages.
+                                    {t(
+                                        'editor.exportDialog.reporter.scormHint'
+                                    )}
                                 </FormHelperText>
                             )}
                         </FormControl>
@@ -172,7 +191,7 @@ export default function H5PEditorExportDialog() {
                             dispatch(actions.h5peditor.cancelExportH5P())
                         }
                     >
-                        Cancel
+                        {t('editor.exportDialog.cancelButton')}
                     </Button>
                     <Button
                         color="primary"
@@ -195,7 +214,7 @@ export default function H5PEditorExportDialog() {
                         }
                         disabled={formatChoice === 'scorm' && !isValid}
                     >
-                        Export now
+                        {t('editor.exportDialog.exportButton')}
                     </Button>
                 </DialogActions>
             </Dialog>
