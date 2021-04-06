@@ -35,7 +35,7 @@ export default function (
 
     router.use('/api/v1/auth', authRoutes());
     router.use('/api/v1/track', trackingRoutes(serverConfig));
-    router.use('/api/v1/analytics', analyticRoutes());
+    router.use('/api/v1/analytics', analyticRoutes(browserWindow));
 
     // Adding dummy user to make sure all requests can be handled
     router.use((req, res, next) => {
@@ -48,7 +48,10 @@ export default function (
         settingsRoutes(serverConfig, browserWindow, app)
     );
 
-    router.use('/api/v1/run', runRoutes(serverConfig, h5pEditor));
+    router.use(
+        '/api/v1/run',
+        runRoutes(serverConfig, h5pEditor, browserWindow)
+    );
 
     // // Directly serving the library and content files statically speeds up
     // // loading times and there is no security issue, as Lumi never is a
@@ -109,9 +112,10 @@ export default function (
         h5pRoutes(
             h5pEditor,
             h5pPlayer,
-            'auto' // You can change the language of the editor here by sett
+            'auto', // You can change the language of the editor here by sett
             // the language code you need here. 'auto' means the route will try
-            // to use the language detected by the i18next language detector.
+            // to use the language detected by the i18next language detector.,
+            browserWindow
         )
     );
 
@@ -129,7 +133,10 @@ export default function (
         contentTypeCacheExpressRouter(h5pEditor.contentTypeCache)
     );
 
-    router.use('/api/v1/lumi', lumiRoutes(h5pEditor, serverConfig));
+    router.use(
+        '/api/v1/lumi',
+        lumiRoutes(h5pEditor, serverConfig, browserWindow)
+    );
 
     router.get('*', express.static(`${__dirname}/../../client`));
 

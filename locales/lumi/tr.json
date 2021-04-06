@@ -16,6 +16,44 @@
             "open": "Mevcut H5P'yi açın",
             "create": "yeni H5P oluştur",
             "start": "Başlat"
+        },
+        "exportDialog": {
+            "title": "Dışa Aktarma Ayarları",
+            "format": {
+                "title": "Biçim",
+                "bundleLabel": "Hepsi bir arada HTML dosyası",
+                "bundleHint": "Çok sayıda medya dosyası eklerseniz dosya bazı bilgisayarlar için çok büyüyebilir.",
+                "externalLabel": "Bir HTML dosyası ve birkaç medya dosyası",
+                "externalHint": "Sonraki adımda HTML dosyası için bir ad istenecektir. Medya dosyaları, dosya ile aynı adla başlayan klasörlere yerleştirilecektir.",
+                "scorm": {
+                    "label": "SCORM paketi",
+                    "masteryScoreLabel": "Ustalık puanı (% olarak)",
+                    "errorNaN": "Girilen değer bir sayı değil",
+                    "errorRange": "Değer 0 ile 100 arasında olmalıdır"
+                }
+            },
+            "reporter": {
+                "title": "Muhabir",
+                "hint": "Muhabiri eklerseniz, öğrenciler ilerlemelerinin olduğu bir dosyayı kaydedebilir ve size gönderebilir.",
+                "switchLabel": "Muhabiri dahil et",
+                "learnMoreLink": "Buradan daha fazla bilgi edinin.",
+                "scormHint": "Raporlayıcı, SCORM paketlerine eklenemez."
+            },
+            "cancelButton": "İptal etmek",
+            "exportButton": "Şimdi dışa aktar",
+            "filePicker": {
+                "title": "Farklı dışa aktar ...",
+                "buttonLabel": "İhracat",
+                "formatNames": {
+                    "bundle": "Hepsi bir arada HTML dosyası (.html)",
+                    "external": "HTML dosyası (.html)",
+                    "scorm": "SCORM dosyası (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P Yazar",
+                "title": "H5P İçeriği"
+            }
         }
     },
     "settings": {
@@ -109,17 +147,8 @@
                 "error": "H5P açılamadı."
             },
             "export_as_html": {
-                "success": "H5P başarıyla HTML olarak dışa aktarıldı",
-                "error": "H5P HTML olarak dışa aktarılamadı"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Kar muhabiri",
-                "description": "HTML'nize bir muhabir eklemek ister misiniz? Onun hakkında daha fazla bilgi edinin",
-                "yes": "Evet",
-                "no": "Hayır",
-                "here": "İşte"
+                "success": "H5P başarıyla ihraç edildi",
+                "error": "H5P dışa aktarılamadı"
             }
         }
     }

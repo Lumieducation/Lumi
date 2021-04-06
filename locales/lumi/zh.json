@@ -16,6 +16,44 @@
             "open": "打开现有的H5P",
             "create": "创建新的H5P",
             "start": "开始"
+        },
+        "exportDialog": {
+            "title": "汇出设定",
+            "format": {
+                "title": "格式",
+                "bundleLabel": "多合一HTML文件",
+                "bundleHint": "如果您包含很多媒体文件，则文件对于某些计算机可能会变得太大。",
+                "externalLabel": "一个HTML文件和几个媒体文件",
+                "externalHint": "在下一步中，将要求您输入HTML文件的名称。媒体文件将被放入与文件名相同的文件夹中。",
+                "scorm": {
+                    "label": "SCORM软件包",
+                    "masteryScoreLabel": "精通分数（％）",
+                    "errorNaN": "输入的值不是数字",
+                    "errorRange": "值必须介于0到100之间"
+                }
+            },
+            "reporter": {
+                "title": "记者",
+                "hint": "如果您添加了报告者，则学生可以保存其进度的文件并将其发送给您。",
+                "switchLabel": "包括记者",
+                "learnMoreLink": "点击此处了解详情。",
+                "scormHint": "无法将报告程序添加到SCORM程序包中。"
+            },
+            "cancelButton": "取消",
+            "exportButton": "现在导出",
+            "filePicker": {
+                "title": "导出为...",
+                "buttonLabel": "出口",
+                "formatNames": {
+                    "bundle": "多合一HTML文件（.html）",
+                    "external": "HTML档案（.html）",
+                    "scorm": "SCORM文件（.zip）"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P作者",
+                "title": "H5P内容"
+            }
         }
     },
     "settings": {
@@ -109,17 +147,8 @@
                 "error": "无法打开H5P。"
             },
             "export_as_html": {
-                "success": "H5P成功导出为HTML",
-                "error": "无法将H5P导出为HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "雪记者",
-                "description": "您想在HTML中包含一个记者吗？进一步了解",
-                "yes": "是的",
-                "no": "不",
-                "here": "这里"
+                "success": "H5P成功导出",
+                "error": "无法导出H5P"
             }
         }
     }

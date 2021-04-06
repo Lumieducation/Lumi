@@ -207,7 +207,8 @@ export default function tabReducer(
                               }
                             : tab
                     ),
-                    lockDisplay: false
+                    lockDisplay: false,
+                    showExportDialog: false
                 };
 
             case H5PEDITOR_EXPORT_ERROR:
@@ -315,7 +316,7 @@ export default function tabReducer(
                             name: i18next.t('editor.default_name'),
                             path: undefined,
                             mode: Modes.edit,
-                            opening: true,
+                            opening: false,
                             ...action.payload.tab
                         }
                     ]
