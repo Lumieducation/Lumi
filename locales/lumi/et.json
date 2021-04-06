@@ -16,6 +16,44 @@
             "open": "Avage olemasolev H5P",
             "create": "luua uus H5P",
             "start": "algus"
+        },
+        "exportDialog": {
+            "title": "Ekspordi seaded",
+            "format": {
+                "title": "Vormindus",
+                "bundleLabel": "Kõik ühes HTML-fail",
+                "bundleHint": "Kui lisate palju meediumifaile, võib fail mõne arvuti jaoks liiga suureks kasvada.",
+                "externalLabel": "Üks HTML-fail ja mitu meediumifaili",
+                "externalHint": "Järgmises etapis küsitakse HTML-failile nime. Meediumifailid paigutatakse kaustadesse, mis algavad failiga sama nimega.",
+                "scorm": {
+                    "label": "SCORM pakend",
+                    "masteryScoreLabel": "Meisterlikkuse skoor (%)",
+                    "errorNaN": "Sisestatud väärtus ei ole number",
+                    "errorRange": "Väärtus peab olema vahemikus 0 kuni 100"
+                }
+            },
+            "reporter": {
+                "title": "Reporter",
+                "hint": "Kui lisate reporteri, saavad õpilased faili oma edusammudega salvestada ja teile saata.",
+                "switchLabel": "Kaasa reporter",
+                "learnMoreLink": "Lisateavet selle kohta leiate siit.",
+                "scormHint": "Reporterit ei saa lisada SCORM-pakettidesse."
+            },
+            "cancelButton": "Tühista",
+            "exportButton": "Ekspordi kohe",
+            "filePicker": {
+                "title": "Ekspordi nimega ...",
+                "buttonLabel": "Eksport",
+                "formatNames": {
+                    "bundle": "Kõik ühes HTML-fail (.html)",
+                    "external": "HTML-fail (.html)",
+                    "scorm": "SCORM-fail (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P autor",
+                "title": "H5P sisu"
+            }
         }
     },
     "settings": {
@@ -109,17 +147,8 @@
                 "error": "H5P-d ei saanud avada."
             },
             "export_as_html": {
-                "success": "H5P edukalt HTML-iga eksportitud",
-                "error": "H5P-d ei saanud HTML-vormingus eksportida"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Lumi reporter",
-                "description": "Kas soovite oma HTML-i lisada reporteri? Lisateave selle kohta",
-                "yes": "jah",
-                "no": "ei",
-                "here": "siin"
+                "success": "H5P edukalt eksportitud",
+                "error": "H5P-d ei saanud eksportida"
             }
         }
     }

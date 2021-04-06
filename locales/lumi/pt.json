@@ -16,6 +16,44 @@
             "open": "Abra o H5P existente",
             "create": "criar novo H5P",
             "start": "começar"
+        },
+        "exportDialog": {
+            "title": "Exportar configurações",
+            "format": {
+                "title": "Formato",
+                "bundleLabel": "Arquivo HTML tudo-em-um",
+                "bundleHint": "O arquivo pode ficar muito grande para alguns computadores se você incluir muitos arquivos de mídia.",
+                "externalLabel": "Um arquivo HTML e vários arquivos de mídia",
+                "externalHint": "Você será solicitado a fornecer um nome para o arquivo HTML na próxima etapa. Os arquivos de mídia serão colocados em pastas que começam com o mesmo nome do arquivo.",
+                "scorm": {
+                    "label": "Pacote SCORM",
+                    "masteryScoreLabel": "Pontuação de domínio (em%)",
+                    "errorNaN": "O valor inserido não é um número",
+                    "errorRange": "O valor deve estar entre 0 e 100"
+                }
+            },
+            "reporter": {
+                "title": "Repórter",
+                "hint": "Se você adicionar o repórter, os alunos podem salvar um arquivo com seu progresso e enviá-lo para você.",
+                "switchLabel": "Incluir repórter",
+                "learnMoreLink": "Saiba mais sobre isso aqui.",
+                "scormHint": "O relator não pode ser adicionado a pacotes SCORM."
+            },
+            "cancelButton": "Cancelar",
+            "exportButton": "Exportar agora",
+            "filePicker": {
+                "title": "Exportar como ...",
+                "buttonLabel": "Exportar",
+                "formatNames": {
+                    "bundle": "Arquivo HTML tudo-em-um (.html)",
+                    "external": "Arquivo HTML (.html)",
+                    "scorm": "Arquivo SCORM (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "Autor H5P",
+                "title": "Conteúdo H5P"
+            }
         }
     },
     "settings": {
@@ -109,17 +147,8 @@
                 "error": "Não foi possível abrir o H5P."
             },
             "export_as_html": {
-                "success": "H5P exportado com sucesso como HTML",
-                "error": "Não foi possível exportar H5P como HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Repórter de neve",
-                "description": "Quer incluir um repórter em seu html? Saiba mais sobre isso",
-                "yes": "sim",
-                "no": "não",
-                "here": "aqui"
+                "success": "H5P exportado com sucesso",
+                "error": "Não foi possível exportar H5P"
             }
         }
     }

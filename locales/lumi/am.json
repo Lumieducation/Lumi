@@ -16,7 +16,45 @@
             "create": "አዲስ H5P ይፍጠሩ",
             "start": "ጀምር"
         },
-        "default_name": "አዲስ H5P"
+        "default_name": "አዲስ H5P",
+        "exportDialog": {
+            "title": "ወደ ውጭ ላክ ቅንብሮች",
+            "format": {
+                "title": "ቅርጸት",
+                "bundleLabel": "ሁሉም-በአንድ-ኤችቲኤምኤል ፋይል",
+                "bundleHint": "ብዙ የሚዲያ ፋይሎችን ካካተቱ ፋይሉ ለአንዳንድ ኮምፒተሮች በጣም ትልቅ ሊሆን ይችላል ፡፡",
+                "externalLabel": "አንድ የኤችቲኤምኤል ፋይል እና በርካታ የሚዲያ ፋይሎች",
+                "externalHint": "በሚቀጥለው ደረጃ ለኤችቲኤምኤል ፋይል ስም ይጠየቃሉ። የሚዲያ ፋይሎቹ ከፋይሉ ጋር በተመሳሳይ ስም በሚጀምሩ አቃፊዎች ውስጥ ይቀመጣሉ ፡፡",
+                "scorm": {
+                    "label": "የ SCORM ጥቅል",
+                    "masteryScoreLabel": "ዋና ውጤት (በ% ውስጥ)",
+                    "errorNaN": "የገባ እሴት ቁጥር አይደለም",
+                    "errorRange": "እሴቱ ከ 0 እስከ 100 መሆን አለበት"
+                }
+            },
+            "reporter": {
+                "title": "ዘጋቢ",
+                "hint": "ዘጋቢውን ካከሉ ተማሪዎች በእድገታቸው አንድ ፋይልን ማስቀመጥ እና ለእርስዎ መላክ ይችላሉ ፡፡",
+                "switchLabel": "ዘጋቢን አካትት",
+                "learnMoreLink": "እዚህ ስለዚህ ጉዳይ የበለጠ ይረዱ።",
+                "scormHint": "ዘጋቢው ወደ SCORM ጥቅሎች ሊታከል አይችልም።"
+            },
+            "cancelButton": "ሰርዝ",
+            "exportButton": "አሁን ላክ",
+            "filePicker": {
+                "title": "ላክ እንደ ...",
+                "buttonLabel": "ወደ ውጭ ላክ",
+                "formatNames": {
+                    "bundle": "ሁሉም-በአንድ-ኤችቲኤምኤል ፋይል (.html)",
+                    "external": "የኤችቲኤምኤል ፋይል (.html)",
+                    "scorm": "SCORM ፋይል (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P ደራሲ",
+                "title": "H5P ይዘት"
+            }
+        }
     },
     "settings": {
         "appbar": {
@@ -109,17 +147,8 @@
                 "error": "H5P ን መክፈት አልተቻለም።"
             },
             "export_as_html": {
-                "success": "ኤች 5 ፒ በተሳካ ሁኔታ እንደ ኤችቲኤምኤል ተልኳል",
-                "error": "H5P ን እንደ HTML መላክ አልተቻለም"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "የሎሚ ዘጋቢ",
-                "description": "ሪፖርተርን በኤችቲኤምኤልዎ ውስጥ ማካተት ይፈልጋሉ? ስለዚህ ጉዳይ የበለጠ ይረዱ",
-                "yes": "አዎ",
-                "no": "አይ",
-                "here": "እዚህ"
+                "success": "ኤች 5 ፒ በተሳካ ሁኔታ ወደ ውጭ ተልኳል",
+                "error": "ኤች 5 ፒ ወደ ውጭ መላክ አልተቻለም"
             }
         }
     }
