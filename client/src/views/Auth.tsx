@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 
+import classnames from 'classnames';
 import {
     withStyles,
     makeStyles,
@@ -14,7 +15,9 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import CssBaseline from '@material-ui/core/CssBaseline';
-
+import Grid from '@material-ui/core/Grid';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
 import Container from '@material-ui/core/Container';
 
 import superagent from 'superagent';
@@ -32,6 +35,9 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         bg: {
             background: 'linear-gradient(45deg, #1abc9c 0%, #3498db 100%)'
+        },
+        error: {
+            background: 'linear-gradient(45deg, #e67e22 0%, #e74c3c 100%)'
         },
         paper: {
             marginTop: theme.spacing(8),
@@ -84,6 +90,8 @@ export default function FormDialog() {
     const [email, setEmail] = React.useState('');
     const [enterCode, setEnterCode] = React.useState(false);
     const [code, setCode] = React.useState('');
+    const [error, setError] = React.useState(false);
+    const [message, setMessage] = React.useState('');
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -94,9 +102,30 @@ export default function FormDialog() {
         setEnterCode(false);
     };
 
+    const changeEmail = async (e: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(e.target.value);
+        setError(false);
+        setMessage('');
+    };
+
     const handleSendCode = async () => {
-        await superagent.post(`/api/v1/auth/register`).send({ email });
-        setEnterCode(true);
+        const validateEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+            String(email).toLowerCase()
+        );
+
+        if (!validateEmail) {
+            setMessage('auth.error.no-valid-email');
+            setError(true);
+            return;
+        }
+        try {
+            await superagent.post(`/api/v1/auth/register`).send({ email });
+            setMessage('auth.notification.pending');
+            setEnterCode(true);
+        } catch (error) {
+            setMessage('auth.no-valid-email');
+            setError(true);
+        }
     };
 
     const handleVerification = async () => {
@@ -110,7 +139,7 @@ export default function FormDialog() {
 
         dispatch(
             actions.notifications.notify(
-                t('auth.notification.success'),
+                t('auth.notification.success', { email }),
                 'success'
             )
         );
@@ -123,14 +152,19 @@ export default function FormDialog() {
                 color="primary"
                 onClick={handleClickOpen}
             >
-                Open Auth
+                {t('auth.set_email')}
             </Button>
             <Dialog
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="form-dialog-title"
             >
-                <DialogContent className={classes.bg}>
+                <DialogContent
+                    className={classnames({
+                        [classes.bg]: !error,
+                        [classes.error]: error
+                    })}
+                >
                     <Container component="main" maxWidth="xs">
                         <CssBaseline />
                         <div className={classes.paper}>
@@ -151,8 +185,11 @@ export default function FormDialog() {
                                     disabled={enterCode}
                                     autoFocus={true}
                                     value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    onChange={changeEmail}
                                 />
+                                <Grid item xs={12}>
+                                    <div>{t(message, { email })}</div>
+                                </Grid>
                                 {enterCode ? (
                                     <CssTextField
                                         variant="outlined"
@@ -169,6 +206,7 @@ export default function FormDialog() {
                                         }
                                     />
                                 ) : null}
+
                                 {enterCode ? (
                                     <Button
                                         type="submit"
@@ -198,7 +236,7 @@ export default function FormDialog() {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose} color="primary">
-                        {t('cancel')}
+                        {t('auth.cancel')}
                     </Button>
                 </DialogActions>
             </Dialog>

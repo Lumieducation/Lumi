@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
@@ -11,7 +12,11 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 
 import Button from '@material-ui/core/Button';
 
+import Auth from '../../Auth';
+
 import EmailIcon from '@material-ui/icons/Email';
+
+import { IState } from '../../../state';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -26,6 +31,7 @@ export default function SettingsAccountSettingsList() {
     const classes = useStyles();
 
     const { t } = useTranslation();
+    const settings = useSelector((state: IState) => state.settings);
 
     return (
         <List
@@ -42,15 +48,11 @@ export default function SettingsAccountSettingsList() {
                     id="switch-list-label-privacy-policy"
                     primary={t('settings.account.email.title')}
                     secondary={
-                        /* settings.email || */ t(
-                            'settings.account.email.not-set'
-                        )
+                        settings.email || t('settings.account.email.not-set')
                     }
                 />
                 <ListItemSecondaryAction>
-                    <Button variant="contained">
-                        {t('settings.account.email.change')}
-                    </Button>
+                    <Auth />
                 </ListItemSecondaryAction>
             </ListItem>
         </List>
