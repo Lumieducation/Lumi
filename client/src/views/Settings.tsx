@@ -177,26 +177,27 @@ export default function FullScreenDialog() {
                                 primary={t('settings.menu.updates')}
                             />
                         </ListItem>
-                        {/* <ListItem
+                        <ListItem
                             button
-                            key="h5p-libraries"
-                            onClick={() => setSection('h5p-libraries')}
-                               style={{
-                                backgroundColor:
-                                    section === 'general'
-                                        ? '#EFEFEF'
-                                        : '#FFFFFF',
-                                color: '#3498db'
-                            }}
+                            key="h5p-library-administration"
+                            onClick={() =>
+                                setSection('h5p-library-administration')
+                            }
+                            className={classnames({
+                                [classes.selected]:
+                                    section === 'h5p-library-administration'
+                            })}
                         >
                             <ListItemIcon>
                                 <LibraryBooksIcon />
                             </ListItemIcon>
                             <ListItemText
-                                primary={t('settings.menu.h5p-libraries')}
+                                primary={t(
+                                    'settings.menu.h5p-library-administration'
+                                )}
                             />
                         </ListItem>
-                        */}
+
                         <ListItem
                             button
                             key="account"
@@ -227,7 +228,7 @@ export default function FullScreenDialog() {
                                         case 'updates':
                                             return <UpdateSettings />;
 
-                                        case 'h5p-libraries':
+                                        case 'h5p-library-administration':
                                             return (
                                                 <SettingsLibraryManagement endpointUrl="/api/v1/h5p/libraries" />
                                             );

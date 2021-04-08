@@ -1,60 +1,22 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import i18next from 'i18next';
 
 import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
+
+import LibraryDetails from './LibraryManagementDetails';
 
 import H5PAvatar from '../H5PAvatar';
-// import EmailIcon from '@material-ui/icons/Email';
-
-// const useStyles = makeStyles((theme: Theme) =>
-//     createStyles({
-//         root: {
-//             width: '100%',
-//             backgroundColor: theme.palette.background.paper
-//         }
-//     })
-// );
-
-// export default function SettingsLibraryManagement() {
-//     const classes = useStyles();
-
-//     const { t } = useTranslation();
-
-//     return (
-//         <List
-//             subheader={
-//                 <ListSubheader>{t('settings.libraries.label')}</ListSubheader>
-//             }
-//             className={classes.root}
-//         >
-//             <ListItem>
-//                 <ListItemIcon>
-//                     <EmailIcon />
-//                 </ListItemIcon>
-//                 <ListItemText
-//                     id="switch-list-label-privacy-policy"
-//                     primary={t('libraries will come here')}
-//                     secondary={'...' /*settings.email */}
-//                 />
-//                 <ListItemSecondaryAction>
-//                     <Button variant="contained">{t('action')}</Button>
-//                 </ListItemSecondaryAction>
-//             </ListItem>
-//         </List>
-//     );
-// }
-
-// We reference the build directory (which contains a .d.ts file) to avoid
-// including the whole server part of the library in the build of the client.
-import type { ILibraryAdministrationOverviewItem } from '@lumieducation/h5p-server';
 
 // The .js references are necessary for requireJs to work in the browser.
 // import LibraryDetails from './LibraryDetailsComponent';
@@ -62,7 +24,8 @@ import {
     ILibraryViewModel,
     LibraryAdministrationService
 } from '../../../services/LibraryAdministrationService';
-
+import { actions } from '../../../state';
+import { NotificationTypes } from '../../../state/Notifications/NotificationsTypes';
 /**
  * The components displays a list with the currently installed libraries. It
  * offers basic administration functions like deleting libraries, showing more
@@ -71,8 +34,8 @@ import {
  * It uses Bootstrap 4 to layout the component. You can override or replace the
  * render() method to customize looks.
  */
-export default class LibraryAdmin extends React.Component<
-    { endpointUrl: string },
+export class LibraryAdmin extends React.Component<
+    { endpointUrl: string; notify: typeof actions.notifications.notify },
     {
         isUploading: boolean;
         libraries?: ILibraryViewModel[] | null;
@@ -87,7 +50,10 @@ export default class LibraryAdmin extends React.Component<
     /**
      * @param endpointUrl the URL of the REST library administration endpoint.
      */
-    constructor(props: { endpointUrl: string }) {
+    constructor(props: {
+        endpointUrl: string;
+        notify: typeof actions.notifications.notify;
+    }) {
         super(props);
 
         this.state = {
@@ -126,13 +92,26 @@ export default class LibraryAdmin extends React.Component<
                     .concat(libraries?.slice(libraryIndex + 1))
             });
             this.displayMessage(
-                `Successfully deleted library ${library.title} (${library.majorVersion}.${library.minorVersion}).`
+                i18next.t(
+                    `settings.h5p-library-administration.notifications.delete.success`,
+                    {
+                        title: library.title,
+                        version: `${library.majorVersion}.${library.minorVersion}`
+                    }
+                ),
+                'success'
             );
             await this.updateList();
         } catch {
             this.displayMessage(
-                `Error deleting library ${library.title} (${library.majorVersion}.${library.minorVersion}).`,
-                'danger'
+                i18next.t(
+                    'settings.h5p-library-administration.notifications.delete.error',
+                    {
+                        title: library.title,
+                        version: `${library.majorVersion}.${library.minorVersion}`
+                    }
+                ),
+                'error'
             );
             this.updateLibraryState(newState, { isDeleting: false });
             await this.updateList();
@@ -151,16 +130,27 @@ export default class LibraryAdmin extends React.Component<
             } = await this.librariesService.postPackage(files[0]);
             if (installed + updated === 0) {
                 this.displayMessage(
-                    'Upload successful, but no libraries were installed or updated. The content type is probably already installed on the system.'
+                    i18next.t(
+                        'settings.h5p-library-administration.notifications.upload.success-no-update'
+                    ),
+                    'success'
                 );
                 return;
             }
             this.displayMessage(
-                `Successfully installed ${installed} and updated ${updated} libraries.`,
+                i18next.t(
+                    'settings.h5p-library-administration.notifications.upload.success-with-update',
+                    { installed, updated }
+                ),
                 'success'
             );
         } catch {
-            this.displayMessage(`Error while uploading package.`, 'danger');
+            this.displayMessage(
+                i18next.t(
+                    'settings.h5p-library-administration.notifications.upload.error'
+                ),
+                'error'
+            );
             return;
         } finally {
             this.setState({ isUploading: false });
@@ -168,29 +158,6 @@ export default class LibraryAdmin extends React.Component<
         this.setState({ libraries: null });
         const libraries = await this.librariesService.getLibraries();
         this.setState({ libraries });
-    }
-
-    protected async restrict(
-        library: ILibraryAdministrationOverviewItem
-    ): Promise<void> {
-        try {
-            const newLibrary = await this.librariesService.patchLibrary(
-                library,
-                {
-                    restricted: !library.restricted
-                }
-            );
-            this.updateLibraryState(library, newLibrary);
-            this.displayMessage(
-                `Successfully set restricted property of library ${library.title} (${library.majorVersion}.${library.minorVersion}) to ${newLibrary.restricted}.`,
-                'success'
-            );
-        } catch {
-            this.displayMessage(
-                `Error setting restricted proeprty of library ${library.title} (${library.majorVersion}.${library.minorVersion}).`,
-                'danger'
-            );
-        }
     }
 
     protected async showDetails(library: ILibraryViewModel): Promise<void> {
@@ -206,8 +173,14 @@ export default class LibraryAdmin extends React.Component<
                 });
             } catch {
                 this.displayMessage(
-                    `Error getting detailed information about library ${library.title} (${library.majorVersion}.${library.minorVersion}).`,
-                    'danger'
+                    i18next.t(
+                        'settings.h5p-library-administration.notifications.get.error',
+                        {
+                            title: library.title,
+                            version: `${library.majorVersion}.${library.minorVersion}`
+                        }
+                    ),
+                    'error'
                 );
             }
         }
@@ -218,16 +191,14 @@ export default class LibraryAdmin extends React.Component<
         this.setState({ libraries });
     }
 
-    protected displayMessage(
-        text: string,
-        type: 'primary' | 'success' | 'danger' = 'primary'
-    ): void {
-        this.setState({
-            message: {
-                text,
-                type
-            }
-        });
+    protected displayMessage(text: string, type: NotificationTypes): void {
+        this.props.notify(text, type);
+        // this.setState({
+        //     message: {
+        //         text,
+        //         type
+        //     }
+        // });
     }
 
     protected updateLibraryState(
@@ -269,13 +240,33 @@ export default class LibraryAdmin extends React.Component<
                         >
                             {this.state.isUploading ? (
                                 <div
-                                    className="spinner-border spinner-border-sm m-2 align-middle"
-                                    role="status"
-                                />
+                                    style={{ display: 'flex', padding: '20px' }}
+                                >
+                                    <CircularProgress
+                                        style={{
+                                            margin: 'auto'
+                                            // display: 'block'
+                                        }}
+                                    />
+                                </div>
                             ) : (
                                 <span className="fa fa-upload m-2" />
                             )}{' '}
-                            Upload libraries
+                            <div style={{ display: 'flex', padding: '20px' }}>
+                                <Button
+                                    variant="contained"
+                                    color="secondary"
+                                    component="span"
+                                    style={{
+                                        margin: 'auto'
+                                        // display: 'block'
+                                    }}
+                                >
+                                    {i18next.t(
+                                        'settings.h5p-library-administration.upload_and_install'
+                                    )}
+                                </Button>
+                            </div>
                             <input
                                 disabled={this.state.isUploading}
                                 type="file"
@@ -294,22 +285,21 @@ export default class LibraryAdmin extends React.Component<
                     </div>
                 ) : null}
                 {this.state.libraries === null ? (
-                    <div>
-                        <div
-                            className="spinner-grow spinner-grow-sm text-primary align-middle mr-2"
-                            role="status"
-                        >
-                            <span className="sr-only" />
-                        </div>
-                        <span className="align-middle">
-                            Loading installed libraries from REST endpoint ...
-                        </span>
+                    <div style={{ display: 'flex', padding: '20px' }}>
+                        <CircularProgress
+                            style={{
+                                margin: 'auto'
+                                // display: 'block'
+                            }}
+                        />
                     </div>
                 ) : (
                     <List
                         subheader={
                             <ListSubheader>
-                                {'settings.libraries.label'}
+                                {i18next.t(
+                                    'settings.h5p-library-administration.header'
+                                )}
                             </ListSubheader>
                         }
                         // className={classes.root}
@@ -327,9 +317,32 @@ export default class LibraryAdmin extends React.Component<
                                     secondary={`${info.majorVersion}.${info.minorVersion}.${info.patchVersion}`}
                                 />
                                 <ListItemSecondaryAction>
-                                    <Button variant="contained">
-                                        {'Details'}
-                                    </Button>
+                                    <ButtonGroup
+                                        color="primary"
+                                        aria-label="outlined primary button group"
+                                    >
+                                        {info.canBeDeleted ? (
+                                            <Button
+                                                disabled={info.isDeleting}
+                                                onClick={() =>
+                                                    this.deleteLibrary(info)
+                                                }
+                                            >
+                                                {i18next.t('general.delete')}
+                                            </Button>
+                                        ) : null}
+                                        <LibraryDetails
+                                            details={info.details}
+                                            showDetails={() =>
+                                                this.showDetails(info)
+                                            }
+                                        />
+                                    </ButtonGroup>
+                                    {/* <Button variant="contained">
+                                        {i18next.t(
+                                            'settings.h5p-library-administration.details'
+                                        )}
+                                    </Button> */}
                                 </ListItemSecondaryAction>
                             </ListItem>
                         ))}
@@ -339,3 +352,18 @@ export default class LibraryAdmin extends React.Component<
         );
     }
 }
+
+function mapStateToProps(state: any, ownProps: any): any {
+    return {};
+}
+
+function mapDispatchToProps(dispatch: any): any {
+    return bindActionCreators(
+        {
+            notify: actions.notifications.notify
+        },
+        dispatch
+    );
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LibraryAdmin);
