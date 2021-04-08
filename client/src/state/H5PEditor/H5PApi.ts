@@ -74,3 +74,11 @@ export function updateH5P(
 export function openFiles(): Promise<superagent.Response> {
     return superagent.get('/api/v1/lumi/open_files');
 }
+
+export function getLibraryOverview(
+    ubername: string
+): Promise<superagent.Response> {
+    return superagent
+        .post('/api/v1/h5p/ajax?action=libraries')
+        .send({ libraries: [ubername] });
+}

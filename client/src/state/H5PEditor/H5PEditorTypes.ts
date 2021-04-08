@@ -44,7 +44,6 @@ export interface ITab {
     loadingIndicator: boolean;
     viewDisabled: boolean;
     mainLibrary: string;
-    mainLibraryName: string;
     name: string;
     path?: string;
     mode: Modes;
