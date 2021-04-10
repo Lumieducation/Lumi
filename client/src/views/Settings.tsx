@@ -197,7 +197,6 @@ export default function FullScreenDialog() {
                                 )}
                             />
                         </ListItem>
-
                         <ListItem
                             button
                             key="account"

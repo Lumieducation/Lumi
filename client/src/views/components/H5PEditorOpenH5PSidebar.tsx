@@ -1,28 +1,17 @@
-import React from 'react';
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-
 import { useTranslation } from 'react-i18next';
-
 import Toolbar from '@material-ui/core/Toolbar';
-
 import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
-import LinearProgress from '@material-ui/core/LinearProgress';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
-import Tooltip from '@material-ui/core/Tooltip';
-
 import InsertDriveFileOutlinedIcon from '@material-ui/icons/InsertDriveFileOutlined';
 import AddIcon from '@material-ui/icons/Add';
-import CloseIcon from '@material-ui/icons/Close';
-
-import H5PAvatar from './H5PAvatar';
 
 import { ITab } from '../../state/H5PEditor/H5PEditorTypes';
+import H5PEditorSidebarItem from './H5PEditorSidebarItem';
 
 const drawerWidth = 240;
 
@@ -90,48 +79,14 @@ export default function H5PEditorLeftDrawerView(props: {
                                             : '#FFFFFF'
                                 }}
                             >
-                                <Tooltip
-                                    title={tab.path || ''}
-                                    enterDelay={1000}
-                                >
-                                    <ListItem
-                                        onClick={() => selectTab(index)}
-                                        button={true}
-                                    >
-                                        <ListItemAvatar>
-                                            <H5PAvatar
-                                                mainLibrary={tab.mainLibrary}
-                                            />
-                                        </ListItemAvatar>
-                                        <ListItemText
-                                            primary={tab.name}
-                                            secondary={tab.mainLibrary}
-                                            style={{
-                                                overflow: 'hidden',
-                                                textOverflow: 'ellipsis'
-                                            }}
-                                            primaryTypographyProps={{
-                                                noWrap: true
-                                            }}
-                                        />
-                                        <ListItemSecondaryAction>
-                                            <IconButton
-                                                edge="end"
-                                                onClick={() =>
-                                                    closeTab(index, tab.id)
-                                                }
-                                            >
-                                                <CloseIcon />
-                                            </IconButton>
-                                        </ListItemSecondaryAction>
-                                    </ListItem>
-                                </Tooltip>
-                                {tab.loadingIndicator ? (
-                                    <LinearProgress />
-                                ) : null}
-                                {index !== tabs.length - 1 ? (
+                                <H5PEditorSidebarItem
+                                    tab={tab}
+                                    onSelect={() => selectTab(index)}
+                                    onClose={() => closeTab(index, tab.id)}
+                                />
+                                {index !== tabs.length - 1 && (
                                     <Divider component="li" />
-                                ) : null}
+                                )}
                             </div>
                         ))}
                         {tabs.length === 0 ? (
