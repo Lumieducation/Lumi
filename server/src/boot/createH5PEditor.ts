@@ -1,3 +1,4 @@
+import path from 'path';
 import * as H5P from '@lumieducation/h5p-server';
 
 /**
@@ -20,16 +21,22 @@ export default async function createH5PEditor(
     localLibraryPath: string,
     localContentPath?: string,
     localTemporaryPath?: string,
-    translationCallback?: H5P.ITranslationFunction
+    translationCallback?: H5P.ITranslationFunction,
+    options?: {
+        disableLibraryCache?: boolean;
+    }
 ): Promise<H5P.H5PEditor> {
+    const libStorage = new H5P.fsImplementations.FileLibraryStorage(
+        localLibraryPath
+    );
     // Depending on the environment variables we use different implementations
     // of the storage interfaces.
     const h5pEditor = new H5P.H5PEditor(
         new H5P.fsImplementations.InMemoryStorage(), // this is a general-purpose cache
         config,
-        new H5P.cacheImplementations.CachedLibraryStorage(
-            new H5P.fsImplementations.FileLibraryStorage(localLibraryPath)
-        ),
+        options?.disableLibraryCache
+            ? libStorage
+            : new H5P.cacheImplementations.CachedLibraryStorage(libStorage),
         new H5P.fsImplementations.FileContentStorage(localContentPath),
         new H5P.fsImplementations.DirectoryTemporaryFileStorage(
             localTemporaryPath
