@@ -156,8 +156,12 @@ export class LibraryAdmin extends React.Component<
             this.setState({ isUploading: false });
         }
         this.setState({ libraries: null });
-        const libraries = await this.librariesService.getLibraries();
-        this.setState({ libraries });
+        try {
+            const libraries = await this.librariesService.getLibraries();
+            this.setState({ libraries });
+        } catch (error) {
+            this.props.notify(error.message, 'error');
+        }
     }
 
     protected async showDetails(library: ILibraryViewModel): Promise<void> {
@@ -187,8 +191,12 @@ export class LibraryAdmin extends React.Component<
     }
 
     public async updateList(): Promise<void> {
-        const libraries = await this.librariesService.getLibraries();
-        this.setState({ libraries });
+        try {
+            const libraries = await this.librariesService.getLibraries();
+            this.setState({ libraries });
+        } catch (error) {
+            this.props.notify(error.message, 'error');
+        }
     }
 
     protected displayMessage(text: string, type: NotificationTypes): void {
