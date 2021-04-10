@@ -1,4 +1,19 @@
 {
+    "auth": {
+        "set_email": "Set Email",
+        "email": "Email",
+        "code": "Code",
+        "verify_code": "Verify Code",
+        "verify_email": "Verify Email",
+        "notification": {
+            "success": "{{email}} has been successfully validated",
+            "pending": "A verification code has been send to {{email}}. Please check your emails."
+        },
+        "error": {
+            "no-valid-email": "{{email}} is not a valid email address."
+        },
+        "cancel": "Cancel"
+    },
     "editor": {
         "default_name": "new H5P",
         "tab": { "view": "View", "edit": "Edit" },
