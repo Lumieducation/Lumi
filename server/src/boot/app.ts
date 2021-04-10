@@ -40,7 +40,11 @@ const increaseMaxFileSize = async (config: H5P.IH5PConfig) => {
 
 export default async (
     serverConfig: IServerConfig,
-    browserWindow: electron.BrowserWindow
+    browserWindow: electron.BrowserWindow,
+    options?: {
+        devMode?: boolean;
+        libraryDir?: string;
+    }
 ) => {
     const config = await new H5P.H5PConfig(
         new H5P.fsImplementations.JsonStorage(serverConfig.configFile)
@@ -50,22 +54,17 @@ export default async (
 
     const translationFunction = await boot_i18n(serverConfig);
 
-    // The H5PEditor object is central to all operations of @lumieducation/h5p-server
-    // if you want to user the editor component.
-    //
-    // To create the H5PEditor object, we call a helper function, which
-    // uses implementations of the storage classes with a local filesystem
-    // or a MongoDB/S3 backend, depending on the configuration values set
-    // in the environment variables.
-    // In your implementation, you will probably instantiate H5PEditor by
-    // calling new H5P.H5PEditor(...) or by using the convenience function
-    // H5P.fs(...).
+    // The H5PEditor object is central to all operations of
+    // @lumieducation/h5p-server if you want to user the editor component.
     const h5pEditor: H5P.H5PEditor = await createH5PEditor(
         config,
-        serverConfig.librariesPath, // the path on the local disc where libraries should be stored)
+        options?.libraryDir ?? serverConfig.librariesPath, // the path on the local disc where libraries should be stored)
         serverConfig.workingCachePath, // the path on the local disc where content is stored. Only used / necessary if you use the local filesystem content storage class.
         serverConfig.temporaryStoragePath, // the path on the local disc where temporary files (uploads) should be stored. Only used / necessary if you use the local filesystem temporary storage class.
-        (key, language) => translationFunction(key, { lng: language })
+        (key, language) => translationFunction(key, { lng: language }),
+        {
+            disableLibraryCache: options?.devMode
+        }
     );
 
     h5pEditor.setRenderer((model) => model);

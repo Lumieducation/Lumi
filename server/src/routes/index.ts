@@ -12,6 +12,7 @@ import lumiRoutes from './lumiRoutes';
 import trackingRoutes from './trackingRoutes';
 import Logger from '../helpers/Logger';
 import IServerConfig from '../IServerConfig';
+import authRoutes from './authRoutes';
 import h5pRoutes from './h5pRoutes';
 import analyticRoutes from './analyticRoutes';
 import settingsRoutes from './settingsRoutes';
@@ -32,6 +33,7 @@ export default function (
 
     log.info('setting up routes');
 
+    router.use('/api/v1/auth', authRoutes());
     router.use('/api/v1/track', trackingRoutes(serverConfig));
     router.use('/api/v1/analytics', analyticRoutes(browserWindow));
 

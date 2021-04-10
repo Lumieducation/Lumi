@@ -145,7 +145,11 @@ app.on('ready', async () => {
     log.info('app is ready');
     const server = await httpServerFactory(
         serverConfigFactory(process.env.USERDATA || app.getPath('userData')),
-        mainWindow
+        mainWindow,
+        {
+            devMode: app.commandLine.hasSwitch('dev'),
+            libraryDir: app.commandLine.getSwitchValue('libs')
+        }
     );
     log.info('server booted');
 
