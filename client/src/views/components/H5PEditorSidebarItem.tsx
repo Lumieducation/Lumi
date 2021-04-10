@@ -8,9 +8,9 @@ import {
     Tooltip
 } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
-import React, { useEffect, useState } from 'react';
-import { getLibraryOverview } from '../../state/H5PEditor/H5PApi';
+import { Fragment, useEffect, useState } from 'react';
 
+import { getLibraryOverview } from '../../state/H5PEditor/H5PApi';
 import { ITab } from '../../state/H5PEditor/H5PEditorTypes';
 import H5PAvatar from './H5PAvatar';
 
@@ -23,6 +23,8 @@ export default function H5PEditorSidebarItem({
     onSelect: () => void;
     onClose: () => void;
 }) {
+    // We store the user-readable main library name in an internal state, as we
+    // need to fetch it async from the server through the Ajax API
     const [mainLibrayName, setMainLibraryName] = useState<string>('');
     useEffect(() => {
         if (tab?.mainLibrary && tab?.mainLibrary !== '') {
@@ -45,7 +47,7 @@ export default function H5PEditorSidebarItem({
     }, [tab]);
 
     return (
-        <React.Fragment>
+        <Fragment>
             <Tooltip title={tab.path || ''} enterDelay={1000}>
                 <ListItem onClick={onSelect} button={true}>
                     <ListItemAvatar>
@@ -75,6 +77,6 @@ export default function H5PEditorSidebarItem({
                 </ListItem>
             </Tooltip>
             {tab.loadingIndicator && <LinearProgress />}
-        </React.Fragment>
+        </Fragment>
     );
 }

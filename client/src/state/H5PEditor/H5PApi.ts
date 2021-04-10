@@ -75,10 +75,17 @@ export function openFiles(): Promise<superagent.Response> {
     return superagent.get('/api/v1/lumi/open_files');
 }
 
+/**
+ * Gets the core H5P overview for a single library from the H5P API endpoint.
+ * @param ubernameWithWhitespace The ubername with whitespace as separator (e.g.
+ * H5P.Example 1.0")
+ * @returns a superagent response with the answer in the body. (answer = array
+ * of structures)
+ */
 export function getLibraryOverview(
-    ubername: string
+    ubernameWithWhitespace: string
 ): Promise<superagent.Response> {
     return superagent
         .post('/api/v1/h5p/ajax?action=libraries')
-        .send({ libraries: [ubername] });
+        .send({ libraries: [ubernameWithWhitespace] });
 }
