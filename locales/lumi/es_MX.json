@@ -59,7 +59,45 @@
             "create": "Nuevo archivo H5P",
             "open": "Abrir archivo H5P"
         },
-        "default_name": "nuevo H5P"
+        "default_name": "nuevo H5P",
+        "exportDialog": {
+            "defaults": {
+                "title": "Contenido del H5P",
+                "authorName": "Autor del H5P"
+            },
+            "filePicker": {
+                "formatNames": {
+                    "scorm": "Archivo SCORM (.zip)",
+                    "external": "Archivo HTML (.html)",
+                    "bundle": "Archivo HTML todo en uno (.html)"
+                },
+                "buttonLabel": "Exportar",
+                "title": "Exportar como..."
+            },
+            "exportButton": "Exportar ahora",
+            "cancelButton": "Cancelar",
+            "reporter": {
+                "scormHint": "El reportero no se puede agregar a los paquetes SCORM.",
+                "learnMoreLink": "Obtenga más información al respecto aquí.",
+                "switchLabel": "Incluir reportero",
+                "hint": "Si agrega al reportero, los estudiantes pueden guardar un archivo con su progreso y enviárselo.",
+                "title": "Reportero"
+            },
+            "format": {
+                "scorm": {
+                    "errorRange": "El valor debe estar entre 0 y 100",
+                    "errorNaN": "El valor ingresado no es un número",
+                    "masteryScoreLabel": "Puntuación de dominio (en%)",
+                    "label": "Paquete SCORM"
+                },
+                "externalHint": "Se le pedirá un nombre para el archivo HTML en el siguiente paso. Los archivos multimedia se colocarán en carpetas que comienzan con el mismo nombre que el archivo.",
+                "externalLabel": "Un archivo HTML y varios archivos multimedia",
+                "bundleHint": "El archivo puede crecer demasiado para algunas computadoras si incluye muchos archivos multimedia.",
+                "bundleLabel": "Archivo HTML todo en uno",
+                "title": "Formato"
+            },
+            "title": "Exportar configuraciones"
+        }
     },
     "notifications": {
         "export_as_html": {
@@ -73,8 +111,8 @@
         },
         "h5peditor": {
             "export_as_html": {
-                "error": "No se pudo exportar H5P como HTML",
-                "success": "H5P exportado correctamente como HTML"
+                "error": "No se pudo exportar H5P",
+                "success": "H5P exportado con éxito"
             },
             "open": {
                 "error": "No se pudo abrir H5P."
@@ -111,7 +149,7 @@
         "startPage": {
             "learn_more": "aprender más",
             "start": "Comenzar",
-            "open": "Importar archivos .lumi",
+            "open": "Elegir carpeta con archivos .lumi",
             "welcomeMessage": "La herramienta analítica de Lumi le permite importar reportes de usuario y los visualiza por usted",
             "title": "Analítica de Lumi"
         }
