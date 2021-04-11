@@ -61,7 +61,27 @@
             "label": "Seaded",
             "save": "Salvesta"
         },
-        "enable": "Luba"
+        "enable": "Luba",
+        "menu": {
+            "general": "Kindral",
+            "updates": "Uuendused",
+            "h5p-libraries": "H5P raamatukogud",
+            "account": "Konto"
+        },
+        "general": {
+            "header": "Kindral"
+        },
+        "updates": {
+            "header": "Uuendused"
+        },
+        "account": {
+            "label": "Konto",
+            "email": {
+                "title": "E-post",
+                "change": "Muuda meiliaadressi",
+                "not-set": "E-posti pole määratud"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "Lülitage arendaja tööriistad sisse ja välja",
             "follow_us_on_twitter": "Jälgi meid Twitteris",
             "about": "Umbes"
+        },
+        "mac": {
+            "services": "Teenused",
+            "hide": "Peida Lumi",
+            "hideothers": "Peida teised",
+            "unhide": "Näita kõike"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "H5P-d ei saanud eksportida"
             }
         }
+    },
+    "auth": {
+        "set_email": "Määra meil",
+        "email": "E-post",
+        "code": "Kood",
+        "verify_code": "Kontrollige koodi",
+        "verify_email": "Kontrollige e-posti aadressi",
+        "notification": {
+            "success": "{{email}} on edukalt kinnitatud",
+            "pending": "Kinnituskood on saadetud aadressile {{email}} . Palun kontrollige oma e-kirju."
+        },
+        "error": {
+            "no-valid-email": "{{email}} pole kehtiv e-posti aadress."
+        },
+        "cancel": "Tühista"
     }
 }

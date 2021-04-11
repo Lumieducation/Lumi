@@ -61,7 +61,27 @@
             "label": "Einstellungen",
             "save": "Speichern"
         },
-        "enable": "Aktivieren"
+        "enable": "Aktivieren",
+        "menu": {
+            "general": "Allgemeines",
+            "updates": "Updates",
+            "h5p-libraries": "H5P-Bibliotheken",
+            "account": "Konto"
+        },
+        "general": {
+            "header": "Allgemeines"
+        },
+        "updates": {
+            "header": "Updates"
+        },
+        "account": {
+            "label": "Konto",
+            "email": {
+                "title": "Email",
+                "change": "Änder deine E-Mail-Adresse",
+                "not-set": "E-Mail ist nicht festgelegt"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "Entwickler-Tools an-/ausschalten",
             "follow_us_on_twitter": "Folge uns auf Twitter",
             "about": "Über Lumi"
+        },
+        "mac": {
+            "services": "Dienste",
+            "hide": "Lumi ausblenden",
+            "hideothers": "Andere ausblenden",
+            "unhide": "Alle einblenden"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "H5P konnte nicht exportiert werden"
             }
         }
+    },
+    "auth": {
+        "set_email": "E-Mail einstellen",
+        "email": "Email",
+        "code": "Code",
+        "verify_code": "Code überprüfen",
+        "verify_email": "E-Mail bestätigen",
+        "notification": {
+            "success": "{{email}} wurde erfolgreich validiert",
+            "pending": "Ein Bestätigungscode wurde an {{email}} versendet. Bitte überprüfe deine E-Mails."
+        },
+        "error": {
+            "no-valid-email": "{{email}} ist keine gültige E-Mail-Adresse."
+        },
+        "cancel": "Abbrechen"
     }
 }

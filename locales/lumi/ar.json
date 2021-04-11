@@ -61,7 +61,27 @@
             "label": "إعدادات",
             "save": "يحفظ"
         },
-        "enable": "يمكن"
+        "enable": "يمكن",
+        "menu": {
+            "general": "جنرال لواء",
+            "updates": "التحديثات",
+            "h5p-libraries": "مكتبات H5P",
+            "account": "حساب"
+        },
+        "general": {
+            "header": "جنرال لواء"
+        },
+        "updates": {
+            "header": "التحديثات"
+        },
+        "account": {
+            "label": "حساب",
+            "email": {
+                "title": "بريد إلكتروني",
+                "change": "تغيير البريد الالكتروني",
+                "not-set": "لم يتم تعيين البريد الإلكتروني"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,7 +149,13 @@
             "follow_us_on_twitter": "تابعنا على تويتر",
             "about": "حول"
         },
-        "quit": "استقال"
+        "quit": "استقال",
+        "mac": {
+            "services": "خدمات",
+            "hide": "إخفاء لومي",
+            "hideothers": "إخفاء الآخرين",
+            "unhide": "عرض الكل"
+        }
     },
     "notifications": {
         "analytics": {
@@ -151,5 +177,20 @@
                 "error": "تعذر تصدير H5P"
             }
         }
+    },
+    "auth": {
+        "set_email": "تعيين البريد الإلكتروني",
+        "email": "بريد إلكتروني",
+        "code": "شفرة",
+        "verify_code": "التحقق من كود",
+        "verify_email": "التحقق من البريد الإلكتروني",
+        "notification": {
+            "success": "تم التحقق من {{email}}",
+            "pending": "تم إرسال رمز التحقق إلى {{email}} . يرجى التحقق من رسائل البريد الإلكتروني الخاصة بك."
+        },
+        "error": {
+            "no-valid-email": "{{email}} ليس عنوان بريد إلكتروني صالحًا."
+        },
+        "cancel": "يلغي"
     }
 }

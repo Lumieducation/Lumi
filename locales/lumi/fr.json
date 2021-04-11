@@ -61,7 +61,27 @@
             "label": "Réglages",
             "save": "Sauvegarder"
         },
-        "enable": "Permettre"
+        "enable": "Permettre",
+        "menu": {
+            "general": "Général",
+            "updates": "Mises à jour",
+            "h5p-libraries": "Bibliothèques H5P",
+            "account": "Compte"
+        },
+        "general": {
+            "header": "Général"
+        },
+        "updates": {
+            "header": "Mises à jour"
+        },
+        "account": {
+            "label": "Compte",
+            "email": {
+                "title": "E-mail",
+                "change": "Changer l'e-mail",
+                "not-set": "L'e-mail n'est pas défini"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "Toggle Outils de développement",
             "follow_us_on_twitter": "Suivez-nous sur Twitter",
             "about": "À propos de"
+        },
+        "mac": {
+            "services": "Prestations de service",
+            "hide": "Masquer Lumi",
+            "hideothers": "Masquer les autres",
+            "unhide": "Afficher tout"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "Impossible d'exporter H5P"
             }
         }
+    },
+    "auth": {
+        "set_email": "Définir l'e-mail",
+        "email": "E-mail",
+        "code": "Code",
+        "verify_code": "Vérifier le code",
+        "verify_email": "Vérifier les courriels",
+        "notification": {
+            "success": "{{email}} a été validé avec succès",
+            "pending": "Un code de vérification a été envoyé à {{email}} . Veuillez vérifier vos e-mails."
+        },
+        "error": {
+            "no-valid-email": "{{email}} n'est pas une adresse e-mail valide."
+        },
+        "cancel": "Annuler"
     }
 }

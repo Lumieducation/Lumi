@@ -65,7 +65,8 @@
         "uninstall": "rm -rf build/ && rm -rf node_modules/",
         "postinstall": "sh scripts/install.sh 1.24 && sh scripts/install.sh 1.24.1",
         "prepare": "husky install",
-        "ci:all": "npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)"
+        "ci:all": "npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)",
+        "localize": "json-autotranslate -d --directory-structure ngx-translate -c google_translate.json -s google-translate --decode-escapes -t key-based -i locales/lumi -m i18next && prettier --write \"locales/hub/*.json\""
     },
     "publishConfig": {
         "access": "restricted"
@@ -84,6 +85,7 @@
         "electron-notarize": "1.0.0",
         "husky": "6.0.0",
         "jest": "26.6.0",
+        "json-autotranslate": "^1.8.0",
         "prettier": "2.2.1",
         "semantic-release": "17.4.2",
         "socket.io-client": "4.0.1",

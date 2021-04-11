@@ -61,7 +61,27 @@
             "label": "Ρυθμίσεις",
             "save": "Αποθηκεύσετε"
         },
-        "enable": "επιτρέπω"
+        "enable": "επιτρέπω",
+        "menu": {
+            "general": "Γενικός",
+            "updates": "Ενημερώσεις",
+            "h5p-libraries": "Βιβλιοθήκες H5P",
+            "account": "λογαριασμός"
+        },
+        "general": {
+            "header": "Γενικός"
+        },
+        "updates": {
+            "header": "Ενημερώσεις"
+        },
+        "account": {
+            "label": "λογαριασμός",
+            "email": {
+                "title": "ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ",
+                "change": "Αλλαγή email",
+                "not-set": "Το email δεν έχει οριστεί"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "Εναλλαγή εργαλείων προγραμματιστή",
             "follow_us_on_twitter": "Ακολουθήστε μας στο Twitter",
             "about": "Σχετικά με"
+        },
+        "mac": {
+            "services": "Υπηρεσίες",
+            "hide": "Απόκρυψη Lumi",
+            "hideothers": "Απόκρυψη άλλων",
+            "unhide": "Προβολή όλων"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "Δεν ήταν δυνατή η εξαγωγή H5P"
             }
         }
+    },
+    "auth": {
+        "set_email": "Ορισμός email",
+        "email": "ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ",
+        "code": "Κώδικας",
+        "verify_code": "Επαλήθευση κωδικού",
+        "verify_email": "Επαλήθευση email",
+        "notification": {
+            "success": "{{email}} επικυρώθηκε με επιτυχία",
+            "pending": "Ένας κωδικός επαλήθευσης έχει σταλεί στο {{email}} . Ελέγξτε τα email σας."
+        },
+        "error": {
+            "no-valid-email": "{{email}} δεν είναι έγκυρη διεύθυνση email."
+        },
+        "cancel": "Ματαίωση"
     }
 }

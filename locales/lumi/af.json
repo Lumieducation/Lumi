@@ -61,7 +61,27 @@
             "label": "Instellings",
             "save": "Stoor"
         },
-        "enable": "Aktiveer"
+        "enable": "Aktiveer",
+        "menu": {
+            "general": "Generaal",
+            "updates": "Opdaterings",
+            "h5p-libraries": "H5P Biblioteke",
+            "account": "Rekening"
+        },
+        "general": {
+            "header": "Generaal"
+        },
+        "updates": {
+            "header": "Opdaterings"
+        },
+        "account": {
+            "label": "Rekening",
+            "email": {
+                "title": "E-pos",
+                "change": "Verander e-pos",
+                "not-set": "E-pos is nie gestel nie"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,7 +149,13 @@
             "follow_us_on_twitter": "Volg ons op Twitter",
             "about": "Oor"
         },
-        "quit": "Verlaat"
+        "quit": "Verlaat",
+        "mac": {
+            "services": "Dienste",
+            "hide": "Steek Lumi weg",
+            "hideothers": "Steek ander weg",
+            "unhide": "Wys alles"
+        }
     },
     "notifications": {
         "h5peditor": {
@@ -151,5 +177,20 @@
                 "error": "Geen geldige lêer gevind nie"
             }
         }
+    },
+    "auth": {
+        "set_email": "Stel e-pos",
+        "email": "E-pos",
+        "code": "Kode",
+        "verify_code": "Verifieer die kode",
+        "verify_email": "verifieer e-pos",
+        "notification": {
+            "success": "{{email}} is suksesvol bekragtig",
+            "pending": "'N Verifikasiekode is na {{email}} . Gaan u e-pos na."
+        },
+        "error": {
+            "no-valid-email": "{{email}} is nie 'n geldige e-posadres nie."
+        },
+        "cancel": "Kanselleer"
     }
 }

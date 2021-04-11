@@ -61,7 +61,27 @@
             "label": "ቅንብሮች",
             "save": "አስቀምጥ"
         },
-        "enable": "አንቃ"
+        "enable": "አንቃ",
+        "menu": {
+            "general": "ጄኔራል",
+            "updates": "ዝመናዎች",
+            "h5p-libraries": "H5P ቤተመፃህፍት",
+            "account": "መለያ"
+        },
+        "general": {
+            "header": "ጄኔራል"
+        },
+        "updates": {
+            "header": "ዝመናዎች"
+        },
+        "account": {
+            "label": "መለያ",
+            "email": {
+                "title": "ኢሜል",
+                "change": "ኢሜል ይቀይሩ",
+                "not-set": "ኢሜል አልተዘጋጀም"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,7 +149,13 @@
             "follow_us_on_twitter": "በትዊተር ላይ ይከተሉን",
             "about": "ስለ"
         },
-        "quit": "አቁም"
+        "quit": "አቁም",
+        "mac": {
+            "services": "አገልግሎቶች",
+            "hide": "Lumi ን ደብቅ",
+            "hideothers": "ሌሎችን ደብቅ",
+            "unhide": "ሁሉንም አሳይ"
+        }
     },
     "notifications": {
         "analytics": {
@@ -151,5 +177,20 @@
                 "error": "ኤች 5 ፒ ወደ ውጭ መላክ አልተቻለም"
             }
         }
+    },
+    "auth": {
+        "set_email": "ኢሜል ያዘጋጁ",
+        "email": "ኢሜል",
+        "code": "ኮድ",
+        "verify_code": "ኮድ ያረጋግጡ",
+        "verify_email": "ኢሜል ያረጋግጡ",
+        "notification": {
+            "success": "{{email}} በተሳካ ሁኔታ ተረጋግጧል",
+            "pending": "የማረጋገጫ ኮድ ወደ {{email}} ፡ እባክዎን ኢሜሎችዎን ይፈትሹ ፡፡"
+        },
+        "error": {
+            "no-valid-email": "{{email}} ትክክለኛ የኢሜል አድራሻ አይደለም ፡"
+        },
+        "cancel": "ሰርዝ"
     }
 }

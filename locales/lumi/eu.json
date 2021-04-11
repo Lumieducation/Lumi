@@ -61,7 +61,27 @@
             "label": "Ezarpenak",
             "save": "Gorde"
         },
-        "enable": "Gaitu"
+        "enable": "Gaitu",
+        "menu": {
+            "general": "Orokorra",
+            "updates": "Eguneratzeak",
+            "h5p-libraries": "H5P liburutegiak",
+            "account": "Kontua"
+        },
+        "general": {
+            "header": "Orokorra"
+        },
+        "updates": {
+            "header": "Eguneratzeak"
+        },
+        "account": {
+            "label": "Kontua",
+            "email": {
+                "title": "Posta elektronikoa",
+                "change": "Aldatu helbide elektronikoa",
+                "not-set": "Mezu elektronikoa ez dago ezarrita"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "Txandatu Garatzaile Tresnak",
             "follow_us_on_twitter": "Jarrai iezaguzu Twitterren",
             "about": "Buruz"
+        },
+        "mac": {
+            "services": "Zerbitzuak",
+            "hide": "Ezkutatu Lumi",
+            "hideothers": "Ezkutatu Besteak",
+            "unhide": "Erakutsi dena"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "Ezin izan da H5P esportatu"
             }
         }
+    },
+    "auth": {
+        "set_email": "Ezarri posta elektronikoa",
+        "email": "Posta elektronikoa",
+        "code": "Kodea",
+        "verify_code": "Egiaztatu kodea",
+        "verify_email": "Egiaztatu helbide elektronikoa",
+        "notification": {
+            "success": "{{email}} behar bezala balioztatu da",
+            "pending": "Egiaztapen kode bat izan da bidali {{email}} . Mesedez, egiaztatu zure mezu elektronikoak."
+        },
+        "error": {
+            "no-valid-email": "{{email}} ez da baliozko helbide elektronikoa."
+        },
+        "cancel": "Utzi"
     }
 }

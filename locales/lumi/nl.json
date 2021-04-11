@@ -61,7 +61,27 @@
             "label": "Instellingen",
             "save": "Opslaan"
         },
-        "enable": "Inschakelen"
+        "enable": "Inschakelen",
+        "menu": {
+            "general": "Algemeen",
+            "updates": "Updates",
+            "h5p-libraries": "H5P-bibliotheken",
+            "account": "Account"
+        },
+        "general": {
+            "header": "Algemeen"
+        },
+        "updates": {
+            "header": "Updates"
+        },
+        "account": {
+            "label": "Account",
+            "email": {
+                "title": "E-mail",
+                "change": "E-mailadres wijzigen",
+                "not-set": "E-mail is niet ingesteld"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "Schakel Developer Tools in of uit",
             "follow_us_on_twitter": "Volg ons op Twitter",
             "about": "Over"
+        },
+        "mac": {
+            "services": "Diensten",
+            "hide": "Verberg Lumi",
+            "hideothers": "Verberg anderen",
+            "unhide": "Toon alles"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "Kan H5P niet exporteren"
             }
         }
+    },
+    "auth": {
+        "set_email": "E-mail instellen",
+        "email": "E-mail",
+        "code": "Code",
+        "verify_code": "Code verifiëren",
+        "verify_email": "Verifieer Email",
+        "notification": {
+            "success": "{{email}} is succesvol gevalideerd",
+            "pending": "Er is een verificatiecode naar {{email}} gestuurd. Controleer uw e-mails."
+        },
+        "error": {
+            "no-valid-email": "{{email}} is geen geldig e-mailadres."
+        },
+        "cancel": "annuleren"
     }
 }

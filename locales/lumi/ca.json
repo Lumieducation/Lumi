@@ -61,7 +61,27 @@
             "label": "Configuració",
             "save": "Desa"
         },
-        "enable": "Activa"
+        "enable": "Activa",
+        "menu": {
+            "general": "General",
+            "updates": "Actualitzacions",
+            "h5p-libraries": "Biblioteques H5P",
+            "account": "Compte"
+        },
+        "general": {
+            "header": "General"
+        },
+        "updates": {
+            "header": "Actualitzacions"
+        },
+        "account": {
+            "label": "Compte",
+            "email": {
+                "title": "Correu electrònic",
+                "change": "Canviar e-mail",
+                "not-set": "El correu electrònic no està definit"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "Commuta les eines per a desenvolupadors",
             "follow_us_on_twitter": "Segueix-nos a Twitter",
             "about": "Sobre"
+        },
+        "mac": {
+            "services": "Serveis",
+            "hide": "Amaga Lumi",
+            "hideothers": "Amaga els altres",
+            "unhide": "Mostrar tots"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "No s'ha pogut exportar H5P"
             }
         }
+    },
+    "auth": {
+        "set_email": "Estableix el correu electrònic",
+        "email": "Correu electrònic",
+        "code": "Codi",
+        "verify_code": "Verifiqueu el codi",
+        "verify_email": "verificar Correu",
+        "notification": {
+            "success": "{{email}} s'ha validat correctament",
+            "pending": "S'ha enviat un codi de verificació a {{email}} . Consulteu els vostres correus electrònics."
+        },
+        "error": {
+            "no-valid-email": "{{email}} no és una adreça electrònica vàlida."
+        },
+        "cancel": "Cancel · lar"
     }
 }
