@@ -2,10 +2,12 @@ import electron from 'electron';
 import SocketIO from 'socket.io';
 import i18next from 'i18next';
 
+import macMenu from './macMenu';
 import helpMenu from './helpMenu';
 import editMenu from './editMenu';
 
 export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
+    ...macMenu(),
     {
         label: i18next.t('lumi:menu.file.label'),
         submenu: [

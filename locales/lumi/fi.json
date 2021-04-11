@@ -61,7 +61,27 @@
             "label": "asetukset",
             "save": "Tallentaa"
         },
-        "enable": "ota käyttöön"
+        "enable": "ota käyttöön",
+        "menu": {
+            "general": "Kenraali",
+            "updates": "Päivitykset",
+            "h5p-libraries": "H5P-kirjastot",
+            "account": "Tili"
+        },
+        "general": {
+            "header": "Kenraali"
+        },
+        "updates": {
+            "header": "Päivitykset"
+        },
+        "account": {
+            "label": "Tili",
+            "email": {
+                "title": "Sähköposti",
+                "change": "Vaihda sähköposti",
+                "not-set": "Sähköpostiosoitetta ei ole asetettu"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "Toggle Kehittäjän työkalut",
             "follow_us_on_twitter": "Seuraa meitä Twitterissä",
             "about": "Noin"
+        },
+        "mac": {
+            "services": "Palvelut",
+            "hide": "Piilota Lumi",
+            "hideothers": "Piilota muut",
+            "unhide": "Näytä kaikki"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "H5P: n vienti epäonnistui"
             }
         }
+    },
+    "auth": {
+        "set_email": "Aseta sähköposti",
+        "email": "Sähköposti",
+        "code": "Koodi",
+        "verify_code": "Varmistus koodi",
+        "verify_email": "vahvista sähköposti",
+        "notification": {
+            "success": "{{email}} on vahvistettu",
+            "pending": "Vahvistuskoodi on lähetetty numeroon {{email}} . Tarkista sähköpostisi."
+        },
+        "error": {
+            "no-valid-email": "{{email}} ei ole kelvollinen sähköpostiosoite."
+        },
+        "cancel": "Peruuttaa"
     }
 }

@@ -61,7 +61,27 @@
             "label": "Nastavení",
             "save": "Uložit"
         },
-        "enable": "Umožnit"
+        "enable": "Umožnit",
+        "menu": {
+            "general": "Všeobecné",
+            "updates": "Aktualizace",
+            "h5p-libraries": "H5P knihovny",
+            "account": "Účet"
+        },
+        "general": {
+            "header": "Všeobecné"
+        },
+        "updates": {
+            "header": "Aktualizace"
+        },
+        "account": {
+            "label": "Účet",
+            "email": {
+                "title": "E-mailem",
+                "change": "Změnit e-mail",
+                "not-set": "E-mail není nastaven"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "Přepnout vývojářské nástroje",
             "follow_us_on_twitter": "Sleduj nás na Twitteru",
             "about": "O"
+        },
+        "mac": {
+            "services": "Služby",
+            "hide": "Skrýt Lumi",
+            "hideothers": "Skrýt ostatní",
+            "unhide": "Ukázat vše"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "Nelze exportovat H5P"
             }
         }
+    },
+    "auth": {
+        "set_email": "Nastavit e-mail",
+        "email": "E-mailem",
+        "code": "Kód",
+        "verify_code": "Ověřit kód",
+        "verify_email": "ověřovací email",
+        "notification": {
+            "success": "{{email}} byl úspěšně ověřen",
+            "pending": "Ověřovací kód byl odeslán na {{email}} . Zkontrolujte prosím své e-maily."
+        },
+        "error": {
+            "no-valid-email": "{{email}} není platná e-mailová adresa."
+        },
+        "cancel": "zrušení"
     }
 }

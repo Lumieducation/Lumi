@@ -61,7 +61,27 @@
             "label": "inställningar",
             "save": "Spara"
         },
-        "enable": "Gör det möjligt"
+        "enable": "Gör det möjligt",
+        "menu": {
+            "general": "Allmän",
+            "updates": "Uppdateringar",
+            "h5p-libraries": "H5P-bibliotek",
+            "account": "konto"
+        },
+        "general": {
+            "header": "Allmän"
+        },
+        "updates": {
+            "header": "Uppdateringar"
+        },
+        "account": {
+            "label": "konto",
+            "email": {
+                "title": "E-post",
+                "change": "Byta e-mail",
+                "not-set": "E-postadressen har inte ställts in"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "Växla utvecklarverktyg",
             "follow_us_on_twitter": "Följ oss på Twitter",
             "about": "Handla om"
+        },
+        "mac": {
+            "services": "Tjänster",
+            "hide": "Dölj Lumi",
+            "hideothers": "Dölj andra",
+            "unhide": "Visa allt"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "Det gick inte att exportera H5P"
             }
         }
+    },
+    "auth": {
+        "set_email": "Ställ in e-post",
+        "email": "E-post",
+        "code": "Koda",
+        "verify_code": "Verifiera kod",
+        "verify_email": "Verifiera Email",
+        "notification": {
+            "success": "{{email}} har validerats",
+            "pending": "En verifieringskod har skickats till {{email}} . Kontrollera dina e-postmeddelanden."
+        },
+        "error": {
+            "no-valid-email": "{{email}} är inte en giltig e-postadress."
+        },
+        "cancel": "Avbryt"
     }
 }

@@ -61,7 +61,27 @@
             "label": "ការកំណត់",
             "save": "រក្សាទុក"
         },
-        "enable": "បើកដំណើរការ"
+        "enable": "បើកដំណើរការ",
+        "menu": {
+            "general": "ទូទៅ",
+            "updates": "បច្ចុប្បន្នភាព",
+            "h5p-libraries": "បណ្ណាល័យ H5P",
+            "account": "គណនី"
+        },
+        "general": {
+            "header": "ទូទៅ"
+        },
+        "updates": {
+            "header": "បច្ចុប្បន្នភាព"
+        },
+        "account": {
+            "label": "គណនី",
+            "email": {
+                "title": "អ៊ីមែល",
+                "change": "ផ្លាស់ប្តូរអ៊ីមែល",
+                "not-set": "អ៊ីមែលមិនត្រូវបានកំណត់ទេ"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "បិទបើកឧបករណ៍អ្នកអភិវឌ្ឍន៍",
             "follow_us_on_twitter": "បន្ទាប់សូមអនុវត្តតាមពួកយើងនៅលើ Twitter",
             "about": "អំពី"
+        },
+        "mac": {
+            "services": "សេវាកម្ម",
+            "hide": "លាក់ Lumi",
+            "hideothers": "លាក់អ្នកដទៃ",
+            "unhide": "បង្ហាញ​ទាំងអស់"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "មិនអាចនាំចេញ H5P បានទេ"
             }
         }
+    },
+    "auth": {
+        "set_email": "កំណត់អ៊ីមែល",
+        "email": "អ៊ីមែល",
+        "code": "លេខកូដ",
+        "verify_code": "ផ្ទៀងផ្ទាត់លេខកូដ",
+        "verify_email": "បញ្ជាក់អ៊ីមែល",
+        "notification": {
+            "success": "{{email}} ត្រូវបានធ្វើឱ្យមានសុពលភាព",
+            "pending": "លេខកូដផ្ទៀងផ្ទាត់ត្រូវបានផ្ញើទៅ {{email}} ។ សូមពិនិត្យអ៊ីមែលរបស់អ្នក។"
+        },
+        "error": {
+            "no-valid-email": "{{email}} មិនមែនជាអាសយដ្ឋានអ៊ីមែលត្រឹមត្រូវទេ។"
+        },
+        "cancel": "បោះបង់"
     }
 }

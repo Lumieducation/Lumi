@@ -61,7 +61,27 @@
             "label": "Nastavitve",
             "save": "Shrani"
         },
-        "enable": "Omogoči"
+        "enable": "Omogoči",
+        "menu": {
+            "general": "Splošno",
+            "updates": "Posodobitve",
+            "h5p-libraries": "Knjižnice H5P",
+            "account": "račun"
+        },
+        "general": {
+            "header": "Splošno"
+        },
+        "updates": {
+            "header": "Posodobitve"
+        },
+        "account": {
+            "label": "račun",
+            "email": {
+                "title": "E-naslov",
+                "change": "Spremeni e-pošto",
+                "not-set": "E-pošta ni nastavljena"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "Preklopi orodja za razvijalce",
             "follow_us_on_twitter": "Spremljajte nas na Twitterju",
             "about": "O tem"
+        },
+        "mac": {
+            "services": "Storitve",
+            "hide": "Skrij Lumi",
+            "hideothers": "Skrij druge",
+            "unhide": "Pokaži vse"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "H5P ni bilo mogoče izvoziti"
             }
         }
+    },
+    "auth": {
+        "set_email": "Nastavite e-pošto",
+        "email": "E-naslov",
+        "code": "Koda",
+        "verify_code": "Preveri kodo",
+        "verify_email": "preveri email",
+        "notification": {
+            "success": "{{email}} je bil uspešno potrjen",
+            "pending": "Koda za preverjanje je bila poslana na {{email}} . Prosimo, preverite svojo e-pošto."
+        },
+        "error": {
+            "no-valid-email": "{{email}} ni veljaven e-poštni naslov."
+        },
+        "cancel": "Prekliči"
     }
 }
