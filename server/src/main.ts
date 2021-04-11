@@ -148,7 +148,10 @@ app.on('ready', async () => {
         mainWindow,
         {
             devMode: app.commandLine.hasSwitch('dev'),
-            libraryDir: app.commandLine.getSwitchValue('libs')
+            libraryDir:
+                app.commandLine.getSwitchValue('libs') !== ''
+                    ? app.commandLine.getSwitchValue('libs')
+                    : undefined
         }
     );
     log.info('server booted');
