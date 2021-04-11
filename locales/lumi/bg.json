@@ -61,7 +61,27 @@
             "label": "Настройки",
             "save": "Запазете"
         },
-        "enable": "Активиране"
+        "enable": "Активиране",
+        "menu": {
+            "general": "Общ",
+            "updates": "Актуализации",
+            "h5p-libraries": "H5P библиотеки",
+            "account": "Сметка"
+        },
+        "general": {
+            "header": "Общ"
+        },
+        "updates": {
+            "header": "Актуализации"
+        },
+        "account": {
+            "label": "Сметка",
+            "email": {
+                "title": "електронна поща",
+                "change": "Смяна на имейл",
+                "not-set": "Имейлът не е зададен"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "Превключете Инструменти за програмисти",
             "follow_us_on_twitter": "Следвайте ни в Twitter",
             "about": "относно"
+        },
+        "mac": {
+            "services": "Услуги",
+            "hide": "Скрий Луми",
+            "hideothers": "Скрий другите",
+            "unhide": "Покажи всичко"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "H5P не можа да се експортира"
             }
         }
+    },
+    "auth": {
+        "set_email": "Задайте имейл",
+        "email": "електронна поща",
+        "code": "Код",
+        "verify_code": "Проверете кода",
+        "verify_email": "Потвърди Имейл",
+        "notification": {
+            "success": "{{email}} е успешно потвърден",
+            "pending": "Код за потвърждение е изпратен на {{email}} . Моля, проверете имейлите си."
+        },
+        "error": {
+            "no-valid-email": "{{email}} не е валиден имейл адрес."
+        },
+        "cancel": "Отказ"
     }
 }

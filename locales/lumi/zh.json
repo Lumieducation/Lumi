@@ -61,7 +61,27 @@
             "label": "设定值",
             "save": "救"
         },
-        "enable": "使能够"
+        "enable": "使能够",
+        "menu": {
+            "general": "一般的",
+            "updates": "更新",
+            "h5p-libraries": "H5P库",
+            "account": "帐户"
+        },
+        "general": {
+            "header": "一般的"
+        },
+        "updates": {
+            "header": "更新"
+        },
+        "account": {
+            "label": "帐户",
+            "email": {
+                "title": "电子邮件",
+                "change": "更改电子邮件",
+                "not-set": "电子邮件未设置"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "切换开发人员工具",
             "follow_us_on_twitter": "在推特上关注我们",
             "about": "关于"
+        },
+        "mac": {
+            "services": "服务",
+            "hide": "隐藏卢米",
+            "hideothers": "隐藏其他",
+            "unhide": "显示所有"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "无法导出H5P"
             }
         }
+    },
+    "auth": {
+        "set_email": "设定电子邮件",
+        "email": "电子邮件",
+        "code": "代码",
+        "verify_code": "验证码",
+        "verify_email": "验证邮件",
+        "notification": {
+            "success": "{{email}}已成功验证",
+            "pending": "验证码已发送至{{email}} 。请检查您的电子邮件。"
+        },
+        "error": {
+            "no-valid-email": "{{email}}不是有效的电子邮件地址。"
+        },
+        "cancel": "取消"
     }
 }

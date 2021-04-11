@@ -61,7 +61,27 @@
             "label": "Ayarlar",
             "save": "Kayıt etmek"
         },
-        "enable": "etkinleştirme"
+        "enable": "etkinleştirme",
+        "menu": {
+            "general": "Genel",
+            "updates": "Güncellemeler",
+            "h5p-libraries": "H5P Kitaplıkları",
+            "account": "Hesap"
+        },
+        "general": {
+            "header": "Genel"
+        },
+        "updates": {
+            "header": "Güncellemeler"
+        },
+        "account": {
+            "label": "Hesap",
+            "email": {
+                "title": "E-posta adresi",
+                "change": "Değişim e-posta",
+                "not-set": "E-posta ayarlanmadı"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "Geliştirici Araçlarını Aç / Kapat",
             "follow_us_on_twitter": "Bizi Twitter'da takip edin",
             "about": "hakkında"
+        },
+        "mac": {
+            "services": "Hizmetler",
+            "hide": "Lumi'yi gizle",
+            "hideothers": "Diğerlerini sakla",
+            "unhide": "Hepsini Göster ↓"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "H5P dışa aktarılamadı"
             }
         }
+    },
+    "auth": {
+        "set_email": "E-postayı Ayarla",
+        "email": "E-posta adresi",
+        "code": "Kod",
+        "verify_code": "Doğrulama kodu",
+        "verify_email": "E-mail'i doğrula",
+        "notification": {
+            "success": "{{email}} başarıyla doğrulandı",
+            "pending": "{{email}} bir doğrulama kodu gönderildi. Lütfen e-postalarınızı kontrol edin."
+        },
+        "error": {
+            "no-valid-email": "{{email}} geçerli bir e-posta adresi değil."
+        },
+        "cancel": "İptal etmek"
     }
 }

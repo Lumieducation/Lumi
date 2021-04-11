@@ -61,7 +61,27 @@
             "label": "설정",
             "save": "저장"
         },
-        "enable": "활성화"
+        "enable": "활성화",
+        "menu": {
+            "general": "일반",
+            "updates": "업데이트",
+            "h5p-libraries": "H5P 라이브러리",
+            "account": "계정"
+        },
+        "general": {
+            "header": "일반"
+        },
+        "updates": {
+            "header": "업데이트"
+        },
+        "account": {
+            "label": "계정",
+            "email": {
+                "title": "이메일",
+                "change": "이메일을 바꾸다",
+                "not-set": "이메일이 설정되지 않았습니다."
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -129,6 +149,12 @@
             "toggle_developer_tools": "개발자 도구 전환",
             "follow_us_on_twitter": "Twitter에서 팔로우하세요",
             "about": "약"
+        },
+        "mac": {
+            "services": "서비스",
+            "hide": "루미 숨기기",
+            "hideothers": "다른 사람 숨기기",
+            "unhide": "모두 표시"
         }
     },
     "notifications": {
@@ -151,5 +177,20 @@
                 "error": "H5P를 내보낼 수 없습니다."
             }
         }
+    },
+    "auth": {
+        "set_email": "이메일 설정",
+        "email": "이메일",
+        "code": "암호",
+        "verify_code": "코드 확인",
+        "verify_email": "이메일 확인",
+        "notification": {
+            "success": "{{email}} 이 성공적으로 확인되었습니다.",
+            "pending": "인증 코드가 {{email}} 로 전송되었습니다. 이메일을 확인하십시오."
+        },
+        "error": {
+            "no-valid-email": "{{email}} 은 유효한 이메일 주소가 아닙니다."
+        },
+        "cancel": "취소"
     }
 }
