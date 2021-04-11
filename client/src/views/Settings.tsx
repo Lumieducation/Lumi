@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         root: {
             display: 'flex',
-            marginLeft: '100px'
+            paddingLeft: drawerWidth
         },
         heading: {
             fontSize: theme.typography.pxToRem(15),
@@ -73,6 +73,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         drawer: {
             width: drawerWidth,
+            marginRight: '20px',
             flexShrink: 0
         },
         drawerPaper: {
@@ -139,7 +140,8 @@ export default function FullScreenDialog() {
                 </AppBar>
                 <Drawer
                     className={classes.drawer}
-                    variant="permanent"
+                    variant="persistent"
+                    open={true}
                     classes={{
                         paper: classes.drawerPaper
                     }}
