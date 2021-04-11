@@ -9,10 +9,13 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Tooltip from '@material-ui/core/Tooltip';
+
 import i18next from 'i18next';
 
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
+import IconButton from '@material-ui/core/IconButton';
 
 import LibraryDetails from './LibraryManagementDetails';
 
@@ -338,7 +341,26 @@ export class LibraryAdmin extends React.Component<
                                             >
                                                 {i18next.t('general.delete')}
                                             </Button>
-                                        ) : null}
+                                        ) : (
+                                            <Tooltip
+                                                title={`${i18next.t(
+                                                    'settings.h5p-library-administration.can-not-be-deleted',
+                                                    {
+                                                        libraries:
+                                                            info.dependentsCount
+                                                    }
+                                                )}`}
+                                                placement="bottom"
+                                            >
+                                                <div>
+                                                    <Button disabled={true}>
+                                                        {i18next.t(
+                                                            'general.delete'
+                                                        )}
+                                                    </Button>
+                                                </div>
+                                            </Tooltip>
+                                        )}
                                         <LibraryDetails
                                             details={info.details}
                                             showDetails={() =>
