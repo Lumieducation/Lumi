@@ -263,7 +263,7 @@ export class LibraryAdmin extends React.Component<
                             <div style={{ display: 'flex', padding: '20px' }}>
                                 <Button
                                     variant="contained"
-                                    color="secondary"
+                                    color="primary"
                                     component="span"
                                     style={{
                                         margin: 'auto'
