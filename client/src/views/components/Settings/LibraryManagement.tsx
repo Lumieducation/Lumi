@@ -82,7 +82,7 @@ export class LibraryAdmin extends React.Component<
 
         try {
             await this.librariesService.deleteLibrary(library);
-            const libraryIndex = libraries?.indexOf(newState);
+            const libraryIndex = libraries?.indexOf(library);
             if (libraryIndex === undefined) {
                 throw new Error('Could not find old entry in list');
             }
