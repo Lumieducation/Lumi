@@ -2,7 +2,6 @@ import { IGetSettingsErrorAction } from '../Settings/SettingsTypes';
 
 export interface IRun {
     id: string;
-    secret: string;
     title: string;
     mainLibrary: string;
 }
@@ -46,7 +45,7 @@ export interface IGetRunsRequestAction {
 }
 
 export interface IGetRunsSuccessAction {
-    payload: IRunState;
+    payload: IRun[];
     type: typeof RUN_GET_RUNS_SUCCESS;
 }
 export interface IGetRunsErrorAction {

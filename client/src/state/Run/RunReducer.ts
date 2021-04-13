@@ -40,10 +40,10 @@ export default function runReducer(
                     ...state
                 };
             case RUN_GET_RUNS_SUCCESS:
-            case RUN_UPLOAD_SUCCESS:
+                // case RUN_UPLOAD_SUCCESS:
                 return {
                     ...state,
-                    ...action.payload
+                    runs: action.payload
                 };
 
             case RUN_UPDATE_STATE:

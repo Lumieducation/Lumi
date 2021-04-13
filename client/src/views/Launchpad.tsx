@@ -11,7 +11,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import AnalyticsIcon from '@material-ui/icons/ShowChart';
-// import RunIcon from '@material-ui/icons/CloudUpload';
+import RunIcon from '@material-ui/icons/CloudUpload';
 import { useTranslation } from 'react-i18next';
 
 import MainSection from './components/MainSection';
@@ -198,7 +198,7 @@ export default function Launchpad() {
                             </CardActions>
                         </Card>
                     </Grid>
-                    {/* <Grid item xs={4}>
+                    <Grid item xs={4}>
                         <Card id="launchpad-run" className={classes.card}>
                             <Link
                                 to="/run"
@@ -249,7 +249,7 @@ export default function Launchpad() {
                                 </Button>
                             </CardActions>
                         </Card>
-                    </Grid> */}
+                    </Grid>
                 </Grid>
             </MainSection>
         </div>

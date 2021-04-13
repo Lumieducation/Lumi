@@ -6,6 +6,8 @@ interface ISettingsState {
     lastVersion: string;
     privacyPolicyConsent: boolean;
     usageStatistics: boolean;
+    email: string;
+    token: string;
 }
 
 import defaultSettings from './boot/defaultSettings';

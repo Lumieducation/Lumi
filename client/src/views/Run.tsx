@@ -42,8 +42,8 @@ export default function FolderList() {
     return (
         <div>
             <RunList
-                deleteCallback={(id: string, secret: string) =>
-                    dispatch(actions.run.deleteFromRun(id, secret))
+                deleteCallback={(id: string) =>
+                    dispatch(actions.run.deleteFromRun(id))
                 }
             />
 

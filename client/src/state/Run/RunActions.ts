@@ -26,10 +26,10 @@ export function getRuns(): any {
             });
 
             try {
-                const settings = await API.getRuns();
+                const runs = await API.getRuns();
 
                 dispatch({
-                    payload: settings,
+                    payload: runs,
                     type: RUN_GET_RUNS_SUCCESS
                 });
             } catch (error) {
@@ -75,7 +75,7 @@ export function upload(options?: { includeReporter?: boolean; path?: string }) {
     };
 }
 
-export function deleteFromRun(id: string, secret: string): any {
+export function deleteFromRun(id: string): any {
     return async (dispatch: any) => {
         try {
             dispatch({
@@ -84,7 +84,7 @@ export function deleteFromRun(id: string, secret: string): any {
             });
 
             try {
-                const run = await API.deleteFromRun(id, secret);
+                const run = await API.deleteFromRun(id);
 
                 dispatch({
                     payload: run,

@@ -6,9 +6,12 @@ import User from '../User';
 import fs from 'fs-extra';
 import path from 'path';
 import superagent from 'superagent';
+import proxy from 'express-http-proxy';
 
 import * as H5P from '@lumieducation/h5p-server';
 import HtmlExporter from '@lumieducation/h5p-html-exporter';
+
+import settingsCache from '../settingsCache';
 
 import { io as websocket } from '../websocket';
 
@@ -18,45 +21,46 @@ export default function (
     browserWindow: BrowserWindow
 ): express.Router {
     const router = express.Router();
-    router.get(
-        `/`,
-        async (
-            req: express.Request,
-            res: express.Response,
-            next: express.NextFunction
-        ) => {
-            try {
-                const run = await fs.readJSON(serverConfig.runFile);
 
-                res.status(200).json(run);
-            } catch (error) {
-                Sentry.captureException(error);
-                res.status(500).end();
-            }
-        }
-    );
+    // router.get(
+    //     `/`,
+    //     async (
+    //         req: express.Request,
+    //         res: express.Response,
+    //         next: express.NextFunction
+    //     ) => {
+    //         try {
+    //             const run = await fs.readJSON(serverConfig.runFile);
 
-    router.patch(
-        '/',
-        async (
-            req: express.Request,
-            res: express.Response,
-            next: express.NextFunction
-        ) => {
-            try {
-                if (req.body) {
-                    await fs.readJSON(serverConfig.runFile);
+    //             res.status(200).json(run);
+    //         } catch (error) {
+    //             Sentry.captureException(error);
+    //             res.status(500).end();
+    //         }
+    //     }
+    // );
 
-                    await fs.writeJSON(serverConfig.runFile, req.body);
+    // router.patch(
+    //     '/',
+    //     async (
+    //         req: express.Request,
+    //         res: express.Response,
+    //         next: express.NextFunction
+    //     ) => {
+    //         try {
+    //             if (req.body) {
+    //                 await fs.readJSON(serverConfig.runFile);
 
-                    res.status(200).json(req.body);
-                }
-            } catch (error) {
-                Sentry.captureException(error);
-                res.status(500).end();
-            }
-        }
-    );
+    //                 await fs.writeJSON(serverConfig.runFile, req.body);
+
+    //                 res.status(200).json(req.body);
+    //             }
+    //         } catch (error) {
+    //             Sentry.captureException(error);
+    //             res.status(500).end();
+    //         }
+    //     }
+    // );
 
     router.post(
         '/upload',
@@ -245,10 +249,13 @@ export default function (
             }
             let run;
             try {
+                console.log('aaa');
                 const response = await superagent
-                    .post('http://lumi.run')
-                    .set('x-auth', 'c598f9799dfa05ea02156f847530fbea')
+                    .post('http://localhost:8090')
+                    .set('x-auth', settingsCache.getSettings().token)
                     .attach('content', htmlFilePath)
+                    .field('title', meta.title)
+                    .field('mainLibrary', meta.mainLibrary)
                     .on('progress', (event) => {
                         websocket.emit('action', {
                             type: 'action',
@@ -275,22 +282,6 @@ export default function (
                         });
                     });
 
-                const newEntry = {
-                    title: meta.title,
-                    mainLibrary: meta.mainLibrary,
-                    id: response.body.id,
-                    secret: response.body.secret
-                };
-
-                run = await fs.readJSON(serverConfig.runFile);
-                run.runs = [...run.runs, newEntry];
-                await fs.writeJSON(serverConfig.runFile, run);
-
-                await fs.remove(htmlFilePath);
-                await fs.remove(
-                    path.join(serverConfig.workingCachePath, `${contentId}`)
-                );
-
                 websocket.emit('action', {
                     type: 'action',
                     payload: {
@@ -313,6 +304,7 @@ export default function (
                     }
                 });
             } catch (error) {
+                console.log(error);
                 Sentry.captureException(error);
                 return websocket.emit('action', {
                     type: 'action',
@@ -368,6 +360,15 @@ export default function (
                 res.status(500).end();
             }
         }
+    );
+
+    router.use(
+        '/',
+        (req, res, next) => {
+            req.headers['x-auth'] = settingsCache.getSettings().token;
+            next();
+        },
+        proxy('http://localhost:8090')
     );
 
     return router;
