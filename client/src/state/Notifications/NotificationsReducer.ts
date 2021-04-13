@@ -74,6 +74,37 @@ export default function notificationsReducer(
                 };
 
             case ANALYTICS_IMPORT_SUCCESS:
+                const numberBrokenFiles = action.payload.files.filter(
+                    (file) => file.error
+                ).length;
+
+                if (numberBrokenFiles > 0) {
+                    return {
+                        ...state,
+                        notifications: [
+                            ...state.notifications,
+                            {
+                                key: shortid(),
+                                message: i18next.t(
+                                    'notifications.analytics.import.success'
+                                ),
+                                options: {
+                                    variant: 'success'
+                                }
+                            },
+                            {
+                                key: shortid(),
+                                message: i18next.t(
+                                    'notifications.analytics.import.broken-files',
+                                    { numberBrokenFiles }
+                                ),
+                                options: {
+                                    variant: 'error'
+                                }
+                            }
+                        ]
+                    };
+                }
                 return {
                     ...state,
                     notifications: [

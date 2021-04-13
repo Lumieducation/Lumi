@@ -6,11 +6,7 @@ import recursiveReaddir from 'recursive-readdir';
 
 import objectHash from 'object-hash';
 
-import {
-    getInteractions,
-    IInteraction,
-    getResult
-} from '@lumieducation/xapi-aggregator';
+import { getInteractions, getResult } from '../helpers/xAPI';
 
 import _path from 'path';
 
@@ -32,75 +28,106 @@ export default function (browserWindow: BrowserWindow): express.Router {
             const files = await recursiveReaddir(filePath, ['!*.lumi']);
 
             if (files.length === 0) {
-                return res.status(404).end();
-            }
-
-            const userStatements = {};
-            let contentJson;
-            let library: string;
-            let error: boolean = false;
-
-            files.forEach((f) => {
-                const d = JSON.parse(fs.readFileSync(f, { encoding: 'utf-8' }));
-
-                userStatements[_path.basename(f, '.lumi')] = d.xapi;
-
-                if (contentJson && d.contentJson) {
-                    if (objectHash(contentJson) !== objectHash(d.contentJson)) {
-                        error = true;
-                        res.status(400).json({
-                            message: `${f} is from a different content`
-                        });
-                    }
-                }
-
-                contentJson = d.contentJson;
-                library = d.library;
-            });
-
-            if (error) {
-                res.status(500).end();
-                return;
-            }
-            const interactions: IInteraction[] = [];
-
-            try {
-                getInteractions(contentJson, interactions);
-            } catch (error) {
-                Sentry.captureException(error);
-                return res.status(500).json(error);
-            }
-
-            if (interactions.length === 0) {
-                interactions.push({
-                    name: library.replace('H5P.', '').split(' ')[0],
-                    id: 'skip'
+                return res.status(404).json({
+                    message: 'no-valid-files-found'
                 });
             }
 
-            const users = Object.keys(userStatements).map((key) => {
-                return {
-                    name: key,
-                    id:
-                        userStatements[key][0]?.actor?.account?.name ||
-                        userStatements[key][0]?.actor?.name ||
-                        key,
-                    results: interactions.map(
+            const processedFiles = files.map((file) => {
+                let data;
+                let fileData: any = { file };
+
+                try {
+                    fileData = {
+                        ...fileData,
+                        name: _path.basename(file, '.lumi')
+                    };
+                } catch (error) {
+                    return {
+                        ...fileData,
+                        error: true,
+                        code: 'determine-name'
+                    };
+                }
+
+                try {
+                    data = JSON.parse(
+                        fs.readFileSync(file, { encoding: 'utf-8' })
+                    );
+                } catch (error) {
+                    return {
+                        file,
+                        error: true,
+                        code: 'json-parse-error'
+                    };
+                }
+
+                try {
+                    fileData = {
+                        ...fileData,
+                        contentHash: objectHash(data.contentJson)
+                    };
+                } catch (error) {
+                    return {
+                        ...fileData,
+                        error: true,
+                        code: 'no-content-json'
+                    };
+                }
+
+                try {
+                    let interactions = [];
+                    getInteractions(data.contentJson, interactions);
+
+                    if (interactions.length < 1) {
+                        interactions.push({
+                            name: data.library
+                                .replace('H5P.', '')
+                                .split(' ')[0],
+                            id: 'skip'
+                        });
+                    }
+
+                    fileData = {
+                        ...fileData,
+                        interactions
+                    };
+                } catch (error) {
+                    return {
+                        ...fileData,
+                        error: true,
+                        code: 'invalid-interactions'
+                    };
+                }
+
+                try {
+                    const statements = data.xapi;
+                    const results = fileData.interactions.map(
                         (interaction) =>
                             getResult(
-                                userStatements[key],
+                                statements,
                                 interaction.id === 'skip'
                                     ? undefined
                                     : interaction.id
                             ).score.scaled
-                    )
-                };
+                    );
+
+                    fileData = {
+                        ...fileData,
+                        results
+                    };
+                } catch (error) {
+                    return {
+                        ...fileData,
+                        error: true,
+                        code: 'invalid-statements'
+                    };
+                }
+
+                return fileData;
             });
 
-            res.status(200).json({
-                interactions,
-                users
-            });
+            res.status(200).json(processedFiles);
         } catch (error) {
             res.status(500).end();
             Sentry.captureException(error);
