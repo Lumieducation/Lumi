@@ -15,7 +15,6 @@ import i18next from 'i18next';
 
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
-import IconButton from '@material-ui/core/IconButton';
 
 import LibraryDetails from './LibraryManagementDetails';
 
