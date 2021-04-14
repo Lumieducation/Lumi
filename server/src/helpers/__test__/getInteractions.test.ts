@@ -11,7 +11,7 @@ import coursePresentationInteractions from './data/coursePresentation/interactio
 
 describe('interactions', () => {
     it('ignores the H5P.Image library', (done) => {
-        let interactions = [];
+        const interactions = [];
 
         const test = {
             test: {
@@ -33,7 +33,7 @@ describe('interactions', () => {
     });
 
     it('ignores the H5P.Text library', (done) => {
-        let interactions = [];
+        const interactions = [];
 
         const test = {
             test: {
@@ -55,7 +55,7 @@ describe('interactions', () => {
     });
 
     it('ignores the H5P.Column library', (done) => {
-        let interactions = [];
+        const interactions = [];
 
         const test = {
             test: {
@@ -77,7 +77,7 @@ describe('interactions', () => {
     });
 
     it('ignores the H5P.AdvancedText library', (done) => {
-        let interactions = [];
+        const interactions = [];
 
         const test = {
             test: {
@@ -99,7 +99,7 @@ describe('interactions', () => {
     });
 
     it('ignores the H5P.Table library', (done) => {
-        let interactions = [];
+        const interactions = [];
 
         const test = {
             test: {
@@ -121,7 +121,7 @@ describe('interactions', () => {
     });
 
     it('ignores the H5P.Video library', (done) => {
-        let interactions = [];
+        const interactions = [];
 
         const test = {
             test: {
@@ -143,7 +143,7 @@ describe('interactions', () => {
     });
 
     it('ignores the H5P.Nil library', (done) => {
-        let interactions = [];
+        const interactions = [];
 
         const test = {
             test: {
@@ -165,7 +165,7 @@ describe('interactions', () => {
     });
 
     it('[interactive video]: gets all interactions', (done) => {
-        let interactions = [];
+        const interactions = [];
 
         getInteractions(interactiveVideoContentJson, interactions);
 
@@ -174,7 +174,7 @@ describe('interactions', () => {
     });
 
     it('[interactive book]: gets all interactions ', (done) => {
-        let interactions = [];
+        const interactions = [];
 
         getInteractions(interactiveBookContent, interactions);
 
@@ -183,7 +183,7 @@ describe('interactions', () => {
     });
 
     it('[course presentation]: gets all interactions', (done) => {
-        // let interactions = [];
+        // const interactions = [];
 
         const interactions = getInteractions(coursePresentationContent, []);
 

@@ -5,16 +5,16 @@ export interface IInteraction {
 }
 
 export interface IxAPIStatementResult {
+    completion: boolean;
+    duration: string;
+    response?: string;
     score: {
-        min: number;
         max: number;
+        min: number;
         raw: number;
         scaled: number;
     };
-    completion: boolean;
     success?: boolean;
-    duration: string;
-    response?: string;
 }
 
 export interface IxAPIStatement {
@@ -22,14 +22,14 @@ export interface IxAPIStatement {
         account: string;
         objectType: string;
     };
-    verb: {
-        id: string;
-        display: any;
-    };
     object: {
         id: string;
     };
     result?: IxAPIStatementResult;
+    verb: {
+        display: any;
+        id: string;
+    };
 }
 
 const ignoredInteractionLibraries = [

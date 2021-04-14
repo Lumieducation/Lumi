@@ -76,7 +76,7 @@ export default function (browserWindow: BrowserWindow): express.Router {
                 }
 
                 try {
-                    let interactions = [];
+                    const interactions = [];
                     getInteractions(data.contentJson, interactions);
 
                     if (interactions.length < 1) {
