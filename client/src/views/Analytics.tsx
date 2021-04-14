@@ -8,7 +8,7 @@ import AnalyticsToolbar from './components/AnalyticsToolbar';
 import Paper from '@material-ui/core/Paper';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import List from '@material-ui/core/List';
-import ListItem, { ListItemProps } from '@material-ui/core/ListItem';
+import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -39,14 +39,21 @@ export default function Analytics() {
                 <LumixAPIViewer
                     key={key}
                     interactions={d[key][0].interactions}
-                    users={d[key].map((v) => {
-                        return {
-                            id: v.file,
-                            name: v.name,
-                            results: v.results,
-                            error: v.error
-                        };
-                    })}
+                    users={d[key]
+                        .filter(
+                            (v) =>
+                                v.name
+                                    .toLowerCase()
+                                    .indexOf(searchText.toLowerCase()) > -1
+                        )
+                        .map((v) => {
+                            return {
+                                id: v.file,
+                                name: v.name,
+                                results: v.results,
+                                error: v.error
+                            };
+                        })}
                 />
             </Paper>
         );
