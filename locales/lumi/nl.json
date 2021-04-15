@@ -92,7 +92,16 @@
             "open": "Kies een map met .lumi-bestanden"
         },
         "name": "Naam",
-        "average": "Gemiddelde"
+        "average": "Gemiddelde",
+        "searchPlaceholder": "Zoek studentnamen ...",
+        "brokenFiles": "Lijst met kapotte bestanden",
+        "errors": {
+            "no-content-json": "De H5P-inhoud is niet correct toegevoegd aan het .lumi-bestand.",
+            "json-parse-error": "Het .lumi-bestand bevat ongeldige inhoud (JSON is niet geparseerd).",
+            "determine-name": "Kan naam van leerling niet bepalen.",
+            "invalid-interactions": "Sommige interacties zijn verbroken.",
+            "invalid-statements": "Sommige van de geregistreerde acties van leerlingen zijn verbroken."
+        }
     },
     "bug_report": {
         "title": "Bug- en crashrapporten",
@@ -161,7 +170,9 @@
         "analytics": {
             "import": {
                 "error": "Geen geldige bestanden gevonden",
-                "success": "Geïmporteerde rapportbestanden"
+                "success": "Geïmporteerde rapportbestanden",
+                "brokenFiles": "{{numberBrokenFiles}} gebroken bestand gevonden",
+                "brokenFiles_plural": "{{numberBrokenFiles}} kapotte bestanden gevonden"
             }
         },
         "h5peditor": {

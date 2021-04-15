@@ -92,7 +92,16 @@
             "open": "Wähle einen Ordner mit .lumi-Dateien"
         },
         "name": "Name",
-        "average": "Durchschnitt"
+        "average": "Durchschnitt",
+        "searchPlaceholder": "Nach Namen von Lernenden suchen ...",
+        "brokenFiles": "Liste mit defekten Dateien",
+        "errors": {
+            "no-content-json": "Der H5P-Inhalt wurde der .lumi-Datei nicht ordnungsgemäß hinzugefügt.",
+            "json-parse-error": "Die .lumi-Datei enthält ungültigen Inhalt (JSON ist fehlerhaft).",
+            "determine-name": "Der Name des Lernenden konnte nicht ermittelt werden.",
+            "invalid-interactions": "Einige der Interaktionen sind fehlerhaft.",
+            "invalid-statements": "Einige der aufgezeichneten Schüleraktionen sind fehlerhaft."
+        }
     },
     "bug_report": {
         "title": "Fehler- und Absturzberichte",
@@ -161,7 +170,9 @@
         "analytics": {
             "import": {
                 "error": "Keine gültigen Dateien gefunden",
-                "success": "Importierte Berichtsdateien"
+                "success": "Importierte Berichtsdateien",
+                "brokenFiles": "{{numberBrokenFiles}} defekte Datei gefunden",
+                "brokenFiles_plural": "{{numberBrokenFiles}} defekte Dateien gefunden"
             }
         },
         "h5peditor": {

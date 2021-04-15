@@ -92,7 +92,16 @@
             "open": "Izaberite mapu sa .lumi datotekama"
         },
         "name": "Ime",
-        "average": "Prosječno"
+        "average": "Prosječno",
+        "searchPlaceholder": "Pretražite imena učenika ...",
+        "brokenFiles": "Spisak neispravnih datoteka",
+        "errors": {
+            "no-content-json": "Sadržaj H5P nije pravilno dodan u .lumi datoteku.",
+            "json-parse-error": "Datoteka .lumi sadrži nevaljani sadržaj (JSON nije raščlanjen).",
+            "determine-name": "Nije moguće odrediti ime učenika.",
+            "invalid-interactions": "Neke interakcije su prekinute.",
+            "invalid-statements": "Neke od zabilježenih studentskih akcija su slomljene."
+        }
     },
     "bug_report": {
         "title": "Izvještaji o greškama i padovima",
@@ -161,7 +170,9 @@
         "analytics": {
             "import": {
                 "error": "Nisu pronađene važeće datoteke",
-                "success": "Uvezene datoteke izvještaja"
+                "success": "Uvezene datoteke izvještaja",
+                "brokenFiles": "{{numberBrokenFiles}} pronađena neispravna datoteka",
+                "brokenFiles_plural": "Pronađeno je {{numberBrokenFiles}}"
             }
         },
         "h5peditor": {

@@ -92,7 +92,16 @@
             "open": ".Lumi ፋይሎችን የያዘ አቃፊ ይምረጡ"
         },
         "name": "ስም",
-        "average": "አማካይ"
+        "average": "አማካይ",
+        "searchPlaceholder": "የተማሪ ስሞችን ይፈልጉ ...",
+        "brokenFiles": "የተሰበሩ ፋይሎች ዝርዝር",
+        "errors": {
+            "no-content-json": "የኤች 5 ፒ ይዘት ለ .lumi ፋይል በትክክል አልተጨመረም።",
+            "json-parse-error": ".Lumi ፋይል ልክ ያልሆነ ይዘት ይ containsል (JSON አልተመረመረም)።",
+            "determine-name": "የተማሪውን ስም መወሰን አልተቻለም።",
+            "invalid-interactions": "አንዳንድ ግንኙነቶች ተሰብረዋል ፡፡",
+            "invalid-statements": "ከተመዘገቡት የተማሪ እርምጃዎች መካከል አንዳንዶቹ ተሰብረዋል ፡፡"
+        }
     },
     "bug_report": {
         "title": "የሳንካ እና የስንክል ሪፖርቶች",
@@ -161,7 +170,9 @@
         "analytics": {
             "import": {
                 "error": "ትክክለኛ ፋይሎች አልተገኙም",
-                "success": "ከውጭ የመጡ የሪፖርት ፋይሎች"
+                "success": "ከውጭ የመጡ የሪፖርት ፋይሎች",
+                "brokenFiles": "{{numberBrokenFiles}} የተሰበረ ፋይል ተገኝቷል",
+                "brokenFiles_plural": "{{numberBrokenFiles}} የተሰበሩ ፋይሎች ተገኝተዋል"
             }
         },
         "h5peditor": {

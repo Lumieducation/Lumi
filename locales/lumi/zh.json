@@ -92,7 +92,16 @@
             "open": "选择包含.lumi文件的文件夹"
         },
         "name": "姓名",
-        "average": "平均"
+        "average": "平均",
+        "searchPlaceholder": "搜索学生姓名...",
+        "brokenFiles": "损坏的文件列表",
+        "errors": {
+            "no-content-json": "H5P内容未正确添加到.lumi文件。",
+            "json-parse-error": ".lumi文件包含无效的内容（JSON未解析）。",
+            "determine-name": "无法确定学生的姓名。",
+            "invalid-interactions": "一些交互被破坏了。",
+            "invalid-statements": "一些记录的学生动作已损坏。"
+        }
     },
     "bug_report": {
         "title": "错误和崩溃报告",
@@ -161,7 +170,9 @@
         "analytics": {
             "import": {
                 "error": "找不到有效的文件",
-                "success": "导入的报告文件"
+                "success": "导入的报告文件",
+                "brokenFiles": "{{numberBrokenFiles}}损坏的文件",
+                "brokenFiles_plural": "{{numberBrokenFiles}}损坏的文件"
             }
         },
         "h5peditor": {

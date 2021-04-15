@@ -92,7 +92,16 @@
             "open": "Valige .lumi-failidega kaust"
         },
         "name": "Nimi",
-        "average": "Keskmine"
+        "average": "Keskmine",
+        "searchPlaceholder": "Otsige õpilaste nimesid ...",
+        "brokenFiles": "Katkiste failide loend",
+        "errors": {
+            "no-content-json": "H5P-sisu ei lisatud .lumi-faili korralikult.",
+            "json-parse-error": ".Lumi-fail sisaldab kehtetut sisu (JSON ei parsinud).",
+            "determine-name": "Õpilase nime ei saanud kindlaks teha.",
+            "invalid-interactions": "Osa vastastikmõjudest on katki.",
+            "invalid-statements": "Osa registreeritud õpilaste toimingutest on katki."
+        }
     },
     "bug_report": {
         "title": "Vigade ja krahhide aruanded",
@@ -161,7 +170,9 @@
         "analytics": {
             "import": {
                 "error": "Kehtivaid faile ei leitud",
-                "success": "Imporditud aruandefailid"
+                "success": "Imporditud aruandefailid",
+                "brokenFiles": "{{numberBrokenFiles}} katkist faili",
+                "brokenFiles_plural": "{{numberBrokenFiles}} katkist faili"
             }
         },
         "h5peditor": {
