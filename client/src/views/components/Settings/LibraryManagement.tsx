@@ -356,7 +356,11 @@ export class LibraryAdmin extends React.Component<
                                                 )}`}
                                                 placement="bottom"
                                             >
-                                                <div>
+                                                <div
+                                                    style={{
+                                                        marginRight: '20px'
+                                                    }}
+                                                >
                                                     <Button disabled={true}>
                                                         {i18next.t(
                                                             'general.delete'
