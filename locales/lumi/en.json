@@ -103,7 +103,14 @@
         "name": "Name",
         "average": "Average",
         "searchPlaceholder": "Search student names...",
-        "broken-files": "List of broken files"
+        "brokenFiles": "List of broken files",
+        "errors": {
+            "no-content-json": "The H5P content was not added properly to the .lumi file.",
+            "json-parse-error": "The .lumi file contains invalid content (JSON did not parse).",
+            "determine-name": "Could not determine name of student.",
+            "invalid-interactions": "Some of the interactions are broken.",
+            "invalid-statements": "Some of the recorded student actions are broken."
+        }
     },
     "bug_report": {
         "title": "Bug & Crash Reports",
@@ -170,7 +177,8 @@
             "import": {
                 "error": "No valid files found",
                 "success": "Imported report files",
-                "broken-files": "{{numberBrokenFiles}} broken file(s) found"
+                "brokenFiles": "{{numberBrokenFiles}} broken file found",
+                "brokenFiles_plural": "{{numberBrokenFiles}} broken files found"
             }
         },
         "h5peditor": {

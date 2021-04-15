@@ -92,7 +92,7 @@ export default function Analytics() {
                                 component="div"
                                 id="nested-list-subheader"
                             >
-                                {t('analytics.broken-files')}
+                                {t('analytics.brokenFiles')}
                             </ListSubheader>
                         }
                     >
@@ -106,7 +106,7 @@ export default function Analytics() {
                                 <ListItemText
                                     primary={brokenFile.file}
                                     secondary={t(
-                                        `analytics.${brokenFile.code}`
+                                        `analytics.errors.${brokenFile.code}`
                                     )}
                                 />
                             </ListItem>
