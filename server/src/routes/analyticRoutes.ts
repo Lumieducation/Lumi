@@ -25,7 +25,7 @@ export default function (browserWindow: BrowserWindow): express.Router {
 
             const filePath = openDialog.filePaths[0];
 
-            const files = await recursiveReaddir(filePath, ['!*.lumi']);
+            const files = await recursiveReaddir(filePath, ['!*.[Ll][Uu][Mm][Ii]']);
 
             if (files.length === 0) {
                 return res.status(404).json({
@@ -36,11 +36,12 @@ export default function (browserWindow: BrowserWindow): express.Router {
             const processedFiles = files.map((file) => {
                 let data;
                 let fileData: any = { file };
+                const extension = _path.extname(file);
 
                 try {
                     fileData = {
                         ...fileData,
-                        name: _path.basename(file, '.lumi')
+                        name: _path.basename(file, extension)
                     };
                 } catch (error) {
                     return {
