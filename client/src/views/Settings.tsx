@@ -25,8 +25,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 import CloseIcon from '@material-ui/icons/Close';
 import SettingsIcon from '@material-ui/icons/Settings';
+import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 // import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
-import AccountBoxIcon from '@material-ui/icons/AccountBox';
+// import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import UpdateIcon from '@material-ui/icons/Update';
 
 import SettingsList from './components/Settings/GeneralSettingsList';
@@ -49,7 +50,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         root: {
             display: 'flex',
-            marginLeft: '100px'
+            paddingLeft: drawerWidth
         },
         heading: {
             fontSize: theme.typography.pxToRem(15),
@@ -72,6 +73,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         drawer: {
             width: drawerWidth,
+            marginRight: '20px',
             flexShrink: 0
         },
         drawerPaper: {
@@ -138,7 +140,8 @@ export default function FullScreenDialog() {
                 </AppBar>
                 <Drawer
                     className={classes.drawer}
-                    variant="permanent"
+                    variant="persistent"
+                    open={true}
                     classes={{
                         paper: classes.drawerPaper
                     }}
@@ -176,27 +179,27 @@ export default function FullScreenDialog() {
                                 primary={t('settings.menu.updates')}
                             />
                         </ListItem>
-                        {/* <ListItem
+                        <ListItem
                             button
-                            key="h5p-libraries"
-                            onClick={() => setSection('h5p-libraries')}
-                               style={{
-                                backgroundColor:
-                                    section === 'general'
-                                        ? '#EFEFEF'
-                                        : '#FFFFFF',
-                                color: '#3498db'
-                            }}
+                            key="h5p-library-administration"
+                            onClick={() =>
+                                setSection('h5p-library-administration')
+                            }
+                            className={classnames({
+                                [classes.selected]:
+                                    section === 'h5p-library-administration'
+                            })}
                         >
                             <ListItemIcon>
                                 <LibraryBooksIcon />
                             </ListItemIcon>
                             <ListItemText
-                                primary={t('settings.menu.h5p-libraries')}
+                                primary={t(
+                                    'settings.menu.h5p-library-administration'
+                                )}
                             />
                         </ListItem>
-                        */}
-                        <ListItem
+                        {/* <ListItem
                             button
                             key="account"
                             onClick={() => setSection('account')}
@@ -210,7 +213,7 @@ export default function FullScreenDialog() {
                             <ListItemText
                                 primary={t('settings.menu.account')}
                             />
-                        </ListItem>
+                        </ListItem> */}
                     </List>
                 </Drawer>
                 <DialogContent className={classes.bg}>
@@ -226,9 +229,9 @@ export default function FullScreenDialog() {
                                         case 'updates':
                                             return <UpdateSettings />;
 
-                                        case 'h5p-libraries':
+                                        case 'h5p-library-administration':
                                             return (
-                                                <SettingsLibraryManagement />
+                                                <SettingsLibraryManagement endpointUrl="/api/v1/h5p/libraries" />
                                             );
 
                                         case 'account':

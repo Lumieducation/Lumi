@@ -1,4 +1,10 @@
 {
+    "dialog": {
+        "close": "Close"
+    },
+    "general": {
+        "delete": "Delete"
+    },
     "auth": {
         "set_email": "Set Email",
         "email": "Email",
@@ -74,7 +80,7 @@
         "menu": {
             "general": "General",
             "updates": "Updates",
-            "h5p-libraries": "H5P Libraries",
+            "h5p-library-administration": "H5P Libraries",
             "account": "Account"
         },
         "general": {
@@ -89,6 +95,41 @@
                 "title": "Email",
                 "change": "Change Email",
                 "not-set": "Email is not set"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Installed H5P libraries",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Upload successful, but no libraries were installed or updated. The content type is probably already installed on the system.",
+                    "success-with-update": "Successfully installed {{installed}} and updated {{updated}} libraries.",
+                    "error": "Error while uploading package."
+                },
+                "delete": {
+                    "success": "Successfully deleted library {{title}} ({{version}}).",
+                    "error": "Error deleting library {{title}} ({{version}})."
+                },
+                "get": {
+                    "error": "Error getting detailed information about library {{library.title}} ({{version}})."
+                }
+            },
+            "upload_and_install": "Upload and install Library",
+            "details": "Details",
+            "can-not-be-deleted": "This library cannot be deleted, because it is used in {{count}} other library",
+            "can-not-be-deleted_plural": "This library cannot be deleted, because it is used in {{count}} other libraries",
+            "library-details": {
+                "header": "Library Details",
+                "author": "Author",
+                "description": "Description",
+                "license": "License",
+                "standalone": "Standalone content type",
+                "restricted": "Restricted (can only be used with privilege)",
+                "fullscreen": "Supports fullscreen",
+                "addon": "Addon",
+                "embedTypes": "Allowed embed types",
+                "dependentsCount": "Number of libraries that use the library",
+                "instancesCount": "Objects created with this library as the main content type",
+                "instancesAsDependencyCount": "Objects in which this library is used by another library"
             }
         }
     },
