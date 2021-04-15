@@ -25,7 +25,9 @@ export default function (browserWindow: BrowserWindow): express.Router {
 
             const filePath = openDialog.filePaths[0];
 
-            const files = await recursiveReaddir(filePath, ['!*.[Ll][Uu][Mm][Ii]']);
+            const files = await recursiveReaddir(filePath, [
+                '!*.[Ll][Uu][Mm][Ii]'
+            ]);
 
             if (files.length === 0) {
                 return res.status(404).json({
