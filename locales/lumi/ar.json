@@ -92,7 +92,16 @@
             "open": "اختر مجلدًا يحتوي على ملفات .lumi"
         },
         "name": "إسم",
-        "average": "المتوسط"
+        "average": "المتوسط",
+        "searchPlaceholder": "البحث في أسماء الطلاب ...",
+        "brokenFiles": "قائمة الملفات المعطلة",
+        "errors": {
+            "no-content-json": "لم تتم إضافة محتوى H5P بشكل صحيح إلى ملف .lumi.",
+            "json-parse-error": "يحتوي ملف .lumi على محتوى غير صالح (لم يتم تحليل JSON).",
+            "determine-name": "تعذر تحديد اسم الطالب.",
+            "invalid-interactions": "بعض التفاعلات معطلة.",
+            "invalid-statements": "تم كسر بعض إجراءات الطالب المسجلة."
+        }
     },
     "bug_report": {
         "title": "تقارير الأخطاء والأعطال",
@@ -161,7 +170,9 @@
         "analytics": {
             "import": {
                 "error": "لم يعثر علي ملفات مدعومه",
-                "success": "ملفات التقرير المستورده"
+                "success": "ملفات التقرير المستورده",
+                "brokenFiles": "تم العثور على {{count}}",
+                "brokenFiles_plural": "تم العثور على {{count}}"
             }
         },
         "h5peditor": {

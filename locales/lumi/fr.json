@@ -92,7 +92,16 @@
             "open": "Choisissez un dossier avec des fichiers .lumi"
         },
         "name": "Nom",
-        "average": "Moyen"
+        "average": "Moyen",
+        "searchPlaceholder": "Rechercher les noms des élèves ...",
+        "brokenFiles": "Liste des fichiers cassés",
+        "errors": {
+            "no-content-json": "Le contenu H5P n'a pas été ajouté correctement au fichier .lumi.",
+            "json-parse-error": "Le fichier .lumi contient un contenu non valide (JSON n'a pas analysé).",
+            "determine-name": "Impossible de déterminer le nom de l'élève.",
+            "invalid-interactions": "Certaines des interactions sont interrompues.",
+            "invalid-statements": "Certaines des actions des élèves enregistrées sont interrompues."
+        }
     },
     "bug_report": {
         "title": "Rapports de bogues et de plantages",
@@ -161,7 +170,9 @@
         "analytics": {
             "import": {
                 "error": "Aucun fichier valide trouvé",
-                "success": "Fichiers de rapport importés"
+                "success": "Fichiers de rapport importés",
+                "brokenFiles": "{{count}} fichier cassé trouvé",
+                "brokenFiles_plural": "{{count}} fichiers cassés trouvés"
             }
         },
         "h5peditor": {

@@ -92,7 +92,16 @@
             "open": "Kies die lêergids met .lumi-lêers"
         },
         "average": "Gemiddeld",
-        "name": "Naam"
+        "name": "Naam",
+        "searchPlaceholder": "Soek studentename ...",
+        "brokenFiles": "Lys van gebreekte lêers",
+        "errors": {
+            "no-content-json": "Die H5P-inhoud is nie behoorlik by die .lumi-lêer gevoeg nie.",
+            "json-parse-error": "Die .lumi-lêer bevat ongeldige inhoud (JSON het nie ontleed nie).",
+            "determine-name": "Kon nie die naam van die student bepaal nie.",
+            "invalid-interactions": "Sommige interaksies is verbreek.",
+            "invalid-statements": "Sommige van die opgetekende studente-aksies is gebreek."
+        }
     },
     "bug_report": {
         "title": "Foutverslae",
@@ -174,7 +183,9 @@
         "analytics": {
             "import": {
                 "success": "Voer verslaglêers in",
-                "error": "Geen geldige lêer gevind nie"
+                "error": "Geen geldige lêer gevind nie",
+                "brokenFiles": "{{count}} gebreekte lêer gevind",
+                "brokenFiles_plural": "{{count}} stukkende lêers gevind"
             }
         }
     },

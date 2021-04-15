@@ -92,7 +92,16 @@
             "open": "Aukeratu karpeta .lumi fitxategiekin"
         },
         "name": "Izena",
-        "average": "Batez bestekoa"
+        "average": "Batez bestekoa",
+        "searchPlaceholder": "Bilatu ikasleen izenak ...",
+        "brokenFiles": "Hautsitako fitxategien zerrenda",
+        "errors": {
+            "no-content-json": "H5P edukia ez da behar bezala gehitu .lumi fitxategian.",
+            "json-parse-error": ".Lumi fitxategiak baliogabeko edukia du (JSONk ez du analizatu).",
+            "determine-name": "Ezin izan da ikaslearen izena zehaztu.",
+            "invalid-interactions": "Elkarrekintza batzuk hautsita daude.",
+            "invalid-statements": "Grabatutako ikasleen ekintza batzuk hautsita daude."
+        }
     },
     "bug_report": {
         "title": "Akatsen eta akatsen txostenak",
@@ -161,7 +170,9 @@
         "analytics": {
             "import": {
                 "error": "Ez da baliozko fitxategirik aurkitu",
-                "success": "Inportatutako txosten fitxategiak"
+                "success": "Inportatutako txosten fitxategiak",
+                "brokenFiles": "{{count}} fitxategi hautsi aurkitu da",
+                "brokenFiles_plural": "{{count}} fitxategi aurkitu dira"
             }
         },
         "h5peditor": {

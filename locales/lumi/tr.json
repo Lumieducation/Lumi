@@ -92,7 +92,16 @@
             "open": ".Lumi dosyalarını içeren klasör seçin"
         },
         "name": "İsim Soyisim",
-        "average": "Ortalama"
+        "average": "Ortalama",
+        "searchPlaceholder": "Öğrenci isimlerini ara ...",
+        "brokenFiles": "Bozuk dosyaların listesi",
+        "errors": {
+            "no-content-json": "H5P içeriği .lumi dosyasına düzgün şekilde eklenmedi.",
+            "json-parse-error": ".Lumi dosyası geçersiz içerik içeriyor (JSON ayrıştırılmadı).",
+            "determine-name": "Öğrencinin adı belirlenemedi.",
+            "invalid-interactions": "Bazı etkileşimler bozuldu.",
+            "invalid-statements": "Kaydedilen öğrenci eylemlerinden bazıları bozuldu."
+        }
     },
     "bug_report": {
         "title": "Hata ve Kilitlenme Raporları",
@@ -161,7 +170,9 @@
         "analytics": {
             "import": {
                 "error": "Geçerli dosya bulunamadı",
-                "success": "İçe aktarılan rapor dosyaları"
+                "success": "İçe aktarılan rapor dosyaları",
+                "brokenFiles": "{{count}} bozuk dosya bulundu",
+                "brokenFiles_plural": "{{count}} bozuk dosya bulundu"
             }
         },
         "h5peditor": {
