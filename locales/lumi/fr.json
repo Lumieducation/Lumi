@@ -1,207 +1,248 @@
 {
-    "editor": {
-        "default_name": "nouveau H5P",
-        "tab": {
-            "view": "Vue",
-            "edit": "Éditer"
-        },
-        "sidebar": {
-            "open": "Ouvrez le fichier H5P",
-            "create": "Nouveau fichier H5P",
-            "noOpenFiles": "Aucun fichier ouvert"
-        },
-        "startPage": {
-            "title": "Éditeur H5P",
-            "welcomeMessage": "L'éditeur H5P de Lumi est une application autonome qui vous permet d'afficher, d'éditer et de créer H5P.",
-            "open": "Ouvrir un H5P existant",
-            "create": "créer un nouveau H5P",
-            "start": "début"
-        },
-        "exportDialog": {
-            "title": "Exporter les paramètres",
-            "format": {
-                "title": "Format",
-                "bundleLabel": "Fichier HTML tout-en-un",
-                "bundleHint": "Le fichier peut devenir trop volumineux pour certains ordinateurs si vous incluez de nombreux fichiers multimédias.",
-                "externalLabel": "Un fichier HTML et plusieurs fichiers multimédias",
-                "externalHint": "Il vous sera demandé un nom pour le fichier HTML à l'étape suivante. Les fichiers multimédias seront placés dans des dossiers commençant par le même nom que le fichier.",
-                "scorm": {
-                    "label": "Paquet SCORM",
-                    "masteryScoreLabel": "Score de maîtrise (en%)",
-                    "errorNaN": "La valeur saisie n'est pas un nombre",
-                    "errorRange": "La valeur doit être comprise entre 0 et 100"
-                }
-            },
-            "reporter": {
-                "title": "Rapporteur",
-                "hint": "Si vous ajoutez le rapporteur, les étudiants peuvent enregistrer un fichier avec leur progression et vous l'envoyer.",
-                "switchLabel": "Inclure le journaliste",
-                "learnMoreLink": "Apprenez-en plus ici.",
-                "scormHint": "Le rapporteur ne peut pas être ajouté aux packages SCORM."
-            },
-            "cancelButton": "Annuler",
-            "exportButton": "Exportez maintenant",
-            "filePicker": {
-                "title": "Exporter sous ...",
-                "buttonLabel": "Exporter",
-                "formatNames": {
-                    "bundle": "Fichier HTML tout-en-un (.html)",
-                    "external": "Fichier HTML (.html)",
-                    "scorm": "Fichier SCORM (.zip)"
-                }
-            },
-            "defaults": {
-                "authorName": "Auteur H5P",
-                "title": "Contenu H5P"
-            }
+  "editor": {
+    "default_name": "nouveau H5P",
+    "tab": {
+      "view": "Vue",
+      "edit": "Éditer"
+    },
+    "sidebar": {
+      "open": "Ouvrez le fichier H5P",
+      "create": "Nouveau fichier H5P",
+      "noOpenFiles": "Aucun fichier ouvert"
+    },
+    "startPage": {
+      "title": "Éditeur H5P",
+      "welcomeMessage": "L'éditeur H5P de Lumi est une application autonome qui vous permet d'afficher, d'éditer et de créer H5P.",
+      "open": "Ouvrir un H5P existant",
+      "create": "créer un nouveau H5P",
+      "start": "début"
+    },
+    "exportDialog": {
+      "title": "Exporter les paramètres",
+      "format": {
+        "title": "Format",
+        "bundleLabel": "Fichier HTML tout-en-un",
+        "bundleHint": "Le fichier peut devenir trop volumineux pour certains ordinateurs si vous incluez de nombreux fichiers multimédias.",
+        "externalLabel": "Un fichier HTML et plusieurs fichiers multimédias",
+        "externalHint": "Il vous sera demandé un nom pour le fichier HTML à l'étape suivante. Les fichiers multimédias seront placés dans des dossiers commençant par le même nom que le fichier.",
+        "scorm": {
+          "label": "Paquet SCORM",
+          "masteryScoreLabel": "Score de maîtrise (en%)",
+          "errorNaN": "La valeur saisie n'est pas un nombre",
+          "errorRange": "La valeur doit être comprise entre 0 et 100"
         }
-    },
-    "settings": {
-        "appbar": {
-            "label": "Réglages",
-            "save": "Sauvegarder"
-        },
-        "enable": "Permettre",
-        "menu": {
-            "general": "Général",
-            "updates": "Mises à jour",
-            "h5p-libraries": "Bibliothèques H5P",
-            "account": "Compte"
-        },
-        "general": {
-            "header": "Général"
-        },
-        "updates": {
-            "header": "Mises à jour"
-        },
-        "account": {
-            "label": "Compte",
-            "email": {
-                "title": "E-mail",
-                "change": "Changer l'e-mail",
-                "not-set": "L'e-mail n'est pas défini"
-            }
+      },
+      "reporter": {
+        "title": "Rapporteur",
+        "hint": "Si vous ajoutez le rapporteur, les étudiants peuvent enregistrer un fichier avec leur progression et vous l'envoyer.",
+        "switchLabel": "Inclure le journaliste",
+        "learnMoreLink": "Apprenez-en plus ici.",
+        "scormHint": "Le rapporteur ne peut pas être ajouté aux packages SCORM."
+      },
+      "cancelButton": "Annuler",
+      "exportButton": "Exportez maintenant",
+      "filePicker": {
+        "title": "Exporter sous ...",
+        "buttonLabel": "Exporter",
+        "formatNames": {
+          "bundle": "Fichier HTML tout-en-un (.html)",
+          "external": "Fichier HTML (.html)",
+          "scorm": "Fichier SCORM (.zip)"
         }
+      },
+      "defaults": {
+        "authorName": "Auteur H5P",
+        "title": "Contenu H5P"
+      }
+    }
+  },
+  "settings": {
+    "appbar": {
+      "label": "Réglages",
+      "save": "Sauvegarder"
     },
-    "analytics": {
-        "startPage": {
-            "title": "Lumi Analytics",
-            "welcomeMessage": "L'outil Analytics de Lumi vous permet d'importer des rapports d'utilisateurs et de les visualiser pour vous",
-            "start": "Début",
-            "learn_more": "apprendre encore plus",
-            "open": "Choisissez un dossier avec des fichiers .lumi"
-        },
-        "name": "Nom",
-        "average": "Moyen",
-        "searchPlaceholder": "Rechercher les noms des élèves ...",
-        "brokenFiles": "Liste des fichiers cassés",
-        "errors": {
-            "no-content-json": "Le contenu H5P n'a pas été ajouté correctement au fichier .lumi.",
-            "json-parse-error": "Le fichier .lumi contient un contenu non valide (JSON n'a pas analysé).",
-            "determine-name": "Impossible de déterminer le nom de l'élève.",
-            "invalid-interactions": "Certaines des interactions sont interrompues.",
-            "invalid-statements": "Certaines des actions des élèves enregistrées sont interrompues."
-        }
+    "enable": "Permettre",
+    "menu": {
+      "general": "Général",
+      "updates": "Mises à jour",
+      "account": "Compte",
+      "h5p-library-administration": "Bibliothèques H5P"
     },
-    "bug_report": {
-        "title": "Rapports de bogues et de plantages",
-        "description": "Aidez-nous à améliorer nos logiciels et services en envoyant des rapports anonymes de plantage et de bogue.",
-        "consent": "J'autorise cette application à envoyer des rapports de bogues et de plantages."
-    },
-    "usage_statistics": {
-        "title": "Statistiques d'utilisation",
-        "description": " Aidez-nous à améliorer nos logiciels et services en envoyant des statistiques d'utilisation anonymes.",
-        "consent": "J'autorise cette application à envoyer des statistiques d'utilisation anonymes."
+    "general": {
+      "header": "Général"
     },
     "updates": {
-        "title": "Mises à jour automatiques",
-        "description": "Obtenez la dernière version automatiquement.",
-        "consent": "J'autorise cette application à rechercher automatiquement les mises à jour."
+      "header": "Mises à jour"
     },
-    "language": {
-        "title": "Langue",
-        "description": "Changez la langue de l'application.",
-        "help_translate": "Aidez-nous à traduire!"
+    "account": {
+      "label": "Compte",
+      "email": {
+        "title": "E-mail",
+        "change": "Changer l'e-mail",
+        "not-set": "L'e-mail n'est pas défini"
+      }
     },
-    "privacy_policy": {
-        "title": "Politique de confidentialité",
-        "consent": "J'ai lu et j'accepte la politique de confidentialité."
-    },
-    "setup_dialog": {
-        "description": "La protection de la vie privée de l'individu est importante pour nous. Nous collectons uniquement les informations que vous choisissez de nous fournir et nous les traitons avec votre consentement. Nous voulons être aussi transparents que possible. Cependant Lumi s'appuie sur certaines connexions et transferts de données pour fonctionner.",
-        "save": "Sauvegarder",
-        "consent_warning": "Vous devez au moins consentir à la politique de confidentialité pour utiliser cette application."
-    },
-    "menu": {
-        "quit": "Quitter",
-        "file": {
-            "label": "Fichier",
-            "open": "Ouvrir les fichiers analytiques",
-            "save": "Sauvegarder",
-            "save_as": "Enregistrer sous...",
-            "export": "Exporter...",
-            "edit": "Éditer",
-            "undo": "Annuler",
-            "redo": "Rétablir",
-            "cut": "Couper",
-            "copy": "Copier",
-            "paste": "Coller",
-            "select_all": "Tout sélectionner"
+    "h5p-library-administration": {
+      "header": "Bibliothèques H5P installées",
+      "notifications": {
+        "upload": {
+          "success-no-update": "Le téléchargement a réussi, mais aucune bibliothèque n'a été installée ou mise à jour. Le type de contenu est probablement déjà installé sur le système.",
+          "success-with-update": "Bibliothèques {{installed}} installées avec succès et mises à jour {{updated}}",
+          "error": "Erreur lors du téléchargement du package."
         },
-        "h5peditor": {
-            "new": "Nouveau H5P",
-            "open": "Ouvrez H5P"
+        "delete": {
+          "success": "La bibliothèque {{title}} ( {{version}} ) a bien été supprimée.",
+          "error": "Erreur lors de la suppression de la bibliothèque {{title}} ( {{version}} )."
         },
-        "help": {
-            "label": "Aider",
-            "report_issue": "Signaler un problème",
-            "toggle_developer_tools": "Toggle Outils de développement",
-            "follow_us_on_twitter": "Suivez-nous sur Twitter",
-            "about": "À propos de"
-        },
-        "mac": {
-            "services": "Prestations de service",
-            "hide": "Masquer Lumi",
-            "hideothers": "Masquer les autres",
-            "unhide": "Afficher tout"
+        "get": {
+          "error": "Erreur lors de l'obtention d'informations détaillées sur la bibliothèque {{library.title}} ( {{version}} )."
         }
-    },
-    "notifications": {
-        "analytics": {
-            "import": {
-                "error": "Aucun fichier valide trouvé",
-                "success": "Fichiers de rapport importés",
-                "brokenFiles": "{{count}} fichier cassé trouvé",
-                "brokenFiles_plural": "{{count}} fichiers cassés trouvés"
-            }
-        },
-        "h5peditor": {
-            "save": {
-                "success": "H5P sauvé!",
-                "error": "H5P n'a pas pu être enregistré."
-            },
-            "open": {
-                "error": "Impossible d'ouvrir H5P."
-            },
-            "export_as_html": {
-                "success": "H5P exporté avec succès",
-                "error": "Impossible d'exporter H5P"
-            }
-        }
-    },
-    "auth": {
-        "set_email": "Définir l'e-mail",
-        "email": "E-mail",
-        "code": "Code",
-        "verify_code": "Vérifier le code",
-        "verify_email": "Vérifier les courriels",
-        "notification": {
-            "success": "{{email}} a été validé avec succès",
-            "pending": "Un code de vérification a été envoyé à {{email}} . Veuillez vérifier vos e-mails."
-        },
-        "error": {
-            "no-valid-email": "{{email}} n'est pas une adresse e-mail valide."
-        },
-        "cancel": "Annuler"
+      },
+      "upload_and_install": "Télécharger et installer la bibliothèque",
+      "details": "Des détails",
+      "can-not-be-deleted": "Cette bibliothèque ne peut pas être supprimée, car elle est utilisée dans {{count}} autre bibliothèque",
+      "can-not-be-deleted_plural": "Cette bibliothèque ne peut pas être supprimée, car elle est utilisée dans {{count}} autres bibliothèques",
+      "library-details": {
+        "header": "Détails de la bibliothèque",
+        "author": "Auteur",
+        "description": "La description",
+        "license": "Licence",
+        "standalone": "Type de contenu autonome",
+        "restricted": "Restreint (ne peut être utilisé qu'avec des privilèges)",
+        "fullscreen": "Prend en charge le plein écran",
+        "addon": "Ajouter",
+        "embedTypes": "Types d'intégration autorisés",
+        "dependentsCount": "Nombre de bibliothèques qui utilisent la bibliothèque",
+        "instancesCount": "Objets créés avec cette bibliothèque comme type de contenu principal",
+        "instancesAsDependencyCount": "Objets dans lesquels cette bibliothèque est utilisée par une autre bibliothèque"
+      }
     }
+  },
+  "analytics": {
+    "startPage": {
+      "title": "Lumi Analytics",
+      "welcomeMessage": "L'outil Analytics de Lumi vous permet d'importer des rapports d'utilisateurs et de les visualiser pour vous",
+      "start": "Début",
+      "learn_more": "apprendre encore plus",
+      "open": "Choisissez un dossier avec des fichiers .lumi"
+    },
+    "name": "Nom",
+    "average": "Moyen",
+    "searchPlaceholder": "Rechercher les noms des élèves ...",
+    "brokenFiles": "Liste des fichiers cassés",
+    "errors": {
+      "no-content-json": "Le contenu H5P n'a pas été ajouté correctement au fichier .lumi.",
+      "json-parse-error": "Le fichier .lumi contient un contenu non valide (JSON n'a pas analysé).",
+      "determine-name": "Impossible de déterminer le nom de l'élève.",
+      "invalid-interactions": "Certaines des interactions sont interrompues.",
+      "invalid-statements": "Certaines des actions des élèves enregistrées sont interrompues."
+    }
+  },
+  "bug_report": {
+    "title": "Rapports de bogues et de plantages",
+    "description": "Aidez-nous à améliorer nos logiciels et services en envoyant des rapports anonymes de plantage et de bogue.",
+    "consent": "J'autorise cette application à envoyer des rapports de bogues et de plantages."
+  },
+  "usage_statistics": {
+    "title": "Statistiques d'utilisation",
+    "description": " Aidez-nous à améliorer nos logiciels et services en envoyant des statistiques d'utilisation anonymes.",
+    "consent": "J'autorise cette application à envoyer des statistiques d'utilisation anonymes."
+  },
+  "updates": {
+    "title": "Mises à jour automatiques",
+    "description": "Obtenez la dernière version automatiquement.",
+    "consent": "J'autorise cette application à rechercher automatiquement les mises à jour."
+  },
+  "language": {
+    "title": "Langue",
+    "description": "Changez la langue de l'application.",
+    "help_translate": "Aidez-nous à traduire!"
+  },
+  "privacy_policy": {
+    "title": "Politique de confidentialité",
+    "consent": "J'ai lu et j'accepte la politique de confidentialité."
+  },
+  "setup_dialog": {
+    "description": "La protection de la vie privée de l'individu est importante pour nous. Nous collectons uniquement les informations que vous choisissez de nous fournir et nous les traitons avec votre consentement. Nous voulons être aussi transparents que possible. Cependant Lumi s'appuie sur certaines connexions et transferts de données pour fonctionner.",
+    "save": "Sauvegarder",
+    "consent_warning": "Vous devez au moins consentir à la politique de confidentialité pour utiliser cette application."
+  },
+  "menu": {
+    "quit": "Quitter",
+    "file": {
+      "label": "Fichier",
+      "open": "Ouvrir les fichiers analytiques",
+      "save": "Sauvegarder",
+      "save_as": "Enregistrer sous...",
+      "export": "Exporter...",
+      "edit": "Éditer",
+      "undo": "Annuler",
+      "redo": "Rétablir",
+      "cut": "Couper",
+      "copy": "Copier",
+      "paste": "Coller",
+      "select_all": "Tout sélectionner"
+    },
+    "h5peditor": {
+      "new": "Nouveau H5P",
+      "open": "Ouvrez H5P"
+    },
+    "help": {
+      "label": "Aider",
+      "report_issue": "Signaler un problème",
+      "toggle_developer_tools": "Toggle Outils de développement",
+      "follow_us_on_twitter": "Suivez-nous sur Twitter",
+      "about": "À propos de"
+    },
+    "mac": {
+      "services": "Prestations de service",
+      "hide": "Masquer Lumi",
+      "hideothers": "Masquer les autres",
+      "unhide": "Afficher tout"
+    }
+  },
+  "notifications": {
+    "analytics": {
+      "import": {
+        "error": "Aucun fichier valide trouvé",
+        "success": "Fichiers de rapport importés",
+        "brokenFiles": "{{count}} fichier cassé trouvé",
+        "brokenFiles_plural": "{{count}} fichiers cassés trouvés"
+      }
+    },
+    "h5peditor": {
+      "save": {
+        "success": "H5P sauvé!",
+        "error": "H5P n'a pas pu être enregistré."
+      },
+      "open": {
+        "error": "Impossible d'ouvrir H5P."
+      },
+      "export_as_html": {
+        "success": "H5P exporté avec succès",
+        "error": "Impossible d'exporter H5P"
+      }
+    }
+  },
+  "auth": {
+    "set_email": "Définir l'e-mail",
+    "email": "E-mail",
+    "code": "Code",
+    "verify_code": "Vérifier le code",
+    "verify_email": "Vérifier les courriels",
+    "notification": {
+      "success": "{{email}} a été validé avec succès",
+      "pending": "Un code de vérification a été envoyé à {{email}} . Veuillez vérifier vos e-mails."
+    },
+    "error": {
+      "no-valid-email": "{{email}} n'est pas une adresse e-mail valide."
+    },
+    "cancel": "Annuler"
+  },
+  "dialog": {
+    "close": "Fermer"
+  },
+  "general": {
+    "delete": "Effacer"
+  }
 }
