@@ -345,7 +345,7 @@ export class LibraryAdmin extends React.Component<
                                                 title={`${i18next.t(
                                                     'settings.h5p-library-administration.can-not-be-deleted',
                                                     {
-                                                        libraries:
+                                                        count:
                                                             info.dependentsCount
                                                     }
                                                 )}`}
