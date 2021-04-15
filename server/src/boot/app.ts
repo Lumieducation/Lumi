@@ -82,7 +82,7 @@ export default async (
     if (process.env.NODE_ENV !== 'development') {
         Sentry.init({
             dsn:
-                'https://c9daaaa874704f15b172ada7ebf44c87@sen.lumi.education/2',
+                'https://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
             release: electron.app.getVersion(),
             environment: process.env.NODE_ENV,
             beforeSend: async (event: Sentry.Event) => {
