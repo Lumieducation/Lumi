@@ -199,7 +199,7 @@ export default function FullScreenDialog() {
                                 )}
                             />
                         </ListItem>
-                        <ListItem
+                        {/* <ListItem
                             button
                             key="account"
                             onClick={() => setSection('account')}
@@ -213,7 +213,7 @@ export default function FullScreenDialog() {
                             <ListItemText
                                 primary={t('settings.menu.account')}
                             />
-                        </ListItem>
+                        </ListItem> */}
                     </List>
                 </Drawer>
                 <DialogContent className={classes.bg}>
