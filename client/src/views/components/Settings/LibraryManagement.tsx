@@ -306,7 +306,12 @@ export class LibraryAdmin extends React.Component<
                 ) : (
                     <List
                         subheader={
-                            <ListSubheader>
+                            <ListSubheader
+                                component="div"
+                                style={{
+                                    position: 'relative'
+                                }}
+                            >
                                 {i18next.t(
                                     'settings.h5p-library-administration.header'
                                 )}
