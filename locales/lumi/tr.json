@@ -65,8 +65,8 @@
         "menu": {
             "general": "Genel",
             "updates": "Güncellemeler",
-            "h5p-libraries": "H5P Kitaplıkları",
-            "account": "Hesap"
+            "account": "Hesap",
+            "h5p-library-administration": "H5P Kitaplıkları"
         },
         "general": {
             "header": "Genel"
@@ -80,6 +80,41 @@
                 "title": "E-posta adresi",
                 "change": "Değişim e-posta",
                 "not-set": "E-posta ayarlanmadı"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Yüklü H5P kitaplıkları",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Yükleme başarılı, ancak hiçbir kitaplık yüklenmedi veya güncellenmedi. İçerik türü muhtemelen sistemde zaten yüklüdür.",
+                    "success-with-update": "{{installed}} başarıyla yüklendi ve {{updated}} kitaplık güncellendi.",
+                    "error": "Paket yüklenirken hata oluştu."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) başarıyla silindi.",
+                    "error": "{{title}} ( {{version}} ) silinirken hata oluştu."
+                },
+                "get": {
+                    "error": "{{library.title}} ( {{version}} ) hakkında ayrıntılı bilgi alınırken hata oluştu."
+                }
+            },
+            "upload_and_install": "Kitaplığı yükleyin ve kurun",
+            "details": "Detaylar",
+            "can-not-be-deleted": "Bu kitaplık başka {{count}}",
+            "can-not-be-deleted_plural": "Bu kitaplık başka {{count}}",
+            "library-details": {
+                "header": "Kütüphane Ayrıntıları",
+                "author": "Yazar",
+                "description": "Açıklama",
+                "license": "Lisans",
+                "standalone": "Bağımsız içerik türü",
+                "restricted": "Kısıtlı (yalnızca ayrıcalıkla kullanılabilir)",
+                "fullscreen": "Tam ekranı destekler",
+                "addon": "Ayriyeten",
+                "embedTypes": "İzin verilen yerleştirme türleri",
+                "dependentsCount": "Kitaplığı kullanan kitaplık sayısı",
+                "instancesCount": "Ana içerik türü olarak bu kitaplıkla oluşturulan nesneler",
+                "instancesAsDependencyCount": "Bu kitaplığın başka bir kitaplık tarafından kullanıldığı nesneler"
             }
         }
     },
@@ -203,5 +238,11 @@
             "no-valid-email": "{{email}} geçerli bir e-posta adresi değil."
         },
         "cancel": "İptal etmek"
+    },
+    "dialog": {
+        "close": "Kapat"
+    },
+    "general": {
+        "delete": "Silme"
     }
 }

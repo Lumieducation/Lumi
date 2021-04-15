@@ -65,8 +65,8 @@
         "menu": {
             "general": "Orokorra",
             "updates": "Eguneratzeak",
-            "h5p-libraries": "H5P liburutegiak",
-            "account": "Kontua"
+            "account": "Kontua",
+            "h5p-library-administration": "H5P liburutegiak"
         },
         "general": {
             "header": "Orokorra"
@@ -80,6 +80,41 @@
                 "title": "Posta elektronikoa",
                 "change": "Aldatu helbide elektronikoa",
                 "not-set": "Mezu elektronikoa ez dago ezarrita"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Instalatutako H5P liburutegiak",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Kargatu arrakastaz, baina ez da liburutegirik instalatu edo eguneratu. Eduki mota dagoeneko sisteman instalatuta dago.",
+                    "success-with-update": "{{installed}} liburutegi instalatu {{updated}} eguneratu dira.",
+                    "error": "Errorea paketea kargatzean."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) liburutegia behar bezala ezabatu da.",
+                    "error": "{{title}} ( {{version}} ) liburutegia ezabatzean."
+                },
+                "get": {
+                    "error": "{{library.title}} ( {{version}} ) liburutegiari buruzko informazio zehatza lortzean."
+                }
+            },
+            "upload_and_install": "Kargatu eta instalatu Liburutegia",
+            "details": "Xehetasunak",
+            "can-not-be-deleted": "Liburutegi hau ezin da ezabatu, beste {{count}}",
+            "can-not-be-deleted_plural": "Liburutegi hau ezin da ezabatu, beste {{count}}",
+            "library-details": {
+                "header": "Liburutegiaren xehetasunak",
+                "author": "Egilea",
+                "description": "Deskribapena",
+                "license": "Lizentzia",
+                "standalone": "Eduki mota autonomoa",
+                "restricted": "Mugatua (pribilegioarekin bakarrik erabil daiteke)",
+                "fullscreen": "Pantaila osoa onartzen du",
+                "addon": "Gehitu",
+                "embedTypes": "Onartutako txertatze motak",
+                "dependentsCount": "Liburutegia erabiltzen duten liburutegi kopurua",
+                "instancesCount": "Liburutegi honekin eduki mota nagusi gisa sortutako objektuak",
+                "instancesAsDependencyCount": "Liburutegi hau beste liburutegi batek erabiltzen dituen objektuak"
             }
         }
     },
@@ -203,5 +238,11 @@
             "no-valid-email": "{{email}} ez da baliozko helbide elektronikoa."
         },
         "cancel": "Utzi"
+    },
+    "dialog": {
+        "close": "Itxi"
+    },
+    "general": {
+        "delete": "Ezabatu"
     }
 }

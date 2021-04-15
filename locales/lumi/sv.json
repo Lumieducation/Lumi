@@ -65,8 +65,8 @@
         "menu": {
             "general": "Allmän",
             "updates": "Uppdateringar",
-            "h5p-libraries": "H5P-bibliotek",
-            "account": "konto"
+            "account": "konto",
+            "h5p-library-administration": "H5P-bibliotek"
         },
         "general": {
             "header": "Allmän"
@@ -80,6 +80,41 @@
                 "title": "E-post",
                 "change": "Byta e-mail",
                 "not-set": "E-postadressen har inte ställts in"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Installerade H5P-bibliotek",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Uppladdningen lyckades, men inga bibliotek installerades eller uppdaterades. Innehållstypen är förmodligen redan installerad på systemet.",
+                    "success-with-update": "{{installed}} installerats och {{updated}} bibliotek har uppdaterats.",
+                    "error": "Fel vid uppladdning av paket."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) har tagits bort.",
+                    "error": "Fel vid borttagning av bibliotek {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Fel vid inhämtning av detaljerad information om bibliotek {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Ladda upp och installera bibliotek",
+            "details": "Detaljer",
+            "can-not-be-deleted": "Detta bibliotek kan inte tas bort eftersom det används i {{count}} andra bibliotek",
+            "can-not-be-deleted_plural": "Det här biblioteket kan inte raderas eftersom det används i {{count}} andra bibliotek",
+            "library-details": {
+                "header": "Biblioteksdetaljer",
+                "author": "Författare",
+                "description": "Beskrivning",
+                "license": "Licens",
+                "standalone": "Fristående innehållstyp",
+                "restricted": "Begränsad (kan endast användas med behörighet)",
+                "fullscreen": "Stöder helskärm",
+                "addon": "Tillägg",
+                "embedTypes": "Tillåtna inbäddningstyper",
+                "dependentsCount": "Antal bibliotek som använder biblioteket",
+                "instancesCount": "Objekt som skapats med detta bibliotek som huvudinnehållstyp",
+                "instancesAsDependencyCount": "Objekt där detta bibliotek används av ett annat bibliotek"
             }
         }
     },
@@ -203,5 +238,11 @@
             "no-valid-email": "{{email}} är inte en giltig e-postadress."
         },
         "cancel": "Avbryt"
+    },
+    "dialog": {
+        "close": "Stänga"
+    },
+    "general": {
+        "delete": "Radera"
     }
 }

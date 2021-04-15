@@ -65,8 +65,8 @@
         "menu": {
             "general": "Generale",
             "updates": "Aggiornamenti",
-            "h5p-libraries": "Librerie H5P",
-            "account": "account"
+            "account": "account",
+            "h5p-library-administration": "Librerie H5P"
         },
         "general": {
             "header": "Generale"
@@ -80,6 +80,41 @@
                 "title": "E-mail",
                 "change": "Cambia email",
                 "not-set": "L'email non è impostata"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Librerie H5P installate",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Caricamento riuscito, ma nessuna libreria è stata installata o aggiornata. Il tipo di contenuto è probabilmente già installato nel sistema.",
+                    "success-with-update": "Librerie {{installed}} installate e aggiornate {{updated}}",
+                    "error": "Errore durante il caricamento del pacchetto."
+                },
+                "delete": {
+                    "success": "Libreria eliminata con successo {{title}} ( {{version}} ).",
+                    "error": "Errore durante l'eliminazione della libreria {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Errore durante il recupero di informazioni dettagliate sulla libreria {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Carica e installa Library",
+            "details": "Dettagli",
+            "can-not-be-deleted": "Questa libreria non può essere cancellata, perché è usata in {{count}} altre librerie",
+            "can-not-be-deleted_plural": "Questa libreria non può essere cancellata, perché è usata in {{count}} altre librerie",
+            "library-details": {
+                "header": "Dettagli della libreria",
+                "author": "Autore",
+                "description": "Descrizione",
+                "license": "Licenza",
+                "standalone": "Tipo di contenuto autonomo",
+                "restricted": "Limitato (può essere utilizzato solo con privilegi)",
+                "fullscreen": "Supporta lo schermo intero",
+                "addon": "Aggiungi su",
+                "embedTypes": "Tipi di incorporamento consentiti",
+                "dependentsCount": "Numero di biblioteche che utilizzano la libreria",
+                "instancesCount": "Oggetti creati con questa libreria come tipo di contenuto principale",
+                "instancesAsDependencyCount": "Oggetti in cui questa libreria viene utilizzata da un'altra libreria"
             }
         }
     },
@@ -203,5 +238,11 @@
             "no-valid-email": "{{email}} non è un indirizzo email valido."
         },
         "cancel": "Annulla"
+    },
+    "dialog": {
+        "close": "Vicino"
+    },
+    "general": {
+        "delete": "Elimina"
     }
 }

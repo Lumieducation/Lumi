@@ -65,8 +65,8 @@
         "menu": {
             "general": "عام",
             "updates": "تحديثات",
-            "h5p-libraries": "مستودعات “H5P”",
-            "account": "حساب"
+            "account": "حساب",
+            "h5p-library-administration": "مكتبات H5P"
         },
         "general": {
             "header": "عام"
@@ -80,6 +80,41 @@
                 "title": "بريد إليكتروني",
                 "change": "تغيير البريد الإليكتروني",
                 "not-set": "البريد الإليكتروني غير مثبت"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "مكتبات H5P المثبتة",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "تم التحميل بنجاح ، ولكن لم يتم تثبيت أو تحديث أي مكتبات. من المحتمل أن نوع المحتوى مثبت بالفعل على النظام.",
+                    "success-with-update": "تم بنجاح تثبيت {{installed}} وتحديث مكتبات {{updated}}",
+                    "error": "خطأ أثناء تحميل الحزمة."
+                },
+                "delete": {
+                    "success": "تم حذف المكتبة بنجاح {{title}} ( {{version}} ).",
+                    "error": "خطأ في حذف المكتبة {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "خطأ في الحصول على معلومات مفصلة حول المكتبة {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "تحميل وتثبيت المكتبة",
+            "details": "تفاصيل",
+            "can-not-be-deleted": "لا يمكن حذف هذه المكتبة لأنها مستخدمة في {{count}} مكتبة أخرى",
+            "can-not-be-deleted_plural": "لا يمكن حذف هذه المكتبة لأنها مستخدمة في {{count}} مكتبات أخرى",
+            "library-details": {
+                "header": "تفاصيل المكتبة",
+                "author": "مؤلف",
+                "description": "وصف",
+                "license": "رخصة",
+                "standalone": "نوع المحتوى المستقل",
+                "restricted": "مقيد (لا يمكن استخدامه إلا بامتياز)",
+                "fullscreen": "يدعم وضع ملء الشاشة",
+                "addon": "اضافه",
+                "embedTypes": "أنواع التضمين المسموح بها",
+                "dependentsCount": "عدد المكتبات التي تستخدم المكتبة",
+                "instancesCount": "الكائنات التي تم إنشاؤها باستخدام هذه المكتبة كنوع المحتوى الرئيسي",
+                "instancesAsDependencyCount": "الكائنات التي تستخدم فيها هذه المكتبة من قبل مكتبة أخرى"
             }
         }
     },
@@ -203,5 +238,11 @@
             "no-valid-email": "{{email}} ليس عنوان بريد إلكتروني صالحًا."
         },
         "cancel": "يلغي"
+    },
+    "dialog": {
+        "close": "يغلق"
+    },
+    "general": {
+        "delete": "حذف"
     }
 }

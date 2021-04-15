@@ -65,8 +65,8 @@
         "menu": {
             "general": "Allgemeines",
             "updates": "Updates",
-            "h5p-libraries": "H5P-Bibliotheken",
-            "account": "Konto"
+            "account": "Konto",
+            "h5p-library-administration": "H5P-Bibliotheken"
         },
         "general": {
             "header": "Allgemeines"
@@ -80,6 +80,41 @@
                 "title": "Email",
                 "change": "Ändere deine E-Mail-Adresse",
                 "not-set": "E-Mail ist nicht festgelegt"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Installierte H5P-Bibliotheken",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Upload erfolgreich, aber es wurden keine Bibliotheken installiert oder aktualisiert. Der Inhaltstyp ist wahrscheinlich bereits auf dem System installiert.",
+                    "success-with-update": "{{installed}} Bibliotheken erfolgreich installiert und {{updated}}",
+                    "error": "Fehler beim Hochladen des Pakets."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) erfolgreich gelöscht.",
+                    "error": "Fehler beim Löschen der Bibliothek {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Fehler beim Abrufen detaillierter Informationen zur Bibliothek {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Laden Sie die Bibliothek hoch und installieren Sie sie",
+            "details": "Einzelheiten",
+            "can-not-be-deleted": "Diese Bibliothek kann nicht gelöscht werden, da sie in {{count}} anderen Bibliotheken verwendet wird",
+            "can-not-be-deleted_plural": "Diese Bibliothek kann nicht gelöscht werden, da sie in {{count}} anderen Bibliotheken verwendet wird",
+            "library-details": {
+                "header": "Bibliotheksdetails",
+                "author": "Autor",
+                "description": "Beschreibung",
+                "license": "Lizenz",
+                "standalone": "Eigenständiger Inhaltstyp",
+                "restricted": "Eingeschränkt (kann nur mit Privilegien verwendet werden)",
+                "fullscreen": "Unterstützt Vollbild",
+                "addon": "Erweiterung",
+                "embedTypes": "Zulässige Einbettungstypen",
+                "dependentsCount": "Anzahl der Bibliotheken, die die Bibliothek verwenden",
+                "instancesCount": "Objekte, die mit dieser Bibliothek als Hauptinhaltstyp erstellt wurden",
+                "instancesAsDependencyCount": "Objekte, in denen diese Bibliothek von einer anderen Bibliothek verwendet wird"
             }
         }
     },
@@ -203,5 +238,11 @@
             "no-valid-email": "{{email}} ist keine gültige E-Mail-Adresse."
         },
         "cancel": "Abbrechen"
+    },
+    "dialog": {
+        "close": "Schließen"
+    },
+    "general": {
+        "delete": "Löschen"
     }
 }

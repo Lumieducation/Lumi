@@ -65,8 +65,8 @@
         "menu": {
             "general": "일반",
             "updates": "업데이트",
-            "h5p-libraries": "H5P 라이브러리",
-            "account": "계정"
+            "account": "계정",
+            "h5p-library-administration": "H5P 라이브러리"
         },
         "general": {
             "header": "일반"
@@ -80,6 +80,41 @@
                 "title": "이메일",
                 "change": "이메일을 바꾸다",
                 "not-set": "이메일이 설정되지 않았습니다."
+            }
+        },
+        "h5p-library-administration": {
+            "header": "설치된 H5P 라이브러리",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "업로드에 성공했지만 라이브러리가 설치 또는 업데이트되지 않았습니다. 컨텐츠 유형이 이미 시스템에 설치되어있을 수 있습니다.",
+                    "success-with-update": "{{installed}} 성공적으로 설치 {{updated}} 라이브러리를 업데이트했습니다.",
+                    "error": "패키지를 업로드하는 동안 오류가 발생했습니다."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} )을 삭제했습니다.",
+                    "error": "{{title}} ( {{version}} )을 삭제하는 동안 오류가 발생했습니다."
+                },
+                "get": {
+                    "error": "{{library.title}} ( {{version}} )에 대한 자세한 정보를 가져 오는 동안 오류가 발생했습니다."
+                }
+            },
+            "upload_and_install": "라이브러리 업로드 및 설치",
+            "details": "세부",
+            "can-not-be-deleted": "{{count}} 다른 라이브러리에서 사용 중이므로 삭제할 수 없습니다.",
+            "can-not-be-deleted_plural": "{{count}} 다른 라이브러리에서 사용 중이므로 삭제할 수 없습니다.",
+            "library-details": {
+                "header": "도서관 세부 정보",
+                "author": "저자",
+                "description": "기술",
+                "license": "특허",
+                "standalone": "독립형 콘텐츠 유형",
+                "restricted": "제한됨 (특전으로 만 사용 가능)",
+                "fullscreen": "전체 화면 지원",
+                "addon": "애드온",
+                "embedTypes": "허용 된 삽입 유형",
+                "dependentsCount": "라이브러리를 사용하는 라이브러리 수",
+                "instancesCount": "이 라이브러리를 기본 콘텐츠 유형으로 사용하여 만든 개체",
+                "instancesAsDependencyCount": "이 라이브러리가 다른 라이브러리에서 사용되는 객체"
             }
         }
     },
@@ -203,5 +238,11 @@
             "no-valid-email": "{{email}} 은 유효한 이메일 주소가 아닙니다."
         },
         "cancel": "취소"
+    },
+    "dialog": {
+        "close": "닫기"
+    },
+    "general": {
+        "delete": "지우다"
     }
 }

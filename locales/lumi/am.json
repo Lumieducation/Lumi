@@ -65,8 +65,8 @@
         "menu": {
             "general": "ጄኔራል",
             "updates": "ዝመናዎች",
-            "h5p-libraries": "H5P ቤተመፃህፍት",
-            "account": "መለያ"
+            "account": "መለያ",
+            "h5p-library-administration": "H5P ቤተመፃህፍት"
         },
         "general": {
             "header": "ጄኔራል"
@@ -80,6 +80,41 @@
                 "title": "ኢሜል",
                 "change": "ኢሜል ይቀይሩ",
                 "not-set": "ኢሜል አልተዘጋጀም"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "የተጫኑ የኤች 5 ፒ ቤተ-መጻሕፍት",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "ስቀሉ ስኬታማ ነበር ፣ ግን ምንም ቤተ-መጽሐፍት አልተጫኑም ወይም አልተዘመኑም። የይዘቱ ዓይነት ምናልባት ቀድሞውኑ በስርዓቱ ላይ ተጭኗል።",
+                    "success-with-update": "በተሳካ ሁኔታ {{installed}} የተጫነ እና {{updated}} ቤተ-መጻሕፍት ተዘምኗል።",
+                    "error": "ጥቅልን በመስቀል ላይ ስህተት"
+                },
+                "delete": {
+                    "success": "ቤተ-መጽሐፍት በተሳካ ሁኔታ ተሰር deletedል {{title}} ( {{version}} )",
+                    "error": "ቤተ-መጽሐፍት {{title}} ( {{version}} ) መሰረዝ ላይ ስህተት"
+                },
+                "get": {
+                    "error": "{{library.title}} ( {{version}} ) ዝርዝር መረጃ ማግኘት ላይ ስህተት።"
+                }
+            },
+            "upload_and_install": "ቤተ-መጽሐፍት ስቀል እና ጫን",
+            "details": "ዝርዝሮች",
+            "can-not-be-deleted": "ይህ ቤተ-መጽሐፍት መሰረዝ አይቻልም ፣ ምክንያቱም በ {{count}} ሌሎች ቤተ-መጽሐፍት ውስጥ ጥቅም ላይ ስለሚውል",
+            "can-not-be-deleted_plural": "ይህ ቤተ-መጽሐፍት መሰረዝ አይቻልም ፣ ምክንያቱም በ {{count}} ሌሎች ቤተ-መጻሕፍት ውስጥ ጥቅም ላይ ይውላል",
+            "library-details": {
+                "header": "የቤተ-መጽሐፍት ዝርዝሮች",
+                "author": "ደራሲ",
+                "description": "መግለጫ",
+                "license": "ፈቃድ",
+                "standalone": "ራሱን የቻለ የይዘት ዓይነት",
+                "restricted": "የተከለከለ (በልዩ መብት ብቻ ሊያገለግል ይችላል)",
+                "fullscreen": "ሙሉ ማያ ገጽን ይደግፋል",
+                "addon": "አዶን",
+                "embedTypes": "የተፈቀዱ መክተት ዓይነቶች",
+                "dependentsCount": "ቤተ መፃህፍቱን የሚጠቀሙ ቤተመፃህፍት ብዛት",
+                "instancesCount": "እንደ ዋናው የይዘት አይነት በዚህ ቤተ-መጽሐፍት የተፈጠሩ ዕቃዎች",
+                "instancesAsDependencyCount": "ይህ ቤተ-መጽሐፍት በሌላ ቤተ-መጽሐፍት የሚጠቀምባቸው ነገሮች"
             }
         }
     },
@@ -203,5 +238,11 @@
             "no-valid-email": "{{email}} ትክክለኛ የኢሜል አድራሻ አይደለም ፡"
         },
         "cancel": "ሰርዝ"
+    },
+    "dialog": {
+        "close": "ገጠመ"
+    },
+    "general": {
+        "delete": "ሰርዝ"
     }
 }

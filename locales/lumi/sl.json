@@ -65,8 +65,8 @@
         "menu": {
             "general": "Splošno",
             "updates": "Posodobitve",
-            "h5p-libraries": "Knjižnice H5P",
-            "account": "račun"
+            "account": "račun",
+            "h5p-library-administration": "Knjižnice H5P"
         },
         "general": {
             "header": "Splošno"
@@ -80,6 +80,41 @@
                 "title": "E-naslov",
                 "change": "Spremeni e-pošto",
                 "not-set": "E-pošta ni nastavljena"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Nameščene knjižnice H5P",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Nalaganje je bilo uspešno, vendar knjižnice niso bile nameščene ali posodobljene. Vrsta vsebine je verjetno že nameščena v sistemu.",
+                    "success-with-update": "Uspešno nameščena {{installed}} in posodobljena {{updated}} knjižnica.",
+                    "error": "Napaka pri nalaganju paketa."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) je bila uspešno izbrisana.",
+                    "error": "Napaka pri brisanju knjižnice {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Napaka pri pridobivanju podrobnih informacij o knjižnici {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Naložite in namestite knjižnico",
+            "details": "Podrobnosti",
+            "can-not-be-deleted": "Te knjižnice ni mogoče izbrisati, ker se uporablja v {{count}} drugih knjižnicah",
+            "can-not-be-deleted_plural": "Te knjižnice ni mogoče izbrisati, ker se uporablja v {{count}} drugih knjižnicah",
+            "library-details": {
+                "header": "Podrobnosti o knjižnici",
+                "author": "Avtor",
+                "description": "Opis",
+                "license": "Licenca",
+                "standalone": "Samostojna vrsta vsebine",
+                "restricted": "Omejeno (lahko se uporablja samo s privilegiji)",
+                "fullscreen": "Podpira celozaslonski način",
+                "addon": "Addon",
+                "embedTypes": "Dovoljene vrste vdelave",
+                "dependentsCount": "Število knjižnic, ki uporabljajo knjižnico",
+                "instancesCount": "Predmeti, ustvarjeni s to knjižnico kot glavno vrsto vsebine",
+                "instancesAsDependencyCount": "Predmeti, v katerih to knjižnico uporablja druga knjižnica"
             }
         }
     },
@@ -203,5 +238,11 @@
             "no-valid-email": "{{email}} ni veljaven e-poštni naslov."
         },
         "cancel": "Prekliči"
+    },
+    "dialog": {
+        "close": "Zapri"
+    },
+    "general": {
+        "delete": "Izbriši"
     }
 }

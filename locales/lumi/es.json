@@ -78,9 +78,44 @@
         },
         "menu": {
             "account": "Cuenta",
-            "h5p-libraries": "Librerías H5P",
             "updates": "Actualizaciones",
-            "general": "General"
+            "general": "General",
+            "h5p-library-administration": "Bibliotecas H5P"
+        },
+        "h5p-library-administration": {
+            "header": "Bibliotecas H5P instaladas",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "La carga se realizó correctamente, pero no se instalaron ni actualizaron bibliotecas. Probablemente el tipo de contenido ya esté instalado en el sistema.",
+                    "success-with-update": "Se instalaron correctamente {{installed}} y se actualizaron {{updated}} bibliotecas.",
+                    "error": "Error al cargar el paquete."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) eliminada con éxito.",
+                    "error": "Error al eliminar la biblioteca {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Error al obtener información detallada sobre la biblioteca {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Cargar e instalar la biblioteca",
+            "details": "Detalles",
+            "can-not-be-deleted": "Esta biblioteca no se puede eliminar porque se usa en {{count}} otras bibliotecas",
+            "can-not-be-deleted_plural": "Esta biblioteca no se puede eliminar porque se usa en otras {{count}}",
+            "library-details": {
+                "header": "Detalles de la biblioteca",
+                "author": "Autor",
+                "description": "Descripción",
+                "license": "Licencia",
+                "standalone": "Tipo de contenido independiente",
+                "restricted": "Restringido (solo se puede usar con privilegios)",
+                "fullscreen": "Soporta pantalla completa",
+                "addon": "Añadir",
+                "embedTypes": "Tipos de inserción permitidos",
+                "dependentsCount": "Número de bibliotecas que usan la biblioteca",
+                "instancesCount": "Objetos creados con esta biblioteca como tipo de contenido principal",
+                "instancesAsDependencyCount": "Objetos en los que esta biblioteca es utilizada por otra biblioteca"
+            }
         }
     },
     "analytics": {
@@ -203,5 +238,11 @@
             "no-valid-email": "{{email}} no es una dirección de correo electrónico válida."
         },
         "cancel": "Cancelar"
+    },
+    "dialog": {
+        "close": "Cerca"
+    },
+    "general": {
+        "delete": "Borrar"
     }
 }

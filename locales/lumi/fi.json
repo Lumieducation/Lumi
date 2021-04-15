@@ -65,8 +65,8 @@
         "menu": {
             "general": "Kenraali",
             "updates": "Päivitykset",
-            "h5p-libraries": "H5P-kirjastot",
-            "account": "Tili"
+            "account": "Tili",
+            "h5p-library-administration": "H5P-kirjastot"
         },
         "general": {
             "header": "Kenraali"
@@ -80,6 +80,41 @@
                 "title": "Sähköposti",
                 "change": "Vaihda sähköposti",
                 "not-set": "Sähköpostiosoitetta ei ole asetettu"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Asennetut H5P-kirjastot",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Lataus onnistui, mutta kirjastoja ei ole asennettu tai päivitetty. Sisältötyyppi on todennäköisesti jo asennettu järjestelmään.",
+                    "success-with-update": "Onnistuneesti asennettu {{installed}} ja päivitetään {{updated}} kirjastoissa.",
+                    "error": "Virhe pakettia ladattaessa."
+                },
+                "delete": {
+                    "success": "Kirjasto {{title}} ( {{version}} ) poistettu.",
+                    "error": "Virhe poistettaessa kirjastoa {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Virhe haettaessa yksityiskohtaisia tietoja kirjastosta {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Lataa ja asenna kirjasto",
+            "details": "Yksityiskohdat",
+            "can-not-be-deleted": "Tätä kirjastoa ei voi poistaa, koska sitä käytetään {{count}} muussa kirjastossa",
+            "can-not-be-deleted_plural": "Tätä kirjastoa ei voi poistaa, koska sitä käytetään {{count}} muussa kirjastossa",
+            "library-details": {
+                "header": "Kirjaston tiedot",
+                "author": "Kirjoittaja",
+                "description": "Kuvaus",
+                "license": "Lisenssi",
+                "standalone": "Itsenäinen sisältötyyppi",
+                "restricted": "Rajoitettu (voidaan käyttää vain etuoikeudella)",
+                "fullscreen": "Tukee koko näyttöä",
+                "addon": "Addon",
+                "embedTypes": "Sallitut upotustyypit",
+                "dependentsCount": "Kirjastoa käyttävien kirjastojen määrä",
+                "instancesCount": "Objektit, jotka on luotu tämän kirjaston pääsisältötyypiksi",
+                "instancesAsDependencyCount": "Objektit, joissa toinen kirjasto käyttää tätä kirjastoa"
             }
         }
     },
@@ -203,5 +238,11 @@
             "no-valid-email": "{{email}} ei ole kelvollinen sähköpostiosoite."
         },
         "cancel": "Peruuttaa"
+    },
+    "dialog": {
+        "close": "kiinni"
+    },
+    "general": {
+        "delete": "Poistaa"
     }
 }

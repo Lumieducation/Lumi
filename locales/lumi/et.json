@@ -65,8 +65,8 @@
         "menu": {
             "general": "Kindral",
             "updates": "Uuendused",
-            "h5p-libraries": "H5P raamatukogud",
-            "account": "Konto"
+            "account": "Konto",
+            "h5p-library-administration": "H5P raamatukogud"
         },
         "general": {
             "header": "Kindral"
@@ -80,6 +80,41 @@
                 "title": "E-post",
                 "change": "Muuda meiliaadressi",
                 "not-set": "E-posti pole määratud"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Paigaldatud H5P teegid",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Üleslaadimine õnnestus, kuid ühtegi teeki ei installitud ega värskendatud. Sisutüüp on arvatavasti juba süsteemi installitud.",
+                    "success-with-update": "{{installed}} teeki installimine ja {{updated}}",
+                    "error": "Viga paketi üleslaadimisel."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) kustutamine õnnestus.",
+                    "error": "Viga teegi {{title}} ( {{version}} ) kustutamisel."
+                },
+                "get": {
+                    "error": "{{library.title}} ( {{version}} ) teegi kohta üksikasjaliku teabe hankimisel tekkis viga."
+                }
+            },
+            "upload_and_install": "Laadige üles ja installige teek",
+            "details": "Üksikasjad",
+            "can-not-be-deleted": "Seda teeki ei saa kustutada, kuna seda kasutatakse {{count}} teises teegis",
+            "can-not-be-deleted_plural": "Seda teeki ei saa kustutada, kuna seda kasutatakse veel {{count}}",
+            "library-details": {
+                "header": "Raamatukogu üksikasjad",
+                "author": "Autor",
+                "description": "Kirjeldus",
+                "license": "Litsents",
+                "standalone": "Eraldi sisu tüüp",
+                "restricted": "Piiratud (saab kasutada ainult privileegiga)",
+                "fullscreen": "Toetab täisekraani",
+                "addon": "Lisa",
+                "embedTypes": "Lubatud manustüübid",
+                "dependentsCount": "Raamatukogu kasutavate teekide arv",
+                "instancesCount": "Objektid, mis on loodud selle teegi peamise sisutüübina",
+                "instancesAsDependencyCount": "Objektid, milles seda teeki kasutab teine teek"
             }
         }
     },
@@ -203,5 +238,11 @@
             "no-valid-email": "{{email}} pole kehtiv e-posti aadress."
         },
         "cancel": "Tühista"
+    },
+    "dialog": {
+        "close": "Sulge"
+    },
+    "general": {
+        "delete": "Kustuta"
     }
 }

@@ -65,8 +65,8 @@
         "menu": {
             "general": "Algemeen",
             "updates": "Updates",
-            "h5p-libraries": "H5P-bibliotheken",
-            "account": "Account"
+            "account": "Account",
+            "h5p-library-administration": "H5P-bibliotheken"
         },
         "general": {
             "header": "Algemeen"
@@ -80,6 +80,41 @@
                 "title": "E-mail",
                 "change": "E-mailadres wijzigen",
                 "not-set": "E-mail is niet ingesteld"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Geïnstalleerde H5P-bibliotheken",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Upload succesvol, maar er zijn geen bibliotheken geïnstalleerd of bijgewerkt. Het inhoudstype is waarschijnlijk al op het systeem geïnstalleerd.",
+                    "success-with-update": "Met succes {{installed}} geïnstalleerd en {{updated}} bibliotheken bijgewerkt.",
+                    "error": "Fout bij het uploaden van pakket."
+                },
+                "delete": {
+                    "success": "Bibliotheek {{title}} ( {{version}} ) is verwijderd.",
+                    "error": "Fout bij het verwijderen van bibliotheek {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Fout bij het ophalen van gedetailleerde informatie over bibliotheek {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Upload en installeer Bibliotheek",
+            "details": "Details",
+            "can-not-be-deleted": "Deze bibliotheek kan niet worden verwijderd, omdat deze in {{count}} andere bibliotheek wordt gebruikt",
+            "can-not-be-deleted_plural": "Deze bibliotheek kan niet worden verwijderd, omdat deze in {{count}} andere bibliotheken wordt gebruikt",
+            "library-details": {
+                "header": "Bibliotheekdetails",
+                "author": "Schrijver",
+                "description": "Omschrijving",
+                "license": "Licentie",
+                "standalone": "Zelfstandig inhoudstype",
+                "restricted": "Beperkt (kan alleen worden gebruikt met privilege)",
+                "fullscreen": "Ondersteunt volledig scherm",
+                "addon": "Toevoegen",
+                "embedTypes": "Toegestane typen insluiten",
+                "dependentsCount": "Aantal bibliotheken dat de bibliotheek gebruikt",
+                "instancesCount": "Objecten gemaakt met deze bibliotheek als het belangrijkste inhoudstype",
+                "instancesAsDependencyCount": "Objecten waarin deze bibliotheek wordt gebruikt door een andere bibliotheek"
             }
         }
     },
@@ -203,5 +238,11 @@
             "no-valid-email": "{{email}} is geen geldig e-mailadres."
         },
         "cancel": "annuleren"
+    },
+    "dialog": {
+        "close": "Dichtbij"
+    },
+    "general": {
+        "delete": "Verwijderen"
     }
 }

@@ -65,8 +65,8 @@
         "menu": {
             "general": "一般的",
             "updates": "更新",
-            "h5p-libraries": "H5P库",
-            "account": "帐户"
+            "account": "帐户",
+            "h5p-library-administration": "H5P库"
         },
         "general": {
             "header": "一般的"
@@ -80,6 +80,41 @@
                 "title": "电子邮件",
                 "change": "更改电子邮件",
                 "not-set": "电子邮件未设置"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "已安装的H5P库",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "上传成功，但未安装或更新任何库。内容类型可能已经安装在系统上。",
+                    "success-with-update": "已成功安装{{installed}}并更新了{{updated}}库。",
+                    "error": "上载档案时发生错误。"
+                },
+                "delete": {
+                    "success": "成功删除库{{title}} （ {{version}} ）。",
+                    "error": "删除库{{title}} （ {{version}} ）时出错。"
+                },
+                "get": {
+                    "error": "{{library.title}} （ {{version}} ）的详细信息时出错。"
+                }
+            },
+            "upload_and_install": "上传并安装库",
+            "details": "细节",
+            "can-not-be-deleted": "该库无法删除，因为它已在{{count}}个库中使用",
+            "can-not-be-deleted_plural": "无法删除该库，因为它已在{{count}}个库中使用",
+            "library-details": {
+                "header": "图书馆资料",
+                "author": "作者",
+                "description": "描述",
+                "license": "执照",
+                "standalone": "独立内容类型",
+                "restricted": "受限制的（只能与特权一起使用）",
+                "fullscreen": "支持全屏",
+                "addon": "添加在",
+                "embedTypes": "允许的嵌入类型",
+                "dependentsCount": "使用该库的库数",
+                "instancesCount": "使用此库作为主要内容类型创建的对象",
+                "instancesAsDependencyCount": "该库被另一个库使用的对象"
             }
         }
     },
@@ -203,5 +238,11 @@
             "no-valid-email": "{{email}}不是有效的电子邮件地址。"
         },
         "cancel": "取消"
+    },
+    "dialog": {
+        "close": "关闭"
+    },
+    "general": {
+        "delete": "删除"
     }
 }

@@ -65,8 +65,8 @@
         "menu": {
             "general": "Em geral",
             "updates": "Atualizações",
-            "h5p-libraries": "Bibliotecas H5P",
-            "account": "Conta"
+            "account": "Conta",
+            "h5p-library-administration": "Bibliotecas H5P"
         },
         "general": {
             "header": "Em geral"
@@ -80,6 +80,41 @@
                 "title": "E-mail",
                 "change": "Mude o e-mail",
                 "not-set": "Email não está definido"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Bibliotecas H5P instaladas",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Upload bem-sucedido, mas nenhuma biblioteca foi instalada ou atualizada. O tipo de conteúdo provavelmente já está instalado no sistema.",
+                    "success-with-update": "Instalou com sucesso {{installed}} e atualizou {{updated}} bibliotecas.",
+                    "error": "Erro ao fazer upload do pacote."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) excluída com sucesso.",
+                    "error": "Erro ao excluir biblioteca {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Erro ao obter informações detalhadas sobre a biblioteca {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Carregar e instalar a biblioteca",
+            "details": "Detalhes",
+            "can-not-be-deleted": "Esta biblioteca não pode ser excluída porque é usada em {{count}} outra biblioteca",
+            "can-not-be-deleted_plural": "Esta biblioteca não pode ser excluída porque é usada em {{count}} outras bibliotecas",
+            "library-details": {
+                "header": "Detalhes da biblioteca",
+                "author": "Autor",
+                "description": "Descrição",
+                "license": "Licença",
+                "standalone": "Tipo de conteúdo autônomo",
+                "restricted": "Restrito (só pode ser usado com privilégio)",
+                "fullscreen": "Suporta tela cheia",
+                "addon": "Adicionar",
+                "embedTypes": "Tipos de incorporação permitidos",
+                "dependentsCount": "Número de bibliotecas que usam a biblioteca",
+                "instancesCount": "Objetos criados com esta biblioteca como o tipo de conteúdo principal",
+                "instancesAsDependencyCount": "Objetos nos quais esta biblioteca é usada por outra biblioteca"
             }
         }
     },
@@ -203,5 +238,11 @@
             "no-valid-email": "{{email}} não é um endereço de e-mail válido."
         },
         "cancel": "Cancelar"
+    },
+    "dialog": {
+        "close": "Perto"
+    },
+    "general": {
+        "delete": "Excluir"
     }
 }
