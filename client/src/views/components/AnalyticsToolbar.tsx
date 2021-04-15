@@ -1,4 +1,4 @@
-import React from 'react';
+import { useTranslation } from 'react-i18next';
 import {
     fade,
     makeStyles,
@@ -86,6 +86,7 @@ export default function AnalyticsToolbar(props: {
     search: (text: string) => void;
 }) {
     const classes = useStyles();
+    const { t } = useTranslation();
 
     return (
         <div className={classes.grow}>
@@ -101,14 +102,14 @@ export default function AnalyticsToolbar(props: {
                         <OpenIcon />
                     </IconButton>
                     <Typography className={classes.title} variant="h6" noWrap>
-                        Analytics
+                        {t('analytics.startPage.title')}
                     </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
                             <SearchIcon />
                         </div>
                         <InputBase
-                            placeholder="Search student names…"
+                            placeholder={t('analytics.searchPlaceholder')}
                             classes={{
                                 root: classes.inputRoot,
                                 input: classes.inputInput
