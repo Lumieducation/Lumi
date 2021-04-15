@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import classnames from 'classnames';
 import {
@@ -17,12 +17,13 @@ import DialogContent from '@material-ui/core/DialogContent';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-
+import IconButton from '@material-ui/core/IconButton';
 import superagent from 'superagent';
 
+import CheckIcon from '@material-ui/icons/Check';
 import Logo from './components/Logo';
 
-import { actions } from '../state';
+import { IState, actions } from '../state';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -83,6 +84,7 @@ export default function FormDialog() {
     const classes = useStyles();
     const { t } = useTranslation();
     const dispatch = useDispatch();
+    const settings = useSelector((state: IState) => state.settings);
 
     const [open, setOpen] = React.useState(false);
     const [email, setEmail] = React.useState('');
@@ -145,13 +147,20 @@ export default function FormDialog() {
 
     return (
         <div>
-            <Button
-                variant="outlined"
-                color="primary"
-                onClick={handleClickOpen}
-            >
-                {t('auth.set_email')}
-            </Button>
+            {settings.email ? (
+                <IconButton color="secondary" onClick={handleClickOpen}>
+                    <CheckIcon />
+                </IconButton>
+            ) : (
+                <Button
+                    variant="outlined"
+                    color="primary"
+                    onClick={handleClickOpen}
+                >
+                    {t('auth.set_email')}
+                </Button>
+            )}
+
             <Dialog
                 open={open}
                 onClose={handleClose}

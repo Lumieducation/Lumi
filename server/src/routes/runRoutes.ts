@@ -333,34 +333,34 @@ export default function (
         }
     );
 
-    router.delete(
-        '/:id',
-        async (
-            req: express.Request,
-            res: express.Response,
-            next: express.NextFunction
-        ) => {
-            try {
-                const response = await superagent.delete(
-                    `http://lumi.run/${req.params.id}?secret=${req.query.secret}`
-                );
+    // router.delete(
+    //     '/:id',
+    //     async (
+    //         req: express.Request,
+    //         res: express.Response,
+    //         next: express.NextFunction
+    //     ) => {
+    //         try {
+    //             const response = await superagent.delete(
+    //                 `http://lumi.run/${req.params.id}?secret=${req.query.secret}`
+    //             );
 
-                const run = await fs.readJSON(serverConfig.runFile);
-                run.runs = run.runs.filter((r) => r.id !== req.params.id);
-                await fs.writeJSON(serverConfig.runFile, run);
+    //             const run = await fs.readJSON(serverConfig.runFile);
+    //             run.runs = run.runs.filter((r) => r.id !== req.params.id);
+    //             await fs.writeJSON(serverConfig.runFile, run);
 
-                res.status(200).json(response);
-            } catch (error) {
-                if (error.status === 404) {
-                    const run = await fs.readJSON(serverConfig.runFile);
-                    run.runs = run.runs.filter((r) => r.id !== req.params.id);
-                    await fs.writeJSON(serverConfig.runFile, run);
-                }
-                Sentry.captureException(error);
-                res.status(500).end();
-            }
-        }
-    );
+    //             res.status(200).json(response);
+    //         } catch (error) {
+    //             if (error.status === 404) {
+    //                 const run = await fs.readJSON(serverConfig.runFile);
+    //                 run.runs = run.runs.filter((r) => r.id !== req.params.id);
+    //                 await fs.writeJSON(serverConfig.runFile, run);
+    //             }
+    //             Sentry.captureException(error);
+    //             res.status(500).end();
+    //         }
+    //     }
+    // );
 
     router.use(
         '/',
@@ -368,7 +368,7 @@ export default function (
             req.headers['x-auth'] = settingsCache.getSettings().token;
             next();
         },
-        proxy('http://localhost:8090')
+        proxy(process.env.RUN_HOST || 'http://lumi.run')
     );
 
     return router;

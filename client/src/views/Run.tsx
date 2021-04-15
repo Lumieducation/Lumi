@@ -12,6 +12,8 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
 import RunList from './components/RunList';
 
+import RunSetupDialog from './components/RunSetupDialog';
+
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
@@ -35,8 +37,18 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function FolderList() {
     const classes = useStyles();
     const dispatch = useDispatch();
+    const [showRunSetupDialog, setShowRunSetupDialog] = React.useState(false);
+
+    const closeRunSetupDialog = () => {
+        setShowRunSetupDialog(false);
+    };
+
     useEffect(() => {
-        dispatch(actions.run.getRuns());
+        dispatch(actions.run.getRuns()).then((t: string) => {
+            if (t === 'error') {
+                setShowRunSetupDialog(true);
+            }
+        });
     });
 
     return (
@@ -63,6 +75,10 @@ export default function FolderList() {
                     </Button>
                 </Grid>
             </Grid>
+            <RunSetupDialog
+                open={showRunSetupDialog}
+                close={closeRunSetupDialog}
+            />
         </div>
     );
 }

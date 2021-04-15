@@ -32,6 +32,7 @@ export function getRuns(): any {
                     payload: runs,
                     type: RUN_GET_RUNS_SUCCESS
                 });
+                return 'success';
             } catch (error) {
                 Sentry.captureException(error);
 
@@ -39,6 +40,7 @@ export function getRuns(): any {
                     payload: { error },
                     type: RUN_GET_RUNS_ERROR
                 });
+                return 'error';
             }
         } catch (error) {
             Sentry.captureException(error);
@@ -61,6 +63,7 @@ export function upload(options?: { includeReporter?: boolean; path?: string }) {
                     payload: run,
                     type: RUN_UPLOAD_SUCCESS
                 });
+                dispatch(getRuns());
             } catch (error) {
                 Sentry.captureException(error);
 
