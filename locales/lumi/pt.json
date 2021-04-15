@@ -92,7 +92,16 @@
             "open": "Escolha a pasta com os arquivos .lumi"
         },
         "name": "Nome",
-        "average": "Média"
+        "average": "Média",
+        "searchPlaceholder": "Pesquisar nomes de alunos ...",
+        "brokenFiles": "Lista de arquivos quebrados",
+        "errors": {
+            "no-content-json": "O conteúdo H5P não foi adicionado corretamente ao arquivo .lumi.",
+            "json-parse-error": "O arquivo .lumi contém conteúdo inválido (JSON não analisou).",
+            "determine-name": "Não foi possível determinar o nome do aluno.",
+            "invalid-interactions": "Algumas das interações são interrompidas.",
+            "invalid-statements": "Algumas das ações dos alunos gravadas foram interrompidas."
+        }
     },
     "bug_report": {
         "title": "Relatórios de erros e falhas",
@@ -161,7 +170,9 @@
         "analytics": {
             "import": {
                 "error": "Nenhum arquivo válido encontrado",
-                "success": "Arquivos de relatório importados"
+                "success": "Arquivos de relatório importados",
+                "brokenFiles": "{{count}} arquivo quebrado encontrado",
+                "brokenFiles_plural": "{{count}} arquivos quebrados encontrados"
             }
         },
         "h5peditor": {

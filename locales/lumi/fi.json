@@ -92,7 +92,16 @@
             "open": "Valitse kansio .lumi-tiedostoilla"
         },
         "name": "Nimi",
-        "average": "Keskiverto"
+        "average": "Keskiverto",
+        "searchPlaceholder": "Hae opiskelijoiden nimiä ...",
+        "brokenFiles": "Luettelo rikki tiedostoista",
+        "errors": {
+            "no-content-json": "H5P-sisältöä ei lisätty oikein .lumi-tiedostoon.",
+            "json-parse-error": ".Lumi-tiedosto sisältää virheellistä sisältöä (JSON ei jäsennä).",
+            "determine-name": "Opiskelijan nimeä ei voitu määrittää.",
+            "invalid-interactions": "Jotkut vuorovaikutuksista ovat rikki.",
+            "invalid-statements": "Jotkut tallennetuista opiskelijoiden toimista ovat rikki."
+        }
     },
     "bug_report": {
         "title": "Virhe- ja kaatumisraportit",
@@ -161,7 +170,9 @@
         "analytics": {
             "import": {
                 "error": "Kelvollisia tiedostoja ei löytynyt",
-                "success": "Tuodut raporttitiedostot"
+                "success": "Tuodut raporttitiedostot",
+                "brokenFiles": "{{count}} rikki tiedostoa",
+                "brokenFiles_plural": "{{count}} rikki tiedostoa"
             }
         },
         "h5peditor": {

@@ -92,7 +92,16 @@
             "open": "Välj mapp med .lumi-filer"
         },
         "name": "namn",
-        "average": "Medel"
+        "average": "Medel",
+        "searchPlaceholder": "Sök i studentnamn ...",
+        "brokenFiles": "Lista över trasiga filer",
+        "errors": {
+            "no-content-json": "H5P-innehållet har inte lagts till ordentligt i .lumi-filen.",
+            "json-parse-error": ".Lumi-filen innehåller ogiltigt innehåll (JSON analyserade inte).",
+            "determine-name": "Det gick inte att avgöra studentens namn.",
+            "invalid-interactions": "Några av interaktionerna är trasiga.",
+            "invalid-statements": "Några av de inspelade studenternas handlingar är trasiga."
+        }
     },
     "bug_report": {
         "title": "Fel- och kraschrapporter",
@@ -161,7 +170,9 @@
         "analytics": {
             "import": {
                 "error": "Inga giltiga filer hittades",
-                "success": "Importerade rapportfiler"
+                "success": "Importerade rapportfiler",
+                "brokenFiles": "{{count}} trasig fil hittades",
+                "brokenFiles_plural": "{{count}} trasiga filer hittades"
             }
         },
         "h5peditor": {

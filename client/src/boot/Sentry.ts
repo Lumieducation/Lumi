@@ -3,7 +3,7 @@ import store from '../state';
 import { track } from '../state/track/actions';
 
 Sentry.init({
-    dsn: 'http://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
+    dsn: 'https://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
     release: process.env.VERSION,
     environment: process.env.NODE_ENV,
     beforeSend: (event: Sentry.Event, hint: Sentry.EventHint) => {

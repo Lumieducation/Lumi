@@ -54,7 +54,9 @@ const LumixAPIViewer = (props: {
                     <TableRow>
                         <TableCell>{t('analytics.name')}</TableCell>
                         {interactions.map((interaction) => (
-                            <TableCell>{interaction.name}</TableCell>
+                            <TableCell>
+                                {interaction.title || interaction.name}
+                            </TableCell>
                         ))}
                         <TableCell></TableCell>
                         <TableCell>{t('analytics.average')}</TableCell>

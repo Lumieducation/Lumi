@@ -92,7 +92,16 @@
             "open": "Vyberte složku se soubory .lumi"
         },
         "name": "název",
-        "average": "Průměrný"
+        "average": "Průměrný",
+        "searchPlaceholder": "Hledat jména studentů ...",
+        "brokenFiles": "Seznam nefunkčních souborů",
+        "errors": {
+            "no-content-json": "Obsah H5P nebyl správně přidán do souboru .lumi.",
+            "json-parse-error": "Soubor .lumi obsahuje neplatný obsah (JSON nebyl analyzován).",
+            "determine-name": "Nelze určit jméno studenta.",
+            "invalid-interactions": "Některé interakce jsou přerušené.",
+            "invalid-statements": "Některé zaznamenané akce studentů jsou nefunkční."
+        }
     },
     "bug_report": {
         "title": "Zprávy o chybách a selháních",
@@ -161,7 +170,9 @@
         "analytics": {
             "import": {
                 "error": "Nebyly nalezeny žádné platné soubory",
-                "success": "Importované soubory zpráv"
+                "success": "Importované soubory zpráv",
+                "brokenFiles": "{{count}} poškozený soubor",
+                "brokenFiles_plural": "{{count}} poškozených souborů"
             }
         },
         "h5peditor": {

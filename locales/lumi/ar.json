@@ -16,7 +16,7 @@
             "create": "إنشاء H5P جديد",
             "start": "بداية"
         },
-        "default_name": "H5P جديد",
+        "default_name": "”H5P“ جديد",
         "exportDialog": {
             "title": "إعدادات التصدير",
             "format": {
@@ -42,7 +42,7 @@
             "cancelButton": "يلغي",
             "exportButton": "تصدير الآن",
             "filePicker": {
-                "title": "تصدير كـ ...",
+                "title": "تصدير كـ …",
                 "buttonLabel": "يصدر",
                 "formatNames": {
                     "bundle": "ملف HTML الكل في واحد (.html)",
@@ -63,23 +63,23 @@
         },
         "enable": "يمكن",
         "menu": {
-            "general": "جنرال لواء",
-            "updates": "التحديثات",
-            "h5p-libraries": "مكتبات H5P",
+            "general": "عام",
+            "updates": "تحديثات",
+            "h5p-libraries": "مستودعات “H5P”",
             "account": "حساب"
         },
         "general": {
-            "header": "جنرال لواء"
+            "header": "عام"
         },
         "updates": {
-            "header": "التحديثات"
+            "header": "تحديثات"
         },
         "account": {
             "label": "حساب",
             "email": {
-                "title": "بريد إلكتروني",
-                "change": "تغيير البريد الالكتروني",
-                "not-set": "لم يتم تعيين البريد الإلكتروني"
+                "title": "بريد إليكتروني",
+                "change": "تغيير البريد الإليكتروني",
+                "not-set": "البريد الإليكتروني غير مثبت"
             }
         }
     },
@@ -91,8 +91,17 @@
             "learn_more": "يتعلم أكثر",
             "open": "اختر مجلدًا يحتوي على ملفات .lumi"
         },
-        "name": "اسم",
-        "average": "متوسط"
+        "name": "إسم",
+        "average": "المتوسط",
+        "searchPlaceholder": "البحث في أسماء الطلاب ...",
+        "brokenFiles": "قائمة الملفات المعطلة",
+        "errors": {
+            "no-content-json": "لم تتم إضافة محتوى H5P بشكل صحيح إلى ملف .lumi.",
+            "json-parse-error": "يحتوي ملف .lumi على محتوى غير صالح (لم يتم تحليل JSON).",
+            "determine-name": "تعذر تحديد اسم الطالب.",
+            "invalid-interactions": "بعض التفاعلات معطلة.",
+            "invalid-statements": "تم كسر بعض إجراءات الطالب المسجلة."
+        }
     },
     "bug_report": {
         "title": "تقارير الأخطاء والأعطال",
@@ -112,7 +121,7 @@
     "language": {
         "title": "لغة",
         "description": "تغيير لغة التطبيق.",
-        "help_translate": "ساعدنا في الترجمة!"
+        "help_translate": "ساعدنا للترجمة!"
     },
     "privacy_policy": {
         "title": "سياسة خاصة",
@@ -147,9 +156,9 @@
             "report_issue": "قضية تقرير",
             "toggle_developer_tools": "تبديل أدوات المطور",
             "follow_us_on_twitter": "تابعنا على تويتر",
-            "about": "حول"
+            "about": "نبذه"
         },
-        "quit": "استقال",
+        "quit": "اغلاق",
         "mac": {
             "services": "خدمات",
             "hide": "إخفاء لومي",
@@ -160,21 +169,23 @@
     "notifications": {
         "analytics": {
             "import": {
-                "error": "لم يتم العثور على ملفات صالحة",
-                "success": "ملفات التقارير المستوردة"
+                "error": "لم يعثر علي ملفات مدعومه",
+                "success": "ملفات التقرير المستورده",
+                "brokenFiles": "تم العثور على {{count}}",
+                "brokenFiles_plural": "تم العثور على {{count}}"
             }
         },
         "h5peditor": {
             "save": {
-                "success": "تم حفظ H5P!",
-                "error": "تعذر حفظ H5P."
+                "success": "تم الحفظ !",
+                "error": "لا يمكن حفظ الملف."
             },
             "open": {
-                "error": "تعذر فتح H5P."
+                "error": "لا يمكن فتح الملف ."
             },
             "export_as_html": {
-                "success": "تم تصدير H5P بنجاح",
-                "error": "تعذر تصدير H5P"
+                "success": "تم تصدير الملف HTML بنجاح",
+                "error": "لا يمكن تصدير الملف بصيغة HTML"
             }
         }
     },

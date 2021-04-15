@@ -19,35 +19,23 @@ export function importAnalytics(): any {
 
         dispatch(track('Analytics', 'import'));
         try {
-            const { users, interactions } = await API.importAnalytics();
+            const { files } = await API.importAnalytics();
             dispatch(
-                track(
-                    'Analytics',
-                    'import',
-                    `content-types`,
-                    interactions.length
-                )
+                track('Analytics', 'import', `content-types`, files.length)
             );
 
             dispatch({
-                payload: { users, interactions },
+                payload: { files },
                 type: ANALYTICS_IMPORT_SUCCESS
             });
         } catch (error) {
             Sentry.captureException(error);
-            try {
-                dispatch({
-                    payload: { message: error.response.body.message },
-                    type: ANALYTICS_IMPORT_ERROR
-                });
-            } catch (error) {
-                Sentry.captureException(error);
 
-                dispatch({
-                    payload: { message: 'no valid data' },
-                    type: ANALYTICS_IMPORT_ERROR
-                });
-            }
+            console.log(error);
+            dispatch({
+                payload: { message: JSON.stringify(error) },
+                type: ANALYTICS_IMPORT_ERROR
+            });
         }
     };
 }

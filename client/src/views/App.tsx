@@ -34,9 +34,11 @@ export default function AppContainer() {
 
     useEffect(() => {
         dispatch(actions.settings.getSettings()).then(
-            async ({ language }: { language: string }) => {
-                await i18n.loadLanguages(language);
-                i18n.changeLanguage(language);
+            async (settings: { language: string }) => {
+                if (settings?.language) {
+                    await i18n.loadLanguages(settings.language);
+                    i18n.changeLanguage(settings.language);
+                }
             }
         );
     }, [dispatch, i18n]);
