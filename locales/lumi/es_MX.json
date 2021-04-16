@@ -131,7 +131,9 @@
         "analytics": {
             "import": {
                 "success": "Archivos de reportes importados",
-                "error": "No se encontraron archivos válidos"
+                "error": "No se encontraron archivos válidos",
+                "brokenFiles": "{{count}} archivo roto encontrado",
+                "brokenFiles_plural": "{{count}} archivos rotos encontrados"
             }
         }
     },
@@ -158,7 +160,16 @@
             "open": "Elegir carpeta con archivos .lumi",
             "welcomeMessage": "La herramienta analítica de Lumi le permite importar reportes de usuario y los visualiza por usted",
             "title": "Analítica de Lumi"
-        }
+        },
+        "errors": {
+            "invalid-statements": "Algunas de las acciones registradas de los estudiantes están rotas.",
+            "invalid-interactions": "Algunas de las interacciones están rotas.",
+            "determine-name": "No se pudo determinar el nombre del estudiante.",
+            "json-parse-error": "El archivo .lumi contiene contenido no válido (JSON no analizó).",
+            "no-content-json": "El contenido de H5P no se agregó correctamente al archivo .lumi."
+        },
+        "brokenFiles": "Lista de archivos rotos",
+        "searchPlaceholder": "Buscar nombres de estudiantes ..."
     },
     "settings": {
         "enable": "Habilitar",
@@ -184,7 +195,43 @@
             "account": "Cuenta",
             "h5p-libraries": "Librerías H5P",
             "updates": "Actualizaciones",
-            "general": "General"
+            "general": "General",
+            "h5p-library-administration": "Bibliotecas H5P"
+        },
+        "h5p-library-administration": {
+            "library-details": {
+                "instancesAsDependencyCount": "Objetos en los que esta biblioteca es utilizada por otra biblioteca",
+                "instancesCount": "Objetos creados con esta biblioteca como el tipo principal de contenido",
+                "dependentsCount": "Número de bibliotecas que usan la biblioteca",
+                "embedTypes": "Tipos de incrustación permitidos",
+                "addon": "Adicional",
+                "fullscreen": "Soporta pantalla completa",
+                "restricted": "Restringido (solo se puede usar con privilegios)",
+                "standalone": "Tipo de contenido independiente",
+                "license": "Licencia",
+                "description": "Descripción",
+                "author": "Autor",
+                "header": "Detalles de la Biblioteca"
+            },
+            "can-not-be-deleted": "Esta biblioteca no se puede eliminar porque se usa en otra {{count}} biblioteca",
+            "can-not-be-deleted_plural": "Esta biblioteca no se puede eliminar porque se usa en otras {{count}} bibliotecas",
+            "details": "Detalles",
+            "upload_and_install": "Cargar e instalar Biblioteca",
+            "notifications": {
+                "get": {
+                    "error": "Error al obtener información detallada sobre la biblioteca {{library.title}} ( {{version}} )."
+                },
+                "delete": {
+                    "error": "Error al eliminar la biblioteca {{title}} ( {{version}} ).",
+                    "success": "Biblioteca {{title}} ( {{version}} ) eliminada exitosamente."
+                },
+                "upload": {
+                    "error": "Error al cargar el paquete.",
+                    "success-with-update": "Se instalaron correctamente {{installed}} y se actualizaron {{updated}} bibliotecas.",
+                    "success-no-update": "La carga se realizó correctamente, pero no se instalaron ni actualizaron bibliotecas. Probablemente el tipo de contenido ya esté instalado en el sistema."
+                }
+            },
+            "header": "Bibliotecas H5P instaladas"
         }
     },
     "auth": {
@@ -201,5 +248,11 @@
         "code": "Código",
         "email": "Correo electrónico",
         "set_email": "5.6.1.7 MoodleNet Esperimenter"
+    },
+    "general": {
+        "delete": "Eliminar"
+    },
+    "dialog": {
+        "close": "Cerca"
     }
 }
