@@ -8,8 +8,7 @@ import {
 } from './AnalyticsTypes';
 
 export const initialState: IAnalyticsState = {
-    users: [],
-    interactions: []
+    files: []
 };
 
 const log = new Logger('reducer:analytics');
@@ -23,8 +22,8 @@ export default function analyticsReducer(
         switch (action.type) {
             case ANALYTICS_IMPORT_SUCCESS:
                 return {
-                    users: action.payload.users,
-                    interactions: action.payload.interactions
+                    ...state,
+                    files: action.payload.files
                 };
 
             default:

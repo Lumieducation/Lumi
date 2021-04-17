@@ -65,8 +65,8 @@
         "menu": {
             "general": "Generale",
             "updates": "Ažuriranja",
-            "h5p-libraries": "H5P biblioteke",
-            "account": "Račun"
+            "account": "Račun",
+            "h5p-library-administration": "H5P biblioteke"
         },
         "general": {
             "header": "Generale"
@@ -81,6 +81,41 @@
                 "change": "Promijeni e-mail",
                 "not-set": "E-adresa nije postavljena"
             }
+        },
+        "h5p-library-administration": {
+            "header": "Instalirane H5P biblioteke",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Prijenos je uspješan, ali nije instalirana ili ažurirana knjižnica. Tip sadržaja je vjerojatno već instaliran na sistemu.",
+                    "success-with-update": "Uspješno instalirana {{installed}} i ažurirana {{updated}} biblioteka.",
+                    "error": "Greška prilikom prijenosa paketa."
+                },
+                "delete": {
+                    "success": "Uspješno izbrisana biblioteka {{title}} ( {{version}} ).",
+                    "error": "Greška pri brisanju knjižnice {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Greška pri dobivanju detaljnih informacija o biblioteci {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Otpremite i instalirajte Biblioteku",
+            "details": "Detalji",
+            "can-not-be-deleted": "Ova se knjižnica ne može izbrisati jer se koristi u {{count}} drugih biblioteka",
+            "can-not-be-deleted_plural": "Ova se knjižnica ne može izbrisati jer se koristi u {{count}} drugih biblioteka",
+            "library-details": {
+                "header": "Detalji biblioteke",
+                "author": "Autor",
+                "description": "Opis",
+                "license": "Licenca",
+                "standalone": "Samostalni tip sadržaja",
+                "restricted": "Ograničeno (može se koristiti samo s privilegijom)",
+                "fullscreen": "Podržava preko cijelog ekrana",
+                "addon": "Addon",
+                "embedTypes": "Dopušteni tipovi ugrađivanja",
+                "dependentsCount": "Broj biblioteka koje koriste biblioteku",
+                "instancesCount": "Objekti stvoreni ovom bibliotekom kao glavnim tipom sadržaja",
+                "instancesAsDependencyCount": "Objekti u kojima ovu knjižnicu koristi druga knjižnica"
+            }
         }
     },
     "analytics": {
@@ -92,7 +127,16 @@
             "open": "Izaberite mapu sa .lumi datotekama"
         },
         "name": "Ime",
-        "average": "Prosječno"
+        "average": "Prosječno",
+        "searchPlaceholder": "Pretražite imena učenika ...",
+        "brokenFiles": "Spisak neispravnih datoteka",
+        "errors": {
+            "no-content-json": "Sadržaj H5P nije pravilno dodan u .lumi datoteku.",
+            "json-parse-error": "Datoteka .lumi sadrži nevaljani sadržaj (JSON nije raščlanjen).",
+            "determine-name": "Nije moguće odrediti ime učenika.",
+            "invalid-interactions": "Neke interakcije su prekinute.",
+            "invalid-statements": "Neke od zabilježenih studentskih akcija su slomljene."
+        }
     },
     "bug_report": {
         "title": "Izvještaji o greškama i padovima",
@@ -161,7 +205,9 @@
         "analytics": {
             "import": {
                 "error": "Nisu pronađene važeće datoteke",
-                "success": "Uvezene datoteke izvještaja"
+                "success": "Uvezene datoteke izvještaja",
+                "brokenFiles": "{{count}} pronađena neispravna datoteka",
+                "brokenFiles_plural": "Pronađeno je {{count}}"
             }
         },
         "h5peditor": {
@@ -192,5 +238,11 @@
             "no-valid-email": "{{email}} nije važeća adresa e-pošte."
         },
         "cancel": "Otkaži"
+    },
+    "dialog": {
+        "close": "Zatvori"
+    },
+    "general": {
+        "delete": "Izbriši"
     }
 }

@@ -65,8 +65,8 @@
         "menu": {
             "general": "Allmän",
             "updates": "Uppdateringar",
-            "h5p-libraries": "H5P-bibliotek",
-            "account": "konto"
+            "account": "konto",
+            "h5p-library-administration": "H5P-bibliotek"
         },
         "general": {
             "header": "Allmän"
@@ -81,6 +81,41 @@
                 "change": "Byta e-mail",
                 "not-set": "E-postadressen har inte ställts in"
             }
+        },
+        "h5p-library-administration": {
+            "header": "Installerade H5P-bibliotek",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Uppladdningen lyckades, men inga bibliotek installerades eller uppdaterades. Innehållstypen är förmodligen redan installerad på systemet.",
+                    "success-with-update": "{{installed}} installerats och {{updated}} bibliotek har uppdaterats.",
+                    "error": "Fel vid uppladdning av paket."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) har tagits bort.",
+                    "error": "Fel vid borttagning av bibliotek {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Fel vid inhämtning av detaljerad information om bibliotek {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Ladda upp och installera bibliotek",
+            "details": "Detaljer",
+            "can-not-be-deleted": "Detta bibliotek kan inte tas bort eftersom det används i {{count}} andra bibliotek",
+            "can-not-be-deleted_plural": "Det här biblioteket kan inte raderas eftersom det används i {{count}} andra bibliotek",
+            "library-details": {
+                "header": "Biblioteksdetaljer",
+                "author": "Författare",
+                "description": "Beskrivning",
+                "license": "Licens",
+                "standalone": "Fristående innehållstyp",
+                "restricted": "Begränsad (kan endast användas med behörighet)",
+                "fullscreen": "Stöder helskärm",
+                "addon": "Tillägg",
+                "embedTypes": "Tillåtna inbäddningstyper",
+                "dependentsCount": "Antal bibliotek som använder biblioteket",
+                "instancesCount": "Objekt som skapats med detta bibliotek som huvudinnehållstyp",
+                "instancesAsDependencyCount": "Objekt där detta bibliotek används av ett annat bibliotek"
+            }
         }
     },
     "analytics": {
@@ -92,7 +127,16 @@
             "open": "Välj mapp med .lumi-filer"
         },
         "name": "namn",
-        "average": "Medel"
+        "average": "Medel",
+        "searchPlaceholder": "Sök i studentnamn ...",
+        "brokenFiles": "Lista över trasiga filer",
+        "errors": {
+            "no-content-json": "H5P-innehållet har inte lagts till ordentligt i .lumi-filen.",
+            "json-parse-error": ".Lumi-filen innehåller ogiltigt innehåll (JSON analyserade inte).",
+            "determine-name": "Det gick inte att avgöra studentens namn.",
+            "invalid-interactions": "Några av interaktionerna är trasiga.",
+            "invalid-statements": "Några av de inspelade studenternas handlingar är trasiga."
+        }
     },
     "bug_report": {
         "title": "Fel- och kraschrapporter",
@@ -161,7 +205,9 @@
         "analytics": {
             "import": {
                 "error": "Inga giltiga filer hittades",
-                "success": "Importerade rapportfiler"
+                "success": "Importerade rapportfiler",
+                "brokenFiles": "{{count}} trasig fil hittades",
+                "brokenFiles_plural": "{{count}} trasiga filer hittades"
             }
         },
         "h5peditor": {
@@ -192,5 +238,11 @@
             "no-valid-email": "{{email}} är inte en giltig e-postadress."
         },
         "cancel": "Avbryt"
+    },
+    "dialog": {
+        "close": "Stänga"
+    },
+    "general": {
+        "delete": "Radera"
     }
 }

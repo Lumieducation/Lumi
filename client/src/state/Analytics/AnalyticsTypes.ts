@@ -1,15 +1,18 @@
 import { IInteraction } from '@lumieducation/xapi-aggregator';
 
-interface IUser {
-    id: string;
+export interface IFile {
+    file: string;
     name: string;
+    contentHash: string;
+    interactions: IInteraction[];
     results: number[];
+    error?: boolean;
+    code?: string;
 }
 // state
 
 export interface IAnalyticsState {
-    users: IUser[];
-    interactions: IInteraction[];
+    files: IFile[];
 }
 
 export interface IState {
@@ -27,8 +30,7 @@ export interface IAnalyticsImportRequestAction {
 
 export interface IAnalyticsImportSuccessAction {
     payload: {
-        users: IUser[];
-        interactions: IInteraction[];
+        files: IFile[];
     };
     type: typeof ANALYTICS_IMPORT_SUCCESS;
 }

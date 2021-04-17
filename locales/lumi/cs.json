@@ -65,8 +65,8 @@
         "menu": {
             "general": "Všeobecné",
             "updates": "Aktualizace",
-            "h5p-libraries": "H5P knihovny",
-            "account": "Účet"
+            "account": "Účet",
+            "h5p-library-administration": "H5P knihovny"
         },
         "general": {
             "header": "Všeobecné"
@@ -81,6 +81,41 @@
                 "change": "Změnit e-mail",
                 "not-set": "E-mail není nastaven"
             }
+        },
+        "h5p-library-administration": {
+            "header": "Instalované knihovny H5P",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Nahrávání proběhlo úspěšně, ale nebyly nainstalovány ani aktualizovány žádné knihovny. Typ obsahu je pravděpodobně již v systému nainstalován.",
+                    "success-with-update": "Úspěšně nainstalováno {{installed}} a aktualizováno {{updated}} knihoven.",
+                    "error": "Chyba při nahrávání balíčku."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) byla úspěšně odstraněna.",
+                    "error": "Chyba při mazání knihovny {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Chyba při získávání podrobných informací o knihovně {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Nahrajte a nainstalujte knihovnu",
+            "details": "Detaily",
+            "can-not-be-deleted": "Tuto knihovnu nelze odstranit, protože se používá v {{count}} jiné knihovně",
+            "can-not-be-deleted_plural": "Tuto knihovnu nelze odstranit, protože se používá v {{count}} dalších knihovnách",
+            "library-details": {
+                "header": "Podrobnosti o knihovně",
+                "author": "Autor",
+                "description": "Popis",
+                "license": "Licence",
+                "standalone": "Samostatný typ obsahu",
+                "restricted": "Omezeno (lze použít pouze s oprávněním)",
+                "fullscreen": "Podporuje celou obrazovku",
+                "addon": "Doplněk",
+                "embedTypes": "Povolené typy vložení",
+                "dependentsCount": "Počet knihoven, které používají knihovnu",
+                "instancesCount": "Objekty vytvořené pomocí této knihovny jako hlavního typu obsahu",
+                "instancesAsDependencyCount": "Objekty, ve kterých tuto knihovnu používá jiná knihovna"
+            }
         }
     },
     "analytics": {
@@ -92,7 +127,16 @@
             "open": "Vyberte složku se soubory .lumi"
         },
         "name": "název",
-        "average": "Průměrný"
+        "average": "Průměrný",
+        "searchPlaceholder": "Hledat jména studentů ...",
+        "brokenFiles": "Seznam nefunkčních souborů",
+        "errors": {
+            "no-content-json": "Obsah H5P nebyl správně přidán do souboru .lumi.",
+            "json-parse-error": "Soubor .lumi obsahuje neplatný obsah (JSON nebyl analyzován).",
+            "determine-name": "Nelze určit jméno studenta.",
+            "invalid-interactions": "Některé interakce jsou přerušené.",
+            "invalid-statements": "Některé zaznamenané akce studentů jsou nefunkční."
+        }
     },
     "bug_report": {
         "title": "Zprávy o chybách a selháních",
@@ -161,7 +205,9 @@
         "analytics": {
             "import": {
                 "error": "Nebyly nalezeny žádné platné soubory",
-                "success": "Importované soubory zpráv"
+                "success": "Importované soubory zpráv",
+                "brokenFiles": "{{count}} poškozený soubor",
+                "brokenFiles_plural": "{{count}} poškozených souborů"
             }
         },
         "h5peditor": {
@@ -192,5 +238,11 @@
             "no-valid-email": "{{email}} není platná e-mailová adresa."
         },
         "cancel": "zrušení"
+    },
+    "dialog": {
+        "close": "Zavřít"
+    },
+    "general": {
+        "delete": "Vymazat"
     }
 }

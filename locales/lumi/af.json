@@ -65,8 +65,8 @@
         "menu": {
             "general": "Generaal",
             "updates": "Opdaterings",
-            "h5p-libraries": "H5P Biblioteke",
-            "account": "Rekening"
+            "account": "Rekening",
+            "h5p-library-administration": "H5P Biblioteke"
         },
         "general": {
             "header": "Generaal"
@@ -81,6 +81,41 @@
                 "change": "Verander e-pos",
                 "not-set": "E-pos is nie gestel nie"
             }
+        },
+        "h5p-library-administration": {
+            "header": "H5P-biblioteke geïnstalleer",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Oplaai suksesvol, maar geen biblioteke is geïnstalleer of opgedateer nie. Die inhoudstipe is waarskynlik reeds op die stelsel geïnstalleer.",
+                    "success-with-update": "{{installed}} suksesvol geïnstalleer en {{updated}} biblioteke opgedateer.",
+                    "error": "Kon nie pakket oplaai nie."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) suksesvol verwyder.",
+                    "error": "Kon nie biblioteek {{title}} ( {{version}} ) uitvee nie."
+                },
+                "get": {
+                    "error": "Kon nie gedetailleerde inligting oor biblioteek {{library.title}} ( {{version}} ) kry nie."
+                }
+            },
+            "upload_and_install": "Laai biblioteek op en installeer dit",
+            "details": "Besonderhede",
+            "can-not-be-deleted": "Hierdie biblioteek kan nie verwyder word nie, omdat dit in {{count}} ander biblioteke gebruik word",
+            "can-not-be-deleted_plural": "Hierdie biblioteek kan nie verwyder word nie omdat dit in {{count}} ander biblioteke gebruik word",
+            "library-details": {
+                "header": "Biblioteekbesonderhede",
+                "author": "Skrywer",
+                "description": "Beskrywing",
+                "license": "Lisensie",
+                "standalone": "Losstaande inhoudstipe",
+                "restricted": "Beperk (kan slegs met voorreg gebruik word)",
+                "fullscreen": "Ondersteun volskerm",
+                "addon": "Addon",
+                "embedTypes": "Toelaatbare inbettipes",
+                "dependentsCount": "Aantal biblioteke wat die biblioteek gebruik",
+                "instancesCount": "Voorwerpe wat met hierdie biblioteek as die hoofinhoudtipe geskep is",
+                "instancesAsDependencyCount": "Voorwerpe waarin hierdie biblioteek deur 'n ander biblioteek gebruik word"
+            }
         }
     },
     "analytics": {
@@ -92,7 +127,16 @@
             "open": "Kies die lêergids met .lumi-lêers"
         },
         "average": "Gemiddeld",
-        "name": "Naam"
+        "name": "Naam",
+        "searchPlaceholder": "Soek studentename ...",
+        "brokenFiles": "Lys van gebreekte lêers",
+        "errors": {
+            "no-content-json": "Die H5P-inhoud is nie behoorlik by die .lumi-lêer gevoeg nie.",
+            "json-parse-error": "Die .lumi-lêer bevat ongeldige inhoud (JSON het nie ontleed nie).",
+            "determine-name": "Kon nie die naam van die student bepaal nie.",
+            "invalid-interactions": "Sommige interaksies is verbreek.",
+            "invalid-statements": "Sommige van die opgetekende studente-aksies is gebreek."
+        }
     },
     "bug_report": {
         "title": "Foutverslae",
@@ -174,7 +218,9 @@
         "analytics": {
             "import": {
                 "success": "Voer verslaglêers in",
-                "error": "Geen geldige lêer gevind nie"
+                "error": "Geen geldige lêer gevind nie",
+                "brokenFiles": "{{count}} gebreekte lêer gevind",
+                "brokenFiles_plural": "{{count}} stukkende lêers gevind"
             }
         }
     },
@@ -192,5 +238,11 @@
             "no-valid-email": "{{email}} is nie 'n geldige e-posadres nie."
         },
         "cancel": "Kanselleer"
+    },
+    "dialog": {
+        "close": "Naby"
+    },
+    "general": {
+        "delete": "Vee uit"
     }
 }

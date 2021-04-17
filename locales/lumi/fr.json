@@ -13,7 +13,7 @@
         "startPage": {
             "title": "Éditeur H5P",
             "welcomeMessage": "L'éditeur H5P de Lumi est une application autonome qui vous permet d'afficher, d'éditer et de créer H5P.",
-            "open": "Ouvrir le H5P existant",
+            "open": "Ouvrir un H5P existant",
             "create": "créer un nouveau H5P",
             "start": "début"
         },
@@ -33,8 +33,8 @@
                 }
             },
             "reporter": {
-                "title": "Journaliste",
-                "hint": "Si vous ajoutez le journaliste, les étudiants peuvent enregistrer un fichier avec leur progression et vous l'envoyer.",
+                "title": "Rapporteur",
+                "hint": "Si vous ajoutez le rapporteur, les étudiants peuvent enregistrer un fichier avec leur progression et vous l'envoyer.",
                 "switchLabel": "Inclure le journaliste",
                 "learnMoreLink": "Apprenez-en plus ici.",
                 "scormHint": "Le rapporteur ne peut pas être ajouté aux packages SCORM."
@@ -43,7 +43,7 @@
             "exportButton": "Exportez maintenant",
             "filePicker": {
                 "title": "Exporter sous ...",
-                "buttonLabel": "Exportation",
+                "buttonLabel": "Exporter",
                 "formatNames": {
                     "bundle": "Fichier HTML tout-en-un (.html)",
                     "external": "Fichier HTML (.html)",
@@ -65,8 +65,8 @@
         "menu": {
             "general": "Général",
             "updates": "Mises à jour",
-            "h5p-libraries": "Bibliothèques H5P",
-            "account": "Compte"
+            "account": "Compte",
+            "h5p-library-administration": "Bibliothèques H5P"
         },
         "general": {
             "header": "Général"
@@ -81,6 +81,41 @@
                 "change": "Changer l'e-mail",
                 "not-set": "L'e-mail n'est pas défini"
             }
+        },
+        "h5p-library-administration": {
+            "header": "Bibliothèques H5P installées",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Le téléchargement a réussi, mais aucune bibliothèque n'a été installée ou mise à jour. Le type de contenu est probablement déjà installé sur le système.",
+                    "success-with-update": "Bibliothèques {{installed}} installées avec succès et mises à jour {{updated}}",
+                    "error": "Erreur lors du téléchargement du package."
+                },
+                "delete": {
+                    "success": "La bibliothèque {{title}} ( {{version}} ) a bien été supprimée.",
+                    "error": "Erreur lors de la suppression de la bibliothèque {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Erreur lors de l'obtention d'informations détaillées sur la bibliothèque {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Télécharger et installer la bibliothèque",
+            "details": "Des détails",
+            "can-not-be-deleted": "Cette bibliothèque ne peut pas être supprimée, car elle est utilisée dans {{count}} autre bibliothèque",
+            "can-not-be-deleted_plural": "Cette bibliothèque ne peut pas être supprimée, car elle est utilisée dans {{count}} autres bibliothèques",
+            "library-details": {
+                "header": "Détails de la bibliothèque",
+                "author": "Auteur",
+                "description": "La description",
+                "license": "Licence",
+                "standalone": "Type de contenu autonome",
+                "restricted": "Restreint (ne peut être utilisé qu'avec des privilèges)",
+                "fullscreen": "Prend en charge le plein écran",
+                "addon": "Ajouter",
+                "embedTypes": "Types d'intégration autorisés",
+                "dependentsCount": "Nombre de bibliothèques qui utilisent la bibliothèque",
+                "instancesCount": "Objets créés avec cette bibliothèque comme type de contenu principal",
+                "instancesAsDependencyCount": "Objets dans lesquels cette bibliothèque est utilisée par une autre bibliothèque"
+            }
         }
     },
     "analytics": {
@@ -92,7 +127,16 @@
             "open": "Choisissez un dossier avec des fichiers .lumi"
         },
         "name": "Nom",
-        "average": "Moyen"
+        "average": "Moyen",
+        "searchPlaceholder": "Rechercher les noms des élèves ...",
+        "brokenFiles": "Liste des fichiers cassés",
+        "errors": {
+            "no-content-json": "Le contenu H5P n'a pas été ajouté correctement au fichier .lumi.",
+            "json-parse-error": "Le fichier .lumi contient un contenu non valide (JSON n'a pas analysé).",
+            "determine-name": "Impossible de déterminer le nom de l'élève.",
+            "invalid-interactions": "Certaines des interactions sont interrompues.",
+            "invalid-statements": "Certaines des actions des élèves enregistrées sont interrompues."
+        }
     },
     "bug_report": {
         "title": "Rapports de bogues et de plantages",
@@ -126,17 +170,17 @@
     "menu": {
         "quit": "Quitter",
         "file": {
-            "label": "Déposer",
+            "label": "Fichier",
             "open": "Ouvrir les fichiers analytiques",
             "save": "Sauvegarder",
             "save_as": "Enregistrer sous...",
-            "export": "Exportation...",
+            "export": "Exporter...",
             "edit": "Éditer",
-            "undo": "annuler",
-            "redo": "Prêt",
+            "undo": "Annuler",
+            "redo": "Rétablir",
             "cut": "Couper",
-            "copy": "Copie",
-            "paste": "Pâte",
+            "copy": "Copier",
+            "paste": "Coller",
             "select_all": "Tout sélectionner"
         },
         "h5peditor": {
@@ -161,7 +205,9 @@
         "analytics": {
             "import": {
                 "error": "Aucun fichier valide trouvé",
-                "success": "Fichiers de rapport importés"
+                "success": "Fichiers de rapport importés",
+                "brokenFiles": "{{count}} fichier cassé trouvé",
+                "brokenFiles_plural": "{{count}} fichiers cassés trouvés"
             }
         },
         "h5peditor": {
@@ -192,5 +238,11 @@
             "no-valid-email": "{{email}} n'est pas une adresse e-mail valide."
         },
         "cancel": "Annuler"
+    },
+    "dialog": {
+        "close": "Fermer"
+    },
+    "general": {
+        "delete": "Effacer"
     }
 }

@@ -12,7 +12,7 @@
         },
         "startPage": {
             "title": "H5P-Editor",
-            "welcomeMessage": "Lumis H5P-Editor ist eine eigenständige Anwendung, mit der du H5P anzeigen, bearbeiten und erstellen kannst.",
+            "welcomeMessage": "Lumis H5P-Editor ist eine eigenständige Anwendung, mit der du H5Ps anzeigen, bearbeiten und erstellen kannst.",
             "open": "Ein vorhandenes H5P öffnen",
             "create": "Ein neues H5P erstellen",
             "start": "Start"
@@ -65,8 +65,8 @@
         "menu": {
             "general": "Allgemeines",
             "updates": "Updates",
-            "h5p-libraries": "H5P-Bibliotheken",
-            "account": "Konto"
+            "account": "Konto",
+            "h5p-library-administration": "H5P-Bibliotheken"
         },
         "general": {
             "header": "Allgemeines"
@@ -81,6 +81,41 @@
                 "change": "Ändere deine E-Mail-Adresse",
                 "not-set": "E-Mail ist nicht festgelegt"
             }
+        },
+        "h5p-library-administration": {
+            "header": "Installierte H5P-Bibliotheken",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Upload erfolgreich, aber es wurden keine Bibliotheken installiert oder aktualisiert. Der Inhaltstyp ist wahrscheinlich bereits auf dem System installiert.",
+                    "success-with-update": "{{installed}} Bibliotheken erfolgreich installiert und {{updated}} geupdated.",
+                    "error": "Fehler beim Hochladen des Pakets."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) erfolgreich gelöscht.",
+                    "error": "Fehler beim Löschen der Bibliothek {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Fehler beim Abrufen detaillierter Informationen zur Bibliothek {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Bibliothek(en) aus Datei installieren",
+            "details": "Details",
+            "can-not-be-deleted": "Diese Bibliothek kann nicht gelöscht werden, da sie in {{count}} anderen Bibliothek verwendet wird",
+            "can-not-be-deleted_plural": "Diese Bibliothek kann nicht gelöscht werden, da sie in {{count}} anderen Bibliotheken verwendet wird",
+            "library-details": {
+                "header": "Bibliotheksdetails",
+                "author": "Autor",
+                "description": "Beschreibung",
+                "license": "Lizenz",
+                "standalone": "Eigenständiger Inhaltstyp",
+                "restricted": "Eingeschränkt (kann nur mit Privilegien verwendet werden)",
+                "fullscreen": "Unterstützt Vollbild",
+                "addon": "Addon",
+                "embedTypes": "Mögliche Einbettungsarten",
+                "dependentsCount": "Anzahl der Bibliotheken, die die Bibliothek verwenden",
+                "instancesCount": "Objekte, die mit dieser Bibliothek als Hauptinhaltstyp erstellt wurden",
+                "instancesAsDependencyCount": "Objekte, in denen diese Bibliothek von einer anderen Bibliothek verwendet wird"
+            }
         }
     },
     "analytics": {
@@ -92,7 +127,16 @@
             "open": "Wähle einen Ordner mit .lumi-Dateien"
         },
         "name": "Name",
-        "average": "Durchschnitt"
+        "average": "Durchschnitt",
+        "searchPlaceholder": "Nach Namen von Lernenden suchen ...",
+        "brokenFiles": "Liste mit defekten Dateien",
+        "errors": {
+            "no-content-json": "Der H5P-Inhalt wurde der .lumi-Datei nicht ordnungsgemäß hinzugefügt.",
+            "json-parse-error": "Die .lumi-Datei enthält ungültigen Inhalt (JSON ist fehlerhaft).",
+            "determine-name": "Der Name des Lernenden konnte nicht ermittelt werden.",
+            "invalid-interactions": "Einige der Interaktionen sind fehlerhaft.",
+            "invalid-statements": "Einige der aufgezeichneten Schüleraktionen sind fehlerhaft."
+        }
     },
     "bug_report": {
         "title": "Fehler- und Absturzberichte",
@@ -161,7 +205,9 @@
         "analytics": {
             "import": {
                 "error": "Keine gültigen Dateien gefunden",
-                "success": "Importierte Berichtsdateien"
+                "success": "Importierte Berichtsdateien",
+                "brokenFiles": "{{count}} defekte Datei gefunden",
+                "brokenFiles_plural": "{{count}} defekte Dateien gefunden"
             }
         },
         "h5peditor": {
@@ -192,5 +238,11 @@
             "no-valid-email": "{{email}} ist keine gültige E-Mail-Adresse."
         },
         "cancel": "Abbrechen"
+    },
+    "dialog": {
+        "close": "Schließen"
+    },
+    "general": {
+        "delete": "Löschen"
     }
 }

@@ -65,8 +65,8 @@
         "menu": {
             "general": "General",
             "updates": "Actualitzacions",
-            "h5p-libraries": "Biblioteques H5P",
-            "account": "Compte"
+            "account": "Compte",
+            "h5p-library-administration": "Biblioteques H5P"
         },
         "general": {
             "header": "General"
@@ -81,6 +81,41 @@
                 "change": "Canviar e-mail",
                 "not-set": "El correu electrònic no està definit"
             }
+        },
+        "h5p-library-administration": {
+            "header": "Biblioteques H5P instal·lades",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "La càrrega s'ha realitzat correctament, però no s'ha instal·lat ni actualitzat cap biblioteca. El tipus de contingut probablement ja estigui instal·lat al sistema.",
+                    "success-with-update": "S'han instal·lat {{installed}} biblioteques i s'han actualitzat {{updated}}",
+                    "error": "Error en penjar el paquet."
+                },
+                "delete": {
+                    "success": "La biblioteca {{title}} ( {{version}} ) s'ha suprimit correctament.",
+                    "error": "Error en suprimir la biblioteca {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Error en obtenir informació detallada sobre la biblioteca {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Pengeu i instal·leu la biblioteca",
+            "details": "Detalls",
+            "can-not-be-deleted": "Aquesta biblioteca no es pot suprimir, ja que s'utilitza en {{count}} biblioteques més",
+            "can-not-be-deleted_plural": "Aquesta biblioteca no es pot suprimir, ja que s'utilitza en altres {{count}}",
+            "library-details": {
+                "header": "Detalls de la biblioteca",
+                "author": "Autor",
+                "description": "Descripció",
+                "license": "Llicència",
+                "standalone": "Tipus de contingut autònom",
+                "restricted": "Restringit (només es pot utilitzar amb privilegis)",
+                "fullscreen": "Admet pantalla completa",
+                "addon": "Afegir",
+                "embedTypes": "Tipus d'inserció permesos",
+                "dependentsCount": "Nombre de biblioteques que utilitzen la biblioteca",
+                "instancesCount": "Objectes creats amb aquesta biblioteca com a tipus de contingut principal",
+                "instancesAsDependencyCount": "Objectes en què aquesta biblioteca la fa servir una altra biblioteca"
+            }
         }
     },
     "analytics": {
@@ -92,7 +127,16 @@
             "open": "Trieu una carpeta amb fitxers .lumi"
         },
         "name": "Nom",
-        "average": "Mitjana"
+        "average": "Mitjana",
+        "searchPlaceholder": "Cerca noms dels estudiants ...",
+        "brokenFiles": "Llista de fitxers trencats",
+        "errors": {
+            "no-content-json": "El contingut H5P no s'ha afegit correctament al fitxer .lumi.",
+            "json-parse-error": "El fitxer .lumi conté contingut no vàlid (JSON no s'ha analitzat).",
+            "determine-name": "No s'ha pogut determinar el nom de l'estudiant.",
+            "invalid-interactions": "Algunes de les interaccions estan trencades.",
+            "invalid-statements": "Algunes de les accions registrades dels estudiants es trenquen."
+        }
     },
     "bug_report": {
         "title": "Informes d'errors i fallades",
@@ -161,7 +205,9 @@
         "analytics": {
             "import": {
                 "error": "No s'ha trobat cap fitxer vàlid",
-                "success": "Fitxers d'informes importats"
+                "success": "Fitxers d'informes importats",
+                "brokenFiles": "S'ha trobat {{count}}",
+                "brokenFiles_plural": "S'han trobat {{count}}"
             }
         },
         "h5peditor": {
@@ -192,5 +238,11 @@
             "no-valid-email": "{{email}} no és una adreça electrònica vàlida."
         },
         "cancel": "Cancel · lar"
+    },
+    "dialog": {
+        "close": "Tanca"
+    },
+    "general": {
+        "delete": "Suprimeix"
     }
 }
