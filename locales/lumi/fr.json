@@ -13,9 +13,47 @@
         "startPage": {
             "title": "Éditeur H5P",
             "welcomeMessage": "L'éditeur H5P de Lumi est une application autonome qui vous permet d'afficher, d'éditer et de créer H5P.",
-            "open": "Ouvrir le H5P existant",
+            "open": "Ouvrir un H5P existant",
             "create": "créer un nouveau H5P",
             "start": "début"
+        },
+        "exportDialog": {
+            "title": "Exporter les paramètres",
+            "format": {
+                "title": "Format",
+                "bundleLabel": "Fichier HTML tout-en-un",
+                "bundleHint": "Le fichier peut devenir trop volumineux pour certains ordinateurs si vous incluez de nombreux fichiers multimédias.",
+                "externalLabel": "Un fichier HTML et plusieurs fichiers multimédias",
+                "externalHint": "Il vous sera demandé un nom pour le fichier HTML à l'étape suivante. Les fichiers multimédias seront placés dans des dossiers commençant par le même nom que le fichier.",
+                "scorm": {
+                    "label": "Paquet SCORM",
+                    "masteryScoreLabel": "Score de maîtrise (en%)",
+                    "errorNaN": "La valeur saisie n'est pas un nombre",
+                    "errorRange": "La valeur doit être comprise entre 0 et 100"
+                }
+            },
+            "reporter": {
+                "title": "Rapporteur",
+                "hint": "Si vous ajoutez le rapporteur, les étudiants peuvent enregistrer un fichier avec leur progression et vous l'envoyer.",
+                "switchLabel": "Inclure le journaliste",
+                "learnMoreLink": "Apprenez-en plus ici.",
+                "scormHint": "Le rapporteur ne peut pas être ajouté aux packages SCORM."
+            },
+            "cancelButton": "Annuler",
+            "exportButton": "Exportez maintenant",
+            "filePicker": {
+                "title": "Exporter sous ...",
+                "buttonLabel": "Exporter",
+                "formatNames": {
+                    "bundle": "Fichier HTML tout-en-un (.html)",
+                    "external": "Fichier HTML (.html)",
+                    "scorm": "Fichier SCORM (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "Auteur H5P",
+                "title": "Contenu H5P"
+            }
         }
     },
     "settings": {
@@ -23,7 +61,62 @@
             "label": "Réglages",
             "save": "Sauvegarder"
         },
-        "enable": "Permettre"
+        "enable": "Permettre",
+        "menu": {
+            "general": "Général",
+            "updates": "Mises à jour",
+            "account": "Compte",
+            "h5p-library-administration": "Bibliothèques H5P"
+        },
+        "general": {
+            "header": "Général"
+        },
+        "updates": {
+            "header": "Mises à jour"
+        },
+        "account": {
+            "label": "Compte",
+            "email": {
+                "title": "E-mail",
+                "change": "Changer l'e-mail",
+                "not-set": "L'e-mail n'est pas défini"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Bibliothèques H5P installées",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Le téléchargement a réussi, mais aucune bibliothèque n'a été installée ou mise à jour. Le type de contenu est probablement déjà installé sur le système.",
+                    "success-with-update": "Bibliothèques {{installed}} installées avec succès et mises à jour {{updated}}",
+                    "error": "Erreur lors du téléchargement du package."
+                },
+                "delete": {
+                    "success": "La bibliothèque {{title}} ( {{version}} ) a bien été supprimée.",
+                    "error": "Erreur lors de la suppression de la bibliothèque {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Erreur lors de l'obtention d'informations détaillées sur la bibliothèque {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Télécharger et installer la bibliothèque",
+            "details": "Des détails",
+            "can-not-be-deleted": "Cette bibliothèque ne peut pas être supprimée, car elle est utilisée dans {{count}} autre bibliothèque",
+            "can-not-be-deleted_plural": "Cette bibliothèque ne peut pas être supprimée, car elle est utilisée dans {{count}} autres bibliothèques",
+            "library-details": {
+                "header": "Détails de la bibliothèque",
+                "author": "Auteur",
+                "description": "La description",
+                "license": "Licence",
+                "standalone": "Type de contenu autonome",
+                "restricted": "Restreint (ne peut être utilisé qu'avec des privilèges)",
+                "fullscreen": "Prend en charge le plein écran",
+                "addon": "Ajouter",
+                "embedTypes": "Types d'intégration autorisés",
+                "dependentsCount": "Nombre de bibliothèques qui utilisent la bibliothèque",
+                "instancesCount": "Objets créés avec cette bibliothèque comme type de contenu principal",
+                "instancesAsDependencyCount": "Objets dans lesquels cette bibliothèque est utilisée par une autre bibliothèque"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -34,7 +127,16 @@
             "open": "Choisissez un dossier avec des fichiers .lumi"
         },
         "name": "Nom",
-        "average": "Moyen"
+        "average": "Moyen",
+        "searchPlaceholder": "Rechercher les noms des élèves ...",
+        "brokenFiles": "Liste des fichiers cassés",
+        "errors": {
+            "no-content-json": "Le contenu H5P n'a pas été ajouté correctement au fichier .lumi.",
+            "json-parse-error": "Le fichier .lumi contient un contenu non valide (JSON n'a pas analysé).",
+            "determine-name": "Impossible de déterminer le nom de l'élève.",
+            "invalid-interactions": "Certaines des interactions sont interrompues.",
+            "invalid-statements": "Certaines des actions des élèves enregistrées sont interrompues."
+        }
     },
     "bug_report": {
         "title": "Rapports de bogues et de plantages",
@@ -68,17 +170,17 @@
     "menu": {
         "quit": "Quitter",
         "file": {
-            "label": "Déposer",
+            "label": "Fichier",
             "open": "Ouvrir les fichiers analytiques",
             "save": "Sauvegarder",
             "save_as": "Enregistrer sous...",
-            "export": "Exportation...",
+            "export": "Exporter...",
             "edit": "Éditer",
-            "undo": "annuler",
-            "redo": "Prêt",
+            "undo": "Annuler",
+            "redo": "Rétablir",
             "cut": "Couper",
-            "copy": "Copie",
-            "paste": "Pâte",
+            "copy": "Copier",
+            "paste": "Coller",
             "select_all": "Tout sélectionner"
         },
         "h5peditor": {
@@ -91,13 +193,21 @@
             "toggle_developer_tools": "Toggle Outils de développement",
             "follow_us_on_twitter": "Suivez-nous sur Twitter",
             "about": "À propos de"
+        },
+        "mac": {
+            "services": "Prestations de service",
+            "hide": "Masquer Lumi",
+            "hideothers": "Masquer les autres",
+            "unhide": "Afficher tout"
         }
     },
     "notifications": {
         "analytics": {
             "import": {
                 "error": "Aucun fichier valide trouvé",
-                "success": "Fichiers de rapport importés"
+                "success": "Fichiers de rapport importés",
+                "brokenFiles": "{{count}} fichier cassé trouvé",
+                "brokenFiles_plural": "{{count}} fichiers cassés trouvés"
             }
         },
         "h5peditor": {
@@ -109,18 +219,30 @@
                 "error": "Impossible d'ouvrir H5P."
             },
             "export_as_html": {
-                "success": "H5P exporté avec succès au format HTML",
-                "error": "Impossible d'exporter H5P au format HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Journaliste de neige",
-                "description": "Voulez-vous inclure un journaliste dans votre html? En savoir plus",
-                "yes": "Oui",
-                "no": "non",
-                "here": "ici"
+                "success": "H5P exporté avec succès",
+                "error": "Impossible d'exporter H5P"
             }
         }
+    },
+    "auth": {
+        "set_email": "Définir l'e-mail",
+        "email": "E-mail",
+        "code": "Code",
+        "verify_code": "Vérifier le code",
+        "verify_email": "Vérifier les courriels",
+        "notification": {
+            "success": "{{email}} a été validé avec succès",
+            "pending": "Un code de vérification a été envoyé à {{email}} . Veuillez vérifier vos e-mails."
+        },
+        "error": {
+            "no-valid-email": "{{email}} n'est pas une adresse e-mail valide."
+        },
+        "cancel": "Annuler"
+    },
+    "dialog": {
+        "close": "Fermer"
+    },
+    "general": {
+        "delete": "Effacer"
     }
 }

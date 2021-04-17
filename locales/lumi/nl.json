@@ -16,6 +16,44 @@
             "open": "Open bestaande H5P",
             "create": "maak nieuwe H5P",
             "start": "begin"
+        },
+        "exportDialog": {
+            "title": "Exporteer instellingen",
+            "format": {
+                "title": "Formaat",
+                "bundleLabel": "Alles-in-één HTML-bestand",
+                "bundleHint": "Het bestand kan voor sommige computers te groot worden als u veel mediabestanden opneemt.",
+                "externalLabel": "Een HTML-bestand en verschillende mediabestanden",
+                "externalHint": "In de volgende stap wordt u om een naam voor het HTML-bestand gevraagd. De mediabestanden worden in mappen geplaatst die beginnen met dezelfde naam als het bestand.",
+                "scorm": {
+                    "label": "SCORM-pakket",
+                    "masteryScoreLabel": "Beheersingsscore (in%)",
+                    "errorNaN": "De ingevoerde waarde is geen getal",
+                    "errorRange": "De waarde moet tussen 0 en 100 liggen"
+                }
+            },
+            "reporter": {
+                "title": "Verslaggever",
+                "hint": "Als u de verslaggever toevoegt, kunnen studenten een bestand met hun voortgang opslaan en naar u opsturen.",
+                "switchLabel": "Inclusief verslaggever",
+                "learnMoreLink": "Lees er hier meer over.",
+                "scormHint": "De reporter kan niet worden toegevoegd aan SCORM-pakketten."
+            },
+            "cancelButton": "Annuleer",
+            "exportButton": "Nu exporteren",
+            "filePicker": {
+                "title": "Exporteren als ...",
+                "buttonLabel": "Exporteren",
+                "formatNames": {
+                    "bundle": "Alles-in-één HTML-bestand (.html)",
+                    "external": "HTML-bestand (.html)",
+                    "scorm": "SCORM-bestand (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P Auteur",
+                "title": "H5P-inhoud"
+            }
         }
     },
     "settings": {
@@ -23,7 +61,62 @@
             "label": "Instellingen",
             "save": "Opslaan"
         },
-        "enable": "Inschakelen"
+        "enable": "Inschakelen",
+        "menu": {
+            "general": "Algemeen",
+            "updates": "Updates",
+            "account": "Account",
+            "h5p-library-administration": "H5P-bibliotheken"
+        },
+        "general": {
+            "header": "Algemeen"
+        },
+        "updates": {
+            "header": "Updates"
+        },
+        "account": {
+            "label": "Account",
+            "email": {
+                "title": "E-mail",
+                "change": "E-mailadres wijzigen",
+                "not-set": "E-mail is niet ingesteld"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Geïnstalleerde H5P-bibliotheken",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Upload succesvol, maar er zijn geen bibliotheken geïnstalleerd of bijgewerkt. Het inhoudstype is waarschijnlijk al op het systeem geïnstalleerd.",
+                    "success-with-update": "Met succes {{installed}} geïnstalleerd en {{updated}} bibliotheken bijgewerkt.",
+                    "error": "Fout bij het uploaden van pakket."
+                },
+                "delete": {
+                    "success": "Bibliotheek {{title}} ( {{version}} ) is verwijderd.",
+                    "error": "Fout bij het verwijderen van bibliotheek {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Fout bij het ophalen van gedetailleerde informatie over bibliotheek {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Upload en installeer Bibliotheek",
+            "details": "Details",
+            "can-not-be-deleted": "Deze bibliotheek kan niet worden verwijderd, omdat deze in {{count}} andere bibliotheek wordt gebruikt",
+            "can-not-be-deleted_plural": "Deze bibliotheek kan niet worden verwijderd, omdat deze in {{count}} andere bibliotheken wordt gebruikt",
+            "library-details": {
+                "header": "Bibliotheekdetails",
+                "author": "Schrijver",
+                "description": "Omschrijving",
+                "license": "Licentie",
+                "standalone": "Zelfstandig inhoudstype",
+                "restricted": "Beperkt (kan alleen worden gebruikt met privilege)",
+                "fullscreen": "Ondersteunt volledig scherm",
+                "addon": "Toevoegen",
+                "embedTypes": "Toegestane typen insluiten",
+                "dependentsCount": "Aantal bibliotheken dat de bibliotheek gebruikt",
+                "instancesCount": "Objecten gemaakt met deze bibliotheek als het belangrijkste inhoudstype",
+                "instancesAsDependencyCount": "Objecten waarin deze bibliotheek wordt gebruikt door een andere bibliotheek"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -34,7 +127,16 @@
             "open": "Kies een map met .lumi-bestanden"
         },
         "name": "Naam",
-        "average": "Gemiddelde"
+        "average": "Gemiddelde",
+        "searchPlaceholder": "Zoek studentnamen ...",
+        "brokenFiles": "Lijst met kapotte bestanden",
+        "errors": {
+            "no-content-json": "De H5P-inhoud is niet correct toegevoegd aan het .lumi-bestand.",
+            "json-parse-error": "Het .lumi-bestand bevat ongeldige inhoud (JSON is niet geparseerd).",
+            "determine-name": "Kan naam van leerling niet bepalen.",
+            "invalid-interactions": "Sommige interacties zijn verbroken.",
+            "invalid-statements": "Sommige van de geregistreerde acties van leerlingen zijn verbroken."
+        }
     },
     "bug_report": {
         "title": "Bug- en crashrapporten",
@@ -91,13 +193,21 @@
             "toggle_developer_tools": "Schakel Developer Tools in of uit",
             "follow_us_on_twitter": "Volg ons op Twitter",
             "about": "Over"
+        },
+        "mac": {
+            "services": "Diensten",
+            "hide": "Verberg Lumi",
+            "hideothers": "Verberg anderen",
+            "unhide": "Toon alles"
         }
     },
     "notifications": {
         "analytics": {
             "import": {
                 "error": "Geen geldige bestanden gevonden",
-                "success": "Geïmporteerde rapportbestanden"
+                "success": "Geïmporteerde rapportbestanden",
+                "brokenFiles": "{{count}} gebroken bestand gevonden",
+                "brokenFiles_plural": "{{count}} kapotte bestanden gevonden"
             }
         },
         "h5peditor": {
@@ -109,18 +219,30 @@
                 "error": "Kan H5P niet openen."
             },
             "export_as_html": {
-                "success": "H5P is succesvol geëxporteerd als HTML",
-                "error": "Kan H5P niet exporteren als HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Sneeuwverslaggever",
-                "description": "Wilt u een verslaggever opnemen in uw html? Leer er meer over",
-                "yes": "Ja",
-                "no": "Nee",
-                "here": "hier"
+                "success": "H5P is succesvol geëxporteerd",
+                "error": "Kan H5P niet exporteren"
             }
         }
+    },
+    "auth": {
+        "set_email": "E-mail instellen",
+        "email": "E-mail",
+        "code": "Code",
+        "verify_code": "Code verifiëren",
+        "verify_email": "Verifieer Email",
+        "notification": {
+            "success": "{{email}} is succesvol gevalideerd",
+            "pending": "Er is een verificatiecode naar {{email}} gestuurd. Controleer uw e-mails."
+        },
+        "error": {
+            "no-valid-email": "{{email}} is geen geldig e-mailadres."
+        },
+        "cancel": "annuleren"
+    },
+    "dialog": {
+        "close": "Dichtbij"
+    },
+    "general": {
+        "delete": "Verwijderen"
     }
 }

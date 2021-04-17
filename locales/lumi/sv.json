@@ -16,6 +16,44 @@
             "open": "Öppna befintlig H5P",
             "create": "skapa ny H5P",
             "start": "Start"
+        },
+        "exportDialog": {
+            "title": "Exportera inställningar",
+            "format": {
+                "title": "Formatera",
+                "bundleLabel": "Allt-i-ett HTML-fil",
+                "bundleHint": "Filen kan växa för stor för vissa datorer om du inkluderar massor av mediefiler.",
+                "externalLabel": "En HTML-fil och flera mediefiler",
+                "externalHint": "Du kommer att bli ombedd att ange ett namn för HTML-filen i nästa steg. Mediefilerna läggs i mappar som börjar med samma namn som filen.",
+                "scorm": {
+                    "label": "SCORM-paket",
+                    "masteryScoreLabel": "Behärskningspoäng (i%)",
+                    "errorNaN": "Inmatat värde är inte ett tal",
+                    "errorRange": "Värdet måste vara mellan 0 och 100"
+                }
+            },
+            "reporter": {
+                "title": "Reporter",
+                "hint": "Om du lägger till reportern kan eleverna spara en fil med deras framsteg och skicka den till dig.",
+                "switchLabel": "Inkludera reporter",
+                "learnMoreLink": "Läs mer om det här.",
+                "scormHint": "Reportern kan inte läggas till i SCORM-paket."
+            },
+            "cancelButton": "Avbryt",
+            "exportButton": "Exportera nu",
+            "filePicker": {
+                "title": "Exportera som ...",
+                "buttonLabel": "Exportera",
+                "formatNames": {
+                    "bundle": "Allt-i-ett HTML-fil (.html)",
+                    "external": "HTML-fil (.html)",
+                    "scorm": "SCORM-fil (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P Författare",
+                "title": "H5P-innehåll"
+            }
         }
     },
     "settings": {
@@ -23,7 +61,62 @@
             "label": "inställningar",
             "save": "Spara"
         },
-        "enable": "Gör det möjligt"
+        "enable": "Gör det möjligt",
+        "menu": {
+            "general": "Allmän",
+            "updates": "Uppdateringar",
+            "account": "konto",
+            "h5p-library-administration": "H5P-bibliotek"
+        },
+        "general": {
+            "header": "Allmän"
+        },
+        "updates": {
+            "header": "Uppdateringar"
+        },
+        "account": {
+            "label": "konto",
+            "email": {
+                "title": "E-post",
+                "change": "Byta e-mail",
+                "not-set": "E-postadressen har inte ställts in"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Installerade H5P-bibliotek",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Uppladdningen lyckades, men inga bibliotek installerades eller uppdaterades. Innehållstypen är förmodligen redan installerad på systemet.",
+                    "success-with-update": "{{installed}} installerats och {{updated}} bibliotek har uppdaterats.",
+                    "error": "Fel vid uppladdning av paket."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) har tagits bort.",
+                    "error": "Fel vid borttagning av bibliotek {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Fel vid inhämtning av detaljerad information om bibliotek {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Ladda upp och installera bibliotek",
+            "details": "Detaljer",
+            "can-not-be-deleted": "Detta bibliotek kan inte tas bort eftersom det används i {{count}} andra bibliotek",
+            "can-not-be-deleted_plural": "Det här biblioteket kan inte raderas eftersom det används i {{count}} andra bibliotek",
+            "library-details": {
+                "header": "Biblioteksdetaljer",
+                "author": "Författare",
+                "description": "Beskrivning",
+                "license": "Licens",
+                "standalone": "Fristående innehållstyp",
+                "restricted": "Begränsad (kan endast användas med behörighet)",
+                "fullscreen": "Stöder helskärm",
+                "addon": "Tillägg",
+                "embedTypes": "Tillåtna inbäddningstyper",
+                "dependentsCount": "Antal bibliotek som använder biblioteket",
+                "instancesCount": "Objekt som skapats med detta bibliotek som huvudinnehållstyp",
+                "instancesAsDependencyCount": "Objekt där detta bibliotek används av ett annat bibliotek"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -34,7 +127,16 @@
             "open": "Välj mapp med .lumi-filer"
         },
         "name": "namn",
-        "average": "Medel"
+        "average": "Medel",
+        "searchPlaceholder": "Sök i studentnamn ...",
+        "brokenFiles": "Lista över trasiga filer",
+        "errors": {
+            "no-content-json": "H5P-innehållet har inte lagts till ordentligt i .lumi-filen.",
+            "json-parse-error": ".Lumi-filen innehåller ogiltigt innehåll (JSON analyserade inte).",
+            "determine-name": "Det gick inte att avgöra studentens namn.",
+            "invalid-interactions": "Några av interaktionerna är trasiga.",
+            "invalid-statements": "Några av de inspelade studenternas handlingar är trasiga."
+        }
     },
     "bug_report": {
         "title": "Fel- och kraschrapporter",
@@ -91,13 +193,21 @@
             "toggle_developer_tools": "Växla utvecklarverktyg",
             "follow_us_on_twitter": "Följ oss på Twitter",
             "about": "Handla om"
+        },
+        "mac": {
+            "services": "Tjänster",
+            "hide": "Dölj Lumi",
+            "hideothers": "Dölj andra",
+            "unhide": "Visa allt"
         }
     },
     "notifications": {
         "analytics": {
             "import": {
                 "error": "Inga giltiga filer hittades",
-                "success": "Importerade rapportfiler"
+                "success": "Importerade rapportfiler",
+                "brokenFiles": "{{count}} trasig fil hittades",
+                "brokenFiles_plural": "{{count}} trasiga filer hittades"
             }
         },
         "h5peditor": {
@@ -109,18 +219,30 @@
                 "error": "Det gick inte att öppna H5P."
             },
             "export_as_html": {
-                "success": "H5P exporterades framgångsrikt som HTML",
-                "error": "Det gick inte att exportera H5P som HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Snörapporter",
-                "description": "Vill du inkludera en reporter i din html? Läs mer om det",
-                "yes": "ja",
-                "no": "Nej",
-                "here": "här"
+                "success": "H5P har exporterats",
+                "error": "Det gick inte att exportera H5P"
             }
         }
+    },
+    "auth": {
+        "set_email": "Ställ in e-post",
+        "email": "E-post",
+        "code": "Koda",
+        "verify_code": "Verifiera kod",
+        "verify_email": "Verifiera Email",
+        "notification": {
+            "success": "{{email}} har validerats",
+            "pending": "En verifieringskod har skickats till {{email}} . Kontrollera dina e-postmeddelanden."
+        },
+        "error": {
+            "no-valid-email": "{{email}} är inte en giltig e-postadress."
+        },
+        "cancel": "Avbryt"
+    },
+    "dialog": {
+        "close": "Stänga"
+    },
+    "general": {
+        "delete": "Radera"
     }
 }

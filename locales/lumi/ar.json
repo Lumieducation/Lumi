@@ -16,14 +16,107 @@
             "create": "إنشاء H5P جديد",
             "start": "بداية"
         },
-        "default_name": "H5P جديد"
+        "default_name": "”H5P“ جديد",
+        "exportDialog": {
+            "title": "إعدادات التصدير",
+            "format": {
+                "title": "شكل",
+                "bundleLabel": "ملف HTML الكل في واحد",
+                "bundleHint": "يمكن أن يصبح الملف كبيرًا جدًا بالنسبة لبعض أجهزة الكمبيوتر إذا قمت بتضمين الكثير من ملفات الوسائط.",
+                "externalLabel": "ملف HTML واحد والعديد من ملفات الوسائط",
+                "externalHint": "سيُطلب منك اسم ملف HTML في الخطوة التالية. سيتم وضع ملفات الوسائط في مجلدات تبدأ بنفس اسم الملف.",
+                "scorm": {
+                    "label": "حزمة SCORM",
+                    "masteryScoreLabel": "درجة الإتقان (٪)",
+                    "errorNaN": "القيمة التي تم إدخالها ليست رقمًا",
+                    "errorRange": "يجب أن تكون القيمة بين 0 و 100"
+                }
+            },
+            "reporter": {
+                "title": "مراسل",
+                "hint": "إذا قمت بإضافة المراسل ، يمكن للطلاب حفظ ملف مع تقدمهم وإرساله إليك.",
+                "switchLabel": "تشمل المراسل",
+                "learnMoreLink": "تعلم المزيد عن ذلك هنا.",
+                "scormHint": "لا يمكن إضافة المراسل إلى حزم SCORM."
+            },
+            "cancelButton": "يلغي",
+            "exportButton": "تصدير الآن",
+            "filePicker": {
+                "title": "تصدير كـ …",
+                "buttonLabel": "يصدر",
+                "formatNames": {
+                    "bundle": "ملف HTML الكل في واحد (.html)",
+                    "external": "ملف HTML (.html)",
+                    "scorm": "ملف SCORM (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "مؤلف H5P",
+                "title": "محتوى H5P"
+            }
+        }
     },
     "settings": {
         "appbar": {
             "label": "إعدادات",
             "save": "يحفظ"
         },
-        "enable": "يمكن"
+        "enable": "يمكن",
+        "menu": {
+            "general": "عام",
+            "updates": "تحديثات",
+            "account": "حساب",
+            "h5p-library-administration": "مكتبات H5P"
+        },
+        "general": {
+            "header": "عام"
+        },
+        "updates": {
+            "header": "تحديثات"
+        },
+        "account": {
+            "label": "حساب",
+            "email": {
+                "title": "بريد إليكتروني",
+                "change": "تغيير البريد الإليكتروني",
+                "not-set": "البريد الإليكتروني غير مثبت"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "مكتبات H5P المثبتة",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "تم التحميل بنجاح ، ولكن لم يتم تثبيت أو تحديث أي مكتبات. من المحتمل أن نوع المحتوى مثبت بالفعل على النظام.",
+                    "success-with-update": "تم بنجاح تثبيت {{installed}} وتحديث مكتبات {{updated}}",
+                    "error": "خطأ أثناء تحميل الحزمة."
+                },
+                "delete": {
+                    "success": "تم حذف المكتبة بنجاح {{title}} ( {{version}} ).",
+                    "error": "خطأ في حذف المكتبة {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "خطأ في الحصول على معلومات مفصلة حول المكتبة {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "تحميل وتثبيت المكتبة",
+            "details": "تفاصيل",
+            "can-not-be-deleted": "لا يمكن حذف هذه المكتبة لأنها مستخدمة في {{count}} مكتبة أخرى",
+            "can-not-be-deleted_plural": "لا يمكن حذف هذه المكتبة لأنها مستخدمة في {{count}} مكتبات أخرى",
+            "library-details": {
+                "header": "تفاصيل المكتبة",
+                "author": "مؤلف",
+                "description": "وصف",
+                "license": "رخصة",
+                "standalone": "نوع المحتوى المستقل",
+                "restricted": "مقيد (لا يمكن استخدامه إلا بامتياز)",
+                "fullscreen": "يدعم وضع ملء الشاشة",
+                "addon": "اضافه",
+                "embedTypes": "أنواع التضمين المسموح بها",
+                "dependentsCount": "عدد المكتبات التي تستخدم المكتبة",
+                "instancesCount": "الكائنات التي تم إنشاؤها باستخدام هذه المكتبة كنوع المحتوى الرئيسي",
+                "instancesAsDependencyCount": "الكائنات التي تستخدم فيها هذه المكتبة من قبل مكتبة أخرى"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -33,8 +126,17 @@
             "learn_more": "يتعلم أكثر",
             "open": "اختر مجلدًا يحتوي على ملفات .lumi"
         },
-        "name": "اسم",
-        "average": "متوسط"
+        "name": "إسم",
+        "average": "المتوسط",
+        "searchPlaceholder": "البحث في أسماء الطلاب ...",
+        "brokenFiles": "قائمة الملفات المعطلة",
+        "errors": {
+            "no-content-json": "لم تتم إضافة محتوى H5P بشكل صحيح إلى ملف .lumi.",
+            "json-parse-error": "يحتوي ملف .lumi على محتوى غير صالح (لم يتم تحليل JSON).",
+            "determine-name": "تعذر تحديد اسم الطالب.",
+            "invalid-interactions": "بعض التفاعلات معطلة.",
+            "invalid-statements": "تم كسر بعض إجراءات الطالب المسجلة."
+        }
     },
     "bug_report": {
         "title": "تقارير الأخطاء والأعطال",
@@ -54,7 +156,7 @@
     "language": {
         "title": "لغة",
         "description": "تغيير لغة التطبيق.",
-        "help_translate": "ساعدنا في الترجمة!"
+        "help_translate": "ساعدنا للترجمة!"
     },
     "privacy_policy": {
         "title": "سياسة خاصة",
@@ -89,38 +191,58 @@
             "report_issue": "قضية تقرير",
             "toggle_developer_tools": "تبديل أدوات المطور",
             "follow_us_on_twitter": "تابعنا على تويتر",
-            "about": "حول"
+            "about": "نبذه"
         },
-        "quit": "استقال"
+        "quit": "اغلاق",
+        "mac": {
+            "services": "خدمات",
+            "hide": "إخفاء لومي",
+            "hideothers": "إخفاء الآخرين",
+            "unhide": "عرض الكل"
+        }
     },
     "notifications": {
         "analytics": {
             "import": {
-                "error": "لم يتم العثور على ملفات صالحة",
-                "success": "ملفات التقارير المستوردة"
+                "error": "لم يعثر علي ملفات مدعومه",
+                "success": "ملفات التقرير المستورده",
+                "brokenFiles": "تم العثور على {{count}}",
+                "brokenFiles_plural": "تم العثور على {{count}}"
             }
         },
         "h5peditor": {
             "save": {
-                "success": "تم حفظ H5P!",
-                "error": "تعذر حفظ H5P."
+                "success": "تم الحفظ !",
+                "error": "لا يمكن حفظ الملف."
             },
             "open": {
-                "error": "تعذر فتح H5P."
+                "error": "لا يمكن فتح الملف ."
             },
             "export_as_html": {
-                "success": "تم تصدير H5P بنجاح بتنسيق HTML",
-                "error": "تعذر تصدير H5P بتنسيق HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "مراسل لومي",
-                "description": "هل تريد تضمين مراسل في لغة تأشير النص الفائق الخاصة بك؟ تعرف على المزيد حول هذا الموضوع",
-                "yes": "نعم",
-                "no": "لا",
-                "here": "هنا"
+                "success": "تم تصدير الملف HTML بنجاح",
+                "error": "لا يمكن تصدير الملف بصيغة HTML"
             }
         }
+    },
+    "auth": {
+        "set_email": "تعيين البريد الإلكتروني",
+        "email": "بريد إلكتروني",
+        "code": "شفرة",
+        "verify_code": "التحقق من كود",
+        "verify_email": "التحقق من البريد الإلكتروني",
+        "notification": {
+            "success": "تم التحقق من {{email}}",
+            "pending": "تم إرسال رمز التحقق إلى {{email}} . يرجى التحقق من رسائل البريد الإلكتروني الخاصة بك."
+        },
+        "error": {
+            "no-valid-email": "{{email}} ليس عنوان بريد إلكتروني صالحًا."
+        },
+        "cancel": "يلغي"
+    },
+    "dialog": {
+        "close": "يغلق"
+    },
+    "general": {
+        "delete": "حذف"
     }
 }

@@ -145,6 +145,8 @@ export interface IH5PEditorOpenExportDialogAction {
 export interface IH5PEditorExportRequestAction {
     payload: {
         contentId: string;
+        includeReporter: boolean;
+        format: 'bundle' | 'external' | 'scorm';
     };
     type: typeof H5PEDITOR_EXPORT_REQUEST;
 }

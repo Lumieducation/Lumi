@@ -28,7 +28,8 @@ const testTab: ITab = {
     mainLibrary: 'library',
     name: 'test',
     path: '',
-    mode: Modes.view
+    mode: Modes.view,
+    opening: false
 };
 
 describe('H5P_LOADEDITORCONTENT_SUCCESS', () => {
@@ -73,7 +74,9 @@ describe('H5PEDITOR_EXPORT_REQUEST', () => {
         },
         {
             payload: {
-                contentId: testTab.contentId || ''
+                contentId: testTab.contentId || '',
+                format: 'bundle',
+                includeReporter: false
             },
             type: H5PEDITOR_EXPORT_REQUEST
         }

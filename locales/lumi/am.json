@@ -16,14 +16,107 @@
             "create": "አዲስ H5P ይፍጠሩ",
             "start": "ጀምር"
         },
-        "default_name": "አዲስ H5P"
+        "default_name": "አዲስ H5P",
+        "exportDialog": {
+            "title": "ወደ ውጭ ላክ ቅንብሮች",
+            "format": {
+                "title": "ቅርጸት",
+                "bundleLabel": "ሁሉም-በአንድ-ኤችቲኤምኤል ፋይል",
+                "bundleHint": "ብዙ የሚዲያ ፋይሎችን ካካተቱ ፋይሉ ለአንዳንድ ኮምፒተሮች በጣም ትልቅ ሊሆን ይችላል ፡፡",
+                "externalLabel": "አንድ የኤችቲኤምኤል ፋይል እና በርካታ የሚዲያ ፋይሎች",
+                "externalHint": "በሚቀጥለው ደረጃ ለኤችቲኤምኤል ፋይል ስም ይጠየቃሉ። የሚዲያ ፋይሎቹ ከፋይሉ ጋር በተመሳሳይ ስም በሚጀምሩ አቃፊዎች ውስጥ ይቀመጣሉ ፡፡",
+                "scorm": {
+                    "label": "የ SCORM ጥቅል",
+                    "masteryScoreLabel": "ዋና ውጤት (በ% ውስጥ)",
+                    "errorNaN": "የገባ እሴት ቁጥር አይደለም",
+                    "errorRange": "እሴቱ ከ 0 እስከ 100 መሆን አለበት"
+                }
+            },
+            "reporter": {
+                "title": "ዘጋቢ",
+                "hint": "ዘጋቢውን ካከሉ ተማሪዎች በእድገታቸው አንድ ፋይልን ማስቀመጥ እና ለእርስዎ መላክ ይችላሉ ፡፡",
+                "switchLabel": "ዘጋቢን አካትት",
+                "learnMoreLink": "እዚህ ስለዚህ ጉዳይ የበለጠ ይረዱ።",
+                "scormHint": "ዘጋቢው ወደ SCORM ጥቅሎች ሊታከል አይችልም።"
+            },
+            "cancelButton": "ሰርዝ",
+            "exportButton": "አሁን ላክ",
+            "filePicker": {
+                "title": "ላክ እንደ ...",
+                "buttonLabel": "ወደ ውጭ ላክ",
+                "formatNames": {
+                    "bundle": "ሁሉም-በአንድ-ኤችቲኤምኤል ፋይል (.html)",
+                    "external": "የኤችቲኤምኤል ፋይል (.html)",
+                    "scorm": "SCORM ፋይል (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P ደራሲ",
+                "title": "H5P ይዘት"
+            }
+        }
     },
     "settings": {
         "appbar": {
             "label": "ቅንብሮች",
             "save": "አስቀምጥ"
         },
-        "enable": "አንቃ"
+        "enable": "አንቃ",
+        "menu": {
+            "general": "ጄኔራል",
+            "updates": "ዝመናዎች",
+            "account": "መለያ",
+            "h5p-library-administration": "H5P ቤተመፃህፍት"
+        },
+        "general": {
+            "header": "ጄኔራል"
+        },
+        "updates": {
+            "header": "ዝመናዎች"
+        },
+        "account": {
+            "label": "መለያ",
+            "email": {
+                "title": "ኢሜል",
+                "change": "ኢሜል ይቀይሩ",
+                "not-set": "ኢሜል አልተዘጋጀም"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "የተጫኑ የኤች 5 ፒ ቤተ-መጻሕፍት",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "ስቀሉ ስኬታማ ነበር ፣ ግን ምንም ቤተ-መጽሐፍት አልተጫኑም ወይም አልተዘመኑም። የይዘቱ ዓይነት ምናልባት ቀድሞውኑ በስርዓቱ ላይ ተጭኗል።",
+                    "success-with-update": "በተሳካ ሁኔታ {{installed}} የተጫነ እና {{updated}} ቤተ-መጻሕፍት ተዘምኗል።",
+                    "error": "ጥቅልን በመስቀል ላይ ስህተት"
+                },
+                "delete": {
+                    "success": "ቤተ-መጽሐፍት በተሳካ ሁኔታ ተሰር deletedል {{title}} ( {{version}} )",
+                    "error": "ቤተ-መጽሐፍት {{title}} ( {{version}} ) መሰረዝ ላይ ስህተት"
+                },
+                "get": {
+                    "error": "{{library.title}} ( {{version}} ) ዝርዝር መረጃ ማግኘት ላይ ስህተት።"
+                }
+            },
+            "upload_and_install": "ቤተ-መጽሐፍት ስቀል እና ጫን",
+            "details": "ዝርዝሮች",
+            "can-not-be-deleted": "ይህ ቤተ-መጽሐፍት መሰረዝ አይቻልም ፣ ምክንያቱም በ {{count}} ሌሎች ቤተ-መጽሐፍት ውስጥ ጥቅም ላይ ስለሚውል",
+            "can-not-be-deleted_plural": "ይህ ቤተ-መጽሐፍት መሰረዝ አይቻልም ፣ ምክንያቱም በ {{count}} ሌሎች ቤተ-መጻሕፍት ውስጥ ጥቅም ላይ ይውላል",
+            "library-details": {
+                "header": "የቤተ-መጽሐፍት ዝርዝሮች",
+                "author": "ደራሲ",
+                "description": "መግለጫ",
+                "license": "ፈቃድ",
+                "standalone": "ራሱን የቻለ የይዘት ዓይነት",
+                "restricted": "የተከለከለ (በልዩ መብት ብቻ ሊያገለግል ይችላል)",
+                "fullscreen": "ሙሉ ማያ ገጽን ይደግፋል",
+                "addon": "አዶን",
+                "embedTypes": "የተፈቀዱ መክተት ዓይነቶች",
+                "dependentsCount": "ቤተ መፃህፍቱን የሚጠቀሙ ቤተመፃህፍት ብዛት",
+                "instancesCount": "እንደ ዋናው የይዘት አይነት በዚህ ቤተ-መጽሐፍት የተፈጠሩ ዕቃዎች",
+                "instancesAsDependencyCount": "ይህ ቤተ-መጽሐፍት በሌላ ቤተ-መጽሐፍት የሚጠቀምባቸው ነገሮች"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -34,7 +127,16 @@
             "open": ".Lumi ፋይሎችን የያዘ አቃፊ ይምረጡ"
         },
         "name": "ስም",
-        "average": "አማካይ"
+        "average": "አማካይ",
+        "searchPlaceholder": "የተማሪ ስሞችን ይፈልጉ ...",
+        "brokenFiles": "የተሰበሩ ፋይሎች ዝርዝር",
+        "errors": {
+            "no-content-json": "የኤች 5 ፒ ይዘት ለ .lumi ፋይል በትክክል አልተጨመረም።",
+            "json-parse-error": ".Lumi ፋይል ልክ ያልሆነ ይዘት ይ containsል (JSON አልተመረመረም)።",
+            "determine-name": "የተማሪውን ስም መወሰን አልተቻለም።",
+            "invalid-interactions": "አንዳንድ ግንኙነቶች ተሰብረዋል ፡፡",
+            "invalid-statements": "ከተመዘገቡት የተማሪ እርምጃዎች መካከል አንዳንዶቹ ተሰብረዋል ፡፡"
+        }
     },
     "bug_report": {
         "title": "የሳንካ እና የስንክል ሪፖርቶች",
@@ -91,13 +193,21 @@
             "follow_us_on_twitter": "በትዊተር ላይ ይከተሉን",
             "about": "ስለ"
         },
-        "quit": "አቁም"
+        "quit": "አቁም",
+        "mac": {
+            "services": "አገልግሎቶች",
+            "hide": "Lumi ን ደብቅ",
+            "hideothers": "ሌሎችን ደብቅ",
+            "unhide": "ሁሉንም አሳይ"
+        }
     },
     "notifications": {
         "analytics": {
             "import": {
                 "error": "ትክክለኛ ፋይሎች አልተገኙም",
-                "success": "ከውጭ የመጡ የሪፖርት ፋይሎች"
+                "success": "ከውጭ የመጡ የሪፖርት ፋይሎች",
+                "brokenFiles": "{{count}} የተሰበረ ፋይል ተገኝቷል",
+                "brokenFiles_plural": "{{count}} የተሰበሩ ፋይሎች ተገኝተዋል"
             }
         },
         "h5peditor": {
@@ -109,18 +219,30 @@
                 "error": "H5P ን መክፈት አልተቻለም።"
             },
             "export_as_html": {
-                "success": "ኤች 5 ፒ በተሳካ ሁኔታ እንደ ኤችቲኤምኤል ተልኳል",
-                "error": "H5P ን እንደ HTML መላክ አልተቻለም"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "የሎሚ ዘጋቢ",
-                "description": "ሪፖርተርን በኤችቲኤምኤልዎ ውስጥ ማካተት ይፈልጋሉ? ስለዚህ ጉዳይ የበለጠ ይረዱ",
-                "yes": "አዎ",
-                "no": "አይ",
-                "here": "እዚህ"
+                "success": "ኤች 5 ፒ በተሳካ ሁኔታ ወደ ውጭ ተልኳል",
+                "error": "ኤች 5 ፒ ወደ ውጭ መላክ አልተቻለም"
             }
         }
+    },
+    "auth": {
+        "set_email": "ኢሜል ያዘጋጁ",
+        "email": "ኢሜል",
+        "code": "ኮድ",
+        "verify_code": "ኮድ ያረጋግጡ",
+        "verify_email": "ኢሜል ያረጋግጡ",
+        "notification": {
+            "success": "{{email}} በተሳካ ሁኔታ ተረጋግጧል",
+            "pending": "የማረጋገጫ ኮድ ወደ {{email}} ፡ እባክዎን ኢሜሎችዎን ይፈትሹ ፡፡"
+        },
+        "error": {
+            "no-valid-email": "{{email}} ትክክለኛ የኢሜል አድራሻ አይደለም ፡"
+        },
+        "cancel": "ሰርዝ"
+    },
+    "dialog": {
+        "close": "ገጠመ"
+    },
+    "general": {
+        "delete": "ሰርዝ"
     }
 }

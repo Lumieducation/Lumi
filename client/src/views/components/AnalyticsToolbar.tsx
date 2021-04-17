@@ -1,4 +1,4 @@
-import React from 'react';
+import { useTranslation } from 'react-i18next';
 import {
     fade,
     makeStyles,
@@ -38,10 +38,10 @@ const useStyles = makeStyles((theme: Theme) =>
             },
             marginRight: theme.spacing(2),
             marginLeft: 0,
-            width: '100%',
+            width: '60%',
             [theme.breakpoints.up('sm')]: {
-                marginLeft: theme.spacing(3),
-                width: 'auto'
+                marginLeft: theme.spacing(3)
+                // width: 'auto'
             }
         },
         searchIcon: {
@@ -54,17 +54,18 @@ const useStyles = makeStyles((theme: Theme) =>
             justifyContent: 'center'
         },
         inputRoot: {
-            color: 'inherit'
+            color: 'inherit',
+            width: '100%'
         },
         inputInput: {
             padding: theme.spacing(1, 1, 1, 0),
             // vertical padding + font size from searchIcon
             paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-            transition: theme.transitions.create('width'),
-            width: '100%',
-            [theme.breakpoints.up('md')]: {
-                width: '20ch'
-            }
+            // transition: theme.transitions.create('width'),
+            width: '100%'
+            // [theme.breakpoints.up('md')]: {
+            //     // width: '20ch'
+            // }
         },
         sectionDesktop: {
             display: 'none',
@@ -86,6 +87,7 @@ export default function AnalyticsToolbar(props: {
     search: (text: string) => void;
 }) {
     const classes = useStyles();
+    const { t } = useTranslation();
 
     return (
         <div className={classes.grow}>
@@ -101,14 +103,14 @@ export default function AnalyticsToolbar(props: {
                         <OpenIcon />
                     </IconButton>
                     <Typography className={classes.title} variant="h6" noWrap>
-                        Analytics
+                        {t('analytics.startPage.title')}
                     </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
                             <SearchIcon />
                         </div>
                         <InputBase
-                            placeholder="Search student names…"
+                            placeholder={t('analytics.searchPlaceholder')}
                             classes={{
                                 root: classes.inputRoot,
                                 input: classes.inputInput

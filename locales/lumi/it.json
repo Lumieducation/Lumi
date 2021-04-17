@@ -16,6 +16,44 @@
             "open": "Apri H5P esistente",
             "create": "creare nuovo H5P",
             "start": "inizio"
+        },
+        "exportDialog": {
+            "title": "Esporta impostazioni",
+            "format": {
+                "title": "Formato",
+                "bundleLabel": "File HTML all-in-one",
+                "bundleHint": "Il file può diventare troppo grande per alcuni computer se includi molti file multimediali.",
+                "externalLabel": "Un file HTML e diversi file multimediali",
+                "externalHint": "Ti verrà chiesto un nome per il file HTML nel passaggio successivo. I file multimediali verranno inseriti in cartelle che iniziano con lo stesso nome del file.",
+                "scorm": {
+                    "label": "Pacchetto SCORM",
+                    "masteryScoreLabel": "Punteggio di maestria (in%)",
+                    "errorNaN": "Il valore inserito non è un numero",
+                    "errorRange": "Il valore deve essere compreso tra 0 e 100"
+                }
+            },
+            "reporter": {
+                "title": "Reporter",
+                "hint": "Se aggiungi il reporter, gli studenti possono salvare un file con i loro progressi e inviarlo a te.",
+                "switchLabel": "Includi giornalista",
+                "learnMoreLink": "Scopri di più qui.",
+                "scormHint": "Il reporter non può essere aggiunto ai pacchetti SCORM."
+            },
+            "cancelButton": "Annulla",
+            "exportButton": "Esporta ora",
+            "filePicker": {
+                "title": "Esporta come ...",
+                "buttonLabel": "Esportare",
+                "formatNames": {
+                    "bundle": "File HTML all-in-one (.html)",
+                    "external": "File HTML (.html)",
+                    "scorm": "File SCORM (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "Autore H5P",
+                "title": "Contenuto H5P"
+            }
         }
     },
     "settings": {
@@ -23,7 +61,62 @@
             "label": "impostazioni",
             "save": "Salva"
         },
-        "enable": "Abilitare"
+        "enable": "Abilitare",
+        "menu": {
+            "general": "Generale",
+            "updates": "Aggiornamenti",
+            "account": "account",
+            "h5p-library-administration": "Librerie H5P"
+        },
+        "general": {
+            "header": "Generale"
+        },
+        "updates": {
+            "header": "Aggiornamenti"
+        },
+        "account": {
+            "label": "account",
+            "email": {
+                "title": "E-mail",
+                "change": "Cambia email",
+                "not-set": "L'email non è impostata"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Librerie H5P installate",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Caricamento riuscito, ma nessuna libreria è stata installata o aggiornata. Il tipo di contenuto è probabilmente già installato nel sistema.",
+                    "success-with-update": "Librerie {{installed}} installate e aggiornate {{updated}}",
+                    "error": "Errore durante il caricamento del pacchetto."
+                },
+                "delete": {
+                    "success": "Libreria eliminata con successo {{title}} ( {{version}} ).",
+                    "error": "Errore durante l'eliminazione della libreria {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Errore durante il recupero di informazioni dettagliate sulla libreria {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Carica e installa Library",
+            "details": "Dettagli",
+            "can-not-be-deleted": "Questa libreria non può essere cancellata, perché è usata in {{count}} altre librerie",
+            "can-not-be-deleted_plural": "Questa libreria non può essere cancellata, perché è usata in {{count}} altre librerie",
+            "library-details": {
+                "header": "Dettagli della libreria",
+                "author": "Autore",
+                "description": "Descrizione",
+                "license": "Licenza",
+                "standalone": "Tipo di contenuto autonomo",
+                "restricted": "Limitato (può essere utilizzato solo con privilegi)",
+                "fullscreen": "Supporta lo schermo intero",
+                "addon": "Aggiungi su",
+                "embedTypes": "Tipi di incorporamento consentiti",
+                "dependentsCount": "Numero di biblioteche che utilizzano la libreria",
+                "instancesCount": "Oggetti creati con questa libreria come tipo di contenuto principale",
+                "instancesAsDependencyCount": "Oggetti in cui questa libreria viene utilizzata da un'altra libreria"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -34,7 +127,16 @@
             "open": "Scegli la cartella con i file .lumi"
         },
         "name": "Nome",
-        "average": "Media"
+        "average": "Media",
+        "searchPlaceholder": "Cerca i nomi degli studenti ...",
+        "brokenFiles": "Elenco dei file danneggiati",
+        "errors": {
+            "no-content-json": "Il contenuto H5P non è stato aggiunto correttamente al file .lumi.",
+            "json-parse-error": "Il file .lumi contiene contenuti non validi (JSON non è stato analizzato).",
+            "determine-name": "Impossibile determinare il nome dello studente.",
+            "invalid-interactions": "Alcune delle interazioni sono interrotte.",
+            "invalid-statements": "Alcune delle azioni registrate degli studenti sono interrotte."
+        }
     },
     "bug_report": {
         "title": "Segnalazioni di bug e arresti anomali",
@@ -91,13 +193,21 @@
             "toggle_developer_tools": "Attiva / disattiva strumenti per sviluppatori",
             "follow_us_on_twitter": "Seguici su Twitter",
             "about": "Di"
+        },
+        "mac": {
+            "services": "Servizi",
+            "hide": "Nascondi Lumi",
+            "hideothers": "Nascondi altri",
+            "unhide": "Mostra tutto"
         }
     },
     "notifications": {
         "analytics": {
             "import": {
                 "error": "Nessun file valido trovato",
-                "success": "File di report importati"
+                "success": "File di report importati",
+                "brokenFiles": "{{count}} file rotto trovato",
+                "brokenFiles_plural": "{{count}} file danneggiati trovati"
             }
         },
         "h5peditor": {
@@ -109,18 +219,30 @@
                 "error": "Impossibile aprire H5P."
             },
             "export_as_html": {
-                "success": "H5P esportato con successo come HTML",
-                "error": "Impossibile esportare H5P come HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Giornalista della neve",
-                "description": "Vuoi includere un giornalista nel tuo html? Scopri di più su di esso",
-                "yes": "sì",
-                "no": "no",
-                "here": "Qui"
+                "success": "H5P esportato con successo",
+                "error": "Impossibile esportare H5P"
             }
         }
+    },
+    "auth": {
+        "set_email": "Imposta e-mail",
+        "email": "E-mail",
+        "code": "Codice",
+        "verify_code": "Verificare il codice",
+        "verify_email": "Verifica Email",
+        "notification": {
+            "success": "{{email}} è stato convalidato con successo",
+            "pending": "Un codice di verifica è stato inviato a {{email}} . Per favore controlla le tue e-mail."
+        },
+        "error": {
+            "no-valid-email": "{{email}} non è un indirizzo email valido."
+        },
+        "cancel": "Annulla"
+    },
+    "dialog": {
+        "close": "Vicino"
+    },
+    "general": {
+        "delete": "Elimina"
     }
 }

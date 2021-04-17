@@ -16,6 +16,44 @@
             "open": "Avaa olemassa oleva H5P",
             "create": "luo uusi H5P",
             "start": "alkaa"
+        },
+        "exportDialog": {
+            "title": "Vie asetukset",
+            "format": {
+                "title": "Muoto",
+                "bundleLabel": "All-in-one HTML-tiedosto",
+                "bundleHint": "Tiedosto voi kasvaa liian suureksi joillekin tietokoneille, jos sisällytät paljon mediatiedostoja.",
+                "externalLabel": "Yksi HTML-tiedosto ja useita mediatiedostoja",
+                "externalHint": "Sinulta pyydetään nimeä HTML-tiedostolle seuraavassa vaiheessa. Mediatiedostot sijoitetaan kansioihin, jotka alkavat samalla nimellä kuin tiedosto.",
+                "scorm": {
+                    "label": "SCORM-paketti",
+                    "masteryScoreLabel": "Hallintapisteet (%)",
+                    "errorNaN": "Annettu arvo ei ole numero",
+                    "errorRange": "Arvon on oltava välillä 0–100"
+                }
+            },
+            "reporter": {
+                "title": "Reportteri",
+                "hint": "Jos lisäät reportterin, opiskelijat voivat tallentaa edistymisensä tiedoston ja lähettää sen sinulle.",
+                "switchLabel": "Sisällytä toimittaja",
+                "learnMoreLink": "Lue lisää täältä.",
+                "scormHint": "Toimittajaa ei voi lisätä SCORM-paketteihin."
+            },
+            "cancelButton": "Peruuttaa",
+            "exportButton": "Vie nyt",
+            "filePicker": {
+                "title": "Vie nimellä ...",
+                "buttonLabel": "Viedä",
+                "formatNames": {
+                    "bundle": "Kaikki yhdessä HTML-tiedosto (.html)",
+                    "external": "HTML-tiedosto (.html)",
+                    "scorm": "SCORM-tiedosto (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P-kirjailija",
+                "title": "H5P-sisältö"
+            }
         }
     },
     "settings": {
@@ -23,7 +61,62 @@
             "label": "asetukset",
             "save": "Tallentaa"
         },
-        "enable": "ota käyttöön"
+        "enable": "ota käyttöön",
+        "menu": {
+            "general": "Kenraali",
+            "updates": "Päivitykset",
+            "account": "Tili",
+            "h5p-library-administration": "H5P-kirjastot"
+        },
+        "general": {
+            "header": "Kenraali"
+        },
+        "updates": {
+            "header": "Päivitykset"
+        },
+        "account": {
+            "label": "Tili",
+            "email": {
+                "title": "Sähköposti",
+                "change": "Vaihda sähköposti",
+                "not-set": "Sähköpostiosoitetta ei ole asetettu"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Asennetut H5P-kirjastot",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Lataus onnistui, mutta kirjastoja ei ole asennettu tai päivitetty. Sisältötyyppi on todennäköisesti jo asennettu järjestelmään.",
+                    "success-with-update": "Onnistuneesti asennettu {{installed}} ja päivitetään {{updated}} kirjastoissa.",
+                    "error": "Virhe pakettia ladattaessa."
+                },
+                "delete": {
+                    "success": "Kirjasto {{title}} ( {{version}} ) poistettu.",
+                    "error": "Virhe poistettaessa kirjastoa {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Virhe haettaessa yksityiskohtaisia tietoja kirjastosta {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Lataa ja asenna kirjasto",
+            "details": "Yksityiskohdat",
+            "can-not-be-deleted": "Tätä kirjastoa ei voi poistaa, koska sitä käytetään {{count}} muussa kirjastossa",
+            "can-not-be-deleted_plural": "Tätä kirjastoa ei voi poistaa, koska sitä käytetään {{count}} muussa kirjastossa",
+            "library-details": {
+                "header": "Kirjaston tiedot",
+                "author": "Kirjoittaja",
+                "description": "Kuvaus",
+                "license": "Lisenssi",
+                "standalone": "Itsenäinen sisältötyyppi",
+                "restricted": "Rajoitettu (voidaan käyttää vain etuoikeudella)",
+                "fullscreen": "Tukee koko näyttöä",
+                "addon": "Addon",
+                "embedTypes": "Sallitut upotustyypit",
+                "dependentsCount": "Kirjastoa käyttävien kirjastojen määrä",
+                "instancesCount": "Objektit, jotka on luotu tämän kirjaston pääsisältötyypiksi",
+                "instancesAsDependencyCount": "Objektit, joissa toinen kirjasto käyttää tätä kirjastoa"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -34,7 +127,16 @@
             "open": "Valitse kansio .lumi-tiedostoilla"
         },
         "name": "Nimi",
-        "average": "Keskiverto"
+        "average": "Keskiverto",
+        "searchPlaceholder": "Hae opiskelijoiden nimiä ...",
+        "brokenFiles": "Luettelo rikki tiedostoista",
+        "errors": {
+            "no-content-json": "H5P-sisältöä ei lisätty oikein .lumi-tiedostoon.",
+            "json-parse-error": ".Lumi-tiedosto sisältää virheellistä sisältöä (JSON ei jäsennä).",
+            "determine-name": "Opiskelijan nimeä ei voitu määrittää.",
+            "invalid-interactions": "Jotkut vuorovaikutuksista ovat rikki.",
+            "invalid-statements": "Jotkut tallennetuista opiskelijoiden toimista ovat rikki."
+        }
     },
     "bug_report": {
         "title": "Virhe- ja kaatumisraportit",
@@ -91,13 +193,21 @@
             "toggle_developer_tools": "Toggle Kehittäjän työkalut",
             "follow_us_on_twitter": "Seuraa meitä Twitterissä",
             "about": "Noin"
+        },
+        "mac": {
+            "services": "Palvelut",
+            "hide": "Piilota Lumi",
+            "hideothers": "Piilota muut",
+            "unhide": "Näytä kaikki"
         }
     },
     "notifications": {
         "analytics": {
             "import": {
                 "error": "Kelvollisia tiedostoja ei löytynyt",
-                "success": "Tuodut raporttitiedostot"
+                "success": "Tuodut raporttitiedostot",
+                "brokenFiles": "{{count}} rikki tiedostoa",
+                "brokenFiles_plural": "{{count}} rikki tiedostoa"
             }
         },
         "h5peditor": {
@@ -109,18 +219,30 @@
                 "error": "H5P: tä ei voitu avata."
             },
             "export_as_html": {
-                "success": "H5P on viety HTML-muodossa",
-                "error": "H5P: tä ei voitu viedä HTML-muodossa"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Lumireporter",
-                "description": "Haluatko sisällyttää reportterin html-tiedostoosi? Lisätietoja siitä",
-                "yes": "Joo",
-                "no": "ei",
-                "here": "tässä"
+                "success": "H5P: n vienti onnistui",
+                "error": "H5P: n vienti epäonnistui"
             }
         }
+    },
+    "auth": {
+        "set_email": "Aseta sähköposti",
+        "email": "Sähköposti",
+        "code": "Koodi",
+        "verify_code": "Varmistus koodi",
+        "verify_email": "vahvista sähköposti",
+        "notification": {
+            "success": "{{email}} on vahvistettu",
+            "pending": "Vahvistuskoodi on lähetetty numeroon {{email}} . Tarkista sähköpostisi."
+        },
+        "error": {
+            "no-valid-email": "{{email}} ei ole kelvollinen sähköpostiosoite."
+        },
+        "cancel": "Peruuttaa"
+    },
+    "dialog": {
+        "close": "kiinni"
+    },
+    "general": {
+        "delete": "Poistaa"
     }
 }

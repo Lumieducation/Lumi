@@ -16,6 +16,44 @@
             "open": "Ireki lehendik dagoen H5P",
             "create": "sortu H5P berria",
             "start": "hasi"
+        },
+        "exportDialog": {
+            "title": "Esportatu ezarpenak",
+            "format": {
+                "title": "Formatua",
+                "bundleLabel": "Bat-bateko HTML fitxategia",
+                "bundleHint": "Fitxategia ordenagailu batzuetarako handiegia izan daiteke multimedia fitxategi asko sartzen badituzu.",
+                "externalLabel": "HTML fitxategi bat eta hainbat multimedia fitxategi",
+                "externalHint": "Hurrengo urratsean HTML fitxategiaren izena eskatuko zaizu. Multimedia fitxategiak fitxategiaren izen berarekin hasten diren karpetetan sartuko dira.",
+                "scorm": {
+                    "label": "SCORM paketea",
+                    "masteryScoreLabel": "Maisutasun puntuazioa (%)",
+                    "errorNaN": "Sartutako balioa ez da zenbaki bat",
+                    "errorRange": "Balioak 0 eta 100 artean egon behar du"
+                }
+            },
+            "reporter": {
+                "title": "Erreportaria",
+                "hint": "Erreportaria gehitzen baduzu, ikasleek fitxategi bat gorde dezakete aurrerapenarekin eta bidal diezazukete.",
+                "switchLabel": "Sartu berriemailea",
+                "learnMoreLink": "Lortu informazio gehiago hemen.",
+                "scormHint": "Erreportaria ezin da SCORM paketeetan gehitu."
+            },
+            "cancelButton": "Utzi",
+            "exportButton": "Esportatu orain",
+            "filePicker": {
+                "title": "Esportatu honela ...",
+                "buttonLabel": "Esportatu",
+                "formatNames": {
+                    "bundle": "Bat-bateko HTML fitxategia (.html)",
+                    "external": "HTML fitxategia (.html)",
+                    "scorm": "SCORM fitxategia (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P Egilea",
+                "title": "H5P edukia"
+            }
         }
     },
     "settings": {
@@ -23,7 +61,62 @@
             "label": "Ezarpenak",
             "save": "Gorde"
         },
-        "enable": "Gaitu"
+        "enable": "Gaitu",
+        "menu": {
+            "general": "Orokorra",
+            "updates": "Eguneratzeak",
+            "account": "Kontua",
+            "h5p-library-administration": "H5P liburutegiak"
+        },
+        "general": {
+            "header": "Orokorra"
+        },
+        "updates": {
+            "header": "Eguneratzeak"
+        },
+        "account": {
+            "label": "Kontua",
+            "email": {
+                "title": "Posta elektronikoa",
+                "change": "Aldatu helbide elektronikoa",
+                "not-set": "Mezu elektronikoa ez dago ezarrita"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Instalatutako H5P liburutegiak",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Kargatu arrakastaz, baina ez da liburutegirik instalatu edo eguneratu. Eduki mota dagoeneko sisteman instalatuta dago.",
+                    "success-with-update": "{{installed}} liburutegi instalatu {{updated}} eguneratu dira.",
+                    "error": "Errorea paketea kargatzean."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) liburutegia behar bezala ezabatu da.",
+                    "error": "{{title}} ( {{version}} ) liburutegia ezabatzean."
+                },
+                "get": {
+                    "error": "{{library.title}} ( {{version}} ) liburutegiari buruzko informazio zehatza lortzean."
+                }
+            },
+            "upload_and_install": "Kargatu eta instalatu Liburutegia",
+            "details": "Xehetasunak",
+            "can-not-be-deleted": "Liburutegi hau ezin da ezabatu, beste {{count}}",
+            "can-not-be-deleted_plural": "Liburutegi hau ezin da ezabatu, beste {{count}}",
+            "library-details": {
+                "header": "Liburutegiaren xehetasunak",
+                "author": "Egilea",
+                "description": "Deskribapena",
+                "license": "Lizentzia",
+                "standalone": "Eduki mota autonomoa",
+                "restricted": "Mugatua (pribilegioarekin bakarrik erabil daiteke)",
+                "fullscreen": "Pantaila osoa onartzen du",
+                "addon": "Gehitu",
+                "embedTypes": "Onartutako txertatze motak",
+                "dependentsCount": "Liburutegia erabiltzen duten liburutegi kopurua",
+                "instancesCount": "Liburutegi honekin eduki mota nagusi gisa sortutako objektuak",
+                "instancesAsDependencyCount": "Liburutegi hau beste liburutegi batek erabiltzen dituen objektuak"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -34,7 +127,16 @@
             "open": "Aukeratu karpeta .lumi fitxategiekin"
         },
         "name": "Izena",
-        "average": "Batez bestekoa"
+        "average": "Batez bestekoa",
+        "searchPlaceholder": "Bilatu ikasleen izenak ...",
+        "brokenFiles": "Hautsitako fitxategien zerrenda",
+        "errors": {
+            "no-content-json": "H5P edukia ez da behar bezala gehitu .lumi fitxategian.",
+            "json-parse-error": ".Lumi fitxategiak baliogabeko edukia du (JSONk ez du analizatu).",
+            "determine-name": "Ezin izan da ikaslearen izena zehaztu.",
+            "invalid-interactions": "Elkarrekintza batzuk hautsita daude.",
+            "invalid-statements": "Grabatutako ikasleen ekintza batzuk hautsita daude."
+        }
     },
     "bug_report": {
         "title": "Akatsen eta akatsen txostenak",
@@ -91,13 +193,21 @@
             "toggle_developer_tools": "Txandatu Garatzaile Tresnak",
             "follow_us_on_twitter": "Jarrai iezaguzu Twitterren",
             "about": "Buruz"
+        },
+        "mac": {
+            "services": "Zerbitzuak",
+            "hide": "Ezkutatu Lumi",
+            "hideothers": "Ezkutatu Besteak",
+            "unhide": "Erakutsi dena"
         }
     },
     "notifications": {
         "analytics": {
             "import": {
                 "error": "Ez da baliozko fitxategirik aurkitu",
-                "success": "Inportatutako txosten fitxategiak"
+                "success": "Inportatutako txosten fitxategiak",
+                "brokenFiles": "{{count}} fitxategi hautsi aurkitu da",
+                "brokenFiles_plural": "{{count}} fitxategi aurkitu dira"
             }
         },
         "h5peditor": {
@@ -109,18 +219,30 @@
                 "error": "Ezin izan da H5P ireki."
             },
             "export_as_html": {
-                "success": "H5P HTML gisa esportatu da",
-                "error": "Ezin izan da H5P HTML gisa esportatu"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Elur berriemailea",
-                "description": "Erreportari bat sartu nahi duzu zure html-n? Lortu informazio gehiago horri buruz",
-                "yes": "bai",
-                "no": "ez",
-                "here": "hemen"
+                "success": "H5P esportatu da",
+                "error": "Ezin izan da H5P esportatu"
             }
         }
+    },
+    "auth": {
+        "set_email": "Ezarri posta elektronikoa",
+        "email": "Posta elektronikoa",
+        "code": "Kodea",
+        "verify_code": "Egiaztatu kodea",
+        "verify_email": "Egiaztatu helbide elektronikoa",
+        "notification": {
+            "success": "{{email}} behar bezala balioztatu da",
+            "pending": "Egiaztapen kode bat izan da bidali {{email}} . Mesedez, egiaztatu zure mezu elektronikoak."
+        },
+        "error": {
+            "no-valid-email": "{{email}} ez da baliozko helbide elektronikoa."
+        },
+        "cancel": "Utzi"
+    },
+    "dialog": {
+        "close": "Itxi"
+    },
+    "general": {
+        "delete": "Ezabatu"
     }
 }

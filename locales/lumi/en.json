@@ -1,4 +1,25 @@
 {
+    "dialog": {
+        "close": "Close"
+    },
+    "general": {
+        "delete": "Delete"
+    },
+    "auth": {
+        "set_email": "Set Email",
+        "email": "Email",
+        "code": "Code",
+        "verify_code": "Verify Code",
+        "verify_email": "Verify Email",
+        "notification": {
+            "success": "{{email}} has been successfully validated",
+            "pending": "A verification code has been send to {{email}}. Please check your emails."
+        },
+        "error": {
+            "no-valid-email": "{{email}} is not a valid email address."
+        },
+        "cancel": "Cancel"
+    },
     "editor": {
         "default_name": "new H5P",
         "tab": { "view": "View", "edit": "Edit" },
@@ -13,11 +34,104 @@
             "open": "Open existing H5P",
             "create": "create new H5P",
             "start": "start"
+        },
+        "exportDialog": {
+            "title": "Export settings",
+            "format": {
+                "title": "Format",
+                "bundleLabel": "All-in-one HTML file",
+                "bundleHint": "The file can grow too big for some computers if you include lots of media files.",
+                "externalLabel": "One HTML file and several media files",
+                "externalHint": "You will be asked for a name for the HTML file in the next step. The media files will be put into folders that start with the same name as the file.",
+                "scorm": {
+                    "label": "SCORM package",
+                    "masteryScoreLabel": "Mastery score (in %)",
+                    "errorNaN": "Entered value is not a number",
+                    "errorRange": "The value must be between 0 and 100"
+                }
+            },
+            "reporter": {
+                "title": "Reporter",
+                "hint": "If you add the reporter, students can save a file with their progress and send it to you.",
+                "switchLabel": "Include reporter",
+                "learnMoreLink": "Learn more about it here.",
+                "scormHint": "The reporter cannot be added to SCORM packages."
+            },
+            "cancelButton": "Cancel",
+            "exportButton": "Export now",
+            "filePicker": {
+                "title": "Export as...",
+                "buttonLabel": "Export",
+                "formatNames": {
+                    "bundle": "All-in-one HTML file (.html)",
+                    "external": "HTML file (.html)",
+                    "scorm": "SCORM file (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P Author",
+                "title": "H5P Content"
+            }
         }
     },
     "settings": {
         "appbar": { "label": "Settings", "save": "Save" },
-        "enable": "Enable"
+        "enable": "Enable",
+        "menu": {
+            "general": "General",
+            "updates": "Updates",
+            "h5p-library-administration": "H5P Libraries",
+            "account": "Account"
+        },
+        "general": {
+            "header": "General"
+        },
+        "updates": {
+            "header": "Updates"
+        },
+        "account": {
+            "label": "Account",
+            "email": {
+                "title": "Email",
+                "change": "Change Email",
+                "not-set": "Email is not set"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Installed H5P libraries",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Upload successful, but no libraries were installed or updated. The content type is probably already installed on the system.",
+                    "success-with-update": "Successfully installed {{installed}} and updated {{updated}} libraries.",
+                    "error": "Error while uploading package."
+                },
+                "delete": {
+                    "success": "Successfully deleted library {{title}} ({{version}}).",
+                    "error": "Error deleting library {{title}} ({{version}})."
+                },
+                "get": {
+                    "error": "Error getting detailed information about library {{library.title}} ({{version}})."
+                }
+            },
+            "upload_and_install": "Upload and install Library",
+            "details": "Details",
+            "can-not-be-deleted": "This library cannot be deleted, because it is used in {{count}} other library",
+            "can-not-be-deleted_plural": "This library cannot be deleted, because it is used in {{count}} other libraries",
+            "library-details": {
+                "header": "Library Details",
+                "author": "Author",
+                "description": "Description",
+                "license": "License",
+                "standalone": "Standalone content type",
+                "restricted": "Restricted (can only be used with privilege)",
+                "fullscreen": "Supports fullscreen",
+                "addon": "Addon",
+                "embedTypes": "Allowed embed types",
+                "dependentsCount": "Number of libraries that use the library",
+                "instancesCount": "Objects created with this library as the main content type",
+                "instancesAsDependencyCount": "Objects in which this library is used by another library"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -28,7 +142,16 @@
             "learn_more": "learn more"
         },
         "name": "Name",
-        "average": "Average"
+        "average": "Average",
+        "searchPlaceholder": "Search student names...",
+        "brokenFiles": "List of broken files",
+        "errors": {
+            "no-content-json": "The H5P content was not added properly to the .lumi file.",
+            "json-parse-error": "The .lumi file contains invalid content (JSON did not parse).",
+            "determine-name": "Could not determine name of student.",
+            "invalid-interactions": "Some of the interactions are broken.",
+            "invalid-statements": "Some of the recorded student actions are broken."
+        }
     },
     "bug_report": {
         "title": "Bug & Crash Reports",
@@ -60,6 +183,12 @@
         "consent_warning": "You need to at least consent to the privacy policy to use this application."
     },
     "menu": {
+        "mac": {
+            "services": "Services",
+            "hide": "Hide Lumi",
+            "hideothers": "Hide Others",
+            "unhide": "Show all"
+        },
         "quit": "Quit",
         "file": {
             "label": "File",
@@ -88,7 +217,9 @@
         "analytics": {
             "import": {
                 "error": "No valid files found",
-                "success": "Imported report files"
+                "success": "Imported report files",
+                "brokenFiles": "{{count}} broken file found",
+                "brokenFiles_plural": "{{count}} broken files found"
             }
         },
         "h5peditor": {
@@ -98,17 +229,8 @@
             },
             "open": { "error": "Could not open H5P." },
             "export_as_html": {
-                "success": "H5P successfully exported as HTML",
-                "error": "Could not export H5P as HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Lumi reporter",
-                "description": "Do you want to include a reporter in your html? Learn more about it",
-                "yes": "yes",
-                "no": "no",
-                "here": "here"
+                "success": "H5P successfully exported",
+                "error": "Could not export H5P"
             }
         }
     }

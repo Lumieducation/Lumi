@@ -16,6 +16,44 @@
             "open": "Mevcut H5P'yi açın",
             "create": "yeni H5P oluştur",
             "start": "Başlat"
+        },
+        "exportDialog": {
+            "title": "Dışa Aktarma Ayarları",
+            "format": {
+                "title": "Biçim",
+                "bundleLabel": "Hepsi bir arada HTML dosyası",
+                "bundleHint": "Çok sayıda medya dosyası eklerseniz dosya bazı bilgisayarlar için çok büyüyebilir.",
+                "externalLabel": "Bir HTML dosyası ve birkaç medya dosyası",
+                "externalHint": "Sonraki adımda HTML dosyası için bir ad istenecektir. Medya dosyaları, dosya ile aynı adla başlayan klasörlere yerleştirilecektir.",
+                "scorm": {
+                    "label": "SCORM paketi",
+                    "masteryScoreLabel": "Ustalık puanı (% olarak)",
+                    "errorNaN": "Girilen değer bir sayı değil",
+                    "errorRange": "Değer 0 ile 100 arasında olmalıdır"
+                }
+            },
+            "reporter": {
+                "title": "Muhabir",
+                "hint": "Muhabiri eklerseniz, öğrenciler ilerlemelerinin olduğu bir dosyayı kaydedebilir ve size gönderebilir.",
+                "switchLabel": "Muhabiri dahil et",
+                "learnMoreLink": "Buradan daha fazla bilgi edinin.",
+                "scormHint": "Raporlayıcı, SCORM paketlerine eklenemez."
+            },
+            "cancelButton": "İptal etmek",
+            "exportButton": "Şimdi dışa aktar",
+            "filePicker": {
+                "title": "Farklı dışa aktar ...",
+                "buttonLabel": "İhracat",
+                "formatNames": {
+                    "bundle": "Hepsi bir arada HTML dosyası (.html)",
+                    "external": "HTML dosyası (.html)",
+                    "scorm": "SCORM dosyası (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P Yazar",
+                "title": "H5P İçeriği"
+            }
         }
     },
     "settings": {
@@ -23,7 +61,62 @@
             "label": "Ayarlar",
             "save": "Kayıt etmek"
         },
-        "enable": "etkinleştirme"
+        "enable": "etkinleştirme",
+        "menu": {
+            "general": "Genel",
+            "updates": "Güncellemeler",
+            "account": "Hesap",
+            "h5p-library-administration": "H5P Kitaplıkları"
+        },
+        "general": {
+            "header": "Genel"
+        },
+        "updates": {
+            "header": "Güncellemeler"
+        },
+        "account": {
+            "label": "Hesap",
+            "email": {
+                "title": "E-posta adresi",
+                "change": "Değişim e-posta",
+                "not-set": "E-posta ayarlanmadı"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Yüklü H5P kitaplıkları",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Yükleme başarılı, ancak hiçbir kitaplık yüklenmedi veya güncellenmedi. İçerik türü muhtemelen sistemde zaten yüklüdür.",
+                    "success-with-update": "{{installed}} başarıyla yüklendi ve {{updated}} kitaplık güncellendi.",
+                    "error": "Paket yüklenirken hata oluştu."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) başarıyla silindi.",
+                    "error": "{{title}} ( {{version}} ) silinirken hata oluştu."
+                },
+                "get": {
+                    "error": "{{library.title}} ( {{version}} ) hakkında ayrıntılı bilgi alınırken hata oluştu."
+                }
+            },
+            "upload_and_install": "Kitaplığı yükleyin ve kurun",
+            "details": "Detaylar",
+            "can-not-be-deleted": "Bu kitaplık başka {{count}}",
+            "can-not-be-deleted_plural": "Bu kitaplık başka {{count}}",
+            "library-details": {
+                "header": "Kütüphane Ayrıntıları",
+                "author": "Yazar",
+                "description": "Açıklama",
+                "license": "Lisans",
+                "standalone": "Bağımsız içerik türü",
+                "restricted": "Kısıtlı (yalnızca ayrıcalıkla kullanılabilir)",
+                "fullscreen": "Tam ekranı destekler",
+                "addon": "Ayriyeten",
+                "embedTypes": "İzin verilen yerleştirme türleri",
+                "dependentsCount": "Kitaplığı kullanan kitaplık sayısı",
+                "instancesCount": "Ana içerik türü olarak bu kitaplıkla oluşturulan nesneler",
+                "instancesAsDependencyCount": "Bu kitaplığın başka bir kitaplık tarafından kullanıldığı nesneler"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -34,7 +127,16 @@
             "open": ".Lumi dosyalarını içeren klasör seçin"
         },
         "name": "İsim Soyisim",
-        "average": "Ortalama"
+        "average": "Ortalama",
+        "searchPlaceholder": "Öğrenci isimlerini ara ...",
+        "brokenFiles": "Bozuk dosyaların listesi",
+        "errors": {
+            "no-content-json": "H5P içeriği .lumi dosyasına düzgün şekilde eklenmedi.",
+            "json-parse-error": ".Lumi dosyası geçersiz içerik içeriyor (JSON ayrıştırılmadı).",
+            "determine-name": "Öğrencinin adı belirlenemedi.",
+            "invalid-interactions": "Bazı etkileşimler bozuldu.",
+            "invalid-statements": "Kaydedilen öğrenci eylemlerinden bazıları bozuldu."
+        }
     },
     "bug_report": {
         "title": "Hata ve Kilitlenme Raporları",
@@ -91,13 +193,21 @@
             "toggle_developer_tools": "Geliştirici Araçlarını Aç / Kapat",
             "follow_us_on_twitter": "Bizi Twitter'da takip edin",
             "about": "hakkında"
+        },
+        "mac": {
+            "services": "Hizmetler",
+            "hide": "Lumi'yi gizle",
+            "hideothers": "Diğerlerini sakla",
+            "unhide": "Hepsini Göster ↓"
         }
     },
     "notifications": {
         "analytics": {
             "import": {
                 "error": "Geçerli dosya bulunamadı",
-                "success": "İçe aktarılan rapor dosyaları"
+                "success": "İçe aktarılan rapor dosyaları",
+                "brokenFiles": "{{count}} bozuk dosya bulundu",
+                "brokenFiles_plural": "{{count}} bozuk dosya bulundu"
             }
         },
         "h5peditor": {
@@ -109,18 +219,30 @@
                 "error": "H5P açılamadı."
             },
             "export_as_html": {
-                "success": "H5P başarıyla HTML olarak dışa aktarıldı",
-                "error": "H5P HTML olarak dışa aktarılamadı"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Kar muhabiri",
-                "description": "HTML'nize bir muhabir eklemek ister misiniz? Onun hakkında daha fazla bilgi edinin",
-                "yes": "Evet",
-                "no": "Hayır",
-                "here": "İşte"
+                "success": "H5P başarıyla ihraç edildi",
+                "error": "H5P dışa aktarılamadı"
             }
         }
+    },
+    "auth": {
+        "set_email": "E-postayı Ayarla",
+        "email": "E-posta adresi",
+        "code": "Kod",
+        "verify_code": "Doğrulama kodu",
+        "verify_email": "E-mail'i doğrula",
+        "notification": {
+            "success": "{{email}} başarıyla doğrulandı",
+            "pending": "{{email}} bir doğrulama kodu gönderildi. Lütfen e-postalarınızı kontrol edin."
+        },
+        "error": {
+            "no-valid-email": "{{email}} geçerli bir e-posta adresi değil."
+        },
+        "cancel": "İptal etmek"
+    },
+    "dialog": {
+        "close": "Kapat"
+    },
+    "general": {
+        "delete": "Silme"
     }
 }

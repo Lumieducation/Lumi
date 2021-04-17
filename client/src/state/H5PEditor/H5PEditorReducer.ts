@@ -29,6 +29,7 @@ import {
     H5PEDITOR_SAVE_CANCEL,
     H5PEDITOR_OPEN_EXPORT_DIALOG
 } from './H5PEditorTypes';
+import type { ILibraryName } from '@lumieducation/h5p-server';
 
 export const initialState: IH5PEditorState = {
     activeTabIndex: 0,
@@ -136,6 +137,10 @@ export default function tabReducer(
                 };
 
             case H5PEDITOR_UPDATE_SUCCESS:
+                const lib = action.payload.metadata.preloadedDependencies.find(
+                    (l: ILibraryName) =>
+                        l.machineName === action.payload.metadata.mainLibrary
+                );
                 return {
                     ...state,
                     tabList: state.tabList.map((tab, index) =>
@@ -144,8 +149,7 @@ export default function tabReducer(
                                   ...tab,
                                   contentId: action.payload.contentId,
                                   name: action.payload.metadata.title,
-                                  mainLibrary:
-                                      action.payload.metadata.mainLibrary,
+                                  mainLibrary: `${lib.machineName} ${lib.majorVersion}.${lib.minorVersion}`,
                                   viewDisabled: false,
                                   loadingIndicator: false
                               }
@@ -207,7 +211,8 @@ export default function tabReducer(
                               }
                             : tab
                     ),
-                    lockDisplay: false
+                    lockDisplay: false,
+                    showExportDialog: false
                 };
 
             case H5PEDITOR_EXPORT_ERROR:
@@ -290,9 +295,7 @@ export default function tabReducer(
                                   contentId: action.payload.h5p.id,
                                   loadingIndicator: false,
                                   viewDisabled: false,
-                                  mainLibrary: action.payload.h5p.library.split(
-                                      ' '
-                                  )[0],
+                                  mainLibrary: action.payload.h5p.library,
                                   name: action.payload.h5p.metadata.title,
                                   mode: Modes.edit,
                                   opening: false

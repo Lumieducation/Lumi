@@ -16,6 +16,44 @@
             "open": "Otevřete stávající H5P",
             "create": "vytvořit nový H5P",
             "start": "Start"
+        },
+        "exportDialog": {
+            "title": "Exportovat nastavení",
+            "format": {
+                "title": "Formát",
+                "bundleLabel": "Soubor HTML vše v jednom",
+                "bundleHint": "Pokud přidáte spoustu mediálních souborů, může se soubor pro některé počítače zvětšit.",
+                "externalLabel": "Jeden soubor HTML a několik mediálních souborů",
+                "externalHint": "V dalším kroku budete požádáni o název souboru HTML. Mediální soubory budou vloženy do složek, které začínají stejným názvem jako soubor.",
+                "scorm": {
+                    "label": "Balíček SCORM",
+                    "masteryScoreLabel": "Mistrovské skóre (v%)",
+                    "errorNaN": "Zadaná hodnota není číslo",
+                    "errorRange": "Hodnota musí být mezi 0 a 100"
+                }
+            },
+            "reporter": {
+                "title": "Zpravodaj",
+                "hint": "Pokud přidáte reportéra, studenti mohou uložit soubor se svým pokrokem a poslat vám ho.",
+                "switchLabel": "Zahrnout reportéra",
+                "learnMoreLink": "Zde se dozvíte více.",
+                "scormHint": "Reportéra nelze přidat do balíčků SCORM."
+            },
+            "cancelButton": "zrušení",
+            "exportButton": "Exportovat hned",
+            "filePicker": {
+                "title": "Exportovat jako ...",
+                "buttonLabel": "Vývozní",
+                "formatNames": {
+                    "bundle": "Soubor HTML typu vše v jednom (.html)",
+                    "external": "Soubor HTML (.html)",
+                    "scorm": "Soubor SCORM (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "Autor H5P",
+                "title": "Obsah H5P"
+            }
         }
     },
     "settings": {
@@ -23,7 +61,62 @@
             "label": "Nastavení",
             "save": "Uložit"
         },
-        "enable": "Umožnit"
+        "enable": "Umožnit",
+        "menu": {
+            "general": "Všeobecné",
+            "updates": "Aktualizace",
+            "account": "Účet",
+            "h5p-library-administration": "H5P knihovny"
+        },
+        "general": {
+            "header": "Všeobecné"
+        },
+        "updates": {
+            "header": "Aktualizace"
+        },
+        "account": {
+            "label": "Účet",
+            "email": {
+                "title": "E-mailem",
+                "change": "Změnit e-mail",
+                "not-set": "E-mail není nastaven"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Instalované knihovny H5P",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Nahrávání proběhlo úspěšně, ale nebyly nainstalovány ani aktualizovány žádné knihovny. Typ obsahu je pravděpodobně již v systému nainstalován.",
+                    "success-with-update": "Úspěšně nainstalováno {{installed}} a aktualizováno {{updated}} knihoven.",
+                    "error": "Chyba při nahrávání balíčku."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) byla úspěšně odstraněna.",
+                    "error": "Chyba při mazání knihovny {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Chyba při získávání podrobných informací o knihovně {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Nahrajte a nainstalujte knihovnu",
+            "details": "Detaily",
+            "can-not-be-deleted": "Tuto knihovnu nelze odstranit, protože se používá v {{count}} jiné knihovně",
+            "can-not-be-deleted_plural": "Tuto knihovnu nelze odstranit, protože se používá v {{count}} dalších knihovnách",
+            "library-details": {
+                "header": "Podrobnosti o knihovně",
+                "author": "Autor",
+                "description": "Popis",
+                "license": "Licence",
+                "standalone": "Samostatný typ obsahu",
+                "restricted": "Omezeno (lze použít pouze s oprávněním)",
+                "fullscreen": "Podporuje celou obrazovku",
+                "addon": "Doplněk",
+                "embedTypes": "Povolené typy vložení",
+                "dependentsCount": "Počet knihoven, které používají knihovnu",
+                "instancesCount": "Objekty vytvořené pomocí této knihovny jako hlavního typu obsahu",
+                "instancesAsDependencyCount": "Objekty, ve kterých tuto knihovnu používá jiná knihovna"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -34,7 +127,16 @@
             "open": "Vyberte složku se soubory .lumi"
         },
         "name": "název",
-        "average": "Průměrný"
+        "average": "Průměrný",
+        "searchPlaceholder": "Hledat jména studentů ...",
+        "brokenFiles": "Seznam nefunkčních souborů",
+        "errors": {
+            "no-content-json": "Obsah H5P nebyl správně přidán do souboru .lumi.",
+            "json-parse-error": "Soubor .lumi obsahuje neplatný obsah (JSON nebyl analyzován).",
+            "determine-name": "Nelze určit jméno studenta.",
+            "invalid-interactions": "Některé interakce jsou přerušené.",
+            "invalid-statements": "Některé zaznamenané akce studentů jsou nefunkční."
+        }
     },
     "bug_report": {
         "title": "Zprávy o chybách a selháních",
@@ -91,13 +193,21 @@
             "toggle_developer_tools": "Přepnout vývojářské nástroje",
             "follow_us_on_twitter": "Sleduj nás na Twitteru",
             "about": "O"
+        },
+        "mac": {
+            "services": "Služby",
+            "hide": "Skrýt Lumi",
+            "hideothers": "Skrýt ostatní",
+            "unhide": "Ukázat vše"
         }
     },
     "notifications": {
         "analytics": {
             "import": {
                 "error": "Nebyly nalezeny žádné platné soubory",
-                "success": "Importované soubory zpráv"
+                "success": "Importované soubory zpráv",
+                "brokenFiles": "{{count}} poškozený soubor",
+                "brokenFiles_plural": "{{count}} poškozených souborů"
             }
         },
         "h5peditor": {
@@ -109,18 +219,30 @@
                 "error": "Nelze otevřít H5P."
             },
             "export_as_html": {
-                "success": "H5P byl úspěšně exportován jako HTML",
-                "error": "Nelze exportovat H5P jako HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Sněhová reportérka",
-                "description": "Chcete do svého html zahrnout reportéra? Zjistěte více o tom",
-                "yes": "Ano",
-                "no": "Ne",
-                "here": "tady"
+                "success": "H5P úspěšně exportován",
+                "error": "Nelze exportovat H5P"
             }
         }
+    },
+    "auth": {
+        "set_email": "Nastavit e-mail",
+        "email": "E-mailem",
+        "code": "Kód",
+        "verify_code": "Ověřit kód",
+        "verify_email": "ověřovací email",
+        "notification": {
+            "success": "{{email}} byl úspěšně ověřen",
+            "pending": "Ověřovací kód byl odeslán na {{email}} . Zkontrolujte prosím své e-maily."
+        },
+        "error": {
+            "no-valid-email": "{{email}} není platná e-mailová adresa."
+        },
+        "cancel": "zrušení"
+    },
+    "dialog": {
+        "close": "Zavřít"
+    },
+    "general": {
+        "delete": "Vymazat"
     }
 }

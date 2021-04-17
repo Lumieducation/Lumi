@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
@@ -7,19 +7,33 @@ import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import Switch from '@material-ui/core/Switch';
 
 import { actions, IState } from '../../state';
+import { Box, FormHelperText, TextField } from '@material-ui/core';
 
 export default function H5PEditorExportDialog() {
-    // const { open, yesCallback, noCallback } = props;
+    const dispatch = useDispatch();
+    const { t } = useTranslation('lumi');
+
+    // State from Redux
     const open = useSelector(
         (state: IState) => state.h5peditor.showExportDialog
     );
-
-    const dispatch = useDispatch();
-    const { t } = useTranslation();
+    // Internal State
+    const [formatChoice, setFormatChoice] = useState<
+        'bundle' | 'external' | 'scorm'
+    >('bundle');
+    const [includeReporter, setIncludeReporter] = useState<boolean>(true);
+    const [masteryScore, setMasteryScore] = useState<string>('70');
+    const [masteryScoreError, setMasteryScoreError] = useState<string>();
+    const [isValid, setIsValid] = useState<boolean>(true);
 
     return (
         <div>
@@ -27,40 +41,180 @@ export default function H5PEditorExportDialog() {
                 open={open}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
+                onClose={() => dispatch(actions.h5peditor.cancelExportH5P())}
             >
                 <DialogTitle id="alert-dialog-title">
-                    {t('notifications.export_as_html.dialog.title')}
+                    {t('editor.exportDialog.title')}
                 </DialogTitle>
                 <DialogContent>
-                    <DialogContentText id="alert-dialog-description">
-                        {t('notifications.export_as_html.dialog.description')}
-                        <a
-                            href="https://lumieducation.gitbook.io/lumi/analytics/reporter"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            {t('notifications.export_as_html.dialog.here')}
-                        </a>
-                        .
-                    </DialogContentText>
+                    <Box paddingBottom={4}>
+                        <FormControl>
+                            <FormLabel>
+                                {t('editor.exportDialog.format.title')}
+                            </FormLabel>
+                            <RadioGroup
+                                name="exportformat"
+                                value={formatChoice}
+                                onChange={(e, val) =>
+                                    setFormatChoice(val as any)
+                                }
+                            >
+                                <FormControlLabel
+                                    value="bundle"
+                                    control={<Radio />}
+                                    label={t(
+                                        'editor.exportDialog.format.bundleLabel'
+                                    )}
+                                />
+                                {formatChoice === 'bundle' && (
+                                    <FormHelperText>
+                                        {t(
+                                            'editor.exportDialog.format.bundleHint'
+                                        )}
+                                    </FormHelperText>
+                                )}
+                                <FormControlLabel
+                                    value="external"
+                                    control={<Radio />}
+                                    label={t(
+                                        'editor.exportDialog.format.externalLabel'
+                                    )}
+                                />
+                                {formatChoice === 'external' && (
+                                    <FormHelperText>
+                                        {t(
+                                            'editor.exportDialog.format.externalHint'
+                                        )}
+                                    </FormHelperText>
+                                )}
+                                <FormControlLabel
+                                    value="scorm"
+                                    control={<Radio />}
+                                    label={t(
+                                        'editor.exportDialog.format.scorm.label'
+                                    )}
+                                />
+                                {formatChoice === 'scorm' && (
+                                    <Box marginLeft={2}>
+                                        <TextField
+                                            label={t(
+                                                'editor.exportDialog.format.scorm.masteryScoreLabel'
+                                            )}
+                                            value={masteryScore}
+                                            error={
+                                                masteryScoreError !== undefined
+                                            }
+                                            helperText={masteryScoreError}
+                                            onChange={(event) => {
+                                                const parsed = Number.parseFloat(
+                                                    event.target.value
+                                                );
+                                                if (isNaN(parsed)) {
+                                                    setMasteryScoreError(
+                                                        t(
+                                                            'editor.exportDialog.format.scorm.errorNaN'
+                                                        )
+                                                    );
+                                                    setIsValid(false);
+                                                } else if (
+                                                    parsed < 0 ||
+                                                    parsed > 100
+                                                ) {
+                                                    setMasteryScoreError(
+                                                        t(
+                                                            'editor.exportDialog.format.scorm.errorRange'
+                                                        )
+                                                    );
+                                                    setIsValid(false);
+                                                } else {
+                                                    setMasteryScoreError(
+                                                        undefined
+                                                    );
+                                                    setIsValid(true);
+                                                }
+                                                setMasteryScore(
+                                                    event.target.value
+                                                );
+                                            }}
+                                        />
+                                    </Box>
+                                )}
+                            </RadioGroup>
+                        </FormControl>
+                    </Box>
+                    <Box>
+                        <FormControl>
+                            <FormLabel>
+                                {t('editor.exportDialog.reporter.title')}
+                            </FormLabel>
+                            <FormHelperText>
+                                {t('editor.exportDialog.reporter.hint')}{' '}
+                                <a
+                                    href="https://lumieducation.gitbook.io/lumi/analytics/reporter"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    {t(
+                                        'editor.exportDialog.reporter.learnMoreLink'
+                                    )}
+                                </a>
+                            </FormHelperText>
+                            <FormControlLabel
+                                control={<Switch />}
+                                checked={
+                                    formatChoice === 'scorm'
+                                        ? false
+                                        : includeReporter
+                                }
+                                onChange={(e, checked) =>
+                                    setIncludeReporter(checked)
+                                }
+                                disabled={formatChoice === 'scorm'}
+                                name="includeReporter"
+                                label={t(
+                                    'editor.exportDialog.reporter.switchLabel'
+                                )}
+                            />
+                            {formatChoice === 'scorm' && (
+                                <FormHelperText>
+                                    {t(
+                                        'editor.exportDialog.reporter.scormHint'
+                                    )}
+                                </FormHelperText>
+                            )}
+                        </FormControl>
+                    </Box>
                 </DialogContent>
                 <DialogActions>
                     <Button
                         onClick={() =>
-                            dispatch(actions.h5peditor.exportH5P(false))
+                            dispatch(actions.h5peditor.cancelExportH5P())
                         }
-                        color="primary"
                     >
-                        {t('notifications.export_as_html.dialog.no')}
+                        {t('editor.exportDialog.cancelButton')}
                     </Button>
                     <Button
-                        onClick={() =>
-                            dispatch(actions.h5peditor.exportH5P(true))
-                        }
                         color="primary"
                         autoFocus
+                        onClick={() =>
+                            dispatch(
+                                actions.h5peditor.exportH5P(
+                                    formatChoice !== 'scorm'
+                                        ? includeReporter
+                                        : false,
+                                    formatChoice,
+                                    {
+                                        masteryScore:
+                                            formatChoice === 'scorm'
+                                                ? masteryScore
+                                                : undefined
+                                    }
+                                )
+                            )
+                        }
+                        disabled={formatChoice === 'scorm' && !isValid}
                     >
-                        {t('notifications.export_as_html.dialog.yes')}
+                        {t('editor.exportDialog.exportButton')}
                     </Button>
                 </DialogActions>
             </Dialog>

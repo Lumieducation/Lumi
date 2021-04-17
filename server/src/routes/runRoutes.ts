@@ -1,7 +1,7 @@
 import express from 'express';
 import * as Sentry from '@sentry/node';
 import IServerConfig from '../IServerConfig';
-import { dialog } from 'electron';
+import { BrowserWindow, dialog } from 'electron';
 import User from '../User';
 import fs from 'fs-extra';
 import path from 'path';
@@ -14,7 +14,8 @@ import { io as websocket } from '../websocket';
 
 export default function (
     serverConfig: IServerConfig,
-    h5pEditor: H5P.H5PEditor
+    h5pEditor: H5P.H5PEditor,
+    browserWindow: BrowserWindow
 ): express.Router {
     const router = express.Router();
     router.get(
@@ -67,15 +68,18 @@ export default function (
             let filePath: string =
                 req.query.filePath && `${req.query.filePath}`;
             if (!filePath) {
-                const { filePaths } = await dialog.showOpenDialog({
-                    filters: [
-                        {
-                            extensions: ['h5p'],
-                            name: 'HTML 5 Package'
-                        }
-                    ],
-                    properties: ['openFile']
-                });
+                const { filePaths } = await dialog.showOpenDialog(
+                    browserWindow,
+                    {
+                        filters: [
+                            {
+                                extensions: ['h5p'],
+                                name: 'HTML 5 Package'
+                            }
+                        ],
+                        properties: ['openFile']
+                    }
+                );
 
                 filePath = filePaths[0];
             }

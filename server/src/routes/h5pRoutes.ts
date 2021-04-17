@@ -1,6 +1,6 @@
 import express from 'express';
 import * as Sentry from '@sentry/node';
-import { dialog } from 'electron';
+import { BrowserWindow, dialog } from 'electron';
 import fsExtra from 'fs-extra';
 import _path from 'path';
 import * as H5P from '@lumieducation/h5p-server';
@@ -9,11 +9,77 @@ import {
     IRequestWithLanguage
 } from '@lumieducation/h5p-express';
 import HtmlExporter from '@lumieducation/h5p-html-exporter';
+import i18next from 'i18next';
+import promisePipe from 'promisepipe';
+import { withDir } from 'tmp-promise';
+import scopackager from 'simple-scorm-packager';
 
 import electronState from '../electronState';
-
 import createReporter from '../helpers/createRepoter';
 import User from '../User';
+
+const cleanAndTrim = (text) => {
+    const textClean = text.replace(/[^a-zA-Z\d\s]/g, '');
+    return textClean.replace(/\s/g, '');
+};
+
+const t = i18next.getFixedT(null, 'lumi');
+
+const reporterTemplate = (
+    integration: string,
+    scriptsBundle: string,
+    stylesBundle: string,
+    contentId: string
+) => {
+    const reporterClient = fsExtra.readFileSync(
+        `${__dirname}/../../../reporter-client/build/static/js/2.chunk.js`,
+        {
+            encoding: 'utf-8'
+        }
+    );
+
+    const reporterMain = fsExtra.readFileSync(
+        `${__dirname}/../../../reporter-client/build/static/js/main.chunk.js`,
+        {
+            encoding: 'utf-8'
+        }
+    );
+
+    return `<!doctype html>
+<html class="h5p-iframe">
+<head>
+<meta charset="utf-8">                    
+<script>H5PIntegration = ${integration};
+${scriptsBundle}</script>
+<style>${stylesBundle}</style>
+</head>
+<body>
+<div id="root"></div>
+${createReporter(reporterClient, reporterMain)}
+<div style="margin: 20px auto; padding: 20px;  max-width: 840px; box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)" class="h5p-content lag" data-content-id="${contentId}"></div>                
+</body>
+</html>`;
+};
+
+const scormTemplate = (
+    integration: string,
+    scriptsBundle: string,
+    stylesBundle: string,
+    contentId: string
+) => `<!doctype html>
+<html class="h5p-iframe">
+<head>
+  <meta charset="utf-8">                    
+  <script>H5PIntegration = ${integration};
+  ${scriptsBundle}</script>
+  <script type="text/javascript" src="SCORM_API_wrapper.js"></script>
+  <script type="text/javascript" src="h5p-adaptor.js"></script>
+  <style>${stylesBundle}</style>
+</head>
+<body>
+  <div class="h5p-content lag" data-content-id="${contentId}"></div>                
+</body>
+</html>`;
 
 /**
  * @param h5pEditor
@@ -25,7 +91,8 @@ import User from '../User';
 export default function (
     h5pEditor: H5P.H5PEditor,
     h5pPlayer: H5P.H5PPlayer,
-    languageOverride: string | 'auto' = 'auto'
+    languageOverride: string | 'auto' = 'auto',
+    browserWindow: BrowserWindow
 ): express.Router {
     const router = express.Router();
 
@@ -46,88 +113,105 @@ export default function (
         }
     });
 
-    router.get(`/:contentId/html`, async (req: IRequestWithUser, res) => {
-        const includeReporter = req.query.includeReporter === 'true';
-
-        const reporterClient = await fsExtra.readFileSync(
-            `${__dirname}/../../../reporter-client/build/static/js/2.chunk.js`,
-            {
-                encoding: 'utf-8'
-            }
-        );
-
-        const reporterMain = await fsExtra.readFileSync(
-            `${__dirname}/../../../reporter-client/build/static/js/main.chunk.js`,
-            {
-                encoding: 'utf-8'
-            }
-        );
-
-        const htmlExporter = new HtmlExporter(
-            h5pEditor.libraryStorage,
-            h5pEditor.contentStorage,
-            h5pEditor.config,
-            `${__dirname}/../../../h5p/core`,
-            `${__dirname}/../../../h5p/editor`,
-            includeReporter
-                ? (
-                      integration: string,
-                      scriptsBundle: string,
-                      stylesBundle: string,
-                      contentId: string
-                  ) => `<!doctype html>
-            <html class="h5p-iframe">
-            <head>
-                <meta charset="utf-8">                    
-                <script>H5PIntegration = ${integration};
-                ${scriptsBundle}</script>
-                <style>${stylesBundle}</style>
-            </head>
-            <body>
-            <div id="root"></div>
-            ${createReporter(reporterClient, reporterMain)}
-                <div style="margin: 20px auto; padding: 20px;  max-width: 840px; box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)" class="h5p-content lag" data-content-id="${contentId}"></div>                
-            </body>
-            </html>`
-                : undefined
-        );
-
-        let path = dialog.showSaveDialogSync({
-            defaultPath: '.html',
-            filters: [
+    router.get(
+        `/:contentId/export`,
+        async (
+            req: express.Request<
+                { contentId: string },
+                any,
+                any,
                 {
-                    extensions: ['html'],
-                    name: 'html with inline-resources'
+                    format: 'bundle' | 'external' | 'scorm';
+                    includeReporter: string;
+                    masteryScore: string;
                 }
-            ],
-            title: 'Export H5P as ...'
-        });
+            > & { user: H5P.IUser },
+            res
+        ) => {
+            const includeReporter = req.query.includeReporter === 'true';
+            const format: 'bundle' | 'external' | 'scorm' = req.query.format;
+            const expectedExtension = format === 'scorm' ? 'zip' : 'html';
 
-        if (!path) {
-            return res.status(499).end();
-        }
+            const result = await dialog.showSaveDialog(browserWindow, {
+                defaultPath: `.${expectedExtension}`,
+                filters: [
+                    {
+                        extensions: [expectedExtension],
+                        name: t(
+                            `editor.exportDialog.filePicker.formatNames.${format}`
+                        )
+                    }
+                ],
+                title: t('editor.exportDialog.filePicker.title'),
+                buttonLabel: t('editor.exportDialog.filePicker.buttonLabel'),
+                properties: ['showOverwriteConfirmation']
+            });
 
-        try {
-            if (_path.extname(path) !== '.html') {
-                path = `${path}.html`;
+            if (result.canceled) {
+                return res.status(499).end();
+            }
+            let path = result.filePath;
+
+            try {
+                electronState.setState({ blockKeyboard: true });
+
+                let actualExtension = _path.extname(path);
+                if (actualExtension !== `.${expectedExtension}`) {
+                    path = `${path}.${expectedExtension}`;
+                    actualExtension = `.${expectedExtension}`;
+                }
+
+                const htmlExporter = new HtmlExporter(
+                    h5pEditor.libraryStorage,
+                    h5pEditor.contentStorage,
+                    h5pEditor.config,
+                    `${__dirname}/../../../h5p/core`,
+                    `${__dirname}/../../../h5p/editor`,
+                    includeReporter && format !== 'scorm'
+                        ? reporterTemplate
+                        : format === 'scorm'
+                        ? scormTemplate
+                        : undefined
+                );
+
+                if (format === 'bundle') {
+                    const html = await htmlExporter.createSingleBundle(
+                        req.params.contentId,
+                        req.user
+                    );
+                    await fsExtra.writeFile(path, html);
+                } else if (format === 'external') {
+                    await exportHtmlExternal(
+                        htmlExporter,
+                        h5pEditor,
+                        path,
+                        req.params.contentId,
+                        req.user
+                    );
+                } else if (format === 'scorm') {
+                    await exportScorm(
+                        htmlExporter,
+                        h5pEditor,
+                        path,
+                        req.params.contentId,
+                        req.user,
+                        {
+                            masteryScore: Number.parseFloat(
+                                req.query.masteryScore
+                            )
+                        }
+                    );
+                }
+            } catch (error) {
+                Sentry.captureException(error);
+                res.status(500).json(error);
+            } finally {
+                electronState.setState({ blockKeyboard: false });
             }
 
-            electronState.setState({ blockKeyboard: true });
-            const html = await htmlExporter.createSingleBundle(
-                req.params.contentId,
-                req.user
-            );
-
-            await fsExtra.writeFile(path, html);
-            electronState.setState({ blockKeyboard: false });
-        } catch (error) {
-            electronState.setState({ blockKeyboard: false });
-            Sentry.captureException(error);
-            res.status(500).json(error);
+            res.status(200).end();
         }
-
-        res.status(200).end();
-    });
+    );
 
     router.get('/:contentId/edit', async (req: IRequestWithLanguage, res) => {
         // This route merges the render and the /ajax/params routes to avoid a
@@ -263,4 +347,145 @@ export default function (
     });
 
     return router;
+}
+
+/**
+ * Creates a SCORM package.
+ */
+async function exportScorm(
+    htmlExporter: HtmlExporter,
+    h5pEditor: H5P.H5PEditor,
+    path: string,
+    contentId: string,
+    user: H5P.IUser,
+    scormOptions: { masteryScore: number }
+): Promise<void> {
+    await withDir(
+        async ({ path: tmpDir }) => {
+            await fsExtra.copyFile(
+                `${__dirname}/../../../scorm-client/h5p-adaptor.js`,
+                _path.join(tmpDir, 'h5p-adaptor.js')
+            );
+            await fsExtra.copyFile(
+                `${__dirname}/../../../scorm-client/SCORM_API_wrapper.js`,
+                _path.join(tmpDir, 'SCORM_API_wrapper.js')
+            );
+
+            const {
+                html,
+                contentFiles
+            } = await htmlExporter.createBundleWithExternalContentResources(
+                contentId,
+                user
+            );
+            await fsExtra.writeFile(_path.join(tmpDir, 'index.html'), html);
+            for (const filename of contentFiles) {
+                const fn = _path.join(tmpDir, filename);
+                await fsExtra.mkdirp(_path.dirname(fn));
+                const outputStream = fsExtra.createWriteStream(fn, {
+                    autoClose: true
+                });
+                await promisePipe(
+                    await h5pEditor.contentStorage.getFileStream(
+                        contentId,
+                        filename,
+                        user
+                    ),
+                    outputStream
+                );
+                outputStream.close();
+            }
+
+            const contentMetadata = await h5pEditor.contentManager.getContentMetadata(
+                contentId,
+                user
+            );
+
+            const temporaryFilename = await new Promise<string>(
+                (resolve, reject) => {
+                    const options = {
+                        version: '1.2',
+                        organization:
+                            contentMetadata.authors &&
+                            contentMetadata.authors[0]
+                                ? contentMetadata.authors[0].name
+                                : t('editor.exportDialog.defaults.authorName'),
+                        title:
+                            contentMetadata.title ||
+                            t('editor.exportDialog.defaults.title'),
+                        language: contentMetadata.language || 'en-EN',
+                        identifier: '00',
+                        masteryScore: scormOptions.masteryScore,
+                        startingPage: 'index.html',
+                        source: tmpDir,
+                        package: {
+                            version: '1.0.0',
+                            zip: true,
+                            outputFolder: _path.dirname(path),
+                            date: new Date().toISOString().slice(0, 10)
+                        }
+                    };
+                    scopackager(options, () => {
+                        resolve(
+                            `${cleanAndTrim(options.title)}_v${
+                                options.package.version
+                            }_${options.package.date}.zip`
+                        );
+                    });
+                }
+            );
+            try {
+                await fsExtra.rename(
+                    _path.join(_path.dirname(path), temporaryFilename),
+                    path
+                );
+            } catch (error) {
+                await fsExtra.remove(temporaryFilename);
+            }
+        },
+        {
+            keep: false,
+            unsafeCleanup: true
+        }
+    );
+}
+
+/**
+ * Exports the content to a HTML file and stores media resources in extra files.
+ */
+async function exportHtmlExternal(
+    htmlExporter: HtmlExporter,
+    h5pEditor: H5P.H5PEditor,
+    path: string,
+    contentId: string,
+    user: H5P.IUser
+): Promise<void> {
+    const dir = _path.dirname(path);
+    const basename = _path.basename(path, '.html');
+
+    const {
+        html,
+        contentFiles
+    } = await htmlExporter.createBundleWithExternalContentResources(
+        contentId,
+        user,
+        basename
+    );
+    await fsExtra.writeFile(path, html);
+    for (const filename of contentFiles) {
+        const fn = _path.join(dir, basename, filename);
+        await fsExtra.mkdirp(_path.dirname(fn));
+        const outputStream = fsExtra.createWriteStream(fn, {
+            autoClose: true
+        });
+        await promisePipe(
+            await h5pEditor.contentStorage.getFileStream(
+                contentId,
+                filename,
+                user
+            ),
+            outputStream
+        );
+        outputStream.close();
+    }
 }

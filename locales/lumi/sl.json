@@ -16,6 +16,44 @@
             "open": "Odprite obstoječi H5P",
             "create": "ustvarite nov H5P",
             "start": "začetek"
+        },
+        "exportDialog": {
+            "title": "Izvozi nastavitve",
+            "format": {
+                "title": "Oblika",
+                "bundleLabel": "Datoteka HTML v enem",
+                "bundleHint": "Datoteka lahko za nekatere računalnike postane prevelika, če vključite veliko predstavnostnih datotek.",
+                "externalLabel": "Ena datoteka HTML in več predstavnostnih datotek",
+                "externalHint": "V naslednjem koraku boste morali vnesti ime datoteke HTML. Predstavnostne datoteke bodo shranjene v mape, ki se začnejo z istim imenom.",
+                "scorm": {
+                    "label": "Paket SCORM",
+                    "masteryScoreLabel": "Ocena mojstrstva (v%)",
+                    "errorNaN": "Vnesena vrednost ni število",
+                    "errorRange": "Vrednost mora biti med 0 in 100"
+                }
+            },
+            "reporter": {
+                "title": "Poročevalec",
+                "hint": "Če dodate poročevalca, lahko študentje shranijo datoteko z napredkom in vam jo pošljejo.",
+                "switchLabel": "Vključi poročevalca",
+                "learnMoreLink": "Več o tem lahko preberete tukaj.",
+                "scormHint": "Poročevalca ni mogoče dodati v pakete SCORM."
+            },
+            "cancelButton": "Prekliči",
+            "exportButton": "Izvozi zdaj",
+            "filePicker": {
+                "title": "Izvozi kot ...",
+                "buttonLabel": "Izvozi",
+                "formatNames": {
+                    "bundle": "Vse-v-enem datoteka HTML (.html)",
+                    "external": "Datoteka HTML (.html)",
+                    "scorm": "Datoteka SCORM (.zip)"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P Avtor",
+                "title": "Vsebina H5P"
+            }
         }
     },
     "settings": {
@@ -23,7 +61,62 @@
             "label": "Nastavitve",
             "save": "Shrani"
         },
-        "enable": "Omogoči"
+        "enable": "Omogoči",
+        "menu": {
+            "general": "Splošno",
+            "updates": "Posodobitve",
+            "account": "račun",
+            "h5p-library-administration": "Knjižnice H5P"
+        },
+        "general": {
+            "header": "Splošno"
+        },
+        "updates": {
+            "header": "Posodobitve"
+        },
+        "account": {
+            "label": "račun",
+            "email": {
+                "title": "E-naslov",
+                "change": "Spremeni e-pošto",
+                "not-set": "E-pošta ni nastavljena"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Nameščene knjižnice H5P",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Nalaganje je bilo uspešno, vendar knjižnice niso bile nameščene ali posodobljene. Vrsta vsebine je verjetno že nameščena v sistemu.",
+                    "success-with-update": "Uspešno nameščena {{installed}} in posodobljena {{updated}} knjižnica.",
+                    "error": "Napaka pri nalaganju paketa."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) je bila uspešno izbrisana.",
+                    "error": "Napaka pri brisanju knjižnice {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Napaka pri pridobivanju podrobnih informacij o knjižnici {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Naložite in namestite knjižnico",
+            "details": "Podrobnosti",
+            "can-not-be-deleted": "Te knjižnice ni mogoče izbrisati, ker se uporablja v {{count}} drugih knjižnicah",
+            "can-not-be-deleted_plural": "Te knjižnice ni mogoče izbrisati, ker se uporablja v {{count}} drugih knjižnicah",
+            "library-details": {
+                "header": "Podrobnosti o knjižnici",
+                "author": "Avtor",
+                "description": "Opis",
+                "license": "Licenca",
+                "standalone": "Samostojna vrsta vsebine",
+                "restricted": "Omejeno (lahko se uporablja samo s privilegiji)",
+                "fullscreen": "Podpira celozaslonski način",
+                "addon": "Addon",
+                "embedTypes": "Dovoljene vrste vdelave",
+                "dependentsCount": "Število knjižnic, ki uporabljajo knjižnico",
+                "instancesCount": "Predmeti, ustvarjeni s to knjižnico kot glavno vrsto vsebine",
+                "instancesAsDependencyCount": "Predmeti, v katerih to knjižnico uporablja druga knjižnica"
+            }
+        }
     },
     "analytics": {
         "startPage": {
@@ -34,7 +127,16 @@
             "open": "Izberite mapo z datotekami .lumi"
         },
         "name": "Ime",
-        "average": "Povprečno"
+        "average": "Povprečno",
+        "searchPlaceholder": "Poiščite imena študentov ...",
+        "brokenFiles": "Seznam zlomljenih datotek",
+        "errors": {
+            "no-content-json": "Vsebina H5P ni bila pravilno dodana v datoteko .lumi.",
+            "json-parse-error": "Datoteka .lumi vsebuje neveljavno vsebino (JSON ni bil razčlenjen).",
+            "determine-name": "Ni bilo mogoče določiti imena študenta.",
+            "invalid-interactions": "Nekatere interakcije so prekinjene.",
+            "invalid-statements": "Nekatere posnete študentske akcije so prekinjene."
+        }
     },
     "bug_report": {
         "title": "Poročila o napakah in zrušitvah",
@@ -91,13 +193,21 @@
             "toggle_developer_tools": "Preklopi orodja za razvijalce",
             "follow_us_on_twitter": "Spremljajte nas na Twitterju",
             "about": "O tem"
+        },
+        "mac": {
+            "services": "Storitve",
+            "hide": "Skrij Lumi",
+            "hideothers": "Skrij druge",
+            "unhide": "Pokaži vse"
         }
     },
     "notifications": {
         "analytics": {
             "import": {
                 "error": "Najdena ni nobena veljavna datoteka",
-                "success": "Uvožene datoteke poročil"
+                "success": "Uvožene datoteke poročil",
+                "brokenFiles": "Najdena je {{count}}",
+                "brokenFiles_plural": "Najdenih je {{count}}"
             }
         },
         "h5peditor": {
@@ -109,18 +219,30 @@
                 "error": "H5P ni bilo mogoče odpreti."
             },
             "export_as_html": {
-                "success": "H5P je bil uspešno izvožen kot HTML",
-                "error": "H5P ni bilo mogoče izvoziti kot HTML"
-            }
-        },
-        "export_as_html": {
-            "dialog": {
-                "title": "Poročevalec snega",
-                "description": "Ali želite v svoj html vključiti poročevalca? Več o tem",
-                "yes": "ja",
-                "no": "št",
-                "here": "tukaj"
+                "success": "H5P je bil uspešno izvožen",
+                "error": "H5P ni bilo mogoče izvoziti"
             }
         }
+    },
+    "auth": {
+        "set_email": "Nastavite e-pošto",
+        "email": "E-naslov",
+        "code": "Koda",
+        "verify_code": "Preveri kodo",
+        "verify_email": "preveri email",
+        "notification": {
+            "success": "{{email}} je bil uspešno potrjen",
+            "pending": "Koda za preverjanje je bila poslana na {{email}} . Prosimo, preverite svojo e-pošto."
+        },
+        "error": {
+            "no-valid-email": "{{email}} ni veljaven e-poštni naslov."
+        },
+        "cancel": "Prekliči"
+    },
+    "dialog": {
+        "close": "Zapri"
+    },
+    "general": {
+        "delete": "Izbriši"
     }
 }
