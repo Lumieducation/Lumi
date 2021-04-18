@@ -5,6 +5,8 @@ import i18next from 'i18next';
 import helpMenu from './helpMenu';
 import editMenu from './editMenu';
 import macMenu from './macMenu';
+import windowMenu from './windowMenu';
+import viewMenu from './viewMenu';
 
 export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
     ...macMenu(),
@@ -84,5 +86,7 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
         ]
     },
     editMenu(),
+    viewMenu(),
+    windowMenu(),
     helpMenu(window, websocket)
 ];
