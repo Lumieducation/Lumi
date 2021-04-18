@@ -43,6 +43,7 @@ export default function AppContainer() {
         );
     }, [dispatch, i18n]);
 
+    console.log(process.env.TARGET);
     return (
         <div id="app">
             <CssBaseline />

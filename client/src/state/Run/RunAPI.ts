@@ -3,7 +3,12 @@ import superagent from 'superagent';
 import { IRunState } from './RunTypes';
 
 export async function getRuns(): Promise<IRunState> {
-    return (await superagent.get(`/api/v1/run/list`)).body;
+    const body = (await superagent.get(`/api/v1/run/api/list`)).body;
+
+    if (body === null) {
+        throw new Error('invalid body');
+    }
+    return body;
 }
 
 export async function upload(): Promise<IRunState> {

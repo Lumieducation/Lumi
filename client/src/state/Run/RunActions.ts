@@ -10,6 +10,7 @@ import {
     RUN_DELETE_REQUEST,
     RUN_DELETE_SUCCESS,
     RUN_DELETE_ERROR,
+    RUN_NOT_AUTHORIZED,
     IRunUpdateState,
     RUN_UPDATE_STATE,
     IRunState
@@ -28,19 +29,23 @@ export function getRuns(): any {
             try {
                 const runs = await API.getRuns();
 
-                dispatch({
+                return dispatch({
                     payload: runs,
                     type: RUN_GET_RUNS_SUCCESS
                 });
-                return 'success';
             } catch (error) {
-                Sentry.captureException(error);
+                if (error.status === 401) {
+                    return dispatch({
+                        payload: {},
+                        type: RUN_NOT_AUTHORIZED
+                    });
+                }
 
-                dispatch({
+                Sentry.captureException(error);
+                return dispatch({
                     payload: { error },
                     type: RUN_GET_RUNS_ERROR
                 });
-                return 'error';
             }
         } catch (error) {
             Sentry.captureException(error);

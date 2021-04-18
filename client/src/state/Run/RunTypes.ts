@@ -38,6 +38,7 @@ export interface IRunUpdateState {
 export const RUN_GET_RUNS_REQUEST = 'RUN_GET_RUNS_REQUEST';
 export const RUN_GET_RUNS_SUCCESS = 'RUN_GET_RUNS_SUCCESS';
 export const RUN_GET_RUNS_ERROR = 'RUN_GET_RUNS_ERROR';
+export const RUN_NOT_AUTHORIZED = 'RUN_NOT_AUTHORIZED';
 
 export interface IGetRunsRequestAction {
     payload: {};

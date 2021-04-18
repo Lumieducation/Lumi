@@ -95,7 +95,7 @@ const DialogActions = withStyles((theme: Theme) => ({
 
 export default function CustomizedDialogs(props: {
     open: boolean;
-    close: () => void;
+    close: (redirect?: boolean) => void;
 }) {
     // const [open, setOpen] = React.useState(false);
     const { t } = useTranslation();
@@ -107,13 +107,13 @@ export default function CustomizedDialogs(props: {
         // setOpen(true);
     };
     const handleClose = () => {
-        props.close();
+        props.close(true);
     };
 
     const handleConsent = async () => {
         try {
             await superagent.post(`/api/v1/run/consent`);
-            props.close();
+            props.close(false);
         } catch (error) {
             //
         }

@@ -365,7 +365,9 @@ export default function (
     router.use(
         '/',
         (req, res, next) => {
-            req.headers['x-auth'] = settingsCache.getSettings().token;
+            if (settingsCache.getSettings().token) {
+                req.headers['x-auth'] = settingsCache.getSettings().token;
+            }
             next();
         },
         proxy(process.env.RUN_HOST || 'http://lumi.run')
