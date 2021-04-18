@@ -15,7 +15,7 @@ It runs as a [Electron](https://electronjs.org)-Standalone App on Mac OS X, Wind
 Lumi tries to improve education wherever it is possible by providing a software that connects teachers with their students. But Lumi is in a very early development stage. Every help is appreciated and welcome. You can contribute in many ways. You can help reporting, testing, and detailing bugs, and also test and suggest new features.
 Please read [CONTRIBUTING.md](./.github/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-We manage the localization of Lumi on [translate-h5p.tk](https://translate-h5p.tk/) in the project [Lumi Education](https://translate-h5p.tk/weblate/projects/lumi-education/). The Weblate installation there makes it easy to add translations into your language. Please read the [guide how to contribute](https://translate-h5p.tk/contributing/] and register on translate-h5p.tk if you're interested in helping out! 
+We manage the localization of Lumi on [translate-h5p.tk](https://translate-h5p.tk/) in the project [Lumi Education](https://translate-h5p.tk/weblate/projects/lumi-education/). The Weblate installation there makes it easy to add translations into your language. Please read the [guide how to contribute](https://translate-h5p.tk/contributing/) and register on translate-h5p.tk if you're interested in helping out! 
 
 Lumi has adopted the code of conduct defined by the Contributor Covenant. It can be read in full [here](./CODE-OF-CONDUCT.md).
 
