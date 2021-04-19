@@ -88,6 +88,9 @@ const DialogActions = withStyles((theme: Theme) => ({
 export default function CustomizedDialogs() {
     const dispatch = useDispatch();
     const settings = useSelector((state: IState) => state.settings);
+    const platformSupportsUpdates = useSelector(
+        (state: IState) => state.system.platformSupportsUpdates
+    );
     const classes = useStyles();
     const { t } = useTranslation();
 
@@ -227,33 +230,35 @@ export default function CustomizedDialogs() {
                             />
                         </ListItemSecondaryAction>
                     </ListItem>
-                    <ListItem>
-                        <ListItemIcon>
-                            <UpdateIcon />
-                        </ListItemIcon>
-                        <ListItemText
-                            id="switch-list-label-updates"
-                            primary={t('updates.title')}
-                            secondary={t('updates.consent')}
-                        />
-                        <ListItemSecondaryAction>
-                            <Switch
-                                edge="end"
-                                onChange={() =>
-                                    dispatch(
-                                        actions.settings.changeSetting({
-                                            autoUpdates: !settings.autoUpdates
-                                        })
-                                    )
-                                }
-                                checked={settings.autoUpdates}
-                                inputProps={{
-                                    'aria-labelledby':
-                                        'switch-list-label-updates'
-                                }}
+                    {platformSupportsUpdates && (
+                        <ListItem>
+                            <ListItemIcon>
+                                <UpdateIcon />
+                            </ListItemIcon>
+                            <ListItemText
+                                id="switch-list-label-updates"
+                                primary={t('updates.title')}
+                                secondary={t('updates.consent')}
                             />
-                        </ListItemSecondaryAction>
-                    </ListItem>
+                            <ListItemSecondaryAction>
+                                <Switch
+                                    edge="end"
+                                    onChange={() =>
+                                        dispatch(
+                                            actions.settings.changeSetting({
+                                                autoUpdates: !settings.autoUpdates
+                                            })
+                                        )
+                                    }
+                                    checked={settings.autoUpdates}
+                                    inputProps={{
+                                        'aria-labelledby':
+                                            'switch-list-label-updates'
+                                    }}
+                                />
+                            </ListItemSecondaryAction>
+                        </ListItem>
+                    )}
                     <ListItem>
                         <ListItemIcon>
                             <TranslateIcon />

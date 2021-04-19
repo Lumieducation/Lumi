@@ -19,6 +19,10 @@ import * as SettingsTypes from './Settings/SettingsTypes';
 import SettingsReducer from './Settings/SettingsReducer';
 import * as SettingsActions from './Settings/SettingsActions';
 
+import * as SystemTypes from './System/SystemTypes';
+import SystemReducer from './System/SystemReducer';
+import * as SystemActions from './System/SystemActions';
+
 import RunReducer from './Run/RunReducer';
 import * as RunTypes from './Run/RunTypes';
 import * as RunActions from './Run/RunActions';
@@ -48,7 +52,8 @@ const rootReducer = () =>
         h5peditor: H5PEditorReducer,
         analytics: AnalyticsReducer,
         run: RunReducer,
-        settings: SettingsReducer
+        settings: SettingsReducer,
+        system: SystemReducer
     });
 
 const store = createStore(
@@ -62,14 +67,16 @@ export interface IState
         NotificationsTypes.IState,
         AnalyticsTypes.IState,
         SettingsTypes.IState,
-        RunTypes.IState {}
+        RunTypes.IState,
+        SystemTypes.IState {}
 
 export const actions = {
     notifications: NotificationsActions,
     h5peditor: H5PEditorActions,
     analytics: AnalyticsActions,
     settings: SettingsActions,
-    run: RunActions
+    run: RunActions,
+    system: SystemActions
 };
 
 export const selectors = {

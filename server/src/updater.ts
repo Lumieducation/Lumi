@@ -8,6 +8,24 @@ import IServerConfig from './IServerConfig';
 let updateAvailable: boolean = false;
 let updating: boolean = false;
 
+export const platformSupportsUpdates = () => {
+    if (process.env.DISABLE_UPDATES) {
+        return false;
+    }
+    if (process.platform === 'win32') {
+        return !process.windowsStore;
+    }
+    if (process.platform === 'darwin') {
+        return !process.mas;
+    }
+    if (process.platform === 'linux') {
+        if (process.env.APPIMAGE) {
+            return true;
+        }
+    }
+    return false;
+};
+
 export default async function boot(
     app: Electron.App,
     websocket: SocketIO.Server,
@@ -46,7 +64,10 @@ export default async function boot(
         }
     });
 
-    if ((await fsExtra.readJSON(serverConfig.settingsFile)).autoUpdates) {
+    if (
+        platformSupportsUpdates() &&
+        (await fsExtra.readJSON(serverConfig.settingsFile)).autoUpdates
+    ) {
         autoUpdater.checkForUpdates();
     }
 }
