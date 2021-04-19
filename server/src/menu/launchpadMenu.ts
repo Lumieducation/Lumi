@@ -10,7 +10,7 @@ import viewMenu from './viewMenu';
 export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
     ...macMenu(),
     editMenu(),
-    viewMenu(),
-    windowMenu(),
+    ...viewMenu(),
+    ...windowMenu(),
     helpMenu(window, websocket)
 ];

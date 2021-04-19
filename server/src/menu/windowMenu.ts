@@ -6,33 +6,43 @@ import { createMainWindow } from '../main';
 import { io } from '../websocket';
 
 export default function (): any {
-    return {
-        label: i18next.t('lumi:menu.window.label'),
-        submenu: [
-            { label: i18next.t('lumi:menu.window.minimize'), role: 'minimize' },
-            { label: i18next.t('lumi:menu.window.zoom'), role: 'zoom' },
-            ...(isMac
-                ? [
-                      { type: 'separator' },
+    return isMac
+        ? [
+              {
+                  label: i18next.t('lumi:menu.window.label'),
+                  submenu: [
                       {
-                          label: i18next.t('lumi:menu.window.front'),
-                          role: 'front'
+                          label: i18next.t('lumi:menu.window.minimize'),
+                          role: 'minimize'
                       },
-                      { type: 'separator' },
                       {
-                          accelerator: 'CmdOrCtrl+)',
-                          click: () => {
-                              createMainWindow(io);
-                          },
-                          label: i18next.t('lumi:menu.window.show')
-                      }
+                          label: i18next.t('lumi:menu.window.zoom'),
+                          role: 'zoom'
+                      },
+                      ...(isMac
+                          ? [
+                                { type: 'separator' },
+                                {
+                                    label: i18next.t('lumi:menu.window.front'),
+                                    role: 'front'
+                                },
+                                { type: 'separator' },
+                                {
+                                    accelerator: 'CmdOrCtrl+)',
+                                    click: () => {
+                                        createMainWindow(io);
+                                    },
+                                    label: i18next.t('lumi:menu.window.show')
+                                }
+                            ]
+                          : [
+                                {
+                                    label: i18next.t('lumi:menu.window.close'),
+                                    role: 'close'
+                                }
+                            ])
                   ]
-                : [
-                      {
-                          label: i18next.t('lumi:menu.window.close'),
-                          role: 'close'
-                      }
-                  ])
-        ]
-    };
+              }
+          ]
+        : [];
 }

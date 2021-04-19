@@ -86,7 +86,7 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
         ]
     },
     editMenu(),
-    viewMenu(),
-    windowMenu(),
+    ...viewMenu(),
+    ...windowMenu(),
     helpMenu(window, websocket)
 ];
