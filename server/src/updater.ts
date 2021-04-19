@@ -9,6 +9,9 @@ let updateAvailable: boolean = false;
 let updating: boolean = false;
 
 export const platformSupportsUpdates = () => {
+    if (process.env.DISABLE_UPDATES) {
+        return false;
+    }
     if (process.platform === 'win32') {
         return !process.windowsStore;
     }
