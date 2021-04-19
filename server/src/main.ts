@@ -114,6 +114,23 @@ app.on('window-all-closed', () => {
     }
 });
 
+app.on('open-file', (event, path) => {
+    let filePath = path;
+    if (process.argv.length >= 2) {
+        // or electron.remote.process.argv
+        filePath = process.argv[1];
+    }
+
+    websocket.emit('action', {
+        payload: {
+            paths: [filePath]
+        },
+        type: 'OPEN_H5P'
+    });
+
+    event.preventDefault();
+});
+
 app.on('activate', () => {
     // on macOS it is common to re-create a window even after all windows have been closed
     if (mainWindow === null) {

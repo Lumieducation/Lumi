@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as Sentry from '@sentry/browser';
 import SocketIOClient from 'socket.io-client';
-
+import { History } from 'history';
 import Logger from '../helpers/Logger';
 import { ITab } from '../state/H5PEditor/H5PEditorTypes';
 import { actions, IState, selectors } from '../state';
@@ -23,6 +23,10 @@ interface IDispatchProps {
 interface IComponentState {}
 
 interface IProps extends IStateProps, IDispatchProps {}
+
+declare var window: {
+    h: History;
+};
 
 export class WebsocketContainer extends React.Component<
     IProps,
@@ -74,7 +78,9 @@ export class WebsocketContainer extends React.Component<
 
                     case 'OPEN_H5P':
                         action.payload.paths.forEach((file: any) => {
-                            dispatch(actions.h5peditor.importH5P(file));
+                            dispatch(
+                                actions.h5peditor.importH5P(file, window.h)
+                            );
                         });
                         break;
 
