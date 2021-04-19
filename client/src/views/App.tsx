@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import * as H from 'history';
 import Logger from '../helpers/Logger';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
