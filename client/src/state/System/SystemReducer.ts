@@ -7,7 +7,8 @@ import {
 } from './SystemTypes';
 
 export const initialState: ISystemState = {
-    platformSupportsUpdates: true
+    platformSupportsUpdates: true,
+    platform: 'mac'
 };
 
 export default function settingsReducer(

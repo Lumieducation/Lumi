@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     createStyles,
     Theme,
@@ -91,6 +91,22 @@ export default function CustomizedDialogs() {
     const platformSupportsUpdates = useSelector(
         (state: IState) => state.system.platformSupportsUpdates
     );
+    const platform = useSelector((state: IState) => state.system.platform);
+
+    useEffect(() => {
+        if (platform === 'mas') {
+            dispatch(
+                actions.settings.updateSettings({
+                    ...settings,
+                    privacyPolicyConsent: false,
+                    usageStatistics: false,
+                    bugTracking: false,
+                    firstOpen: true
+                })
+            );
+        }
+    }, []);
+
     const classes = useStyles();
     const { t } = useTranslation();
 
@@ -110,37 +126,28 @@ export default function CustomizedDialogs() {
                 <Typography variant="body2" gutterBottom>
                     {t('setup_dialog.description')}
                 </Typography>
+                <List subheader={<ListSubheader>{'Links'}</ListSubheader>}>
+                    <a
+                        href="https://www.lumi.education/app/privacy-policy"
+                        target="_blank"
+                        rel="noreferrer"
+                        style={{ color: 'inherit', textDecoration: 'inherit' }}
+                    >
+                        <ListItem>
+                            <ListItemIcon>
+                                <PolicyIcon />
+                            </ListItemIcon>
+                            <ListItemText
+                                id="switch-list-label-privacy-policy"
+                                primary={
+                                    'https://www.Lumi.education/app/privacy-policy'
+                                }
+                                secondary={t('privacy_policy.title')}
+                            />
+                        </ListItem>
+                    </a>
+                </List>
 
-                <a
-                    href="https://www.lumi.education/app/privacy-policy"
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ color: 'inherit', textDecoration: 'inherit' }}
-                >
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        className={classes.button}
-                        startIcon={<PolicyIcon />}
-                    >
-                        {t('privacy_policy.title')}
-                    </Button>
-                </a>
-                <a
-                    href="https://www.github.com/Lumieducation/Lumi"
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ color: 'inherit', textDecoration: 'inherit' }}
-                >
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        className={classes.button}
-                        startIcon={<GitHubIcon />}
-                    >
-                        Open Source
-                    </Button>
-                </a>
                 <List
                     subheader={
                         <ListSubheader>
