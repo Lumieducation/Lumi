@@ -114,8 +114,8 @@ app.on('window-all-closed', () => {
     }
 });
 
-app.on('open-file', (event, path) => {
-    let filePath = path;
+app.on('open-file', (event, openedFilePath) => {
+    let filePath = openedFilePath;
     if (process.argv.length >= 2) {
         // or electron.remote.process.argv
         filePath = process.argv[1];
