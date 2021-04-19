@@ -41,6 +41,8 @@ export default function AppContainer() {
                 }
             }
         );
+
+        dispatch(actions.system.getSystem());
     }, [dispatch, i18n]);
 
     return (
