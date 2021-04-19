@@ -29,7 +29,6 @@ import BugReportIcon from '@material-ui/icons/BugReport';
 import InsertChartIcon from '@material-ui/icons/InsertChart';
 import UpdateIcon from '@material-ui/icons/Update';
 import TranslateIcon from '@material-ui/icons/Translate';
-import GitHubIcon from '@material-ui/icons/GitHub';
 
 import LanguageList from './Settings/LanguageList';
 
@@ -105,7 +104,7 @@ export default function CustomizedDialogs() {
                 })
             );
         }
-    }, []);
+    }, [platform]);
 
     const classes = useStyles();
     const { t } = useTranslation();
