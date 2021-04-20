@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
     createStyles,
     Theme,
@@ -31,6 +31,7 @@ import UpdateIcon from '@material-ui/icons/Update';
 import TranslateIcon from '@material-ui/icons/Translate';
 
 import LanguageList from './Settings/LanguageList';
+import LinkList from './Settings/LinkList';
 
 import { IState, actions } from '../../state';
 
@@ -90,21 +91,6 @@ export default function CustomizedDialogs() {
     const platformSupportsUpdates = useSelector(
         (state: IState) => state.system.platformSupportsUpdates
     );
-    const platform = useSelector((state: IState) => state.system.platform);
-
-    useEffect(() => {
-        if (platform === 'mas') {
-            dispatch(
-                actions.settings.updateSettings({
-                    ...settings,
-                    privacyPolicyConsent: false,
-                    usageStatistics: false,
-                    bugTracking: false,
-                    firstOpen: true
-                })
-            );
-        }
-    }, [platform]);
 
     const classes = useStyles();
     const { t } = useTranslation();
@@ -112,6 +98,19 @@ export default function CustomizedDialogs() {
     const handleSave = () => {
         dispatch(
             actions.settings.updateSettings({ ...settings, firstOpen: false })
+        );
+    };
+
+    const handleAcceptAll = () => {
+        dispatch(
+            actions.settings.updateSettings({
+                ...settings,
+                bugTracking: true,
+                usageStatistics: true,
+                privacyPolicyConsent: true,
+                autoUpdates: true,
+                firstOpen: false
+            })
         );
     };
 
@@ -125,27 +124,7 @@ export default function CustomizedDialogs() {
                 <Typography variant="body2" gutterBottom>
                     {t('setup_dialog.description')}
                 </Typography>
-                <List subheader={<ListSubheader>{'Links'}</ListSubheader>}>
-                    <a
-                        href="https://www.lumi.education/app/privacy-policy"
-                        target="_blank"
-                        rel="noreferrer"
-                        style={{ color: 'inherit', textDecoration: 'inherit' }}
-                    >
-                        <ListItem>
-                            <ListItemIcon>
-                                <PolicyIcon />
-                            </ListItemIcon>
-                            <ListItemText
-                                id="switch-list-label-privacy-policy"
-                                primary={
-                                    'https://www.Lumi.education/app/privacy-policy'
-                                }
-                                secondary={t('privacy_policy.title')}
-                            />
-                        </ListItem>
-                    </a>
-                </List>
+                <LinkList />
 
                 <List
                     subheader={
@@ -153,7 +132,6 @@ export default function CustomizedDialogs() {
                             {t('settings.appbar.label')}
                         </ListSubheader>
                     }
-                    // className={classes.list}
                 >
                     <ListItem>
                         <ListItemIcon>
@@ -291,12 +269,19 @@ export default function CustomizedDialogs() {
             </DialogContent>
             <DialogActions>
                 <Button
-                    autoFocus
                     onClick={handleSave}
-                    color="primary"
+                    color="secondary"
                     disabled={!settings.privacyPolicyConsent}
                 >
-                    {t('setup_dialog.save')}
+                    {t('setup_dialog.accept_selected')}
+                </Button>
+                <Button
+                    autoFocus={true}
+                    onClick={handleAcceptAll}
+                    color="primary"
+                    // disabled={!settings.privacyPolicyConsent}
+                >
+                    {t('setup_dialog.accept_all')}
                 </Button>
             </DialogActions>
         </Dialog>
