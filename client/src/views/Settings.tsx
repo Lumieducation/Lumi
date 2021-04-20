@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 
 import { useTranslation } from 'react-i18next';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
@@ -35,6 +35,7 @@ import AccountSettingsList from './components/Settings/AccountSettingsList';
 import SettingsLibraryManagement from './components/Settings/LibraryManagement';
 import UpdateSettings from './components/Settings/UpdatesSettings';
 
+import { IState } from '../state';
 import { track } from '../state/track/actions';
 
 const drawerWidth = 240;
@@ -100,6 +101,10 @@ export default function FullScreenDialog() {
     const { t } = useTranslation();
     const dispatch = useDispatch();
 
+    const platformSupportsUpdates = useSelector(
+        (state: IState) => state.system.platformSupportsUpdates
+    );
+
     const [section, setSection] = React.useState('general');
 
     const handleClickOpen = () => {
@@ -164,21 +169,23 @@ export default function FullScreenDialog() {
                                 primary={t('settings.menu.general')}
                             />
                         </ListItem>
-                        <ListItem
-                            button
-                            key="updates"
-                            onClick={() => setSection('updates')}
-                            className={classnames({
-                                [classes.selected]: section === 'updates'
-                            })}
-                        >
-                            <ListItemIcon>
-                                <UpdateIcon />
-                            </ListItemIcon>
-                            <ListItemText
-                                primary={t('settings.menu.updates')}
-                            />
-                        </ListItem>
+                        {platformSupportsUpdates && (
+                            <ListItem
+                                button
+                                key="updates"
+                                onClick={() => setSection('updates')}
+                                className={classnames({
+                                    [classes.selected]: section === 'updates'
+                                })}
+                            >
+                                <ListItemIcon>
+                                    <UpdateIcon />
+                                </ListItemIcon>
+                                <ListItemText
+                                    primary={t('settings.menu.updates')}
+                                />
+                            </ListItem>
+                        )}
                         <ListItem
                             button
                             key="h5p-library-administration"
@@ -199,7 +206,7 @@ export default function FullScreenDialog() {
                                 )}
                             />
                         </ListItem>
-                        {/* <ListItem
+                        <ListItem
                             button
                             key="account"
                             onClick={() => setSection('account')}

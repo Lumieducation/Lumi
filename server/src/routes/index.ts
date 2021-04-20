@@ -17,6 +17,7 @@ import h5pRoutes from './h5pRoutes';
 import analyticRoutes from './analyticRoutes';
 import settingsRoutes from './settingsRoutes';
 import runRoutes from './runRoutes';
+import updateRoutes from './systemRoutes';
 
 import User from '../User';
 
@@ -42,6 +43,8 @@ export default function (
         (req as any).user = new User();
         next();
     });
+
+    router.use('/api/v1/system', updateRoutes());
 
     router.use(
         '/api/v1/settings',
