@@ -45,65 +45,67 @@ process.on('uncaughtException', (error) => {
     log.error(error);
 });
 
-function createMainWindow(
-    websocketArg: SocketIO.Server
-): electron.BrowserWindow {
-    const window = new BrowserWindow({
-        height: 800,
-        minHeight: 600,
-        minWidth: 500,
-        width: 1000
-    });
-
-    window.webContents.on('did-navigate-in-page', (event, url) => {
-        currentPath = new URL(url).pathname;
-        updateMenu(currentPath, window, websocketArg);
-    });
-
-    i18next.on('languageChanged', (lng) => {
-        updateMenu(currentPath, window, websocketArg);
-    });
-
-    updateMenu('/', window, websocketArg);
-
-    if (isDevelopment) {
-        window.webContents.openDevTools();
-        if (process.env.REDUX_EXTENSION) {
-            BrowserWindow.addDevToolsExtension(
-                path.join(
-                    os.homedir(),
-                    `/Library/Application Support/Google/Chrome/Default/Extensions/lmhkpmbekcpmknklioeibfkpmmfibljd/2.17.0_0`
-                )
-            );
-        }
-        window.loadURL('http://localhost:3000');
-    } else {
-        window.loadURL(`http://localhost:${port}`);
-    }
-
-    window.on('closed', () => {
-        mainWindow = null;
-    });
-
-    window.webContents.on('devtools-opened', () => {
-        window.focus();
-        setImmediate(() => {
-            window.focus();
+export function createMainWindow(websocketArg: SocketIO.Server): void {
+    if (!mainWindow) {
+        const window = new BrowserWindow({
+            height: 800,
+            minHeight: 600,
+            minWidth: 500,
+            width: 1000
         });
-    });
 
-    window.webContents.on('will-navigate', (e, url) => {
-        e.preventDefault();
-        require('electron').shell.openExternal(url);
-    });
+        window.webContents.on('did-navigate-in-page', (event, url) => {
+            currentPath = new URL(url).pathname;
+            updateMenu(currentPath, window, websocketArg);
+        });
 
-    window.webContents.on('before-input-event', (event, input) => {
-        if (electronState.getState().blockKeyboard) {
-            event.preventDefault();
+        i18next.on('languageChanged', (lng) => {
+            updateMenu(currentPath, window, websocketArg);
+        });
+
+        updateMenu('/', window, websocketArg);
+
+        if (isDevelopment) {
+            window.webContents.openDevTools();
+            if (process.env.REDUX_EXTENSION) {
+                BrowserWindow.addDevToolsExtension(
+                    path.join(
+                        os.homedir(),
+                        `/Library/Application Support/Google/Chrome/Default/Extensions/lmhkpmbekcpmknklioeibfkpmmfibljd/2.17.0_0`
+                    )
+                );
+            }
+            window.loadURL('http://localhost:3000');
+        } else {
+            window.loadURL(`http://localhost:${port}`);
         }
-    });
 
-    return window;
+        window.on('closed', () => {
+            mainWindow = null;
+        });
+
+        window.webContents.on('devtools-opened', () => {
+            window.focus();
+            setImmediate(() => {
+                window.focus();
+            });
+        });
+
+        window.webContents.on('will-navigate', (e, url) => {
+            e.preventDefault();
+            require('electron').shell.openExternal(url);
+        });
+
+        window.webContents.on('before-input-event', (event, input) => {
+            if (electronState.getState().blockKeyboard) {
+                event.preventDefault();
+            }
+        });
+
+        mainWindow = window;
+
+        // return window;
+    }
 }
 
 // quit application when all windows are closed
@@ -117,7 +119,7 @@ app.on('window-all-closed', () => {
 app.on('activate', () => {
     // on macOS it is common to re-create a window even after all windows have been closed
     if (mainWindow === null) {
-        mainWindow = createMainWindow(websocket);
+        createMainWindow(websocket);
     }
 });
 
@@ -165,7 +167,7 @@ app.on('ready', async () => {
     updater(app, websocket, serverConfig);
     log.info('updater started');
 
-    mainWindow = createMainWindow(websocket);
+    createMainWindow(websocket);
     log.info('window created');
 
     try {
