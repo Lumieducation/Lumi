@@ -1,5 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { History } from 'history';
 
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -18,6 +20,10 @@ import MainSection from './components/MainSection';
 import { Link } from 'react-router-dom';
 
 import { track } from '../state/track/actions';
+
+declare var window: {
+    h: History;
+};
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -56,6 +62,9 @@ export default function Launchpad() {
     const classes = useStyles();
     const { t } = useTranslation();
     const dispatch = useDispatch();
+    const history = useHistory();
+
+    window.h = history;
 
     return (
         <div className={classes.root}>

@@ -2,6 +2,8 @@ import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 import * as Sentry from '@sentry/browser';
 import Logger from '../../helpers/Logger';
 
+import * as H from 'history';
+
 import {
     ContentId,
     ITab,
@@ -484,7 +486,8 @@ export function save(
 }
 
 export function importH5P(
-    path: string
+    path: string,
+    history?: H.History
 ): ThunkAction<void, null, null, SaveActions> {
     return (dispatch: any) => {
         const tabId = shortid();
@@ -493,6 +496,10 @@ export function importH5P(
             payload: { tabId, path },
             type: H5P_IMPORT_REQUEST
         });
+
+        if (history) {
+            history.push('/h5peditor');
+        }
 
         return api
             .importH5P(path)
