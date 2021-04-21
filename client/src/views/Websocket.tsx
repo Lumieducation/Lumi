@@ -6,6 +6,7 @@ import { History } from 'history';
 import Logger from '../helpers/Logger';
 import { ITab } from '../state/H5PEditor/H5PEditorTypes';
 import { actions, IState, selectors } from '../state';
+import { activeTab } from '../state/H5PEditor/H5PEditorSelectors';
 
 const log = new Logger('container:websocket');
 
@@ -98,6 +99,16 @@ export class WebsocketContainer extends React.Component<
 
                     case 'EXPORT_AS_HTML':
                         dispatch(actions.h5peditor.openExportDialog());
+                        break;
+
+                    case 'UPLOAD_TO_RUN':
+                        dispatch(
+                            actions.run.upload({
+                                contentId: this.props.activeTab.contentId,
+                                title: this.props.activeTab.name,
+                                mainLibrary: this.props.activeTab.mainLibrary
+                            })
+                        );
                         break;
 
                     case 'MESSAGE':

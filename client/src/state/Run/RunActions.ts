@@ -16,6 +16,8 @@ import {
     IRunState
 } from './RunTypes';
 
+import store from '../../state';
+
 import * as API from './RunAPI';
 
 export function getRuns(): any {
@@ -53,16 +55,33 @@ export function getRuns(): any {
     };
 }
 
-export function upload(options?: { includeReporter?: boolean; path?: string }) {
+export function upload(options?: {
+    includeReporter?: boolean;
+    path?: string;
+    contentId?: string;
+    title?: string;
+    mainLibrary?: string;
+}) {
     return async (dispatch: any) => {
         try {
+            const settings = store.getState().settings;
+            if (!settings.email || !settings.token) {
+                return dispatch(updateState({ showSetupDialog: true }));
+            }
+
             dispatch({
                 payload: {},
                 type: RUN_UPLOAD_REQUEST
             });
 
+            dispatch(updateState({ showUploadDialog: true }));
+
             try {
-                const run = await API.upload();
+                const run = await API.upload(
+                    options?.contentId,
+                    options?.title,
+                    options?.mainLibrary
+                );
 
                 dispatch({
                     payload: run,
@@ -71,6 +90,8 @@ export function upload(options?: { includeReporter?: boolean; path?: string }) {
                 dispatch(getRuns());
             } catch (error) {
                 Sentry.captureException(error);
+
+                dispatch(updateState({ showUploadDialog: false }));
 
                 dispatch({
                     payload: { error },

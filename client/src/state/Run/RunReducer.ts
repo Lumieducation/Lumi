@@ -11,7 +11,9 @@ import {
 
 export const initialState: IRunState = {
     runs: [],
-    showDialog: false,
+    showSetupDialog: false,
+    showConnectionErrorDialog: false,
+    showUploadDialog: false,
     uploadProgress: {
         import: {
             state: 'not_started'

@@ -11,8 +11,16 @@ export async function getRuns(): Promise<IRunState> {
     return body;
 }
 
-export async function upload(): Promise<IRunState> {
-    return (await superagent.post(`/api/v1/run/upload`)).body;
+export async function upload(
+    contentId?: string,
+    title?: string,
+    mainLibrary?: string
+): Promise<IRunState> {
+    return (
+        await superagent
+            .post(`/api/v1/run/upload`)
+            .send({ contentId, title, mainLibrary })
+    ).body;
 }
 
 export async function deleteFromRun(id: string): Promise<superagent.Response> {

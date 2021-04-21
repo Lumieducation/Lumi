@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 import { actions } from '../state';
@@ -41,31 +41,16 @@ export default function FolderList() {
     const classes = useStyles();
     const dispatch = useDispatch();
     const history = useHistory();
-    const [showRunSetupDialog, setShowRunSetupDialog] = React.useState(false);
-    const [
-        showRunConnectionErrorDialog,
-        setShowRunConnectionErrorDialog
-    ] = React.useState(false);
-
-    const closeRunSetupDialog = (redirect?: boolean) => {
-        if (redirect) {
-            history.push('/');
-        }
-        setShowRunSetupDialog(false);
-    };
-
-    const closeRunConnectionErrorDialog = () => {
-        history.push('/');
-        setShowRunConnectionErrorDialog(false);
-    };
 
     useEffect(() => {
         dispatch(actions.run.getRuns()).then((action: any) => {
             if (action.type === RUN_NOT_AUTHORIZED) {
-                setShowRunSetupDialog(true);
+                dispatch(actions.run.updateState({ showSetupDialog: true }));
             }
             if (action.type === RUN_GET_RUNS_ERROR) {
-                setShowRunConnectionErrorDialog(true);
+                dispatch(
+                    actions.run.updateState({ showConnectionErrorDialog: true })
+                );
             }
         });
     });
@@ -94,14 +79,6 @@ export default function FolderList() {
                     </Button>
                 </Grid>
             </Grid>
-            <RunSetupDialog
-                open={showRunSetupDialog}
-                close={closeRunSetupDialog}
-            />
-            <RunConnectionErrorDialog
-                open={showRunConnectionErrorDialog}
-                close={closeRunConnectionErrorDialog}
-            />
         </div>
     );
 }

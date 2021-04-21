@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 import Button from '@material-ui/core/Button';
@@ -10,6 +11,8 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import { TransitionProps } from '@material-ui/core/transitions';
 
+import { IState } from '../../state';
+
 const Transition = React.forwardRef(function Transition(
     props: TransitionProps & { children?: React.ReactElement<any, any> },
     ref: React.Ref<unknown>
@@ -17,18 +20,22 @@ const Transition = React.forwardRef(function Transition(
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function RunConnectionErrorDialog(props: {
-    open: boolean;
-    close: () => void;
-}) {
+export default function RunConnectionErrorDialog() {
     const { t } = useTranslation();
+    const open = useSelector(
+        (state: IState) => state.run.showConnectionErrorDialog
+    );
+
+    const close = () => {
+        console.log('do');
+    };
 
     return (
         <Dialog
-            open={props.open}
+            open={open}
             TransitionComponent={Transition}
             keepMounted
-            onClose={props.close}
+            onClose={close}
             aria-labelledby="runconnectionerrordialog-title"
             aria-describedby="runconnectionerrordialog-description"
         >
@@ -41,7 +48,7 @@ export default function RunConnectionErrorDialog(props: {
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
-                <Button onClick={props.close} color="primary">
+                <Button onClick={close} color="primary">
                     {t('run.dialog.error.ok')}
                 </Button>
             </DialogActions>

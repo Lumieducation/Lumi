@@ -11,6 +11,7 @@ import superagent from 'superagent';
 
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router';
 
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -93,27 +94,28 @@ const DialogActions = withStyles((theme: Theme) => ({
     }
 }))(MuiDialogActions);
 
-export default function CustomizedDialogs(props: {
-    open: boolean;
-    close: (redirect?: boolean) => void;
-}) {
+export default function CustomizedDialogs() {
     // const [open, setOpen] = React.useState(false);
     const { t } = useTranslation();
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const settings = useSelector((state: IState) => state.settings);
+    const open = useSelector((state: IState) => state.run.showSetupDialog);
 
     const handleClickOpen = () => {
         // setOpen(true);
     };
     const handleClose = () => {
-        props.close(true);
+        history.push('/');
+        dispatch(actions.run.updateState({ showSetupDialog: false }));
     };
 
     const handleConsent = async () => {
         try {
-            await superagent.post(`/api/v1/run/consent`);
-            props.close(false);
+            await superagent.post(`/api/v1/run/api/consent`);
+            dispatch(actions.run.updateState({ showSetupDialog: false }));
+            // props.close(false);
         } catch (error) {
             //
         }
@@ -129,7 +131,7 @@ export default function CustomizedDialogs(props: {
         <Dialog
             onClose={handleClose}
             aria-labelledby="customized-dialog-title"
-            open={props.open}
+            open={open}
         >
             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
                 Lumi Run

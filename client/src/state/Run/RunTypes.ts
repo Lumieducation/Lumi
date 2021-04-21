@@ -9,7 +9,9 @@ export interface IRun {
 type uploadProgressStates = 'not_started' | 'pending' | 'success' | 'error';
 export interface IRunState {
     runs: IRun[];
-    showDialog: boolean;
+    showSetupDialog: boolean;
+    showConnectionErrorDialog: boolean;
+    showUploadDialog: boolean;
     uploadProgress: {
         import: {
             state: uploadProgressStates;

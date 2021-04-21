@@ -87,7 +87,9 @@ const DialogActions = withStyles((theme: Theme) => ({
 }))(MuiDialogActions);
 
 export default function CustomizedDialogs() {
-    const showDialog = useSelector((state: IState) => state.run.showDialog);
+    const showDialog = useSelector(
+        (state: IState) => state.run.showUploadDialog
+    );
     const uploadProgress = useSelector(
         (state: IState) => state.run.uploadProgress
     );
@@ -98,7 +100,7 @@ export default function CustomizedDialogs() {
             onClose={() =>
                 dispatch(
                     actions.run.updateState({
-                        showDialog: false
+                        showUploadDialog: false
                     })
                 )
             }
@@ -110,7 +112,7 @@ export default function CustomizedDialogs() {
                 onClose={() =>
                     dispatch(
                         actions.run.updateState({
-                            showDialog: false
+                            showUploadDialog: false
                         })
                     )
                 }
@@ -176,7 +178,7 @@ export default function CustomizedDialogs() {
                     onClick={() =>
                         dispatch(
                             actions.run.updateState({
-                                showDialog: false
+                                showUploadDialog: false
                             })
                         )
                     }

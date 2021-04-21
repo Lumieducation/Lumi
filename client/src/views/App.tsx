@@ -21,6 +21,8 @@ import Launchpad from './Launchpad';
 import SetupDialog from './components/SetupDialog';
 import Backdrop from './components/Backdrop';
 import Websocket from './Websocket';
+import RunSetupDialog from './components/RunSetupDialog';
+import RunConnectionErrorDialog from './components/RunConnectionErrorDialog';
 
 import { actions } from '../state';
 
@@ -67,8 +69,11 @@ export default function AppContainer() {
                 </Switch>
                 <SetupDialog />
                 <RunUploadDialog />
+                <RunSetupDialog />
+                <RunConnectionErrorDialog />
             </Router>
             <Notifications />
+
             <Backdrop />
         </div>
     );
