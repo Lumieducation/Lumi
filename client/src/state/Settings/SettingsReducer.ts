@@ -27,15 +27,6 @@ export default function settingsReducer(
     try {
         switch (action.type) {
             case SETTINGS_GET_SETTINGS_SUCCESS:
-                if (action.payload.firstOpen) {
-                    return {
-                        ...action.payload,
-                        privacyPolicyConsent: true,
-                        usageStatistics: true,
-                        bugTracking: true,
-                        autoUpdates: true
-                    };
-                }
                 return action.payload;
 
             case SETTINGS_CHANGE:

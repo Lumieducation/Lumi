@@ -34,6 +34,7 @@ import SettingsList from './components/Settings/GeneralSettingsList';
 import AccountSettingsList from './components/Settings/AccountSettingsList';
 import SettingsLibraryManagement from './components/Settings/LibraryManagement';
 import UpdateSettings from './components/Settings/UpdatesSettings';
+import LinkList from './components/Settings/LinkList';
 
 import { IState } from '../state';
 import { track } from '../state/track/actions';
@@ -70,7 +71,8 @@ const useStyles = makeStyles((theme: Theme) =>
             background: theme.palette.background.default
         },
         paper: {
-            minWidth: '640px'
+            minWidth: '640px',
+            margin: '20px'
         },
         drawer: {
             width: drawerWidth,
@@ -226,26 +228,47 @@ export default function FullScreenDialog() {
                 <DialogContent className={classes.bg}>
                     <div className={classes.root}>
                         <div className={classes.center}>
-                            <Paper className={classes.paper}>
-                                {(() => {
-                                    switch (section) {
-                                        case 'general':
-                                        default:
-                                            return <SettingsList />;
+                            {(() => {
+                                switch (section) {
+                                    case 'general':
+                                    default:
+                                        return (
+                                            <div>
+                                                <Paper
+                                                    className={classes.paper}
+                                                >
+                                                    <SettingsList />{' '}
+                                                </Paper>
+                                                <Paper
+                                                    className={classes.paper}
+                                                >
+                                                    <LinkList />
+                                                </Paper>
+                                            </div>
+                                        );
 
-                                        case 'updates':
-                                            return <UpdateSettings />;
+                                    case 'updates':
+                                        return (
+                                            <Paper className={classes.paper}>
+                                                <UpdateSettings />{' '}
+                                            </Paper>
+                                        );
 
-                                        case 'h5p-library-administration':
-                                            return (
-                                                <SettingsLibraryManagement endpointUrl="/api/v1/h5p/libraries" />
-                                            );
+                                    case 'h5p-library-administration':
+                                        return (
+                                            <Paper className={classes.paper}>
+                                                <SettingsLibraryManagement endpointUrl="/api/v1/h5p/libraries" />{' '}
+                                            </Paper>
+                                        );
 
-                                        case 'account':
-                                            return <AccountSettingsList />;
-                                    }
-                                })()}
-                            </Paper>
+                                    case 'account':
+                                        return (
+                                            <Paper className={classes.paper}>
+                                                <AccountSettingsList />{' '}
+                                            </Paper>
+                                        );
+                                }
+                            })()}
                         </div>
                     </div>
                 </DialogContent>
