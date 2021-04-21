@@ -29,9 +29,9 @@ import BugReportIcon from '@material-ui/icons/BugReport';
 import InsertChartIcon from '@material-ui/icons/InsertChart';
 import UpdateIcon from '@material-ui/icons/Update';
 import TranslateIcon from '@material-ui/icons/Translate';
-import GitHubIcon from '@material-ui/icons/GitHub';
 
 import LanguageList from './Settings/LanguageList';
+import LinkList from './Settings/LinkList';
 
 import { IState, actions } from '../../state';
 
@@ -91,12 +91,26 @@ export default function CustomizedDialogs() {
     const platformSupportsUpdates = useSelector(
         (state: IState) => state.system.platformSupportsUpdates
     );
+
     const classes = useStyles();
     const { t } = useTranslation();
 
     const handleSave = () => {
         dispatch(
             actions.settings.updateSettings({ ...settings, firstOpen: false })
+        );
+    };
+
+    const handleAcceptAll = () => {
+        dispatch(
+            actions.settings.updateSettings({
+                ...settings,
+                bugTracking: true,
+                usageStatistics: true,
+                privacyPolicyConsent: true,
+                autoUpdates: true,
+                firstOpen: false
+            })
         );
     };
 
@@ -110,44 +124,14 @@ export default function CustomizedDialogs() {
                 <Typography variant="body2" gutterBottom>
                     {t('setup_dialog.description')}
                 </Typography>
+                <LinkList />
 
-                <a
-                    href="https://www.lumi.education/app/privacy-policy"
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ color: 'inherit', textDecoration: 'inherit' }}
-                >
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        className={classes.button}
-                        startIcon={<PolicyIcon />}
-                    >
-                        {t('privacy_policy.title')}
-                    </Button>
-                </a>
-                <a
-                    href="https://www.github.com/Lumieducation/Lumi"
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ color: 'inherit', textDecoration: 'inherit' }}
-                >
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        className={classes.button}
-                        startIcon={<GitHubIcon />}
-                    >
-                        Open Source
-                    </Button>
-                </a>
                 <List
                     subheader={
                         <ListSubheader>
                             {t('settings.appbar.label')}
                         </ListSubheader>
                     }
-                    // className={classes.list}
                 >
                     <ListItem>
                         <ListItemIcon>
@@ -285,12 +269,19 @@ export default function CustomizedDialogs() {
             </DialogContent>
             <DialogActions>
                 <Button
-                    autoFocus
                     onClick={handleSave}
-                    color="primary"
+                    color="secondary"
                     disabled={!settings.privacyPolicyConsent}
                 >
-                    {t('setup_dialog.save')}
+                    {t('setup_dialog.accept_selected')}
+                </Button>
+                <Button
+                    autoFocus={true}
+                    onClick={handleAcceptAll}
+                    color="primary"
+                    // disabled={!settings.privacyPolicyConsent}
+                >
+                    {t('setup_dialog.accept_all')}
                 </Button>
             </DialogActions>
         </Dialog>

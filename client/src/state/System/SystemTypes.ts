@@ -4,7 +4,10 @@ export interface IState {
 
 export interface ISystemState {
     platformSupportsUpdates: boolean;
+    platform: Platform;
 }
+
+type Platform = 'mac' | 'mas' | 'win' | 'win-store' | 'linux' | NodeJS.Platform;
 
 export const SYSTEM_GET_SYSTEM_REQUEST = 'SYSTEM_GET_SYSTEM_REQUEST';
 export const SYSTEM_GET_SYSTEM_SUCCESS = 'SYSTEM_GET_SYSTEM_SUCCESS';
