@@ -70,7 +70,7 @@ export function upload(options?: { path?: string; contentId?: string }) {
             dispatch(updateState({ showUploadDialog: true }));
             let contentId = options?.contentId;
 
-            if (!options?.path && !contentId) {
+            if (!options?.path && contentId) {
                 const data = await dispatch(updateContentOnServer());
                 contentId = data.contentId;
             }

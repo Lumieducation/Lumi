@@ -101,7 +101,6 @@ export default function (
                 }
                 return res.status(200).json(response.body);
             } catch (error) {
-                console.log(error);
                 Sentry.captureException(error);
             }
 
