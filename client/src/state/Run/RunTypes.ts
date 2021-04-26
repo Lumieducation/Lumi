@@ -1,3 +1,4 @@
+import { ContentId } from '@lumieducation/h5p-server';
 import { IGetSettingsErrorAction } from '../Settings/SettingsTypes';
 
 export interface IRun {
@@ -6,23 +7,21 @@ export interface IRun {
     mainLibrary: string;
 }
 
-type uploadProgressStates = 'not_started' | 'pending' | 'success' | 'error';
+type uploadProgressStates =
+    | 'not_started'
+    | 'pending'
+    | 'success'
+    | 'error'
+    | 'processing';
 export interface IRunState {
     runs: IRun[];
     showSetupDialog: boolean;
     showConnectionErrorDialog: boolean;
     showUploadDialog: boolean;
     uploadProgress: {
-        import: {
-            state: uploadProgressStates;
-        };
-        export: {
-            state: uploadProgressStates;
-        };
-        upload: {
-            state: uploadProgressStates;
-            progress: number;
-        };
+        id?: string;
+        state: uploadProgressStates;
+        progress: number;
     };
 }
 
@@ -70,7 +69,9 @@ export interface IRunUploadRequestAction {
 }
 
 export interface IRunUploadSuccessAction {
-    payload: IRunState;
+    payload: {
+        contentId: ContentId;
+    };
     type: typeof RUN_UPLOAD_SUCCESS;
 }
 export interface IRunUploadErrorAction {

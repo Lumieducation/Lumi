@@ -1,4 +1,5 @@
 import * as Sentry from '@sentry/browser';
+import i18next from 'i18next';
 
 import {
     RUN_GET_RUNS_REQUEST,
@@ -17,6 +18,9 @@ import {
 } from './RunTypes';
 
 import store from '../../state';
+
+import { updateContentOnServer } from '../H5PEditor/H5PEditorActions';
+import { notify } from '../Notifications/NotificationsActions';
 
 import * as API from './RunAPI';
 
@@ -55,13 +59,7 @@ export function getRuns(): any {
     };
 }
 
-export function upload(options?: {
-    includeReporter?: boolean;
-    path?: string;
-    contentId?: string;
-    title?: string;
-    mainLibrary?: string;
-}) {
+export function upload(options?: { path?: string; contentId?: string }) {
     return async (dispatch: any) => {
         try {
             const settings = store.getState().settings;
@@ -69,24 +67,32 @@ export function upload(options?: {
                 return dispatch(updateState({ showSetupDialog: true }));
             }
 
+            dispatch(updateState({ showUploadDialog: true }));
+            let contentId = options?.contentId;
+
+            if (!options?.path && !contentId) {
+                const data = await dispatch(updateContentOnServer());
+                contentId = data.contentId;
+            }
+
             dispatch({
                 payload: {},
                 type: RUN_UPLOAD_REQUEST
             });
 
-            dispatch(updateState({ showUploadDialog: true }));
-
             try {
-                const run = await API.upload(
-                    options?.contentId,
-                    options?.title,
-                    options?.mainLibrary
-                );
+                const run = await API.upload(contentId);
 
                 dispatch({
                     payload: run,
                     type: RUN_UPLOAD_SUCCESS
                 });
+                dispatch(
+                    notify(
+                        i18next.t('run.notifications.upload.success'),
+                        'success'
+                    )
+                );
                 dispatch(getRuns());
             } catch (error) {
                 Sentry.captureException(error);

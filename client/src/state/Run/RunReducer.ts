@@ -15,16 +15,8 @@ export const initialState: IRunState = {
     showConnectionErrorDialog: false,
     showUploadDialog: false,
     uploadProgress: {
-        import: {
-            state: 'not_started'
-        },
-        export: {
-            state: 'not_started'
-        },
-        upload: {
-            state: 'not_started',
-            progress: 0
-        }
+        state: 'not_started',
+        progress: 0
     }
 };
 
@@ -39,7 +31,12 @@ export default function runReducer(
         switch (action.type) {
             case RUN_UPLOAD_REQUEST:
                 return {
-                    ...state
+                    ...state,
+                    uploadProgress: {
+                        state: 'not_started',
+                        progress: 0,
+                        id: undefined
+                    }
                 };
             case RUN_GET_RUNS_SUCCESS:
                 // case RUN_UPLOAD_SUCCESS:
@@ -54,6 +51,15 @@ export default function runReducer(
                     ...action.payload
                 };
 
+            case RUN_UPLOAD_SUCCESS:
+                return {
+                    ...state,
+                    uploadProgress: {
+                        state: 'success',
+                        progress: 100,
+                        id: action.payload.contentId
+                    }
+                };
             // case 'RUN_UPDATE_UPLOAD_PROGRESS':
             //     return {
             //         ...state,

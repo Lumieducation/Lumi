@@ -103,9 +103,6 @@ export default function CustomizedDialogs() {
     const settings = useSelector((state: IState) => state.settings);
     const open = useSelector((state: IState) => state.run.showSetupDialog);
 
-    const handleClickOpen = () => {
-        // setOpen(true);
-    };
     const handleClose = () => {
         history.push('/');
         dispatch(actions.run.updateState({ showSetupDialog: false }));

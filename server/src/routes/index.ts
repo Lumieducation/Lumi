@@ -51,10 +51,7 @@ export default function (
         settingsRoutes(serverConfig, browserWindow, app)
     );
 
-    router.use(
-        '/api/v1/run',
-        runRoutes(serverConfig, h5pEditor, browserWindow)
-    );
+    router.use('/api/run', runRoutes(serverConfig, h5pEditor, browserWindow));
 
     // // Directly serving the library and content files statically speeds up
     // // loading times and there is no security issue, as Lumi never is a

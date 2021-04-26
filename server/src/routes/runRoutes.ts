@@ -13,9 +13,11 @@ import HtmlExporter from '@lumieducation/h5p-html-exporter';
 
 import settingsCache from '../settingsCache';
 
+import LumiController from '../controllers/LumiController';
+
 import { io as websocket } from '../websocket';
 
-const run_host = process.env.RUN_HOST || 'http://lumi.run';
+const run_host = process.env.RUN_HOST || 'https://lumi.run';
 
 export default function (
     serverConfig: IServerConfig,
@@ -23,9 +25,14 @@ export default function (
     browserWindow: BrowserWindow
 ): express.Router {
     const router = express.Router();
+    const lumiController = new LumiController(
+        h5pEditor,
+        serverConfig,
+        browserWindow
+    );
 
     router.post(
-        '/upload',
+        '/',
         async (
             req: express.Request,
             res: express.Response,
@@ -59,195 +66,19 @@ export default function (
                 }
             }
 
-            let htmlFilePath;
-            let meta = {
-                title: req.body.title,
-                mainLibrary: req.body.mainLibrary
-            };
-
-            if (!contentId) {
-                websocket.emit('action', {
-                    type: 'action',
-                    payload: {
-                        type: 'RUN_UPDATE_STATE',
-                        payload: {
-                            showDialog: true,
-                            uploadProgress: {
-                                import: {
-                                    state: 'pending'
-                                },
-                                export: {
-                                    state: 'not_started'
-                                },
-                                upload: {
-                                    state: 'not_started',
-                                    progress: 0
-                                }
-                            }
-                        }
-                    }
-                });
-
-                try {
-                    const buffer = await fs.readFile(filePath);
-
-                    const {
-                        metadata,
-                        parameters
-                    } = await h5pEditor.uploadPackage(buffer, new User());
-
-                    meta = metadata;
-
-                    contentId = await h5pEditor.saveOrUpdateContent(
-                        undefined,
-                        parameters,
-                        metadata,
-                        getUbernameFromH5pJson(metadata),
-                        new User()
-                    );
-
-                    websocket.emit('action', {
-                        type: 'action',
-                        payload: {
-                            type: 'RUN_UPDATE_STATE',
-                            payload: {
-                                showDialog: true,
-                                uploadProgress: {
-                                    import: {
-                                        state: 'success'
-                                    },
-                                    export: {
-                                        state: 'pending'
-                                    },
-                                    upload: {
-                                        state: 'not_started',
-                                        progress: 0
-                                    }
-                                }
-                            }
-                        }
-                    });
-                } catch (error) {
-                    Sentry.captureException(error);
-                    return websocket.emit('action', {
-                        type: 'action',
-                        payload: {
-                            type: 'RUN_UPDATE_STATE',
-                            payload: {
-                                showDialog: true,
-                                uploadProgress: {
-                                    import: {
-                                        state: 'error'
-                                    },
-                                    export: {
-                                        state: 'not_started'
-                                    },
-                                    upload: {
-                                        state: 'not_started',
-                                        progress: 0
-                                    }
-                                }
-                            }
-                        }
-                    });
-                }
-            } else {
-                websocket.emit('action', {
-                    type: 'action',
-                    payload: {
-                        type: 'RUN_UPDATE_STATE',
-                        payload: {
-                            showDialog: true,
-                            uploadProgress: {
-                                import: {
-                                    state: 'success'
-                                },
-                                export: {
-                                    state: 'pending'
-                                },
-                                upload: {
-                                    state: 'not_started',
-                                    progress: 0
-                                }
-                            }
-                        }
-                    }
-                });
+            if (contentId) {
+                filePath = path.join(
+                    serverConfig.temporaryStoragePath,
+                    `${contentId}.h5p`
+                );
+                await lumiController.export(`${contentId}`, filePath);
             }
 
-            try {
-                const htmlExporter = new HtmlExporter(
-                    h5pEditor.libraryStorage,
-                    h5pEditor.contentStorage,
-                    h5pEditor.config,
-                    `${__dirname}/../../../h5p/core`,
-                    `${__dirname}/../../../h5p/editor`
-                );
-
-                const html = await htmlExporter.createSingleBundle(
-                    contentId,
-                    new User()
-                );
-
-                htmlFilePath = path.join(
-                    serverConfig.workingCachePath,
-                    `${contentId}.html`
-                );
-                await fs.writeFileSync(htmlFilePath, html);
-
-                websocket.emit('action', {
-                    type: 'action',
-                    payload: {
-                        type: 'RUN_UPDATE_STATE',
-                        payload: {
-                            showDialog: true,
-                            uploadProgress: {
-                                import: {
-                                    state: 'success'
-                                },
-                                export: {
-                                    state: 'success'
-                                },
-                                upload: {
-                                    state: 'pending',
-                                    progress: 0
-                                }
-                            }
-                        }
-                    }
-                });
-            } catch (error) {
-                Sentry.captureException(error);
-                return websocket.emit('action', {
-                    type: 'action',
-                    payload: {
-                        type: 'RUN_UPDATE_STATE',
-                        payload: {
-                            showDialog: true,
-                            uploadProgress: {
-                                import: {
-                                    state: 'success'
-                                },
-                                export: {
-                                    state: 'error'
-                                },
-                                upload: {
-                                    state: 'not_started',
-                                    progress: 0
-                                }
-                            }
-                        }
-                    }
-                });
-            }
-            let run;
             try {
                 const response = await superagent
-                    .post(`${run_host}/api/h5p`)
+                    .post(`${run_host}/api/v1/run`)
                     .set('x-auth', settingsCache.getSettings().token)
-                    .attach('content', htmlFilePath)
-                    .field('title', meta.title)
-                    .field('mainLibrary', meta.mainLibrary)
+                    .attach('h5p', filePath)
                     .on('progress', (event) => {
                         websocket.emit('action', {
                             type: 'action',
@@ -256,103 +87,27 @@ export default function (
                                 payload: {
                                     showDialog: true,
                                     uploadProgress: {
-                                        import: {
-                                            state: 'success'
-                                        },
-                                        export: {
-                                            state: 'success'
-                                        },
-                                        upload: {
-                                            state: 'pending',
-                                            progress:
-                                                event.loaded /
-                                                (event.total / 100)
-                                        }
+                                        state: 'pending',
+                                        progress:
+                                            event.loaded / (event.total / 100)
                                     }
                                 }
                             }
                         });
                     });
 
-                websocket.emit('action', {
-                    type: 'action',
-                    payload: {
-                        type: 'RUN_UPDATE_STATE',
-                        payload: {
-                            showDialog: true,
-                            uploadProgress: {
-                                import: {
-                                    state: 'success'
-                                },
-                                export: {
-                                    state: 'success'
-                                },
-                                upload: {
-                                    state: 'success',
-                                    progress: 100
-                                }
-                            }
-                        }
-                    }
-                });
+                if (contentId) {
+                    await fs.unlink(filePath);
+                }
+                return res.status(200).json(response.body);
             } catch (error) {
                 console.log(error);
                 Sentry.captureException(error);
-                return websocket.emit('action', {
-                    type: 'action',
-                    payload: {
-                        type: 'RUN_UPDATE_STATE',
-                        payload: {
-                            showDialog: true,
-                            uploadProgress: {
-                                import: {
-                                    state: 'success'
-                                },
-                                export: {
-                                    state: 'success'
-                                },
-                                upload: {
-                                    state: 'error',
-                                    progress: 0
-                                }
-                            }
-                        }
-                    }
-                });
             }
 
-            res.status(200).json(run);
+            res.status(200).end();
         }
     );
-
-    // router.delete(
-    //     '/:id',
-    //     async (
-    //         req: express.Request,
-    //         res: express.Response,
-    //         next: express.NextFunction
-    //     ) => {
-    //         try {
-    //             const response = await superagent.delete(
-    //                 `http://lumi.run/${req.params.id}?secret=${req.query.secret}`
-    //             );
-
-    //             const run = await fs.readJSON(serverConfig.runFile);
-    //             run.runs = run.runs.filter((r) => r.id !== req.params.id);
-    //             await fs.writeJSON(serverConfig.runFile, run);
-
-    //             res.status(200).json(response);
-    //         } catch (error) {
-    //             if (error.status === 404) {
-    //                 const run = await fs.readJSON(serverConfig.runFile);
-    //                 run.runs = run.runs.filter((r) => r.id !== req.params.id);
-    //                 await fs.writeJSON(serverConfig.runFile, run);
-    //             }
-    //             Sentry.captureException(error);
-    //             res.status(500).end();
-    //         }
-    //     }
-    // );
 
     router.use(
         '/',

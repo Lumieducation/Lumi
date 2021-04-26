@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import {
     createStyles,
@@ -18,21 +20,19 @@ import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
-import ListItemText from '@material-ui/core/ListItemText';
+import LinearProgress from '@material-ui/core/LinearProgress';
 
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import CodeIcon from '@material-ui/icons/Code';
 import DoneIcon from '@material-ui/icons/Done';
-import ImportExportIcon from '@material-ui/icons/ImportExport';
+
 import ErrorIcon from '@material-ui/icons/Error';
 import { actions, IState } from '../../state';
 import CircularProgress, {
     CircularProgressProps
 } from '@material-ui/core/CircularProgress';
 import Box from '@material-ui/core/Box';
-import { Link } from 'react-router-dom';
+import RunLink from './RunLink';
+
+// import { Link, useHistory } from 'react-router-dom';
 
 const styles = (theme: Theme) =>
     createStyles({
@@ -46,6 +46,9 @@ const styles = (theme: Theme) =>
             right: theme.spacing(1),
             top: theme.spacing(1),
             color: theme.palette.grey[500]
+        },
+        link: {
+            minWidth: '280px'
         }
     });
 
@@ -93,7 +96,14 @@ export default function CustomizedDialogs() {
     const uploadProgress = useSelector(
         (state: IState) => state.run.uploadProgress
     );
+    const history = useHistory();
     const dispatch = useDispatch();
+    const { t } = useTranslation();
+
+    const goToRun = () => {
+        dispatch(actions.run.updateState({ showUploadDialog: false }));
+        history.push('/run');
+    };
 
     return (
         <Dialog
@@ -120,60 +130,37 @@ export default function CustomizedDialogs() {
                 Lumi Run
             </DialogTitle>
             <DialogContent dividers>
-                <List>
-                    <ListItem>
-                        <ListItemIcon>
-                            <ImportExportIcon />
-                        </ListItemIcon>
-                        <ListItemText
-                            id="switch-list-label-wifi"
-                            primary="Importing & validating H5P"
+                {uploadProgress.id && (
+                    <div>
+                        {t('run.upload_dialog.success')}
+                        <List>
+                            <ListItem>
+                                <RunLink id={uploadProgress.id} />
+                            </ListItem>
+                        </List>
+                    </div>
+                )}
+                {uploadProgress.progress !== 100 && (
+                    <div>
+                        {t('run.upload_dialog.uploading')}
+                        <LinearProgress
+                            variant="determinate"
+                            value={uploadProgress.progress}
                         />
-                        <ListItemSecondaryAction>
-                            {uploadStateIcon(uploadProgress.import.state)}
-                        </ListItemSecondaryAction>
-                    </ListItem>
-                    <ListItem>
-                        <ListItemIcon>
-                            <CodeIcon />
-                        </ListItemIcon>
-                        <ListItemText
-                            id="switch-list-label-wifi"
-                            primary="Exporting H5P as HTML"
-                        />
-                        <ListItemSecondaryAction>
-                            {uploadStateIcon(uploadProgress.export.state)}
-                        </ListItemSecondaryAction>
-                    </ListItem>
-                    <ListItem>
-                        <ListItemIcon>
-                            <CloudUploadIcon />
-                        </ListItemIcon>
-                        <ListItemText
-                            id="switch-list-label-bluetooth"
-                            primary="Uploading to Lumi.run"
-                        />
-                        <ListItemSecondaryAction>
-                            {uploadStateIcon(
-                                uploadProgress.upload.state,
-                                uploadProgress.upload.progress
-                            )}
-                        </ListItemSecondaryAction>
-                    </ListItem>
-                </List>
+                    </div>
+                )}
+                {uploadProgress.progress === 100 && !uploadProgress.id && (
+                    <div>
+                        {t('run.upload_dialog.processing')}
+                        <LinearProgress variant="indeterminate" />
+                    </div>
+                )}
             </DialogContent>
             <DialogActions>
-                <Link
-                    to="/run"
-                    style={{
-                        color: 'inherit',
-                        textDecoration: 'inherit'
-                    }}
-                >
-                    <Button autoFocus color="secondary">
-                        Go to Run
-                    </Button>
-                </Link>
+                <Button onClick={goToRun} autoFocus color="secondary">
+                    {t('run.upload_dialog.buttons.go_to_run')}
+                </Button>
+
                 <Button
                     onClick={() =>
                         dispatch(
@@ -185,64 +172,9 @@ export default function CustomizedDialogs() {
                     autoFocus
                     color="primary"
                 >
-                    Ok
+                    {t('run.upload_dialog.buttons.ok')}
                 </Button>
             </DialogActions>
         </Dialog>
-    );
-}
-
-function uploadStateIcon(
-    state: 'not_started' | 'pending' | 'success' | 'error',
-    progress?: number
-): JSX.Element {
-    switch (state) {
-        default:
-        case 'not_started':
-            return <div></div>;
-        case 'pending':
-            return progress ? (
-                <CircularProgressWithLabel value={progress} />
-            ) : (
-                <CircularProgress />
-            );
-        case 'success':
-            return (
-                <IconButton>
-                    <DoneIcon />
-                </IconButton>
-            );
-        case 'error':
-            return (
-                <IconButton>
-                    <ErrorIcon />
-                </IconButton>
-            );
-    }
-}
-
-function CircularProgressWithLabel(
-    props: CircularProgressProps & { value: number }
-) {
-    return (
-        <Box position="relative" display="inline-flex">
-            <CircularProgress variant="determinate" {...props} />
-            <Box
-                top={0}
-                left={0}
-                bottom={0}
-                right={0}
-                position="absolute"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-            >
-                <Typography
-                    variant="caption"
-                    component="div"
-                    color="textSecondary"
-                >{`${Math.round(props.value)}%`}</Typography>
-            </Box>
-        </Box>
     );
 }

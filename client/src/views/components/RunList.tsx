@@ -16,6 +16,7 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import IconButton from '@material-ui/core/IconButton';
 import H5PAvatar from './H5PAvatar';
 import ListSubheader from '@material-ui/core/ListSubheader';
+import RunLink from './RunLink';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -59,15 +60,7 @@ export default function FolderList(props: {
                         </ListItemAvatar>
                         <ListItemText primary={run.title} secondary={run.id} />
                         <div className={classes.center}>
-                            <form noValidate autoComplete="off">
-                                <TextField
-                                    className={classes.link}
-                                    id="outlined-basic"
-                                    label="Link"
-                                    variant="outlined"
-                                    value={`http://Lumi.run/${run.id}`}
-                                />
-                            </form>
+                            <RunLink id={run.id} />
                         </div>
                         <ListItemSecondaryAction>
                             <IconButton

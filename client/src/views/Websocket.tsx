@@ -104,9 +104,7 @@ export class WebsocketContainer extends React.Component<
                     case 'UPLOAD_TO_RUN':
                         dispatch(
                             actions.run.upload({
-                                contentId: this.props.activeTab.contentId,
-                                title: this.props.activeTab.name,
-                                mainLibrary: this.props.activeTab.mainLibrary
+                                contentId: this.props.activeTab.contentId
                             })
                         );
                         break;

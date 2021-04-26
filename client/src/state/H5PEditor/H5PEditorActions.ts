@@ -461,21 +461,21 @@ export function save(
                 Sentry.captureException(error);
             }
 
-            dispatch({
+            return dispatch({
                 // tslint:disable-next-line: object-shorthand-properties-first
                 payload: { id: data.contentId, ...response.body },
                 type: H5PEDITOR_SAVE_SUCCESS
             });
         } catch (error) {
             if (error.status === 499) {
-                dispatch({
+                return dispatch({
                     payload: {},
                     type: H5PEDITOR_SAVE_CANCEL
                 });
             } else {
                 Sentry.captureException(error);
 
-                dispatch({
+                return dispatch({
                     error,
                     payload: { path },
                     type: H5PEDITOR_SAVE_ERROR
