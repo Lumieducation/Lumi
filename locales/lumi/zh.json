@@ -1,263 +1,263 @@
 {
-    "editor": {
-        "default_name": "新H5P",
-        "tab": {
-            "view": "看法",
-            "edit": "编辑"
+    "analytics": {
+        "average": "平均",
+        "brokenFiles": "损坏的文件列表",
+        "errors": {
+            "determine-name": "无法确定学生的姓名。",
+            "invalid-interactions": "一些交互已损坏。",
+            "invalid-statements": "一些学生动作记录已损坏。",
+            "json-parse-error": ".lumi文件包含无效的内容（JSON未解析）。",
+            "no-content-json": "H5P内容未正确添加到.lumi文件。"
         },
-        "sidebar": {
-            "open": "打开H5P文件",
-            "create": "新的H5P文件",
-            "noOpenFiles": "没有打开的文件"
-        },
+        "name": "姓名",
+        "searchPlaceholder": "按学生姓名搜索...",
         "startPage": {
-            "title": "H5P编辑器",
-            "welcomeMessage": "Lumi的H5P编辑器是一个独立的应用程序，可让您查看，编辑和创建H5P。",
-            "open": "打开现有的H5P",
-            "create": "创建新的H5P",
-            "start": "开始"
+            "learn_more": "更多内容",
+            "open": "选择包含.lumi文件的文件夹",
+            "start": "开始",
+            "title": "鲁米分析",
+            "welcomeMessage": "Lumi的分析工具可让您导入用户的数据并为您生成可视化报告"
+        }
+    },
+    "auth": {
+        "cancel": "取消",
+        "code": "验证码",
+        "email": "电子邮件",
+        "error": {
+            "no-valid-email": "{{email}}不是有效的电子邮件地址。"
         },
+        "notification": {
+            "pending": "验证码已发送至{{email}} 。请检查您的电子邮件。",
+            "success": "{{email}}已成功验证"
+        },
+        "set_email": "设定电子邮件",
+        "verify_code": "输入验证码",
+        "verify_email": "验证邮件"
+    },
+    "bug_report": {
+        "consent": "允许该应用程序发送错误和崩溃报告。",
+        "description": "发送匿名崩溃和错误报告，帮助我们改善软件和服务。",
+        "title": "错误和崩溃报告"
+    },
+    "dialog": {
+        "close": "关闭"
+    },
+    "editor": {
+        "default_name": "新建H5P",
         "exportDialog": {
-            "title": "汇出设定",
-            "format": {
-                "title": "格式",
-                "bundleLabel": "多合一HTML文件",
-                "bundleHint": "如果您包含很多媒体文件，则文件对于某些计算机可能会变得太大。",
-                "externalLabel": "一个HTML文件和几个媒体文件",
-                "externalHint": "在下一步中，将要求您输入HTML文件的名称。媒体文件将被放入与文件名相同的文件夹中。",
-                "scorm": {
-                    "label": "SCORM软件包",
-                    "masteryScoreLabel": "精通分数（％）",
-                    "errorNaN": "输入的值不是数字",
-                    "errorRange": "值必须介于0到100之间"
-                }
-            },
-            "reporter": {
-                "title": "记者",
-                "hint": "如果您添加了报告者，则学生可以保存其进度的文件并将其发送给您。",
-                "switchLabel": "包括记者",
-                "learnMoreLink": "点击此处了解详情。",
-                "scormHint": "无法将报告程序添加到SCORM程序包中。"
-            },
             "cancelButton": "取消",
-            "exportButton": "现在导出",
-            "filePicker": {
-                "title": "导出为...",
-                "buttonLabel": "出口",
-                "formatNames": {
-                    "bundle": "多合一HTML文件（.html）",
-                    "external": "HTML档案（.html）",
-                    "scorm": "SCORM文件（.zip）"
-                }
-            },
             "defaults": {
                 "authorName": "H5P作者",
                 "title": "H5P内容"
-            }
-        }
-    },
-    "settings": {
-        "appbar": {
-            "label": "设定值",
-            "save": "救"
-        },
-        "enable": "使能够",
-        "menu": {
-            "general": "一般的",
-            "updates": "更新",
-            "account": "帐户",
-            "h5p-library-administration": "H5P库"
-        },
-        "general": {
-            "header": "一般的"
-        },
-        "updates": {
-            "header": "更新"
-        },
-        "account": {
-            "label": "帐户",
-            "email": {
-                "title": "电子邮件",
-                "change": "更改电子邮件",
-                "not-set": "电子邮件未设置"
-            }
-        },
-        "h5p-library-administration": {
-            "header": "已安装的H5P库",
-            "notifications": {
-                "upload": {
-                    "success-no-update": "上传成功，但未安装或更新任何库。内容类型可能已经安装在系统上。",
-                    "success-with-update": "已成功安装{{installed}}并更新了{{updated}}库。",
-                    "error": "上载档案时发生错误。"
-                },
-                "delete": {
-                    "success": "成功删除库{{title}} （ {{version}} ）。",
-                    "error": "删除库{{title}} （ {{version}} ）时出错。"
-                },
-                "get": {
-                    "error": "{{library.title}} （ {{version}} ）的详细信息时出错。"
-                }
             },
-            "upload_and_install": "上传并安装库",
-            "details": "细节",
-            "can-not-be-deleted": "该库无法删除，因为它已在{{count}}个库中使用",
-            "can-not-be-deleted_plural": "无法删除该库，因为它已在{{count}}个库中使用",
-            "library-details": {
-                "header": "图书馆资料",
-                "author": "作者",
-                "description": "描述",
-                "license": "执照",
-                "standalone": "独立内容类型",
-                "restricted": "受限制的（只能与特权一起使用）",
-                "fullscreen": "支持全屏",
-                "addon": "添加在",
-                "embedTypes": "允许的嵌入类型",
-                "dependentsCount": "使用该库的库数",
-                "instancesCount": "使用此库作为主要内容类型创建的对象",
-                "instancesAsDependencyCount": "该库被另一个库使用的对象"
-            }
-        }
-    },
-    "analytics": {
-        "startPage": {
-            "title": "鲁米分析",
-            "welcomeMessage": "Lumi的分析工具可让您导入用户报告并为您可视化它们",
-            "start": "开始",
-            "learn_more": "了解更多",
-            "open": "选择包含.lumi文件的文件夹"
+            "exportButton": "现在导出",
+            "filePicker": {
+                "buttonLabel": "导出",
+                "formatNames": {
+                    "bundle": "多合一HTML文件（.html）",
+                    "external": "HTML文件（.html）",
+                    "scorm": "SCORM文件（.zip）"
+                },
+                "title": "导出为..."
+            },
+            "format": {
+                "bundleHint": "如果您的导出文件中包含很多媒体文件，该文件对于某些计算机来说可能会太大。",
+                "bundleLabel": "多合一HTML文件",
+                "externalHint": "在下一步中，将要求您输入HTML文件的名称。媒体文件将被放入与文件名相同的文件夹中。",
+                "externalLabel": "一个HTML文件和几个媒体文件",
+                "scorm": {
+                    "errorNaN": "输入的值不是数字",
+                    "errorRange": "值必须介于0到100之间",
+                    "label": "SCORM软件包",
+                    "masteryScoreLabel": "精通分数（％）"
+                },
+                "title": "格式"
+            },
+            "reporter": {
+                "hint": "如果您添加了报告功能，则学生可以将其进度保存为文件并发送给您。",
+                "learnMoreLink": "点击此处了解详情。",
+                "scormHint": "无法将报告功能添加到SCORM课件包中。",
+                "switchLabel": "包括报告功能",
+                "title": "报告功能"
+            },
+            "title": "导出设置"
         },
-        "name": "姓名",
-        "average": "平均",
-        "searchPlaceholder": "搜索学生姓名...",
-        "brokenFiles": "损坏的文件列表",
-        "errors": {
-            "no-content-json": "H5P内容未正确添加到.lumi文件。",
-            "json-parse-error": ".lumi文件包含无效的内容（JSON未解析）。",
-            "determine-name": "无法确定学生的姓名。",
-            "invalid-interactions": "一些交互被破坏了。",
-            "invalid-statements": "一些记录的学生动作已损坏。"
+        "sidebar": {
+            "create": "新的H5P文件",
+            "noOpenFiles": "没有打开的文件",
+            "open": "打开H5P文件"
+        },
+        "startPage": {
+            "create": "创建新的H5P",
+            "open": "打开现有的H5P",
+            "start": "开始",
+            "title": "H5P编辑器",
+            "welcomeMessage": "Lumi的H5P编辑器是一个独立的应用程序，可让您查看，编辑和创建H5P。"
+        },
+        "tab": {
+            "edit": "编辑",
+            "view": "预览"
         }
     },
-    "bug_report": {
-        "title": "错误和崩溃报告",
-        "description": "发送匿名崩溃和错误报告，帮助我们改善软件和服务。",
-        "consent": "我允许该应用程序发送错误和崩溃报告。"
-    },
-    "usage_statistics": {
-        "title": "使用情况统计",
-        "description": " 通过发送匿名使用情况统计信息来帮助我们改善软件和服务。",
-        "consent": "我允许该应用程序发送匿名使用情况统计信息。"
-    },
-    "updates": {
-        "title": "自动更新",
-        "description": "自动获取最新版本。",
-        "consent": "我允许该应用程序自动检查更新。"
+    "general": {
+        "delete": "删除"
     },
     "language": {
-        "title": "语言",
         "description": "更改应用程序的语言。",
-        "help_translate": "帮助我们翻译！"
-    },
-    "privacy_policy": {
-        "title": "隐私政策",
-        "consent": "我已阅读并同意隐私政策。"
-    },
-    "setup_dialog": {
-        "description": "保护个人的隐私对我们很重要。我们仅收集您选择提供给我们的信息，并且在您的同意下我们将对其进行处理。我们希望尽可能透明。但是，Lumi依靠某些连接和数据传输来工作。",
-        "save": "救",
-        "consent_warning": "您至少需要同意隐私政策才能使用此应用程序。"
+        "help_translate": "帮助我们翻译！",
+        "title": "语言"
     },
     "menu": {
-        "quit": "辞职",
         "file": {
+            "copy": "复制",
+            "cut": "剪切",
+            "edit": "编辑",
+            "export": "导出...",
             "label": "文件",
             "open": "打开分析文件",
-            "save": "救",
-            "save_as": "另存为...",
-            "export": "出口...",
-            "edit": "编辑",
-            "undo": "撤消",
-            "redo": "准备好",
-            "cut": "切",
-            "copy": "复制",
             "paste": "粘贴",
-            "select_all": "全选"
+            "redo": "重做",
+            "save": "保存",
+            "save_as": "另存为...",
+            "select_all": "全选",
+            "undo": "撤消"
         },
         "h5peditor": {
-            "new": "新H5P",
-            "open": "开启H5P"
+            "new": "新建H5P",
+            "open": "打开H5P"
         },
         "help": {
+            "about": "关于",
+            "follow_us_on_twitter": "在推特上关注我们",
             "label": "帮助",
             "report_issue": "报告问题",
-            "toggle_developer_tools": "切换开发人员工具",
-            "follow_us_on_twitter": "在推特上关注我们",
-            "about": "关于"
+            "toggle_developer_tools": "切换开发人员工具"
         },
         "mac": {
-            "services": "服务",
-            "hide": "隐藏卢米",
+            "hide": "隐藏Lumi",
             "hideothers": "隐藏其他",
+            "services": "服务",
             "unhide": "显示所有"
         },
-        "window": {
-            "label": "窗户",
-            "show": "表演",
-            "minimize": "最小化",
-            "zoom": "飞涨",
-            "front": "一切都摆在前面",
-            "close": "关闭"
-        },
+        "quit": "退出",
         "view": {
             "label": "看法",
             "resetZoom": "真实大小",
+            "togglefullscreen": "切换全屏",
             "zoomIn": "放大",
-            "zoomOut": "缩小",
-            "togglefullscreen": "切换全屏"
+            "zoomOut": "缩小"
+        },
+        "window": {
+            "close": "关闭",
+            "front": "一切都摆在前面",
+            "label": "窗户",
+            "minimize": "最小化",
+            "show": "表演",
+            "zoom": "飞涨"
         }
     },
     "notifications": {
         "analytics": {
             "import": {
+                "brokenFiles": "找到{{count}}个损坏的文件",
+                "brokenFiles_plural": "找到了{{count}}个损坏的文件",
                 "error": "找不到有效的文件",
-                "success": "导入的报告文件",
-                "brokenFiles": "{{count}}损坏的文件",
-                "brokenFiles_plural": "{{count}}损坏的文件"
+                "success": "导入的报告文件"
             }
         },
         "h5peditor": {
-            "save": {
-                "success": "H5P保存！",
-                "error": "无法保存H5P。"
+            "export_as_html": {
+                "error": "无法导出H5P",
+                "success": "H5P成功导出"
             },
             "open": {
                 "error": "无法打开H5P。"
             },
-            "export_as_html": {
-                "success": "H5P成功导出",
-                "error": "无法导出H5P"
+            "save": {
+                "error": "无法保存H5P。",
+                "success": "H5P 已保存！"
             }
         }
     },
-    "auth": {
-        "set_email": "设定电子邮件",
-        "email": "电子邮件",
-        "code": "代码",
-        "verify_code": "验证码",
-        "verify_email": "验证邮件",
-        "notification": {
-            "success": "{{email}}已成功验证",
-            "pending": "验证码已发送至{{email}} 。请检查您的电子邮件。"
-        },
-        "error": {
-            "no-valid-email": "{{email}}不是有效的电子邮件地址。"
-        },
-        "cancel": "取消"
+    "privacy_policy": {
+        "consent": "我已阅读并同意隐私政策。",
+        "title": "隐私政策"
     },
-    "dialog": {
-        "close": "关闭"
+    "settings": {
+        "account": {
+            "email": {
+                "change": "更改电子邮件",
+                "not-set": "未设置电子邮件",
+                "title": "电子邮件"
+            },
+            "label": "帐户"
+        },
+        "appbar": {
+            "label": "设置",
+            "save": "保存"
+        },
+        "enable": "使用",
+        "general": {
+            "header": "常规"
+        },
+        "h5p-library-administration": {
+            "can-not-be-deleted": "该库无法删除，因为它已在{{count}}个其他库中使用",
+            "can-not-be-deleted_plural": "无法删除该库，因为它已在{{count}}个其他库中使用",
+            "details": "详情",
+            "header": "已安装的H5P库",
+            "library-details": {
+                "addon": "附加项",
+                "author": "作者",
+                "dependentsCount": "使用该库的库数量",
+                "description": "描述",
+                "embedTypes": "允许的嵌入类型",
+                "fullscreen": "支持全屏",
+                "header": "库详情",
+                "instancesAsDependencyCount": "该库被另一个库使用的对象",
+                "instancesCount": "使用此库作为主要内容类型创建的对象",
+                "license": "许可",
+                "restricted": "受限的（仅具有权限用户使用）",
+                "standalone": "独立内容类型"
+            },
+            "notifications": {
+                "delete": {
+                    "error": "删除库{{title}} （ {{version}} ）时出错。",
+                    "success": "成功删除库{{title}} （ {{version}} ）。"
+                },
+                "get": {
+                    "error": "获取 {{library.title}} （ {{version}} ）的详细信息时出错。"
+                },
+                "upload": {
+                    "error": "上传时发生错误。",
+                    "success-no-update": "上传成功，但未安装或更新任何库。内容类型可能已经安装在系统上。",
+                    "success-with-update": "已成功安装{{installed}}并更新了{{updated}}库。"
+                }
+            },
+            "upload_and_install": "上传并安装库"
+        },
+        "menu": {
+            "account": "帐户",
+            "general": "常规",
+            "h5p-library-administration": "H5P库",
+            "updates": "更新"
+        },
+        "updates": {
+            "header": "更新"
+        }
     },
-    "general": {
-        "delete": "删除"
+    "setup_dialog": {
+        "consent_warning": "您需要同意隐私政策才能使用此应用程序。",
+        "description": "保护个人的隐私对我们很重要。我们仅收集您选择提供给我们的信息，并且在您的同意下对其进行处理。我们希望尽可能透明。请了解，Lumi需要某些网络连接和数据传输才能正常工作。",
+        "save": "救"
+    },
+    "updates": {
+        "consent": "允许该应用程序自动检查更新。",
+        "description": "自动获取最新版本。",
+        "title": "自动更新"
+    },
+    "usage_statistics": {
+        "consent": "允许该应用程序发送匿名使用情况统计信息。",
+        "description": " 通过发送匿名使用情况统计信息来帮助我们改善软件和服务。",
+        "title": "使用情况统计"
     }
 }
