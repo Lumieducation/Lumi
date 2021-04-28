@@ -108,7 +108,30 @@ export default function FormDialog() {
         setMessage('');
     };
 
+    const handleError = async (error: superagent.ResponseError) => {
+        try {
+            const { status } = error;
+
+            switch (status) {
+                case 500:
+                    setMessage('auth.error.econnrefused');
+                    setError(true);
+                    dispatch(
+                        actions.notifications.notify(
+                            t('notifications.general.econnrefused'),
+                            'error'
+                        )
+                    );
+            }
+        } catch (error) {
+            setError(true);
+            setMessage('auth.something_went_wrong');
+        }
+    };
+
     const handleSendCode = async () => {
+        setError(false);
+        setMessage('');
         const validateEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
             String(email).toLowerCase()
         );
@@ -119,30 +142,39 @@ export default function FormDialog() {
             return;
         }
         try {
-            await superagent.post(`/api/v1/auth/register`).send({ email });
+            await superagent
+                .post(`/api/v1/auth/api/v1/auth/register`)
+                .send({ email });
             setMessage('auth.notification.pending');
             setEnterCode(true);
         } catch (error) {
-            setMessage('auth.no-valid-email');
-            setError(true);
+            handleError(error);
         }
     };
 
     const handleVerification = async () => {
-        const { body } = await superagent.post(`/api/v1/auth/login`).send({
-            code
-        });
+        try {
+            const { body } = await superagent
+                .post(`/api/v1/auth/api/v1/auth/login`)
+                .send({
+                    code
+                });
 
-        dispatch(actions.settings.changeSetting({ email, token: body.token }));
+            dispatch(
+                actions.settings.changeSetting({ email, token: body.token })
+            );
 
-        setOpen(false);
+            setOpen(false);
 
-        dispatch(
-            actions.notifications.notify(
-                t('auth.notification.success', { email }),
-                'success'
-            )
-        );
+            dispatch(
+                actions.notifications.notify(
+                    t('auth.notification.success', { email }),
+                    'success'
+                )
+            );
+        } catch (error) {
+            handleError(error);
+        }
     };
 
     return (

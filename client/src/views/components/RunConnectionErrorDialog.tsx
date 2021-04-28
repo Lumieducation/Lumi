@@ -1,6 +1,7 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import { useHistory } from 'react-router-dom';
 
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -11,7 +12,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import { TransitionProps } from '@material-ui/core/transitions';
 
-import { IState } from '../../state';
+import { actions, IState } from '../../state';
 
 const Transition = React.forwardRef(function Transition(
     props: TransitionProps & { children?: React.ReactElement<any, any> },
@@ -22,12 +23,15 @@ const Transition = React.forwardRef(function Transition(
 
 export default function RunConnectionErrorDialog() {
     const { t } = useTranslation();
+    const history = useHistory();
+    const dispatch = useDispatch();
     const open = useSelector(
         (state: IState) => state.run.showConnectionErrorDialog
     );
 
     const close = () => {
-        console.log('do');
+        dispatch(actions.run.updateState({ showConnectionErrorDialog: false }));
+        history.push('/');
     };
 
     return (

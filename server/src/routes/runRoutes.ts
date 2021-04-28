@@ -17,7 +17,7 @@ import LumiController from '../controllers/LumiController';
 
 import { io as websocket } from '../websocket';
 
-const run_host = process.env.RUN_HOST || 'https://lumi.run';
+const run_host = process.env.LUMI_HOST || 'https://lumi.run';
 
 export default function (
     serverConfig: IServerConfig,

@@ -16,7 +16,8 @@
             "pending": "A verification code has been send to {{email}}. Please check your emails."
         },
         "error": {
-            "no-valid-email": "{{email}} is not a valid email address."
+            "no-valid-email": "{{email}} is not a valid email address.",
+            "econnrefused": "Could not contact Lumi Auth server. Please check your internet connection."
         },
         "cancel": "Cancel"
     },
@@ -34,6 +35,13 @@
             "processing": "Processing",
             "buttons": {
                 "go_to_run": "Go to runs",
+                "ok": "Ok"
+            }
+        },
+        "dialog": {
+            "error": {
+                "title": "Lumi Run Error",
+                "description": "An error occured while trying to connect to https://Lumi.run. Make sure that you have internet connection and Lumi has access to it.",
                 "ok": "Ok"
             }
         }
@@ -255,6 +263,9 @@
         }
     },
     "notifications": {
+        "general": {
+            "econnrefused": "There seems to be a problem with your internet connection."
+        },
         "analytics": {
             "import": {
                 "error": "No valid files found",
