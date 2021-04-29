@@ -18,7 +18,7 @@ import LumiController from '../controllers/LumiController';
 import { io as websocket } from '../websocket';
 import LumiError from '../helpers/LumiError';
 
-const run_host = process.env.LUMI_HOST || 'https://lumi.run';
+const runHost = process.env.LUMI_HOST || 'https://lumi.run';
 
 export default function (
     serverConfig: IServerConfig,
@@ -42,7 +42,7 @@ export default function (
             let filePath: string =
                 req.query.filePath && `${req.query.filePath}`;
 
-            let contentId = req.body.contentId;
+            const contentId = req.body.contentId;
 
             if (!contentId) {
                 if (!filePath) {
@@ -77,7 +77,7 @@ export default function (
 
             try {
                 const response = await superagent
-                    .post(`${run_host}/api/v1/run`)
+                    .post(`${runHost}/api/v1/run`)
                     .set('x-auth', settingsCache.getSettings().token)
                     .attach('h5p', filePath)
                     .on('progress', (event) => {
@@ -122,7 +122,7 @@ export default function (
             }
             next();
         },
-        proxy(run_host)
+        proxy(runHost)
     );
 
     return router;

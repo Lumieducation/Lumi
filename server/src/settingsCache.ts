@@ -1,13 +1,13 @@
 interface ISettingsState {
     autoUpdates: boolean;
     bugTracking: boolean;
+    email: string;
     firstOpen: boolean;
     language: string;
     lastVersion: string;
     privacyPolicyConsent: boolean;
-    usageStatistics: boolean;
-    email: string;
     token: string;
+    usageStatistics: boolean;
 }
 
 import defaultSettings from './boot/defaultSettings';
