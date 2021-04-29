@@ -21,17 +21,32 @@ const Transition = React.forwardRef(function Transition(
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function RunConnectionErrorDialog() {
+export default function ErrorDialog() {
     const { t } = useTranslation();
     const history = useHistory();
     const dispatch = useDispatch();
     const open = useSelector(
-        (state: IState) => state.run.showConnectionErrorDialog
+        (state: IState) => state.notifications.showErrorDialog
+    );
+
+    const code = useSelector(
+        (state: IState) => state.notifications.error?.code
+    );
+
+    const message = useSelector(
+        (state: IState) => state.notifications.error?.message
+    );
+
+    const redirect = useSelector(
+        (state: IState) => state.notifications.error.redirect
     );
 
     const close = () => {
-        dispatch(actions.run.updateState({ showConnectionErrorDialog: false }));
-        history.push('/');
+        dispatch(actions.notifications.closeErrorDialog());
+
+        if (redirect) {
+            history.push(redirect);
+        }
     };
 
     return (
@@ -40,15 +55,13 @@ export default function RunConnectionErrorDialog() {
             TransitionComponent={Transition}
             keepMounted
             onClose={close}
-            aria-labelledby="runconnectionerrordialog-title"
-            aria-describedby="runconnectionerrordialog-description"
+            aria-labelledby="errordialog-title"
+            aria-describedby="errordialog-description"
         >
-            <DialogTitle id="runconnectionerrordialog-title">
-                {t('run.dialog.error.title')}
-            </DialogTitle>
+            <DialogTitle id="errorialog-title">{t(code)}</DialogTitle>
             <DialogContent>
-                <DialogContentText id="runconnectionerrordialog-description">
-                    {t('run.dialog.error.description')}
+                <DialogContentText id="errordialog-description">
+                    {t(message)}
                 </DialogContentText>
             </DialogContent>
             <DialogActions>

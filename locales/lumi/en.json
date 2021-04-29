@@ -3,7 +3,14 @@
         "close": "Close"
     },
     "general": {
-        "delete": "Delete"
+        "delete": "Delete",
+        "copy_clipboard": "Copied {{value}} to clipboard"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Connection Refused"
+        },
+        "messages": { "econnrefused": "Connection Refused" }
     },
     "auth": {
         "set_email": "Set Email",
@@ -29,6 +36,11 @@
             "description": "I have read and consent to the terms of service."
         },
         "link": "Link",
+        "upload": "Upload",
+        "list": {
+            "header": "Uploaded H5P",
+            "no-uploaded-h5p": "No uploaded H5P"
+        },
         "upload_dialog": {
             "success": "Your H5P was uploaded to Lumi.run. You can access and share it with the following link.",
             "uploading": "Uploading",
@@ -43,6 +55,15 @@
                 "title": "Lumi Run Error",
                 "description": "An error occured while trying to connect to https://Lumi.run. Make sure that you have internet connection and Lumi has access to it.",
                 "ok": "Ok"
+            }
+        },
+
+        "notifications": {
+            "delete": {
+                "success": "Successfully deleted {{id}} from Lumi.run"
+            },
+            "upload": {
+                "success": "Successfully uploaded H5P to Lumi.run"
             }
         }
     },

@@ -6,7 +6,8 @@ import {
     RunActionTypes,
     RUN_UPLOAD_SUCCESS,
     RUN_UPLOAD_REQUEST,
-    RUN_UPDATE_STATE
+    RUN_UPDATE_STATE,
+    RUN_UPLOAD_ERROR
 } from './RunTypes';
 
 export const initialState: IRunState = {
@@ -33,7 +34,7 @@ export default function runReducer(
                 return {
                     ...state,
                     uploadProgress: {
-                        state: 'not_started',
+                        state: 'pending',
                         progress: 0,
                         id: undefined
                     }
@@ -43,6 +44,12 @@ export default function runReducer(
                 return {
                     ...state,
                     runs: action.payload
+                };
+
+            case RUN_UPLOAD_ERROR:
+                return {
+                    ...state,
+                    showConnectionErrorDialog: true
                 };
 
             case RUN_UPDATE_STATE:
@@ -57,7 +64,7 @@ export default function runReducer(
                     uploadProgress: {
                         state: 'success',
                         progress: 100,
-                        id: action.payload.contentId
+                        id: action.payload.id
                     }
                 };
             // case 'RUN_UPDATE_UPLOAD_PROGRESS':

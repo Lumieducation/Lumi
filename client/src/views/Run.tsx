@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-
+import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { actions } from '../state';
 
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
@@ -13,8 +12,6 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
 import RunList from './components/RunList';
 
-import RunSetupDialog from './components/RunSetupDialog';
-import RunConnectionErrorDialog from './components/RunConnectionErrorDialog';
 import { RUN_GET_RUNS_ERROR, RUN_NOT_AUTHORIZED } from '../state/Run/RunTypes';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -40,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function FolderList() {
     const classes = useStyles();
     const dispatch = useDispatch();
-    const history = useHistory();
+    const { t } = useTranslation();
 
     useEffect(() => {
         dispatch(actions.run.getRuns()).then((action: any) => {
@@ -49,7 +46,11 @@ export default function FolderList() {
             }
             if (action.type === RUN_GET_RUNS_ERROR) {
                 dispatch(
-                    actions.run.updateState({ showConnectionErrorDialog: true })
+                    actions.notifications.showErrorDialog(
+                        'errors.codes.econnrefused',
+                        'run.dialog.error.description',
+                        '/'
+                    )
                 );
             }
         });
@@ -75,7 +76,7 @@ export default function FolderList() {
                         color="primary"
                         startIcon={<CloudUploadIcon />}
                     >
-                        Upload
+                        {t('run.upload')}
                     </Button>
                 </Grid>
             </Grid>

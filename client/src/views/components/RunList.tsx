@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import { IState } from '../../state';
 
@@ -10,7 +11,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Divider from '@material-ui/core/Divider';
 
-import TextField from '@material-ui/core/TextField';
 import DeleteIcon from '@material-ui/icons/Delete';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import IconButton from '@material-ui/core/IconButton';
@@ -39,15 +39,18 @@ export default function FolderList(props: {
 }) {
     const classes = useStyles();
     const runs = useSelector((state: IState) => state.run.runs);
+    const { t } = useTranslation();
 
     return (
         <List
-            subheader={<ListSubheader>Uploaded H5P</ListSubheader>}
+            subheader={<ListSubheader>{t('run.list.header')}</ListSubheader>}
             className={classes.root}
         >
             {runs.length === 0 && (
                 <ListItem>
-                    <ListItemText primary={'no uploaded H5P'}></ListItemText>
+                    <ListItemText
+                        primary={t('run.list.no-uploaded-h5p')}
+                    ></ListItemText>
                 </ListItem>
             )}
             {runs.map((run) => (

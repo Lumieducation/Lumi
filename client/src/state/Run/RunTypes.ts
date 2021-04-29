@@ -70,7 +70,7 @@ export interface IRunUploadRequestAction {
 
 export interface IRunUploadSuccessAction {
     payload: {
-        contentId: ContentId;
+        id: ContentId;
     };
     type: typeof RUN_UPLOAD_SUCCESS;
 }

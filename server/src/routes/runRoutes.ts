@@ -16,6 +16,7 @@ import settingsCache from '../settingsCache';
 import LumiController from '../controllers/LumiController';
 
 import { io as websocket } from '../websocket';
+import LumiError from '../helpers/LumiError';
 
 const run_host = process.env.LUMI_HOST || 'https://lumi.run';
 
@@ -99,12 +100,17 @@ export default function (
                 if (contentId) {
                     await fs.unlink(filePath);
                 }
-                return res.status(200).json(response.body);
+                res.status(200).json(response.body);
             } catch (error) {
-                Sentry.captureException(error);
+                res.status(error.status || 500).json(
+                    new LumiError(
+                        error.code,
+                        error.message,
+                        error.status,
+                        error
+                    )
+                );
             }
-
-            res.status(200).end();
         }
     );
 
@@ -120,14 +126,4 @@ export default function (
     );
 
     return router;
-}
-
-function getUbernameFromH5pJson(h5pJson: H5P.IContentMetadata): string {
-    const library = (h5pJson.preloadedDependencies || []).find(
-        (dependency) => dependency.machineName === h5pJson.mainLibrary
-    );
-    if (!library) {
-        return '';
-    }
-    return H5P.LibraryName.toUberName(library, { useWhitespace: true });
 }

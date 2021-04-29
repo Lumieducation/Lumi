@@ -22,7 +22,7 @@ import SetupDialog from './components/SetupDialog';
 import Backdrop from './components/Backdrop';
 import Websocket from './Websocket';
 import RunSetupDialog from './components/RunSetupDialog';
-import RunConnectionErrorDialog from './components/RunConnectionErrorDialog';
+import ErrorDialog from './components/ErrorDialog';
 
 import { actions } from '../state';
 
@@ -70,7 +70,7 @@ export default function AppContainer() {
                 <SetupDialog />
                 <RunUploadDialog />
                 <RunSetupDialog />
-                <RunConnectionErrorDialog />
+                <ErrorDialog />
             </Router>
             <Notifications />
 

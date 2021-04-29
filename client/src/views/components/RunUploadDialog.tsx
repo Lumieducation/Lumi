@@ -15,21 +15,13 @@ import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import MuiDialogContent from '@material-ui/core/DialogContent';
 import MuiDialogActions from '@material-ui/core/DialogActions';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
-import DoneIcon from '@material-ui/icons/Done';
-
-import ErrorIcon from '@material-ui/icons/Error';
 import { actions, IState } from '../../state';
-import CircularProgress, {
-    CircularProgressProps
-} from '@material-ui/core/CircularProgress';
-import Box from '@material-ui/core/Box';
+
 import RunLink from './RunLink';
 
 // import { Link, useHistory } from 'react-router-dom';
@@ -55,23 +47,13 @@ const styles = (theme: Theme) =>
 export interface DialogTitleProps extends WithStyles<typeof styles> {
     id: string;
     children: React.ReactNode;
-    onClose: () => void;
 }
 
 const DialogTitle = withStyles(styles)((props: DialogTitleProps) => {
-    const { children, classes, onClose, ...other } = props;
+    const { children, classes, ...other } = props;
     return (
         <MuiDialogTitle disableTypography className={classes.root} {...other}>
             <Typography variant="h6">{children}</Typography>
-            {onClose ? (
-                <IconButton
-                    aria-label="close"
-                    className={classes.closeButton}
-                    onClick={onClose}
-                >
-                    <CloseIcon />
-                </IconButton>
-            ) : null}
         </MuiDialogTitle>
     );
 });
@@ -106,29 +88,8 @@ export default function CustomizedDialogs() {
     };
 
     return (
-        <Dialog
-            onClose={() =>
-                dispatch(
-                    actions.run.updateState({
-                        showUploadDialog: false
-                    })
-                )
-            }
-            aria-labelledby="customized-dialog-title"
-            open={showDialog}
-        >
-            <DialogTitle
-                id="customized-dialog-title"
-                onClose={() =>
-                    dispatch(
-                        actions.run.updateState({
-                            showUploadDialog: false
-                        })
-                    )
-                }
-            >
-                Lumi Run
-            </DialogTitle>
+        <Dialog aria-labelledby="customized-dialog-title" open={showDialog}>
+            <DialogTitle id="run-upload-dialog-title">Lumi Run</DialogTitle>
             <DialogContent dividers>
                 {uploadProgress.id && (
                     <div>
@@ -157,7 +118,15 @@ export default function CustomizedDialogs() {
                 )}
             </DialogContent>
             <DialogActions>
-                <Button onClick={goToRun} autoFocus color="secondary">
+                <Button
+                    onClick={goToRun}
+                    autoFocus
+                    color="secondary"
+                    disabled={
+                        uploadProgress.state === 'pending' ||
+                        uploadProgress.state === 'processing'
+                    }
+                >
                     {t('run.upload_dialog.buttons.go_to_run')}
                 </Button>
 
@@ -170,6 +139,10 @@ export default function CustomizedDialogs() {
                         )
                     }
                     autoFocus
+                    disabled={
+                        uploadProgress.state === 'pending' ||
+                        uploadProgress.state === 'processing'
+                    }
                     color="primary"
                 >
                     {t('run.upload_dialog.buttons.ok')}

@@ -1,19 +1,18 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
 
 import clsx from 'clsx';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
-import Input from '@material-ui/core/Input';
-import FilledInput from '@material-ui/core/FilledInput';
+
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import InputLabel from '@material-ui/core/InputLabel';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
-import TextField from '@material-ui/core/TextField';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 
+import { actions } from '../../state';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
@@ -35,6 +34,7 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function RunLink(props: { id: string }) {
     const classes = useStyles();
     const { t } = useTranslation();
+    const dispatch = useDispatch();
 
     return (
         <FormControl
@@ -50,7 +50,23 @@ export default function RunLink(props: { id: string }) {
                 value={`https://Lumi.run/${props.id}`}
                 endAdornment={
                     <InputAdornment position="end">
-                        <IconButton aria-label="run link" edge="end">
+                        <IconButton
+                            aria-label="run link"
+                            edge="end"
+                            onClick={() => {
+                                navigator.clipboard.writeText(
+                                    `https://Lumi.run/${props.id}`
+                                );
+                                dispatch(
+                                    actions.notifications.notify(
+                                        t('general.copy_clipboard', {
+                                            value: `https://Lumi.run/${props.id}`
+                                        }),
+                                        'success'
+                                    )
+                                );
+                            }}
+                        >
                             <FileCopyIcon />
                         </IconButton>
                     </InputAdornment>

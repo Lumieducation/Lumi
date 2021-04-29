@@ -20,7 +20,7 @@ import {
 import store from '../../state';
 
 import { updateContentOnServer } from '../H5PEditor/H5PEditorActions';
-import { notify } from '../Notifications/NotificationsActions';
+import { notify, showErrorDialog } from '../Notifications/NotificationsActions';
 
 import * as API from './RunAPI';
 
@@ -95,14 +95,24 @@ export function upload(options?: { path?: string; contentId?: string }) {
                 );
                 dispatch(getRuns());
             } catch (error) {
-                Sentry.captureException(error);
+                if (error.status !== 499) {
+                    Sentry.captureException(error);
 
+                    dispatch(
+                        showErrorDialog(
+                            'errors.codes.econnrefused',
+                            'run.dialog.error.description'
+                        )
+                    );
+
+                    dispatch({
+                        payload: { error },
+                        type: RUN_UPLOAD_ERROR
+                    });
+                }
+
+                // user canceled electrons openfile dialog
                 dispatch(updateState({ showUploadDialog: false }));
-
-                dispatch({
-                    payload: { error },
-                    type: RUN_UPLOAD_ERROR
-                });
             }
         } catch (error) {
             Sentry.captureException(error);
@@ -126,6 +136,12 @@ export function deleteFromRun(id: string): any {
                     type: RUN_DELETE_SUCCESS
                 });
                 dispatch(getRuns());
+                dispatch(
+                    notify(
+                        i18next.t('run.notifications.delete.success', { id }),
+                        'success'
+                    )
+                );
             } catch (error) {
                 Sentry.captureException(error);
 

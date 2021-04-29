@@ -3,7 +3,7 @@ export type ErrorCodes = 'user-abort' | 'h5p-not-found';
 export default class LumiError {
     constructor(
         code: ErrorCodes,
-        message?: string,
+        message: string,
         status: number = 500,
         error?: Error
     ) {
