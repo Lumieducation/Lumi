@@ -1,3 +1,0 @@
-# Languages
-
--   [Deutsch](de/)
