@@ -54,20 +54,23 @@ export default function FolderList(props: {
                 </ListItem>
             )}
             {runs.map((run) => (
-                <div key={run.id}>
+                <div key={run.runId}>
                     <Divider variant="inset" component="li" />
 
                     <ListItem>
                         <ListItemAvatar>
                             <H5PAvatar mainLibrary={run.mainLibrary} />
                         </ListItemAvatar>
-                        <ListItemText primary={run.title} secondary={run.id} />
+                        <ListItemText
+                            primary={run.title}
+                            secondary={run.runId}
+                        />
                         <div className={classes.center}>
-                            <RunLink id={run.id} />
+                            <RunLink id={run.runId} />
                         </div>
                         <ListItemSecondaryAction>
                             <IconButton
-                                onClick={() => props.deleteCallback(run.id)}
+                                onClick={() => props.deleteCallback(run.runId)}
                                 edge="end"
                                 aria-label="delete"
                             >

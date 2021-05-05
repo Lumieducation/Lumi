@@ -32,6 +32,63 @@ export default function (
         browserWindow
     );
 
+    router.get(
+        '/',
+        async (
+            req: express.Request,
+            res: express.Response,
+            next: express.NextFunction
+        ) => {
+            try {
+                const { body } = await superagent
+                    .get(`${runHost}/api/v1/run`)
+                    .set('x-auth', settingsCache.getSettings().token || '');
+
+                res.status(200).json(body);
+            } catch (error) {
+                res.status(error.status || 500).json(error.response?.body);
+            }
+        }
+    );
+
+    router.delete(
+        '/:runId',
+        async (
+            req: express.Request,
+            res: express.Response,
+            next: express.NextFunction
+        ) => {
+            try {
+                const { body } = await superagent
+                    .delete(`${runHost}/api/v1/run/${req.params.runId}`)
+                    .set('x-auth', settingsCache.getSettings().token);
+
+                res.status(200).json(body);
+            } catch (error) {
+                res.status(500).json(error);
+            }
+        }
+    );
+
+    router.post(
+        '/consent',
+        async (
+            req: express.Request,
+            res: express.Response,
+            next: express.NextFunction
+        ) => {
+            try {
+                const { body } = await superagent
+                    .post(`${runHost}/api/v1/run/consent`)
+                    .set('x-auth', settingsCache.getSettings().token);
+
+                res.status(200).json(body);
+            } catch (error) {
+                res.status(500).json(error);
+            }
+        }
+    );
+
     router.post(
         '/',
         async (
@@ -102,27 +159,9 @@ export default function (
                 }
                 res.status(200).json(response.body);
             } catch (error) {
-                res.status(error.status || 500).json(
-                    new LumiError(
-                        error.code,
-                        error.message,
-                        error.status,
-                        error
-                    )
-                );
+                res.status(error.status || 500).json(error.response?.body);
             }
         }
-    );
-
-    router.use(
-        '/',
-        (req, res, next) => {
-            if (settingsCache.getSettings().token) {
-                req.headers['x-auth'] = settingsCache.getSettings().token;
-            }
-            next();
-        },
-        proxy(runHost)
     );
 
     return router;

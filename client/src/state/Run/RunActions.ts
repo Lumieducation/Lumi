@@ -100,7 +100,7 @@ export function upload(options?: { path?: string; contentId?: string }) {
 
                     dispatch(
                         showErrorDialog(
-                            'errors.codes.econnrefused',
+                            error.code || 'errors.codes.econnrefused',
                             'run.dialog.error.description'
                         )
                     );

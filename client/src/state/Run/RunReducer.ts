@@ -36,7 +36,7 @@ export default function runReducer(
                     uploadProgress: {
                         state: 'pending',
                         progress: 0,
-                        id: undefined
+                        runId: undefined
                     }
                 };
             case RUN_GET_RUNS_SUCCESS:
@@ -64,7 +64,7 @@ export default function runReducer(
                     uploadProgress: {
                         state: 'success',
                         progress: 100,
-                        id: action.payload.id
+                        runId: action.payload.runId
                     }
                 };
             // case 'RUN_UPDATE_UPLOAD_PROGRESS':

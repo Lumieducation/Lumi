@@ -2,7 +2,7 @@ import { ContentId } from '@lumieducation/h5p-server';
 import { IGetSettingsErrorAction } from '../Settings/SettingsTypes';
 
 export interface IRun {
-    id: string;
+    runId: string;
     title: string;
     mainLibrary: string;
 }
@@ -19,7 +19,7 @@ export interface IRunState {
     showConnectionErrorDialog: boolean;
     showUploadDialog: boolean;
     uploadProgress: {
-        id?: string;
+        runId?: string;
         state: uploadProgressStates;
         progress: number;
     };
@@ -70,7 +70,7 @@ export interface IRunUploadRequestAction {
 
 export interface IRunUploadSuccessAction {
     payload: {
-        id: ContentId;
+        runId: ContentId;
     };
     type: typeof RUN_UPLOAD_SUCCESS;
 }

@@ -91,12 +91,12 @@ export default function CustomizedDialogs() {
         <Dialog aria-labelledby="customized-dialog-title" open={showDialog}>
             <DialogTitle id="run-upload-dialog-title">Lumi Run</DialogTitle>
             <DialogContent dividers>
-                {uploadProgress.id && (
+                {uploadProgress.runId && (
                     <div>
                         {t('run.upload_dialog.success')}
                         <List>
                             <ListItem>
-                                <RunLink id={uploadProgress.id} />
+                                <RunLink id={uploadProgress.runId} />
                             </ListItem>
                         </List>
                     </div>
@@ -110,7 +110,7 @@ export default function CustomizedDialogs() {
                         />
                     </div>
                 )}
-                {uploadProgress.progress === 100 && !uploadProgress.id && (
+                {uploadProgress.progress === 100 && !uploadProgress.runId && (
                     <div>
                         {t('run.upload_dialog.processing')}
                         <LinearProgress variant="indeterminate" />

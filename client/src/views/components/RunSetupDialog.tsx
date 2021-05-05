@@ -110,7 +110,7 @@ export default function CustomizedDialogs() {
 
     const handleConsent = async () => {
         try {
-            await superagent.post(`/api/run/api/v1/run/consent`);
+            await superagent.post(`/api/run/consent`);
             dispatch(actions.run.updateState({ showSetupDialog: false }));
             // props.close(false);
         } catch (error) {
