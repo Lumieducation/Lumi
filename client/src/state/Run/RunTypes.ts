@@ -47,7 +47,9 @@ export interface IGetRunsRequestAction {
 }
 
 export interface IGetRunsSuccessAction {
-    payload: IRun[];
+    payload: {
+        runList: IRun[];
+    };
     type: typeof RUN_GET_RUNS_SUCCESS;
 }
 export interface IGetRunsErrorAction {

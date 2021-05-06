@@ -43,7 +43,7 @@ export default function runReducer(
                 // case RUN_UPLOAD_SUCCESS:
                 return {
                     ...state,
-                    runs: action.payload
+                    runs: action.payload.runList
                 };
 
             case RUN_UPLOAD_ERROR:

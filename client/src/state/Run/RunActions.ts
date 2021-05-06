@@ -33,10 +33,10 @@ export function getRuns(): any {
             });
 
             try {
-                const runs = await API.getRuns();
+                const runResponse = await API.getRuns();
 
                 return dispatch({
-                    payload: runs,
+                    payload: runResponse,
                     type: RUN_GET_RUNS_SUCCESS
                 });
             } catch (error) {
