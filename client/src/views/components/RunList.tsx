@@ -16,6 +16,13 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import IconButton from '@material-ui/core/IconButton';
 import H5PAvatar from './H5PAvatar';
 import ListSubheader from '@material-ui/core/ListSubheader';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+
 import RunLink from './RunLink';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -41,45 +48,91 @@ export default function FolderList(props: {
     const runs = useSelector((state: IState) => state.run.runs);
     const { t } = useTranslation();
 
-    return (
-        <List
-            subheader={<ListSubheader>{t('run.list.header')}</ListSubheader>}
-            className={classes.root}
-        >
-            {runs.length === 0 && (
-                <ListItem>
-                    <ListItemText
-                        primary={t('run.list.no-uploaded-h5p')}
-                    ></ListItemText>
-                </ListItem>
-            )}
-            {runs.map((run) => (
-                <div key={run.runId}>
-                    <Divider variant="inset" component="li" />
+    const [showDeleteDialog, setShowDeleteDialog] = React.useState(false);
+    const [runIdToDelete, setRunIdToDelete] = React.useState('');
 
+    return (
+        <div>
+            <List
+                subheader={
+                    <ListSubheader>{t('run.list.header')}</ListSubheader>
+                }
+                className={classes.root}
+            >
+                {runs.length === 0 && (
                     <ListItem>
-                        <ListItemAvatar>
-                            <H5PAvatar mainLibrary={run.mainLibrary} />
-                        </ListItemAvatar>
                         <ListItemText
-                            primary={run.title}
-                            secondary={run.runId}
-                        />
-                        <div className={classes.center}>
-                            <RunLink id={run.runId} />
-                        </div>
-                        <ListItemSecondaryAction>
-                            <IconButton
-                                onClick={() => props.deleteCallback(run.runId)}
-                                edge="end"
-                                aria-label="delete"
-                            >
-                                <DeleteIcon />
-                            </IconButton>
-                        </ListItemSecondaryAction>
+                            primary={t('run.list.no-uploaded-h5p')}
+                        ></ListItemText>
                     </ListItem>
-                </div>
-            ))}
-        </List>
+                )}
+                {runs.map((run) => (
+                    <div key={run.runId}>
+                        <Divider variant="inset" component="li" />
+
+                        <ListItem>
+                            <ListItemAvatar>
+                                <H5PAvatar mainLibrary={run.mainLibrary} />
+                            </ListItemAvatar>
+                            <ListItemText
+                                primary={run.title}
+                                secondary={run.runId}
+                            />
+                            <div className={classes.center}>
+                                <RunLink id={run.runId} />
+                            </div>
+                            <ListItemSecondaryAction>
+                                <IconButton
+                                    onClick={() => {
+                                        setRunIdToDelete(run.runId);
+                                        setShowDeleteDialog(true);
+                                    }}
+                                    edge="end"
+                                    aria-label="delete"
+                                >
+                                    <DeleteIcon />
+                                </IconButton>
+                            </ListItemSecondaryAction>
+                        </ListItem>
+                    </div>
+                ))}
+            </List>
+
+            <Dialog
+                open={showDeleteDialog}
+                onClose={() => setShowDeleteDialog(false)}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogTitle id="alert-dialog-title">
+                    {t('run.dialog.delete.title', { runId: runIdToDelete })}
+                </DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        {t('run.dialog.delete.description', {
+                            runId: runIdToDelete
+                        })}
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button
+                        onClick={() => setShowDeleteDialog(false)}
+                        color="primary"
+                    >
+                        {t('run.dialog.delete.cancel')}
+                    </Button>
+                    <Button
+                        onClick={() => {
+                            props.deleteCallback(runIdToDelete);
+                            setShowDeleteDialog(true);
+                        }}
+                        color="primary"
+                        autoFocus
+                    >
+                        {t('run.dialog.delete.confirm')}
+                    </Button>
+                </DialogActions>
+            </Dialog>
+        </div>
     );
 }

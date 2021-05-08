@@ -18,9 +18,13 @@
         "code": "Code",
         "verify_code": "Verify Code",
         "verify_email": "Verify Email",
+        "logout": "Logout",
         "notification": {
             "success": "{{email}} has been successfully validated",
-            "pending": "A verification code has been send to {{email}}. Please check your emails."
+            "pending": "A verification code has been send to {{email}}. Please check your emails.",
+            "logout": {
+                "success": "Your were logged out."
+            }
         },
         "error": {
             "no-valid-email": "{{email}} is not a valid email address.",
@@ -55,6 +59,12 @@
                 "title": "Lumi Run Error",
                 "description": "An error occured while trying to connect to https://Lumi.run. Make sure that you have internet connection and Lumi has access to it.",
                 "ok": "Ok"
+            },
+            "delete": {
+                "title": "Delete Run {{runId}}",
+                "description": "Do you really want to delete run {{runId}}",
+                "cancel": "Cancel",
+                "confirm": "Confirm"
             }
         },
 
