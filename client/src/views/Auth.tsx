@@ -122,11 +122,42 @@ export default function FormDialog() {
                             'error'
                         )
                     );
+                    break;
+                default:
+                    dispatch(
+                        actions.settings.changeSetting({
+                            token: undefined,
+                            email: undefined
+                        })
+                    );
+
+                    dispatch(
+                        actions.notifications.notify(
+                            t('auth.notification.logout.success'),
+                            'success'
+                        )
+                    );
             }
         } catch (error) {
             setError(true);
             setMessage('auth.something_went_wrong');
         }
+    };
+
+    const handleLogout = async () => {
+        dispatch(
+            actions.settings.changeSetting({
+                token: undefined,
+                email: undefined
+            })
+        );
+
+        dispatch(
+            actions.notifications.notify(
+                t('auth.notification.logout.success'),
+                'success'
+            )
+        );
     };
 
     const handleSendCode = async () => {
@@ -180,9 +211,13 @@ export default function FormDialog() {
     return (
         <div>
             {settings.email ? (
-                <IconButton color="secondary" onClick={handleClickOpen}>
-                    <CheckIcon />
-                </IconButton>
+                <Button
+                    variant="outlined"
+                    color="primary"
+                    onClick={handleLogout}
+                >
+                    {t('auth.logout')}
+                </Button>
             ) : (
                 <Button
                     variant="outlined"
