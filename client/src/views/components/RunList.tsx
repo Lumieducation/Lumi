@@ -1,17 +1,13 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
-import { IState } from '../../state';
-
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
+
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Divider from '@material-ui/core/Divider';
-
-import DeleteIcon from '@material-ui/icons/Delete';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import IconButton from '@material-ui/core/IconButton';
 import H5PAvatar from './H5PAvatar';
@@ -23,7 +19,15 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
+import DeleteIcon from '@material-ui/icons/Delete';
+
 import RunLink from './RunLink';
+
+export interface IRun {
+    runId: string;
+    title: string;
+    mainLibrary: string;
+}
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -41,12 +45,14 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-export default function FolderList(props: {
-    deleteCallback: (id: string) => void;
+export default function RunList(props: {
+    runs: IRun[];
+    onDelete: (runId: string) => void;
+    onCopy: (runId: string) => void;
 }) {
     const classes = useStyles();
-    const runs = useSelector((state: IState) => state.run.runs);
     const { t } = useTranslation();
+    const { runs } = props;
 
     const [showDeleteDialog, setShowDeleteDialog] = React.useState(false);
     const [runIdToDelete, setRunIdToDelete] = React.useState('');
@@ -79,7 +85,7 @@ export default function FolderList(props: {
                                 secondary={run.runId}
                             />
                             <div className={classes.center}>
-                                <RunLink id={run.runId} />
+                                <RunLink runId={run.runId} {...props} />
                             </div>
                             <ListItemSecondaryAction>
                                 <IconButton
@@ -105,11 +111,11 @@ export default function FolderList(props: {
                 aria-describedby="alert-dialog-description"
             >
                 <DialogTitle id="alert-dialog-title">
-                    {t('run.dialog.delete.title', { runId: runIdToDelete })}
+                    {t('run.list.deleteDialog.title', { runId: runIdToDelete })}
                 </DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-description">
-                        {t('run.dialog.delete.description', {
+                        {t('run.list.deleteDialog.description', {
                             runId: runIdToDelete
                         })}
                     </DialogContentText>
@@ -119,17 +125,17 @@ export default function FolderList(props: {
                         onClick={() => setShowDeleteDialog(false)}
                         color="primary"
                     >
-                        {t('run.dialog.delete.cancel')}
+                        {t('run.list.deleteDialog.cancel')}
                     </Button>
                     <Button
                         onClick={() => {
-                            props.deleteCallback(runIdToDelete);
+                            props.onDelete(runIdToDelete);
                             setShowDeleteDialog(true);
                         }}
                         color="primary"
                         autoFocus
                     >
-                        {t('run.dialog.delete.confirm')}
+                        {t('run.list.deleteDialog.confirm')}
                     </Button>
                 </DialogActions>
             </Dialog>

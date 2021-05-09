@@ -1,18 +1,17 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { useDispatch } from 'react-redux';
 
 import clsx from 'clsx';
+
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
-
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import InputLabel from '@material-ui/core/InputLabel';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import FormControl from '@material-ui/core/FormControl';
+
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 
-import { actions } from '../../state';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
@@ -31,10 +30,13 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-export default function RunLink(props: { id: string }) {
+export default function RunLink(props: {
+    runId: string;
+    onCopy: (runId: string) => void;
+}) {
     const classes = useStyles();
     const { t } = useTranslation();
-    const dispatch = useDispatch();
+    const { runId, onCopy } = props;
 
     return (
         <FormControl
@@ -42,30 +44,17 @@ export default function RunLink(props: { id: string }) {
             variant="outlined"
         >
             <InputLabel htmlFor="outlined-adornment-link">
-                {t('run.link')}
+                {t('run.link.header')}
             </InputLabel>
             <OutlinedInput
-                id="outlined-adornment-link"
-                // type={values.showPassword ? 'text' : 'password'}
-                value={`https://Lumi.run/${props.id}`}
+                id={`run-link-${runId}`}
+                value={`https://Lumi.run/${runId}`}
                 endAdornment={
                     <InputAdornment position="end">
                         <IconButton
                             aria-label="run link"
                             edge="end"
-                            onClick={() => {
-                                navigator.clipboard.writeText(
-                                    `https://Lumi.run/${props.id}`
-                                );
-                                dispatch(
-                                    actions.notifications.notify(
-                                        t('general.copy_clipboard', {
-                                            value: `https://Lumi.run/${props.id}`
-                                        }),
-                                        'success'
-                                    )
-                                );
-                            }}
+                            onClick={() => onCopy(runId)}
                         >
                             <FileCopyIcon />
                         </IconButton>

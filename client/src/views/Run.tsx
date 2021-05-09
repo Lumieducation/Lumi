@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { actions } from '../state';
 
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
 
@@ -13,6 +12,7 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import RunList from './components/RunList';
 
 import { RUN_GET_RUNS_ERROR, RUN_NOT_AUTHORIZED } from '../state/Run/RunTypes';
+import { actions, IState } from '../state';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -34,10 +34,11 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-export default function FolderList() {
+export default function RunContainer() {
     const classes = useStyles();
     const dispatch = useDispatch();
     const { t } = useTranslation();
+    const runs = useSelector((state: IState) => state.run.runs);
 
     useEffect(() => {
         dispatch(actions.run.getRuns()).then((action: any) => {
@@ -54,15 +55,27 @@ export default function FolderList() {
                 );
             }
         });
-    });
+    }, [dispatch]);
+
+    const onCopy = (runId: string) => {
+        navigator.clipboard.writeText(`https://Lumi.run/${runId}`);
+        dispatch(
+            actions.notifications.notify(
+                t('general.copyClipboard', {
+                    value: `https://Lumi.run/${runId}`
+                }),
+                'success'
+            )
+        );
+    };
+
+    const onDelete = (runId: string) => {
+        dispatch(actions.run.deleteFromRun(runId));
+    };
 
     return (
         <div>
-            <RunList
-                deleteCallback={(id: string) =>
-                    dispatch(actions.run.deleteFromRun(id))
-                }
-            />
+            <RunList runs={runs} onDelete={onDelete} onCopy={onCopy} />
 
             <Grid container={true} spacing={2} justify="center">
                 <Grid item={true}>

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -20,11 +18,14 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
-import { actions, IState } from '../../state';
-
 import RunLink from './RunLink';
 
-// import { Link, useHistory } from 'react-router-dom';
+type uploadProgressStates =
+    | 'not_started'
+    | 'pending'
+    | 'success'
+    | 'error'
+    | 'processing';
 
 const styles = (theme: Theme) =>
     createStyles({
@@ -71,24 +72,22 @@ const DialogActions = withStyles((theme: Theme) => ({
     }
 }))(MuiDialogActions);
 
-export default function CustomizedDialogs() {
-    const showDialog = useSelector(
-        (state: IState) => state.run.showUploadDialog
-    );
-    const uploadProgress = useSelector(
-        (state: IState) => state.run.uploadProgress
-    );
-    const history = useHistory();
-    const dispatch = useDispatch();
-    const { t } = useTranslation();
-
-    const goToRun = () => {
-        dispatch(actions.run.updateState({ showUploadDialog: false }));
-        history.push('/run');
+export default function RunUploadDialog(props: {
+    open: boolean;
+    uploadProgress: {
+        runId?: string;
+        state: uploadProgressStates;
+        progress: number;
     };
+    goToRun: () => void;
+    onCopy: (runId: string) => void;
+    onClose: () => void;
+}) {
+    const { t } = useTranslation();
+    const { open, uploadProgress, goToRun, onCopy, onClose } = props;
 
     return (
-        <Dialog aria-labelledby="customized-dialog-title" open={showDialog}>
+        <Dialog aria-labelledby="customized-dialog-title" open={open}>
             <DialogTitle id="run-upload-dialog-title">Lumi Run</DialogTitle>
             <DialogContent dividers>
                 {uploadProgress.runId && (
@@ -96,7 +95,10 @@ export default function CustomizedDialogs() {
                         {t('run.upload_dialog.success')}
                         <List>
                             <ListItem>
-                                <RunLink id={uploadProgress.runId} />
+                                <RunLink
+                                    runId={uploadProgress.runId}
+                                    onCopy={onCopy}
+                                />
                             </ListItem>
                         </List>
                     </div>
@@ -131,13 +133,7 @@ export default function CustomizedDialogs() {
                 </Button>
 
                 <Button
-                    onClick={() =>
-                        dispatch(
-                            actions.run.updateState({
-                                showUploadDialog: false
-                            })
-                        )
-                    }
+                    onClick={onClose}
                     autoFocus
                     disabled={
                         uploadProgress.state === 'pending' ||

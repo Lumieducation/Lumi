@@ -10,8 +10,6 @@ import {
 import superagent from 'superagent';
 
 import { useTranslation } from 'react-i18next';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router';
 
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -32,8 +30,7 @@ import PolicyIcon from '@material-ui/icons/Policy';
 import EmailIcon from '@material-ui/icons/Email';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
-import Auth from '../Auth';
-import { IState, actions } from '../../state';
+import Auth, { IAuthProps } from './Auth';
 
 const styles = (theme: Theme) =>
     createStyles({
@@ -94,32 +91,21 @@ const DialogActions = withStyles((theme: Theme) => ({
     }
 }))(MuiDialogActions);
 
-export default function CustomizedDialogs() {
-    // const [open, setOpen] = React.useState(false);
+export interface IRunSetupDialogProps extends IAuthProps {
+    open: boolean;
+    onClose: () => void;
+    email?: string;
+    onConsent: () => void;
+}
+export default function RunSetupDialog(props: IRunSetupDialogProps) {
     const { t } = useTranslation();
-    const dispatch = useDispatch();
-    const history = useHistory();
-
-    const settings = useSelector((state: IState) => state.settings);
-    const open = useSelector((state: IState) => state.run.showSetupDialog);
-
-    const handleClose = () => {
-        history.push('/');
-        dispatch(actions.run.updateState({ showSetupDialog: false }));
-    };
+    const { email, open, onClose, onConsent } = props;
 
     const handleConsent = async () => {
         try {
             await superagent.post(`/api/run/consent`);
-            dispatch(actions.run.updateState({ showSetupDialog: false }));
-            // props.close(false);
-        } catch (error) {
-            // dispatch(actions.run.updateState({ showSetupDialog: false }));
-            dispatch(
-                actions.run.updateState({ showConnectionErrorDialog: true })
-            );
-            //
-        }
+            onConsent();
+        } catch (error) {}
     };
 
     const classes = useStyles();
@@ -130,11 +116,11 @@ export default function CustomizedDialogs() {
 
     return (
         <Dialog
-            onClose={handleClose}
+            onClose={onClose}
             aria-labelledby="customized-dialog-title"
             open={open}
         >
-            <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+            <DialogTitle id="customized-dialog-title" onClose={onClose}>
                 Lumi Run
             </DialogTitle>
             <DialogContent dividers>
@@ -197,24 +183,21 @@ export default function CustomizedDialogs() {
                             id="switch-list-label-privacy-policy"
                             primary={t('settings.account.email.title')}
                             secondary={
-                                settings.email ||
-                                t('settings.account.email.not-set')
+                                email || t('settings.account.email.not-set')
                             }
                         />
                         <ListItemSecondaryAction>
-                            <Auth />
+                            <Auth {...props} />
                         </ListItemSecondaryAction>
                     </ListItem>
                 </List>
             </DialogContent>
             <DialogActions>
-                <Button onClick={handleClose} color="secondary">
+                <Button onClick={onClose} color="secondary">
                     Close
                 </Button>
                 <Button
-                    disabled={
-                        !settings.email || !tosConsent || !privacyPolicyConsent
-                    }
+                    disabled={!email || !tosConsent || !privacyPolicyConsent}
                     autoFocus={true}
                     onClick={handleConsent}
                     color="primary"

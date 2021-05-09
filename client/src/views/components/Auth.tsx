@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { useDispatch, useSelector } from 'react-redux';
 
 import classnames from 'classnames';
 import {
@@ -17,13 +16,9 @@ import DialogContent from '@material-ui/core/DialogContent';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import IconButton from '@material-ui/core/IconButton';
 import superagent from 'superagent';
 
-import CheckIcon from '@material-ui/icons/Check';
-import Logo from './components/Logo';
-
-import { IState, actions } from '../state';
+import Logo from './Logo';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -80,11 +75,16 @@ const CssTextField = withStyles({
     }
 })(TextField);
 
-export default function FormDialog() {
+export interface IAuthProps {
+    loggedIn: boolean;
+    handleLogout: () => void;
+    handleLogin: (email: string, token: string) => void;
+}
+export default function Auth(props: IAuthProps): JSX.Element {
     const classes = useStyles();
     const { t } = useTranslation();
-    const dispatch = useDispatch();
-    const settings = useSelector((state: IState) => state.settings);
+
+    const { loggedIn, handleLogin, handleLogout } = props;
 
     const [open, setOpen] = React.useState(false);
     const [email, setEmail] = React.useState('');
@@ -116,48 +116,15 @@ export default function FormDialog() {
                 case 500:
                     setMessage('auth.error.econnrefused');
                     setError(true);
-                    dispatch(
-                        actions.notifications.notify(
-                            t('notifications.general.econnrefused'),
-                            'error'
-                        )
-                    );
+
                     break;
                 default:
-                    dispatch(
-                        actions.settings.changeSetting({
-                            token: undefined,
-                            email: undefined
-                        })
-                    );
-
-                    dispatch(
-                        actions.notifications.notify(
-                            t('auth.notification.logout.success'),
-                            'success'
-                        )
-                    );
+                    handleLogout();
             }
         } catch (error) {
             setError(true);
             setMessage('auth.something_went_wrong');
         }
-    };
-
-    const handleLogout = async () => {
-        dispatch(
-            actions.settings.changeSetting({
-                token: undefined,
-                email: undefined
-            })
-        );
-
-        dispatch(
-            actions.notifications.notify(
-                t('auth.notification.logout.success'),
-                'success'
-            )
-        );
     };
 
     const handleSendCode = async () => {
@@ -191,18 +158,8 @@ export default function FormDialog() {
                     code
                 });
 
-            dispatch(
-                actions.settings.changeSetting({ email, token: body.token })
-            );
-
             setOpen(false);
-
-            dispatch(
-                actions.notifications.notify(
-                    t('auth.notification.success', { email }),
-                    'success'
-                )
-            );
+            handleLogin(email, body.token);
         } catch (error) {
             handleError(error);
         }
@@ -210,7 +167,7 @@ export default function FormDialog() {
 
     return (
         <div>
-            {settings.email ? (
+            {loggedIn ? (
                 <Button
                     variant="outlined"
                     color="primary"
