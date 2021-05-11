@@ -92,7 +92,7 @@ export default function RunUploadDialog(props: {
             <DialogContent dividers>
                 {uploadProgress.runId && (
                     <div>
-                        {t('run.upload_dialog.success')}
+                        {t('run.uploadDialog.success')}
                         <List>
                             <ListItem>
                                 <RunLink
@@ -105,7 +105,7 @@ export default function RunUploadDialog(props: {
                 )}
                 {uploadProgress.progress !== 100 && (
                     <div>
-                        {t('run.upload_dialog.uploading')}
+                        {t('run.uploadDialog.uploading')}
                         <LinearProgress
                             variant="determinate"
                             value={uploadProgress.progress}
@@ -114,7 +114,7 @@ export default function RunUploadDialog(props: {
                 )}
                 {uploadProgress.progress === 100 && !uploadProgress.runId && (
                     <div>
-                        {t('run.upload_dialog.processing')}
+                        {t('run.uploadDialog.processing')}
                         <LinearProgress variant="indeterminate" />
                     </div>
                 )}
@@ -129,7 +129,7 @@ export default function RunUploadDialog(props: {
                         uploadProgress.state === 'processing'
                     }
                 >
-                    {t('run.upload_dialog.buttons.go_to_run')}
+                    {t('run.uploadDialog.goToRun')}
                 </Button>
 
                 <Button
@@ -141,7 +141,7 @@ export default function RunUploadDialog(props: {
                     }
                     color="primary"
                 >
-                    {t('run.upload_dialog.buttons.ok')}
+                    {t('run.uploadDialog.ok')}
                 </Button>
             </DialogActions>
         </Dialog>

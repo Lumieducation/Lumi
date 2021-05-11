@@ -24,7 +24,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import Switch from '@material-ui/core/Switch';
 import PolicyIcon from '@material-ui/icons/Policy';
 import EmailIcon from '@material-ui/icons/Email';
@@ -127,17 +126,25 @@ export default function RunSetupDialog(props: IRunSetupDialogProps) {
                 <Typography gutterBottom>{t('run.description')}</Typography>
                 <Typography gutterBottom>{t('run.legal')}</Typography>
 
-                <List
-                    subheader={<ListSubheader>Settings</ListSubheader>}
-                    className={classes.root}
-                >
+                <List className={classes.root}>
                     <ListItem>
                         <ListItemIcon>
                             <PolicyIcon />
                         </ListItemIcon>
                         <ListItemText
                             id="switch-list-label-privacy-policy"
-                            primary={t('privacy_policy.title')}
+                            primary={
+                                <span>
+                                    {t('privacy_policy.title')} [
+                                    <a
+                                        href="https://Lumi.education/run/privacy-policy"
+                                        target="_blank"
+                                    >
+                                        Link
+                                    </a>
+                                    ]
+                                </span>
+                            }
                             secondary={t('privacy_policy.consent')}
                         />
                         <ListItemSecondaryAction>
@@ -161,7 +168,18 @@ export default function RunSetupDialog(props: IRunSetupDialogProps) {
                         </ListItemIcon>
                         <ListItemText
                             id="switch-list-label-tos"
-                            primary={t('run.tos.header')}
+                            primary={
+                                <span>
+                                    {t('run.tos.header')} [
+                                    <a
+                                        href="https://Lumi.education/run/terms-of-use"
+                                        target="_blank"
+                                    >
+                                        Link
+                                    </a>
+                                    ]
+                                </span>
+                            }
                             secondary={t('run.tos.description')}
                         />
                         <ListItemSecondaryAction>
@@ -194,7 +212,7 @@ export default function RunSetupDialog(props: IRunSetupDialogProps) {
             </DialogContent>
             <DialogActions>
                 <Button onClick={onClose} color="secondary">
-                    Close
+                    {t('run.setupDialog.close')}
                 </Button>
                 <Button
                     disabled={!email || !tosConsent || !privacyPolicyConsent}
@@ -202,7 +220,7 @@ export default function RunSetupDialog(props: IRunSetupDialogProps) {
                     onClick={handleConsent}
                     color="primary"
                 >
-                    Start
+                    {t('run.setupDialog.start')}
                 </Button>
             </DialogActions>
         </Dialog>

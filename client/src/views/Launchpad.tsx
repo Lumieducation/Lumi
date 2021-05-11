@@ -238,8 +238,7 @@ export default function Launchpad() {
                                             color="textSecondary"
                                             component="p"
                                         >
-                                            Lumi Run allows you to upload H5P to
-                                            Lumi.run and host your H5P online.
+                                            {t('run.description')}
                                         </Typography>
                                     </CardContent>
                                 </CardActionArea>

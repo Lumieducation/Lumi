@@ -68,7 +68,7 @@ export default function RunList(props: {
                 {runs.length === 0 && (
                     <ListItem>
                         <ListItemText
-                            primary={t('run.list.no-uploaded-h5p')}
+                            primary={t('run.list.noUploadedH5P')}
                         ></ListItemText>
                     </ListItem>
                 )}
@@ -129,8 +129,8 @@ export default function RunList(props: {
                     </Button>
                     <Button
                         onClick={() => {
+                            setShowDeleteDialog(false);
                             props.onDelete(runIdToDelete);
-                            setShowDeleteDialog(true);
                         }}
                         color="primary"
                         autoFocus
