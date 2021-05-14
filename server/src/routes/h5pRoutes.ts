@@ -252,16 +252,14 @@ export default function (
             return;
         }
         try {
-            const {
-                id: contentId,
-                metadata
-            } = await h5pEditor.saveOrUpdateContentReturnMetaData(
-                undefined,
-                req.body.params.params,
-                req.body.params.metadata,
-                req.body.library,
-                req.user
-            );
+            const { id: contentId, metadata } =
+                await h5pEditor.saveOrUpdateContentReturnMetaData(
+                    undefined,
+                    req.body.params.params,
+                    req.body.params.metadata,
+                    req.body.library,
+                    req.user
+                );
             res.send(JSON.stringify({ contentId, metadata }));
             res.status(200).end();
         } catch (error) {
@@ -284,16 +282,14 @@ export default function (
             return;
         }
         try {
-            const {
-                id: contentId,
-                metadata
-            } = await h5pEditor.saveOrUpdateContentReturnMetaData(
-                req.params.contentId.toString(),
-                req.body.params.params,
-                req.body.params.metadata,
-                req.body.library,
-                req.user
-            );
+            const { id: contentId, metadata } =
+                await h5pEditor.saveOrUpdateContentReturnMetaData(
+                    req.params.contentId.toString(),
+                    req.body.params.params,
+                    req.body.params.metadata,
+                    req.body.library,
+                    req.user
+                );
 
             res.send(JSON.stringify({ contentId, metadata }));
             res.status(200).end();
@@ -371,13 +367,11 @@ async function exportScorm(
                 _path.join(tmpDir, 'SCORM_API_wrapper.js')
             );
 
-            const {
-                html,
-                contentFiles
-            } = await htmlExporter.createBundleWithExternalContentResources(
-                contentId,
-                user
-            );
+            const { html, contentFiles } =
+                await htmlExporter.createBundleWithExternalContentResources(
+                    contentId,
+                    user
+                );
             await fsExtra.writeFile(_path.join(tmpDir, 'index.html'), html);
             for (const filename of contentFiles) {
                 const fn = _path.join(tmpDir, filename);
@@ -396,10 +390,11 @@ async function exportScorm(
                 outputStream.close();
             }
 
-            const contentMetadata = await h5pEditor.contentManager.getContentMetadata(
-                contentId,
-                user
-            );
+            const contentMetadata =
+                await h5pEditor.contentManager.getContentMetadata(
+                    contentId,
+                    user
+                );
 
             const temporaryFilename = await new Promise<string>(
                 (resolve, reject) => {
@@ -463,14 +458,12 @@ async function exportHtmlExternal(
     const dir = _path.dirname(path);
     const basename = _path.basename(path, '.html');
 
-    const {
-        html,
-        contentFiles
-    } = await htmlExporter.createBundleWithExternalContentResources(
-        contentId,
-        user,
-        basename
-    );
+    const { html, contentFiles } =
+        await htmlExporter.createBundleWithExternalContentResources(
+            contentId,
+            user,
+            basename
+        );
     await fsExtra.writeFile(path, html);
     for (const filename of contentFiles) {
         const fn = _path.join(dir, basename, filename);
