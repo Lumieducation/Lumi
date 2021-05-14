@@ -108,9 +108,8 @@ export default function RunSetupDialog(props: IRunSetupDialogProps) {
     };
 
     const classes = useStyles();
-    const [privacyPolicyConsent, setPrivacyPolicyConsent] = React.useState(
-        false
-    );
+    const [privacyPolicyConsent, setPrivacyPolicyConsent] =
+        React.useState(false);
     const [tosConsent, setTosConsent] = React.useState(false);
 
     return (

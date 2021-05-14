@@ -27,9 +27,8 @@ export default function H5PEditorExportDialog() {
         (state: IState) => state.h5peditor.showExportDialog
     );
     // Internal State
-    const [formatChoice, setFormatChoice] = useState<
-        'bundle' | 'external' | 'scorm'
-    >('bundle');
+    const [formatChoice, setFormatChoice] =
+        useState<'bundle' | 'external' | 'scorm'>('bundle');
     const [includeReporter, setIncludeReporter] = useState<boolean>(true);
     const [masteryScore, setMasteryScore] = useState<string>('70');
     const [masteryScoreError, setMasteryScoreError] = useState<string>();
@@ -106,9 +105,10 @@ export default function H5PEditorExportDialog() {
                                             }
                                             helperText={masteryScoreError}
                                             onChange={(event) => {
-                                                const parsed = Number.parseFloat(
-                                                    event.target.value
-                                                );
+                                                const parsed =
+                                                    Number.parseFloat(
+                                                        event.target.value
+                                                    );
                                                 if (isNaN(parsed)) {
                                                     setMasteryScoreError(
                                                         t(

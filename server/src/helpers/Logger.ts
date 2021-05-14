@@ -21,9 +21,13 @@ export default class Logger {
     constructor(scope: string) {
         this.scope = scope;
 
-        this.DEBUG = this.ERROR = this.INFO = this.SILLY = this.VERBOSE = this.WARN = debug(
-            `lumi:h5peditor:${this.scope}`
-        );
+        this.DEBUG =
+            this.ERROR =
+            this.INFO =
+            this.SILLY =
+            this.VERBOSE =
+            this.WARN =
+                debug(`lumi:h5peditor:${this.scope}`);
 
         this.logLevel = (process.env.LOG_LEVEL as logLevel) || 'info';
     }

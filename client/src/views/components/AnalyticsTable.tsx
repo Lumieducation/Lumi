@@ -77,9 +77,8 @@ const LumixAPIViewer = (props: {
                                 <TableCell
                                     align="center"
                                     style={{
-                                        backgroundColor: get_grade_color(
-                                            average
-                                        )
+                                        backgroundColor:
+                                            get_grade_color(average)
                                     }}
                                 >{`${average.toFixed(0)} %`}</TableCell>
                             );
