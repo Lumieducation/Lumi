@@ -1,27 +1,27 @@
+import { ContentId } from '@lumieducation/h5p-server';
 import { IGetSettingsErrorAction } from '../Settings/SettingsTypes';
 
 export interface IRun {
-    id: string;
-    secret: string;
+    runId: string;
     title: string;
     mainLibrary: string;
 }
 
-type uploadProgressStates = 'not_started' | 'pending' | 'success' | 'error';
+type uploadProgressStates =
+    | 'not_started'
+    | 'pending'
+    | 'success'
+    | 'error'
+    | 'processing';
 export interface IRunState {
     runs: IRun[];
-    showDialog: boolean;
+    showSetupDialog: boolean;
+    showConnectionErrorDialog: boolean;
+    showUploadDialog: boolean;
     uploadProgress: {
-        import: {
-            state: uploadProgressStates;
-        };
-        export: {
-            state: uploadProgressStates;
-        };
-        upload: {
-            state: uploadProgressStates;
-            progress: number;
-        };
+        runId?: string;
+        state: uploadProgressStates;
+        progress: number;
     };
 }
 
@@ -39,6 +39,7 @@ export interface IRunUpdateState {
 export const RUN_GET_RUNS_REQUEST = 'RUN_GET_RUNS_REQUEST';
 export const RUN_GET_RUNS_SUCCESS = 'RUN_GET_RUNS_SUCCESS';
 export const RUN_GET_RUNS_ERROR = 'RUN_GET_RUNS_ERROR';
+export const RUN_NOT_AUTHORIZED = 'RUN_NOT_AUTHORIZED';
 
 export interface IGetRunsRequestAction {
     payload: {};
@@ -46,7 +47,9 @@ export interface IGetRunsRequestAction {
 }
 
 export interface IGetRunsSuccessAction {
-    payload: IRunState;
+    payload: {
+        runList: IRun[];
+    };
     type: typeof RUN_GET_RUNS_SUCCESS;
 }
 export interface IGetRunsErrorAction {
@@ -68,7 +71,9 @@ export interface IRunUploadRequestAction {
 }
 
 export interface IRunUploadSuccessAction {
-    payload: IRunState;
+    payload: {
+        runId: ContentId;
+    };
     type: typeof RUN_UPLOAD_SUCCESS;
 }
 export interface IRunUploadErrorAction {

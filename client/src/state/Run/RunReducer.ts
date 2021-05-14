@@ -6,23 +6,18 @@ import {
     RunActionTypes,
     RUN_UPLOAD_SUCCESS,
     RUN_UPLOAD_REQUEST,
-    RUN_UPDATE_STATE
+    RUN_UPDATE_STATE,
+    RUN_UPLOAD_ERROR
 } from './RunTypes';
 
 export const initialState: IRunState = {
     runs: [],
-    showDialog: false,
+    showSetupDialog: false,
+    showConnectionErrorDialog: false,
+    showUploadDialog: false,
     uploadProgress: {
-        import: {
-            state: 'not_started'
-        },
-        export: {
-            state: 'not_started'
-        },
-        upload: {
-            state: 'not_started',
-            progress: 0
-        }
+        state: 'not_started',
+        progress: 0
     }
 };
 
@@ -37,13 +32,24 @@ export default function runReducer(
         switch (action.type) {
             case RUN_UPLOAD_REQUEST:
                 return {
-                    ...state
+                    ...state,
+                    uploadProgress: {
+                        state: 'pending',
+                        progress: 0,
+                        runId: undefined
+                    }
                 };
             case RUN_GET_RUNS_SUCCESS:
-            case RUN_UPLOAD_SUCCESS:
+                // case RUN_UPLOAD_SUCCESS:
                 return {
                     ...state,
-                    ...action.payload
+                    runs: action.payload.runList
+                };
+
+            case RUN_UPLOAD_ERROR:
+                return {
+                    ...state,
+                    showConnectionErrorDialog: true
                 };
 
             case RUN_UPDATE_STATE:
@@ -52,6 +58,15 @@ export default function runReducer(
                     ...action.payload
                 };
 
+            case RUN_UPLOAD_SUCCESS:
+                return {
+                    ...state,
+                    uploadProgress: {
+                        state: 'success',
+                        progress: 100,
+                        runId: action.payload.runId
+                    }
+                };
             // case 'RUN_UPDATE_UPLOAD_PROGRESS':
             //     return {
             //         ...state,

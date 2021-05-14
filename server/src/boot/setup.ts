@@ -45,21 +45,6 @@ export default async function setup(
             });
         }
 
-        // Check if current runsexists and is read- and parsable
-        let runOk = false;
-        try {
-            if (await fsExtra.pathExists(serverConfig.runFile)) {
-                await fsExtra.readJSON(serverConfig.runFile);
-                runOk = true;
-            }
-        } catch (error) {
-            runOk = false;
-        }
-
-        if (!runOk) {
-            await fsExtra.writeJSON(serverConfig.runFile, defaultRun);
-        }
-
         // Check if current config exists and is read- and parsable
         let configOk = false;
         try {

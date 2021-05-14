@@ -1,4 +1,5 @@
 import * as Sentry from '@sentry/browser';
+import i18next from 'i18next';
 
 import {
     RUN_GET_RUNS_REQUEST,
@@ -10,10 +11,16 @@ import {
     RUN_DELETE_REQUEST,
     RUN_DELETE_SUCCESS,
     RUN_DELETE_ERROR,
+    RUN_NOT_AUTHORIZED,
     IRunUpdateState,
     RUN_UPDATE_STATE,
     IRunState
 } from './RunTypes';
+
+import store from '../../state';
+
+import { updateContentOnServer } from '../H5PEditor/H5PEditorActions';
+import { notify, showErrorDialog } from '../Notifications/NotificationsActions';
 
 import * as API from './RunAPI';
 
@@ -26,16 +33,22 @@ export function getRuns(): any {
             });
 
             try {
-                const settings = await API.getRuns();
+                const runResponse = await API.getRuns();
 
-                dispatch({
-                    payload: settings,
+                return dispatch({
+                    payload: runResponse,
                     type: RUN_GET_RUNS_SUCCESS
                 });
             } catch (error) {
-                Sentry.captureException(error);
+                if (error.status === 401) {
+                    return dispatch({
+                        payload: {},
+                        type: RUN_NOT_AUTHORIZED
+                    });
+                }
 
-                dispatch({
+                Sentry.captureException(error);
+                return dispatch({
                     payload: { error },
                     type: RUN_GET_RUNS_ERROR
                 });
@@ -46,28 +59,60 @@ export function getRuns(): any {
     };
 }
 
-export function upload(options?: { includeReporter?: boolean; path?: string }) {
+export function upload(options?: { path?: string; contentId?: string }) {
     return async (dispatch: any) => {
         try {
+            const settings = store.getState().settings;
+            if (!settings.email || !settings.token) {
+                return dispatch(updateState({ showSetupDialog: true }));
+            }
+
+            dispatch(updateState({ showUploadDialog: true }));
+            let contentId = options?.contentId;
+
+            if (!options?.path && contentId) {
+                const data = await dispatch(updateContentOnServer());
+                contentId = data.contentId;
+            }
+
             dispatch({
                 payload: {},
                 type: RUN_UPLOAD_REQUEST
             });
 
             try {
-                const run = await API.upload();
+                const run = await API.upload(contentId);
 
                 dispatch({
                     payload: run,
                     type: RUN_UPLOAD_SUCCESS
                 });
+                dispatch(
+                    notify(
+                        i18next.t('run.notifications.upload.success'),
+                        'success'
+                    )
+                );
+                dispatch(getRuns());
             } catch (error) {
-                Sentry.captureException(error);
+                if (error.status !== 499) {
+                    Sentry.captureException(error);
 
-                dispatch({
-                    payload: { error },
-                    type: RUN_UPLOAD_ERROR
-                });
+                    dispatch(
+                        showErrorDialog(
+                            error.code || 'errors.codes.econnrefused',
+                            'run.dialog.error.description'
+                        )
+                    );
+
+                    dispatch({
+                        payload: { error },
+                        type: RUN_UPLOAD_ERROR
+                    });
+                }
+
+                // user canceled electrons openfile dialog
+                dispatch(updateState({ showUploadDialog: false }));
             }
         } catch (error) {
             Sentry.captureException(error);
@@ -75,7 +120,7 @@ export function upload(options?: { includeReporter?: boolean; path?: string }) {
     };
 }
 
-export function deleteFromRun(id: string, secret: string): any {
+export function deleteFromRun(id: string): any {
     return async (dispatch: any) => {
         try {
             dispatch({
@@ -84,13 +129,19 @@ export function deleteFromRun(id: string, secret: string): any {
             });
 
             try {
-                const run = await API.deleteFromRun(id, secret);
+                const run = await API.deleteFromRun(id);
 
                 dispatch({
                     payload: run,
                     type: RUN_DELETE_SUCCESS
                 });
                 dispatch(getRuns());
+                dispatch(
+                    notify(
+                        i18next.t('run.notifications.delete.success', { id }),
+                        'success'
+                    )
+                );
             } catch (error) {
                 Sentry.captureException(error);
 

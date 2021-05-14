@@ -8,6 +8,8 @@ import fileUpload from 'express-fileupload';
 import i18next from 'i18next';
 import i18nextHttpMiddleware from 'i18next-http-middleware';
 
+import LumiError from '../helpers/LumiError';
+
 import routes from '../routes';
 
 import IServerConfig from '../IServerConfig';
@@ -146,11 +148,9 @@ export default async (
 
     app.use((error, req, res, next) => {
         Sentry.captureException(error);
-        res.status(error.status || 500).json({
-            code: error.code,
-            message: error.message,
-            status: error.status
-        });
+        res.status(error.status || 500).json(
+            new LumiError(error.code, error.message, error.status)
+        );
     });
     return app;
 };

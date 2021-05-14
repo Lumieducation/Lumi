@@ -7,5 +7,7 @@ export default {
     usageStatistics: false,
     lastVersion: app ? app.getVersion() : 'test',
     autoUpdates: false,
-    language: 'en'
+    language: 'en',
+    email: '',
+    token: ''
 };

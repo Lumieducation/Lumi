@@ -1,9 +1,14 @@
 import {
     CLOSE_SNACKBAR,
     ENQUEUE_SNACKBAR,
+    IShowErrorDialog,
     NotificationActionTypes,
     NotificationTypes,
-    REMOVE_SNACKBAR
+    REMOVE_SNACKBAR,
+    SHOW_ERROR_DIALOG,
+    ErrorTypes,
+    ICloseErrorDialog,
+    CLOSE_ERROR_DIALOG
 } from './NotificationsTypes';
 
 import shortid from 'shortid';
@@ -21,6 +26,30 @@ export function notify(
             }
         },
         type: ENQUEUE_SNACKBAR
+    };
+}
+
+export function showErrorDialog(
+    code: ErrorTypes,
+    message: string,
+    redirect?: string
+): IShowErrorDialog {
+    return {
+        payload: {
+            error: {
+                code,
+                message,
+                redirect
+            }
+        },
+        type: SHOW_ERROR_DIALOG
+    };
+}
+
+export function closeErrorDialog(): ICloseErrorDialog {
+    return {
+        payload: {},
+        type: CLOSE_ERROR_DIALOG
     };
 }
 

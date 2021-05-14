@@ -6,7 +6,11 @@ import {
     REMOVE_SNACKBAR,
     INotifyAction,
     ICloseSnackbar,
-    IRemoveSnackbar
+    IRemoveSnackbar,
+    SHOW_ERROR_DIALOG,
+    IShowErrorDialog,
+    ICloseErrorDialog,
+    CLOSE_ERROR_DIALOG
 } from './NotificationsTypes';
 
 import {
@@ -36,7 +40,12 @@ import i18next from 'i18next';
 import shortid from 'shortid';
 
 export const initialState: INotificationsState = {
-    notifications: []
+    notifications: [],
+    showErrorDialog: false,
+    error: {
+        code: 'init',
+        message: ''
+    }
 };
 
 export default function notificationsReducer(
@@ -53,9 +62,29 @@ export default function notificationsReducer(
         | IH5PImportErrorAction
         | IAnalyticsImportSuccessAction
         | IAnalyticsImportErrorAction
+        | IShowErrorDialog
+        | ICloseErrorDialog
 ): INotificationsState {
     try {
         switch (action.type) {
+            case SHOW_ERROR_DIALOG:
+                return {
+                    ...state,
+                    showErrorDialog: true,
+                    error: action.payload.error
+                };
+
+            case CLOSE_ERROR_DIALOG:
+                return {
+                    ...state,
+                    error: {
+                        code: 'init',
+                        message: '',
+                        redirect: undefined
+                    },
+                    showErrorDialog: false
+                };
+
             case ANALYTICS_IMPORT_ERROR:
                 return {
                     ...state,

@@ -12,8 +12,6 @@ import Notifications from './Notifications';
 
 import RunPage from './Run';
 
-import RunUploadDialog from './components/RunUploadDialog';
-
 import H5PEditor from './H5PEditor';
 import Analytics from './Analytics';
 import Launchpad from './Launchpad';
@@ -21,6 +19,10 @@ import Launchpad from './Launchpad';
 import SetupDialog from './components/SetupDialog';
 import Backdrop from './components/Backdrop';
 import Websocket from './Websocket';
+import RunSetupDialogContainer from './container/RunSetupDialogContainer';
+import RunUploadDialogContainer from './container/RunUploadDialogContainer';
+
+import ErrorDialog from './components/ErrorDialog';
 
 import { actions } from '../state';
 
@@ -44,6 +46,7 @@ export default function AppContainer() {
         dispatch(actions.system.getSystem());
     }, [dispatch, i18n]);
 
+    console.log(process.env.TARGET);
     return (
         <div id="app">
             <CssBaseline />
@@ -65,9 +68,12 @@ export default function AppContainer() {
                     <Route path="/" component={Launchpad} />
                 </Switch>
                 <SetupDialog />
-                <RunUploadDialog />
+                <RunUploadDialogContainer />
+                <RunSetupDialogContainer />
+                <ErrorDialog />
             </Router>
             <Notifications />
+
             <Backdrop />
         </div>
     );

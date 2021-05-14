@@ -1,0 +1,112 @@
+name: Build
+
+on:
+    push:
+        branches:
+            - build
+
+jobs:
+    build-mac:
+        runs-on: macos-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js 10.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 10.x
+            - name: NPM Setup
+              run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+              env:
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - name: install
+              run: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
+            - name: Build macOS
+              run: npm run build:mac
+              env:
+                  CI: true
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  CSC_LINK: ${{ secrets.mac_certs }}
+                  CSC_KEY_PASSWORD: ${{ secrets.mac_certs_password }}
+                  APPLEID: ${{ secrets.apple_id }}
+                  APPLEIDPASSWORD: ${{ secrets.apple_id_password }}
+            - run: rm -rf dist/mac/
+            - name: Upload macOS artifacts
+              uses: actions/upload-artifact@v2
+              with:
+                  name: macOS
+                  path: dist/
+
+    build-win:
+        runs-on: windows-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js 10.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 10.x
+            - name: NPM Setup
+              uses: filipstefansson/set-npm-token-action@v1
+              with:
+                  token: ${{ secrets.NPM_TOKEN }}
+            - name: install server
+              run: npm ci
+              env:
+                  NPM_TOKEN: $${ secrets.NPM_TOKEN }
+            - name: Copy NPM config
+              run: cp ./.npmrc ./client/.npmrc && cp ./.npmrc ./reporter-client/.npmrc
+            - name: install client(s)
+              run: (cd client && npm ci) && (cd ../reporter-client && npm ci)
+              env:
+                  NPM_TOKEN: $${ secrets.NPM_TOKEN }
+            - name: Build Windows
+              run: npm run build:win
+              env:
+                  CI: true
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  APPX_APPLICATION_ID: ${{ secrets.APPX_APPLICATION_ID }}
+                  APPX_DISPLAY_NAME: ${{ secrets.APPX_DISPLAY_NAME }}
+                  APPX_IDENTITY_NAME: ${{ secrets.APPX_IDENTITY_NAME }}
+                  APPX_PUBLISHER: ${{ secrets.APPX_PUBLISHER }}
+                  APPX_PUBLISHER_DISPLAY_NAME: ${{ secrets.APPX_PUBLISHER_DISPLAY_NAME }}
+            - run: Remove-Item 'dist\win-unpacked' -Recurse -Force
+            - name: Upload Windows artifacts
+              uses: actions/upload-artifact@v2
+              with:
+                  name: Windows
+                  path: dist
+
+    build-linux:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js 10.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 10.x
+            - name: NPM Setup
+              run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+              env:
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - name: install labarchive-tools
+              run: sudo apt install libarchive-tools
+            - name: install
+              run: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
+            - name: Build
+              run: npm run build
+            - name: Install Snapcraft
+              uses: samuelmeuli/action-snapcraft@v1
+              with:
+                  snapcraft_token: ${{ secrets.snapcraft_token }}
+            - name: Build Linux
+              run: npm run build:linux:dev
+              env:
+                  CI: true
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: Upload Linux artifacts
+              uses: actions/upload-artifact@v2
+              with:
+                  name: Linux
+                  path: dist/

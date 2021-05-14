@@ -7,6 +7,7 @@ import editMenu from './editMenu';
 import macMenu from './macMenu';
 import windowMenu from './windowMenu';
 import viewMenu from './viewMenu';
+import runMenu from './runMenuItem';
 
 export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
     ...macMenu(),
@@ -85,6 +86,7 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
             } as any
         ]
     },
+    runMenu(websocket),
     editMenu(),
     ...viewMenu(),
     ...windowMenu(),

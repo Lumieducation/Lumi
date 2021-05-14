@@ -27,7 +27,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import SettingsIcon from '@material-ui/icons/Settings';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 // import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
-// import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import UpdateIcon from '@material-ui/icons/Update';
 
 import SettingsList from './components/Settings/GeneralSettingsList';
@@ -208,7 +208,7 @@ export default function FullScreenDialog() {
                                 )}
                             />
                         </ListItem>
-                        {/* <ListItem
+                        <ListItem
                             button
                             key="account"
                             onClick={() => setSection('account')}
@@ -222,7 +222,7 @@ export default function FullScreenDialog() {
                             <ListItemText
                                 primary={t('settings.menu.account')}
                             />
-                        </ListItem> */}
+                        </ListItem>
                     </List>
                 </Drawer>
                 <DialogContent className={classes.bg}>

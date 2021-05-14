@@ -1,10 +1,12 @@
 interface ISettingsState {
     autoUpdates: boolean;
     bugTracking: boolean;
+    email: string;
     firstOpen: boolean;
     language: string;
     lastVersion: string;
     privacyPolicyConsent: boolean;
+    token: string;
     usageStatistics: boolean;
 }
 

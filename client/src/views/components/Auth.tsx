@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { useDispatch } from 'react-redux';
 
 import classnames from 'classnames';
 import {
@@ -17,12 +16,9 @@ import DialogContent from '@material-ui/core/DialogContent';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-
 import superagent from 'superagent';
 
-import Logo from './components/Logo';
-
-import { actions } from '../state';
+import Logo from './Logo';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -79,10 +75,16 @@ const CssTextField = withStyles({
     }
 })(TextField);
 
-export default function FormDialog() {
+export interface IAuthProps {
+    loggedIn: boolean;
+    handleLogout: () => void;
+    handleLogin: (email: string, token: string) => void;
+}
+export default function Auth(props: IAuthProps): JSX.Element {
     const classes = useStyles();
     const { t } = useTranslation();
-    const dispatch = useDispatch();
+
+    const { loggedIn, handleLogin, handleLogout } = props;
 
     const [open, setOpen] = React.useState(false);
     const [email, setEmail] = React.useState('');
@@ -106,11 +108,31 @@ export default function FormDialog() {
         setMessage('');
     };
 
+    const handleError = async (error: superagent.ResponseError) => {
+        try {
+            const { status } = error;
+
+            switch (status) {
+                case 500:
+                    setMessage('auth.error.econnrefused');
+                    setError(true);
+
+                    break;
+                default:
+                    handleLogout();
+            }
+        } catch (error) {
+            setError(true);
+            setMessage('auth.something_went_wrong');
+        }
+    };
+
     const handleSendCode = async () => {
-        const validateEmail =
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-                String(email).toLowerCase()
-            );
+        setError(false);
+        setMessage('');
+        const validateEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+            String(email).toLowerCase()
+        );
 
         if (!validateEmail) {
             setMessage('auth.error.no-valid-email');
@@ -118,41 +140,51 @@ export default function FormDialog() {
             return;
         }
         try {
-            await superagent.post(`/api/v1/auth/register`).send({ email });
+            await superagent
+                .post(`/api/v1/auth/api/v1/auth/register`)
+                .send({ email });
             setMessage('auth.notification.pending');
             setEnterCode(true);
         } catch (error) {
-            setMessage('auth.no-valid-email');
-            setError(true);
+            handleError(error);
         }
     };
 
     const handleVerification = async () => {
-        const { body } = await superagent.post(`/api/v1/auth/login`).send({
-            code
-        });
+        try {
+            const { body } = await superagent
+                .post(`/api/v1/auth/api/v1/auth/login`)
+                .send({
+                    code
+                });
 
-        dispatch(actions.settings.changeSetting({ email, token: body.token }));
-
-        setOpen(false);
-
-        dispatch(
-            actions.notifications.notify(
-                t('auth.notification.success', { email }),
-                'success'
-            )
-        );
+            setOpen(false);
+            handleLogin(email, body.token);
+        } catch (error) {
+            handleError(error);
+        }
     };
 
     return (
         <div>
-            <Button
-                variant="outlined"
-                color="primary"
-                onClick={handleClickOpen}
-            >
-                {t('auth.set_email')}
-            </Button>
+            {loggedIn ? (
+                <Button
+                    variant="outlined"
+                    color="primary"
+                    onClick={handleLogout}
+                >
+                    {t('auth.logout')}
+                </Button>
+            ) : (
+                <Button
+                    variant="outlined"
+                    color="primary"
+                    onClick={handleClickOpen}
+                >
+                    {t('auth.set_email')}
+                </Button>
+            )}
+
             <Dialog
                 open={open}
                 onClose={handleClose}

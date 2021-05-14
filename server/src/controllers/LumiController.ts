@@ -20,12 +20,15 @@ export default class LumiController {
         serverConfig: IServerConfig,
         private browserWindow: BrowserWindow
     ) {
+        this.temporaryStoragePath = serverConfig.temporaryStoragePath;
         fs.readJSON(serverConfig.settingsFile).then((settings) => {
             if (settings.privacyPolicyConsent) {
                 h5pEditor.contentTypeCache.updateIfNecessary();
             }
         });
     }
+
+    private temporaryStoragePath: string;
 
     public async delete(contentId: string): Promise<void> {
         return this.h5pEditor.deleteContent(contentId, new User());

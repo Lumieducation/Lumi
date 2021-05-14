@@ -100,6 +100,14 @@ export class WebsocketContainer extends React.Component<
                         dispatch(actions.h5peditor.openExportDialog());
                         break;
 
+                    case 'UPLOAD_TO_RUN':
+                        dispatch(
+                            actions.run.upload({
+                                contentId: this.props.activeTab.contentId
+                            })
+                        );
+                        break;
+
                     case 'MESSAGE':
                         dispatch(
                             actions.notifications.notify(
