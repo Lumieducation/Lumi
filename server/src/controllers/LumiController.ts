@@ -89,9 +89,7 @@ export default class LumiController {
         }
     }
 
-    public async import(
-        path: string
-    ): Promise<{
+    public async import(path: string): Promise<{
         id: string;
         library: string;
         metadata: H5P.IContentMetadata;
@@ -120,9 +118,7 @@ export default class LumiController {
         };
     }
 
-    public async loadPackage(
-        contentId: string
-    ): Promise<{
+    public async loadPackage(contentId: string): Promise<{
         h5p: H5P.IContentMetadata;
         library: string;
         params: {

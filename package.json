@@ -6,9 +6,9 @@
     "author": "Lumi Education Jan Philip Schellenberg & Sebastian Rettig GbR <c@Lumi.education>",
     "main": "build/server/main.js",
     "dependencies": {
-        "@lumieducation/h5p-express": "7.5.2",
-        "@lumieducation/h5p-html-exporter": "7.5.2",
-        "@lumieducation/h5p-server": "7.5.2",
+        "@lumieducation/h5p-express": "8.0.1",
+        "@lumieducation/h5p-html-exporter": "8.0.1",
+        "@lumieducation/h5p-server": "8.0.1",
         "@lumieducation/xapi-aggregator": "1.0.1-alpha.7",
         "@sentry/electron": "2.4.1",
         "@sentry/node": "6.3.6",
@@ -63,7 +63,7 @@
         "test:e2e": "npx jest --config jest.e2e.config.js",
         "semantic-release": "semantic-release",
         "uninstall": "rm -rf build/ && rm -rf node_modules/",
-        "postinstall": "sh scripts/install.sh 1.24 && sh scripts/install.sh 1.24.1",
+        "postinstall": "sh scripts/install.sh affaa83b51828be13e175c8ba1a7085ba9692d1d 7bc192798f8f6e1dee34891b56f3bf60ab320f3d",
         "prepare": "husky install",
         "ci:all": "npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)",
         "localize": "json-autotranslate -d --directory-structure ngx-translate -c google_translate.json -s google-translate --decode-escapes -t key-based -i locales/lumi -m i18next && prettier --write \"locales/hub/*.json\""
