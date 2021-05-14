@@ -148,8 +148,7 @@ export default function CustomizedDialogs() {
                                 onChange={() =>
                                     dispatch(
                                         actions.settings.changeSetting({
-                                            privacyPolicyConsent:
-                                                !settings.privacyPolicyConsent
+                                            privacyPolicyConsent: !settings.privacyPolicyConsent
                                         })
                                     )
                                 }
@@ -203,8 +202,7 @@ export default function CustomizedDialogs() {
                                 onChange={() =>
                                     dispatch(
                                         actions.settings.changeSetting({
-                                            usageStatistics:
-                                                !settings.usageStatistics
+                                            usageStatistics: !settings.usageStatistics
                                         })
                                     )
                                 }
@@ -232,8 +230,7 @@ export default function CustomizedDialogs() {
                                     onChange={() =>
                                         dispatch(
                                             actions.settings.changeSetting({
-                                                autoUpdates:
-                                                    !settings.autoUpdates
+                                                autoUpdates: !settings.autoUpdates
                                             })
                                         )
                                     }

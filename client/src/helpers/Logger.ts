@@ -21,13 +21,9 @@ export default class Logger {
     constructor(scope: string) {
         this.scope = scope;
 
-        this.DEBUG =
-            this.ERROR =
-            this.INFO =
-            this.SILLY =
-            this.VERBOSE =
-            this.WARN =
-                debug(`lumi:${this.scope}`);
+        this.DEBUG = this.ERROR = this.INFO = this.SILLY = this.VERBOSE = this.WARN = debug(
+            `lumi:${this.scope}`
+        );
 
         try {
             this.logLevel =

@@ -126,8 +126,10 @@ export class LibraryAdmin extends React.Component<
         }
         try {
             this.setState({ isUploading: true });
-            const { installed, updated } =
-                await this.librariesService.postPackage(files[0]);
+            const {
+                installed,
+                updated
+            } = await this.librariesService.postPackage(files[0]);
             if (installed + updated === 0) {
                 this.displayMessage(
                     i18next.t(
@@ -348,7 +350,8 @@ export class LibraryAdmin extends React.Component<
                                                 title={`${i18next.t(
                                                     'settings.h5p-library-administration.can-not-be-deleted',
                                                     {
-                                                        count: info.dependentsCount
+                                                        count:
+                                                            info.dependentsCount
                                                     }
                                                 )}`}
                                                 placement="bottom"

@@ -45,8 +45,14 @@ export default function H5PEditorLeftDrawerView(props: {
     selectTab: (index: number) => void;
     closeTab: (index: number, id: string) => void;
 }) {
-    const { activeTabIndex, closeTab, create, openFiles, selectTab, tabs } =
-        props;
+    const {
+        activeTabIndex,
+        closeTab,
+        create,
+        openFiles,
+        selectTab,
+        tabs
+    } = props;
     const classes = useStyles();
 
     const { t } = useTranslation();
