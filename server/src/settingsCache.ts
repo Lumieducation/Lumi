@@ -8,6 +8,7 @@ interface ISettingsState {
     privacyPolicyConsent: boolean;
     token: string;
     usageStatistics: boolean;
+    allowPrerelease: boolean;
 }
 
 import defaultSettings from './boot/defaultSettings';

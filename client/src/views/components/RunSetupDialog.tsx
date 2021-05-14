@@ -120,7 +120,7 @@ export default function RunSetupDialog(props: IRunSetupDialogProps) {
             open={open}
         >
             <DialogTitle id="customized-dialog-title" onClose={onClose}>
-                Lumi Run
+                Lumi Run (Beta)
             </DialogTitle>
             <DialogContent dividers>
                 <Typography gutterBottom>{t('run.description')}</Typography>

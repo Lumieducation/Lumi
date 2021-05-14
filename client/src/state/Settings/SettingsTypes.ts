@@ -12,6 +12,7 @@ export interface ISettingsState {
     language: string;
     email: string;
     token: string;
+    allowPrerelease: boolean;
 }
 
 export const SETTINGS_GET_SETTINGS_REQUEST = 'SETTINGS_GET_SETTINGS_REQUEST';
