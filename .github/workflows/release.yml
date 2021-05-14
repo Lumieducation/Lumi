@@ -22,7 +22,7 @@ jobs:
             - name: install
               run: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
             - name: Release
-              run: npm run semantic-release || true
+              run: npm run semantic-release
               env:
                   CI: true
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
