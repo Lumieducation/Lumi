@@ -1,4 +1,5 @@
 interface ISettingsState {
+    allowPrerelease: boolean;
     autoUpdates: boolean;
     bugTracking: boolean;
     email: string;
@@ -8,7 +9,6 @@ interface ISettingsState {
     privacyPolicyConsent: boolean;
     token: string;
     usageStatistics: boolean;
-    allowPrerelease: boolean;
 }
 
 import defaultSettings from './boot/defaultSettings';
