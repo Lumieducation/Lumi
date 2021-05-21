@@ -1,5 +1,5 @@
 import { dialog } from 'electron';
-import { autoUpdater } from 'electron-updater';
+import { autoUpdater, UpdateInfo } from 'electron-updater';
 import SocketIO from 'socket.io';
 import * as Sentry from '@sentry/electron';
 import fsExtra from 'fs-extra';

@@ -68,10 +68,12 @@ export function createMainWindow(websocketArg: SocketIO.Server): void {
         if (isDevelopment) {
             window.webContents.openDevTools();
             if (process.env.REDUX_EXTENSION) {
-                BrowserWindow.addDevToolsExtension(
+                const ses = window.webContents.session;
+
+                ses.loadExtension(
                     path.join(
                         os.homedir(),
-                        `/Library/Application Support/Google/Chrome/Default/Extensions/lmhkpmbekcpmknklioeibfkpmmfibljd/2.17.0_0`
+                        `/Library/Application Support/Google/Chrome/Default/Extensions/lmhkpmbekcpmknklioeibfkpmmfibljd/2.17.1_0`
                     )
                 );
             }

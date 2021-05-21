@@ -23,6 +23,10 @@ import * as SystemTypes from './System/SystemTypes';
 import SystemReducer from './System/SystemReducer';
 import * as SystemActions from './System/SystemActions';
 
+import * as UpdatesTypes from './Updates/UpdatesTypes';
+import UpdatesReducer from './Updates/UpdatesReducer';
+import * as UpdatesActions from './Updates/UpdatesActions';
+
 import RunReducer from './Run/RunReducer';
 import * as RunTypes from './Run/RunTypes';
 import * as RunActions from './Run/RunActions';
@@ -53,7 +57,8 @@ const rootReducer = () =>
         analytics: AnalyticsReducer,
         run: RunReducer,
         settings: SettingsReducer,
-        system: SystemReducer
+        system: SystemReducer,
+        updates: UpdatesReducer
     });
 
 const store = createStore(
@@ -68,7 +73,8 @@ export interface IState
         AnalyticsTypes.IState,
         SettingsTypes.IState,
         RunTypes.IState,
-        SystemTypes.IState {}
+        SystemTypes.IState,
+        UpdatesTypes.IState {}
 
 export const actions = {
     notifications: NotificationsActions,
@@ -76,7 +82,8 @@ export const actions = {
     analytics: AnalyticsActions,
     settings: SettingsActions,
     run: RunActions,
-    system: SystemActions
+    system: SystemActions,
+    updates: UpdatesActions
 };
 
 export const selectors = {
