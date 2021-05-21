@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { History } from 'history';
 
@@ -19,6 +19,7 @@ import { useTranslation } from 'react-i18next';
 import MainSection from './components/MainSection';
 import { Link } from 'react-router-dom';
 
+import { IState } from '../state';
 import { track } from '../state/track/actions';
 
 declare var window: {
@@ -63,6 +64,9 @@ export default function Launchpad() {
     const { t } = useTranslation();
     const dispatch = useDispatch();
     const history = useHistory();
+    const allowPrerelease = useSelector(
+        (state: IState) => state.settings.allowPrerelease
+    );
 
     window.h = history;
 
@@ -207,57 +211,61 @@ export default function Launchpad() {
                             </CardActions>
                         </Card>
                     </Grid>
-                    <Grid item xs={4}>
-                        <Card id="launchpad-run" className={classes.card}>
-                            <Link
-                                to="/run"
-                                style={{
-                                    color: 'inherit',
-                                    textDecoration: 'inherit'
-                                }}
-                            >
-                                <CardActionArea>
-                                    <CardMedia
-                                        className={classes.media}
-                                        title="Lumi Run"
-                                    >
-                                        <RunIcon
-                                            className={classes.analyticsIcon}
-                                        />
-                                    </CardMedia>
-                                    <CardContent>
-                                        <Typography
-                                            gutterBottom
-                                            variant="h5"
-                                            component="h2"
+                    {allowPrerelease && (
+                        <Grid item xs={4}>
+                            <Card id="launchpad-run" className={classes.card}>
+                                <Link
+                                    to="/run"
+                                    style={{
+                                        color: 'inherit',
+                                        textDecoration: 'inherit'
+                                    }}
+                                >
+                                    <CardActionArea>
+                                        <CardMedia
+                                            className={classes.media}
+                                            title="Lumi Run"
                                         >
-                                            Lumi Run
-                                        </Typography>
-                                        <Typography
-                                            variant="body2"
-                                            color="textSecondary"
-                                            component="p"
+                                            <RunIcon
+                                                className={
+                                                    classes.analyticsIcon
+                                                }
+                                            />
+                                        </CardMedia>
+                                        <CardContent>
+                                            <Typography
+                                                gutterBottom
+                                                variant="h5"
+                                                component="h2"
+                                            >
+                                                Lumi Run (Beta)
+                                            </Typography>
+                                            <Typography
+                                                variant="body2"
+                                                color="textSecondary"
+                                                component="p"
+                                            >
+                                                {t('run.description')}
+                                            </Typography>
+                                        </CardContent>
+                                    </CardActionArea>
+                                </Link>
+                                <CardActions>
+                                    <Button size="small" color="primary">
+                                        <Link
+                                            to="/run"
+                                            style={{
+                                                color: 'inherit',
+                                                textDecoration: 'inherit'
+                                            }}
                                         >
-                                            {t('run.description')}
-                                        </Typography>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Link>
-                            <CardActions>
-                                <Button size="small" color="primary">
-                                    <Link
-                                        to="/run"
-                                        style={{
-                                            color: 'inherit',
-                                            textDecoration: 'inherit'
-                                        }}
-                                    >
-                                        {t('analytics.startPage.start')}
-                                    </Link>
-                                </Button>
-                            </CardActions>
-                        </Card>
-                    </Grid>
+                                            {t('analytics.startPage.start')}
+                                        </Link>
+                                    </Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                    )}
                 </Grid>
             </MainSection>
         </div>

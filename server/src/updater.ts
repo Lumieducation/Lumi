@@ -4,6 +4,7 @@ import SocketIO from 'socket.io';
 import * as Sentry from '@sentry/electron';
 import fsExtra from 'fs-extra';
 import IServerConfig from './IServerConfig';
+import settingsCache from './settingsCache';
 
 let updateAvailable: boolean = false;
 let updating: boolean = false;
@@ -31,6 +32,8 @@ export default async function boot(
     websocket: SocketIO.Server,
     serverConfig: IServerConfig
 ): Promise<void> {
+    autoUpdater.allowPrerelease = settingsCache.getSettings().allowPrerelease;
+
     autoUpdater.on('update-downloaded', async () => {
         updateAvailable = true;
 
