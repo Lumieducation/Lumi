@@ -17,7 +17,8 @@ export const initialState: ISettingsState = {
     autoUpdates: false,
     language: 'en',
     email: '',
-    token: ''
+    token: '',
+    allowPrerelease: false
 };
 
 export default function settingsReducer(

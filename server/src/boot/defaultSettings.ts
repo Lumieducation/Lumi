@@ -9,5 +9,6 @@ export default {
     autoUpdates: false,
     language: 'en',
     email: '',
-    token: ''
+    token: '',
+    allowPrerelease: false
 };

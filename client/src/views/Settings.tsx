@@ -15,7 +15,7 @@ import Slide from '@material-ui/core/Slide';
 import { TransitionProps } from '@material-ui/core/transitions';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-
+import Badge from '@material-ui/core/Badge';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -107,6 +107,10 @@ export default function FullScreenDialog() {
         (state: IState) => state.system.platformSupportsUpdates
     );
 
+    const updateAvailable = useSelector(
+        (state: IState) => state.updates.updateInfo.releaseName !== ''
+    );
+
     const [section, setSection] = React.useState('general');
 
     const handleClickOpen = () => {
@@ -121,9 +125,19 @@ export default function FullScreenDialog() {
 
     return (
         <div>
-            <IconButton color="inherit" onClick={handleClickOpen}>
-                <SettingsIcon />
-            </IconButton>
+            <Badge
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'left'
+                }}
+                color="secondary"
+                badgeContent={t('updates.badge')}
+                invisible={!updateAvailable}
+            >
+                <IconButton color="inherit" onClick={handleClickOpen}>
+                    <SettingsIcon />
+                </IconButton>
+            </Badge>
             <Dialog
                 fullScreen={true}
                 open={open}

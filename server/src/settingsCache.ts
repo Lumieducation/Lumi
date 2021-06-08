@@ -1,4 +1,5 @@
 interface ISettingsState {
+    allowPrerelease: boolean;
     autoUpdates: boolean;
     bugTracking: boolean;
     email: string;

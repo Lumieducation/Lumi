@@ -23,7 +23,6 @@ import RunSetupDialogContainer from './container/RunSetupDialogContainer';
 import RunUploadDialogContainer from './container/RunUploadDialogContainer';
 
 import ErrorDialog from './components/ErrorDialog';
-
 import { actions } from '../state';
 
 const log = new Logger('container:app');
@@ -35,10 +34,13 @@ export default function AppContainer() {
 
     useEffect(() => {
         dispatch(actions.settings.getSettings()).then(
-            async (settings: { language: string }) => {
+            async (settings: { language: string; autoUpdates: boolean }) => {
                 if (settings?.language) {
                     await i18n.loadLanguages(settings.language);
                     i18n.changeLanguage(settings.language);
+                }
+                if (settings?.autoUpdates) {
+                    dispatch(actions.updates.getUpdates());
                 }
             }
         );
