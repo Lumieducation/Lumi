@@ -119,9 +119,9 @@ app.on('window-all-closed', () => {
 });
 
 app.on('open-file', (event, openedFilePath) => {
+    log.debug('Electron open-file event caught');
     let filePath = openedFilePath;
     if (process.argv.length >= 2) {
-        // or electron.remote.process.argv
         filePath = process.argv[1];
     }
 
@@ -188,6 +188,25 @@ app.on('ready', async () => {
 
     createMainWindow(websocket);
     log.info('window created');
+
+    websocket.on('connection', () => {
+        const argv = process.argv;
+        if (process.platform === 'win32' && argv.length >= 2) {
+            // Check if there are H5Ps specified in the command line args and
+            // load them (Windows only).
+            argv.splice(0, 1);
+            const openFilePaths = argv.filter((arg) => arg.endsWith('.h5p'));
+            if (openFilePaths.length > 0) {
+                log.debug(`Opening file(s): ${openFilePaths.join(' ')}`);
+                websocket.emit('action', {
+                    payload: {
+                        paths: openFilePaths
+                    },
+                    type: 'OPEN_H5P'
+                });
+            }
+        }
+    });
 
     try {
         if (settingsCache.getSettings().usageStatistics) {
