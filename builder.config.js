@@ -28,7 +28,11 @@ module.exports = {
     afterSign: 'scripts/notarize.js',
     win: {
         icon: 'electron/assets/lumi.png',
-        target: ['appx', 'nsis']
+        target: ['appx', 'nsis'],
+        fileAssociations: {
+            ext: 'h5p',
+            name: 'H5P'
+        }
     },
     appx: {
         identityName: process.env.APPX_IDENTITY_NAME,
@@ -36,6 +40,9 @@ module.exports = {
         publisher: process.env.APPX_PUBLISHER,
         displayName: process.env.APPX_DISPLAY_NAME,
         publisherDisplayName: process.env.APPX_PUBLISHER_DISPLAY_NAME
+    },
+    nsis: {
+        deleteAppDataOnUninstall: true
     },
     linux: {
         category: 'Utility',
