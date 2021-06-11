@@ -20,7 +20,13 @@ import DelayedEmitter from './helpers/delayedEmitter';
 
 const app = electron.app;
 let websocket: SocketIO.Server;
-let delayedWebsocketEmitter: DelayedEmitter = new DelayedEmitter();
+/**
+ * The DelayedEmitter queues websocket events until the websocket is connected.
+ * We need it as the browser window and the client must be initialized before
+ * we can send events, but the events are raised by the startup routine before
+ * the initialization is over.
+ */
+const delayedWebsocketEmitter: DelayedEmitter = new DelayedEmitter();
 let mainWindow: electron.BrowserWindow;
 let port: number;
 let currentPath: string = '/';
@@ -181,7 +187,7 @@ app.on('ready', async () => {
 
     websocket = websocketFactory(server);
     log.info('websocket created');
-    
+
     delayedWebsocketEmitter.setWebsocket(websocket);
 
     updater(app, websocket, serverConfig);
