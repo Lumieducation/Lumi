@@ -16,9 +16,17 @@ import i18next from 'i18next';
 
 import settingsCache from './settingsCache';
 import electronState from './electronState';
+import DelayedEmitter from './helpers/DelayedEmitter';
 
 const app = electron.app;
 let websocket: SocketIO.Server;
+/**
+ * The DelayedEmitter queues websocket events until the websocket is connected.
+ * We need it as the browser window and the client must be initialized before
+ * we can send events, but the events are raised by the startup routine before
+ * the initialization is over.
+ */
+const delayedWebsocketEmitter: DelayedEmitter = new DelayedEmitter();
 let mainWindow: electron.BrowserWindow;
 let port: number;
 let currentPath: string = '/';
@@ -118,16 +126,13 @@ app.on('window-all-closed', () => {
     }
 });
 
-app.on('open-file', (event, openedFilePath) => {
-    let filePath = openedFilePath;
-    if (process.argv.length >= 2) {
-        // or electron.remote.process.argv
-        filePath = process.argv[1];
-    }
+// Handle open file events for MacOS
+app.on('open-file', (event: electron.Event, openedFilePath: string) => {
+    log.debug('Electron open-file event caught');
 
-    websocket.emit('action', {
+    delayedWebsocketEmitter.emit('action', {
         payload: {
-            paths: [filePath]
+            paths: [openedFilePath]
         },
         type: 'OPEN_H5P'
     });
@@ -183,11 +188,30 @@ app.on('ready', async () => {
     websocket = websocketFactory(server);
     log.info('websocket created');
 
+    delayedWebsocketEmitter.setWebsocket(websocket);
+
     updater(app, websocket, serverConfig);
     log.info('updater started');
 
     createMainWindow(websocket);
     log.info('window created');
+
+    const argv = process.argv;
+    if (process.platform === 'win32' && argv.length >= 2) {
+        // Check if there are H5Ps specified in the command line args and
+        // load them (Windows only).
+        argv.splice(0, 1);
+        const openFilePaths = argv.filter((arg) => arg.endsWith('.h5p'));
+        if (openFilePaths.length > 0) {
+            log.debug(`Opening file(s): ${openFilePaths.join(' ')}`);
+            delayedWebsocketEmitter.emit('action', {
+                payload: {
+                    paths: openFilePaths
+                },
+                type: 'OPEN_H5P'
+            });
+        }
+    }
 
     try {
         if (settingsCache.getSettings().usageStatistics) {
