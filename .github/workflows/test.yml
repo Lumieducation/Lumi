@@ -19,6 +19,8 @@ jobs:
               run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
               env:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - name: Test
+              run: echo ${{ github.ref }}
             - name: install
               run: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
             - name: lint
