@@ -20,7 +20,9 @@ jobs:
               env:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             - name: Test
-              run: echo ${{ env.GITHUB_HEAD_REF }}
+              run: echo ${{ env.GITHUB_REF }}
+            - name: Test2
+              run: echo ${{ env.GITHUB_RUN_ID }}
             - name: install
               run: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
             - name: lint
