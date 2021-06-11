@@ -16,7 +16,7 @@ import i18next from 'i18next';
 
 import settingsCache from './settingsCache';
 import electronState from './electronState';
-import DelayedEmitter from './helpers/delayedEmitter';
+import DelayedEmitter from './helpers/DelayedEmitter';
 
 const app = electron.app;
 let websocket: SocketIO.Server;
