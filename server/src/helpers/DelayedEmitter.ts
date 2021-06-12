@@ -58,6 +58,17 @@ export default class DelayedEmitter {
         }
     };
 
+    /**
+     * Sets the connection state to false again and listens for a new connection.
+     */
+    public resetWebsocketConnection = () => {
+        log.debug(
+            `DelayedEmitter: Resetting websocket connected state and waiting for new connection event`
+        );
+        this.isConnected = false;
+        this.websocketServer.on('connection', this.onConnection);
+    };
+
     public setWebsocket = (websocket: SocketIO.Server): void => {
         log.debug(`DelayedEmitter: Set websocket`);
         this.websocketServer = websocket;

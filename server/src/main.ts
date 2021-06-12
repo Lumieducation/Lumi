@@ -92,6 +92,9 @@ export function createMainWindow(websocketArg: SocketIO.Server): void {
 
         window.on('closed', () => {
             mainWindow = null;
+            // If a new main window is recreated later (macOS), we need to
+            // listen to the websocket's connection event again.
+            delayedWebsocketEmitter.resetWebsocketConnection();
         });
 
         window.webContents.on('devtools-opened', () => {
@@ -113,8 +116,6 @@ export function createMainWindow(websocketArg: SocketIO.Server): void {
         });
 
         mainWindow = window;
-
-        // return window;
     }
 }
 
@@ -129,6 +130,14 @@ app.on('window-all-closed', () => {
 // Handle open file events for MacOS
 app.on('open-file', (event: electron.Event, openedFilePath: string) => {
     log.debug('Electron open-file event caught');
+
+    /**
+     * If we are in macOS and the process is still active but there is no
+     * window, we need to create one.
+     */
+    if (mainWindow === null) {
+        createMainWindow(websocket);
+    }
 
     delayedWebsocketEmitter.emit('action', {
         payload: {
