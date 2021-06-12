@@ -1,6 +1,8 @@
 import SocketIO from 'socket.io';
 import log from 'electron-log';
 
+import settingsCache from '../settingsCache';
+
 /**
  * Wraps around SocketIO.Server and queues events until the websocket connection
  * to the client is established. Events sent after the connection is established
@@ -11,6 +13,11 @@ export default class DelayedEmitter {
         log.debug(`DelayedEmitter: Initialized"`);
         if (this.websocketServer) {
             this.websocketServer.on('connection', this.onConnection);
+        }
+        if (settingsCache.getSettings().privacyPolicyConsent) {
+            this.hasConsented = true;
+        } else {
+            settingsCache.subscribe(this.onSettingsChanged);
         }
     }
 
@@ -24,6 +31,15 @@ export default class DelayedEmitter {
          */
         name: string;
     }[] = [];
+
+    /**
+     * Keeps track if the user has consented to the privacy policy.
+     */
+    private hasConsented: boolean = false;
+
+    /**
+     * Keeps track if the Websocket is connected to the client.
+     */
     private isConnected: boolean = false;
 
     /**
@@ -33,7 +49,7 @@ export default class DelayedEmitter {
      * @param args the custom arguments to pass alongside the event name
      */
     public emit = (name: string, ...args: any[]): void => {
-        if (this.isConnected) {
+        if (this.isConnected && this.hasConsented) {
             log.debug(`DelayedEmitter: Immediately emitting event "${name}"`);
             this.websocketServer.emit(name, ...args);
         } else {
@@ -59,6 +75,19 @@ export default class DelayedEmitter {
     private onConnection = () => {
         log.debug('DelayedEmitter: Websocket connected');
         this.isConnected = true;
-        this.emitQueue();
+        if (this.hasConsented) {
+            this.emitQueue();
+        }
+    };
+
+    private onSettingsChanged = (): void => {
+        if (settingsCache.getSettings().privacyPolicyConsent) {
+            log.debug('DelayedEmitter: User has consented to privacy policy');
+            this.hasConsented = true;
+            settingsCache.unsubscribe(this.onSettingsChanged);
+            if (this.isConnected) {
+                this.emitQueue();
+            }
+        }
     };
 }
