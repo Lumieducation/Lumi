@@ -147,10 +147,13 @@ export default function CustomizedDialogs() {
                                 edge="end"
                                 onChange={() =>
                                     dispatch(
-                                        actions.settings.changeSetting({
-                                            privacyPolicyConsent:
-                                                !settings.privacyPolicyConsent
-                                        })
+                                        actions.settings.changeSetting(
+                                            {
+                                                privacyPolicyConsent:
+                                                    !settings.privacyPolicyConsent
+                                            },
+                                            false
+                                        )
                                     )
                                 }
                                 checked={settings.privacyPolicyConsent}
@@ -175,9 +178,13 @@ export default function CustomizedDialogs() {
                                 edge="end"
                                 onChange={() =>
                                     dispatch(
-                                        actions.settings.changeSetting({
-                                            bugTracking: !settings.bugTracking
-                                        })
+                                        actions.settings.changeSetting(
+                                            {
+                                                bugTracking:
+                                                    !settings.bugTracking
+                                            },
+                                            false
+                                        )
                                     )
                                 }
                                 checked={settings.bugTracking}
@@ -202,10 +209,13 @@ export default function CustomizedDialogs() {
                                 edge="end"
                                 onChange={() =>
                                     dispatch(
-                                        actions.settings.changeSetting({
-                                            usageStatistics:
-                                                !settings.usageStatistics
-                                        })
+                                        actions.settings.changeSetting(
+                                            {
+                                                usageStatistics:
+                                                    !settings.usageStatistics
+                                            },
+                                            false
+                                        )
                                     )
                                 }
                                 checked={settings.usageStatistics}
@@ -231,10 +241,13 @@ export default function CustomizedDialogs() {
                                     edge="end"
                                     onChange={() =>
                                         dispatch(
-                                            actions.settings.changeSetting({
-                                                autoUpdates:
-                                                    !settings.autoUpdates
-                                            })
+                                            actions.settings.changeSetting(
+                                                {
+                                                    autoUpdates:
+                                                        !settings.autoUpdates
+                                                },
+                                                false
+                                            )
                                         )
                                     }
                                     checked={settings.autoUpdates}

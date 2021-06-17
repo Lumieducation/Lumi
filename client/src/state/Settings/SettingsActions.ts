@@ -71,7 +71,18 @@ export function updateSettings(settings: ISettingsState): any {
     };
 }
 
-export function changeSetting(payload: Partial<ISettingsState>): any {
+/**
+ *
+ * @param payload
+ * @param save If true, the setting change will also be persisted, if false the
+ * change will only be performed in the Redux state, but not persisted to the
+ * disk.
+ * @returns
+ */
+export function changeSetting(
+    payload: Partial<ISettingsState>,
+    save: boolean = false
+): any {
     return async (dispatch: any) => {
         try {
             dispatch({
@@ -79,7 +90,9 @@ export function changeSetting(payload: Partial<ISettingsState>): any {
                 type: SETTINGS_CHANGE
             });
 
-            dispatch(updateSettings(store.getState().settings));
+            if (save) {
+                dispatch(updateSettings(store.getState().settings));
+            }
         } catch (error) {
             Sentry.captureException(error);
         }

@@ -19,12 +19,26 @@ class SettingsStorage {
     }
     public settings: ISettingsState;
 
+    private subscribers: (() => void)[] = [];
+
     getSettings(): ISettingsState {
         return this.settings;
     }
 
     setSettings(s: ISettingsState): void {
         this.settings = s;
+        this.subscribers.forEach((subscriber) => subscriber());
+    }
+
+    subscribe(handler: () => void): void {
+        this.subscribers.push(handler);
+    }
+
+    unsubscribe(handler: () => void): void {
+        const index = this.subscribers.indexOf(handler);
+        if (index >= 0) {
+            this.subscribers.splice(index, 1);
+        }
     }
 }
 
