@@ -24,7 +24,7 @@ export default function (
                 },
                 label: i18next.t('lumi:menu.help.toggle_developer_tools')
             },
-            { type: 'separator' } as any,
+            { type: 'separator' },
             {
                 click: () => {
                     electron.shell.openExternal(
@@ -33,7 +33,14 @@ export default function (
                 },
                 label: i18next.t('lumi:menu.help.follow_us_on_twitter')
             },
-            // { label: 'Check for Updates...', click: updater },
+            {
+                label: i18next.t('lumi:privacy_policy.title'),
+                click: () => {
+                    electron.shell.openExternal(
+                        `https://www.lumi.education/app/privacy-policy?lng=${i18next.language}`
+                    );
+                }
+            },
             { label: i18next.t('lumi:menu.help.about'), role: 'about' }
         ]
     };

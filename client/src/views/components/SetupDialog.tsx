@@ -295,7 +295,6 @@ export default function CustomizedDialogs() {
                     autoFocus={true}
                     onClick={handleAcceptAll}
                     color="primary"
-                    // disabled={!settings.privacyPolicyConsent}
                 >
                     {t('setup_dialog.accept_all')}
                 </Button>

@@ -43,6 +43,11 @@ export function createMainWindow(websocketArg: SocketIO.Server): void {
             width: 1000
         });
 
+        window.webContents.on('new-window', (e, url) => {
+            e.preventDefault();
+            electron.shell.openExternal(url);
+        });
+
         window.webContents.on('did-navigate-in-page', (event, url) => {
             currentPath = new URL(url).pathname;
             updateMenu(currentPath, window, websocketArg);

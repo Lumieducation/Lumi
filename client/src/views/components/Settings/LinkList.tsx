@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, getI18n } from 'react-i18next';
 
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -11,6 +11,7 @@ import PolicyIcon from '@material-ui/icons/Policy';
 
 export default function SettingsLinkList() {
     const { t } = useTranslation();
+    const i18n = getI18n();
 
     return (
         <List
@@ -19,7 +20,7 @@ export default function SettingsLinkList() {
             }
         >
             <a
-                href="https://www.lumi.education/app/privacy-policy"
+                href={`https://www.lumi.education/app/privacy-policy?lng=${i18n.language}`}
                 target="_blank"
                 rel="noreferrer"
                 style={{ color: 'inherit', textDecoration: 'inherit' }}
@@ -30,9 +31,7 @@ export default function SettingsLinkList() {
                     </ListItemIcon>
                     <ListItemText
                         id="switch-list-label-privacy-policy"
-                        primary={
-                            'https://www.Lumi.education/app/privacy-policy'
-                        }
+                        primary={`https://www.lumi.education/app/privacy-policy?lng=${i18n.language}`}
                         secondary={t('privacy_policy.title')}
                     />
                 </ListItem>
