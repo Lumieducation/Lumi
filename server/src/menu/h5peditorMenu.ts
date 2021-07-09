@@ -8,87 +8,89 @@ import macMenu from './macMenu';
 import windowMenu from './windowMenu';
 import viewMenu from './viewMenu';
 import runMenu from './runMenuItem';
+import settings from '../settingsCache';
 
-export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
-    ...macMenu(),
-    {
-        label: i18next.t('lumi:menu.file.label'),
-        submenu: [
-            {
-                accelerator: 'CmdOrCtrl+N',
-                click: () => {
-                    websocket.emit('action', {
-                        payload: {
-                            contentId: Math.round(Math.random() * 100000)
-                        },
-                        type: 'NEW_H5P'
-                    });
-                },
-                label: i18next.t('lumi:menu.h5peditor.new')
-            },
-            { type: 'separator' } as any,
-            {
-                accelerator: 'CmdOrCtrl+O',
-                click: () => {
-                    electron.dialog
-                        .showOpenDialog({
-                            filters: [
-                                {
-                                    extensions: ['h5p'],
-                                    name: 'HTML 5 Package'
-                                }
-                            ],
-                            properties: ['openFile', 'multiSelections']
-                        })
-                        .then(({ filePaths }) => {
-                            websocket.emit('action', {
-                                payload: {
-                                    paths: filePaths
-                                },
-                                type: 'OPEN_H5P'
-                            });
+export default (window: electron.BrowserWindow, websocket: SocketIO.Server) =>
+    [
+        ...macMenu(),
+        {
+            label: i18next.t('lumi:menu.file.label'),
+            submenu: [
+                {
+                    accelerator: 'CmdOrCtrl+N',
+                    click: () => {
+                        websocket.emit('action', {
+                            payload: {
+                                contentId: Math.round(Math.random() * 100000)
+                            },
+                            type: 'NEW_H5P'
                         });
+                    },
+                    label: i18next.t('lumi:menu.h5peditor.new')
                 },
-                label: i18next.t('lumi:menu.h5peditor.open')
-            },
-            { type: 'separator' } as any,
-            {
-                accelerator: 'CmdOrCtrl+S',
-                click: () => {
-                    websocket.emit('action', {
-                        type: 'SAVE'
-                    });
+                { type: 'separator' } as any,
+                {
+                    accelerator: 'CmdOrCtrl+O',
+                    click: () => {
+                        electron.dialog
+                            .showOpenDialog({
+                                filters: [
+                                    {
+                                        extensions: ['h5p'],
+                                        name: 'HTML 5 Package'
+                                    }
+                                ],
+                                properties: ['openFile', 'multiSelections']
+                            })
+                            .then(({ filePaths }) => {
+                                websocket.emit('action', {
+                                    payload: {
+                                        paths: filePaths
+                                    },
+                                    type: 'OPEN_H5P'
+                                });
+                            });
+                    },
+                    label: i18next.t('lumi:menu.h5peditor.open')
                 },
-                label: i18next.t('lumi:menu.file.save')
-            },
-            {
-                accelerator: 'Shift+CmdOrCtrl+S',
-                click: () => {
-                    websocket.emit('action', {
-                        type: 'SAVE_AS'
-                    });
+                { type: 'separator' } as any,
+                {
+                    accelerator: 'CmdOrCtrl+S',
+                    click: () => {
+                        websocket.emit('action', {
+                            type: 'SAVE'
+                        });
+                    },
+                    label: i18next.t('lumi:menu.file.save')
                 },
-                label: i18next.t('lumi:menu.file.save_as')
-            },
-            { type: 'separator' } as any,
-            {
-                click: () => {
-                    websocket.emit('action', {
-                        type: 'EXPORT_AS_HTML'
-                    });
+                {
+                    accelerator: 'Shift+CmdOrCtrl+S',
+                    click: () => {
+                        websocket.emit('action', {
+                            type: 'SAVE_AS'
+                        });
+                    },
+                    label: i18next.t('lumi:menu.file.save_as')
                 },
-                label: i18next.t('lumi:menu.file.export')
-            },
-            { type: 'separator' } as any,
-            {
-                label: i18next.t('lumi:menu.quit'),
-                role: 'quit'
-            } as any
-        ]
-    },
-    runMenu(websocket),
-    editMenu(),
-    ...viewMenu(),
-    ...windowMenu(),
-    helpMenu(window, websocket)
-];
+                { type: 'separator' } as any,
+                {
+                    click: () => {
+                        websocket.emit('action', {
+                            type: 'EXPORT_AS_HTML'
+                        });
+                    },
+                    label: i18next.t('lumi:menu.file.export')
+                },
+                { type: 'separator' } as any,
+                {
+                    label: i18next.t('lumi:menu.quit'),
+                    role: 'quit'
+                } as any
+            ]
+        },
+        settings.getSettings().allowPrerelease ? runMenu(websocket) : undefined,
+        editMenu(),
+        ...viewMenu(),
+        ...windowMenu(),
+        helpMenu(window, websocket)
+    ].filter((m) => m !== undefined);
