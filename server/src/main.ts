@@ -13,6 +13,7 @@ import serverConfigFactory from './serverConfig';
 import matomo from './matomo';
 import { machineId } from 'node-machine-id';
 import i18next from 'i18next';
+import fsExtra from 'fs-extra';
 
 import settingsCache from './settingsCache';
 import electronState from './electronState';
@@ -210,6 +211,10 @@ if (!gotSingleInstanceLock) {
     // create main BrowserWindow when electron is ready
     app.on('ready', async () => {
         log.info('app is ready');
+        settingsCache.setSettings(
+            await fsExtra.readJSON(serverConfig.settingsFile)
+        );
+
         const server = await httpServerFactory(
             serverConfigFactory(
                 process.env.USERDATA || app.getPath('userData')

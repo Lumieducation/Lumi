@@ -42,9 +42,7 @@ export default function (
         ) => {
             try {
                 if (req.body) {
-                    const settings = await fsExtra.readJSON(
-                        serverConfig.settingsFile
-                    );
+                    const oldSettings = settingsCache.getSettings();
 
                     await fsExtra.writeJSON(
                         serverConfig.settingsFile,
@@ -53,7 +51,7 @@ export default function (
 
                     if (
                         req.body.language &&
-                        req.body.language !== settings.language
+                        req.body.language !== oldSettings.language
                     ) {
                         await i18next.loadLanguages(req.body.language);
                         await i18next.changeLanguage(req.body.language);

@@ -81,7 +81,7 @@ export function updateSettings(settings: ISettingsState): any {
  */
 export function changeSetting(
     payload: Partial<ISettingsState>,
-    save: boolean = false
+    save: boolean = true
 ): any {
     return async (dispatch: any) => {
         try {

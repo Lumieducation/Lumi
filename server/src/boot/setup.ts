@@ -5,9 +5,6 @@ import { app } from 'electron';
 import IServerConfig from '../IServerConfig';
 import { fsImplementations, H5PConfig } from '@lumieducation/h5p-server';
 import defaultSettings from './defaultSettings';
-import defaultRun from './defaultRun';
-
-import settingsCache from '../settingsCache';
 
 export default async function setup(
     serverConfig: IServerConfig
@@ -78,10 +75,6 @@ export default async function setup(
             );
             await h5pConfig.save();
         }
-
-        settingsCache.setSettings(
-            await fsExtra.readJSON(serverConfig.settingsFile)
-        );
     } catch (error) {
         Sentry.captureException(error);
         throw error;
