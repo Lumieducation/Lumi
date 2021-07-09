@@ -5,6 +5,7 @@ import { app } from 'electron';
 import IServerConfig from '../IServerConfig';
 import { fsImplementations, H5PConfig } from '@lumieducation/h5p-server';
 import defaultSettings from './defaultSettings';
+import settingsCache from '../settingsCache';
 
 export default async function setup(
     serverConfig: IServerConfig
@@ -52,6 +53,10 @@ export default async function setup(
         } catch (error) {
             configOk = false;
         }
+        settingsCache.setSettings(
+            await fsExtra.readJSON(serverConfig.settingsFile)
+        );
+
         // Create a new configuration if needed
         if (!configOk) {
             // We write configuration values that are not automatically saved

@@ -216,9 +216,6 @@ if (!gotSingleInstanceLock) {
     // create main BrowserWindow when electron is ready
     app.on('ready', async () => {
         log.info('app is ready');
-        settingsCache.setSettings(
-            await fsExtra.readJSON(serverConfig.settingsFile)
-        );
 
         const server = await httpServerFactory(
             serverConfigFactory(
