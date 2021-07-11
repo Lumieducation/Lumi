@@ -20,14 +20,16 @@ describe('App', () => {
                 '.bin',
                 'electron'
             ),
-            args: ['--no-sandbox', path.join(__dirname, '..')]
+            args: [path.join(__dirname, '..')],
+            chromeDriverArgs: ['--no-sandbox', '--disable-dev-shm-usage']
         });
         return app.start();
     }, 30000);
 
-    afterAll(() => {
+    afterAll(async () => {
         if (app && app.isRunning()) {
-            return app.stop();
+            await app.stop();
+            app.mainProcess.abort();
         }
     });
 
