@@ -7,7 +7,6 @@ import editMenu from './editMenu';
 import macMenu from './macMenu';
 import windowMenu from './windowMenu';
 import viewMenu from './viewMenu';
-import runMenu from './runMenuItem';
 import settings from '../settingsCache';
 
 export default (window: electron.BrowserWindow, websocket: SocketIO.Server) =>
@@ -81,14 +80,24 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) =>
                     },
                     label: i18next.t('lumi:menu.file.export')
                 },
+                settings.getSettings().allowPrerelease !== undefined
+                    ? {
+                          label: i18next.t('lumi:menu.run.upload'),
+                          click: () => {
+                              websocket.emit('action', {
+                                  payload: {},
+                                  type: 'UPLOAD_TO_RUN'
+                              });
+                          }
+                      }
+                    : undefined,
                 { type: 'separator' } as any,
                 {
                     label: i18next.t('lumi:menu.quit'),
                     role: 'quit'
                 } as any
-            ]
+            ].filter((e) => e !== undefined)
         },
-        settings.getSettings().allowPrerelease ? runMenu(websocket) : undefined,
         editMenu(),
         ...viewMenu(),
         ...windowMenu(),

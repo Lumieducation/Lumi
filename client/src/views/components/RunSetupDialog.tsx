@@ -137,7 +137,7 @@ export default function RunSetupDialog(props: IRunSetupDialogProps) {
                                     {t('privacy_policy.title')} [
                                     <a
                                         rel="noreferrer"
-                                        href="https://Lumi.education/run/privacy-policy"
+                                        href="https://lumi.education/run/privacy-policy"
                                         target="_blank"
                                     >
                                         Link
@@ -173,7 +173,7 @@ export default function RunSetupDialog(props: IRunSetupDialogProps) {
                                     {t('run.tos.header')} [
                                     <a
                                         rel="noreferrer"
-                                        href="https://Lumi.education/run/terms-of-use"
+                                        href="https://lumi.education/run/terms-of-use"
                                         target="_blank"
                                     >
                                         Link

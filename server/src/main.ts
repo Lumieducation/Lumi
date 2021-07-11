@@ -77,6 +77,11 @@ export function createMainWindow(websocketArg: SocketIO.Server): void {
             delayedWebsocketEmitter.resetWebsocketConnection();
         });
 
+        window.webContents.on('new-window', (e, url) => {
+            e.preventDefault();
+            electron.shell.openExternal(url);
+        });
+
         window.webContents.on('devtools-opened', () => {
             window.focus();
             setImmediate(() => {

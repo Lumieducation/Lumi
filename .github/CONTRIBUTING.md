@@ -104,7 +104,7 @@ Once you have resolved any conflicts locally you can update the Pull Request wit
 
 ### We’re Here To Help
 
-We encourage you to ask for help at any point. You can open issues or chat with us in [Slack](https://join.slack.com/t/lumi-education/shared_invite/enQtMjY0MTM2NjIwNDU0LWU3YzVhZjdkNGFjZGE1YThjNzBiMmJjY2I2ODk2MzAzNDE3YzI0MmFkOTdmZWZhOTBmY2RjOTc3ZmZmOWMxY2U) or reach us via [c@Lumi.education](mailto:c@Lumi.education).
+We encourage you to ask for help at any point. You can open issues or chat with us in [Slack](https://join.slack.com/t/lumi-education/shared_invite/enQtMjY0MTM2NjIwNDU0LWU3YzVhZjdkNGFjZGE1YThjNzBiMmJjY2I2ODk2MzAzNDE3YzI0MmFkOTdmZWZhOTBmY2RjOTc3ZmZmOWMxY2U) or reach us via [c@lumi.education](mailto:c@lumi.education).
 
 ---
 
