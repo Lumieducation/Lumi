@@ -21,10 +21,7 @@ export default function (
             next: express.NextFunction
         ) => {
             try {
-                const settings = await fsExtra.readJSON(
-                    serverConfig.settingsFile
-                );
-
+                const settings = await settingsCache.getSettings();
                 res.status(200).json(settings);
             } catch (error) {
                 Sentry.captureException(error);
