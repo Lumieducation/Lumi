@@ -5,7 +5,7 @@ export default {
     autoUpdates: false,
     bugTracking: false,
     email: '',
-    enableLumiRun: true, // This is a flag that's not user configurable but globally set here
+    enableLumiRun: false, // This is a flag that's not user configurable but globally set here
     firstOpen: true,
     language: 'en',
     lastVersion: app ? app.getVersion() : 'test',
