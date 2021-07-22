@@ -25,6 +25,10 @@ window.onunload = function () {
 };
 
 var onCompleted = function (result) {
+    if (!result.score) {
+        return;
+    }
+    
     var masteryScore;
     if (scorm.version == '2004') {
         masteryScore = scorm.get('cmi.scaled_passing_score');
