@@ -111,6 +111,14 @@ export default function FullScreenDialog() {
         (state: IState) => state.updates.updateInfo.releaseName !== ''
     );
 
+    const allowPrerelease = useSelector(
+        (state: IState) => state.settings.allowPrerelease
+    );
+
+    const enableLumiRun = useSelector(
+        (state: IState) => state.settings.enableLumiRun
+    );
+
     const [section, setSection] = React.useState('general');
 
     const handleClickOpen = () => {
@@ -222,21 +230,23 @@ export default function FullScreenDialog() {
                                 )}
                             />
                         </ListItem>
-                        <ListItem
-                            button
-                            key="account"
-                            onClick={() => setSection('account')}
-                            className={classnames({
-                                [classes.selected]: section === 'account'
-                            })}
-                        >
-                            <ListItemIcon>
-                                <AccountBoxIcon />
-                            </ListItemIcon>
-                            <ListItemText
-                                primary={t('settings.menu.account')}
-                            />
-                        </ListItem>
+                        {allowPrerelease && enableLumiRun && (
+                            <ListItem
+                                button
+                                key="account"
+                                onClick={() => setSection('account')}
+                                className={classnames({
+                                    [classes.selected]: section === 'account'
+                                })}
+                            >
+                                <ListItemIcon>
+                                    <AccountBoxIcon />
+                                </ListItemIcon>
+                                <ListItemText
+                                    primary={t('settings.menu.account')}
+                                />
+                            </ListItem>
+                        )}
                     </List>
                 </Drawer>
                 <DialogContent className={classes.bg}>

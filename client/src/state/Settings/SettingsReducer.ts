@@ -18,7 +18,8 @@ export const initialState: ISettingsState = {
     language: 'en',
     email: '',
     token: '',
-    allowPrerelease: false
+    allowPrerelease: false,
+    enableLumiRun: false
 };
 
 export default function settingsReducer(

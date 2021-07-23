@@ -13,6 +13,7 @@ export interface ISettingsState {
     email: string;
     token: string;
     allowPrerelease: boolean;
+    enableLumiRun: boolean;
 }
 
 export const SETTINGS_GET_SETTINGS_REQUEST = 'SETTINGS_GET_SETTINGS_REQUEST';

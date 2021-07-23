@@ -3,6 +3,7 @@ interface ISettingsState {
     autoUpdates: boolean;
     bugTracking: boolean;
     email: string;
+    enableLumiRun: boolean;
     firstOpen: boolean;
     language: string;
     lastVersion: string;
@@ -26,6 +27,10 @@ class SettingsStorage {
     }
 
     setSettings(s: ISettingsState): void {
+        // We override the user defined values so that we have a feature flag in
+        // the app code
+        s.enableLumiRun = defaultSettings.enableLumiRun;
+
         this.settings = s;
         this.subscribers.forEach((subscriber) => subscriber());
     }

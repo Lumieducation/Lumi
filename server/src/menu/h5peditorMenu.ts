@@ -80,7 +80,8 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) =>
                     },
                     label: i18next.t('lumi:menu.file.export')
                 },
-                settings.getSettings().allowPrerelease !== undefined
+                settings.getSettings().allowPrerelease &&
+                settings.getSettings().enableLumiRun
                     ? {
                           label: i18next.t('lumi:menu.run.upload'),
                           click: () => {
