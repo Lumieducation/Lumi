@@ -98,33 +98,6 @@ export default function SettingsGeneralSettingsList() {
             </ListItem>
             <ListItem>
                 <ListItemIcon>
-                    <UpdateIcon />
-                </ListItemIcon>
-                <ListItemText
-                    id="switch-list-label-updates"
-                    primary={t('prerelease.title')}
-                    secondary={t('prerelease.description')}
-                />
-                <ListItemSecondaryAction>
-                    <Switch
-                        edge="end"
-                        onChange={() =>
-                            dispatch(
-                                actions.settings.changeSetting({
-                                    allowPrerelease: !settings.allowPrerelease
-                                })
-                            )
-                        }
-                        checked={settings.allowPrerelease}
-                        inputProps={{
-                            'aria-labelledby':
-                                'switch-list-label-prerelease-updates'
-                        }}
-                    />
-                </ListItemSecondaryAction>
-            </ListItem>
-            <ListItem>
-                <ListItemIcon>
                     <TranslateIcon />
                 </ListItemIcon>
                 <ListItemText
