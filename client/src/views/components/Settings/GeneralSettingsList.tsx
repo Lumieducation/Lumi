@@ -15,7 +15,6 @@ import BugReportIcon from '@material-ui/icons/BugReport';
 import InsertChartIcon from '@material-ui/icons/InsertChart';
 
 import TranslateIcon from '@material-ui/icons/Translate';
-import UpdateIcon from '@material-ui/icons/Update';
 
 import { actions, IState } from '../../../state';
 import LanguageList from './LanguageList';
