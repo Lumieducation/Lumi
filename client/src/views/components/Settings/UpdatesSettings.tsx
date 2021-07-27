@@ -84,7 +84,8 @@ export default function UpdatesSettingsList() {
                             onChange={() =>
                                 dispatch(
                                     actions.settings.changeSetting({
-                                        allowPrerelease: !settings.allowPrerelease
+                                        allowPrerelease:
+                                            !settings.allowPrerelease
                                     })
                                 )
                             }
