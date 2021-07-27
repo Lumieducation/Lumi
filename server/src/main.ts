@@ -110,7 +110,8 @@ if (!gotSingleInstanceLock) {
     app.quit();
 } else {
     const serverConfig = serverConfigFactory(
-        process.env.USERDATA || app.getPath('userData')
+        process.env.USERDATA || app.getPath('userData'),
+        process.env.TEMPDATA || app.getPath('temp')
     );
     Sentry.init({
         dsn: 'http://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
@@ -217,7 +218,8 @@ if (!gotSingleInstanceLock) {
         log.info('app is ready');
         const server = await httpServerFactory(
             serverConfigFactory(
-                process.env.USERDATA || app.getPath('userData')
+                process.env.USERDATA || app.getPath('userData'),
+                process.env.TEMPDATA || app.getPath('temp')
             ),
             mainWindow,
             {
