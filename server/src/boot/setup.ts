@@ -1,9 +1,9 @@
 import * as Sentry from '@sentry/electron';
 import fsExtra from 'fs-extra';
 import { app } from 'electron';
-
+import path from 'path';
 import IServerConfig from '../IServerConfig';
-import { fsImplementations, H5PConfig } from '@lumieducation/h5p-server';
+import { fs, fsImplementations, H5PConfig } from '@lumieducation/h5p-server';
 import defaultSettings from './defaultSettings';
 import defaultRun from './defaultRun';
 
@@ -13,8 +13,17 @@ export default async function setup(
     serverConfig: IServerConfig
 ): Promise<void> {
     try {
+        // If the workingCache (prior 0.8.0) still exists in userData remove it. -> https://github.com/Lumieducation/Lumi/pull/1727
+        const workingCachePath = path.join(
+            process.env.USERDATA || app.getPath('userData'),
+            'workingCache'
+        );
+
+        if (await fsExtra.stat(workingCachePath)) {
+            fsExtra.remove(workingCachePath); // deliberately without await to not block the setup if it takes long.
+        }
+
         // Make sure required directories exist
-        await fsExtra.mkdirp(serverConfig.workingCachePath);
         await fsExtra.mkdirp(serverConfig.librariesPath);
         await fsExtra.mkdirp(serverConfig.temporaryStoragePath);
 
