@@ -15,7 +15,11 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
                 configFile: path.resolve('test', 'data', 'config.json'),
                 librariesPath: path.resolve('test', 'data', `libraries`),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
-                workingCachePath: path.resolve('test', 'data', 'workingCache'),
+                contentStoragePath: path.resolve(
+                    'test',
+                    'data',
+                    'workingCache'
+                ),
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
             null

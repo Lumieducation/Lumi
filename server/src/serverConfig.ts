@@ -6,7 +6,7 @@ export default (userData: string, tempData: string): IServerConfig => {
         librariesPath: path.join(userData, 'libraries'),
         cache: path.join(userData, 'store.json'),
         temporaryStoragePath: path.join(tempData, 'tmp'),
-        workingCachePath: path.join(tempData, 'workingCache'),
+        contentStoragePath: path.join(tempData, 'contentStorage'),
         configFile: path.join(userData, 'config.json'),
         settingsFile: path.join(userData, 'settings.json')
     };

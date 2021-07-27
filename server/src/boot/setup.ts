@@ -14,13 +14,13 @@ export default async function setup(
 ): Promise<void> {
     try {
         // If the workingCache (prior 0.8.0) still exists in userData remove it. -> https://github.com/Lumieducation/Lumi/pull/1727
-        const workingCachePath = path.join(
+        const contentStoragePath = path.join(
             process.env.USERDATA || app.getPath('userData'),
             'workingCache'
         );
 
-        if (await fsExtra.stat(workingCachePath)) {
-            fsExtra.remove(workingCachePath); // deliberately without await to not block the setup if it takes long.
+        if (await fsExtra.stat(contentStoragePath)) {
+            fsExtra.remove(contentStoragePath); // deliberately without await to not block the setup if it takes long.
         }
 
         // Make sure required directories exist

@@ -4,5 +4,5 @@ export default interface IServerConfig {
     librariesPath: string;
     settingsFile: string;
     temporaryStoragePath: string;
-    workingCachePath: string;
+    contentStoragePath: string;
 }
