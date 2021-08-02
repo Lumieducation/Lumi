@@ -3,9 +3,8 @@ import fsExtra from 'fs-extra';
 import { app } from 'electron';
 import path from 'path';
 import IServerConfig from '../IServerConfig';
-import { fs, fsImplementations, H5PConfig } from '@lumieducation/h5p-server';
+import { fsImplementations, H5PConfig } from '@lumieducation/h5p-server';
 import defaultSettings from './defaultSettings';
-import defaultRun from './defaultRun';
 
 import settingsCache from '../settingsCache';
 
@@ -24,11 +23,11 @@ export default async function setup(
             'tmp'
         );
 
-        if (await fsExtra.stat(deprecatedContentStoragePath)) {
+        if (await fsExtra.pathExists(deprecatedContentStoragePath)) {
             fsExtra.remove(deprecatedContentStoragePath); // deliberately without await to not block the setup if it takes long.
         }
 
-        if (await fsExtra.stat(deprecatedTemporaryStoragePath)) {
+        if (await fsExtra.pathExists(deprecatedTemporaryStoragePath)) {
             fsExtra.remove(deprecatedTemporaryStoragePath); // deliberately without await to not block the setup if it takes long.
         }
 
