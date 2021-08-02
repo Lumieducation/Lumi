@@ -61,7 +61,7 @@ export default async (
     const h5pEditor: H5P.H5PEditor = await createH5PEditor(
         config,
         options?.libraryDir ?? serverConfig.librariesPath, // the path on the local disc where libraries should be stored)
-        serverConfig.workingCachePath, // the path on the local disc where content is stored. Only used / necessary if you use the local filesystem content storage class.
+        serverConfig.contentStoragePath, // the path on the local disc where content is stored. Only used / necessary if you use the local filesystem content storage class.
         serverConfig.temporaryStoragePath, // the path on the local disc where temporary files (uploads) should be stored. Only used / necessary if you use the local filesystem temporary storage class.
         (key, language) => translationFunction(key, { lng: language }),
         {
