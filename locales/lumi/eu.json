@@ -116,6 +116,9 @@
                 "instancesCount": "Liburutegi honekin eduki mota nagusi gisa sortutako objektuak",
                 "instancesAsDependencyCount": "Liburutegi hau beste liburutegi batek erabiltzen dituen objektuak"
             }
+        },
+        "links": {
+            "header": "Estekak"
         }
     },
     "analytics": {
@@ -151,7 +154,14 @@
     "updates": {
         "title": "Eguneratze automatikoak",
         "description": "Lortu azken bertsioa automatikoki.",
-        "consent": "Aplikazio honi eguneratzeak automatikoki begiratzea baimentzen diot."
+        "consent": "Aplikazio honi eguneratzeak automatikoki begiratzea baimentzen diot.",
+        "checkForUpdate": {
+            "title": "Egiaztatu eguneratzeak",
+            "description": "Egiaztatu eguneratzeak",
+            "checkButton": "Egiaztatu"
+        },
+        "restartAndInstall": "Instalatu eta berrabiarazi",
+        "badge": "Eguneratu"
     },
     "language": {
         "title": "Hizkuntza",
@@ -164,8 +174,9 @@
     },
     "setup_dialog": {
         "description": "Norberaren pribatutasuna babestea garrantzitsua da guretzat. Eman nahi duzun informazioa soilik biltzen dugu eta zure baimenarekin tratatzen dugu. Ahalik eta gardenenak izan nahi dugu. Hala ere, Lumi konexio eta datu transferentzietan oinarritzen da lan egiteko.",
-        "save": "Gorde",
-        "consent_warning": "Aplikazio hau erabiltzeko pribatutasun politika onartu behar duzu gutxienez."
+        "consent_warning": "Aplikazio hau erabiltzeko pribatutasun politika onartu behar duzu gutxienez.",
+        "accept_all": "Onartu guztiak",
+        "accept_selected": "Onartu hautatutakoa"
     },
     "menu": {
         "quit": "Utzi",
@@ -214,6 +225,10 @@
             "zoomIn": "Handitu",
             "zoomOut": "Txikitu",
             "togglefullscreen": "Txandakatu pantaila osoa"
+        },
+        "run": {
+            "label": "Korrika egin",
+            "upload": "Kargatu Lumi Run-era"
         }
     },
     "notifications": {
@@ -237,6 +252,9 @@
                 "success": "H5P esportatu da",
                 "error": "Ezin izan da H5P esportatu"
             }
+        },
+        "general": {
+            "econnrefused": "Badirudi arazo bat dagoela zure Interneteko konexioarekin."
         }
     },
     "auth": {
@@ -247,17 +265,76 @@
         "verify_email": "Egiaztatu helbide elektronikoa",
         "notification": {
             "success": "{{email}} behar bezala balioztatu da",
-            "pending": "Egiaztapen kode bat izan da bidali {{email}} . Mesedez, egiaztatu zure mezu elektronikoak."
+            "pending": "Egiaztapen kode bat izan da bidali {{email}} . Mesedez, egiaztatu zure mezu elektronikoak.",
+            "logout": {
+                "success": "Saioa amaitu zenuen."
+            }
         },
         "error": {
-            "no-valid-email": "{{email}} ez da baliozko helbide elektronikoa."
+            "no-valid-email": "{{email}} ez da baliozko helbide elektronikoa.",
+            "econnrefused": "Ezin izan da Lumi Auth zerbitzariarekin jarri harremanetan. Mesedez, egiaztatu zure Interneteko konexioa."
         },
-        "cancel": "Utzi"
+        "cancel": "Utzi",
+        "logout": "Saioa amaitu"
     },
     "dialog": {
         "close": "Itxi"
     },
     "general": {
-        "delete": "Ezabatu"
+        "delete": "Ezabatu",
+        "copyClipboard": "{{value}} arbelera kopiatu da"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Konexioa ukatu da"
+        },
+        "messages": {
+            "econnrefused": "Konexioa ukatu da"
+        }
+    },
+    "prerelease": {
+        "title": "Aurretiazko Ezaugarriak",
+        "description": "Gaitu eginbide esperimentalak kaleratu aurretik"
+    },
+    "run": {
+        "description": "Lumi Run-ek zure H5P klik bakarrarekin kargatu eta ostatatzeko aukera ematen dizu.",
+        "legal": "Zerbitzu hau erabiltzeko, Zerbitzu baldintzak, pribatutasun politika eta ados jarri behar duzu.",
+        "tos": {
+            "header": "Zerbitzu-baldintzak",
+            "description": "Zerbitzuaren baldintzak irakurri eta onartzen ditut."
+        },
+        "link": {
+            "header": "Esteka"
+        },
+        "upload": "Kargatu",
+        "list": {
+            "header": "Kargatutako H5P",
+            "noUploadedH5P": "Ez da kargatutako H5P",
+            "deleteDialog": {
+                "title": "Ezabatu Exekutatu {{runId}}",
+                "description": "{{runId}} run ezabatu nahi duzula?",
+                "cancel": "Utzi",
+                "confirm": "Berretsi"
+            }
+        },
+        "uploadDialog": {
+            "success": "Zure H5P Lumi.run-era kargatu da. Atzitu eta parteka dezakezu esteka honekin.",
+            "uploading": "Kargatzen",
+            "processing": "Prozesamendua",
+            "goToRun": "Joan lasterketetara",
+            "ok": "Ados"
+        },
+        "setupDialog": {
+            "close": "Itxi",
+            "start": "Hasi"
+        },
+        "notifications": {
+            "delete": {
+                "success": "{{id}} Lumi.run-etik 0 ezabatu da"
+            },
+            "upload": {
+                "success": "H5P behar bezala kargatu da Lumi.run-era"
+            }
+        }
     }
 }

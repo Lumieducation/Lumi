@@ -116,6 +116,9 @@
                 "instancesCount": "Objectes creats amb aquesta biblioteca com a tipus de contingut principal",
                 "instancesAsDependencyCount": "Objectes en què aquesta biblioteca la fa servir una altra biblioteca"
             }
+        },
+        "links": {
+            "header": "Enllaços"
         }
     },
     "analytics": {
@@ -151,7 +154,14 @@
     "updates": {
         "title": "Actualitzacions automàtiques",
         "description": "Obteniu la versió més recent automàticament.",
-        "consent": "Permeto que aquesta aplicació comprovi automàticament si hi ha actualitzacions."
+        "consent": "Permeto que aquesta aplicació comprovi automàticament si hi ha actualitzacions.",
+        "checkForUpdate": {
+            "title": "Buscar actualitzacions",
+            "description": "Buscar actualitzacions",
+            "checkButton": "Comprovar"
+        },
+        "restartAndInstall": "Instal·leu i reinicieu",
+        "badge": "Actualització"
     },
     "language": {
         "title": "Llenguatge",
@@ -164,8 +174,9 @@
     },
     "setup_dialog": {
         "description": "Protegir la privadesa de la persona és important per a nosaltres. Només recopilem la informació que trieu per donar-nos i la processem amb el vostre consentiment. Volem ser el més transparents possible. No obstant això, Lumi confia en algunes connexions i transferències de dades per funcionar.",
-        "save": "Desa",
-        "consent_warning": "Per utilitzar aquesta aplicació, heu de consentir almenys la política de privadesa."
+        "consent_warning": "Per utilitzar aquesta aplicació, heu de consentir almenys la política de privadesa.",
+        "accept_all": "Accepta-ho tot",
+        "accept_selected": "Accepta seleccionats"
     },
     "menu": {
         "quit": "Deixa",
@@ -214,6 +225,10 @@
             "zoomIn": "Apropar",
             "zoomOut": "Disminuir el zoom",
             "togglefullscreen": "Commuta la pantalla completa"
+        },
+        "run": {
+            "label": "Correr",
+            "upload": "Pengeu a Lumi Run"
         }
     },
     "notifications": {
@@ -237,6 +252,9 @@
                 "success": "H5P s'ha exportat correctament",
                 "error": "No s'ha pogut exportar H5P"
             }
+        },
+        "general": {
+            "econnrefused": "Sembla que hi ha un problema amb la vostra connexió a Internet."
         }
     },
     "auth": {
@@ -247,17 +265,76 @@
         "verify_email": "verificar Correu",
         "notification": {
             "success": "{{email}} s'ha validat correctament",
-            "pending": "S'ha enviat un codi de verificació a {{email}} . Consulteu els vostres correus electrònics."
+            "pending": "S'ha enviat un codi de verificació a {{email}} . Consulteu els vostres correus electrònics.",
+            "logout": {
+                "success": "Heu tancat la sessió."
+            }
         },
         "error": {
-            "no-valid-email": "{{email}} no és una adreça electrònica vàlida."
+            "no-valid-email": "{{email}} no és una adreça electrònica vàlida.",
+            "econnrefused": "No s'ha pogut contactar amb el servidor Lumi Auth. Comproveu la vostra connexió a Internet."
         },
-        "cancel": "Cancel · lar"
+        "cancel": "Cancel · lar",
+        "logout": "Tancar sessió"
     },
     "dialog": {
         "close": "Tanca"
     },
     "general": {
-        "delete": "Suprimeix"
+        "delete": "Suprimeix",
+        "copyClipboard": "S'ha copiat {{value}} al porta-retalls"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Connexió rebutjada"
+        },
+        "messages": {
+            "econnrefused": "Connexió rebutjada"
+        }
+    },
+    "prerelease": {
+        "title": "Funcions de pre-llançament",
+        "description": "Activeu les funcions experimentals abans que es publiquin"
+    },
+    "run": {
+        "description": "Lumi Run us permet carregar i allotjar el vostre H5P amb un sol clic.",
+        "legal": "Per utilitzar aquest servei, heu d’acceptar les Condicions del servei, la política de privadesa i proporcionar-nos un correu electrònic de contacte.",
+        "tos": {
+            "header": "Termes del servei",
+            "description": "He llegit i accepto les condicions del servei."
+        },
+        "link": {
+            "header": "Enllaç"
+        },
+        "upload": "Pujar",
+        "list": {
+            "header": "H5P penjat",
+            "noUploadedH5P": "No hi ha H5P penjat",
+            "deleteDialog": {
+                "title": "Suprimeix l'execució {{runId}}",
+                "description": "Confirmes que vols suprimir l’execució {{runId}}",
+                "cancel": "Cancel · lar",
+                "confirm": "Confirmeu"
+            }
+        },
+        "uploadDialog": {
+            "success": "El vostre H5P s'ha carregat a Lumi.run. Podeu accedir-hi i compartir-lo amb el següent enllaç.",
+            "uploading": "S'està penjant",
+            "processing": "Processament",
+            "goToRun": "Vés a les curses",
+            "ok": "D'acord"
+        },
+        "setupDialog": {
+            "close": "Tanca",
+            "start": "Començar"
+        },
+        "notifications": {
+            "delete": {
+                "success": "S'ha suprimit correctament {{id}} de Lumi.run"
+            },
+            "upload": {
+                "success": "H5P s'ha penjat correctament a Lumi.run"
+            }
+        }
     }
 }

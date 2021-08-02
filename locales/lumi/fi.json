@@ -116,6 +116,9 @@
                 "instancesCount": "Objektit, jotka on luotu tämän kirjaston pääsisältötyypiksi",
                 "instancesAsDependencyCount": "Objektit, joissa toinen kirjasto käyttää tätä kirjastoa"
             }
+        },
+        "links": {
+            "header": "Linkit"
         }
     },
     "analytics": {
@@ -151,7 +154,14 @@
     "updates": {
         "title": "Automaattiset päivitykset",
         "description": "Hanki uusin versio automaattisesti.",
-        "consent": "Annan tämän sovelluksen tarkistaa automaattisesti päivitykset."
+        "consent": "Annan tämän sovelluksen tarkistaa automaattisesti päivitykset.",
+        "checkForUpdate": {
+            "title": "Tarkista päivitykset",
+            "description": "Tarkista päivitykset",
+            "checkButton": "Tarkistaa"
+        },
+        "restartAndInstall": "Asenna ja käynnistä uudelleen",
+        "badge": "Päivittää"
     },
     "language": {
         "title": "Kieli",
@@ -164,8 +174,9 @@
     },
     "setup_dialog": {
         "description": "Yksilön yksityisyyden suojaaminen on meille tärkeää. Keräämme vain tiedot, jotka päätät antaa meille, ja käsittelemme niitä suostumuksellasi. Haluamme olla mahdollisimman avoimia. Lumi luottaa kuitenkin joihinkin yhteyksiin ja tiedonsiirtoihin työhön.",
-        "save": "Tallentaa",
-        "consent_warning": "Sinun on ainakin suostuttava tietosuojakäytäntöön tämän sovelluksen käyttämiseksi."
+        "consent_warning": "Sinun on ainakin suostuttava tietosuojakäytäntöön tämän sovelluksen käyttämiseksi.",
+        "accept_all": "Hyväksy kaikki",
+        "accept_selected": "Hyväksy valittu"
     },
     "menu": {
         "quit": "Lopettaa",
@@ -214,6 +225,10 @@
             "zoomIn": "Lähennä",
             "zoomOut": "Loitontaa",
             "togglefullscreen": "Vaihda koko näytöllä"
+        },
+        "run": {
+            "label": "Juosta",
+            "upload": "Lataa Lumi Runiin"
         }
     },
     "notifications": {
@@ -237,6 +252,9 @@
                 "success": "H5P: n vienti onnistui",
                 "error": "H5P: n vienti epäonnistui"
             }
+        },
+        "general": {
+            "econnrefused": "Internet -yhteydessänne näyttää olevan ongelma."
         }
     },
     "auth": {
@@ -247,17 +265,76 @@
         "verify_email": "vahvista sähköposti",
         "notification": {
             "success": "{{email}} on vahvistettu",
-            "pending": "Vahvistuskoodi on lähetetty numeroon {{email}} . Tarkista sähköpostisi."
+            "pending": "Vahvistuskoodi on lähetetty numeroon {{email}} . Tarkista sähköpostisi.",
+            "logout": {
+                "success": "Olit kirjautunut ulos."
+            }
         },
         "error": {
-            "no-valid-email": "{{email}} ei ole kelvollinen sähköpostiosoite."
+            "no-valid-email": "{{email}} ei ole kelvollinen sähköpostiosoite.",
+            "econnrefused": "Yhteyden ottaminen Lumi Auth -palvelimeen ei onnistunut. Tarkista internetyhteytesi."
         },
-        "cancel": "Peruuttaa"
+        "cancel": "Peruuttaa",
+        "logout": "Kirjautua ulos"
     },
     "dialog": {
         "close": "kiinni"
     },
     "general": {
-        "delete": "Poistaa"
+        "delete": "Poistaa",
+        "copyClipboard": "Kopioitu {{value}} leikepöydälle"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Yhteys evätty"
+        },
+        "messages": {
+            "econnrefused": "Yhteys evätty"
+        }
+    },
+    "prerelease": {
+        "title": "Esijulkaisuominaisuudet",
+        "description": "Ota kokeelliset ominaisuudet käyttöön ennen niiden julkaisua"
+    },
+    "run": {
+        "description": "Lumi Runin avulla voit ladata ja isännöidä H5P: si yhdellä napsautuksella.",
+        "legal": "Voidaksesi käyttää tätä palvelua sinun on hyväksyttävä käyttöehdot, tietosuojakäytäntö ja annettava meille yhteyssähköposti.",
+        "tos": {
+            "header": "Käyttöehdot",
+            "description": "Olen lukenut ja hyväksyn palveluehdot."
+        },
+        "link": {
+            "header": "Linkki"
+        },
+        "upload": "Lataa",
+        "list": {
+            "header": "Ladattu H5P",
+            "noUploadedH5P": "Ei ladattua H5P: tä",
+            "deleteDialog": {
+                "title": "Poista Suorita {{runId}}",
+                "description": "Haluatko todella poistaa suorituksen {{runId}}",
+                "cancel": "Peruuttaa",
+                "confirm": "Vahvistaa"
+            }
+        },
+        "uploadDialog": {
+            "success": "H5P -laitteesi ladattiin Lumi.run -palveluun. Voit käyttää ja jakaa sen seuraavan linkin avulla.",
+            "uploading": "Ladataan",
+            "processing": "Käsittely",
+            "goToRun": "Mene juoksuihin",
+            "ok": "Ok"
+        },
+        "setupDialog": {
+            "close": "kiinni",
+            "start": "alkaa"
+        },
+        "notifications": {
+            "delete": {
+                "success": "{{id}} poistettiin onnistuneesti osoitteesta Lumi.run"
+            },
+            "upload": {
+                "success": "H5P: n lataaminen Lumi.runiin onnistui"
+            }
+        }
     }
 }
