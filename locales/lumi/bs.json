@@ -116,6 +116,9 @@
                 "instancesCount": "Objekti stvoreni ovom bibliotekom kao glavnim tipom sadržaja",
                 "instancesAsDependencyCount": "Objekti u kojima ovu knjižnicu koristi druga knjižnica"
             }
+        },
+        "links": {
+            "header": "Linkovi"
         }
     },
     "analytics": {
@@ -151,7 +154,14 @@
     "updates": {
         "title": "Automatsko ažuriranje",
         "description": "Automatski nabavite najnoviju verziju.",
-        "consent": "Dopuštam ovoj aplikaciji da automatski provjerava ima li ažuriranja."
+        "consent": "Dopuštam ovoj aplikaciji da automatski provjerava ima li ažuriranja.",
+        "checkForUpdate": {
+            "title": "Provjerite ažuriranja",
+            "description": "Provjerite ažuriranja",
+            "checkButton": "Proveri"
+        },
+        "restartAndInstall": "Instalirajte i ponovo pokrenite",
+        "badge": "Update"
     },
     "language": {
         "title": "Jezik",
@@ -164,8 +174,9 @@
     },
     "setup_dialog": {
         "description": "Zaštita privatnosti pojedinca važna je za nas. Prikupljamo samo podatke koje ste nam odabrali i obrađujemo ih uz vaš pristanak. Želimo biti što transparentniji. Međutim, Lumi se na posao oslanja na neke veze i prijenose podataka.",
-        "save": "Save",
-        "consent_warning": "Da biste koristili ovu aplikaciju, morate barem pristati na politiku privatnosti."
+        "consent_warning": "Da biste koristili ovu aplikaciju, morate barem pristati na politiku privatnosti.",
+        "accept_all": "Prihvati sve",
+        "accept_selected": "Prihvati odabrano"
     },
     "menu": {
         "quit": "Prestani",
@@ -214,6 +225,10 @@
             "zoomIn": "Priblizi",
             "zoomOut": "Umanji",
             "togglefullscreen": "Uključi / isključi cijeli ekran"
+        },
+        "run": {
+            "label": "Trči",
+            "upload": "Otpremite na Lumi Run"
         }
     },
     "notifications": {
@@ -237,6 +252,9 @@
                 "success": "H5P je uspješno izvezen",
                 "error": "Nije moguće izvesti H5P"
             }
+        },
+        "general": {
+            "econnrefused": "Čini se da postoji problem s vašom internetskom vezom."
         }
     },
     "auth": {
@@ -247,17 +265,76 @@
         "verify_email": "Potvrdi Email",
         "notification": {
             "success": "{{email}} je uspješno potvrđena",
-            "pending": "Verifikacijski kod poslan je na {{email}} . Molimo provjerite svoju e-poštu."
+            "pending": "Verifikacijski kod poslan je na {{email}} . Molimo provjerite svoju e-poštu.",
+            "logout": {
+                "success": "Odjavljeni ste."
+            }
         },
         "error": {
-            "no-valid-email": "{{email}} nije važeća adresa e-pošte."
+            "no-valid-email": "{{email}} nije važeća adresa e-pošte.",
+            "econnrefused": "Nije moguće kontaktirati Lumi Auth server. Provjerite internetsku vezu."
         },
-        "cancel": "Otkaži"
+        "cancel": "Otkaži",
+        "logout": "Odjaviti se"
     },
     "dialog": {
         "close": "Zatvori"
     },
     "general": {
-        "delete": "Izbriši"
+        "delete": "Izbriši",
+        "copyClipboard": "Kopirano {{value}} u međuspremnik"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Veza odbijena"
+        },
+        "messages": {
+            "econnrefused": "Veza odbijena"
+        }
+    },
+    "prerelease": {
+        "title": "Značajke prethodnog objavljivanja",
+        "description": "Omogućite eksperimentalne funkcije prije nego što budu objavljene"
+    },
+    "run": {
+        "description": "Lumi Run vam omogućava da jednim klikom otpremite i ugostite svoj H5P.",
+        "legal": "Da biste koristili ovu uslugu, morate se složiti s Uslovima usluge, politikom privatnosti i dostaviti nam kontakt adresu e -pošte.",
+        "tos": {
+            "header": "Uslovi korištenja",
+            "description": "Pročitao sam i slažem se s uslovima pružanja usluge."
+        },
+        "link": {
+            "header": "Veza"
+        },
+        "upload": "Upload",
+        "list": {
+            "header": "Postavljen H5P",
+            "noUploadedH5P": "Nema učitanog H5P",
+            "deleteDialog": {
+                "title": "Izbriši Run {{runId}}",
+                "description": "Želite li zaista izbrisati pokretanje {{runId}}",
+                "cancel": "Cancel",
+                "confirm": "Potvrdi"
+            }
+        },
+        "uploadDialog": {
+            "success": "Vaš H5P je postavljen na Lumi.run. Možete mu pristupiti i podijeliti ga sa sljedećom vezom.",
+            "uploading": "Uploading",
+            "processing": "Obrada",
+            "goToRun": "Idite na trčanje",
+            "ok": "Uredu"
+        },
+        "setupDialog": {
+            "close": "Zatvori",
+            "start": "Počni"
+        },
+        "notifications": {
+            "delete": {
+                "success": "Uspješno izbrisano {{id}} sa Lumi.run"
+            },
+            "upload": {
+                "success": "Uspješno postavljen H5P na Lumi.run"
+            }
+        }
     }
 }

@@ -66,7 +66,7 @@
         "postinstall": "sh scripts/install.sh affaa83b51828be13e175c8ba1a7085ba9692d1d 7bc192798f8f6e1dee34891b56f3bf60ab320f3d",
         "prepare": "husky install",
         "ci:all": "npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)",
-        "localize": "json-autotranslate -d --directory-structure ngx-translate -c google_translate.json -s google-translate --decode-escapes -t key-based -i locales/lumi -m i18next && prettier --write \"locales/hub/*.json\""
+        "localize": "json-autotranslate -d --directory-structure ngx-translate -c google_translate.json -s google-translate --decode-escapes -t key-based -i locales/lumi -m i18next && prettier --write \"locales/lumi/*.json\""
     },
     "publishConfig": {
         "access": "restricted"

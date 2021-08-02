@@ -116,6 +116,9 @@
                 "instancesCount": "Voorwerpe wat met hierdie biblioteek as die hoofinhoudtipe geskep is",
                 "instancesAsDependencyCount": "Voorwerpe waarin hierdie biblioteek deur 'n ander biblioteek gebruik word"
             }
+        },
+        "links": {
+            "header": "Skakels"
         }
     },
     "analytics": {
@@ -151,7 +154,14 @@
     "updates": {
         "title": "Outomatiese opdaterings",
         "description": "Kry die nuutste weergawe outomaties.",
-        "consent": "Ek laat toe dat hierdie aansoek outomaties vir opdaterings kyk."
+        "consent": "Ek laat toe dat hierdie aansoek outomaties vir opdaterings kyk.",
+        "checkForUpdate": {
+            "title": "Kyk vir opdaterings",
+            "description": "Kyk vir opdaterings",
+            "checkButton": "Tjek"
+        },
+        "restartAndInstall": "Installeer en herbegin",
+        "badge": "Opdateer"
     },
     "language": {
         "title": "Taal",
@@ -164,8 +174,9 @@
     },
     "setup_dialog": {
         "description": "Dit is vir ons belangrik om die privaatheid van die individu te beskerm. Ons versamel slegs die inligting wat jy kies om vir ons te gee, en ons verwerk dit met jou toestemming. Ons wil so deursigtig moontlik wees. Lumi maak egter staat op sommige verbindings en data-oordragte om te werk.",
-        "save": "Stoor",
-        "consent_warning": "U moet ten minste toestemming gee vir die privaatheidsbeleid om hierdie aansoek te gebruik."
+        "consent_warning": "U moet ten minste toestemming gee vir die privaatheidsbeleid om hierdie aansoek te gebruik.",
+        "accept_all": "Aanvaar alles",
+        "accept_selected": "Aanvaar gekies"
     },
     "menu": {
         "file": {
@@ -214,6 +225,10 @@
             "zoomIn": "Zoom in",
             "zoomOut": "Zoom uit",
             "togglefullscreen": "Skakel die volle skerm"
+        },
+        "run": {
+            "label": "Hardloop",
+            "upload": "Laai op na Lumi Run"
         }
     },
     "notifications": {
@@ -237,6 +252,9 @@
                 "brokenFiles": "{{count}} gebreekte lêer gevind",
                 "brokenFiles_plural": "{{count}} stukkende lêers gevind"
             }
+        },
+        "general": {
+            "econnrefused": "Dit lyk asof daar 'n probleem met u internetverbinding is."
         }
     },
     "auth": {
@@ -247,17 +265,76 @@
         "verify_email": "verifieer e-pos",
         "notification": {
             "success": "{{email}} is suksesvol bekragtig",
-            "pending": "'N Verifikasiekode is na {{email}} . Gaan u e-pos na."
+            "pending": "'N Verifikasiekode is na {{email}} . Gaan u e-pos na.",
+            "logout": {
+                "success": "U is afgemeld."
+            }
         },
         "error": {
-            "no-valid-email": "{{email}} is nie 'n geldige e-posadres nie."
+            "no-valid-email": "{{email}} is nie 'n geldige e-posadres nie.",
+            "econnrefused": "Kon nie Lumi Auth -bediener kontak nie. Gaan u internetverbinding na."
         },
-        "cancel": "Kanselleer"
+        "cancel": "Kanselleer",
+        "logout": "Teken uit"
     },
     "dialog": {
         "close": "Naby"
     },
     "general": {
-        "delete": "Vee uit"
+        "delete": "Vee uit",
+        "copyClipboard": "{{value}} na die knipbord gekopieer"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Verbinding geweier"
+        },
+        "messages": {
+            "econnrefused": "Verbinding geweier"
+        }
+    },
+    "prerelease": {
+        "title": "Voorafgaande vrystellingskenmerke",
+        "description": "Aktiveer eksperimentele funksies voordat dit vrygestel word"
+    },
+    "run": {
+        "description": "Met Lumi Run kan u u H5P met een klik oplaai en huisves.",
+        "legal": "Om hierdie diens te gebruik, moet u akkoord gaan met die diensbepalings, die privaatheidsbeleid en ons 'n kontak -e -posadres verskaf.",
+        "tos": {
+            "header": "Diensvoorwaardes",
+            "description": "Ek het die diensvoorwaardes gelees en ek stem daarmee in."
+        },
+        "link": {
+            "header": "Skakel"
+        },
+        "upload": "Laai op",
+        "list": {
+            "header": "Opgelaai H5P",
+            "noUploadedH5P": "Geen H5P opgelaai nie",
+            "deleteDialog": {
+                "title": "Vee Run {{runId}}",
+                "description": "Wil u regtig run {{runId}}",
+                "cancel": "Kanselleer",
+                "confirm": "Bevestig"
+            }
+        },
+        "uploadDialog": {
+            "success": "U H5P is na Lumi.run opgelaai. U het toegang tot en deel dit met die volgende skakel.",
+            "uploading": "Laai tans op",
+            "processing": "Verwerking",
+            "goToRun": "Gaan hardloop",
+            "ok": "Ok"
+        },
+        "setupDialog": {
+            "close": "Naby",
+            "start": "Begin"
+        },
+        "notifications": {
+            "delete": {
+                "success": "{{id}} suksesvol uit Lumi.run verwyder"
+            },
+            "upload": {
+                "success": "Het H5P suksesvol opgelaai na Lumi.run"
+            }
+        }
     }
 }

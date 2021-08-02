@@ -24,15 +24,20 @@
         "code": "验证码",
         "email": "电子邮件",
         "error": {
-            "no-valid-email": "{{email}}不是有效的电子邮件地址。"
+            "no-valid-email": "{{email}}不是有效的电子邮件地址。",
+            "econnrefused": "无法联系 Lumi 身份验证服务器。请检查您的互联网连接。"
         },
         "notification": {
             "pending": "验证码已发送至{{email}} 。请检查您的电子邮件。",
-            "success": "{{email}}已成功验证"
+            "success": "{{email}}已成功验证",
+            "logout": {
+                "success": "您已注销。"
+            }
         },
         "set_email": "设定电子邮件",
         "verify_code": "输入验证码",
-        "verify_email": "验证邮件"
+        "verify_email": "验证邮件",
+        "logout": "登出"
     },
     "bug_report": {
         "consent": "允许该应用程序发送错误和崩溃报告。",
@@ -100,7 +105,8 @@
         }
     },
     "general": {
-        "delete": "删除"
+        "delete": "删除",
+        "copyClipboard": "将{{value}}复制到剪贴板"
     },
     "language": {
         "description": "更改应用程序的语言。",
@@ -154,6 +160,10 @@
             "minimize": "最小化",
             "show": "表演",
             "zoom": "飞涨"
+        },
+        "run": {
+            "label": "跑步",
+            "upload": "上传到 Lumi Run"
         }
     },
     "notifications": {
@@ -177,6 +187,9 @@
                 "error": "无法保存H5P。",
                 "success": "H5P 已保存！"
             }
+        },
+        "general": {
+            "econnrefused": "您的互联网连接似乎有问题。"
         }
     },
     "privacy_policy": {
@@ -243,21 +256,85 @@
         },
         "updates": {
             "header": "更新"
+        },
+        "links": {
+            "header": "链接"
         }
     },
     "setup_dialog": {
         "consent_warning": "您需要同意隐私政策才能使用此应用程序。",
         "description": "保护个人的隐私对我们很重要。我们仅收集您选择提供给我们的信息，并且在您的同意下对其进行处理。我们希望尽可能透明。请了解，Lumi需要某些网络连接和数据传输才能正常工作。",
-        "save": "救"
+        "accept_all": "全都接受",
+        "accept_selected": "接受选择"
     },
     "updates": {
         "consent": "允许该应用程序自动检查更新。",
         "description": "自动获取最新版本。",
-        "title": "自动更新"
+        "title": "自动更新",
+        "checkForUpdate": {
+            "title": "检查更新",
+            "description": "检查更新",
+            "checkButton": "查看"
+        },
+        "restartAndInstall": "安装并重启",
+        "badge": "更新"
     },
     "usage_statistics": {
         "consent": "允许该应用程序发送匿名使用情况统计信息。",
         "description": " 通过发送匿名使用情况统计信息来帮助我们改善软件和服务。",
         "title": "使用情况统计"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "连接被拒绝"
+        },
+        "messages": {
+            "econnrefused": "连接被拒绝"
+        }
+    },
+    "prerelease": {
+        "title": "售前赛特色",
+        "description": "在发布之前启用实验性功能"
+    },
+    "run": {
+        "description": "Lumi Run 允许您一键上传和托管您的 H5P。",
+        "legal": "为了使用此服务，您必须同意服务条款、隐私政策并向我们提供联系电子邮件。",
+        "tos": {
+            "header": "服务条款",
+            "description": "我已阅读并同意服务条款。"
+        },
+        "link": {
+            "header": "关联"
+        },
+        "upload": "上传",
+        "list": {
+            "header": "上传H5P",
+            "noUploadedH5P": "没有上传H5P",
+            "deleteDialog": {
+                "title": "删除运行{{runId}}",
+                "description": "你真的要删除 run {{runId}}",
+                "cancel": "取消",
+                "confirm": "确认"
+            }
+        },
+        "uploadDialog": {
+            "success": "您的 H5P 已上传到 Lumi.run。您可以通过以下链接访问和共享它。",
+            "uploading": "上传",
+            "processing": "加工",
+            "goToRun": "去跑步",
+            "ok": "行"
+        },
+        "setupDialog": {
+            "close": "关",
+            "start": "开始"
+        },
+        "notifications": {
+            "delete": {
+                "success": "已成功从 Lumi.run 中{{id}}"
+            },
+            "upload": {
+                "success": "成功上传H5P到Lumi.run"
+            }
+        }
     }
 }
