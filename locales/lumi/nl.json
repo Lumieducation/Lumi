@@ -116,6 +116,9 @@
                 "instancesCount": "Objecten gemaakt met deze bibliotheek als het belangrijkste inhoudstype",
                 "instancesAsDependencyCount": "Objecten waarin deze bibliotheek wordt gebruikt door een andere bibliotheek"
             }
+        },
+        "links": {
+            "header": "Links"
         }
     },
     "analytics": {
@@ -151,7 +154,14 @@
     "updates": {
         "title": "Automatische updates",
         "description": "Download automatisch de laatste versie.",
-        "consent": "Ik sta deze applicatie toe om automatisch te controleren op updates."
+        "consent": "Ik sta deze applicatie toe om automatisch te controleren op updates.",
+        "checkForUpdate": {
+            "title": "Controleren op updates",
+            "description": "Controleren op updates",
+            "checkButton": "Rekening"
+        },
+        "restartAndInstall": "Installeren en herstarten",
+        "badge": "Bijwerken"
     },
     "language": {
         "title": "Taal",
@@ -164,8 +174,9 @@
     },
     "setup_dialog": {
         "description": "Het beschermen van de privacy van het individu is belangrijk voor ons. We verzamelen alleen de informatie die u ons wilt geven, en we verwerken deze met uw toestemming. We willen zo transparant mogelijk zijn. Lumi is echter afhankelijk van sommige verbindingen en gegevensoverdrachten om te werken.",
-        "save": "Opslaan",
-        "consent_warning": "U moet minimaal instemmen met het privacybeleid om deze applicatie te gebruiken."
+        "consent_warning": "U moet minimaal instemmen met het privacybeleid om deze applicatie te gebruiken.",
+        "accept_all": "Accepteer alles",
+        "accept_selected": "Geselecteerde accepteren"
     },
     "menu": {
         "quit": "Afsluiten",
@@ -214,6 +225,10 @@
             "zoomIn": "In zoomen",
             "zoomOut": "Uitzoomen",
             "togglefullscreen": "Volledig scherm activeren"
+        },
+        "run": {
+            "label": "Loop",
+            "upload": "Uploaden naar Lumi Run"
         }
     },
     "notifications": {
@@ -237,6 +252,9 @@
                 "success": "H5P is succesvol geëxporteerd",
                 "error": "Kan H5P niet exporteren"
             }
+        },
+        "general": {
+            "econnrefused": "Er lijkt een probleem te zijn met uw internetverbinding."
         }
     },
     "auth": {
@@ -247,17 +265,76 @@
         "verify_email": "Verifieer Email",
         "notification": {
             "success": "{{email}} is succesvol gevalideerd",
-            "pending": "Er is een verificatiecode naar {{email}} gestuurd. Controleer uw e-mails."
+            "pending": "Er is een verificatiecode naar {{email}} gestuurd. Controleer uw e-mails.",
+            "logout": {
+                "success": "Je bent uitgelogd."
+            }
         },
         "error": {
-            "no-valid-email": "{{email}} is geen geldig e-mailadres."
+            "no-valid-email": "{{email}} is geen geldig e-mailadres.",
+            "econnrefused": "Kan geen verbinding maken met de Lumi Auth-server. Controleer uw internetverbinding."
         },
-        "cancel": "annuleren"
+        "cancel": "annuleren",
+        "logout": "Uitloggen"
     },
     "dialog": {
         "close": "Dichtbij"
     },
     "general": {
-        "delete": "Verwijderen"
+        "delete": "Verwijderen",
+        "copyClipboard": "{{value}} gekopieerd naar klembord"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Verbinding geweigerd"
+        },
+        "messages": {
+            "econnrefused": "Verbinding geweigerd"
+        }
+    },
+    "prerelease": {
+        "title": "Pre-releasefuncties",
+        "description": "Experimentele functies inschakelen voordat ze worden vrijgegeven"
+    },
+    "run": {
+        "description": "Met Lumi Run kunt u uw H5P met één klik uploaden en hosten.",
+        "legal": "Om deze service te gebruiken, moet u akkoord gaan met de servicevoorwaarden, het privacybeleid en ons een e-mailadres voor contact verstrekken.",
+        "tos": {
+            "header": "Servicevoorwaarden",
+            "description": "Ik heb de servicevoorwaarden gelezen en ga ermee akkoord."
+        },
+        "link": {
+            "header": "Koppeling"
+        },
+        "upload": "Uploaden",
+        "list": {
+            "header": "Geüploade H5P",
+            "noUploadedH5P": "Geen geüploade H5P",
+            "deleteDialog": {
+                "title": "Verwijder Uitvoeren {{runId}}",
+                "description": "Wil je echt run {{runId}}",
+                "cancel": "Annuleren",
+                "confirm": "Bevestigen"
+            }
+        },
+        "uploadDialog": {
+            "success": "Uw H5P is geüpload naar Lumi.run. U kunt het openen en delen via de volgende link.",
+            "uploading": "Uploaden",
+            "processing": "Verwerken",
+            "goToRun": "Ga naar hardlopen",
+            "ok": "OK"
+        },
+        "setupDialog": {
+            "close": "Dichtbij",
+            "start": "Begin"
+        },
+        "notifications": {
+            "delete": {
+                "success": "{{id}} succesvol verwijderd van Lumi.run"
+            },
+            "upload": {
+                "success": "H5P is geüpload naar Lumi.run"
+            }
+        }
     }
 }

@@ -116,6 +116,9 @@
                 "instancesCount": "Ana içerik türü olarak bu kitaplıkla oluşturulan nesneler",
                 "instancesAsDependencyCount": "Bu kitaplığın başka bir kitaplık tarafından kullanıldığı nesneler"
             }
+        },
+        "links": {
+            "header": "Bağlantılar"
         }
     },
     "analytics": {
@@ -151,7 +154,14 @@
     "updates": {
         "title": "Otomatik güncellemeler",
         "description": "En son sürümü otomatik olarak alın.",
-        "consent": "Bu uygulamanın güncellemeleri otomatik olarak kontrol etmesine izin veriyorum."
+        "consent": "Bu uygulamanın güncellemeleri otomatik olarak kontrol etmesine izin veriyorum.",
+        "checkForUpdate": {
+            "title": "Güncellemeleri kontrol et",
+            "description": "Güncellemeleri kontrol et",
+            "checkButton": "Kontrol etmek"
+        },
+        "restartAndInstall": "Yükle ve yeniden başlat",
+        "badge": "Güncelleme"
     },
     "language": {
         "title": "Dil",
@@ -164,8 +174,9 @@
     },
     "setup_dialog": {
         "description": "Bireyin mahremiyetini korumak bizim için önemlidir. Yalnızca bize vermeyi seçtiğiniz bilgileri topluyoruz ve bunları sizin izninizle işliyoruz. Mümkün olduğunca şeffaf olmak istiyoruz. Ancak Lumi, çalışmak için bazı bağlantılara ve veri aktarımlarına güveniyor.",
-        "save": "Kayıt etmek",
-        "consent_warning": "Bu uygulamayı kullanmak için en azından gizlilik politikasına onay vermeniz gerekir."
+        "consent_warning": "Bu uygulamayı kullanmak için en azından gizlilik politikasına onay vermeniz gerekir.",
+        "accept_all": "Hepsini kabul et",
+        "accept_selected": "Seçilenleri kabul et"
     },
     "menu": {
         "quit": "Çık",
@@ -214,6 +225,10 @@
             "zoomIn": "Yakınlaştır",
             "zoomOut": "Uzaklaştır",
             "togglefullscreen": "Tam ekrana geç"
+        },
+        "run": {
+            "label": "Çalıştırmak",
+            "upload": "Lumi Run'a yükle"
         }
     },
     "notifications": {
@@ -237,6 +252,9 @@
                 "success": "H5P başarıyla ihraç edildi",
                 "error": "H5P dışa aktarılamadı"
             }
+        },
+        "general": {
+            "econnrefused": "İnternet bağlantınızda bir sorun var gibi görünüyor."
         }
     },
     "auth": {
@@ -247,17 +265,76 @@
         "verify_email": "E-mail'i doğrula",
         "notification": {
             "success": "{{email}} başarıyla doğrulandı",
-            "pending": "{{email}} bir doğrulama kodu gönderildi. Lütfen e-postalarınızı kontrol edin."
+            "pending": "{{email}} bir doğrulama kodu gönderildi. Lütfen e-postalarınızı kontrol edin.",
+            "logout": {
+                "success": "Oturumunuz kapatıldı."
+            }
         },
         "error": {
-            "no-valid-email": "{{email}} geçerli bir e-posta adresi değil."
+            "no-valid-email": "{{email}} geçerli bir e-posta adresi değil.",
+            "econnrefused": "Lumi Auth sunucusuyla bağlantı kurulamadı. Lütfen internet bağlantınızı kontrol edin."
         },
-        "cancel": "İptal etmek"
+        "cancel": "İptal etmek",
+        "logout": "Çıkış Yap"
     },
     "dialog": {
         "close": "Kapat"
     },
     "general": {
-        "delete": "Silme"
+        "delete": "Silme",
+        "copyClipboard": "{{value}} panoya kopyalandı"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Bağlantı reddedildi"
+        },
+        "messages": {
+            "econnrefused": "Bağlantı reddedildi"
+        }
+    },
+    "prerelease": {
+        "title": "Yayın Öncesi Özellikler",
+        "description": "Yayınlanmadan önce deneysel özellikleri etkinleştirin"
+    },
+    "run": {
+        "description": "Lumi Run, tek tıklamayla H5P'nizi yüklemenize ve barındırmanıza olanak tanır.",
+        "legal": "Bu hizmeti kullanmak için Hizmet Koşullarını, gizlilik politikasını kabul etmeniz ve bize bir iletişim e-postası sağlamanız gerekir.",
+        "tos": {
+            "header": "Kullanım Şartları",
+            "description": "Hizmet şartlarını okudum ve kabul ediyorum."
+        },
+        "link": {
+            "header": "Bağlantı"
+        },
+        "upload": "Yüklemek",
+        "list": {
+            "header": "H5P yüklendi",
+            "noUploadedH5P": "Yüklenen H5P yok",
+            "deleteDialog": {
+                "title": "Çalıştır {{runId}}",
+                "description": "{{runId}} çalıştırmayı gerçekten silmek istiyor musunuz?",
+                "cancel": "İptal",
+                "confirm": "Onaylamak"
+            }
+        },
+        "uploadDialog": {
+            "success": "H5P'niz Lumi.run'a yüklendi. Aşağıdaki linkten ulaşabilir ve paylaşabilirsiniz.",
+            "uploading": "yükleniyor",
+            "processing": "İşleme",
+            "goToRun": "Koşulara git",
+            "ok": "Tamam"
+        },
+        "setupDialog": {
+            "close": "Kapat",
+            "start": "Başlangıç"
+        },
+        "notifications": {
+            "delete": {
+                "success": "{{id}} , Lumi.run'dan başarıyla silindi"
+            },
+            "upload": {
+                "success": "H5P başarıyla Lumi.run'a yüklendi"
+            }
+        }
     }
 }

@@ -60,7 +60,7 @@ export default function (
     // // multi-user environment.
     // router.use(
     //     h5pConfig.baseUrl + h5pConfig.contentFilesUrl,
-    //     express.static(`${serverConfig.workingCachePath}`)
+    //     express.static(`${serverConfig.contentStoragePath}`)
     // );
     // router.use(
     //     h5pConfig.baseUrl + h5pConfig.librariesUrl,

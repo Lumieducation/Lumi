@@ -1,14 +1,15 @@
 import { app } from 'electron';
 
 export default {
-    bugTracking: false,
-    firstOpen: true,
-    privacyPolicyConsent: false,
-    usageStatistics: false,
-    lastVersion: app ? app.getVersion() : 'test',
+    allowPrerelease: false,
     autoUpdates: false,
-    language: 'en',
+    bugTracking: false,
     email: '',
+    enableLumiRun: false, // This is a flag that's not user configurable but globally set here
+    firstOpen: true,
+    language: 'en',
+    lastVersion: app ? app.getVersion() : 'test',
+    privacyPolicyConsent: false,
     token: '',
-    allowPrerelease: false
+    usageStatistics: false
 };

@@ -24,15 +24,20 @@
         "code": "Kód",
         "email": "E-mailem",
         "error": {
-            "no-valid-email": "{{email}} není platná e-mailová adresa."
+            "no-valid-email": "{{email}} není platná e-mailová adresa.",
+            "econnrefused": "Nelze kontaktovat server Lumi Auth. Zkontrolujte prosím své připojení k internetu."
         },
         "notification": {
             "pending": "Ověřovací kód byl odeslán na {{email}} . Zkontrolujte prosím své e-maily.",
-            "success": "{{email}} byl úspěšně ověřen"
+            "success": "{{email}} byl úspěšně ověřen",
+            "logout": {
+                "success": "Byli jste odhlášeni."
+            }
         },
         "set_email": "Nastavit e-mail",
         "verify_code": "Ověřit kód",
-        "verify_email": "ověřovací email"
+        "verify_email": "ověřovací email",
+        "logout": "Odhlásit se"
     },
     "bug_report": {
         "consent": "Povoluji této aplikaci odesílat zprávy o chybách a selháních.",
@@ -100,7 +105,8 @@
         }
     },
     "general": {
-        "delete": "Vymazat"
+        "delete": "Vymazat",
+        "copyClipboard": "Zkopírováno {{value}} do schránky"
     },
     "language": {
         "description": "Změňte jazyk aplikace.",
@@ -154,6 +160,10 @@
             "minimize": "Minimalizovat",
             "show": "Ukázat",
             "zoom": "Zvětšení"
+        },
+        "run": {
+            "label": "Běh",
+            "upload": "Nahrát do Lumi Run"
         }
     },
     "notifications": {
@@ -177,6 +187,9 @@
                 "error": "H5P nelze uložit.",
                 "success": "H5P uložen!"
             }
+        },
+        "general": {
+            "econnrefused": "Zdá se, že je problém s vaším internetovým připojením."
         }
     },
     "privacy_policy": {
@@ -252,17 +265,76 @@
         "accept_all": "Přijmout vše",
         "accept_selected": "Přijmout vybraná",
         "consent_warning": "Abyste mohli tuto aplikaci používat, musíte alespoň souhlasit se zásadami ochrany osobních údajů.",
-        "description": "Ochrana soukromí jednotlivce je pro nás důležitá. Shromažďujeme pouze informace, které se nám rozhodnete poskytnout, a zpracováváme je s vaším souhlasem. Chceme být co nejvíce transparentní. Lumi však spoléhá na to, že některá připojení a datové přenosy budou fungovat.",
-        "save": "Uložit"
+        "description": "Ochrana soukromí jednotlivce je pro nás důležitá. Shromažďujeme pouze informace, které se nám rozhodnete poskytnout, a zpracováváme je s vaším souhlasem. Chceme být co nejvíce transparentní. Lumi však spoléhá na to, že některá připojení a datové přenosy budou fungovat."
     },
     "updates": {
         "consent": "Povoluji této aplikaci automaticky kontrolovat aktualizace.",
         "description": "Získejte nejnovější verzi automaticky.",
-        "title": "Automatické aktualizace"
+        "title": "Automatické aktualizace",
+        "checkForUpdate": {
+            "title": "Kontrola aktualizací",
+            "description": "Kontrola aktualizací",
+            "checkButton": "Šek"
+        },
+        "restartAndInstall": "Nainstalujte a restartujte",
+        "badge": "Aktualizace"
     },
     "usage_statistics": {
         "consent": "Povoluji této aplikaci odesílat anonymní statistiky používání.",
         "description": " Pomozte nám vylepšit náš software a služby zasláním anonymních statistik využití.",
         "title": "Statistiky využití"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Spojení odmítnuto"
+        },
+        "messages": {
+            "econnrefused": "Spojení odmítnuto"
+        }
+    },
+    "prerelease": {
+        "title": "Funkce předprodeje",
+        "description": "Povolte experimentální funkce před jejich vydáním"
+    },
+    "run": {
+        "description": "Lumi Run vám umožňuje nahrát a hostovat váš H5P jediným kliknutím.",
+        "legal": "Chcete -li používat tuto službu, musíte souhlasit s podmínkami služby, zásadami ochrany osobních údajů a poskytnout nám kontaktní e -mail.",
+        "tos": {
+            "header": "Podmínky služby",
+            "description": "Přečetl jsem a souhlasím s podmínkami služby."
+        },
+        "link": {
+            "header": "Odkaz"
+        },
+        "upload": "nahrát",
+        "list": {
+            "header": "Nahráno H5P",
+            "noUploadedH5P": "Žádný nahraný H5P",
+            "deleteDialog": {
+                "title": "Smazat běh {{runId}}",
+                "description": "Opravdu chcete odstranit běh {{runId}}",
+                "cancel": "zrušení",
+                "confirm": "Potvrdit"
+            }
+        },
+        "uploadDialog": {
+            "success": "Váš H5P byl nahrán do Lumi.run. Můžete k nim přistupovat a sdílet je pomocí následujícího odkazu.",
+            "uploading": "Odesílání",
+            "processing": "zpracovává se",
+            "goToRun": "Přejít na běhy",
+            "ok": "OK"
+        },
+        "setupDialog": {
+            "close": "Zavřít",
+            "start": "Start"
+        },
+        "notifications": {
+            "delete": {
+                "success": "Úspěšně odstraněno {{id}} z Lumi.run"
+            },
+            "upload": {
+                "success": "H5P bylo úspěšně nahráno do Lumi.run"
+            }
+        }
     }
 }

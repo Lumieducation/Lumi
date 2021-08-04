@@ -24,15 +24,20 @@
         "code": "Kood",
         "email": "E-post",
         "error": {
-            "no-valid-email": "{{email}} pole kehtiv e-posti aadress."
+            "no-valid-email": "{{email}} pole kehtiv e-posti aadress.",
+            "econnrefused": "Lumi Authi serveriga ei saanud ühendust. Palun kontrollige oma Interneti -ühendust."
         },
         "notification": {
             "pending": "Kinnituskood on saadetud aadressile {{email}} . Palun kontrollige oma e-kirju.",
-            "success": "{{email}} on edukalt kinnitatud"
+            "success": "{{email}} on edukalt kinnitatud",
+            "logout": {
+                "success": "Teid logiti välja."
+            }
         },
         "set_email": "Määra meil",
         "verify_code": "Kontrollige koodi",
-        "verify_email": "Kontrollige e-posti aadressi"
+        "verify_email": "Kontrollige e-posti aadressi",
+        "logout": "Logi välja"
     },
     "bug_report": {
         "consent": "Luban sellel rakendusel saata vea- ja krahhiaruandeid.",
@@ -100,7 +105,8 @@
         }
     },
     "general": {
-        "delete": "Kustuta"
+        "delete": "Kustuta",
+        "copyClipboard": "{{value}} kopeeriti lõikelauale"
     },
     "language": {
         "description": "Muutke rakenduse keelt.",
@@ -154,6 +160,10 @@
             "minimize": "Minimeeri",
             "show": "Näita",
             "zoom": "Suum"
+        },
+        "run": {
+            "label": "Jookse",
+            "upload": "Laadige üles Lumi Run"
         }
     },
     "notifications": {
@@ -177,6 +187,9 @@
                 "error": "H5P-d ei õnnestunud salvestada.",
                 "success": "H5P salvestatud!"
             }
+        },
+        "general": {
+            "econnrefused": "Tundub, et teie Interneti -ühenduses on probleem."
         }
     },
     "privacy_policy": {
@@ -251,16 +264,77 @@
     "setup_dialog": {
         "consent_warning": "Selle rakenduse kasutamiseks peate nõustuma vähemalt privaatsuseeskirjadega.",
         "description": "Isiku privaatsuse kaitsmine on meie jaoks oluline. Kogume ainult teavet, mille olete otsustanud meile anda, ja töötleme seda teie nõusolekul. Me tahame olla võimalikult läbipaistvad. Kuid Lumi tugineb mõnele ühendusele ja andmeedastusele.",
-        "save": "Salvesta"
+        "accept_all": "Võtke kõik vastu",
+        "accept_selected": "Aktsepteeri valitud"
     },
     "updates": {
         "consent": "Luban sellel rakendusel värskendusi automaatselt kontrollida.",
         "description": "Hankige uusim versioon automaatselt.",
-        "title": "Automaatsed värskendused"
+        "title": "Automaatsed värskendused",
+        "checkForUpdate": {
+            "title": "Kontrolli kas uuendused on saadaval",
+            "description": "Kontrolli kas uuendused on saadaval",
+            "checkButton": "Kontrollima"
+        },
+        "restartAndInstall": "Installige ja taaskäivitage",
+        "badge": "Värskenda"
     },
     "usage_statistics": {
         "consent": "Luban sellel rakendusel saata anonüümset kasutusstatistikat.",
         "description": " Aidake meil oma tarkvara ja teenuseid täiustada, saates anonüümset kasutusstatistikat.",
         "title": "Kasutusstatistika"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Ühendusest keelduti"
+        },
+        "messages": {
+            "econnrefused": "Ühendusest keelduti"
+        }
+    },
+    "prerelease": {
+        "title": "Väljalaskeeelsed funktsioonid",
+        "description": "Luba eksperimentaalsed funktsioonid enne nende avaldamist"
+    },
+    "run": {
+        "description": "Lumi Run võimaldab teil ühe klõpsuga oma H5P üles laadida ja hostida.",
+        "legal": "Selle teenuse kasutamiseks peate nõustuma teenusetingimuste, privaatsuspoliitikaga ja edastama meile kontaktmeili.",
+        "tos": {
+            "header": "Kasutustingimused",
+            "description": "Olen teenusetingimustega tutvunud ja nõustun nendega."
+        },
+        "link": {
+            "header": "Link"
+        },
+        "upload": "Laadi üles",
+        "list": {
+            "header": "Laadis üles H5P",
+            "noUploadedH5P": "Üleslaaditud H5P pole",
+            "deleteDialog": {
+                "title": "Kustuta Run {{runId}}",
+                "description": "Kas soovite tõesti jooksu {{runId}}",
+                "cancel": "Tühista",
+                "confirm": "Kinnitage"
+            }
+        },
+        "uploadDialog": {
+            "success": "Teie H5P laaditi üles saidile Lumi.run. Saate sellele juurde pääseda ja seda järgmise lingi kaudu jagada.",
+            "uploading": "Üleslaadimine",
+            "processing": "Töötlemine",
+            "goToRun": "Mine jooksudele",
+            "ok": "Okei"
+        },
+        "setupDialog": {
+            "close": "Sulge",
+            "start": "Alusta"
+        },
+        "notifications": {
+            "delete": {
+                "success": "{{id}} kustutati saidilt Lumi.run"
+            },
+            "upload": {
+                "success": "H5P üleslaadimine saidile Lumi.run"
+            }
+        }
     }
 }

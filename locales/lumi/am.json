@@ -116,6 +116,9 @@
                 "instancesCount": "እንደ ዋናው የይዘት አይነት በዚህ ቤተ-መጽሐፍት የተፈጠሩ ዕቃዎች",
                 "instancesAsDependencyCount": "ይህ ቤተ-መጽሐፍት በሌላ ቤተ-መጽሐፍት የሚጠቀምባቸው ነገሮች"
             }
+        },
+        "links": {
+            "header": "አገናኞች"
         }
     },
     "analytics": {
@@ -151,7 +154,14 @@
     "updates": {
         "title": "ራስ-ሰር ዝመናዎች",
         "description": "የቅርብ ጊዜውን ስሪት በራስ-ሰር ያግኙ።",
-        "consent": "ይህ መተግበሪያ ዝመናዎችን በራስ-ሰር እንዲያረጋግጥ ፈቅጃለሁ።"
+        "consent": "ይህ መተግበሪያ ዝመናዎችን በራስ-ሰር እንዲያረጋግጥ ፈቅጃለሁ።",
+        "checkForUpdate": {
+            "title": "ዝማኔዎችን ይመልከቱ",
+            "description": "ዝማኔዎችን ይመልከቱ",
+            "checkButton": "ይፈትሹ"
+        },
+        "restartAndInstall": "ይጫኑ እና እንደገና ያስጀምሩ",
+        "badge": "አዘምን"
     },
     "language": {
         "title": "ቋንቋ",
@@ -164,8 +174,9 @@
     },
     "setup_dialog": {
         "description": "የግለሰቡን ግላዊነት መጠበቅ ለእኛ አስፈላጊ ነው ፡፡ እኛ የሚሰጡን ለእኛ የመረጡትን መረጃ ብቻ ነው የምንሰበስበው እና እኛ በእርስዎ ፈቃድ እናከናውናለን ፡፡ በተቻለ መጠን ግልፅ መሆን እንፈልጋለን ፡፡ ሆኖም ሉሚ ወደ ሥራ አንዳንድ ግንኙነቶች እና የውሂብ ዝውውሮች ላይ ይተማመናል ፡፡",
-        "save": "አስቀምጥ",
-        "consent_warning": "ይህንን ትግበራ ለመጠቀም ቢያንስ ለግላዊነት ፖሊሲው መስማማት ያስፈልግዎታል።"
+        "consent_warning": "ይህንን ትግበራ ለመጠቀም ቢያንስ ለግላዊነት ፖሊሲው መስማማት ያስፈልግዎታል።",
+        "accept_all": "ሁሉንም ተቀበል",
+        "accept_selected": "የተመረጠውን ተቀበል"
     },
     "menu": {
         "file": {
@@ -214,6 +225,10 @@
             "zoomIn": "አቅርብ",
             "zoomOut": "አጉላ",
             "togglefullscreen": "ሙሉ ማያ ገጽን ይቀያይሩ"
+        },
+        "run": {
+            "label": "አሂድ",
+            "upload": "ወደ ሉሚ ሩጫ ይስቀሉ"
         }
     },
     "notifications": {
@@ -237,6 +252,9 @@
                 "success": "ኤች 5 ፒ በተሳካ ሁኔታ ወደ ውጭ ተልኳል",
                 "error": "ኤች 5 ፒ ወደ ውጭ መላክ አልተቻለም"
             }
+        },
+        "general": {
+            "econnrefused": "በበይነመረብ ግንኙነትዎ ላይ ችግር ያለ ይመስላል።"
         }
     },
     "auth": {
@@ -247,17 +265,76 @@
         "verify_email": "ኢሜል ያረጋግጡ",
         "notification": {
             "success": "{{email}} በተሳካ ሁኔታ ተረጋግጧል",
-            "pending": "የማረጋገጫ ኮድ ወደ {{email}} ፡ እባክዎን ኢሜሎችዎን ይፈትሹ ፡፡"
+            "pending": "የማረጋገጫ ኮድ ወደ {{email}} ፡ እባክዎን ኢሜሎችዎን ይፈትሹ ፡፡",
+            "logout": {
+                "success": "የእርስዎ ዘግተው ወጥተዋል።"
+            }
         },
         "error": {
-            "no-valid-email": "{{email}} ትክክለኛ የኢሜል አድራሻ አይደለም ፡"
+            "no-valid-email": "{{email}} ትክክለኛ የኢሜል አድራሻ አይደለም ፡",
+            "econnrefused": "Lumi Auth አገልጋይን ማነጋገር አልተቻለም። እባክዎ የበይነመረብ ግንኙነትዎን ይፈትሹ።"
         },
-        "cancel": "ሰርዝ"
+        "cancel": "ሰርዝ",
+        "logout": "ውጣ"
     },
     "dialog": {
         "close": "ገጠመ"
     },
     "general": {
-        "delete": "ሰርዝ"
+        "delete": "ሰርዝ",
+        "copyClipboard": "{{value}} ወደ ቅንጥብ ሰሌዳ ተቀድቷል"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "ግንኙነት ውድቅ ተደርጓል"
+        },
+        "messages": {
+            "econnrefused": "ግንኙነት ውድቅ ተደርጓል"
+        }
+    },
+    "prerelease": {
+        "title": "የቅድመ -ልቀት ባህሪዎች",
+        "description": "ከመሞታቸው በፊት የሙከራ ባህሪያትን ያንቁ"
+    },
+    "run": {
+        "description": "ሉሚ ሩጫ በአንድ ጠቅታ የእርስዎን H5P ለመስቀል እና ለማስተናገድ ያስችልዎታል።",
+        "legal": "ይህንን አገልግሎት ለመጠቀም በአገልግሎት ውሎች ፣ በግላዊነት ፖሊሲው ላይ መጣስ እና የእውቂያ ኢሜይል ለእኛ መስጠት አለብዎት።",
+        "tos": {
+            "header": "የአገልግሎት ውሎች",
+            "description": "ለአገልግሎት ውሎች አንብቤ ተስማምቻለሁ።"
+        },
+        "link": {
+            "header": "አገናኝ"
+        },
+        "upload": "ስቀል",
+        "list": {
+            "header": "H5P ተሰቅሏል",
+            "noUploadedH5P": "ምንም የተሰቀለ H5P የለም",
+            "deleteDialog": {
+                "title": "አሂድ {{runId}}",
+                "description": "{{runId}} በእውነት መሰረዝ ይፈልጋሉ?",
+                "cancel": "ሰርዝ",
+                "confirm": "ያረጋግጡ"
+            }
+        },
+        "uploadDialog": {
+            "success": "የእርስዎ H5P ወደ Lumi.run ተሰቅሏል። በሚከተለው አገናኝ መድረስ እና ማጋራት ይችላሉ።",
+            "uploading": "በመስቀል ላይ",
+            "processing": "በማስኬድ ላይ",
+            "goToRun": "ወደ ሩጫዎች ይሂዱ",
+            "ok": "እሺ"
+        },
+        "setupDialog": {
+            "close": "ገጠመ",
+            "start": "ጀምር"
+        },
+        "notifications": {
+            "delete": {
+                "success": "ከሉሚ.run {{id}} በተሳካ ሁኔታ ተሰር deletedል"
+            },
+            "upload": {
+                "success": "H5P ን በተሳካ ሁኔታ ወደ Lumi.run ሰቅሏል"
+            }
+        }
     }
 }

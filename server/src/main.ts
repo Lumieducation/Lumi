@@ -13,6 +13,7 @@ import serverConfigFactory from './serverConfig';
 import matomo from './matomo';
 import { machineId } from 'node-machine-id';
 import i18next from 'i18next';
+import fsExtra from 'fs-extra';
 
 import settingsCache from './settingsCache';
 import electronState from './electronState';
@@ -20,6 +21,8 @@ import DelayedEmitter from './helpers/DelayedEmitter';
 
 const app = electron.app;
 let websocket: SocketIO.Server;
+const tmpDir = process.env.TEMPDATA || path.join(app.getPath('temp'), 'lumi');
+
 /**
  * The DelayedEmitter queues websocket events until the websocket is connected.
  * We need it as the browser window and the client must be initialized before
@@ -110,7 +113,8 @@ if (!gotSingleInstanceLock) {
     app.quit();
 } else {
     const serverConfig = serverConfigFactory(
-        process.env.USERDATA || app.getPath('userData')
+        process.env.USERDATA || app.getPath('userData'),
+        tmpDir
     );
     Sentry.init({
         dsn: 'http://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
@@ -212,22 +216,21 @@ if (!gotSingleInstanceLock) {
         }
     });
 
+    app.on('will-quit', (event) => {
+        log.debug(`Deleting temporary directory: ${tmpDir}`);
+        fsExtra.removeSync(tmpDir);
+    });
+
     // create main BrowserWindow when electron is ready
     app.on('ready', async () => {
         log.info('app is ready');
-        const server = await httpServerFactory(
-            serverConfigFactory(
-                process.env.USERDATA || app.getPath('userData')
-            ),
-            mainWindow,
-            {
-                devMode: app.commandLine.hasSwitch('dev'),
-                libraryDir:
-                    app.commandLine.getSwitchValue('libs') !== ''
-                        ? app.commandLine.getSwitchValue('libs')
-                        : undefined
-            }
-        );
+        const server = await httpServerFactory(serverConfig, mainWindow, {
+            devMode: app.commandLine.hasSwitch('dev'),
+            libraryDir:
+                app.commandLine.getSwitchValue('libs') !== ''
+                    ? app.commandLine.getSwitchValue('libs')
+                    : undefined
+        });
         log.info('server booted');
 
         port = (server.address() as any).port;

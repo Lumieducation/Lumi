@@ -24,15 +24,20 @@
         "code": "Código",
         "email": "Correo electrónico",
         "error": {
-            "no-valid-email": "{{email}} no es una dirección de correo electrónico válida."
+            "no-valid-email": "{{email}} no es una dirección de correo electrónico válida.",
+            "econnrefused": "No se pudo contactar con el servidor de autenticación de Lumi. Por favor revise su conexion a internet."
         },
         "notification": {
             "pending": "Se ha enviado un código de verificación a {{email}} . Por favor revise sus correos electrónicos.",
-            "success": "{{email}} ha sido validado con éxito"
+            "success": "{{email}} ha sido validado con éxito",
+            "logout": {
+                "success": "Se cerró la sesión."
+            }
         },
         "set_email": "Establecer correo electrónico",
         "verify_code": "Código de verificación",
-        "verify_email": "Verificar correo electrónico"
+        "verify_email": "Verificar correo electrónico",
+        "logout": "Cerrar sesión"
     },
     "bug_report": {
         "consent": "Permito que esta aplicación envíe informes de errores y fallas.",
@@ -100,7 +105,8 @@
         }
     },
     "general": {
-        "delete": "Borrar"
+        "delete": "Borrar",
+        "copyClipboard": "Copiado {{value}} al portapapeles"
     },
     "language": {
         "description": "Cambiar el idioma de la aplicación.",
@@ -154,6 +160,10 @@
             "minimize": "Minimizar",
             "show": "Mostrar",
             "zoom": "Zoom"
+        },
+        "run": {
+            "label": "Correr",
+            "upload": "Subir a Lumi Run"
         }
     },
     "notifications": {
@@ -177,6 +187,9 @@
                 "error": "No se pudo guardar H5P.",
                 "success": "¡H5P guardado!"
             }
+        },
+        "general": {
+            "econnrefused": "Parece haber un problema con tu conexión a Internet."
         }
     },
     "privacy_policy": {
@@ -252,17 +265,76 @@
         "accept_all": "Aceptar todo",
         "accept_selected": "Aceptar seleccionados",
         "consent_warning": "Necesita al menos dar su consentimiento a la política de privacidad para usar esta aplicación.",
-        "description": "Proteger la privacidad del individuo es importante para nosotros. Solo recopilamos la información que usted elige darnos y la procesamos con su consentimiento. Queremos ser lo más transparentes posible. Sin embargo, Lumi depende de algunas conexiones y transferencias de datos para funcionar.",
-        "save": "Guardar"
+        "description": "Proteger la privacidad del individuo es importante para nosotros. Solo recopilamos la información que usted elige darnos y la procesamos con su consentimiento. Queremos ser lo más transparentes posible. Sin embargo, Lumi depende de algunas conexiones y transferencias de datos para funcionar."
     },
     "updates": {
         "consent": "Permito que esta aplicación busque actualizaciones automáticamente.",
         "description": "Obtenga la última versión automáticamente.",
-        "title": "Actualizaciones Automáticas"
+        "title": "Actualizaciones Automáticas",
+        "checkForUpdate": {
+            "title": "Buscar actualizaciones",
+            "description": "Buscar actualizaciones",
+            "checkButton": "Cheque"
+        },
+        "restartAndInstall": "Instalar y reiniciar",
+        "badge": "Actualizar"
     },
     "usage_statistics": {
         "consent": "Permito que esta aplicación envíe estadísticas de uso anónimas.",
         "description": " Ayúdenos a mejorar nuestro software y servicios enviando estadísticas de uso anónimas.",
         "title": "Estadísticas de uso"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Conexión denegada"
+        },
+        "messages": {
+            "econnrefused": "Conexión denegada"
+        }
+    },
+    "prerelease": {
+        "title": "Características de la Presentación",
+        "description": "Habilite las funciones experimentales antes de que se publiquen"
+    },
+    "run": {
+        "description": "Lumi Run le permite cargar y alojar su H5P con un solo clic.",
+        "legal": "Para utilizar este servicio, debe aceptar los Términos de servicio, la política de privacidad y proporcionarnos un correo electrónico de contacto.",
+        "tos": {
+            "header": "Términos de servicio",
+            "description": "He leído y acepto los términos de servicio."
+        },
+        "link": {
+            "header": "Enlace"
+        },
+        "upload": "Subir",
+        "list": {
+            "header": "H5P subido",
+            "noUploadedH5P": "Sin H5P subido",
+            "deleteDialog": {
+                "title": "Eliminar ejecución {{runId}}",
+                "description": "¿De verdad quieres eliminar la ejecución {{runId}}",
+                "cancel": "Cancelar",
+                "confirm": "Confirmar"
+            }
+        },
+        "uploadDialog": {
+            "success": "Su H5P se cargó en Lumi.run. Puedes acceder y compartirlo con el siguiente enlace.",
+            "uploading": "Subiendo",
+            "processing": "Procesando",
+            "goToRun": "Ir a carreras",
+            "ok": "OK"
+        },
+        "setupDialog": {
+            "close": "Cerrar",
+            "start": "Comienzo"
+        },
+        "notifications": {
+            "delete": {
+                "success": "{{id}} eliminado con éxito de Lumi.run"
+            },
+            "upload": {
+                "success": "H5P subido correctamente a Lumi.run"
+            }
+        }
     }
 }

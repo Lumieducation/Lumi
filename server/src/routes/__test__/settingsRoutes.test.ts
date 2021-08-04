@@ -5,6 +5,8 @@ import express from 'express';
 import fsExtra from 'fs-extra';
 import { dialog, BrowserWindow, MessageBoxOptions } from 'electron';
 
+import settingsCache from '../../settingsCache';
+
 describe('GET /settings', () => {
     let app: express.Application;
 
@@ -15,7 +17,11 @@ describe('GET /settings', () => {
                 configFile: path.resolve('test', 'data', 'config.json'),
                 librariesPath: path.resolve('test', 'data', `libraries`),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
-                workingCachePath: path.resolve('test', 'data', 'workingCache'),
+                contentStoragePath: path.resolve(
+                    'test',
+                    'data',
+                    'workingCache'
+                ),
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
             null
@@ -27,10 +33,11 @@ describe('GET /settings', () => {
         const settings = await fsExtra.readJSON(
             path.resolve('test', 'data', 'settings.json')
         );
+        settingsCache.setSettings(settings);
 
         const res = await request(app).get('/api/v1/settings');
         expect(res.statusCode).toEqual(200);
-        expect(res.body).toStrictEqual(settings);
+        expect(res.body).toMatchObject(settings);
         done();
     });
 });
@@ -46,7 +53,11 @@ describe('PATCH /settings', () => {
                 librariesPath: path.resolve('test', 'data', `libraries`),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
 
-                workingCachePath: path.resolve('test', 'data', 'workingCache'),
+                contentStoragePath: path.resolve(
+                    'test',
+                    'data',
+                    'workingCache'
+                ),
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
             null

@@ -116,6 +116,9 @@
                 "instancesCount": "이 라이브러리를 기본 콘텐츠 유형으로 사용하여 만든 개체",
                 "instancesAsDependencyCount": "이 라이브러리가 다른 라이브러리에서 사용되는 객체"
             }
+        },
+        "links": {
+            "header": "연결"
         }
     },
     "analytics": {
@@ -151,7 +154,14 @@
     "updates": {
         "title": "자동 업데이트",
         "description": "자동으로 최신 버전을 받으세요.",
-        "consent": "이 애플리케이션이 자동으로 업데이트를 확인할 수 있도록합니다."
+        "consent": "이 애플리케이션이 자동으로 업데이트를 확인할 수 있도록합니다.",
+        "checkForUpdate": {
+            "title": "업데이트 확인",
+            "description": "업데이트 확인",
+            "checkButton": "확인하다"
+        },
+        "restartAndInstall": "설치 및 다시 시작",
+        "badge": "업데이트"
     },
     "language": {
         "title": "언어",
@@ -164,8 +174,9 @@
     },
     "setup_dialog": {
         "description": "개인의 프라이버시를 보호하는 것은 우리에게 중요합니다. 당사는 귀하가 제공하기로 선택한 정보 만 수집하며 귀하의 동의하에 처리합니다. 우리는 가능한 한 투명 해지기를 원합니다. 그러나 Lumi는 일부 연결 및 데이터 전송에 의존하여 작동합니다.",
-        "save": "저장",
-        "consent_warning": "이 애플리케이션을 사용하려면 최소한 개인 정보 보호 정책에 대한 동의가 필요합니다."
+        "consent_warning": "이 애플리케이션을 사용하려면 최소한 개인 정보 보호 정책에 대한 동의가 필요합니다.",
+        "accept_all": "모든것을 받아 들인다",
+        "accept_selected": "선택 수락"
     },
     "menu": {
         "quit": "떠나다",
@@ -214,6 +225,10 @@
             "zoomIn": "확대",
             "zoomOut": "축소",
             "togglefullscreen": "전체 화면 전환"
+        },
+        "run": {
+            "label": "운영",
+            "upload": "Lumi Run에 업로드"
         }
     },
     "notifications": {
@@ -237,6 +252,9 @@
                 "success": "H5P를 성공적으로 내보냈습니다.",
                 "error": "H5P를 내보낼 수 없습니다."
             }
+        },
+        "general": {
+            "econnrefused": "인터넷 연결에 문제가 있는 것 같습니다."
         }
     },
     "auth": {
@@ -247,17 +265,76 @@
         "verify_email": "이메일 확인",
         "notification": {
             "success": "{{email}} 이 성공적으로 확인되었습니다.",
-            "pending": "인증 코드가 {{email}} 로 전송되었습니다. 이메일을 확인하십시오."
+            "pending": "인증 코드가 {{email}} 로 전송되었습니다. 이메일을 확인하십시오.",
+            "logout": {
+                "success": "로그아웃되었습니다."
+            }
         },
         "error": {
-            "no-valid-email": "{{email}} 은 유효한 이메일 주소가 아닙니다."
+            "no-valid-email": "{{email}} 은 유효한 이메일 주소가 아닙니다.",
+            "econnrefused": "Lumi 인증 서버에 연결할 수 없습니다. 인터넷 연결을 확인하십시오."
         },
-        "cancel": "취소"
+        "cancel": "취소",
+        "logout": "로그 아웃"
     },
     "dialog": {
         "close": "닫기"
     },
     "general": {
-        "delete": "지우다"
+        "delete": "지우다",
+        "copyClipboard": "{{value}} 을 클립보드에 복사했습니다."
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "연결 거부됨"
+        },
+        "messages": {
+            "econnrefused": "연결 거부됨"
+        }
+    },
+    "prerelease": {
+        "title": "시험판 기능",
+        "description": "시험 기능이 출시되기 전에 활성화"
+    },
+    "run": {
+        "description": "Lumi Run을 사용하면 클릭 한 번으로 H5P를 업로드하고 호스팅할 수 있습니다.",
+        "legal": "이 서비스를 사용하려면 서비스 약관, 개인 정보 보호 정책에 동의하고 연락처 이메일을 제공해야 합니다.",
+        "tos": {
+            "header": "서비스 약관",
+            "description": "이용약관을 읽었으며 이에 동의합니다."
+        },
+        "link": {
+            "header": "링크"
+        },
+        "upload": "업로드",
+        "list": {
+            "header": "업로드된 H5P",
+            "noUploadedH5P": "업로드된 H5P 없음",
+            "deleteDialog": {
+                "title": "실행 {{runId}}",
+                "description": "{{runId}} 을 삭제하시겠습니까?",
+                "cancel": "취소",
+                "confirm": "확인하다"
+            }
+        },
+        "uploadDialog": {
+            "success": "귀하의 H5P가 Lumi.run에 업로드되었습니다. 다음 링크를 통해 액세스 및 공유할 수 있습니다.",
+            "uploading": "업로드 중",
+            "processing": "처리",
+            "goToRun": "실행으로 이동",
+            "ok": "확인"
+        },
+        "setupDialog": {
+            "close": "닫기",
+            "start": "시작"
+        },
+        "notifications": {
+            "delete": {
+                "success": "Lumi.run에서 {{id}} 를) 성공적으로 삭제했습니다."
+            },
+            "upload": {
+                "success": "Lumi.run에 H5P 업로드 성공"
+            }
+        }
     }
 }

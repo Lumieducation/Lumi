@@ -116,6 +116,9 @@
                 "instancesCount": "Objekt som skapats med detta bibliotek som huvudinnehållstyp",
                 "instancesAsDependencyCount": "Objekt där detta bibliotek används av ett annat bibliotek"
             }
+        },
+        "links": {
+            "header": "Länkar"
         }
     },
     "analytics": {
@@ -151,7 +154,14 @@
     "updates": {
         "title": "Automatiska uppdateringar",
         "description": "Få den senaste versionen automatiskt.",
-        "consent": "Jag tillåter att denna applikation automatiskt söker efter uppdateringar."
+        "consent": "Jag tillåter att denna applikation automatiskt söker efter uppdateringar.",
+        "checkForUpdate": {
+            "title": "Sök efter uppdateringar",
+            "description": "Sök efter uppdateringar",
+            "checkButton": "Kolla upp"
+        },
+        "restartAndInstall": "Installera och starta om",
+        "badge": "Uppdatering"
     },
     "language": {
         "title": "Språk",
@@ -164,8 +174,9 @@
     },
     "setup_dialog": {
         "description": "Att skydda individens integritet är viktigt för oss. Vi samlar bara in den information du väljer att ge oss och vi behandlar den med ditt samtycke. Vi vill vara så transparenta som möjligt. Lumi förlitar sig dock på att vissa anslutningar och dataöverföringar fungerar.",
-        "save": "Spara",
-        "consent_warning": "Du måste åtminstone godkänna sekretesspolicyn för att använda denna applikation."
+        "consent_warning": "Du måste åtminstone godkänna sekretesspolicyn för att använda denna applikation.",
+        "accept_all": "Acceptera alla",
+        "accept_selected": "Acceptera valt"
     },
     "menu": {
         "quit": "Sluta med",
@@ -214,6 +225,10 @@
             "zoomIn": "Zooma in",
             "zoomOut": "Zooma ut",
             "togglefullscreen": "Växla helskärm"
+        },
+        "run": {
+            "label": "Springa",
+            "upload": "Ladda upp till Lumi Run"
         }
     },
     "notifications": {
@@ -237,6 +252,9 @@
                 "success": "H5P har exporterats",
                 "error": "Det gick inte att exportera H5P"
             }
+        },
+        "general": {
+            "econnrefused": "Det verkar vara ett problem med din internetanslutning."
         }
     },
     "auth": {
@@ -247,17 +265,76 @@
         "verify_email": "Verifiera Email",
         "notification": {
             "success": "{{email}} har validerats",
-            "pending": "En verifieringskod har skickats till {{email}} . Kontrollera dina e-postmeddelanden."
+            "pending": "En verifieringskod har skickats till {{email}} . Kontrollera dina e-postmeddelanden.",
+            "logout": {
+                "success": "Du var utloggad."
+            }
         },
         "error": {
-            "no-valid-email": "{{email}} är inte en giltig e-postadress."
+            "no-valid-email": "{{email}} är inte en giltig e-postadress.",
+            "econnrefused": "Det gick inte att kontakta Lumi Auth -servern. Kontrollera din internetanslutning."
         },
-        "cancel": "Avbryt"
+        "cancel": "Avbryt",
+        "logout": "Logga ut"
     },
     "dialog": {
         "close": "Stänga"
     },
     "general": {
-        "delete": "Radera"
+        "delete": "Radera",
+        "copyClipboard": "Kopierade {{value}} till urklipp"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Anslutning nekad"
+        },
+        "messages": {
+            "econnrefused": "Anslutning nekad"
+        }
+    },
+    "prerelease": {
+        "title": "Funktioner för förlansering",
+        "description": "Aktivera experimentella funktioner innan de släpps"
+    },
+    "run": {
+        "description": "Med Lumi Run kan du ladda upp och vara värd för din H5P med ett klick.",
+        "legal": "För att kunna använda denna tjänst måste du godkänna användarvillkoren, sekretesspolicyn och ge oss ett kontaktmeddelande.",
+        "tos": {
+            "header": "Användarvillkor",
+            "description": "Jag har läst och godkänner användarvillkoren."
+        },
+        "link": {
+            "header": "Länk"
+        },
+        "upload": "Ladda upp",
+        "list": {
+            "header": "Uppladdad H5P",
+            "noUploadedH5P": "Ingen uppladdad H5P",
+            "deleteDialog": {
+                "title": "Ta bort körning {{runId}}",
+                "description": "Vill du verkligen ta bort körning {{runId}}",
+                "cancel": "Annullera",
+                "confirm": "Bekräfta"
+            }
+        },
+        "uploadDialog": {
+            "success": "Din H5P laddades upp till Lumi.run. Du kan komma åt och dela den med följande länk.",
+            "uploading": "Uppladdning",
+            "processing": "Bearbetning",
+            "goToRun": "Gå till körningar",
+            "ok": "Ok"
+        },
+        "setupDialog": {
+            "close": "Stänga",
+            "start": "Start"
+        },
+        "notifications": {
+            "delete": {
+                "success": "Raderade {{id}} från Lumi.run"
+            },
+            "upload": {
+                "success": "H5P har laddats upp till Lumi.run"
+            }
+        }
     }
 }

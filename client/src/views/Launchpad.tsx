@@ -68,6 +68,10 @@ export default function Launchpad() {
         (state: IState) => state.settings.allowPrerelease
     );
 
+    const enableLumiRun = useSelector(
+        (state: IState) => state.settings.enableLumiRun
+    );
+
     window.h = history;
 
     return (
@@ -211,7 +215,7 @@ export default function Launchpad() {
                             </CardActions>
                         </Card>
                     </Grid>
-                    {allowPrerelease && (
+                    {allowPrerelease && enableLumiRun && (
                         <Grid item xs={4}>
                             <Card id="launchpad-run" className={classes.card}>
                                 <Link

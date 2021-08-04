@@ -15,7 +15,6 @@ import BugReportIcon from '@material-ui/icons/BugReport';
 import InsertChartIcon from '@material-ui/icons/InsertChart';
 
 import TranslateIcon from '@material-ui/icons/Translate';
-import UpdateIcon from '@material-ui/icons/Update';
 
 import { actions, IState } from '../../../state';
 import LanguageList from './LanguageList';
@@ -92,33 +91,6 @@ export default function SettingsGeneralSettingsList() {
                         checked={settings.usageStatistics}
                         inputProps={{
                             'aria-labelledby': 'switch-list-label-bluetooth'
-                        }}
-                    />
-                </ListItemSecondaryAction>
-            </ListItem>
-            <ListItem>
-                <ListItemIcon>
-                    <UpdateIcon />
-                </ListItemIcon>
-                <ListItemText
-                    id="switch-list-label-updates"
-                    primary={t('prerelease.title')}
-                    secondary={t('prerelease.description')}
-                />
-                <ListItemSecondaryAction>
-                    <Switch
-                        edge="end"
-                        onChange={() =>
-                            dispatch(
-                                actions.settings.changeSetting({
-                                    allowPrerelease: !settings.allowPrerelease
-                                })
-                            )
-                        }
-                        checked={settings.allowPrerelease}
-                        inputProps={{
-                            'aria-labelledby':
-                                'switch-list-label-prerelease-updates'
                         }}
                     />
                 </ListItemSecondaryAction>
