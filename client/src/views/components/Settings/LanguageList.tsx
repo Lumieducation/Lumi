@@ -53,6 +53,7 @@ export default function LanguageList() {
                 }}
             >
                 <MenuItem value={'af'}>Afrikaans</MenuItem>
+                <MenuItem value={'ar'}>العربية</MenuItem>
                 <MenuItem value={'bg'}>български език</MenuItem>
                 <MenuItem value={'bs'}>bosanski jezik</MenuItem>
                 <MenuItem value={'ca'}>català, valencià</MenuItem>
