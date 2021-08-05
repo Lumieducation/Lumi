@@ -3,12 +3,7 @@ import * as H5P from '@lumieducation/h5p-server';
 
 /**
  * Create a H5PEditor object.
- * Which storage classes are used depends on the configuration values set in
- * the environment variables. If you set no environment variables, the local
- * filesystem storage classes will be used.
  *
- * Further environment variables to set up MongoDB and S3 can be found in
- * docs/mongo-s3-content-storage.md and docs/s3-temporary-file-storage.md!
  * @param config the configuration object
  * @param localLibraryPath a path in the local filesystem in which the H5P libraries (content types) are stored
  * @param localContentPath a path in the local filesystem in which H5P content will be stored (only necessary if you want to use the local filesystem content storage class)

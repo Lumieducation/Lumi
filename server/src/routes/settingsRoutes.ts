@@ -5,7 +5,7 @@ import * as Sentry from '@sentry/node';
 import IPaths from '../config/IPaths';
 import i18next from 'i18next';
 
-import settingsCache from '../settingsCache';
+import settingsCache from '../config/SettingsCache';
 
 export default function (
     serverPaths: IPaths,

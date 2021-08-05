@@ -10,8 +10,7 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
     beforeAll(async () => {
         app = await bootApp(
             {
-                cache: path.resolve('test', 'data'),
-                configFile: path.resolve('test', 'data', 'config.json'),
+                contentTypeCache: path.resolve('test', 'data'),
                 librariesPath: path.resolve('test', 'data', `libraries`),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
                 contentStoragePath: path.resolve(

@@ -4,7 +4,7 @@ import SocketIO from 'socket.io';
 import * as Sentry from '@sentry/electron';
 import fsExtra from 'fs-extra';
 import IServerConfig from './config/IPaths';
-import settingsCache from './settingsCache';
+import settingsCache from './config/SettingsCache';
 
 let updateAvailable: boolean = false;
 let updating: boolean = false;

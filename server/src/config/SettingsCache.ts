@@ -1,32 +1,19 @@
-interface ISettingsState {
-    allowPrerelease: boolean;
-    autoUpdates: boolean;
-    bugTracking: boolean;
-    email: string;
-    enableLumiRun: boolean;
-    firstOpen: boolean;
-    language: string;
-    lastVersion: string;
-    privacyPolicyConsent: boolean;
-    token: string;
-    usageStatistics: boolean;
-}
-
-import defaultSettings from './boot/defaultSettings';
+import defaultSettings from './defaultSettings';
+import IH5PEditorSettings from './IH5PEditorSettings';
 
 class SettingsStorage {
     constructor() {
         this.settings = defaultSettings;
     }
-    public settings: ISettingsState;
+    public settings: IH5PEditorSettings;
 
     private subscribers: (() => void)[] = [];
 
-    getSettings(): ISettingsState {
+    getSettings(): IH5PEditorSettings {
         return this.settings;
     }
 
-    setSettings(s: ISettingsState): void {
+    setSettings(s: IH5PEditorSettings): void {
         // We override the user defined values so that we have a feature flag in
         // the app code
         s.enableLumiRun = defaultSettings.enableLumiRun;

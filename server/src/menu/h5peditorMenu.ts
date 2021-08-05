@@ -7,7 +7,7 @@ import editMenu from './editMenu';
 import macMenu from './macMenu';
 import windowMenu from './windowMenu';
 import viewMenu from './viewMenu';
-import settings from '../settingsCache';
+import settings from '../config/SettingsCache';
 
 export default (window: electron.BrowserWindow, websocket: SocketIO.Server) =>
     [

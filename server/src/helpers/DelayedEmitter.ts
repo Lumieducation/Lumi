@@ -1,7 +1,7 @@
 import SocketIO from 'socket.io';
 import log from 'electron-log';
 
-import settingsCache from '../settingsCache';
+import settingsCache from '../config/SettingsCache';
 
 /**
  * Wraps around SocketIO.Server and queues events until the websocket connection

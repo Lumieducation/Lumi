@@ -11,8 +11,7 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
     beforeAll(async () => {
         app = await bootApp(
             {
-                cache: path.resolve('test', 'data'),
-                configFile: path.resolve('test', 'data', 'config.json'),
+                contentTypeCache: path.resolve('test', 'data'),
                 librariesPath: path.resolve('test', 'data', `libraries`),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
                 contentStoragePath: path.resolve(

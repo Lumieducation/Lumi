@@ -1,6 +1,7 @@
 import { app } from 'electron';
+import IH5PEditorSettings from './IH5PEditorSettings';
 
-export default {
+const defaultSettings: IH5PEditorSettings = {
     allowPrerelease: false,
     autoUpdates: false,
     bugTracking: false,
@@ -13,3 +14,5 @@ export default {
     token: '',
     usageStatistics: false
 };
+
+export default defaultSettings;

@@ -15,7 +15,7 @@ import { machineId } from 'node-machine-id';
 import i18next from 'i18next';
 import fsExtra from 'fs-extra';
 
-import settingsCache from './settingsCache';
+import settingsCache from './config/SettingsCache';
 import electronState from './electronState';
 import DelayedEmitter from './helpers/DelayedEmitter';
 

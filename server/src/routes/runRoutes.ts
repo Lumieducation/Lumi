@@ -11,7 +11,7 @@ import proxy from 'express-http-proxy';
 import * as H5P from '@lumieducation/h5p-server';
 import HtmlExporter from '@lumieducation/h5p-html-exporter';
 
-import settingsCache from '../settingsCache';
+import settingsCache from '../config/SettingsCache';
 
 import LumiController from '../controllers/LumiController';
 

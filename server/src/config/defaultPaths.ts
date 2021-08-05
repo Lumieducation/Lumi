@@ -10,11 +10,10 @@ import IPaths from './IPaths';
  */
 export default (userData: string, tempData: string): IPaths => {
     return {
-        librariesPath: path.join(userData, 'libraries'),
-        cache: path.join(userData, 'store.json'),
-        temporaryStoragePath: path.join(tempData, 'tmp'),
         contentStoragePath: path.join(tempData, 'contentStorage'),
-        configFile: path.join(userData, 'config.json'),
-        settingsFile: path.join(userData, 'settings.json')
+        contentTypeCache: path.join(userData, 'store.json'),
+        librariesPath: path.join(userData, 'libraries'),
+        settingsFile: path.join(userData, 'settings.json'),
+        temporaryStoragePath: path.join(tempData, 'tmp')
     };
 };

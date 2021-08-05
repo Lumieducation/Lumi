@@ -5,7 +5,7 @@ import express from 'express';
 import fsExtra from 'fs-extra';
 import { dialog, BrowserWindow, MessageBoxOptions } from 'electron';
 
-import settingsCache from '../../settingsCache';
+import settingsCache from '../../config/SettingsCache';
 
 describe('GET /settings', () => {
     let app: express.Application;
@@ -13,8 +13,7 @@ describe('GET /settings', () => {
     beforeAll(async () => {
         app = await bootApp(
             {
-                cache: path.resolve('test', 'data'),
-                configFile: path.resolve('test', 'data', 'config.json'),
+                contentTypeCache: path.resolve('test', 'data'),
                 librariesPath: path.resolve('test', 'data', `libraries`),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
                 contentStoragePath: path.resolve(
@@ -48,8 +47,7 @@ describe('PATCH /settings', () => {
     beforeAll(async () => {
         app = await bootApp(
             {
-                cache: path.resolve('test', 'data'),
-                configFile: path.resolve('test', 'data', 'config.json'),
+                contentTypeCache: path.resolve('test', 'data'),
                 librariesPath: path.resolve('test', 'data', `libraries`),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
 

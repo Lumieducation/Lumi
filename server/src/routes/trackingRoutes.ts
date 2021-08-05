@@ -7,7 +7,7 @@ import * as os from 'os';
 import { machineId } from 'node-machine-id';
 import cryptoRandomString from 'crypto-random-string';
 
-import settingsCache from '../settingsCache';
+import settingsCache from '../config/SettingsCache';
 
 const id = cryptoRandomString({ length: 16 });
 

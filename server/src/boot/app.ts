@@ -4,41 +4,17 @@ import * as Sentry from '@sentry/node';
 import bodyParser from 'body-parser';
 import express from 'express';
 import fileUpload from 'express-fileupload';
-
 import i18next from 'i18next';
 import i18nextHttpMiddleware from 'i18next-http-middleware';
 
-import LumiError from '../helpers/LumiError';
-
-import routes from '../routes';
-
-import IServerConfig from '../config/IPaths';
-
-import createH5PEditor from './createH5PEditor';
-
-import User from '../User';
-
-import settingsCache from '../settingsCache';
-
 import boot_i18n from './i18n';
-
-/**
- * Increases the maximum file size if it is still at the default value.
- */
-const increaseMaxFileSize = async (config: H5P.IH5PConfig) => {
-    let updatedConfig = false;
-    if (!config.maxFileSize || config.maxFileSize === 16 * 1024 * 1024) {
-        config.maxFileSize = 2048 * 1024 * 1024;
-        updatedConfig = true;
-    }
-    if (!config.maxTotalSize || config.maxTotalSize === 64 * 1024 * 1024) {
-        config.maxTotalSize = 2048 * 1024 * 1024;
-        updatedConfig = true;
-    }
-    if (updatedConfig) {
-        await config.save();
-    }
-};
+import createH5PEditor from './createH5PEditor';
+import H5PConfig from '../config/H5PConfig';
+import IServerConfig from '../config/IPaths';
+import LumiError from '../helpers/LumiError';
+import routes from '../routes';
+import settingsCache from '../config/SettingsCache';
+import User from '../User';
 
 export default async (
     serverConfig: IServerConfig,
@@ -48,11 +24,7 @@ export default async (
         libraryDir?: string;
     }
 ) => {
-    const config = await new H5P.H5PConfig(
-        new H5P.fsImplementations.JsonStorage(serverConfig.configFile)
-    ).load();
-
-    await increaseMaxFileSize(config);
+    const config = new H5PConfig();
 
     const translationFunction = await boot_i18n(serverConfig);
 
