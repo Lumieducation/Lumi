@@ -2,7 +2,7 @@ import * as Sentry from '@sentry/electron';
 import fsExtra from 'fs-extra';
 import { app } from 'electron';
 import path from 'path';
-import IServerConfig from '../IServerConfig';
+import IServerConfig from '../config/IPaths';
 import { fsImplementations, H5PConfig } from '@lumieducation/h5p-server';
 import defaultSettings from './defaultSettings';
 

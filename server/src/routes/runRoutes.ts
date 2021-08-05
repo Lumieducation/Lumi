@@ -1,6 +1,6 @@
 import express from 'express';
 import * as Sentry from '@sentry/node';
-import IServerConfig from '../IServerConfig';
+import IServerConfig from '../config/IPaths';
 import { BrowserWindow, dialog } from 'electron';
 import User from '../User';
 import fs from 'fs-extra';

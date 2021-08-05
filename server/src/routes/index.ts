@@ -11,7 +11,7 @@ import {
 import lumiRoutes from './lumiRoutes';
 import trackingRoutes from './trackingRoutes';
 import Logger from '../helpers/Logger';
-import IServerConfig from '../IServerConfig';
+import IServerConfig from '../config/IPaths';
 import authRoutes from './authRoutes';
 import h5pRoutes from './h5pRoutes';
 import analyticRoutes from './analyticRoutes';

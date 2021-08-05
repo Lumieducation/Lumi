@@ -4,7 +4,7 @@ import electron from 'electron';
 import appFactory from './boot/app';
 import Logger from './helpers/Logger';
 import setup from './boot/setup';
-import IServerConfig from './IServerConfig';
+import IServerConfig from './config/IPaths';
 
 const log = new Logger('boot');
 

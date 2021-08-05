@@ -8,7 +8,7 @@ import * as H5P from '@lumieducation/h5p-server';
 import Logger from '../helpers/Logger';
 
 import User from '../User';
-import IServerConfig from '../IServerConfig';
+import IServerConfig from '../config/IPaths';
 
 import electronState from '../electronState';
 

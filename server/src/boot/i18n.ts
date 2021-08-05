@@ -1,6 +1,6 @@
 import i18next, { TFunction } from 'i18next';
 import fsExtra from 'fs-extra';
-import IServerConfig from '../IServerConfig';
+import IServerConfig from '../config/IPaths';
 import i18nextBackend from 'i18next-node-fs-backend';
 
 export default async function boot(

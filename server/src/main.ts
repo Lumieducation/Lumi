@@ -9,7 +9,7 @@ import httpServerFactory from './httpServer';
 import updateMenu from './menu';
 import updater from './updater';
 import websocketFactory from './websocket';
-import serverConfigFactory from './serverConfig';
+import serverConfigFactory from './config/defaultPaths';
 import matomo from './matomo';
 import { machineId } from 'node-machine-id';
 import i18next from 'i18next';

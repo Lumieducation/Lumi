@@ -2,13 +2,13 @@ import express from 'express';
 import fsExtra from 'fs-extra';
 import electron from 'electron';
 import * as Sentry from '@sentry/node';
-import IServerConfig from '../IServerConfig';
+import IPaths from '../config/IPaths';
 import i18next from 'i18next';
 
 import settingsCache from '../settingsCache';
 
 export default function (
-    serverConfig: IServerConfig,
+    serverPaths: IPaths,
     browserWindow: electron.BrowserWindow,
     app: express.Application
 ): express.Router {
@@ -41,10 +41,7 @@ export default function (
                 if (req.body) {
                     const oldSettings = settingsCache.getSettings();
 
-                    await fsExtra.writeJSON(
-                        serverConfig.settingsFile,
-                        req.body
-                    );
+                    await fsExtra.writeJSON(serverPaths.settingsFile, req.body);
 
                     if (
                         req.body.language &&

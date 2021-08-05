@@ -12,7 +12,7 @@ import LumiError from '../helpers/LumiError';
 
 import routes from '../routes';
 
-import IServerConfig from '../IServerConfig';
+import IServerConfig from '../config/IPaths';
 
 import createH5PEditor from './createH5PEditor';
 

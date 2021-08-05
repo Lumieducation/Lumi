@@ -1,7 +1,7 @@
 import express from 'express';
 import matomo from '../matomo';
 import * as Sentry from '@sentry/node';
-import IServerConfig from '../IServerConfig';
+import IServerConfig from '../config/IPaths';
 import electron from 'electron';
 import * as os from 'os';
 import { machineId } from 'node-machine-id';
