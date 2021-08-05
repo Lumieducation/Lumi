@@ -6,24 +6,19 @@ import User from '../User';
 import fs from 'fs-extra';
 import path from 'path';
 import superagent from 'superagent';
-import proxy from 'express-http-proxy';
-
 import * as H5P from '@lumieducation/h5p-server';
-import HtmlExporter from '@lumieducation/h5p-html-exporter';
 
-import settingsCache from '../config/SettingsCache';
-
+import SettingsCache from '../config/SettingsCache';
 import LumiController from '../controllers/LumiController';
-
 import { io as websocket } from '../websocket';
-import LumiError from '../helpers/LumiError';
 
 const runHost = process.env.LUMI_HOST || 'https://lumi.run';
 
 export default function (
     serverConfig: IServerConfig,
     h5pEditor: H5P.H5PEditor,
-    browserWindow: BrowserWindow
+    browserWindow: BrowserWindow,
+    settingsCache: SettingsCache
 ): express.Router {
     const router = express.Router();
     const lumiController = new LumiController(
@@ -42,7 +37,10 @@ export default function (
             try {
                 const { body } = await superagent
                     .get(`${runHost}/api/v1/run`)
-                    .set('x-auth', settingsCache.getSettings().token || '');
+                    .set(
+                        'x-auth',
+                        (await settingsCache.getSettings()).token || ''
+                    );
 
                 res.status(200).json(body);
             } catch (error) {
@@ -61,7 +59,7 @@ export default function (
             try {
                 const { body } = await superagent
                     .delete(`${runHost}/api/v1/run/${req.params.runId}`)
-                    .set('x-auth', settingsCache.getSettings().token);
+                    .set('x-auth', (await settingsCache.getSettings()).token);
 
                 res.status(200).json(body);
             } catch (error) {
@@ -80,7 +78,7 @@ export default function (
             try {
                 const { body } = await superagent
                     .post(`${runHost}/api/v1/run/consent`)
-                    .set('x-auth', settingsCache.getSettings().token);
+                    .set('x-auth', (await settingsCache.getSettings()).token);
 
                 res.status(200).json(body);
             } catch (error) {
@@ -135,7 +133,7 @@ export default function (
             try {
                 const response = await superagent
                     .post(`${runHost}/api/v1/run`)
-                    .set('x-auth', settingsCache.getSettings().token)
+                    .set('x-auth', (await settingsCache.getSettings()).token)
                     .attach('h5p', filePath)
                     .on('progress', (event) => {
                         websocket.emit('action', {

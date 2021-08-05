@@ -1,5 +1,6 @@
 import electron from 'electron';
 import SocketIO from 'socket.io';
+import SettingsCache from '../config/SettingsCache';
 
 import analyticsMenu from './analyticsMenu';
 import h5peditorMenu from './h5peditorMenu';
@@ -9,7 +10,8 @@ import runMenu from './runMenu';
 export default function menuFactory(
     path: string,
     window: electron.BrowserWindow,
-    webSocket: SocketIO.Server
+    webSocket: SocketIO.Server,
+    settingsCache: SettingsCache
 ): void {
     switch (path) {
         case '/':
@@ -24,7 +26,7 @@ export default function menuFactory(
         case '/h5peditor':
             electron.Menu.setApplicationMenu(
                 electron.Menu.buildFromTemplate(
-                    h5peditorMenu(window, webSocket)
+                    h5peditorMenu(window, webSocket, settingsCache)
                 )
             );
             break;

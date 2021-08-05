@@ -8,6 +8,8 @@ import SettingsCache from './SettingsCache';
  * hard-code all of them here. This makes later updates easier.
  */
 export default class H5PConfig implements IH5PConfig {
+    constructor(private settingsCache: SettingsCache) {}
+
     public ajaxUrl: string = '/ajax';
     public baseUrl: string = '/api/v1/h5p';
     public contentFilesUrl: string = '/content';
@@ -95,15 +97,15 @@ export default class H5PConfig implements IH5PConfig {
     public uuid: string = '';
 
     public async load(): Promise<H5PConfig> {
-        this.uuid = SettingsCache.getSettings().h5pUuid ?? '';
+        this.uuid = (await this.settingsCache.getSettings()).h5pUuid ?? '';
         return this;
     }
 
     public async save(): Promise<void> {
-        const settings = SettingsCache.getSettings();
+        const settings = await this.settingsCache.getSettings();
         if (settings.h5pUuid !== this.uuid) {
             settings.h5pUuid = this.uuid;
-            SettingsCache.setSettings(settings);
+            await this.settingsCache.saveSettings(settings);
         }
     }
 }

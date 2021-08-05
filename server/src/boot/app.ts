@@ -13,18 +13,19 @@ import H5PConfig from '../config/H5PConfig';
 import IServerConfig from '../config/IPaths';
 import LumiError from '../helpers/LumiError';
 import routes from '../routes';
-import settingsCache from '../config/SettingsCache';
+import SettingsCache from '../config/SettingsCache';
 import User from '../User';
 
 export default async (
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow,
+    settingsCache: SettingsCache,
     options?: {
         devMode?: boolean;
         libraryDir?: string;
     }
 ) => {
-    const config = await new H5PConfig().load();
+    const config = await new H5PConfig(settingsCache).load();
 
     const translationFunction = await boot_i18n(serverConfig);
 
@@ -59,7 +60,7 @@ export default async (
             release: electron.app.getVersion(),
             environment: process.env.NODE_ENV,
             beforeSend: async (event: Sentry.Event) => {
-                if (settingsCache.getSettings().bugTracking) {
+                if ((await settingsCache.getSettings()).bugTracking) {
                     return event;
                 }
                 return null;
@@ -105,14 +106,21 @@ export default async (
     app.use(i18nextHttpMiddleware.handle(i18next));
 
     app.use(async (req: any, res: any, next: express.NextFunction) => {
-        const languageCode = settingsCache.getSettings().language;
+        const languageCode = (await settingsCache.getSettings()).language;
         req.language = languageCode;
         req.languages = [languageCode, 'en'];
         next();
     });
     app.use(
         '/',
-        routes(h5pEditor, h5pPlayer, serverConfig, browserWindow, app)
+        routes(
+            h5pEditor,
+            h5pPlayer,
+            serverConfig,
+            browserWindow,
+            app,
+            settingsCache
+        )
     );
 
     // The error handler must be before any other error middleware and after all controllers

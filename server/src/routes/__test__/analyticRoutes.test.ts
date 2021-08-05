@@ -4,6 +4,8 @@ import path from 'path';
 import { dialog } from 'electron';
 import express from 'express';
 
+import SettingsCache from '../../config/SettingsCache';
+
 describe('[analytics:routes]: GET /api/v1/analytics', () => {
     let app: express.Application;
 
@@ -20,7 +22,8 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
                 ),
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
-            null
+            null,
+            new SettingsCache(path.resolve('test', 'data', 'settings.json'))
         );
 
         return app;

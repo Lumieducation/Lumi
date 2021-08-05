@@ -7,9 +7,13 @@ import editMenu from './editMenu';
 import macMenu from './macMenu';
 import windowMenu from './windowMenu';
 import viewMenu from './viewMenu';
-import settings from '../config/SettingsCache';
+import SettingsCache from '../config/SettingsCache';
 
-export default (window: electron.BrowserWindow, websocket: SocketIO.Server) =>
+export default (
+    window: electron.BrowserWindow,
+    websocket: SocketIO.Server,
+    settingsCache: SettingsCache
+) =>
     [
         ...macMenu(),
         {
@@ -80,8 +84,8 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) =>
                     },
                     label: i18next.t('lumi:menu.file.export')
                 },
-                settings.getSettings().allowPrerelease &&
-                settings.getSettings().enableLumiRun
+                settingsCache.getSettingsSync().allowPrerelease &&
+                settingsCache.getSettingsSync().enableLumiRun
                     ? {
                           label: i18next.t('lumi:menu.run.upload'),
                           click: () => {

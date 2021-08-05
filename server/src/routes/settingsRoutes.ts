@@ -5,12 +5,13 @@ import * as Sentry from '@sentry/node';
 import IPaths from '../config/IPaths';
 import i18next from 'i18next';
 
-import settingsCache from '../config/SettingsCache';
+import SettingsCache from '../config/SettingsCache';
 
 export default function (
     serverPaths: IPaths,
     browserWindow: electron.BrowserWindow,
-    app: express.Application
+    app: express.Application,
+    settingsCache: SettingsCache
 ): express.Router {
     const router = express.Router();
     router.get(
@@ -39,9 +40,8 @@ export default function (
         ) => {
             try {
                 if (req.body) {
-                    const oldSettings = settingsCache.getSettings();
-
-                    await fsExtra.writeJSON(serverPaths.settingsFile, req.body);
+                    const oldSettings = await settingsCache.getSettings();
+                    await settingsCache.saveSettings(req.body);
 
                     if (
                         req.body.language &&
@@ -50,8 +50,6 @@ export default function (
                         await i18next.loadLanguages(req.body.language);
                         await i18next.changeLanguage(req.body.language);
                     }
-
-                    settingsCache.setSettings(req.body);
 
                     res.status(200).json(req.body);
                 }

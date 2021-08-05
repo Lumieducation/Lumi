@@ -4,7 +4,7 @@ import SocketIO from 'socket.io';
 import * as Sentry from '@sentry/electron';
 import fsExtra from 'fs-extra';
 import IServerConfig from './config/IPaths';
-import settingsCache from './config/SettingsCache';
+import SettingsCache from './config/SettingsCache';
 
 let updateAvailable: boolean = false;
 let updating: boolean = false;
@@ -30,9 +30,12 @@ export const platformSupportsUpdates = () => {
 export default async function boot(
     app: Electron.App,
     websocket: SocketIO.Server,
-    serverConfig: IServerConfig
+    serverConfig: IServerConfig,
+    settingsCache: SettingsCache
 ): Promise<void> {
-    autoUpdater.allowPrerelease = settingsCache.getSettings().allowPrerelease;
+    autoUpdater.allowPrerelease = (
+        await settingsCache.getSettings()
+    ).allowPrerelease;
 
     autoUpdater.on('update-downloaded', async () => {
         updateAvailable = true;
