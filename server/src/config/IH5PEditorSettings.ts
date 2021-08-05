@@ -5,6 +5,7 @@ export default interface IH5PEditorSettings {
     email: string;
     enableLumiRun: boolean;
     firstOpen: boolean;
+    h5pUuid: string;
     language: string;
     lastVersion: string;
     privacyPolicyConsent: boolean;

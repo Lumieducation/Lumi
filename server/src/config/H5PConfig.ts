@@ -1,5 +1,6 @@
 import electron from 'electron';
 import { IH5PConfig } from '@lumieducation/h5p-server';
+import SettingsCache from './SettingsCache';
 
 /**
  * Hard-codes configuration options and literals that are used by H5P and that
@@ -90,21 +91,19 @@ export default class H5PConfig implements IH5PConfig {
     public siteType: 'local' | 'network' | 'internet' = 'local';
     public temporaryFileLifetime: number = 1 * 60 * 1000; // 120 minutes
     public temporaryFilesUrl: string = '/temp-files';
+    // The only user-configurable setting.
     public uuid: string = '';
 
-    /**
-     * As we hard-code all H5P settings in this file, we don't load anything
-     * from the disk.
-     */
     public async load(): Promise<H5PConfig> {
+        this.uuid = SettingsCache.getSettings().h5pUuid ?? '';
         return this;
     }
 
-    /**
-     * As we hard-code all H5P settings in this file, we don't save any changes.
-     */
     public async save(): Promise<void> {
-        // TODO: save uuid
-        return;
+        const settings = SettingsCache.getSettings();
+        if (settings.h5pUuid !== this.uuid) {
+            settings.h5pUuid = this.uuid;
+            SettingsCache.setSettings(settings);
+        }
     }
 }

@@ -24,7 +24,7 @@ export default async (
         libraryDir?: string;
     }
 ) => {
-    const config = new H5PConfig();
+    const config = await new H5PConfig().load();
 
     const translationFunction = await boot_i18n(serverConfig);
 
