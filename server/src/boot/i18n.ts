@@ -3,7 +3,7 @@ import fsExtra from 'fs-extra';
 import IServerConfig from '../config/IPaths';
 import i18nextBackend from 'i18next-node-fs-backend';
 
-export default async function boot(
+export default async function initI18n(
     serverConfig: IServerConfig
 ): Promise<TFunction> {
     const languageCode = (await fsExtra.readJSON(serverConfig.settingsFile))

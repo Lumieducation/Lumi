@@ -24,7 +24,8 @@ describe('GET /settings', () => {
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
             null,
-            new settingsCache(path.resolve('test', 'data', 'settings.json'))
+            new settingsCache(path.resolve('test', 'data', 'settings.json')),
+            () => ''
         );
 
         return app;
@@ -57,7 +58,8 @@ describe('PATCH /settings', () => {
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
             null,
-            new settingsCache(path.resolve('test', 'data', 'settings.json'))
+            new settingsCache(path.resolve('test', 'data', 'settings.json')),
+            () => ''
         );
 
         return app;

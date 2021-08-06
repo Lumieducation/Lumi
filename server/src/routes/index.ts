@@ -28,7 +28,6 @@ export default function (
     h5pPlayer: H5PPlayer,
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow,
-    app: express.Application,
     settingsCache: SettingsCache
 ): express.Router {
     const router = express.Router();
@@ -48,10 +47,7 @@ export default function (
     router.use('/api/v1/system', systemRoutes());
     router.use('/api/v1/updates', updatesRoutes());
 
-    router.use(
-        '/api/v1/settings',
-        settingsRoutes(serverConfig, browserWindow, app, settingsCache)
-    );
+    router.use('/api/v1/settings', settingsRoutes(settingsCache));
 
     router.use(
         '/api/run',
@@ -88,24 +84,6 @@ export default function (
     );
 
     router.use('/locales', express.static(`${__dirname}/../../../locales`));
-
-    // async (req, res) => {
-    //     try {
-    //         const languageCode = (
-    //             await fsExtra.readJSON(serverConfig.settingsFile)
-    //         ).language;
-    //         const locale = await fsExtra.readJSON(
-    //             `${__dirname}/../../../locales/${languageCode}.json`
-    //         );
-    //         res.status(200).json(locale);
-    //     } catch (error) {
-    //         Sentry.captureException(error);
-    //         const locale = await fsExtra.readJSON(
-    //             `${__dirname}/../../../locales/en.json`
-    //         );
-    //         res.status(200).json(locale);
-    //     }
-    // });
 
     // The expressRoutes are routes that create pages for these actions:
     // - Creating new content

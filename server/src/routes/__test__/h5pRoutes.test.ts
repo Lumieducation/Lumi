@@ -23,7 +23,8 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
             null,
-            new SettingsCache(path.resolve('test', 'data', 'settings.json'))
+            new SettingsCache(path.resolve('test', 'data', 'settings.json')),
+            () => ''
         );
 
         return app;

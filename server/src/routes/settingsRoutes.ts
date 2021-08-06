@@ -1,18 +1,10 @@
 import express from 'express';
-import fsExtra from 'fs-extra';
-import electron from 'electron';
 import * as Sentry from '@sentry/node';
-import IPaths from '../config/IPaths';
 import i18next from 'i18next';
 
 import SettingsCache from '../config/SettingsCache';
 
-export default function (
-    serverPaths: IPaths,
-    browserWindow: electron.BrowserWindow,
-    app: express.Application,
-    settingsCache: SettingsCache
-): express.Router {
+export default function (settingsCache: SettingsCache): express.Router {
     const router = express.Router();
     router.get(
         `/`,

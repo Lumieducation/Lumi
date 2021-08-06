@@ -15,7 +15,7 @@ import { withDir } from 'tmp-promise';
 import scopackager from 'simple-scorm-packager';
 
 import electronState from '../state/electronState';
-import createReporter from '../helpers/createRepoter';
+import createReporter from '../helpers/createReporter';
 import User from '../h5pImplementations/User';
 
 const cleanAndTrim = (text) => {

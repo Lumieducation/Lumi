@@ -4,11 +4,10 @@ import * as Sentry from '@sentry/node';
 import bodyParser from 'body-parser';
 import express from 'express';
 import fileUpload from 'express-fileupload';
-import i18next from 'i18next';
+import i18next, { TFunction } from 'i18next';
 import i18nextHttpMiddleware from 'i18next-http-middleware';
 
-import boot_i18n from './i18n';
-import createH5PEditor from './createH5PEditor';
+import createH5PEditor from './h5pEditor';
 import H5PConfig from '../config/H5PConfig';
 import IServerConfig from '../config/IPaths';
 import LumiError from '../helpers/LumiError';
@@ -16,18 +15,20 @@ import routes from '../routes';
 import SettingsCache from '../config/SettingsCache';
 import User from '../h5pImplementations/User';
 
+/**
+ * Creates the main Express app.
+ */
 export default async (
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow,
     settingsCache: SettingsCache,
+    translationFunction: TFunction,
     options?: {
         devMode?: boolean;
         libraryDir?: string;
     }
 ) => {
     const config = await new H5PConfig(settingsCache).load();
-
-    const translationFunction = await boot_i18n(serverConfig);
 
     // The H5PEditor object is central to all operations of
     // @lumieducation/h5p-server if you want to user the editor component.
@@ -113,14 +114,7 @@ export default async (
     });
     app.use(
         '/',
-        routes(
-            h5pEditor,
-            h5pPlayer,
-            serverConfig,
-            browserWindow,
-            app,
-            settingsCache
-        )
+        routes(h5pEditor, h5pPlayer, serverConfig, browserWindow, settingsCache)
     );
 
     // The error handler must be before any other error middleware and after all controllers

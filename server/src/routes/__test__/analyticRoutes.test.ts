@@ -23,7 +23,8 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
             null,
-            new SettingsCache(path.resolve('test', 'data', 'settings.json'))
+            new SettingsCache(path.resolve('test', 'data', 'settings.json')),
+            () => ''
         );
 
         return app;
