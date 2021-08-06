@@ -1,11 +1,11 @@
 import http from 'http';
 import electron from 'electron';
 
-import appFactory from './boot/app';
-import Logger from './helpers/Logger';
-import setup from './boot/setup';
-import IServerConfig from './config/IPaths';
-import SettingsCache from './config/SettingsCache';
+import appFactory from './expressApp';
+import Logger from '../helpers/Logger';
+import setup from './setup';
+import IServerConfig from '../config/IPaths';
+import SettingsCache from '../config/SettingsCache';
 
 const log = new Logger('boot');
 

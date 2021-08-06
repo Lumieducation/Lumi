@@ -1,5 +1,5 @@
 import express from 'express';
-import matomo from '../matomo';
+import matomo from '../boot/matomo';
 import * as Sentry from '@sentry/node';
 import IServerConfig from '../config/IPaths';
 import electron from 'electron';

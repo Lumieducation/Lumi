@@ -1,5 +1,5 @@
 import request from 'supertest';
-import bootApp from '../../boot/app';
+import bootApp from '../../boot/expressApp';
 import path from 'path';
 import { dialog } from 'electron';
 import express from 'express';

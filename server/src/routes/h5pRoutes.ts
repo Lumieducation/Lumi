@@ -14,9 +14,9 @@ import promisePipe from 'promisepipe';
 import { withDir } from 'tmp-promise';
 import scopackager from 'simple-scorm-packager';
 
-import electronState from '../electronState';
+import electronState from '../state/electronState';
 import createReporter from '../helpers/createRepoter';
-import User from '../User';
+import User from '../h5pImplementations/User';
 
 const cleanAndTrim = (text) => {
     const textClean = text.replace(/[^a-zA-Z\d\s]/g, '');

@@ -3,8 +3,8 @@ import { autoUpdater, UpdateInfo } from 'electron-updater';
 import SocketIO from 'socket.io';
 import * as Sentry from '@sentry/electron';
 import fsExtra from 'fs-extra';
-import IServerConfig from './config/IPaths';
-import SettingsCache from './config/SettingsCache';
+import IServerConfig from '../config/IPaths';
+import SettingsCache from '../config/SettingsCache';
 
 let updateAvailable: boolean = false;
 let updating: boolean = false;

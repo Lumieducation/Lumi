@@ -3,7 +3,7 @@ const isMac = process.platform === 'darwin';
 
 import { createMainWindow } from '../main';
 
-import { io } from '../websocket';
+import { io } from '../boot/websocket';
 
 export default function (): any {
     return isMac

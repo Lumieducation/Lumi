@@ -1,7 +1,7 @@
 import express from 'express';
 import * as Sentry from '@sentry/electron';
 
-import { platformSupportsUpdates } from '../updater';
+import { platformSupportsUpdates } from '../boot/updater';
 
 export type Platform =
     | 'mac'

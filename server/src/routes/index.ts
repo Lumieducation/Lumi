@@ -18,7 +18,7 @@ import settingsRoutes from './settingsRoutes';
 import runRoutes from './runRoutes';
 import systemRoutes from './systemRoutes';
 import updatesRoutes from './updatesRoutes';
-import User from '../User';
+import User from '../h5pImplementations/User';
 import SettingsCache from '../config/SettingsCache';
 
 const log = new Logger('routes');

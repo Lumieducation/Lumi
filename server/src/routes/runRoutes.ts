@@ -2,7 +2,7 @@ import express from 'express';
 import * as Sentry from '@sentry/node';
 import IServerConfig from '../config/IPaths';
 import { BrowserWindow, dialog } from 'electron';
-import User from '../User';
+import User from '../h5pImplementations/User';
 import fs from 'fs-extra';
 import path from 'path';
 import superagent from 'superagent';
@@ -10,7 +10,7 @@ import * as H5P from '@lumieducation/h5p-server';
 
 import SettingsCache from '../config/SettingsCache';
 import LumiController from '../controllers/LumiController';
-import { io as websocket } from '../websocket';
+import { io as websocket } from '../boot/websocket';
 
 const runHost = process.env.LUMI_HOST || 'https://lumi.run';
 

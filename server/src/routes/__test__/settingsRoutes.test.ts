@@ -1,5 +1,5 @@
 import request from 'supertest';
-import bootApp from '../../boot/app';
+import bootApp from '../../boot/expressApp';
 import path from 'path';
 import express from 'express';
 import fsExtra from 'fs-extra';

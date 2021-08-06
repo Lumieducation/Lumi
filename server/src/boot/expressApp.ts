@@ -14,7 +14,7 @@ import IServerConfig from '../config/IPaths';
 import LumiError from '../helpers/LumiError';
 import routes from '../routes';
 import SettingsCache from '../config/SettingsCache';
-import User from '../User';
+import User from '../h5pImplementations/User';
 
 export default async (
     serverConfig: IServerConfig,

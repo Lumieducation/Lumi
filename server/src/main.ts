@@ -1,3 +1,9 @@
+/**
+ * This file contains the Electron app initialization and is the main entry
+ * point into the whole app. It initializes all other components and parses
+ * command line arguments and other events received from the OS.
+ */
+
 import * as Sentry from '@sentry/electron';
 import electron from 'electron';
 import log from 'electron-log';
@@ -5,18 +11,18 @@ import os from 'os';
 import path from 'path';
 import SocketIO from 'socket.io';
 import { URL } from 'url';
-import httpServerFactory from './httpServer';
+import httpServerFactory from './boot/httpServer';
 import updateMenu from './menu';
-import updater from './updater';
-import websocketFactory from './websocket';
+import updater from './boot/updater';
+import websocketFactory from './boot/websocket';
 import serverConfigFactory from './config/defaultPaths';
-import matomo from './matomo';
+import matomo from './boot/matomo';
 import { machineId } from 'node-machine-id';
 import i18next from 'i18next';
 import fsExtra from 'fs-extra';
 
 import SettingsCache from './config/SettingsCache';
-import electronState from './electronState';
+import electronState from './state/electronState';
 import DelayedEmitter from './helpers/DelayedEmitter';
 
 const app = electron.app;

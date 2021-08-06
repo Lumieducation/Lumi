@@ -4,8 +4,6 @@ import { app } from 'electron';
 import path from 'path';
 import IServerConfig from '../config/IPaths';
 
-import settingsCache from '../config/SettingsCache';
-
 export default async function setup(
     serverConfig: IServerConfig
 ): Promise<void> {
