@@ -197,7 +197,7 @@ if (!gotSingleInstanceLock) {
         await fsExtra.mkdirp(serverPaths.temporaryStoragePath);
 
         // Initialize localization
-        const translationFunction = await initI18n(serverPaths);
+        const translationFunction = await initI18n(settingsCache);
 
         // Create the express server logic
         const expressApp = await createApp(
