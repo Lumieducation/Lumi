@@ -1,17 +1,20 @@
 import express from 'express';
 import matomo from '../matomo';
 import * as Sentry from '@sentry/node';
-import IServerConfig from '../IServerConfig';
+import IServerConfig from '../config/IPaths';
 import electron from 'electron';
 import * as os from 'os';
 import { machineId } from 'node-machine-id';
 import cryptoRandomString from 'crypto-random-string';
 
-import settingsCache from '../settingsCache';
+import SettingsCache from '../config/SettingsCache';
 
 const id = cryptoRandomString({ length: 16 });
 
-export default function (serverConfig: IServerConfig): express.Router {
+export default function (
+    serverConfig: IServerConfig,
+    settingsCache: SettingsCache
+): express.Router {
     const router = express.Router();
     router.post(
         `/`,
@@ -21,7 +24,7 @@ export default function (serverConfig: IServerConfig): express.Router {
             next: express.NextFunction
         ) => {
             try {
-                if (settingsCache.getSettings().usageStatistics) {
+                if ((await settingsCache.getSettings()).usageStatistics) {
                     const { action, category, name, value } = req.body;
                     const data = {
                         url: '/Lumi',

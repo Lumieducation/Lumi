@@ -9,13 +9,13 @@ import httpServerFactory from './httpServer';
 import updateMenu from './menu';
 import updater from './updater';
 import websocketFactory from './websocket';
-import serverConfigFactory from './serverConfig';
+import serverConfigFactory from './config/defaultPaths';
 import matomo from './matomo';
 import { machineId } from 'node-machine-id';
 import i18next from 'i18next';
 import fsExtra from 'fs-extra';
 
-import settingsCache from './settingsCache';
+import SettingsCache from './config/SettingsCache';
 import electronState from './electronState';
 import DelayedEmitter from './helpers/DelayedEmitter';
 
@@ -23,13 +23,22 @@ const app = electron.app;
 let websocket: SocketIO.Server;
 const tmpDir = process.env.TEMPDATA || path.join(app.getPath('temp'), 'lumi');
 
+const serverConfig = serverConfigFactory(
+    process.env.USERDATA || app.getPath('userData'),
+    tmpDir
+);
+
+const settingsCache = new SettingsCache(serverConfig.settingsFile);
+
 /**
  * The DelayedEmitter queues websocket events until the websocket is connected.
  * We need it as the browser window and the client must be initialized before
  * we can send events, but the events are raised by the startup routine before
  * the initialization is over.
  */
-const delayedWebsocketEmitter: DelayedEmitter = new DelayedEmitter();
+const delayedWebsocketEmitter: DelayedEmitter = new DelayedEmitter(
+    settingsCache
+);
 let mainWindow: electron.BrowserWindow;
 let port: number;
 let currentPath: string = '/';
@@ -47,14 +56,14 @@ export function createMainWindow(websocketArg: SocketIO.Server): void {
 
         window.webContents.on('did-navigate-in-page', (event, url) => {
             currentPath = new URL(url).pathname;
-            updateMenu(currentPath, window, websocketArg);
+            updateMenu(currentPath, window, websocketArg, settingsCache);
         });
 
         i18next.on('languageChanged', (lng) => {
-            updateMenu(currentPath, window, websocketArg);
+            updateMenu(currentPath, window, websocketArg, settingsCache);
         });
 
-        updateMenu('/', window, websocketArg);
+        updateMenu('/', window, websocketArg, settingsCache);
 
         if (isDevelopment) {
             window.webContents.openDevTools();
@@ -112,16 +121,12 @@ const gotSingleInstanceLock = app.requestSingleInstanceLock();
 if (!gotSingleInstanceLock) {
     app.quit();
 } else {
-    const serverConfig = serverConfigFactory(
-        process.env.USERDATA || app.getPath('userData'),
-        tmpDir
-    );
     Sentry.init({
         dsn: 'http://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
         release: app.getVersion(),
         environment: process.env.NODE_ENV,
         beforeSend: async (event: Sentry.Event) => {
-            if (settingsCache.getSettings().bugTracking) {
+            if ((await settingsCache.getSettings()).bugTracking) {
                 return event;
             }
             return null;
@@ -199,7 +204,7 @@ if (!gotSingleInstanceLock) {
 
     app.on('before-quit', async () => {
         try {
-            if (settingsCache.getSettings().usageStatistics) {
+            if ((await settingsCache.getSettings()).usageStatistics) {
                 const data = {
                     url: '/Lumi',
                     _id: await machineId(),
@@ -224,13 +229,18 @@ if (!gotSingleInstanceLock) {
     // create main BrowserWindow when electron is ready
     app.on('ready', async () => {
         log.info('app is ready');
-        const server = await httpServerFactory(serverConfig, mainWindow, {
-            devMode: app.commandLine.hasSwitch('dev'),
-            libraryDir:
-                app.commandLine.getSwitchValue('libs') !== ''
-                    ? app.commandLine.getSwitchValue('libs')
-                    : undefined
-        });
+        const server = await httpServerFactory(
+            serverConfig,
+            mainWindow,
+            settingsCache,
+            {
+                devMode: app.commandLine.hasSwitch('dev'),
+                libraryDir:
+                    app.commandLine.getSwitchValue('libs') !== ''
+                        ? app.commandLine.getSwitchValue('libs')
+                        : undefined
+            }
+        );
         log.info('server booted');
 
         port = (server.address() as any).port;
@@ -241,7 +251,7 @@ if (!gotSingleInstanceLock) {
 
         delayedWebsocketEmitter.setWebsocket(websocket);
 
-        updater(app, websocket, serverConfig);
+        updater(app, websocket, serverConfig, settingsCache);
         log.info('updater started');
 
         createMainWindow(websocket);
@@ -265,7 +275,7 @@ if (!gotSingleInstanceLock) {
         }
 
         try {
-            if (settingsCache.getSettings().usageStatistics) {
+            if ((await settingsCache.getSettings()).usageStatistics) {
                 const data = {
                     url: '/Lumi',
                     _id: await machineId(),

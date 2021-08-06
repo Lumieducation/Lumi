@@ -4,55 +4,28 @@ import * as Sentry from '@sentry/node';
 import bodyParser from 'body-parser';
 import express from 'express';
 import fileUpload from 'express-fileupload';
-
 import i18next from 'i18next';
 import i18nextHttpMiddleware from 'i18next-http-middleware';
 
-import LumiError from '../helpers/LumiError';
-
-import routes from '../routes';
-
-import IServerConfig from '../IServerConfig';
-
-import createH5PEditor from './createH5PEditor';
-
-import User from '../User';
-
-import settingsCache from '../settingsCache';
-
 import boot_i18n from './i18n';
-
-/**
- * Increases the maximum file size if it is still at the default value.
- */
-const increaseMaxFileSize = async (config: H5P.IH5PConfig) => {
-    let updatedConfig = false;
-    if (!config.maxFileSize || config.maxFileSize === 16 * 1024 * 1024) {
-        config.maxFileSize = 2048 * 1024 * 1024;
-        updatedConfig = true;
-    }
-    if (!config.maxTotalSize || config.maxTotalSize === 64 * 1024 * 1024) {
-        config.maxTotalSize = 2048 * 1024 * 1024;
-        updatedConfig = true;
-    }
-    if (updatedConfig) {
-        await config.save();
-    }
-};
+import createH5PEditor from './createH5PEditor';
+import H5PConfig from '../config/H5PConfig';
+import IServerConfig from '../config/IPaths';
+import LumiError from '../helpers/LumiError';
+import routes from '../routes';
+import SettingsCache from '../config/SettingsCache';
+import User from '../User';
 
 export default async (
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow,
+    settingsCache: SettingsCache,
     options?: {
         devMode?: boolean;
         libraryDir?: string;
     }
 ) => {
-    const config = await new H5P.H5PConfig(
-        new H5P.fsImplementations.JsonStorage(serverConfig.configFile)
-    ).load();
-
-    await increaseMaxFileSize(config);
+    const config = await new H5PConfig(settingsCache).load();
 
     const translationFunction = await boot_i18n(serverConfig);
 
@@ -87,7 +60,7 @@ export default async (
             release: electron.app.getVersion(),
             environment: process.env.NODE_ENV,
             beforeSend: async (event: Sentry.Event) => {
-                if (settingsCache.getSettings().bugTracking) {
+                if ((await settingsCache.getSettings()).bugTracking) {
                     return event;
                 }
                 return null;
@@ -133,14 +106,21 @@ export default async (
     app.use(i18nextHttpMiddleware.handle(i18next));
 
     app.use(async (req: any, res: any, next: express.NextFunction) => {
-        const languageCode = settingsCache.getSettings().language;
+        const languageCode = (await settingsCache.getSettings()).language;
         req.language = languageCode;
         req.languages = [languageCode, 'en'];
         next();
     });
     app.use(
         '/',
-        routes(h5pEditor, h5pPlayer, serverConfig, browserWindow, app)
+        routes(
+            h5pEditor,
+            h5pPlayer,
+            serverConfig,
+            browserWindow,
+            app,
+            settingsCache
+        )
     );
 
     // The error handler must be before any other error middleware and after all controllers

@@ -3,7 +3,7 @@ import { H5PEditor } from '@lumieducation/h5p-server';
 import * as Sentry from '@sentry/node';
 import LumiController from '../controllers/LumiController';
 import Logger from '../helpers/Logger';
-import IServerConfig from '../IServerConfig';
+import IServerConfig from '../config/IPaths';
 import { BrowserWindow } from 'electron';
 
 const log = new Logger('routes:lumi-h5p');

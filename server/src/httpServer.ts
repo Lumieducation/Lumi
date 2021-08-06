@@ -4,7 +4,8 @@ import electron from 'electron';
 import appFactory from './boot/app';
 import Logger from './helpers/Logger';
 import setup from './boot/setup';
-import IServerConfig from './IServerConfig';
+import IServerConfig from './config/IPaths';
+import SettingsCache from './config/SettingsCache';
 
 const log = new Logger('boot');
 
@@ -20,13 +21,14 @@ export { server };
 export default async (
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow,
+    settingsCache: SettingsCache,
     options?: {
         devMode?: boolean;
         libraryDir?: string;
     }
 ) => {
     await setup(serverConfig);
-    const app = appFactory(serverConfig, browserWindow, options);
+    const app = appFactory(serverConfig, browserWindow, settingsCache, options);
     server = http.createServer(await app);
     return server.listen(process.env.PORT || 0, () => {
         log.info(`server booted on port ${(server.address() as any).port}`);

@@ -4,6 +4,7 @@ import path from 'path';
 import { dialog } from 'electron';
 import express from 'express';
 import fsExtra from 'fs-extra';
+import SettingsCache from '../../config/SettingsCache';
 
 describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
     let app: express.Application;
@@ -11,8 +12,7 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
     beforeAll(async () => {
         app = await bootApp(
             {
-                cache: path.resolve('test', 'data'),
-                configFile: path.resolve('test', 'data', 'config.json'),
+                contentTypeCache: path.resolve('test', 'data'),
                 librariesPath: path.resolve('test', 'data', `libraries`),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
                 contentStoragePath: path.resolve(
@@ -22,7 +22,8 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
                 ),
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
-            null
+            null,
+            new SettingsCache(path.resolve('test', 'data', 'settings.json'))
         );
 
         return app;
