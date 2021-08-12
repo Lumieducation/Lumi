@@ -3,7 +3,7 @@ const isMac = process.platform === 'darwin';
 
 import { createMainWindow } from '../main';
 
-import { io } from '../websocket';
+import { globalWebsocket } from '../boot/websocket';
 
 export default function (): any {
     return isMac
@@ -30,7 +30,7 @@ export default function (): any {
                                 {
                                     accelerator: 'CmdOrCtrl+)',
                                     click: () => {
-                                        createMainWindow(io);
+                                        createMainWindow(globalWebsocket);
                                     },
                                     label: i18next.t('lumi:menu.window.show')
                                 }

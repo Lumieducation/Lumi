@@ -1,34 +1,42 @@
+/**
+ * This file contains the Electron app initialization and is the main entry
+ * point into the whole app. It initializes all other components and parses
+ * command line arguments and other events received from the OS.
+ */
+
 import * as Sentry from '@sentry/electron';
-import electron from 'electron';
+import electron, { app } from 'electron';
 import log from 'electron-log';
 import os from 'os';
 import path from 'path';
 import SocketIO from 'socket.io';
 import { URL } from 'url';
-import httpServerFactory from './httpServer';
-import updateMenu from './menu';
-import updater from './updater';
-import websocketFactory from './websocket';
+import createHttpServer from './boot/httpServer';
+import initUpdater from './boot/updater';
+import createWebsocket from './boot/websocket';
 import serverConfigFactory from './config/defaultPaths';
-import matomo from './matomo';
+import matomo from './boot/matomo';
 import { machineId } from 'node-machine-id';
 import i18next from 'i18next';
 import fsExtra from 'fs-extra';
 
+import updateMenu from './menu';
 import SettingsCache from './config/SettingsCache';
-import electronState from './electronState';
 import DelayedEmitter from './helpers/DelayedEmitter';
+import createWindow from './boot/clientWindow';
+import migrations from './boot/migrations';
+import initI18n from './boot/i18n';
+import createApp from './boot/expressApp';
 
-const app = electron.app;
 let websocket: SocketIO.Server;
 const tmpDir = process.env.TEMPDATA || path.join(app.getPath('temp'), 'lumi');
 
-const serverConfig = serverConfigFactory(
+const serverPaths = serverConfigFactory(
     process.env.USERDATA || app.getPath('userData'),
     tmpDir
 );
 
-const settingsCache = new SettingsCache(serverConfig.settingsFile);
+const settingsCache = new SettingsCache(serverPaths.settingsFile);
 
 /**
  * The DelayedEmitter queues websocket events until the websocket is connected.
@@ -43,81 +51,33 @@ let mainWindow: electron.BrowserWindow;
 let port: number;
 let currentPath: string = '/';
 const isDevelopment = process.env.NODE_ENV === 'development';
-const BrowserWindow = electron.BrowserWindow;
 
+/**
+ * (Re-)Creates the main window.
+ * @param websocketArg
+ */
 export function createMainWindow(websocketArg: SocketIO.Server): void {
-    if (!mainWindow) {
-        const window = new BrowserWindow({
-            height: 800,
-            minHeight: 600,
-            minWidth: 500,
-            width: 1000
-        });
+    mainWindow = createWindow(isDevelopment ? 3000 : port, isDevelopment);
+    mainWindow.on('closed', () => {
+        mainWindow = null;
+        // If a new main window is recreated later (macOS), we need to
+        // listen to the websocket's connection event again.
+        delayedWebsocketEmitter.resetWebsocketConnection();
+    });
 
-        window.webContents.on('did-navigate-in-page', (event, url) => {
-            currentPath = new URL(url).pathname;
-            updateMenu(currentPath, window, websocketArg, settingsCache);
-        });
+    mainWindow.webContents.on('did-navigate-in-page', (event, url) => {
+        currentPath = new URL(url).pathname;
+        updateMenu(currentPath, mainWindow, websocketArg, settingsCache);
+    });
 
-        i18next.on('languageChanged', (lng) => {
-            updateMenu(currentPath, window, websocketArg, settingsCache);
-        });
+    i18next.on('languageChanged', (lng) => {
+        updateMenu(currentPath, mainWindow, websocketArg, settingsCache);
+    });
 
-        updateMenu('/', window, websocketArg, settingsCache);
-
-        if (isDevelopment) {
-            window.webContents.openDevTools();
-            if (process.env.REDUX_EXTENSION) {
-                const ses = window.webContents.session;
-
-                ses.loadExtension(
-                    path.join(
-                        os.homedir(),
-                        `/Library/Application Support/Google/Chrome/Default/Extensions/lmhkpmbekcpmknklioeibfkpmmfibljd/2.17.1_0`
-                    )
-                );
-            }
-            window.loadURL('http://localhost:3000');
-        } else {
-            window.loadURL(`http://localhost:${port}`);
-        }
-
-        window.on('closed', () => {
-            mainWindow = null;
-            // If a new main window is recreated later (macOS), we need to
-            // listen to the websocket's connection event again.
-            delayedWebsocketEmitter.resetWebsocketConnection();
-        });
-
-        window.webContents.on('new-window', (e, url) => {
-            e.preventDefault();
-            electron.shell.openExternal(url);
-        });
-
-        window.webContents.on('devtools-opened', () => {
-            window.focus();
-            setImmediate(() => {
-                window.focus();
-            });
-        });
-
-        window.webContents.on('will-navigate', (e, url) => {
-            e.preventDefault();
-            require('electron').shell.openExternal(url);
-        });
-
-        window.webContents.on('before-input-event', (event, input) => {
-            if (electronState.getState().blockKeyboard) {
-                event.preventDefault();
-            }
-        });
-
-        mainWindow = window;
-    }
+    updateMenu('/', mainWindow, websocketArg, settingsCache);
 }
 
 const gotSingleInstanceLock = app.requestSingleInstanceLock();
-
 if (!gotSingleInstanceLock) {
     app.quit();
 } else {
@@ -228,30 +188,45 @@ if (!gotSingleInstanceLock) {
 
     // create main BrowserWindow when electron is ready
     app.on('ready', async () => {
-        log.info('app is ready');
-        const server = await httpServerFactory(
-            serverConfig,
+        // Performs migrations needed due to updates.
+        await migrations(serverPaths);
+
+        // Make sure required directories exist
+        await fsExtra.mkdirp(serverPaths.contentStoragePath);
+        await fsExtra.mkdirp(serverPaths.librariesPath);
+        await fsExtra.mkdirp(serverPaths.temporaryStoragePath);
+
+        // Initialize localization
+        const translationFunction = await initI18n(settingsCache);
+
+        // Create the express server logic
+        const expressApp = await createApp(
+            serverPaths,
             mainWindow,
             settingsCache,
+            translationFunction,
             {
-                devMode: app.commandLine.hasSwitch('dev'),
+                devMode: electron.app.commandLine.hasSwitch('dev'),
                 libraryDir:
-                    app.commandLine.getSwitchValue('libs') !== ''
-                        ? app.commandLine.getSwitchValue('libs')
+                    electron.app.commandLine.getSwitchValue('libs') !== ''
+                        ? electron.app.commandLine.getSwitchValue('libs')
                         : undefined
             }
         );
+
+        log.info('app is ready');
+        const server = await createHttpServer(expressApp);
         log.info('server booted');
 
+        // The port in production is random and is 3000 in dev.
         port = (server.address() as any).port;
         log.info(`port is ${port}`);
 
-        websocket = websocketFactory(server);
+        websocket = createWebsocket(server);
         log.info('websocket created');
-
         delayedWebsocketEmitter.setWebsocket(websocket);
 
-        updater(app, websocket, serverConfig, settingsCache);
+        initUpdater(app, websocket, serverPaths, settingsCache);
         log.info('updater started');
 
         createMainWindow(websocket);

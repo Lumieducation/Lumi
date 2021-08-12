@@ -1,13 +1,11 @@
 import i18next, { TFunction } from 'i18next';
-import fsExtra from 'fs-extra';
-import IServerConfig from '../config/IPaths';
 import i18nextBackend from 'i18next-node-fs-backend';
+import SettingsStorage from '../config/SettingsCache';
 
-export default async function boot(
-    serverConfig: IServerConfig
+export default async function initI18n(
+    settingsCache: SettingsStorage
 ): Promise<TFunction> {
-    const languageCode = (await fsExtra.readJSON(serverConfig.settingsFile))
-        .language;
+    const languageCode = (await settingsCache.getSettings()).language;
 
     const t = await i18next.use(i18nextBackend).init({
         lng: languageCode,

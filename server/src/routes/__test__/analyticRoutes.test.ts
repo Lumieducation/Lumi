@@ -1,19 +1,23 @@
 import request from 'supertest';
-import bootApp from '../../boot/app';
+import bootApp from '../../boot/expressApp';
 import path from 'path';
 import { dialog } from 'electron';
 import express from 'express';
 
 import SettingsCache from '../../config/SettingsCache';
+import initI18n from '../../boot/i18n';
 
 describe('[analytics:routes]: GET /api/v1/analytics', () => {
     let app: express.Application;
 
     beforeAll(async () => {
+        const settingsCache = new SettingsCache(
+            path.resolve('test', 'data', 'settings.json')
+        );
         app = await bootApp(
             {
                 contentTypeCache: path.resolve('test', 'data'),
-                librariesPath: path.resolve('test', 'data', `libraries`),
+                librariesPath: path.resolve('test', 'data', 'libraries'),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
                 contentStoragePath: path.resolve(
                     'test',
@@ -23,7 +27,8 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
             null,
-            new SettingsCache(path.resolve('test', 'data', 'settings.json'))
+            settingsCache,
+            await initI18n(settingsCache)
         );
 
         return app;
