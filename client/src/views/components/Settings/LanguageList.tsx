@@ -61,7 +61,6 @@ export default function LanguageList() {
                 <MenuItem value={'de'}>Deutsch</MenuItem>
                 <MenuItem value={'el'}>ελληνικά</MenuItem>
                 <MenuItem value={'en'}>English</MenuItem>
-                <MenuItem value={'en-GB'}>English (British)</MenuItem>
                 <MenuItem value={'es'}>español</MenuItem>
                 <MenuItem value={'es-MX'}>español mexicano</MenuItem>
                 <MenuItem value={'et'}>eesti, eesti keel</MenuItem>

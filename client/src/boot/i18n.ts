@@ -9,7 +9,7 @@ i18n.use(initReactI18next) // passes i18n down to react-i18next
             loadPath: '/locales/{{ns}}/{{lng}}.json'
         },
         fallbackLng: 'en',
-        load: 'languageOnly',
+        load: 'all',
         interpolation: {
             escapeValue: false
         },

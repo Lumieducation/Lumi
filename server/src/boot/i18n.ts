@@ -20,7 +20,7 @@ export default async function initI18n(
             'server',
             'storage-file-implementations'
         ],
-        load: 'languageOnly',
+        load: 'all',
         defaultNS: 'server',
         backend: {
             loadPath: `${__dirname}/../../../locales/{{ns}}/{{lng}}.json`
