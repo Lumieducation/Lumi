@@ -1,8 +1,12 @@
 import { app } from 'electron';
 import fsExtra from 'fs-extra';
+import { supportedLocales } from '../boot/i18n';
 
 import defaultSettings from './defaultSettings';
 import IH5PEditorSettings from './IH5PEditorSettings';
+import Logger from '../helpers/Logger';
+
+const log = new Logger('SettingsStorage');
 
 /**
  * Allows access to global settings and offers persistence. If you use
@@ -50,8 +54,11 @@ export default class SettingsStorage {
      * Also persists these changes to the settings file in the user directory.
      */
     async saveSettings(s: IH5PEditorSettings): Promise<void> {
+        log.debug('Saving settings to file');
         this.settings = s;
         await fsExtra.writeJSON(this.settingsFile, this.settings);
+
+        log.debug('Notifying subscribers of settings change');
         this.subscribers.forEach((subscriber) => subscriber());
     }
 
@@ -74,18 +81,66 @@ export default class SettingsStorage {
     }
 
     /**
+     * Checks if the values of the settings are correct and fixes them if
+     * necessary.
+     * @param settings
+     * @returns true if the settings were changed, false if they remained the
+     * same
+     */
+    public validateAndFixSettings(settings: IH5PEditorSettings): boolean {
+        let lng = settings.language;
+        // allow regular language codes like de-DE or zh-HANS
+        if (
+            !/^[a-z]{2,3}(-[A-Z]{2,6})?$/i.test(settings.language) ||
+            !supportedLocales.find((l) => l.code === lng)
+        ) {
+            log.debug(
+                'The language in the settings is either malformed or not in the list of supported locales.'
+            );
+            // converts es-419 into es
+            const res = /^([a-z]{2,3})(-.{2,6})?$/i.exec(settings.language);
+            if (res.length > 0) {
+                log.debug('Removing variant code from language');
+                lng = res[1];
+            }
+        }
+        if (supportedLocales.find((l) => l.code === lng)) {
+            if (settings.language !== lng) {
+                log.debug(
+                    `Changing language '${settings.language}' to '${lng}'`
+                );
+                settings.language = lng;
+                return true;
+            }
+            log.debug('Language code is ok');
+            return false;
+        }
+        log.debug('Falling back to English language.');
+        settings.language = 'en';
+        return true;
+    }
+
+    /**
      * Loads the settings from the file or creates a new file if none existed so
      * far.
      */
     private async loadSettings(): Promise<void> {
-        // Check if current settings exists and is read- and parsable
+        log.debug('Loading settings from file');
         let settingsOk = false;
+        let saveSettings = false;
+
+        // Check if current settings exists and are read- and parsable
         try {
             if (await fsExtra.pathExists(this.settingsFile)) {
                 const loadedSettings = await fsExtra.readJSON(
                     this.settingsFile
                 );
+                log.debug('Loaded valid settings file');
                 this.settings = this.mergeSettings(loadedSettings);
+                saveSettings = this.validateAndFixSettings(this.settings);
+                if (saveSettings) {
+                    log.debug('Settings values were invalid and repaired.');
+                }
                 settingsOk = true;
             }
         } catch (error) {
@@ -93,10 +148,19 @@ export default class SettingsStorage {
         }
 
         if (!settingsOk) {
+            log.debug(
+                'There was an error loading the settings file. Either none exists or it is malformed. Generating new file.'
+            );
             this.settings = {
                 ...defaultSettings,
                 language: app.getLocale()
             };
+            this.validateAndFixSettings(this.settings);
+            saveSettings = true;
+        }
+
+        if (saveSettings) {
+            log.debug('Saving new settings to file');
             await fsExtra.writeJSON(this.settingsFile, this.settings);
         }
     }
@@ -106,12 +170,19 @@ export default class SettingsStorage {
      * far.
      */
     private loadSettingsSync(): void {
-        // Check if current settings exists and is read- and parsable
         let settingsOk = false;
+        let saveSettings = false;
+
         try {
+            // Check if current settings exists and are read- and parsable
             if (fsExtra.pathExistsSync(this.settingsFile)) {
                 const loadedSettings = fsExtra.readJSONSync(this.settingsFile);
+                log.debug('Loaded valid settings file');
                 this.settings = this.mergeSettings(loadedSettings);
+                saveSettings = this.validateAndFixSettings(this.settings);
+                if (saveSettings) {
+                    log.debug('Settings values were invalid and repaired.');
+                }
                 settingsOk = true;
             }
         } catch (error) {
@@ -119,14 +190,30 @@ export default class SettingsStorage {
         }
 
         if (!settingsOk) {
+            log.debug(
+                'There was an error loading the settings file. Either none exists or it is malformed. Generating new file.'
+            );
             this.settings = {
                 ...defaultSettings,
                 language: app.getLocale()
             };
+            this.validateAndFixSettings(this.settings);
+            saveSettings = true;
+        }
+
+        if (saveSettings) {
+            log.debug('Saving new settings to file');
             fsExtra.writeJSONSync(this.settingsFile, this.settings);
         }
     }
 
+    /**
+     * Merges the default settings with loadedSettings. Only allowed properties
+     * are taken from loadedSettings, so it acts as a migrator of old setting
+     * structure after updates.
+     * @param loadedSettings
+     * @returns the merged settings
+     */
     private mergeSettings(
         loadedSettings: IH5PEditorSettings
     ): IH5PEditorSettings {

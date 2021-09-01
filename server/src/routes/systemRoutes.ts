@@ -2,6 +2,7 @@ import express from 'express';
 import * as Sentry from '@sentry/electron';
 
 import { platformSupportsUpdates } from '../boot/updater';
+import { supportedLocales } from '../boot/i18n';
 
 export type Platform =
     | 'mac'
@@ -28,6 +29,10 @@ function getPlatform(): Platform {
 }
 export default function (): express.Router {
     const router = express.Router();
+
+    router.get('/locales', (req: express.Request, res: express.Response) => {
+        res.json(supportedLocales);
+    });
 
     router.get(
         `/`,
