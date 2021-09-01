@@ -13,7 +13,7 @@ export default class DelayedEmitter {
         private settingsCache: SettingsCache,
         private websocketServer?: SocketIO.Server
     ) {
-        log.debug(`DelayedEmitter: Initialized"`);
+        log.debug(`DelayedEmitter: Initialized`);
         if (this.websocketServer) {
             this.websocketServer.on('connection', this.onConnection);
         }
