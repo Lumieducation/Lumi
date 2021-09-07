@@ -226,6 +226,7 @@ export default class SettingsStorage {
                 email: loadedSettings.email,
                 firstOpen: loadedSettings.firstOpen,
                 h5pUuid: loadedSettings.h5pUuid,
+                enableLumiRun: loadedSettings.enableLumiRun,
                 language: loadedSettings.language,
                 lastVersion: loadedSettings.lastVersion,
                 privacyPolicyConsent: loadedSettings.privacyPolicyConsent,
