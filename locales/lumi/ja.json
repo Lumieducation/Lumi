@@ -1,10 +1,108 @@
 {
-    "dialog": {
-        "close": "選ぶ"
+    "analytics": {
+        "average": "平均",
+        "brokenFiles": "壊れたファイルのリスト",
+        "errors": {
+            "determine-name": "学生の名前を特定できませんでした。",
+            "invalid-interactions": "いくつかの相互作用が壊れています。",
+            "invalid-statements": "記録された生徒の行動のいくつかは壊れています。",
+            "json-parse-error": ".lumiファイルに無効なコンテンツが含まれています（JSONは解析しませんでした）。",
+            "no-content-json": "H5Pコンテンツが.lumiファイルに正しく追加されませんでした。"
+        },
+        "name": "名前",
+        "searchPlaceholder": "学生の名前を検索...",
+        "startPage": {
+            "learn_more": "もっと詳しく知る",
+            "open": ".lumiファイルのあるフォルダーを選択します",
+            "start": "始める",
+            "title": "Lumi Analytics",
+            "welcomeMessage": "Lumiの分析ツールを使用すると、ユーザーレポートをインポートして、視覚化できます"
+        }
     },
-    "general": {
-        "delete": "消去",
-        "copyClipboard": "{{value}}をクリップボードにコピーしました"
+    "auth": {
+        "cancel": "キャンセル",
+        "code": "コード",
+        "email": "Eメール",
+        "error": {
+            "econnrefused": "LumiAuthサーバーに接続できませんでした。インターネット接続を確認してください。",
+            "no-valid-email": "{{email}}は有効なメールアドレスではありません。"
+        },
+        "logout": "ログアウト",
+        "notification": {
+            "logout": {
+                "success": "ログアウトしました。"
+            },
+            "pending": "{{email}}送信されました。メールをご確認ください。",
+            "success": "{{email}}は正常に検証されました"
+        },
+        "set_email": "メールを設定する",
+        "verify_code": "コードを確認する",
+        "verify_email": "Eメールを確認します"
+    },
+    "bug_report": {
+        "consent": "このアプリケーションがバグとクラッシュのレポートを送信することを許可します。",
+        "description": "匿名のクラッシュとバグレポートを送信して、ソフトウェアとサービスの改善にご協力ください。",
+        "title": "バグとクラッシュレポート"
+    },
+    "dialog": {
+        "close": "閉じる"
+    },
+    "editor": {
+        "default_name": "新しいH5P",
+        "exportDialog": {
+            "cancelButton": "キャンセル",
+            "defaults": {
+                "authorName": "H5P作成者",
+                "title": "H5Pコンテンツ"
+            },
+            "exportButton": "今すぐエクスポート",
+            "filePicker": {
+                "buttonLabel": "書き出す",
+                "formatNames": {
+                    "bundle": "オールインワンHTMLファイル（.html）",
+                    "external": "HTMLファイル（.html）",
+                    "scorm": "SCORMファイル（.zip）"
+                },
+                "title": "としてエクスポート..."
+            },
+            "format": {
+                "bundleHint": "多くのメディアファイルを含めると、一部のコンピューターではファイルが大きくなりすぎる可能性があります。",
+                "bundleLabel": "オールインワンのHTMLファイル",
+                "externalHint": "次のステップで、HTMLファイルの名前を尋ねられます。メディアファイルは、ファイルと同じ名前で始まるフォルダーに配置されます。",
+                "externalLabel": "1つのHTMLファイルと複数のメディアファイル",
+                "scorm": {
+                    "errorNaN": "入力した値は数値ではありません",
+                    "errorRange": "値は0〜100の間でなければなりません",
+                    "label": "SCORMパッケージ",
+                    "masteryScoreLabel": "マスタリースコア（％）"
+                },
+                "title": "フォーマット"
+            },
+            "reporter": {
+                "hint": "レポーターを追加すると、生徒は進行状況をファイルに保存して送信できます。",
+                "learnMoreLink": "詳細については、こちらをご覧ください。",
+                "scormHint": "レポーターをSCORMパッケージに追加することはできません。",
+                "switchLabel": "レポーターを含める",
+                "title": "レポーター"
+            },
+            "title": "設定のエクスポート"
+        },
+        "sidebar": {
+            "create": "新しいH5Pファイル",
+            "noOpenFiles": "開いているファイルはありません",
+            "open": "H5Pファイルを開く"
+        },
+        "startPage": {
+            "create": "新しいH5Pを作成する",
+            "open": "既存のH5Pを開く",
+            "start": "始める",
+            "title": "H5Pエディター",
+            "welcomeMessage": "LumiのH5Pエディターは、H5Pを表示、編集、作成できるスタンドアロンアプリケーションです。"
+        },
+        "tab": {
+            "edit": "編集",
+            "view": "意見"
+        }
     },
     "errors": {
         "codes": {
@@ -14,61 +112,117 @@
             "econnrefused": "接続拒否"
         }
     },
-    "prerelease": {
-        "title": "プレリリース機能",
-        "description": "リリースされる前に実験的な機能を有効にする"
+    "general": {
+        "copyClipboard": "{{value}}をクリップボードにコピーしました",
+        "delete": "消去"
     },
-    "auth": {
-        "set_email": "メールを設定する",
-        "email": "Eメール",
-        "code": "コード",
-        "verify_code": "コードを確認する",
-        "verify_email": "Eメールを確認します",
-        "logout": "ログアウト",
-        "notification": {
-            "success": "{{email}}は正常に検証されました",
-            "pending": "{{email}}送信されました。メールをご確認ください。",
-            "logout": {
-                "success": "ログアウトしました。"
+    "language": {
+        "description": "アプリケーションの言語を変更します。",
+        "help_translate": "翻訳にご協力ください！",
+        "title": "言語"
+    },
+    "menu": {
+        "file": {
+            "copy": "コピー",
+            "cut": "切る",
+            "edit": "編集",
+            "export": "書き出す...",
+            "label": "ファイル",
+            "open": "分析ファイルを開く",
+            "paste": "ペースト",
+            "redo": "やり直し",
+            "save": "保存する",
+            "save_as": "名前を付けて保存...",
+            "select_all": "すべて選択",
+            "undo": "元に戻す"
+        },
+        "h5peditor": {
+            "new": "新しいH5P",
+            "open": "H5Pを開く"
+        },
+        "help": {
+            "about": "だいたい",
+            "follow_us_on_twitter": "Twitterでフォローします",
+            "label": "ヘルプ",
+            "report_issue": "問題の報告",
+            "toggle_developer_tools": "開発者ツールの切り替え"
+        },
+        "mac": {
+            "hide": "ルミを隠す",
+            "hideothers": "他を隠す",
+            "services": "サービス",
+            "unhide": "すべて表示する"
+        },
+        "quit": "終了する",
+        "run": {
+            "label": "走る",
+            "upload": "LumiRunにアップロード"
+        },
+        "view": {
+            "label": "意見",
+            "resetZoom": "実際のサイズ",
+            "togglefullscreen": "フルスクリーン切り替え",
+            "zoomIn": "ズームイン",
+            "zoomOut": "ズームアウトする"
+        },
+        "window": {
+            "close": "選ぶ",
+            "front": "すべてを前面に出す",
+            "label": "窓",
+            "minimize": "最小化",
+            "show": "見せる",
+            "zoom": "ズーム"
+        }
+    },
+    "notifications": {
+        "analytics": {
+            "import": {
+                "brokenFiles": "{{count}}壊れたファイルが見つかりました",
+                "brokenFiles_plural": "{{count}}壊れたファイルが見つかりました",
+                "error": "有効なファイルが見つかりません",
+                "success": "インポートされたレポートファイル"
             }
         },
-        "error": {
-            "no-valid-email": "{{email}}は有効なメールアドレスではありません。",
-            "econnrefused": "LumiAuthサーバーに接続できませんでした。インターネット接続を確認してください。"
+        "general": {
+            "econnrefused": "インターネット接続に問題があるようです。"
         },
-        "cancel": "キャンセル"
+        "h5peditor": {
+            "export_as_html": {
+                "error": "H5Pをエクスポートできませんでした",
+                "success": "H5Pは正常にエクスポートされました"
+            },
+            "open": {
+                "error": "H5Pを開くことができませんでした。"
+            },
+            "save": {
+                "error": "H5Pを保存できませんでした。",
+                "success": "H5Pが保存されました！"
+            }
+        }
+    },
+    "prerelease": {
+        "description": "リリースされる前に実験的な機能を有効にする",
+        "title": "プレリリース機能"
+    },
+    "privacy_policy": {
+        "consent": "私はプライバシーポリシーを読み、同意しました。",
+        "title": "プライバシーポリシー"
     },
     "run": {
         "description": "Lumi Runを使用すると、ワンクリックでH5Pをアップロードしてホストできます。",
         "legal": "このサービスを使用するには、利用規約、プライバシーポリシーに同意し、連絡先メールアドレスを提供する必要があります。",
-        "tos": {
-            "header": "利用規約",
-            "description": "利用規約を読み、同意します。"
-        },
         "link": {
             "header": "リンク"
         },
-        "upload": "アップロード",
         "list": {
-            "header": "アップロードされたH5P",
-            "noUploadedH5P": "アップロードされたH5Pはありません",
             "deleteDialog": {
-                "title": "実行{{runId}}",
-                "description": "{{runId}}を削除しますか",
                 "cancel": "キャンセル",
-                "confirm": "確認"
-            }
-        },
-        "uploadDialog": {
-            "success": "H5PがLumi.runにアップロードされました。次のリンクからアクセスして共有できます。",
-            "uploading": "アップロード",
-            "processing": "処理",
-            "goToRun": "実行に移動",
-            "ok": "Ok"
-        },
-        "setupDialog": {
-            "close": "選ぶ",
-            "start": "始める"
+                "confirm": "確認",
+                "description": "{{runId}}を削除しますか",
+                "title": "実行{{runId}}"
+            },
+            "header": "アップロードされたH5P",
+            "noUploadedH5P": "アップロードされたH5Pはありません"
         },
         "notifications": {
             "delete": {
@@ -77,264 +231,109 @@
             "upload": {
                 "success": "H5PをLumi.runに正常にアップロードしました"
             }
-        }
-    },
-    "editor": {
-        "default_name": "新しいH5P",
-        "tab": {
-            "view": "意見",
-            "edit": "編集"
         },
-        "sidebar": {
-            "open": "H5Pファイルを開く",
-            "create": "新しいH5Pファイル",
-            "noOpenFiles": "開いているファイルはありません"
-        },
-        "startPage": {
-            "title": "H5Pエディター",
-            "welcomeMessage": "LumiのH5Pエディターは、H5Pを表示、編集、作成できるスタンドアロンアプリケーションです。",
-            "open": "既存のH5Pを開く",
-            "create": "新しいH5Pを作成する",
+        "setupDialog": {
+            "close": "選ぶ",
             "start": "始める"
         },
-        "exportDialog": {
-            "title": "設定のエクスポート",
-            "format": {
-                "title": "フォーマット",
-                "bundleLabel": "オールインワンのHTMLファイル",
-                "bundleHint": "多くのメディアファイルを含めると、一部のコンピューターではファイルが大きくなりすぎる可能性があります。",
-                "externalLabel": "1つのHTMLファイルと複数のメディアファイル",
-                "externalHint": "次のステップで、HTMLファイルの名前を尋ねられます。メディアファイルは、ファイルと同じ名前で始まるフォルダーに配置されます。",
-                "scorm": {
-                    "label": "SCORMパッケージ",
-                    "masteryScoreLabel": "マスタリースコア（％）",
-                    "errorNaN": "入力した値は数値ではありません",
-                    "errorRange": "値は0〜100の間でなければなりません"
-                }
-            },
-            "reporter": {
-                "title": "レポーター",
-                "hint": "レポーターを追加すると、生徒は進行状況をファイルに保存して送信できます。",
-                "switchLabel": "レポーターを含める",
-                "learnMoreLink": "詳細については、こちらをご覧ください。",
-                "scormHint": "レポーターをSCORMパッケージに追加することはできません。"
-            },
-            "cancelButton": "キャンセル",
-            "exportButton": "今すぐエクスポート",
-            "filePicker": {
-                "title": "としてエクスポート...",
-                "buttonLabel": "書き出す",
-                "formatNames": {
-                    "bundle": "オールインワンHTMLファイル（.html）",
-                    "external": "HTMLファイル（.html）",
-                    "scorm": "SCORMファイル（.zip）"
-                }
-            },
-            "defaults": {
-                "authorName": "H5P作成者",
-                "title": "H5Pコンテンツ"
-            }
+        "tos": {
+            "description": "利用規約を読み、同意します。",
+            "header": "利用規約"
+        },
+        "upload": "アップロード",
+        "uploadDialog": {
+            "goToRun": "実行に移動",
+            "ok": "Ok",
+            "processing": "処理",
+            "success": "H5PがLumi.runにアップロードされました。次のリンクからアクセスして共有できます。",
+            "uploading": "アップロード"
         }
     },
     "settings": {
+        "account": {
+            "email": {
+                "change": "メールアドレスを変更",
+                "not-set": "メールが設定されていません",
+                "title": "Eメール"
+            },
+            "label": "アカウント"
+        },
         "appbar": {
             "label": "設定",
             "save": "保存する"
         },
         "enable": "有効",
-        "menu": {
-            "general": "全般的",
-            "updates": "更新",
-            "h5p-library-administration": "H5Pライブラリ",
-            "account": "アカウント"
-        },
         "general": {
             "header": "全般的"
         },
-        "updates": {
-            "header": "更新"
-        },
-        "account": {
-            "label": "アカウント",
-            "email": {
-                "title": "Eメール",
-                "change": "メールアドレスを変更",
-                "not-set": "メールが設定されていません"
-            }
+        "h5p-library-administration": {
+            "can-not-be-deleted": "このライブラリは他の{{count}}ライブラリで使用されているため、削除できません",
+            "details": "詳細",
+            "header": "インストールされたH5Pライブラリ",
+            "library-details": {
+                "addon": "アドオン",
+                "author": "著者",
+                "dependentsCount": "ライブラリを使用するライブラリの数",
+                "description": "説明",
+                "embedTypes": "許可される埋め込みタイプ",
+                "fullscreen": "フルスクリーンをサポート",
+                "header": "ライブラリの詳細",
+                "instancesAsDependencyCount": "このライブラリが別のライブラリによって使用されているオブジェクト",
+                "instancesCount": "このライブラリをメインコンテンツタイプとして作成されたオブジェクト",
+                "license": "ライセンス",
+                "restricted": "制限付き（特権でのみ使用できます）",
+                "standalone": "スタンドアロンコンテンツタイプ"
+            },
+            "notifications": {
+                "delete": {
+                    "error": "{{title}} （ {{version}} ）の削除中にエラーが発生しました。",
+                    "success": "{{title}} （ {{version}} ）が正常に削除されました。"
+                },
+                "get": {
+                    "error": "{{library.title}} （ {{version}} ）に関する詳細情報の取得中にエラーが発生しました。"
+                },
+                "upload": {
+                    "error": "パッケージのアップロード中にエラーが発生しました。",
+                    "success-no-update": "アップロードは成功しましたが、ライブラリがインストールまたは更新されていません。コンテンツタイプは、おそらくシステムにすでにインストールされています。",
+                    "success-with-update": "{{installed}}ライブラリを正常にインストールし{{updated}}ライブラリを更新しました。"
+                }
+            },
+            "upload_and_install": "ライブラリをアップロードしてインストールする"
         },
         "links": {
             "header": "リンク"
         },
-        "h5p-library-administration": {
-            "header": "インストールされたH5Pライブラリ",
-            "notifications": {
-                "upload": {
-                    "success-no-update": "アップロードは成功しましたが、ライブラリがインストールまたは更新されていません。コンテンツタイプは、おそらくシステムにすでにインストールされています。",
-                    "success-with-update": "{{installed}}ライブラリを正常にインストールし{{updated}}ライブラリを更新しました。",
-                    "error": "パッケージのアップロード中にエラーが発生しました。"
-                },
-                "delete": {
-                    "success": "{{title}} （ {{version}} ）が正常に削除されました。",
-                    "error": "{{title}} （ {{version}} ）の削除中にエラーが発生しました。"
-                },
-                "get": {
-                    "error": "{{library.title}} （ {{version}} ）に関する詳細情報の取得中にエラーが発生しました。"
-                }
-            },
-            "upload_and_install": "ライブラリをアップロードしてインストールする",
-            "details": "詳細",
-            "can-not-be-deleted": "このライブラリは他の{{count}}ライブラリで使用されているため、削除できません。",
-            "can-not-be-deleted_plural": "{{count}}のライブラリで使用されているため、削除できません。",
-            "library-details": {
-                "header": "ライブラリの詳細",
-                "author": "著者",
-                "description": "説明",
-                "license": "ライセンス",
-                "standalone": "スタンドアロンコンテンツタイプ",
-                "restricted": "制限付き（特権でのみ使用できます）",
-                "fullscreen": "フルスクリーンをサポート",
-                "addon": "アドオン",
-                "embedTypes": "許可される埋め込みタイプ",
-                "dependentsCount": "ライブラリを使用するライブラリの数",
-                "instancesCount": "このライブラリをメインコンテンツタイプとして作成されたオブジェクト",
-                "instancesAsDependencyCount": "このライブラリが別のライブラリによって使用されているオブジェクト"
-            }
-        }
-    },
-    "analytics": {
-        "startPage": {
-            "title": "Lumi Analytics",
-            "welcomeMessage": "Lumiの分析ツールを使用すると、ユーザーレポートをインポートして、視覚化できます",
-            "start": "始める",
-            "open": ".lumiファイルのあるフォルダーを選択します",
-            "learn_more": "もっと詳しく知る"
+        "menu": {
+            "account": "アカウント",
+            "general": "全般的",
+            "h5p-library-administration": "H5Pライブラリ",
+            "updates": "更新"
         },
-        "name": "名前",
-        "average": "平均",
-        "searchPlaceholder": "学生の名前を検索...",
-        "brokenFiles": "壊れたファイルのリスト",
-        "errors": {
-            "no-content-json": "H5Pコンテンツが.lumiファイルに正しく追加されませんでした。",
-            "json-parse-error": ".lumiファイルに無効なコンテンツが含まれています（JSONは解析しませんでした）。",
-            "determine-name": "学生の名前を特定できませんでした。",
-            "invalid-interactions": "いくつかの相互作用が壊れています。",
-            "invalid-statements": "記録された生徒の行動のいくつかは壊れています。"
+        "updates": {
+            "header": "更新"
         }
-    },
-    "bug_report": {
-        "title": "バグとクラッシュレポート",
-        "description": "匿名のクラッシュとバグレポートを送信して、ソフトウェアとサービスの改善にご協力ください。",
-        "consent": "このアプリケーションがバグとクラッシュのレポートを送信することを許可します。"
-    },
-    "usage_statistics": {
-        "title": "使用統計",
-        "description": " 匿名の使用統計を送信して、ソフトウェアとサービスの改善にご協力ください。",
-        "consent": "このアプリケーションが匿名の使用統計を送信することを許可します。"
-    },
-    "updates": {
-        "title": "自動更新",
-        "description": "最新バージョンを自動的に取得します。",
-        "consent": "このアプリケーションが更新を自動的にチェックすることを許可します。",
-        "checkForUpdate": {
-            "title": "アップデートを確認する",
-            "description": "アップデートを確認する",
-            "checkButton": "チェック"
-        },
-        "restartAndInstall": "インストールして再起動します",
-        "badge": "アップデート"
-    },
-    "language": {
-        "title": "言語",
-        "description": "アプリケーションの言語を変更します。",
-        "help_translate": "翻訳にご協力ください！"
-    },
-    "privacy_policy": {
-        "title": "プライバシーポリシー",
-        "consent": "私はプライバシーポリシーを読み、同意しました。"
     },
     "setup_dialog": {
-        "description": "個人のプライバシーを保護することは私たちにとって重要です。私たちはあなたが私たちに提供することを選択した情報のみを収集し、あなたの同意を得てそれを処理します。可能な限り透明性を保ちたいと考えています。ただし、Lumiは、いくつかの接続とデータ転送に依存して機能します。",
-        "consent_warning": "このアプリケーションを使用するには、少なくともプライバシーポリシーに同意する必要があります。",
         "accept_all": "すべて受け入れる",
-        "accept_selected": "選択を受け入れる"
+        "accept_selected": "選択を受け入れる",
+        "consent_warning": "このアプリケーションを使用するには、少なくともプライバシーポリシーに同意する必要があります。",
+        "description": "個人のプライバシーを保護することは私たちにとって重要です。私たちはあなたが私たちに提供することを選択した情報のみを収集し、あなたの同意を得てそれを処理します。可能な限り透明性を保ちたいと考えています。ただし、Lumiは、いくつかの接続とデータ転送に依存して機能します。"
     },
-    "menu": {
-        "mac": {
-            "services": "サービス",
-            "hide": "ルミを隠す",
-            "hideothers": "他を隠す",
-            "unhide": "すべて表示する"
+    "updates": {
+        "badge": "アップデート",
+        "checkForUpdate": {
+            "checkButton": "チェック",
+            "description": "アップデートを確認する",
+            "title": "アップデートを確認する"
         },
-        "quit": "終了する",
-        "file": {
-            "label": "ファイル",
-            "open": "分析ファイルを開く",
-            "save": "保存する",
-            "save_as": "名前を付けて保存...",
-            "export": "書き出す...",
-            "edit": "編集",
-            "undo": "元に戻す",
-            "redo": "やり直し",
-            "cut": "切る",
-            "copy": "コピー",
-            "paste": "ペースト",
-            "select_all": "すべて選択"
-        },
-        "window": {
-            "label": "窓",
-            "show": "見せる",
-            "minimize": "最小化",
-            "zoom": "ズーム",
-            "front": "すべてを前面に出す",
-            "close": "選ぶ"
-        },
-        "view": {
-            "label": "意見",
-            "resetZoom": "実際のサイズ",
-            "zoomIn": "ズームイン",
-            "zoomOut": "ズームアウトする",
-            "togglefullscreen": "フルスクリーン切り替え"
-        },
-        "h5peditor": {
-            "new": "新しいH5P",
-            "open": "H5Pを開く"
-        },
-        "help": {
-            "label": "ヘルプ",
-            "report_issue": "問題の報告",
-            "toggle_developer_tools": "開発者ツールの切り替え",
-            "follow_us_on_twitter": "Twitterでフォローします",
-            "about": "だいたい"
-        },
-        "run": {
-            "label": "走る",
-            "upload": "LumiRunにアップロード"
-        }
+        "consent": "このアプリケーションが更新を自動的にチェックすることを許可します。",
+        "description": "最新バージョンを自動的に取得します。",
+        "restartAndInstall": "インストールして再起動します",
+        "title": "自動更新"
     },
-    "notifications": {
-        "general": {
-            "econnrefused": "インターネット接続に問題があるようです。"
-        },
-        "analytics": {
-            "import": {
-                "error": "有効なファイルが見つかりません",
-                "success": "インポートされたレポートファイル",
-                "brokenFiles": "{{count}}壊れたファイルが見つかりました",
-                "brokenFiles_plural": "{{count}}壊れたファイルが見つかりました"
-            }
-        },
-        "h5peditor": {
-            "save": {
-                "success": "H5Pが保存されました！",
-                "error": "H5Pを保存できませんでした。"
-            },
-            "open": {
-                "error": "H5Pを開くことができませんでした。"
-            },
-            "export_as_html": {
-                "success": "H5Pは正常にエクスポートされました",
-                "error": "H5Pをエクスポートできませんでした"
-            }
-        }
+    "usage_statistics": {
+        "consent": "このアプリケーションが匿名の使用統計を送信することを許可します。",
+        "description": " 匿名の使用統計を送信して、ソフトウェアとサービスの改善にご協力ください。",
+        "title": "使用統計"
     }
 }
