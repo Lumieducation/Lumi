@@ -1,5 +1,4 @@
 import express from 'express';
-import * as Sentry from '@sentry/node';
 import { BrowserWindow, dialog } from 'electron';
 import fsExtra from 'fs-extra';
 import _path from 'path';
@@ -8,6 +7,7 @@ import {
     IRequestWithUser,
     IRequestWithLanguage
 } from '@lumieducation/h5p-express';
+import * as Sentry from '@sentry/node';
 import HtmlExporter from '@lumieducation/h5p-html-exporter';
 import i18next from 'i18next';
 import promisePipe from 'promisepipe';
@@ -96,22 +96,24 @@ export default function (
 ): express.Router {
     const router = express.Router();
 
-    router.get(`/:contentId/play`, async (req, res) => {
-        try {
-            const content = (await h5pPlayer.render(
-                req.params.contentId,
-                new User()
-            )) as H5P.IPlayerModel;
-            // We override the embed types to make sure content always resizes
-            // properly.
-            content.embedTypes = ['iframe'];
-            res.send(content);
-            res.status(200).end();
-        } catch (error) {
-            Sentry.captureException(error);
-            res.status(500).end(error.message);
+    router.get(
+        `/:contentId/play`,
+        async (req, res, next: express.NextFunction) => {
+            try {
+                const content = (await h5pPlayer.render(
+                    req.params.contentId,
+                    new User()
+                )) as H5P.IPlayerModel;
+                // We override the embed types to make sure content always resizes
+                // properly.
+                content.embedTypes = ['iframe'];
+                res.send(content);
+                res.status(200).end();
+            } catch (error) {
+                next(error);
+            }
         }
-    });
+    );
 
     router.get(
         `/:contentId/export`,
@@ -126,7 +128,8 @@ export default function (
                     masteryScore: string;
                 }
             > & { user: H5P.IUser },
-            res
+            res,
+            next: express.NextFunction
         ) => {
             const includeReporter = req.query.includeReporter === 'true';
             const format: 'bundle' | 'external' | 'scorm' = req.query.format;
@@ -203,8 +206,7 @@ export default function (
                     );
                 }
             } catch (error) {
-                Sentry.captureException(error);
-                res.status(500).json(error);
+                next(error);
             } finally {
                 electronState.setState({ blockKeyboard: false });
             }
@@ -247,7 +249,6 @@ export default function (
             !req.body.library ||
             !req.user
         ) {
-            Sentry.captureMessage('Malformed request');
             res.status(400).send('Malformed request').end();
             return;
         }
@@ -301,21 +302,24 @@ export default function (
         }
     });
 
-    router.delete('/:contentId', async (req: IRequestWithUser, res) => {
-        try {
-            await h5pEditor.deleteContent(req.params.contentId, req.user);
-        } catch (error) {
-            Sentry.captureException(error);
-            res.send(
-                `Error deleting content with id ${req.params.contentId}: ${error.message}`
-            );
-            res.status(500).end();
-            return;
-        }
+    router.delete(
+        '/:contentId',
+        async (req: IRequestWithUser, res, next: express.NextFunction) => {
+            try {
+                await h5pEditor.deleteContent(req.params.contentId, req.user);
+            } catch (error) {
+                Sentry.captureException(error);
+                res.send(
+                    `Error deleting content with id ${req.params.contentId}: ${error.message}`
+                );
+                next(error);
+                return;
+            }
 
-        res.send(`Content ${req.params.contentId} successfully deleted.`);
-        res.status(200).end();
-    });
+            res.send(`Content ${req.params.contentId} successfully deleted.`);
+            res.status(200).end();
+        }
+    );
 
     router.get('/', async (req: IRequestWithUser, res) => {
         // TODO: check access permissions

@@ -1,6 +1,5 @@
 import express from 'express';
 import { H5PEditor } from '@lumieducation/h5p-server';
-import * as Sentry from '@sentry/node';
 import LumiController from '../controllers/LumiController';
 import Logger from '../helpers/Logger';
 import IServerConfig from '../config/IPaths';
@@ -29,7 +28,6 @@ export default function (
                 log.info(`sending package-data for contentId ${contentId} `);
                 res.status(200).json(content);
             } catch (error) {
-                Sentry.captureException(error);
                 log.warn(error);
                 res.status(404).end();
             }
@@ -49,7 +47,6 @@ export default function (
                     res.status(200).json(result);
                 })
                 .catch((error) => {
-                    Sentry.captureException(error);
                     next(error);
                 });
         }
@@ -68,7 +65,6 @@ export default function (
                     res.status(200).json(result);
                 })
                 .catch((error) => {
-                    Sentry.captureException(error);
                     next(error);
                 });
         }
@@ -90,7 +86,6 @@ export default function (
                 })
                 .catch((error) => {
                     log.error(`Error while saving H5P: ${error}`);
-                    Sentry.captureException(error);
                     next(error);
                 });
         }
@@ -110,7 +105,6 @@ export default function (
                     res.status(200).json(result);
                 })
                 .catch((error) => {
-                    Sentry.captureException(error);
                     next(error);
                 });
         }
@@ -132,7 +126,6 @@ export default function (
                     res.status(200).json(result);
                 })
                 .catch((error) => {
-                    Sentry.captureException(error);
                     next(error);
                 });
         }

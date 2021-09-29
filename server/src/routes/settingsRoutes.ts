@@ -1,5 +1,4 @@
 import express from 'express';
-import * as Sentry from '@sentry/node';
 import i18next from 'i18next';
 
 import SettingsCache from '../config/SettingsCache';
@@ -17,8 +16,7 @@ export default function (settingsCache: SettingsCache): express.Router {
                 const settings = await settingsCache.getSettings();
                 res.status(200).json(settings);
             } catch (error) {
-                Sentry.captureException(error);
-                res.status(500).end();
+                next(error);
             }
         }
     );
@@ -46,8 +44,7 @@ export default function (settingsCache: SettingsCache): express.Router {
                     res.status(200).json(req.body);
                 }
             } catch (error) {
-                Sentry.captureException(error);
-                res.status(500).end();
+                next(error);
             }
         }
     );

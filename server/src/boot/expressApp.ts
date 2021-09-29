@@ -15,6 +15,7 @@ import routes from '../routes';
 import SettingsCache from '../config/SettingsCache';
 import User from '../h5pImplementations/User';
 
+import errorHandler from '../middlewares/errorHandler';
 /**
  * Creates the main Express app.
  */
@@ -120,11 +121,6 @@ export default async (
     // The error handler must be before any other error middleware and after all controllers
     app.use(Sentry.Handlers.errorHandler());
 
-    app.use((error, req, res, next) => {
-        Sentry.captureException(error);
-        res.status(error.status || 500).json(
-            new LumiError(error.code, error.message, error.status)
-        );
-    });
+    app.use(errorHandler);
     return app;
 };

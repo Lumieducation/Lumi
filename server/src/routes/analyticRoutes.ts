@@ -1,6 +1,5 @@
 import express from 'express';
 import { BrowserWindow, dialog } from 'electron';
-import * as Sentry from '@sentry/electron';
 import fs from 'fs';
 import recursiveReaddir from 'recursive-readdir';
 
@@ -13,129 +12,131 @@ import _path from 'path';
 export default function (browserWindow: BrowserWindow): express.Router {
     const router = express.Router();
 
-    router.get('/', async (req: express.Request, res) => {
-        try {
-            const openDialog = await dialog.showOpenDialog(browserWindow, {
-                properties: ['openDirectory']
-            });
-
-            if (openDialog.canceled) {
-                return res.status(499).end();
-            }
-
-            const filePath = openDialog.filePaths[0];
-
-            const files = await recursiveReaddir(filePath, [
-                '!*.[Ll][Uu][Mm][Ii]'
-            ]);
-
-            if (files.length === 0) {
-                return res.status(404).json({
-                    message: 'no-valid-files-found'
+    router.get(
+        '/',
+        async (req: express.Request, res, next: express.NextFunction) => {
+            try {
+                const openDialog = await dialog.showOpenDialog(browserWindow, {
+                    properties: ['openDirectory']
                 });
-            }
 
-            const processedFiles = files.map((file) => {
-                let data;
-                let fileData: any = { file };
-                const extension = _path.extname(file);
-
-                try {
-                    fileData = {
-                        ...fileData,
-                        name: _path.basename(file, extension)
-                    };
-                } catch (error) {
-                    return {
-                        ...fileData,
-                        error: true,
-                        code: 'determine-name'
-                    };
+                if (openDialog.canceled) {
+                    return res.status(499).end();
                 }
 
-                try {
-                    data = JSON.parse(
-                        fs.readFileSync(file, { encoding: 'utf-8' })
-                    );
-                } catch (error) {
-                    return {
-                        file,
-                        error: true,
-                        code: 'json-parse-error'
-                    };
+                const filePath = openDialog.filePaths[0];
+
+                const files = await recursiveReaddir(filePath, [
+                    '!*.[Ll][Uu][Mm][Ii]'
+                ]);
+
+                if (files.length === 0) {
+                    return res.status(404).json({
+                        message: 'no-valid-files-found'
+                    });
                 }
 
-                try {
-                    fileData = {
-                        ...fileData,
-                        contentHash: objectHash(data.contentJson)
-                    };
-                } catch (error) {
-                    return {
-                        ...fileData,
-                        error: true,
-                        code: 'no-content-json'
-                    };
-                }
+                const processedFiles = files.map((file) => {
+                    let data;
+                    let fileData: any = { file };
+                    const extension = _path.extname(file);
 
-                try {
-                    const interactions = [];
-                    getInteractions(data.contentJson, interactions);
-
-                    if (interactions.length < 1) {
-                        interactions.push({
-                            name: data.library
-                                .replace('H5P.', '')
-                                .split(' ')[0],
-                            id: 'skip'
-                        });
+                    try {
+                        fileData = {
+                            ...fileData,
+                            name: _path.basename(file, extension)
+                        };
+                    } catch (error) {
+                        return {
+                            ...fileData,
+                            error: true,
+                            code: 'determine-name'
+                        };
                     }
 
-                    fileData = {
-                        ...fileData,
-                        interactions
-                    };
-                } catch (error) {
-                    return {
-                        ...fileData,
-                        error: true,
-                        code: 'invalid-interactions'
-                    };
-                }
+                    try {
+                        data = JSON.parse(
+                            fs.readFileSync(file, { encoding: 'utf-8' })
+                        );
+                    } catch (error) {
+                        return {
+                            file,
+                            error: true,
+                            code: 'json-parse-error'
+                        };
+                    }
 
-                try {
-                    const statements = data.xapi;
-                    const results = fileData.interactions.map(
-                        (interaction) =>
-                            getResult(
-                                statements,
-                                interaction.id === 'skip'
-                                    ? undefined
-                                    : interaction.id
-                            ).score.scaled
-                    );
+                    try {
+                        fileData = {
+                            ...fileData,
+                            contentHash: objectHash(data.contentJson)
+                        };
+                    } catch (error) {
+                        return {
+                            ...fileData,
+                            error: true,
+                            code: 'no-content-json'
+                        };
+                    }
 
-                    fileData = {
-                        ...fileData,
-                        results
-                    };
-                } catch (error) {
-                    return {
-                        ...fileData,
-                        error: true,
-                        code: 'invalid-statements'
-                    };
-                }
+                    try {
+                        const interactions = [];
+                        getInteractions(data.contentJson, interactions);
 
-                return fileData;
-            });
+                        if (interactions.length < 1) {
+                            interactions.push({
+                                name: data.library
+                                    .replace('H5P.', '')
+                                    .split(' ')[0],
+                                id: 'skip'
+                            });
+                        }
 
-            res.status(200).json(processedFiles);
-        } catch (error) {
-            res.status(500).end();
-            Sentry.captureException(error);
+                        fileData = {
+                            ...fileData,
+                            interactions
+                        };
+                    } catch (error) {
+                        return {
+                            ...fileData,
+                            error: true,
+                            code: 'invalid-interactions'
+                        };
+                    }
+
+                    try {
+                        const statements = data.xapi;
+                        const results = fileData.interactions.map(
+                            (interaction) =>
+                                getResult(
+                                    statements,
+                                    interaction.id === 'skip'
+                                        ? undefined
+                                        : interaction.id
+                                ).score.scaled
+                        );
+
+                        fileData = {
+                            ...fileData,
+                            results
+                        };
+                    } catch (error) {
+                        return {
+                            ...fileData,
+                            error: true,
+                            code: 'invalid-statements'
+                        };
+                    }
+
+                    return fileData;
+                });
+
+                res.status(200).json(processedFiles);
+            } catch (error) {
+                next(error);
+            }
         }
-    });
+    );
 
     return router;
 }

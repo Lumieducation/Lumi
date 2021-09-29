@@ -1,6 +1,5 @@
 import express from 'express';
 import matomo from '../boot/matomo';
-import * as Sentry from '@sentry/node';
 import IServerConfig from '../config/IPaths';
 import electron from 'electron';
 import * as os from 'os';
@@ -41,8 +40,7 @@ export default function (
                 }
                 res.status(200).end();
             } catch (error) {
-                Sentry.captureException(error);
-                res.status(200).end();
+                next(error);
             }
         }
     );
