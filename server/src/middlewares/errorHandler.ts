@@ -9,7 +9,7 @@ export default function (
     req: express.Request,
     res: express.Response,
     next: express.NextFunction
-) {
+): void {
     log(`sending error response`, error);
     res.status(error.status || 500).json(error);
 }
