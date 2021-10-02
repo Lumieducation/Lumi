@@ -49,6 +49,11 @@ export default class SettingsStorage {
         return this.settings;
     }
 
+    init(): void {
+        log.debug('Sending initial notification that settings are available.');
+        this.subscribers.forEach((subscriber) => subscriber());
+    }
+
     /**
      * Saves the settings so that they can be used elsewhere in the program.
      * Also persists these changes to the settings file in the user directory.
@@ -88,7 +93,12 @@ export default class SettingsStorage {
      * same
      */
     public validateAndFixSettings(settings: IH5PEditorSettings): boolean {
+        log.debug(`Validating settings. Language: ${settings.language}`);
         let lng = settings.language;
+        if (!lng) {
+            settings.language = 'en';
+            return true;
+        }
         // allow regular language codes like de-DE or zh-HANS
         if (
             !/^[a-z]{2,3}(-[A-Z]{2,6})?$/i.test(settings.language) ||
@@ -149,8 +159,9 @@ export default class SettingsStorage {
 
         if (!settingsOk) {
             log.debug(
-                'There was an error loading the settings file. Either none exists or it is malformed. Generating new file.'
+                `There was an error loading the settings file. Either none exists or it is malformed. Generating new file. locale: ${app.getLocale()}`
             );
+
             this.settings = {
                 ...defaultSettings,
                 language: app.getLocale()
@@ -191,7 +202,7 @@ export default class SettingsStorage {
 
         if (!settingsOk) {
             log.debug(
-                'There was an error loading the settings file. Either none exists or it is malformed. Generating new file.'
+                `There was an error loading the settings file. Either none exists or it is malformed. Generating new file. locale: ${app.getLocale()}`
             );
             this.settings = {
                 ...defaultSettings,

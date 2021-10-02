@@ -188,6 +188,9 @@ if (!gotSingleInstanceLock) {
 
     // create main BrowserWindow when electron is ready
     app.on('ready', async () => {
+        log.debug('Electron ready event');
+        settingsCache.init();
+
         // Performs migrations needed due to updates.
         await migrations(serverPaths);
 
@@ -233,7 +236,7 @@ if (!gotSingleInstanceLock) {
         log.info('window created');
 
         const argv = process.argv;
-        if (process.platform === 'win32' && argv.length >= 2) {
+        if (argv.length >= 2) {
             // Check if there are H5Ps specified in the command line args and
             // load them (Windows only).
             argv.splice(0, 1);
