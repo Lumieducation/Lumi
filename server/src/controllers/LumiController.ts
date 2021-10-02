@@ -7,10 +7,10 @@ import LumiError from '../helpers/LumiError';
 import * as H5P from '@lumieducation/h5p-server';
 import Logger from '../helpers/Logger';
 
-import User from '../User';
-import IServerConfig from '../IServerConfig';
+import User from '../h5pImplementations/User';
+import IServerConfig from '../config/IPaths';
 
-import electronState from '../electronState';
+import electronState from '../state/electronState';
 
 const log = new Logger('controller:lumi-h5p');
 

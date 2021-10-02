@@ -1,37 +1,51 @@
 import request from 'supertest';
-import bootApp from '../../boot/app';
+import bootApp from '../../boot/expressApp';
 import path from 'path';
 import { dialog } from 'electron';
 import express from 'express';
 import fsExtra from 'fs-extra';
 
+import SettingsCache from '../../config/SettingsCache';
+import initI18n from '../../boot/i18n';
+
 describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
     let app: express.Application;
 
     beforeAll(async () => {
+        const settingsCache = new SettingsCache(
+            path.join(__dirname, '../../../../test/data/settings.json')
+        );
         app = await bootApp(
             {
-                cache: path.resolve('test', 'data'),
-                configFile: path.resolve('test', 'data', 'config.json'),
-                librariesPath: path.resolve('test', 'data', `libraries`),
+                contentTypeCache: path.resolve('test', 'data'),
+                librariesPath: path.resolve('test', 'data', 'libraries'),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
                 contentStoragePath: path.resolve(
                     'test',
                     'data',
                     'workingCache'
                 ),
-                settingsFile: path.resolve('test', 'data', 'settings.json')
+                settingsFile: path.join(
+                    __dirname,
+                    '../../../../test/data/settings.json'
+                )
             },
-            null
+            null,
+            settingsCache,
+            await initI18n(settingsCache)
         );
 
         return app;
     });
 
     it('exports a html file', async (done) => {
+        const outputPath = path.join(
+            __dirname,
+            '../../../../test/build/test.html'
+        );
         dialog.showSaveDialog = jest.fn(async (c) => ({
             canceled: false,
-            filePath: path.resolve('test', 'build', 'test.html')
+            filePath: path.join(__dirname, '../../../../test/build/test.html')
         }));
 
         const contentId = 740522043;
@@ -41,19 +55,21 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
         );
         expect(res.statusCode).toEqual(200);
 
-        expect(
-            await fsExtra.stat(path.resolve('test', 'build', 'test.html'))
-        ).toBeTruthy();
+        expect(await fsExtra.stat(outputPath)).toBeTruthy();
 
-        fsExtra.removeSync(path.resolve('test', 'build', 'test.html'));
+        fsExtra.removeSync(outputPath);
 
         done();
     }, 30000);
 
     it('appends .html if no extension is defined', async (done) => {
+        const outputPath = path.join(
+            __dirname,
+            '../../../../test/build/test2.html'
+        );
         dialog.showSaveDialog = jest.fn(async (c) => ({
             canceled: false,
-            filePath: path.resolve('test', 'build', 'test2')
+            filePath: outputPath
         }));
 
         const contentId = 740522043;
@@ -63,11 +79,9 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
         );
         expect(res.statusCode).toEqual(200);
 
-        expect(
-            await fsExtra.stat(path.resolve('test', 'build', 'test2.html'))
-        ).toBeTruthy();
+        expect(await fsExtra.stat(outputPath)).toBeTruthy();
 
-        fsExtra.removeSync(path.resolve('test', 'build', 'test2.html'));
+        fsExtra.removeSync(outputPath);
 
         done();
     }, 30000);

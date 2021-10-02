@@ -1,6 +1,5 @@
 import express from 'express';
 import electron from 'electron';
-
 import { H5PEditor, H5PPlayer } from '@lumieducation/h5p-server';
 import {
     h5pAjaxExpressRouter,
@@ -11,7 +10,7 @@ import {
 import lumiRoutes from './lumiRoutes';
 import trackingRoutes from './trackingRoutes';
 import Logger from '../helpers/Logger';
-import IServerConfig from '../IServerConfig';
+import IServerConfig from '../config/IPaths';
 import authRoutes from './authRoutes';
 import h5pRoutes from './h5pRoutes';
 import analyticRoutes from './analyticRoutes';
@@ -19,8 +18,8 @@ import settingsRoutes from './settingsRoutes';
 import runRoutes from './runRoutes';
 import systemRoutes from './systemRoutes';
 import updatesRoutes from './updatesRoutes';
-
-import User from '../User';
+import User from '../h5pImplementations/User';
+import SettingsCache from '../config/SettingsCache';
 
 const log = new Logger('routes');
 
@@ -29,14 +28,14 @@ export default function (
     h5pPlayer: H5PPlayer,
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow,
-    app: express.Application
+    settingsCache: SettingsCache
 ): express.Router {
     const router = express.Router();
 
     log.info('setting up routes');
 
     router.use('/api/v1/auth', authRoutes());
-    router.use('/api/v1/track', trackingRoutes(serverConfig));
+    router.use('/api/v1/track', trackingRoutes(serverConfig, settingsCache));
     router.use('/api/v1/analytics', analyticRoutes(browserWindow));
 
     // Adding dummy user to make sure all requests can be handled
@@ -48,12 +47,12 @@ export default function (
     router.use('/api/v1/system', systemRoutes());
     router.use('/api/v1/updates', updatesRoutes());
 
-    router.use(
-        '/api/v1/settings',
-        settingsRoutes(serverConfig, browserWindow, app)
-    );
+    router.use('/api/v1/settings', settingsRoutes(settingsCache));
 
-    router.use('/api/run', runRoutes(serverConfig, h5pEditor, browserWindow));
+    router.use(
+        '/api/run',
+        runRoutes(serverConfig, h5pEditor, browserWindow, settingsCache)
+    );
 
     // // Directly serving the library and content files statically speeds up
     // // loading times and there is no security issue, as Lumi never is a
@@ -85,24 +84,6 @@ export default function (
     );
 
     router.use('/locales', express.static(`${__dirname}/../../../locales`));
-
-    // async (req, res) => {
-    //     try {
-    //         const languageCode = (
-    //             await fsExtra.readJSON(serverConfig.settingsFile)
-    //         ).language;
-    //         const locale = await fsExtra.readJSON(
-    //             `${__dirname}/../../../locales/${languageCode}.json`
-    //         );
-    //         res.status(200).json(locale);
-    //     } catch (error) {
-    //         Sentry.captureException(error);
-    //         const locale = await fsExtra.readJSON(
-    //             `${__dirname}/../../../locales/en.json`
-    //         );
-    //         res.status(200).json(locale);
-    //     }
-    // });
 
     // The expressRoutes are routes that create pages for these actions:
     // - Creating new content

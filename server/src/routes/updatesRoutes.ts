@@ -2,10 +2,10 @@ import express from 'express';
 import fsExtra from 'fs-extra';
 import electron from 'electron';
 import * as Sentry from '@sentry/node';
-import IServerConfig from '../IServerConfig';
+import IServerConfig from '../config/IPaths';
 import { autoUpdater, UpdateInfo, ProgressInfo } from 'electron-updater';
 
-import { io as websocket } from '../websocket';
+import { globalWebsocket as websocket } from '../boot/websocket';
 
 export default function (): express.Router {
     const router = express.Router();

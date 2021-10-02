@@ -1,21 +1,24 @@
 import request from 'supertest';
-import bootApp from '../../boot/app';
+import bootApp from '../../boot/expressApp';
 import path from 'path';
 import express from 'express';
 import fsExtra from 'fs-extra';
 import { dialog, BrowserWindow, MessageBoxOptions } from 'electron';
 
-import settingsCache from '../../settingsCache';
+import SettingsCache from '../../config/SettingsCache';
+import initI18n from '../../boot/i18n';
 
 describe('GET /settings', () => {
     let app: express.Application;
 
     beforeAll(async () => {
+        const settingsCache = new SettingsCache(
+            path.resolve('test', 'data', 'settings.json')
+        );
         app = await bootApp(
             {
-                cache: path.resolve('test', 'data'),
-                configFile: path.resolve('test', 'data', 'config.json'),
-                librariesPath: path.resolve('test', 'data', `libraries`),
+                contentTypeCache: path.resolve('test', 'data'),
+                librariesPath: path.resolve('test', 'data', 'libraries'),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
                 contentStoragePath: path.resolve(
                     'test',
@@ -24,17 +27,18 @@ describe('GET /settings', () => {
                 ),
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
-            null
+            null,
+            settingsCache,
+            await initI18n(settingsCache)
         );
 
         return app;
     });
+
     it('should return the settings', async (done) => {
-        const settings = await fsExtra.readJSON(
+        const settings = fsExtra.readJSON(
             path.resolve('test', 'data', 'settings.json')
         );
-        settingsCache.setSettings(settings);
-
         const res = await request(app).get('/api/v1/settings');
         expect(res.statusCode).toEqual(200);
         expect(res.body).toMatchObject(settings);
@@ -46,13 +50,14 @@ describe('PATCH /settings', () => {
     let app: express.Application;
 
     beforeAll(async () => {
+        const settingsCache = new SettingsCache(
+            path.resolve('test', 'data', 'settings.json')
+        );
         app = await bootApp(
             {
-                cache: path.resolve('test', 'data'),
-                configFile: path.resolve('test', 'data', 'config.json'),
-                librariesPath: path.resolve('test', 'data', `libraries`),
+                contentTypeCache: path.resolve('test', 'data'),
+                librariesPath: path.resolve('test', 'data', 'libraries'),
                 temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
-
                 contentStoragePath: path.resolve(
                     'test',
                     'data',
@@ -60,7 +65,9 @@ describe('PATCH /settings', () => {
                 ),
                 settingsFile: path.resolve('test', 'data', 'settings.json')
             },
-            null
+            null,
+            settingsCache,
+            await initI18n(settingsCache)
         );
 
         return app;

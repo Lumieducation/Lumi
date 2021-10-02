@@ -1,7 +1,7 @@
 import SocketIO from 'socket.io';
 import log from 'electron-log';
 
-import settingsCache from '../settingsCache';
+import SettingsCache from '../config/SettingsCache';
 
 /**
  * Wraps around SocketIO.Server and queues events until the websocket connection
@@ -9,16 +9,15 @@ import settingsCache from '../settingsCache';
  * are sent directly without delay.
  */
 export default class DelayedEmitter {
-    constructor(private websocketServer?: SocketIO.Server) {
-        log.debug(`DelayedEmitter: Initialized"`);
+    constructor(
+        private settingsCache: SettingsCache,
+        private websocketServer?: SocketIO.Server
+    ) {
+        log.debug(`DelayedEmitter: Initialized`);
         if (this.websocketServer) {
             this.websocketServer.on('connection', this.onConnection);
         }
-        if (settingsCache.getSettings().privacyPolicyConsent) {
-            this.hasConsented = true;
-        } else {
-            settingsCache.subscribe(this.onSettingsChanged);
-        }
+        settingsCache.subscribe(this.onSettingsChanged);
     }
 
     private eventQueue: {
@@ -78,6 +77,9 @@ export default class DelayedEmitter {
     private emitQueue = (): void => {
         log.debug('DelayedEmitter: Emitting queued events');
         for (const event of this.eventQueue) {
+            log.debug(
+                `Event: ${event.name}, args: ${JSON.stringify(event.args)}`
+            );
             this.websocketServer.emit(event.name, ...event.args);
         }
         this.eventQueue = [];
@@ -92,10 +94,10 @@ export default class DelayedEmitter {
     };
 
     private onSettingsChanged = (): void => {
-        if (settingsCache.getSettings().privacyPolicyConsent) {
+        if (this.settingsCache.getSettingsSync().privacyPolicyConsent) {
             log.debug('DelayedEmitter: User has consented to privacy policy');
             this.hasConsented = true;
-            settingsCache.unsubscribe(this.onSettingsChanged);
+            this.settingsCache.unsubscribe(this.onSettingsChanged);
             if (this.isConnected) {
                 this.emitQueue();
             }

@@ -39,7 +39,7 @@ jobs:
               run: |
                   sudo apt-get update
                   sudo apt-get install xvfb libgbm1 libxss1 libnss3 libgtk-3-dev libasound2-dev unzip
-            - name: e2e-test
-              run: xvfb-run --auto-servernum --server-args='-screen 0, 1600x900x24' npm run test:e2e
-              env:
-                  CI: true
+            # - name: e2e-test
+            #   run: xvfb-run --auto-servernum --server-args='-screen 0, 1600x900x24' npm run test:e2e
+            #   env:
+            #       CI: true
