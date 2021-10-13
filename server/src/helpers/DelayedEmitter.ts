@@ -17,11 +17,7 @@ export default class DelayedEmitter {
         if (this.websocketServer) {
             this.websocketServer.on('connection', this.onConnection);
         }
-        if (settingsCache.getSettingsSync().privacyPolicyConsent) {
-            this.hasConsented = true;
-        } else {
-            settingsCache.subscribe(this.onSettingsChanged);
-        }
+        settingsCache.subscribe(this.onSettingsChanged);
     }
 
     private eventQueue: {
@@ -81,6 +77,9 @@ export default class DelayedEmitter {
     private emitQueue = (): void => {
         log.debug('DelayedEmitter: Emitting queued events');
         for (const event of this.eventQueue) {
+            log.debug(
+                `Event: ${event.name}, args: ${JSON.stringify(event.args)}`
+            );
             this.websocketServer.emit(event.name, ...event.args);
         }
         this.eventQueue = [];
