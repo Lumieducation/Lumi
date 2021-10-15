@@ -24,20 +24,20 @@
         "code": "Codice",
         "email": "E-mail",
         "error": {
-            "no-valid-email": "{{email}} non è un indirizzo email valido.",
-            "econnrefused": "Impossibile contattare il server Lumi Auth. Per favore controlla la tua connessione Internet."
+            "econnrefused": "Impossibile contattare il server Lumi Auth. Per favore controlla la tua connessione Internet.",
+            "no-valid-email": "{{email}} non è un indirizzo email valido."
         },
+        "logout": "Disconnettersi",
         "notification": {
-            "pending": "Un codice di verifica è stato inviato a {{email}} . Per favore controlla le tue e-mail.",
-            "success": "{{email}} è stato convalidato con successo",
             "logout": {
                 "success": "Sei stato disconnesso."
-            }
+            },
+            "pending": "Un codice di verifica è stato inviato a {{email}} . Per favore controlla le tue e-mail.",
+            "success": "{{email}} è stato convalidato con successo"
         },
         "set_email": "Imposta e-mail",
         "verify_code": "Verificare il codice",
-        "verify_email": "Verifica Email",
-        "logout": "Disconnettersi"
+        "verify_email": "Verifica Email"
     },
     "bug_report": {
         "consent": "Consento a questa applicazione di inviare segnalazioni di bug e arresti anomali.",
@@ -104,9 +104,17 @@
             "view": "Visualizza"
         }
     },
+    "errors": {
+        "codes": {
+            "econnrefused": "Connessione rifiutata"
+        },
+        "messages": {
+            "econnrefused": "Connessione rifiutata"
+        }
+    },
     "general": {
-        "delete": "Elimina",
-        "copyClipboard": "Copiato {{value}} negli appunti"
+        "copyClipboard": "Copiato {{value}} negli appunti",
+        "delete": "Elimina"
     },
     "language": {
         "description": "Cambia la lingua dell'applicazione.",
@@ -126,7 +134,7 @@
             "save": "Salva",
             "save_as": "Salva come...",
             "select_all": "Seleziona tutto",
-            "undo": "Disfare"
+            "undo": "Annulla"
         },
         "h5peditor": {
             "new": "Nuovo H5P",
@@ -146,6 +154,10 @@
             "unhide": "Mostra tutto"
         },
         "quit": "Smettere",
+        "run": {
+            "label": "Correre",
+            "upload": "Carica su Lumi Run"
+        },
         "view": {
             "label": "Visualizza",
             "resetZoom": "Dimensione reale",
@@ -160,10 +172,6 @@
             "minimize": "Minimizzare",
             "show": "Mostrare",
             "zoom": "Ingrandisci"
-        },
-        "run": {
-            "label": "Correre",
-            "upload": "Carica su Lumi Run"
         }
     },
     "notifications": {
@@ -174,6 +182,9 @@
                 "error": "Nessun file valido trovato",
                 "success": "File di report importati"
             }
+        },
+        "general": {
+            "econnrefused": "Sembra che ci sia un problema con la tua connessione Internet."
         },
         "h5peditor": {
             "export_as_html": {
@@ -187,14 +198,56 @@
                 "error": "Non è stato possibile salvare H5P.",
                 "success": "H5P salvato!"
             }
-        },
-        "general": {
-            "econnrefused": "Sembra che ci sia un problema con la tua connessione Internet."
         }
+    },
+    "prerelease": {
+        "description": "Abilita le funzionalità sperimentali prima che vengano rilasciate",
+        "title": "Funzionalità di anteprima"
     },
     "privacy_policy": {
         "consent": "Ho letto e acconsento all'informativa sulla privacy.",
         "title": "politica sulla riservatezza"
+    },
+    "run": {
+        "description": "Lumi Run ti consente di caricare e ospitare il tuo H5P con un clic.",
+        "legal": "Per utilizzare questo servizio devi accettare i Termini di servizio, l'informativa sulla privacy e fornirci un'e-mail di contatto.",
+        "link": {
+            "header": "Collegamento"
+        },
+        "list": {
+            "deleteDialog": {
+                "cancel": "Annulla",
+                "confirm": "Confermare",
+                "description": "Vuoi davvero eliminare la corsa {{runId}}",
+                "title": "Elimina Esegui {{runId}}"
+            },
+            "header": "H5P caricato",
+            "noUploadedH5P": "Nessun H5P caricato"
+        },
+        "notifications": {
+            "delete": {
+                "success": "Eliminato con successo {{id}}"
+            },
+            "upload": {
+                "success": "H5P caricato con successo su Lumi.run"
+            }
+        },
+        "setupDialog": {
+            "close": "Chiudere",
+            "start": "Cominciare"
+        },
+        "tos": {
+            "description": "Ho letto e acconsento ai termini di servizio.",
+            "header": "Termini di servizio"
+        },
+        "upload": "Caricamento",
+        "uploadDialog": {
+            "goToRun": "Vai alle corse",
+            "ok": "Ok",
+            "processing": "in lavorazione",
+            "success": "Il tuo H5P è stato caricato su Lumi.run. Puoi accedervi e condividerlo con il seguente link.",
+            "uploading": "Caricamento"
+        }
     },
     "settings": {
         "account": {
@@ -268,73 +321,20 @@
         "description": "La protezione della privacy dell'individuo è importante per noi. Raccogliamo solo le informazioni che scegli di fornirci e le elaboriamo con il tuo consenso. Vogliamo essere il più trasparenti possibile. Tuttavia Lumi si affida ad alcune connessioni e trasferimenti di dati per funzionare."
     },
     "updates": {
+        "badge": "Aggiornare",
+        "checkForUpdate": {
+            "checkButton": "Dai un'occhiata",
+            "description": "Controlla gli aggiornamenti",
+            "title": "Controlla gli aggiornamenti"
+        },
         "consent": "Consento a questa applicazione di verificare automaticamente la presenza di aggiornamenti.",
         "description": "Ottieni automaticamente l'ultima versione.",
-        "title": "Aggiornamenti automatici",
-        "checkForUpdate": {
-            "title": "Controlla gli aggiornamenti",
-            "description": "Controlla gli aggiornamenti",
-            "checkButton": "Dai un'occhiata"
-        },
         "restartAndInstall": "Installa e riavvia",
-        "badge": "Aggiornare"
+        "title": "Aggiornamenti automatici"
     },
     "usage_statistics": {
         "consent": "Consento a questa applicazione di inviare statistiche di utilizzo anonime.",
         "description": " Aiutaci a migliorare il nostro software e servizi inviando statistiche di utilizzo anonime.",
         "title": "Statistiche di utilizzo"
-    },
-    "errors": {
-        "codes": {
-            "econnrefused": "Connessione rifiutata"
-        },
-        "messages": {
-            "econnrefused": "Connessione rifiutata"
-        }
-    },
-    "prerelease": {
-        "title": "Funzionalità di anteprima",
-        "description": "Abilita le funzionalità sperimentali prima che vengano rilasciate"
-    },
-    "run": {
-        "description": "Lumi Run ti consente di caricare e ospitare il tuo H5P con un clic.",
-        "legal": "Per utilizzare questo servizio devi accettare i Termini di servizio, l'informativa sulla privacy e fornirci un'e-mail di contatto.",
-        "tos": {
-            "header": "Termini di servizio",
-            "description": "Ho letto e acconsento ai termini di servizio."
-        },
-        "link": {
-            "header": "Collegamento"
-        },
-        "upload": "Caricamento",
-        "list": {
-            "header": "H5P caricato",
-            "noUploadedH5P": "Nessun H5P caricato",
-            "deleteDialog": {
-                "title": "Elimina Esegui {{runId}}",
-                "description": "Vuoi davvero eliminare la corsa {{runId}}",
-                "cancel": "Annulla",
-                "confirm": "Confermare"
-            }
-        },
-        "uploadDialog": {
-            "success": "Il tuo H5P è stato caricato su Lumi.run. Puoi accedervi e condividerlo con il seguente link.",
-            "uploading": "Caricamento",
-            "processing": "in lavorazione",
-            "goToRun": "Vai alle corse",
-            "ok": "Ok"
-        },
-        "setupDialog": {
-            "close": "Chiudere",
-            "start": "Cominciare"
-        },
-        "notifications": {
-            "delete": {
-                "success": "Eliminato con successo {{id}}"
-            },
-            "upload": {
-                "success": "H5P caricato con successo su Lumi.run"
-            }
-        }
     }
 }
