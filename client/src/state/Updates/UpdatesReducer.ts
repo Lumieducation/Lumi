@@ -38,7 +38,7 @@ export default function updatesReducer(
             default:
                 return state;
         }
-    } catch (error) {
+    } catch (error: any) {
         Sentry.captureException(error);
         return state;
     }

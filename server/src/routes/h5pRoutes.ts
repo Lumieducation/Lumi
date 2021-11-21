@@ -107,7 +107,7 @@ export default function (
             content.embedTypes = ['iframe'];
             res.send(content);
             res.status(200).end();
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
             res.status(500).end(error.message);
         }
@@ -202,7 +202,7 @@ export default function (
                         }
                     );
                 }
-            } catch (error) {
+            } catch (error: any) {
                 Sentry.captureException(error);
                 res.status(500).json(error);
             } finally {
@@ -262,7 +262,7 @@ export default function (
                 );
             res.send(JSON.stringify({ contentId, metadata }));
             res.status(200).end();
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
             if (error instanceof H5P.H5pError) {
                 res.status(error.httpStatusCode).send(error.message).end();
@@ -293,7 +293,7 @@ export default function (
 
             res.send(JSON.stringify({ contentId, metadata }));
             res.status(200).end();
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
             if (error instanceof H5P.H5pError) {
                 res.status(error.httpStatusCode).send(error.message).end();
@@ -304,7 +304,7 @@ export default function (
     router.delete('/:contentId', async (req: IRequestWithUser, res) => {
         try {
             await h5pEditor.deleteContent(req.params.contentId, req.user);
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
             res.send(
                 `Error deleting content with id ${req.params.contentId}: ${error.message}`
@@ -434,7 +434,7 @@ async function exportScorm(
                     _path.join(_path.dirname(path), temporaryFilename),
                     path
                 );
-            } catch (error) {
+            } catch (error: any) {
                 await fsExtra.remove(temporaryFilename);
             }
         },

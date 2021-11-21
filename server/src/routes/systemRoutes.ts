@@ -46,7 +46,7 @@ export default function (): express.Router {
                     platformSupportsUpdates: platformSupportsUpdates(),
                     platform: getPlatform()
                 });
-            } catch (error) {
+            } catch (error: any) {
                 Sentry.captureException(error);
                 res.status(500).json(error);
             }

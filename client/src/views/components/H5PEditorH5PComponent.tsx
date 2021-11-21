@@ -165,7 +165,7 @@ export class H5PEditorH5PComponent extends React.Component<IH5PEditorH5PComponen
                     mode
                 });
             }
-        } catch (error) {}
+        } catch (error: any) {}
     };
 
     private editorSaved = () => {

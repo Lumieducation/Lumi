@@ -24,7 +24,7 @@ export function getSystem(): any {
                     type: SYSTEM_GET_SYSTEM_SUCCESS
                 });
                 return system;
-            } catch (error) {
+            } catch (error: any) {
                 Sentry.captureException(error);
 
                 dispatch({
@@ -32,6 +32,6 @@ export function getSystem(): any {
                     type: SYSTEM_GET_SYSTEM_ERROR
                 });
             }
-        } catch (error) {}
+        } catch (error: any) {}
     };
 }

@@ -121,7 +121,7 @@ export default function Auth(props: IAuthProps): JSX.Element {
                 default:
                     handleLogout();
             }
-        } catch (error) {
+        } catch (error: any) {
             setError(true);
             setMessage('auth.something_went_wrong');
         }
@@ -146,7 +146,7 @@ export default function Auth(props: IAuthProps): JSX.Element {
                 .send({ email });
             setMessage('auth.notification.pending');
             setEnterCode(true);
-        } catch (error) {
+        } catch (error: any) {
             handleError(error);
         }
     };
@@ -161,7 +161,7 @@ export default function Auth(props: IAuthProps): JSX.Element {
 
             setOpen(false);
             handleLogin(email, body.token);
-        } catch (error) {
+        } catch (error: any) {
             handleError(error);
         }
     };

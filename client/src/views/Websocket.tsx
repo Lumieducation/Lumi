@@ -130,7 +130,7 @@ export class WebsocketContainer extends React.Component<
             const { activeTab, dispatch } = this.props;
             log.info(`saving ${activeTab.contentId}`);
             dispatch(actions.h5peditor.save());
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
 
             log.error(error);
@@ -142,7 +142,7 @@ export class WebsocketContainer extends React.Component<
             const { activeTab, dispatch } = this.props;
             log.info(`saving ${activeTab.contentId}`);
             dispatch(actions.h5peditor.save(activeTab.path));
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
 
             log.error(error);

@@ -30,7 +30,7 @@ export function getSettings(): any {
                     type: SETTINGS_GET_SETTINGS_SUCCESS
                 });
                 return settings;
-            } catch (error) {
+            } catch (error: any) {
                 Sentry.captureException(error);
 
                 dispatch({
@@ -38,7 +38,7 @@ export function getSettings(): any {
                     type: SETTINGS_GET_SETTINGS_ERROR
                 });
             }
-        } catch (error) {}
+        } catch (error: any) {}
     };
 }
 
@@ -60,7 +60,7 @@ export function updateSettings(settings: ISettingsState): any {
             if (settings.privacyPolicyConsent) {
                 await API.updateContentTypeCache();
             }
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
 
             dispatch({
@@ -93,7 +93,7 @@ export function changeSetting(
             if (save) {
                 dispatch(updateSettings(store.getState().settings));
             }
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
         }
     };

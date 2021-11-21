@@ -153,7 +153,7 @@ export default class SettingsStorage {
                 }
                 settingsOk = true;
             }
-        } catch (error) {
+        } catch (error: any) {
             settingsOk = false;
         }
 
@@ -196,7 +196,7 @@ export default class SettingsStorage {
                 }
                 settingsOk = true;
             }
-        } catch (error) {
+        } catch (error: any) {
             settingsOk = false;
         }
 

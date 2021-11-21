@@ -39,7 +39,7 @@ export function getRuns(): any {
                     payload: runResponse,
                     type: RUN_GET_RUNS_SUCCESS
                 });
-            } catch (error) {
+            } catch (error: any) {
                 if (error.status === 401) {
                     return dispatch({
                         payload: {},
@@ -53,7 +53,7 @@ export function getRuns(): any {
                     type: RUN_GET_RUNS_ERROR
                 });
             }
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
         }
     };
@@ -94,7 +94,7 @@ export function upload(options?: { path?: string; contentId?: string }) {
                     )
                 );
                 dispatch(getRuns());
-            } catch (error) {
+            } catch (error: any) {
                 if (error.status !== 499) {
                     Sentry.captureException(error);
 
@@ -114,7 +114,7 @@ export function upload(options?: { path?: string; contentId?: string }) {
                 // user canceled electrons openfile dialog
                 dispatch(updateState({ showUploadDialog: false }));
             }
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
         }
     };
@@ -142,7 +142,7 @@ export function deleteFromRun(id: string): any {
                         'success'
                     )
                 );
-            } catch (error) {
+            } catch (error: any) {
                 Sentry.captureException(error);
 
                 dispatch({
@@ -150,7 +150,7 @@ export function deleteFromRun(id: string): any {
                     type: RUN_DELETE_ERROR
                 });
             }
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
         }
     };

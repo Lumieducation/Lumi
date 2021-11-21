@@ -176,7 +176,7 @@ if (!gotSingleInstanceLock) {
                 };
                 matomo.track(data);
             }
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
         }
     });
@@ -265,7 +265,7 @@ if (!gotSingleInstanceLock) {
                 };
                 matomo.track(data);
             }
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
         }
     });

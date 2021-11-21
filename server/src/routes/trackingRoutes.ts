@@ -40,7 +40,7 @@ export default function (
                     matomo.track(data);
                 }
                 res.status(200).end();
-            } catch (error) {
+            } catch (error: any) {
                 Sentry.captureException(error);
                 res.status(200).end();
             }

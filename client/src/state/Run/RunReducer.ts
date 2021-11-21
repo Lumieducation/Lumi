@@ -76,7 +76,7 @@ export default function runReducer(
             default:
                 return state;
         }
-    } catch (error) {
+    } catch (error: any) {
         log.error(error);
         return state;
     }

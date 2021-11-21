@@ -27,7 +27,7 @@ export function getUpdates(): any {
                     type: UPDATES_GET_UPDATES_SUCCESS
                 });
                 return updateInfo;
-            } catch (error) {
+            } catch (error: any) {
                 Sentry.captureException(error);
 
                 dispatch({
@@ -35,7 +35,7 @@ export function getUpdates(): any {
                     type: UPDATES_GET_UPDATES_ERROR
                 });
             }
-        } catch (error) {}
+        } catch (error: any) {}
     };
 }
 
@@ -52,7 +52,7 @@ export function update(): any {
                 dispatch({
                     type: UPDATES_UPDATE_SUCCESS
                 });
-            } catch (error) {
+            } catch (error: any) {
                 Sentry.captureException(error);
 
                 dispatch({
@@ -60,6 +60,6 @@ export function update(): any {
                     type: UPDATES_UPDATE_ERROR
                 });
             }
-        } catch (error) {}
+        } catch (error: any) {}
     };
 }

@@ -21,7 +21,7 @@ export function all(state: IState): ITab[] {
     try {
         log.debug(`selecting tab-list`);
         return state.h5peditor.tabList || [];
-    } catch (error) {
+    } catch (error: any) {
         Sentry.captureException(error);
 
         log.error(error);
@@ -33,7 +33,7 @@ export function activeTabIndex(state: IState): number {
     try {
         log.debug(`selecting activeTabIndex`);
         return state.h5peditor.activeTabIndex || 0;
-    } catch (error) {
+    } catch (error: any) {
         Sentry.captureException(error);
 
         log.error(error);
@@ -48,7 +48,7 @@ export function activeTab(state: IState): ITab {
             state.h5peditor.tabList[state.h5peditor.activeTabIndex] ||
             errorObject
         );
-    } catch (error) {
+    } catch (error: any) {
         Sentry.captureException(error);
 
         log.error(error);
@@ -59,7 +59,7 @@ export function activeTab(state: IState): ITab {
 export function noActiveTabs(state: IState): boolean {
     try {
         return state.h5peditor.tabList.length === 0;
-    } catch (error) {
+    } catch (error: any) {
         Sentry.captureException(error);
 
         log.error(error);
@@ -77,7 +77,7 @@ export function viewDisabled(state: IState): boolean {
     try {
         return state.h5peditor.tabList[state.h5peditor.activeTabIndex]
             .viewDisabled;
-    } catch (error) {
+    } catch (error: any) {
         return true;
     }
 }
