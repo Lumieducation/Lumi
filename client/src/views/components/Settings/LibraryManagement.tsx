@@ -159,7 +159,7 @@ export class LibraryAdmin extends React.Component<
         try {
             const libraries = await this.librariesService.getLibraries();
             this.setState({ libraries });
-        } catch (error) {
+        } catch (error: any) {
             this.props.notify(error.message, 'error');
         }
     }
@@ -194,7 +194,7 @@ export class LibraryAdmin extends React.Component<
         try {
             const libraries = await this.librariesService.getLibraries();
             this.setState({ libraries });
-        } catch (error) {
+        } catch (error: any) {
             this.props.notify(error.message, 'error');
         }
     }

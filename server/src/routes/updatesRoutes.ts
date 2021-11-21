@@ -20,7 +20,7 @@ export default function (): express.Router {
                 const updateCheckResult = await autoUpdater.checkForUpdates();
 
                 res.status(200).json(updateCheckResult.updateInfo);
-            } catch (error) {
+            } catch (error: any) {
                 Sentry.captureException(error);
                 res.status(500).end();
             }
@@ -51,7 +51,7 @@ export default function (): express.Router {
                 await autoUpdater.downloadUpdate();
 
                 autoUpdater.quitAndInstall();
-            } catch (error) {
+            } catch (error: any) {
                 Sentry.captureException(error);
                 res.status(500).end();
             }

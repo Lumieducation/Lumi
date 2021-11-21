@@ -86,7 +86,7 @@ export default class LumiController {
             });
 
             return { path };
-        } catch (error) {
+        } catch (error: any) {
             electronState.setState({ blockKeyboard: false });
             Sentry.captureException(error);
         }

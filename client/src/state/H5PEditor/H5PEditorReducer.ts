@@ -343,7 +343,7 @@ export default function tabReducer(
             default:
                 return state;
         }
-    } catch (error) {
+    } catch (error: any) {
         Sentry.captureException(error);
 
         log.error(error);

@@ -16,7 +16,7 @@ export default function (settingsCache: SettingsCache): express.Router {
             try {
                 const settings = await settingsCache.getSettings();
                 res.status(200).json(settings);
-            } catch (error) {
+            } catch (error: any) {
                 Sentry.captureException(error);
                 res.status(500).end();
             }
@@ -45,7 +45,7 @@ export default function (settingsCache: SettingsCache): express.Router {
 
                     res.status(200).json(req.body);
                 }
-            } catch (error) {
+            } catch (error: any) {
                 Sentry.captureException(error);
                 res.status(500).end();
             }

@@ -47,7 +47,7 @@ export default async function migrations(
 ): Promise<void> {
     try {
         await v0_8_0();
-    } catch (error) {
+    } catch (error: any) {
         Sentry.captureException(error);
         throw error;
     }

@@ -28,7 +28,7 @@ export function importAnalytics(): any {
                 payload: { files },
                 type: ANALYTICS_IMPORT_SUCCESS
             });
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
 
             console.log(error);

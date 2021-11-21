@@ -1,5 +1,6 @@
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 import * as Sentry from '@sentry/browser';
+
 import Logger from '../../helpers/Logger';
 
 import * as H from 'history';
@@ -151,7 +152,7 @@ export function exportH5P(
                     options
                 );
 
-                // TOOD: chang tracking
+                // TODO: change tracking
                 dispatch(
                     track(
                         'H5P',
@@ -171,7 +172,7 @@ export function exportH5P(
                     },
                     type: H5PEDITOR_EXPORT_SUCCESS
                 });
-            } catch (error) {
+            } catch (error: any) {
                 if (error.status === 499) {
                     // dispatched if the user cancel the system's save dialog.
                     dispatch(cancelExportH5P(data.contentId));
@@ -187,7 +188,7 @@ export function exportH5P(
                     });
                 }
             }
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
 
             dispatch({
@@ -283,7 +284,7 @@ export function updateContentOnServer(): any {
         try {
             const data = await window.h5peditor.current?.save();
             return data;
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
             return;
         }
@@ -338,7 +339,7 @@ export function updateContent(
             });
 
             return response;
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
             dispatch({
                 payload: {
@@ -373,7 +374,7 @@ export function loadEditorContent(
             });
 
             return content;
-        } catch (error) {
+        } catch (error: any) {
             Sentry.captureException(error);
 
             throw new Error(error);
@@ -457,7 +458,7 @@ export function save(
 
             try {
                 dispatch(track('H5P', 'save', data.metadata?.mainLibrary));
-            } catch (error) {
+            } catch (error: any) {
                 Sentry.captureException(error);
             }
 
@@ -466,7 +467,7 @@ export function save(
                 payload: { id: data.contentId, ...response.body },
                 type: H5PEDITOR_SAVE_SUCCESS
             });
-        } catch (error) {
+        } catch (error: any) {
             if (error.status === 499) {
                 return dispatch({
                     payload: {},
@@ -506,7 +507,7 @@ export function importH5P(
             .then(({ body }) => {
                 try {
                     dispatch(track('H5P', 'open', body.metadata.mainLibrary));
-                } catch (error) {
+                } catch (error: any) {
                     Sentry.captureException(error);
                 }
 

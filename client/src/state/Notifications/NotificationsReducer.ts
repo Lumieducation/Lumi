@@ -252,7 +252,7 @@ export default function notificationsReducer(
             default:
                 return state;
         }
-    } catch (error) {
+    } catch (error: any) {
         Sentry.captureException(error);
         return state;
     }

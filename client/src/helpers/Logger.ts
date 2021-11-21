@@ -32,8 +32,8 @@ export default class Logger {
         try {
             this.logLevel =
                 (window.localStorage.logLevel as logLevel) || 'info';
-        } catch (error) {
-            this.ERROR(error);
+        } catch (error: any) {
+            this.ERROR(error as string);
             this.logLevel = 'info';
         }
     }

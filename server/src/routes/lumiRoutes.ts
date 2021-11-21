@@ -28,7 +28,7 @@ export default function (
                 const content = await lumiController.loadPackage(contentId);
                 log.info(`sending package-data for contentId ${contentId} `);
                 res.status(200).json(content);
-            } catch (error) {
+            } catch (error: any) {
                 Sentry.captureException(error);
                 log.warn(error);
                 res.status(404).end();

@@ -41,7 +41,7 @@ export default function (
                     );
 
                 res.status(200).json(body);
-            } catch (error) {
+            } catch (error: any) {
                 res.status(error.status || 500).json(error.response?.body);
             }
         }
@@ -60,7 +60,7 @@ export default function (
                     .set('x-auth', (await settingsCache.getSettings()).token);
 
                 res.status(200).json(body);
-            } catch (error) {
+            } catch (error: any) {
                 res.status(500).json(error);
             }
         }
@@ -79,7 +79,7 @@ export default function (
                     .set('x-auth', (await settingsCache.getSettings()).token);
 
                 res.status(200).json(body);
-            } catch (error) {
+            } catch (error: any) {
                 res.status(500).json(error);
             }
         }
@@ -154,7 +154,7 @@ export default function (
                     await fs.unlink(filePath);
                 }
                 res.status(200).json(response.body);
-            } catch (error) {
+            } catch (error: any) {
                 res.status(error.status || 500).json(error.response?.body);
             }
         }

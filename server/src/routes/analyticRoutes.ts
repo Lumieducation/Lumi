@@ -45,7 +45,7 @@ export default function (browserWindow: BrowserWindow): express.Router {
                         ...fileData,
                         name: _path.basename(file, extension)
                     };
-                } catch (error) {
+                } catch (error: any) {
                     return {
                         ...fileData,
                         error: true,
@@ -57,7 +57,7 @@ export default function (browserWindow: BrowserWindow): express.Router {
                     data = JSON.parse(
                         fs.readFileSync(file, { encoding: 'utf-8' })
                     );
-                } catch (error) {
+                } catch (error: any) {
                     return {
                         file,
                         error: true,
@@ -70,7 +70,7 @@ export default function (browserWindow: BrowserWindow): express.Router {
                         ...fileData,
                         contentHash: objectHash(data.contentJson)
                     };
-                } catch (error) {
+                } catch (error: any) {
                     return {
                         ...fileData,
                         error: true,
@@ -95,7 +95,7 @@ export default function (browserWindow: BrowserWindow): express.Router {
                         ...fileData,
                         interactions
                     };
-                } catch (error) {
+                } catch (error: any) {
                     return {
                         ...fileData,
                         error: true,
@@ -119,7 +119,7 @@ export default function (browserWindow: BrowserWindow): express.Router {
                         ...fileData,
                         results
                     };
-                } catch (error) {
+                } catch (error: any) {
                     return {
                         ...fileData,
                         error: true,
@@ -131,7 +131,7 @@ export default function (browserWindow: BrowserWindow): express.Router {
             });
 
             res.status(200).json(processedFiles);
-        } catch (error) {
+        } catch (error: any) {
             res.status(500).end();
             Sentry.captureException(error);
         }

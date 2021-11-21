@@ -29,10 +29,10 @@ export default function analyticsReducer(
             default:
                 return state;
         }
-    } catch (error) {
+    } catch (error: any) {
         Sentry.captureException(error);
 
-        log.error(error);
+        log.error(error as string);
         return state;
     }
 }

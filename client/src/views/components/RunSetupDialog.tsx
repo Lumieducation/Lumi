@@ -104,7 +104,7 @@ export default function RunSetupDialog(props: IRunSetupDialogProps) {
         try {
             await superagent.post(`/api/run/consent`);
             onConsent();
-        } catch (error) {}
+        } catch (error: any) {}
     };
 
     const classes = useStyles();
