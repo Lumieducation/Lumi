@@ -1,9 +1,5 @@
 import express from 'express';
-import fsExtra from 'fs-extra';
-import electron from 'electron';
-import * as Sentry from '@sentry/node';
-import IServerConfig from '../config/IPaths';
-import { autoUpdater, UpdateInfo, ProgressInfo } from 'electron-updater';
+import { autoUpdater, ProgressInfo } from 'electron-updater';
 
 import { globalWebsocket as websocket } from '../boot/websocket';
 
@@ -21,8 +17,7 @@ export default function (): express.Router {
 
                 res.status(200).json(updateCheckResult.updateInfo);
             } catch (error) {
-                Sentry.captureException(error);
-                res.status(500).end();
+                next(error);
             }
         }
     );
@@ -52,8 +47,7 @@ export default function (): express.Router {
 
                 autoUpdater.quitAndInstall();
             } catch (error) {
-                Sentry.captureException(error);
-                res.status(500).end();
+                next(error);
             }
         }
     );

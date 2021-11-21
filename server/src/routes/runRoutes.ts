@@ -42,7 +42,7 @@ export default function (
 
                 res.status(200).json(body);
             } catch (error) {
-                res.status(error.status || 500).json(error.response?.body);
+                next(error);
             }
         }
     );
@@ -61,7 +61,7 @@ export default function (
 
                 res.status(200).json(body);
             } catch (error) {
-                res.status(500).json(error);
+                next(error);
             }
         }
     );
@@ -80,7 +80,7 @@ export default function (
 
                 res.status(200).json(body);
             } catch (error) {
-                res.status(500).json(error);
+                next(error);
             }
         }
     );
@@ -155,7 +155,7 @@ export default function (
                 }
                 res.status(200).json(response.body);
             } catch (error) {
-                res.status(error.status || 500).json(error.response?.body);
+                next(error);
             }
         }
     );
