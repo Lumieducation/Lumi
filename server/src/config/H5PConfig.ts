@@ -67,6 +67,8 @@ export default class H5PConfig implements IH5PConfig {
     public hubContentTypesEndpoint: string =
         'https://api.h5p.org/v1/content-types/';
     public hubRegistrationEndpoint: string = 'https://api.h5p.org/v1/sites';
+    public installLibraryLockMaxOccupationTime: number = 30000;
+    public installLibraryLockTimeout: number = 60000;
     public librariesUrl: string = '/libraries';
     public libraryConfig: { [machineName: string]: any };
     public libraryWhitelist: string = 'js css';
