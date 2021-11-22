@@ -142,9 +142,10 @@ export default function (
 
             const result = await dialog.showSaveDialog(browserWindow, {
                 defaultPath:
-                sanitizeFilename(
-                    params.metadata.title, t('edit.exportDialog.defaults.fileName')) ??
-                    t('edit.exportDialog.defaults.fileName'),
+                    sanitizeFilename(
+                        params.metadata.title,
+                        t('edit.exportDialog.defaults.fileName')
+                    ) ?? t('edit.exportDialog.defaults.fileName'),
                 filters: [
                     {
                         extensions: [expectedExtension],
