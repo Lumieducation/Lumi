@@ -53,7 +53,8 @@
             "cancelButton": "キャンセル",
             "defaults": {
                 "authorName": "H5P作成者",
-                "title": "H5Pコンテンツ"
+                "title": "H5Pコンテンツ",
+                "filename": "私のH5Pエクスポート"
             },
             "exportButton": "今すぐエクスポート",
             "filePicker": {
@@ -102,7 +103,12 @@
         "tab": {
             "edit": "編集",
             "view": "意見"
-        }
+        },
+        "saveAsDialog": {
+            "title": "名前を付けて保存",
+            "fallbackFilename": "私のH5Pファイル"
+        },
+        "extensionName": "H5Pパッケージ"
     },
     "errors": {
         "codes": {
@@ -298,7 +304,8 @@
                     "success-with-update": "{{installed}}ライブラリを正常にインストールし{{updated}}ライブラリを更新しました。"
                 }
             },
-            "upload_and_install": "ライブラリをアップロードしてインストールする"
+            "upload_and_install": "ライブラリをアップロードしてインストールする",
+            "can-not-be-deleted_plural": "{{count}}のライブラリで使用されているため、削除できません。"
         },
         "links": {
             "header": "リンク"
