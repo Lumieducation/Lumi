@@ -1,3 +1,5 @@
+// file deepcode ignore NoRateLimitingForExpensiveWebOperation: No public API
+
 import express from 'express';
 import * as Sentry from '@sentry/node';
 import { BrowserWindow, dialog } from 'electron';
@@ -17,6 +19,7 @@ import scopackager from 'simple-scorm-packager';
 import electronState from '../state/electronState';
 import createReporter from '../helpers/createReporter';
 import User from '../h5pImplementations/User';
+import { sanitizeFilename } from '../helpers/FilenameSanitizer';
 
 const cleanAndTrim = (text) => {
     const textClean = text.replace(/[^a-zA-Z\d\s]/g, '');
@@ -132,8 +135,16 @@ export default function (
             const format: 'bundle' | 'external' | 'scorm' = req.query.format;
             const expectedExtension = format === 'scorm' ? 'zip' : 'html';
 
+            const { params } = await h5pEditor.getContent(
+                req.params.contentId,
+                req.user
+            );
+
             const result = await dialog.showSaveDialog(browserWindow, {
-                defaultPath: `.${expectedExtension}`,
+                defaultPath:
+                sanitizeFilename(
+                    params.metadata.title, t('edit.exportDialog.defaults.fileName')) ??
+                    t('edit.exportDialog.defaults.fileName'),
                 filters: [
                     {
                         extensions: [expectedExtension],

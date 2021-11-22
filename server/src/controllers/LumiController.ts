@@ -1,18 +1,20 @@
 import { BrowserWindow, dialog } from 'electron';
 import fs from 'fs-extra';
 import _path from 'path';
+import i18next from 'i18next';
 
 import Sentry from '@sentry/node';
 import LumiError from '../helpers/LumiError';
 import * as H5P from '@lumieducation/h5p-server';
 import Logger from '../helpers/Logger';
-
 import User from '../h5pImplementations/User';
 import IServerConfig from '../config/IPaths';
-
 import electronState from '../state/electronState';
+import { sanitizeFilename } from '../helpers/FilenameSanitizer';
 
 const log = new Logger('controller:lumi-h5p');
+
+const t = i18next.getFixedT(null, 'lumi');
 
 export default class LumiController {
     constructor(
@@ -20,15 +22,12 @@ export default class LumiController {
         serverConfig: IServerConfig,
         private browserWindow: BrowserWindow
     ) {
-        this.temporaryStoragePath = serverConfig.temporaryStoragePath;
         fs.readJSON(serverConfig.settingsFile).then((settings) => {
             if (settings.privacyPolicyConsent) {
                 h5pEditor.contentTypeCache.updateIfNecessary();
             }
         });
     }
-
-    private temporaryStoragePath: string;
 
     public async delete(contentId: string): Promise<void> {
         return this.h5pEditor.deleteContent(contentId, new User());
@@ -41,16 +40,25 @@ export default class LumiController {
         try {
             let path = pathArg;
 
+            const { params } = await this.h5pEditor.getContent(
+                contentId,
+                new User()
+            );
+
             if (!path || path === 'undefined') {
                 const result = await dialog.showSaveDialog(this.browserWindow, {
-                    defaultPath: '.h5p',
+                    defaultPath:
+                        sanitizeFilename(
+                            params?.metadata?.title,
+                            t('editor.saveAsDialog.fallbackFilename')
+                        ) ?? t('editor.saveAsDialog.fallbackFilename'),
                     filters: [
                         {
                             extensions: ['h5p'],
-                            name: 'H5P'
+                            name: t('editor.extensionName')
                         }
                     ],
-                    title: 'Save H5P',
+                    title: t('editor.saveAsDialog.title'),
                     properties: ['showOverwriteConfirmation']
                 });
                 path = result.filePath;
@@ -58,7 +66,6 @@ export default class LumiController {
 
             if (!path) {
                 throw new LumiError('user-abort', 'Aborted by user', 499);
-                return;
             }
 
             if (_path.extname(path) !== '.h5p') {
@@ -138,7 +145,7 @@ export default class LumiController {
             filters: [
                 {
                     extensions: ['h5p'],
-                    name: 'HTML 5 Package'
+                    name: t('editor.extensionName')
                 }
             ],
             properties: ['openFile', 'multiSelections']

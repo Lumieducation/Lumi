@@ -6,9 +6,9 @@
     "author": "Lumi Education Jan Philip Schellenberg & Sebastian Rettig GbR <c@lumi.education>",
     "main": "build/server/main.js",
     "dependencies": {
-        "@lumieducation/h5p-server": "9.0.4",
-        "@lumieducation/h5p-html-exporter": "9.0.4",
         "@lumieducation/h5p-express": "9.0.4",
+        "@lumieducation/h5p-html-exporter": "9.0.4",
+        "@lumieducation/h5p-server": "9.0.4",
         "@lumieducation/xapi-aggregator": "1.0.1-alpha.7",
         "@sentry/electron": "2.5.4",
         "@sentry/node": "6.14.1",
@@ -33,7 +33,8 @@
         "simple-scorm-packager": "0.2.5",
         "socket.io": "4.4.0",
         "superagent": "6.1.0",
-        "tmp-promise": "3.0.3"
+        "tmp-promise": "3.0.3",
+        "upath": "^2.0.1"
     },
     "scripts": {
         "build": "npm run build:server && npm run build:client && npm run build:reporter-client",
