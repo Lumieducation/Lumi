@@ -11,9 +11,13 @@ export default function (
         submenu: [
             {
                 click: () => {
-                    websocket.emit('action', {
-                        type: 'REPORT_ISSUE'
-                    });
+                    electron.shell.openExternal(
+                        `mailto:c@lumi.education?subject=${encodeURI(
+                            i18next.t('lumi:bug_report.email.subject')
+                        )}&body=${encodeURI(
+                            i18next.t('lumi:bug_report.email.body')
+                        )}`
+                    );
                 },
                 label: i18next.t('lumi:menu.help.report_issue')
             },

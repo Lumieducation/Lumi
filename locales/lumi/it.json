@@ -42,7 +42,11 @@
     "bug_report": {
         "consent": "Consento a questa applicazione di inviare segnalazioni di bug e arresti anomali.",
         "description": "Aiutaci a migliorare il nostro software e servizi inviando rapporti anonimi su arresti anomali e bug.",
-        "title": "Segnalazioni di bug e arresti anomali"
+        "title": "Segnalazioni di bug e arresti anomali",
+        "email": {
+            "subject": "Rapporto sui problemi di Lumi",
+            "body": "Per ottenere una rapida soluzione al tuo problema, scrivi su:\n\n  - Versione Lumi: <compila qui>, Sistema operativo: <compila qui>\n  - descrivi il problema\n  - descrivere come possiamo riprodurre il problema sulle nostre macchine\n  - inviaci file di esempio .h5p o esportati se il problema è correlato ai file\n\nSe ci invii messaggi in una lingua diversa dall'inglese o dal tedesco, utilizzeremo uno strumento di traduzione automatica per tradurre il tuo messaggio."
+        }
     },
     "dialog": {
         "close": "Vicino"
@@ -60,7 +64,7 @@
             "filePicker": {
                 "buttonLabel": "Esportare",
                 "formatNames": {
-                    "bundle": "File HTML all-in-one",
+                    "bundle": "File HTML tutto in uno",
                     "external": "File HTML",
                     "scorm": "File SCORM"
                 },

@@ -45,9 +45,9 @@
                 "title": "Vie nimellä ...",
                 "buttonLabel": "Viedä",
                 "formatNames": {
-                    "bundle": "Kaikki yhdessä HTML-tiedosto",
+                    "bundle": "All-in-one HTML-tiedosto",
                     "external": "HTML-tiedosto",
-                    "scorm": "SCORM-tiedosto"
+                    "scorm": "SCORM tiedosto"
                 }
             },
             "defaults": {
@@ -150,7 +150,11 @@
     "bug_report": {
         "title": "Virhe- ja kaatumisraportit",
         "description": "Auta meitä parantamaan ohjelmistojamme ja palveluitamme lähettämällä nimettömiä kaatumis- ja virheraportteja.",
-        "consent": "Annan tämän sovelluksen lähettää vikailmoituksia."
+        "consent": "Annan tämän sovelluksen lähettää vikailmoituksia.",
+        "email": {
+            "subject": "Lumin ongelmaraportti",
+            "body": "Saadaksesi nopean ratkaisun ongelmaasi, kirjoita aiheesta:\n\n  - Lumi-versio: <täytä tästä>, Käyttöjärjestelmä: <täytä tästä>\n  - kuvaile ongelmaa\n  - kuvaile kuinka voimme toistaa ongelman koneissamme\n  - lähetä meille näyte.h5p-tiedostoja tai vietyjä tiedostoja, jos ongelma liittyy tiedostoihin\n\nJos lähetät meille viestejä muulla kielellä kuin englanniksi tai saksaksi, käytämme automaattista käännöstyökalua viestisi kääntämiseen."
+        }
     },
     "usage_statistics": {
         "title": "Käyttötilastot",

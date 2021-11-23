@@ -223,7 +223,11 @@
     "bug_report": {
         "title": "Bug & Crash Reports",
         "description": "Help us improve our software and services by sending anonymous crash & bug reports.",
-        "consent": "I allow this application to send bug & crash reports."
+        "consent": "I allow this application to send bug & crash reports.",
+        "email": {
+            "subject": "Lumi problem report",
+            "body": "To get a quick solution for your problem, please write about:\n\n  - Lumi version: <fill in here>, Operating system: <fill in here>\n  - describe the problem\n  - describe how we can reproduce the problem on our machines\n  - send us sample .h5p or exported files if the problem is related to the files\n\nIf you send us messages in a language other than English or German, we will use an auto-translation tool to translate your message."
+        }
     },
     "usage_statistics": {
         "title": "Usage Statistics",

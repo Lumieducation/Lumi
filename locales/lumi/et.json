@@ -42,7 +42,11 @@
     "bug_report": {
         "consent": "Luban sellel rakendusel saata vea- ja krahhiaruandeid.",
         "description": "Aidake meil tarkvara ja teenuseid täiustada, saates anonüümseid krahhi- ja veateateid.",
-        "title": "Vigade ja krahhide aruanded"
+        "title": "Vigade ja krahhide aruanded",
+        "email": {
+            "subject": "Lumi probleemiaruanne",
+            "body": "Oma probleemile kiire lahenduse leidmiseks kirjutage järgmiselt:\n\n  - Lumi versioon: <täitke siin>, Operatsioonisüsteem: <täitke siin>\n  - kirjeldage probleemi\n  - kirjeldage, kuidas saaksime probleemi oma masinates taasesitada\n  - saatke meile näidis-.h5p või eksporditud failid, kui probleem on seotud failidega\n\nKui saadate meile sõnumeid muus keeles kui inglise või saksa keeles, kasutame teie sõnumi tõlkimiseks automaattõlke tööriista."
+        }
     },
     "dialog": {
         "close": "Sulge"
@@ -60,8 +64,8 @@
             "filePicker": {
                 "buttonLabel": "Eksport",
                 "formatNames": {
-                    "bundle": "Kõik ühes HTML-fail",
-                    "external": "HTML-fail",
+                    "bundle": "Kõik-ühes HTML-fail",
+                    "external": "HTML-faili",
                     "scorm": "SCORM-fail"
                 },
                 "title": "Ekspordi nimega ..."

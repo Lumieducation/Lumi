@@ -42,7 +42,11 @@
     "bug_report": {
         "consent": "Povoluji této aplikaci odesílat zprávy o chybách a selháních.",
         "description": "Pomozte nám vylepšit náš software a služby zasíláním anonymních zpráv o selháních a chybách.",
-        "title": "Zprávy o chybách a selháních"
+        "title": "Zprávy o chybách a selháních",
+        "email": {
+            "subject": "Zpráva o problému Lumi",
+            "body": "Chcete-li získat rychlé řešení vašeho problému, napište o:\n\n  - Verze Lumi: <vyplňte zde>, Operační systém: <vyplňte zde>\n  - popište problém\n  - popsat, jak můžeme problém reprodukovat na našich strojích\n  - pošlete nám ukázkové .h5p nebo exportované soubory, pokud se problém týká souborů\n\nPokud nám posíláte zprávy v jiném jazyce než v angličtině nebo němčině, použijeme k překladu vaší zprávy nástroj pro automatický překlad."
+        }
     },
     "dialog": {
         "close": "Zavřít"
@@ -61,8 +65,8 @@
                 "buttonLabel": "Vývozní",
                 "formatNames": {
                     "bundle": "Soubor HTML typu vše v jednom",
-                    "external": "Soubor HTML",
-                    "scorm": "Soubor SCORM"
+                    "external": "HTML soubor",
+                    "scorm": "soubor SCORM"
                 },
                 "title": "Exportovat jako ..."
             },

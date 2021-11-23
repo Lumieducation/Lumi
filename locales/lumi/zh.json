@@ -42,7 +42,11 @@
     "bug_report": {
         "consent": "允许该应用程序发送错误和崩溃报告。",
         "description": "发送匿名崩溃和错误报告，帮助我们改善软件和服务。",
-        "title": "错误和崩溃报告"
+        "title": "错误和崩溃报告",
+        "email": {
+            "subject": "Lumi问题报告",
+            "body": "要快速解决您的问题，请写下：\n\n  - Lumi 版本：<此处填写>，操作系统：<此处填写>\n  - 描述问题\n  - 描述我们如何在我们的机器上重现问题\n  - 如果问题与文件有关，请向我们发送示例 .h5p 或导出的文件\n\n如果您使用英语或德语以外的语言向我们发送消息，我们将使用自动翻译工具来翻译您的消息。"
+        }
     },
     "dialog": {
         "close": "关闭"
@@ -60,9 +64,9 @@
             "filePicker": {
                 "buttonLabel": "导出",
                 "formatNames": {
-                    "bundle": "多合一HTML文件（.html）",
-                    "external": "HTML文件（.html）",
-                    "scorm": "SCORM文件（.zip）"
+                    "bundle": "多合一的 HTML 文件",
+                    "external": "HTML文件",
+                    "scorm": "SCORM文件"
                 },
                 "title": "导出为..."
             },

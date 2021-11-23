@@ -42,7 +42,11 @@
     "bug_report": {
         "consent": "J'autorise cette application à envoyer des rapports de bogues et de plantages.",
         "description": "Aidez-nous à améliorer nos logiciels et services en envoyant des rapports anonymes de plantage et de bogue.",
-        "title": "Rapports de bogues et de plantages"
+        "title": "Rapports de bogues et de plantages",
+        "email": {
+            "subject": "Rapport de problème Lumi",
+            "body": "Pour obtenir une solution rapide à votre problème, veuillez écrire sur :\n\n  - Version Lumi : <remplir ici>, Système d'exploitation : <remplir ici>\n  - décris le problème\n  - décrire comment nous pouvons reproduire le problème sur nos machines\n  - envoyez-nous des exemples de fichiers .h5p ou exportés si le problème est lié aux fichiers\n\nSi vous nous envoyez des messages dans une langue autre que l'anglais ou l'allemand, nous utiliserons un outil de traduction automatique pour traduire votre message."
+        }
     },
     "dialog": {
         "close": "Fermer"
@@ -61,8 +65,8 @@
                 "buttonLabel": "Exporter",
                 "formatNames": {
                     "bundle": "Fichier HTML tout-en-un",
-                    "external": "Fichier HTML",
-                    "scorm": "Fichier SCORM"
+                    "external": "fichier HTML",
+                    "scorm": "fichier SCORM"
                 },
                 "title": "Exporter sous ..."
             },

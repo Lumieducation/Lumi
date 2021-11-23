@@ -45,9 +45,9 @@
                 "title": "Izvezi kao ...",
                 "buttonLabel": "Izvoz",
                 "formatNames": {
-                    "bundle": "Sve u jednom HTML datoteka",
-                    "external": "HTML datoteka",
-                    "scorm": "SCORM datoteka"
+                    "bundle": "Sve-u-jednom HTML fajl",
+                    "external": "HTML fajl",
+                    "scorm": "SCORM fajl"
                 }
             },
             "defaults": {
@@ -150,7 +150,11 @@
     "bug_report": {
         "title": "Izvještaji o greškama i padovima",
         "description": "Pomozite nam da poboljšamo naš softver i usluge slanjem anonimnih izvještaja o padovima i greškama.",
-        "consent": "Omogućujem ovoj aplikaciji slanje izvještaja o greškama i padovima."
+        "consent": "Omogućujem ovoj aplikaciji slanje izvještaja o greškama i padovima.",
+        "email": {
+            "subject": "Izveštaj o problemu Lumi",
+            "body": "Da biste dobili brzo rješenje za svoj problem, pišite o:\n\n  - Lumi verzija: <popunite ovdje>, Operativni sistem: <unesite ovdje>\n  - opišite problem\n  - opišite kako možemo reproducirati problem na našim mašinama\n  - pošaljite nam uzorak .h5p ili izvezenih datoteka ako je problem povezan sa datotekama\n\nAko nam šaljete poruke na jeziku koji nije engleski ili njemački, mi ćemo koristiti alat za automatsko prevođenje da prevedemo vašu poruku."
+        }
     },
     "usage_statistics": {
         "title": "Statistika upotrebe",
