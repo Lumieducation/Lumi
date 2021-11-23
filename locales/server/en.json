@@ -19,6 +19,7 @@
     "hub-install-no-content-type": "No content type was specified.",
     "illegal-filename": "The filename you used is not allowed.",
     "import-package-no-id-assigned": "Something went wrong when storing the package: no content id was assigned.",
+    "install-missing-libraries": "Could not load the content as the following libraries are not installed on this system: {{libraries}}",
     "installed-libraries_plural": "Added {{count}} new H5P libraries.",
     "installed-libraries": "Added {{count}} new H5P library.",
     "invalid-content-folder": "A valid content folder is missing",
@@ -54,5 +55,10 @@
     "upload-package-failed-tmp": "Could not save uploaded package to temporary file.",
     "upload-validation-error": "The file you've uploaded is invalid.",
     "unsatisfiable-range": "The requested range of the file is not within the size of the actual file.",
-    "multipart-ranges-unsupported": "Multipart range requests are not supported on this server."
+    "multipart-ranges-unsupported": "Multipart range requests are not supported on this server.",
+    "h5p-hub-connection-failed": "There was an error connecting to the H5P Content Hub. Please try again later.",
+    "content-hub-download-error-with-message": "There was an error connecting to the H5P Content Hub ({{message}}). Please try again later.",
+    "content-hub-download-error": "There was an error connecting to the H5P Content Hub. Please try again later.",
+    "install-library-lock-timeout": "The library {{ubername}} could not be installed, because the same libraries is being installed from another place (waited {{limit}} ms for lock on the library).",
+    "install-library-lock-max-time-exceeded": "The library {{ubername}} could not be installed, because it took longer than the allowed {{limit}} ms."
 }
