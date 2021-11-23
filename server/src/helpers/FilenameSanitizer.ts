@@ -30,14 +30,14 @@ export function generalizedSanitizeFilename(
     // Shorten the filename if it is too long.
     const numberOfCharactersToCut = cleanedFilename.length - maxLength;
     if (numberOfCharactersToCut < 0) {
-        return cleanedFilename;
+        return cleanedFilename.trim();
     }
 
     const finalBasenameLength = Math.max(
         1,
         cleanedFilename.length - numberOfCharactersToCut
     );
-    return cleanedFilename.substr(0, finalBasenameLength);
+    return cleanedFilename.substr(0, finalBasenameLength).trim();
 }
 
 /**
@@ -58,7 +58,7 @@ export function sanitizeFilename(
     return generalizedSanitizeFilename(
         filename,
         /[~"#%&*:<>?/\\{|}]/g,
-        50,
+        128,
         fallbackFilename
     );
 }
