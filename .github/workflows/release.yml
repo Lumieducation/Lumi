@@ -37,6 +37,7 @@ jobs:
                   CSC_KEY_PASSWORD: ${{ secrets.mac_certs_password }}
                   APPLEID: ${{ secrets.apple_id }}
                   APPLEIDPASSWORD: ${{ secrets.apple_id_password }}
+                  APPLE_ASCPROVIDER: ${{ secrets.apple_ascprovider }}
 
     release-windows:
         needs: release
