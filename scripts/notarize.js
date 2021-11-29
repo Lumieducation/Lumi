@@ -15,7 +15,8 @@ exports.default = async function notarizing(context) {
             appBundleId: 'education.lumi.lumi',
             appPath: `${appOutDir}/${appName}.app`,
             appleId: process.env.APPLEID,
-            appleIdPassword: process.env.APPLEIDPASSWORD
+            appleIdPassword: process.env.APPLEIDPASSWORD,
+            ascProvider: process.env.APPLE_ASCPROVIDER
         });
     }
 
