@@ -3,7 +3,7 @@ const { notarize } = require('electron-notarize');
 
 exports.default = async function notarizing(context) {
     if (process.env.CSC_IDENTITY_AUTO_DISCOVERY !== 'false') {
-        console.log('notarizing');
+        console.log(`notarizing (${process.env.APPLE_ASCPROVIDER})`);
         const { electronPlatformName, appOutDir } = context;
         if (electronPlatformName !== 'darwin') {
             return;
