@@ -3,7 +3,7 @@ const { notarize } = require('electron-notarize');
 
 exports.default = async function notarizing(context) {
     if (process.env.CSC_IDENTITY_AUTO_DISCOVERY !== 'false') {
-        console.log('notarizing');
+        console.log(`notarizing (${process.env.APPLE_ASCPROVIDER})`);
         const { electronPlatformName, appOutDir } = context;
         if (electronPlatformName !== 'darwin') {
             return;
@@ -15,7 +15,8 @@ exports.default = async function notarizing(context) {
             appBundleId: 'education.lumi.lumi',
             appPath: `${appOutDir}/${appName}.app`,
             appleId: process.env.APPLEID,
-            appleIdPassword: process.env.APPLEIDPASSWORD
+            appleIdPassword: process.env.APPLEIDPASSWORD,
+            ascProvider: process.env.APPLE_ASCPROVIDER
         });
     }
 
