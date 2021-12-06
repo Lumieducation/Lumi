@@ -40,7 +40,8 @@ const ignoredInteractionLibraries = [
     'H5P.Table',
     'H5P.Video',
     'H5P.Nil',
-    'H5P.Link'
+    'H5P.Link',
+    'H5P.Shape'
 ];
 
 export function getInteractions(
