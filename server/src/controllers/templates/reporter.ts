@@ -120,14 +120,14 @@ export default function (
     contentId: string
 ): string {
     const reporterClient = fsExtra.readFileSync(
-        `${__dirname}/../../../reporter-client/build/static/js/2.chunk.js`,
+        `${__dirname}/../../../../reporter-client/build/static/js/2.chunk.js`,
         {
             encoding: 'utf-8'
         }
     );
 
     const reporterMain = fsExtra.readFileSync(
-        `${__dirname}/../../../reporter-client/build/static/js/main.chunk.js`,
+        `${__dirname}/../../../../reporter-client/build/static/js/main.chunk.js`,
         {
             encoding: 'utf-8'
         }
@@ -138,6 +138,12 @@ export default function (
 <head>
 <meta charset="utf-8">                    
 <script>H5PIntegration = ${JSON.stringify(integration)};
+if (new URLSearchParams(window.location.search).get('embed') == 'true') {
+    H5PIntegration.contents['cid-' + '${contentId}'].displayOptions.embed = false;
+} else {
+    H5PIntegration.contents['cid-' + '${contentId}'].embedCode = '<iframe src=\"' + window.location.protocol + "//" + window.location.host + window.location.pathname + '?embed=true' + '\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe>';
+    H5PIntegration.contents['cid-' + '${contentId}'].resizeCode = '';
+}
 ${scriptsBundle}</script>
 <style>${stylesBundle}</style>
 </head>
