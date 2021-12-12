@@ -17,7 +17,7 @@ import {
 } from '@lumieducation/h5p-express';
 import i18next from 'i18next';
 
-import electronState from '../state/electronState';
+import StateStorage from '../state/electronState';
 import User from '../h5pImplementations/User';
 import { sanitizeFilename } from '../helpers/FilenameSanitizer';
 import { exportH5P } from '../controllers/ExportController';
@@ -36,7 +36,8 @@ export default function (
     h5pPlayer: H5PPlayer,
     languageOverride: string | 'auto' = 'auto',
     browserWindow: BrowserWindow,
-    translationFunction: ITranslationFunction
+    translationFunction: ITranslationFunction,
+    electronState: StateStorage
 ): express.Router {
     const router = express.Router();
 

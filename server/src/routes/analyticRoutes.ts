@@ -9,9 +9,12 @@ import objectHash from 'object-hash';
 import { getInteractions, getResult } from '../helpers/xAPI';
 
 import _path from 'path';
-import electronState from '../state/electronState';
+import StateStorage from '../state/electronState';
 
-export default function (browserWindow: BrowserWindow): express.Router {
+export default function (
+    browserWindow: BrowserWindow,
+    electronState: StateStorage
+): express.Router {
     const router = express.Router();
 
     router.get('/', async (req: express.Request, res) => {

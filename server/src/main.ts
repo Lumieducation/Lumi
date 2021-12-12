@@ -27,6 +27,7 @@ import createWindow from './boot/clientWindow';
 import migrations from './boot/migrations';
 import initI18n from './boot/i18n';
 import createApp from './boot/expressApp';
+import StateStorage from './state/electronState';
 
 let websocket: SocketIO.Server;
 const tmpDir = process.env.TEMPDATA || path.join(app.getPath('temp'), 'lumi');
@@ -52,12 +53,18 @@ let port: number;
 let currentPath: string = '/';
 const isDevelopment = process.env.NODE_ENV === 'development';
 
+const electronState = new StateStorage();
+
 /**
  * (Re-)Creates the main window.
  * @param websocketArg
  */
 export function createMainWindow(websocketArg: SocketIO.Server): void {
-    mainWindow = createWindow(isDevelopment ? 3000 : port, isDevelopment);
+    mainWindow = createWindow(
+        isDevelopment ? 3000 : port,
+        isDevelopment,
+        electronState
+    );
     mainWindow.on('closed', () => {
         mainWindow = null;
         // If a new main window is recreated later (macOS), we need to
@@ -67,14 +74,26 @@ export function createMainWindow(websocketArg: SocketIO.Server): void {
 
     mainWindow.webContents.on('did-navigate-in-page', (event, url) => {
         currentPath = new URL(url).pathname;
-        updateMenu(currentPath, mainWindow, websocketArg, settingsCache);
+        updateMenu(
+            currentPath,
+            mainWindow,
+            websocketArg,
+            settingsCache,
+            electronState
+        );
     });
 
     i18next.on('languageChanged', (lng) => {
-        updateMenu(currentPath, mainWindow, websocketArg, settingsCache);
+        updateMenu(
+            currentPath,
+            mainWindow,
+            websocketArg,
+            settingsCache,
+            electronState
+        );
     });
 
-    updateMenu('/', mainWindow, websocketArg, settingsCache);
+    updateMenu('/', mainWindow, websocketArg, settingsCache, electronState);
 }
 
 const gotSingleInstanceLock = app.requestSingleInstanceLock();
@@ -208,6 +227,7 @@ if (!gotSingleInstanceLock) {
             mainWindow,
             settingsCache,
             translationFunction,
+            electronState,
             {
                 devMode: electron.app.commandLine.hasSwitch('dev'),
                 libraryDir:

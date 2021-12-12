@@ -9,7 +9,7 @@ import * as H5P from '@lumieducation/h5p-server';
 import Logger from '../helpers/Logger';
 import User from '../h5pImplementations/User';
 import IServerConfig from '../config/IPaths';
-import electronState from '../state/electronState';
+import StateStorage from '../state/electronState';
 import { sanitizeFilename } from '../helpers/FilenameSanitizer';
 
 const log = new Logger('controller:lumi-h5p');
@@ -20,7 +20,8 @@ export default class LumiController {
     constructor(
         private h5pEditor: H5P.H5PEditor,
         serverConfig: IServerConfig,
-        private browserWindow: BrowserWindow
+        private browserWindow: BrowserWindow,
+        private electronState: StateStorage
     ) {
         fs.readJSON(serverConfig.settingsFile).then((settings) => {
             if (settings.privacyPolicyConsent) {
@@ -48,7 +49,7 @@ export default class LumiController {
             if (!path || path === 'undefined') {
                 const result = await dialog.showSaveDialog(this.browserWindow, {
                     defaultPath: _path.join(
-                        electronState.getState().lastDirectory,
+                        this.electronState.getState().lastDirectory,
                         sanitizeFilename(
                             params?.metadata?.title,
                             t('editor.saveAsDialog.fallbackFilename')
@@ -70,13 +71,13 @@ export default class LumiController {
                 throw new LumiError('user-abort', 'Aborted by user', 499);
             }
 
-            electronState.setState({ lastDirectory: _path.dirname(path) });
+            this.electronState.setState({ lastDirectory: _path.dirname(path) });
 
             if (_path.extname(path) !== '.h5p') {
                 path = `${path}.h5p`;
             }
 
-            electronState.setState({ blockKeyboard: true });
+            this.electronState.setState({ blockKeyboard: true });
 
             const stream = fs.createWriteStream(path);
             const packageExporter = new H5P.PackageExporter(
@@ -93,12 +94,12 @@ export default class LumiController {
                     y();
                 });
             }).finally(() => {
-                electronState.setState({ blockKeyboard: false });
+                this.electronState.setState({ blockKeyboard: false });
             });
 
             return { path };
         } catch (error: any) {
-            electronState.setState({ blockKeyboard: false });
+            this.electronState.setState({ blockKeyboard: false });
             Sentry.captureException(error);
         }
     }
@@ -146,7 +147,7 @@ export default class LumiController {
 
     public async open(): Promise<string[]> {
         const response = await dialog.showOpenDialog(this.browserWindow, {
-            defaultPath: electronState.getState().lastDirectory,
+            defaultPath: this.electronState.getState().lastDirectory,
             filters: [
                 {
                     extensions: ['h5p'],
@@ -161,7 +162,7 @@ export default class LumiController {
             response.filePaths.length > 0 &&
             response.filePaths[0] !== ''
         ) {
-            electronState.setState({
+            this.electronState.setState({
                 lastDirectory: _path.dirname(response.filePaths[0])
             });
         }

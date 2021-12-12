@@ -14,6 +14,7 @@ import LumiError from '../helpers/LumiError';
 import routes from '../routes';
 import SettingsCache from '../config/SettingsCache';
 import User from '../h5pImplementations/User';
+import StateStorage from '../state/electronState';
 
 /**
  * Creates the main Express app.
@@ -23,6 +24,7 @@ export default async (
     browserWindow: electron.BrowserWindow,
     settingsCache: SettingsCache,
     translationFunction: TFunction,
+    electronState: StateStorage,
     options?: {
         devMode?: boolean;
         libraryDir?: string;
@@ -123,7 +125,8 @@ export default async (
             serverConfig,
             browserWindow,
             settingsCache,
-            (key, language) => translationFunction(key, { lng: language })
+            (key, language) => translationFunction(key, { lng: language }),
+            electronState
         )
     );
 

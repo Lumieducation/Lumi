@@ -1,4 +1,4 @@
-interface IElectronState {
+export interface IElectronState {
     /**
      * Blocks all keyboard interaction in the window.
      */
@@ -9,7 +9,7 @@ interface IElectronState {
     lastDirectory: string;
 }
 
-class StateStorage {
+export default class StateStorage {
     constructor() {
         this.state = {
             blockKeyboard: false,
@@ -26,5 +26,3 @@ class StateStorage {
         this.state = { ...this.state, ...s };
     }
 }
-
-export default new StateStorage();

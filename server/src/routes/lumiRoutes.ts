@@ -5,19 +5,22 @@ import LumiController from '../controllers/LumiController';
 import Logger from '../helpers/Logger';
 import IServerConfig from '../config/IPaths';
 import { BrowserWindow } from 'electron';
+import StateStorage from '../state/electronState';
 
 const log = new Logger('routes:lumi-h5p');
 
 export default function (
     h5pEditor: H5PEditor,
     serverConfig: IServerConfig,
-    browserWindow: BrowserWindow
+    browserWindow: BrowserWindow,
+    electronState: StateStorage
 ): express.Router {
     const router = express.Router();
     const lumiController = new LumiController(
         h5pEditor,
         serverConfig,
-        browserWindow
+        browserWindow,
+        electronState
     );
 
     router.get(

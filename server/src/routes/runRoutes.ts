@@ -9,7 +9,7 @@ import * as H5P from '@lumieducation/h5p-server';
 import SettingsCache from '../config/SettingsCache';
 import LumiController from '../controllers/LumiController';
 import { globalWebsocket as websocket } from '../boot/websocket';
-import electronState from '../state/electronState';
+import StateStorage from '../state/electronState';
 
 const runHost = process.env.LUMI_HOST || 'https://lumi.run';
 
@@ -17,13 +17,15 @@ export default function (
     serverConfig: IServerConfig,
     h5pEditor: H5P.H5PEditor,
     browserWindow: BrowserWindow,
-    settingsCache: SettingsCache
+    settingsCache: SettingsCache,
+    electronState: StateStorage
 ): express.Router {
     const router = express.Router();
     const lumiController = new LumiController(
         h5pEditor,
         serverConfig,
-        browserWindow
+        browserWindow,
+        electronState
     );
 
     router.get(

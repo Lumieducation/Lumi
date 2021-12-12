@@ -7,6 +7,7 @@ import { dialog, BrowserWindow, MessageBoxOptions } from 'electron';
 
 import SettingsCache from '../../config/SettingsCache';
 import initI18n from '../../boot/i18n';
+import StateStorage from '../../state/electronState';
 
 describe('GET /settings', () => {
     let app: express.Application;
@@ -29,7 +30,8 @@ describe('GET /settings', () => {
             },
             null,
             settingsCache,
-            await initI18n(settingsCache)
+            await initI18n(settingsCache),
+            new StateStorage()
         );
 
         return app;
@@ -67,7 +69,8 @@ describe('PATCH /settings', () => {
             },
             null,
             settingsCache,
-            await initI18n(settingsCache)
+            await initI18n(settingsCache),
+            new StateStorage()
         );
 
         return app;

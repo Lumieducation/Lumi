@@ -9,12 +9,13 @@ import macMenu from './macMenu';
 import windowMenu from './windowMenu';
 import viewMenu from './viewMenu';
 import SettingsCache from '../config/SettingsCache';
-import electronState from '../state/electronState';
+import StateStorage from '../state/electronState';
 
 export default (
     window: electron.BrowserWindow,
     websocket: SocketIO.Server,
-    settingsCache: SettingsCache
+    settingsCache: SettingsCache,
+    electronState: StateStorage
 ) =>
     [
         ...macMenu(),

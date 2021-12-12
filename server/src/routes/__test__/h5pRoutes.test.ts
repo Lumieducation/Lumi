@@ -7,6 +7,7 @@ import fsExtra from 'fs-extra';
 
 import SettingsCache from '../../config/SettingsCache';
 import initI18n from '../../boot/i18n';
+import StateStorage from '../../state/electronState';
 
 describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
     let app: express.Application;
@@ -32,7 +33,8 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
             },
             null,
             settingsCache,
-            await initI18n(settingsCache)
+            await initI18n(settingsCache),
+            new StateStorage()
         );
 
         return app;

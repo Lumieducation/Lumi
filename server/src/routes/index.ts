@@ -24,6 +24,7 @@ import systemRoutes from './systemRoutes';
 import updatesRoutes from './updatesRoutes';
 import User from '../h5pImplementations/User';
 import SettingsCache from '../config/SettingsCache';
+import StateStorage from '../state/electronState';
 
 const log = new Logger('routes');
 
@@ -33,7 +34,8 @@ export default function (
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow,
     settingsCache: SettingsCache,
-    translationFunction: ITranslationFunction
+    translationFunction: ITranslationFunction,
+    electronState: StateStorage
 ): express.Router {
     const router = express.Router();
 
@@ -41,7 +43,10 @@ export default function (
 
     router.use('/api/v1/auth', authRoutes());
     router.use('/api/v1/track', trackingRoutes(serverConfig, settingsCache));
-    router.use('/api/v1/analytics', analyticRoutes(browserWindow));
+    router.use(
+        '/api/v1/analytics',
+        analyticRoutes(browserWindow, electronState)
+    );
 
     // Adding dummy user to make sure all requests can be handled
     router.use((req, res, next) => {
@@ -56,7 +61,13 @@ export default function (
 
     router.use(
         '/api/run',
-        runRoutes(serverConfig, h5pEditor, browserWindow, settingsCache)
+        runRoutes(
+            serverConfig,
+            h5pEditor,
+            browserWindow,
+            settingsCache,
+            electronState
+        )
     );
 
     // // Directly serving the library and content files statically speeds up
@@ -104,7 +115,8 @@ export default function (
             // the language code you need here. 'auto' means the route will try
             // to use the language detected by the i18next language detector.,
             browserWindow,
-            translationFunction
+            translationFunction,
+            electronState
         )
     );
 
@@ -124,7 +136,7 @@ export default function (
 
     router.use(
         '/api/v1/lumi',
-        lumiRoutes(h5pEditor, serverConfig, browserWindow)
+        lumiRoutes(h5pEditor, serverConfig, browserWindow, electronState)
     );
 
     router.get('*', express.static(`${__dirname}/../../client`));

@@ -6,6 +6,7 @@ import express from 'express';
 
 import SettingsCache from '../../config/SettingsCache';
 import initI18n from '../../boot/i18n';
+import StateStorage from '../../state/electronState';
 
 describe('[analytics:routes]: GET /api/v1/analytics', () => {
     let app: express.Application;
@@ -28,7 +29,8 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
             },
             null,
             settingsCache,
-            await initI18n(settingsCache)
+            await initI18n(settingsCache),
+            new StateStorage()
         );
 
         return app;
