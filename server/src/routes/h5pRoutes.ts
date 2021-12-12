@@ -9,7 +9,9 @@ import {
     H5PEditor,
     H5pError,
     H5PPlayer,
+    IEditorModel,
     IIntegration,
+    IPlayerModel,
     ITranslationFunction,
     IUser
 } from '@lumieducation/h5p-server';
