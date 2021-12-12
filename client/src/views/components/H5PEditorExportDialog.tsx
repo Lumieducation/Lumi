@@ -31,6 +31,8 @@ export default function H5PEditorExportDialog() {
         'bundle' | 'external' | 'scorm'
     >('bundle');
     const [includeReporter, setIncludeReporter] = useState<boolean>(true);
+    const [showRights, setShowRights] = useState<boolean>(true);
+    const [showEmbed, setShowEmbed] = useState<boolean>(false);
     const [masteryScore, setMasteryScore] = useState<string>('70');
     const [masteryScoreError, setMasteryScoreError] = useState<string>();
     const [isValid, setIsValid] = useState<boolean>(true);
@@ -104,6 +106,7 @@ export default function H5PEditorExportDialog() {
                                             error={
                                                 masteryScoreError !== undefined
                                             }
+                                            fullWidth
                                             helperText={masteryScoreError}
                                             onChange={(event) => {
                                                 const parsed =
@@ -146,9 +149,23 @@ export default function H5PEditorExportDialog() {
                     <Box>
                         <FormControl>
                             <FormLabel>
-                                {t('editor.exportDialog.reporter.title')}
+                                {t('editor.exportDialog.options.title')}
                             </FormLabel>
-                            <FormHelperText>
+                            <FormControlLabel
+                                control={<Switch />}
+                                checked={
+                                    formatChoice !== 'scorm' && includeReporter
+                                }
+                                disabled={formatChoice === 'scorm'}
+                                onChange={(e, checked) =>
+                                    setIncludeReporter(checked)
+                                }
+                                name="includeReporter"
+                                label={t(
+                                    'editor.exportDialog.reporter.switchLabel'
+                                )}
+                            />
+                            <FormHelperText style={{ marginLeft: '20px' }}>
                                 {t('editor.exportDialog.reporter.hint')}{' '}
                                 <a
                                     href="https://lumieducation.gitbook.io/lumi/analytics/reporter"
@@ -161,28 +178,24 @@ export default function H5PEditorExportDialog() {
                                 </a>
                             </FormHelperText>
                             <FormControlLabel
+                                checked={showRights}
                                 control={<Switch />}
-                                checked={
-                                    formatChoice === 'scorm'
-                                        ? false
-                                        : includeReporter
-                                }
-                                onChange={(e, checked) =>
-                                    setIncludeReporter(checked)
-                                }
-                                disabled={formatChoice === 'scorm'}
-                                name="includeReporter"
-                                label={t(
-                                    'editor.exportDialog.reporter.switchLabel'
-                                )}
+                                label={t('editor.exportDialog.options.rights')}
+                                onChange={(e, checked) => {
+                                    setShowRights(checked);
+                                }}
+                                name="showRights"
                             />
-                            {formatChoice === 'scorm' && (
-                                <FormHelperText>
-                                    {t(
-                                        'editor.exportDialog.reporter.scormHint'
-                                    )}
-                                </FormHelperText>
-                            )}
+                            <FormControlLabel
+                                checked={formatChoice !== 'scorm' && showEmbed}
+                                control={<Switch />}
+                                disabled={formatChoice === 'scorm'}
+                                label={t('editor.exportDialog.options.embed')}
+                                onChange={(e, checked) => {
+                                    setShowEmbed(checked);
+                                }}
+                                name="showEmbed"
+                            />
                         </FormControl>
                     </Box>
                 </DialogContent>
@@ -205,10 +218,15 @@ export default function H5PEditorExportDialog() {
                                         : false,
                                     formatChoice,
                                     {
+                                        showRights,
                                         masteryScore:
                                             formatChoice === 'scorm'
                                                 ? masteryScore
-                                                : undefined
+                                                : undefined,
+                                        showEmbed:
+                                            formatChoice === 'scorm'
+                                                ? false
+                                                : showEmbed
                                     }
                                 )
                             )

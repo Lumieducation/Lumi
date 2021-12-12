@@ -1,6 +1,10 @@
 import express from 'express';
 import electron from 'electron';
-import { H5PEditor, H5PPlayer } from '@lumieducation/h5p-server';
+import {
+    H5PEditor,
+    H5PPlayer,
+    ITranslationFunction
+} from '@lumieducation/h5p-server';
 import {
     h5pAjaxExpressRouter,
     libraryAdministrationExpressRouter,
@@ -28,7 +32,8 @@ export default function (
     h5pPlayer: H5PPlayer,
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow,
-    settingsCache: SettingsCache
+    settingsCache: SettingsCache,
+    translationFunction: ITranslationFunction
 ): express.Router {
     const router = express.Router();
 
@@ -98,7 +103,8 @@ export default function (
             'auto', // You can change the language of the editor here by sett
             // the language code you need here. 'auto' means the route will try
             // to use the language detected by the i18next language detector.,
-            browserWindow
+            browserWindow,
+            translationFunction
         )
     );
 

@@ -218,7 +218,7 @@ if (!gotSingleInstanceLock) {
         );
 
         log.info('app is ready');
-        const server = await createHttpServer(expressApp);
+        const server = await createHttpServer(expressApp, isDevelopment);
         log.info('server booted');
 
         // The port in production is random and is 3000 in dev.

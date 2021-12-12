@@ -48,7 +48,10 @@ export default async (
     const h5pPlayer = new H5P.H5PPlayer(
         h5pEditor.libraryStorage,
         h5pEditor.contentStorage,
-        config
+        config,
+        undefined,
+        undefined,
+        (key, language) => translationFunction(key, { lng: language })
     );
 
     h5pPlayer.setRenderer((model) => model);
@@ -114,7 +117,14 @@ export default async (
     });
     app.use(
         '/',
-        routes(h5pEditor, h5pPlayer, serverConfig, browserWindow, settingsCache)
+        routes(
+            h5pEditor,
+            h5pPlayer,
+            serverConfig,
+            browserWindow,
+            settingsCache,
+            (key, language) => translationFunction(key, { lng: language })
+        )
     );
 
     // The error handler must be before any other error middleware and after all controllers

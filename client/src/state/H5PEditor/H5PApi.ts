@@ -10,12 +10,12 @@ export function exportContent(
     contentId: string,
     includeReporter: boolean,
     format: 'bundle' | 'external' | 'scorm',
-    options: { masteryScore?: string }
+    options: { masteryScore?: string; showEmbed: boolean; showRights: boolean }
 ): Promise<superagent.Response> {
     return superagent.get(
         `/api/v1/h5p/${contentId}/export?includeReporter=${includeReporter}&format=${format}${
             options.masteryScore ? `&masteryScore=${options.masteryScore}` : ''
-        }`
+        }&showRights=${options.showRights.toString()}&showEmbed=${options.showEmbed.toString()}`
     );
 }
 
