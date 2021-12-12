@@ -9,6 +9,7 @@ import objectHash from 'object-hash';
 import { getInteractions, getResult } from '../helpers/xAPI';
 
 import _path from 'path';
+import electronState from '../state/electronState';
 
 export default function (browserWindow: BrowserWindow): express.Router {
     const router = express.Router();
@@ -16,7 +17,8 @@ export default function (browserWindow: BrowserWindow): express.Router {
     router.get('/', async (req: express.Request, res) => {
         try {
             const openDialog = await dialog.showOpenDialog(browserWindow, {
-                properties: ['openDirectory']
+                properties: ['openDirectory'],
+                defaultPath: electronState.getState().lastDirectory
             });
 
             if (openDialog.canceled) {
@@ -24,6 +26,8 @@ export default function (browserWindow: BrowserWindow): express.Router {
             }
 
             const filePath = openDialog.filePaths[0];
+
+            electronState.setState({ lastDirectory: _path.dirname(filePath) });
 
             const files = await recursiveReaddir(filePath, [
                 '!*.[Ll][Uu][Mm][Ii]'

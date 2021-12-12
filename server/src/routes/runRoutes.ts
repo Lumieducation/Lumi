@@ -9,6 +9,7 @@ import * as H5P from '@lumieducation/h5p-server';
 import SettingsCache from '../config/SettingsCache';
 import LumiController from '../controllers/LumiController';
 import { globalWebsocket as websocket } from '../boot/websocket';
+import electronState from '../state/electronState';
 
 const runHost = process.env.LUMI_HOST || 'https://lumi.run';
 
@@ -102,6 +103,7 @@ export default function (
                     const { filePaths } = await dialog.showOpenDialog(
                         browserWindow,
                         {
+                            defaultPath: electronState.getState().lastDirectory,
                             filters: [
                                 {
                                     extensions: ['h5p'],
@@ -112,7 +114,12 @@ export default function (
                         }
                     );
 
-                    filePath = filePaths[0];
+                    if (filePath.length > 0) {
+                        filePath = filePaths[0];
+                        electronState.setState({
+                            lastDirectory: path.dirname(filePath)
+                        });
+                    }
                 }
 
                 if (!filePath) {

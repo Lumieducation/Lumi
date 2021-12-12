@@ -1,5 +1,3 @@
-// file deepcode ignore NoRateLimitingForExpensiveWebOperation: No public API
-
 import express from 'express';
 import * as Sentry from '@sentry/node';
 import { BrowserWindow, dialog } from 'electron';
@@ -87,11 +85,13 @@ export default function (
                 req.user
             );
             const result = await dialog.showSaveDialog(browserWindow, {
-                defaultPath:
+                defaultPath: _path.join(
+                    electronState.getState().lastDirectory,
                     sanitizeFilename(
                         params.metadata.title,
                         t('edit.exportDialog.defaults.fileName')
-                    ) ?? t('edit.exportDialog.defaults.fileName'),
+                    ) ?? t('edit.exportDialog.defaults.fileName')
+                ),
                 filters: [
                     {
                         extensions: [expectedExtension],
@@ -109,6 +109,9 @@ export default function (
                 return res.status(499).end();
             }
             let filePath = result.filePath;
+
+            electronState.setState({ lastDirectory: _path.dirname(filePath) });
+
             let actualExtension = _path.extname(filePath);
             if (actualExtension !== `.${expectedExtension}`) {
                 filePath = `${filePath}.${expectedExtension}`;

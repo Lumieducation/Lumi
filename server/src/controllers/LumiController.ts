@@ -47,11 +47,13 @@ export default class LumiController {
 
             if (!path || path === 'undefined') {
                 const result = await dialog.showSaveDialog(this.browserWindow, {
-                    defaultPath:
+                    defaultPath: _path.join(
+                        electronState.getState().lastDirectory,
                         sanitizeFilename(
                             params?.metadata?.title,
                             t('editor.saveAsDialog.fallbackFilename')
-                        ) ?? t('editor.saveAsDialog.fallbackFilename'),
+                        ) ?? t('editor.saveAsDialog.fallbackFilename')
+                    ),
                     filters: [
                         {
                             extensions: ['h5p'],
@@ -67,6 +69,8 @@ export default class LumiController {
             if (!path) {
                 throw new LumiError('user-abort', 'Aborted by user', 499);
             }
+
+            electronState.setState({ lastDirectory: _path.dirname(path) });
 
             if (_path.extname(path) !== '.h5p') {
                 path = `${path}.h5p`;
@@ -142,6 +146,7 @@ export default class LumiController {
 
     public async open(): Promise<string[]> {
         const response = await dialog.showOpenDialog(this.browserWindow, {
+            defaultPath: electronState.getState().lastDirectory,
             filters: [
                 {
                     extensions: ['h5p'],
@@ -150,6 +155,16 @@ export default class LumiController {
             ],
             properties: ['openFile', 'multiSelections']
         });
+
+        if (
+            response.filePaths &&
+            response.filePaths.length > 0 &&
+            response.filePaths[0] !== ''
+        ) {
+            electronState.setState({
+                lastDirectory: _path.dirname(response.filePaths[0])
+            });
+        }
 
         return response.filePaths;
     }

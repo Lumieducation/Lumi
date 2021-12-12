@@ -1,6 +1,7 @@
 import electron from 'electron';
 import SocketIO from 'socket.io';
 import i18next from 'i18next';
+import path from 'path';
 
 import helpMenu from './helpMenu';
 import editMenu from './editMenu';
@@ -8,6 +9,7 @@ import macMenu from './macMenu';
 import windowMenu from './windowMenu';
 import viewMenu from './viewMenu';
 import SettingsCache from '../config/SettingsCache';
+import electronState from '../state/electronState';
 
 export default (
     window: electron.BrowserWindow,
@@ -37,6 +39,8 @@ export default (
                     click: () => {
                         electron.dialog
                             .showOpenDialog({
+                                defaultPath:
+                                    electronState.getState().lastDirectory,
                                 filters: [
                                     {
                                         extensions: ['h5p'],
@@ -46,6 +50,16 @@ export default (
                                 properties: ['openFile', 'multiSelections']
                             })
                             .then(({ filePaths }) => {
+                                if (
+                                    filePaths.length > 0 &&
+                                    filePaths[0] !== ''
+                                ) {
+                                    electronState.setState({
+                                        lastDirectory: path.dirname(
+                                            filePaths[0]
+                                        )
+                                    });
+                                }
                                 websocket.emit('action', {
                                     payload: {
                                         paths: filePaths
