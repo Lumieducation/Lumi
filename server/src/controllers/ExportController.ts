@@ -12,6 +12,7 @@ import scopackager from 'simple-scorm-packager';
 import i18next from 'i18next';
 import reporterTemplate from './templates/reporter';
 import scormTemplate from './templates/scorm';
+import simpleTemplate from './templates/simple';
 
 const t = i18next.getFixedT(null, 'lumi');
 
@@ -206,7 +207,7 @@ export async function exportH5P(
             ? reporterTemplate
             : options.format === 'scorm'
             ? scormTemplate
-            : undefined,
+            : simpleTemplate(50, 50, 800),
         translationFunction
     );
 
