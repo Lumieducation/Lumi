@@ -16,7 +16,20 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import Switch from '@material-ui/core/Switch';
 
 import { actions, IState } from '../../state';
-import { Box, FormHelperText, TextField } from '@material-ui/core';
+import {
+    Box,
+    Checkbox,
+    FormHelperText,
+    InputAdornment,
+    TextField
+} from '@material-ui/core';
+import {
+    Accordion,
+    AccordionDetails,
+    AccordionSummary,
+    Stack
+} from '@mui/material';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 export default function H5PEditorExportDialog() {
     const dispatch = useDispatch();
@@ -49,7 +62,7 @@ export default function H5PEditorExportDialog() {
                     {t('editor.exportDialog.title')}
                 </DialogTitle>
                 <DialogContent>
-                    <Box paddingBottom={4}>
+                    <Box paddingBottom={2}>
                         <FormControl>
                             <FormLabel>
                                 {t('editor.exportDialog.format.title')}
@@ -97,8 +110,9 @@ export default function H5PEditorExportDialog() {
                                     )}
                                 />
                                 {formatChoice === 'scorm' && (
-                                    <Box marginLeft={2}>
+                                    <Box mt={1}>
                                         <TextField
+                                            style={{ width: '35ch' }}
                                             label={t(
                                                 'editor.exportDialog.format.scorm.masteryScoreLabel'
                                             )}
@@ -106,8 +120,17 @@ export default function H5PEditorExportDialog() {
                                             error={
                                                 masteryScoreError !== undefined
                                             }
-                                            fullWidth
                                             helperText={masteryScoreError}
+                                            variant="outlined"
+                                            type="number"
+                                            size="small"
+                                            InputProps={{
+                                                endAdornment: (
+                                                    <InputAdornment position="end">
+                                                        %
+                                                    </InputAdornment>
+                                                )
+                                            }}
                                             onChange={(event) => {
                                                 const parsed =
                                                     Number.parseFloat(
@@ -146,11 +169,13 @@ export default function H5PEditorExportDialog() {
                             </RadioGroup>
                         </FormControl>
                     </Box>
-                    <Box>
+                    <Stack paddingBottom={2}>
                         <FormControl>
                             <FormLabel>
                                 {t('editor.exportDialog.options.title')}
                             </FormLabel>
+                        </FormControl>
+                        <FormControl>
                             <FormControlLabel
                                 control={<Switch />}
                                 checked={
@@ -165,7 +190,12 @@ export default function H5PEditorExportDialog() {
                                     'editor.exportDialog.reporter.switchLabel'
                                 )}
                             />
-                            <FormHelperText style={{ marginLeft: '20px' }}>
+                            <FormHelperText
+                                style={{
+                                    marginBottom: '5px',
+                                    marginLeft: '20px'
+                                }}
+                            >
                                 {t('editor.exportDialog.reporter.hint')}{' '}
                                 <a
                                     href="https://lumieducation.gitbook.io/lumi/analytics/reporter"
@@ -177,6 +207,8 @@ export default function H5PEditorExportDialog() {
                                     )}
                                 </a>
                             </FormHelperText>
+                        </FormControl>
+                        <FormControl>
                             <FormControlLabel
                                 checked={showRights}
                                 control={<Switch />}
@@ -186,6 +218,8 @@ export default function H5PEditorExportDialog() {
                                 }}
                                 name="showRights"
                             />
+                        </FormControl>
+                        <FormControl>
                             <FormControlLabel
                                 checked={formatChoice !== 'scorm' && showEmbed}
                                 control={<Switch />}
@@ -197,7 +231,82 @@ export default function H5PEditorExportDialog() {
                                 name="showEmbed"
                             />
                         </FormControl>
-                    </Box>
+                    </Stack>
+                    <Accordion>
+                        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                            Display options
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <Stack spacing={2}>
+                                <Stack direction="row" spacing={2}>
+                                    <FormControl style={{ width: '35ch' }}>
+                                        <TextField
+                                            label="Right & left margin"
+                                            variant="outlined"
+                                            type="number"
+                                            size="small"
+                                            InputProps={{
+                                                endAdornment: (
+                                                    <InputAdornment position="end">
+                                                        px
+                                                    </InputAdornment>
+                                                )
+                                            }}
+                                        />
+                                    </FormControl>
+                                    <FormControl style={{ width: '35ch' }}>
+                                        <TextField
+                                            label="Top & bottom margin"
+                                            type="number"
+                                            variant="outlined"
+                                            size="small"
+                                            InputProps={{
+                                                endAdornment: (
+                                                    <InputAdornment position="end">
+                                                        px
+                                                    </InputAdornment>
+                                                )
+                                            }}
+                                        />
+                                    </FormControl>
+                                </Stack>
+                                <Stack direction="row">
+                                    <FormControl>
+                                        <FormControlLabel
+                                            control={<Checkbox />}
+                                            label="Restrict width and align centrally"
+                                        />
+                                    </FormControl>
+                                    <FormControl style={{ width: '25ch' }}>
+                                        <TextField
+                                            label="Maximum width"
+                                            variant="outlined"
+                                            type="number"
+                                            size="small"
+                                            InputProps={{
+                                                endAdornment: (
+                                                    <InputAdornment position="end">
+                                                        px
+                                                    </InputAdornment>
+                                                )
+                                            }}
+                                        />
+                                    </FormControl>
+                                </Stack>
+                                <Stack direction="row" alignItems="center">
+                                    <FormControl>
+                                        <FormControlLabel
+                                            control={<Checkbox />}
+                                            label="Add CSS file"
+                                        />
+                                    </FormControl>
+                                    <FormHelperText>filename</FormHelperText>
+                                    <Box flexGrow="1" />
+                                    <Button size="small">choose</Button>
+                                </Stack>
+                            </Stack>
+                        </AccordionDetails>
+                    </Accordion>
                 </DialogContent>
                 <DialogActions>
                     <Button
