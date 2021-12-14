@@ -27,9 +27,7 @@
                 "externalHint": "Al següent pas, se us demanarà un nom per al fitxer HTML. Els fitxers multimèdia es col·locaran a carpetes que comencin amb el mateix nom que el fitxer.",
                 "scorm": {
                     "label": "Paquet SCORM",
-                    "masteryScoreLabel": "Puntuació de domini (en%)",
-                    "errorNaN": "El valor introduït no és un número",
-                    "errorRange": "El valor ha d’estar entre 0 i 100"
+                    "masteryScoreLabel": "Puntuació de domini"
                 }
             },
             "reporter": {
@@ -53,11 +51,27 @@
                 "title": "Contingut H5P",
                 "filename": "La meva exportació H5P"
             },
-            "options": {
-                "title": "Opcions",
+            "validationErrors": {
+                "errorNaN": "El valor introduït no és un número",
+                "errorRangeMin": "El valor ha de ser superior a {{min}}",
+                "errorRangeMax": "El valor ha de ser inferior a {{max}}",
+                "errorRange": "El valor ha d'estar entre {{min}} i {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Afegeix funcionalitat",
                 "rights": "Mostra els drets i els permisos",
                 "embed": "Mostra l'enllaç incrustat"
-            }
+            },
+            "displayOptions": {
+                "marginX": "Marge dret i esquerre",
+                "marginY": "Marge superior i inferior",
+                "restrictWidthAndAlign": "Restringeix l'amplada i alinea'l centralment",
+                "maximumWidth": "Amplada màxima",
+                "addCss": "Afegeix un fitxer CSS",
+                "chooseCssFile": "triar",
+                "title": "Opcions de visualització"
+            },
+            "pixelsAbbreviation": "px"
         },
         "saveAsDialog": {
             "title": "Guardar com",

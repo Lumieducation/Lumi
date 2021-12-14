@@ -108,9 +108,7 @@
                 "externalHint": "You will be asked for a name for the HTML file in the next step. The media files will be put into folders that start with the same name as the file.",
                 "scorm": {
                     "label": "SCORM package",
-                    "masteryScoreLabel": "Mastery score (in %)",
-                    "errorNaN": "Entered value is not a number",
-                    "errorRange": "The value must be between 0 and 100"
+                    "masteryScoreLabel": "Mastery score"
                 }
             },
             "reporter": {
@@ -118,10 +116,19 @@
                 "switchLabel": "Include reporter",
                 "learnMoreLink": "Learn more about it here."
             },
-            "options": {
-                "title": "Options",
+            "addFunctionality": {
+                "title": "Add functionality",
                 "rights": "Show rights and permissions",
                 "embed": "Show embed link"
+            },
+            "displayOptions": {
+                "title": "Display options",
+                "marginX": "Right & left margin",
+                "marginY": "Top & bottom margin",
+                "restrictWidthAndAlign": "Restrict width and align centrally",
+                "maximumWidth": "Maximum width",
+                "addCss": "Add CSS file",
+                "chooseCssFile": "choose"
             },
             "cancelButton": "Cancel",
             "exportButton": "Export now",
@@ -138,7 +145,14 @@
                 "authorName": "H5P Author",
                 "title": "H5P Content",
                 "filename": "My H5P export"
-            }
+            },
+            "validationErrors": {
+                "errorNaN": "Entered value is not a number",
+                "errorRangeMin": "The value must be greater than {{min}}",
+                "errorRangeMax": "The value must be smaller than {{max}}",
+                "errorRange": "The value must be between {{min}} and {{max}}"
+            },
+            "pixelsAbbreviation": "px"
         }
     },
     "settings": {

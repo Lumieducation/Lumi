@@ -27,9 +27,7 @@
                 "externalHint": "U sljedećem koraku zatražit ćete ime za HTML datoteku. Medijske datoteke stavit će se u mape koje započinju istim imenom kao i datoteka.",
                 "scorm": {
                     "label": "SCORM paket",
-                    "masteryScoreLabel": "Ocjena majstorstva (u%)",
-                    "errorNaN": "Unesena vrijednost nije broj",
-                    "errorRange": "Vrijednost mora biti između 0 i 100"
+                    "masteryScoreLabel": "Majstorski rezultat"
                 }
             },
             "reporter": {
@@ -53,11 +51,27 @@
                 "title": "H5P Sadržaj",
                 "filename": "Moj H5P izvoz"
             },
-            "options": {
-                "title": "Opcije",
+            "validationErrors": {
+                "errorNaN": "Unesena vrijednost nije broj",
+                "errorRangeMin": "Vrijednost mora biti veća od {{min}}",
+                "errorRangeMax": "Vrijednost mora biti manja od {{max}}",
+                "errorRange": "Vrijednost mora biti između {{min}} i {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Dodajte funkcionalnost",
                 "rights": "Prikaži prava i dozvole",
                 "embed": "Prikaži vezu za ugradnju"
-            }
+            },
+            "displayOptions": {
+                "marginX": "Desna i lijeva margina",
+                "marginY": "Gornja i donja margina",
+                "restrictWidthAndAlign": "Ograničite širinu i poravnajte centralno",
+                "maximumWidth": "Maksimalna širina",
+                "addCss": "Dodajte CSS fajl",
+                "chooseCssFile": "izabrati",
+                "title": "Opcije prikaza"
+            },
+            "pixelsAbbreviation": "px"
         },
         "saveAsDialog": {
             "title": "Sačuvaj kao",

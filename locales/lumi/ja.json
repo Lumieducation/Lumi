@@ -76,10 +76,8 @@
                 "externalHint": "次のステップで、HTMLファイルの名前を尋ねられます。メディアファイルは、ファイルと同じ名前で始まるフォルダーに配置されます。",
                 "externalLabel": "1つのHTMLファイルと複数のメディアファイル",
                 "scorm": {
-                    "errorNaN": "入力した値は数値ではありません",
-                    "errorRange": "値は0〜100の間でなければなりません",
                     "label": "SCORMパッケージ",
-                    "masteryScoreLabel": "マスタリースコア（％）"
+                    "masteryScoreLabel": "マスタリースコア"
                 },
                 "title": "フォーマット"
             },
@@ -89,11 +87,27 @@
                 "switchLabel": "レポーターを含める"
             },
             "title": "設定のエクスポート",
-            "options": {
-                "title": "オプション",
+            "validationErrors": {
+                "errorNaN": "入力した値は数値ではありません",
+                "errorRangeMin": "{{min}}より大きくなければなりません",
+                "errorRangeMax": "{{max}}未満である必要があります",
+                "errorRange": "{{min}}から{{max}}間でなければなりません"
+            },
+            "addFunctionality": {
+                "title": "機能を追加する",
                 "rights": "権限と権限を表示する",
                 "embed": "埋め込みリンクを表示"
-            }
+            },
+            "displayOptions": {
+                "marginX": "左右の余白",
+                "marginY": "上マージンと下マージン",
+                "restrictWidthAndAlign": "幅を制限し、中央に揃えます",
+                "maximumWidth": "最大幅",
+                "addCss": "CSSファイルを追加する",
+                "chooseCssFile": "選ぶ",
+                "title": "表示オプション"
+            },
+            "pixelsAbbreviation": "px"
         },
         "sidebar": {
             "create": "新しいH5Pファイル",

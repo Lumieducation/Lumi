@@ -49,6 +49,71 @@ export default function H5PEditorExportDialog() {
     const [masteryScore, setMasteryScore] = useState<string>('70');
     const [masteryScoreError, setMasteryScoreError] = useState<string>();
     const [isValid, setIsValid] = useState<boolean>(true);
+    const [marginX, setMarginX] = useState<string>('20');
+    const [marginXError, setMarginXError] = useState<string>();
+    const [marginY, setMarginY] = useState<string>('20');
+    const [marginYError, setMarginYError] = useState<string>();
+    const [restrictWidthAndCenter, setRestrictWidthAndCenter] =
+        useState<boolean>(true);
+    const [maxWidth, setMaxWidth] = useState<string>('800');
+    const [maxWidthError, setMaxWidthError] = useState<string>();
+    const [addCss, setAddCss] = useState<boolean>(false);
+    const [cssPath, setCssPath] = useState<string>('');
+
+    const checkAndSetNumber =
+        (
+            errorSetter: {
+                (value: React.SetStateAction<string | undefined>): void;
+                (arg0: undefined): void;
+            },
+            setter: {
+                (value: React.SetStateAction<string>): void;
+                (arg0: string): void;
+            },
+            min?: number,
+            max?: number
+        ) =>
+        (event: { target: { value: string } }) => {
+            const parsed = Number.parseFloat(event.target.value);
+            if (isNaN(parsed)) {
+                errorSetter(t('editor.exportDialog.validationErrors.errorNaN'));
+                setIsValid(false);
+            } else if (
+                (min !== undefined && parsed < min) ||
+                (max !== undefined && parsed > max)
+            ) {
+                let message;
+                if (min !== undefined && max !== undefined) {
+                    message = t(
+                        'editor.exportDialog.validationErrors.errorRange',
+                        {
+                            min,
+                            max
+                        }
+                    );
+                } else if (min !== undefined) {
+                    message = t(
+                        'editor.exportDialog.validationErrors.errorRangeMin',
+                        {
+                            min
+                        }
+                    );
+                } else {
+                    message = t(
+                        'editor.exportDialog.validationErrors.errorRangeMax',
+                        {
+                            max
+                        }
+                    );
+                }
+                errorSetter(message);
+                setIsValid(false);
+            } else {
+                errorSetter(undefined);
+                setIsValid(true);
+            }
+            setter(event.target.value);
+        };
 
     return (
         <div>
@@ -70,9 +135,16 @@ export default function H5PEditorExportDialog() {
                             <RadioGroup
                                 name="exportformat"
                                 value={formatChoice}
-                                onChange={(e, val) =>
-                                    setFormatChoice(val as any)
-                                }
+                                onChange={(e, val) => {
+                                    if (
+                                        formatChoice === 'scorm' &&
+                                        val !== 'scorm' &&
+                                        masteryScore === ''
+                                    ) {
+                                        setMasteryScore('70');
+                                    }
+                                    setFormatChoice(val as any);
+                                }}
                             >
                                 <FormControlLabel
                                     value="bundle"
@@ -131,38 +203,12 @@ export default function H5PEditorExportDialog() {
                                                     </InputAdornment>
                                                 )
                                             }}
-                                            onChange={(event) => {
-                                                const parsed =
-                                                    Number.parseFloat(
-                                                        event.target.value
-                                                    );
-                                                if (isNaN(parsed)) {
-                                                    setMasteryScoreError(
-                                                        t(
-                                                            'editor.exportDialog.format.scorm.errorNaN'
-                                                        )
-                                                    );
-                                                    setIsValid(false);
-                                                } else if (
-                                                    parsed < 0 ||
-                                                    parsed > 100
-                                                ) {
-                                                    setMasteryScoreError(
-                                                        t(
-                                                            'editor.exportDialog.format.scorm.errorRange'
-                                                        )
-                                                    );
-                                                    setIsValid(false);
-                                                } else {
-                                                    setMasteryScoreError(
-                                                        undefined
-                                                    );
-                                                    setIsValid(true);
-                                                }
-                                                setMasteryScore(
-                                                    event.target.value
-                                                );
-                                            }}
+                                            onChange={checkAndSetNumber(
+                                                setMasteryScoreError,
+                                                setMasteryScore,
+                                                0,
+                                                100
+                                            )}
                                         />
                                     </Box>
                                 )}
@@ -172,7 +218,9 @@ export default function H5PEditorExportDialog() {
                     <Stack paddingBottom={2}>
                         <FormControl>
                             <FormLabel>
-                                {t('editor.exportDialog.options.title')}
+                                {t(
+                                    'editor.exportDialog.addFunctionality.title'
+                                )}
                             </FormLabel>
                         </FormControl>
                         <FormControl>
@@ -212,7 +260,9 @@ export default function H5PEditorExportDialog() {
                             <FormControlLabel
                                 checked={showRights}
                                 control={<Switch />}
-                                label={t('editor.exportDialog.options.rights')}
+                                label={t(
+                                    'editor.exportDialog.addFunctionality.rights'
+                                )}
                                 onChange={(e, checked) => {
                                     setShowRights(checked);
                                 }}
@@ -224,7 +274,9 @@ export default function H5PEditorExportDialog() {
                                 checked={formatChoice !== 'scorm' && showEmbed}
                                 control={<Switch />}
                                 disabled={formatChoice === 'scorm'}
-                                label={t('editor.exportDialog.options.embed')}
+                                label={t(
+                                    'editor.exportDialog.addFunctionality.embed'
+                                )}
                                 onChange={(e, checked) => {
                                     setShowEmbed(checked);
                                 }}
@@ -234,39 +286,63 @@ export default function H5PEditorExportDialog() {
                     </Stack>
                     <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            Display options
+                            {t('editor.exportDialog.displayOptions.title')}
                         </AccordionSummary>
                         <AccordionDetails>
                             <Stack spacing={2}>
                                 <Stack direction="row" spacing={2}>
                                     <FormControl style={{ width: '35ch' }}>
                                         <TextField
-                                            label="Right & left margin"
+                                            label={t(
+                                                'editor.exportDialog.displayOptions.marginX'
+                                            )}
                                             variant="outlined"
                                             type="number"
                                             size="small"
                                             InputProps={{
                                                 endAdornment: (
                                                     <InputAdornment position="end">
-                                                        px
+                                                        {t(
+                                                            'editor.exportDialog.pixelsAbbreviation'
+                                                        )}
                                                     </InputAdornment>
                                                 )
                                             }}
+                                            error={marginXError !== undefined}
+                                            helperText={marginXError}
+                                            value={marginX}
+                                            onChange={checkAndSetNumber(
+                                                setMarginXError,
+                                                setMarginX,
+                                                0
+                                            )}
                                         />
                                     </FormControl>
                                     <FormControl style={{ width: '35ch' }}>
                                         <TextField
-                                            label="Top & bottom margin"
+                                            label={t(
+                                                'editor.exportDialog.displayOptions.marginY'
+                                            )}
                                             type="number"
                                             variant="outlined"
                                             size="small"
                                             InputProps={{
                                                 endAdornment: (
                                                     <InputAdornment position="end">
-                                                        px
+                                                        {t(
+                                                            'editor.exportDialog.pixelsAbbreviation'
+                                                        )}
                                                     </InputAdornment>
                                                 )
                                             }}
+                                            error={marginYError !== undefined}
+                                            helperText={marginYError}
+                                            value={marginY}
+                                            onChange={checkAndSetNumber(
+                                                setMarginYError,
+                                                setMarginY,
+                                                0
+                                            )}
                                         />
                                     </FormControl>
                                 </Stack>
@@ -274,22 +350,43 @@ export default function H5PEditorExportDialog() {
                                     <FormControl>
                                         <FormControlLabel
                                             control={<Checkbox />}
-                                            label="Restrict width and align centrally"
+                                            label={t(
+                                                'editor.exportDialog.displayOptions.restrictWidthAndAlign'
+                                            )}
+                                            checked={restrictWidthAndCenter}
+                                            onChange={(e, checked) =>
+                                                setRestrictWidthAndCenter(
+                                                    checked
+                                                )
+                                            }
                                         />
                                     </FormControl>
                                     <FormControl style={{ width: '25ch' }}>
                                         <TextField
-                                            label="Maximum width"
+                                            label={t(
+                                                'editor.exportDialog.displayOptions.maximumWidth'
+                                            )}
                                             variant="outlined"
                                             type="number"
                                             size="small"
+                                            disabled={!restrictWidthAndCenter}
                                             InputProps={{
                                                 endAdornment: (
                                                     <InputAdornment position="end">
-                                                        px
+                                                        {t(
+                                                            'editor.exportDialog.pixelsAbbreviation'
+                                                        )}
                                                     </InputAdornment>
                                                 )
                                             }}
+                                            error={maxWidthError !== undefined}
+                                            helperText={maxWidthError}
+                                            value={maxWidth}
+                                            onChange={checkAndSetNumber(
+                                                setMaxWidthError,
+                                                setMaxWidth,
+                                                0
+                                            )}
                                         />
                                     </FormControl>
                                 </Stack>
@@ -297,12 +394,22 @@ export default function H5PEditorExportDialog() {
                                     <FormControl>
                                         <FormControlLabel
                                             control={<Checkbox />}
-                                            label="Add CSS file"
+                                            label={t(
+                                                'editor.exportDialog.displayOptions.addCss'
+                                            )}
+                                            checked={addCss}
+                                            onChange={(e, checked) =>
+                                                setAddCss(checked)
+                                            }
                                         />
                                     </FormControl>
                                     <FormHelperText>filename</FormHelperText>
                                     <Box flexGrow="1" />
-                                    <Button size="small">choose</Button>
+                                    <Button disabled={!addCss} size="small">
+                                        {t(
+                                            'editor.exportDialog.displayOptions.chooseCssFile'
+                                        )}
+                                    </Button>
                                 </Stack>
                             </Stack>
                         </AccordionDetails>
@@ -340,7 +447,7 @@ export default function H5PEditorExportDialog() {
                                 )
                             )
                         }
-                        disabled={formatChoice === 'scorm' && !isValid}
+                        disabled={!isValid}
                     >
                         {t('editor.exportDialog.exportButton')}
                     </Button>

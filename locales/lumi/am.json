@@ -27,9 +27,7 @@
                 "externalHint": "በሚቀጥለው ደረጃ ለኤችቲኤምኤል ፋይል ስም ይጠየቃሉ። የሚዲያ ፋይሎቹ ከፋይሉ ጋር በተመሳሳይ ስም በሚጀምሩ አቃፊዎች ውስጥ ይቀመጣሉ ፡፡",
                 "scorm": {
                     "label": "የ SCORM ጥቅል",
-                    "masteryScoreLabel": "ዋና ውጤት (በ% ውስጥ)",
-                    "errorNaN": "የገባ እሴት ቁጥር አይደለም",
-                    "errorRange": "እሴቱ ከ 0 እስከ 100 መሆን አለበት"
+                    "masteryScoreLabel": "የላቀ ውጤት"
                 }
             },
             "reporter": {
@@ -53,11 +51,27 @@
                 "title": "H5P ይዘት",
                 "filename": "የእኔ H5P ወደ ውጭ መላክ"
             },
-            "options": {
-                "title": "አማራጮች",
+            "validationErrors": {
+                "errorNaN": "የገባው እሴት ቁጥር አይደለም።",
+                "errorRangeMin": "{{min}} በላይ መሆን አለበት።",
+                "errorRangeMax": "{{max}} ያነሰ መሆን አለበት።",
+                "errorRange": "{{min}} እና {{max}} መካከል መሆን አለበት።"
+            },
+            "addFunctionality": {
+                "title": "ተግባራዊነትን ጨምር",
                 "rights": "መብቶችን እና ፈቃዶችን አሳይ",
                 "embed": "የተከተተ አገናኝ አሳይ"
-            }
+            },
+            "displayOptions": {
+                "marginX": "የቀኝ እና የግራ ህዳግ",
+                "marginY": "የላይኛው እና የታችኛው ህዳግ",
+                "restrictWidthAndAlign": "ስፋቱን ይገድቡ እና ወደ ማእከላዊ አሰላለፍ",
+                "maximumWidth": "ከፍተኛው ስፋት",
+                "addCss": "የ CSS ፋይል ያክሉ",
+                "chooseCssFile": "መምረጥ",
+                "title": "የማሳያ አማራጮች"
+            },
+            "pixelsAbbreviation": "px"
         },
         "saveAsDialog": {
             "title": "አስቀምጥ እንደ",

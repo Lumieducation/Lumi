@@ -27,9 +27,7 @@
                 "externalHint": "سيُطلب منك اسم ملف HTML في الخطوة التالية. سيتم وضع ملفات الوسائط في مجلدات تبدأ بنفس اسم الملف.",
                 "scorm": {
                     "label": "حزمة SCORM",
-                    "masteryScoreLabel": "درجة الإتقان (٪)",
-                    "errorNaN": "القيمة التي تم إدخالها ليست رقمًا",
-                    "errorRange": "يجب أن تكون القيمة بين 0 و 100"
+                    "masteryScoreLabel": "نقاط الإتقان"
                 }
             },
             "reporter": {
@@ -53,11 +51,27 @@
                 "title": "محتوى H5P",
                 "filename": "تصدير H5P الخاص بي"
             },
-            "options": {
-                "title": "خيارات",
+            "validationErrors": {
+                "errorNaN": "القيمة التي تم إدخالها ليست رقمًا",
+                "errorRangeMin": "يجب أن تكون القيمة أكبر من {{min}}",
+                "errorRangeMax": "يجب أن تكون القيمة أصغر من {{max}}",
+                "errorRange": "يجب أن تكون القيمة بين {{min}} و {{max}}"
+            },
+            "addFunctionality": {
+                "title": "أضف وظائف",
                 "rights": "إظهار الحقوق والأذونات",
                 "embed": "إظهار ارتباط التضمين"
-            }
+            },
+            "displayOptions": {
+                "marginX": "الهامش الأيمن والأيسر",
+                "marginY": "الهامش العلوي والسفلي",
+                "restrictWidthAndAlign": "تقييد العرض والمحاذاة مركزيًا",
+                "maximumWidth": "الحد الأقصى للعرض",
+                "addCss": "أضف ملف CSS",
+                "chooseCssFile": "أختر",
+                "title": "خيارات العرض"
+            },
+            "pixelsAbbreviation": "مقصف"
         },
         "saveAsDialog": {
             "title": "حفظ باسم",

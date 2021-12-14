@@ -76,10 +76,8 @@
                 "externalHint": "Você será solicitado a fornecer um nome para o arquivo HTML na próxima etapa. Os arquivos de mídia serão colocados em pastas que começam com o mesmo nome do arquivo.",
                 "externalLabel": "Um arquivo HTML e vários arquivos de mídia",
                 "scorm": {
-                    "errorNaN": "O valor inserido não é um número",
-                    "errorRange": "O valor deve estar entre 0 e 100",
                     "label": "Pacote SCORM",
-                    "masteryScoreLabel": "Pontuação de domínio (em%)"
+                    "masteryScoreLabel": "Pontuação de maestria"
                 },
                 "title": "Formato"
             },
@@ -89,11 +87,27 @@
                 "switchLabel": "Incluir repórter"
             },
             "title": "Exportar configurações",
-            "options": {
-                "title": "Opções",
+            "validationErrors": {
+                "errorNaN": "O valor inserido não é um número",
+                "errorRangeMin": "O valor deve ser maior que {{min}}",
+                "errorRangeMax": "O valor deve ser menor que {{max}}",
+                "errorRange": "O valor deve estar entre {{min}} e {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Adicionar funcionalidade",
                 "rights": "Mostrar direitos e permissões",
                 "embed": "Mostrar link de incorporação"
-            }
+            },
+            "displayOptions": {
+                "marginX": "Margem direita e esquerda",
+                "marginY": "Margem superior e inferior",
+                "restrictWidthAndAlign": "Restrinja a largura e alinhe centralmente",
+                "maximumWidth": "Largura máxima",
+                "addCss": "Adicionar arquivo CSS",
+                "chooseCssFile": "escolher",
+                "title": "Opções de exibição"
+            },
+            "pixelsAbbreviation": "px"
         },
         "sidebar": {
             "create": "Novo arquivo H5P",

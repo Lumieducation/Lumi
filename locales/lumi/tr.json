@@ -76,10 +76,8 @@
                 "externalHint": "Sonraki adımda HTML dosyası için bir ad istenecektir. Medya dosyaları, dosya ile aynı adla başlayan klasörlere yerleştirilecektir.",
                 "externalLabel": "Bir HTML dosyası ve birkaç medya dosyası",
                 "scorm": {
-                    "errorNaN": "Girilen değer bir sayı değil",
-                    "errorRange": "Değer 0 ile 100 arasında olmalıdır",
                     "label": "SCORM paketi",
-                    "masteryScoreLabel": "Ustalık puanı (% olarak)"
+                    "masteryScoreLabel": "Ustalık puanı"
                 },
                 "title": "Biçim"
             },
@@ -89,11 +87,27 @@
                 "switchLabel": "Raportörü dahil et"
             },
             "title": "Dışa Aktarma Ayarları",
-            "options": {
-                "title": "Seçenekler",
+            "validationErrors": {
+                "errorNaN": "Girilen değer bir sayı değil",
+                "errorRangeMin": "{{min}} büyük olmalıdır",
+                "errorRangeMax": "{{max}} küçük olmalıdır",
+                "errorRange": "{{min}} ile {{max}} arasında olmalıdır"
+            },
+            "addFunctionality": {
+                "title": "İşlevsellik ekle",
                 "rights": "Hakları ve izinleri göster",
                 "embed": "Yerleştirme bağlantısını göster"
-            }
+            },
+            "displayOptions": {
+                "marginX": "Sağ ve sol kenar boşluğu",
+                "marginY": "Üst ve alt kenar boşluğu",
+                "restrictWidthAndAlign": "Genişliği sınırlayın ve merkezi olarak hizalayın",
+                "maximumWidth": "Maksimum genişlik",
+                "addCss": "CSS dosyası ekle",
+                "chooseCssFile": "Seç",
+                "title": "görüntüleme seçenekleri"
+            },
+            "pixelsAbbreviation": "piksel"
         },
         "sidebar": {
             "create": "Yeni H5P Dosyası",

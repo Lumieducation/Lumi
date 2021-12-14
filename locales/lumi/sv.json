@@ -27,9 +27,7 @@
                 "externalHint": "Du kommer att bli ombedd att ange ett namn för HTML-filen i nästa steg. Mediefilerna läggs i mappar som börjar med samma namn som filen.",
                 "scorm": {
                     "label": "SCORM-paket",
-                    "masteryScoreLabel": "Behärskningspoäng (i%)",
-                    "errorNaN": "Inmatat värde är inte ett tal",
-                    "errorRange": "Värdet måste vara mellan 0 och 100"
+                    "masteryScoreLabel": "Mastery poäng"
                 }
             },
             "reporter": {
@@ -53,11 +51,27 @@
                 "title": "H5P-innehåll",
                 "filename": "Min H5P export"
             },
-            "options": {
-                "title": "alternativ",
+            "validationErrors": {
+                "errorNaN": "Det angivna värdet är inte ett tal",
+                "errorRangeMin": "Värdet måste vara större än {{min}}",
+                "errorRangeMax": "Värdet måste vara mindre än {{max}}",
+                "errorRange": "Värdet måste vara mellan {{min}} och {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Lägg till funktionalitet",
                 "rights": "Visa rättigheter och behörigheter",
                 "embed": "Visa inbäddningslänk"
-            }
+            },
+            "displayOptions": {
+                "marginX": "Höger & vänster marginal",
+                "marginY": "Topp- och bottenmarginal",
+                "restrictWidthAndAlign": "Begränsa bredden och rikta in centralt",
+                "maximumWidth": "Maximal bredd",
+                "addCss": "Lägg till CSS-fil",
+                "chooseCssFile": "välja",
+                "title": "Skärmalternativ"
+            },
+            "pixelsAbbreviation": "px"
         },
         "saveAsDialog": {
             "title": "Spara som",

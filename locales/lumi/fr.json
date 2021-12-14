@@ -76,10 +76,8 @@
                 "externalHint": "Il vous sera demandé un nom pour le fichier HTML à l'étape suivante. Les fichiers multimédias seront placés dans des dossiers commençant par le même nom que le fichier.",
                 "externalLabel": "Un fichier HTML et plusieurs fichiers multimédias",
                 "scorm": {
-                    "errorNaN": "La valeur saisie n'est pas un nombre",
-                    "errorRange": "La valeur doit être comprise entre 0 et 100",
                     "label": "Paquet SCORM",
-                    "masteryScoreLabel": "Score de maîtrise (en %)"
+                    "masteryScoreLabel": "Score de maîtrise"
                 },
                 "title": "Format"
             },
@@ -89,11 +87,27 @@
                 "switchLabel": "Inclure le rapporteur"
             },
             "title": "Exporter les paramètres",
-            "options": {
-                "title": "Options",
+            "validationErrors": {
+                "errorNaN": "La valeur saisie n'est pas un nombre",
+                "errorRangeMin": "La valeur doit être supérieure à {{min}}",
+                "errorRangeMax": "La valeur doit être inférieure à {{max}}",
+                "errorRange": "La valeur doit être comprise entre {{min}} et {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Ajouter des fonctionnalités",
                 "rights": "Afficher les droits et autorisations",
                 "embed": "Afficher le lien d'intégration"
-            }
+            },
+            "displayOptions": {
+                "marginX": "Marge droite et gauche",
+                "marginY": "Marge supérieure et inférieure",
+                "restrictWidthAndAlign": "Limiter la largeur et aligner au centre",
+                "maximumWidth": "Largeur maximale",
+                "addCss": "Ajouter un fichier CSS",
+                "chooseCssFile": "choisir",
+                "title": "option d'affichage"
+            },
+            "pixelsAbbreviation": "pixels"
         },
         "sidebar": {
             "create": "Nouveau fichier H5P",

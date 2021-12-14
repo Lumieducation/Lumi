@@ -27,9 +27,7 @@
                 "externalHint": "Sinulta pyydetään nimeä HTML-tiedostolle seuraavassa vaiheessa. Mediatiedostot sijoitetaan kansioihin, jotka alkavat samalla nimellä kuin tiedosto.",
                 "scorm": {
                     "label": "SCORM-paketti",
-                    "masteryScoreLabel": "Hallintapisteet (%)",
-                    "errorNaN": "Annettu arvo ei ole numero",
-                    "errorRange": "Arvon on oltava välillä 0–100"
+                    "masteryScoreLabel": "Mastery pisteet"
                 }
             },
             "reporter": {
@@ -53,11 +51,27 @@
                 "title": "H5P-sisältö",
                 "filename": "H5P-vientini"
             },
-            "options": {
-                "title": "Vaihtoehdot",
+            "validationErrors": {
+                "errorNaN": "Syötetty arvo ei ole numero",
+                "errorRangeMin": "Arvon on oltava suurempi kuin {{min}}",
+                "errorRangeMax": "Arvon on oltava pienempi kuin {{max}}",
+                "errorRange": "Arvon pitää olla välillä {{min}} ja {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Lisää toimintoja",
                 "rights": "Näytä oikeudet ja käyttöoikeudet",
                 "embed": "Näytä upotuslinkki"
-            }
+            },
+            "displayOptions": {
+                "marginX": "Oikea ja vasen marginaali",
+                "marginY": "Ylä- ja alamarginaali",
+                "restrictWidthAndAlign": "Rajoita leveyttä ja kohdista keskelle",
+                "maximumWidth": "Suurin leveys",
+                "addCss": "Lisää CSS-tiedosto",
+                "chooseCssFile": "valita",
+                "title": "näytön asetukset"
+            },
+            "pixelsAbbreviation": "px"
         },
         "saveAsDialog": {
             "title": "Tallenna nimellä",

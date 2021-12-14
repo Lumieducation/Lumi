@@ -27,9 +27,7 @@
                 "externalHint": "Hurrengo urratsean HTML fitxategiaren izena eskatuko zaizu. Multimedia fitxategiak fitxategiaren izen berarekin hasten diren karpetetan sartuko dira.",
                 "scorm": {
                     "label": "SCORM paketea",
-                    "masteryScoreLabel": "Maisutasun puntuazioa (%)",
-                    "errorNaN": "Sartutako balioa ez da zenbaki bat",
-                    "errorRange": "Balioak 0 eta 100 artean egon behar du"
+                    "masteryScoreLabel": "Maisutasun puntuazioa"
                 }
             },
             "reporter": {
@@ -53,11 +51,27 @@
                 "title": "H5P edukia",
                 "filename": "Nire H5P esportazioa"
             },
-            "options": {
-                "title": "Aukerak",
+            "validationErrors": {
+                "errorNaN": "Sartutako balioa ez da zenbaki bat",
+                "errorRangeMin": "{{min}} baino handiagoa izan behar du",
+                "errorRangeMax": "{{max}} baino txikiagoa izan behar du",
+                "errorRange": "{{min}} eta {{max}} artekoa izan behar du"
+            },
+            "addFunctionality": {
+                "title": "Gehitu funtzionaltasuna",
                 "rights": "Erakutsi eskubideak eta baimenak",
                 "embed": "Erakutsi kapsulatutako esteka"
-            }
+            },
+            "displayOptions": {
+                "marginX": "Eskuineko eta ezkerreko marjina",
+                "marginY": "Goiko eta beheko marjina",
+                "restrictWidthAndAlign": "Mugatu zabalera eta lerrokatu erdialdean",
+                "maximumWidth": "Gehieneko zabalera",
+                "addCss": "Gehitu CSS fitxategia",
+                "chooseCssFile": "aukeratu",
+                "title": "Bistaratzeko aukerak"
+            },
+            "pixelsAbbreviation": "px"
         },
         "saveAsDialog": {
             "title": "Gorde",

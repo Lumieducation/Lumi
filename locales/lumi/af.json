@@ -27,9 +27,7 @@
                 "externalHint": "U sal in die volgende stap gevra word vir 'n naam vir die HTML-lêer. Die mediabestande sal in vouers geplaas word wat met dieselfde naam as die lêer begin.",
                 "scorm": {
                     "label": "SCORM pakket",
-                    "masteryScoreLabel": "Bemeestertelling (in%)",
-                    "errorNaN": "Ingevoerde waarde is nie 'n getal nie",
-                    "errorRange": "Die waarde moet tussen 0 en 100 wees"
+                    "masteryScoreLabel": "Bemeestering telling"
                 }
             },
             "reporter": {
@@ -53,11 +51,27 @@
                 "title": "H5P-inhoud",
                 "filename": "My H5P uitvoer"
             },
-            "options": {
-                "title": "Opsies",
+            "validationErrors": {
+                "errorNaN": "Ingevoerde waarde is nie 'n getal nie",
+                "errorRangeMin": "Die waarde moet groter as {{min}}",
+                "errorRangeMax": "Die waarde moet kleiner as {{max}}",
+                "errorRange": "Die waarde moet tussen {{min}} en {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Voeg funksionaliteit by",
                 "rights": "Wys regte en toestemmings",
                 "embed": "Wys inbedskakel"
-            }
+            },
+            "displayOptions": {
+                "marginX": "Regs- en linkerkantlyn",
+                "marginY": "Boonste en onderste kantlyn",
+                "restrictWidthAndAlign": "Beperk breedte en pas sentraal in",
+                "maximumWidth": "Maksimum breedte",
+                "addCss": "Voeg CSS-lêer by",
+                "chooseCssFile": "kies",
+                "title": "Vertoon opsies"
+            },
+            "pixelsAbbreviation": "px"
         },
         "saveAsDialog": {
             "title": "Stoor as",

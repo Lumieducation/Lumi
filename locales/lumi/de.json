@@ -76,10 +76,8 @@
                 "externalHint": "Im nächsten Schritt wirst du nach dem Namen für die HTML-Datei gefragt. Die Mediendateien werden in Ordnern abgelegt, die mit demselben Namen wie die Datei beginnen.",
                 "externalLabel": "Eine HTML-Datei und zusätzliche Mediendateien",
                 "scorm": {
-                    "errorNaN": "Der eingegebene Wert ist keine Zahl",
-                    "errorRange": "Der Wert muss zwischen 0 und 100 liegen",
                     "label": "SCORM-Paket",
-                    "masteryScoreLabel": "Bestehens-Schwellenwert (in %)"
+                    "masteryScoreLabel": "Bestehens-Schwellenwert"
                 },
                 "title": "Format"
             },
@@ -89,11 +87,27 @@
                 "switchLabel": "Reporter hinzufügen"
             },
             "title": "Exporteinstellungen",
-            "options": {
-                "title": "Optionen",
-                "rights": "Nutzungsrechte anzeigen",
+            "addFunctionality": {
+                "title": "Funktionalität hinzufügen",
+                "rights": "Rechte und Berechtigungen anzeigen",
                 "embed": "Einbettungslink anzeigen"
-            }
+            },
+            "validationErrors": {
+                "errorNaN": "Der eingegebene Wert ist keine Zahl",
+                "errorRangeMin": "Der Wert muss größer als {{min}} sein",
+                "errorRangeMax": "Der Wert muss kleiner als {{max}} sein",
+                "errorRange": "Der Wert muss zwischen {{min}} und {{max}} liegen"
+            },
+            "displayOptions": {
+                "marginX": "Rechter und linker Rand",
+                "marginY": "Oberer und unterer Rand",
+                "restrictWidthAndAlign": "Breite einschränken und mittig ausrichten",
+                "maximumWidth": "Maximale Breite",
+                "addCss": "CSS-Datei hinzufügen",
+                "chooseCssFile": "wählen",
+                "title": "Darstellungsoptionen"
+            },
+            "pixelsAbbreviation": "px"
         },
         "sidebar": {
             "create": "Neue H5P-Datei",
