@@ -24,29 +24,29 @@
         "code": "Code",
         "email": "Email",
         "error": {
-            "no-valid-email": "{{email}} ist keine gültige E-Mail-Adresse.",
-            "econnrefused": "Der Lumi Anmeldungs-Server konnte nicht kontaktiert werden. Bitte überprüfe deine Internetverbindung."
+            "econnrefused": "Der Lumi Anmeldungs-Server konnte nicht kontaktiert werden. Bitte überprüfe deine Internetverbindung.",
+            "no-valid-email": "{{email}} ist keine gültige E-Mail-Adresse."
         },
+        "logout": "Ausloggen",
         "notification": {
-            "pending": "Ein Bestätigungscode wurde an {{email}} versendet. Bitte überprüfe deine E-Mails.",
-            "success": "{{email}} wurde erfolgreich validiert",
             "logout": {
                 "success": "Du wurdest abgemeldet."
-            }
+            },
+            "pending": "Ein Bestätigungscode wurde an {{email}} versendet. Bitte überprüfe deine E-Mails.",
+            "success": "{{email}} wurde erfolgreich validiert"
         },
         "set_email": "E-Mail einstellen",
         "verify_code": "Code überprüfen",
-        "verify_email": "E-Mail bestätigen",
-        "logout": "Ausloggen"
+        "verify_email": "E-Mail bestätigen"
     },
     "bug_report": {
         "consent": "Ich erlaube dieser Anwendung, Fehler- und Absturzberichte zu senden.",
         "description": "Hilf uns, unsere Software und Services zu verbessern, indem du anonyme Absturz- und Fehlerberichte sendest.",
-        "title": "Fehler- und Absturzberichte",
         "email": {
-            "subject": "Lumi-Problembericht",
-            "body": "Um eine schnelle Lösung für dein Problem zu erhalten, schreibe uns bitte folgende Informationen:\n\n  - Lumi-Version: <hier ausfüllen>, Betriebssystem: <hier ausfüllen>\n  - Beschreibe das Problem\n  - Beschreibe, wie wir das Problem auf unseren Geräten reproduzieren können\n  - Senden uns .h5p-Beispieldateien oder exportierte Dateien, wenn das Problem mit den Dateien zusammenhängt\n\nWenn du uns Nachrichten in einer anderen Sprache als Englisch oder Deutsch sendest, verwenden wir ein automatisches Übersetzungstool, um deine Nachricht zu übersetzen."
-        }
+            "body": "Um eine schnelle Lösung für dein Problem zu erhalten, schreibe uns bitte folgende Informationen:\n\n  - Lumi-Version: <hier ausfüllen>, Betriebssystem: <hier ausfüllen>\n  - Beschreibe das Problem\n  - Beschreibe, wie wir das Problem auf unseren Geräten reproduzieren können\n  - Senden uns .h5p-Beispieldateien oder exportierte Dateien, wenn das Problem mit den Dateien zusammenhängt\n\nWenn du uns Nachrichten in einer anderen Sprache als Englisch oder Deutsch sendest, verwenden wir ein automatisches Übersetzungstool, um deine Nachricht zu übersetzen.",
+            "subject": "Lumi-Problembericht"
+        },
+        "title": "Fehler- und Absturzberichte"
     },
     "dialog": {
         "close": "Schließen"
@@ -57,8 +57,8 @@
             "cancelButton": "Abbrechen",
             "defaults": {
                 "authorName": "H5P Autor",
-                "title": "H5P-Inhalt",
-                "filename": "Mein H5P-Export"
+                "filename": "Mein H5P-Export",
+                "title": "H5P-Inhalt"
             },
             "exportButton": "Jetzt exportieren",
             "filePicker": {
@@ -92,6 +92,11 @@
             },
             "title": "Exporteinstellungen"
         },
+        "extensionName": "H5P-Paket",
+        "saveAsDialog": {
+            "fallbackFilename": "Meine H5P-Datei",
+            "title": "Speichern als"
+        },
         "sidebar": {
             "create": "Neue H5P-Datei",
             "noOpenFiles": "Keine geöffneten Dateien",
@@ -107,20 +112,23 @@
         "tab": {
             "edit": "Bearbeiten",
             "view": "Vorschau"
+        }
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Verbindung abgelehnt"
         },
-        "saveAsDialog": {
-            "title": "Speichern als",
-            "fallbackFilename": "Meine H5P-Datei"
-        },
-        "extensionName": "H5P-Paket"
+        "messages": {
+            "econnrefused": "Verbindung abgelehnt"
+        }
     },
     "general": {
-        "delete": "Löschen",
-        "copyClipboard": "{{value}} in die Zwischenablage kopiert"
+        "copyClipboard": "{{value}} in die Zwischenablage kopiert",
+        "delete": "Löschen"
     },
     "language": {
         "description": "Ändere die Sprache der Anwendung.",
-        "help_translate": "Helfe uns beim Übersetzen!",
+        "help_translate": "Hilf uns beim Übersetzen!",
         "title": "Sprache"
     },
     "menu": {
@@ -156,6 +164,10 @@
             "unhide": "Alle einblenden"
         },
         "quit": "Beenden",
+        "run": {
+            "label": "Run",
+            "upload": "Auf Lumi Run hochladen"
+        },
         "view": {
             "label": "Darstellung",
             "resetZoom": "Zoom zurücksetzen",
@@ -170,10 +182,6 @@
             "minimize": "Minimieren",
             "show": "Anzeigen",
             "zoom": "Zoomen"
-        },
-        "run": {
-            "label": "Run",
-            "upload": "Auf Lumi Run hochladen"
         }
     },
     "notifications": {
@@ -184,6 +192,9 @@
                 "error": "Keine gültigen Dateien gefunden",
                 "success": "Importierte Berichtsdateien"
             }
+        },
+        "general": {
+            "econnrefused": "Es scheint ein Problem mit deiner Internetverbindung zu geben."
         },
         "h5peditor": {
             "export_as_html": {
@@ -197,14 +208,56 @@
                 "error": "H5P konnte nicht gespeichert werden.",
                 "success": "H5P gespeichert!"
             }
-        },
-        "general": {
-            "econnrefused": "Es scheint ein Problem mit deiner Internetverbindung zu geben."
         }
+    },
+    "prerelease": {
+        "description": "Aktiviere experimentelle Funktionen, bevor sie allgemein veröffentlicht werden",
+        "title": "Vorschau-Funktionen"
     },
     "privacy_policy": {
         "consent": "Ich habe die Datenschutzerklärung gelesen und stimme der notwendigen Datenverarbeitung zu.",
         "title": "Datenschutzerklärung"
+    },
+    "run": {
+        "description": "Lumi Run ermöglicht dir das Hochladen und Bereitstellen deines H5P mit einem Klick.",
+        "legal": "Um diesen Service nutzen zu können, musst du den Nutzungsbedingungen und der Datenschutzerklärung zustimmen und eine Kontakt-E-Mail angeben.",
+        "link": {
+            "header": "Link"
+        },
+        "list": {
+            "deleteDialog": {
+                "cancel": "Abbrechen",
+                "confirm": "Löschen",
+                "description": "Möchten Sie H5P {{runId}} löschen?",
+                "title": "H5P {{runId}} löschen"
+            },
+            "header": "H5P hochgeladen",
+            "noUploadedH5P": "Kein H5P hochgeladen"
+        },
+        "notifications": {
+            "delete": {
+                "success": "{{id}} von lumi.run gelöscht"
+            },
+            "upload": {
+                "success": "H5P erfolgreich auf lumi.run hochgeladen"
+            }
+        },
+        "setupDialog": {
+            "close": "Schließen",
+            "start": "Start"
+        },
+        "tos": {
+            "description": "Ich habe die Nutzungsbedingungen gelesen und stimme ihnen zu.",
+            "header": "Nutzungsbedingungen"
+        },
+        "upload": "Hochladen",
+        "uploadDialog": {
+            "goToRun": "meine hochgeladenen H5Ps",
+            "ok": "Ok",
+            "processing": "Wird bearbeitet",
+            "success": "Dein H5P wurde auf lumi.run hochgeladen. DU knnast es über den folgenden Link aufrufen und teilen.",
+            "uploading": "Hochladen"
+        }
     },
     "settings": {
         "account": {
@@ -278,73 +331,20 @@
         "description": "Der Schutz der Privatsphäre des Einzelnen ist uns wichtig. Wir sammeln nur die Informationen, die du auswählst, und verarbeiten sie mit deiner Zustimmung. Wir wollen so transparent wie möglich sein. Lumi ist jedoch auf einige Internet-Verbindungen und Datenübertragungen angewiesen, um zu funktionieren."
     },
     "updates": {
+        "badge": "Aktualisieren",
+        "checkForUpdate": {
+            "checkButton": "Prüfen",
+            "description": "Auf Updates prüfen",
+            "title": "Auf Updates prüfen"
+        },
         "consent": "Ich erlaube dieser Anwendung, automatisch nach Updates zu suchen.",
         "description": "Bleibe auf dem neuesten Stand und installiere automatisch die neueste Version.",
-        "title": "Automatische Updates",
-        "checkForUpdate": {
-            "title": "Auf Updates prüfen",
-            "description": "Auf Updates prüfen",
-            "checkButton": "Prüfen"
-        },
         "restartAndInstall": "Installieren und neu starten",
-        "badge": "Aktualisieren"
+        "title": "Automatische Updates"
     },
     "usage_statistics": {
         "consent": "Ich erlaube dieser Anwendung, anonyme Nutzungsstatistiken zu senden.",
         "description": " Hilf uns, unsere Software und Dienste zu verbessern, indem du anonyme Nutzungsstatistiken sendest.",
         "title": "Nutzungsstatistiken"
-    },
-    "errors": {
-        "codes": {
-            "econnrefused": "Verbindung abgelehnt"
-        },
-        "messages": {
-            "econnrefused": "Verbindung abgelehnt"
-        }
-    },
-    "prerelease": {
-        "title": "Vorschau-Funktionen",
-        "description": "Aktiviere experimentelle Funktionen, bevor sie allgemein veröffentlicht werden"
-    },
-    "run": {
-        "description": "Lumi Run ermöglicht dir das Hochladen und Bereitstellen deines H5P mit einem Klick.",
-        "legal": "Um diesen Service nutzen zu können, musst du den Nutzungsbedingungen und der Datenschutzerklärung zustimmen und eine Kontakt-E-Mail angeben.",
-        "tos": {
-            "header": "Nutzungsbedingungen",
-            "description": "Ich habe die Nutzungsbedingungen gelesen und stimme ihnen zu."
-        },
-        "link": {
-            "header": "Link"
-        },
-        "upload": "Hochladen",
-        "list": {
-            "header": "H5P hochgeladen",
-            "noUploadedH5P": "Kein H5P hochgeladen",
-            "deleteDialog": {
-                "title": "H5P {{runId}} löschen",
-                "description": "Möchten Sie H5P {{runId}} löschen?",
-                "cancel": "Abbrechen",
-                "confirm": "Löschen"
-            }
-        },
-        "uploadDialog": {
-            "success": "Dein H5P wurde auf lumi.run hochgeladen. DU knnast es über den folgenden Link aufrufen und teilen.",
-            "uploading": "Hochladen",
-            "processing": "Wird bearbeitet",
-            "goToRun": "meine hochgeladenen H5Ps",
-            "ok": "Ok"
-        },
-        "setupDialog": {
-            "close": "Schließen",
-            "start": "Start"
-        },
-        "notifications": {
-            "delete": {
-                "success": "{{id}} von lumi.run gelöscht"
-            },
-            "upload": {
-                "success": "H5P erfolgreich auf lumi.run hochgeladen"
-            }
-        }
     }
 }
