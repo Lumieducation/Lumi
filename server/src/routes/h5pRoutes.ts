@@ -68,7 +68,11 @@ export default function (
                 {
                     format: 'bundle' | 'external' | 'scorm';
                     includeReporter: string;
+                    marginX: string;
+                    marginY: string;
                     masteryScore: string;
+                    maxWidth: string;
+                    restrictWidthAndCenter: string;
                     showEmbed: string;
                     showRights: string;
                 }
@@ -80,6 +84,11 @@ export default function (
             const expectedExtension = format === 'scorm' ? 'zip' : 'html';
             const showEmbed = req.query.showEmbed === 'true';
             const showRights = req.query.showRights === 'true';
+            const marginX = Number.parseInt(req.query.marginX, 10);
+            const marginY = Number.parseInt(req.query.marginY, 10);
+            const restrictWidthAndCenter =
+                req.query.restrictWidthAndCenter === 'true';
+            const maxWidth = Number.parseInt(req.query.maxWidth, 10);
 
             const { params, h5p } = await h5pEditor.getContent(
                 req.params.contentId,
@@ -132,6 +141,10 @@ export default function (
                     {
                         format,
                         includeReporter,
+                        marginX,
+                        marginY,
+                        maxWidth,
+                        restrictWidthAndCenter,
                         showEmbed,
                         showRights,
                         masteryScore: Number.parseFloat(req.query.masteryScore)

@@ -192,7 +192,11 @@ export async function exportH5P(
     options: {
         format: 'bundle' | 'external' | 'scorm';
         includeReporter: boolean;
+        marginX: number;
+        marginY: number;
         masteryScore: number;
+        maxWidth: number;
+        restrictWidthAndCenter: boolean;
         showEmbed: boolean;
         showRights: boolean;
     }
@@ -207,7 +211,11 @@ export async function exportH5P(
             ? reporterTemplate
             : options.format === 'scorm'
             ? scormTemplate
-            : simpleTemplate(50, 50, 800),
+            : simpleTemplate(
+                  options.marginX,
+                  options.marginY,
+                  options.restrictWidthAndCenter ? options.maxWidth : undefined
+              ),
         translationFunction
     );
 

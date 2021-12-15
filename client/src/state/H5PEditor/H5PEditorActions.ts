@@ -132,7 +132,16 @@ export function cancelExportH5P(contentId?: string) {
 export function exportH5P(
     includeReporter: boolean,
     format: 'bundle' | 'external' | 'scorm',
-    options: { masteryScore?: string; showEmbed: boolean; showRights: boolean }
+    options: {
+        masteryScore?: string;
+        showEmbed: boolean;
+        showRights: boolean;
+        marginX: number;
+        marginY: number;
+        restrictWidthAndCenter: boolean;
+        maxWidth: number;
+        cssPath: string;
+    }
 ): any {
     return async (dispatch: any) => {
         try {

@@ -15,7 +15,7 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import Switch from '@material-ui/core/Switch';
 
-import { actions, IState } from '../../state';
+import { actions, IState, selectors } from '../../state';
 import {
     Box,
     Checkbox,
@@ -30,6 +30,7 @@ import {
     Stack
 } from '@mui/material';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { getDefaultContentTypeWidth } from '../../helpers/contentTypeWidths';
 
 export default function H5PEditorExportDialog() {
     const dispatch = useDispatch();
@@ -39,6 +40,13 @@ export default function H5PEditorExportDialog() {
     const open = useSelector(
         (state: IState) => state.h5peditor.showExportDialog
     );
+    const currentTab = useSelector((state: IState) =>
+        selectors.h5peditor.activeTab(state)
+    );
+    const autoMaxWidth = currentTab
+        ? getDefaultContentTypeWidth(currentTab.mainLibrary)
+        : 800;
+
     // Internal State
     const [formatChoice, setFormatChoice] = useState<
         'bundle' | 'external' | 'scorm'
@@ -55,10 +63,17 @@ export default function H5PEditorExportDialog() {
     const [marginYError, setMarginYError] = useState<string>();
     const [restrictWidthAndCenter, setRestrictWidthAndCenter] =
         useState<boolean>(true);
-    const [maxWidth, setMaxWidth] = useState<string>('800');
+    const [maxWidth, setMaxWidth] = useState<string>(autoMaxWidth.toString());
+    const [defaultMaxWidth, setDefaultMaxWidth] =
+        useState<number>(autoMaxWidth);
     const [maxWidthError, setMaxWidthError] = useState<string>();
     const [addCss, setAddCss] = useState<boolean>(false);
     const [cssPath, setCssPath] = useState<string>('');
+
+    if (autoMaxWidth !== defaultMaxWidth) {
+        setDefaultMaxWidth(autoMaxWidth);
+        setMaxWidth(autoMaxWidth.toString());
+    }
 
     const checkAndSetNumber =
         (
@@ -442,7 +457,12 @@ export default function H5PEditorExportDialog() {
                                         showEmbed:
                                             formatChoice === 'scorm'
                                                 ? false
-                                                : showEmbed
+                                                : showEmbed,
+                                        marginX: Number.parseInt(marginX, 10),
+                                        marginY: Number.parseInt(marginY, 10),
+                                        restrictWidthAndCenter,
+                                        maxWidth: Number.parseInt(maxWidth, 10),
+                                        cssPath
                                     }
                                 )
                             )
