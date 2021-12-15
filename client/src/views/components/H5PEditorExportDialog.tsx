@@ -51,7 +51,7 @@ export default function H5PEditorExportDialog() {
     const [formatChoice, setFormatChoice] = useState<
         'bundle' | 'external' | 'scorm'
     >('bundle');
-    const [includeReporter, setIncludeReporter] = useState<boolean>(true);
+    const [includeReporter, setIncludeReporter] = useState<boolean>(false);
     const [showRights, setShowRights] = useState<boolean>(true);
     const [showEmbed, setShowEmbed] = useState<boolean>(false);
     const [masteryScore, setMasteryScore] = useState<string>('70');
@@ -68,7 +68,7 @@ export default function H5PEditorExportDialog() {
         useState<number>(autoMaxWidth);
     const [maxWidthError, setMaxWidthError] = useState<string>();
     const [addCss, setAddCss] = useState<boolean>(false);
-    const [cssPath, setCssPath] = useState<string>('');
+    // const [cssPath, setCssPath] = useState<string>('');
 
     if (autoMaxWidth !== defaultMaxWidth) {
         setDefaultMaxWidth(autoMaxWidth);
@@ -240,6 +240,33 @@ export default function H5PEditorExportDialog() {
                         </FormControl>
                         <FormControl>
                             <FormControlLabel
+                                checked={showRights}
+                                control={<Switch />}
+                                label={t(
+                                    'editor.exportDialog.addFunctionality.rights'
+                                )}
+                                onChange={(e, checked) => {
+                                    setShowRights(checked);
+                                }}
+                                name="showRights"
+                            />
+                        </FormControl>
+                        <FormControl>
+                            <FormControlLabel
+                                checked={formatChoice !== 'scorm' && showEmbed}
+                                control={<Switch />}
+                                disabled={formatChoice === 'scorm'}
+                                label={t(
+                                    'editor.exportDialog.addFunctionality.embed'
+                                )}
+                                onChange={(e, checked) => {
+                                    setShowEmbed(checked);
+                                }}
+                                name="showEmbed"
+                            />
+                        </FormControl>
+                        <FormControl>
+                            <FormControlLabel
                                 control={<Switch />}
                                 checked={
                                     formatChoice !== 'scorm' && includeReporter
@@ -271,164 +298,149 @@ export default function H5PEditorExportDialog() {
                                 </a>
                             </FormHelperText>
                         </FormControl>
-                        <FormControl>
-                            <FormControlLabel
-                                checked={showRights}
-                                control={<Switch />}
-                                label={t(
-                                    'editor.exportDialog.addFunctionality.rights'
-                                )}
-                                onChange={(e, checked) => {
-                                    setShowRights(checked);
-                                }}
-                                name="showRights"
-                            />
-                        </FormControl>
-                        <FormControl>
-                            <FormControlLabel
-                                checked={formatChoice !== 'scorm' && showEmbed}
-                                control={<Switch />}
-                                disabled={formatChoice === 'scorm'}
-                                label={t(
-                                    'editor.exportDialog.addFunctionality.embed'
-                                )}
-                                onChange={(e, checked) => {
-                                    setShowEmbed(checked);
-                                }}
-                                name="showEmbed"
-                            />
-                        </FormControl>
                     </Stack>
-                    <Accordion>
-                        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            {t('editor.exportDialog.displayOptions.title')}
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Stack spacing={2}>
-                                <Stack direction="row" spacing={2}>
-                                    <FormControl style={{ width: '35ch' }}>
-                                        <TextField
-                                            label={t(
-                                                'editor.exportDialog.displayOptions.marginX'
+                    {!includeReporter && (
+                        <Accordion>
+                            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                                {t('editor.exportDialog.displayOptions.title')}
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Stack spacing={2}>
+                                    <Stack direction="row" spacing={2}>
+                                        <FormControl style={{ width: '35ch' }}>
+                                            <TextField
+                                                label={t(
+                                                    'editor.exportDialog.displayOptions.marginX'
+                                                )}
+                                                variant="outlined"
+                                                type="number"
+                                                size="small"
+                                                InputProps={{
+                                                    endAdornment: (
+                                                        <InputAdornment position="end">
+                                                            {t(
+                                                                'editor.exportDialog.pixelsAbbreviation'
+                                                            )}
+                                                        </InputAdornment>
+                                                    )
+                                                }}
+                                                error={
+                                                    marginXError !== undefined
+                                                }
+                                                helperText={marginXError}
+                                                value={marginX}
+                                                onChange={checkAndSetNumber(
+                                                    setMarginXError,
+                                                    setMarginX,
+                                                    0
+                                                )}
+                                            />
+                                        </FormControl>
+                                        <FormControl style={{ width: '35ch' }}>
+                                            <TextField
+                                                label={t(
+                                                    'editor.exportDialog.displayOptions.marginY'
+                                                )}
+                                                type="number"
+                                                variant="outlined"
+                                                size="small"
+                                                InputProps={{
+                                                    endAdornment: (
+                                                        <InputAdornment position="end">
+                                                            {t(
+                                                                'editor.exportDialog.pixelsAbbreviation'
+                                                            )}
+                                                        </InputAdornment>
+                                                    )
+                                                }}
+                                                error={
+                                                    marginYError !== undefined
+                                                }
+                                                helperText={marginYError}
+                                                value={marginY}
+                                                onChange={checkAndSetNumber(
+                                                    setMarginYError,
+                                                    setMarginY,
+                                                    0
+                                                )}
+                                            />
+                                        </FormControl>
+                                    </Stack>
+                                    <Stack direction="row">
+                                        <FormControl>
+                                            <FormControlLabel
+                                                control={<Checkbox />}
+                                                label={t(
+                                                    'editor.exportDialog.displayOptions.restrictWidthAndAlign'
+                                                )}
+                                                checked={restrictWidthAndCenter}
+                                                onChange={(e, checked) =>
+                                                    setRestrictWidthAndCenter(
+                                                        checked
+                                                    )
+                                                }
+                                            />
+                                        </FormControl>
+                                        <FormControl style={{ width: '25ch' }}>
+                                            <TextField
+                                                label={t(
+                                                    'editor.exportDialog.displayOptions.maximumWidth'
+                                                )}
+                                                variant="outlined"
+                                                type="number"
+                                                size="small"
+                                                disabled={
+                                                    !restrictWidthAndCenter
+                                                }
+                                                InputProps={{
+                                                    endAdornment: (
+                                                        <InputAdornment position="end">
+                                                            {t(
+                                                                'editor.exportDialog.pixelsAbbreviation'
+                                                            )}
+                                                        </InputAdornment>
+                                                    )
+                                                }}
+                                                error={
+                                                    maxWidthError !== undefined
+                                                }
+                                                helperText={maxWidthError}
+                                                value={maxWidth}
+                                                onChange={checkAndSetNumber(
+                                                    setMaxWidthError,
+                                                    setMaxWidth,
+                                                    0
+                                                )}
+                                            />
+                                        </FormControl>
+                                    </Stack>
+                                    <Stack direction="row" alignItems="center">
+                                        <FormControl>
+                                            <FormControlLabel
+                                                control={<Checkbox />}
+                                                label={t(
+                                                    'editor.exportDialog.displayOptions.addCss'
+                                                )}
+                                                checked={addCss}
+                                                onChange={(e, checked) =>
+                                                    setAddCss(checked)
+                                                }
+                                            />
+                                        </FormControl>
+                                        <FormHelperText>
+                                            filename
+                                        </FormHelperText>
+                                        <Box flexGrow="1" />
+                                        <Button disabled={!addCss} size="small">
+                                            {t(
+                                                'editor.exportDialog.displayOptions.chooseCssFile'
                                             )}
-                                            variant="outlined"
-                                            type="number"
-                                            size="small"
-                                            InputProps={{
-                                                endAdornment: (
-                                                    <InputAdornment position="end">
-                                                        {t(
-                                                            'editor.exportDialog.pixelsAbbreviation'
-                                                        )}
-                                                    </InputAdornment>
-                                                )
-                                            }}
-                                            error={marginXError !== undefined}
-                                            helperText={marginXError}
-                                            value={marginX}
-                                            onChange={checkAndSetNumber(
-                                                setMarginXError,
-                                                setMarginX,
-                                                0
-                                            )}
-                                        />
-                                    </FormControl>
-                                    <FormControl style={{ width: '35ch' }}>
-                                        <TextField
-                                            label={t(
-                                                'editor.exportDialog.displayOptions.marginY'
-                                            )}
-                                            type="number"
-                                            variant="outlined"
-                                            size="small"
-                                            InputProps={{
-                                                endAdornment: (
-                                                    <InputAdornment position="end">
-                                                        {t(
-                                                            'editor.exportDialog.pixelsAbbreviation'
-                                                        )}
-                                                    </InputAdornment>
-                                                )
-                                            }}
-                                            error={marginYError !== undefined}
-                                            helperText={marginYError}
-                                            value={marginY}
-                                            onChange={checkAndSetNumber(
-                                                setMarginYError,
-                                                setMarginY,
-                                                0
-                                            )}
-                                        />
-                                    </FormControl>
+                                        </Button>
+                                    </Stack>
                                 </Stack>
-                                <Stack direction="row">
-                                    <FormControl>
-                                        <FormControlLabel
-                                            control={<Checkbox />}
-                                            label={t(
-                                                'editor.exportDialog.displayOptions.restrictWidthAndAlign'
-                                            )}
-                                            checked={restrictWidthAndCenter}
-                                            onChange={(e, checked) =>
-                                                setRestrictWidthAndCenter(
-                                                    checked
-                                                )
-                                            }
-                                        />
-                                    </FormControl>
-                                    <FormControl style={{ width: '25ch' }}>
-                                        <TextField
-                                            label={t(
-                                                'editor.exportDialog.displayOptions.maximumWidth'
-                                            )}
-                                            variant="outlined"
-                                            type="number"
-                                            size="small"
-                                            disabled={!restrictWidthAndCenter}
-                                            InputProps={{
-                                                endAdornment: (
-                                                    <InputAdornment position="end">
-                                                        {t(
-                                                            'editor.exportDialog.pixelsAbbreviation'
-                                                        )}
-                                                    </InputAdornment>
-                                                )
-                                            }}
-                                            error={maxWidthError !== undefined}
-                                            helperText={maxWidthError}
-                                            value={maxWidth}
-                                            onChange={checkAndSetNumber(
-                                                setMaxWidthError,
-                                                setMaxWidth,
-                                                0
-                                            )}
-                                        />
-                                    </FormControl>
-                                </Stack>
-                                <Stack direction="row" alignItems="center">
-                                    <FormControl>
-                                        <FormControlLabel
-                                            control={<Checkbox />}
-                                            label={t(
-                                                'editor.exportDialog.displayOptions.addCss'
-                                            )}
-                                            checked={addCss}
-                                            onChange={(e, checked) =>
-                                                setAddCss(checked)
-                                            }
-                                        />
-                                    </FormControl>
-                                    <FormHelperText>filename</FormHelperText>
-                                    <Box flexGrow="1" />
-                                    <Button disabled={!addCss} size="small">
-                                        {t(
-                                            'editor.exportDialog.displayOptions.chooseCssFile'
-                                        )}
-                                    </Button>
-                                </Stack>
-                            </Stack>
-                        </AccordionDetails>
-                    </Accordion>
+                            </AccordionDetails>
+                        </Accordion>
+                    )}
                 </DialogContent>
                 <DialogActions>
                     <Button
@@ -450,19 +462,19 @@ export default function H5PEditorExportDialog() {
                                     formatChoice,
                                     {
                                         showRights,
+                                        restrictWidthAndCenter,
+                                        cssPath: '',
                                         masteryScore:
                                             formatChoice === 'scorm'
                                                 ? masteryScore
                                                 : undefined,
+                                        marginX: Number.parseInt(marginX, 10),
+                                        marginY: Number.parseInt(marginY, 10),
+                                        maxWidth: Number.parseInt(maxWidth, 10),
                                         showEmbed:
                                             formatChoice === 'scorm'
                                                 ? false
-                                                : showEmbed,
-                                        marginX: Number.parseInt(marginX, 10),
-                                        marginY: Number.parseInt(marginY, 10),
-                                        restrictWidthAndCenter,
-                                        maxWidth: Number.parseInt(maxWidth, 10),
-                                        cssPath
+                                                : showEmbed
                                     }
                                 )
                             )

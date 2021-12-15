@@ -1,12 +1,23 @@
 import { IIntegration } from '@lumieducation/h5p-server';
 
-export default function (
-    integration: IIntegration,
-    scriptsBundle: string,
-    stylesBundle: string,
-    contentId: string
-): string {
-    return `<!doctype html>
+export default (marginX?: number, marginY?: number, maxWidth?: number) =>
+    (
+        integration: IIntegration,
+        scriptsBundle: string,
+        stylesBundle: string,
+        contentId: string
+    ): string => {
+        let marginStyle = '';
+        if (marginX !== undefined && marginY !== undefined) {
+            marginStyle = `margin: ${marginY}px ${marginX}px;`;
+        }
+        let flexStyle = '';
+        let widthStyle = '';
+        if (maxWidth !== undefined) {
+            flexStyle = `display: flex; justify-content: center;`;
+            widthStyle = `max-width:${maxWidth}px;`;
+        }
+        return `<!doctype html>
 <html class="h5p-iframe">
 <head>
   <meta charset="utf-8">                    
@@ -17,7 +28,9 @@ export default function (
   <style>${stylesBundle}</style>
 </head>
 <body>
-  <div class="h5p-content lag" data-content-id="${contentId}"></div>                
+    <div style="${marginStyle}${flexStyle}">
+        <div style="${widthStyle}" class="h5p-content lag" data-content-id="${contentId}"></div>        
+    </div>  
 </body>
 </html>`;
-}
+    };

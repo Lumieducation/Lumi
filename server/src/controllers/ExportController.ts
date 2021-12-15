@@ -210,7 +210,11 @@ export async function exportH5P(
         options.includeReporter && options.format !== 'scorm'
             ? reporterTemplate
             : options.format === 'scorm'
-            ? scormTemplate
+            ? scormTemplate(
+                  options.marginX,
+                  options.marginY,
+                  options.restrictWidthAndCenter ? options.maxWidth : undefined
+              )
             : simpleTemplate(
                   options.marginX,
                   options.marginY,

@@ -11,14 +11,14 @@ export function exportContent(
     includeReporter: boolean,
     format: 'bundle' | 'external' | 'scorm',
     options: {
-        masteryScore?: string;
-        showEmbed: boolean;
-        showRights: boolean;
+        cssPath: string;
         marginX: number;
         marginY: number;
-        restrictWidthAndCenter: boolean;
+        masteryScore?: string;
         maxWidth: number;
-        cssPath: string;
+        restrictWidthAndCenter: boolean;
+        showEmbed: boolean;
+        showRights: boolean;
     }
 ): Promise<superagent.Response> {
     return superagent.get(
