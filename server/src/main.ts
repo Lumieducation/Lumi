@@ -28,6 +28,10 @@ import migrations from './boot/migrations';
 import initI18n from './boot/i18n';
 import createApp from './boot/expressApp';
 import StateStorage from './state/electronState';
+import FilePickers from './helpers/FilePickers';
+import FileHandleManager from './state/FileHandleManager';
+import LumiController from './controllers/LumiController';
+import { initH5P } from './boot/h5p';
 
 let websocket: SocketIO.Server;
 const tmpDir = process.env.TEMPDATA || path.join(app.getPath('temp'), 'lumi');
@@ -54,6 +58,9 @@ let currentPath: string = '/';
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 const electronState = new StateStorage();
+const fileHandleManager = new FileHandleManager();
+
+let lumiController: LumiController;
 
 /**
  * (Re-)Creates the main window.
@@ -65,6 +72,9 @@ export function createMainWindow(websocketArg: SocketIO.Server): void {
         isDevelopment,
         electronState
     );
+
+    lumiController.setBrowserWindow(mainWindow);
+
     mainWindow.on('closed', () => {
         mainWindow = null;
         // If a new main window is recreated later (macOS), we need to
@@ -79,7 +89,8 @@ export function createMainWindow(websocketArg: SocketIO.Server): void {
             mainWindow,
             websocketArg,
             settingsCache,
-            electronState
+            electronState,
+            lumiController
         );
     });
 
@@ -89,11 +100,19 @@ export function createMainWindow(websocketArg: SocketIO.Server): void {
             mainWindow,
             websocketArg,
             settingsCache,
-            electronState
+            electronState,
+            lumiController
         );
     });
 
-    updateMenu('/', mainWindow, websocketArg, settingsCache, electronState);
+    updateMenu(
+        '/',
+        mainWindow,
+        websocketArg,
+        settingsCache,
+        electronState,
+        lumiController
+    );
 }
 
 const gotSingleInstanceLock = app.requestSingleInstanceLock();
@@ -135,7 +154,12 @@ if (!gotSingleInstanceLock) {
                     log.debug(`Opening file(s): ${openFilePaths.join(' ')}`);
                     delayedWebsocketEmitter.emit('action', {
                         payload: {
-                            paths: openFilePaths
+                            files: openFilePaths
+                                .map((p) => fileHandleManager.create(p))
+                                .map((fh) => ({
+                                    fileHandleId: fh.handleId,
+                                    path: fh.filename
+                                }))
                         },
                         type: 'OPEN_H5P'
                     });
@@ -166,7 +190,13 @@ if (!gotSingleInstanceLock) {
 
         delayedWebsocketEmitter.emit('action', {
             payload: {
-                paths: [openedFilePath]
+                files: [
+                    {
+                        fileHandleId:
+                            fileHandleManager.create(openedFilePath).handleId,
+                        path: openedFilePath
+                    }
+                ]
             },
             type: 'OPEN_H5P'
         });
@@ -221,13 +251,10 @@ if (!gotSingleInstanceLock) {
         // Initialize localization
         const translationFunction = await initI18n(settingsCache);
 
-        // Create the express server logic
-        const expressApp = await createApp(
+        const { h5pEditor, h5pPlayer } = await initH5P(
             serverPaths,
-            mainWindow,
-            settingsCache,
             translationFunction,
-            electronState,
+            settingsCache,
             {
                 devMode: electron.app.commandLine.hasSwitch('dev'),
                 libraryDir:
@@ -235,6 +262,19 @@ if (!gotSingleInstanceLock) {
                         ? electron.app.commandLine.getSwitchValue('libs')
                         : undefined
             }
+        );
+
+        // Create the express server logic
+        const expressApp = await createApp(
+            h5pEditor,
+            h5pPlayer,
+            serverPaths,
+            mainWindow,
+            settingsCache,
+            translationFunction,
+            electronState,
+            new FilePickers(fileHandleManager),
+            fileHandleManager
         );
 
         log.info('app is ready');
@@ -252,6 +292,15 @@ if (!gotSingleInstanceLock) {
         initUpdater(app, websocket, serverPaths, settingsCache);
         log.info('updater started');
 
+        lumiController = new LumiController(
+            h5pEditor,
+            serverPaths,
+            mainWindow,
+            electronState,
+            new FilePickers(fileHandleManager),
+            fileHandleManager
+        );
+
         createMainWindow(websocket);
         log.info('window created');
 
@@ -265,7 +314,12 @@ if (!gotSingleInstanceLock) {
                 log.debug(`Opening file(s): ${openFilePaths.join(' ')}`);
                 delayedWebsocketEmitter.emit('action', {
                     payload: {
-                        paths: openFilePaths
+                        files: openFilePaths
+                            .map((fp) => fileHandleManager.create(fp))
+                            .map((fh) => ({
+                                fileHandleId: fh.handleId,
+                                path: fh.filename
+                            }))
                     },
                     type: 'OPEN_H5P'
                 });

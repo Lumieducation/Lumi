@@ -25,6 +25,8 @@ import updatesRoutes from './updatesRoutes';
 import User from '../h5pImplementations/User';
 import SettingsCache from '../config/SettingsCache';
 import StateStorage from '../state/electronState';
+import { IFilePickers } from '../types';
+import FileHandleManager from '../state/FileHandleManager';
 
 const log = new Logger('routes');
 
@@ -35,7 +37,9 @@ export default function (
     browserWindow: electron.BrowserWindow,
     settingsCache: SettingsCache,
     translationFunction: ITranslationFunction,
-    electronState: StateStorage
+    electronState: StateStorage,
+    filePickers: IFilePickers,
+    fileHandleManager: FileHandleManager
 ): express.Router {
     const router = express.Router();
 
@@ -66,7 +70,9 @@ export default function (
             h5pEditor,
             browserWindow,
             settingsCache,
-            electronState
+            electronState,
+            filePickers,
+            fileHandleManager
         )
     );
 
@@ -136,7 +142,14 @@ export default function (
 
     router.use(
         '/api/v1/lumi',
-        lumiRoutes(h5pEditor, serverConfig, browserWindow, electronState)
+        lumiRoutes(
+            h5pEditor,
+            serverConfig,
+            browserWindow,
+            electronState,
+            filePickers,
+            fileHandleManager
+        )
     );
 
     router.get('*', express.static(`${__dirname}/../../client`));

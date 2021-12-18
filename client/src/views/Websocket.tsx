@@ -77,11 +77,17 @@ export class WebsocketContainer extends React.Component<
                         break;
 
                     case 'OPEN_H5P':
-                        action.payload.paths.forEach((file: any) => {
-                            dispatch(
-                                actions.h5peditor.importH5P(file, window.h)
-                            );
-                        });
+                        action.payload.files.forEach(
+                            (file: { fileHandleId: string; path: string }) => {
+                                dispatch(
+                                    actions.h5peditor.importH5P(
+                                        file.fileHandleId,
+                                        file.path,
+                                        window.h
+                                    )
+                                );
+                            }
+                        );
                         break;
 
                     case 'SAVE':
@@ -141,7 +147,7 @@ export class WebsocketContainer extends React.Component<
         try {
             const { activeTab, dispatch } = this.props;
             log.info(`saving ${activeTab.contentId}`);
-            dispatch(actions.h5peditor.save(activeTab.path));
+            dispatch(actions.h5peditor.save(activeTab.fileHandleId));
         } catch (error: any) {
             Sentry.captureException(error);
 

@@ -28,6 +28,7 @@ const testTab: ITab = {
     mainLibrary: 'library',
     name: 'test',
     path: '',
+    fileHandleId: undefined,
     mode: Modes.view,
     opening: false
 };

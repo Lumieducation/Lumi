@@ -6,6 +6,8 @@ import Logger from '../helpers/Logger';
 import IServerConfig from '../config/IPaths';
 import { BrowserWindow } from 'electron';
 import StateStorage from '../state/electronState';
+import { IFilePickers } from '../types';
+import FileHandleManager from '../state/FileHandleManager';
 
 const log = new Logger('routes:lumi-h5p');
 
@@ -13,14 +15,18 @@ export default function (
     h5pEditor: H5PEditor,
     serverConfig: IServerConfig,
     browserWindow: BrowserWindow,
-    electronState: StateStorage
+    electronState: StateStorage,
+    filePickers: IFilePickers,
+    fileHandleManager: FileHandleManager
 ): express.Router {
     const router = express.Router();
     const lumiController = new LumiController(
         h5pEditor,
         serverConfig,
         browserWindow,
-        electronState
+        electronState,
+        filePickers,
+        fileHandleManager
     );
 
     router.get(
@@ -66,7 +72,7 @@ export default function (
             next: express.NextFunction
         ) => {
             lumiController
-                .import(req.body.path)
+                .import(req.body.fileHandleId)
                 .then((result) => {
                     res.status(200).json(result);
                 })
@@ -80,14 +86,24 @@ export default function (
     router.get(
         `/`,
         (
-            req: express.Request,
+            req: express.Request<
+                {},
+                {},
+                {},
+                { contentId: string; fileHandleId: string }
+            >,
             res: express.Response,
             next: express.NextFunction
         ) => {
             lumiController
                 // the casts assume we don't get arrays of complex objects from
                 // the client
-                .export(req.query.contentId as string, req.query.path as string)
+                .export(
+                    req.query.contentId,
+                    req.query.fileHandleId === 'undefined'
+                        ? undefined
+                        : req.query.fileHandleId
+                )
                 .then((result) => {
                     res.status(200).json(result);
                 })

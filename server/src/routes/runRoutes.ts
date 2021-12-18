@@ -10,6 +10,8 @@ import SettingsCache from '../config/SettingsCache';
 import LumiController from '../controllers/LumiController';
 import { globalWebsocket as websocket } from '../boot/websocket';
 import StateStorage from '../state/electronState';
+import FileHandleManager from '../state/FileHandleManager';
+import { IFilePickers } from '../types';
 
 const runHost = process.env.LUMI_HOST || 'https://lumi.run';
 
@@ -18,14 +20,18 @@ export default function (
     h5pEditor: H5P.H5PEditor,
     browserWindow: BrowserWindow,
     settingsCache: SettingsCache,
-    electronState: StateStorage
+    electronState: StateStorage,
+    filePickers: IFilePickers,
+    fileHandleManager: FileHandleManager
 ): express.Router {
     const router = express.Router();
     const lumiController = new LumiController(
         h5pEditor,
         serverConfig,
         browserWindow,
-        electronState
+        electronState,
+        filePickers,
+        fileHandleManager
     );
 
     router.get(

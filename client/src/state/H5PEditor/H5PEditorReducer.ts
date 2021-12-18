@@ -75,6 +75,7 @@ export default function tabReducer(
                             ? {
                                   ...tab,
                                   loadingIndicator: false,
+                                  fileHandleId: action.payload.fileHandleId,
                                   path: action.payload.path
                               }
                             : tab
@@ -279,7 +280,8 @@ export default function tabReducer(
                             mainLibrary: '',
                             name: path.basename(action.payload.path),
                             mode: Modes.edit,
-                            opening: true
+                            opening: true,
+                            fileHandleId: action.payload.fileHandleId
                         }
                     ]
                 };
@@ -298,7 +300,8 @@ export default function tabReducer(
                                   mainLibrary: action.payload.h5p.library,
                                   name: action.payload.h5p.metadata.title,
                                   mode: Modes.edit,
-                                  opening: false
+                                  opening: false,
+                                  fileHandleId: action.payload.fileHandleId
                               }
                             : tab
                     )
@@ -319,7 +322,8 @@ export default function tabReducer(
                             path: undefined,
                             mode: Modes.edit,
                             opening: false,
-                            ...action.payload.tab
+                            ...action.payload.tab,
+                            fileHandleId: undefined
                         }
                     ]
                 };

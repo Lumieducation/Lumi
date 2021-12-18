@@ -1,5 +1,5 @@
 import request from 'supertest';
-import bootApp from '../../boot/expressApp';
+import createExpressApp from '../../boot/expressApp';
 import path from 'path';
 import express from 'express';
 import fsExtra from 'fs-extra';
@@ -8,6 +8,9 @@ import { dialog, BrowserWindow, MessageBoxOptions } from 'electron';
 import SettingsCache from '../../config/SettingsCache';
 import initI18n from '../../boot/i18n';
 import StateStorage from '../../state/electronState';
+import FilePickerMock from './FilePickerMock';
+import FileHandleManager from '../../state/FileHandleManager';
+import { initH5P } from '../../boot/h5p';
 
 describe('GET /settings', () => {
     let app: express.Application;
@@ -16,22 +19,25 @@ describe('GET /settings', () => {
         const settingsCache = new SettingsCache(
             path.resolve('test', 'data', 'settings.json')
         );
-        app = await bootApp(
-            {
-                contentTypeCache: path.resolve('test', 'data'),
-                librariesPath: path.resolve('test', 'data', 'libraries'),
-                temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
-                contentStoragePath: path.resolve(
-                    'test',
-                    'data',
-                    'workingCache'
-                ),
-                settingsFile: path.resolve('test', 'data', 'settings.json')
-            },
+        const paths = {
+            contentTypeCache: path.resolve('test', 'data'),
+            librariesPath: path.resolve('test', 'data', 'libraries'),
+            temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
+            contentStoragePath: path.resolve('test', 'data', 'workingCache'),
+            settingsFile: path.resolve('test', 'data', 'settings.json')
+        };
+        const t = await initI18n(settingsCache);
+        const { h5pEditor, h5pPlayer } = await initH5P(paths, t, settingsCache);
+        app = await createExpressApp(
+            h5pEditor,
+            h5pPlayer,
+            paths,
             null,
             settingsCache,
-            await initI18n(settingsCache),
-            new StateStorage()
+            t,
+            new StateStorage(),
+            new FilePickerMock(),
+            new FileHandleManager()
         );
 
         return app;
@@ -55,22 +61,25 @@ describe('PATCH /settings', () => {
         const settingsCache = new SettingsCache(
             path.resolve('test', 'data', 'settings.json')
         );
-        app = await bootApp(
-            {
-                contentTypeCache: path.resolve('test', 'data'),
-                librariesPath: path.resolve('test', 'data', 'libraries'),
-                temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
-                contentStoragePath: path.resolve(
-                    'test',
-                    'data',
-                    'workingCache'
-                ),
-                settingsFile: path.resolve('test', 'data', 'settings.json')
-            },
+        const paths = {
+            contentTypeCache: path.resolve('test', 'data'),
+            librariesPath: path.resolve('test', 'data', 'libraries'),
+            temporaryStoragePath: path.resolve('test', 'data', 'tmp'),
+            contentStoragePath: path.resolve('test', 'data', 'workingCache'),
+            settingsFile: path.resolve('test', 'data', 'settings.json')
+        };
+        const t = await initI18n(settingsCache);
+        const { h5pEditor, h5pPlayer } = await initH5P(paths, t, settingsCache);
+        app = await createExpressApp(
+            h5pEditor,
+            h5pPlayer,
+            paths,
             null,
             settingsCache,
-            await initI18n(settingsCache),
-            new StateStorage()
+            t,
+            new StateStorage(),
+            new FilePickerMock(),
+            new FileHandleManager()
         );
 
         return app;

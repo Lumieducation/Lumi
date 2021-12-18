@@ -7,57 +7,29 @@ import fileUpload from 'express-fileupload';
 import i18next, { TFunction } from 'i18next';
 import i18nextHttpMiddleware from 'i18next-http-middleware';
 
-import createH5PEditor from './h5pEditor';
-import H5PConfig from '../config/H5PConfig';
 import IServerConfig from '../config/IPaths';
 import LumiError from '../helpers/LumiError';
 import routes from '../routes';
 import SettingsCache from '../config/SettingsCache';
 import User from '../h5pImplementations/User';
 import StateStorage from '../state/electronState';
+import FileHandleManager from '../state/FileHandleManager';
+import { IFilePickers } from '../types';
 
 /**
  * Creates the main Express app.
  */
 export default async (
+    h5pEditor: H5P.H5PEditor,
+    h5pPlayer: H5P.H5PPlayer,
     serverConfig: IServerConfig,
     browserWindow: electron.BrowserWindow,
     settingsCache: SettingsCache,
     translationFunction: TFunction,
     electronState: StateStorage,
-    options?: {
-        devMode?: boolean;
-        libraryDir?: string;
-    }
+    filePickers: IFilePickers,
+    fileHandleManager: FileHandleManager
 ) => {
-    const config = await new H5PConfig(settingsCache).load();
-
-    // The H5PEditor object is central to all operations of
-    // @lumieducation/h5p-server if you want to user the editor component.
-    const h5pEditor: H5P.H5PEditor = await createH5PEditor(
-        config,
-        options?.libraryDir ?? serverConfig.librariesPath, // the path on the local disc where libraries should be stored)
-        serverConfig.contentStoragePath, // the path on the local disc where content is stored. Only used / necessary if you use the local filesystem content storage class.
-        serverConfig.temporaryStoragePath, // the path on the local disc where temporary files (uploads) should be stored. Only used / necessary if you use the local filesystem temporary storage class.
-        (key, language) => translationFunction(key, { lng: language }),
-        {
-            disableLibraryCache: options?.devMode
-        }
-    );
-
-    h5pEditor.setRenderer((model) => model);
-
-    const h5pPlayer = new H5P.H5PPlayer(
-        h5pEditor.libraryStorage,
-        h5pEditor.contentStorage,
-        config,
-        undefined,
-        undefined,
-        (key, language) => translationFunction(key, { lng: language })
-    );
-
-    h5pPlayer.setRenderer((model) => model);
-
     const app = express();
 
     if (process.env.NODE_ENV !== 'development') {
@@ -126,7 +98,9 @@ export default async (
             browserWindow,
             settingsCache,
             (key, language) => translationFunction(key, { lng: language }),
-            electronState
+            electronState,
+            filePickers,
+            fileHandleManager
         )
     );
 

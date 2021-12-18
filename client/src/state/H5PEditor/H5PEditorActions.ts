@@ -216,9 +216,11 @@ export function openH5P(): any {
             .then((response) => {
                 const files = response.body;
 
-                files.forEach((file: string) => {
-                    dispatch(importH5P(file));
-                });
+                files.forEach(
+                    (file: { fileHandleId: string; path: string }) => {
+                        dispatch(importH5P(file.fileHandleId, file.path));
+                    }
+                );
             })
             .catch((error) => Sentry.captureException(error));
         return dispatch;
@@ -232,14 +234,14 @@ export function openTab(tab?: Partial<ITab>): any {
             track(
                 'H5PEditor',
                 'openTab',
-                tab?.path ? 'existing h5p' : 'new h5p'
+                tab?.fileHandleId ? 'existing h5p' : 'new h5p'
             )
         );
 
         dispatch({
             payload: {
-                id: shortid(),
-                tab
+                tab,
+                id: shortid()
             },
             type: H5PEDITOR_OPEN_TAB
         });
@@ -448,18 +450,18 @@ export function deleteH5P(
 }
 
 export function save(
-    path?: string
+    fileHandleId?: string
 ): ThunkAction<void, null, null, SaveActions> {
     return async (dispatch: any) => {
         try {
             const data = await dispatch(updateContentOnServer());
 
             dispatch({
-                payload: { id: data.contentId, path },
+                payload: { id: data.contentId },
                 type: H5PEDITOR_SAVE_REQUEST
             });
 
-            const response = await api.exportH5P(data.contentId, path);
+            const response = await api.exportH5P(data.contentId, fileHandleId);
 
             if (response.status !== 200) {
                 throw new Error(`Error while saving H5P: ${response.text}`);
@@ -472,8 +474,11 @@ export function save(
             }
 
             return dispatch({
-                // tslint:disable-next-line: object-shorthand-properties-first
-                payload: { id: data.contentId, ...response.body },
+                payload: {
+                    id: data.contentId,
+                    fileHandleId: response.body.fileHandleId,
+                    path: response.body.path
+                },
                 type: H5PEDITOR_SAVE_SUCCESS
             });
         } catch (error: any) {
@@ -487,7 +492,7 @@ export function save(
 
                 return dispatch({
                     error,
-                    payload: { path },
+                    payload: { fileHandleId },
                     type: H5PEDITOR_SAVE_ERROR
                 });
             }
@@ -496,6 +501,7 @@ export function save(
 }
 
 export function importH5P(
+    fileHandleId: string,
     path: string,
     history?: H.History
 ): ThunkAction<void, null, null, SaveActions> {
@@ -503,7 +509,7 @@ export function importH5P(
         const tabId = shortid();
 
         dispatch({
-            payload: { tabId, path },
+            payload: { tabId, fileHandleId, path },
             type: H5P_IMPORT_REQUEST
         });
 
@@ -512,7 +518,7 @@ export function importH5P(
         }
 
         return api
-            .importH5P(path)
+            .importH5P(fileHandleId)
             .then(({ body }) => {
                 try {
                     dispatch(track('H5P', 'open', body.metadata.mainLibrary));
@@ -521,7 +527,12 @@ export function importH5P(
                 }
 
                 dispatch({
-                    payload: { tabId, path, h5p: body },
+                    payload: {
+                        tabId,
+                        fileHandleId,
+                        path,
+                        h5p: body
+                    },
                     type: H5P_IMPORT_SUCCESS
                 });
             })
@@ -531,7 +542,7 @@ export function importH5P(
                 dispatch({
                     error,
                     payload: {
-                        path
+                        fileHandleId
                     },
                     type: H5P_IMPORT_ERROR
                 });

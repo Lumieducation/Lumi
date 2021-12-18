@@ -66,14 +66,16 @@ export function deleteH5P(contentId: string): Promise<superagent.Response> {
 
 export function exportH5P(
     contentId: string,
-    path?: string
+    fileHandleId?: string
 ): Promise<superagent.Response> {
-    return superagent.get(`/api/v1/lumi?contentId=${contentId}&path=${path}`);
+    return superagent.get(
+        `/api/v1/lumi?contentId=${contentId}&fileHandleId=${fileHandleId}`
+    );
 }
 
-export function importH5P(path: string): Promise<superagent.Response> {
+export function importH5P(fileHandleId: string): Promise<superagent.Response> {
     return superagent.post(`/api/v1/lumi`).send({
-        path
+        fileHandleId
     });
 }
 
