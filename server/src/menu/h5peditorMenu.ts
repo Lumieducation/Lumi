@@ -40,7 +40,7 @@ export default (
                 {
                     accelerator: 'CmdOrCtrl+O',
                     click: async () => {
-                        const fileHandles = await lumiController.open();
+                        const fileHandles = await lumiController.pickH5PFiles();
                         if (
                             fileHandles.length > 0 &&
                             fileHandles[0] !== undefined

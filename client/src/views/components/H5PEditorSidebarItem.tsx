@@ -10,7 +10,7 @@ import {
 import CloseIcon from '@material-ui/icons/Close';
 import { Fragment, useEffect, useState } from 'react';
 
-import { getLibraryOverview } from '../../state/H5PEditor/H5PApi';
+import { getLibraryOverview } from '../../services/H5PApi';
 import { ITab } from '../../state/H5PEditor/H5PEditorTypes';
 import H5PAvatar from './H5PAvatar';
 

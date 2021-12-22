@@ -190,6 +190,7 @@ export async function exportH5P(
     user: IUser,
     language: string,
     options: {
+        cssPath?: string;
         format: 'bundle' | 'external' | 'scorm';
         includeReporter: boolean;
         marginX: number;
@@ -201,6 +202,16 @@ export async function exportH5P(
         showRights: boolean;
     }
 ): Promise<void> {
+    let customCss: string;
+    try {
+        customCss = options.cssPath
+            ? await fsExtra.readFile(options.cssPath, 'utf-8')
+            : undefined;
+    } catch {
+        // Read error from file; don't include CSS and silently ignore for the
+        // moment
+    }
+
     const htmlExporter = new HtmlExporter(
         h5pEditor.libraryStorage,
         h5pEditor.contentStorage,
@@ -213,12 +224,14 @@ export async function exportH5P(
             ? scormTemplate(
                   options.marginX,
                   options.marginY,
-                  options.restrictWidthAndCenter ? options.maxWidth : undefined
+                  options.restrictWidthAndCenter ? options.maxWidth : undefined,
+                  customCss
               )
             : simpleTemplate(
                   options.marginX,
                   options.marginY,
-                  options.restrictWidthAndCenter ? options.maxWidth : undefined
+                  options.restrictWidthAndCenter ? options.maxWidth : undefined,
+                  customCss
               ),
         translationFunction
     );

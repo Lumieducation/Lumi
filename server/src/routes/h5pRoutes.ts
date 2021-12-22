@@ -21,6 +21,7 @@ import StateStorage from '../state/electronState';
 import User from '../h5pImplementations/User';
 import { sanitizeFilename } from '../helpers/FilenameSanitizer';
 import { exportH5P } from '../controllers/ExportController';
+import FileHandleManager from '../state/FileHandleManager';
 
 const t = i18next.getFixedT(null, 'lumi');
 
@@ -37,7 +38,8 @@ export default function (
     languageOverride: string | 'auto' = 'auto',
     browserWindow: BrowserWindow,
     translationFunction: ITranslationFunction,
-    electronState: StateStorage
+    electronState: StateStorage,
+    fileHandleManager: FileHandleManager
 ): express.Router {
     const router = express.Router();
 
@@ -66,6 +68,7 @@ export default function (
                 any,
                 any,
                 {
+                    cssFileHandleId?: string;
                     format: 'bundle' | 'external' | 'scorm';
                     includeReporter: string;
                     marginX: string;
@@ -89,6 +92,10 @@ export default function (
             const restrictWidthAndCenter =
                 req.query.restrictWidthAndCenter === 'true';
             const maxWidth = Number.parseInt(req.query.maxWidth, 10);
+            const cssFileHandleId = req.query.cssFileHandleId;
+            const cssPath = cssFileHandleId
+                ? fileHandleManager.getById(cssFileHandleId)?.filename
+                : undefined;
 
             const { params, h5p } = await h5pEditor.getContent(
                 req.params.contentId,
@@ -147,6 +154,7 @@ export default function (
                         restrictWidthAndCenter,
                         showEmbed,
                         showRights,
+                        cssPath,
                         masteryScore: Number.parseFloat(req.query.masteryScore)
                     }
                 );

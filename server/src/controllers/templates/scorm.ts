@@ -1,6 +1,11 @@
 import { IIntegration } from '@lumieducation/h5p-server';
 
-export default (marginX?: number, marginY?: number, maxWidth?: number) =>
+export default (
+        marginX?: number,
+        marginY?: number,
+        maxWidth?: number,
+        customCss?: string
+    ) =>
     (
         integration: IIntegration,
         scriptsBundle: string,
@@ -26,6 +31,7 @@ export default (marginX?: number, marginY?: number, maxWidth?: number) =>
   <script type="text/javascript" src="SCORM_API_wrapper.js"></script>
   <script type="text/javascript" src="h5p-adaptor.js"></script>
   <style>${stylesBundle}</style>
+  ${customCss ? `<style>${customCss}</style>` : ''}
 </head>
 <body>
     <div style="${marginStyle}${flexStyle}">

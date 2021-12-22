@@ -1,6 +1,12 @@
 import { IIntegration } from '@lumieducation/h5p-server';
+import * as fsExtra from 'fs-extra';
 
-export default (marginX?: number, marginY?: number, maxWidth?: number) =>
+export default (
+        marginX?: number,
+        marginY?: number,
+        maxWidth?: number,
+        customCss?: string
+    ) =>
     (
         integration: IIntegration,
         scriptsBundle: string,
@@ -17,6 +23,7 @@ export default (marginX?: number, marginY?: number, maxWidth?: number) =>
             flexStyle = `display: flex; justify-content: center;`;
             widthStyle = `max-width:${maxWidth}px;`;
         }
+
         return `
 <!doctype html>
     <html class="h5p-iframe">
@@ -40,6 +47,7 @@ export default (marginX?: number, marginY?: number, maxWidth?: number) =>
             
         ${scriptsBundle}</script>
         <style>${stylesBundle}</style>
+        ${customCss ? `<style>${customCss}</style>` : ''}
     </head>
     <body>
         <div style="${marginStyle}${flexStyle}">

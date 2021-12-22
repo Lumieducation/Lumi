@@ -155,7 +155,26 @@ export default class LumiController {
         return this.h5pEditor.getContent(contentId);
     }
 
-    public async open(): Promise<{ fileHandleId: string; path: string }[]> {
+    public async pickCSSFile(): Promise<{ fileHandle: string; path: string }> {
+        const fileHandle = await this.filePickers.openSingleFile(
+            ['css'],
+            t('editor.exportDialog.cssFilePicker.formatName'),
+            this.electronState.getState().lastDirectory,
+            this.browserWindow
+        );
+
+        if (fileHandle) {
+            this.electronState.setState({
+                lastDirectory: _path.dirname(fileHandle.filename)
+            });
+        }
+
+        return { fileHandle: fileHandle.handleId, path: fileHandle.filename };
+    }
+
+    public async pickH5PFiles(): Promise<
+        { fileHandleId: string; path: string }[]
+    > {
         const fileHandles = await this.filePickers.openMultipleFiles(
             ['h5p'],
             t('editor.extensionName'),
@@ -171,6 +190,8 @@ export default class LumiController {
             this.electronState.setState({
                 lastDirectory: _path.dirname(fileHandles[0].filename)
             });
+        } else {
+            return undefined;
         }
 
         return fileHandles.map((fh) => ({

@@ -57,7 +57,7 @@ import { track } from '../track/actions';
 
 import store from '../index';
 
-import * as api from './H5PApi';
+import * as api from '../../services/H5PApi';
 
 const log = new Logger('actions:tabs');
 
@@ -133,14 +133,15 @@ export function exportH5P(
     includeReporter: boolean,
     format: 'bundle' | 'external' | 'scorm',
     options: {
-        masteryScore?: string;
-        showEmbed: boolean;
-        showRights: boolean;
+        addCss: boolean;
+        cssFileHandleId: string;
         marginX: number;
         marginY: number;
-        restrictWidthAndCenter: boolean;
+        masteryScore?: string;
         maxWidth: number;
-        cssPath: string;
+        restrictWidthAndCenter: boolean;
+        showEmbed: boolean;
+        showRights: boolean;
     }
 ): any {
     return async (dispatch: any) => {
@@ -212,7 +213,7 @@ export function exportH5P(
 
 export function openH5P(): any {
     return (dispatch: any) => {
-        api.openFiles()
+        api.pickH5PFiles()
             .then((response) => {
                 const files = response.body;
 

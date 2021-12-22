@@ -117,12 +117,11 @@ export default function (
         h5pRoutes(
             h5pEditor,
             h5pPlayer,
-            'auto', // You can change the language of the editor here by sett
-            // the language code you need here. 'auto' means the route will try
-            // to use the language detected by the i18next language detector.,
+            'auto',
             browserWindow,
             translationFunction,
-            electronState
+            electronState,
+            fileHandleManager
         )
     );
 

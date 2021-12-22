@@ -14,8 +14,6 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import Switch from '@material-ui/core/Switch';
-
-import { actions, IState, selectors } from '../../state';
 import {
     Box,
     Checkbox,
@@ -30,7 +28,10 @@ import {
     Stack
 } from '@mui/material';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
+import { actions, IState, selectors } from '../../state';
 import { getDefaultContentTypeWidth } from '../../helpers/contentTypeWidths';
+import { pickCSSFile } from '../../services/H5PApi';
 
 export default function H5PEditorExportDialog() {
     const dispatch = useDispatch();
@@ -68,7 +69,8 @@ export default function H5PEditorExportDialog() {
         useState<number>(autoMaxWidth);
     const [maxWidthError, setMaxWidthError] = useState<string>();
     const [addCss, setAddCss] = useState<boolean>(false);
-    // const [cssPath, setCssPath] = useState<string>('');
+    const [cssFilename, setCssFilename] = useState<string>('');
+    const [cssFileHandleId, setCssFileHandleId] = useState<string>('');
 
     if (autoMaxWidth !== defaultMaxWidth) {
         setDefaultMaxWidth(autoMaxWidth);
@@ -427,11 +429,25 @@ export default function H5PEditorExportDialog() {
                                                 }
                                             />
                                         </FormControl>
-                                        <FormHelperText>
-                                            filename
+                                        <FormHelperText disabled={!addCss}>
+                                            {cssFilename}
                                         </FormHelperText>
                                         <Box flexGrow="1" />
-                                        <Button disabled={!addCss} size="small">
+                                        <Button
+                                            disabled={!addCss}
+                                            size="small"
+                                            onClick={async () => {
+                                                const res = await pickCSSFile();
+                                                if (res?.statusCode === 200) {
+                                                    setCssFileHandleId(
+                                                        res.body.fileHandleId
+                                                    );
+                                                    setCssFilename(
+                                                        res.body.filename
+                                                    );
+                                                }
+                                            }}
+                                        >
                                             {t(
                                                 'editor.exportDialog.displayOptions.chooseCssFile'
                                             )}
@@ -463,7 +479,8 @@ export default function H5PEditorExportDialog() {
                                     {
                                         showRights,
                                         restrictWidthAndCenter,
-                                        cssPath: '',
+                                        cssFileHandleId,
+                                        addCss,
                                         masteryScore:
                                             formatChoice === 'scorm'
                                                 ? masteryScore

@@ -11,7 +11,8 @@ export function exportContent(
     includeReporter: boolean,
     format: 'bundle' | 'external' | 'scorm',
     options: {
-        cssPath: string;
+        addCss: boolean;
+        cssFileHandleId: string;
         marginX: number;
         marginY: number;
         masteryScore?: string;
@@ -30,7 +31,7 @@ export function exportContent(
             options.marginY
         }&restrictWidthAndCenter=${options.restrictWidthAndCenter.toString()}&maxWidth=${
             options.maxWidth
-        }`
+        }${options.addCss ? `&cssFileHandleId=${options.cssFileHandleId}` : ''}`
     );
 }
 
@@ -88,8 +89,12 @@ export function updateH5P(
         .send(content);
 }
 
-export function openFiles(): Promise<superagent.Response> {
-    return superagent.get('/api/v1/lumi/open_files');
+export function pickH5PFiles(): Promise<superagent.Response> {
+    return superagent.get('/api/v1/lumi/pick_h5p_files');
+}
+
+export function pickCSSFile(): Promise<superagent.Response> {
+    return superagent.get('/api/v1/lumi/pick_css_file');
 }
 
 /**

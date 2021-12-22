@@ -1,6 +1,8 @@
 import express from 'express';
 import { H5PEditor } from '@lumieducation/h5p-server';
 import * as Sentry from '@sentry/node';
+import * as _path from 'path';
+
 import LumiController from '../controllers/LumiController';
 import Logger from '../helpers/Logger';
 import IServerConfig from '../config/IPaths';
@@ -46,16 +48,42 @@ export default function (
     );
 
     router.get(
-        '/open_files',
+        '/pick_h5p_files',
         (
             req: express.Request,
             res: express.Response,
             next: express.NextFunction
         ) => {
             lumiController
-                .open()
+                .pickH5PFiles()
                 .then((result) => {
-                    res.status(200).json(result);
+                    if (result) {
+                        res.status(200).json(result);
+                    } else {
+                        res.status(404).send();
+                    }
+                })
+                .catch((error) => {
+                    Sentry.captureException(error);
+                    next(error);
+                });
+        }
+    );
+
+    router.get(
+        '/pick_css_file',
+        (
+            req: express.Request,
+            res: express.Response,
+            next: express.NextFunction
+        ) => {
+            lumiController
+                .pickCSSFile()
+                .then((result) => {
+                    res.status(200).json({
+                        fileHandleId: result.fileHandle,
+                        filename: _path.basename(result.path)
+                    });
                 })
                 .catch((error) => {
                     Sentry.captureException(error);
