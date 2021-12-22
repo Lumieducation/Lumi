@@ -19,6 +19,8 @@ export default function (
 
     router.get('/', async (req: express.Request, res) => {
         try {
+            // using the regular file dialog is safe, as the path is only used
+            // on the server side to load files
             const openDialog = await dialog.showOpenDialog(browserWindow, {
                 properties: ['openDirectory'],
                 defaultPath: electronState.getState().lastDirectory

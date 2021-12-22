@@ -101,6 +101,9 @@ export default function (
                 req.params.contentId,
                 req.user
             );
+
+            // using the path directly is safe, as it is not passed to the
+            // client and sent back
             const result = await dialog.showSaveDialog(browserWindow, {
                 defaultPath: _path.join(
                     electronState.getState().lastDirectory,

@@ -12,6 +12,9 @@ import { globalWebsocket as websocket } from '../boot/websocket';
 import StateStorage from '../state/electronState';
 import FileHandleManager from '../state/FileHandleManager';
 import { IFilePickers } from '../types';
+import i18next from 'i18next';
+
+const t = i18next.getFixedT(null, 'lumi');
 
 const runHost = process.env.LUMI_HOST || 'https://lumi.run';
 
@@ -101,6 +104,9 @@ export default function (
             res: express.Response,
             next: express.NextFunction
         ) => {
+            // The run route is currently not in use, so the unsafe path in the
+            // query is not dealt with properly
+
             let filePath: string =
                 req.query.filePath && `${req.query.filePath}`;
 
@@ -115,7 +121,7 @@ export default function (
                             filters: [
                                 {
                                     extensions: ['h5p'],
-                                    name: 'HTML 5 Package'
+                                    name: t('editor.extensionName')
                                 }
                             ],
                             properties: ['openFile']
