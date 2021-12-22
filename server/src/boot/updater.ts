@@ -5,9 +5,12 @@ import * as Sentry from '@sentry/electron';
 import fsExtra from 'fs-extra';
 import IServerConfig from '../config/IPaths';
 import SettingsCache from '../config/SettingsCache';
+import i18next from 'i18next';
 
 let updateAvailable: boolean = false;
 let updating: boolean = false;
+
+const t = i18next.getFixedT(null, 'lumi');
 
 export const platformSupportsUpdates = () => {
     if (process.env.DISABLE_UPDATES) {
@@ -58,9 +61,8 @@ export default async function initUpdater(
             event.preventDefault();
 
             dialog.showMessageBox({
-                message:
-                    'Update is available. The application will install the update and restart.',
-                title: 'Install Updates'
+                message: t('notifications.updater.availableText'),
+                title: t('notifications.updater.availableTitle')
             });
 
             setTimeout(() => {
