@@ -57,7 +57,6 @@ export default function H5PEditorExportDialog() {
     const [showEmbed, setShowEmbed] = useState<boolean>(false);
     const [masteryScore, setMasteryScore] = useState<string>('70');
     const [masteryScoreError, setMasteryScoreError] = useState<string>();
-    const [isValid, setIsValid] = useState<boolean>(true);
     const [marginX, setMarginX] = useState<string>('20');
     const [marginXError, setMarginXError] = useState<string>();
     const [marginY, setMarginY] = useState<string>('20');
@@ -94,7 +93,6 @@ export default function H5PEditorExportDialog() {
             const parsed = Number.parseFloat(event.target.value);
             if (isNaN(parsed)) {
                 errorSetter(t('editor.exportDialog.validationErrors.errorNaN'));
-                setIsValid(false);
             } else if (
                 (min !== undefined && parsed < min) ||
                 (max !== undefined && parsed > max)
@@ -124,10 +122,8 @@ export default function H5PEditorExportDialog() {
                     );
                 }
                 errorSetter(message);
-                setIsValid(false);
             } else {
                 errorSetter(undefined);
-                setIsValid(true);
             }
             setter(event.target.value);
         };
@@ -496,7 +492,12 @@ export default function H5PEditorExportDialog() {
                                 )
                             )
                         }
-                        disabled={!isValid}
+                        disabled={
+                            masteryScoreError !== undefined ||
+                            marginXError !== undefined ||
+                            marginYError !== undefined ||
+                            maxWidthError !== undefined
+                        }
                     >
                         {t('editor.exportDialog.exportButton')}
                     </Button>
