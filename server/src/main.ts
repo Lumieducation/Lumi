@@ -30,7 +30,7 @@ import createApp from './boot/expressApp';
 import StateStorage from './state/electronState';
 import FilePickers from './helpers/FilePickers';
 import FileHandleManager from './state/FileHandleManager';
-import LumiController from './controllers/LumiController';
+import FileController from './controllers/FileController';
 import { initH5P } from './boot/h5p';
 
 let websocket: SocketIO.Server;
@@ -60,7 +60,7 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 const electronState = new StateStorage();
 const fileHandleManager = new FileHandleManager();
 
-let lumiController: LumiController;
+let fileController: FileController;
 
 /**
  * (Re-)Creates the main window.
@@ -72,8 +72,6 @@ export function createMainWindow(websocketArg: SocketIO.Server): void {
         isDevelopment,
         electronState
     );
-
-    lumiController.setBrowserWindow(mainWindow);
 
     mainWindow.on('closed', () => {
         mainWindow = null;
@@ -90,7 +88,7 @@ export function createMainWindow(websocketArg: SocketIO.Server): void {
             websocketArg,
             settingsCache,
             electronState,
-            lumiController
+            fileController
         );
     });
 
@@ -101,7 +99,7 @@ export function createMainWindow(websocketArg: SocketIO.Server): void {
             websocketArg,
             settingsCache,
             electronState,
-            lumiController
+            fileController
         );
     });
 
@@ -111,7 +109,7 @@ export function createMainWindow(websocketArg: SocketIO.Server): void {
         websocketArg,
         settingsCache,
         electronState,
-        lumiController
+        fileController
     );
 }
 
@@ -269,7 +267,7 @@ if (!gotSingleInstanceLock) {
             h5pEditor,
             h5pPlayer,
             serverPaths,
-            mainWindow,
+            () => mainWindow,
             settingsCache,
             translationFunction,
             electronState,
@@ -292,10 +290,9 @@ if (!gotSingleInstanceLock) {
         initUpdater(app, websocket, serverPaths, settingsCache);
         log.info('updater started');
 
-        lumiController = new LumiController(
+        fileController = new FileController(
             h5pEditor,
-            serverPaths,
-            mainWindow,
+            () => mainWindow,
             electronState,
             new FilePickers(fileHandleManager),
             fileHandleManager

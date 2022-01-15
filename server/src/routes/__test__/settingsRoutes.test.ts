@@ -32,7 +32,7 @@ describe('GET /settings', () => {
             h5pEditor,
             h5pPlayer,
             paths,
-            null,
+            () => null,
             settingsCache,
             t,
             new StateStorage(),

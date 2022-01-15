@@ -31,7 +31,7 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
             h5pEditor,
             h5pPlayer,
             paths,
-            null,
+            () => null,
             settingsCache,
             t,
             new StateStorage(),

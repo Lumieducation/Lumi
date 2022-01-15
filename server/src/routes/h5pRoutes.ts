@@ -1,15 +1,12 @@
 import express from 'express';
 import * as Sentry from '@sentry/node';
-import { BrowserWindow, dialog } from 'electron';
 import _path from 'path';
 import {
     H5PEditor,
     H5pError,
     H5PPlayer,
     IEditorModel,
-    IPlayerModel,
-    ITranslationFunction,
-    IUser
+    IPlayerModel
 } from '@lumieducation/h5p-server';
 import {
     IRequestWithUser,
@@ -17,13 +14,14 @@ import {
 } from '@lumieducation/h5p-express';
 import i18next from 'i18next';
 
-import StateStorage from '../state/electronState';
 import User from '../h5pImplementations/User';
-import { sanitizeFilename } from '../helpers/FilenameSanitizer';
-import { exportH5P } from '../controllers/ExportController';
-import FileHandleManager from '../state/FileHandleManager';
+import H5PController from '../controllers/H5PController';
+import IServerConfig from '../config/IPaths';
+import Logger from '../helpers/Logger';
 
 const t = i18next.getFixedT(null, 'lumi');
+
+const log = new Logger('routes:h5p');
 
 /**
  * @param h5pEditor
@@ -35,13 +33,28 @@ const t = i18next.getFixedT(null, 'lumi');
 export default function (
     h5pEditor: H5PEditor,
     h5pPlayer: H5PPlayer,
-    languageOverride: string | 'auto' = 'auto',
-    browserWindow: BrowserWindow,
-    translationFunction: ITranslationFunction,
-    electronState: StateStorage,
-    fileHandleManager: FileHandleManager
+    serverConfig: IServerConfig,
+    languageOverride: string | 'auto' = 'auto'
 ): express.Router {
     const router = express.Router();
+
+    const h5pController = new H5PController(h5pEditor, serverConfig);
+
+    router.get(
+        '/:contentId/data',
+        async (req: express.Request, res: express.Response) => {
+            const { contentId } = req.params;
+            try {
+                const content = await this.h5pEditor.getContent(contentId);
+                log.info(`sending package data for contentId ${contentId}`);
+                res.status(200).json(content);
+            } catch (error: any) {
+                Sentry.captureException(error);
+                log.warn(error);
+                res.status(404).end();
+            }
+        }
+    );
 
     router.get(`/:contentId/play`, async (req, res) => {
         try {
@@ -59,118 +72,6 @@ export default function (
             res.status(500).end(error.message);
         }
     });
-
-    router.get(
-        `/:contentId/export`,
-        async (
-            req: express.Request<
-                { contentId: string },
-                any,
-                any,
-                {
-                    cssFileHandleId?: string;
-                    format: 'bundle' | 'external' | 'scorm';
-                    includeReporter: string;
-                    marginX: string;
-                    marginY: string;
-                    masteryScore: string;
-                    maxWidth: string;
-                    restrictWidthAndCenter: string;
-                    showEmbed: string;
-                    showRights: string;
-                }
-            > & { user: IUser },
-            res
-        ) => {
-            const includeReporter = req.query.includeReporter === 'true';
-            const format: 'bundle' | 'external' | 'scorm' = req.query.format;
-            const expectedExtension = format === 'scorm' ? 'zip' : 'html';
-            const showEmbed = req.query.showEmbed === 'true';
-            const showRights = req.query.showRights === 'true';
-            const marginX = Number.parseInt(req.query.marginX, 10);
-            const marginY = Number.parseInt(req.query.marginY, 10);
-            const restrictWidthAndCenter =
-                req.query.restrictWidthAndCenter === 'true';
-            const maxWidth = Number.parseInt(req.query.maxWidth, 10);
-            const cssFileHandleId = req.query.cssFileHandleId;
-            const cssPath = cssFileHandleId
-                ? fileHandleManager.getById(cssFileHandleId)?.filename
-                : undefined;
-
-            const { params, h5p } = await h5pEditor.getContent(
-                req.params.contentId,
-                req.user
-            );
-
-            // using the path directly is safe, as it is not passed to the
-            // client and sent back
-            const result = await dialog.showSaveDialog(browserWindow, {
-                defaultPath: _path.join(
-                    electronState.getState().lastDirectory,
-                    sanitizeFilename(
-                        params.metadata.title,
-                        t('edit.exportDialog.defaults.fileName')
-                    ) ?? t('edit.exportDialog.defaults.fileName')
-                ),
-                filters: [
-                    {
-                        extensions: [expectedExtension],
-                        name: t(
-                            `editor.exportDialog.filePicker.formatNames.${format}`
-                        )
-                    }
-                ],
-                title: t('editor.exportDialog.filePicker.title'),
-                buttonLabel: t('editor.exportDialog.filePicker.buttonLabel'),
-                properties: ['showOverwriteConfirmation']
-            });
-
-            if (result.canceled) {
-                return res.status(499).end();
-            }
-            let filePath = result.filePath;
-
-            electronState.setState({ lastDirectory: _path.dirname(filePath) });
-
-            let actualExtension = _path.extname(filePath);
-            if (actualExtension !== `.${expectedExtension}`) {
-                filePath = `${filePath}.${expectedExtension}`;
-                actualExtension = `.${expectedExtension}`;
-            }
-
-            try {
-                electronState.setState({ blockKeyboard: true });
-
-                await exportH5P(
-                    filePath,
-                    h5pEditor,
-                    translationFunction,
-                    req.params.contentId,
-                    req.user,
-                    h5p.defaultLanguage,
-                    {
-                        format,
-                        includeReporter,
-                        marginX,
-                        marginY,
-                        maxWidth,
-                        restrictWidthAndCenter,
-                        showEmbed,
-                        showRights,
-                        cssPath,
-                        masteryScore: Number.parseFloat(req.query.masteryScore)
-                    }
-                );
-            } catch (error: any) {
-                Sentry.captureException(error);
-                res.status(500).json(error);
-            } finally {
-                electronState.setState({ blockKeyboard: false });
-            }
-
-            res.status(200).end();
-        }
-    );
 
     router.get('/:contentId/edit', async (req: IRequestWithLanguage, res) => {
         // This route merges the render and the /ajax/params routes to avoid a
@@ -298,6 +199,28 @@ export default function (
             })
         );
     });
+
+    router.delete(
+        '/:contentId',
+        async (
+            req: express.Request<{ contentId: string }>,
+            res: express.Response,
+            next: express.NextFunction
+        ) => {
+            const contentId = req.params.contentId;
+            h5pController
+                // the cast assumes we don't get arrays of complex objects from
+                // the client
+                .delete(contentId as string)
+                .then((result) => {
+                    res.status(200).json(result);
+                })
+                .catch((error) => {
+                    Sentry.captureException(error);
+                    next(error);
+                });
+        }
+    );
 
     return router;
 }

@@ -10,14 +10,14 @@ import windowMenu from './windowMenu';
 import viewMenu from './viewMenu';
 import SettingsCache from '../config/SettingsCache';
 import StateStorage from '../state/electronState';
-import LumiController from '../controllers/LumiController';
+import FileController from '../controllers/FileController';
 
 export default (
     window: electron.BrowserWindow,
     websocket: SocketIO.Server,
     settingsCache: SettingsCache,
     electronState: StateStorage,
-    lumiController: LumiController
+    fileController: FileController
 ) =>
     [
         ...macMenu(),
@@ -40,7 +40,7 @@ export default (
                 {
                     accelerator: 'CmdOrCtrl+O',
                     click: async () => {
-                        const fileHandles = await lumiController.pickH5PFiles();
+                        const fileHandles = await fileController.pickH5PFiles();
                         if (
                             fileHandles.length > 0 &&
                             fileHandles[0] !== undefined

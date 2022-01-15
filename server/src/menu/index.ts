@@ -1,7 +1,7 @@
 import electron from 'electron';
 import SocketIO from 'socket.io';
 import SettingsCache from '../config/SettingsCache';
-import LumiController from '../controllers/LumiController';
+import FileController from '../controllers/FileController';
 import StateStorage from '../state/electronState';
 
 import analyticsMenu from './analyticsMenu';
@@ -15,7 +15,7 @@ export default function menuFactory(
     webSocket: SocketIO.Server,
     settingsCache: SettingsCache,
     electronState: StateStorage,
-    lumiController: LumiController
+    fileController: FileController
 ): void {
     switch (path) {
         case '/':
@@ -35,7 +35,7 @@ export default function menuFactory(
                         webSocket,
                         settingsCache,
                         electronState,
-                        lumiController
+                        fileController
                     )
                 )
             );

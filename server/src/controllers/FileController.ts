@@ -7,7 +7,6 @@ import * as H5P from '@lumieducation/h5p-server';
 import LumiError from '../helpers/LumiError';
 import Logger from '../helpers/Logger';
 import User from '../h5pImplementations/User';
-import IServerConfig from '../config/IPaths';
 import StateStorage from '../state/electronState';
 import { sanitizeFilename } from '../helpers/FilenameSanitizer';
 import { IFilePickers } from '../types';
@@ -18,25 +17,14 @@ const log = new Logger('controller:lumi-h5p');
 
 const t = i18next.getFixedT(null, 'lumi');
 
-export default class LumiController {
+export default class FileController {
     constructor(
         private h5pEditor: H5P.H5PEditor,
-        serverConfig: IServerConfig,
-        private browserWindow: BrowserWindow,
+        private getBrowserWindow: () => BrowserWindow,
         private electronState: StateStorage,
         private filePickers: IFilePickers,
         private fileHandleManager: FileHandleManager
-    ) {
-        fs.readJSON(serverConfig.settingsFile).then((settings) => {
-            if (settings.privacyPolicyConsent) {
-                h5pEditor.contentTypeCache.updateIfNecessary();
-            }
-        });
-    }
-
-    public async delete(contentId: string): Promise<void> {
-        return this.h5pEditor.deleteContent(contentId, new User());
-    }
+    ) {}
 
     public async export(
         contentId: string,
@@ -63,7 +51,7 @@ export default class LumiController {
                     ),
                     t('editor.saveAsDialog.title'),
                     undefined,
-                    this.browserWindow
+                    this.getBrowserWindow()
                 );
             }
             if (!fileHandle) {
@@ -144,24 +132,12 @@ export default class LumiController {
         };
     }
 
-    public async loadPackage(contentId: string): Promise<{
-        h5p: H5P.IContentMetadata;
-        library: string;
-        params: {
-            metadata: H5P.IContentMetadata;
-            params: H5P.ContentParameters;
-        };
-    }> {
-        log.info(`loading package with contentId ${contentId}`);
-        return this.h5pEditor.getContent(contentId);
-    }
-
     public async pickCSSFile(): Promise<{ fileHandle: string; path: string }> {
         const fileHandle = await this.filePickers.openSingleFile(
             ['css'],
             t('editor.exportDialog.cssFilePicker.formatName'),
             this.electronState.getState().lastDirectory,
-            this.browserWindow
+            this.getBrowserWindow()
         );
 
         if (fileHandle) {
@@ -180,7 +156,7 @@ export default class LumiController {
             ['h5p'],
             t('editor.extensionName'),
             this.electronState.getState().lastDirectory,
-            this.browserWindow
+            this.getBrowserWindow()
         );
 
         if (
@@ -199,46 +175,6 @@ export default class LumiController {
             fileHandleId: fh.handleId,
             path: fh.filename
         }));
-    }
-
-    public setBrowserWindow(browserWindow: BrowserWindow): void {
-        this.browserWindow = browserWindow;
-    }
-
-    public async update(
-        parameters: any,
-        metadata: H5P.IContentMetadata,
-        library: string,
-        argId?: string
-    ): Promise<{
-        id: string;
-        library: string;
-        metadata: H5P.IContentMetadata;
-        parameters: any;
-    }> {
-        let id: any;
-        if (argId !== 'undefined') {
-            id = argId;
-        }
-
-        if (id && !(await this.h5pEditor.contentManager.contentExists(id))) {
-            throw new LumiError('h5p-not-found', 'content not found', 404);
-        }
-
-        const contentId = await this.h5pEditor.saveOrUpdateContent(
-            id,
-            parameters,
-            metadata,
-            library,
-            new User()
-        );
-
-        return {
-            library,
-            metadata,
-            parameters,
-            id: contentId
-        };
     }
 
     private getUbernameFromH5pJson(h5pJson: H5P.IContentMetadata): string {
