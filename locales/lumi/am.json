@@ -27,17 +27,13 @@
                 "externalHint": "በሚቀጥለው ደረጃ ለኤችቲኤምኤል ፋይል ስም ይጠየቃሉ። የሚዲያ ፋይሎቹ ከፋይሉ ጋር በተመሳሳይ ስም በሚጀምሩ አቃፊዎች ውስጥ ይቀመጣሉ ፡፡",
                 "scorm": {
                     "label": "የ SCORM ጥቅል",
-                    "masteryScoreLabel": "ዋና ውጤት (በ% ውስጥ)",
-                    "errorNaN": "የገባ እሴት ቁጥር አይደለም",
-                    "errorRange": "እሴቱ ከ 0 እስከ 100 መሆን አለበት"
+                    "masteryScoreLabel": "የላቀ ውጤት"
                 }
             },
             "reporter": {
-                "title": "ዘጋቢ",
                 "hint": "ዘጋቢውን ካከሉ ተማሪዎች በእድገታቸው አንድ ፋይልን ማስቀመጥ እና ለእርስዎ መላክ ይችላሉ ፡፡",
                 "switchLabel": "ዘጋቢን አካትት",
-                "learnMoreLink": "እዚህ ስለዚህ ጉዳይ የበለጠ ይረዱ።",
-                "scormHint": "ዘጋቢው ወደ SCORM ጥቅሎች ሊታከል አይችልም።"
+                "learnMoreLink": "እዚህ ስለዚህ ጉዳይ የበለጠ ይረዱ።"
             },
             "cancelButton": "ሰርዝ",
             "exportButton": "አሁን ላክ",
@@ -54,6 +50,30 @@
                 "authorName": "H5P ደራሲ",
                 "title": "H5P ይዘት",
                 "filename": "የእኔ H5P ወደ ውጭ መላክ"
+            },
+            "validationErrors": {
+                "errorNaN": "የገባው እሴት ቁጥር አይደለም።",
+                "errorRangeMin": "{{min}} በላይ መሆን አለበት።",
+                "errorRangeMax": "{{max}} ያነሰ መሆን አለበት።",
+                "errorRange": "{{min}} እና {{max}} መካከል መሆን አለበት።"
+            },
+            "addFunctionality": {
+                "title": "ተግባራዊነትን ጨምር",
+                "rights": "መብቶችን እና ፈቃዶችን አሳይ",
+                "embed": "የተከተተ አገናኝ አሳይ"
+            },
+            "displayOptions": {
+                "marginX": "የቀኝ እና የግራ ህዳግ",
+                "marginY": "የላይኛው እና የታችኛው ህዳግ",
+                "restrictWidthAndAlign": "ስፋቱን ይገድቡ እና ወደ ማእከላዊ አሰላለፍ",
+                "maximumWidth": "ከፍተኛው ስፋት",
+                "addCss": "የ CSS ፋይል ያክሉ",
+                "chooseCssFile": "መምረጥ",
+                "title": "የማሳያ አማራጮች"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "CSS ፋይል"
             }
         },
         "saveAsDialog": {
@@ -265,6 +285,10 @@
         },
         "general": {
             "econnrefused": "በበይነመረብ ግንኙነትዎ ላይ ችግር ያለ ይመስላል።"
+        },
+        "updater": {
+            "availableText": "ማዘመን አለ። አፕሊኬሽኑ ዝመናውን ይጭናል እና እንደገና ይጀምራል።",
+            "availableTitle": "ዝመናዎችን ጫን"
         }
     },
     "auth": {

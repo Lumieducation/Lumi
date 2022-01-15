@@ -27,17 +27,13 @@
                 "externalHint": "Hurrengo urratsean HTML fitxategiaren izena eskatuko zaizu. Multimedia fitxategiak fitxategiaren izen berarekin hasten diren karpetetan sartuko dira.",
                 "scorm": {
                     "label": "SCORM paketea",
-                    "masteryScoreLabel": "Maisutasun puntuazioa (%)",
-                    "errorNaN": "Sartutako balioa ez da zenbaki bat",
-                    "errorRange": "Balioak 0 eta 100 artean egon behar du"
+                    "masteryScoreLabel": "Maisutasun puntuazioa"
                 }
             },
             "reporter": {
-                "title": "Erreportaria",
                 "hint": "Erreportaria gehitzen baduzu, ikasleek fitxategi bat gorde dezakete aurrerapenarekin eta bidal diezazukete.",
                 "switchLabel": "Sartu berriemailea",
-                "learnMoreLink": "Lortu informazio gehiago hemen.",
-                "scormHint": "Erreportaria ezin da SCORM paketeetan gehitu."
+                "learnMoreLink": "Lortu informazio gehiago hemen."
             },
             "cancelButton": "Utzi",
             "exportButton": "Esportatu orain",
@@ -54,6 +50,30 @@
                 "authorName": "H5P Egilea",
                 "title": "H5P edukia",
                 "filename": "Nire H5P esportazioa"
+            },
+            "validationErrors": {
+                "errorNaN": "Sartutako balioa ez da zenbaki bat",
+                "errorRangeMin": "{{min}} baino handiagoa izan behar du",
+                "errorRangeMax": "{{max}} baino txikiagoa izan behar du",
+                "errorRange": "{{min}} eta {{max}} artekoa izan behar du"
+            },
+            "addFunctionality": {
+                "title": "Gehitu funtzionaltasuna",
+                "rights": "Erakutsi eskubideak eta baimenak",
+                "embed": "Erakutsi kapsulatutako esteka"
+            },
+            "displayOptions": {
+                "marginX": "Eskuineko eta ezkerreko marjina",
+                "marginY": "Goiko eta beheko marjina",
+                "restrictWidthAndAlign": "Mugatu zabalera eta lerrokatu erdialdean",
+                "maximumWidth": "Gehieneko zabalera",
+                "addCss": "Gehitu CSS fitxategia",
+                "chooseCssFile": "aukeratu",
+                "title": "Bistaratzeko aukerak"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "CSS fitxategia"
             }
         },
         "saveAsDialog": {
@@ -265,6 +285,10 @@
         },
         "general": {
             "econnrefused": "Badirudi arazo bat dagoela zure Interneteko konexioarekin."
+        },
+        "updater": {
+            "availableText": "Eguneraketa eskuragarri dago. Aplikazioak eguneratzea instalatuko du eta berrabiaraziko du.",
+            "availableTitle": "Instalatu eguneraketak"
         }
     },
     "auth": {

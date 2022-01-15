@@ -76,21 +76,41 @@
                 "externalHint": "Järgmises etapis küsitakse HTML-failile nime. Meediumifailid paigutatakse kaustadesse, mis algavad failiga sama nimega.",
                 "externalLabel": "Üks HTML-fail ja mitu meediumifaili",
                 "scorm": {
-                    "errorNaN": "Sisestatud väärtus ei ole number",
-                    "errorRange": "Väärtus peab olema vahemikus 0 kuni 100",
                     "label": "SCORM pakend",
-                    "masteryScoreLabel": "Meisterlikkuse skoor (%)"
+                    "masteryScoreLabel": "Meisterlikkuse skoor"
                 },
                 "title": "Vormindus"
             },
             "reporter": {
                 "hint": "Kui lisate reporteri, saavad õpilased faili oma edusammudega salvestada ja teile saata.",
                 "learnMoreLink": "Lisateavet selle kohta leiate siit.",
-                "scormHint": "Reporterit ei saa lisada SCORM-pakettidesse.",
-                "switchLabel": "Kaasa reporter",
-                "title": "Reporter"
+                "switchLabel": "Kaasa reporter"
             },
-            "title": "Ekspordi seaded"
+            "title": "Ekspordi seaded",
+            "validationErrors": {
+                "errorNaN": "Sisestatud väärtus ei ole arv",
+                "errorRangeMin": "Väärtus peab olema suurem kui {{min}}",
+                "errorRangeMax": "Väärtus peab olema väiksem kui {{max}}",
+                "errorRange": "Väärtus peab olema vahemikus {{min}} kuni {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Funktsionaalsuse lisamine",
+                "rights": "Kuva õigused ja load",
+                "embed": "Kuva manustamislink"
+            },
+            "displayOptions": {
+                "marginX": "Parem ja vasak veeris",
+                "marginY": "Ülemine ja alumine veeris",
+                "restrictWidthAndAlign": "Piirake laiust ja joondage keskele",
+                "maximumWidth": "Maksimaalne laius",
+                "addCss": "Lisage CSS-fail",
+                "chooseCssFile": "vali",
+                "title": "Kuvavalikud"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "CSS-fail"
+            }
         },
         "sidebar": {
             "create": "Uus H5P-fail",
@@ -200,6 +220,10 @@
         },
         "general": {
             "econnrefused": "Tundub, et teie Interneti -ühenduses on probleem."
+        },
+        "updater": {
+            "availableText": "Värskendus on saadaval. Rakendus installib värskenduse ja taaskäivitab.",
+            "availableTitle": "Installige värskendused"
         }
     },
     "privacy_policy": {

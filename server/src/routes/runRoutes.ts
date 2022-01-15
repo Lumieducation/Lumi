@@ -9,6 +9,12 @@ import * as H5P from '@lumieducation/h5p-server';
 import SettingsCache from '../config/SettingsCache';
 import LumiController from '../controllers/LumiController';
 import { globalWebsocket as websocket } from '../boot/websocket';
+import StateStorage from '../state/electronState';
+import FileHandleManager from '../state/FileHandleManager';
+import { IFilePickers } from '../types';
+import i18next from 'i18next';
+
+const t = i18next.getFixedT(null, 'lumi');
 
 const runHost = process.env.LUMI_HOST || 'https://lumi.run';
 
@@ -16,13 +22,19 @@ export default function (
     serverConfig: IServerConfig,
     h5pEditor: H5P.H5PEditor,
     browserWindow: BrowserWindow,
-    settingsCache: SettingsCache
+    settingsCache: SettingsCache,
+    electronState: StateStorage,
+    filePickers: IFilePickers,
+    fileHandleManager: FileHandleManager
 ): express.Router {
     const router = express.Router();
     const lumiController = new LumiController(
         h5pEditor,
         serverConfig,
-        browserWindow
+        browserWindow,
+        electronState,
+        filePickers,
+        fileHandleManager
     );
 
     router.get(
@@ -92,6 +104,9 @@ export default function (
             res: express.Response,
             next: express.NextFunction
         ) => {
+            // The run route is currently not in use, so the unsafe path in the
+            // query is not dealt with properly
+
             let filePath: string =
                 req.query.filePath && `${req.query.filePath}`;
 
@@ -102,17 +117,23 @@ export default function (
                     const { filePaths } = await dialog.showOpenDialog(
                         browserWindow,
                         {
+                            defaultPath: electronState.getState().lastDirectory,
                             filters: [
                                 {
                                     extensions: ['h5p'],
-                                    name: 'HTML 5 Package'
+                                    name: t('editor.extensionName')
                                 }
                             ],
                             properties: ['openFile']
                         }
                     );
 
-                    filePath = filePaths[0];
+                    if (filePath.length > 0) {
+                        filePath = filePaths[0];
+                        electronState.setState({
+                            lastDirectory: path.dirname(filePath)
+                        });
+                    }
                 }
 
                 if (!filePath) {

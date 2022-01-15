@@ -27,17 +27,13 @@
                 "externalHint": "U sal in die volgende stap gevra word vir 'n naam vir die HTML-lêer. Die mediabestande sal in vouers geplaas word wat met dieselfde naam as die lêer begin.",
                 "scorm": {
                     "label": "SCORM pakket",
-                    "masteryScoreLabel": "Bemeestertelling (in%)",
-                    "errorNaN": "Ingevoerde waarde is nie 'n getal nie",
-                    "errorRange": "Die waarde moet tussen 0 en 100 wees"
+                    "masteryScoreLabel": "Bemeestering telling"
                 }
             },
             "reporter": {
-                "title": "Verslaggewer",
                 "hint": "As u die verslaggewer byvoeg, kan studente 'n lêer met hul vordering stoor en dit aan u stuur.",
                 "switchLabel": "Sluit verslaggewer in",
-                "learnMoreLink": "Lees meer hieroor.",
-                "scormHint": "Die verslaggewer kan nie by SCORM-pakkette gevoeg word nie."
+                "learnMoreLink": "Lees meer hieroor."
             },
             "cancelButton": "Kanselleer",
             "exportButton": "Voer nou uit",
@@ -54,6 +50,30 @@
                 "authorName": "H5P Skrywer",
                 "title": "H5P-inhoud",
                 "filename": "My H5P uitvoer"
+            },
+            "validationErrors": {
+                "errorNaN": "Ingevoerde waarde is nie 'n getal nie",
+                "errorRangeMin": "Die waarde moet groter as {{min}}",
+                "errorRangeMax": "Die waarde moet kleiner as {{max}}",
+                "errorRange": "Die waarde moet tussen {{min}} en {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Voeg funksionaliteit by",
+                "rights": "Wys regte en toestemmings",
+                "embed": "Wys inbedskakel"
+            },
+            "displayOptions": {
+                "marginX": "Regs- en linkerkantlyn",
+                "marginY": "Boonste en onderste kantlyn",
+                "restrictWidthAndAlign": "Beperk breedte en pas sentraal in",
+                "maximumWidth": "Maksimum breedte",
+                "addCss": "Voeg CSS-lêer by",
+                "chooseCssFile": "kies",
+                "title": "Vertoon opsies"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "CSS-lêer"
             }
         },
         "saveAsDialog": {
@@ -265,6 +285,10 @@
         },
         "general": {
             "econnrefused": "Dit lyk asof daar 'n probleem met u internetverbinding is."
+        },
+        "updater": {
+            "availableText": "Opdatering is beskikbaar. Die toepassing sal die opdatering installeer en herbegin.",
+            "availableTitle": "Installeer opdaterings"
         }
     },
     "auth": {

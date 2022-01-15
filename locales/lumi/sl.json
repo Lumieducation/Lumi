@@ -27,17 +27,13 @@
                 "externalHint": "V naslednjem koraku boste morali vnesti ime datoteke HTML. Predstavnostne datoteke bodo shranjene v mape, ki se začnejo z istim imenom.",
                 "scorm": {
                     "label": "Paket SCORM",
-                    "masteryScoreLabel": "Ocena mojstrstva (v%)",
-                    "errorNaN": "Vnesena vrednost ni število",
-                    "errorRange": "Vrednost mora biti med 0 in 100"
+                    "masteryScoreLabel": "Ocena mojstrstva"
                 }
             },
             "reporter": {
-                "title": "Poročevalec",
                 "hint": "Če dodate poročevalca, lahko študentje shranijo datoteko z napredkom in vam jo pošljejo.",
                 "switchLabel": "Vključi poročevalca",
-                "learnMoreLink": "Več o tem lahko preberete tukaj.",
-                "scormHint": "Poročevalca ni mogoče dodati v pakete SCORM."
+                "learnMoreLink": "Več o tem lahko preberete tukaj."
             },
             "cancelButton": "Prekliči",
             "exportButton": "Izvozi zdaj",
@@ -54,6 +50,30 @@
                 "authorName": "H5P Avtor",
                 "title": "Vsebina H5P",
                 "filename": "Moj izvoz H5P"
+            },
+            "validationErrors": {
+                "errorNaN": "Vnesena vrednost ni številka",
+                "errorRangeMin": "Vrednost mora biti večja od {{min}}",
+                "errorRangeMax": "Vrednost mora biti manjša od {{max}}",
+                "errorRange": "Vrednost mora biti med {{min}} in {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Dodajte funkcionalnost",
+                "rights": "Pokaži pravice in dovoljenja",
+                "embed": "Pokaži povezavo za vdelavo"
+            },
+            "displayOptions": {
+                "marginX": "Desni in levi rob",
+                "marginY": "Zgornji in spodnji rob",
+                "restrictWidthAndAlign": "Omejite širino in poravnajte na sredini",
+                "maximumWidth": "Največja širina",
+                "addCss": "Dodajte datoteko CSS",
+                "chooseCssFile": "izberite",
+                "title": "Možnosti prikaza"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "Datoteka CSS"
             }
         },
         "saveAsDialog": {
@@ -265,6 +285,10 @@
         },
         "general": {
             "econnrefused": "Zdi se, da imate težave z internetno povezavo."
+        },
+        "updater": {
+            "availableText": "Posodobitev je na voljo. Aplikacija bo namestila posodobitev in se znova zagnala.",
+            "availableTitle": "Namesti posodobitve"
         }
     },
     "auth": {

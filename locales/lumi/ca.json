@@ -27,17 +27,13 @@
                 "externalHint": "Al següent pas, se us demanarà un nom per al fitxer HTML. Els fitxers multimèdia es col·locaran a carpetes que comencin amb el mateix nom que el fitxer.",
                 "scorm": {
                     "label": "Paquet SCORM",
-                    "masteryScoreLabel": "Puntuació de domini (en%)",
-                    "errorNaN": "El valor introduït no és un número",
-                    "errorRange": "El valor ha d’estar entre 0 i 100"
+                    "masteryScoreLabel": "Puntuació de domini"
                 }
             },
             "reporter": {
-                "title": "Periodista",
                 "hint": "Si afegiu el reporter, els estudiants poden desar un fitxer amb el seu progrés i us el poden enviar.",
                 "switchLabel": "Inclou el periodista",
-                "learnMoreLink": "Obteniu més informació al respecte aquí.",
-                "scormHint": "El reporter no es pot afegir als paquets SCORM."
+                "learnMoreLink": "Obteniu més informació al respecte aquí."
             },
             "cancelButton": "Cancel · lar",
             "exportButton": "Exporta ara",
@@ -54,6 +50,30 @@
                 "authorName": "Autor H5P",
                 "title": "Contingut H5P",
                 "filename": "La meva exportació H5P"
+            },
+            "validationErrors": {
+                "errorNaN": "El valor introduït no és un número",
+                "errorRangeMin": "El valor ha de ser superior a {{min}}",
+                "errorRangeMax": "El valor ha de ser inferior a {{max}}",
+                "errorRange": "El valor ha d'estar entre {{min}} i {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Afegeix funcionalitat",
+                "rights": "Mostra els drets i els permisos",
+                "embed": "Mostra l'enllaç incrustat"
+            },
+            "displayOptions": {
+                "marginX": "Marge dret i esquerre",
+                "marginY": "Marge superior i inferior",
+                "restrictWidthAndAlign": "Restringeix l'amplada i alinea'l centralment",
+                "maximumWidth": "Amplada màxima",
+                "addCss": "Afegeix un fitxer CSS",
+                "chooseCssFile": "triar",
+                "title": "Opcions de visualització"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "Fitxer CSS"
             }
         },
         "saveAsDialog": {
@@ -265,6 +285,10 @@
         },
         "general": {
             "econnrefused": "Sembla que hi ha un problema amb la vostra connexió a Internet."
+        },
+        "updater": {
+            "availableText": "L'actualització està disponible. L'aplicació instal·larà l'actualització i reiniciarà.",
+            "availableTitle": "Instal·leu les actualitzacions"
         }
     },
     "auth": {

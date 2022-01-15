@@ -31,7 +31,6 @@ export function importAnalytics(): any {
         } catch (error: any) {
             Sentry.captureException(error);
 
-            console.log(error);
             dispatch({
                 payload: { message: JSON.stringify(error) },
                 type: ANALYTICS_IMPORT_ERROR

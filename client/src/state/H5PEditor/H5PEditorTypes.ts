@@ -40,21 +40,22 @@ export enum Modes {
 
 export interface ITab {
     contentId?: ContentId;
+    fileHandleId?: string;
     id: string;
     loadingIndicator: boolean;
-    viewDisabled: boolean;
     mainLibrary: string;
-    name: string;
-    path?: string;
     mode: Modes;
+    name: string;
     opening: boolean;
+    path?: string;
+    viewDisabled: boolean;
 }
 
 export interface IH5PEditorState {
     activeTabIndex: number;
-    tabList: ITab[];
-    showExportDialog: boolean;
     lockDisplay: boolean;
+    showExportDialog: boolean;
+    tabList: ITab[];
 }
 
 export interface IState {
@@ -124,8 +125,8 @@ export const H5PEDITOR_ERROR = 'H5PEDITOR_ERROR';
 
 export interface IH5PEditorError {
     payload: {
-        tabId: string;
         message: string;
+        tabId: string;
     };
     type: typeof H5PEDITOR_ERROR;
 }
@@ -145,8 +146,8 @@ export interface IH5PEditorOpenExportDialogAction {
 export interface IH5PEditorExportRequestAction {
     payload: {
         contentId: string;
-        includeReporter: boolean;
         format: 'bundle' | 'external' | 'scorm';
+        includeReporter: boolean;
     };
     type: typeof H5PEDITOR_EXPORT_REQUEST;
 }
@@ -193,8 +194,8 @@ export interface IH5PLoadEditorContentRequestAction {
 
 export interface IH5PLoadEditorContentSuccessAction {
     payload: {
-        contentId: string;
         content: IEditorModel;
+        contentId: string;
         tabId: string;
     };
     type: typeof H5P_LOADEDITORCONTENT_SUCCESS;
@@ -218,18 +219,18 @@ export const H5PEDITOR_UPDATE_ERROR = 'H5PEDITOR_UPDATE_ERROR';
 
 export interface IH5PUpdateContentRequestAction {
     payload: {
-        tabId: string;
         library: string;
         params: any;
+        tabId: string;
     };
     type: typeof H5PEDITOR_UPDATE_REQUEST;
 }
 
 export interface IH5PUpdateContentSuccessAction {
     payload: {
-        tabId: string;
         contentId: string;
         metadata: any;
+        tabId: string;
     };
     type: typeof H5PEDITOR_UPDATE_SUCCESS;
 }
@@ -267,8 +268,8 @@ export interface IH5PLoadPlayerContentErrorAction {
 
 export interface IH5PLoadPlayerContentSuccessAction {
     payload: {
-        contentId: ContentId;
         content: IPlayerModel;
+        contentId: ContentId;
     };
     type: typeof H5P_LOADPLAYERCONTENT_SUCCESS;
 }
@@ -324,16 +325,17 @@ export interface IH5PEditorSaveErrorAction {
     };
     type: typeof H5PEDITOR_SAVE_ERROR;
 }
+
 export interface IH5PEditorSaveRequestAction {
     payload: {
         id: string;
-        path: string;
     };
     type: typeof H5PEDITOR_SAVE_REQUEST;
 }
 
 export interface IH5PEditorSaveSuccessAction {
     payload: {
+        fileHandleId: string;
         h5p: IH5P;
         id: string;
         path: string;
@@ -361,13 +363,14 @@ export const H5P_IMPORT_SUCCESS = 'H5P_IMPORT_SUCCESS';
 export interface IH5PImportErrorAction {
     error: { response: Superagent.Response };
     payload: {
-        tabId: string;
         path: string;
+        tabId: string;
     };
     type: typeof H5P_IMPORT_ERROR;
 }
 export interface IH5PImportRequestAction {
     payload: {
+        fileHandleId: string;
         tabId: string;
         path: string;
     };
@@ -376,9 +379,10 @@ export interface IH5PImportRequestAction {
 
 export interface IH5PImportSuccessAction {
     payload: {
-        tabId: string;
+        fileHandleId: string;
         h5p: IH5P;
         path: string;
+        tabId: string;
     };
     type: typeof H5P_IMPORT_SUCCESS;
 }

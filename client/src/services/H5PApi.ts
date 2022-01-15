@@ -10,12 +10,28 @@ export function exportContent(
     contentId: string,
     includeReporter: boolean,
     format: 'bundle' | 'external' | 'scorm',
-    options: { masteryScore?: string }
+    options: {
+        addCss: boolean;
+        cssFileHandleId: string;
+        marginX: number;
+        marginY: number;
+        masteryScore?: string;
+        maxWidth: number;
+        restrictWidthAndCenter: boolean;
+        showEmbed: boolean;
+        showRights: boolean;
+    }
 ): Promise<superagent.Response> {
     return superagent.get(
         `/api/v1/h5p/${contentId}/export?includeReporter=${includeReporter}&format=${format}${
             options.masteryScore ? `&masteryScore=${options.masteryScore}` : ''
-        }`
+        }&showRights=${options.showRights.toString()}&showEmbed=${options.showEmbed.toString()}&marginX=${
+            options.marginX
+        }&marginY=${
+            options.marginY
+        }&restrictWidthAndCenter=${options.restrictWidthAndCenter.toString()}&maxWidth=${
+            options.maxWidth
+        }${options.addCss ? `&cssFileHandleId=${options.cssFileHandleId}` : ''}`
     );
 }
 
@@ -51,14 +67,16 @@ export function deleteH5P(contentId: string): Promise<superagent.Response> {
 
 export function exportH5P(
     contentId: string,
-    path?: string
+    fileHandleId?: string
 ): Promise<superagent.Response> {
-    return superagent.get(`/api/v1/lumi?contentId=${contentId}&path=${path}`);
+    return superagent.get(
+        `/api/v1/lumi?contentId=${contentId}&fileHandleId=${fileHandleId}`
+    );
 }
 
-export function importH5P(path: string): Promise<superagent.Response> {
+export function importH5P(fileHandleId: string): Promise<superagent.Response> {
     return superagent.post(`/api/v1/lumi`).send({
-        path
+        fileHandleId
     });
 }
 
@@ -71,8 +89,12 @@ export function updateH5P(
         .send(content);
 }
 
-export function openFiles(): Promise<superagent.Response> {
-    return superagent.get('/api/v1/lumi/open_files');
+export function pickH5PFiles(): Promise<superagent.Response> {
+    return superagent.get('/api/v1/lumi/pick_h5p_files');
+}
+
+export function pickCSSFile(): Promise<superagent.Response> {
+    return superagent.get('/api/v1/lumi/pick_css_file');
 }
 
 /**

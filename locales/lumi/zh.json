@@ -76,21 +76,41 @@
                 "externalHint": "在下一步中，将要求您输入HTML文件的名称。媒体文件将被放入与文件名相同的文件夹中。",
                 "externalLabel": "一个HTML文件和几个媒体文件",
                 "scorm": {
-                    "errorNaN": "输入的值不是数字",
-                    "errorRange": "值必须介于0到100之间",
                     "label": "SCORM软件包",
-                    "masteryScoreLabel": "精通分数（％）"
+                    "masteryScoreLabel": "掌握分数"
                 },
                 "title": "格式"
             },
             "reporter": {
                 "hint": "如果您添加了报告功能，则学生可以将其进度保存为文件并发送给您。",
                 "learnMoreLink": "点击此处了解详情。",
-                "scormHint": "无法将报告功能添加到SCORM课件包中。",
-                "switchLabel": "包括报告功能",
-                "title": "报告功能"
+                "switchLabel": "包括报告功能"
             },
-            "title": "导出设置"
+            "title": "导出设置",
+            "validationErrors": {
+                "errorNaN": "输入的值不是数字",
+                "errorRangeMin": "该值必须大于{{min}}",
+                "errorRangeMax": "该值必须小于{{max}}",
+                "errorRange": "该值必须介于{{min}}和{{max}}"
+            },
+            "addFunctionality": {
+                "title": "添加功能",
+                "rights": "显示权限",
+                "embed": "显示嵌入链接"
+            },
+            "displayOptions": {
+                "marginX": "左右边距",
+                "marginY": "上下边距",
+                "restrictWidthAndAlign": "限制宽度并居中对齐",
+                "maximumWidth": "最大宽度",
+                "addCss": "添加 CSS 文件",
+                "chooseCssFile": "选择",
+                "title": "显示选项"
+            },
+            "pixelsAbbreviation": "像素",
+            "cssFilePicker": {
+                "formatName": "CSS文件"
+            }
         },
         "sidebar": {
             "create": "新的H5P文件",
@@ -200,6 +220,10 @@
         },
         "general": {
             "econnrefused": "您的互联网连接似乎有问题。"
+        },
+        "updater": {
+            "availableText": "更新可用。该应用程序将安装更新并重新启动。",
+            "availableTitle": "安装更新"
         }
     },
     "privacy_policy": {

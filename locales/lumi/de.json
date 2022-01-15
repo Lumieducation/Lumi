@@ -43,8 +43,8 @@
         "consent": "Ich erlaube dieser Anwendung, Fehler- und Absturzberichte zu senden.",
         "description": "Hilf uns, unsere Software und Services zu verbessern, indem du anonyme Absturz- und Fehlerberichte sendest.",
         "email": {
-            "body": "Um eine schnelle Lösung für dein Problem zu erhalten, schreibe uns bitte folgende Informationen:\n\n  - Lumi-Version: <hier ausfüllen>, Betriebssystem: <hier ausfüllen>\n  - Beschreibe das Problem\n  - Beschreibe, wie wir das Problem auf unseren Geräten reproduzieren können\n  - Senden uns .h5p-Beispieldateien oder exportierte Dateien, wenn das Problem mit den Dateien zusammenhängt\n\nWenn du uns Nachrichten in einer anderen Sprache als Englisch oder Deutsch sendest, verwenden wir ein automatisches Übersetzungstool, um deine Nachricht zu übersetzen.",
-            "subject": "Lumi-Problembericht"
+            "subject": "Lumi-Problembericht",
+            "body": "Um eine schnelle Lösung für dein Problem zu erhalten, schreibe uns bitte folgende Informationen:\n\n  - Lumi-Version: <hier ausfüllen>, Betriebssystem: <hier ausfüllen>\n  - Beschreibe das Problem\n  - Beschreibe, wie wir das Problem auf unseren Geräten reproduzieren können\n  - Sende uns .h5p-Beispieldateien oder exportierte Dateien, wenn das Problem mit den Dateien zusammenhängt\n\nWenn du uns Nachrichten in einer anderen Sprache als Englisch oder Deutsch sendest, verwenden wir ein automatisches Übersetzungstool, um deine Nachricht zu übersetzen."
         },
         "title": "Fehler- und Absturzberichte"
     },
@@ -76,21 +76,41 @@
                 "externalHint": "Im nächsten Schritt wirst du nach dem Namen für die HTML-Datei gefragt. Die Mediendateien werden in Ordnern abgelegt, die mit demselben Namen wie die Datei beginnen.",
                 "externalLabel": "Eine HTML-Datei und zusätzliche Mediendateien",
                 "scorm": {
-                    "errorNaN": "Der eingegebene Wert ist keine Zahl",
-                    "errorRange": "Der Wert muss zwischen 0 und 100 liegen",
                     "label": "SCORM-Paket",
-                    "masteryScoreLabel": "Bestehens-Schwellenwert (in %)"
+                    "masteryScoreLabel": "Bestehens-Schwellenwert"
                 },
                 "title": "Format"
             },
             "reporter": {
                 "hint": "Wenn du den Reporter hinzufügst, können die Lernenden eine Datei mit ihrem Fortschritt speichern und an dich schicken.",
                 "learnMoreLink": "Erfahre hier mehr darüber.",
-                "scormHint": "Der Reporter kann nicht zu SCORM-Paketen hinzugefügt werden.",
-                "switchLabel": "Reporter hinzufügen",
-                "title": "Reporter"
+                "switchLabel": "Reporter hinzufügen"
             },
-            "title": "Exporteinstellungen"
+            "title": "Exporteinstellungen",
+            "addFunctionality": {
+                "title": "Funktionalität hinzufügen",
+                "rights": "Rechte und Berechtigungen anzeigen",
+                "embed": "Einbettungslink anzeigen"
+            },
+            "validationErrors": {
+                "errorNaN": "Der eingegebene Wert ist keine Zahl",
+                "errorRangeMin": "Der Wert muss größer als {{min}} sein",
+                "errorRangeMax": "Der Wert muss kleiner als {{max}} sein",
+                "errorRange": "Der Wert muss zwischen {{min}} und {{max}} liegen"
+            },
+            "displayOptions": {
+                "marginX": "Rechter und linker Rand",
+                "marginY": "Oberer und unterer Rand",
+                "restrictWidthAndAlign": "Breite einschränken und mittig ausrichten",
+                "maximumWidth": "Maximale Breite",
+                "addCss": "CSS-Datei hinzufügen",
+                "chooseCssFile": "wählen",
+                "title": "Darstellungsoptionen"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "CSS-Datei"
+            }
         },
         "extensionName": "H5P-Paket",
         "saveAsDialog": {
@@ -208,6 +228,10 @@
                 "error": "H5P konnte nicht gespeichert werden.",
                 "success": "H5P gespeichert!"
             }
+        },
+        "updater": {
+            "availableText": "Update ist verfügbar. Die Anwendung installiert das Update und startet neu.",
+            "availableTitle": "Installiere Updates"
         }
     },
     "prerelease": {

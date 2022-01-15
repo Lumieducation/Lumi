@@ -76,21 +76,41 @@
                 "externalHint": "Se le pedirá un nombre para el archivo HTML en el siguiente paso. Los archivos multimedia se colocarán en carpetas que comienzan con el mismo nombre que el archivo.",
                 "externalLabel": "Un archivo HTML y varios archivos multimedia",
                 "scorm": {
-                    "errorNaN": "El valor ingresado no es un número",
-                    "errorRange": "El valor debe estar entre 0 y 100",
                     "label": "Paquete SCORM",
-                    "masteryScoreLabel": "Puntuación de dominio (en%)"
+                    "masteryScoreLabel": "Puntuación de maestría"
                 },
                 "title": "Formato"
             },
             "reporter": {
                 "hint": "Si agrega al reportero, los estudiantes pueden guardar un archivo con su progreso y enviárselo.",
                 "learnMoreLink": "Obtenga más información al respecto aquí.",
-                "scormHint": "El reportero no se puede agregar a los paquetes SCORM.",
-                "switchLabel": "Incluir reportero",
-                "title": "Reportero"
+                "switchLabel": "Incluir reportero"
             },
-            "title": "Exportar configuraciones"
+            "title": "Exportar configuraciones",
+            "validationErrors": {
+                "errorNaN": "El valor introducido no es un número",
+                "errorRangeMin": "El valor debe ser mayor que {{min}}",
+                "errorRangeMax": "El valor debe ser menor que {{max}}",
+                "errorRange": "El valor debe estar entre {{min}} y {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Agregar funcionalidad",
+                "rights": "Mostrar derechos y permisos",
+                "embed": "Mostrar enlace para insertar"
+            },
+            "displayOptions": {
+                "marginX": "Margen derecho e izquierdo",
+                "marginY": "Margen superior e inferior",
+                "restrictWidthAndAlign": "Restringir el ancho y alinear centralmente",
+                "maximumWidth": "Ancho máximo",
+                "addCss": "Agregar archivo CSS",
+                "chooseCssFile": "escoger",
+                "title": "opciones de pantalla"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "Archivo CSS"
+            }
         },
         "extensionName": "Paquete H5P",
         "saveAsDialog": {
@@ -208,6 +228,10 @@
                 "error": "No se pudo guardar H5P.",
                 "success": "¡H5P guardado!"
             }
+        },
+        "updater": {
+            "availableText": "Actualización disponible. La aplicación instalará la actualización y se reiniciará.",
+            "availableTitle": "Instalar actualizaciones"
         }
     },
     "prerelease": {

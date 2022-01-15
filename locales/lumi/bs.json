@@ -27,17 +27,13 @@
                 "externalHint": "U sljedećem koraku zatražit ćete ime za HTML datoteku. Medijske datoteke stavit će se u mape koje započinju istim imenom kao i datoteka.",
                 "scorm": {
                     "label": "SCORM paket",
-                    "masteryScoreLabel": "Ocjena majstorstva (u%)",
-                    "errorNaN": "Unesena vrijednost nije broj",
-                    "errorRange": "Vrijednost mora biti između 0 i 100"
+                    "masteryScoreLabel": "Majstorski rezultat"
                 }
             },
             "reporter": {
-                "title": "Reporter",
                 "hint": "Ako dodate izvjestitelja, studenti mogu spremiti datoteku sa svojim napretkom i poslati vam je.",
                 "switchLabel": "Uključi reportera",
-                "learnMoreLink": "Saznajte više o tome ovdje.",
-                "scormHint": "Reporter se ne može dodati u SCORM pakete."
+                "learnMoreLink": "Saznajte više o tome ovdje."
             },
             "cancelButton": "Otkaži",
             "exportButton": "Izvezi odmah",
@@ -54,6 +50,30 @@
                 "authorName": "H5P Autor",
                 "title": "H5P Sadržaj",
                 "filename": "Moj H5P izvoz"
+            },
+            "validationErrors": {
+                "errorNaN": "Unesena vrijednost nije broj",
+                "errorRangeMin": "Vrijednost mora biti veća od {{min}}",
+                "errorRangeMax": "Vrijednost mora biti manja od {{max}}",
+                "errorRange": "Vrijednost mora biti između {{min}} i {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Dodajte funkcionalnost",
+                "rights": "Prikaži prava i dozvole",
+                "embed": "Prikaži vezu za ugradnju"
+            },
+            "displayOptions": {
+                "marginX": "Desna i lijeva margina",
+                "marginY": "Gornja i donja margina",
+                "restrictWidthAndAlign": "Ograničite širinu i poravnajte centralno",
+                "maximumWidth": "Maksimalna širina",
+                "addCss": "Dodajte CSS fajl",
+                "chooseCssFile": "izabrati",
+                "title": "Opcije prikaza"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "CSS datoteka"
             }
         },
         "saveAsDialog": {
@@ -265,6 +285,10 @@
         },
         "general": {
             "econnrefused": "Čini se da postoji problem s vašom internetskom vezom."
+        },
+        "updater": {
+            "availableText": "Ažuriranje je dostupno. Aplikacija će instalirati ažuriranje i ponovo pokrenuti.",
+            "availableTitle": "Instalirajte ažuriranja"
         }
     },
     "auth": {

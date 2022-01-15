@@ -76,21 +76,41 @@
                 "externalHint": "In de volgende stap wordt u om een naam voor het HTML-bestand gevraagd. De mediabestanden worden in mappen geplaatst die beginnen met dezelfde naam als het bestand.",
                 "externalLabel": "Een HTML-bestand en verschillende mediabestanden",
                 "scorm": {
-                    "errorNaN": "De ingevoerde waarde is geen getal",
-                    "errorRange": "De waarde moet tussen 0 en 100 liggen",
                     "label": "SCORM-pakket",
-                    "masteryScoreLabel": "Beheersingsscore (in%)"
+                    "masteryScoreLabel": "Meesterschap score"
                 },
                 "title": "Formaat"
             },
             "reporter": {
                 "hint": "Als u de verslaggever toevoegt, kunnen studenten een bestand met hun voortgang opslaan en naar u opsturen.",
                 "learnMoreLink": "Lees er hier meer over.",
-                "scormHint": "De reporter kan niet worden toegevoegd aan SCORM-pakketten.",
-                "switchLabel": "Inclusief verslaggever",
-                "title": "Verslaggever"
+                "switchLabel": "Inclusief verslaggever"
             },
-            "title": "Exporteer instellingen"
+            "title": "Exporteer instellingen",
+            "validationErrors": {
+                "errorNaN": "Ingevoerde waarde is geen getal",
+                "errorRangeMin": "De waarde moet groter zijn dan {{min}}",
+                "errorRangeMax": "De waarde moet kleiner zijn dan {{max}}",
+                "errorRange": "De waarde moet tussen {{min}} en {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Functionaliteit toevoegen",
+                "rights": "Rechten en machtigingen weergeven",
+                "embed": "Insluitlink weergeven"
+            },
+            "displayOptions": {
+                "marginX": "Marge rechts & links",
+                "marginY": "Boven- en ondermarge",
+                "restrictWidthAndAlign": "Breedte beperken en centraal uitlijnen",
+                "maximumWidth": "Maximale breedte",
+                "addCss": "CSS-bestand toevoegen",
+                "chooseCssFile": "Kiezen",
+                "title": "weergaveopties"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "CSS-bestand"
+            }
         },
         "extensionName": "H5P-pakket",
         "saveAsDialog": {
@@ -208,6 +228,10 @@
                 "error": "H5P kan niet worden opgeslagen.",
                 "success": "H5P opgeslagen!"
             }
+        },
+        "updater": {
+            "availableText": "Update is beschikbaar. De applicatie zal de update installeren en opnieuw opstarten.",
+            "availableTitle": "Installeer updates"
         }
     },
     "prerelease": {

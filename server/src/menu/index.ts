@@ -1,6 +1,8 @@
 import electron from 'electron';
 import SocketIO from 'socket.io';
 import SettingsCache from '../config/SettingsCache';
+import LumiController from '../controllers/LumiController';
+import StateStorage from '../state/electronState';
 
 import analyticsMenu from './analyticsMenu';
 import h5peditorMenu from './h5peditorMenu';
@@ -11,7 +13,9 @@ export default function menuFactory(
     path: string,
     window: electron.BrowserWindow,
     webSocket: SocketIO.Server,
-    settingsCache: SettingsCache
+    settingsCache: SettingsCache,
+    electronState: StateStorage,
+    lumiController: LumiController
 ): void {
     switch (path) {
         case '/':
@@ -26,7 +30,13 @@ export default function menuFactory(
         case '/h5peditor':
             electron.Menu.setApplicationMenu(
                 electron.Menu.buildFromTemplate(
-                    h5peditorMenu(window, webSocket, settingsCache)
+                    h5peditorMenu(
+                        window,
+                        webSocket,
+                        settingsCache,
+                        electronState,
+                        lumiController
+                    )
                 )
             );
             break;

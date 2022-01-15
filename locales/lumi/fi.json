@@ -27,17 +27,13 @@
                 "externalHint": "Sinulta pyydetään nimeä HTML-tiedostolle seuraavassa vaiheessa. Mediatiedostot sijoitetaan kansioihin, jotka alkavat samalla nimellä kuin tiedosto.",
                 "scorm": {
                     "label": "SCORM-paketti",
-                    "masteryScoreLabel": "Hallintapisteet (%)",
-                    "errorNaN": "Annettu arvo ei ole numero",
-                    "errorRange": "Arvon on oltava välillä 0–100"
+                    "masteryScoreLabel": "Mastery pisteet"
                 }
             },
             "reporter": {
-                "title": "Reportteri",
                 "hint": "Jos lisäät reportterin, opiskelijat voivat tallentaa edistymisensä tiedoston ja lähettää sen sinulle.",
                 "switchLabel": "Sisällytä toimittaja",
-                "learnMoreLink": "Lue lisää täältä.",
-                "scormHint": "Toimittajaa ei voi lisätä SCORM-paketteihin."
+                "learnMoreLink": "Lue lisää täältä."
             },
             "cancelButton": "Peruuttaa",
             "exportButton": "Vie nyt",
@@ -54,6 +50,30 @@
                 "authorName": "H5P-kirjailija",
                 "title": "H5P-sisältö",
                 "filename": "H5P-vientini"
+            },
+            "validationErrors": {
+                "errorNaN": "Syötetty arvo ei ole numero",
+                "errorRangeMin": "Arvon on oltava suurempi kuin {{min}}",
+                "errorRangeMax": "Arvon on oltava pienempi kuin {{max}}",
+                "errorRange": "Arvon pitää olla välillä {{min}} ja {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Lisää toimintoja",
+                "rights": "Näytä oikeudet ja käyttöoikeudet",
+                "embed": "Näytä upotuslinkki"
+            },
+            "displayOptions": {
+                "marginX": "Oikea ja vasen marginaali",
+                "marginY": "Ylä- ja alamarginaali",
+                "restrictWidthAndAlign": "Rajoita leveyttä ja kohdista keskelle",
+                "maximumWidth": "Suurin leveys",
+                "addCss": "Lisää CSS-tiedosto",
+                "chooseCssFile": "valita",
+                "title": "näytön asetukset"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "CSS-tiedosto"
             }
         },
         "saveAsDialog": {
@@ -265,6 +285,10 @@
         },
         "general": {
             "econnrefused": "Internet -yhteydessänne näyttää olevan ongelma."
+        },
+        "updater": {
+            "availableText": "Päivitys on saatavilla. Sovellus asentaa päivityksen ja käynnistyy uudelleen.",
+            "availableTitle": "Asenna päivitykset"
         }
     },
     "auth": {

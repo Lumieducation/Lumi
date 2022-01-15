@@ -1,6 +1,7 @@
 import electron from 'electron';
 import SocketIO from 'socket.io';
 import i18next from 'i18next';
+import path from 'path';
 
 import helpMenu from './helpMenu';
 import editMenu from './editMenu';
@@ -8,11 +9,15 @@ import macMenu from './macMenu';
 import windowMenu from './windowMenu';
 import viewMenu from './viewMenu';
 import SettingsCache from '../config/SettingsCache';
+import StateStorage from '../state/electronState';
+import LumiController from '../controllers/LumiController';
 
 export default (
     window: electron.BrowserWindow,
     websocket: SocketIO.Server,
-    settingsCache: SettingsCache
+    settingsCache: SettingsCache,
+    electronState: StateStorage,
+    lumiController: LumiController
 ) =>
     [
         ...macMenu(),
@@ -34,25 +39,22 @@ export default (
                 { type: 'separator' } as any,
                 {
                     accelerator: 'CmdOrCtrl+O',
-                    click: () => {
-                        electron.dialog
-                            .showOpenDialog({
-                                filters: [
-                                    {
-                                        extensions: ['h5p'],
-                                        name: 'HTML 5 Package'
-                                    }
-                                ],
-                                properties: ['openFile', 'multiSelections']
-                            })
-                            .then(({ filePaths }) => {
-                                websocket.emit('action', {
-                                    payload: {
-                                        paths: filePaths
-                                    },
-                                    type: 'OPEN_H5P'
-                                });
+                    click: async () => {
+                        const fileHandles = await lumiController.pickH5PFiles();
+                        if (
+                            fileHandles.length > 0 &&
+                            fileHandles[0] !== undefined
+                        ) {
+                            electronState.setState({
+                                lastDirectory: path.dirname(fileHandles[0].path)
                             });
+                        }
+                        websocket.emit('action', {
+                            payload: {
+                                files: fileHandles
+                            },
+                            type: 'OPEN_H5P'
+                        });
                     },
                     label: i18next.t('lumi:menu.h5peditor.open')
                 },

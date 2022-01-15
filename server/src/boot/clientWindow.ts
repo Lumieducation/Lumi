@@ -1,8 +1,7 @@
 import { shell, BrowserWindow } from 'electron';
 import path from 'path';
 import os from 'os';
-
-import electronState from '../state/electronState';
+import StateStorage from '../state/electronState';
 
 /**
  * Creates an Electron client window.
@@ -12,7 +11,8 @@ import electronState from '../state/electronState';
  */
 export default function createWindow(
     port: number,
-    isDevelopment: boolean
+    isDevelopment: boolean,
+    electronState: StateStorage
 ): BrowserWindow {
     const hostname = `http://localhost:${port}`;
 

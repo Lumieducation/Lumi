@@ -76,21 +76,41 @@
                 "externalHint": "V dalším kroku budete požádáni o název souboru HTML. Mediální soubory budou vloženy do složek, které začínají stejným názvem jako soubor.",
                 "externalLabel": "Jeden soubor HTML a několik mediálních souborů",
                 "scorm": {
-                    "errorNaN": "Zadaná hodnota není číslo",
-                    "errorRange": "Hodnota musí být mezi 0 a 100",
                     "label": "Balíček SCORM",
-                    "masteryScoreLabel": "Mistrovské skóre (v%)"
+                    "masteryScoreLabel": "Mistrovské skóre"
                 },
                 "title": "Formát"
             },
             "reporter": {
                 "hint": "Pokud přidáte reportéra, studenti mohou uložit soubor se svým pokrokem a poslat vám ho.",
                 "learnMoreLink": "Zde se dozvíte více.",
-                "scormHint": "Reportéra nelze přidat do balíčků SCORM.",
-                "switchLabel": "Zahrnout reportéra",
-                "title": "Zpravodaj"
+                "switchLabel": "Zahrnout reportéra"
             },
-            "title": "Exportovat nastavení"
+            "title": "Exportovat nastavení",
+            "validationErrors": {
+                "errorNaN": "Zadaná hodnota není číslo",
+                "errorRangeMin": "Hodnota musí být větší než {{min}}",
+                "errorRangeMax": "Hodnota musí být menší než {{max}}",
+                "errorRange": "Hodnota musí být mezi {{min}} a {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Přidejte funkcionalitu",
+                "rights": "Zobrazit práva a oprávnění",
+                "embed": "Zobrazit odkaz pro vložení"
+            },
+            "displayOptions": {
+                "marginX": "Pravý a levý okraj",
+                "marginY": "Horní a spodní okraj",
+                "restrictWidthAndAlign": "Omezte šířku a zarovnejte na střed",
+                "maximumWidth": "Maximální šířka",
+                "addCss": "Přidejte soubor CSS",
+                "chooseCssFile": "Vybrat",
+                "title": "Volby zobrazení"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "Soubor CSS"
+            }
         },
         "sidebar": {
             "create": "Nový soubor H5P",
@@ -200,6 +220,10 @@
         },
         "general": {
             "econnrefused": "Zdá se, že je problém s vaším internetovým připojením."
+        },
+        "updater": {
+            "availableText": "Aktualizace je k dispozici. Aplikace nainstaluje aktualizaci a restartuje se.",
+            "availableTitle": "Nainstalujte aktualizace"
         }
     },
     "privacy_policy": {

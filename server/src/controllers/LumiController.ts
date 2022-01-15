@@ -1,16 +1,18 @@
-import { BrowserWindow, dialog } from 'electron';
+import { BrowserWindow } from 'electron';
 import fs from 'fs-extra';
 import _path from 'path';
 import i18next from 'i18next';
-
 import Sentry from '@sentry/node';
-import LumiError from '../helpers/LumiError';
 import * as H5P from '@lumieducation/h5p-server';
+import LumiError from '../helpers/LumiError';
 import Logger from '../helpers/Logger';
 import User from '../h5pImplementations/User';
 import IServerConfig from '../config/IPaths';
-import electronState from '../state/electronState';
+import StateStorage from '../state/electronState';
 import { sanitizeFilename } from '../helpers/FilenameSanitizer';
+import { IFilePickers } from '../types';
+import FileHandle from '../state/FileHandle';
+import FileHandleManager from '../state/FileHandleManager';
 
 const log = new Logger('controller:lumi-h5p');
 
@@ -20,7 +22,10 @@ export default class LumiController {
     constructor(
         private h5pEditor: H5P.H5PEditor,
         serverConfig: IServerConfig,
-        private browserWindow: BrowserWindow
+        private browserWindow: BrowserWindow,
+        private electronState: StateStorage,
+        private filePickers: IFilePickers,
+        private fileHandleManager: FileHandleManager
     ) {
         fs.readJSON(serverConfig.settingsFile).then((settings) => {
             if (settings.privacyPolicyConsent) {
@@ -35,44 +40,46 @@ export default class LumiController {
 
     public async export(
         contentId: string,
-        pathArg?: string
-    ): Promise<{ path: string }> {
+        fileHandleId?: string
+    ): Promise<{ fileHandleId: string; path: string }> {
         try {
-            let path = pathArg;
-
             const { params } = await this.h5pEditor.getContent(
                 contentId,
                 new User()
             );
 
-            if (!path || path === 'undefined') {
-                const result = await dialog.showSaveDialog(this.browserWindow, {
-                    defaultPath:
+            let fileHandle: FileHandle =
+                this.fileHandleManager.getById(fileHandleId);
+            if (!fileHandle) {
+                fileHandle = await this.filePickers.saveFile(
+                    ['h5p'],
+                    t('editor.extensionName'),
+                    _path.join(
+                        this.electronState.getState().lastDirectory,
                         sanitizeFilename(
                             params?.metadata?.title,
                             t('editor.saveAsDialog.fallbackFilename')
-                        ) ?? t('editor.saveAsDialog.fallbackFilename'),
-                    filters: [
-                        {
-                            extensions: ['h5p'],
-                            name: t('editor.extensionName')
-                        }
-                    ],
-                    title: t('editor.saveAsDialog.title'),
-                    properties: ['showOverwriteConfirmation']
-                });
-                path = result.filePath;
+                        ) ?? t('editor.saveAsDialog.fallbackFilename')
+                    ),
+                    t('editor.saveAsDialog.title'),
+                    undefined,
+                    this.browserWindow
+                );
             }
-
-            if (!path) {
+            if (!fileHandle) {
                 throw new LumiError('user-abort', 'Aborted by user', 499);
             }
 
+            this.electronState.setState({
+                lastDirectory: _path.dirname(fileHandle.filename)
+            });
+
+            let path = fileHandle.filename;
             if (_path.extname(path) !== '.h5p') {
                 path = `${path}.h5p`;
             }
 
-            electronState.setState({ blockKeyboard: true });
+            this.electronState.setState({ blockKeyboard: true });
 
             const stream = fs.createWriteStream(path);
             const packageExporter = new H5P.PackageExporter(
@@ -89,22 +96,30 @@ export default class LumiController {
                     y();
                 });
             }).finally(() => {
-                electronState.setState({ blockKeyboard: false });
+                this.electronState.setState({ blockKeyboard: false });
             });
 
-            return { path };
+            return {
+                fileHandleId: fileHandle.handleId,
+                path: fileHandle.filename
+            };
         } catch (error: any) {
-            electronState.setState({ blockKeyboard: false });
+            this.electronState.setState({ blockKeyboard: false });
             Sentry.captureException(error);
         }
     }
 
-    public async import(path: string): Promise<{
+    public async import(fileHandleId: string): Promise<{
         id: string;
         library: string;
         metadata: H5P.IContentMetadata;
         parameters: any;
     }> {
+        const path = this.fileHandleManager.getById(fileHandleId)?.filename;
+        if (!path) {
+            throw new Error('File not selected before');
+        }
+
         const buffer = await fs.readFile(path);
 
         const { metadata, parameters } = await this.h5pEditor.uploadPackage(
@@ -140,18 +155,53 @@ export default class LumiController {
         return this.h5pEditor.getContent(contentId);
     }
 
-    public async open(): Promise<string[]> {
-        const response = await dialog.showOpenDialog(this.browserWindow, {
-            filters: [
-                {
-                    extensions: ['h5p'],
-                    name: t('editor.extensionName')
-                }
-            ],
-            properties: ['openFile', 'multiSelections']
-        });
+    public async pickCSSFile(): Promise<{ fileHandle: string; path: string }> {
+        const fileHandle = await this.filePickers.openSingleFile(
+            ['css'],
+            t('editor.exportDialog.cssFilePicker.formatName'),
+            this.electronState.getState().lastDirectory,
+            this.browserWindow
+        );
 
-        return response.filePaths;
+        if (fileHandle) {
+            this.electronState.setState({
+                lastDirectory: _path.dirname(fileHandle.filename)
+            });
+        }
+
+        return { fileHandle: fileHandle.handleId, path: fileHandle.filename };
+    }
+
+    public async pickH5PFiles(): Promise<
+        { fileHandleId: string; path: string }[]
+    > {
+        const fileHandles = await this.filePickers.openMultipleFiles(
+            ['h5p'],
+            t('editor.extensionName'),
+            this.electronState.getState().lastDirectory,
+            this.browserWindow
+        );
+
+        if (
+            fileHandles &&
+            fileHandles.length > 0 &&
+            fileHandles[0] !== undefined
+        ) {
+            this.electronState.setState({
+                lastDirectory: _path.dirname(fileHandles[0].filename)
+            });
+        } else {
+            return undefined;
+        }
+
+        return fileHandles.map((fh) => ({
+            fileHandleId: fh.handleId,
+            path: fh.filename
+        }));
+    }
+
+    public setBrowserWindow(browserWindow: BrowserWindow): void {
+        this.browserWindow = browserWindow;
     }
 
     public async update(

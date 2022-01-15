@@ -27,17 +27,13 @@
                 "externalHint": "سيُطلب منك اسم ملف HTML في الخطوة التالية. سيتم وضع ملفات الوسائط في مجلدات تبدأ بنفس اسم الملف.",
                 "scorm": {
                     "label": "حزمة SCORM",
-                    "masteryScoreLabel": "درجة الإتقان (٪)",
-                    "errorNaN": "القيمة التي تم إدخالها ليست رقمًا",
-                    "errorRange": "يجب أن تكون القيمة بين 0 و 100"
+                    "masteryScoreLabel": "نقاط الإتقان"
                 }
             },
             "reporter": {
-                "title": "مراسل",
                 "hint": "إذا قمت بإضافة المراسل ، يمكن للطلاب حفظ ملف مع تقدمهم وإرساله إليك.",
                 "switchLabel": "تشمل المراسل",
-                "learnMoreLink": "تعلم المزيد عن ذلك هنا.",
-                "scormHint": "لا يمكن إضافة المراسل إلى حزم SCORM."
+                "learnMoreLink": "تعلم المزيد عن ذلك هنا."
             },
             "cancelButton": "يلغي",
             "exportButton": "تصدير الآن",
@@ -54,6 +50,30 @@
                 "authorName": "مؤلف H5P",
                 "title": "محتوى H5P",
                 "filename": "تصدير H5P الخاص بي"
+            },
+            "validationErrors": {
+                "errorNaN": "القيمة التي تم إدخالها ليست رقمًا",
+                "errorRangeMin": "يجب أن تكون القيمة أكبر من {{min}}",
+                "errorRangeMax": "يجب أن تكون القيمة أصغر من {{max}}",
+                "errorRange": "يجب أن تكون القيمة بين {{min}} و {{max}}"
+            },
+            "addFunctionality": {
+                "title": "أضف وظائف",
+                "rights": "إظهار الحقوق والأذونات",
+                "embed": "إظهار ارتباط التضمين"
+            },
+            "displayOptions": {
+                "marginX": "الهامش الأيمن والأيسر",
+                "marginY": "الهامش العلوي والسفلي",
+                "restrictWidthAndAlign": "تقييد العرض والمحاذاة مركزيًا",
+                "maximumWidth": "الحد الأقصى للعرض",
+                "addCss": "أضف ملف CSS",
+                "chooseCssFile": "أختر",
+                "title": "خيارات العرض"
+            },
+            "pixelsAbbreviation": "مقصف",
+            "cssFilePicker": {
+                "formatName": "ملف CSS"
             }
         },
         "saveAsDialog": {
@@ -265,6 +285,10 @@
         },
         "general": {
             "econnrefused": "يبدو أن هناك مشكلة في اتصالك بالإنترنت."
+        },
+        "updater": {
+            "availableText": "يتوفر التحديث. سيقوم التطبيق بتثبيت التحديث وإعادة التشغيل.",
+            "availableTitle": "تثبيت التحديثات"
         }
     },
     "auth": {

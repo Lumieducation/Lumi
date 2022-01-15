@@ -76,21 +76,41 @@
                 "externalHint": "Il vous sera demandé un nom pour le fichier HTML à l'étape suivante. Les fichiers multimédias seront placés dans des dossiers commençant par le même nom que le fichier.",
                 "externalLabel": "Un fichier HTML et plusieurs fichiers multimédias",
                 "scorm": {
-                    "errorNaN": "La valeur saisie n'est pas un nombre",
-                    "errorRange": "La valeur doit être comprise entre 0 et 100",
                     "label": "Paquet SCORM",
-                    "masteryScoreLabel": "Score de maîtrise (en %)"
+                    "masteryScoreLabel": "Score de maîtrise"
                 },
                 "title": "Format"
             },
             "reporter": {
                 "hint": "Si vous ajoutez le rapporteur, les étudiants peuvent enregistrer un fichier avec leur progression et vous l'envoyer.",
                 "learnMoreLink": "Apprenez-en plus ici.",
-                "scormHint": "Le rapporteur ne peut pas être ajouté aux packages SCORM.",
-                "switchLabel": "Inclure le rapporteur",
-                "title": "Rapporteur"
+                "switchLabel": "Inclure le rapporteur"
             },
-            "title": "Exporter les paramètres"
+            "title": "Exporter les paramètres",
+            "validationErrors": {
+                "errorNaN": "La valeur saisie n'est pas un nombre",
+                "errorRangeMin": "La valeur doit être supérieure à {{min}}",
+                "errorRangeMax": "La valeur doit être inférieure à {{max}}",
+                "errorRange": "La valeur doit être comprise entre {{min}} et {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Ajouter des fonctionnalités",
+                "rights": "Afficher les droits et autorisations",
+                "embed": "Afficher le lien d'intégration"
+            },
+            "displayOptions": {
+                "marginX": "Marge droite et gauche",
+                "marginY": "Marge supérieure et inférieure",
+                "restrictWidthAndAlign": "Limiter la largeur et aligner au centre",
+                "maximumWidth": "Largeur maximale",
+                "addCss": "Ajouter un fichier CSS",
+                "chooseCssFile": "choisir",
+                "title": "option d'affichage"
+            },
+            "pixelsAbbreviation": "pixels",
+            "cssFilePicker": {
+                "formatName": "Fichier CSS"
+            }
         },
         "sidebar": {
             "create": "Nouveau fichier H5P",
@@ -200,6 +220,10 @@
         },
         "general": {
             "econnrefused": "Il semble y avoir un problème avec votre connexion Internet."
+        },
+        "updater": {
+            "availableText": "La mise à jour est disponible. L'application installera la mise à jour et redémarrera.",
+            "availableTitle": "Installer les mises à jour"
         }
     },
     "privacy_policy": {

@@ -1,11 +1,10 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-
+import { createTheme } from '@material-ui/core/styles';
 export const drawerWidth = 240;
 
 const gradientBackground = 'linear-gradient(45deg, #1abc9c 0%, #3498db 100%)';
 
 // A custom theme for this app
-const theme = createMuiTheme({
+const theme = createTheme({
     palette: {
         error: {
             main: '#c0392b'
