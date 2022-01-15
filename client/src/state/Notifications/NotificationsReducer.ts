@@ -16,7 +16,7 @@ import {
 import {
     H5PEDITOR_SAVE_SUCCESS,
     H5PEDITOR_SAVE_ERROR,
-    H5P_IMPORT_ERROR,
+    H5P_OPEN_ERROR,
     H5PEDITOR_EXPORT_SUCCESS,
     H5PEDITOR_EXPORT_ERROR,
     H5PEDITOR_ERROR,
@@ -25,7 +25,7 @@ import {
     IH5PEditorExportErrorAction,
     IH5PEditorExportSuccessAction,
     IH5PEditorError,
-    IH5PImportErrorAction
+    IH5POpenErrorAction
 } from '../H5PEditor/H5PEditorTypes';
 
 import {
@@ -59,7 +59,7 @@ export default function notificationsReducer(
         | IH5PEditorExportErrorAction
         | IH5PEditorExportSuccessAction
         | IH5PEditorError
-        | IH5PImportErrorAction
+        | IH5POpenErrorAction
         | IAnalyticsImportSuccessAction
         | IAnalyticsImportErrorAction
         | IShowErrorDialog
@@ -168,7 +168,7 @@ export default function notificationsReducer(
                     ]
                 };
 
-            case H5P_IMPORT_ERROR:
+            case H5P_OPEN_ERROR:
                 return {
                     ...state,
                     notifications: [

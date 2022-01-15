@@ -30,9 +30,9 @@ import {
     H5PEDITOR_SAVE_ERROR,
     H5PEDITOR_SAVE_REQUEST,
     H5PEDITOR_SAVE_SUCCESS,
-    H5P_IMPORT_ERROR,
-    H5P_IMPORT_REQUEST,
-    H5P_IMPORT_SUCCESS,
+    H5P_OPEN_ERROR,
+    H5P_OPEN_REQUEST,
+    H5P_OPEN_SUCCESS,
     H5P_LOADPLAYERCONTENT_REQUEST,
     H5P_LOADPLAYERCONTENT_SUCCESS,
     H5PEDITOR_UPDATE_REQUEST,
@@ -212,14 +212,14 @@ export function exportH5P(
     };
 }
 
-export function openH5P(): any {
+export function selectH5PAndOpen(): any {
     return (dispatch: any) => {
         filesApi
             .pickH5PFiles()
             .then((files) => {
                 files.forEach(
                     (file: { fileHandleId: string; path: string }) => {
-                        dispatch(importH5P(file.fileHandleId, file.path));
+                        dispatch(openH5P(file.fileHandleId, file.path));
                     }
                 );
             })
@@ -501,7 +501,7 @@ export function save(
     };
 }
 
-export function importH5P(
+export function openH5P(
     fileHandleId: string,
     path: string,
     history?: H.History
@@ -511,7 +511,7 @@ export function importH5P(
 
         dispatch({
             payload: { tabId, fileHandleId, path },
-            type: H5P_IMPORT_REQUEST
+            type: H5P_OPEN_REQUEST
         });
 
         if (history) {
@@ -534,7 +534,7 @@ export function importH5P(
                         path,
                         h5p: result
                     },
-                    type: H5P_IMPORT_SUCCESS
+                    type: H5P_OPEN_SUCCESS
                 });
             })
             .catch((error: Error) => {
@@ -545,7 +545,7 @@ export function importH5P(
                     payload: {
                         fileHandleId
                     },
-                    type: H5P_IMPORT_ERROR
+                    type: H5P_OPEN_ERROR
                 });
             });
     };

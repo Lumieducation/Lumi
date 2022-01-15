@@ -11,7 +11,7 @@ import {
     H5PEDITOR_SAVE_ERROR,
     H5PEDITOR_EXPORT_SUCCESS,
     H5PEDITOR_EXPORT_ERROR,
-    H5P_IMPORT_ERROR
+    H5P_OPEN_ERROR
 } from '../../H5PEditor/H5PEditorTypes';
 
 import {
@@ -169,7 +169,7 @@ describe('Notifications', () => {
         done();
     });
 
-    it('shows a error notification on H5P_IMPORT_ERROR', (done) => {
+    it('shows a error notification on H5P_OPEN_ERROR', (done) => {
         const state = reducer(
             {
                 notifications: []
@@ -183,7 +183,7 @@ describe('Notifications', () => {
                     }
                 } as any,
                 payload: {} as any,
-                type: H5P_IMPORT_ERROR
+                type: H5P_OPEN_ERROR
             }
         );
 

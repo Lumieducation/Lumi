@@ -22,8 +22,8 @@ import {
     H5PEDITOR_SAVE_REQUEST,
     H5PEDITOR_SAVE_SUCCESS,
     H5PEDITOR_SAVE_ERROR,
-    H5P_IMPORT_REQUEST,
-    H5P_IMPORT_SUCCESS,
+    H5P_OPEN_REQUEST,
+    H5P_OPEN_SUCCESS,
     Modes,
     H5PEDITOR_EXPORT_CANCEL,
     H5PEDITOR_SAVE_CANCEL,
@@ -266,7 +266,7 @@ export default function tabReducer(
                     )
                 };
 
-            case H5P_IMPORT_REQUEST:
+            case H5P_OPEN_REQUEST:
                 return {
                     ...state,
                     activeTabIndex: state.tabList.length,
@@ -286,7 +286,7 @@ export default function tabReducer(
                     ]
                 };
 
-            case H5P_IMPORT_SUCCESS:
+            case H5P_OPEN_SUCCESS:
                 return {
                     ...state,
                     tabList: state.tabList.map((tab) =>

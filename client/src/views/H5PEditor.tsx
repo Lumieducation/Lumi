@@ -42,7 +42,7 @@ export class H5PEditor extends React.Component<{
 
     closeTab: typeof actions.h5peditor.closeTab;
     openTab: typeof actions.h5peditor.openTab;
-    openFiles: typeof actions.h5peditor.openH5P;
+    selectH5PAndOpen: typeof actions.h5peditor.selectH5PAndOpen;
     selectTab: typeof actions.h5peditor.selectTab;
 }> {
     public render(): React.ReactNode {
@@ -50,7 +50,7 @@ export class H5PEditor extends React.Component<{
             return (
                 <div>
                     <H5PEditorStartPage
-                        primaryButtonClick={() => this.props.openFiles()}
+                        primaryButtonClick={() => this.props.selectH5PAndOpen()}
                         secondaryButtonClick={() => this.props.openTab()}
                     />
                 </div>
@@ -63,7 +63,7 @@ export class H5PEditor extends React.Component<{
                         tabs={this.props.tabs}
                         activeTabIndex={this.props.activeTabIndex}
                         create={() => this.props.openTab()}
-                        openFiles={() => this.props.openFiles()}
+                        openFiles={() => this.props.selectH5PAndOpen()}
                         selectTab={(index: number) =>
                             this.props.selectTab(index)
                         }
@@ -127,7 +127,7 @@ function mapDispatchToProps(dispatch: any): any {
 
             closeTab: actions.h5peditor.closeTab,
             openTab: actions.h5peditor.openTab,
-            openFiles: actions.h5peditor.openH5P,
+            selectH5PAndOpen: actions.h5peditor.selectH5PAndOpen,
             selectTab: actions.h5peditor.selectTab
         },
         dispatch
