@@ -1,6 +1,6 @@
 import superagent from 'superagent';
 
-import { IFile } from './AnalyticsTypes';
+import { IFile } from '../state/Analytics/AnalyticsTypes';
 
 export async function importAnalytics(): Promise<{
     files: IFile[];

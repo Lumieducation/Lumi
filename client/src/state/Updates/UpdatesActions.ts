@@ -9,7 +9,7 @@ import {
     UPDATES_UPDATE_SUCCESS
 } from './UpdatesTypes';
 
-import * as API from './UpdatesAPI';
+import * as API from '../../services/UpdatesAPI';
 
 export function getUpdates(): any {
     return async (dispatch: any) => {

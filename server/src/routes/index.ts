@@ -64,7 +64,7 @@ export default function (
     router.use('/api/v1/settings', settingsRoutes(settingsCache));
 
     router.use(
-        '/api/run',
+        '/api/v1/run',
         runRoutes(
             serverConfig,
             h5pEditor,
@@ -110,7 +110,7 @@ export default function (
     // The LibraryAdministrationExpress routes are REST endpoints that offer library
     // management functionality.
     router.use(
-        `${h5pEditor.config.baseUrl}/libraries`,
+        `/api/v1/libraries`,
         libraryAdministrationExpressRouter(h5pEditor)
     );
 

@@ -31,7 +31,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import { actions, IState, selectors } from '../../state';
 import { getDefaultContentTypeWidth } from '../../helpers/contentTypeWidths';
-import { pickCSSFile } from '../../services/H5PApi';
+import { pickCSSFile } from '../../services/FilesAPI';
 
 export default function H5PEditorExportDialog() {
     const dispatch = useDispatch();

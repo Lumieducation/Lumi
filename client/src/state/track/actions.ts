@@ -1,4 +1,4 @@
-import * as api from './api';
+import * as api from '../../services/TrackingAPI';
 
 export function track(
     category: string,

@@ -83,15 +83,15 @@ export default function (
         }
     );
 
-    router.post(
+    router.get(
         `/open`,
         (
-            req: express.Request,
+            req: express.Request<{}, {}, {}, { fileHandleId: string }>,
             res: express.Response,
             next: express.NextFunction
         ) => {
             fileController
-                .import(req.body.fileHandleId)
+                .import(req.query.fileHandleId)
                 .then((result) => {
                     res.status(200).json(result);
                 })

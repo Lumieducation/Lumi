@@ -22,7 +22,7 @@ import store from '../../state';
 import { updateContentOnServer } from '../H5PEditor/H5PEditorActions';
 import { notify, showErrorDialog } from '../Notifications/NotificationsActions';
 
-import * as API from './RunAPI';
+import * as API from '../../services/RunAPI';
 
 export function getRuns(): any {
     return async (dispatch: any) => {

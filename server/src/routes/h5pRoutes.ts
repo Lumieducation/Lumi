@@ -151,7 +151,7 @@ export default function (
                     req.user
                 );
 
-            res.send(JSON.stringify({ contentId, metadata }));
+            res.json({ contentId, metadata });
             res.status(200).end();
         } catch (error: any) {
             Sentry.captureException(error);

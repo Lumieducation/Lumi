@@ -12,7 +12,8 @@ import {
     ISettingsState
 } from './SettingsTypes';
 
-import * as API from './SettingsAPI';
+import * as settingsAPI from '../../services/SettingsAPI';
+import { updateContentTypeCache } from '../../services/H5PApi';
 
 export function getSettings(): any {
     return async (dispatch: any) => {
@@ -23,7 +24,7 @@ export function getSettings(): any {
             });
 
             try {
-                const settings = await API.getSettings();
+                const settings = await settingsAPI.getSettings();
 
                 dispatch({
                     payload: settings,
@@ -50,7 +51,7 @@ export function updateSettings(settings: ISettingsState): any {
                 type: SETTINGS_UPDATE_REQUEST
             });
 
-            await API.updateSettings(settings);
+            await settingsAPI.updateSettings(settings);
 
             dispatch({
                 payload: settings,
@@ -58,7 +59,7 @@ export function updateSettings(settings: ISettingsState): any {
             });
 
             if (settings.privacyPolicyConsent) {
-                await API.updateContentTypeCache();
+                await updateContentTypeCache();
             }
         } catch (error: any) {
             Sentry.captureException(error);

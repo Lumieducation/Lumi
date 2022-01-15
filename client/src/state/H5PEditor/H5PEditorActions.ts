@@ -57,7 +57,8 @@ import { track } from '../track/actions';
 
 import store from '../index';
 
-import * as api from '../../services/H5PApi';
+import * as h5pApi from '../../services/H5PApi';
+import * as filesApi from '../../services/FilesAPI';
 
 const log = new Logger('actions:tabs');
 
@@ -155,7 +156,7 @@ export function exportH5P(
             });
 
             try {
-                await api.exportContent(
+                await filesApi.exportContent(
                     data.contentId,
                     includeReporter,
                     format,
@@ -213,7 +214,8 @@ export function exportH5P(
 
 export function openH5P(): any {
     return (dispatch: any) => {
-        api.pickH5PFiles()
+        filesApi
+            .pickH5PFiles()
             .then((response) => {
                 const files = response.body;
 
@@ -323,7 +325,7 @@ export function updateContent(
         try {
             if (contentId) {
                 const response = JSON.parse(
-                    (await api.saveContent(contentId, requestBody)).text
+                    (await h5pApi.updateContent(contentId, requestBody)).text
                 );
 
                 dispatch({
@@ -339,7 +341,7 @@ export function updateContent(
             }
 
             const response = JSON.parse(
-                (await api.createContent(requestBody)).text
+                (await h5pApi.createContent(requestBody)).text
             );
             dispatch({
                 payload: {
@@ -377,7 +379,7 @@ export function loadEditorContent(
 
         try {
             const content = JSON.parse(
-                (await api.loadEditorContent(contentId)).text
+                (await h5pApi.loadEditorContent(contentId)).text
             );
 
             dispatch({
@@ -409,7 +411,7 @@ export function loadPlayerContent(
         });
 
         const content = JSON.parse(
-            (await api.loadPlayerContent(contentId)).text
+            (await h5pApi.loadPlayerContent(contentId)).text
         );
 
         dispatch({
@@ -430,7 +432,7 @@ export function deleteH5P(
             type: H5P_DELETE_REQUEST
         });
 
-        return api
+        return h5pApi
             .deleteH5P(contentId)
             .then((response) => {
                 return dispatch({
@@ -462,7 +464,10 @@ export function save(
                 type: H5PEDITOR_SAVE_REQUEST
             });
 
-            const response = await api.exportH5P(data.contentId, fileHandleId);
+            const response = await filesApi.exportH5P(
+                data.contentId,
+                fileHandleId
+            );
 
             if (response.status !== 200) {
                 throw new Error(`Error while saving H5P: ${response.text}`);
@@ -518,7 +523,7 @@ export function importH5P(
             history.push('/h5peditor');
         }
 
-        return api
+        return filesApi
             .importH5P(fileHandleId)
             .then(({ body }) => {
                 try {
