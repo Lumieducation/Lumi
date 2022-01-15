@@ -2,7 +2,7 @@ import { BrowserWindow } from 'electron';
 import fs from 'fs-extra';
 import _path from 'path';
 import i18next from 'i18next';
-import Sentry from '@sentry/node';
+import * as Sentry from '@sentry/node';
 import * as H5P from '@lumieducation/h5p-server';
 import LumiError from '../helpers/LumiError';
 import Logger from '../helpers/Logger';
@@ -106,6 +106,7 @@ export default class LumiController {
         } catch (error: any) {
             this.electronState.setState({ blockKeyboard: false });
             Sentry.captureException(error);
+            throw error;
         }
     }
 
