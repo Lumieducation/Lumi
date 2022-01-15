@@ -26,7 +26,88 @@ export default class FileController {
         private fileHandleManager: FileHandleManager
     ) {}
 
-    public async export(
+    public async open(fileHandleId: string): Promise<{
+        id: string;
+        library: string;
+        metadata: H5P.IContentMetadata;
+        parameters: any;
+    }> {
+        const path = this.fileHandleManager.getById(fileHandleId)?.filename;
+        if (!path) {
+            throw new Error('File not selected before');
+        }
+
+        const buffer = await fs.readFile(path);
+
+        const { metadata, parameters } = await this.h5pEditor.uploadPackage(
+            buffer,
+            new User()
+        );
+
+        const id = await this.h5pEditor.saveOrUpdateContent(
+            undefined,
+            parameters,
+            metadata,
+            this.getUbernameFromH5pJson(metadata),
+            new User()
+        );
+
+        return {
+            id,
+            metadata,
+            parameters,
+            library: this.getUbernameFromH5pJson(metadata)
+        };
+    }
+
+    public async pickCSSFile(): Promise<{ fileHandle: string; path: string }> {
+        const fileHandle = await this.filePickers.openSingleFile(
+            ['css'],
+            t('editor.exportDialog.cssFilePicker.formatName'),
+            this.electronState.getState().lastDirectory,
+            this.getBrowserWindow()
+        );
+
+        if (fileHandle) {
+            this.electronState.setState({
+                lastDirectory: _path.dirname(fileHandle.filename)
+            });
+        } else {
+            return undefined;
+        }
+
+        return { fileHandle: fileHandle.handleId, path: fileHandle.filename };
+    }
+
+    public async pickH5PFiles(): Promise<
+        { fileHandleId: string; path: string }[]
+    > {
+        const fileHandles = await this.filePickers.openMultipleFiles(
+            ['h5p'],
+            t('editor.extensionName'),
+            this.electronState.getState().lastDirectory,
+            this.getBrowserWindow()
+        );
+
+        if (
+            fileHandles &&
+            fileHandles.length > 0 &&
+            fileHandles[0] !== undefined
+        ) {
+            this.electronState.setState({
+                lastDirectory: _path.dirname(fileHandles[0].filename)
+            });
+        } else {
+            return undefined;
+        }
+
+        return fileHandles.map((fh) => ({
+            fileHandleId: fh.handleId,
+            path: fh.filename
+        }));
+    }
+
+    public async save(
         contentId: string,
         fileHandleId?: string
     ): Promise<{ fileHandleId: string; path: string }> {
@@ -96,85 +177,6 @@ export default class FileController {
             Sentry.captureException(error);
             throw error;
         }
-    }
-
-    public async import(fileHandleId: string): Promise<{
-        id: string;
-        library: string;
-        metadata: H5P.IContentMetadata;
-        parameters: any;
-    }> {
-        const path = this.fileHandleManager.getById(fileHandleId)?.filename;
-        if (!path) {
-            throw new Error('File not selected before');
-        }
-
-        const buffer = await fs.readFile(path);
-
-        const { metadata, parameters } = await this.h5pEditor.uploadPackage(
-            buffer,
-            new User()
-        );
-
-        const id = await this.h5pEditor.saveOrUpdateContent(
-            undefined,
-            parameters,
-            metadata,
-            this.getUbernameFromH5pJson(metadata),
-            new User()
-        );
-
-        return {
-            id,
-            metadata,
-            parameters,
-            library: this.getUbernameFromH5pJson(metadata)
-        };
-    }
-
-    public async pickCSSFile(): Promise<{ fileHandle: string; path: string }> {
-        const fileHandle = await this.filePickers.openSingleFile(
-            ['css'],
-            t('editor.exportDialog.cssFilePicker.formatName'),
-            this.electronState.getState().lastDirectory,
-            this.getBrowserWindow()
-        );
-
-        if (fileHandle) {
-            this.electronState.setState({
-                lastDirectory: _path.dirname(fileHandle.filename)
-            });
-        }
-
-        return { fileHandle: fileHandle.handleId, path: fileHandle.filename };
-    }
-
-    public async pickH5PFiles(): Promise<
-        { fileHandleId: string; path: string }[]
-    > {
-        const fileHandles = await this.filePickers.openMultipleFiles(
-            ['h5p'],
-            t('editor.extensionName'),
-            this.electronState.getState().lastDirectory,
-            this.getBrowserWindow()
-        );
-
-        if (
-            fileHandles &&
-            fileHandles.length > 0 &&
-            fileHandles[0] !== undefined
-        ) {
-            this.electronState.setState({
-                lastDirectory: _path.dirname(fileHandles[0].filename)
-            });
-        } else {
-            return undefined;
-        }
-
-        return fileHandles.map((fh) => ({
-            fileHandleId: fh.handleId,
-            path: fh.filename
-        }));
     }
 
     private getUbernameFromH5pJson(h5pJson: H5P.IContentMetadata): string {

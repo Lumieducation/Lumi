@@ -71,10 +71,14 @@ export default function (
             fileController
                 .pickCSSFile()
                 .then((result) => {
-                    res.status(200).json({
-                        fileHandleId: result.fileHandle,
-                        filename: _path.basename(result.path)
-                    });
+                    if (result) {
+                        res.status(200).json({
+                            fileHandleId: result.fileHandle,
+                            filename: _path.basename(result.path)
+                        });
+                    } else {
+                        res.status(499).send();
+                    }
                 })
                 .catch((error) => {
                     Sentry.captureException(error);
@@ -91,7 +95,7 @@ export default function (
             next: express.NextFunction
         ) => {
             fileController
-                .import(req.query.fileHandleId)
+                .open(req.query.fileHandleId)
                 .then((result) => {
                     res.status(200).json(result);
                 })
@@ -117,7 +121,7 @@ export default function (
             fileController
                 // the casts assume we don't get arrays of complex objects from
                 // the client
-                .export(
+                .save(
                     req.query.contentId,
                     req.query.fileHandleId === 'undefined'
                         ? undefined

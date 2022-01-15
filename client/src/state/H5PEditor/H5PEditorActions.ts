@@ -59,6 +59,7 @@ import store from '../index';
 
 import * as h5pApi from '../../services/H5PApi';
 import * as filesApi from '../../services/FilesAPI';
+import { Result } from '../../services/FilesAPI';
 
 const log = new Logger('actions:tabs');
 
@@ -156,48 +157,47 @@ export function exportH5P(
             });
 
             try {
-                await filesApi.exportContent(
+                const result = await filesApi.exportContent(
                     data.contentId,
                     includeReporter,
                     format,
                     options
                 );
 
-                // TODO: change tracking
-                dispatch(
-                    track(
-                        'H5P',
-                        'export',
-                        `${format}-${
-                            includeReporter
-                                ? 'with_reporter'
-                                : 'without_reporter'
-                        }`
-                    )
-                );
-                dispatch({
-                    payload: {
-                        contentId: data.contentId,
-                        includeReporter,
-                        format
-                    },
-                    type: H5PEDITOR_EXPORT_SUCCESS
-                });
-            } catch (error: any) {
-                if (error.status === 499) {
-                    // dispatched if the user cancel the system's save dialog.
+                if (result === Result.Cancelled) {
                     dispatch(cancelExportH5P(data.contentId));
                 } else {
-                    Sentry.captureException(error);
+                    // TODO: change tracking
+                    dispatch(
+                        track(
+                            'H5P',
+                            'export',
+                            `${format}-${
+                                includeReporter
+                                    ? 'with_reporter'
+                                    : 'without_reporter'
+                            }`
+                        )
+                    );
 
                     dispatch({
                         payload: {
-                            error,
-                            contentId: data.contentId
+                            contentId: data.contentId,
+                            includeReporter,
+                            format
                         },
-                        type: H5PEDITOR_EXPORT_ERROR
+                        type: H5PEDITOR_EXPORT_SUCCESS
                     });
                 }
+            } catch (error: any) {
+                Sentry.captureException(error);
+                dispatch({
+                    payload: {
+                        error,
+                        contentId: data.contentId
+                    },
+                    type: H5PEDITOR_EXPORT_ERROR
+                });
             }
         } catch (error: any) {
             Sentry.captureException(error);
@@ -216,9 +216,7 @@ export function openH5P(): any {
     return (dispatch: any) => {
         filesApi
             .pickH5PFiles()
-            .then((response) => {
-                const files = response.body;
-
+            .then((files) => {
                 files.forEach(
                     (file: { fileHandleId: string; path: string }) => {
                         dispatch(importH5P(file.fileHandleId, file.path));
@@ -464,13 +462,17 @@ export function save(
                 type: H5PEDITOR_SAVE_REQUEST
             });
 
-            const response = await filesApi.exportH5P(
-                data.contentId,
-                fileHandleId
-            );
+            const result = await filesApi.save(data.contentId, fileHandleId);
 
-            if (response.status !== 200) {
-                throw new Error(`Error while saving H5P: ${response.text}`);
+            if (result.status === Result.Error) {
+                throw new Error(result.errorText);
+            }
+
+            if (result.status === Result.Cancelled) {
+                return dispatch({
+                    payload: {},
+                    type: H5PEDITOR_SAVE_CANCEL
+                });
             }
 
             try {
@@ -482,26 +484,19 @@ export function save(
             return dispatch({
                 payload: {
                     id: data.contentId,
-                    fileHandleId: response.body.fileHandleId,
-                    path: response.body.path
+                    fileHandleId: result.fileHandleId,
+                    path: result.path
                 },
                 type: H5PEDITOR_SAVE_SUCCESS
             });
         } catch (error: any) {
-            if (error.status === 499) {
-                return dispatch({
-                    payload: {},
-                    type: H5PEDITOR_SAVE_CANCEL
-                });
-            } else {
-                Sentry.captureException(error);
+            Sentry.captureException(error);
 
-                return dispatch({
-                    error,
-                    payload: { fileHandleId },
-                    type: H5PEDITOR_SAVE_ERROR
-                });
-            }
+            return dispatch({
+                error,
+                payload: { fileHandleId },
+                type: H5PEDITOR_SAVE_ERROR
+            });
         }
     };
 }
@@ -524,10 +519,10 @@ export function importH5P(
         }
 
         return filesApi
-            .importH5P(fileHandleId)
-            .then(({ body }) => {
+            .open(fileHandleId)
+            .then((result) => {
                 try {
-                    dispatch(track('H5P', 'open', body.metadata.mainLibrary));
+                    dispatch(track('H5P', 'open', result.metadata.mainLibrary));
                 } catch (error: any) {
                     Sentry.captureException(error);
                 }
@@ -537,7 +532,7 @@ export function importH5P(
                         tabId,
                         fileHandleId,
                         path,
-                        h5p: body
+                        h5p: result
                     },
                     type: H5P_IMPORT_SUCCESS
                 });

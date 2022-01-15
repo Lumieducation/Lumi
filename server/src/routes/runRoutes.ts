@@ -145,7 +145,7 @@ export default function (
                     serverConfig.temporaryStoragePath,
                     `${contentId}.h5p`
                 );
-                await fileController.export(`${contentId}`, filePath);
+                await fileController.save(`${contentId}`, filePath);
             }
 
             try {

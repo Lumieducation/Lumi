@@ -26,7 +26,7 @@ import SettingsCache from '../config/SettingsCache';
 import StateStorage from '../state/electronState';
 import { IFilePickers } from '../types';
 import FileHandleManager from '../state/FileHandleManager';
-import fileRoutes from './fileRoutes';
+import filesRoutes from './filesRoutes';
 
 const log = new Logger('routes');
 
@@ -133,7 +133,7 @@ export default function (
 
     router.use(
         '/api/v1/files',
-        fileRoutes(
+        filesRoutes(
             h5pEditor,
             getBrowserWindow,
             electronState,
