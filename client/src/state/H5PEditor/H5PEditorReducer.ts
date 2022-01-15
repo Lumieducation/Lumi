@@ -1,7 +1,7 @@
 import Logger from '../../helpers/Logger';
 import * as Sentry from '@sentry/browser';
 import i18next from 'i18next';
-import path from 'path';
+import path from 'path-browserify';
 
 import {
     IH5PEditorState,
