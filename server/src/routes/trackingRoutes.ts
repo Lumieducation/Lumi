@@ -5,11 +5,11 @@ import IServerConfig from '../config/IPaths';
 import electron from 'electron';
 import * as os from 'os';
 import { machineId } from 'node-machine-id';
-import cryptoRandomString from 'crypto-random-string';
+import { nanoid } from 'nanoid';
 
 import SettingsCache from '../config/SettingsCache';
 
-const id = cryptoRandomString({ length: 16 });
+const id = nanoid(16);
 
 export default function (
     serverConfig: IServerConfig,
