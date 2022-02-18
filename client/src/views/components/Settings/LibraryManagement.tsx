@@ -24,8 +24,8 @@ import H5PAvatar from '../H5PAvatar';
 // import LibraryDetails from './LibraryDetailsComponent';
 import {
     ILibraryViewModel,
-    LibraryAdministrationService
-} from '../../../services/LibraryAdministrationService';
+    LibraryAdministrationAPI
+} from '../../../services/LibraryAdministrationAPI';
 import { actions } from '../../../state';
 import { NotificationTypes } from '../../../state/Notifications/NotificationsTypes';
 /**
@@ -37,7 +37,7 @@ import { NotificationTypes } from '../../../state/Notifications/NotificationsTyp
  * render() method to customize looks.
  */
 export class LibraryAdmin extends React.Component<
-    { endpointUrl: string; notify: typeof actions.notifications.notify },
+    { notify: typeof actions.notifications.notify },
     {
         isUploading: boolean;
         libraries?: ILibraryViewModel[] | null;
@@ -47,15 +47,9 @@ export class LibraryAdmin extends React.Component<
         } | null;
     }
 > {
-    protected librariesService: LibraryAdministrationService;
+    protected librariesService: LibraryAdministrationAPI;
 
-    /**
-     * @param endpointUrl the URL of the REST library administration endpoint.
-     */
-    constructor(props: {
-        endpointUrl: string;
-        notify: typeof actions.notifications.notify;
-    }) {
+    constructor(props: { notify: typeof actions.notifications.notify }) {
         super(props);
 
         this.state = {
@@ -63,9 +57,7 @@ export class LibraryAdmin extends React.Component<
             libraries: null,
             message: null
         };
-        this.librariesService = new LibraryAdministrationService(
-            props.endpointUrl
-        );
+        this.librariesService = new LibraryAdministrationAPI();
     }
 
     public async componentDidMount(): Promise<void> {

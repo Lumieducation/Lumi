@@ -11,7 +11,6 @@ import {
     contentTypeCacheExpressRouter
 } from '@lumieducation/h5p-express';
 
-import lumiRoutes from './lumiRoutes';
 import trackingRoutes from './trackingRoutes';
 import Logger from '../helpers/Logger';
 import IServerConfig from '../config/IPaths';
@@ -27,6 +26,7 @@ import SettingsCache from '../config/SettingsCache';
 import StateStorage from '../state/electronState';
 import { IFilePickers } from '../types';
 import FileHandleManager from '../state/FileHandleManager';
+import filesRoutes from './filesRoutes';
 
 const log = new Logger('routes');
 
@@ -34,7 +34,7 @@ export default function (
     h5pEditor: H5PEditor,
     h5pPlayer: H5PPlayer,
     serverConfig: IServerConfig,
-    browserWindow: electron.BrowserWindow,
+    getBrowserWindow: () => electron.BrowserWindow,
     settingsCache: SettingsCache,
     translationFunction: ITranslationFunction,
     electronState: StateStorage,
@@ -49,7 +49,7 @@ export default function (
     router.use('/api/v1/track', trackingRoutes(serverConfig, settingsCache));
     router.use(
         '/api/v1/analytics',
-        analyticRoutes(browserWindow, electronState)
+        analyticRoutes(getBrowserWindow, electronState)
     );
 
     // Adding dummy user to make sure all requests can be handled
@@ -64,11 +64,11 @@ export default function (
     router.use('/api/v1/settings', settingsRoutes(settingsCache));
 
     router.use(
-        '/api/run',
+        '/api/v1/run',
         runRoutes(
             serverConfig,
             h5pEditor,
-            browserWindow,
+            getBrowserWindow,
             settingsCache,
             electronState,
             filePickers,
@@ -107,28 +107,10 @@ export default function (
 
     router.use('/locales', express.static(`${__dirname}/../../../locales`));
 
-    // The expressRoutes are routes that create pages for these actions:
-    // - Creating new content
-    // - Editing content
-    // - Saving content
-    // - Deleting content
-    router.use(
-        h5pEditor.config.baseUrl,
-        h5pRoutes(
-            h5pEditor,
-            h5pPlayer,
-            'auto',
-            browserWindow,
-            translationFunction,
-            electronState,
-            fileHandleManager
-        )
-    );
-
     // The LibraryAdministrationExpress routes are REST endpoints that offer library
     // management functionality.
     router.use(
-        `${h5pEditor.config.baseUrl}/libraries`,
+        `/api/v1/libraries`,
         libraryAdministrationExpressRouter(h5pEditor)
     );
 
@@ -139,15 +121,25 @@ export default function (
         contentTypeCacheExpressRouter(h5pEditor.contentTypeCache)
     );
 
+    // The expressRoutes are routes that create pages for these actions:
+    // - Creating new content
+    // - Editing content
+    // - Saving content
+    // - Deleting content
     router.use(
-        '/api/v1/lumi',
-        lumiRoutes(
+        '/api/v1/h5p',
+        h5pRoutes(h5pEditor, h5pPlayer, serverConfig, 'auto')
+    );
+
+    router.use(
+        '/api/v1/files',
+        filesRoutes(
             h5pEditor,
-            serverConfig,
-            browserWindow,
+            getBrowserWindow,
             electronState,
             filePickers,
-            fileHandleManager
+            fileHandleManager,
+            translationFunction
         )
     );
 

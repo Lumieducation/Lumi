@@ -12,7 +12,7 @@ import _path from 'path';
 import StateStorage from '../state/electronState';
 
 export default function (
-    browserWindow: BrowserWindow,
+    getBrowserWindow: () => BrowserWindow,
     electronState: StateStorage
 ): express.Router {
     const router = express.Router();
@@ -21,7 +21,7 @@ export default function (
         try {
             // using the regular file dialog is safe, as the path is only used
             // on the server side to load files
-            const openDialog = await dialog.showOpenDialog(browserWindow, {
+            const openDialog = await dialog.showOpenDialog(getBrowserWindow(), {
                 properties: ['openDirectory'],
                 defaultPath: electronState.getState().lastDirectory
             });

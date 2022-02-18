@@ -30,9 +30,9 @@ import {
     H5PEDITOR_SAVE_ERROR,
     H5PEDITOR_SAVE_REQUEST,
     H5PEDITOR_SAVE_SUCCESS,
-    H5P_IMPORT_ERROR,
-    H5P_IMPORT_REQUEST,
-    H5P_IMPORT_SUCCESS,
+    H5P_OPEN_ERROR,
+    H5P_OPEN_REQUEST,
+    H5P_OPEN_SUCCESS,
     H5P_LOADPLAYERCONTENT_REQUEST,
     H5P_LOADPLAYERCONTENT_SUCCESS,
     H5PEDITOR_UPDATE_REQUEST,
@@ -57,7 +57,9 @@ import { track } from '../track/actions';
 
 import store from '../index';
 
-import * as api from '../../services/H5PApi';
+import * as h5pApi from '../../services/H5PApi';
+import * as filesApi from '../../services/FilesAPI';
+import { Result } from '../../services/FilesAPI';
 
 const log = new Logger('actions:tabs');
 
@@ -155,48 +157,47 @@ export function exportH5P(
             });
 
             try {
-                await api.exportContent(
+                const result = await filesApi.exportContent(
                     data.contentId,
                     includeReporter,
                     format,
                     options
                 );
 
-                // TODO: change tracking
-                dispatch(
-                    track(
-                        'H5P',
-                        'export',
-                        `${format}-${
-                            includeReporter
-                                ? 'with_reporter'
-                                : 'without_reporter'
-                        }`
-                    )
-                );
-                dispatch({
-                    payload: {
-                        contentId: data.contentId,
-                        includeReporter,
-                        format
-                    },
-                    type: H5PEDITOR_EXPORT_SUCCESS
-                });
-            } catch (error: any) {
-                if (error.status === 499) {
-                    // dispatched if the user cancel the system's save dialog.
+                if (result === Result.Cancelled) {
                     dispatch(cancelExportH5P(data.contentId));
                 } else {
-                    Sentry.captureException(error);
+                    // TODO: change tracking
+                    dispatch(
+                        track(
+                            'H5P',
+                            'export',
+                            `${format}-${
+                                includeReporter
+                                    ? 'with_reporter'
+                                    : 'without_reporter'
+                            }`
+                        )
+                    );
 
                     dispatch({
                         payload: {
-                            error,
-                            contentId: data.contentId
+                            contentId: data.contentId,
+                            includeReporter,
+                            format
                         },
-                        type: H5PEDITOR_EXPORT_ERROR
+                        type: H5PEDITOR_EXPORT_SUCCESS
                     });
                 }
+            } catch (error: any) {
+                Sentry.captureException(error);
+                dispatch({
+                    payload: {
+                        error,
+                        contentId: data.contentId
+                    },
+                    type: H5PEDITOR_EXPORT_ERROR
+                });
             }
         } catch (error: any) {
             Sentry.captureException(error);
@@ -211,15 +212,14 @@ export function exportH5P(
     };
 }
 
-export function openH5P(): any {
+export function selectH5PAndOpen(): any {
     return (dispatch: any) => {
-        api.pickH5PFiles()
-            .then((response) => {
-                const files = response.body;
-
+        filesApi
+            .pickH5PFiles()
+            .then((files) => {
                 files.forEach(
                     (file: { fileHandleId: string; path: string }) => {
-                        dispatch(importH5P(file.fileHandleId, file.path));
+                        dispatch(openH5P(file.fileHandleId, file.path));
                     }
                 );
             })
@@ -323,7 +323,7 @@ export function updateContent(
         try {
             if (contentId) {
                 const response = JSON.parse(
-                    (await api.saveContent(contentId, requestBody)).text
+                    (await h5pApi.updateContent(contentId, requestBody)).text
                 );
 
                 dispatch({
@@ -339,7 +339,7 @@ export function updateContent(
             }
 
             const response = JSON.parse(
-                (await api.createContent(requestBody)).text
+                (await h5pApi.createContent(requestBody)).text
             );
             dispatch({
                 payload: {
@@ -377,7 +377,7 @@ export function loadEditorContent(
 
         try {
             const content = JSON.parse(
-                (await api.loadEditorContent(contentId)).text
+                (await h5pApi.loadEditorContent(contentId)).text
             );
 
             dispatch({
@@ -409,7 +409,7 @@ export function loadPlayerContent(
         });
 
         const content = JSON.parse(
-            (await api.loadPlayerContent(contentId)).text
+            (await h5pApi.loadPlayerContent(contentId)).text
         );
 
         dispatch({
@@ -430,7 +430,7 @@ export function deleteH5P(
             type: H5P_DELETE_REQUEST
         });
 
-        return api
+        return h5pApi
             .deleteH5P(contentId)
             .then((response) => {
                 return dispatch({
@@ -462,10 +462,17 @@ export function save(
                 type: H5PEDITOR_SAVE_REQUEST
             });
 
-            const response = await api.exportH5P(data.contentId, fileHandleId);
+            const result = await filesApi.save(data.contentId, fileHandleId);
 
-            if (response.status !== 200) {
-                throw new Error(`Error while saving H5P: ${response.text}`);
+            if (result.status === Result.Error) {
+                throw new Error(result.errorText);
+            }
+
+            if (result.status === Result.Cancelled) {
+                return dispatch({
+                    payload: {},
+                    type: H5PEDITOR_SAVE_CANCEL
+                });
             }
 
             try {
@@ -477,31 +484,24 @@ export function save(
             return dispatch({
                 payload: {
                     id: data.contentId,
-                    fileHandleId: response.body.fileHandleId,
-                    path: response.body.path
+                    fileHandleId: result.fileHandleId,
+                    path: result.path
                 },
                 type: H5PEDITOR_SAVE_SUCCESS
             });
         } catch (error: any) {
-            if (error.status === 499) {
-                return dispatch({
-                    payload: {},
-                    type: H5PEDITOR_SAVE_CANCEL
-                });
-            } else {
-                Sentry.captureException(error);
+            Sentry.captureException(error);
 
-                return dispatch({
-                    error,
-                    payload: { fileHandleId },
-                    type: H5PEDITOR_SAVE_ERROR
-                });
-            }
+            return dispatch({
+                error,
+                payload: { fileHandleId },
+                type: H5PEDITOR_SAVE_ERROR
+            });
         }
     };
 }
 
-export function importH5P(
+export function openH5P(
     fileHandleId: string,
     path: string,
     history?: H.History
@@ -511,18 +511,18 @@ export function importH5P(
 
         dispatch({
             payload: { tabId, fileHandleId, path },
-            type: H5P_IMPORT_REQUEST
+            type: H5P_OPEN_REQUEST
         });
 
         if (history) {
             history.push('/h5peditor');
         }
 
-        return api
-            .importH5P(fileHandleId)
-            .then(({ body }) => {
+        return filesApi
+            .open(fileHandleId)
+            .then((result) => {
                 try {
-                    dispatch(track('H5P', 'open', body.metadata.mainLibrary));
+                    dispatch(track('H5P', 'open', result.metadata.mainLibrary));
                 } catch (error: any) {
                     Sentry.captureException(error);
                 }
@@ -532,9 +532,9 @@ export function importH5P(
                         tabId,
                         fileHandleId,
                         path,
-                        h5p: body
+                        h5p: result
                     },
-                    type: H5P_IMPORT_SUCCESS
+                    type: H5P_OPEN_SUCCESS
                 });
             })
             .catch((error: Error) => {
@@ -545,7 +545,7 @@ export function importH5P(
                     payload: {
                         fileHandleId
                     },
-                    type: H5P_IMPORT_ERROR
+                    type: H5P_OPEN_ERROR
                 });
             });
     };

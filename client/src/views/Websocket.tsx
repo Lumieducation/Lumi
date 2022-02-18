@@ -80,7 +80,7 @@ export class WebsocketContainer extends React.Component<
                         action.payload.files.forEach(
                             (file: { fileHandleId: string; path: string }) => {
                                 dispatch(
-                                    actions.h5peditor.importH5P(
+                                    actions.h5peditor.openH5P(
                                         file.fileHandleId,
                                         file.path,
                                         window.h

@@ -114,9 +114,9 @@ export type H5PEditorActionTypes =
     | IH5PEditorSaveCancelAction
     | IH5PEditorSaveErrorAction
     | IH5PEditorExportActions
-    | IH5PImportRequestAction
-    | IH5PImportSuccessAction
-    | IH5PImportErrorAction
+    | IH5POpenRequestAction
+    | IH5POpenSuccessAction
+    | IH5POpenErrorAction
     | IH5PEditorOpenExportDialogAction;
 
 //
@@ -354,35 +354,35 @@ export type SaveActions =
     | IH5PEditorSaveSuccessAction
     | IH5PEditorSaveCancelAction;
 
-// Import
+// Open
 
-export const H5P_IMPORT_ERROR = 'H5P_IMPORT_ERROR';
-export const H5P_IMPORT_REQUEST = 'H5P_IMPORT_REQUEST';
-export const H5P_IMPORT_SUCCESS = 'H5P_IMPORT_SUCCESS';
+export const H5P_OPEN_ERROR = 'H5P_OPEN_ERROR';
+export const H5P_OPEN_REQUEST = 'H5P_OPEN_REQUEST';
+export const H5P_OPEN_SUCCESS = 'H5P_OPEN_SUCCESS';
 
-export interface IH5PImportErrorAction {
+export interface IH5POpenErrorAction {
     error: { response: Superagent.Response };
     payload: {
         path: string;
         tabId: string;
     };
-    type: typeof H5P_IMPORT_ERROR;
+    type: typeof H5P_OPEN_ERROR;
 }
-export interface IH5PImportRequestAction {
+export interface IH5POpenRequestAction {
     payload: {
         fileHandleId: string;
         tabId: string;
         path: string;
     };
-    type: typeof H5P_IMPORT_REQUEST;
+    type: typeof H5P_OPEN_REQUEST;
 }
 
-export interface IH5PImportSuccessAction {
+export interface IH5POpenSuccessAction {
     payload: {
         fileHandleId: string;
         h5p: IH5P;
         path: string;
         tabId: string;
     };
-    type: typeof H5P_IMPORT_SUCCESS;
+    type: typeof H5P_OPEN_SUCCESS;
 }

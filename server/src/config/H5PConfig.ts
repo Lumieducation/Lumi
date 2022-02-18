@@ -11,7 +11,7 @@ export default class H5PConfig implements IH5PConfig {
     constructor(private settingsCache: SettingsCache) {}
 
     public ajaxUrl: string = '/ajax';
-    public baseUrl: string = '/api/v1/h5p';
+    public baseUrl: string = '/h5p';
     public contentFilesUrl: string = '/content';
     public contentFilesUrlPlayerOverride: string;
     public contentHubContentEndpoint: string = '';

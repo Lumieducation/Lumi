@@ -1,9 +1,8 @@
 import superagent from 'superagent';
-
-import { IRunState } from './RunTypes';
+import { IRunState } from '../state/Run/RunTypes';
 
 export async function getRuns(): Promise<IRunState> {
-    const body = (await await superagent.get(`/api/run`)).body;
+    const body = (await await superagent.get(`/api/v1/run`)).body;
 
     if (body === null) {
         throw new Error('invalid body');
@@ -12,9 +11,9 @@ export async function getRuns(): Promise<IRunState> {
 }
 
 export async function upload(contentId?: string): Promise<IRunState> {
-    return (await superagent.post(`/api/run`).send({ contentId })).body;
+    return (await superagent.post(`/api/v1/run`).send({ contentId })).body;
 }
 
 export async function deleteFromRun(id: string): Promise<superagent.Response> {
-    return await superagent.delete(`/api/run/${id}`);
+    return await superagent.delete(`/api/v1/run/${id}`);
 }

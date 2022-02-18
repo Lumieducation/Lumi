@@ -7,12 +7,12 @@ import superagent from 'superagent';
 import * as H5P from '@lumieducation/h5p-server';
 
 import SettingsCache from '../config/SettingsCache';
-import LumiController from '../controllers/LumiController';
 import { globalWebsocket as websocket } from '../boot/websocket';
 import StateStorage from '../state/electronState';
 import FileHandleManager from '../state/FileHandleManager';
 import { IFilePickers } from '../types';
 import i18next from 'i18next';
+import FileController from '../controllers/FileController';
 
 const t = i18next.getFixedT(null, 'lumi');
 
@@ -21,17 +21,16 @@ const runHost = process.env.LUMI_HOST || 'https://lumi.run';
 export default function (
     serverConfig: IServerConfig,
     h5pEditor: H5P.H5PEditor,
-    browserWindow: BrowserWindow,
+    getBrowserWindow: () => BrowserWindow,
     settingsCache: SettingsCache,
     electronState: StateStorage,
     filePickers: IFilePickers,
     fileHandleManager: FileHandleManager
 ): express.Router {
     const router = express.Router();
-    const lumiController = new LumiController(
+    const fileController = new FileController(
         h5pEditor,
-        serverConfig,
-        browserWindow,
+        getBrowserWindow,
         electronState,
         filePickers,
         fileHandleManager
@@ -115,7 +114,7 @@ export default function (
             if (!contentId) {
                 if (!filePath) {
                     const { filePaths } = await dialog.showOpenDialog(
-                        browserWindow,
+                        getBrowserWindow(),
                         {
                             defaultPath: electronState.getState().lastDirectory,
                             filters: [
@@ -146,7 +145,7 @@ export default function (
                     serverConfig.temporaryStoragePath,
                     `${contentId}.h5p`
                 );
-                await lumiController.export(`${contentId}`, filePath);
+                await fileController.save(`${contentId}`, filePath);
             }
 
             try {

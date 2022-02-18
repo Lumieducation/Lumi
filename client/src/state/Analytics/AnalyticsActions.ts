@@ -8,7 +8,7 @@ import {
 
 import { track } from '../track/actions';
 
-import * as API from './AnalyticsAPI';
+import * as API from '../../services/AnalyticsAPI';
 
 export function importAnalytics(): any {
     return async (dispatch: any) => {

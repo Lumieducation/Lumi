@@ -52,8 +52,8 @@ describe('App', () => {
         }, 30000);
     });
 
-    describe('Import H5P file', () => {
-        it('displays an error snackbar if the imported .h5p file is not valid', async () => {
+    describe('Open H5P file', () => {
+        it('displays an error snackbar if the open .h5p file is not valid', async () => {
             const ws = socketio(`http://localhost:${PORT}`);
 
             ws.emit('dispatch', {
@@ -67,7 +67,7 @@ describe('App', () => {
             ws.disconnect();
         });
 
-        // it('imports a valid .h5p file', async (done) => {
+        // it('opens a valid .h5p file', async (done) => {
         //     const ws = socketio(`http://localhost:${PORT}`);
 
         //     ws.emit('dispatch', {

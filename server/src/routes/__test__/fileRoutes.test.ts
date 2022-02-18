@@ -12,7 +12,7 @@ import FileHandleManager from '../../state/FileHandleManager';
 import FilePickerMock from './FilePickerMock';
 import { initH5P } from '../../boot/h5p';
 
-describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
+describe('[export h5p as html]: GET /api/v1/files/export', () => {
     let app: express.Application;
 
     beforeAll(async () => {
@@ -35,7 +35,7 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
             h5pEditor,
             h5pPlayer,
             paths,
-            null,
+            () => null,
             settingsCache,
             t,
             new StateStorage(),
@@ -59,7 +59,7 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
         const contentId = 740522043;
 
         const res = await request(app).get(
-            `/api/v1/h5p/${contentId}/export?format=bundle`
+            `/api/v1/files/export?contentId=${contentId}&format=bundle`
         );
         expect(res.statusCode).toEqual(200);
 
@@ -83,7 +83,7 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
         const contentId = 740522043;
 
         const res = await request(app).get(
-            `/api/v1/h5p/${contentId}/export?format=bundle`
+            `/api/v1/files/export?contentId=${contentId}&format=bundle`
         );
         expect(res.statusCode).toEqual(200);
 
@@ -103,7 +103,7 @@ describe('[export h5p as html]: GET /api/v1/h5p/:contentId/html', () => {
         const contentId = 740522043;
 
         const res = await request(app).get(
-            `/api/v1/h5p/${contentId}/export?format=bundle`
+            `/api/v1/files/export?contentId=${contentId}&format=bundle`
         );
         expect(res.statusCode).toEqual(499);
 

@@ -281,7 +281,7 @@ export default function FullScreenDialog() {
                                     case 'h5p-library-administration':
                                         return (
                                             <Paper className={classes.paper}>
-                                                <SettingsLibraryManagement endpointUrl="/api/v1/h5p/libraries" />{' '}
+                                                <SettingsLibraryManagement />{' '}
                                             </Paper>
                                         );
 

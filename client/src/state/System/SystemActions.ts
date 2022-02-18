@@ -6,7 +6,7 @@ import {
     SYSTEM_GET_SYSTEM_SUCCESS
 } from './SystemTypes';
 
-import * as API from './SystemAPI';
+import * as API from '../../services/SystemAPI';
 
 export function getSystem(): any {
     return async (dispatch: any) => {

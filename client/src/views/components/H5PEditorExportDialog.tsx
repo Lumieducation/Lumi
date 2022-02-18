@@ -31,7 +31,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import { actions, IState, selectors } from '../../state';
 import { getDefaultContentTypeWidth } from '../../helpers/contentTypeWidths';
-import { pickCSSFile } from '../../services/H5PApi';
+import { pickCSSFile, Result } from '../../services/FilesAPI';
 
 export default function H5PEditorExportDialog() {
     const dispatch = useDispatch();
@@ -433,15 +433,23 @@ export default function H5PEditorExportDialog() {
                                             disabled={!addCss}
                                             size="small"
                                             onClick={async () => {
-                                                const res = await pickCSSFile();
-                                                if (res?.statusCode === 200) {
-                                                    setCssFileHandleId(
-                                                        res.body.fileHandleId
-                                                    );
-                                                    setCssFilename(
-                                                        res.body.filename
-                                                    );
-                                                }
+                                                try {
+                                                    const res =
+                                                        await pickCSSFile();
+                                                    if (
+                                                        res.status ===
+                                                            Result.Success &&
+                                                        res.fileHandleId &&
+                                                        res.filename
+                                                    ) {
+                                                        setCssFileHandleId(
+                                                            res.fileHandleId
+                                                        );
+                                                        setCssFilename(
+                                                            res.filename
+                                                        );
+                                                    }
+                                                } catch (error: any) {}
                                             }}
                                         >
                                             {t(

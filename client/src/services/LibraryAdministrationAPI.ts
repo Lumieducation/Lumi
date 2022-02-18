@@ -20,8 +20,8 @@ export interface ILibraryViewModel extends ILibraryAdministrationOverviewItem {
 /**
  *
  */
-export class LibraryAdministrationService {
-    constructor(private baseUrl: string) {}
+export class LibraryAdministrationAPI {
+    private baseUrl = '/api/v1/libraries';
 
     public async deleteLibrary(library: ILibraryViewModel): Promise<void> {
         const response = await fetch(
