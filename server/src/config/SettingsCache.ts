@@ -233,7 +233,7 @@ export default class SettingsStorage {
             ...{
                 allowPrerelease: loadedSettings.allowPrerelease,
                 autoUpdates: loadedSettings.autoUpdates,
-                bugTracking: loadedSettings.autoUpdates,
+                bugTracking: loadedSettings.bugTracking,
                 email: loadedSettings.email,
                 firstOpen: loadedSettings.firstOpen,
                 h5pUuid: loadedSettings.h5pUuid,
