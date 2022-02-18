@@ -14,9 +14,9 @@ describe('SettingsCache', () => {
     });
 
     it('leaves language codes like es-MX', () => {
-        const settings = { ...defaultSettings, language: 'es-MX' };
+        const settings = { ...defaultSettings, language: 'es-mx' };
         expect(settingsCache.validateAndFixSettings(settings)).toBe(false);
-        expect(settings.language).toEqual('es-MX');
+        expect(settings.language).toEqual('es-mx');
     });
 
     it('leaves language codes like es', () => {

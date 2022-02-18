@@ -4,6 +4,7 @@ import SettingsStorage from '../config/SettingsCache';
 
 export const supportedLocales = [
     { code: 'af', name: 'Afrikaans' },
+    { code: 'am', name: 'አማርኛ' },
     { code: 'ar', name: 'العربية' },
     { code: 'bg', name: 'български език' },
     { code: 'bs', name: 'bosanski jezik' },
@@ -12,8 +13,8 @@ export const supportedLocales = [
     { code: 'de', name: 'Deutsch' },
     { code: 'el', name: 'ελληνικά' },
     { code: 'en', name: 'English' },
+    { code: 'es-mx', name: 'español mexicano' },
     { code: 'es', name: 'español' },
-    { code: 'es-MX', name: 'español mexicano' },
     { code: 'et', name: 'eesti, eesti keel' },
     { code: 'eu', name: 'euskara, euskera' },
     { code: 'fi', name: 'suomi, suomen kieli' },
@@ -29,7 +30,8 @@ export const supportedLocales = [
     { code: 'sl', name: 'slovenski jezik' },
     { code: 'sv', name: 'Svenska' },
     { code: 'tr', name: 'Türkçe' },
-    { code: 'zh', name: '中文 (Zhōngwén), 汉语, 漢語' }
+    { code: 'zh', name: '中文 (Zhōngwén), 汉语, 漢語' },
+    { code: 'ja', name: '日本語 (にほんご)' }
 ];
 
 export default async function initI18n(
