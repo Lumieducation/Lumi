@@ -42,11 +42,11 @@
     "bug_report": {
         "consent": "このアプリケーションがバグとクラッシュのレポートを送信することを許可します。",
         "description": "匿名のクラッシュとバグレポートを送信して、ソフトウェアとサービスの改善にご協力ください。",
-        "title": "バグとクラッシュレポート",
         "email": {
-            "subject": "ルミ問題報告",
-            "body": "問題の迅速な解決策を得るには、次のことについて書いてください。\n\n  -Lumiバージョン：<ここに入力>、オペレーティングシステム：<ここに入力>\n  -問題を説明する\n  -マシンで問題を再現する方法を説明する\n  -問題がファイルに関連している場合は、サンプルの.h5pまたはエクスポートされたファイルを送信してください\n\n英語またはドイツ語以外の言語でメッセージを送信する場合は、自動翻訳ツールを使用してメッセージを翻訳します。"
-        }
+            "body": "問題の迅速な解決策を得るには、次のことについて書いてください。\n\n  -Lumiバージョン：<ここに入力>、オペレーティングシステム：<ここに入力>\n  -問題を説明する\n  -マシンで問題を再現する方法を説明する\n  -問題がファイルに関連している場合は、サンプルの.h5pまたはエクスポートされたファイルを送信してください\n\n英語またはドイツ語以外の言語でメッセージを送信する場合は、自動翻訳ツールを使用してメッセージを翻訳します。",
+            "subject": "ルミ問題報告"
+        },
+        "title": "バグとクラッシュレポート"
     },
     "dialog": {
         "close": "閉じる"
@@ -54,21 +54,38 @@
     "editor": {
         "default_name": "新しいH5P",
         "exportDialog": {
+            "addFunctionality": {
+                "embed": "埋め込みリンクを表示",
+                "rights": "権限と権限を表示する",
+                "title": "機能を追加する"
+            },
             "cancelButton": "キャンセル",
+            "cssFilePicker": {
+                "formatName": "CSSファイル"
+            },
             "defaults": {
                 "authorName": "H5P作成者",
-                "title": "H5Pコンテンツ",
-                "filename": "私のH5Pエクスポート"
+                "filename": "私のH5Pエクスポート",
+                "title": "H5Pコンテンツ"
+            },
+            "displayOptions": {
+                "addCss": "CSSファイルを追加する",
+                "chooseCssFile": "選ぶ",
+                "marginX": "左右の余白",
+                "marginY": "上マージンと下マージン",
+                "maximumWidth": "最大幅",
+                "restrictWidthAndAlign": "幅を制限し、中央に揃えます",
+                "title": "表示オプション"
             },
             "exportButton": "今すぐエクスポート",
             "filePicker": {
                 "buttonLabel": "書き出す",
                 "formatNames": {
-                    "bundle": "オールインワンのHTMLファイル",
+                    "bundle": "一体型のHTMLファイル",
                     "external": "HTMLファイル",
                     "scorm": "SCORMファイル"
                 },
-                "title": "としてエクスポート..."
+                "title": "...としてエクスポート"
             },
             "format": {
                 "bundleHint": "多くのメディアファイルを含めると、一部のコンピューターではファイルが大きくなりすぎる可能性があります。",
@@ -81,36 +98,24 @@
                 },
                 "title": "フォーマット"
             },
+            "pixelsAbbreviation": "px",
             "reporter": {
                 "hint": "レポーターを追加すると、生徒は進行状況をファイルに保存して送信できます。",
                 "learnMoreLink": "詳細については、こちらをご覧ください。",
                 "switchLabel": "レポーターを含める"
             },
-            "title": "設定のエクスポート",
+            "title": "エクスポートの設定",
             "validationErrors": {
                 "errorNaN": "入力した値は数値ではありません",
-                "errorRangeMin": "{{min}}より大きくなければなりません",
+                "errorRange": "{{min}}から{{max}}間でなければなりません",
                 "errorRangeMax": "{{max}}未満である必要があります",
-                "errorRange": "{{min}}から{{max}}間でなければなりません"
-            },
-            "addFunctionality": {
-                "title": "機能を追加する",
-                "rights": "権限と権限を表示する",
-                "embed": "埋め込みリンクを表示"
-            },
-            "displayOptions": {
-                "marginX": "左右の余白",
-                "marginY": "上マージンと下マージン",
-                "restrictWidthAndAlign": "幅を制限し、中央に揃えます",
-                "maximumWidth": "最大幅",
-                "addCss": "CSSファイルを追加する",
-                "chooseCssFile": "選ぶ",
-                "title": "表示オプション"
-            },
-            "pixelsAbbreviation": "px",
-            "cssFilePicker": {
-                "formatName": "CSSファイル"
+                "errorRangeMin": "{{min}}より大きくなければなりません"
             }
+        },
+        "extensionName": "H5Pパッケージ",
+        "saveAsDialog": {
+            "fallbackFilename": "私のH5Pファイル",
+            "title": "名前を付けて保存"
         },
         "sidebar": {
             "create": "新しいH5Pファイル",
@@ -122,17 +127,12 @@
             "open": "既存のH5Pを開く",
             "start": "始める",
             "title": "H5Pエディター",
-            "welcomeMessage": "LumiのH5Pエディターは、H5Pを表示、編集、作成できるスタンドアロンアプリケーションです。"
+            "welcomeMessage": "LumiのH5Pエディターは、H5Pを表示、編集、作成できる独立アプリケーションです。"
         },
         "tab": {
             "edit": "編集",
-            "view": "意見"
-        },
-        "saveAsDialog": {
-            "title": "名前を付けて保存",
-            "fallbackFilename": "私のH5Pファイル"
-        },
-        "extensionName": "H5Pパッケージ"
+            "view": "表示"
+        }
     },
     "errors": {
         "codes": {
@@ -154,7 +154,7 @@
     "menu": {
         "file": {
             "copy": "コピー",
-            "cut": "切る",
+            "cut": "カット",
             "edit": "編集",
             "export": "書き出す...",
             "label": "ファイル",
@@ -162,7 +162,7 @@
             "paste": "ペースト",
             "redo": "やり直し",
             "save": "保存する",
-            "save_as": "名前を付けて保存...",
+            "save_as": "名前を付けて保存",
             "select_all": "すべて選択",
             "undo": "元に戻す"
         },
@@ -171,11 +171,11 @@
             "open": "H5Pを開く"
         },
         "help": {
-            "about": "だいたい",
-            "follow_us_on_twitter": "Twitterでフォローします",
+            "about": "Lumiについて",
+            "follow_us_on_twitter": "Twitterをフォローする",
             "label": "ヘルプ",
             "report_issue": "問題の報告",
-            "toggle_developer_tools": "開発者ツールの切り替え"
+            "toggle_developer_tools": "開発者ツール"
         },
         "mac": {
             "hide": "Lumiを隠す",
@@ -189,7 +189,7 @@
             "upload": "LumiRunにアップロード"
         },
         "view": {
-            "label": "意見",
+            "label": "表示",
             "resetZoom": "実際のサイズ",
             "togglefullscreen": "フルスクリーン切り替え",
             "zoomIn": "ズームイン",
@@ -302,6 +302,7 @@
         },
         "h5p-library-administration": {
             "can-not-be-deleted": "このライブラリは他の{{count}}ライブラリで使用されているため、削除できません",
+            "can-not-be-deleted_plural": "{{count}}のライブラリで使用されているため、削除できません。",
             "details": "詳細",
             "header": "インストールされたH5Pライブラリ",
             "library-details": {
@@ -316,7 +317,7 @@
                 "instancesCount": "このライブラリをメインコンテンツタイプとして作成されたオブジェクト",
                 "license": "ライセンス",
                 "restricted": "制限付き（特権でのみ使用できます）",
-                "standalone": "スタンドアロンコンテンツタイプ"
+                "standalone": "独立コンテンツタイプ"
             },
             "notifications": {
                 "delete": {
@@ -332,8 +333,7 @@
                     "success-with-update": "{{installed}}ライブラリを正常にインストールし{{updated}}ライブラリを更新しました。"
                 }
             },
-            "upload_and_install": "ライブラリをアップロードしてインストールする",
-            "can-not-be-deleted_plural": "{{count}}のライブラリで使用されているため、削除できません。"
+            "upload_and_install": "ライブラリをアップロードしてインストールする"
         },
         "links": {
             "header": "リンク"
