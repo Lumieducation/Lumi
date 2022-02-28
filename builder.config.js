@@ -45,8 +45,7 @@ module.exports = {
         deleteAppDataOnUninstall: true
     },
     linux: {
-        category: 'Utility',
-        target: ['AppImage', 'snap', 'deb', 'pacman']
+        category: 'Utility'
     },
     dmg: {
         sign: false
