@@ -28,7 +28,6 @@ module.exports = {
     afterSign: 'scripts/notarize.js',
     win: {
         icon: 'electron/assets/lumi.png',
-        target: ['appx', 'nsis'],
         fileAssociations: {
             ext: 'h5p',
             name: 'H5P'
