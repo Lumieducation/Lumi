@@ -13,5 +13,9 @@ module.exports = {
         allowToChangeInstallationDirectory: true
     },
     extraResources: 'platform-information/win.machine.json',
-    artifactName: 'Lumi-${version}-multiuser-${arch}.${ext}'
+    artifactName: 'Lumi-${version}-multiuser-${arch}.${ext}',
+    publish: {
+        ...base.publish,
+        publishAutoUpdate: false
+    }
 };

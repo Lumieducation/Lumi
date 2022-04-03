@@ -4,7 +4,7 @@ module.exports = {
     ...base,
     win: {
         ...base.win,
-        target: [{ target: 'nsis', arch: ['arm64', 'x64', 'ia32'] }]
+        target: [{ target: 'nsis', arch: ['x64'] }]
     },
     extraResources: 'platform-information/win.clickonce.json'
 };
