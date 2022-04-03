@@ -22,7 +22,16 @@ module.exports = {
             ext: 'h5p',
             name: 'H5P'
         },
-        target: ['zip', 'dmg'],
+        target: [
+            {
+                target: 'dmg',
+                arch: ['arm64', 'x64']
+            },
+            {
+                target: 'zip',
+                arch: ['arm64', 'x64']
+            }
+        ],
         hardenedRuntime: true
     },
     afterSign: 'scripts/notarize.js',

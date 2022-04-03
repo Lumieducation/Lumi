@@ -4,7 +4,7 @@ module.exports = {
     ...base,
     linux: {
         category: 'Utility',
-        target: [{ target: 'snap', arch: ['arm64', 'x64'] }]
+        target: [{ target: 'snap', arch: ['x64'] }]
     },
     extraResources: 'platform-information/snap.json'
 };
