@@ -3,8 +3,6 @@ import * as Sentry from '@sentry/browser';
 
 import Logger from '../../helpers/Logger';
 
-import * as H from 'history';
-
 import {
     ContentId,
     ITab,
@@ -60,6 +58,7 @@ import store from '../index';
 import * as h5pApi from '../../services/H5PApi';
 import * as filesApi from '../../services/FilesAPI';
 import { Result } from '../../services/FilesAPI';
+import { NavigateFunction } from 'react-router-dom';
 
 const log = new Logger('actions:tabs');
 
@@ -504,7 +503,7 @@ export function save(
 export function openH5P(
     fileHandleId: string,
     path: string,
-    history?: H.History
+    navigate?: NavigateFunction
 ): ThunkAction<void, null, null, SaveActions> {
     return (dispatch: any) => {
         const tabId = shortid();
@@ -514,8 +513,8 @@ export function openH5P(
             type: H5P_OPEN_REQUEST
         });
 
-        if (history) {
-            history.push('/h5peditor');
+        if (navigate) {
+            navigate('/h5peditor');
         }
 
         return filesApi

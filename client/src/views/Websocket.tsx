@@ -2,10 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as Sentry from '@sentry/browser';
 import SocketIOClient from 'socket.io-client';
-import { History } from 'history';
 import Logger from '../helpers/Logger';
 import { ITab } from '../state/H5PEditor/H5PEditorTypes';
 import { actions, IState, selectors } from '../state';
+import { NavigateFunction } from 'react-router-dom';
 
 const log = new Logger('container:websocket');
 
@@ -25,7 +25,7 @@ interface IComponentState {}
 interface IProps extends IStateProps, IDispatchProps {}
 
 declare var window: {
-    h: History;
+    navigate: NavigateFunction;
 };
 
 export class WebsocketContainer extends React.Component<
@@ -83,7 +83,7 @@ export class WebsocketContainer extends React.Component<
                                     actions.h5peditor.openH5P(
                                         file.fileHandleId,
                                         file.path,
-                                        window.h
+                                        window.navigate
                                     )
                                 );
                             }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
 
 import RunUploadDialog from '../components/RunUploadDialog';
@@ -9,7 +9,7 @@ import { actions, IState } from '../../state';
 
 export default function RunSetupDialogContainer() {
     const dispatch = useDispatch();
-    const history = useHistory();
+    const navigate = useNavigate();
     const { t } = useTranslation();
 
     const open = useSelector((state: IState) => state.run.showUploadDialog);
@@ -20,7 +20,7 @@ export default function RunSetupDialogContainer() {
 
     const goToRun = () => {
         dispatch(actions.run.updateState({ showUploadDialog: false }));
-        history.push('/run');
+        navigate('/run');
     };
 
     const onCopy = (runId: string) => {

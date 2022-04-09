@@ -11,10 +11,10 @@ import Settings from '../Settings';
 
 import { Link } from 'react-router-dom';
 
-import { useRouteMatch } from 'react-router-dom';
+import { useMatch } from 'react-router-dom';
 
 export default function AppBar(props: {}): JSX.Element {
-    let match = useRouteMatch();
+    let match = useMatch('/');
     const classes = useStyles();
     return (
         <MAppBar position="fixed" className={classes.appBar}>
@@ -28,7 +28,7 @@ export default function AppBar(props: {}): JSX.Element {
                         aria-label="open drawer"
                         edge="start"
                     >
-                        {match.isExact ? <AppIcon /> : <BackIcon />}
+                        {match ? <AppIcon /> : <BackIcon />}
                     </IconButton>
                 </Link>
                 <Typography variant="h6" noWrap={true}>
