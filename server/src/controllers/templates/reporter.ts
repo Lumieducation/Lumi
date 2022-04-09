@@ -1,7 +1,7 @@
 import { IIntegration } from '@lumieducation/h5p-server';
 import fsExtra from 'fs-extra';
 
-function createReporter(client: string, main: string): string {
+function createReporter(main: string): string {
     return `<script>
     !(function (e) {
         function t(t) {
@@ -109,7 +109,6 @@ function createReporter(client: string, main: string): string {
         r();
     })([]);
 </script>
-<script>${client}</script>
 <script>${main}</script>`;
 }
 
@@ -119,15 +118,8 @@ export default function (
     stylesBundle: string,
     contentId: string
 ): string {
-    const reporterClient = fsExtra.readFileSync(
-        `${__dirname}/../../../../reporter-client/build/static/js/2.chunk.js`,
-        {
-            encoding: 'utf-8'
-        }
-    );
-
     const reporterMain = fsExtra.readFileSync(
-        `${__dirname}/../../../../reporter-client/build/static/js/main.chunk.js`,
+        `${__dirname}/../../../../reporter-client/build/static/js/main.js`,
         {
             encoding: 'utf-8'
         }
@@ -149,7 +141,7 @@ ${scriptsBundle}</script>
 </head>
 <body>
 <div id="root"></div>
-${createReporter(reporterClient, reporterMain)}
+${createReporter(reporterMain)}
 <div style="margin: 20px auto; padding: 20px;  max-width: 840px; box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)" class="h5p-content lag" data-content-id="${contentId}"></div>                
 </body>
 </html>`;

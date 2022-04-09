@@ -5,17 +5,9 @@
     "dependencies": {
         "@material-ui/core": "4.12.4",
         "@material-ui/icons": "4.11.3",
-        "@testing-library/jest-dom": "5.16.4",
-        "@testing-library/react": "12.1.4",
-        "@testing-library/user-event": "13.5.0",
-        "@types/jest": "27.0.2",
-        "@types/node": "17.0.8",
-        "@types/react": "17.0.44",
-        "@types/react-dom": "17.0.15",
-        "react": "17.0.2",
-        "react-dom": "17.0.2",
-        "react-scripts": "5.0.0",
-        "typescript": "4.6.3"
+        "@material-ui/styles": "^4.11.5",
+        "react": "18.0.0",
+        "react-dom": "18.0.0"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -44,9 +36,14 @@
         ]
     },
     "devDependencies": {
+        "@types/jest": "27.4.1",
+        "@types/node": "17.0.23",
+        "@types/react": "18.0.0",
+        "@types/react-dom": "18.0.0",
         "mini-css-extract-plugin": "2.6.0",
-        "prettier": "2.6.1",
-        "react-app-rewired": "2.2.1"
+        "prettier": "2.6.2",
+        "react-scripts": "5.0.0",
+        "typescript": "4.6.3"
     },
     "engines": {
         "node": ">=16.0.0",
