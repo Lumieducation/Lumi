@@ -1,7 +1,7 @@
 module.exports = {
     appId: 'education.lumi.lumi',
     productName: 'Lumi',
-    asar: false,
+    asar: true,
     icon: 'electron/assets/lumi.icns',
     files: [
         'build/**/*',
