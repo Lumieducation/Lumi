@@ -6,27 +6,59 @@ import fsExtra from 'fs-extra';
 import IServerConfig from '../config/IPaths';
 import SettingsCache from '../config/SettingsCache';
 import i18next from 'i18next';
+import path from 'path';
 
 let updateAvailable: boolean = false;
 let updating: boolean = false;
 
 const t = i18next.getFixedT(null, 'lumi');
 
+const loadPlatformInformation = (): {
+    package: string;
+    platform: string;
+    supportsUpdates: 'no' | 'external' | 'yes';
+} => {
+    const platformInfoDir = path.join(
+        __dirname,
+        '../../../../platform-information'
+    );
+    if (!fsExtra.pathExistsSync(platformInfoDir)) {
+        return undefined;
+    }
+
+    const files = fsExtra.readdirSync(platformInfoDir);
+    if (files.length < 1) {
+        return undefined;
+    }
+
+    try {
+        const platformInfo = fsExtra.readJSONSync(
+            path.join(platformInfoDir, files[0])
+        );
+        return platformInfo;
+    } catch {
+        return undefined;
+    }
+};
+
 export const platformSupportsUpdates = () => {
     if (process.env.DISABLE_UPDATES) {
         return false;
     }
-    if (process.platform === 'win32') {
-        return !process.windowsStore;
-    }
+
     if (process.platform === 'darwin') {
         return !process.mas;
     }
-    if (process.platform === 'linux') {
-        if (process.env.APPIMAGE) {
-            return true;
-        }
+
+    // Linux and Windows support updates depending on the build
+    const platformInfo = loadPlatformInformation();
+    if (!platformInfo) {
+        return false;
     }
+    if (platformInfo.supportsUpdates === 'yes') {
+        return true;
+    }
+
     return false;
 };
 

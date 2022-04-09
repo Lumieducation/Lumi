@@ -1,7 +1,7 @@
 module.exports = {
     appId: 'education.lumi.lumi',
     productName: 'Lumi',
-    asar: false,
+    asar: true,
     icon: 'electron/assets/lumi.icns',
     files: [
         'build/**/*',
@@ -22,13 +22,21 @@ module.exports = {
             ext: 'h5p',
             name: 'H5P'
         },
-        target: ['zip', 'dmg'],
+        target: [
+            {
+                target: 'dmg',
+                arch: ['arm64', 'x64']
+            },
+            {
+                target: 'zip',
+                arch: ['arm64', 'x64']
+            }
+        ],
         hardenedRuntime: true
     },
     afterSign: 'scripts/notarize.js',
     win: {
         icon: 'electron/assets/lumi.png',
-        target: ['appx', 'nsis'],
         fileAssociations: {
             ext: 'h5p',
             name: 'H5P'
@@ -45,8 +53,7 @@ module.exports = {
         deleteAppDataOnUninstall: true
     },
     linux: {
-        category: 'Utility',
-        target: ['AppImage', 'snap', 'deb', 'pacman']
+        category: 'Utility'
     },
     dmg: {
         sign: false
