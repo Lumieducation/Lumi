@@ -25,7 +25,8 @@ export default (
         return `<!doctype html>
 <html class="h5p-iframe">
 <head>
-  <meta charset="utf-8">                    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
   <script>H5PIntegration = ${JSON.stringify(integration)};
   ${scriptsBundle}</script>
   <script type="text/javascript" src="SCORM_API_wrapper.js"></script>

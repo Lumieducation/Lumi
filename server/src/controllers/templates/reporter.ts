@@ -129,6 +129,7 @@ export default function (
 <html class="h5p-iframe">
 <head>
 <meta charset="utf-8">                    
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
 <script>H5PIntegration = ${JSON.stringify(integration)};
 if (new URLSearchParams(window.location.search).get('embed') == 'true') {
     H5PIntegration.contents['cid-' + '${contentId}'].displayOptions.embed = false;
