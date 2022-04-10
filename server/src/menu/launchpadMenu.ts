@@ -7,10 +7,10 @@ import helpMenu from './helpMenu';
 import windowMenu from './windowMenu';
 import viewMenu from './viewMenu';
 
-export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
+export default (window: electron.BrowserWindow) => [
     ...macMenu(),
     editMenu(),
     ...viewMenu(),
     ...windowMenu(),
-    helpMenu(window, websocket)
+    helpMenu(window)
 ];

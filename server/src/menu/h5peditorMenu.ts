@@ -108,5 +108,5 @@ export default (
         editMenu(),
         ...viewMenu(),
         ...windowMenu(),
-        helpMenu(window, websocket)
+        helpMenu(window)
     ].filter((m) => m !== undefined);

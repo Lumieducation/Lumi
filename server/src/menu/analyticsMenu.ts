@@ -33,5 +33,5 @@ export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
     editMenu(),
     ...viewMenu(),
     ...windowMenu(),
-    helpMenu(window, websocket)
+    helpMenu(window)
 ];
