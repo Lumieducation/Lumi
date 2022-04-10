@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-import { History } from 'history';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -23,7 +22,7 @@ import { IState } from '../state';
 import { track } from '../state/track/actions';
 
 declare var window: {
-    h: History;
+    navigate: NavigateFunction;
 };
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -63,7 +62,7 @@ export default function Launchpad() {
     const classes = useStyles();
     const { t } = useTranslation();
     const dispatch = useDispatch();
-    const history = useHistory();
+    const navigate = useNavigate();
     const allowPrerelease = useSelector(
         (state: IState) => state.settings.allowPrerelease
     );
@@ -72,7 +71,7 @@ export default function Launchpad() {
         (state: IState) => state.settings.enableLumiRun
     );
 
-    window.h = history;
+    window.navigate = navigate;
 
     return (
         <div className={classes.root}>

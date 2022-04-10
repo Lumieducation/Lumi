@@ -11,7 +11,7 @@ import {
     CLOSE_ERROR_DIALOG
 } from './NotificationsTypes';
 
-import shortid from 'shortid';
+import { nanoid } from 'nanoid';
 
 export function notify(
     message: string,
@@ -19,7 +19,7 @@ export function notify(
 ): NotificationActionTypes {
     return {
         notification: {
-            key: shortid(),
+            key: nanoid(),
             message,
             options: {
                 variant

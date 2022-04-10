@@ -5,7 +5,7 @@ import EssayxAPIStatements from './data/essay/xAPIStatements.json';
 import FindTheHotspotxAPIStatement from './data/findTheHotSpot/xAPIStatements.json';
 
 describe('getResult', () => {
-    it('gets the result from an xAPI Statements Array with given subContentId', (done) => {
+    it('gets the result from an xAPI Statements Array with given subContentId', async () => {
         expect(
             getResult(
                 InteractiveVideoxAPIStatements as any,
@@ -18,10 +18,9 @@ describe('getResult', () => {
             duration: 'PT23.44S',
             response: '2'
         });
-        done();
     });
 
-    it('returns an uncompleted result if not found', (done) => {
+    it('returns an uncompleted result if not found', async () => {
         expect(
             getResult(
                 InteractiveVideoxAPIStatements as any,
@@ -34,10 +33,9 @@ describe('getResult', () => {
             duration: '',
             response: ''
         });
-        done();
     });
 
-    it('[essay]: it returns results', (done) => {
+    it('[essay]: it returns results', async () => {
         expect(getResult(EssayxAPIStatements as any)).toStrictEqual({
             score: { min: 0, max: 5, raw: 0, scaled: 0 },
             completion: true,
@@ -45,16 +43,13 @@ describe('getResult', () => {
             duration: 'PT5.62S',
             response: 'test '
         });
-
-        done();
     });
 
-    it('[find-the-hotspot]: it returns results', (done) => {
+    it('[find-the-hotspot]: it returns results', async () => {
         expect(getResult(FindTheHotspotxAPIStatement as any)).toStrictEqual({
             score: { min: 0, max: 1, raw: 0, scaled: 0 },
             completion: true,
             duration: 'PT3.09S'
         });
-        done();
     });
 });

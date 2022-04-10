@@ -42,7 +42,7 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
         return app;
     });
 
-    it('should return an json-prase-error when the file is not parseable', async (done) => {
+    it('should return an json-prase-error when the file is not parseable', async () => {
         dialog.showOpenDialog = jest.fn(async (c) => {
             return {
                 canceled: false,
@@ -61,10 +61,9 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
         const res = await request(app).get('/api/v1/analytics');
         expect(res.statusCode).toEqual(200);
         expect(res.body[0].code).toBe('json-parse-error');
-        done();
     });
 
-    it('should contain the filename as namefield without extension', async (done) => {
+    it('should contain the filename as namefield without extension', async () => {
         dialog.showOpenDialog = jest.fn(async (c) => {
             return {
                 canceled: false,
@@ -82,10 +81,9 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
         const res = await request(app).get('/api/v1/analytics');
         expect(res.statusCode).toEqual(200);
         expect(res.body[0].name).toBe('test-interactions');
-        done();
     });
 
-    it('should contain the objectHash of the content', async (done) => {
+    it('should contain the objectHash of the content', async () => {
         dialog.showOpenDialog = jest.fn(async (c) => {
             return {
                 canceled: false,
@@ -100,10 +98,9 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
         expect(res.body[0].contentHash).toBe(
             '6ae0f6934e4f016496092127436c5ad8c8f7744b'
         );
-        done();
     });
 
-    it('should contain a no-content-json error when there is no contentJson', async (done) => {
+    it('should contain a no-content-json error when there is no contentJson', async () => {
         dialog.showOpenDialog = jest.fn(async (c) => {
             return {
                 canceled: false,
@@ -122,10 +119,9 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
         const res = await request(app).get('/api/v1/analytics');
         expect(res.statusCode).toEqual(200);
         expect(res.body[0].code).toBe('no-content-json');
-        done();
     });
 
-    it('should contain the interactions of the content type', async (done) => {
+    it('should contain the interactions of the content type', async () => {
         dialog.showOpenDialog = jest.fn(async (c) => {
             return {
                 canceled: false,
@@ -184,10 +180,9 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
                 title: 'Kern- und Halbschatten 8'
             }
         ]);
-        done();
     });
 
-    it('should contain the results of the user from the statements', async (done) => {
+    it('should contain the results of the user from the statements', async () => {
         dialog.showOpenDialog = jest.fn(async (c) => {
             return {
                 canceled: false,
@@ -205,10 +200,9 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
         const res = await request(app).get('/api/v1/analytics');
         expect(res.statusCode).toEqual(200);
         expect(res.body[0].results).toStrictEqual([1, 1, 1, 1, 0, 1, 1, 0]);
-        done();
     });
 
-    it('should return 499 if canceled', async (done) => {
+    it('should return 499 if canceled', async () => {
         dialog.showOpenDialog = jest.fn(async (c) => {
             return {
                 canceled: true,
@@ -218,10 +212,9 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
 
         const res = await request(app).get('/api/v1/analytics');
         expect(res.statusCode).toEqual(499);
-        done();
     });
 
-    it('should return 404 if no valid data was found', async (done) => {
+    it('should return 404 if no valid data was found', async () => {
         dialog.showOpenDialog = jest.fn(async (c) => {
             return {
                 canceled: false,
@@ -231,7 +224,5 @@ describe('[analytics:routes]: GET /api/v1/analytics', () => {
 
         const res = await request(app).get('/api/v1/analytics');
         expect(res.statusCode).toEqual(404);
-
-        done();
     });
 });

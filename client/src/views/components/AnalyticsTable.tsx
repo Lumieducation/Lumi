@@ -1,8 +1,8 @@
 import React from 'react';
 
-import classnames from 'classnames';
+import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
-import { IInteraction } from '@lumieducation/xapi-aggregator';
+import type { IInteraction } from '@lumieducation/xapi-aggregator';
 import { useTranslation } from 'react-i18next';
 
 import Table from '@material-ui/core/Table';
@@ -15,7 +15,7 @@ import Paper from '@material-ui/core/Paper';
 
 export function get_grade_color(grade: number) {
     grade = Math.ceil(grade / 5) * 5;
-    return classnames({
+    return clsx({
         '#2ecc71': grade >= 85,
         '#27ae60': grade >= 70 && grade < 85,
         '#f1c40e': grade >= 55 && grade < 70,

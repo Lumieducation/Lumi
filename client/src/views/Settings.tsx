@@ -1,5 +1,5 @@
 import React from 'react';
-import classnames from 'classnames';
+import clsx from 'clsx';
 
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
@@ -182,7 +182,7 @@ export default function FullScreenDialog() {
                             button
                             key="general"
                             onClick={() => setSection('general')}
-                            className={classnames({
+                            className={clsx({
                                 [classes.selected]: section === 'general'
                             })}
                         >
@@ -198,7 +198,7 @@ export default function FullScreenDialog() {
                                 button
                                 key="updates"
                                 onClick={() => setSection('updates')}
-                                className={classnames({
+                                className={clsx({
                                     [classes.selected]: section === 'updates'
                                 })}
                             >
@@ -216,7 +216,7 @@ export default function FullScreenDialog() {
                             onClick={() =>
                                 setSection('h5p-library-administration')
                             }
-                            className={classnames({
+                            className={clsx({
                                 [classes.selected]:
                                     section === 'h5p-library-administration'
                             })}
@@ -235,7 +235,7 @@ export default function FullScreenDialog() {
                                 button
                                 key="account"
                                 onClick={() => setSection('account')}
-                                className={classnames({
+                                className={clsx({
                                     [classes.selected]: section === 'account'
                                 })}
                             >

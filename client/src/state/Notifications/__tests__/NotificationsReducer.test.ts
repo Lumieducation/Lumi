@@ -20,16 +20,15 @@ import {
 } from '../../Analytics/AnalyticsTypes';
 
 describe('initialState', () => {
-    it('returns the initial state', (done) => {
+    it('returns the initial state', async () => {
         const state = reducer(undefined, { type: 'init' } as any);
 
         expect(state).toEqual(initialState);
-        done();
     });
 });
 
 describe('ENQUEUE_SNACKBAR', () => {
-    it('adds a new notification to the notifications-list', (done) => {
+    it('adds a new notification to the notifications-list', async () => {
         const notification: INotification = {
             key: 'a',
             message: 'test',
@@ -49,12 +48,11 @@ describe('ENQUEUE_SNACKBAR', () => {
         );
 
         expect(state.notifications.length).toBe(1);
-        done();
     });
 });
 
 describe('CLOSE_SNACKBAR', () => {
-    it('dismisses a notification', (done) => {
+    it('dismisses a notification', async () => {
         const notification: INotification = {
             key: 'a',
             message: 'test',
@@ -75,12 +73,11 @@ describe('CLOSE_SNACKBAR', () => {
         );
 
         expect(state.notifications[0].dismissed).toBeTruthy();
-        done();
     });
 });
 
 describe('REMOVE_SNACKBAR', () => {
-    it('removes a notification from the notifications-list', (done) => {
+    it('removes a notification from the notifications-list', async () => {
         const notification: INotification = {
             key: 'a',
             message: 'test',
@@ -100,12 +97,11 @@ describe('REMOVE_SNACKBAR', () => {
         );
 
         expect(state.notifications.length).toBe(0);
-        done();
     });
 });
 
 describe('Notifications', () => {
-    it('shows a success notification on H5PEDITOR_SAVE_SUCCESS', (done) => {
+    it('shows a success notification on H5PEDITOR_SAVE_SUCCESS', async () => {
         const state = reducer(
             {
                 notifications: []
@@ -118,10 +114,9 @@ describe('Notifications', () => {
 
         expect(state.notifications.length).toBe(1);
         expect(state.notifications[0].options.variant).toBe('success');
-        done();
     });
 
-    it('shows a error notification on H5PEDITOR_SAVE_ERROR', (done) => {
+    it('shows a error notification on H5PEDITOR_SAVE_ERROR', async () => {
         const state = reducer(
             {
                 notifications: []
@@ -134,10 +129,9 @@ describe('Notifications', () => {
 
         expect(state.notifications.length).toBe(1);
         expect(state.notifications[0].options.variant).toBe('error');
-        done();
     });
 
-    it('shows a success notification on H5PEDITOR_EXPORT_SUCCESS', (done) => {
+    it('shows a success notification on H5PEDITOR_EXPORT_SUCCESS', async () => {
         const state = reducer(
             {
                 notifications: []
@@ -150,10 +144,9 @@ describe('Notifications', () => {
 
         expect(state.notifications.length).toBe(1);
         expect(state.notifications[0].options.variant).toBe('success');
-        done();
     });
 
-    it('shows a error notification on H5PEDITOR_EXPORT_ERROR', (done) => {
+    it('shows a error notification on H5PEDITOR_EXPORT_ERROR', async () => {
         const state = reducer(
             {
                 notifications: []
@@ -166,10 +159,9 @@ describe('Notifications', () => {
 
         expect(state.notifications.length).toBe(1);
         expect(state.notifications[0].options.variant).toBe('error');
-        done();
     });
 
-    it('shows a error notification on H5P_OPEN_ERROR', (done) => {
+    it('shows a error notification on H5P_OPEN_ERROR', async () => {
         const state = reducer(
             {
                 notifications: []
@@ -189,10 +181,9 @@ describe('Notifications', () => {
 
         expect(state.notifications.length).toBe(1);
         expect(state.notifications[0].options.variant).toBe('error');
-        done();
     });
 
-    it('shows a error notification on ANALYTICS_IMPORT_ERROR', (done) => {
+    it('shows a error notification on ANALYTICS_IMPORT_ERROR', async () => {
         const state = reducer(
             {
                 notifications: []
@@ -205,10 +196,9 @@ describe('Notifications', () => {
 
         expect(state.notifications.length).toBe(1);
         expect(state.notifications[0].options.variant).toBe('error');
-        done();
     });
 
-    it('shows a success notification on ANALYTICS_IMPORT_SUCCESS', (done) => {
+    it('shows a success notification on ANALYTICS_IMPORT_SUCCESS', async () => {
         const state = reducer(
             {
                 notifications: []
@@ -223,6 +213,5 @@ describe('Notifications', () => {
 
         expect(state.notifications.length).toBe(1);
         expect(state.notifications[0].options.variant).toBe('success');
-        done();
     });
 });

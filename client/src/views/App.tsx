@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import Logger from '../helpers/Logger';
@@ -54,20 +54,12 @@ export default function AppContainer() {
             <Router>
                 <Websocket />
                 <AppBar />
-                <Switch>
-                    <Route
-                        exact={true}
-                        path="/h5peditor"
-                        component={H5PEditor}
-                    />
-                    <Route
-                        exact={true}
-                        path="/analytics"
-                        component={Analytics}
-                    />
-                    <Route exact={true} path="/run" component={RunPage} />
-                    <Route path="/" component={Launchpad} />
-                </Switch>
+                <Routes>
+                    <Route path="/h5peditor" element={<H5PEditor />} />
+                    <Route path="/analytics" element={<Analytics />} />
+                    <Route path="/run" element={<RunPage />} />
+                    <Route path="/" element={<Launchpad />} />
+                </Routes>
                 <SetupDialog />
                 <RunUploadDialogContainer />
                 <RunSetupDialogContainer />

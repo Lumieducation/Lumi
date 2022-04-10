@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -23,7 +23,7 @@ const Transition = React.forwardRef(function Transition(
 
 export default function ErrorDialog() {
     const { t } = useTranslation();
-    const history = useHistory();
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const open = useSelector(
         (state: IState) => state.notifications.showErrorDialog
@@ -45,7 +45,7 @@ export default function ErrorDialog() {
         dispatch(actions.notifications.closeErrorDialog());
 
         if (redirect) {
-            history.push(redirect);
+            navigate(redirect);
         }
     };
 

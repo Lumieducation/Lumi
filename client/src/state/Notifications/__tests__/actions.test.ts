@@ -14,7 +14,7 @@ const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
 describe('closeSnackbar', () => {
-    it('dispatches the correct actions-types', (done) => {
+    it('dispatches the correct actions-types', async () => {
         const key = '1337';
 
         const expectedActions = [
@@ -29,12 +29,11 @@ describe('closeSnackbar', () => {
 
         store.dispatch(actions.closeSnackbar(key));
         expect(store.getActions()).toEqual(expectedActions);
-        done();
     });
 });
 
 describe('removeSnackbar', () => {
-    it('dispatches the correct actions-types', (done) => {
+    it('dispatches the correct actions-types', async () => {
         const key = '1337';
 
         const expectedActions = [
@@ -47,6 +46,5 @@ describe('removeSnackbar', () => {
 
         store.dispatch(actions.removeSnackbar(key));
         expect(store.getActions()).toEqual(expectedActions);
-        done();
     });
 });

@@ -67,7 +67,7 @@ describe('App', () => {
             ws.disconnect();
         });
 
-        // it('opens a valid .h5p file', async (done) => {
+        // it('opens a valid .h5p file', async () => {
         //     const ws = socketio(`http://localhost:${PORT}`);
 
         //     ws.emit('dispatch', {
@@ -77,7 +77,7 @@ describe('App', () => {
 
         //     setTimeout(() => {
         //         ws.disconnect();
-        //         done();
+        //         ;
         //     }, 10000);
         // });
     });
