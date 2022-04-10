@@ -56,7 +56,7 @@
         "build:linux:dev": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run build:linux",
         "publish:linux": "npm run build && ./builder-configs/build.linux.sh --publish always",
         "start:dev": "cross-env NODE_ENV=development DEBUG=lumi:* LOG_LEVEL=debug PORT=8080 ./node_modules/.bin/electron .",
-        "start": "cross-env DEBUG=lumi:* LOG_LEVEL=debug PORT=8080 ./node_modules/.bin/electron .",
+        "start": "cross-env DEBUG=lumi:*,h5p:* LOG_LEVEL=debug PORT=8080 ./node_modules/.bin/electron .",
         "test:e2e": "npx jest --config jest.e2e.config.js --run-in-band",
         "test:watch": "cross-env NODE_ENV=development jest --watch",
         "test": "cross-env NODE_ENV=development jest && npm run test --prefix client/",
