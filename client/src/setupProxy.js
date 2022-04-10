@@ -2,28 +2,28 @@ const proxy = require('http-proxy-middleware');
 module.exports = function (app) {
     app.use(
         '/api',
-        proxy({
+        proxy.createProxyMiddleware({
             changeOrigin: true,
             target: 'http://localhost:8080'
         })
     );
     app.use(
         '/h5p',
-        proxy({
+        proxy.createProxyMiddleware({
             changeOrigin: true,
             target: 'http://localhost:8080'
         })
     );
     app.use(
         '/socket.io',
-        proxy({
+        proxy.createProxyMiddleware({
             changeOrigin: true,
             target: 'http://localhost:8080'
         })
     );
     app.use(
         '/locales',
-        proxy({
+        proxy.createProxyMiddleware({
             changeOrigin: true,
             target: 'http://localhost:8080'
         })

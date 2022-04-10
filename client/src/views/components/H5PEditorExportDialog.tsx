@@ -15,18 +15,15 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import Switch from '@material-ui/core/Switch';
 import {
+    Accordion,
+    AccordionDetails,
+    AccordionSummary,
     Box,
     Checkbox,
     FormHelperText,
     InputAdornment,
     TextField
 } from '@material-ui/core';
-import {
-    Accordion,
-    AccordionDetails,
-    AccordionSummary,
-    Stack
-} from '@mui/material';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import { actions, IState, selectors } from '../../state';
@@ -228,7 +225,11 @@ export default function H5PEditorExportDialog() {
                             </RadioGroup>
                         </FormControl>
                     </Box>
-                    <Stack paddingBottom={2}>
+                    <Box
+                        paddingBottom={2}
+                        display="flex"
+                        flexDirection="column"
+                    >
                         <FormControl>
                             <FormLabel>
                                 {t(
@@ -296,43 +297,46 @@ export default function H5PEditorExportDialog() {
                                 </a>
                             </FormHelperText>
                         </FormControl>
-                    </Stack>
+                    </Box>
                     {!includeReporter && (
                         <Accordion>
                             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                                 {t('editor.exportDialog.displayOptions.title')}
                             </AccordionSummary>
                             <AccordionDetails>
-                                <Stack spacing={2}>
-                                    <Stack direction="row" spacing={2}>
+                                <Box style={{ width: '100%' }}>
+                                    <Box display="flex" flexDirection="row">
                                         <FormControl style={{ width: '35ch' }}>
-                                            <TextField
-                                                label={t(
-                                                    'editor.exportDialog.displayOptions.marginX'
-                                                )}
-                                                variant="outlined"
-                                                type="number"
-                                                size="small"
-                                                InputProps={{
-                                                    endAdornment: (
-                                                        <InputAdornment position="end">
-                                                            {t(
-                                                                'editor.exportDialog.pixelsAbbreviation'
-                                                            )}
-                                                        </InputAdornment>
-                                                    )
-                                                }}
-                                                error={
-                                                    marginXError !== undefined
-                                                }
-                                                helperText={marginXError}
-                                                value={marginX}
-                                                onChange={checkAndSetNumber(
-                                                    setMarginXError,
-                                                    setMarginX,
-                                                    0
-                                                )}
-                                            />
+                                            <Box marginRight={2}>
+                                                <TextField
+                                                    label={t(
+                                                        'editor.exportDialog.displayOptions.marginX'
+                                                    )}
+                                                    variant="outlined"
+                                                    type="number"
+                                                    size="small"
+                                                    InputProps={{
+                                                        endAdornment: (
+                                                            <InputAdornment position="end">
+                                                                {t(
+                                                                    'editor.exportDialog.pixelsAbbreviation'
+                                                                )}
+                                                            </InputAdornment>
+                                                        )
+                                                    }}
+                                                    error={
+                                                        marginXError !==
+                                                        undefined
+                                                    }
+                                                    helperText={marginXError}
+                                                    value={marginX}
+                                                    onChange={checkAndSetNumber(
+                                                        setMarginXError,
+                                                        setMarginX,
+                                                        0
+                                                    )}
+                                                />
+                                            </Box>
                                         </FormControl>
                                         <FormControl style={{ width: '35ch' }}>
                                             <TextField
@@ -363,21 +367,29 @@ export default function H5PEditorExportDialog() {
                                                 )}
                                             />
                                         </FormControl>
-                                    </Stack>
-                                    <Stack direction="row">
+                                    </Box>
+                                    <Box
+                                        display="flex"
+                                        flexDirection="row"
+                                        marginTop={2}
+                                    >
                                         <FormControl>
-                                            <FormControlLabel
-                                                control={<Checkbox />}
-                                                label={t(
-                                                    'editor.exportDialog.displayOptions.restrictWidthAndAlign'
-                                                )}
-                                                checked={restrictWidthAndCenter}
-                                                onChange={(e, checked) =>
-                                                    setRestrictWidthAndCenter(
-                                                        checked
-                                                    )
-                                                }
-                                            />
+                                            <Box marginRight={2}>
+                                                <FormControlLabel
+                                                    control={<Checkbox />}
+                                                    label={t(
+                                                        'editor.exportDialog.displayOptions.restrictWidthAndAlign'
+                                                    )}
+                                                    checked={
+                                                        restrictWidthAndCenter
+                                                    }
+                                                    onChange={(e, checked) =>
+                                                        setRestrictWidthAndCenter(
+                                                            checked
+                                                        )
+                                                    }
+                                                />
+                                            </Box>
                                         </FormControl>
                                         <FormControl style={{ width: '25ch' }}>
                                             <TextField
@@ -411,8 +423,12 @@ export default function H5PEditorExportDialog() {
                                                 )}
                                             />
                                         </FormControl>
-                                    </Stack>
-                                    <Stack direction="row" alignItems="center">
+                                    </Box>
+                                    <Box
+                                        display="flew"
+                                        flexDirection="row"
+                                        alignItems="center"
+                                    >
                                         <FormControl>
                                             <FormControlLabel
                                                 control={<Checkbox />}
@@ -456,8 +472,8 @@ export default function H5PEditorExportDialog() {
                                                 'editor.exportDialog.displayOptions.chooseCssFile'
                                             )}
                                         </Button>
-                                    </Stack>
-                                </Stack>
+                                    </Box>
+                                </Box>
                             </AccordionDetails>
                         </Accordion>
                     )}
