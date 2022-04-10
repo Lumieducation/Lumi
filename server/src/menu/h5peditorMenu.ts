@@ -42,7 +42,7 @@ export default (
                     click: async () => {
                         const fileHandles = await fileController.pickH5PFiles();
                         if (
-                            fileHandles.length > 0 &&
+                            fileHandles?.length > 0 &&
                             fileHandles[0] !== undefined
                         ) {
                             electronState.setState({

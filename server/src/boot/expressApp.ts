@@ -50,8 +50,6 @@ export default async (
     // RequestHandler creates a separate execution context using domains, so that every
     // transaction/span/breadcrumb is attached to its own Hub instance
     app.use(Sentry.Handlers.requestHandler());
-    // TracingHandler creates a trace for every incoming request
-    app.use(Sentry.Handlers.tracingHandler());
 
     app.use(bodyParser.json({ limit: h5pEditor.config.maxTotalSize }));
     app.use(
@@ -107,11 +105,5 @@ export default async (
     // The error handler must be before any other error middleware and after all controllers
     app.use(Sentry.Handlers.errorHandler());
 
-    app.use((error, req, res, next) => {
-        Sentry.captureException(error);
-        res.status(error.status || 500).json(
-            new LumiError(error.code, error.message, error.status)
-        );
-    });
     return app;
 };
