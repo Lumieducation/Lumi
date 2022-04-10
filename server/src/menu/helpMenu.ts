@@ -1,11 +1,8 @@
-import electron from 'electron';
-import SocketIO from 'socket.io';
+import electron, { dialog } from 'electron';
 import i18next from 'i18next';
+import { loadPlatformInformation } from '../boot/updater';
 
-export default function (
-    window: electron.BrowserWindow,
-    websocket: SocketIO.Server
-): any {
+export default function (window: electron.BrowserWindow): any {
     return {
         label: i18next.t('lumi:menu.help.label'),
         submenu: [
@@ -45,7 +42,19 @@ export default function (
                     );
                 }
             },
-            { label: i18next.t('lumi:menu.help.about'), role: 'about' }
+            process.platform === 'linux'
+                ? {
+                      label: i18next.t('lumi:menu.help.about'),
+                      click: () => {
+                          const platformInfo = loadPlatformInformation();
+                          dialog.showMessageBox(window, {
+                              message: `Lumi v${electron.app.getVersion()} - ${
+                                  platformInfo?.package ?? 'unknown package'
+                              }\n(C) 2022 Lumi Education GbR Jan Philip Schellenberg und Sebastian Rettig\nAGPL 3.0 License`
+                          });
+                      }
+                  }
+                : { label: i18next.t('lumi:menu.help.about'), role: 'about' }
         ]
     };
 }

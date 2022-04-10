@@ -21,9 +21,7 @@ export default function menuFactory(
         case '/':
         default:
             electron.Menu.setApplicationMenu(
-                electron.Menu.buildFromTemplate(
-                    launchpadMenu(window, webSocket)
-                )
+                electron.Menu.buildFromTemplate(launchpadMenu(window))
             );
             break;
 
@@ -43,7 +41,7 @@ export default function menuFactory(
 
         case '/run':
             electron.Menu.setApplicationMenu(
-                electron.Menu.buildFromTemplate(runMenu(window, webSocket))
+                electron.Menu.buildFromTemplate(runMenu(window))
             );
             break;
 

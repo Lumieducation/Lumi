@@ -4,7 +4,7 @@ import editMenu from './editMenu';
 
 import helpMenu from './helpMenu';
 
-export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
+export default (window: electron.BrowserWindow) => [
     editMenu(),
-    helpMenu(window, websocket)
+    helpMenu(window)
 ];

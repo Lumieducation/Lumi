@@ -13,7 +13,7 @@ let updating: boolean = false;
 
 const t = i18next.getFixedT(null, 'lumi');
 
-const loadPlatformInformation = (): {
+export const loadPlatformInformation = (): {
     package: string;
     platform: string;
     supportsUpdates: 'no' | 'external' | 'yes';
