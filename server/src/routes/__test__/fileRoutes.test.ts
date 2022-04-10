@@ -46,7 +46,7 @@ describe('[export h5p as html]: GET /api/v1/files/export', () => {
         return app;
     });
 
-    it('exports a html file', async (done) => {
+    it('exports a html file', async () => {
         const outputPath = path.join(
             __dirname,
             '../../../../test/build/test.html'
@@ -66,11 +66,9 @@ describe('[export h5p as html]: GET /api/v1/files/export', () => {
         expect(await fsExtra.stat(outputPath)).toBeTruthy();
 
         fsExtra.removeSync(outputPath);
-
-        done();
     }, 30000);
 
-    it('appends .html if no extension is defined', async (done) => {
+    it('appends .html if no extension is defined', async () => {
         const outputPath = path.join(
             __dirname,
             '../../../../test/build/test2.html'
@@ -90,11 +88,9 @@ describe('[export h5p as html]: GET /api/v1/files/export', () => {
         expect(await fsExtra.stat(outputPath)).toBeTruthy();
 
         fsExtra.removeSync(outputPath);
-
-        done();
     }, 30000);
 
-    it('returns 499 if canceled by user', async (done) => {
+    it('returns 499 if canceled by user', async () => {
         dialog.showSaveDialog = jest.fn(async (c) => ({
             canceled: true,
             filePath: undefined
@@ -106,7 +102,5 @@ describe('[export h5p as html]: GET /api/v1/files/export', () => {
             `/api/v1/files/export?contentId=${contentId}&format=bundle`
         );
         expect(res.statusCode).toEqual(499);
-
-        done();
     }, 30000);
 });

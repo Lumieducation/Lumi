@@ -43,14 +43,13 @@ describe('GET /settings', () => {
         return app;
     });
 
-    it('should return the settings', async (done) => {
+    it('should return the settings', async () => {
         const settings = fsExtra.readJSON(
             path.resolve('test', 'data', 'settings.json')
         );
         const res = await request(app).get('/api/v1/settings');
         expect(res.statusCode).toEqual(200);
         expect(res.body).toMatchObject(settings);
-        done();
     });
 });
 
@@ -84,7 +83,7 @@ describe('PATCH /settings', () => {
 
         return app;
     });
-    it('should update the settings', async (done) => {
+    it('should update the settings', async () => {
         dialog.showMessageBox = (async (
             browserWindow: BrowserWindow,
             options: MessageBoxOptions
@@ -115,6 +114,5 @@ describe('PATCH /settings', () => {
                 path.resolve('test', 'data', 'settings.json')
             )
         ).toStrictEqual(updatedSettings);
-        done();
     });
 });

@@ -10,7 +10,7 @@ import coursePresentationContent from './data/coursePresentation/content.json';
 import coursePresentationInteractions from './data/coursePresentation/interactions.json';
 
 describe('interactions', () => {
-    it('ignores the H5P.Image library', (done) => {
+    it('ignores the H5P.Image library', async () => {
         const interactions = [];
 
         const test = {
@@ -29,10 +29,9 @@ describe('interactions', () => {
         expect(interactions).toStrictEqual([
             { id: 'm', name: 'TEST', title: undefined }
         ]);
-        done();
     });
 
-    it('ignores the H5P.Text library', (done) => {
+    it('ignores the H5P.Text library', async () => {
         const interactions = [];
 
         const test = {
@@ -51,10 +50,9 @@ describe('interactions', () => {
         expect(interactions).toStrictEqual([
             { id: 'm', name: 'TEST', title: undefined }
         ]);
-        done();
     });
 
-    it('ignores the H5P.Column library', (done) => {
+    it('ignores the H5P.Column library', async () => {
         const interactions = [];
 
         const test = {
@@ -73,10 +71,9 @@ describe('interactions', () => {
         expect(interactions).toStrictEqual([
             { id: 'm', name: 'TEST', title: undefined }
         ]);
-        done();
     });
 
-    it('ignores the H5P.AdvancedText library', (done) => {
+    it('ignores the H5P.AdvancedText library', async () => {
         const interactions = [];
 
         const test = {
@@ -95,10 +92,9 @@ describe('interactions', () => {
         expect(interactions).toStrictEqual([
             { id: 'm', name: 'TEST', title: undefined }
         ]);
-        done();
     });
 
-    it('ignores the H5P.Table library', (done) => {
+    it('ignores the H5P.Table library', async () => {
         const interactions = [];
 
         const test = {
@@ -117,10 +113,9 @@ describe('interactions', () => {
         expect(interactions).toStrictEqual([
             { id: 'm', name: 'TEST', title: undefined }
         ]);
-        done();
     });
 
-    it('ignores the H5P.Video library', (done) => {
+    it('ignores the H5P.Video library', async () => {
         const interactions = [];
 
         const test = {
@@ -139,10 +134,9 @@ describe('interactions', () => {
         expect(interactions).toStrictEqual([
             { id: 'm', name: 'TEST', title: undefined }
         ]);
-        done();
     });
 
-    it('ignores the H5P.Nil library', (done) => {
+    it('ignores the H5P.Nil library', async () => {
         const interactions = [];
 
         const test = {
@@ -161,33 +155,29 @@ describe('interactions', () => {
         expect(interactions).toStrictEqual([
             { id: 'm', name: 'TEST', title: undefined }
         ]);
-        done();
     });
 
-    it('[interactive video]: gets all interactions', (done) => {
+    it('[interactive video]: gets all interactions', async () => {
         const interactions = [];
 
         getInteractions(interactiveVideoContentJson, interactions);
 
         expect(interactions).toStrictEqual(interactiveVideoInteractions);
-        done();
     });
 
-    it('[interactive book]: gets all interactions ', (done) => {
+    it('[interactive book]: gets all interactions ', async () => {
         const interactions = [];
 
         getInteractions(interactiveBookContent, interactions);
 
         expect(interactions).toStrictEqual(interactiveBookInteractions);
-        done();
     });
 
-    it('[course presentation]: gets all interactions', (done) => {
+    it('[course presentation]: gets all interactions', async () => {
         // const interactions = [];
 
         const interactions = getInteractions(coursePresentationContent, []);
 
         expect(interactions).toStrictEqual(coursePresentationInteractions);
-        done();
     });
 });

@@ -11,11 +11,10 @@ import {
 } from '../H5PEditorTypes';
 
 describe('initialState', () => {
-    it('returns the initial state', (done) => {
+    it('returns the initial state', async () => {
         const state = reducer(undefined, { type: 'init' } as any);
 
         expect(state).toEqual(initialState);
-        done();
     });
 });
 
@@ -33,7 +32,7 @@ const testTab: ITab = {
 };
 
 describe('H5P_LOADEDITORCONTENT_SUCCESS', () => {
-    it('sets the loadingIndicator to false', (done) => {
+    it('sets the loadingIndicator to false', async () => {
         const state = reducer(
             {
                 activeTabIndex: 0,
@@ -56,7 +55,6 @@ describe('H5P_LOADEDITORCONTENT_SUCCESS', () => {
             }
         );
         expect(state.tabList[0].loadingIndicator).toBeFalsy();
-        done();
     });
 });
 
@@ -82,19 +80,16 @@ describe('H5PEDITOR_EXPORT_REQUEST', () => {
         }
     );
 
-    it('sets the loadingIndicator to true', (done) => {
+    it('sets the loadingIndicator to true', async () => {
         expect(state.tabList[0].loadingIndicator).toBeTruthy();
-        done();
     });
 
-    it('locks the display', (done) => {
+    it('locks the display', async () => {
         expect(state.lockDisplay).toBeTruthy();
-        done();
     });
 
-    it('hides the export dialog', (done) => {
+    it('hides the export dialog', async () => {
         expect(state.showExportDialog).toBeFalsy();
-        done();
     });
 });
 
@@ -119,14 +114,12 @@ describe('H5PEDITOR_EXPORT_SUCCESS', () => {
         }
     );
 
-    it('sets the loadingIndicator to false', (done) => {
+    it('sets the loadingIndicator to false', async () => {
         expect(state.tabList[0].loadingIndicator).toBeFalsy();
-        done();
     });
 
-    it('unlocks the display', (done) => {
+    it('unlocks the display', async () => {
         expect(state.lockDisplay).toBeFalsy();
-        done();
     });
 });
 
@@ -151,18 +144,15 @@ describe('H5PEDITOR_EXPORT_ERROR', () => {
         }
     );
 
-    it('sets the loadingIndicator to false', (done) => {
+    it('sets the loadingIndicator to false', async () => {
         expect(state.tabList[0].loadingIndicator).toBeFalsy();
-        done();
     });
 
-    it('closes the export Dialog', (done) => {
+    it('closes the export Dialog', async () => {
         expect(state.showExportDialog).toBeFalsy();
-        done();
     });
 
-    it('unlocks the display', (done) => {
+    it('unlocks the display', async () => {
         expect(state.lockDisplay).toBeFalsy();
-        done();
     });
 });
