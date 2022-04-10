@@ -37,7 +37,7 @@ import {
 
 import i18next from 'i18next';
 
-import shortid from 'shortid';
+import { nanoid } from 'nanoid';
 
 export const initialState: INotificationsState = {
     notifications: [],
@@ -91,7 +91,7 @@ export default function notificationsReducer(
                     notifications: [
                         ...state.notifications,
                         {
-                            key: shortid(),
+                            key: nanoid(),
                             message: i18next.t(
                                 'notifications.analytics.import.error'
                             ),
@@ -108,7 +108,7 @@ export default function notificationsReducer(
                     notifications: [
                         ...state.notifications,
                         {
-                            key: shortid(),
+                            key: nanoid(),
                             message: i18next.t(
                                 'notifications.analytics.import.success'
                             ),
@@ -125,7 +125,7 @@ export default function notificationsReducer(
                     notifications: [
                         ...state.notifications,
                         {
-                            key: shortid(),
+                            key: nanoid(),
                             message: action.payload.message,
                             options: {
                                 variant: 'warning'
@@ -140,7 +140,7 @@ export default function notificationsReducer(
                     notifications: [
                         ...state.notifications,
                         {
-                            key: shortid(),
+                            key: nanoid(),
                             message: i18next.t(
                                 'notifications.h5peditor.save.success'
                             ),
@@ -157,7 +157,7 @@ export default function notificationsReducer(
                     notifications: [
                         ...state.notifications,
                         {
-                            key: shortid(),
+                            key: nanoid(),
                             message: i18next.t(
                                 'notifications.h5peditor.save.error'
                             ),
@@ -174,7 +174,7 @@ export default function notificationsReducer(
                     notifications: [
                         ...state.notifications,
                         {
-                            key: shortid(),
+                            key: nanoid(),
                             message: i18next.t(
                                 'notifications.h5peditor.open.error'
                             ),
@@ -191,7 +191,7 @@ export default function notificationsReducer(
                     notifications: [
                         ...state.notifications,
                         {
-                            key: shortid(),
+                            key: nanoid(),
                             message: i18next.t(
                                 'notifications.h5peditor.export_as_html.success'
                             ),
@@ -208,7 +208,7 @@ export default function notificationsReducer(
                     notifications: [
                         ...state.notifications,
                         {
-                            key: shortid(),
+                            key: nanoid(),
                             message: i18next.t(
                                 'notifications.h5peditor.export_as_html.error'
                             ),

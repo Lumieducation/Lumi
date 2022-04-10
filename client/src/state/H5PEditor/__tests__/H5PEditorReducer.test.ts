@@ -1,5 +1,4 @@
-import { showReportDialog } from '@sentry/browser';
-import shortid from 'shortid';
+import { nanoid } from 'nanoid';
 
 import { default as reducer, initialState } from '../H5PEditorReducer';
 import {
@@ -21,8 +20,8 @@ describe('initialState', () => {
 });
 
 const testTab: ITab = {
-    id: shortid(),
-    contentId: shortid(),
+    id: nanoid(),
+    contentId: nanoid(),
     loadingIndicator: true,
     viewDisabled: true,
     mainLibrary: 'library',

@@ -1,4 +1,4 @@
-import { IInteraction } from '@lumieducation/xapi-aggregator';
+import type { IInteraction } from '@lumieducation/xapi-aggregator';
 
 export interface IFile {
     file: string;

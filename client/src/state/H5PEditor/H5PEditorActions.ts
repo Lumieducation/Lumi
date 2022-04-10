@@ -1,8 +1,9 @@
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 import * as Sentry from '@sentry/browser';
+import { nanoid } from 'nanoid';
+import { NavigateFunction } from 'react-router-dom';
 
 import Logger from '../../helpers/Logger';
-
 import {
     ContentId,
     ITab,
@@ -47,18 +48,11 @@ import {
     IH5PEditorOpenExportDialogAction,
     H5PEDITOR_OPEN_EXPORT_DIALOG
 } from './H5PEditorTypes';
-
 import * as selectors from './H5PEditorSelectors';
-import shortid from 'shortid';
-
 import { track } from '../track/actions';
-
 import store from '../index';
-
 import * as h5pApi from '../../services/H5PApi';
 import * as filesApi from '../../services/FilesAPI';
-import { Result } from '../../services/FilesAPI';
-import { NavigateFunction } from 'react-router-dom';
 
 const log = new Logger('actions:tabs');
 
@@ -163,7 +157,7 @@ export function exportH5P(
                     options
                 );
 
-                if (result === Result.Cancelled) {
+                if (result === filesApi.Result.Cancelled) {
                     dispatch(cancelExportH5P(data.contentId));
                 } else {
                     // TODO: change tracking
@@ -241,7 +235,7 @@ export function openTab(tab?: Partial<ITab>): any {
         dispatch({
             payload: {
                 tab,
-                id: shortid()
+                id: nanoid()
             },
             type: H5PEDITOR_OPEN_TAB
         });
@@ -463,11 +457,11 @@ export function save(
 
             const result = await filesApi.save(data.contentId, fileHandleId);
 
-            if (result.status === Result.Error) {
+            if (result.status === filesApi.Result.Error) {
                 throw new Error(result.errorText);
             }
 
-            if (result.status === Result.Cancelled) {
+            if (result.status === filesApi.Result.Cancelled) {
                 return dispatch({
                     payload: {},
                     type: H5PEDITOR_SAVE_CANCEL
@@ -506,7 +500,7 @@ export function openH5P(
     navigate?: NavigateFunction
 ): ThunkAction<void, null, null, SaveActions> {
     return (dispatch: any) => {
-        const tabId = shortid();
+        const tabId = nanoid();
 
         dispatch({
             payload: { tabId, fileHandleId, path },

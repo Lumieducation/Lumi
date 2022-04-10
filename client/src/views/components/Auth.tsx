@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import classnames from 'classnames';
+import clsx from 'clsx';
 import {
     withStyles,
     makeStyles,
@@ -192,7 +192,7 @@ export default function Auth(props: IAuthProps): JSX.Element {
                 aria-labelledby="form-dialog-title"
             >
                 <DialogContent
-                    className={classnames({
+                    className={clsx({
                         [classes.bg]: !error,
                         [classes.error]: error
                     })}
