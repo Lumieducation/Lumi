@@ -43,8 +43,8 @@
         "consent": "Ich erlaube dieser Anwendung, Fehler- und Absturzberichte zu senden.",
         "description": "Hilf uns, unsere Software und Services zu verbessern, indem du anonyme Absturz- und Fehlerberichte sendest.",
         "email": {
-            "subject": "Lumi-Problembericht",
-            "body": "Um eine schnelle Lösung für dein Problem zu erhalten, schreibe uns bitte folgende Informationen:\n\n  - Lumi-Version: <hier ausfüllen>, Betriebssystem: <hier ausfüllen>\n  - Beschreibe das Problem\n  - Beschreibe, wie wir das Problem auf unseren Geräten reproduzieren können\n  - Sende uns .h5p-Beispieldateien oder exportierte Dateien, wenn das Problem mit den Dateien zusammenhängt\n\nWenn du uns Nachrichten in einer anderen Sprache als Englisch oder Deutsch sendest, verwenden wir ein automatisches Übersetzungstool, um deine Nachricht zu übersetzen."
+            "body": "Um eine schnelle Lösung für dein Problem zu erhalten, schreibe uns bitte folgende Informationen:\n\n  - Lumi-Version: <hier ausfüllen>, Betriebssystem: <hier ausfüllen>\n  - Beschreibe das Problem\n  - Beschreibe, wie wir das Problem auf unseren Geräten reproduzieren können\n  - Sende uns .h5p-Beispieldateien oder exportierte Dateien, wenn das Problem mit den Dateien zusammenhängt\n\nWenn du uns Nachrichten in einer anderen Sprache als Englisch oder Deutsch sendest, verwenden wir ein automatisches Übersetzungstool, um deine Nachricht zu übersetzen.",
+            "subject": "Lumi-Problembericht"
         },
         "title": "Fehler- und Absturzberichte"
     },
@@ -54,11 +54,28 @@
     "editor": {
         "default_name": "Neues H5P",
         "exportDialog": {
+            "addFunctionality": {
+                "embed": "Einbettungslink anzeigen",
+                "rights": "Rechteangaben anzeigen",
+                "title": "Funktionalität hinzufügen"
+            },
             "cancelButton": "Abbrechen",
+            "cssFilePicker": {
+                "formatName": "CSS-Datei"
+            },
             "defaults": {
                 "authorName": "H5P Autor",
                 "filename": "Mein H5P-Export",
                 "title": "H5P-Inhalt"
+            },
+            "displayOptions": {
+                "addCss": "CSS-Datei hinzufügen",
+                "chooseCssFile": "wählen",
+                "marginX": "Rechter und linker Rand",
+                "marginY": "Oberer und unterer Rand",
+                "maximumWidth": "Maximale Breite",
+                "restrictWidthAndAlign": "Breite einschränken und mittig ausrichten",
+                "title": "Darstellungsoptionen"
             },
             "exportButton": "Jetzt exportieren",
             "filePicker": {
@@ -81,35 +98,18 @@
                 },
                 "title": "Format"
             },
+            "pixelsAbbreviation": "px",
             "reporter": {
                 "hint": "Wenn du den Reporter hinzufügst, können die Lernenden eine Datei mit ihrem Fortschritt speichern und an dich schicken.",
                 "learnMoreLink": "Erfahre hier mehr darüber.",
                 "switchLabel": "Reporter hinzufügen"
             },
             "title": "Exporteinstellungen",
-            "addFunctionality": {
-                "title": "Funktionalität hinzufügen",
-                "rights": "Rechte und Berechtigungen anzeigen",
-                "embed": "Einbettungslink anzeigen"
-            },
             "validationErrors": {
                 "errorNaN": "Der eingegebene Wert ist keine Zahl",
-                "errorRangeMin": "Der Wert muss größer als {{min}} sein",
+                "errorRange": "Der Wert muss zwischen {{min}} und {{max}} liegen",
                 "errorRangeMax": "Der Wert muss kleiner als {{max}} sein",
-                "errorRange": "Der Wert muss zwischen {{min}} und {{max}} liegen"
-            },
-            "displayOptions": {
-                "marginX": "Rechter und linker Rand",
-                "marginY": "Oberer und unterer Rand",
-                "restrictWidthAndAlign": "Breite einschränken und mittig ausrichten",
-                "maximumWidth": "Maximale Breite",
-                "addCss": "CSS-Datei hinzufügen",
-                "chooseCssFile": "wählen",
-                "title": "Darstellungsoptionen"
-            },
-            "pixelsAbbreviation": "px",
-            "cssFilePicker": {
-                "formatName": "CSS-Datei"
+                "errorRangeMin": "Der Wert muss größer als {{min}} sein"
             }
         },
         "extensionName": "H5P-Paket",
@@ -168,7 +168,7 @@
         },
         "h5peditor": {
             "new": "Neues H5P",
-            "open": "Ein H5P öffnen"
+            "open": "H5P öffnen"
         },
         "help": {
             "about": "Über Lumi",
