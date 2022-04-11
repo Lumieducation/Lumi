@@ -42,11 +42,11 @@
     "bug_report": {
         "consent": "Bu uygulamanın hata ve kilitlenme raporları göndermesine izin veriyorum.",
         "description": "Anonim çökme ve hata raporları göndererek yazılımımızı ve hizmetlerimizi geliştirmemize yardımcı olun.",
-        "title": "Hata & Kilitlenme Raporları",
         "email": {
-            "subject": "Lumi sorun raporu",
-            "body": "Sorununuza hızlı bir çözüm bulmak için lütfen şunu yazın:\n\n  - Lumi sürümü: <burayı doldurun>, İşletim sistemi: <burayı doldurun>\n  - sorunu tanımlayın\n  - sorunu makinelerimizde nasıl yeniden oluşturabileceğimizi açıklayın\n  - sorun dosyalarla ilgiliyse bize örnek .h5p veya dışa aktarılan dosyaları gönderin\n\nBize İngilizce veya Almanca dışında bir dilde mesaj gönderirseniz, mesajınızı çevirmek için bir otomatik çeviri aracı kullanacağız."
-        }
+            "body": "Sorununuza hızlı bir çözüm bulmak için lütfen şunu yazın:\n\n  - Lumi sürümü: <burayı doldurun>, İşletim sistemi: <burayı doldurun>\n  - sorunu tanımlayın\n  - sorunu makinelerimizde nasıl yeniden oluşturabileceğimizi açıklayın\n  - sorun dosyalarla ilgiliyse bize örnek .h5p veya dışa aktarılan dosyaları gönderin\n\nBize İngilizce veya Almanca dışında bir dilde mesaj gönderirseniz, mesajınızı çevirmek için bir otomatik çeviri aracı kullanacağız.",
+            "subject": "Lumi sorun raporu"
+        },
+        "title": "Hata & Kilitlenme Raporları"
     },
     "dialog": {
         "close": "Kapat"
@@ -54,11 +54,28 @@
     "editor": {
         "default_name": "Yeni H5P",
         "exportDialog": {
+            "addFunctionality": {
+                "embed": "Yerleştirme bağlantısını göster",
+                "rights": "Hakları ve izinleri göster",
+                "title": "İşlevsellik ekle"
+            },
             "cancelButton": "İptal",
+            "cssFilePicker": {
+                "formatName": "CSS Dosyası"
+            },
             "defaults": {
                 "authorName": "H5P Yazar",
-                "title": "H5P İçerik",
-                "filename": "H5P dışa aktarmam"
+                "filename": "H5P dışa aktarmam",
+                "title": "H5P İçerik"
+            },
+            "displayOptions": {
+                "addCss": "CSS dosyası ekle",
+                "chooseCssFile": "Seç",
+                "marginX": "Sağ ve sol kenar boşluğu",
+                "marginY": "Üst ve alt kenar boşluğu",
+                "maximumWidth": "Maksimum genişlik",
+                "restrictWidthAndAlign": "Genişliği sınırlayın ve merkezi olarak hizalayın",
+                "title": "görüntüleme seçenekleri"
             },
             "exportButton": "Şimdi Dışa Aktar",
             "filePicker": {
@@ -81,6 +98,7 @@
                 },
                 "title": "Biçim"
             },
+            "pixelsAbbreviation": "piksel",
             "reporter": {
                 "hint": "Raportörü eklerseniz, öğrenciler ilerlemeleriyle birlikte bir dosya kaydedebilir ve size gönderebilir.",
                 "learnMoreLink": "Buradan daha fazla bilgi edinin.",
@@ -89,28 +107,15 @@
             "title": "Dışa Aktarma Ayarları",
             "validationErrors": {
                 "errorNaN": "Girilen değer bir sayı değil",
-                "errorRangeMin": "{{min}} büyük olmalıdır",
+                "errorRange": "{{min}} ile {{max}} arasında olmalıdır",
                 "errorRangeMax": "{{max}} küçük olmalıdır",
-                "errorRange": "{{min}} ile {{max}} arasında olmalıdır"
-            },
-            "addFunctionality": {
-                "title": "İşlevsellik ekle",
-                "rights": "Hakları ve izinleri göster",
-                "embed": "Yerleştirme bağlantısını göster"
-            },
-            "displayOptions": {
-                "marginX": "Sağ ve sol kenar boşluğu",
-                "marginY": "Üst ve alt kenar boşluğu",
-                "restrictWidthAndAlign": "Genişliği sınırlayın ve merkezi olarak hizalayın",
-                "maximumWidth": "Maksimum genişlik",
-                "addCss": "CSS dosyası ekle",
-                "chooseCssFile": "Seç",
-                "title": "görüntüleme seçenekleri"
-            },
-            "pixelsAbbreviation": "piksel",
-            "cssFilePicker": {
-                "formatName": "CSS Dosyası"
+                "errorRangeMin": "{{min}} büyük olmalıdır"
             }
+        },
+        "extensionName": "H5P paketi",
+        "saveAsDialog": {
+            "fallbackFilename": "H5P dosyam",
+            "title": "Farklı kaydet"
         },
         "sidebar": {
             "create": "Yeni H5P Dosyası",
@@ -127,12 +132,7 @@
         "tab": {
             "edit": "Düzenle",
             "view": "Görünüm"
-        },
-        "saveAsDialog": {
-            "title": "Farklı kaydet",
-            "fallbackFilename": "H5P dosyam"
-        },
-        "extensionName": "H5P paketi"
+        }
     },
     "errors": {
         "codes": {
