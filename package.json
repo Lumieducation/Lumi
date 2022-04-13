@@ -46,7 +46,7 @@
         "build:server": "npx tsc --project tsconfig.json",
         "build:win": "npm run build && cp -r electron/assets/appx build && builder-configs\\build.win.bat --publish never && rm -rf build/appx",
         "build:win32": "npm run build && cp -r electron/assets/appx build && npx --no-install electron-builder --config builder.config.js --windows nsis --publish never --ia32 && rm -rf build/appx",
-        "ci": "npm run lint && npm run format:check && npm run build && npm run test",
+        "ci": "npm run build && npm run test",
         "clean": "rm -rf build/",
         "format": "npx prettier --write \"{server,client,test}/**/*.{ts,tsx}\"",
         "format:check": "npx prettier --check \"{server,client,test}/**/*.{ts,tsx}\"",
