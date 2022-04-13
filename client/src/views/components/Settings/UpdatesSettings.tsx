@@ -119,7 +119,7 @@ export default function UpdatesSettingsList() {
                 </ListItem>
             </List>
 
-            {updateInfo.releaseName !== '' && (
+            {updateInfo.version !== '' && (
                 <UpdateInfoCard
                     updateCallback={() => dispatch(actions.updates.update())}
                     releaseName={updateInfo.releaseName}
