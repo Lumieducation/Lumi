@@ -31,3 +31,9 @@ export interface IFilePickers {
         parentBrowserWindow?: BrowserWindow
     ): Promise<FileHandle>;
 }
+
+export interface IPlatformInformation {
+    package: string;
+    platform: string;
+    supportsUpdates: 'no' | 'external' | 'yes';
+}

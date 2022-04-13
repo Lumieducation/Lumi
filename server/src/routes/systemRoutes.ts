@@ -1,7 +1,7 @@
 import express from 'express';
 import * as Sentry from '@sentry/electron';
 
-import { platformSupportsUpdates } from '../boot/updater';
+import { platformSupportsUpdates } from '../services/platformInformation';
 import { supportedLocales } from '../boot/i18n';
 
 export type Platform =

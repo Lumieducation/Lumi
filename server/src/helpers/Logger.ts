@@ -18,62 +18,60 @@ export type logLevel =
     | 'silly';
 
 export default class Logger {
-    constructor(scope: string) {
-        this.scope = scope;
-
+    constructor(private scope: string) {
         this.DEBUG =
             this.ERROR =
             this.INFO =
             this.SILLY =
             this.VERBOSE =
             this.WARN =
-                debug(`lumi:h5peditor:${this.scope}`);
+                debug(`lumi:${this.scope}`);
 
-        this.logLevel = (process.env.LOG_LEVEL as logLevel) || 'info';
+        this.logLevel =
+            (process.env.LOG_LEVEL.toLowerCase() as logLevel) || 'info';
     }
 
-    private DEBUG: (message: string) => void;
-    private ERROR: (message: string) => void;
-    private INFO: (message: string) => void;
+    private DEBUG: (...args: any[]) => any;
+    private ERROR: (...args: any[]) => any;
+    private INFO: (...args: any[]) => any;
     private logLevel: logLevel;
-    private scope: string;
-    private SILLY: (message: string) => void;
-    private VERBOSE: (message: string) => void;
-    private WARN: (message: string) => void;
+    private SILLY: (...args: any[]) => any;
+    private VERBOSE: (...args: any[]) => any;
+    private WARN: (...args: any[]) => any;
 
-    public debug(message: string): void {
+    public debug(...args: any[]): void {
         if (logLevelNumber[this.logLevel] >= logLevelNumber.debug) {
-            this.DEBUG(message);
+            this.DEBUG(...args);
         }
     }
 
-    public error(message: string): void {
+    public error(...args: any[]): void {
         if (logLevelNumber[this.logLevel] >= logLevelNumber.error) {
-            this.ERROR(message);
+            this.ERROR(...args);
         }
     }
 
-    public info(message: string): void {
+    public info(...args: any[]): void {
         if (logLevelNumber[this.logLevel] >= logLevelNumber.info) {
-            this.INFO(message);
+            this.INFO(...args);
         }
     }
 
-    public silly(message: string): void {
+    public silly(...args: any[]): void {
         if (logLevelNumber[this.logLevel] >= logLevelNumber.silly) {
-            this.SILLY(message);
+            this.SILLY(...args);
         }
     }
 
-    public verbose(message: string): void {
+    public verbose(...args: any[]): void {
         if (logLevelNumber[this.logLevel] >= logLevelNumber.verbose) {
-            this.VERBOSE(message);
+            this.VERBOSE(...args);
         }
     }
 
-    public warn(message: string): void {
+    public warn(...args: any[]): void {
         if (logLevelNumber[this.logLevel] >= logLevelNumber.warn) {
-            this.WARN(message);
+            this.WARN(...args);
         }
     }
 }
