@@ -2,11 +2,10 @@ import { dialog } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import SocketIO from 'socket.io';
 import * as Sentry from '@sentry/electron';
-import fsExtra from 'fs-extra';
-import IServerConfig from '../config/IPaths';
 import SettingsCache from '../config/SettingsCache';
 import i18next from 'i18next';
-import { platformSupportsUpdates } from '../services/platformInformation';
+
+import { platformSupportsUpdates } from './platformInformation';
 
 let updateAvailable: boolean = false;
 let updating: boolean = false;
@@ -16,19 +15,17 @@ const t = i18next.getFixedT(null, 'lumi');
 export default async function initUpdater(
     app: Electron.App,
     websocket: SocketIO.Server,
-    serverConfig: IServerConfig,
     settingsCache: SettingsCache
 ): Promise<void> {
-    autoUpdater.allowPrerelease = (
-        await settingsCache.getSettings()
-    ).allowPrerelease;
+    const currentSettings = await settingsCache.getSettings();
+    autoUpdater.allowPrerelease = currentSettings.allowPrerelease;
 
     autoUpdater.on('update-downloaded', async () => {
         updateAvailable = true;
 
         websocket.emit('action', {
             payload: {
-                message: 'update-downloaded',
+                message: t('notifications.updater.updateDownloaded'),
                 type: 'info'
             },
             type: 'MESSAGE'
@@ -55,10 +52,7 @@ export default async function initUpdater(
         }
     });
 
-    if (
-        platformSupportsUpdates() &&
-        (await fsExtra.readJSON(serverConfig.settingsFile)).autoUpdates
-    ) {
+    if (platformSupportsUpdates() && currentSettings.autoUpdates) {
         autoUpdater.checkForUpdates();
     }
 }

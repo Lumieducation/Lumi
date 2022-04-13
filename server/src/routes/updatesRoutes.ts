@@ -1,11 +1,9 @@
 import express from 'express';
-import fsExtra from 'fs-extra';
-import electron from 'electron';
 import * as Sentry from '@sentry/node';
-import IServerConfig from '../config/IPaths';
-import { autoUpdater, UpdateInfo, ProgressInfo } from 'electron-updater';
+import { autoUpdater, ProgressInfo } from 'electron-updater';
 
 import { globalWebsocket as websocket } from '../boot/websocket';
+import { platformSupportsUpdates } from '../services/platformInformation';
 
 export default function (): express.Router {
     const router = express.Router();
@@ -16,6 +14,10 @@ export default function (): express.Router {
             res: express.Response,
             next: express.NextFunction
         ) => {
+            if (!platformSupportsUpdates()) {
+                res.status(400).send('Platform does not support updates');
+                return;
+            }
             try {
                 const updateCheckResult = await autoUpdater.checkForUpdates();
 
@@ -34,6 +36,10 @@ export default function (): express.Router {
             res: express.Response,
             next: express.NextFunction
         ) => {
+            if (!platformSupportsUpdates()) {
+                res.status(400).send('Platform does not support updates');
+                return;
+            }
             try {
                 autoUpdater.on(
                     'download-progress',

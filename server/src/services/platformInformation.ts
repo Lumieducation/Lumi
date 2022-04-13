@@ -1,6 +1,10 @@
 import * as path from 'path';
 import * as fsExtra from 'fs-extra';
+
 import { IPlatformInformation } from '../types';
+import Logger from '../helpers/Logger';
+
+const log = new Logger('platformInformation');
 
 let platformInformation: IPlatformInformation;
 
@@ -23,9 +27,9 @@ export const getPlatformInformation = (): IPlatformInformation => {
     }
 
     try {
-        platformInformation = fsExtra.readJSONSync(
-            path.join(platformInfoDir, files[0])
-        );
+        const p = path.join(platformInfoDir, files[0]);
+        log.info('Platform info path: ', p);
+        platformInformation = fsExtra.readJSONSync(p);
         return platformInformation;
     } catch {
         return undefined;
