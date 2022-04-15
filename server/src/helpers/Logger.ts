@@ -28,7 +28,7 @@ export default class Logger {
                 debug(`lumi:${this.scope}`);
 
         this.logLevel =
-            (process.env.LOG_LEVEL.toLowerCase() as logLevel) || 'info';
+            (process.env.LOG_LEVEL?.toLowerCase() as logLevel) || 'info';
     }
 
     private DEBUG: (...args: any[]) => any;
