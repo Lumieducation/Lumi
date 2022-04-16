@@ -11,7 +11,6 @@ export interface IUpdateInfo {
 }
 
 export interface IUpdatesState {
-    updateAvailable: boolean;
     checkingForUpdates: boolean;
     updateInfo: IUpdateInfo;
     downloadProgress: {

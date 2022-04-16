@@ -15,6 +15,9 @@ import User from '../h5pImplementations/User';
 import StateStorage from '../state/electronState';
 import FileHandleManager from '../state/FileHandleManager';
 import { IFilePickers } from '../types';
+import Logger from '../helpers/Logger';
+
+const log = new Logger('expressApp');
 
 /**
  * Creates the main Express app.
@@ -31,21 +34,6 @@ export default async (
     fileHandleManager: FileHandleManager
 ) => {
     const app = express();
-
-    if (process.env.NODE_ENV !== 'development') {
-        Sentry.init({
-            dsn: 'https://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
-            release: electron.app?.getVersion(),
-            environment: process.env.NODE_ENV,
-            beforeSend: async (event: Sentry.Event) => {
-                if ((await settingsCache.getSettings()).bugTracking) {
-                    return event;
-                }
-                return null;
-            }
-        });
-        Sentry.setTag('type', 'server');
-    }
 
     // RequestHandler creates a separate execution context using domains, so that every
     // transaction/span/breadcrumb is attached to its own Hub instance
@@ -105,5 +93,15 @@ export default async (
     // The error handler must be before any other error middleware and after all controllers
     app.use(Sentry.Handlers.errorHandler());
 
+    app.use((error, req, res: express.Response, next) => {
+        log.debug(`Unhandled error in express App: ${JSON.stringify(error)}`);
+        Sentry.captureException(error);
+
+        if (!res.writableEnded) {
+            res.status(error.status || 500).json(
+                new LumiError(error.code, error.message, error.status)
+            );
+        }
+    });
     return app;
 };

@@ -108,7 +108,7 @@ export default function FullScreenDialog() {
     );
 
     const updateAvailable = useSelector(
-        (state: IState) => state.updates.updateInfo.releaseName !== ''
+        (state: IState) => state.updates.updateInfo.version !== ''
     );
 
     const allowPrerelease = useSelector(

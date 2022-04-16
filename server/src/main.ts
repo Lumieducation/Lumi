@@ -12,7 +12,7 @@ import path from 'path';
 import SocketIO from 'socket.io';
 import { URL } from 'url';
 import createHttpServer from './boot/httpServer';
-import initUpdater from './boot/updater';
+import initUpdater from './services/updater';
 import createWebsocket from './boot/websocket';
 import serverConfigFactory from './config/defaultPaths';
 import matomo from './boot/matomo';
@@ -32,6 +32,8 @@ import FilePickers from './helpers/FilePickers';
 import FileHandleManager from './state/FileHandleManager';
 import FileController from './controllers/FileController';
 import { initH5P } from './boot/h5p';
+import { initBugTracking } from './boot/bugTracking';
+import { platformSupportsUpdates } from './services/platformInformation';
 
 let websocket: SocketIO.Server;
 const tmpDir = process.env.TEMPDATA || path.join(app.getPath('temp'), 'lumi');
@@ -117,17 +119,7 @@ const gotSingleInstanceLock = app.requestSingleInstanceLock();
 if (!gotSingleInstanceLock) {
     app.quit();
 } else {
-    Sentry.init({
-        dsn: 'http://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
-        release: app.getVersion(),
-        environment: process.env.NODE_ENV,
-        beforeSend: async (event: Sentry.Event) => {
-            if ((await settingsCache.getSettings()).bugTracking) {
-                return event;
-            }
-            return null;
-        }
-    });
+    initBugTracking(settingsCache);
 
     process.on('uncaughtException', (error) => {
         Sentry.captureException(error);
@@ -287,8 +279,12 @@ if (!gotSingleInstanceLock) {
         log.info('websocket created');
         delayedWebsocketEmitter.setWebsocket(websocket);
 
-        initUpdater(app, websocket, serverPaths, settingsCache);
-        log.info('updater started');
+        if (platformSupportsUpdates()) {
+            initUpdater(app, websocket, settingsCache);
+            log.info('Updater started.');
+        } else {
+            log.info('Platform does not support auto updates.');
+        }
 
         fileController = new FileController(
             h5pEditor,

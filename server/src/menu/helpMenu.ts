@@ -1,6 +1,6 @@
 import electron, { dialog } from 'electron';
 import i18next from 'i18next';
-import { loadPlatformInformation } from '../boot/updater';
+import { getPlatformInformation } from '../services/platformInformation';
 
 export default function (window: electron.BrowserWindow): any {
     return {
@@ -46,7 +46,7 @@ export default function (window: electron.BrowserWindow): any {
                 ? {
                       label: i18next.t('lumi:menu.help.about'),
                       click: () => {
-                          const platformInfo = loadPlatformInformation();
+                          const platformInfo = getPlatformInformation();
                           dialog.showMessageBox(window, {
                               message: `Lumi v${electron.app.getVersion()} - ${
                                   platformInfo?.package ?? 'unknown package'

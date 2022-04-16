@@ -7,7 +7,6 @@ import {
 } from './UpdatesTypes';
 
 export const initialState: IUpdatesState = {
-    updateAvailable: false,
     checkingForUpdates: false,
     updateInfo: {
         version: '',
