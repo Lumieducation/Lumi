@@ -46,7 +46,7 @@ export default function (
     log.info('setting up routes');
 
     router.use('/api/v1/auth', authRoutes());
-    router.use('/api/v1/track', trackingRoutes(serverConfig, settingsCache));
+    router.use('/api/v1/track', trackingRoutes(settingsCache));
     router.use(
         '/api/v1/analytics',
         analyticRoutes(getBrowserWindow, electronState)

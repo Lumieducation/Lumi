@@ -13,7 +13,8 @@ const defaultSettings: IH5PEditorSettings = {
     privacyPolicyConsent: false,
     token: '',
     usageStatistics: false,
-    h5pUuid: ''
+    h5pUuid: '',
+    machineId: ''
 };
 
 export default defaultSettings;
