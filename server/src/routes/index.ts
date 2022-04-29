@@ -27,6 +27,7 @@ import StateStorage from '../state/electronState';
 import { IFilePickers } from '../types';
 import FileHandleManager from '../state/FileHandleManager';
 import filesRoutes from './filesRoutes';
+import Updater from '../services/Updater';
 
 const log = new Logger('routes');
 
@@ -39,7 +40,8 @@ export default function (
     translationFunction: ITranslationFunction,
     electronState: StateStorage,
     filePickers: IFilePickers,
-    fileHandleManager: FileHandleManager
+    fileHandleManager: FileHandleManager,
+    updater?: Updater
 ): express.Router {
     const router = express.Router();
 
@@ -59,7 +61,7 @@ export default function (
     });
 
     router.use('/api/v1/system', systemRoutes());
-    router.use('/api/v1/updates', updatesRoutes());
+    router.use('/api/v1/updates', updatesRoutes(updater));
 
     router.use('/api/v1/settings', settingsRoutes(settingsCache));
 

@@ -12,7 +12,6 @@ import path from 'path';
 import SocketIO from 'socket.io';
 import { URL } from 'url';
 import createHttpServer from './boot/httpServer';
-import initUpdater from './services/updater';
 import createWebsocket from './boot/websocket';
 import serverConfigFactory from './config/defaultPaths';
 import matomo from './boot/matomo';
@@ -34,6 +33,7 @@ import FileController from './controllers/FileController';
 import { initH5P } from './boot/h5p';
 import { initBugTracking } from './boot/bugTracking';
 import { platformSupportsUpdates } from './services/platformInformation';
+import Updater from './services/Updater';
 
 let websocket: SocketIO.Server;
 const tmpDir = process.env.TEMPDATA || path.join(app.getPath('temp'), 'lumi');
@@ -58,6 +58,7 @@ let mainWindow: electron.BrowserWindow;
 let port: number;
 let currentPath: string = '/';
 const isDevelopment = process.env.NODE_ENV === 'development';
+let updater: Updater;
 
 const electronState = new StateStorage();
 const fileHandleManager = new FileHandleManager();
@@ -254,6 +255,13 @@ if (!gotSingleInstanceLock) {
             }
         );
 
+        if (platformSupportsUpdates()) {
+            updater = await Updater.create(app, websocket, settingsCache);
+            log.info('Updater started.');
+        } else {
+            log.info('Platform does not support auto updates.');
+        }
+
         // Create the express server logic
         const expressApp = await createApp(
             h5pEditor,
@@ -264,7 +272,8 @@ if (!gotSingleInstanceLock) {
             translationFunction,
             electronState,
             new FilePickers(fileHandleManager),
-            fileHandleManager
+            fileHandleManager,
+            updater
         );
 
         log.info('app is ready');
@@ -278,13 +287,6 @@ if (!gotSingleInstanceLock) {
         websocket = createWebsocket(server);
         log.info('websocket created');
         delayedWebsocketEmitter.setWebsocket(websocket);
-
-        if (platformSupportsUpdates()) {
-            initUpdater(app, websocket, settingsCache);
-            log.info('Updater started.');
-        } else {
-            log.info('Platform does not support auto updates.');
-        }
 
         fileController = new FileController(
             h5pEditor,

@@ -1,13 +1,10 @@
 import express from 'express';
 import * as Sentry from '@sentry/node';
-import { autoUpdater, ProgressInfo } from 'electron-updater';
-import electron from 'electron';
 
-import { globalWebsocket as websocket } from '../boot/websocket';
 import { platformSupportsUpdates } from '../services/platformInformation';
-import { compareAppVersions } from '../helpers/compareAppVersions';
+import Updater from '../services/Updater';
 
-export default function (): express.Router {
+export default function (updater?: Updater): express.Router {
     const router = express.Router();
     router.get(`/`, async (req: express.Request, res: express.Response) => {
         if (!platformSupportsUpdates()) {
@@ -15,15 +12,9 @@ export default function (): express.Router {
             return;
         }
         try {
-            const updateCheckResult = await autoUpdater.checkForUpdates();
-            if (
-                updateCheckResult?.updateInfo?.version &&
-                compareAppVersions(
-                    electron.app.getVersion(),
-                    updateCheckResult.updateInfo.version
-                ) > 0
-            ) {
-                return res.status(200).json(updateCheckResult.updateInfo);
+            await updater?.check();
+            if (updater?.hasUpdate()) {
+                return res.status(200).json(updater.getUpdateInfo());
             }
             return res.status(404).send();
         } catch (error: any) {
@@ -38,22 +29,7 @@ export default function (): express.Router {
             return;
         }
         try {
-            autoUpdater.on(
-                'download-progress',
-                (progressInfo: ProgressInfo) => {
-                    websocket.emit('action', {
-                        type: 'action',
-                        payload: {
-                            type: 'UPDATES_DOWNLOADPROGRESS',
-                            payload: progressInfo
-                        }
-                    });
-                }
-            );
-
-            await autoUpdater.downloadUpdate();
-
-            autoUpdater.quitAndInstall();
+            await updater?.downloadAndQuit();
         } catch (error: any) {
             Sentry.captureException(error);
             res.status(500).end();
