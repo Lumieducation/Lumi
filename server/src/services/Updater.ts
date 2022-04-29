@@ -34,21 +34,30 @@ export default class Updater {
     public check = async () => {
         const currentSettings = await this.settingsCache.getSettings();
         if (platformSupportsUpdates() && currentSettings.autoUpdates) {
-            const updateCheckResult = await autoUpdater.checkForUpdates();
-            this.updateInfo =
-                updateCheckResult?.updateInfo?.version &&
-                compareAppVersions(
-                    electron.app.getVersion(),
-                    updateCheckResult.updateInfo.version
-                ) > 0
-                    ? updateCheckResult.updateInfo
-                    : null;
+            try {
+                const updateCheckResult = await autoUpdater.checkForUpdates();
+                this.updateInfo =
+                    updateCheckResult?.updateInfo?.version &&
+                    compareAppVersions(
+                        electron.app.getVersion(),
+                        updateCheckResult.updateInfo.version
+                    ) > 0
+                        ? updateCheckResult.updateInfo
+                        : null;
+            } catch (error) {
+                this.updateInfo = null;
+                Sentry.captureException(error);
+            }
         }
     };
 
     async downloadAndQuit(): Promise<void> {
         if (this.hasUpdate()) {
-            await autoUpdater.downloadUpdate();
+            try {
+                await autoUpdater.downloadUpdate();
+            } catch (error) {
+                Sentry.captureException(error);
+            }
             autoUpdater.quitAndInstall();
         }
     }
