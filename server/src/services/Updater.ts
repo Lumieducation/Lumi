@@ -17,7 +17,7 @@ export default class Updater {
         private settingsCache: SettingsCache
     ) {}
 
-    private updateAvailable: boolean = false;
+    private updateReady: boolean = false;
     private updateInfo: UpdateInfo = null;
     private updating: boolean = false;
 
@@ -75,7 +75,7 @@ export default class Updater {
         autoUpdater.allowPrerelease = currentSettings.allowPrerelease;
 
         autoUpdater.on('update-downloaded', async () => {
-            this.updateAvailable = true;
+            this.updateReady = true;
 
             this.websocket.emit('action', {
                 payload: {
@@ -101,7 +101,7 @@ export default class Updater {
         });
 
         this.app.on('will-quit', (event) => {
-            if (this.updateAvailable && !this.updating) {
+            if (this.updateReady && !this.updating) {
                 event.preventDefault();
 
                 dialog.showMessageBox({
