@@ -16,7 +16,6 @@ import initUpdater from './services/updater';
 import createWebsocket from './boot/websocket';
 import serverConfigFactory from './config/defaultPaths';
 import matomo from './boot/matomo';
-import { machineId } from 'node-machine-id';
 import i18next from 'i18next';
 import fsExtra from 'fs-extra';
 
@@ -203,11 +202,12 @@ if (!gotSingleInstanceLock) {
 
     app.on('before-quit', async () => {
         try {
-            if ((await settingsCache.getSettings()).usageStatistics) {
+            const settings = await settingsCache.getSettings();
+            if (settings.usageStatistics) {
                 const data = {
                     url: '/Lumi',
-                    _id: await machineId(),
-                    uid: await machineId(),
+                    _id: settings.machineId,
+                    uid: settings.machineId,
                     e_c: 'App',
                     e_a: 'quit',
                     lang: electron.app.getLocale(),
@@ -320,11 +320,12 @@ if (!gotSingleInstanceLock) {
         }
 
         try {
-            if ((await settingsCache.getSettings()).usageStatistics) {
+            const settings = await settingsCache.getSettings();
+            if (settings.usageStatistics) {
                 const data = {
                     url: '/Lumi',
-                    _id: await machineId(),
-                    uid: await machineId(),
+                    _id: settings.machineId,
+                    uid: settings.machineId,
                     e_c: 'App',
                     e_a: 'start',
                     lang: electron.app.getLocale(),

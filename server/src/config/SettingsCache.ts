@@ -5,6 +5,7 @@ import { supportedLocales } from '../boot/i18n';
 import defaultSettings from './defaultSettings';
 import IH5PEditorSettings from './IH5PEditorSettings';
 import Logger from '../helpers/Logger';
+import { nanoid } from 'nanoid';
 
 const log = new Logger('SettingsStorage');
 
@@ -93,41 +94,56 @@ export default class SettingsStorage {
      * same
      */
     public validateAndFixSettings(settings: IH5PEditorSettings): boolean {
+        let changed = false;
+
         log.debug(`Validating settings. Language: ${settings.language}`);
         let lng = settings.language;
         if (!lng) {
             settings.language = 'en';
-            return true;
-        }
-        // allow regular language codes like de-DE or zh-HANS
-        if (
-            !/^[a-z]{2,3}(-[A-Z]{2,6})?$/i.test(settings.language) ||
-            !supportedLocales.find((l) => l.code === lng)
-        ) {
-            log.debug(
-                'The language in the settings is either malformed or not in the list of supported locales.'
-            );
-            // converts es-419 into es
-            const res = /^([a-z]{2,3})(-.{2,6})?$/i.exec(settings.language);
-            if (res.length > 0) {
-                log.debug('Removing variant code from language');
-                lng = res[1];
-            }
-        }
-        if (supportedLocales.find((l) => l.code === lng)) {
-            if (settings.language !== lng) {
+            changed = true;
+        } else {
+            let lngOk = false;
+            // allow regular language codes like de-DE or zh-HANS
+            if (
+                !/^[a-z]{2,3}(-[A-Z]{2,6})?$/i.test(settings.language) ||
+                !supportedLocales.find((l) => l.code === lng)
+            ) {
                 log.debug(
-                    `Changing language '${settings.language}' to '${lng}'`
+                    'The language in the settings is either malformed or not in the list of supported locales.'
                 );
-                settings.language = lng;
-                return true;
+                // converts es-419 into es
+                const res = /^([a-z]{2,3})(-.{2,6})?$/i.exec(settings.language);
+                if (res.length > 0) {
+                    log.debug('Removing variant code from language');
+                    lng = res[1];
+                }
             }
-            log.debug('Language code is ok');
-            return false;
+            if (supportedLocales.find((l) => l.code === lng)) {
+                if (settings.language !== lng) {
+                    log.debug(
+                        `Changing language '${settings.language}' to '${lng}'`
+                    );
+                    settings.language = lng;
+                    changed = true;
+                    lngOk = true;
+                }
+                log.debug('Language code is ok');
+                lngOk = true;
+            }
+            if (!lngOk) {
+                log.debug('Falling back to English language.');
+                settings.language = 'en';
+                changed = true;
+            }
         }
-        log.debug('Falling back to English language.');
-        settings.language = 'en';
-        return true;
+
+        if (!settings.machineId || settings.machineId === '') {
+            log.debug('Generating new machine id');
+            settings.machineId = nanoid();
+            changed = true;
+        }
+
+        return changed;
     }
 
     /**
@@ -241,7 +257,8 @@ export default class SettingsStorage {
                 lastVersion: loadedSettings.lastVersion,
                 privacyPolicyConsent: loadedSettings.privacyPolicyConsent,
                 token: loadedSettings.token,
-                usageStatistics: loadedSettings.usageStatistics
+                usageStatistics: loadedSettings.usageStatistics,
+                machineId: loadedSettings.machineId
             }
         };
     }
