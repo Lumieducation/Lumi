@@ -105,5 +105,8 @@ function mapDispatchToProps(dispatch: any): IDispatchProps {
     );
 }
 export default withSnackbar(
-    connect(mapStateToProps, mapDispatchToProps)(NotificationsContainer)
+    connect(
+        mapStateToProps as any,
+        mapDispatchToProps as any
+    )(NotificationsContainer as any)
 );

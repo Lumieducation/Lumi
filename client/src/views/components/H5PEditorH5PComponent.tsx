@@ -78,7 +78,9 @@ export class H5PEditorH5PComponent extends React.Component<IH5PEditorH5PComponen
                                 <VisibilityOutlinedIcon
                                     style={{ verticalAlign: 'middle' }}
                                 />{' '}
-                                {i18next.t('editor.tab.view')}
+                                <span>
+                                    {i18next.t('editor.tab.view') as string}
+                                </span>
                             </div>
                         }
                         disabled={this.props.tab.viewDisabled}
@@ -90,7 +92,9 @@ export class H5PEditorH5PComponent extends React.Component<IH5PEditorH5PComponen
                                 <EditOutlinedIcon
                                     style={{ verticalAlign: 'middle' }}
                                 />{' '}
-                                {i18next.t('editor.tab.edit')}
+                                <span>
+                                    {i18next.t('editor.tab.edit') as string}
+                                </span>
                             </div>
                         }
                         {...a11yProps(1)}

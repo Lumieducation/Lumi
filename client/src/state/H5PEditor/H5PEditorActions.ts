@@ -116,11 +116,9 @@ export function blurActiveElement(): IBlurActiveElementAction {
 
 export function cancelExportH5P(contentId?: string) {
     log.info(`canceling export`);
-    return async (dispatch: any) => {
-        dispatch({
-            payload: { contentId },
-            type: H5PEDITOR_EXPORT_CANCEL
-        });
+    return {
+        payload: { contentId },
+        type: H5PEDITOR_EXPORT_CANCEL
     };
 }
 

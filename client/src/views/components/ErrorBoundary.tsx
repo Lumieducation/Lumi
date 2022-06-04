@@ -14,7 +14,9 @@ interface IComponentState {
     hasError: boolean;
 }
 
-interface IProps extends IStateProps, IDispatchProps {}
+interface IProps extends IStateProps, IDispatchProps {
+    children: React.ReactNode;
+}
 
 export default class ErrorBoundary extends React.Component<
     IProps,

@@ -14,7 +14,9 @@ interface IDispatchProps {}
 interface IProps extends IStateProps, IDispatchProps {}
 
 // tslint:disable-next-line: variable-name
-const ContentPaper: React.FunctionComponent<IProps> = (props: IProps) => {
+const ContentPaper: React.FunctionComponent<
+    React.PropsWithChildren<React.PropsWithChildren<IProps>>
+> = (props: IProps) => {
     const classes = useStyles();
     return <Paper className={classes.paper}>{props.children}</Paper>;
 };
