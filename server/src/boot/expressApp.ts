@@ -16,6 +16,7 @@ import StateStorage from '../state/electronState';
 import FileHandleManager from '../state/FileHandleManager';
 import { IFilePickers } from '../types';
 import Logger from '../helpers/Logger';
+import Updater from '../services/Updater';
 
 const log = new Logger('expressApp');
 
@@ -31,7 +32,8 @@ export default async (
     translationFunction: TFunction,
     electronState: StateStorage,
     filePickers: IFilePickers,
-    fileHandleManager: FileHandleManager
+    fileHandleManager: FileHandleManager,
+    updater?: Updater
 ) => {
     const app = express();
 
@@ -86,7 +88,8 @@ export default async (
             (key, language) => translationFunction(key, { lng: language }),
             electronState,
             filePickers,
-            fileHandleManager
+            fileHandleManager,
+            updater
         )
     );
 
