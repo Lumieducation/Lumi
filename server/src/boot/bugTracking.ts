@@ -7,7 +7,7 @@ import { getPlatformInformation } from '../services/platformInformation';
 
 const log = new Logger('bugTracking');
 
-const initSentry = (settingsCache: SettingsCache) => {
+const initSentry = (settingsCache: SettingsCache): void => {
     Sentry.init({
         dsn: 'https://1f4ae874b81a48ed8e22fe6e9d52ed1b@sentry.lumi.education/3',
         release: electron.app.getVersion(),
@@ -26,7 +26,7 @@ const initSentry = (settingsCache: SettingsCache) => {
     );
 };
 
-export const initBugTracking = (settingsCache: SettingsCache) => {
+export const initBugTracking = (settingsCache: SettingsCache): void => {
     const settings = settingsCache.getSettingsSync();
     if (process.env.NODE_ENV !== 'development' && settings.bugTracking) {
         log.info('Initializing Sentry...');

@@ -4,7 +4,7 @@ import editMenu from './editMenu';
 
 import helpMenu from './helpMenu';
 
-export default (window: electron.BrowserWindow) => [
+export default (window: electron.BrowserWindow): electron.MenuItem[] => [
     editMenu(),
     helpMenu(window)
 ];

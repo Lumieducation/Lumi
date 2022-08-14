@@ -36,7 +36,7 @@ export const getPlatformInformation = (): IPlatformInformation => {
     }
 };
 
-export const platformSupportsUpdates = () => {
+export const platformSupportsUpdates = (): boolean => {
     if (process.env.DISABLE_UPDATES) {
         return false;
     }
