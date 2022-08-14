@@ -32,7 +32,7 @@ export default async (
     electronState: StateStorage,
     filePickers: IFilePickers,
     fileHandleManager: FileHandleManager
-): Promise<express.Application> => {
+): Promise<express.Express> => {
     const app = express();
 
     // RequestHandler creates a separate execution context using domains, so that every
