@@ -7,8 +7,8 @@ import IServerConfig from '../config/IPaths';
 /**
  * Migrations needed from older versions to v0.8.0
  */
-// tslint:disable-next-line: variable-name
-const v0_8_0 = async () => {
+// eslint-disable-next-line @typescript-eslint/naming-convention
+const v0_8_0 = async (): Promise<void> => {
     // If the workingCache (prior 0.8.0) still exists in userData remove it. -> https://github.com/Lumieducation/Lumi/pull/1727
     const deprecatedContentStoragePath = path.join(
         process.env.USERDATA || app.getPath('userData'),

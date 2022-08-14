@@ -1,6 +1,6 @@
-import debug from 'debug';
+import debugLib from 'debug';
 
-enum logLevelNumber {
+enum LogLevelNumber {
     error,
     warn,
     info,
@@ -9,7 +9,7 @@ enum logLevelNumber {
     silly
 }
 
-export type logLevel =
+export type LogLevel =
     | 'error'
     | 'warn'
     | 'info'
@@ -25,52 +25,52 @@ export default class Logger {
             this.SILLY =
             this.VERBOSE =
             this.WARN =
-                debug(`lumi:${this.scope}`);
+                debugLib(`lumi:${this.scope}`);
 
         this.logLevel =
-            (process.env.LOG_LEVEL?.toLowerCase() as logLevel) || 'info';
+            (process.env.LOG_LEVEL?.toLowerCase() as LogLevel) || 'info';
     }
 
     private DEBUG: (...args: any[]) => any;
     private ERROR: (...args: any[]) => any;
     private INFO: (...args: any[]) => any;
-    private logLevel: logLevel;
+    private logLevel: LogLevel;
     private SILLY: (...args: any[]) => any;
     private VERBOSE: (...args: any[]) => any;
     private WARN: (...args: any[]) => any;
 
     public debug(...args: any[]): void {
-        if (logLevelNumber[this.logLevel] >= logLevelNumber.debug) {
+        if (LogLevelNumber[this.logLevel] >= LogLevelNumber.debug) {
             this.DEBUG(...args);
         }
     }
 
     public error(...args: any[]): void {
-        if (logLevelNumber[this.logLevel] >= logLevelNumber.error) {
+        if (LogLevelNumber[this.logLevel] >= LogLevelNumber.error) {
             this.ERROR(...args);
         }
     }
 
     public info(...args: any[]): void {
-        if (logLevelNumber[this.logLevel] >= logLevelNumber.info) {
+        if (LogLevelNumber[this.logLevel] >= LogLevelNumber.info) {
             this.INFO(...args);
         }
     }
 
     public silly(...args: any[]): void {
-        if (logLevelNumber[this.logLevel] >= logLevelNumber.silly) {
+        if (LogLevelNumber[this.logLevel] >= LogLevelNumber.silly) {
             this.SILLY(...args);
         }
     }
 
     public verbose(...args: any[]): void {
-        if (logLevelNumber[this.logLevel] >= logLevelNumber.verbose) {
+        if (LogLevelNumber[this.logLevel] >= LogLevelNumber.verbose) {
             this.VERBOSE(...args);
         }
     }
 
     public warn(...args: any[]): void {
-        if (logLevelNumber[this.logLevel] >= logLevelNumber.warn) {
+        if (LogLevelNumber[this.logLevel] >= LogLevelNumber.warn) {
             this.WARN(...args);
         }
     }
