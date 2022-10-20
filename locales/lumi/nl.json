@@ -1,375 +1,378 @@
 {
-    "analytics": {
-        "average": "Gemiddelde",
-        "brokenFiles": "Lijst met kapotte bestanden",
-        "errors": {
-            "determine-name": "Kan naam van leerling niet bepalen.",
-            "invalid-interactions": "Sommige interacties zijn verbroken.",
-            "invalid-statements": "Sommige van de geregistreerde acties van leerlingen zijn verbroken.",
-            "json-parse-error": "Het .lumi-bestand bevat ongeldige inhoud (JSON is niet geparseerd).",
-            "no-content-json": "De H5P-inhoud is niet correct toegevoegd aan het .lumi-bestand."
-        },
-        "name": "Naam",
-        "searchPlaceholder": "Zoek studentnamen ...",
-        "startPage": {
-            "learn_more": "kom meer te weten",
-            "open": "Kies een map met .lumi-bestanden",
-            "start": "Begin",
-            "title": "Lumi Analytics",
-            "welcomeMessage": "Met Lumi's Analytics-tool kunt u gebruikersrapporten importeren en deze voor u visualiseren"
-        }
-    },
-    "auth": {
-        "cancel": "annuleren",
-        "code": "Code",
-        "email": "E-mail",
-        "error": {
-            "econnrefused": "Kan geen verbinding maken met de Lumi Auth-server. Controleer uw internetverbinding.",
-            "no-valid-email": "{{email}} is geen geldig e-mailadres."
-        },
-        "logout": "Uitloggen",
-        "notification": {
-            "logout": {
-                "success": "Je bent uitgelogd."
-            },
-            "pending": "Er is een verificatiecode naar {{email}} gestuurd. Controleer uw e-mails.",
-            "success": "{{email}} is succesvol gevalideerd"
-        },
-        "set_email": "E-mail instellen",
-        "verify_code": "Code verifiëren",
-        "verify_email": "Verifieer Email"
-    },
-    "bug_report": {
-        "consent": "Ik sta toe dat deze applicatie bug- en crashrapporten verzendt.",
-        "description": "Help ons onze software en services te verbeteren door anonieme crash- en bugrapporten te verzenden.",
-        "email": {
-            "body": "Om een snelle oplossing voor uw probleem te krijgen, kunt u schrijven over:\n\n  - Lumi-versie: <vul hier in>, Besturingssysteem: <vul hier in>\n  - beschrijf het probleem\n  - beschrijf hoe we het probleem op onze machines kunnen reproduceren\n  - stuur ons voorbeeld .h5p of geëxporteerde bestanden als het probleem te maken heeft met de bestanden\n\nAls u ons berichten stuurt in een andere taal dan Engels of Duits, gebruiken we een automatische vertaaltool om uw bericht te vertalen.",
-            "subject": "Lumi-probleemrapport"
-        },
-        "title": "Bug- en crashrapporten"
-    },
-    "dialog": {
-        "close": "Dichtbij"
-    },
-    "editor": {
-        "default_name": "nieuwe H5P",
-        "exportDialog": {
-            "cancelButton": "Annuleer",
-            "defaults": {
-                "authorName": "H5P Auteur",
-                "filename": "Mijn H5P-export",
-                "title": "H5P-inhoud"
-            },
-            "exportButton": "Nu exporteren",
-            "filePicker": {
-                "buttonLabel": "Exporteren",
-                "formatNames": {
-                    "bundle": "Alles-in-één HTML-bestand",
-                    "external": "HTML-bestand",
-                    "scorm": "SCORM-bestand"
-                },
-                "title": "Exporteren als ..."
-            },
-            "format": {
-                "bundleHint": "Het bestand kan voor sommige computers te groot worden als u veel mediabestanden opneemt.",
-                "bundleLabel": "Alles-in-één HTML-bestand",
-                "externalHint": "In de volgende stap wordt u om een naam voor het HTML-bestand gevraagd. De mediabestanden worden in mappen geplaatst die beginnen met dezelfde naam als het bestand.",
-                "externalLabel": "Een HTML-bestand en verschillende mediabestanden",
-                "scorm": {
-                    "label": "SCORM-pakket",
-                    "masteryScoreLabel": "Meesterschap score"
-                },
-                "title": "Formaat"
-            },
-            "reporter": {
-                "hint": "Als u de verslaggever toevoegt, kunnen studenten een bestand met hun voortgang opslaan en naar u opsturen.",
-                "learnMoreLink": "Lees er hier meer over.",
-                "switchLabel": "Inclusief verslaggever"
-            },
-            "title": "Exporteer instellingen",
-            "validationErrors": {
-                "errorNaN": "Ingevoerde waarde is geen getal",
-                "errorRangeMin": "De waarde moet groter zijn dan {{min}}",
-                "errorRangeMax": "De waarde moet kleiner zijn dan {{max}}",
-                "errorRange": "De waarde moet tussen {{min}} en {{max}}"
-            },
-            "addFunctionality": {
-                "title": "Functionaliteit toevoegen",
-                "rights": "Rechten en machtigingen weergeven",
-                "embed": "Insluitlink weergeven"
-            },
-            "displayOptions": {
-                "marginX": "Marge rechts & links",
-                "marginY": "Boven- en ondermarge",
-                "restrictWidthAndAlign": "Breedte beperken en centraal uitlijnen",
-                "maximumWidth": "Maximale breedte",
-                "addCss": "CSS-bestand toevoegen",
-                "chooseCssFile": "Kiezen",
-                "title": "weergaveopties"
-            },
-            "pixelsAbbreviation": "px",
-            "cssFilePicker": {
-                "formatName": "CSS-bestand"
-            }
-        },
-        "extensionName": "H5P-pakket",
-        "saveAsDialog": {
-            "fallbackFilename": "Mijn H5P-bestand",
-            "title": "Opslaan als"
-        },
-        "sidebar": {
-            "create": "Nieuw H5P-bestand",
-            "noOpenFiles": "Geen geopende bestanden",
-            "open": "Open H5P-bestand"
-        },
-        "startPage": {
-            "create": "maak nieuwe H5P",
-            "open": "Open bestaande H5P",
-            "start": "begin",
-            "title": "H5P-editor",
-            "welcomeMessage": "Lumi's H5P Editor is een zelfstandige applicatie waarmee u H5P kunt bekijken, bewerken en maken."
-        },
-        "tab": {
-            "edit": "Bewerk",
-            "view": "Visie"
-        }
-    },
+  "analytics": {
+    "average": "Gemiddelde",
+    "brokenFiles": "Lijst met kapotte bestanden",
     "errors": {
-        "codes": {
-            "econnrefused": "Verbinding geweigerd"
+      "determine-name": "Kan naam van leerling niet bepalen.",
+      "invalid-interactions": "Sommige interacties zijn verbroken.",
+      "invalid-statements": "Sommige van de geregistreerde acties van leerlingen zijn verbroken.",
+      "json-parse-error": "Het .lumi-bestand bevat ongeldige inhoud (JSON is niet geparseerd).",
+      "no-content-json": "De H5P-inhoud is niet correct toegevoegd aan het .lumi-bestand."
+    },
+    "name": "Naam",
+    "searchPlaceholder": "Zoek studentnamen ...",
+    "startPage": {
+      "learn_more": "kom meer te weten",
+      "open": "Kies een map met .lumi-bestanden",
+      "start": "Begin",
+      "title": "Lumi Analytics",
+      "welcomeMessage": "Met Lumi's Analytics-tool kunt u gebruikersrapporten importeren en deze voor u visualiseren"
+    }
+  },
+  "auth": {
+    "cancel": "annuleren",
+    "code": "Code",
+    "email": "E-mail",
+    "error": {
+      "econnrefused": "Kan geen verbinding maken met de Lumi Auth-server. Controleer uw internetverbinding.",
+      "no-valid-email": "{{email}} is geen geldig e-mailadres."
+    },
+    "logout": "Uitloggen",
+    "notification": {
+      "logout": {
+        "success": "Je bent uitgelogd."
+      },
+      "pending": "Er is een verificatiecode naar {{email}} gestuurd. Controleer uw e-mails.",
+      "success": "{{email}} is succesvol gevalideerd"
+    },
+    "set_email": "E-mail instellen",
+    "verify_code": "Code verifiëren",
+    "verify_email": "Verifieer Email"
+  },
+  "bug_report": {
+    "consent": "Ik sta toe dat deze applicatie bug- en crashrapporten verzendt.",
+    "description": "Help ons onze software en services te verbeteren door anonieme crash- en bugrapporten te verzenden.",
+    "email": {
+      "body": "Om een snelle oplossing voor uw probleem te krijgen, kunt u schrijven over:\n\n  - Lumi-versie: <vul hier in>, Besturingssysteem: <vul hier in>\n  - beschrijf het probleem\n  - beschrijf hoe we het probleem op onze machines kunnen reproduceren\n  - stuur ons voorbeeld .h5p of geëxporteerde bestanden als het probleem te maken heeft met de bestanden\n\nAls u ons berichten stuurt in een andere taal dan Engels of Duits, gebruiken we een automatische vertaaltool om uw bericht te vertalen.",
+      "subject": "Lumi-probleemrapport"
+    },
+    "title": "Bug- en crashrapporten"
+  },
+  "dialog": {
+    "close": "Dichtbij"
+  },
+  "editor": {
+    "default_name": "nieuwe H5P",
+    "exportDialog": {
+      "cancelButton": "Annuleer",
+      "defaults": {
+        "authorName": "H5P Auteur",
+        "filename": "Mijn H5P-export",
+        "title": "H5P-inhoud"
+      },
+      "exportButton": "Nu exporteren",
+      "filePicker": {
+        "buttonLabel": "Exporteren",
+        "formatNames": {
+          "bundle": "Alles-in-één HTML-bestand",
+          "external": "HTML-bestand",
+          "scorm": "SCORM-bestand"
         },
-        "messages": {
-            "econnrefused": "Verbinding geweigerd"
-        }
+        "title": "Exporteren als ..."
+      },
+      "format": {
+        "bundleHint": "Het bestand kan voor sommige computers te groot worden als u veel mediabestanden opneemt.",
+        "bundleLabel": "Alles-in-één HTML-bestand",
+        "externalHint": "In de volgende stap wordt u om een naam voor het HTML-bestand gevraagd. De mediabestanden worden in mappen geplaatst die beginnen met dezelfde naam als het bestand.",
+        "externalLabel": "Een HTML-bestand en verschillende mediabestanden",
+        "scorm": {
+          "label": "SCORM-pakket",
+          "masteryScoreLabel": "Meesterschap score"
+        },
+        "title": "Formaat"
+      },
+      "reporter": {
+        "hint": "Als u de verslaggever toevoegt, kunnen studenten een bestand met hun voortgang opslaan en naar u opsturen.",
+        "learnMoreLink": "Lees er hier meer over.",
+        "switchLabel": "Inclusief verslaggever"
+      },
+      "title": "Exporteer instellingen",
+      "validationErrors": {
+        "errorNaN": "Ingevoerde waarde is geen getal",
+        "errorRangeMin": "De waarde moet groter zijn dan {{min}}",
+        "errorRangeMax": "De waarde moet kleiner zijn dan {{max}}",
+        "errorRange": "De waarde moet tussen {{min}} en {{max}}"
+      },
+      "addFunctionality": {
+        "title": "Functionaliteit toevoegen",
+        "rights": "Rechten en machtigingen weergeven",
+        "embed": "Insluitlink weergeven"
+      },
+      "displayOptions": {
+        "marginX": "Marge rechts & links",
+        "marginY": "Boven- en ondermarge",
+        "restrictWidthAndAlign": "Breedte beperken en centraal uitlijnen",
+        "maximumWidth": "Maximale breedte",
+        "addCss": "CSS-bestand toevoegen",
+        "chooseCssFile": "Kiezen",
+        "title": "weergaveopties"
+      },
+      "pixelsAbbreviation": "px",
+      "cssFilePicker": {
+        "formatName": "CSS-bestand"
+      }
+    },
+    "extensionName": "H5P-pakket",
+    "saveAsDialog": {
+      "fallbackFilename": "Mijn H5P-bestand",
+      "title": "Opslaan als"
+    },
+    "sidebar": {
+      "create": "Nieuw H5P-bestand",
+      "noOpenFiles": "Geen geopende bestanden",
+      "open": "Open H5P-bestand"
+    },
+    "startPage": {
+      "create": "maak nieuwe H5P",
+      "open": "Open bestaande H5P",
+      "start": "begin",
+      "title": "H5P-editor",
+      "welcomeMessage": "Lumi's H5P Editor is een zelfstandige applicatie waarmee u H5P kunt bekijken, bewerken en maken."
+    },
+    "tab": {
+      "edit": "Bewerk",
+      "view": "Visie"
+    }
+  },
+  "errors": {
+    "codes": {
+      "econnrefused": "Verbinding geweigerd"
+    },
+    "messages": {
+      "econnrefused": "Verbinding geweigerd"
+    }
+  },
+  "general": {
+    "copyClipboard": "{{value}} gekopieerd naar klembord",
+    "delete": "Verwijderen"
+  },
+  "language": {
+    "description": "Verander de taal van de applicatie.",
+    "help_translate": "Help ons vertalen!",
+    "title": "Taal"
+  },
+  "menu": {
+    "file": {
+      "copy": "Kopiëren",
+      "cut": "Besnoeiing",
+      "edit": "Bewerk",
+      "export": "Exporteren...",
+      "label": "het dossier",
+      "open": "Open Analytische bestanden",
+      "paste": "Plakken",
+      "redo": "Klaar",
+      "save": "Opslaan",
+      "save_as": "Opslaan als...",
+      "select_all": "Selecteer alles",
+      "undo": "Ongedaan maken"
+    },
+    "h5peditor": {
+      "new": "Nieuwe H5P",
+      "open": "Open H5P"
+    },
+    "help": {
+      "about": "Over",
+      "follow_us_on_twitter": "Volg ons op Twitter",
+      "label": "Helpen",
+      "report_issue": "Probleem melden",
+      "toggle_developer_tools": "Schakel Developer Tools in of uit"
+    },
+    "mac": {
+      "hide": "Verberg Lumi",
+      "hideothers": "Verberg anderen",
+      "services": "Diensten",
+      "unhide": "Toon alles"
+    },
+    "quit": "Afsluiten",
+    "run": {
+      "label": "Loop",
+      "upload": "Uploaden naar Lumi Run"
+    },
+    "view": {
+      "label": "Visie",
+      "resetZoom": "Daadwerkelijke grootte",
+      "togglefullscreen": "Volledig scherm activeren",
+      "zoomIn": "In zoomen",
+      "zoomOut": "Uitzoomen"
+    },
+    "window": {
+      "close": "Dichtbij",
+      "front": "Breng alles naar voren",
+      "label": "Venster",
+      "minimize": "Minimaliseren",
+      "show": "Tonen",
+      "zoom": "Zoom"
+    }
+  },
+  "notifications": {
+    "analytics": {
+      "import": {
+        "brokenFiles": "{{count}} gebroken bestand gevonden",
+        "brokenFiles_plural": "{{count}} kapotte bestanden gevonden",
+        "error": "Geen geldige bestanden gevonden",
+        "success": "Geïmporteerde rapportbestanden"
+      }
     },
     "general": {
-        "copyClipboard": "{{value}} gekopieerd naar klembord",
-        "delete": "Verwijderen"
+      "econnrefused": "Er lijkt een probleem te zijn met uw internetverbinding."
     },
-    "language": {
-        "description": "Verander de taal van de applicatie.",
-        "help_translate": "Help ons vertalen!",
-        "title": "Taal"
+    "h5peditor": {
+      "export_as_html": {
+        "error": "Kan H5P niet exporteren",
+        "success": "H5P is succesvol geëxporteerd"
+      },
+      "open": {
+        "error": "Kan H5P niet openen."
+      },
+      "save": {
+        "error": "H5P kan niet worden opgeslagen.",
+        "success": "H5P opgeslagen!"
+      }
     },
-    "menu": {
-        "file": {
-            "copy": "Kopiëren",
-            "cut": "Besnoeiing",
-            "edit": "Bewerk",
-            "export": "Exporteren...",
-            "label": "het dossier",
-            "open": "Open Analytische bestanden",
-            "paste": "Plakken",
-            "redo": "Klaar",
-            "save": "Opslaan",
-            "save_as": "Opslaan als...",
-            "select_all": "Selecteer alles",
-            "undo": "Ongedaan maken"
-        },
-        "h5peditor": {
-            "new": "Nieuwe H5P",
-            "open": "Open H5P"
-        },
-        "help": {
-            "about": "Over",
-            "follow_us_on_twitter": "Volg ons op Twitter",
-            "label": "Helpen",
-            "report_issue": "Probleem melden",
-            "toggle_developer_tools": "Schakel Developer Tools in of uit"
-        },
-        "mac": {
-            "hide": "Verberg Lumi",
-            "hideothers": "Verberg anderen",
-            "services": "Diensten",
-            "unhide": "Toon alles"
-        },
-        "quit": "Afsluiten",
-        "run": {
-            "label": "Loop",
-            "upload": "Uploaden naar Lumi Run"
-        },
-        "view": {
-            "label": "Visie",
-            "resetZoom": "Daadwerkelijke grootte",
-            "togglefullscreen": "Volledig scherm activeren",
-            "zoomIn": "In zoomen",
-            "zoomOut": "Uitzoomen"
-        },
-        "window": {
-            "close": "Dichtbij",
-            "front": "Breng alles naar voren",
-            "label": "Venster",
-            "minimize": "Minimaliseren",
-            "show": "Tonen",
-            "zoom": "Zoom"
-        }
+    "updater": {
+      "availableText": "Update is beschikbaar. De applicatie zal de update installeren en opnieuw opstarten.",
+      "availableTitle": "Installeer updates",
+      "updateDownloaded": "Update is gedownload en wordt geïnstalleerd zodra u Lumi afsluit."
+    }
+  },
+  "prerelease": {
+    "description": "Experimentele functies inschakelen voordat ze worden vrijgegeven",
+    "title": "Pre-releasefuncties"
+  },
+  "privacy_policy": {
+    "consent": "Ik heb het privacybeleid gelezen en ga ermee akkoord.",
+    "title": "Privacybeleid"
+  },
+  "run": {
+    "description": "Met Lumi Run kunt u uw H5P met één klik uploaden en hosten.",
+    "legal": "Om deze service te gebruiken, moet u akkoord gaan met de servicevoorwaarden, het privacybeleid en ons een e-mailadres voor contact verstrekken.",
+    "link": {
+      "header": "Koppeling"
+    },
+    "list": {
+      "deleteDialog": {
+        "cancel": "Annuleren",
+        "confirm": "Bevestigen",
+        "description": "Wil je echt run {{runId}}",
+        "title": "Verwijder Uitvoeren {{runId}}"
+      },
+      "header": "Geüploade H5P",
+      "noUploadedH5P": "Geen geüploade H5P"
     },
     "notifications": {
-        "analytics": {
-            "import": {
-                "brokenFiles": "{{count}} gebroken bestand gevonden",
-                "brokenFiles_plural": "{{count}} kapotte bestanden gevonden",
-                "error": "Geen geldige bestanden gevonden",
-                "success": "Geïmporteerde rapportbestanden"
-            }
+      "delete": {
+        "success": "{{id}} succesvol verwijderd van Lumi.run"
+      },
+      "upload": {
+        "success": "H5P is geüpload naar Lumi.run"
+      }
+    },
+    "setupDialog": {
+      "close": "Dichtbij",
+      "start": "Begin"
+    },
+    "tos": {
+      "description": "Ik heb de servicevoorwaarden gelezen en ga ermee akkoord.",
+      "header": "Servicevoorwaarden"
+    },
+    "upload": "Uploaden",
+    "uploadDialog": {
+      "goToRun": "Ga naar hardlopen",
+      "ok": "OK",
+      "processing": "Verwerken",
+      "success": "Uw H5P is geüpload naar Lumi.run. U kunt het openen en delen via de volgende link.",
+      "uploading": "Uploaden"
+    }
+  },
+  "settings": {
+    "account": {
+      "email": {
+        "change": "E-mailadres wijzigen",
+        "not-set": "E-mail is niet ingesteld",
+        "title": "E-mail"
+      },
+      "label": "Account"
+    },
+    "appbar": {
+      "label": "Instellingen",
+      "save": "Opslaan"
+    },
+    "enable": "Inschakelen",
+    "general": {
+      "header": "Algemeen"
+    },
+    "h5p-library-administration": {
+      "can-not-be-deleted": "Deze bibliotheek kan niet worden verwijderd, omdat deze in {{count}} andere bibliotheek wordt gebruikt",
+      "can-not-be-deleted_plural": "Deze bibliotheek kan niet worden verwijderd, omdat deze in {{count}} andere bibliotheken wordt gebruikt",
+      "details": "Details",
+      "header": "Geïnstalleerde H5P-bibliotheken",
+      "library-details": {
+        "addon": "Toevoegen",
+        "author": "Schrijver",
+        "dependentsCount": "Aantal bibliotheken dat de bibliotheek gebruikt",
+        "description": "Omschrijving",
+        "embedTypes": "Toegestane typen insluiten",
+        "fullscreen": "Ondersteunt volledig scherm",
+        "header": "Bibliotheekdetails",
+        "instancesAsDependencyCount": "Objecten waarin deze bibliotheek wordt gebruikt door een andere bibliotheek",
+        "instancesCount": "Objecten gemaakt met deze bibliotheek als het belangrijkste inhoudstype",
+        "license": "Licentie",
+        "restricted": "Beperkt (kan alleen worden gebruikt met privilege)",
+        "standalone": "Zelfstandig inhoudstype"
+      },
+      "notifications": {
+        "delete": {
+          "error": "Fout bij het verwijderen van bibliotheek {{title}} ( {{version}} ).",
+          "success": "Bibliotheek {{title}} ( {{version}} ) is verwijderd."
         },
-        "general": {
-            "econnrefused": "Er lijkt een probleem te zijn met uw internetverbinding."
+        "get": {
+          "error": "Fout bij het ophalen van gedetailleerde informatie over bibliotheek {{library.title}} ( {{version}} )."
         },
-        "h5peditor": {
-            "export_as_html": {
-                "error": "Kan H5P niet exporteren",
-                "success": "H5P is succesvol geëxporteerd"
-            },
-            "open": {
-                "error": "Kan H5P niet openen."
-            },
-            "save": {
-                "error": "H5P kan niet worden opgeslagen.",
-                "success": "H5P opgeslagen!"
-            }
-        },
-        "updater": {
-            "availableText": "Update is beschikbaar. De applicatie zal de update installeren en opnieuw opstarten.",
-            "availableTitle": "Installeer updates",
-            "updateDownloaded": "Update is gedownload en wordt geïnstalleerd zodra u Lumi afsluit."
+        "upload": {
+          "error": "Fout bij het uploaden van pakket.",
+          "success-no-update": "Upload succesvol, maar er zijn geen bibliotheken geïnstalleerd of bijgewerkt. Het inhoudstype is waarschijnlijk al op het systeem geïnstalleerd.",
+          "success-with-update": "Met succes {{installed}} geïnstalleerd en {{updated}} bibliotheken bijgewerkt."
         }
+      },
+      "upload_and_install": "Upload en installeer Bibliotheek"
     },
-    "prerelease": {
-        "description": "Experimentele functies inschakelen voordat ze worden vrijgegeven",
-        "title": "Pre-releasefuncties"
+    "links": {
+      "header": "Links"
     },
-    "privacy_policy": {
-        "consent": "Ik heb het privacybeleid gelezen en ga ermee akkoord.",
-        "title": "Privacybeleid"
-    },
-    "run": {
-        "description": "Met Lumi Run kunt u uw H5P met één klik uploaden en hosten.",
-        "legal": "Om deze service te gebruiken, moet u akkoord gaan met de servicevoorwaarden, het privacybeleid en ons een e-mailadres voor contact verstrekken.",
-        "link": {
-            "header": "Koppeling"
-        },
-        "list": {
-            "deleteDialog": {
-                "cancel": "Annuleren",
-                "confirm": "Bevestigen",
-                "description": "Wil je echt run {{runId}}",
-                "title": "Verwijder Uitvoeren {{runId}}"
-            },
-            "header": "Geüploade H5P",
-            "noUploadedH5P": "Geen geüploade H5P"
-        },
-        "notifications": {
-            "delete": {
-                "success": "{{id}} succesvol verwijderd van Lumi.run"
-            },
-            "upload": {
-                "success": "H5P is geüpload naar Lumi.run"
-            }
-        },
-        "setupDialog": {
-            "close": "Dichtbij",
-            "start": "Begin"
-        },
-        "tos": {
-            "description": "Ik heb de servicevoorwaarden gelezen en ga ermee akkoord.",
-            "header": "Servicevoorwaarden"
-        },
-        "upload": "Uploaden",
-        "uploadDialog": {
-            "goToRun": "Ga naar hardlopen",
-            "ok": "OK",
-            "processing": "Verwerken",
-            "success": "Uw H5P is geüpload naar Lumi.run. U kunt het openen en delen via de volgende link.",
-            "uploading": "Uploaden"
-        }
-    },
-    "settings": {
-        "account": {
-            "email": {
-                "change": "E-mailadres wijzigen",
-                "not-set": "E-mail is niet ingesteld",
-                "title": "E-mail"
-            },
-            "label": "Account"
-        },
-        "appbar": {
-            "label": "Instellingen",
-            "save": "Opslaan"
-        },
-        "enable": "Inschakelen",
-        "general": {
-            "header": "Algemeen"
-        },
-        "h5p-library-administration": {
-            "can-not-be-deleted": "Deze bibliotheek kan niet worden verwijderd, omdat deze in {{count}} andere bibliotheek wordt gebruikt",
-            "can-not-be-deleted_plural": "Deze bibliotheek kan niet worden verwijderd, omdat deze in {{count}} andere bibliotheken wordt gebruikt",
-            "details": "Details",
-            "header": "Geïnstalleerde H5P-bibliotheken",
-            "library-details": {
-                "addon": "Toevoegen",
-                "author": "Schrijver",
-                "dependentsCount": "Aantal bibliotheken dat de bibliotheek gebruikt",
-                "description": "Omschrijving",
-                "embedTypes": "Toegestane typen insluiten",
-                "fullscreen": "Ondersteunt volledig scherm",
-                "header": "Bibliotheekdetails",
-                "instancesAsDependencyCount": "Objecten waarin deze bibliotheek wordt gebruikt door een andere bibliotheek",
-                "instancesCount": "Objecten gemaakt met deze bibliotheek als het belangrijkste inhoudstype",
-                "license": "Licentie",
-                "restricted": "Beperkt (kan alleen worden gebruikt met privilege)",
-                "standalone": "Zelfstandig inhoudstype"
-            },
-            "notifications": {
-                "delete": {
-                    "error": "Fout bij het verwijderen van bibliotheek {{title}} ( {{version}} ).",
-                    "success": "Bibliotheek {{title}} ( {{version}} ) is verwijderd."
-                },
-                "get": {
-                    "error": "Fout bij het ophalen van gedetailleerde informatie over bibliotheek {{library.title}} ( {{version}} )."
-                },
-                "upload": {
-                    "error": "Fout bij het uploaden van pakket.",
-                    "success-no-update": "Upload succesvol, maar er zijn geen bibliotheken geïnstalleerd of bijgewerkt. Het inhoudstype is waarschijnlijk al op het systeem geïnstalleerd.",
-                    "success-with-update": "Met succes {{installed}} geïnstalleerd en {{updated}} bibliotheken bijgewerkt."
-                }
-            },
-            "upload_and_install": "Upload en installeer Bibliotheek"
-        },
-        "links": {
-            "header": "Links"
-        },
-        "menu": {
-            "account": "Account",
-            "general": "Algemeen",
-            "h5p-library-administration": "H5P-bibliotheken",
-            "updates": "Updates"
-        },
-        "updates": {
-            "header": "Updates"
-        }
-    },
-    "setup_dialog": {
-        "accept_all": "Accepteer alles",
-        "accept_selected": "Geselecteerde accepteren",
-        "consent_warning": "U moet minimaal instemmen met het privacybeleid om deze applicatie te gebruiken.",
-        "description": "Het beschermen van de privacy van het individu is belangrijk voor ons. We verzamelen alleen de informatie die u ons wilt geven, en we verwerken deze met uw toestemming. We willen zo transparant mogelijk zijn. Lumi is echter afhankelijk van sommige verbindingen en gegevensoverdrachten om te werken."
+    "menu": {
+      "account": "Account",
+      "general": "Algemeen",
+      "h5p-library-administration": "H5P-bibliotheken",
+      "updates": "Updates"
     },
     "updates": {
-        "checkForUpdate": {
-            "checkButton": "Rekening",
-            "description": "Controleren op updates",
-            "title": "Controleren op updates"
-        },
-        "consent": "Ik sta deze applicatie toe om automatisch te controleren op updates.",
-        "description": "Download automatisch de laatste versie.",
-        "restartAndInstall": "Installeren en herstarten",
-        "title": "Automatische updates",
-        "badge": "Update beschikbaar"
-    },
-    "usage_statistics": {
-        "consent": "Ik sta deze applicatie toe om anonieme gebruiksstatistieken te verzenden.",
-        "description": " Help ons onze software en services te verbeteren door anonieme gebruiksstatistieken te verzenden.",
-        "title": "Gebruiksstatistieken"
+      "header": "Updates"
     }
+  },
+  "setup_dialog": {
+    "accept_all": "Accepteer alles",
+    "accept_selected": "Geselecteerde accepteren",
+    "consent_warning": "U moet minimaal instemmen met het privacybeleid om deze applicatie te gebruiken.",
+    "description": "Het beschermen van de privacy van het individu is belangrijk voor ons. We verzamelen alleen de informatie die u ons wilt geven, en we verwerken deze met uw toestemming. We willen zo transparant mogelijk zijn. Lumi is echter afhankelijk van sommige verbindingen en gegevensoverdrachten om te werken."
+  },
+  "updates": {
+    "checkForUpdate": {
+      "checkButton": "Rekening",
+      "description": "Controleren op updates",
+      "title": "Controleren op updates"
+    },
+    "consent": "Ik sta deze applicatie toe om automatisch te controleren op updates.",
+    "description": "Download automatisch de laatste versie.",
+    "restartAndInstall": "Installeren en herstarten",
+    "title": "Automatische updates",
+    "badge": "Update beschikbaar"
+  },
+  "usage_statistics": {
+    "consent": "Ik sta deze applicatie toe om anonieme gebruiksstatistieken te verzenden.",
+    "description": " Help ons onze software en services te verbeteren door anonieme gebruiksstatistieken te verzenden.",
+    "title": "Gebruiksstatistieken"
+  },
+  "cloudhub": {
+    "description": "Zoek naar inhoud of publiceer uw inhoud."
+  }
 }

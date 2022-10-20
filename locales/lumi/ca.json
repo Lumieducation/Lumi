@@ -1,375 +1,378 @@
 {
-    "editor": {
-        "default_name": "nou H5P",
-        "tab": {
-            "view": "Veure",
-            "edit": "Edita"
-        },
-        "sidebar": {
-            "open": "Obriu el fitxer H5P",
-            "create": "Nou fitxer H5P",
-            "noOpenFiles": "No hi ha fitxers oberts"
-        },
-        "startPage": {
-            "title": "Editor H5P",
-            "welcomeMessage": "L'editor H5P de Lumi és una aplicació independent que us permet veure, editar i crear H5P.",
-            "open": "Obriu l'H5P existent",
-            "create": "creeu un nou H5P",
-            "start": "començar"
-        },
-        "exportDialog": {
-            "title": "Configuració d'exportació",
-            "format": {
-                "title": "Format",
-                "bundleLabel": "Fitxer HTML tot en un",
-                "bundleHint": "El fitxer pot créixer massa per a alguns equips si incloeu molts fitxers multimèdia.",
-                "externalLabel": "Un fitxer HTML i diversos fitxers multimèdia",
-                "externalHint": "Al següent pas, se us demanarà un nom per al fitxer HTML. Els fitxers multimèdia es col·locaran a carpetes que comencin amb el mateix nom que el fitxer.",
-                "scorm": {
-                    "label": "Paquet SCORM",
-                    "masteryScoreLabel": "Puntuació de domini"
-                }
-            },
-            "reporter": {
-                "hint": "Si afegiu el reporter, els estudiants poden desar un fitxer amb el seu progrés i us el poden enviar.",
-                "switchLabel": "Inclou el periodista",
-                "learnMoreLink": "Obteniu més informació al respecte aquí."
-            },
-            "cancelButton": "Cancel · lar",
-            "exportButton": "Exporta ara",
-            "filePicker": {
-                "title": "Exporta com a ...",
-                "buttonLabel": "Exporta",
-                "formatNames": {
-                    "bundle": "Fitxer HTML tot en un",
-                    "external": "Fitxer HTML",
-                    "scorm": "Fitxer SCORM"
-                }
-            },
-            "defaults": {
-                "authorName": "Autor H5P",
-                "title": "Contingut H5P",
-                "filename": "La meva exportació H5P"
-            },
-            "validationErrors": {
-                "errorNaN": "El valor introduït no és un número",
-                "errorRangeMin": "El valor ha de ser superior a {{min}}",
-                "errorRangeMax": "El valor ha de ser inferior a {{max}}",
-                "errorRange": "El valor ha d'estar entre {{min}} i {{max}}"
-            },
-            "addFunctionality": {
-                "title": "Afegeix funcionalitat",
-                "rights": "Mostra els drets i els permisos",
-                "embed": "Mostra l'enllaç incrustat"
-            },
-            "displayOptions": {
-                "marginX": "Marge dret i esquerre",
-                "marginY": "Marge superior i inferior",
-                "restrictWidthAndAlign": "Restringeix l'amplada i alinea'l centralment",
-                "maximumWidth": "Amplada màxima",
-                "addCss": "Afegeix un fitxer CSS",
-                "chooseCssFile": "triar",
-                "title": "Opcions de visualització"
-            },
-            "pixelsAbbreviation": "px",
-            "cssFilePicker": {
-                "formatName": "Fitxer CSS"
-            }
-        },
-        "saveAsDialog": {
-            "title": "Guardar com",
-            "fallbackFilename": "El meu fitxer H5P"
-        },
-        "extensionName": "Paquet H5P"
+  "editor": {
+    "default_name": "nou H5P",
+    "tab": {
+      "view": "Veure",
+      "edit": "Edita"
     },
-    "settings": {
-        "appbar": {
-            "label": "Configuració",
-            "save": "Desa"
-        },
-        "enable": "Activa",
-        "menu": {
-            "general": "General",
-            "updates": "Actualitzacions",
-            "account": "Compte",
-            "h5p-library-administration": "Biblioteques H5P"
-        },
-        "general": {
-            "header": "General"
-        },
-        "updates": {
-            "header": "Actualitzacions"
-        },
-        "account": {
-            "label": "Compte",
-            "email": {
-                "title": "Correu electrònic",
-                "change": "Canviar e-mail",
-                "not-set": "El correu electrònic no està definit"
-            }
-        },
-        "h5p-library-administration": {
-            "header": "Biblioteques H5P instal·lades",
-            "notifications": {
-                "upload": {
-                    "success-no-update": "La càrrega s'ha realitzat correctament, però no s'ha instal·lat ni actualitzat cap biblioteca. El tipus de contingut probablement ja estigui instal·lat al sistema.",
-                    "success-with-update": "S'han instal·lat {{installed}} biblioteques i s'han actualitzat {{updated}}",
-                    "error": "Error en penjar el paquet."
-                },
-                "delete": {
-                    "success": "La biblioteca {{title}} ( {{version}} ) s'ha suprimit correctament.",
-                    "error": "Error en suprimir la biblioteca {{title}} ( {{version}} )."
-                },
-                "get": {
-                    "error": "Error en obtenir informació detallada sobre la biblioteca {{library.title}} ( {{version}} )."
-                }
-            },
-            "upload_and_install": "Pengeu i instal·leu la biblioteca",
-            "details": "Detalls",
-            "can-not-be-deleted": "Aquesta biblioteca no es pot suprimir, ja que s'utilitza en {{count}} biblioteques més",
-            "can-not-be-deleted_plural": "Aquesta biblioteca no es pot suprimir, ja que s'utilitza en altres {{count}}",
-            "library-details": {
-                "header": "Detalls de la biblioteca",
-                "author": "Autor",
-                "description": "Descripció",
-                "license": "Llicència",
-                "standalone": "Tipus de contingut autònom",
-                "restricted": "Restringit (només es pot utilitzar amb privilegis)",
-                "fullscreen": "Admet pantalla completa",
-                "addon": "Afegir",
-                "embedTypes": "Tipus d'inserció permesos",
-                "dependentsCount": "Nombre de biblioteques que utilitzen la biblioteca",
-                "instancesCount": "Objectes creats amb aquesta biblioteca com a tipus de contingut principal",
-                "instancesAsDependencyCount": "Objectes en què aquesta biblioteca la fa servir una altra biblioteca"
-            }
-        },
-        "links": {
-            "header": "Enllaços"
+    "sidebar": {
+      "open": "Obriu el fitxer H5P",
+      "create": "Nou fitxer H5P",
+      "noOpenFiles": "No hi ha fitxers oberts"
+    },
+    "startPage": {
+      "title": "Editor H5P",
+      "welcomeMessage": "L'editor H5P de Lumi és una aplicació independent que us permet veure, editar i crear H5P.",
+      "open": "Obriu l'H5P existent",
+      "create": "creeu un nou H5P",
+      "start": "començar"
+    },
+    "exportDialog": {
+      "title": "Configuració d'exportació",
+      "format": {
+        "title": "Format",
+        "bundleLabel": "Fitxer HTML tot en un",
+        "bundleHint": "El fitxer pot créixer massa per a alguns equips si incloeu molts fitxers multimèdia.",
+        "externalLabel": "Un fitxer HTML i diversos fitxers multimèdia",
+        "externalHint": "Al següent pas, se us demanarà un nom per al fitxer HTML. Els fitxers multimèdia es col·locaran a carpetes que comencin amb el mateix nom que el fitxer.",
+        "scorm": {
+          "label": "Paquet SCORM",
+          "masteryScoreLabel": "Puntuació de domini"
         }
-    },
-    "analytics": {
-        "startPage": {
-            "title": "Lumi Analytics",
-            "welcomeMessage": "L’eina d’anàlisi de Lumi us permet importar informes d’usuaris i visualitzar-los",
-            "start": "Començar",
-            "learn_more": "aprèn més",
-            "open": "Trieu una carpeta amb fitxers .lumi"
-        },
-        "name": "Nom",
-        "average": "Mitjana",
-        "searchPlaceholder": "Cerca noms dels estudiants ...",
-        "brokenFiles": "Llista de fitxers trencats",
-        "errors": {
-            "no-content-json": "El contingut H5P no s'ha afegit correctament al fitxer .lumi.",
-            "json-parse-error": "El fitxer .lumi conté contingut no vàlid (JSON no s'ha analitzat).",
-            "determine-name": "No s'ha pogut determinar el nom de l'estudiant.",
-            "invalid-interactions": "Algunes de les interaccions estan trencades.",
-            "invalid-statements": "Algunes de les accions registrades dels estudiants es trenquen."
+      },
+      "reporter": {
+        "hint": "Si afegiu el reporter, els estudiants poden desar un fitxer amb el seu progrés i us el poden enviar.",
+        "switchLabel": "Inclou el periodista",
+        "learnMoreLink": "Obteniu més informació al respecte aquí."
+      },
+      "cancelButton": "Cancel · lar",
+      "exportButton": "Exporta ara",
+      "filePicker": {
+        "title": "Exporta com a ...",
+        "buttonLabel": "Exporta",
+        "formatNames": {
+          "bundle": "Fitxer HTML tot en un",
+          "external": "Fitxer HTML",
+          "scorm": "Fitxer SCORM"
         }
+      },
+      "defaults": {
+        "authorName": "Autor H5P",
+        "title": "Contingut H5P",
+        "filename": "La meva exportació H5P"
+      },
+      "validationErrors": {
+        "errorNaN": "El valor introduït no és un número",
+        "errorRangeMin": "El valor ha de ser superior a {{min}}",
+        "errorRangeMax": "El valor ha de ser inferior a {{max}}",
+        "errorRange": "El valor ha d'estar entre {{min}} i {{max}}"
+      },
+      "addFunctionality": {
+        "title": "Afegeix funcionalitat",
+        "rights": "Mostra els drets i els permisos",
+        "embed": "Mostra l'enllaç incrustat"
+      },
+      "displayOptions": {
+        "marginX": "Marge dret i esquerre",
+        "marginY": "Marge superior i inferior",
+        "restrictWidthAndAlign": "Restringeix l'amplada i alinea'l centralment",
+        "maximumWidth": "Amplada màxima",
+        "addCss": "Afegeix un fitxer CSS",
+        "chooseCssFile": "triar",
+        "title": "Opcions de visualització"
+      },
+      "pixelsAbbreviation": "px",
+      "cssFilePicker": {
+        "formatName": "Fitxer CSS"
+      }
     },
-    "bug_report": {
-        "title": "Informes d'errors i fallades",
-        "description": "Ajudeu-nos a millorar el nostre programari i serveis enviant informes anònims d’errors i errors.",
-        "consent": "Permeto que aquesta aplicació enviï informes d'errors i errors.",
-        "email": {
-            "subject": "Informe de problemes Lumi",
-            "body": "Per obtenir una solució ràpida al vostre problema, escriviu sobre:\n\n  - Versió Lumi: <empleneu aquí>, Sistema operatiu: <empleneu aquí>\n  - Descriu el problema\n  - descriure com podem reproduir el problema a les nostres màquines\n  - Envieu-nos una mostra .h5p o fitxers exportats si el problema està relacionat amb els fitxers\n\nSi ens envieu missatges en un idioma diferent de l'anglès o l'alemany, utilitzarem una eina de traducció automàtica per traduir el vostre missatge."
-        }
+    "saveAsDialog": {
+      "title": "Guardar com",
+      "fallbackFilename": "El meu fitxer H5P"
     },
-    "usage_statistics": {
-        "title": "Estadístiques d’ús",
-        "description": " Ajudeu-nos a millorar el nostre programari i serveis enviant estadístiques d’ús anònimes.",
-        "consent": "Permeto que aquesta aplicació enviï estadístiques d'ús anònimes."
+    "extensionName": "Paquet H5P"
+  },
+  "settings": {
+    "appbar": {
+      "label": "Configuració",
+      "save": "Desa"
     },
-    "updates": {
-        "title": "Actualitzacions automàtiques",
-        "description": "Obteniu la versió més recent automàticament.",
-        "consent": "Permeto que aquesta aplicació comprovi automàticament si hi ha actualitzacions.",
-        "checkForUpdate": {
-            "title": "Buscar actualitzacions",
-            "description": "Buscar actualitzacions",
-            "checkButton": "Comprovar"
-        },
-        "restartAndInstall": "Instal·leu i reinicieu",
-        "badge": "Actualització disponible"
-    },
-    "language": {
-        "title": "Llenguatge",
-        "description": "Canvieu l'idioma de l'aplicació.",
-        "help_translate": "Ajudeu-nos a traduir!"
-    },
-    "privacy_policy": {
-        "title": "Política de privacitat",
-        "consent": "He llegit i accepto la política de privadesa."
-    },
-    "setup_dialog": {
-        "description": "Protegir la privadesa de la persona és important per a nosaltres. Només recopilem la informació que trieu per donar-nos i la processem amb el vostre consentiment. Volem ser el més transparents possible. No obstant això, Lumi confia en algunes connexions i transferències de dades per funcionar.",
-        "consent_warning": "Per utilitzar aquesta aplicació, heu de consentir almenys la política de privadesa.",
-        "accept_all": "Accepta-ho tot",
-        "accept_selected": "Accepta seleccionats"
-    },
+    "enable": "Activa",
     "menu": {
-        "quit": "Deixa",
-        "file": {
-            "label": "Dossier",
-            "open": "Obriu els fitxers analítics",
-            "save": "Desa",
-            "save_as": "Guardar com...",
-            "export": "Exporta ...",
-            "edit": "Edita",
-            "undo": "Desfés",
-            "redo": "Llestos",
-            "cut": "Tallar",
-            "copy": "Copia",
-            "paste": "Enganxa",
-            "select_all": "Seleccionar tot"
-        },
-        "h5peditor": {
-            "new": "Nou H5P",
-            "open": "Obre H5P"
-        },
-        "help": {
-            "label": "Ajuda",
-            "report_issue": "Informa d'un problema",
-            "toggle_developer_tools": "Commuta les eines per a desenvolupadors",
-            "follow_us_on_twitter": "Segueix-nos a Twitter",
-            "about": "Sobre"
-        },
-        "mac": {
-            "services": "Serveis",
-            "hide": "Amaga Lumi",
-            "hideothers": "Amaga els altres",
-            "unhide": "Mostrar tots"
-        },
-        "window": {
-            "label": "Finestra",
-            "show": "Espectacle",
-            "minimize": "Minimitzar",
-            "zoom": "Zoom",
-            "front": "Porteu-ho tot al davant",
-            "close": "Tanca"
-        },
-        "view": {
-            "label": "Veure",
-            "resetZoom": "Mida actual",
-            "zoomIn": "Apropar",
-            "zoomOut": "Disminuir el zoom",
-            "togglefullscreen": "Commuta la pantalla completa"
-        },
-        "run": {
-            "label": "Correr",
-            "upload": "Pengeu a Lumi Run"
-        }
-    },
-    "notifications": {
-        "analytics": {
-            "import": {
-                "error": "No s'ha trobat cap fitxer vàlid",
-                "success": "Fitxers d'informes importats",
-                "brokenFiles": "S'ha trobat {{count}}",
-                "brokenFiles_plural": "S'han trobat {{count}}"
-            }
-        },
-        "h5peditor": {
-            "save": {
-                "success": "H5P desat.",
-                "error": "No s'ha pogut desar l'H5P."
-            },
-            "open": {
-                "error": "No s'ha pogut obrir l'H5P."
-            },
-            "export_as_html": {
-                "success": "H5P s'ha exportat correctament",
-                "error": "No s'ha pogut exportar H5P"
-            }
-        },
-        "general": {
-            "econnrefused": "Sembla que hi ha un problema amb la vostra connexió a Internet."
-        },
-        "updater": {
-            "availableText": "L'actualització està disponible. L'aplicació instal·larà l'actualització i reiniciarà.",
-            "availableTitle": "Instal·leu les actualitzacions",
-            "updateDownloaded": "L'actualització s'ha baixat i s'instal·larà un cop sortiu de Lumi."
-        }
-    },
-    "auth": {
-        "set_email": "Estableix el correu electrònic",
-        "email": "Correu electrònic",
-        "code": "Codi",
-        "verify_code": "Verifiqueu el codi",
-        "verify_email": "verificar Correu",
-        "notification": {
-            "success": "{{email}} s'ha validat correctament",
-            "pending": "S'ha enviat un codi de verificació a {{email}} . Consulteu els vostres correus electrònics.",
-            "logout": {
-                "success": "Heu tancat la sessió."
-            }
-        },
-        "error": {
-            "no-valid-email": "{{email}} no és una adreça electrònica vàlida.",
-            "econnrefused": "No s'ha pogut contactar amb el servidor Lumi Auth. Comproveu la vostra connexió a Internet."
-        },
-        "cancel": "Cancel · lar",
-        "logout": "Tancar sessió"
-    },
-    "dialog": {
-        "close": "Tanca"
+      "general": "General",
+      "updates": "Actualitzacions",
+      "account": "Compte",
+      "h5p-library-administration": "Biblioteques H5P"
     },
     "general": {
-        "delete": "Suprimeix",
-        "copyClipboard": "S'ha copiat {{value}} al porta-retalls"
+      "header": "General"
     },
-    "errors": {
-        "codes": {
-            "econnrefused": "Connexió rebutjada"
+    "updates": {
+      "header": "Actualitzacions"
+    },
+    "account": {
+      "label": "Compte",
+      "email": {
+        "title": "Correu electrònic",
+        "change": "Canviar e-mail",
+        "not-set": "El correu electrònic no està definit"
+      }
+    },
+    "h5p-library-administration": {
+      "header": "Biblioteques H5P instal·lades",
+      "notifications": {
+        "upload": {
+          "success-no-update": "La càrrega s'ha realitzat correctament, però no s'ha instal·lat ni actualitzat cap biblioteca. El tipus de contingut probablement ja estigui instal·lat al sistema.",
+          "success-with-update": "S'han instal·lat {{installed}} biblioteques i s'han actualitzat {{updated}}",
+          "error": "Error en penjar el paquet."
         },
-        "messages": {
-            "econnrefused": "Connexió rebutjada"
+        "delete": {
+          "success": "La biblioteca {{title}} ( {{version}} ) s'ha suprimit correctament.",
+          "error": "Error en suprimir la biblioteca {{title}} ( {{version}} )."
+        },
+        "get": {
+          "error": "Error en obtenir informació detallada sobre la biblioteca {{library.title}} ( {{version}} )."
         }
+      },
+      "upload_and_install": "Pengeu i instal·leu la biblioteca",
+      "details": "Detalls",
+      "can-not-be-deleted": "Aquesta biblioteca no es pot suprimir, ja que s'utilitza en {{count}} biblioteques més",
+      "can-not-be-deleted_plural": "Aquesta biblioteca no es pot suprimir, ja que s'utilitza en altres {{count}}",
+      "library-details": {
+        "header": "Detalls de la biblioteca",
+        "author": "Autor",
+        "description": "Descripció",
+        "license": "Llicència",
+        "standalone": "Tipus de contingut autònom",
+        "restricted": "Restringit (només es pot utilitzar amb privilegis)",
+        "fullscreen": "Admet pantalla completa",
+        "addon": "Afegir",
+        "embedTypes": "Tipus d'inserció permesos",
+        "dependentsCount": "Nombre de biblioteques que utilitzen la biblioteca",
+        "instancesCount": "Objectes creats amb aquesta biblioteca com a tipus de contingut principal",
+        "instancesAsDependencyCount": "Objectes en què aquesta biblioteca la fa servir una altra biblioteca"
+      }
     },
-    "prerelease": {
-        "title": "Funcions de pre-llançament",
-        "description": "Activeu les funcions experimentals abans que es publiquin"
+    "links": {
+      "header": "Enllaços"
+    }
+  },
+  "analytics": {
+    "startPage": {
+      "title": "Lumi Analytics",
+      "welcomeMessage": "L’eina d’anàlisi de Lumi us permet importar informes d’usuaris i visualitzar-los",
+      "start": "Començar",
+      "learn_more": "aprèn més",
+      "open": "Trieu una carpeta amb fitxers .lumi"
+    },
+    "name": "Nom",
+    "average": "Mitjana",
+    "searchPlaceholder": "Cerca noms dels estudiants ...",
+    "brokenFiles": "Llista de fitxers trencats",
+    "errors": {
+      "no-content-json": "El contingut H5P no s'ha afegit correctament al fitxer .lumi.",
+      "json-parse-error": "El fitxer .lumi conté contingut no vàlid (JSON no s'ha analitzat).",
+      "determine-name": "No s'ha pogut determinar el nom de l'estudiant.",
+      "invalid-interactions": "Algunes de les interaccions estan trencades.",
+      "invalid-statements": "Algunes de les accions registrades dels estudiants es trenquen."
+    }
+  },
+  "bug_report": {
+    "title": "Informes d'errors i fallades",
+    "description": "Ajudeu-nos a millorar el nostre programari i serveis enviant informes anònims d’errors i errors.",
+    "consent": "Permeto que aquesta aplicació enviï informes d'errors i errors.",
+    "email": {
+      "subject": "Informe de problemes Lumi",
+      "body": "Per obtenir una solució ràpida al vostre problema, escriviu sobre:\n\n  - Versió Lumi: <empleneu aquí>, Sistema operatiu: <empleneu aquí>\n  - Descriu el problema\n  - descriure com podem reproduir el problema a les nostres màquines\n  - Envieu-nos una mostra .h5p o fitxers exportats si el problema està relacionat amb els fitxers\n\nSi ens envieu missatges en un idioma diferent de l'anglès o l'alemany, utilitzarem una eina de traducció automàtica per traduir el vostre missatge."
+    }
+  },
+  "usage_statistics": {
+    "title": "Estadístiques d’ús",
+    "description": " Ajudeu-nos a millorar el nostre programari i serveis enviant estadístiques d’ús anònimes.",
+    "consent": "Permeto que aquesta aplicació enviï estadístiques d'ús anònimes."
+  },
+  "updates": {
+    "title": "Actualitzacions automàtiques",
+    "description": "Obteniu la versió més recent automàticament.",
+    "consent": "Permeto que aquesta aplicació comprovi automàticament si hi ha actualitzacions.",
+    "checkForUpdate": {
+      "title": "Buscar actualitzacions",
+      "description": "Buscar actualitzacions",
+      "checkButton": "Comprovar"
+    },
+    "restartAndInstall": "Instal·leu i reinicieu",
+    "badge": "Actualització disponible"
+  },
+  "language": {
+    "title": "Llenguatge",
+    "description": "Canvieu l'idioma de l'aplicació.",
+    "help_translate": "Ajudeu-nos a traduir!"
+  },
+  "privacy_policy": {
+    "title": "Política de privacitat",
+    "consent": "He llegit i accepto la política de privadesa."
+  },
+  "setup_dialog": {
+    "description": "Protegir la privadesa de la persona és important per a nosaltres. Només recopilem la informació que trieu per donar-nos i la processem amb el vostre consentiment. Volem ser el més transparents possible. No obstant això, Lumi confia en algunes connexions i transferències de dades per funcionar.",
+    "consent_warning": "Per utilitzar aquesta aplicació, heu de consentir almenys la política de privadesa.",
+    "accept_all": "Accepta-ho tot",
+    "accept_selected": "Accepta seleccionats"
+  },
+  "menu": {
+    "quit": "Deixa",
+    "file": {
+      "label": "Dossier",
+      "open": "Obriu els fitxers analítics",
+      "save": "Desa",
+      "save_as": "Guardar com...",
+      "export": "Exporta ...",
+      "edit": "Edita",
+      "undo": "Desfés",
+      "redo": "Llestos",
+      "cut": "Tallar",
+      "copy": "Copia",
+      "paste": "Enganxa",
+      "select_all": "Seleccionar tot"
+    },
+    "h5peditor": {
+      "new": "Nou H5P",
+      "open": "Obre H5P"
+    },
+    "help": {
+      "label": "Ajuda",
+      "report_issue": "Informa d'un problema",
+      "toggle_developer_tools": "Commuta les eines per a desenvolupadors",
+      "follow_us_on_twitter": "Segueix-nos a Twitter",
+      "about": "Sobre"
+    },
+    "mac": {
+      "services": "Serveis",
+      "hide": "Amaga Lumi",
+      "hideothers": "Amaga els altres",
+      "unhide": "Mostrar tots"
+    },
+    "window": {
+      "label": "Finestra",
+      "show": "Espectacle",
+      "minimize": "Minimitzar",
+      "zoom": "Zoom",
+      "front": "Porteu-ho tot al davant",
+      "close": "Tanca"
+    },
+    "view": {
+      "label": "Veure",
+      "resetZoom": "Mida actual",
+      "zoomIn": "Apropar",
+      "zoomOut": "Disminuir el zoom",
+      "togglefullscreen": "Commuta la pantalla completa"
     },
     "run": {
-        "description": "Lumi Run us permet carregar i allotjar el vostre H5P amb un sol clic.",
-        "legal": "Per utilitzar aquest servei, heu d’acceptar les Condicions del servei, la política de privadesa i proporcionar-nos un correu electrònic de contacte.",
-        "tos": {
-            "header": "Termes del servei",
-            "description": "He llegit i accepto les condicions del servei."
-        },
-        "link": {
-            "header": "Enllaç"
-        },
-        "upload": "Pujar",
-        "list": {
-            "header": "H5P penjat",
-            "noUploadedH5P": "No hi ha H5P penjat",
-            "deleteDialog": {
-                "title": "Suprimeix l'execució {{runId}}",
-                "description": "Confirmes que vols suprimir l’execució {{runId}}",
-                "cancel": "Cancel · lar",
-                "confirm": "Confirmeu"
-            }
-        },
-        "uploadDialog": {
-            "success": "El vostre H5P s'ha carregat a Lumi.run. Podeu accedir-hi i compartir-lo amb el següent enllaç.",
-            "uploading": "S'està penjant",
-            "processing": "Processament",
-            "goToRun": "Vés a les curses",
-            "ok": "D'acord"
-        },
-        "setupDialog": {
-            "close": "Tanca",
-            "start": "Començar"
-        },
-        "notifications": {
-            "delete": {
-                "success": "S'ha suprimit correctament {{id}} de Lumi.run"
-            },
-            "upload": {
-                "success": "H5P s'ha penjat correctament a Lumi.run"
-            }
-        }
+      "label": "Correr",
+      "upload": "Pengeu a Lumi Run"
     }
+  },
+  "notifications": {
+    "analytics": {
+      "import": {
+        "error": "No s'ha trobat cap fitxer vàlid",
+        "success": "Fitxers d'informes importats",
+        "brokenFiles": "S'ha trobat {{count}}",
+        "brokenFiles_plural": "S'han trobat {{count}}"
+      }
+    },
+    "h5peditor": {
+      "save": {
+        "success": "H5P desat.",
+        "error": "No s'ha pogut desar l'H5P."
+      },
+      "open": {
+        "error": "No s'ha pogut obrir l'H5P."
+      },
+      "export_as_html": {
+        "success": "H5P s'ha exportat correctament",
+        "error": "No s'ha pogut exportar H5P"
+      }
+    },
+    "general": {
+      "econnrefused": "Sembla que hi ha un problema amb la vostra connexió a Internet."
+    },
+    "updater": {
+      "availableText": "L'actualització està disponible. L'aplicació instal·larà l'actualització i reiniciarà.",
+      "availableTitle": "Instal·leu les actualitzacions",
+      "updateDownloaded": "L'actualització s'ha baixat i s'instal·larà un cop sortiu de Lumi."
+    }
+  },
+  "auth": {
+    "set_email": "Estableix el correu electrònic",
+    "email": "Correu electrònic",
+    "code": "Codi",
+    "verify_code": "Verifiqueu el codi",
+    "verify_email": "verificar Correu",
+    "notification": {
+      "success": "{{email}} s'ha validat correctament",
+      "pending": "S'ha enviat un codi de verificació a {{email}} . Consulteu els vostres correus electrònics.",
+      "logout": {
+        "success": "Heu tancat la sessió."
+      }
+    },
+    "error": {
+      "no-valid-email": "{{email}} no és una adreça electrònica vàlida.",
+      "econnrefused": "No s'ha pogut contactar amb el servidor Lumi Auth. Comproveu la vostra connexió a Internet."
+    },
+    "cancel": "Cancel · lar",
+    "logout": "Tancar sessió"
+  },
+  "dialog": {
+    "close": "Tanca"
+  },
+  "general": {
+    "delete": "Suprimeix",
+    "copyClipboard": "S'ha copiat {{value}} al porta-retalls"
+  },
+  "errors": {
+    "codes": {
+      "econnrefused": "Connexió rebutjada"
+    },
+    "messages": {
+      "econnrefused": "Connexió rebutjada"
+    }
+  },
+  "prerelease": {
+    "title": "Funcions de pre-llançament",
+    "description": "Activeu les funcions experimentals abans que es publiquin"
+  },
+  "run": {
+    "description": "Lumi Run us permet carregar i allotjar el vostre H5P amb un sol clic.",
+    "legal": "Per utilitzar aquest servei, heu d’acceptar les Condicions del servei, la política de privadesa i proporcionar-nos un correu electrònic de contacte.",
+    "tos": {
+      "header": "Termes del servei",
+      "description": "He llegit i accepto les condicions del servei."
+    },
+    "link": {
+      "header": "Enllaç"
+    },
+    "upload": "Pujar",
+    "list": {
+      "header": "H5P penjat",
+      "noUploadedH5P": "No hi ha H5P penjat",
+      "deleteDialog": {
+        "title": "Suprimeix l'execució {{runId}}",
+        "description": "Confirmes que vols suprimir l’execució {{runId}}",
+        "cancel": "Cancel · lar",
+        "confirm": "Confirmeu"
+      }
+    },
+    "uploadDialog": {
+      "success": "El vostre H5P s'ha carregat a Lumi.run. Podeu accedir-hi i compartir-lo amb el següent enllaç.",
+      "uploading": "S'està penjant",
+      "processing": "Processament",
+      "goToRun": "Vés a les curses",
+      "ok": "D'acord"
+    },
+    "setupDialog": {
+      "close": "Tanca",
+      "start": "Començar"
+    },
+    "notifications": {
+      "delete": {
+        "success": "S'ha suprimit correctament {{id}} de Lumi.run"
+      },
+      "upload": {
+        "success": "H5P s'ha penjat correctament a Lumi.run"
+      }
+    }
+  },
+  "cloudhub": {
+    "description": "Cerca contingut o publica el teu contingut."
+  }
 }

@@ -1,375 +1,378 @@
 {
-    "editor": {
-        "default_name": "ny H5P",
-        "tab": {
-            "view": "Se",
-            "edit": "Redigera"
-        },
-        "sidebar": {
-            "open": "Öppna H5P-fil",
-            "create": "Ny H5P-fil",
-            "noOpenFiles": "Inga öppnade filer"
-        },
-        "startPage": {
-            "title": "H5P Editor",
-            "welcomeMessage": "Lumis H5P Editor är en fristående applikation som låter dig visa, redigera och skapa H5P.",
-            "open": "Öppna befintlig H5P",
-            "create": "skapa ny H5P",
-            "start": "Start"
-        },
-        "exportDialog": {
-            "title": "Exportera inställningar",
-            "format": {
-                "title": "Formatera",
-                "bundleLabel": "Allt-i-ett HTML-fil",
-                "bundleHint": "Filen kan växa för stor för vissa datorer om du inkluderar massor av mediefiler.",
-                "externalLabel": "En HTML-fil och flera mediefiler",
-                "externalHint": "Du kommer att bli ombedd att ange ett namn för HTML-filen i nästa steg. Mediefilerna läggs i mappar som börjar med samma namn som filen.",
-                "scorm": {
-                    "label": "SCORM-paket",
-                    "masteryScoreLabel": "Mastery poäng"
-                }
-            },
-            "reporter": {
-                "hint": "Om du lägger till reportern kan eleverna spara en fil med deras framsteg och skicka den till dig.",
-                "switchLabel": "Inkludera reporter",
-                "learnMoreLink": "Läs mer om det här."
-            },
-            "cancelButton": "Avbryt",
-            "exportButton": "Exportera nu",
-            "filePicker": {
-                "title": "Exportera som ...",
-                "buttonLabel": "Exportera",
-                "formatNames": {
-                    "bundle": "Allt-i-ett HTML-fil",
-                    "external": "HTML-fil",
-                    "scorm": "SCORM-fil"
-                }
-            },
-            "defaults": {
-                "authorName": "H5P Författare",
-                "title": "H5P-innehåll",
-                "filename": "Min H5P export"
-            },
-            "validationErrors": {
-                "errorNaN": "Det angivna värdet är inte ett tal",
-                "errorRangeMin": "Värdet måste vara större än {{min}}",
-                "errorRangeMax": "Värdet måste vara mindre än {{max}}",
-                "errorRange": "Värdet måste vara mellan {{min}} och {{max}}"
-            },
-            "addFunctionality": {
-                "title": "Lägg till funktionalitet",
-                "rights": "Visa rättigheter och behörigheter",
-                "embed": "Visa inbäddningslänk"
-            },
-            "displayOptions": {
-                "marginX": "Höger & vänster marginal",
-                "marginY": "Topp- och bottenmarginal",
-                "restrictWidthAndAlign": "Begränsa bredden och rikta in centralt",
-                "maximumWidth": "Maximal bredd",
-                "addCss": "Lägg till CSS-fil",
-                "chooseCssFile": "välja",
-                "title": "Skärmalternativ"
-            },
-            "pixelsAbbreviation": "px",
-            "cssFilePicker": {
-                "formatName": "CSS-fil"
-            }
-        },
-        "saveAsDialog": {
-            "title": "Spara som",
-            "fallbackFilename": "Min H5P-fil"
-        },
-        "extensionName": "H5P-paket"
+  "editor": {
+    "default_name": "ny H5P",
+    "tab": {
+      "view": "Se",
+      "edit": "Redigera"
     },
-    "settings": {
-        "appbar": {
-            "label": "inställningar",
-            "save": "Spara"
-        },
-        "enable": "Gör det möjligt",
-        "menu": {
-            "general": "Allmän",
-            "updates": "Uppdateringar",
-            "account": "konto",
-            "h5p-library-administration": "H5P-bibliotek"
-        },
-        "general": {
-            "header": "Allmän"
-        },
-        "updates": {
-            "header": "Uppdateringar"
-        },
-        "account": {
-            "label": "konto",
-            "email": {
-                "title": "E-post",
-                "change": "Byta e-mail",
-                "not-set": "E-postadressen har inte ställts in"
-            }
-        },
-        "h5p-library-administration": {
-            "header": "Installerade H5P-bibliotek",
-            "notifications": {
-                "upload": {
-                    "success-no-update": "Uppladdningen lyckades, men inga bibliotek installerades eller uppdaterades. Innehållstypen är förmodligen redan installerad på systemet.",
-                    "success-with-update": "{{installed}} installerats och {{updated}} bibliotek har uppdaterats.",
-                    "error": "Fel vid uppladdning av paket."
-                },
-                "delete": {
-                    "success": "{{title}} ( {{version}} ) har tagits bort.",
-                    "error": "Fel vid borttagning av bibliotek {{title}} ( {{version}} )."
-                },
-                "get": {
-                    "error": "Fel vid inhämtning av detaljerad information om bibliotek {{library.title}} ( {{version}} )."
-                }
-            },
-            "upload_and_install": "Ladda upp och installera bibliotek",
-            "details": "Detaljer",
-            "can-not-be-deleted": "Detta bibliotek kan inte tas bort eftersom det används i {{count}} andra bibliotek",
-            "can-not-be-deleted_plural": "Det här biblioteket kan inte raderas eftersom det används i {{count}} andra bibliotek",
-            "library-details": {
-                "header": "Biblioteksdetaljer",
-                "author": "Författare",
-                "description": "Beskrivning",
-                "license": "Licens",
-                "standalone": "Fristående innehållstyp",
-                "restricted": "Begränsad (kan endast användas med behörighet)",
-                "fullscreen": "Stöder helskärm",
-                "addon": "Tillägg",
-                "embedTypes": "Tillåtna inbäddningstyper",
-                "dependentsCount": "Antal bibliotek som använder biblioteket",
-                "instancesCount": "Objekt som skapats med detta bibliotek som huvudinnehållstyp",
-                "instancesAsDependencyCount": "Objekt där detta bibliotek används av ett annat bibliotek"
-            }
-        },
-        "links": {
-            "header": "Länkar"
+    "sidebar": {
+      "open": "Öppna H5P-fil",
+      "create": "Ny H5P-fil",
+      "noOpenFiles": "Inga öppnade filer"
+    },
+    "startPage": {
+      "title": "H5P Editor",
+      "welcomeMessage": "Lumis H5P Editor är en fristående applikation som låter dig visa, redigera och skapa H5P.",
+      "open": "Öppna befintlig H5P",
+      "create": "skapa ny H5P",
+      "start": "Start"
+    },
+    "exportDialog": {
+      "title": "Exportera inställningar",
+      "format": {
+        "title": "Formatera",
+        "bundleLabel": "Allt-i-ett HTML-fil",
+        "bundleHint": "Filen kan växa för stor för vissa datorer om du inkluderar massor av mediefiler.",
+        "externalLabel": "En HTML-fil och flera mediefiler",
+        "externalHint": "Du kommer att bli ombedd att ange ett namn för HTML-filen i nästa steg. Mediefilerna läggs i mappar som börjar med samma namn som filen.",
+        "scorm": {
+          "label": "SCORM-paket",
+          "masteryScoreLabel": "Mastery poäng"
         }
-    },
-    "analytics": {
-        "startPage": {
-            "title": "Lumi Analytics",
-            "welcomeMessage": "Lumis Analytics-verktyg låter dig importera användarrapporter och visualisera dem åt dig",
-            "start": "Start",
-            "learn_more": "lära sig mer",
-            "open": "Välj mapp med .lumi-filer"
-        },
-        "name": "namn",
-        "average": "Medel",
-        "searchPlaceholder": "Sök i studentnamn ...",
-        "brokenFiles": "Lista över trasiga filer",
-        "errors": {
-            "no-content-json": "H5P-innehållet har inte lagts till ordentligt i .lumi-filen.",
-            "json-parse-error": ".Lumi-filen innehåller ogiltigt innehåll (JSON analyserade inte).",
-            "determine-name": "Det gick inte att avgöra studentens namn.",
-            "invalid-interactions": "Några av interaktionerna är trasiga.",
-            "invalid-statements": "Några av de inspelade studenternas handlingar är trasiga."
+      },
+      "reporter": {
+        "hint": "Om du lägger till reportern kan eleverna spara en fil med deras framsteg och skicka den till dig.",
+        "switchLabel": "Inkludera reporter",
+        "learnMoreLink": "Läs mer om det här."
+      },
+      "cancelButton": "Avbryt",
+      "exportButton": "Exportera nu",
+      "filePicker": {
+        "title": "Exportera som ...",
+        "buttonLabel": "Exportera",
+        "formatNames": {
+          "bundle": "Allt-i-ett HTML-fil",
+          "external": "HTML-fil",
+          "scorm": "SCORM-fil"
         }
+      },
+      "defaults": {
+        "authorName": "H5P Författare",
+        "title": "H5P-innehåll",
+        "filename": "Min H5P export"
+      },
+      "validationErrors": {
+        "errorNaN": "Det angivna värdet är inte ett tal",
+        "errorRangeMin": "Värdet måste vara större än {{min}}",
+        "errorRangeMax": "Värdet måste vara mindre än {{max}}",
+        "errorRange": "Värdet måste vara mellan {{min}} och {{max}}"
+      },
+      "addFunctionality": {
+        "title": "Lägg till funktionalitet",
+        "rights": "Visa rättigheter och behörigheter",
+        "embed": "Visa inbäddningslänk"
+      },
+      "displayOptions": {
+        "marginX": "Höger & vänster marginal",
+        "marginY": "Topp- och bottenmarginal",
+        "restrictWidthAndAlign": "Begränsa bredden och rikta in centralt",
+        "maximumWidth": "Maximal bredd",
+        "addCss": "Lägg till CSS-fil",
+        "chooseCssFile": "välja",
+        "title": "Skärmalternativ"
+      },
+      "pixelsAbbreviation": "px",
+      "cssFilePicker": {
+        "formatName": "CSS-fil"
+      }
     },
-    "bug_report": {
-        "title": "Fel- och kraschrapporter",
-        "description": "Hjälp oss att förbättra vår programvara och våra tjänster genom att skicka anonyma krasch- och felrapporter.",
-        "consent": "Jag tillåter att denna applikation skickar fel- och kraschrapporter.",
-        "email": {
-            "subject": "Lumi problemrapport",
-            "body": "För att få en snabb lösning på ditt problem, vänligen skriv om:\n\n  - Lumi-version: <fyll i här>, Operativsystem: <fyll i här>\n  - beskriv problemet\n  - beskriva hur vi kan återskapa problemet på våra maskiner\n  - skicka oss exempel på .h5p eller exporterade filer om problemet är relaterat till filerna\n\nOm du skickar meddelanden till oss på ett annat språk än engelska eller tyska, kommer vi att använda ett verktyg för automatisk översättning för att översätta ditt meddelande."
-        }
+    "saveAsDialog": {
+      "title": "Spara som",
+      "fallbackFilename": "Min H5P-fil"
     },
-    "usage_statistics": {
-        "title": "Användningsstatistik",
-        "description": " Hjälp oss att förbättra vår programvara och våra tjänster genom att skicka anonym användningsstatistik.",
-        "consent": "Jag tillåter att denna applikation skickar anonym användningsstatistik."
+    "extensionName": "H5P-paket"
+  },
+  "settings": {
+    "appbar": {
+      "label": "inställningar",
+      "save": "Spara"
     },
-    "updates": {
-        "title": "Automatiska uppdateringar",
-        "description": "Få den senaste versionen automatiskt.",
-        "consent": "Jag tillåter att denna applikation automatiskt söker efter uppdateringar.",
-        "checkForUpdate": {
-            "title": "Sök efter uppdateringar",
-            "description": "Sök efter uppdateringar",
-            "checkButton": "Kolla upp"
-        },
-        "restartAndInstall": "Installera och starta om",
-        "badge": "Uppdatering tillgänglig"
-    },
-    "language": {
-        "title": "Språk",
-        "description": "Ändra applikationens språk.",
-        "help_translate": "Hjälp oss översätta!"
-    },
-    "privacy_policy": {
-        "title": "Integritetspolicy",
-        "consent": "Jag har läst och samtyckt till sekretesspolicyn."
-    },
-    "setup_dialog": {
-        "description": "Att skydda individens integritet är viktigt för oss. Vi samlar bara in den information du väljer att ge oss och vi behandlar den med ditt samtycke. Vi vill vara så transparenta som möjligt. Lumi förlitar sig dock på att vissa anslutningar och dataöverföringar fungerar.",
-        "consent_warning": "Du måste åtminstone godkänna sekretesspolicyn för att använda denna applikation.",
-        "accept_all": "Acceptera alla",
-        "accept_selected": "Acceptera valt"
-    },
+    "enable": "Gör det möjligt",
     "menu": {
-        "quit": "Sluta med",
-        "file": {
-            "label": "Fil",
-            "open": "Öppna analytiska filer",
-            "save": "Spara",
-            "save_as": "Spara som...",
-            "export": "Exportera...",
-            "edit": "Redigera",
-            "undo": "Ångra",
-            "redo": "Redo",
-            "cut": "Skära",
-            "copy": "Kopiera",
-            "paste": "Klistra",
-            "select_all": "Välj alla"
-        },
-        "h5peditor": {
-            "new": "Ny H5P",
-            "open": "Öppna H5P"
-        },
-        "help": {
-            "label": "Hjälp",
-            "report_issue": "Rapportera problem",
-            "toggle_developer_tools": "Växla utvecklarverktyg",
-            "follow_us_on_twitter": "Följ oss på Twitter",
-            "about": "Handla om"
-        },
-        "mac": {
-            "services": "Tjänster",
-            "hide": "Dölj Lumi",
-            "hideothers": "Dölj andra",
-            "unhide": "Visa allt"
-        },
-        "window": {
-            "label": "Fönster",
-            "show": "Show",
-            "minimize": "Minimera",
-            "zoom": "Zoom",
-            "front": "Ta alla fram",
-            "close": "Stänga"
-        },
-        "view": {
-            "label": "Se",
-            "resetZoom": "Faktiska storleken",
-            "zoomIn": "Zooma in",
-            "zoomOut": "Zooma ut",
-            "togglefullscreen": "Växla helskärm"
-        },
-        "run": {
-            "label": "Springa",
-            "upload": "Ladda upp till Lumi Run"
-        }
-    },
-    "notifications": {
-        "analytics": {
-            "import": {
-                "error": "Inga giltiga filer hittades",
-                "success": "Importerade rapportfiler",
-                "brokenFiles": "{{count}} trasig fil hittades",
-                "brokenFiles_plural": "{{count}} trasiga filer hittades"
-            }
-        },
-        "h5peditor": {
-            "save": {
-                "success": "H5P sparad!",
-                "error": "H5P kunde inte sparas."
-            },
-            "open": {
-                "error": "Det gick inte att öppna H5P."
-            },
-            "export_as_html": {
-                "success": "H5P har exporterats",
-                "error": "Det gick inte att exportera H5P"
-            }
-        },
-        "general": {
-            "econnrefused": "Det verkar vara ett problem med din internetanslutning."
-        },
-        "updater": {
-            "availableText": "Uppdatering är tillgänglig. Applikationen kommer att installera uppdateringen och starta om.",
-            "availableTitle": "Installera uppdateringar",
-            "updateDownloaded": "Uppdateringen laddades ner och kommer att installeras när du avslutar Lumi."
-        }
-    },
-    "auth": {
-        "set_email": "Ställ in e-post",
-        "email": "E-post",
-        "code": "Koda",
-        "verify_code": "Verifiera kod",
-        "verify_email": "Verifiera Email",
-        "notification": {
-            "success": "{{email}} har validerats",
-            "pending": "En verifieringskod har skickats till {{email}} . Kontrollera dina e-postmeddelanden.",
-            "logout": {
-                "success": "Du var utloggad."
-            }
-        },
-        "error": {
-            "no-valid-email": "{{email}} är inte en giltig e-postadress.",
-            "econnrefused": "Det gick inte att kontakta Lumi Auth -servern. Kontrollera din internetanslutning."
-        },
-        "cancel": "Avbryt",
-        "logout": "Logga ut"
-    },
-    "dialog": {
-        "close": "Stänga"
+      "general": "Allmän",
+      "updates": "Uppdateringar",
+      "account": "konto",
+      "h5p-library-administration": "H5P-bibliotek"
     },
     "general": {
-        "delete": "Radera",
-        "copyClipboard": "Kopierade {{value}} till urklipp"
+      "header": "Allmän"
     },
-    "errors": {
-        "codes": {
-            "econnrefused": "Anslutning nekad"
+    "updates": {
+      "header": "Uppdateringar"
+    },
+    "account": {
+      "label": "konto",
+      "email": {
+        "title": "E-post",
+        "change": "Byta e-mail",
+        "not-set": "E-postadressen har inte ställts in"
+      }
+    },
+    "h5p-library-administration": {
+      "header": "Installerade H5P-bibliotek",
+      "notifications": {
+        "upload": {
+          "success-no-update": "Uppladdningen lyckades, men inga bibliotek installerades eller uppdaterades. Innehållstypen är förmodligen redan installerad på systemet.",
+          "success-with-update": "{{installed}} installerats och {{updated}} bibliotek har uppdaterats.",
+          "error": "Fel vid uppladdning av paket."
         },
-        "messages": {
-            "econnrefused": "Anslutning nekad"
+        "delete": {
+          "success": "{{title}} ( {{version}} ) har tagits bort.",
+          "error": "Fel vid borttagning av bibliotek {{title}} ( {{version}} )."
+        },
+        "get": {
+          "error": "Fel vid inhämtning av detaljerad information om bibliotek {{library.title}} ( {{version}} )."
         }
+      },
+      "upload_and_install": "Ladda upp och installera bibliotek",
+      "details": "Detaljer",
+      "can-not-be-deleted": "Detta bibliotek kan inte tas bort eftersom det används i {{count}} andra bibliotek",
+      "can-not-be-deleted_plural": "Det här biblioteket kan inte raderas eftersom det används i {{count}} andra bibliotek",
+      "library-details": {
+        "header": "Biblioteksdetaljer",
+        "author": "Författare",
+        "description": "Beskrivning",
+        "license": "Licens",
+        "standalone": "Fristående innehållstyp",
+        "restricted": "Begränsad (kan endast användas med behörighet)",
+        "fullscreen": "Stöder helskärm",
+        "addon": "Tillägg",
+        "embedTypes": "Tillåtna inbäddningstyper",
+        "dependentsCount": "Antal bibliotek som använder biblioteket",
+        "instancesCount": "Objekt som skapats med detta bibliotek som huvudinnehållstyp",
+        "instancesAsDependencyCount": "Objekt där detta bibliotek används av ett annat bibliotek"
+      }
     },
-    "prerelease": {
-        "title": "Funktioner för förlansering",
-        "description": "Aktivera experimentella funktioner innan de släpps"
+    "links": {
+      "header": "Länkar"
+    }
+  },
+  "analytics": {
+    "startPage": {
+      "title": "Lumi Analytics",
+      "welcomeMessage": "Lumis Analytics-verktyg låter dig importera användarrapporter och visualisera dem åt dig",
+      "start": "Start",
+      "learn_more": "lära sig mer",
+      "open": "Välj mapp med .lumi-filer"
+    },
+    "name": "namn",
+    "average": "Medel",
+    "searchPlaceholder": "Sök i studentnamn ...",
+    "brokenFiles": "Lista över trasiga filer",
+    "errors": {
+      "no-content-json": "H5P-innehållet har inte lagts till ordentligt i .lumi-filen.",
+      "json-parse-error": ".Lumi-filen innehåller ogiltigt innehåll (JSON analyserade inte).",
+      "determine-name": "Det gick inte att avgöra studentens namn.",
+      "invalid-interactions": "Några av interaktionerna är trasiga.",
+      "invalid-statements": "Några av de inspelade studenternas handlingar är trasiga."
+    }
+  },
+  "bug_report": {
+    "title": "Fel- och kraschrapporter",
+    "description": "Hjälp oss att förbättra vår programvara och våra tjänster genom att skicka anonyma krasch- och felrapporter.",
+    "consent": "Jag tillåter att denna applikation skickar fel- och kraschrapporter.",
+    "email": {
+      "subject": "Lumi problemrapport",
+      "body": "För att få en snabb lösning på ditt problem, vänligen skriv om:\n\n  - Lumi-version: <fyll i här>, Operativsystem: <fyll i här>\n  - beskriv problemet\n  - beskriva hur vi kan återskapa problemet på våra maskiner\n  - skicka oss exempel på .h5p eller exporterade filer om problemet är relaterat till filerna\n\nOm du skickar meddelanden till oss på ett annat språk än engelska eller tyska, kommer vi att använda ett verktyg för automatisk översättning för att översätta ditt meddelande."
+    }
+  },
+  "usage_statistics": {
+    "title": "Användningsstatistik",
+    "description": " Hjälp oss att förbättra vår programvara och våra tjänster genom att skicka anonym användningsstatistik.",
+    "consent": "Jag tillåter att denna applikation skickar anonym användningsstatistik."
+  },
+  "updates": {
+    "title": "Automatiska uppdateringar",
+    "description": "Få den senaste versionen automatiskt.",
+    "consent": "Jag tillåter att denna applikation automatiskt söker efter uppdateringar.",
+    "checkForUpdate": {
+      "title": "Sök efter uppdateringar",
+      "description": "Sök efter uppdateringar",
+      "checkButton": "Kolla upp"
+    },
+    "restartAndInstall": "Installera och starta om",
+    "badge": "Uppdatering tillgänglig"
+  },
+  "language": {
+    "title": "Språk",
+    "description": "Ändra applikationens språk.",
+    "help_translate": "Hjälp oss översätta!"
+  },
+  "privacy_policy": {
+    "title": "Integritetspolicy",
+    "consent": "Jag har läst och samtyckt till sekretesspolicyn."
+  },
+  "setup_dialog": {
+    "description": "Att skydda individens integritet är viktigt för oss. Vi samlar bara in den information du väljer att ge oss och vi behandlar den med ditt samtycke. Vi vill vara så transparenta som möjligt. Lumi förlitar sig dock på att vissa anslutningar och dataöverföringar fungerar.",
+    "consent_warning": "Du måste åtminstone godkänna sekretesspolicyn för att använda denna applikation.",
+    "accept_all": "Acceptera alla",
+    "accept_selected": "Acceptera valt"
+  },
+  "menu": {
+    "quit": "Sluta med",
+    "file": {
+      "label": "Fil",
+      "open": "Öppna analytiska filer",
+      "save": "Spara",
+      "save_as": "Spara som...",
+      "export": "Exportera...",
+      "edit": "Redigera",
+      "undo": "Ångra",
+      "redo": "Redo",
+      "cut": "Skära",
+      "copy": "Kopiera",
+      "paste": "Klistra",
+      "select_all": "Välj alla"
+    },
+    "h5peditor": {
+      "new": "Ny H5P",
+      "open": "Öppna H5P"
+    },
+    "help": {
+      "label": "Hjälp",
+      "report_issue": "Rapportera problem",
+      "toggle_developer_tools": "Växla utvecklarverktyg",
+      "follow_us_on_twitter": "Följ oss på Twitter",
+      "about": "Handla om"
+    },
+    "mac": {
+      "services": "Tjänster",
+      "hide": "Dölj Lumi",
+      "hideothers": "Dölj andra",
+      "unhide": "Visa allt"
+    },
+    "window": {
+      "label": "Fönster",
+      "show": "Show",
+      "minimize": "Minimera",
+      "zoom": "Zoom",
+      "front": "Ta alla fram",
+      "close": "Stänga"
+    },
+    "view": {
+      "label": "Se",
+      "resetZoom": "Faktiska storleken",
+      "zoomIn": "Zooma in",
+      "zoomOut": "Zooma ut",
+      "togglefullscreen": "Växla helskärm"
     },
     "run": {
-        "description": "Med Lumi Run kan du ladda upp och vara värd för din H5P med ett klick.",
-        "legal": "För att kunna använda denna tjänst måste du godkänna användarvillkoren, sekretesspolicyn och ge oss ett kontaktmeddelande.",
-        "tos": {
-            "header": "Användarvillkor",
-            "description": "Jag har läst och godkänner användarvillkoren."
-        },
-        "link": {
-            "header": "Länk"
-        },
-        "upload": "Ladda upp",
-        "list": {
-            "header": "Uppladdad H5P",
-            "noUploadedH5P": "Ingen uppladdad H5P",
-            "deleteDialog": {
-                "title": "Ta bort körning {{runId}}",
-                "description": "Vill du verkligen ta bort körning {{runId}}",
-                "cancel": "Annullera",
-                "confirm": "Bekräfta"
-            }
-        },
-        "uploadDialog": {
-            "success": "Din H5P laddades upp till Lumi.run. Du kan komma åt och dela den med följande länk.",
-            "uploading": "Uppladdning",
-            "processing": "Bearbetning",
-            "goToRun": "Gå till körningar",
-            "ok": "Ok"
-        },
-        "setupDialog": {
-            "close": "Stänga",
-            "start": "Start"
-        },
-        "notifications": {
-            "delete": {
-                "success": "Raderade {{id}} från Lumi.run"
-            },
-            "upload": {
-                "success": "H5P har laddats upp till Lumi.run"
-            }
-        }
+      "label": "Springa",
+      "upload": "Ladda upp till Lumi Run"
     }
+  },
+  "notifications": {
+    "analytics": {
+      "import": {
+        "error": "Inga giltiga filer hittades",
+        "success": "Importerade rapportfiler",
+        "brokenFiles": "{{count}} trasig fil hittades",
+        "brokenFiles_plural": "{{count}} trasiga filer hittades"
+      }
+    },
+    "h5peditor": {
+      "save": {
+        "success": "H5P sparad!",
+        "error": "H5P kunde inte sparas."
+      },
+      "open": {
+        "error": "Det gick inte att öppna H5P."
+      },
+      "export_as_html": {
+        "success": "H5P har exporterats",
+        "error": "Det gick inte att exportera H5P"
+      }
+    },
+    "general": {
+      "econnrefused": "Det verkar vara ett problem med din internetanslutning."
+    },
+    "updater": {
+      "availableText": "Uppdatering är tillgänglig. Applikationen kommer att installera uppdateringen och starta om.",
+      "availableTitle": "Installera uppdateringar",
+      "updateDownloaded": "Uppdateringen laddades ner och kommer att installeras när du avslutar Lumi."
+    }
+  },
+  "auth": {
+    "set_email": "Ställ in e-post",
+    "email": "E-post",
+    "code": "Koda",
+    "verify_code": "Verifiera kod",
+    "verify_email": "Verifiera Email",
+    "notification": {
+      "success": "{{email}} har validerats",
+      "pending": "En verifieringskod har skickats till {{email}} . Kontrollera dina e-postmeddelanden.",
+      "logout": {
+        "success": "Du var utloggad."
+      }
+    },
+    "error": {
+      "no-valid-email": "{{email}} är inte en giltig e-postadress.",
+      "econnrefused": "Det gick inte att kontakta Lumi Auth -servern. Kontrollera din internetanslutning."
+    },
+    "cancel": "Avbryt",
+    "logout": "Logga ut"
+  },
+  "dialog": {
+    "close": "Stänga"
+  },
+  "general": {
+    "delete": "Radera",
+    "copyClipboard": "Kopierade {{value}} till urklipp"
+  },
+  "errors": {
+    "codes": {
+      "econnrefused": "Anslutning nekad"
+    },
+    "messages": {
+      "econnrefused": "Anslutning nekad"
+    }
+  },
+  "prerelease": {
+    "title": "Funktioner för förlansering",
+    "description": "Aktivera experimentella funktioner innan de släpps"
+  },
+  "run": {
+    "description": "Med Lumi Run kan du ladda upp och vara värd för din H5P med ett klick.",
+    "legal": "För att kunna använda denna tjänst måste du godkänna användarvillkoren, sekretesspolicyn och ge oss ett kontaktmeddelande.",
+    "tos": {
+      "header": "Användarvillkor",
+      "description": "Jag har läst och godkänner användarvillkoren."
+    },
+    "link": {
+      "header": "Länk"
+    },
+    "upload": "Ladda upp",
+    "list": {
+      "header": "Uppladdad H5P",
+      "noUploadedH5P": "Ingen uppladdad H5P",
+      "deleteDialog": {
+        "title": "Ta bort körning {{runId}}",
+        "description": "Vill du verkligen ta bort körning {{runId}}",
+        "cancel": "Annullera",
+        "confirm": "Bekräfta"
+      }
+    },
+    "uploadDialog": {
+      "success": "Din H5P laddades upp till Lumi.run. Du kan komma åt och dela den med följande länk.",
+      "uploading": "Uppladdning",
+      "processing": "Bearbetning",
+      "goToRun": "Gå till körningar",
+      "ok": "Ok"
+    },
+    "setupDialog": {
+      "close": "Stänga",
+      "start": "Start"
+    },
+    "notifications": {
+      "delete": {
+        "success": "Raderade {{id}} från Lumi.run"
+      },
+      "upload": {
+        "success": "H5P har laddats upp till Lumi.run"
+      }
+    }
+  },
+  "cloudhub": {
+    "description": "Sök efter innehåll eller publicera ditt innehåll."
+  }
 }

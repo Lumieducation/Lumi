@@ -1,375 +1,378 @@
 {
-    "analytics": {
-        "average": "Keskmine",
-        "brokenFiles": "Katkiste failide loend",
-        "errors": {
-            "determine-name": "Õpilase nime ei saanud kindlaks teha.",
-            "invalid-interactions": "Osa vastastikmõjudest on katki.",
-            "invalid-statements": "Osa registreeritud õpilaste toimingutest on katki.",
-            "json-parse-error": ".Lumi-fail sisaldab kehtetut sisu (JSON ei parsinud).",
-            "no-content-json": "H5P-sisu ei lisatud .lumi-faili korralikult."
-        },
-        "name": "Nimi",
-        "searchPlaceholder": "Otsige õpilaste nimesid ...",
-        "startPage": {
-            "learn_more": "rohkem teada saada",
-            "open": "Valige .lumi-failidega kaust",
-            "start": "Alusta",
-            "title": "Lumi Analytics",
-            "welcomeMessage": "Lumi Analyticsi tööriist võimaldab teil kasutajaaruandeid importida ja neid teie jaoks visualiseerida"
-        }
-    },
-    "auth": {
-        "cancel": "Tühista",
-        "code": "Kood",
-        "email": "E-post",
-        "error": {
-            "no-valid-email": "{{email}} pole kehtiv e-posti aadress.",
-            "econnrefused": "Lumi Authi serveriga ei saanud ühendust. Palun kontrollige oma Interneti -ühendust."
-        },
-        "notification": {
-            "pending": "Kinnituskood on saadetud aadressile {{email}} . Palun kontrollige oma e-kirju.",
-            "success": "{{email}} on edukalt kinnitatud",
-            "logout": {
-                "success": "Teid logiti välja."
-            }
-        },
-        "set_email": "Määra meil",
-        "verify_code": "Kontrollige koodi",
-        "verify_email": "Kontrollige e-posti aadressi",
-        "logout": "Logi välja"
-    },
-    "bug_report": {
-        "consent": "Luban sellel rakendusel saata vea- ja krahhiaruandeid.",
-        "description": "Aidake meil tarkvara ja teenuseid täiustada, saates anonüümseid krahhi- ja veateateid.",
-        "title": "Vigade ja krahhide aruanded",
-        "email": {
-            "subject": "Lumi probleemiaruanne",
-            "body": "Oma probleemile kiire lahenduse leidmiseks kirjutage järgmiselt:\n\n  - Lumi versioon: <täitke siin>, Operatsioonisüsteem: <täitke siin>\n  - kirjeldage probleemi\n  - kirjeldage, kuidas saaksime probleemi oma masinates taasesitada\n  - saatke meile näidis-.h5p või eksporditud failid, kui probleem on seotud failidega\n\nKui saadate meile sõnumeid muus keeles kui inglise või saksa keeles, kasutame teie sõnumi tõlkimiseks automaattõlke tööriista."
-        }
-    },
-    "dialog": {
-        "close": "Sulge"
-    },
-    "editor": {
-        "default_name": "uus H5P",
-        "exportDialog": {
-            "cancelButton": "Tühista",
-            "defaults": {
-                "authorName": "H5P autor",
-                "title": "H5P sisu",
-                "filename": "Minu H5P eksport"
-            },
-            "exportButton": "Ekspordi kohe",
-            "filePicker": {
-                "buttonLabel": "Eksport",
-                "formatNames": {
-                    "bundle": "Kõik-ühes HTML-fail",
-                    "external": "HTML-faili",
-                    "scorm": "SCORM-fail"
-                },
-                "title": "Ekspordi nimega ..."
-            },
-            "format": {
-                "bundleHint": "Kui lisate palju meediumifaile, võib fail mõne arvuti jaoks liiga suureks kasvada.",
-                "bundleLabel": "Kõik ühes HTML-fail",
-                "externalHint": "Järgmises etapis küsitakse HTML-failile nime. Meediumifailid paigutatakse kaustadesse, mis algavad failiga sama nimega.",
-                "externalLabel": "Üks HTML-fail ja mitu meediumifaili",
-                "scorm": {
-                    "label": "SCORM pakend",
-                    "masteryScoreLabel": "Meisterlikkuse skoor"
-                },
-                "title": "Vormindus"
-            },
-            "reporter": {
-                "hint": "Kui lisate reporteri, saavad õpilased faili oma edusammudega salvestada ja teile saata.",
-                "learnMoreLink": "Lisateavet selle kohta leiate siit.",
-                "switchLabel": "Kaasa reporter"
-            },
-            "title": "Ekspordi seaded",
-            "validationErrors": {
-                "errorNaN": "Sisestatud väärtus ei ole arv",
-                "errorRangeMin": "Väärtus peab olema suurem kui {{min}}",
-                "errorRangeMax": "Väärtus peab olema väiksem kui {{max}}",
-                "errorRange": "Väärtus peab olema vahemikus {{min}} kuni {{max}}"
-            },
-            "addFunctionality": {
-                "title": "Funktsionaalsuse lisamine",
-                "rights": "Kuva õigused ja load",
-                "embed": "Kuva manustamislink"
-            },
-            "displayOptions": {
-                "marginX": "Parem ja vasak veeris",
-                "marginY": "Ülemine ja alumine veeris",
-                "restrictWidthAndAlign": "Piirake laiust ja joondage keskele",
-                "maximumWidth": "Maksimaalne laius",
-                "addCss": "Lisage CSS-fail",
-                "chooseCssFile": "vali",
-                "title": "Kuvavalikud"
-            },
-            "pixelsAbbreviation": "px",
-            "cssFilePicker": {
-                "formatName": "CSS-fail"
-            }
-        },
-        "sidebar": {
-            "create": "Uus H5P-fail",
-            "noOpenFiles": "Avatud faile pole",
-            "open": "Avage H5P-fail"
-        },
-        "startPage": {
-            "create": "luua uus H5P",
-            "open": "Avage olemasolev H5P",
-            "start": "algus",
-            "title": "H5P toimetaja",
-            "welcomeMessage": "Lumi H5P Editor on eraldiseisev rakendus, mis võimaldab teil H5P-d vaadata, muuta ja luua."
-        },
-        "tab": {
-            "edit": "Muuda",
-            "view": "Vaade"
-        },
-        "saveAsDialog": {
-            "title": "Salvesta kui",
-            "fallbackFilename": "Minu H5P fail"
-        },
-        "extensionName": "H5P pakett"
-    },
-    "general": {
-        "delete": "Kustuta",
-        "copyClipboard": "{{value}} kopeeriti lõikelauale"
-    },
-    "language": {
-        "description": "Muutke rakenduse keelt.",
-        "help_translate": "Aidake meil tõlkida!",
-        "title": "Keel"
-    },
-    "menu": {
-        "file": {
-            "copy": "Kopeeri",
-            "cut": "Lõika",
-            "edit": "Muuda",
-            "export": "Eksport ...",
-            "label": "Fail",
-            "open": "Avage analüütilised failid",
-            "paste": "Kleepige",
-            "redo": "Valmis",
-            "save": "Salvesta",
-            "save_as": "Salvesta kui...",
-            "select_all": "Vali kõik",
-            "undo": "Võta tagasi"
-        },
-        "h5peditor": {
-            "new": "Uus H5P",
-            "open": "Avage H5P"
-        },
-        "help": {
-            "about": "Umbes",
-            "follow_us_on_twitter": "Jälgi meid Twitteris",
-            "label": "Abi",
-            "report_issue": "Teata probleemist",
-            "toggle_developer_tools": "Lülitage arendaja tööriistad sisse ja välja"
-        },
-        "mac": {
-            "hide": "Peida Lumi",
-            "hideothers": "Peida teised",
-            "services": "Teenused",
-            "unhide": "Näita kõike"
-        },
-        "quit": "Lõpeta",
-        "view": {
-            "label": "Vaade",
-            "resetZoom": "Tegelik suurus",
-            "togglefullscreen": "Lülitab täisekraani",
-            "zoomIn": "Suurenda",
-            "zoomOut": "Suumi välja"
-        },
-        "window": {
-            "close": "Sulge",
-            "front": "Tooge kõik ette",
-            "label": "Aken",
-            "minimize": "Minimeeri",
-            "show": "Näita",
-            "zoom": "Suum"
-        },
-        "run": {
-            "label": "Jookse",
-            "upload": "Laadige üles Lumi Run"
-        }
-    },
-    "notifications": {
-        "analytics": {
-            "import": {
-                "brokenFiles": "{{count}} katkist faili",
-                "brokenFiles_plural": "{{count}} katkist faili",
-                "error": "Kehtivaid faile ei leitud",
-                "success": "Imporditud aruandefailid"
-            }
-        },
-        "h5peditor": {
-            "export_as_html": {
-                "error": "H5P-d ei saanud eksportida",
-                "success": "H5P edukalt eksportitud"
-            },
-            "open": {
-                "error": "H5P-d ei saanud avada."
-            },
-            "save": {
-                "error": "H5P-d ei õnnestunud salvestada.",
-                "success": "H5P salvestatud!"
-            }
-        },
-        "general": {
-            "econnrefused": "Tundub, et teie Interneti -ühenduses on probleem."
-        },
-        "updater": {
-            "availableText": "Värskendus on saadaval. Rakendus installib värskenduse ja taaskäivitab.",
-            "availableTitle": "Installige värskendused",
-            "updateDownloaded": "Värskendus laaditi alla ja installitakse pärast Lumist väljumist."
-        }
-    },
-    "privacy_policy": {
-        "consent": "Olen privaatsuspoliitikaga tutvunud ja nõustun sellega.",
-        "title": "Privaatsuspoliitika"
-    },
-    "settings": {
-        "account": {
-            "email": {
-                "change": "Muuda meiliaadressi",
-                "not-set": "E-posti pole määratud",
-                "title": "E-post"
-            },
-            "label": "Konto"
-        },
-        "appbar": {
-            "label": "Seaded",
-            "save": "Salvesta"
-        },
-        "enable": "Luba",
-        "general": {
-            "header": "Kindral"
-        },
-        "h5p-library-administration": {
-            "can-not-be-deleted": "Seda teeki ei saa kustutada, kuna seda kasutatakse {{count}} teises teegis",
-            "can-not-be-deleted_plural": "Seda teeki ei saa kustutada, kuna seda kasutatakse veel {{count}}",
-            "details": "Üksikasjad",
-            "header": "Paigaldatud H5P teegid",
-            "library-details": {
-                "addon": "Lisa",
-                "author": "Autor",
-                "dependentsCount": "Raamatukogu kasutavate teekide arv",
-                "description": "Kirjeldus",
-                "embedTypes": "Lubatud manustüübid",
-                "fullscreen": "Toetab täisekraani",
-                "header": "Raamatukogu üksikasjad",
-                "instancesAsDependencyCount": "Objektid, milles seda teeki kasutab teine teek",
-                "instancesCount": "Objektid, mis on loodud selle teegi peamise sisutüübina",
-                "license": "Litsents",
-                "restricted": "Piiratud (saab kasutada ainult privileegiga)",
-                "standalone": "Eraldi sisu tüüp"
-            },
-            "notifications": {
-                "delete": {
-                    "error": "Viga teegi {{title}} ( {{version}} ) kustutamisel.",
-                    "success": "{{title}} ( {{version}} ) kustutamine õnnestus."
-                },
-                "get": {
-                    "error": "{{library.title}} ( {{version}} ) teegi kohta üksikasjaliku teabe hankimisel tekkis viga."
-                },
-                "upload": {
-                    "error": "Viga paketi üleslaadimisel.",
-                    "success-no-update": "Üleslaadimine õnnestus, kuid ühtegi teeki ei installitud ega värskendatud. Sisutüüp on arvatavasti juba süsteemi installitud.",
-                    "success-with-update": "{{installed}} teeki installimine ja {{updated}}"
-                }
-            },
-            "upload_and_install": "Laadige üles ja installige teek"
-        },
-        "links": {
-            "header": "Lingid"
-        },
-        "menu": {
-            "account": "Konto",
-            "general": "Üldine",
-            "h5p-library-administration": "H5P raamatukogud",
-            "updates": "Uuendused"
-        },
-        "updates": {
-            "header": "Uuendused"
-        }
-    },
-    "setup_dialog": {
-        "consent_warning": "Selle rakenduse kasutamiseks peate nõustuma vähemalt privaatsuseeskirjadega.",
-        "description": "Isiku privaatsuse kaitsmine on meie jaoks oluline. Kogume ainult teavet, mille olete otsustanud meile anda, ja töötleme seda teie nõusolekul. Me tahame olla võimalikult läbipaistvad. Kuid Lumi tugineb mõnele ühendusele ja andmeedastusele.",
-        "accept_all": "Võtke kõik vastu",
-        "accept_selected": "Aktsepteeri valitud"
-    },
-    "updates": {
-        "consent": "Luban sellel rakendusel värskendusi automaatselt kontrollida.",
-        "description": "Hankige uusim versioon automaatselt.",
-        "title": "Automaatsed värskendused",
-        "checkForUpdate": {
-            "title": "Kontrolli kas uuendused on saadaval",
-            "description": "Kontrolli kas uuendused on saadaval",
-            "checkButton": "Kontrollima"
-        },
-        "restartAndInstall": "Installige ja taaskäivitage",
-        "badge": "Uuendus saadaval"
-    },
-    "usage_statistics": {
-        "consent": "Luban sellel rakendusel saata anonüümset kasutusstatistikat.",
-        "description": " Aidake meil oma tarkvara ja teenuseid täiustada, saates anonüümset kasutusstatistikat.",
-        "title": "Kasutusstatistika"
-    },
+  "analytics": {
+    "average": "Keskmine",
+    "brokenFiles": "Katkiste failide loend",
     "errors": {
-        "codes": {
-            "econnrefused": "Ühendusest keelduti"
-        },
-        "messages": {
-            "econnrefused": "Ühendusest keelduti"
-        }
+      "determine-name": "Õpilase nime ei saanud kindlaks teha.",
+      "invalid-interactions": "Osa vastastikmõjudest on katki.",
+      "invalid-statements": "Osa registreeritud õpilaste toimingutest on katki.",
+      "json-parse-error": ".Lumi-fail sisaldab kehtetut sisu (JSON ei parsinud).",
+      "no-content-json": "H5P-sisu ei lisatud .lumi-faili korralikult."
     },
-    "prerelease": {
-        "title": "Väljalaskeeelsed funktsioonid",
-        "description": "Luba eksperimentaalsed funktsioonid enne nende avaldamist"
+    "name": "Nimi",
+    "searchPlaceholder": "Otsige õpilaste nimesid ...",
+    "startPage": {
+      "learn_more": "rohkem teada saada",
+      "open": "Valige .lumi-failidega kaust",
+      "start": "Alusta",
+      "title": "Lumi Analytics",
+      "welcomeMessage": "Lumi Analyticsi tööriist võimaldab teil kasutajaaruandeid importida ja neid teie jaoks visualiseerida"
+    }
+  },
+  "auth": {
+    "cancel": "Tühista",
+    "code": "Kood",
+    "email": "E-post",
+    "error": {
+      "no-valid-email": "{{email}} pole kehtiv e-posti aadress.",
+      "econnrefused": "Lumi Authi serveriga ei saanud ühendust. Palun kontrollige oma Interneti -ühendust."
+    },
+    "notification": {
+      "pending": "Kinnituskood on saadetud aadressile {{email}} . Palun kontrollige oma e-kirju.",
+      "success": "{{email}} on edukalt kinnitatud",
+      "logout": {
+        "success": "Teid logiti välja."
+      }
+    },
+    "set_email": "Määra meil",
+    "verify_code": "Kontrollige koodi",
+    "verify_email": "Kontrollige e-posti aadressi",
+    "logout": "Logi välja"
+  },
+  "bug_report": {
+    "consent": "Luban sellel rakendusel saata vea- ja krahhiaruandeid.",
+    "description": "Aidake meil tarkvara ja teenuseid täiustada, saates anonüümseid krahhi- ja veateateid.",
+    "title": "Vigade ja krahhide aruanded",
+    "email": {
+      "subject": "Lumi probleemiaruanne",
+      "body": "Oma probleemile kiire lahenduse leidmiseks kirjutage järgmiselt:\n\n  - Lumi versioon: <täitke siin>, Operatsioonisüsteem: <täitke siin>\n  - kirjeldage probleemi\n  - kirjeldage, kuidas saaksime probleemi oma masinates taasesitada\n  - saatke meile näidis-.h5p või eksporditud failid, kui probleem on seotud failidega\n\nKui saadate meile sõnumeid muus keeles kui inglise või saksa keeles, kasutame teie sõnumi tõlkimiseks automaattõlke tööriista."
+    }
+  },
+  "dialog": {
+    "close": "Sulge"
+  },
+  "editor": {
+    "default_name": "uus H5P",
+    "exportDialog": {
+      "cancelButton": "Tühista",
+      "defaults": {
+        "authorName": "H5P autor",
+        "title": "H5P sisu",
+        "filename": "Minu H5P eksport"
+      },
+      "exportButton": "Ekspordi kohe",
+      "filePicker": {
+        "buttonLabel": "Eksport",
+        "formatNames": {
+          "bundle": "Kõik-ühes HTML-fail",
+          "external": "HTML-faili",
+          "scorm": "SCORM-fail"
+        },
+        "title": "Ekspordi nimega ..."
+      },
+      "format": {
+        "bundleHint": "Kui lisate palju meediumifaile, võib fail mõne arvuti jaoks liiga suureks kasvada.",
+        "bundleLabel": "Kõik ühes HTML-fail",
+        "externalHint": "Järgmises etapis küsitakse HTML-failile nime. Meediumifailid paigutatakse kaustadesse, mis algavad failiga sama nimega.",
+        "externalLabel": "Üks HTML-fail ja mitu meediumifaili",
+        "scorm": {
+          "label": "SCORM pakend",
+          "masteryScoreLabel": "Meisterlikkuse skoor"
+        },
+        "title": "Vormindus"
+      },
+      "reporter": {
+        "hint": "Kui lisate reporteri, saavad õpilased faili oma edusammudega salvestada ja teile saata.",
+        "learnMoreLink": "Lisateavet selle kohta leiate siit.",
+        "switchLabel": "Kaasa reporter"
+      },
+      "title": "Ekspordi seaded",
+      "validationErrors": {
+        "errorNaN": "Sisestatud väärtus ei ole arv",
+        "errorRangeMin": "Väärtus peab olema suurem kui {{min}}",
+        "errorRangeMax": "Väärtus peab olema väiksem kui {{max}}",
+        "errorRange": "Väärtus peab olema vahemikus {{min}} kuni {{max}}"
+      },
+      "addFunctionality": {
+        "title": "Funktsionaalsuse lisamine",
+        "rights": "Kuva õigused ja load",
+        "embed": "Kuva manustamislink"
+      },
+      "displayOptions": {
+        "marginX": "Parem ja vasak veeris",
+        "marginY": "Ülemine ja alumine veeris",
+        "restrictWidthAndAlign": "Piirake laiust ja joondage keskele",
+        "maximumWidth": "Maksimaalne laius",
+        "addCss": "Lisage CSS-fail",
+        "chooseCssFile": "vali",
+        "title": "Kuvavalikud"
+      },
+      "pixelsAbbreviation": "px",
+      "cssFilePicker": {
+        "formatName": "CSS-fail"
+      }
+    },
+    "sidebar": {
+      "create": "Uus H5P-fail",
+      "noOpenFiles": "Avatud faile pole",
+      "open": "Avage H5P-fail"
+    },
+    "startPage": {
+      "create": "luua uus H5P",
+      "open": "Avage olemasolev H5P",
+      "start": "algus",
+      "title": "H5P toimetaja",
+      "welcomeMessage": "Lumi H5P Editor on eraldiseisev rakendus, mis võimaldab teil H5P-d vaadata, muuta ja luua."
+    },
+    "tab": {
+      "edit": "Muuda",
+      "view": "Vaade"
+    },
+    "saveAsDialog": {
+      "title": "Salvesta kui",
+      "fallbackFilename": "Minu H5P fail"
+    },
+    "extensionName": "H5P pakett"
+  },
+  "general": {
+    "delete": "Kustuta",
+    "copyClipboard": "{{value}} kopeeriti lõikelauale"
+  },
+  "language": {
+    "description": "Muutke rakenduse keelt.",
+    "help_translate": "Aidake meil tõlkida!",
+    "title": "Keel"
+  },
+  "menu": {
+    "file": {
+      "copy": "Kopeeri",
+      "cut": "Lõika",
+      "edit": "Muuda",
+      "export": "Eksport ...",
+      "label": "Fail",
+      "open": "Avage analüütilised failid",
+      "paste": "Kleepige",
+      "redo": "Valmis",
+      "save": "Salvesta",
+      "save_as": "Salvesta kui...",
+      "select_all": "Vali kõik",
+      "undo": "Võta tagasi"
+    },
+    "h5peditor": {
+      "new": "Uus H5P",
+      "open": "Avage H5P"
+    },
+    "help": {
+      "about": "Umbes",
+      "follow_us_on_twitter": "Jälgi meid Twitteris",
+      "label": "Abi",
+      "report_issue": "Teata probleemist",
+      "toggle_developer_tools": "Lülitage arendaja tööriistad sisse ja välja"
+    },
+    "mac": {
+      "hide": "Peida Lumi",
+      "hideothers": "Peida teised",
+      "services": "Teenused",
+      "unhide": "Näita kõike"
+    },
+    "quit": "Lõpeta",
+    "view": {
+      "label": "Vaade",
+      "resetZoom": "Tegelik suurus",
+      "togglefullscreen": "Lülitab täisekraani",
+      "zoomIn": "Suurenda",
+      "zoomOut": "Suumi välja"
+    },
+    "window": {
+      "close": "Sulge",
+      "front": "Tooge kõik ette",
+      "label": "Aken",
+      "minimize": "Minimeeri",
+      "show": "Näita",
+      "zoom": "Suum"
     },
     "run": {
-        "description": "Lumi Run võimaldab teil ühe klõpsuga oma H5P üles laadida ja hostida.",
-        "legal": "Selle teenuse kasutamiseks peate nõustuma teenusetingimuste, privaatsuspoliitikaga ja edastama meile kontaktmeili.",
-        "tos": {
-            "header": "Kasutustingimused",
-            "description": "Olen teenusetingimustega tutvunud ja nõustun nendega."
-        },
-        "link": {
-            "header": "Link"
-        },
-        "upload": "Laadi üles",
-        "list": {
-            "header": "Laadis üles H5P",
-            "noUploadedH5P": "Üleslaaditud H5P pole",
-            "deleteDialog": {
-                "title": "Kustuta Run {{runId}}",
-                "description": "Kas soovite tõesti jooksu {{runId}}",
-                "cancel": "Tühista",
-                "confirm": "Kinnitage"
-            }
-        },
-        "uploadDialog": {
-            "success": "Teie H5P laaditi üles saidile Lumi.run. Saate sellele juurde pääseda ja seda järgmise lingi kaudu jagada.",
-            "uploading": "Üleslaadimine",
-            "processing": "Töötlemine",
-            "goToRun": "Mine jooksudele",
-            "ok": "Okei"
-        },
-        "setupDialog": {
-            "close": "Sulge",
-            "start": "Alusta"
-        },
-        "notifications": {
-            "delete": {
-                "success": "{{id}} kustutati saidilt Lumi.run"
-            },
-            "upload": {
-                "success": "H5P üleslaadimine saidile Lumi.run"
-            }
-        }
+      "label": "Jookse",
+      "upload": "Laadige üles Lumi Run"
     }
+  },
+  "notifications": {
+    "analytics": {
+      "import": {
+        "brokenFiles": "{{count}} katkist faili",
+        "brokenFiles_plural": "{{count}} katkist faili",
+        "error": "Kehtivaid faile ei leitud",
+        "success": "Imporditud aruandefailid"
+      }
+    },
+    "h5peditor": {
+      "export_as_html": {
+        "error": "H5P-d ei saanud eksportida",
+        "success": "H5P edukalt eksportitud"
+      },
+      "open": {
+        "error": "H5P-d ei saanud avada."
+      },
+      "save": {
+        "error": "H5P-d ei õnnestunud salvestada.",
+        "success": "H5P salvestatud!"
+      }
+    },
+    "general": {
+      "econnrefused": "Tundub, et teie Interneti -ühenduses on probleem."
+    },
+    "updater": {
+      "availableText": "Värskendus on saadaval. Rakendus installib värskenduse ja taaskäivitab.",
+      "availableTitle": "Installige värskendused",
+      "updateDownloaded": "Värskendus laaditi alla ja installitakse pärast Lumist väljumist."
+    }
+  },
+  "privacy_policy": {
+    "consent": "Olen privaatsuspoliitikaga tutvunud ja nõustun sellega.",
+    "title": "Privaatsuspoliitika"
+  },
+  "settings": {
+    "account": {
+      "email": {
+        "change": "Muuda meiliaadressi",
+        "not-set": "E-posti pole määratud",
+        "title": "E-post"
+      },
+      "label": "Konto"
+    },
+    "appbar": {
+      "label": "Seaded",
+      "save": "Salvesta"
+    },
+    "enable": "Luba",
+    "general": {
+      "header": "Kindral"
+    },
+    "h5p-library-administration": {
+      "can-not-be-deleted": "Seda teeki ei saa kustutada, kuna seda kasutatakse {{count}} teises teegis",
+      "can-not-be-deleted_plural": "Seda teeki ei saa kustutada, kuna seda kasutatakse veel {{count}}",
+      "details": "Üksikasjad",
+      "header": "Paigaldatud H5P teegid",
+      "library-details": {
+        "addon": "Lisa",
+        "author": "Autor",
+        "dependentsCount": "Raamatukogu kasutavate teekide arv",
+        "description": "Kirjeldus",
+        "embedTypes": "Lubatud manustüübid",
+        "fullscreen": "Toetab täisekraani",
+        "header": "Raamatukogu üksikasjad",
+        "instancesAsDependencyCount": "Objektid, milles seda teeki kasutab teine teek",
+        "instancesCount": "Objektid, mis on loodud selle teegi peamise sisutüübina",
+        "license": "Litsents",
+        "restricted": "Piiratud (saab kasutada ainult privileegiga)",
+        "standalone": "Eraldi sisu tüüp"
+      },
+      "notifications": {
+        "delete": {
+          "error": "Viga teegi {{title}} ( {{version}} ) kustutamisel.",
+          "success": "{{title}} ( {{version}} ) kustutamine õnnestus."
+        },
+        "get": {
+          "error": "{{library.title}} ( {{version}} ) teegi kohta üksikasjaliku teabe hankimisel tekkis viga."
+        },
+        "upload": {
+          "error": "Viga paketi üleslaadimisel.",
+          "success-no-update": "Üleslaadimine õnnestus, kuid ühtegi teeki ei installitud ega värskendatud. Sisutüüp on arvatavasti juba süsteemi installitud.",
+          "success-with-update": "{{installed}} teeki installimine ja {{updated}}"
+        }
+      },
+      "upload_and_install": "Laadige üles ja installige teek"
+    },
+    "links": {
+      "header": "Lingid"
+    },
+    "menu": {
+      "account": "Konto",
+      "general": "Üldine",
+      "h5p-library-administration": "H5P raamatukogud",
+      "updates": "Uuendused"
+    },
+    "updates": {
+      "header": "Uuendused"
+    }
+  },
+  "setup_dialog": {
+    "consent_warning": "Selle rakenduse kasutamiseks peate nõustuma vähemalt privaatsuseeskirjadega.",
+    "description": "Isiku privaatsuse kaitsmine on meie jaoks oluline. Kogume ainult teavet, mille olete otsustanud meile anda, ja töötleme seda teie nõusolekul. Me tahame olla võimalikult läbipaistvad. Kuid Lumi tugineb mõnele ühendusele ja andmeedastusele.",
+    "accept_all": "Võtke kõik vastu",
+    "accept_selected": "Aktsepteeri valitud"
+  },
+  "updates": {
+    "consent": "Luban sellel rakendusel värskendusi automaatselt kontrollida.",
+    "description": "Hankige uusim versioon automaatselt.",
+    "title": "Automaatsed värskendused",
+    "checkForUpdate": {
+      "title": "Kontrolli kas uuendused on saadaval",
+      "description": "Kontrolli kas uuendused on saadaval",
+      "checkButton": "Kontrollima"
+    },
+    "restartAndInstall": "Installige ja taaskäivitage",
+    "badge": "Uuendus saadaval"
+  },
+  "usage_statistics": {
+    "consent": "Luban sellel rakendusel saata anonüümset kasutusstatistikat.",
+    "description": " Aidake meil oma tarkvara ja teenuseid täiustada, saates anonüümset kasutusstatistikat.",
+    "title": "Kasutusstatistika"
+  },
+  "errors": {
+    "codes": {
+      "econnrefused": "Ühendusest keelduti"
+    },
+    "messages": {
+      "econnrefused": "Ühendusest keelduti"
+    }
+  },
+  "prerelease": {
+    "title": "Väljalaskeeelsed funktsioonid",
+    "description": "Luba eksperimentaalsed funktsioonid enne nende avaldamist"
+  },
+  "run": {
+    "description": "Lumi Run võimaldab teil ühe klõpsuga oma H5P üles laadida ja hostida.",
+    "legal": "Selle teenuse kasutamiseks peate nõustuma teenusetingimuste, privaatsuspoliitikaga ja edastama meile kontaktmeili.",
+    "tos": {
+      "header": "Kasutustingimused",
+      "description": "Olen teenusetingimustega tutvunud ja nõustun nendega."
+    },
+    "link": {
+      "header": "Link"
+    },
+    "upload": "Laadi üles",
+    "list": {
+      "header": "Laadis üles H5P",
+      "noUploadedH5P": "Üleslaaditud H5P pole",
+      "deleteDialog": {
+        "title": "Kustuta Run {{runId}}",
+        "description": "Kas soovite tõesti jooksu {{runId}}",
+        "cancel": "Tühista",
+        "confirm": "Kinnitage"
+      }
+    },
+    "uploadDialog": {
+      "success": "Teie H5P laaditi üles saidile Lumi.run. Saate sellele juurde pääseda ja seda järgmise lingi kaudu jagada.",
+      "uploading": "Üleslaadimine",
+      "processing": "Töötlemine",
+      "goToRun": "Mine jooksudele",
+      "ok": "Okei"
+    },
+    "setupDialog": {
+      "close": "Sulge",
+      "start": "Alusta"
+    },
+    "notifications": {
+      "delete": {
+        "success": "{{id}} kustutati saidilt Lumi.run"
+      },
+      "upload": {
+        "success": "H5P üleslaadimine saidile Lumi.run"
+      }
+    }
+  },
+  "cloudhub": {
+    "description": "Otsige sisu või avaldage oma sisu."
+  }
 }

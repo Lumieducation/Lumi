@@ -1,375 +1,378 @@
 {
-    "analytics": {
-        "average": "Ortalama",
-        "brokenFiles": "Bozuk dosyaların listesi",
-        "errors": {
-            "determine-name": "Öğrencinin adı belirlenemedi.",
-            "invalid-interactions": "Bazı etkileşimler bozuldu.",
-            "invalid-statements": "Kaydedilen öğrenci eylemlerinden bazıları bozuldu.",
-            "json-parse-error": ".lumi dosyası geçersiz içerik içeriyor (JSON ayrıştırılmadı).",
-            "no-content-json": "H5P içeriği .lumi dosyasına düzgün şekilde eklenmedi."
-        },
-        "name": "İsim",
-        "searchPlaceholder": "Öğrenci isimlerini ara ...",
-        "startPage": {
-            "learn_more": "daha fazla bilgi edin",
-            "open": ".lumi dosyalarının bulunduğu klasörü seçin",
-            "start": "Başlat",
-            "title": "Lumi Analitik",
-            "welcomeMessage": "Lumi'nin Analitik aracı, kullanıcı raporlarını içe aktarmanıza ve bunları sizin için görselleştirmenize olanak tanır"
-        }
-    },
-    "auth": {
-        "cancel": "İptal",
-        "code": "Kod",
-        "email": "E-posta Adresi",
-        "error": {
-            "econnrefused": "Lumi Auth sunucusuyla bağlantı kurulamadı. Lütfen internet bağlantınızı kontrol edin.",
-            "no-valid-email": "{{email}} geçerli bir e-posta adresi değil."
-        },
-        "logout": "Çıkış Yap",
-        "notification": {
-            "logout": {
-                "success": "Oturumunuz kapatıldı."
-            },
-            "pending": "{{email}} adresine bir doğrulama kodu gönderildi. Lütfen e-posta kutunuzu kontrol ediniz.",
-            "success": "{{email}} başarıyla doğrulandı"
-        },
-        "set_email": "E-posta Adresi Ayarla",
-        "verify_code": "Doğrulama Kodu",
-        "verify_email": "E-posta Adresi Doğrula"
-    },
-    "bug_report": {
-        "consent": "Bu uygulamanın hata ve kilitlenme raporları göndermesine izin veriyorum.",
-        "description": "Anonim çökme ve hata raporları göndererek yazılımımızı ve hizmetlerimizi geliştirmemize yardımcı olun.",
-        "email": {
-            "body": "Sorununuza hızlı bir çözüm bulmak için lütfen şunu yazın:\n\n  - Lumi sürümü: <burayı doldurun>, İşletim sistemi: <burayı doldurun>\n  - sorunu tanımlayın\n  - sorunu makinelerimizde nasıl yeniden oluşturabileceğimizi açıklayın\n  - sorun dosyalarla ilgiliyse bize örnek .h5p veya dışa aktarılan dosyaları gönderin\n\nBize İngilizce veya Almanca dışında bir dilde mesaj gönderirseniz, mesajınızı çevirmek için bir otomatik çeviri aracı kullanacağız.",
-            "subject": "Lumi sorun raporu"
-        },
-        "title": "Hata & Kilitlenme Raporları"
-    },
-    "dialog": {
-        "close": "Kapat"
-    },
-    "editor": {
-        "default_name": "Yeni H5P",
-        "exportDialog": {
-            "addFunctionality": {
-                "embed": "Yerleştirme bağlantısını göster",
-                "rights": "Hakları ve izinleri göster",
-                "title": "İşlevsellik ekle"
-            },
-            "cancelButton": "İptal",
-            "cssFilePicker": {
-                "formatName": "CSS Dosyası"
-            },
-            "defaults": {
-                "authorName": "H5P Yazar",
-                "filename": "H5P dışa aktarmam",
-                "title": "H5P İçerik"
-            },
-            "displayOptions": {
-                "addCss": "CSS dosyası ekle",
-                "chooseCssFile": "Seç",
-                "marginX": "Sağ ve sol kenar boşluğu",
-                "marginY": "Üst ve alt kenar boşluğu",
-                "maximumWidth": "Maksimum genişlik",
-                "restrictWidthAndAlign": "Genişliği sınırlayın ve merkezi olarak hizalayın",
-                "title": "görüntüleme seçenekleri"
-            },
-            "exportButton": "Şimdi Dışa Aktar",
-            "filePicker": {
-                "buttonLabel": "Dışa Aktar",
-                "formatNames": {
-                    "bundle": "Hepsi bir arada HTML dosyası",
-                    "external": "HTML dosyası",
-                    "scorm": "SCORM dosyası"
-                },
-                "title": "Farklı Dışa Aktar..."
-            },
-            "format": {
-                "bundleHint": "Çok sayıda medya dosyası eklerseniz dosya bazı bilgisayarlar için çok büyüyebilir.",
-                "bundleLabel": "Hepsi bir arada HTML dosyası",
-                "externalHint": "Sonraki adımda HTML dosyası için bir ad istenecektir. Medya dosyaları, dosya ile aynı adla başlayan klasörlere yerleştirilecektir.",
-                "externalLabel": "Bir HTML dosyası ve birkaç medya dosyası",
-                "scorm": {
-                    "label": "SCORM paketi",
-                    "masteryScoreLabel": "Ustalık puanı"
-                },
-                "title": "Biçim"
-            },
-            "pixelsAbbreviation": "piksel",
-            "reporter": {
-                "hint": "Raportörü eklerseniz, öğrenciler ilerlemeleriyle birlikte bir dosya kaydedebilir ve size gönderebilir.",
-                "learnMoreLink": "Buradan daha fazla bilgi edinin.",
-                "switchLabel": "Raportörü dahil et"
-            },
-            "title": "Dışa Aktarma Ayarları",
-            "validationErrors": {
-                "errorNaN": "Girilen değer bir sayı değil",
-                "errorRange": "{{min}} ile {{max}} arasında olmalıdır",
-                "errorRangeMax": "{{max}} küçük olmalıdır",
-                "errorRangeMin": "{{min}} büyük olmalıdır"
-            }
-        },
-        "extensionName": "H5P paketi",
-        "saveAsDialog": {
-            "fallbackFilename": "H5P dosyam",
-            "title": "Farklı kaydet"
-        },
-        "sidebar": {
-            "create": "Yeni H5P Dosyası",
-            "noOpenFiles": "Açık dosya yok",
-            "open": "H5P Dosyası Aç"
-        },
-        "startPage": {
-            "create": "Yeni H5P Dosyası Oluştur",
-            "open": "Mevcut H5P Dosyasını Aç",
-            "start": "Başlat",
-            "title": "H5P Editör",
-            "welcomeMessage": "Lumi'nin H5P Editörü, H5P'yi görüntülemenize, düzenlemenize ve oluşturmanıza izin veren bağımsız bir uygulamadır."
-        },
-        "tab": {
-            "edit": "Düzenle",
-            "view": "Görünüm"
-        }
-    },
+  "analytics": {
+    "average": "Ortalama",
+    "brokenFiles": "Bozuk dosyaların listesi",
     "errors": {
-        "codes": {
-            "econnrefused": "Bağlantı reddedildi"
+      "determine-name": "Öğrencinin adı belirlenemedi.",
+      "invalid-interactions": "Bazı etkileşimler bozuldu.",
+      "invalid-statements": "Kaydedilen öğrenci eylemlerinden bazıları bozuldu.",
+      "json-parse-error": ".lumi dosyası geçersiz içerik içeriyor (JSON ayrıştırılmadı).",
+      "no-content-json": "H5P içeriği .lumi dosyasına düzgün şekilde eklenmedi."
+    },
+    "name": "İsim",
+    "searchPlaceholder": "Öğrenci isimlerini ara ...",
+    "startPage": {
+      "learn_more": "daha fazla bilgi edin",
+      "open": ".lumi dosyalarının bulunduğu klasörü seçin",
+      "start": "Başlat",
+      "title": "Lumi Analitik",
+      "welcomeMessage": "Lumi'nin Analitik aracı, kullanıcı raporlarını içe aktarmanıza ve bunları sizin için görselleştirmenize olanak tanır"
+    }
+  },
+  "auth": {
+    "cancel": "İptal",
+    "code": "Kod",
+    "email": "E-posta Adresi",
+    "error": {
+      "econnrefused": "Lumi Auth sunucusuyla bağlantı kurulamadı. Lütfen internet bağlantınızı kontrol edin.",
+      "no-valid-email": "{{email}} geçerli bir e-posta adresi değil."
+    },
+    "logout": "Çıkış Yap",
+    "notification": {
+      "logout": {
+        "success": "Oturumunuz kapatıldı."
+      },
+      "pending": "{{email}} adresine bir doğrulama kodu gönderildi. Lütfen e-posta kutunuzu kontrol ediniz.",
+      "success": "{{email}} başarıyla doğrulandı"
+    },
+    "set_email": "E-posta Adresi Ayarla",
+    "verify_code": "Doğrulama Kodu",
+    "verify_email": "E-posta Adresi Doğrula"
+  },
+  "bug_report": {
+    "consent": "Bu uygulamanın hata ve kilitlenme raporları göndermesine izin veriyorum.",
+    "description": "Anonim çökme ve hata raporları göndererek yazılımımızı ve hizmetlerimizi geliştirmemize yardımcı olun.",
+    "email": {
+      "body": "Sorununuza hızlı bir çözüm bulmak için lütfen şunu yazın:\n\n  - Lumi sürümü: <burayı doldurun>, İşletim sistemi: <burayı doldurun>\n  - sorunu tanımlayın\n  - sorunu makinelerimizde nasıl yeniden oluşturabileceğimizi açıklayın\n  - sorun dosyalarla ilgiliyse bize örnek .h5p veya dışa aktarılan dosyaları gönderin\n\nBize İngilizce veya Almanca dışında bir dilde mesaj gönderirseniz, mesajınızı çevirmek için bir otomatik çeviri aracı kullanacağız.",
+      "subject": "Lumi sorun raporu"
+    },
+    "title": "Hata & Kilitlenme Raporları"
+  },
+  "dialog": {
+    "close": "Kapat"
+  },
+  "editor": {
+    "default_name": "Yeni H5P",
+    "exportDialog": {
+      "addFunctionality": {
+        "embed": "Yerleştirme bağlantısını göster",
+        "rights": "Hakları ve izinleri göster",
+        "title": "İşlevsellik ekle"
+      },
+      "cancelButton": "İptal",
+      "cssFilePicker": {
+        "formatName": "CSS Dosyası"
+      },
+      "defaults": {
+        "authorName": "H5P Yazar",
+        "filename": "H5P dışa aktarmam",
+        "title": "H5P İçerik"
+      },
+      "displayOptions": {
+        "addCss": "CSS dosyası ekle",
+        "chooseCssFile": "Seç",
+        "marginX": "Sağ ve sol kenar boşluğu",
+        "marginY": "Üst ve alt kenar boşluğu",
+        "maximumWidth": "Maksimum genişlik",
+        "restrictWidthAndAlign": "Genişliği sınırlayın ve merkezi olarak hizalayın",
+        "title": "görüntüleme seçenekleri"
+      },
+      "exportButton": "Şimdi Dışa Aktar",
+      "filePicker": {
+        "buttonLabel": "Dışa Aktar",
+        "formatNames": {
+          "bundle": "Hepsi bir arada HTML dosyası",
+          "external": "HTML dosyası",
+          "scorm": "SCORM dosyası"
         },
-        "messages": {
-            "econnrefused": "Bağlantı reddedildi"
-        }
+        "title": "Farklı Dışa Aktar..."
+      },
+      "format": {
+        "bundleHint": "Çok sayıda medya dosyası eklerseniz dosya bazı bilgisayarlar için çok büyüyebilir.",
+        "bundleLabel": "Hepsi bir arada HTML dosyası",
+        "externalHint": "Sonraki adımda HTML dosyası için bir ad istenecektir. Medya dosyaları, dosya ile aynı adla başlayan klasörlere yerleştirilecektir.",
+        "externalLabel": "Bir HTML dosyası ve birkaç medya dosyası",
+        "scorm": {
+          "label": "SCORM paketi",
+          "masteryScoreLabel": "Ustalık puanı"
+        },
+        "title": "Biçim"
+      },
+      "pixelsAbbreviation": "piksel",
+      "reporter": {
+        "hint": "Raportörü eklerseniz, öğrenciler ilerlemeleriyle birlikte bir dosya kaydedebilir ve size gönderebilir.",
+        "learnMoreLink": "Buradan daha fazla bilgi edinin.",
+        "switchLabel": "Raportörü dahil et"
+      },
+      "title": "Dışa Aktarma Ayarları",
+      "validationErrors": {
+        "errorNaN": "Girilen değer bir sayı değil",
+        "errorRange": "{{min}} ile {{max}} arasında olmalıdır",
+        "errorRangeMax": "{{max}} küçük olmalıdır",
+        "errorRangeMin": "{{min}} büyük olmalıdır"
+      }
+    },
+    "extensionName": "H5P paketi",
+    "saveAsDialog": {
+      "fallbackFilename": "H5P dosyam",
+      "title": "Farklı kaydet"
+    },
+    "sidebar": {
+      "create": "Yeni H5P Dosyası",
+      "noOpenFiles": "Açık dosya yok",
+      "open": "H5P Dosyası Aç"
+    },
+    "startPage": {
+      "create": "Yeni H5P Dosyası Oluştur",
+      "open": "Mevcut H5P Dosyasını Aç",
+      "start": "Başlat",
+      "title": "H5P Editör",
+      "welcomeMessage": "Lumi'nin H5P Editörü, H5P'yi görüntülemenize, düzenlemenize ve oluşturmanıza izin veren bağımsız bir uygulamadır."
+    },
+    "tab": {
+      "edit": "Düzenle",
+      "view": "Görünüm"
+    }
+  },
+  "errors": {
+    "codes": {
+      "econnrefused": "Bağlantı reddedildi"
+    },
+    "messages": {
+      "econnrefused": "Bağlantı reddedildi"
+    }
+  },
+  "general": {
+    "copyClipboard": "{{value}} panoya kopyalandı",
+    "delete": "Sil"
+  },
+  "language": {
+    "description": "Uygulamanın dilini değiştirebilirsiniz.",
+    "help_translate": "Çevirmemize yardım et!",
+    "title": "Dil"
+  },
+  "menu": {
+    "file": {
+      "copy": "Kopyala",
+      "cut": "Kes",
+      "edit": "Düzenle",
+      "export": "Dışa Aktar...",
+      "label": "Dosya",
+      "open": "Analitik Dosyalarını Aç",
+      "paste": "Yapıştır",
+      "redo": "İleri",
+      "save": "Kaydet",
+      "save_as": "Farklı Kaydet...",
+      "select_all": "Hepsini Seç",
+      "undo": "Geri"
+    },
+    "h5peditor": {
+      "new": "Yeni H5P",
+      "open": "H5P Dosyası Aç"
+    },
+    "help": {
+      "about": "Hakkında",
+      "follow_us_on_twitter": "Bizi Twitter'da Takip Et",
+      "label": "Yardım",
+      "report_issue": "Rapor Bildir",
+      "toggle_developer_tools": "Geliştirici Araçlarını Aç / Kapat"
+    },
+    "mac": {
+      "hide": "Lumi'yi Gizle",
+      "hideothers": "Diğerlerini Sakla",
+      "services": "Hizmetler",
+      "unhide": "Hepsini Göster"
+    },
+    "quit": "Çık",
+    "run": {
+      "label": "Çalıştırmak",
+      "upload": "Lumi Run'a yükle"
+    },
+    "view": {
+      "label": "Görünüm",
+      "resetZoom": "Gerçek Boyutu",
+      "togglefullscreen": "Tam Ekrana Geç",
+      "zoomIn": "Yakınlaştır",
+      "zoomOut": "Uzaklaştır"
+    },
+    "window": {
+      "close": "Kapat",
+      "front": "Tümünü Öne Getir",
+      "label": "Pencere",
+      "minimize": "Küçült",
+      "show": "Göster",
+      "zoom": "Yakınlaştır"
+    }
+  },
+  "notifications": {
+    "analytics": {
+      "import": {
+        "brokenFiles": "{{count}} bozuk dosya bulundu",
+        "brokenFiles_plural": "{{count}} bozuk dosyalar bulundu",
+        "error": "Geçerli dosya bulunamadı",
+        "success": "İçe aktarılan rapor dosyaları"
+      }
     },
     "general": {
-        "copyClipboard": "{{value}} panoya kopyalandı",
-        "delete": "Sil"
+      "econnrefused": "İnternet bağlantınızda bir sorun var gibi görünüyor."
     },
-    "language": {
-        "description": "Uygulamanın dilini değiştirebilirsiniz.",
-        "help_translate": "Çevirmemize yardım et!",
-        "title": "Dil"
+    "h5peditor": {
+      "export_as_html": {
+        "error": "H5P dışa aktarılamadı",
+        "success": "H5P başarıyla dışa aktarıldı"
+      },
+      "open": {
+        "error": "H5P dosyası açılamadı."
+      },
+      "save": {
+        "error": "H5P dosyası kaydedilemedi.",
+        "success": "H5P dosyası kaydedildi!"
+      }
     },
-    "menu": {
-        "file": {
-            "copy": "Kopyala",
-            "cut": "Kes",
-            "edit": "Düzenle",
-            "export": "Dışa Aktar...",
-            "label": "Dosya",
-            "open": "Analitik Dosyalarını Aç",
-            "paste": "Yapıştır",
-            "redo": "İleri",
-            "save": "Kaydet",
-            "save_as": "Farklı Kaydet...",
-            "select_all": "Hepsini Seç",
-            "undo": "Geri"
-        },
-        "h5peditor": {
-            "new": "Yeni H5P",
-            "open": "H5P Dosyası Aç"
-        },
-        "help": {
-            "about": "Hakkında",
-            "follow_us_on_twitter": "Bizi Twitter'da Takip Et",
-            "label": "Yardım",
-            "report_issue": "Rapor Bildir",
-            "toggle_developer_tools": "Geliştirici Araçlarını Aç / Kapat"
-        },
-        "mac": {
-            "hide": "Lumi'yi Gizle",
-            "hideothers": "Diğerlerini Sakla",
-            "services": "Hizmetler",
-            "unhide": "Hepsini Göster"
-        },
-        "quit": "Çık",
-        "run": {
-            "label": "Çalıştırmak",
-            "upload": "Lumi Run'a yükle"
-        },
-        "view": {
-            "label": "Görünüm",
-            "resetZoom": "Gerçek Boyutu",
-            "togglefullscreen": "Tam Ekrana Geç",
-            "zoomIn": "Yakınlaştır",
-            "zoomOut": "Uzaklaştır"
-        },
-        "window": {
-            "close": "Kapat",
-            "front": "Tümünü Öne Getir",
-            "label": "Pencere",
-            "minimize": "Küçült",
-            "show": "Göster",
-            "zoom": "Yakınlaştır"
-        }
+    "updater": {
+      "availableText": "Güncelleme mevcut. Uygulama güncellemeyi yükleyecek ve yeniden başlatacaktır.",
+      "availableTitle": "Güncellemeleri yükle",
+      "updateDownloaded": "Güncelleme indirildi ve Lumi'den çıktığınızda yüklenecek."
+    }
+  },
+  "prerelease": {
+    "description": "Yayınlanmadan önce deneysel özellikleri etkinleştirin",
+    "title": "Yayın Öncesi Özellikler"
+  },
+  "privacy_policy": {
+    "consent": "Gizlilik politikasını okudum ve kabul ediyorum.",
+    "title": "Gizlilik Politikası"
+  },
+  "run": {
+    "description": "Lumi Run, tek tıklamayla H5P'nizi yüklemenize ve barındırmanıza olanak tanır.",
+    "legal": "Bu hizmeti kullanmak için Hizmet Koşullarını, gizlilik politikasını kabul etmeniz ve bize bir iletişim e-postası sağlamanız gerekir.",
+    "link": {
+      "header": "Bağlantı"
+    },
+    "list": {
+      "deleteDialog": {
+        "cancel": "İptal",
+        "confirm": "Onaylamak",
+        "description": "{{runId}} çalıştırmayı gerçekten silmek istiyor musunuz?",
+        "title": "Çalıştır {{runId}}"
+      },
+      "header": "H5P yüklendi",
+      "noUploadedH5P": "Yüklenen H5P yok"
     },
     "notifications": {
-        "analytics": {
-            "import": {
-                "brokenFiles": "{{count}} bozuk dosya bulundu",
-                "brokenFiles_plural": "{{count}} bozuk dosyalar bulundu",
-                "error": "Geçerli dosya bulunamadı",
-                "success": "İçe aktarılan rapor dosyaları"
-            }
+      "delete": {
+        "success": "{{id}} , Lumi.run'dan başarıyla silindi"
+      },
+      "upload": {
+        "success": "H5P başarıyla Lumi.run'a yüklendi"
+      }
+    },
+    "setupDialog": {
+      "close": "Kapat",
+      "start": "Başlangıç"
+    },
+    "tos": {
+      "description": "Hizmet şartlarını okudum ve kabul ediyorum.",
+      "header": "Kullanım Şartları"
+    },
+    "upload": "Yüklemek",
+    "uploadDialog": {
+      "goToRun": "Koşulara git",
+      "ok": "Tamam",
+      "processing": "İşleme",
+      "success": "H5P'niz Lumi.run'a yüklendi. Aşağıdaki linkten ulaşabilir ve paylaşabilirsiniz.",
+      "uploading": "yükleniyor"
+    }
+  },
+  "settings": {
+    "account": {
+      "email": {
+        "change": "E-posta Adresi Değiştir",
+        "not-set": "E-posta adresi ayarlanmadı",
+        "title": "E-posta Adresi"
+      },
+      "label": "Hesap"
+    },
+    "appbar": {
+      "label": "Ayarlar",
+      "save": "Kaydet"
+    },
+    "enable": "Etkinleştir",
+    "general": {
+      "header": "Genel"
+    },
+    "h5p-library-administration": {
+      "can-not-be-deleted": "Bu kütüphane başka {{count}} kütüphanede kullanıldığı için silinemez",
+      "can-not-be-deleted_plural": "Bu kütüphane başka {{count}} kütüphanede daha kullanıldığı için silinemez",
+      "details": "Detaylar",
+      "header": "Yüklü H5P Kütüphaneleri",
+      "library-details": {
+        "addon": "Ayriyeten",
+        "author": "Yazar",
+        "dependentsCount": "Kütüphaneyi kullanan kütüphane sayısı",
+        "description": "Açıklama",
+        "embedTypes": "İzin verilen yerleştirme türleri",
+        "fullscreen": "Tam ekranı destekler",
+        "header": "Kütüphane Ayrıntıları",
+        "instancesAsDependencyCount": "Bu kütüphanenin başka bir kütüphane tarafından kullanıldığı nesneler",
+        "instancesCount": "Ana içerik türü olarak bu kütüphanede oluşturulan nesneler",
+        "license": "Lisans",
+        "restricted": "Kısıtlı (yalnızca ayrıcalıkla kullanılabilir)",
+        "standalone": "Bağımsız içerik türü"
+      },
+      "notifications": {
+        "delete": {
+          "error": "{{title}} ( {{version}} ) kütüphanesi silinirken hata oluştu.",
+          "success": "{{title}} ( {{version}} ) kütüphanesi başarıyla silindi."
         },
-        "general": {
-            "econnrefused": "İnternet bağlantınızda bir sorun var gibi görünüyor."
+        "get": {
+          "error": "{{library.title}} ( {{version}} ) kütüphanesi hakkında ayrıntılı bilgi alınırken hata oluştu."
         },
-        "h5peditor": {
-            "export_as_html": {
-                "error": "H5P dışa aktarılamadı",
-                "success": "H5P başarıyla dışa aktarıldı"
-            },
-            "open": {
-                "error": "H5P dosyası açılamadı."
-            },
-            "save": {
-                "error": "H5P dosyası kaydedilemedi.",
-                "success": "H5P dosyası kaydedildi!"
-            }
-        },
-        "updater": {
-            "availableText": "Güncelleme mevcut. Uygulama güncellemeyi yükleyecek ve yeniden başlatacaktır.",
-            "availableTitle": "Güncellemeleri yükle",
-            "updateDownloaded": "Güncelleme indirildi ve Lumi'den çıktığınızda yüklenecek."
+        "upload": {
+          "error": "Paket yüklenirken hata oluştu.",
+          "success-no-update": "Yükleme başarılı, ancak hiçbir kütüphane yüklenmedi veya güncellenmedi. İçerik türü muhtemelen sistemde zaten yüklüdür.",
+          "success-with-update": "{{installed}} başarıyla yüklendi ve {{updated}} kütüphane güncellendi."
         }
+      },
+      "upload_and_install": "Kütüphane Yükle ve Kur"
     },
-    "prerelease": {
-        "description": "Yayınlanmadan önce deneysel özellikleri etkinleştirin",
-        "title": "Yayın Öncesi Özellikler"
+    "links": {
+      "header": "Bağlantılar"
     },
-    "privacy_policy": {
-        "consent": "Gizlilik politikasını okudum ve kabul ediyorum.",
-        "title": "Gizlilik Politikası"
-    },
-    "run": {
-        "description": "Lumi Run, tek tıklamayla H5P'nizi yüklemenize ve barındırmanıza olanak tanır.",
-        "legal": "Bu hizmeti kullanmak için Hizmet Koşullarını, gizlilik politikasını kabul etmeniz ve bize bir iletişim e-postası sağlamanız gerekir.",
-        "link": {
-            "header": "Bağlantı"
-        },
-        "list": {
-            "deleteDialog": {
-                "cancel": "İptal",
-                "confirm": "Onaylamak",
-                "description": "{{runId}} çalıştırmayı gerçekten silmek istiyor musunuz?",
-                "title": "Çalıştır {{runId}}"
-            },
-            "header": "H5P yüklendi",
-            "noUploadedH5P": "Yüklenen H5P yok"
-        },
-        "notifications": {
-            "delete": {
-                "success": "{{id}} , Lumi.run'dan başarıyla silindi"
-            },
-            "upload": {
-                "success": "H5P başarıyla Lumi.run'a yüklendi"
-            }
-        },
-        "setupDialog": {
-            "close": "Kapat",
-            "start": "Başlangıç"
-        },
-        "tos": {
-            "description": "Hizmet şartlarını okudum ve kabul ediyorum.",
-            "header": "Kullanım Şartları"
-        },
-        "upload": "Yüklemek",
-        "uploadDialog": {
-            "goToRun": "Koşulara git",
-            "ok": "Tamam",
-            "processing": "İşleme",
-            "success": "H5P'niz Lumi.run'a yüklendi. Aşağıdaki linkten ulaşabilir ve paylaşabilirsiniz.",
-            "uploading": "yükleniyor"
-        }
-    },
-    "settings": {
-        "account": {
-            "email": {
-                "change": "E-posta Adresi Değiştir",
-                "not-set": "E-posta adresi ayarlanmadı",
-                "title": "E-posta Adresi"
-            },
-            "label": "Hesap"
-        },
-        "appbar": {
-            "label": "Ayarlar",
-            "save": "Kaydet"
-        },
-        "enable": "Etkinleştir",
-        "general": {
-            "header": "Genel"
-        },
-        "h5p-library-administration": {
-            "can-not-be-deleted": "Bu kütüphane başka {{count}} kütüphanede kullanıldığı için silinemez",
-            "can-not-be-deleted_plural": "Bu kütüphane başka {{count}} kütüphanede daha kullanıldığı için silinemez",
-            "details": "Detaylar",
-            "header": "Yüklü H5P Kütüphaneleri",
-            "library-details": {
-                "addon": "Ayriyeten",
-                "author": "Yazar",
-                "dependentsCount": "Kütüphaneyi kullanan kütüphane sayısı",
-                "description": "Açıklama",
-                "embedTypes": "İzin verilen yerleştirme türleri",
-                "fullscreen": "Tam ekranı destekler",
-                "header": "Kütüphane Ayrıntıları",
-                "instancesAsDependencyCount": "Bu kütüphanenin başka bir kütüphane tarafından kullanıldığı nesneler",
-                "instancesCount": "Ana içerik türü olarak bu kütüphanede oluşturulan nesneler",
-                "license": "Lisans",
-                "restricted": "Kısıtlı (yalnızca ayrıcalıkla kullanılabilir)",
-                "standalone": "Bağımsız içerik türü"
-            },
-            "notifications": {
-                "delete": {
-                    "error": "{{title}} ( {{version}} ) kütüphanesi silinirken hata oluştu.",
-                    "success": "{{title}} ( {{version}} ) kütüphanesi başarıyla silindi."
-                },
-                "get": {
-                    "error": "{{library.title}} ( {{version}} ) kütüphanesi hakkında ayrıntılı bilgi alınırken hata oluştu."
-                },
-                "upload": {
-                    "error": "Paket yüklenirken hata oluştu.",
-                    "success-no-update": "Yükleme başarılı, ancak hiçbir kütüphane yüklenmedi veya güncellenmedi. İçerik türü muhtemelen sistemde zaten yüklüdür.",
-                    "success-with-update": "{{installed}} başarıyla yüklendi ve {{updated}} kütüphane güncellendi."
-                }
-            },
-            "upload_and_install": "Kütüphane Yükle ve Kur"
-        },
-        "links": {
-            "header": "Bağlantılar"
-        },
-        "menu": {
-            "account": "Hesap",
-            "general": "Genel",
-            "h5p-library-administration": "H5P Kütüphaneleri",
-            "updates": "Güncellemeler"
-        },
-        "updates": {
-            "header": "Güncellemeler"
-        }
-    },
-    "setup_dialog": {
-        "accept_all": "Hepsini kabul et",
-        "accept_selected": "Seçilenleri kabul et",
-        "consent_warning": "Bu uygulamayı kullanmak için en azından gizlilik politikasına onay vermeniz gerekir.",
-        "description": "Bireyin mahremiyetini korumak bizim için önemlidir. Yalnızca bize vermeyi seçtiğiniz bilgileri topluyoruz ve bunları sizin izninizle işliyoruz. Mümkün olduğunca şeffaf olmak istiyoruz. Ancak Lumi, çalışmak için bazı bağlantılara ve veri aktarımlarına güvenir."
+    "menu": {
+      "account": "Hesap",
+      "general": "Genel",
+      "h5p-library-administration": "H5P Kütüphaneleri",
+      "updates": "Güncellemeler"
     },
     "updates": {
-        "checkForUpdate": {
-            "checkButton": "Kontrol etmek",
-            "description": "Güncellemeleri kontrol et",
-            "title": "Güncellemeleri kontrol et"
-        },
-        "consent": "Bu uygulamanın güncellemeleri otomatik olarak kontrol etmesine izin veriyorum.",
-        "description": "En son sürümü otomatik olarak alın.",
-        "restartAndInstall": "Yükle ve yeniden başlat",
-        "title": "Otomatik Güncellemeler",
-        "badge": "Güncelleme uygun"
-    },
-    "usage_statistics": {
-        "consent": "Bu uygulamanın anonim kullanım istatistikleri göndermesine izin veriyorum.",
-        "description": " Anonim kullanım istatistikleri göndererek yazılımımızı ve hizmetlerimizi geliştirmemize yardımcı olun.",
-        "title": "Kullanım İstatistikleri"
+      "header": "Güncellemeler"
     }
+  },
+  "setup_dialog": {
+    "accept_all": "Hepsini kabul et",
+    "accept_selected": "Seçilenleri kabul et",
+    "consent_warning": "Bu uygulamayı kullanmak için en azından gizlilik politikasına onay vermeniz gerekir.",
+    "description": "Bireyin mahremiyetini korumak bizim için önemlidir. Yalnızca bize vermeyi seçtiğiniz bilgileri topluyoruz ve bunları sizin izninizle işliyoruz. Mümkün olduğunca şeffaf olmak istiyoruz. Ancak Lumi, çalışmak için bazı bağlantılara ve veri aktarımlarına güvenir."
+  },
+  "updates": {
+    "checkForUpdate": {
+      "checkButton": "Kontrol etmek",
+      "description": "Güncellemeleri kontrol et",
+      "title": "Güncellemeleri kontrol et"
+    },
+    "consent": "Bu uygulamanın güncellemeleri otomatik olarak kontrol etmesine izin veriyorum.",
+    "description": "En son sürümü otomatik olarak alın.",
+    "restartAndInstall": "Yükle ve yeniden başlat",
+    "title": "Otomatik Güncellemeler",
+    "badge": "Güncelleme uygun"
+  },
+  "usage_statistics": {
+    "consent": "Bu uygulamanın anonim kullanım istatistikleri göndermesine izin veriyorum.",
+    "description": " Anonim kullanım istatistikleri göndererek yazılımımızı ve hizmetlerimizi geliştirmemize yardımcı olun.",
+    "title": "Kullanım İstatistikleri"
+  },
+  "cloudhub": {
+    "description": "İçerik arayın veya içeriğinizi yayınlayın."
+  }
 }

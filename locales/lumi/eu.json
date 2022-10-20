@@ -1,375 +1,378 @@
 {
-    "analytics": {
-        "average": "Batezbestekoa",
-        "brokenFiles": "Hautsitako fitxategien zerrenda",
-        "errors": {
-            "determine-name": "Ezin izan da ikaslearen izena zehaztu.",
-            "invalid-interactions": "Elkarrekintza batzuk hautsita daude.",
-            "invalid-statements": "Grabatutako ikasleen ekintza batzuk hautsita daude.",
-            "json-parse-error": ".lumi fitxategiak baliogabeko edukia du (JSONk ez du analizatu).",
-            "no-content-json": "H5P edukia ez da behar bezala gehitu .lumi fitxategian."
-        },
-        "name": "Izena",
-        "searchPlaceholder": "Bilatu ikasleen izenak ...",
-        "startPage": {
-            "learn_more": "gehiago ikasi",
-            "open": "Aukeratu .lumi fitxategiak dituen karpeta",
-            "start": "Hasi",
-            "title": "Lumi Analitikak",
-            "welcomeMessage": "Lumiren Analytics tresnak erabiltzaileen txostenak inportatu eta bistaratzen uzten dizu"
-        }
-    },
-    "auth": {
-        "cancel": "Utzi",
-        "code": "Kodea",
-        "email": "Posta elektronikoa",
-        "error": {
-            "econnrefused": "Ezin izan da Lumi Auth zerbitzariarekin jarri harremanetan. Mesedez, egiaztatu zure Interneteko konexioa.",
-            "no-valid-email": "{{email}} ez da baliozko helbide elektronikoa."
-        },
-        "logout": "Saioa amaitu",
-        "notification": {
-            "logout": {
-                "success": "Saioa amaitu duzu."
-            },
-            "pending": "Egiaztapen kode bat bidali da {{email}} helbidera. Mesedez, egiaztatu zure mezu elektronikoak.",
-            "success": "{{email}} behar bezala balioztatu da"
-        },
-        "set_email": "Ezarri posta elektronikoa",
-        "verify_code": "Egiaztatu kodea",
-        "verify_email": "Egiaztatu helbide elektronikoa"
-    },
-    "bug_report": {
-        "consent": "Aplikazio honi akatsen eta hutsegiteen txostenak bidaltzea baimentzen diot.",
-        "description": "Lagundu iezaguzu gure softwarea eta zerbitzuak hobetzen matxura eta akats txosten anonimoak bidaliz.",
-        "email": {
-            "body": "Zure arazoari irtenbide azkarra lortzeko, zehaztu itzazu hurrengo elementuak:\n\n  - Lumi bertsioa: <bete hemen>, Sistema eragilea: <bete hemen>\n  - Deskribatu arazoa\n  - Deskribatu nola erreproduzi dezakegun arazoa gure makinetan\n  - bidali .h5p laginak edo esportatutako fitxategiak arazoa fitxategiekin erlazionatuta badago\n\nIngelesa edo alemana ez den beste hizkuntza batean bidaltzen badiguzu mezuak, itzulpen automatikoko tresna bat erabiliko dugu zure mezua itzultzeko.",
-            "subject": "Lumi arazoen txostena"
-        },
-        "title": "Errore eta akatsen txostenak"
-    },
-    "dialog": {
-        "close": "Itxi"
-    },
-    "editor": {
-        "default_name": "H5P berria",
-        "exportDialog": {
-            "addFunctionality": {
-                "embed": "Erakutsi kapsulatutako esteka",
-                "rights": "Erakutsi eskubideak eta baimenak",
-                "title": "Gehitu funtzionaltasuna"
-            },
-            "cancelButton": "Utzi",
-            "cssFilePicker": {
-                "formatName": "CSS fitxategia"
-            },
-            "defaults": {
-                "authorName": "H5P Egilea",
-                "filename": "Nire H5P esportazioa",
-                "title": "H5P edukia"
-            },
-            "displayOptions": {
-                "addCss": "Gehitu CSS fitxategia",
-                "chooseCssFile": "aukeratu",
-                "marginX": "Eskuineko eta ezkerreko marjina",
-                "marginY": "Goiko eta beheko marjina",
-                "maximumWidth": "Gehieneko zabalera",
-                "restrictWidthAndAlign": "Mugatu zabalera eta lerrokatu erdialdean",
-                "title": "Bistaratzeko aukerak"
-            },
-            "exportButton": "Esportatu orain",
-            "filePicker": {
-                "buttonLabel": "Esportatu",
-                "formatNames": {
-                    "bundle": "Dena HTML fitxategi bakarrean",
-                    "external": "HTML fitxategia",
-                    "scorm": "SCORM fitxategia"
-                },
-                "title": "Esportatu honela ..."
-            },
-            "format": {
-                "bundleHint": "Fitxategia ordenagailu batzuetarako handiegia izan daiteke multimedia fitxategi asko sartzen badituzu.",
-                "bundleLabel": "Dena HTML bakarrean fitxategia",
-                "externalHint": "Hurrengo urratsean HTML fitxategiaren izena eskatuko zaizu. Multimedia fitxategiak fitxategiaren izen berarekin hasten diren karpetetan sartuko dira.",
-                "externalLabel": "HTML fitxategi bat eta hainbat multimedia fitxategi",
-                "scorm": {
-                    "label": "SCORM paketea",
-                    "masteryScoreLabel": "Maisutasun puntuazioa"
-                },
-                "title": "Formatua"
-            },
-            "pixelsAbbreviation": "px",
-            "reporter": {
-                "hint": "Erreportaria gehitzen baduzu, ikasleek aurrerapenaren berri duen fitxategi bat gorde eta bidal diezazukete.",
-                "learnMoreLink": "Lortu informazio gehiago hemen.",
-                "switchLabel": "Sartu berriemailea"
-            },
-            "title": "Esportatu ezarpenak",
-            "validationErrors": {
-                "errorNaN": "Sartutako balioa ez da zenbaki bat",
-                "errorRange": "Balioa {{min}} eta {{max}} artekoa izan behar du",
-                "errorRangeMax": "Balioa {{max}} baino txikiagoa izan behar du",
-                "errorRangeMin": "Balioa {{min}} baino handiagoa izan behar du"
-            }
-        },
-        "extensionName": "H5P paketea",
-        "saveAsDialog": {
-            "fallbackFilename": "Nire H5P fitxategia",
-            "title": "Gorde"
-        },
-        "sidebar": {
-            "create": "H5P fitxategi berria",
-            "noOpenFiles": "Ez dago irekitako fitxategirik",
-            "open": "Ireki H5P fitxategia"
-        },
-        "startPage": {
-            "create": "sortu H5P berria",
-            "open": "Ireki lehendik dagoen H5P",
-            "start": "hasi",
-            "title": "H5P editorea",
-            "welcomeMessage": "Lumi H5P Editor H5P ikusi, editatu eta sortzeko aukera ematen duen aplikazio autonomoa da."
-        },
-        "tab": {
-            "edit": "Editatu",
-            "view": "Ikusi"
-        }
-    },
+  "analytics": {
+    "average": "Batezbestekoa",
+    "brokenFiles": "Hautsitako fitxategien zerrenda",
     "errors": {
-        "codes": {
-            "econnrefused": "Konexioa ukatu da"
+      "determine-name": "Ezin izan da ikaslearen izena zehaztu.",
+      "invalid-interactions": "Elkarrekintza batzuk hautsita daude.",
+      "invalid-statements": "Grabatutako ikasleen ekintza batzuk hautsita daude.",
+      "json-parse-error": ".lumi fitxategiak baliogabeko edukia du (JSONk ez du analizatu).",
+      "no-content-json": "H5P edukia ez da behar bezala gehitu .lumi fitxategian."
+    },
+    "name": "Izena",
+    "searchPlaceholder": "Bilatu ikasleen izenak ...",
+    "startPage": {
+      "learn_more": "gehiago ikasi",
+      "open": "Aukeratu .lumi fitxategiak dituen karpeta",
+      "start": "Hasi",
+      "title": "Lumi Analitikak",
+      "welcomeMessage": "Lumiren Analytics tresnak erabiltzaileen txostenak inportatu eta bistaratzen uzten dizu"
+    }
+  },
+  "auth": {
+    "cancel": "Utzi",
+    "code": "Kodea",
+    "email": "Posta elektronikoa",
+    "error": {
+      "econnrefused": "Ezin izan da Lumi Auth zerbitzariarekin jarri harremanetan. Mesedez, egiaztatu zure Interneteko konexioa.",
+      "no-valid-email": "{{email}} ez da baliozko helbide elektronikoa."
+    },
+    "logout": "Saioa amaitu",
+    "notification": {
+      "logout": {
+        "success": "Saioa amaitu duzu."
+      },
+      "pending": "Egiaztapen kode bat bidali da {{email}} helbidera. Mesedez, egiaztatu zure mezu elektronikoak.",
+      "success": "{{email}} behar bezala balioztatu da"
+    },
+    "set_email": "Ezarri posta elektronikoa",
+    "verify_code": "Egiaztatu kodea",
+    "verify_email": "Egiaztatu helbide elektronikoa"
+  },
+  "bug_report": {
+    "consent": "Aplikazio honi akatsen eta hutsegiteen txostenak bidaltzea baimentzen diot.",
+    "description": "Lagundu iezaguzu gure softwarea eta zerbitzuak hobetzen matxura eta akats txosten anonimoak bidaliz.",
+    "email": {
+      "body": "Zure arazoari irtenbide azkarra lortzeko, zehaztu itzazu hurrengo elementuak:\n\n  - Lumi bertsioa: <bete hemen>, Sistema eragilea: <bete hemen>\n  - Deskribatu arazoa\n  - Deskribatu nola erreproduzi dezakegun arazoa gure makinetan\n  - bidali .h5p laginak edo esportatutako fitxategiak arazoa fitxategiekin erlazionatuta badago\n\nIngelesa edo alemana ez den beste hizkuntza batean bidaltzen badiguzu mezuak, itzulpen automatikoko tresna bat erabiliko dugu zure mezua itzultzeko.",
+      "subject": "Lumi arazoen txostena"
+    },
+    "title": "Errore eta akatsen txostenak"
+  },
+  "dialog": {
+    "close": "Itxi"
+  },
+  "editor": {
+    "default_name": "H5P berria",
+    "exportDialog": {
+      "addFunctionality": {
+        "embed": "Erakutsi kapsulatutako esteka",
+        "rights": "Erakutsi eskubideak eta baimenak",
+        "title": "Gehitu funtzionaltasuna"
+      },
+      "cancelButton": "Utzi",
+      "cssFilePicker": {
+        "formatName": "CSS fitxategia"
+      },
+      "defaults": {
+        "authorName": "H5P Egilea",
+        "filename": "Nire H5P esportazioa",
+        "title": "H5P edukia"
+      },
+      "displayOptions": {
+        "addCss": "Gehitu CSS fitxategia",
+        "chooseCssFile": "aukeratu",
+        "marginX": "Eskuineko eta ezkerreko marjina",
+        "marginY": "Goiko eta beheko marjina",
+        "maximumWidth": "Gehieneko zabalera",
+        "restrictWidthAndAlign": "Mugatu zabalera eta lerrokatu erdialdean",
+        "title": "Bistaratzeko aukerak"
+      },
+      "exportButton": "Esportatu orain",
+      "filePicker": {
+        "buttonLabel": "Esportatu",
+        "formatNames": {
+          "bundle": "Dena HTML fitxategi bakarrean",
+          "external": "HTML fitxategia",
+          "scorm": "SCORM fitxategia"
         },
-        "messages": {
-            "econnrefused": "Konexioa ukatu da"
-        }
+        "title": "Esportatu honela ..."
+      },
+      "format": {
+        "bundleHint": "Fitxategia ordenagailu batzuetarako handiegia izan daiteke multimedia fitxategi asko sartzen badituzu.",
+        "bundleLabel": "Dena HTML bakarrean fitxategia",
+        "externalHint": "Hurrengo urratsean HTML fitxategiaren izena eskatuko zaizu. Multimedia fitxategiak fitxategiaren izen berarekin hasten diren karpetetan sartuko dira.",
+        "externalLabel": "HTML fitxategi bat eta hainbat multimedia fitxategi",
+        "scorm": {
+          "label": "SCORM paketea",
+          "masteryScoreLabel": "Maisutasun puntuazioa"
+        },
+        "title": "Formatua"
+      },
+      "pixelsAbbreviation": "px",
+      "reporter": {
+        "hint": "Erreportaria gehitzen baduzu, ikasleek aurrerapenaren berri duen fitxategi bat gorde eta bidal diezazukete.",
+        "learnMoreLink": "Lortu informazio gehiago hemen.",
+        "switchLabel": "Sartu berriemailea"
+      },
+      "title": "Esportatu ezarpenak",
+      "validationErrors": {
+        "errorNaN": "Sartutako balioa ez da zenbaki bat",
+        "errorRange": "Balioa {{min}} eta {{max}} artekoa izan behar du",
+        "errorRangeMax": "Balioa {{max}} baino txikiagoa izan behar du",
+        "errorRangeMin": "Balioa {{min}} baino handiagoa izan behar du"
+      }
+    },
+    "extensionName": "H5P paketea",
+    "saveAsDialog": {
+      "fallbackFilename": "Nire H5P fitxategia",
+      "title": "Gorde"
+    },
+    "sidebar": {
+      "create": "H5P fitxategi berria",
+      "noOpenFiles": "Ez dago irekitako fitxategirik",
+      "open": "Ireki H5P fitxategia"
+    },
+    "startPage": {
+      "create": "sortu H5P berria",
+      "open": "Ireki lehendik dagoen H5P",
+      "start": "hasi",
+      "title": "H5P editorea",
+      "welcomeMessage": "Lumi H5P Editor H5P ikusi, editatu eta sortzeko aukera ematen duen aplikazio autonomoa da."
+    },
+    "tab": {
+      "edit": "Editatu",
+      "view": "Ikusi"
+    }
+  },
+  "errors": {
+    "codes": {
+      "econnrefused": "Konexioa ukatu da"
+    },
+    "messages": {
+      "econnrefused": "Konexioa ukatu da"
+    }
+  },
+  "general": {
+    "copyClipboard": "{{value}} arbelean kopiatu da",
+    "delete": "Ezabatu"
+  },
+  "language": {
+    "description": "Aldatu aplikazioaren hizkuntza.",
+    "help_translate": "Lagundu iezaguzu itzultzen!",
+    "title": "Hizkuntza"
+  },
+  "menu": {
+    "file": {
+      "copy": "Kopiatu",
+      "cut": "Ebaki",
+      "edit": "Editatu",
+      "export": "Esportatu ...",
+      "label": "Fitxategia",
+      "open": "Ireki Analitika Fitxategiak",
+      "paste": "Itsatsi",
+      "redo": "Berregin",
+      "save": "Gorde",
+      "save_as": "Gorde honela...",
+      "select_all": "Hautatu guztiak",
+      "undo": "Desegin"
+    },
+    "h5peditor": {
+      "new": "H5P berria",
+      "open": "Ireki H5P"
+    },
+    "help": {
+      "about": "Honi buruz",
+      "follow_us_on_twitter": "Jarrai iezaguzu Twitterren",
+      "label": "Laguntza",
+      "report_issue": "Arazo baten berri eman",
+      "toggle_developer_tools": "Txandatu Garatzaile Tresnak"
+    },
+    "mac": {
+      "hide": "Ezkutatu Lumi",
+      "hideothers": "Ezkutatu besteak",
+      "services": "Zerbitzuak",
+      "unhide": "Erakutsi dena"
+    },
+    "quit": "Utzi",
+    "run": {
+      "label": "Exekutatu",
+      "upload": "Kargatu Lumi Run-era"
+    },
+    "view": {
+      "label": "Ikusi",
+      "resetZoom": "Benetako tamaina",
+      "togglefullscreen": "Txandakatu pantaila osoa",
+      "zoomIn": "Handitu",
+      "zoomOut": "Txikitu"
+    },
+    "window": {
+      "close": "Itxi",
+      "front": "Ekarri guztiak aurrera",
+      "label": "Leihoa",
+      "minimize": "Minimizatu",
+      "show": "Erakutsi",
+      "zoom": "Zooma"
+    }
+  },
+  "notifications": {
+    "analytics": {
+      "import": {
+        "brokenFiles": "{{count}} fitxategi hautsia aurkitu da",
+        "brokenFiles_plural": "{{count}} fitxategi hautsi aurkitu dira",
+        "error": "Ez da baliozko fitxategirik aurkitu",
+        "success": "Inportatutako txosten-fitxategiak"
+      }
     },
     "general": {
-        "copyClipboard": "{{value}} arbelean kopiatu da",
-        "delete": "Ezabatu"
+      "econnrefused": "Badirudi arazo bat dagoela zure Interneteko konexioarekin."
     },
-    "language": {
-        "description": "Aldatu aplikazioaren hizkuntza.",
-        "help_translate": "Lagundu iezaguzu itzultzen!",
-        "title": "Hizkuntza"
+    "h5peditor": {
+      "export_as_html": {
+        "error": "Ezin izan da H5P esportatu",
+        "success": "H5P esportatu da"
+      },
+      "open": {
+        "error": "Ezin izan da H5P ireki."
+      },
+      "save": {
+        "error": "Ezin izan da H5P gorde.",
+        "success": "H5P gorde da!"
+      }
     },
-    "menu": {
-        "file": {
-            "copy": "Kopiatu",
-            "cut": "Ebaki",
-            "edit": "Editatu",
-            "export": "Esportatu ...",
-            "label": "Fitxategia",
-            "open": "Ireki Analitika Fitxategiak",
-            "paste": "Itsatsi",
-            "redo": "Berregin",
-            "save": "Gorde",
-            "save_as": "Gorde honela...",
-            "select_all": "Hautatu guztiak",
-            "undo": "Desegin"
-        },
-        "h5peditor": {
-            "new": "H5P berria",
-            "open": "Ireki H5P"
-        },
-        "help": {
-            "about": "Honi buruz",
-            "follow_us_on_twitter": "Jarrai iezaguzu Twitterren",
-            "label": "Laguntza",
-            "report_issue": "Arazo baten berri eman",
-            "toggle_developer_tools": "Txandatu Garatzaile Tresnak"
-        },
-        "mac": {
-            "hide": "Ezkutatu Lumi",
-            "hideothers": "Ezkutatu besteak",
-            "services": "Zerbitzuak",
-            "unhide": "Erakutsi dena"
-        },
-        "quit": "Utzi",
-        "run": {
-            "label": "Exekutatu",
-            "upload": "Kargatu Lumi Run-era"
-        },
-        "view": {
-            "label": "Ikusi",
-            "resetZoom": "Benetako tamaina",
-            "togglefullscreen": "Txandakatu pantaila osoa",
-            "zoomIn": "Handitu",
-            "zoomOut": "Txikitu"
-        },
-        "window": {
-            "close": "Itxi",
-            "front": "Ekarri guztiak aurrera",
-            "label": "Leihoa",
-            "minimize": "Minimizatu",
-            "show": "Erakutsi",
-            "zoom": "Zooma"
-        }
+    "updater": {
+      "availableText": "Eguneraketa eskuragarri dago. Aplikazioak eguneratzea instalatuko du eta berrabiaraziko du.",
+      "availableTitle": "Instalatu eguneraketak",
+      "updateDownloaded": "Eguneraketa deskargatu da eta Lumitik irteten zarenean instalatuko da."
+    }
+  },
+  "prerelease": {
+    "description": "Gaitu eginbide esperimentalak argitaratu aurretik",
+    "title": "Aurretiazko funtzionalitateak"
+  },
+  "privacy_policy": {
+    "consent": "Pribatutasun politika irakurri eta onartzen dut.",
+    "title": "Pribatutasun politika"
+  },
+  "run": {
+    "description": "Lumi Run-ek zure H5P klik bakarrarekin kargatu eta ostatatzeko aukera ematen dizu.",
+    "legal": "Zerbitzu hau erabiltzeko, zerbitzuaren baldintzak eta pribatutasun politika onartu eta posta elektroniko bat bidali behar diguzu.",
+    "link": {
+      "header": "Esteka"
+    },
+    "list": {
+      "deleteDialog": {
+        "cancel": "Utzi",
+        "confirm": "Berretsi",
+        "description": "Ziur zaude {{runId}}-ren exekuzioa ezabatu nahi duzula?",
+        "title": "Ezabatu {{runId}}-ren exekuzioa"
+      },
+      "header": "Kargatutako H5P",
+      "noUploadedH5P": "H5Pa ez da kargatu"
     },
     "notifications": {
-        "analytics": {
-            "import": {
-                "brokenFiles": "{{count}} fitxategi hautsia aurkitu da",
-                "brokenFiles_plural": "{{count}} fitxategi hautsi aurkitu dira",
-                "error": "Ez da baliozko fitxategirik aurkitu",
-                "success": "Inportatutako txosten-fitxategiak"
-            }
+      "delete": {
+        "success": "{{id}} Lumi.run-etik behar bezala ezabatu da"
+      },
+      "upload": {
+        "success": "H5P behar bezala kargatu da Lumi.run-era"
+      }
+    },
+    "setupDialog": {
+      "close": "Itxi",
+      "start": "Hasi"
+    },
+    "tos": {
+      "description": "Zerbitzuaren baldintzak irakurri eta onartzen ditut.",
+      "header": "Zerbitzuaren baldintzak"
+    },
+    "upload": "Kargatu",
+    "uploadDialog": {
+      "goToRun": "Joan exekuzioetara",
+      "ok": "Ados",
+      "processing": "Prozesatzen",
+      "success": "Zure H5P Lumi.run-era kargatu da. Atzitu eta parteka dezakezu esteka honekin.",
+      "uploading": "Kargatzen"
+    }
+  },
+  "settings": {
+    "account": {
+      "email": {
+        "change": "Aldatu helbide elektronikoa",
+        "not-set": "Posta elektronikoa ez dago ezarrita",
+        "title": "Posta elektronikoa"
+      },
+      "label": "Kontua"
+    },
+    "appbar": {
+      "label": "Ezarpenak",
+      "save": "Gorde"
+    },
+    "enable": "Gaitu",
+    "general": {
+      "header": "Orokorra"
+    },
+    "h5p-library-administration": {
+      "can-not-be-deleted": "Liburutegi hau ezin da ezabatu, beste liburutegi {{count}}-ean erabiltzen delako",
+      "can-not-be-deleted_plural": "Liburutegi hau ezin da ezabatu, beste {{count}} liburutegitan erabiltzen delako",
+      "details": "Xehetasunak",
+      "header": "Instalatutako H5P liburutegiak",
+      "library-details": {
+        "addon": "Gehitu",
+        "author": "Egilea",
+        "dependentsCount": "Liburutegia erabiltzen duten liburutegi kopurua",
+        "description": "Deskribapena",
+        "embedTypes": "Onartutako txertatze motak",
+        "fullscreen": "Pantaila osoa onartzen du",
+        "header": "Liburutegiaren xehetasunak",
+        "instancesAsDependencyCount": "Liburutegi hau beste liburutegi batek erabiltzen dituen objektuak",
+        "instancesCount": "Liburutegi honekin eduki mota nagusi gisa sortutako objektuak",
+        "license": "Lizentzia",
+        "restricted": "Mugatua (pribilegioarekin bakarrik erabil daiteke)",
+        "standalone": "Eduki mota autonomoa"
+      },
+      "notifications": {
+        "delete": {
+          "error": "Errorea {{title}} ( {{version}} ) liburutegia ezabatzean.",
+          "success": "{{title}} ( {{version}} ) liburutegia behar bezala ezabatu da."
         },
-        "general": {
-            "econnrefused": "Badirudi arazo bat dagoela zure Interneteko konexioarekin."
+        "get": {
+          "error": "Errorea {{library.title}} ( {{version}} ) liburutegiari buruzko informazio zehatza lortzean."
         },
-        "h5peditor": {
-            "export_as_html": {
-                "error": "Ezin izan da H5P esportatu",
-                "success": "H5P esportatu da"
-            },
-            "open": {
-                "error": "Ezin izan da H5P ireki."
-            },
-            "save": {
-                "error": "Ezin izan da H5P gorde.",
-                "success": "H5P gorde da!"
-            }
-        },
-        "updater": {
-            "availableText": "Eguneraketa eskuragarri dago. Aplikazioak eguneratzea instalatuko du eta berrabiaraziko du.",
-            "availableTitle": "Instalatu eguneraketak",
-            "updateDownloaded": "Eguneraketa deskargatu da eta Lumitik irteten zarenean instalatuko da."
+        "upload": {
+          "error": "Errorea paketea kargatzean.",
+          "success-no-update": "Behar bezala kargatu da, baina ez da liburutegirik instalatu edo eguneratu. Seguru aski eduki mota hori dagoeneko sisteman instalatuta dago.",
+          "success-with-update": "{{installed}} liburutegi instalatu eta {{updated}} eguneratu dira."
         }
+      },
+      "upload_and_install": "Kargatu eta instalatu Liburutegia"
     },
-    "prerelease": {
-        "description": "Gaitu eginbide esperimentalak argitaratu aurretik",
-        "title": "Aurretiazko funtzionalitateak"
+    "links": {
+      "header": "Estekak"
     },
-    "privacy_policy": {
-        "consent": "Pribatutasun politika irakurri eta onartzen dut.",
-        "title": "Pribatutasun politika"
-    },
-    "run": {
-        "description": "Lumi Run-ek zure H5P klik bakarrarekin kargatu eta ostatatzeko aukera ematen dizu.",
-        "legal": "Zerbitzu hau erabiltzeko, zerbitzuaren baldintzak eta pribatutasun politika onartu eta posta elektroniko bat bidali behar diguzu.",
-        "link": {
-            "header": "Esteka"
-        },
-        "list": {
-            "deleteDialog": {
-                "cancel": "Utzi",
-                "confirm": "Berretsi",
-                "description": "Ziur zaude {{runId}}-ren exekuzioa ezabatu nahi duzula?",
-                "title": "Ezabatu {{runId}}-ren exekuzioa"
-            },
-            "header": "Kargatutako H5P",
-            "noUploadedH5P": "H5Pa ez da kargatu"
-        },
-        "notifications": {
-            "delete": {
-                "success": "{{id}} Lumi.run-etik behar bezala ezabatu da"
-            },
-            "upload": {
-                "success": "H5P behar bezala kargatu da Lumi.run-era"
-            }
-        },
-        "setupDialog": {
-            "close": "Itxi",
-            "start": "Hasi"
-        },
-        "tos": {
-            "description": "Zerbitzuaren baldintzak irakurri eta onartzen ditut.",
-            "header": "Zerbitzuaren baldintzak"
-        },
-        "upload": "Kargatu",
-        "uploadDialog": {
-            "goToRun": "Joan exekuzioetara",
-            "ok": "Ados",
-            "processing": "Prozesatzen",
-            "success": "Zure H5P Lumi.run-era kargatu da. Atzitu eta parteka dezakezu esteka honekin.",
-            "uploading": "Kargatzen"
-        }
-    },
-    "settings": {
-        "account": {
-            "email": {
-                "change": "Aldatu helbide elektronikoa",
-                "not-set": "Posta elektronikoa ez dago ezarrita",
-                "title": "Posta elektronikoa"
-            },
-            "label": "Kontua"
-        },
-        "appbar": {
-            "label": "Ezarpenak",
-            "save": "Gorde"
-        },
-        "enable": "Gaitu",
-        "general": {
-            "header": "Orokorra"
-        },
-        "h5p-library-administration": {
-            "can-not-be-deleted": "Liburutegi hau ezin da ezabatu, beste liburutegi {{count}}-ean erabiltzen delako",
-            "can-not-be-deleted_plural": "Liburutegi hau ezin da ezabatu, beste {{count}} liburutegitan erabiltzen delako",
-            "details": "Xehetasunak",
-            "header": "Instalatutako H5P liburutegiak",
-            "library-details": {
-                "addon": "Gehitu",
-                "author": "Egilea",
-                "dependentsCount": "Liburutegia erabiltzen duten liburutegi kopurua",
-                "description": "Deskribapena",
-                "embedTypes": "Onartutako txertatze motak",
-                "fullscreen": "Pantaila osoa onartzen du",
-                "header": "Liburutegiaren xehetasunak",
-                "instancesAsDependencyCount": "Liburutegi hau beste liburutegi batek erabiltzen dituen objektuak",
-                "instancesCount": "Liburutegi honekin eduki mota nagusi gisa sortutako objektuak",
-                "license": "Lizentzia",
-                "restricted": "Mugatua (pribilegioarekin bakarrik erabil daiteke)",
-                "standalone": "Eduki mota autonomoa"
-            },
-            "notifications": {
-                "delete": {
-                    "error": "Errorea {{title}} ( {{version}} ) liburutegia ezabatzean.",
-                    "success": "{{title}} ( {{version}} ) liburutegia behar bezala ezabatu da."
-                },
-                "get": {
-                    "error": "Errorea {{library.title}} ( {{version}} ) liburutegiari buruzko informazio zehatza lortzean."
-                },
-                "upload": {
-                    "error": "Errorea paketea kargatzean.",
-                    "success-no-update": "Behar bezala kargatu da, baina ez da liburutegirik instalatu edo eguneratu. Seguru aski eduki mota hori dagoeneko sisteman instalatuta dago.",
-                    "success-with-update": "{{installed}} liburutegi instalatu eta {{updated}} eguneratu dira."
-                }
-            },
-            "upload_and_install": "Kargatu eta instalatu Liburutegia"
-        },
-        "links": {
-            "header": "Estekak"
-        },
-        "menu": {
-            "account": "Kontua",
-            "general": "Orokorra",
-            "h5p-library-administration": "H5P liburutegiak",
-            "updates": "Eguneratzeak"
-        },
-        "updates": {
-            "header": "Eguneratzeak"
-        }
-    },
-    "setup_dialog": {
-        "accept_all": "Onartu guztiak",
-        "accept_selected": "Onartu hautatutakoa",
-        "consent_warning": "Aplikazio hau erabiltzeko pribatutasun politika onartu behar duzu gutxienez.",
-        "description": "Norberaren pribatutasuna babestea garrantzitsua da guretzat. Eman nahi duzun informazioa soilik biltzen dugu eta zure baimenarekin tratatzen dugu. Ahalik eta gardenenak izan nahi dugu. Hala ere, Lumi konexio eta datu transferentzietan oinarritzen da lan egiteko."
+    "menu": {
+      "account": "Kontua",
+      "general": "Orokorra",
+      "h5p-library-administration": "H5P liburutegiak",
+      "updates": "Eguneratzeak"
     },
     "updates": {
-        "badge": "Eguneratzea eskuragarri",
-        "checkForUpdate": {
-            "checkButton": "Egiaztatu",
-            "description": "Egiaztatu eguneratzeak",
-            "title": "Bilatu eguneratzeak"
-        },
-        "consent": "Aplikazio honi eguneratzeak automatikoki bilatzea baimentzen diot.",
-        "description": "Lortu azken bertsioa automatikoki.",
-        "restartAndInstall": "Instalatu eta berrabiarazi",
-        "title": "Eguneratze automatikoak"
-    },
-    "usage_statistics": {
-        "consent": "Aplikazio honi erabilera estatistika anonimoak bidaltzea baimentzen diot.",
-        "description": " Lagundu iezaguzu gure softwarea eta zerbitzuak hobetzen erabilera estatistika anonimoak bidaliz.",
-        "title": "Erabilera-estatistikak"
+      "header": "Eguneratzeak"
     }
+  },
+  "setup_dialog": {
+    "accept_all": "Onartu guztiak",
+    "accept_selected": "Onartu hautatutakoa",
+    "consent_warning": "Aplikazio hau erabiltzeko pribatutasun politika onartu behar duzu gutxienez.",
+    "description": "Norberaren pribatutasuna babestea garrantzitsua da guretzat. Eman nahi duzun informazioa soilik biltzen dugu eta zure baimenarekin tratatzen dugu. Ahalik eta gardenenak izan nahi dugu. Hala ere, Lumi konexio eta datu transferentzietan oinarritzen da lan egiteko."
+  },
+  "updates": {
+    "badge": "Eguneratzea eskuragarri",
+    "checkForUpdate": {
+      "checkButton": "Egiaztatu",
+      "description": "Egiaztatu eguneratzeak",
+      "title": "Bilatu eguneratzeak"
+    },
+    "consent": "Aplikazio honi eguneratzeak automatikoki bilatzea baimentzen diot.",
+    "description": "Lortu azken bertsioa automatikoki.",
+    "restartAndInstall": "Instalatu eta berrabiarazi",
+    "title": "Eguneratze automatikoak"
+  },
+  "usage_statistics": {
+    "consent": "Aplikazio honi erabilera estatistika anonimoak bidaltzea baimentzen diot.",
+    "description": " Lagundu iezaguzu gure softwarea eta zerbitzuak hobetzen erabilera estatistika anonimoak bidaliz.",
+    "title": "Erabilera-estatistikak"
+  },
+  "cloudhub": {
+    "description": "Bilatu edukia edo argitaratu zure edukia."
+  }
 }
