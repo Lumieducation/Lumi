@@ -1,378 +1,378 @@
 {
-  "editor": {
-    "tab": {
-      "view": "አሳይ",
-      "edit": "አርትዕ"
+    "editor": {
+        "tab": {
+            "view": "አሳይ",
+            "edit": "አርትዕ"
+        },
+        "sidebar": {
+            "open": "H5P ፋይልን ይክፈቱ",
+            "create": "አዲስ H5P ፋይል",
+            "noOpenFiles": "የተከፈቱ ፋይሎች የሉም"
+        },
+        "startPage": {
+            "title": "H5P አርታዒ",
+            "welcomeMessage": "የሉሚ ኤች 5 ፒ አርታኢ H5P ን እንዲመለከቱ ፣ እንዲያርትዑ እና እንዲፈጥሩ የሚያስችል ራሱን የቻለ መተግበሪያ ነው ፡፡",
+            "open": "አሁን ያለውን H5P ይክፈቱ",
+            "create": "አዲስ H5P ይፍጠሩ",
+            "start": "ጀምር"
+        },
+        "default_name": "አዲስ H5P",
+        "exportDialog": {
+            "title": "ወደ ውጭ ላክ ቅንብሮች",
+            "format": {
+                "title": "ቅርጸት",
+                "bundleLabel": "ሁሉም-በአንድ-ኤችቲኤምኤል ፋይል",
+                "bundleHint": "ብዙ የሚዲያ ፋይሎችን ካካተቱ ፋይሉ ለአንዳንድ ኮምፒተሮች በጣም ትልቅ ሊሆን ይችላል ፡፡",
+                "externalLabel": "አንድ የኤችቲኤምኤል ፋይል እና በርካታ የሚዲያ ፋይሎች",
+                "externalHint": "በሚቀጥለው ደረጃ ለኤችቲኤምኤል ፋይል ስም ይጠየቃሉ። የሚዲያ ፋይሎቹ ከፋይሉ ጋር በተመሳሳይ ስም በሚጀምሩ አቃፊዎች ውስጥ ይቀመጣሉ ፡፡",
+                "scorm": {
+                    "label": "የ SCORM ጥቅል",
+                    "masteryScoreLabel": "የላቀ ውጤት"
+                }
+            },
+            "reporter": {
+                "hint": "ዘጋቢውን ካከሉ ተማሪዎች በእድገታቸው አንድ ፋይልን ማስቀመጥ እና ለእርስዎ መላክ ይችላሉ ፡፡",
+                "switchLabel": "ዘጋቢን አካትት",
+                "learnMoreLink": "እዚህ ስለዚህ ጉዳይ የበለጠ ይረዱ።"
+            },
+            "cancelButton": "ሰርዝ",
+            "exportButton": "አሁን ላክ",
+            "filePicker": {
+                "title": "ላክ እንደ ...",
+                "buttonLabel": "ወደ ውጭ ላክ",
+                "formatNames": {
+                    "bundle": "ሁሉን-በ-አንድ HTML ፋይል",
+                    "external": "HTML ፋይል",
+                    "scorm": "የ SCORM ፋይል"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P ደራሲ",
+                "title": "H5P ይዘት",
+                "filename": "የእኔ H5P ወደ ውጭ መላክ"
+            },
+            "validationErrors": {
+                "errorNaN": "የገባው እሴት ቁጥር አይደለም።",
+                "errorRangeMin": "{{min}} በላይ መሆን አለበት።",
+                "errorRangeMax": "{{max}} ያነሰ መሆን አለበት።",
+                "errorRange": "{{min}} እና {{max}} መካከል መሆን አለበት።"
+            },
+            "addFunctionality": {
+                "title": "ተግባራዊነትን ጨምር",
+                "rights": "መብቶችን እና ፈቃዶችን አሳይ",
+                "embed": "የተከተተ አገናኝ አሳይ"
+            },
+            "displayOptions": {
+                "marginX": "የቀኝ እና የግራ ህዳግ",
+                "marginY": "የላይኛው እና የታችኛው ህዳግ",
+                "restrictWidthAndAlign": "ስፋቱን ይገድቡ እና ወደ ማእከላዊ አሰላለፍ",
+                "maximumWidth": "ከፍተኛው ስፋት",
+                "addCss": "የ CSS ፋይል ያክሉ",
+                "chooseCssFile": "መምረጥ",
+                "title": "የማሳያ አማራጮች"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "CSS ፋይል"
+            }
+        },
+        "saveAsDialog": {
+            "title": "አስቀምጥ እንደ",
+            "fallbackFilename": "የእኔ H5P ፋይል"
+        },
+        "extensionName": "H5P ጥቅል"
     },
-    "sidebar": {
-      "open": "H5P ፋይልን ይክፈቱ",
-      "create": "አዲስ H5P ፋይል",
-      "noOpenFiles": "የተከፈቱ ፋይሎች የሉም"
-    },
-    "startPage": {
-      "title": "H5P አርታዒ",
-      "welcomeMessage": "የሉሚ ኤች 5 ፒ አርታኢ H5P ን እንዲመለከቱ ፣ እንዲያርትዑ እና እንዲፈጥሩ የሚያስችል ራሱን የቻለ መተግበሪያ ነው ፡፡",
-      "open": "አሁን ያለውን H5P ይክፈቱ",
-      "create": "አዲስ H5P ይፍጠሩ",
-      "start": "ጀምር"
-    },
-    "default_name": "አዲስ H5P",
-    "exportDialog": {
-      "title": "ወደ ውጭ ላክ ቅንብሮች",
-      "format": {
-        "title": "ቅርጸት",
-        "bundleLabel": "ሁሉም-በአንድ-ኤችቲኤምኤል ፋይል",
-        "bundleHint": "ብዙ የሚዲያ ፋይሎችን ካካተቱ ፋይሉ ለአንዳንድ ኮምፒተሮች በጣም ትልቅ ሊሆን ይችላል ፡፡",
-        "externalLabel": "አንድ የኤችቲኤምኤል ፋይል እና በርካታ የሚዲያ ፋይሎች",
-        "externalHint": "በሚቀጥለው ደረጃ ለኤችቲኤምኤል ፋይል ስም ይጠየቃሉ። የሚዲያ ፋይሎቹ ከፋይሉ ጋር በተመሳሳይ ስም በሚጀምሩ አቃፊዎች ውስጥ ይቀመጣሉ ፡፡",
-        "scorm": {
-          "label": "የ SCORM ጥቅል",
-          "masteryScoreLabel": "የላቀ ውጤት"
+    "settings": {
+        "appbar": {
+            "label": "ቅንብሮች",
+            "save": "አስቀምጥ"
+        },
+        "enable": "አንቃ",
+        "menu": {
+            "general": "ጄኔራል",
+            "updates": "ዝመናዎች",
+            "account": "መለያ",
+            "h5p-library-administration": "H5P ቤተመፃህፍት"
+        },
+        "general": {
+            "header": "ጄኔራል"
+        },
+        "updates": {
+            "header": "ዝመናዎች"
+        },
+        "account": {
+            "label": "መለያ",
+            "email": {
+                "title": "ኢሜል",
+                "change": "ኢሜል ይቀይሩ",
+                "not-set": "ኢሜል አልተዘጋጀም"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "የተጫኑ የኤች 5 ፒ ቤተ-መጻሕፍት",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "ስቀሉ ስኬታማ ነበር ፣ ግን ምንም ቤተ-መጽሐፍት አልተጫኑም ወይም አልተዘመኑም። የይዘቱ ዓይነት ምናልባት ቀድሞውኑ በስርዓቱ ላይ ተጭኗል።",
+                    "success-with-update": "በተሳካ ሁኔታ {{installed}} የተጫነ እና {{updated}} ቤተ-መጻሕፍት ተዘምኗል።",
+                    "error": "ጥቅልን በመስቀል ላይ ስህተት"
+                },
+                "delete": {
+                    "success": "ቤተ-መጽሐፍት በተሳካ ሁኔታ ተሰር deletedል {{title}} ( {{version}} )",
+                    "error": "ቤተ-መጽሐፍት {{title}} ( {{version}} ) መሰረዝ ላይ ስህተት"
+                },
+                "get": {
+                    "error": "{{library.title}} ( {{version}} ) ዝርዝር መረጃ ማግኘት ላይ ስህተት።"
+                }
+            },
+            "upload_and_install": "ቤተ-መጽሐፍት ስቀል እና ጫን",
+            "details": "ዝርዝሮች",
+            "can-not-be-deleted": "ይህ ቤተ-መጽሐፍት መሰረዝ አይቻልም ፣ ምክንያቱም በ {{count}} ሌሎች ቤተ-መጽሐፍት ውስጥ ጥቅም ላይ ስለሚውል",
+            "can-not-be-deleted_plural": "ይህ ቤተ-መጽሐፍት መሰረዝ አይቻልም ፣ ምክንያቱም በ {{count}} ሌሎች ቤተ-መጻሕፍት ውስጥ ጥቅም ላይ ይውላል",
+            "library-details": {
+                "header": "የቤተ-መጽሐፍት ዝርዝሮች",
+                "author": "ደራሲ",
+                "description": "መግለጫ",
+                "license": "ፈቃድ",
+                "standalone": "ራሱን የቻለ የይዘት ዓይነት",
+                "restricted": "የተከለከለ (በልዩ መብት ብቻ ሊያገለግል ይችላል)",
+                "fullscreen": "ሙሉ ማያ ገጽን ይደግፋል",
+                "addon": "አዶን",
+                "embedTypes": "የተፈቀዱ መክተት ዓይነቶች",
+                "dependentsCount": "ቤተ መፃህፍቱን የሚጠቀሙ ቤተመፃህፍት ብዛት",
+                "instancesCount": "እንደ ዋናው የይዘት አይነት በዚህ ቤተ-መጽሐፍት የተፈጠሩ ዕቃዎች",
+                "instancesAsDependencyCount": "ይህ ቤተ-መጽሐፍት በሌላ ቤተ-መጽሐፍት የሚጠቀምባቸው ነገሮች"
+            }
+        },
+        "links": {
+            "header": "አገናኞች"
         }
-      },
-      "reporter": {
-        "hint": "ዘጋቢውን ካከሉ ተማሪዎች በእድገታቸው አንድ ፋይልን ማስቀመጥ እና ለእርስዎ መላክ ይችላሉ ፡፡",
-        "switchLabel": "ዘጋቢን አካትት",
-        "learnMoreLink": "እዚህ ስለዚህ ጉዳይ የበለጠ ይረዱ።"
-      },
-      "cancelButton": "ሰርዝ",
-      "exportButton": "አሁን ላክ",
-      "filePicker": {
-        "title": "ላክ እንደ ...",
-        "buttonLabel": "ወደ ውጭ ላክ",
-        "formatNames": {
-          "bundle": "ሁሉን-በ-አንድ HTML ፋይል",
-          "external": "HTML ፋይል",
-          "scorm": "የ SCORM ፋይል"
+    },
+    "analytics": {
+        "startPage": {
+            "title": "Lumi ትንታኔዎች",
+            "welcomeMessage": "የሉሚ አናሌቲክስ መሣሪያ የተጠቃሚ ሪፖርቶችን ከውጭ እንዲያስገቡ ያደርግዎታል እንዲሁም በዓይነ ሕሊናዎ እንዲታዩ ያደርጋቸዋል",
+            "start": "ጀምር",
+            "learn_more": "ተጨማሪ እወቅ",
+            "open": ".Lumi ፋይሎችን የያዘ አቃፊ ይምረጡ"
+        },
+        "name": "ስም",
+        "average": "አማካይ",
+        "searchPlaceholder": "የተማሪ ስሞችን ይፈልጉ ...",
+        "brokenFiles": "የተሰበሩ ፋይሎች ዝርዝር",
+        "errors": {
+            "no-content-json": "የኤች 5 ፒ ይዘት ለ .lumi ፋይል በትክክል አልተጨመረም።",
+            "json-parse-error": ".Lumi ፋይል ልክ ያልሆነ ይዘት ይ containsል (JSON አልተመረመረም)።",
+            "determine-name": "የተማሪውን ስም መወሰን አልተቻለም።",
+            "invalid-interactions": "አንዳንድ ግንኙነቶች ተሰብረዋል ፡፡",
+            "invalid-statements": "ከተመዘገቡት የተማሪ እርምጃዎች መካከል አንዳንዶቹ ተሰብረዋል ፡፡"
         }
-      },
-      "defaults": {
-        "authorName": "H5P ደራሲ",
-        "title": "H5P ይዘት",
-        "filename": "የእኔ H5P ወደ ውጭ መላክ"
-      },
-      "validationErrors": {
-        "errorNaN": "የገባው እሴት ቁጥር አይደለም።",
-        "errorRangeMin": "{{min}} በላይ መሆን አለበት።",
-        "errorRangeMax": "{{max}} ያነሰ መሆን አለበት።",
-        "errorRange": "{{min}} እና {{max}} መካከል መሆን አለበት።"
-      },
-      "addFunctionality": {
-        "title": "ተግባራዊነትን ጨምር",
-        "rights": "መብቶችን እና ፈቃዶችን አሳይ",
-        "embed": "የተከተተ አገናኝ አሳይ"
-      },
-      "displayOptions": {
-        "marginX": "የቀኝ እና የግራ ህዳግ",
-        "marginY": "የላይኛው እና የታችኛው ህዳግ",
-        "restrictWidthAndAlign": "ስፋቱን ይገድቡ እና ወደ ማእከላዊ አሰላለፍ",
-        "maximumWidth": "ከፍተኛው ስፋት",
-        "addCss": "የ CSS ፋይል ያክሉ",
-        "chooseCssFile": "መምረጥ",
-        "title": "የማሳያ አማራጮች"
-      },
-      "pixelsAbbreviation": "px",
-      "cssFilePicker": {
-        "formatName": "CSS ፋይል"
-      }
     },
-    "saveAsDialog": {
-      "title": "አስቀምጥ እንደ",
-      "fallbackFilename": "የእኔ H5P ፋይል"
+    "bug_report": {
+        "title": "የሳንካ እና የስንክል ሪፖርቶች",
+        "description": "ያልታወቁ የብልሽት እና የሳንካ ሪፖርቶችን በመላክ ሶፍትዌሮቻችንን እና አገልግሎቶቻችንን እንድናሻሽል ይርዱን ፡፡",
+        "consent": "ይህ ትግበራ የሳንካ እና የብልሽት ሪፖርቶችን እንዲልክ ፈቅጃለሁ ፡፡",
+        "email": {
+            "subject": "የሉሚ ችግር ሪፖርት",
+            "body": "ለችግርዎ ፈጣን መፍትሄ ለማግኘት እባክዎን ስለሚከተሉት ይፃፉ፡-\n\n  - Lumi ስሪት: <እዚህ ሙላ>, ስርዓተ ክወና: <እዚህ ሙላ>\n  - ችግሩን ይግለጹ\n  - በማሽኖቻችን ላይ ያለውን ችግር እንዴት ማባዛት እንደምንችል ይግለጹ\n  - ችግሩ ከፋይሎቹ ጋር የተያያዘ ከሆነ ናሙና .h5p ወይም ወደ ውጭ የተላኩ ፋይሎችን ይላኩልን።\n\nመልእክቶችን ከእንግሊዝኛ ወይም ከጀርመንኛ ሌላ ቋንቋ ከላኩልን መልእክትዎን ለመተርጎም ራስ-ሰር የትርጉም መሳሪያ እንጠቀማለን።"
+        }
     },
-    "extensionName": "H5P ጥቅል"
-  },
-  "settings": {
-    "appbar": {
-      "label": "ቅንብሮች",
-      "save": "አስቀምጥ"
-    },
-    "enable": "አንቃ",
-    "menu": {
-      "general": "ጄኔራል",
-      "updates": "ዝመናዎች",
-      "account": "መለያ",
-      "h5p-library-administration": "H5P ቤተመፃህፍት"
-    },
-    "general": {
-      "header": "ጄኔራል"
+    "usage_statistics": {
+        "title": "የአጠቃቀም ስታትስቲክስ",
+        "description": " ያልታወቁ የአጠቃቀም ስታትስቲክስ በመላክ ሶፍትዌሮቻችንን እና አገልግሎቶቻችንን እንድናሻሽል ይርዱን ፡፡",
+        "consent": "ይህ መተግበሪያ ስም-አልባ የአጠቃቀም ስታትስቲክስ እንዲልክ ፈቅጃለሁ ፡፡"
     },
     "updates": {
-      "header": "ዝመናዎች"
-    },
-    "account": {
-      "label": "መለያ",
-      "email": {
-        "title": "ኢሜል",
-        "change": "ኢሜል ይቀይሩ",
-        "not-set": "ኢሜል አልተዘጋጀም"
-      }
-    },
-    "h5p-library-administration": {
-      "header": "የተጫኑ የኤች 5 ፒ ቤተ-መጻሕፍት",
-      "notifications": {
-        "upload": {
-          "success-no-update": "ስቀሉ ስኬታማ ነበር ፣ ግን ምንም ቤተ-መጽሐፍት አልተጫኑም ወይም አልተዘመኑም። የይዘቱ ዓይነት ምናልባት ቀድሞውኑ በስርዓቱ ላይ ተጭኗል።",
-          "success-with-update": "በተሳካ ሁኔታ {{installed}} የተጫነ እና {{updated}} ቤተ-መጻሕፍት ተዘምኗል።",
-          "error": "ጥቅልን በመስቀል ላይ ስህተት"
+        "title": "ራስ-ሰር ዝመናዎች",
+        "description": "የቅርብ ጊዜውን ስሪት በራስ-ሰር ያግኙ።",
+        "consent": "ይህ መተግበሪያ ዝመናዎችን በራስ-ሰር እንዲያረጋግጥ ፈቅጃለሁ።",
+        "checkForUpdate": {
+            "title": "ዝማኔዎችን ይመልከቱ",
+            "description": "ዝማኔዎችን ይመልከቱ",
+            "checkButton": "ይፈትሹ"
         },
-        "delete": {
-          "success": "ቤተ-መጽሐፍት በተሳካ ሁኔታ ተሰር deletedል {{title}} ( {{version}} )",
-          "error": "ቤተ-መጽሐፍት {{title}} ( {{version}} ) መሰረዝ ላይ ስህተት"
+        "restartAndInstall": "ይጫኑ እና እንደገና ያስጀምሩ",
+        "badge": "ማዘመን አለ።"
+    },
+    "language": {
+        "title": "ቋንቋ",
+        "description": "የማመልከቻውን ቋንቋ ይቀይሩ።",
+        "help_translate": "እንድንተረጎም ይርዱን!"
+    },
+    "privacy_policy": {
+        "title": "የ ግል የሆነ",
+        "consent": "ለግላዊነት ፖሊሲው አንብቤ ተስማምቻለሁ ፡፡"
+    },
+    "setup_dialog": {
+        "description": "የግለሰቡን ግላዊነት መጠበቅ ለእኛ አስፈላጊ ነው ፡፡ እኛ የሚሰጡን ለእኛ የመረጡትን መረጃ ብቻ ነው የምንሰበስበው እና እኛ በእርስዎ ፈቃድ እናከናውናለን ፡፡ በተቻለ መጠን ግልፅ መሆን እንፈልጋለን ፡፡ ሆኖም ሉሚ ወደ ሥራ አንዳንድ ግንኙነቶች እና የውሂብ ዝውውሮች ላይ ይተማመናል ፡፡",
+        "consent_warning": "ይህንን ትግበራ ለመጠቀም ቢያንስ ለግላዊነት ፖሊሲው መስማማት ያስፈልግዎታል።",
+        "accept_all": "ሁሉንም ተቀበል",
+        "accept_selected": "የተመረጠውን ተቀበል"
+    },
+    "menu": {
+        "file": {
+            "label": "ፋይል",
+            "open": "የትንታኔ ፋይሎችን ይክፈቱ",
+            "save": "አስቀምጥ",
+            "save_as": "አስቀምጥ እንደ...",
+            "export": "ወደ ውጭ ላክ ...",
+            "edit": "አርትዕ",
+            "undo": "ቀልብስ",
+            "redo": "ዝግጁ",
+            "cut": "ቁረጥ",
+            "copy": "ገልብጥ",
+            "paste": "ለጥፍ",
+            "select_all": "ሁሉንም ምረጥ"
         },
-        "get": {
-          "error": "{{library.title}} ( {{version}} ) ዝርዝር መረጃ ማግኘት ላይ ስህተት።"
+        "h5peditor": {
+            "new": "አዲስ H5P",
+            "open": "H5P ን ይክፈቱ"
+        },
+        "help": {
+            "label": "እገዛ",
+            "report_issue": "ሪፖርት ያድርጉ",
+            "toggle_developer_tools": "የገንቢ መሣሪያዎችን ይቀያይሩ",
+            "follow_us_on_twitter": "በትዊተር ላይ ይከተሉን",
+            "about": "ስለ"
+        },
+        "quit": "አቁም",
+        "mac": {
+            "services": "አገልግሎቶች",
+            "hide": "Lumi ን ደብቅ",
+            "hideothers": "ሌሎችን ደብቅ",
+            "unhide": "ሁሉንም አሳይ"
+        },
+        "window": {
+            "label": "መስኮት",
+            "show": "አሳይ",
+            "minimize": "አሳንስ",
+            "zoom": "አጉላ",
+            "front": "ሁሉንም ወደ ፊት አምጣ",
+            "close": "ገጠመ"
+        },
+        "view": {
+            "label": "አሳይ",
+            "resetZoom": "ትክክለኛው መጠን",
+            "zoomIn": "አቅርብ",
+            "zoomOut": "አጉላ",
+            "togglefullscreen": "ሙሉ ማያ ገጽን ይቀያይሩ"
+        },
+        "run": {
+            "label": "አሂድ",
+            "upload": "ወደ ሉሚ ሩጫ ይስቀሉ"
         }
-      },
-      "upload_and_install": "ቤተ-መጽሐፍት ስቀል እና ጫን",
-      "details": "ዝርዝሮች",
-      "can-not-be-deleted": "ይህ ቤተ-መጽሐፍት መሰረዝ አይቻልም ፣ ምክንያቱም በ {{count}} ሌሎች ቤተ-መጽሐፍት ውስጥ ጥቅም ላይ ስለሚውል",
-      "can-not-be-deleted_plural": "ይህ ቤተ-መጽሐፍት መሰረዝ አይቻልም ፣ ምክንያቱም በ {{count}} ሌሎች ቤተ-መጻሕፍት ውስጥ ጥቅም ላይ ይውላል",
-      "library-details": {
-        "header": "የቤተ-መጽሐፍት ዝርዝሮች",
-        "author": "ደራሲ",
-        "description": "መግለጫ",
-        "license": "ፈቃድ",
-        "standalone": "ራሱን የቻለ የይዘት ዓይነት",
-        "restricted": "የተከለከለ (በልዩ መብት ብቻ ሊያገለግል ይችላል)",
-        "fullscreen": "ሙሉ ማያ ገጽን ይደግፋል",
-        "addon": "አዶን",
-        "embedTypes": "የተፈቀዱ መክተት ዓይነቶች",
-        "dependentsCount": "ቤተ መፃህፍቱን የሚጠቀሙ ቤተመፃህፍት ብዛት",
-        "instancesCount": "እንደ ዋናው የይዘት አይነት በዚህ ቤተ-መጽሐፍት የተፈጠሩ ዕቃዎች",
-        "instancesAsDependencyCount": "ይህ ቤተ-መጽሐፍት በሌላ ቤተ-መጽሐፍት የሚጠቀምባቸው ነገሮች"
-      }
-    },
-    "links": {
-      "header": "አገናኞች"
-    }
-  },
-  "analytics": {
-    "startPage": {
-      "title": "Lumi ትንታኔዎች",
-      "welcomeMessage": "የሉሚ አናሌቲክስ መሣሪያ የተጠቃሚ ሪፖርቶችን ከውጭ እንዲያስገቡ ያደርግዎታል እንዲሁም በዓይነ ሕሊናዎ እንዲታዩ ያደርጋቸዋል",
-      "start": "ጀምር",
-      "learn_more": "ተጨማሪ እወቅ",
-      "open": ".Lumi ፋይሎችን የያዘ አቃፊ ይምረጡ"
-    },
-    "name": "ስም",
-    "average": "አማካይ",
-    "searchPlaceholder": "የተማሪ ስሞችን ይፈልጉ ...",
-    "brokenFiles": "የተሰበሩ ፋይሎች ዝርዝር",
-    "errors": {
-      "no-content-json": "የኤች 5 ፒ ይዘት ለ .lumi ፋይል በትክክል አልተጨመረም።",
-      "json-parse-error": ".Lumi ፋይል ልክ ያልሆነ ይዘት ይ containsል (JSON አልተመረመረም)።",
-      "determine-name": "የተማሪውን ስም መወሰን አልተቻለም።",
-      "invalid-interactions": "አንዳንድ ግንኙነቶች ተሰብረዋል ፡፡",
-      "invalid-statements": "ከተመዘገቡት የተማሪ እርምጃዎች መካከል አንዳንዶቹ ተሰብረዋል ፡፡"
-    }
-  },
-  "bug_report": {
-    "title": "የሳንካ እና የስንክል ሪፖርቶች",
-    "description": "ያልታወቁ የብልሽት እና የሳንካ ሪፖርቶችን በመላክ ሶፍትዌሮቻችንን እና አገልግሎቶቻችንን እንድናሻሽል ይርዱን ፡፡",
-    "consent": "ይህ ትግበራ የሳንካ እና የብልሽት ሪፖርቶችን እንዲልክ ፈቅጃለሁ ፡፡",
-    "email": {
-      "subject": "የሉሚ ችግር ሪፖርት",
-      "body": "ለችግርዎ ፈጣን መፍትሄ ለማግኘት እባክዎን ስለሚከተሉት ይፃፉ፡-\n\n  - Lumi ስሪት: <እዚህ ሙላ>, ስርዓተ ክወና: <እዚህ ሙላ>\n  - ችግሩን ይግለጹ\n  - በማሽኖቻችን ላይ ያለውን ችግር እንዴት ማባዛት እንደምንችል ይግለጹ\n  - ችግሩ ከፋይሎቹ ጋር የተያያዘ ከሆነ ናሙና .h5p ወይም ወደ ውጭ የተላኩ ፋይሎችን ይላኩልን።\n\nመልእክቶችን ከእንግሊዝኛ ወይም ከጀርመንኛ ሌላ ቋንቋ ከላኩልን መልእክትዎን ለመተርጎም ራስ-ሰር የትርጉም መሳሪያ እንጠቀማለን።"
-    }
-  },
-  "usage_statistics": {
-    "title": "የአጠቃቀም ስታትስቲክስ",
-    "description": " ያልታወቁ የአጠቃቀም ስታትስቲክስ በመላክ ሶፍትዌሮቻችንን እና አገልግሎቶቻችንን እንድናሻሽል ይርዱን ፡፡",
-    "consent": "ይህ መተግበሪያ ስም-አልባ የአጠቃቀም ስታትስቲክስ እንዲልክ ፈቅጃለሁ ፡፡"
-  },
-  "updates": {
-    "title": "ራስ-ሰር ዝመናዎች",
-    "description": "የቅርብ ጊዜውን ስሪት በራስ-ሰር ያግኙ።",
-    "consent": "ይህ መተግበሪያ ዝመናዎችን በራስ-ሰር እንዲያረጋግጥ ፈቅጃለሁ።",
-    "checkForUpdate": {
-      "title": "ዝማኔዎችን ይመልከቱ",
-      "description": "ዝማኔዎችን ይመልከቱ",
-      "checkButton": "ይፈትሹ"
-    },
-    "restartAndInstall": "ይጫኑ እና እንደገና ያስጀምሩ",
-    "badge": "ማዘመን አለ።"
-  },
-  "language": {
-    "title": "ቋንቋ",
-    "description": "የማመልከቻውን ቋንቋ ይቀይሩ።",
-    "help_translate": "እንድንተረጎም ይርዱን!"
-  },
-  "privacy_policy": {
-    "title": "የ ግል የሆነ",
-    "consent": "ለግላዊነት ፖሊሲው አንብቤ ተስማምቻለሁ ፡፡"
-  },
-  "setup_dialog": {
-    "description": "የግለሰቡን ግላዊነት መጠበቅ ለእኛ አስፈላጊ ነው ፡፡ እኛ የሚሰጡን ለእኛ የመረጡትን መረጃ ብቻ ነው የምንሰበስበው እና እኛ በእርስዎ ፈቃድ እናከናውናለን ፡፡ በተቻለ መጠን ግልፅ መሆን እንፈልጋለን ፡፡ ሆኖም ሉሚ ወደ ሥራ አንዳንድ ግንኙነቶች እና የውሂብ ዝውውሮች ላይ ይተማመናል ፡፡",
-    "consent_warning": "ይህንን ትግበራ ለመጠቀም ቢያንስ ለግላዊነት ፖሊሲው መስማማት ያስፈልግዎታል።",
-    "accept_all": "ሁሉንም ተቀበል",
-    "accept_selected": "የተመረጠውን ተቀበል"
-  },
-  "menu": {
-    "file": {
-      "label": "ፋይል",
-      "open": "የትንታኔ ፋይሎችን ይክፈቱ",
-      "save": "አስቀምጥ",
-      "save_as": "አስቀምጥ እንደ...",
-      "export": "ወደ ውጭ ላክ ...",
-      "edit": "አርትዕ",
-      "undo": "ቀልብስ",
-      "redo": "ዝግጁ",
-      "cut": "ቁረጥ",
-      "copy": "ገልብጥ",
-      "paste": "ለጥፍ",
-      "select_all": "ሁሉንም ምረጥ"
-    },
-    "h5peditor": {
-      "new": "አዲስ H5P",
-      "open": "H5P ን ይክፈቱ"
-    },
-    "help": {
-      "label": "እገዛ",
-      "report_issue": "ሪፖርት ያድርጉ",
-      "toggle_developer_tools": "የገንቢ መሣሪያዎችን ይቀያይሩ",
-      "follow_us_on_twitter": "በትዊተር ላይ ይከተሉን",
-      "about": "ስለ"
-    },
-    "quit": "አቁም",
-    "mac": {
-      "services": "አገልግሎቶች",
-      "hide": "Lumi ን ደብቅ",
-      "hideothers": "ሌሎችን ደብቅ",
-      "unhide": "ሁሉንም አሳይ"
-    },
-    "window": {
-      "label": "መስኮት",
-      "show": "አሳይ",
-      "minimize": "አሳንስ",
-      "zoom": "አጉላ",
-      "front": "ሁሉንም ወደ ፊት አምጣ",
-      "close": "ገጠመ"
-    },
-    "view": {
-      "label": "አሳይ",
-      "resetZoom": "ትክክለኛው መጠን",
-      "zoomIn": "አቅርብ",
-      "zoomOut": "አጉላ",
-      "togglefullscreen": "ሙሉ ማያ ገጽን ይቀያይሩ"
-    },
-    "run": {
-      "label": "አሂድ",
-      "upload": "ወደ ሉሚ ሩጫ ይስቀሉ"
-    }
-  },
-  "notifications": {
-    "analytics": {
-      "import": {
-        "error": "ትክክለኛ ፋይሎች አልተገኙም",
-        "success": "ከውጭ የመጡ የሪፖርት ፋይሎች",
-        "brokenFiles": "{{count}} የተሰበረ ፋይል ተገኝቷል",
-        "brokenFiles_plural": "{{count}} የተሰበሩ ፋይሎች ተገኝተዋል"
-      }
-    },
-    "h5peditor": {
-      "save": {
-        "success": "ኤች 5 ፒ ተቀምጧል!",
-        "error": "H5P ሊቀመጥ አልቻለም።"
-      },
-      "open": {
-        "error": "H5P ን መክፈት አልተቻለም።"
-      },
-      "export_as_html": {
-        "success": "ኤች 5 ፒ በተሳካ ሁኔታ ወደ ውጭ ተልኳል",
-        "error": "ኤች 5 ፒ ወደ ውጭ መላክ አልተቻለም"
-      }
-    },
-    "general": {
-      "econnrefused": "በበይነመረብ ግንኙነትዎ ላይ ችግር ያለ ይመስላል።"
-    },
-    "updater": {
-      "availableText": "ማዘመን አለ። አፕሊኬሽኑ ዝመናውን ይጭናል እና እንደገና ይጀምራል።",
-      "availableTitle": "ዝመናዎችን ጫን",
-      "updateDownloaded": "ዝማኔ ወርዷል እና Lumiን ከለቀቀ በኋላ ይጫናል።"
-    }
-  },
-  "auth": {
-    "set_email": "ኢሜል ያዘጋጁ",
-    "email": "ኢሜል",
-    "code": "ኮድ",
-    "verify_code": "ኮድ ያረጋግጡ",
-    "verify_email": "ኢሜል ያረጋግጡ",
-    "notification": {
-      "success": "{{email}} በተሳካ ሁኔታ ተረጋግጧል",
-      "pending": "የማረጋገጫ ኮድ ወደ {{email}} ፡ እባክዎን ኢሜሎችዎን ይፈትሹ ፡፡",
-      "logout": {
-        "success": "የእርስዎ ዘግተው ወጥተዋል።"
-      }
-    },
-    "error": {
-      "no-valid-email": "{{email}} ትክክለኛ የኢሜል አድራሻ አይደለም ፡",
-      "econnrefused": "Lumi Auth አገልጋይን ማነጋገር አልተቻለም። እባክዎ የበይነመረብ ግንኙነትዎን ይፈትሹ።"
-    },
-    "cancel": "ሰርዝ",
-    "logout": "ውጣ"
-  },
-  "dialog": {
-    "close": "ገጠመ"
-  },
-  "general": {
-    "delete": "ሰርዝ",
-    "copyClipboard": "{{value}} ወደ ቅንጥብ ሰሌዳ ተቀድቷል"
-  },
-  "errors": {
-    "codes": {
-      "econnrefused": "ግንኙነት ውድቅ ተደርጓል"
-    },
-    "messages": {
-      "econnrefused": "ግንኙነት ውድቅ ተደርጓል"
-    }
-  },
-  "prerelease": {
-    "title": "የቅድመ -ልቀት ባህሪዎች",
-    "description": "ከመሞታቸው በፊት የሙከራ ባህሪያትን ያንቁ"
-  },
-  "run": {
-    "description": "ሉሚ ሩጫ በአንድ ጠቅታ የእርስዎን H5P ለመስቀል እና ለማስተናገድ ያስችልዎታል።",
-    "legal": "ይህንን አገልግሎት ለመጠቀም በአገልግሎት ውሎች ፣ በግላዊነት ፖሊሲው ላይ መጣስ እና የእውቂያ ኢሜይል ለእኛ መስጠት አለብዎት።",
-    "tos": {
-      "header": "የአገልግሎት ውሎች",
-      "description": "ለአገልግሎት ውሎች አንብቤ ተስማምቻለሁ።"
-    },
-    "link": {
-      "header": "አገናኝ"
-    },
-    "upload": "ስቀል",
-    "list": {
-      "header": "H5P ተሰቅሏል",
-      "noUploadedH5P": "ምንም የተሰቀለ H5P የለም",
-      "deleteDialog": {
-        "title": "አሂድ {{runId}}",
-        "description": "{{runId}} በእውነት መሰረዝ ይፈልጋሉ?",
-        "cancel": "ሰርዝ",
-        "confirm": "ያረጋግጡ"
-      }
-    },
-    "uploadDialog": {
-      "success": "የእርስዎ H5P ወደ Lumi.run ተሰቅሏል። በሚከተለው አገናኝ መድረስ እና ማጋራት ይችላሉ።",
-      "uploading": "በመስቀል ላይ",
-      "processing": "በማስኬድ ላይ",
-      "goToRun": "ወደ ሩጫዎች ይሂዱ",
-      "ok": "እሺ"
-    },
-    "setupDialog": {
-      "close": "ገጠመ",
-      "start": "ጀምር"
     },
     "notifications": {
-      "delete": {
-        "success": "ከሉሚ.run {{id}} በተሳካ ሁኔታ ተሰር deletedል"
-      },
-      "upload": {
-        "success": "H5P ን በተሳካ ሁኔታ ወደ Lumi.run ሰቅሏል"
-      }
+        "analytics": {
+            "import": {
+                "error": "ትክክለኛ ፋይሎች አልተገኙም",
+                "success": "ከውጭ የመጡ የሪፖርት ፋይሎች",
+                "brokenFiles": "{{count}} የተሰበረ ፋይል ተገኝቷል",
+                "brokenFiles_plural": "{{count}} የተሰበሩ ፋይሎች ተገኝተዋል"
+            }
+        },
+        "h5peditor": {
+            "save": {
+                "success": "ኤች 5 ፒ ተቀምጧል!",
+                "error": "H5P ሊቀመጥ አልቻለም።"
+            },
+            "open": {
+                "error": "H5P ን መክፈት አልተቻለም።"
+            },
+            "export_as_html": {
+                "success": "ኤች 5 ፒ በተሳካ ሁኔታ ወደ ውጭ ተልኳል",
+                "error": "ኤች 5 ፒ ወደ ውጭ መላክ አልተቻለም"
+            }
+        },
+        "general": {
+            "econnrefused": "በበይነመረብ ግንኙነትዎ ላይ ችግር ያለ ይመስላል።"
+        },
+        "updater": {
+            "availableText": "ማዘመን አለ። አፕሊኬሽኑ ዝመናውን ይጭናል እና እንደገና ይጀምራል።",
+            "availableTitle": "ዝመናዎችን ጫን",
+            "updateDownloaded": "ዝማኔ ወርዷል እና Lumiን ከለቀቀ በኋላ ይጫናል።"
+        }
+    },
+    "auth": {
+        "set_email": "ኢሜል ያዘጋጁ",
+        "email": "ኢሜል",
+        "code": "ኮድ",
+        "verify_code": "ኮድ ያረጋግጡ",
+        "verify_email": "ኢሜል ያረጋግጡ",
+        "notification": {
+            "success": "{{email}} በተሳካ ሁኔታ ተረጋግጧል",
+            "pending": "የማረጋገጫ ኮድ ወደ {{email}} ፡ እባክዎን ኢሜሎችዎን ይፈትሹ ፡፡",
+            "logout": {
+                "success": "የእርስዎ ዘግተው ወጥተዋል።"
+            }
+        },
+        "error": {
+            "no-valid-email": "{{email}} ትክክለኛ የኢሜል አድራሻ አይደለም ፡",
+            "econnrefused": "Lumi Auth አገልጋይን ማነጋገር አልተቻለም። እባክዎ የበይነመረብ ግንኙነትዎን ይፈትሹ።"
+        },
+        "cancel": "ሰርዝ",
+        "logout": "ውጣ"
+    },
+    "dialog": {
+        "close": "ገጠመ"
+    },
+    "general": {
+        "delete": "ሰርዝ",
+        "copyClipboard": "{{value}} ወደ ቅንጥብ ሰሌዳ ተቀድቷል"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "ግንኙነት ውድቅ ተደርጓል"
+        },
+        "messages": {
+            "econnrefused": "ግንኙነት ውድቅ ተደርጓል"
+        }
+    },
+    "prerelease": {
+        "title": "የቅድመ -ልቀት ባህሪዎች",
+        "description": "ከመሞታቸው በፊት የሙከራ ባህሪያትን ያንቁ"
+    },
+    "run": {
+        "description": "ሉሚ ሩጫ በአንድ ጠቅታ የእርስዎን H5P ለመስቀል እና ለማስተናገድ ያስችልዎታል።",
+        "legal": "ይህንን አገልግሎት ለመጠቀም በአገልግሎት ውሎች ፣ በግላዊነት ፖሊሲው ላይ መጣስ እና የእውቂያ ኢሜይል ለእኛ መስጠት አለብዎት።",
+        "tos": {
+            "header": "የአገልግሎት ውሎች",
+            "description": "ለአገልግሎት ውሎች አንብቤ ተስማምቻለሁ።"
+        },
+        "link": {
+            "header": "አገናኝ"
+        },
+        "upload": "ስቀል",
+        "list": {
+            "header": "H5P ተሰቅሏል",
+            "noUploadedH5P": "ምንም የተሰቀለ H5P የለም",
+            "deleteDialog": {
+                "title": "አሂድ {{runId}}",
+                "description": "{{runId}} በእውነት መሰረዝ ይፈልጋሉ?",
+                "cancel": "ሰርዝ",
+                "confirm": "ያረጋግጡ"
+            }
+        },
+        "uploadDialog": {
+            "success": "የእርስዎ H5P ወደ Lumi.run ተሰቅሏል። በሚከተለው አገናኝ መድረስ እና ማጋራት ይችላሉ።",
+            "uploading": "በመስቀል ላይ",
+            "processing": "በማስኬድ ላይ",
+            "goToRun": "ወደ ሩጫዎች ይሂዱ",
+            "ok": "እሺ"
+        },
+        "setupDialog": {
+            "close": "ገጠመ",
+            "start": "ጀምር"
+        },
+        "notifications": {
+            "delete": {
+                "success": "ከሉሚ.run {{id}} በተሳካ ሁኔታ ተሰር deletedል"
+            },
+            "upload": {
+                "success": "H5P ን በተሳካ ሁኔታ ወደ Lumi.run ሰቅሏል"
+            }
+        }
+    },
+    "cloudhub": {
+        "description": "ይዘትን ይፈልጉ ወይም ይዘትዎን ያትሙ።"
     }
-  },
-  "cloudhub": {
-    "description": "ይዘትን ይፈልጉ ወይም ይዘትዎን ያትሙ።"
-  }
 }

@@ -1,378 +1,378 @@
 {
-  "analytics": {
-    "average": "Průměrný",
-    "brokenFiles": "Seznam nefunkčních souborů",
-    "errors": {
-      "determine-name": "Nelze určit jméno studenta.",
-      "invalid-interactions": "Některé interakce jsou přerušené.",
-      "invalid-statements": "Některé zaznamenané akce studentů jsou nefunkční.",
-      "json-parse-error": "Soubor .lumi obsahuje neplatný obsah (JSON nebyl analyzován).",
-      "no-content-json": "Obsah H5P nebyl správně přidán do souboru .lumi."
-    },
-    "name": "název",
-    "searchPlaceholder": "Hledat jména studentů ...",
-    "startPage": {
-      "learn_more": "dozvědět se více",
-      "open": "Vyberte složku se soubory .lumi",
-      "start": "Start",
-      "title": "Lumi Analytics",
-      "welcomeMessage": "Nástroj Lumi's Analytics umožňuje importovat uživatelské zprávy a vizualizovat je za vás"
-    }
-  },
-  "auth": {
-    "cancel": "zrušení",
-    "code": "Kód",
-    "email": "E-mailem",
-    "error": {
-      "no-valid-email": "{{email}} není platná e-mailová adresa.",
-      "econnrefused": "Nelze kontaktovat server Lumi Auth. Zkontrolujte prosím své připojení k internetu."
-    },
-    "notification": {
-      "pending": "Ověřovací kód byl odeslán na {{email}} . Zkontrolujte prosím své e-maily.",
-      "success": "{{email}} byl úspěšně ověřen",
-      "logout": {
-        "success": "Byli jste odhlášeni."
-      }
-    },
-    "set_email": "Nastavit e-mail",
-    "verify_code": "Ověřit kód",
-    "verify_email": "ověřovací email",
-    "logout": "Odhlásit se"
-  },
-  "bug_report": {
-    "consent": "Povoluji této aplikaci odesílat zprávy o chybách a selháních.",
-    "description": "Pomozte nám vylepšit náš software a služby zasíláním anonymních zpráv o selháních a chybách.",
-    "title": "Zprávy o chybách a selháních",
-    "email": {
-      "subject": "Zpráva o problému Lumi",
-      "body": "Chcete-li získat rychlé řešení vašeho problému, napište o:\n\n  - Verze Lumi: <vyplňte zde>, Operační systém: <vyplňte zde>\n  - popište problém\n  - popsat, jak můžeme problém reprodukovat na našich strojích\n  - pošlete nám ukázkové .h5p nebo exportované soubory, pokud se problém týká souborů\n\nPokud nám posíláte zprávy v jiném jazyce než v angličtině nebo němčině, použijeme k překladu vaší zprávy nástroj pro automatický překlad."
-    }
-  },
-  "dialog": {
-    "close": "Zavřít"
-  },
-  "editor": {
-    "default_name": "nový H5P",
-    "exportDialog": {
-      "cancelButton": "zrušení",
-      "defaults": {
-        "authorName": "Autor H5P",
-        "title": "Obsah H5P",
-        "filename": "Můj export H5P"
-      },
-      "exportButton": "Exportovat hned",
-      "filePicker": {
-        "buttonLabel": "Vývozní",
-        "formatNames": {
-          "bundle": "Soubor HTML typu vše v jednom",
-          "external": "HTML soubor",
-          "scorm": "soubor SCORM"
-        },
-        "title": "Exportovat jako ..."
-      },
-      "format": {
-        "bundleHint": "Pokud přidáte spoustu mediálních souborů, může se soubor pro některé počítače zvětšit.",
-        "bundleLabel": "Soubor HTML vše v jednom",
-        "externalHint": "V dalším kroku budete požádáni o název souboru HTML. Mediální soubory budou vloženy do složek, které začínají stejným názvem jako soubor.",
-        "externalLabel": "Jeden soubor HTML a několik mediálních souborů",
-        "scorm": {
-          "label": "Balíček SCORM",
-          "masteryScoreLabel": "Mistrovské skóre"
-        },
-        "title": "Formát"
-      },
-      "reporter": {
-        "hint": "Pokud přidáte reportéra, studenti mohou uložit soubor se svým pokrokem a poslat vám ho.",
-        "learnMoreLink": "Zde se dozvíte více.",
-        "switchLabel": "Zahrnout reportéra"
-      },
-      "title": "Exportovat nastavení",
-      "validationErrors": {
-        "errorNaN": "Zadaná hodnota není číslo",
-        "errorRangeMin": "Hodnota musí být větší než {{min}}",
-        "errorRangeMax": "Hodnota musí být menší než {{max}}",
-        "errorRange": "Hodnota musí být mezi {{min}} a {{max}}"
-      },
-      "addFunctionality": {
-        "title": "Přidejte funkcionalitu",
-        "rights": "Zobrazit práva a oprávnění",
-        "embed": "Zobrazit odkaz pro vložení"
-      },
-      "displayOptions": {
-        "marginX": "Pravý a levý okraj",
-        "marginY": "Horní a spodní okraj",
-        "restrictWidthAndAlign": "Omezte šířku a zarovnejte na střed",
-        "maximumWidth": "Maximální šířka",
-        "addCss": "Přidejte soubor CSS",
-        "chooseCssFile": "Vybrat",
-        "title": "Volby zobrazení"
-      },
-      "pixelsAbbreviation": "px",
-      "cssFilePicker": {
-        "formatName": "Soubor CSS"
-      }
-    },
-    "sidebar": {
-      "create": "Nový soubor H5P",
-      "noOpenFiles": "Žádné otevřené soubory",
-      "open": "Otevřete soubor H5P"
-    },
-    "startPage": {
-      "create": "vytvořit nový H5P",
-      "open": "Otevřete stávající H5P",
-      "start": "Start",
-      "title": "Editor H5P",
-      "welcomeMessage": "Editor H5P od Lumi je samostatná aplikace, která vám umožňuje prohlížet, upravovat a vytvářet H5P."
-    },
-    "tab": {
-      "edit": "Upravit",
-      "view": "Pohled"
-    },
-    "saveAsDialog": {
-      "title": "Uložit jako",
-      "fallbackFilename": "Můj soubor H5P"
-    },
-    "extensionName": "Balíček H5P"
-  },
-  "general": {
-    "delete": "Vymazat",
-    "copyClipboard": "Zkopírováno {{value}} do schránky"
-  },
-  "language": {
-    "description": "Změňte jazyk aplikace.",
-    "help_translate": "Pomozte nám překládat!",
-    "title": "Jazyk"
-  },
-  "menu": {
-    "file": {
-      "copy": "kopírovat",
-      "cut": "Střih",
-      "edit": "Upravit",
-      "export": "Vývozní...",
-      "label": "Soubor",
-      "open": "Otevřete analytické soubory",
-      "paste": "Vložit",
-      "redo": "Připraven",
-      "save": "Uložit",
-      "save_as": "Uložit jako...",
-      "select_all": "Vybrat vše",
-      "undo": "vrátit"
-    },
-    "h5peditor": {
-      "new": "Nový H5P",
-      "open": "Otevřete H5P"
-    },
-    "help": {
-      "about": "O",
-      "follow_us_on_twitter": "Sleduj nás na Twitteru",
-      "label": "Pomoc",
-      "report_issue": "Nahlásit problém",
-      "toggle_developer_tools": "Přepnout vývojářské nástroje"
-    },
-    "mac": {
-      "hide": "Skrýt Lumi",
-      "hideothers": "Skrýt ostatní",
-      "services": "Služby",
-      "unhide": "Ukázat vše"
-    },
-    "quit": "Přestat",
-    "view": {
-      "label": "Pohled",
-      "resetZoom": "Aktuální velikost",
-      "togglefullscreen": "Přepnout na celou obrazovku",
-      "zoomIn": "Přiblížit",
-      "zoomOut": "Oddálit"
-    },
-    "window": {
-      "close": "Zavřít",
-      "front": "Postavte vše dopředu",
-      "label": "Okno",
-      "minimize": "Minimalizovat",
-      "show": "Ukázat",
-      "zoom": "Zvětšení"
-    },
-    "run": {
-      "label": "Běh",
-      "upload": "Nahrát do Lumi Run"
-    }
-  },
-  "notifications": {
     "analytics": {
-      "import": {
-        "brokenFiles": "{{count}} poškozený soubor",
-        "brokenFiles_plural": "{{count}} poškozených souborů",
-        "error": "Nebyly nalezeny žádné platné soubory",
-        "success": "Importované soubory zpráv"
-      }
-    },
-    "h5peditor": {
-      "export_as_html": {
-        "error": "Nelze exportovat H5P",
-        "success": "H5P úspěšně exportován"
-      },
-      "open": {
-        "error": "Nelze otevřít H5P."
-      },
-      "save": {
-        "error": "H5P nelze uložit.",
-        "success": "H5P uložen!"
-      }
-    },
-    "general": {
-      "econnrefused": "Zdá se, že je problém s vaším internetovým připojením."
-    },
-    "updater": {
-      "availableText": "Aktualizace je k dispozici. Aplikace nainstaluje aktualizaci a restartuje se.",
-      "availableTitle": "Nainstalujte aktualizace",
-      "updateDownloaded": "Aktualizace byla stažena a bude nainstalována, jakmile Lumi ukončíte."
-    }
-  },
-  "privacy_policy": {
-    "consent": "Přečetl jsem si zásady ochrany osobních údajů a souhlasím s nimi.",
-    "title": "Zásady ochrany osobních údajů"
-  },
-  "settings": {
-    "account": {
-      "email": {
-        "change": "Změnit e-mail",
-        "not-set": "E-mail není nastaven",
-        "title": "E-mailem"
-      },
-      "label": "Účet"
-    },
-    "appbar": {
-      "label": "Nastavení",
-      "save": "Uložit"
-    },
-    "enable": "Umožnit",
-    "general": {
-      "header": "Všeobecné"
-    },
-    "h5p-library-administration": {
-      "can-not-be-deleted": "Tuto knihovnu nelze odstranit, protože se používá v {{count}} jiné knihovně",
-      "can-not-be-deleted_plural": "Tuto knihovnu nelze odstranit, protože se používá v {{count}} dalších knihovnách",
-      "details": "Detaily",
-      "header": "Instalované knihovny H5P",
-      "library-details": {
-        "addon": "Doplněk",
-        "author": "Autor",
-        "dependentsCount": "Počet knihoven, které používají knihovnu",
-        "description": "Popis",
-        "embedTypes": "Povolené typy vložení",
-        "fullscreen": "Podporuje celou obrazovku",
-        "header": "Podrobnosti o knihovně",
-        "instancesAsDependencyCount": "Objekty, ve kterých tuto knihovnu používá jiná knihovna",
-        "instancesCount": "Objekty vytvořené pomocí této knihovny jako hlavního typu obsahu",
-        "license": "Licence",
-        "restricted": "Omezeno (lze použít pouze s oprávněním)",
-        "standalone": "Samostatný typ obsahu"
-      },
-      "notifications": {
-        "delete": {
-          "error": "Chyba při mazání knihovny {{title}} ( {{version}} ).",
-          "success": "{{title}} ( {{version}} ) byla úspěšně odstraněna."
+        "average": "Průměrný",
+        "brokenFiles": "Seznam nefunkčních souborů",
+        "errors": {
+            "determine-name": "Nelze určit jméno studenta.",
+            "invalid-interactions": "Některé interakce jsou přerušené.",
+            "invalid-statements": "Některé zaznamenané akce studentů jsou nefunkční.",
+            "json-parse-error": "Soubor .lumi obsahuje neplatný obsah (JSON nebyl analyzován).",
+            "no-content-json": "Obsah H5P nebyl správně přidán do souboru .lumi."
         },
-        "get": {
-          "error": "Chyba při získávání podrobných informací o knihovně {{library.title}} ( {{version}} )."
-        },
-        "upload": {
-          "error": "Chyba při nahrávání balíčku.",
-          "success-no-update": "Nahrávání proběhlo úspěšně, ale nebyly nainstalovány ani aktualizovány žádné knihovny. Typ obsahu je pravděpodobně již v systému nainstalován.",
-          "success-with-update": "Úspěšně nainstalováno {{installed}} a aktualizováno {{updated}} knihoven."
+        "name": "název",
+        "searchPlaceholder": "Hledat jména studentů ...",
+        "startPage": {
+            "learn_more": "dozvědět se více",
+            "open": "Vyberte složku se soubory .lumi",
+            "start": "Start",
+            "title": "Lumi Analytics",
+            "welcomeMessage": "Nástroj Lumi's Analytics umožňuje importovat uživatelské zprávy a vizualizovat je za vás"
         }
-      },
-      "upload_and_install": "Nahrajte a nainstalujte knihovnu"
     },
-    "links": {
-      "header": "Odkazy"
+    "auth": {
+        "cancel": "zrušení",
+        "code": "Kód",
+        "email": "E-mailem",
+        "error": {
+            "no-valid-email": "{{email}} není platná e-mailová adresa.",
+            "econnrefused": "Nelze kontaktovat server Lumi Auth. Zkontrolujte prosím své připojení k internetu."
+        },
+        "notification": {
+            "pending": "Ověřovací kód byl odeslán na {{email}} . Zkontrolujte prosím své e-maily.",
+            "success": "{{email}} byl úspěšně ověřen",
+            "logout": {
+                "success": "Byli jste odhlášeni."
+            }
+        },
+        "set_email": "Nastavit e-mail",
+        "verify_code": "Ověřit kód",
+        "verify_email": "ověřovací email",
+        "logout": "Odhlásit se"
+    },
+    "bug_report": {
+        "consent": "Povoluji této aplikaci odesílat zprávy o chybách a selháních.",
+        "description": "Pomozte nám vylepšit náš software a služby zasíláním anonymních zpráv o selháních a chybách.",
+        "title": "Zprávy o chybách a selháních",
+        "email": {
+            "subject": "Zpráva o problému Lumi",
+            "body": "Chcete-li získat rychlé řešení vašeho problému, napište o:\n\n  - Verze Lumi: <vyplňte zde>, Operační systém: <vyplňte zde>\n  - popište problém\n  - popsat, jak můžeme problém reprodukovat na našich strojích\n  - pošlete nám ukázkové .h5p nebo exportované soubory, pokud se problém týká souborů\n\nPokud nám posíláte zprávy v jiném jazyce než v angličtině nebo němčině, použijeme k překladu vaší zprávy nástroj pro automatický překlad."
+        }
+    },
+    "dialog": {
+        "close": "Zavřít"
+    },
+    "editor": {
+        "default_name": "nový H5P",
+        "exportDialog": {
+            "cancelButton": "zrušení",
+            "defaults": {
+                "authorName": "Autor H5P",
+                "title": "Obsah H5P",
+                "filename": "Můj export H5P"
+            },
+            "exportButton": "Exportovat hned",
+            "filePicker": {
+                "buttonLabel": "Vývozní",
+                "formatNames": {
+                    "bundle": "Soubor HTML typu vše v jednom",
+                    "external": "HTML soubor",
+                    "scorm": "soubor SCORM"
+                },
+                "title": "Exportovat jako ..."
+            },
+            "format": {
+                "bundleHint": "Pokud přidáte spoustu mediálních souborů, může se soubor pro některé počítače zvětšit.",
+                "bundleLabel": "Soubor HTML vše v jednom",
+                "externalHint": "V dalším kroku budete požádáni o název souboru HTML. Mediální soubory budou vloženy do složek, které začínají stejným názvem jako soubor.",
+                "externalLabel": "Jeden soubor HTML a několik mediálních souborů",
+                "scorm": {
+                    "label": "Balíček SCORM",
+                    "masteryScoreLabel": "Mistrovské skóre"
+                },
+                "title": "Formát"
+            },
+            "reporter": {
+                "hint": "Pokud přidáte reportéra, studenti mohou uložit soubor se svým pokrokem a poslat vám ho.",
+                "learnMoreLink": "Zde se dozvíte více.",
+                "switchLabel": "Zahrnout reportéra"
+            },
+            "title": "Exportovat nastavení",
+            "validationErrors": {
+                "errorNaN": "Zadaná hodnota není číslo",
+                "errorRangeMin": "Hodnota musí být větší než {{min}}",
+                "errorRangeMax": "Hodnota musí být menší než {{max}}",
+                "errorRange": "Hodnota musí být mezi {{min}} a {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Přidejte funkcionalitu",
+                "rights": "Zobrazit práva a oprávnění",
+                "embed": "Zobrazit odkaz pro vložení"
+            },
+            "displayOptions": {
+                "marginX": "Pravý a levý okraj",
+                "marginY": "Horní a spodní okraj",
+                "restrictWidthAndAlign": "Omezte šířku a zarovnejte na střed",
+                "maximumWidth": "Maximální šířka",
+                "addCss": "Přidejte soubor CSS",
+                "chooseCssFile": "Vybrat",
+                "title": "Volby zobrazení"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "Soubor CSS"
+            }
+        },
+        "sidebar": {
+            "create": "Nový soubor H5P",
+            "noOpenFiles": "Žádné otevřené soubory",
+            "open": "Otevřete soubor H5P"
+        },
+        "startPage": {
+            "create": "vytvořit nový H5P",
+            "open": "Otevřete stávající H5P",
+            "start": "Start",
+            "title": "Editor H5P",
+            "welcomeMessage": "Editor H5P od Lumi je samostatná aplikace, která vám umožňuje prohlížet, upravovat a vytvářet H5P."
+        },
+        "tab": {
+            "edit": "Upravit",
+            "view": "Pohled"
+        },
+        "saveAsDialog": {
+            "title": "Uložit jako",
+            "fallbackFilename": "Můj soubor H5P"
+        },
+        "extensionName": "Balíček H5P"
+    },
+    "general": {
+        "delete": "Vymazat",
+        "copyClipboard": "Zkopírováno {{value}} do schránky"
+    },
+    "language": {
+        "description": "Změňte jazyk aplikace.",
+        "help_translate": "Pomozte nám překládat!",
+        "title": "Jazyk"
     },
     "menu": {
-      "account": "Účet",
-      "general": "Všeobecné",
-      "h5p-library-administration": "H5P knihovny",
-      "updates": "Aktualizace"
-    },
-    "updates": {
-      "header": "Aktualizace"
-    }
-  },
-  "setup_dialog": {
-    "accept_all": "Přijmout vše",
-    "accept_selected": "Přijmout vybraná",
-    "consent_warning": "Abyste mohli tuto aplikaci používat, musíte alespoň souhlasit se zásadami ochrany osobních údajů.",
-    "description": "Ochrana soukromí jednotlivce je pro nás důležitá. Shromažďujeme pouze informace, které se nám rozhodnete poskytnout, a zpracováváme je s vaším souhlasem. Chceme být co nejvíce transparentní. Lumi však spoléhá na to, že některá připojení a datové přenosy budou fungovat."
-  },
-  "updates": {
-    "consent": "Povoluji této aplikaci automaticky kontrolovat aktualizace.",
-    "description": "Získejte nejnovější verzi automaticky.",
-    "title": "Automatické aktualizace",
-    "checkForUpdate": {
-      "title": "Kontrola aktualizací",
-      "description": "Kontrola aktualizací",
-      "checkButton": "Šek"
-    },
-    "restartAndInstall": "Nainstalujte a restartujte",
-    "badge": "Aktualizace k dispozici"
-  },
-  "usage_statistics": {
-    "consent": "Povoluji této aplikaci odesílat anonymní statistiky používání.",
-    "description": " Pomozte nám vylepšit náš software a služby zasláním anonymních statistik využití.",
-    "title": "Statistiky využití"
-  },
-  "errors": {
-    "codes": {
-      "econnrefused": "Spojení odmítnuto"
-    },
-    "messages": {
-      "econnrefused": "Spojení odmítnuto"
-    }
-  },
-  "prerelease": {
-    "title": "Funkce předprodeje",
-    "description": "Povolte experimentální funkce před jejich vydáním"
-  },
-  "run": {
-    "description": "Lumi Run vám umožňuje nahrát a hostovat váš H5P jediným kliknutím.",
-    "legal": "Chcete -li používat tuto službu, musíte souhlasit s podmínkami služby, zásadami ochrany osobních údajů a poskytnout nám kontaktní e -mail.",
-    "tos": {
-      "header": "Podmínky služby",
-      "description": "Přečetl jsem a souhlasím s podmínkami služby."
-    },
-    "link": {
-      "header": "Odkaz"
-    },
-    "upload": "nahrát",
-    "list": {
-      "header": "Nahráno H5P",
-      "noUploadedH5P": "Žádný nahraný H5P",
-      "deleteDialog": {
-        "title": "Smazat běh {{runId}}",
-        "description": "Opravdu chcete odstranit běh {{runId}}",
-        "cancel": "zrušení",
-        "confirm": "Potvrdit"
-      }
-    },
-    "uploadDialog": {
-      "success": "Váš H5P byl nahrán do Lumi.run. Můžete k nim přistupovat a sdílet je pomocí následujícího odkazu.",
-      "uploading": "Odesílání",
-      "processing": "zpracovává se",
-      "goToRun": "Přejít na běhy",
-      "ok": "OK"
-    },
-    "setupDialog": {
-      "close": "Zavřít",
-      "start": "Start"
+        "file": {
+            "copy": "kopírovat",
+            "cut": "Střih",
+            "edit": "Upravit",
+            "export": "Vývozní...",
+            "label": "Soubor",
+            "open": "Otevřete analytické soubory",
+            "paste": "Vložit",
+            "redo": "Připraven",
+            "save": "Uložit",
+            "save_as": "Uložit jako...",
+            "select_all": "Vybrat vše",
+            "undo": "vrátit"
+        },
+        "h5peditor": {
+            "new": "Nový H5P",
+            "open": "Otevřete H5P"
+        },
+        "help": {
+            "about": "O",
+            "follow_us_on_twitter": "Sleduj nás na Twitteru",
+            "label": "Pomoc",
+            "report_issue": "Nahlásit problém",
+            "toggle_developer_tools": "Přepnout vývojářské nástroje"
+        },
+        "mac": {
+            "hide": "Skrýt Lumi",
+            "hideothers": "Skrýt ostatní",
+            "services": "Služby",
+            "unhide": "Ukázat vše"
+        },
+        "quit": "Přestat",
+        "view": {
+            "label": "Pohled",
+            "resetZoom": "Aktuální velikost",
+            "togglefullscreen": "Přepnout na celou obrazovku",
+            "zoomIn": "Přiblížit",
+            "zoomOut": "Oddálit"
+        },
+        "window": {
+            "close": "Zavřít",
+            "front": "Postavte vše dopředu",
+            "label": "Okno",
+            "minimize": "Minimalizovat",
+            "show": "Ukázat",
+            "zoom": "Zvětšení"
+        },
+        "run": {
+            "label": "Běh",
+            "upload": "Nahrát do Lumi Run"
+        }
     },
     "notifications": {
-      "delete": {
-        "success": "Úspěšně odstraněno {{id}} z Lumi.run"
-      },
-      "upload": {
-        "success": "H5P bylo úspěšně nahráno do Lumi.run"
-      }
+        "analytics": {
+            "import": {
+                "brokenFiles": "{{count}} poškozený soubor",
+                "brokenFiles_plural": "{{count}} poškozených souborů",
+                "error": "Nebyly nalezeny žádné platné soubory",
+                "success": "Importované soubory zpráv"
+            }
+        },
+        "h5peditor": {
+            "export_as_html": {
+                "error": "Nelze exportovat H5P",
+                "success": "H5P úspěšně exportován"
+            },
+            "open": {
+                "error": "Nelze otevřít H5P."
+            },
+            "save": {
+                "error": "H5P nelze uložit.",
+                "success": "H5P uložen!"
+            }
+        },
+        "general": {
+            "econnrefused": "Zdá se, že je problém s vaším internetovým připojením."
+        },
+        "updater": {
+            "availableText": "Aktualizace je k dispozici. Aplikace nainstaluje aktualizaci a restartuje se.",
+            "availableTitle": "Nainstalujte aktualizace",
+            "updateDownloaded": "Aktualizace byla stažena a bude nainstalována, jakmile Lumi ukončíte."
+        }
+    },
+    "privacy_policy": {
+        "consent": "Přečetl jsem si zásady ochrany osobních údajů a souhlasím s nimi.",
+        "title": "Zásady ochrany osobních údajů"
+    },
+    "settings": {
+        "account": {
+            "email": {
+                "change": "Změnit e-mail",
+                "not-set": "E-mail není nastaven",
+                "title": "E-mailem"
+            },
+            "label": "Účet"
+        },
+        "appbar": {
+            "label": "Nastavení",
+            "save": "Uložit"
+        },
+        "enable": "Umožnit",
+        "general": {
+            "header": "Všeobecné"
+        },
+        "h5p-library-administration": {
+            "can-not-be-deleted": "Tuto knihovnu nelze odstranit, protože se používá v {{count}} jiné knihovně",
+            "can-not-be-deleted_plural": "Tuto knihovnu nelze odstranit, protože se používá v {{count}} dalších knihovnách",
+            "details": "Detaily",
+            "header": "Instalované knihovny H5P",
+            "library-details": {
+                "addon": "Doplněk",
+                "author": "Autor",
+                "dependentsCount": "Počet knihoven, které používají knihovnu",
+                "description": "Popis",
+                "embedTypes": "Povolené typy vložení",
+                "fullscreen": "Podporuje celou obrazovku",
+                "header": "Podrobnosti o knihovně",
+                "instancesAsDependencyCount": "Objekty, ve kterých tuto knihovnu používá jiná knihovna",
+                "instancesCount": "Objekty vytvořené pomocí této knihovny jako hlavního typu obsahu",
+                "license": "Licence",
+                "restricted": "Omezeno (lze použít pouze s oprávněním)",
+                "standalone": "Samostatný typ obsahu"
+            },
+            "notifications": {
+                "delete": {
+                    "error": "Chyba při mazání knihovny {{title}} ( {{version}} ).",
+                    "success": "{{title}} ( {{version}} ) byla úspěšně odstraněna."
+                },
+                "get": {
+                    "error": "Chyba při získávání podrobných informací o knihovně {{library.title}} ( {{version}} )."
+                },
+                "upload": {
+                    "error": "Chyba při nahrávání balíčku.",
+                    "success-no-update": "Nahrávání proběhlo úspěšně, ale nebyly nainstalovány ani aktualizovány žádné knihovny. Typ obsahu je pravděpodobně již v systému nainstalován.",
+                    "success-with-update": "Úspěšně nainstalováno {{installed}} a aktualizováno {{updated}} knihoven."
+                }
+            },
+            "upload_and_install": "Nahrajte a nainstalujte knihovnu"
+        },
+        "links": {
+            "header": "Odkazy"
+        },
+        "menu": {
+            "account": "Účet",
+            "general": "Všeobecné",
+            "h5p-library-administration": "H5P knihovny",
+            "updates": "Aktualizace"
+        },
+        "updates": {
+            "header": "Aktualizace"
+        }
+    },
+    "setup_dialog": {
+        "accept_all": "Přijmout vše",
+        "accept_selected": "Přijmout vybraná",
+        "consent_warning": "Abyste mohli tuto aplikaci používat, musíte alespoň souhlasit se zásadami ochrany osobních údajů.",
+        "description": "Ochrana soukromí jednotlivce je pro nás důležitá. Shromažďujeme pouze informace, které se nám rozhodnete poskytnout, a zpracováváme je s vaším souhlasem. Chceme být co nejvíce transparentní. Lumi však spoléhá na to, že některá připojení a datové přenosy budou fungovat."
+    },
+    "updates": {
+        "consent": "Povoluji této aplikaci automaticky kontrolovat aktualizace.",
+        "description": "Získejte nejnovější verzi automaticky.",
+        "title": "Automatické aktualizace",
+        "checkForUpdate": {
+            "title": "Kontrola aktualizací",
+            "description": "Kontrola aktualizací",
+            "checkButton": "Šek"
+        },
+        "restartAndInstall": "Nainstalujte a restartujte",
+        "badge": "Aktualizace k dispozici"
+    },
+    "usage_statistics": {
+        "consent": "Povoluji této aplikaci odesílat anonymní statistiky používání.",
+        "description": " Pomozte nám vylepšit náš software a služby zasláním anonymních statistik využití.",
+        "title": "Statistiky využití"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Spojení odmítnuto"
+        },
+        "messages": {
+            "econnrefused": "Spojení odmítnuto"
+        }
+    },
+    "prerelease": {
+        "title": "Funkce předprodeje",
+        "description": "Povolte experimentální funkce před jejich vydáním"
+    },
+    "run": {
+        "description": "Lumi Run vám umožňuje nahrát a hostovat váš H5P jediným kliknutím.",
+        "legal": "Chcete -li používat tuto službu, musíte souhlasit s podmínkami služby, zásadami ochrany osobních údajů a poskytnout nám kontaktní e -mail.",
+        "tos": {
+            "header": "Podmínky služby",
+            "description": "Přečetl jsem a souhlasím s podmínkami služby."
+        },
+        "link": {
+            "header": "Odkaz"
+        },
+        "upload": "nahrát",
+        "list": {
+            "header": "Nahráno H5P",
+            "noUploadedH5P": "Žádný nahraný H5P",
+            "deleteDialog": {
+                "title": "Smazat běh {{runId}}",
+                "description": "Opravdu chcete odstranit běh {{runId}}",
+                "cancel": "zrušení",
+                "confirm": "Potvrdit"
+            }
+        },
+        "uploadDialog": {
+            "success": "Váš H5P byl nahrán do Lumi.run. Můžete k nim přistupovat a sdílet je pomocí následujícího odkazu.",
+            "uploading": "Odesílání",
+            "processing": "zpracovává se",
+            "goToRun": "Přejít na běhy",
+            "ok": "OK"
+        },
+        "setupDialog": {
+            "close": "Zavřít",
+            "start": "Start"
+        },
+        "notifications": {
+            "delete": {
+                "success": "Úspěšně odstraněno {{id}} z Lumi.run"
+            },
+            "upload": {
+                "success": "H5P bylo úspěšně nahráno do Lumi.run"
+            }
+        }
+    },
+    "cloudhub": {
+        "description": "Vyhledejte obsah nebo svůj obsah publikujte."
     }
-  },
-  "cloudhub": {
-    "description": "Vyhledejte obsah nebo svůj obsah publikujte."
-  }
 }
