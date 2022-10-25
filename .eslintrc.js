@@ -21,6 +21,7 @@ module.exports = {
     rules: {
         'no-script-url': 0,
         'no-restricted-syntax': 0,
+        'import/no-extraneous-dependencies': 0,
         '@typescript-eslint/lines-between-class-members': 0,
         'no-await-in-loop': 1,
         '@typescript-eslint/no-loop-func': 0,
