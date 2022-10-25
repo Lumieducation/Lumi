@@ -18,7 +18,7 @@ export default (
     settingsCache: SettingsCache,
     electronState: StateStorage,
     fileController: FileController
-) =>
+): electron.MenuItem[] =>
     [
         ...macMenu(),
         {

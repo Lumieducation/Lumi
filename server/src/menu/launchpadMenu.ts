@@ -7,7 +7,7 @@ import helpMenu from './helpMenu';
 import windowMenu from './windowMenu';
 import viewMenu from './viewMenu';
 
-export default (window: electron.BrowserWindow) => [
+export default (window: electron.BrowserWindow): electron.MenuItem[] => [
     ...macMenu(),
     editMenu(),
     ...viewMenu(),

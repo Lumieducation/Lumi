@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
@@ -12,13 +12,12 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import AnalyticsIcon from '@material-ui/icons/ShowChart';
-import RunIcon from '@material-ui/icons/CloudUpload';
+import RunIcon from '@material-ui/icons/CloudCircle';
 import { useTranslation } from 'react-i18next';
 
 import MainSection from './components/MainSection';
 import { Link } from 'react-router-dom';
 
-import { IState } from '../state';
 import { track } from '../state/track/actions';
 
 declare var window: {
@@ -63,13 +62,6 @@ export default function Launchpad() {
     const { t } = useTranslation();
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const allowPrerelease = useSelector(
-        (state: IState) => state.settings.allowPrerelease
-    );
-
-    const enableLumiRun = useSelector(
-        (state: IState) => state.settings.enableLumiRun
-    );
 
     window.navigate = navigate;
 
@@ -214,61 +206,60 @@ export default function Launchpad() {
                             </CardActions>
                         </Card>
                     </Grid>
-                    {allowPrerelease && enableLumiRun && (
-                        <Grid item xs={4}>
-                            <Card id="launchpad-run" className={classes.card}>
-                                <Link
-                                    to="/run"
-                                    style={{
-                                        color: 'inherit',
-                                        textDecoration: 'inherit'
-                                    }}
-                                >
-                                    <CardActionArea>
-                                        <CardMedia
-                                            className={classes.media}
-                                            title="Lumi Run"
+
+                    <Grid item xs={4}>
+                        <Card id="launchpad-cloudhub" className={classes.card}>
+                            <div
+                                onClick={() =>
+                                    (window as any).open(
+                                        'https://app.lumi.education/search?mtm_campaign=desktop',
+                                        '_blank'
+                                    )
+                                }
+                            >
+                                <CardActionArea>
+                                    <CardMedia
+                                        className={classes.media}
+                                        title="Lumi Cloud Hub"
+                                    >
+                                        <RunIcon
+                                            className={classes.analyticsIcon}
+                                        />
+                                    </CardMedia>
+                                    <CardContent>
+                                        <Typography
+                                            gutterBottom
+                                            variant="h5"
+                                            component="h2"
                                         >
-                                            <RunIcon
-                                                className={
-                                                    classes.analyticsIcon
-                                                }
-                                            />
-                                        </CardMedia>
-                                        <CardContent>
-                                            <Typography
-                                                gutterBottom
-                                                variant="h5"
-                                                component="h2"
-                                            >
-                                                Lumi Run (Beta)
-                                            </Typography>
-                                            <Typography
-                                                variant="body2"
-                                                color="textSecondary"
-                                                component="p"
-                                            >
-                                                {t('run.description')}
-                                            </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                </Link>
-                                <CardActions>
-                                    <Button size="small" color="primary">
-                                        <Link
-                                            to="/run"
-                                            style={{
-                                                color: 'inherit',
-                                                textDecoration: 'inherit'
-                                            }}
+                                            Lumi Cloud Hub
+                                        </Typography>
+                                        <Typography
+                                            variant="body2"
+                                            color="textSecondary"
+                                            component="p"
                                         >
-                                            {t('analytics.startPage.start')}
-                                        </Link>
-                                    </Button>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                    )}
+                                            {t('cloudhub.description')}
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                            </div>
+                            <CardActions>
+                                <Button size="small" color="primary">
+                                    <div
+                                        onClick={() =>
+                                            (window as any).open(
+                                                'https://app.lumi.education/search?mtm_campaign=desktop',
+                                                '_blank'
+                                            )
+                                        }
+                                    >
+                                        {t('analytics.startPage.start')}
+                                    </div>
+                                </Button>
+                            </CardActions>
+                        </Card>
+                    </Grid>
                 </Grid>
             </MainSection>
         </div>

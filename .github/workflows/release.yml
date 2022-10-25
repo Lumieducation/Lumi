@@ -55,13 +55,13 @@ jobs:
               with:
                   token: ${{ secrets.NPM_TOKEN }}
             - name: install server
-              run: npm ci
+              run: npm ci --legacy-peer-deps
               env:
                   NPM_TOKEN: $${ secrets.NPM_TOKEN }
             - name: Copy NPM config
               run: cp ./.npmrc ./client/.npmrc && cp ./.npmrc ./reporter-client/.npmrc
             - name: install client(s)
-              run: (cd client && npm ci) && (cd ../reporter-client && npm ci)
+              run: (cd client && npm ci --legacy-peer-deps) && (cd ../reporter-client && npm ci --legacy-peer-deps)
               env:
                   NPM_TOKEN: $${ secrets.NPM_TOKEN }
             - name: Build

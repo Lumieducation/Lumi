@@ -16,7 +16,7 @@ import simpleTemplate from './templates/simple';
 
 const t = i18next.getFixedT(null, 'lumi');
 
-const cleanAndTrim = (text) => {
+const cleanAndTrim = (text: string): string => {
     const textClean = text.replace(/[^a-zA-Z\d\s]/g, '');
     return textClean.replace(/\s/g, '');
 };

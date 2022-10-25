@@ -11,7 +11,7 @@ export default async (
 ): Promise<http.Server> => {
     const server = http.createServer(app);
     return new Promise((res, rej) => {
-        const done = () => {
+        const done = (): void => {
             log.info(`server booted on port ${(server.address() as any).port}`);
             res(server);
         };

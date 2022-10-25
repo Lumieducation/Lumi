@@ -8,7 +8,10 @@ import editMenu from './editMenu';
 import windowMenu from './windowMenu';
 import viewMenu from './viewMenu';
 
-export default (window: electron.BrowserWindow, websocket: SocketIO.Server) => [
+export default (
+    window: electron.BrowserWindow,
+    websocket: SocketIO.Server
+): electron.MenuItem[] => [
     ...macMenu(),
     {
         label: i18next.t('lumi:menu.file.label'),
