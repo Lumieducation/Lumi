@@ -1,4 +1,4 @@
-const path = require('path');
+import path from 'path';
 
 module.exports = {
     dialog: {
@@ -16,6 +16,6 @@ module.exports = {
         }
     },
     nativeImage: {
-        createFromPath: (path) => path
+        createFromPath: (p) => p
     }
 };
