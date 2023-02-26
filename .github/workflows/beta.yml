@@ -99,7 +99,7 @@ jobs:
             - name: Build
               run: npm run build
             - name: Install Snapcraft
-              uses: samuelmeuli/action-snapcraft@v1
+              uses: samuelmeuli/action-snapcraft@v2
               with:
                   snapcraft_token: ${{ secrets.snapcraft_token }}
             - name: Publish Linux
