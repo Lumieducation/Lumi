@@ -65,8 +65,8 @@ export default class H5PConfig implements IH5PConfig {
     public fetchingDisabled: 0 | 1 = 0;
     public h5pVersion: string = '1.24-master';
     public hubContentTypesEndpoint: string =
-        'https://api.h5p.org/v1/content-types/';
-    public hubRegistrationEndpoint: string = 'https://api.h5p.org/v1/sites';
+        'https://h5p-hub.educacloud.de/api/v1/content-types/';
+    public hubRegistrationEndpoint: string = 'https://h5p-hub.educacloud.de/api/v1/sites';
     public installLibraryLockMaxOccupationTime: number = 30000;
     public installLibraryLockTimeout: number = 60000;
     public librariesUrl: string = '/libraries';
