@@ -27,7 +27,7 @@
             "econnrefused": "Impossibile contattare il server Lumi Auth. Per favore controlla la tua connessione Internet.",
             "no-valid-email": "{{email}} non è un indirizzo email valido."
         },
-        "logout": "Disconnettersi",
+        "logout": "Esci",
         "notification": {
             "logout": {
                 "success": "Sei stato disconnesso."
@@ -42,27 +42,47 @@
     "bug_report": {
         "consent": "Consento a questa applicazione di inviare segnalazioni di bug e arresti anomali.",
         "description": "Aiutaci a migliorare il nostro software e servizi inviando rapporti anonimi su arresti anomali e bug.",
-        "title": "Segnalazioni di bug e arresti anomali",
         "email": {
-            "subject": "Rapporto sui problemi di Lumi",
-            "body": "Per ottenere una rapida soluzione al tuo problema, scrivi su:\n\n  - Versione Lumi: <compila qui>, Sistema operativo: <compila qui>\n  - descrivi il problema\n  - descrivere come possiamo riprodurre il problema sulle nostre macchine\n  - inviaci file di esempio .h5p o esportati se il problema è correlato ai file\n\nSe ci invii messaggi in una lingua diversa dall'inglese o dal tedesco, utilizzeremo uno strumento di traduzione automatica per tradurre il tuo messaggio."
-        }
+            "body": "Per ottenere una rapida soluzione al tuo problema, completa con:\n\n  - Versione Lumi: <compila qui>, Sistema operativo: <compila qui>\n  - descrizione del problema\n  - descrizione di come possiamo riprodurre il problema sulle nostre macchine\n  - invio del file di esempio .h5p o esportati se il problema è correlato ai file\n\nSe ci invii messaggi in una lingua diversa dall'inglese o dal tedesco, utilizzeremo uno strumento di traduzione automatica per tradurre il tuo messaggio.",
+            "subject": "Rapporto sui problemi di Lumi"
+        },
+        "title": "Segnalazioni di bug e arresti anomali"
+    },
+    "cloudhub": {
+        "description": "Cerca contenuti o pubblica i tuoi contenuti."
     },
     "dialog": {
-        "close": "Vicino"
+        "close": "Chiudi"
     },
     "editor": {
         "default_name": "nuovo H5P",
         "exportDialog": {
+            "addFunctionality": {
+                "embed": "Mostra link di incorporamento",
+                "rights": "Mostra diritti e permessi",
+                "title": "Aggiungi funzionalità"
+            },
             "cancelButton": "Annulla",
+            "cssFilePicker": {
+                "formatName": "File CSS"
+            },
             "defaults": {
                 "authorName": "Autore H5P",
-                "title": "Contenuto H5P",
-                "filename": "La mia esportazione H5P"
+                "filename": "La mia esportazione H5P",
+                "title": "Contenuto H5P"
+            },
+            "displayOptions": {
+                "addCss": "Aggiungi file CSS",
+                "chooseCssFile": "scegli",
+                "marginX": "Margine destro e sinistro",
+                "marginY": "Margine superiore e inferiore",
+                "maximumWidth": "Larghezza massima",
+                "restrictWidthAndAlign": "Limita la larghezza e allinea centralmente",
+                "title": "Opzioni di visualizzazione"
             },
             "exportButton": "Esporta ora",
             "filePicker": {
-                "buttonLabel": "Esportare",
+                "buttonLabel": "Esporta",
                 "formatNames": {
                     "bundle": "File HTML tutto in uno",
                     "external": "File HTML",
@@ -74,43 +94,31 @@
                 "bundleHint": "Il file può diventare troppo grande per alcuni computer se includi molti file multimediali.",
                 "bundleLabel": "File HTML all-in-one",
                 "externalHint": "Ti verrà chiesto un nome per il file HTML nel passaggio successivo. I file multimediali verranno inseriti in cartelle che iniziano con lo stesso nome del file.",
-                "externalLabel": "Un file HTML e diversi file multimediali",
+                "externalLabel": "Un file HTML e vari file multimediali",
                 "scorm": {
                     "label": "Pacchetto SCORM",
-                    "masteryScoreLabel": "Punteggio di maestria"
+                    "masteryScoreLabel": "Punteggio per il superamento"
                 },
                 "title": "Formato"
             },
+            "pixelsAbbreviation": "px",
             "reporter": {
-                "hint": "Se aggiungi il reporter, gli studenti possono salvare un file con i loro progressi e inviarlo a te.",
+                "hint": "Se aggiungi il reporter, gli studenti possono salvare un file con i loro progressi e inviartelo.",
                 "learnMoreLink": "Scopri di più qui.",
-                "switchLabel": "Includi giornalista"
+                "switchLabel": "Includi reporter"
             },
             "title": "Esporta impostazioni",
             "validationErrors": {
                 "errorNaN": "Il valore inserito non è un numero",
-                "errorRangeMin": "Il valore deve essere maggiore di {{min}}",
+                "errorRange": "Il valore deve essere compreso tra {{min}} e {{max}}",
                 "errorRangeMax": "Il valore deve essere inferiore a {{max}}",
-                "errorRange": "Il valore deve essere compreso tra {{min}} e {{max}}"
-            },
-            "addFunctionality": {
-                "title": "Aggiungi funzionalità",
-                "rights": "Mostra diritti e permessi",
-                "embed": "Mostra link di incorporamento"
-            },
-            "displayOptions": {
-                "marginX": "Margine destro e sinistro",
-                "marginY": "Margine superiore e inferiore",
-                "restrictWidthAndAlign": "Limita la larghezza e allinea centralmente",
-                "maximumWidth": "Larghezza massima",
-                "addCss": "Aggiungi file CSS",
-                "chooseCssFile": "scegliere",
-                "title": "Opzioni di visualizzazione"
-            },
-            "pixelsAbbreviation": "px",
-            "cssFilePicker": {
-                "formatName": "File CSS"
+                "errorRangeMin": "Il valore deve essere maggiore di {{min}}"
             }
+        },
+        "extensionName": "Pacchetto H5P",
+        "saveAsDialog": {
+            "fallbackFilename": "Il mio file H5P",
+            "title": "Salva come"
         },
         "sidebar": {
             "create": "Nuovo file H5P",
@@ -127,12 +135,7 @@
         "tab": {
             "edit": "modificare",
             "view": "Visualizza"
-        },
-        "saveAsDialog": {
-            "title": "Salva come",
-            "fallbackFilename": "Il mio file H5P"
-        },
-        "extensionName": "Pacchetto H5P"
+        }
     },
     "errors": {
         "codes": {
@@ -153,14 +156,14 @@
     },
     "menu": {
         "file": {
-            "copy": "copia",
-            "cut": "Taglio",
-            "edit": "modificare",
-            "export": "Esportare...",
+            "copy": "Copia",
+            "cut": "Taglia",
+            "edit": "Modifica",
+            "export": "Esporta...",
             "label": "File",
-            "open": "Apri file analitici",
+            "open": "Apri file per l'analisi",
             "paste": "Incolla",
-            "redo": "Pronto",
+            "redo": "Ripristina",
             "save": "Salva",
             "save_as": "Salva come...",
             "select_all": "Seleziona tutto",
@@ -171,11 +174,11 @@
             "open": "Apri H5P"
         },
         "help": {
-            "about": "Di",
+            "about": "Informazioni su",
             "follow_us_on_twitter": "Seguici su Twitter",
             "label": "Aiuto",
             "report_issue": "Segnala problema",
-            "toggle_developer_tools": "Attiva / disattiva strumenti per sviluppatori"
+            "toggle_developer_tools": "Attiva/disattiva strumenti per sviluppatori"
         },
         "mac": {
             "hide": "Nascondi Lumi",
@@ -183,20 +186,20 @@
             "services": "Servizi",
             "unhide": "Mostra tutto"
         },
-        "quit": "Smettere",
+        "quit": "Chiudi",
         "run": {
-            "label": "Correre",
+            "label": "Avvia",
             "upload": "Carica su Lumi Run"
         },
         "view": {
             "label": "Visualizza",
             "resetZoom": "Dimensione reale",
-            "togglefullscreen": "Passare a schermo intero",
-            "zoomIn": "Ingrandire",
-            "zoomOut": "Zoom indietro"
+            "togglefullscreen": "Passa a schermo intero",
+            "zoomIn": "Ingrandisci",
+            "zoomOut": "Rimpicciolisci"
         },
         "window": {
-            "close": "Vicino",
+            "close": "Chiudi",
             "front": "Porta tutto in primo piano",
             "label": "Finestra",
             "minimize": "Minimizzare",
@@ -207,7 +210,7 @@
     "notifications": {
         "analytics": {
             "import": {
-                "brokenFiles": "{{count}} file rotto trovato",
+                "brokenFiles": "{{count}} file danneggiato trovato",
                 "brokenFiles_plural": "{{count}} file danneggiati trovati",
                 "error": "Nessun file valido trovato",
                 "success": "File di report importati"
@@ -241,7 +244,7 @@
     },
     "privacy_policy": {
         "consent": "Ho letto e acconsento all'informativa sulla privacy.",
-        "title": "politica sulla riservatezza"
+        "title": "Informativa sulla privacy"
     },
     "run": {
         "description": "Lumi Run ti consente di caricare e ospitare il tuo H5P con un clic.",
@@ -252,9 +255,9 @@
         "list": {
             "deleteDialog": {
                 "cancel": "Annulla",
-                "confirm": "Confermare",
+                "confirm": "Conferma",
                 "description": "Vuoi davvero eliminare la corsa {{runId}}",
-                "title": "Elimina Esegui {{runId}}"
+                "title": "Elimina Run {{runId}}"
             },
             "header": "H5P caricato",
             "noUploadedH5P": "Nessun H5P caricato"
@@ -268,8 +271,8 @@
             }
         },
         "setupDialog": {
-            "close": "Chiudere",
-            "start": "Cominciare"
+            "close": "Chiudi",
+            "start": "Inizia"
         },
         "tos": {
             "description": "Ho letto e acconsento ai termini di servizio.",
@@ -277,9 +280,9 @@
         },
         "upload": "Caricamento",
         "uploadDialog": {
-            "goToRun": "Vai alle corse",
+            "goToRun": "Vai ai file Run",
             "ok": "Ok",
-            "processing": "in lavorazione",
+            "processing": "In lavorazione",
             "success": "Il tuo H5P è stato caricato su Lumi.run. Puoi accedervi e condividerlo con il seguente link.",
             "uploading": "Caricamento"
         }
@@ -291,13 +294,13 @@
                 "not-set": "L'email non è impostata",
                 "title": "E-mail"
             },
-            "label": "account"
+            "label": "Account"
         },
         "appbar": {
             "label": "Impostazioni",
             "save": "Salva"
         },
-        "enable": "Abilitare",
+        "enable": "Abilita",
         "general": {
             "header": "Generale"
         },
@@ -307,14 +310,14 @@
             "details": "Dettagli",
             "header": "Librerie H5P installate",
             "library-details": {
-                "addon": "Aggiungi su",
+                "addon": "Funzionalità aggiunte",
                 "author": "Autore",
-                "dependentsCount": "Numero di biblioteche che utilizzano la libreria",
+                "dependentsCount": "Numero di librerie che utilizzano la libreria",
                 "description": "Descrizione",
                 "embedTypes": "Tipi di incorporamento consentiti",
                 "fullscreen": "Supporta lo schermo intero",
                 "header": "Dettagli della libreria",
-                "instancesAsDependencyCount": "Oggetti in cui questa libreria viene utilizzata da un'altra libreria",
+                "instancesAsDependencyCount": "Oggetti in cui questa libreria utilizzati da un'altra libreria",
                 "instancesCount": "Oggetti creati con questa libreria come tipo di contenuto principale",
                 "license": "Licenza",
                 "restricted": "Limitato (può essere utilizzato solo con privilegi)",
@@ -337,7 +340,7 @@
             "upload_and_install": "Carica e installa Library"
         },
         "links": {
-            "header": "Link"
+            "header": "Collegamento"
         },
         "menu": {
             "account": "Account",
@@ -356,23 +359,20 @@
         "description": "La protezione della privacy dell'individuo è importante per noi. Raccogliamo solo le informazioni che scegli di fornirci e le elaboriamo con il tuo consenso. Vogliamo essere il più trasparenti possibile. Tuttavia Lumi si affida ad alcune connessioni e trasferimenti di dati per funzionare."
     },
     "updates": {
+        "badge": "Aggiornamento disponibile",
         "checkForUpdate": {
-            "checkButton": "Dai un'occhiata",
+            "checkButton": "Controlla",
             "description": "Controlla gli aggiornamenti",
             "title": "Controlla gli aggiornamenti"
         },
         "consent": "Consento a questa applicazione di verificare automaticamente la presenza di aggiornamenti.",
         "description": "Ottieni automaticamente l'ultima versione.",
         "restartAndInstall": "Installa e riavvia",
-        "title": "Aggiornamenti automatici",
-        "badge": "Aggiornamento disponibile"
+        "title": "Aggiornamenti automatici"
     },
     "usage_statistics": {
         "consent": "Consento a questa applicazione di inviare statistiche di utilizzo anonime.",
-        "description": " Aiutaci a migliorare il nostro software e servizi inviando statistiche di utilizzo anonime.",
+        "description": " Aiutaci a migliorare il nostro software e i servizi inviando statistiche di utilizzo anonime.",
         "title": "Statistiche di utilizzo"
-    },
-    "cloudhub": {
-        "description": "Cerca contenuti o pubblica i tuoi contenuti."
     }
 }
