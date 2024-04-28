@@ -24,9 +24,14 @@
         "code": "Código",
         "email": "Correo electrónico",
         "error": {
+            "econnrefused": "No se pudo contactar con el servidor de autenticación de Lumi. Por favor revise su conexion a internet.",
             "no-valid-email": "{{email}} no es una dirección de correo electrónico válida."
         },
+        "logout": "cerrar sesión",
         "notification": {
+            "logout": {
+                "success": "Se cerró la sesión."
+            },
             "pending": "Se ha enviado un código de verificación a {{email}} . Por favor revise sus correos electrónicos.",
             "success": "{{email}} ha sido validado con éxito"
         },
@@ -37,6 +42,10 @@
     "bug_report": {
         "consent": "Yo permito que esta aplicación envíe reportes de errores y fallas.",
         "description": "Ayúdenos a mejorar nuestro software y servicios enviando reportes anónimos de fallos y errores.",
+        "email": {
+            "body": "Para obtener una solución rápida a su problema, escriba sobre:\n\n  - Versión Lumi: <rellenar aquí>, Sistema operativo: <rellenar aquí>\n  - describe el problema\n  - describir cómo podemos reproducir el problema en nuestras máquinas\n  - envíenos un archivo .h5p de muestra o archivos exportados si el problema está relacionado con los archivos\n\nSi nos envía mensajes en un idioma que no sea inglés o alemán, usaremos una herramienta de traducción automática para traducir su mensaje.",
+            "subject": "Informe de problemas de Lumi"
+        },
         "title": "Reportes de Fallos y Errores"
     },
     "dialog": {
@@ -45,10 +54,28 @@
     "editor": {
         "default_name": "nuevo H5P",
         "exportDialog": {
+            "addFunctionality": {
+                "embed": "Mostrar enlace para insertar",
+                "rights": "Mostrar derechos y permisos",
+                "title": "Agregar funcionalidad"
+            },
             "cancelButton": "Cancelar",
+            "cssFilePicker": {
+                "formatName": "Archivo CSS"
+            },
             "defaults": {
                 "authorName": "Autor del H5P",
+                "filename": "Mi exportación H5P",
                 "title": "Contenido del H5P"
+            },
+            "displayOptions": {
+                "addCss": "Agregar archivo CSS",
+                "chooseCssFile": "escoger",
+                "marginX": "Margen derecho e izquierdo",
+                "marginY": "Margen superior e inferior",
+                "maximumWidth": "Ancho máximo",
+                "restrictWidthAndAlign": "Restringir el ancho y alinear centralmente",
+                "title": "opciones de visualización"
             },
             "exportButton": "Exportar ahora",
             "filePicker": {
@@ -69,10 +96,11 @@
                     "errorNaN": "El valor ingresado no es un número",
                     "errorRange": "El valor debe estar entre 0 y 100",
                     "label": "Paquete SCORM",
-                    "masteryScoreLabel": "Puntuación de dominio (en%)"
+                    "masteryScoreLabel": "Puntuación de dominio"
                 },
                 "title": "Formato"
             },
+            "pixelsAbbreviation": "px",
             "reporter": {
                 "hint": "Si agrega al reportero, los estudiantes pueden guardar un archivo con su progreso y enviárselo.",
                 "learnMoreLink": "Obtenga más información al respecto aquí.",
@@ -80,7 +108,18 @@
                 "switchLabel": "Incluir reportero",
                 "title": "Reportero"
             },
-            "title": "Exportar configuraciones"
+            "title": "Exportar configuraciones",
+            "validationErrors": {
+                "errorNaN": "El valor introducido no es un número",
+                "errorRange": "El valor debe estar entre {{min}} y {{max}}",
+                "errorRangeMax": "El valor debe ser menor que {{max}}",
+                "errorRangeMin": "El valor debe ser mayor que {{min}}"
+            }
+        },
+        "extensionName": "Paquete H5P",
+        "saveAsDialog": {
+            "fallbackFilename": "Mi archivo H5P",
+            "title": "Guardar como"
         },
         "sidebar": {
             "create": "Nuevo archivo H5P",
@@ -99,7 +138,16 @@
             "view": "Ver"
         }
     },
+    "errors": {
+        "codes": {
+            "econnrefused": "Conexión denegada"
+        },
+        "messages": {
+            "econnrefused": "Conexión denegada"
+        }
+    },
     "general": {
+        "copyClipboard": "Copiado {{value}} al portapapeles",
         "delete": "Eliminar"
     },
     "language": {
@@ -140,6 +188,10 @@
             "unhide": "Mostrar todo"
         },
         "quit": "Renunciar",
+        "run": {
+            "label": "Ejecutar",
+            "upload": "Subir a Lumi Run"
+        },
         "view": {
             "label": "Vista",
             "resetZoom": "Tamaño Real",
@@ -174,6 +226,9 @@
                 "yes": "sí"
             }
         },
+        "general": {
+            "econnrefused": "Parece haber un problema con su conexión a Internet."
+        },
         "h5peditor": {
             "export_as_html": {
                 "error": "No se pudo exportar H5P",
@@ -186,11 +241,60 @@
                 "error": "No se pudo guardar H5P.",
                 "success": "¡H5P guardado!"
             }
+        },
+        "updater": {
+            "availableText": "Actualización disponible. La aplicación instalará la actualización y se reiniciará.",
+            "availableTitle": "Instalar actualizaciones"
         }
+    },
+    "prerelease": {
+        "description": "Habilitar las características experimentales antes de que sean liberadas",
+        "title": "Características de versión pre-liberación"
     },
     "privacy_policy": {
         "consent": "He leído y acepto la política de privacidad.",
         "title": "Política de privacidad"
+    },
+    "run": {
+        "description": "Lumi Run le permite cargar y alojar su H5P con un solo clic.",
+        "legal": "Para utilizar este servicio, debe aceptar los Términos de servicio, la política de privacidad y proporcionarnos un correo electrónico de contacto.",
+        "link": {
+            "header": "Enlace"
+        },
+        "list": {
+            "deleteDialog": {
+                "cancel": "Cancelar",
+                "confirm": "Confirmar",
+                "description": "¿De verdad quieres eliminar la ejecución de {{runId}}",
+                "title": "Eliminar ejecución {{runId}}"
+            },
+            "header": "H5P subido",
+            "noUploadedH5P": "Sin H5P subido"
+        },
+        "notifications": {
+            "delete": {
+                "success": "{{id}} eliminado con éxito de Lumi.run"
+            },
+            "upload": {
+                "success": "H5P subido correctamente a Lumi.run"
+            }
+        },
+        "setupDialog": {
+            "close": "Cerrar",
+            "start": "Comenzar"
+        },
+        "tos": {
+            "description": "He leído y acepto los términos de servicio.",
+            "header": "Términos de servicio"
+        },
+        "upload": "Subir",
+        "uploadDialog": {
+            "goToRun": "Ir a ejecuciones",
+            "ok": "OK",
+            "processing": "Procesando",
+            "success": "Su H5P se cargó en Lumi.run. Puede acceder y compartirlo con el siguiente enlace.",
+            "uploading": "Subiendo"
+        }
     },
     "settings": {
         "account": {
@@ -266,8 +370,15 @@
         "save": "Guardar"
     },
     "updates": {
+        "badge": "Actualización disponible",
+        "checkForUpdate": {
+            "checkButton": "Comprobación",
+            "description": "Buscar actualizaciones",
+            "title": "Buscar actualizaciones"
+        },
         "consent": "Yo permito que esta aplicación busque actualizaciones automáticamente.",
         "description": "Obtener la última versión automáticamente.",
+        "restartAndInstall": "Instalar y reiniciar",
         "title": "Actualizaciones automáticas"
     },
     "usage_statistics": {
