@@ -15,7 +15,7 @@
             "learn_more": "kom meer te weten",
             "open": "Kies een map met .lumi-bestanden",
             "start": "Begin",
-            "title": "Lumi Analytics",
+            "title": "Lumi analyses",
             "welcomeMessage": "Met Lumi's Analytics-tool kunt u gebruikersrapporten importeren en deze voor u visualiseren"
         }
     },
@@ -48,17 +48,37 @@
         },
         "title": "Bug- en crashrapporten"
     },
+    "cloudhub": {
+        "description": "Zoek naar inhoud of publiceer uw inhoud."
+    },
     "dialog": {
         "close": "Dichtbij"
     },
     "editor": {
         "default_name": "nieuwe H5P",
         "exportDialog": {
+            "addFunctionality": {
+                "embed": "Insluitlink weergeven",
+                "rights": "Rechten en machtigingen weergeven",
+                "title": "Functionaliteit toevoegen"
+            },
             "cancelButton": "Annuleer",
+            "cssFilePicker": {
+                "formatName": "CSS-bestand"
+            },
             "defaults": {
                 "authorName": "H5P Auteur",
                 "filename": "Mijn H5P-export",
                 "title": "H5P-inhoud"
+            },
+            "displayOptions": {
+                "addCss": "CSS-bestand toevoegen",
+                "chooseCssFile": "Kiezen",
+                "marginX": "Marge rechts & links",
+                "marginY": "Boven- en ondermarge",
+                "maximumWidth": "Maximale breedte",
+                "restrictWidthAndAlign": "Breedte beperken en centraal uitlijnen",
+                "title": "weergaveopties"
             },
             "exportButton": "Nu exporteren",
             "filePicker": {
@@ -81,6 +101,7 @@
                 },
                 "title": "Formaat"
             },
+            "pixelsAbbreviation": "px",
             "reporter": {
                 "hint": "Als u de verslaggever toevoegt, kunnen studenten een bestand met hun voortgang opslaan en naar u opsturen.",
                 "learnMoreLink": "Lees er hier meer over.",
@@ -89,27 +110,9 @@
             "title": "Exporteer instellingen",
             "validationErrors": {
                 "errorNaN": "Ingevoerde waarde is geen getal",
-                "errorRangeMin": "De waarde moet groter zijn dan {{min}}",
+                "errorRange": "De waarde moet tussen {{min}} en {{max}}",
                 "errorRangeMax": "De waarde moet kleiner zijn dan {{max}}",
-                "errorRange": "De waarde moet tussen {{min}} en {{max}}"
-            },
-            "addFunctionality": {
-                "title": "Functionaliteit toevoegen",
-                "rights": "Rechten en machtigingen weergeven",
-                "embed": "Insluitlink weergeven"
-            },
-            "displayOptions": {
-                "marginX": "Marge rechts & links",
-                "marginY": "Boven- en ondermarge",
-                "restrictWidthAndAlign": "Breedte beperken en centraal uitlijnen",
-                "maximumWidth": "Maximale breedte",
-                "addCss": "CSS-bestand toevoegen",
-                "chooseCssFile": "Kiezen",
-                "title": "weergaveopties"
-            },
-            "pixelsAbbreviation": "px",
-            "cssFilePicker": {
-                "formatName": "CSS-bestand"
+                "errorRangeMin": "De waarde moet groter zijn dan {{min}}"
             }
         },
         "extensionName": "H5P-pakket",
@@ -154,10 +157,10 @@
     "menu": {
         "file": {
             "copy": "Kopiëren",
-            "cut": "Besnoeiing",
+            "cut": "Knippen",
             "edit": "Bewerk",
             "export": "Exporteren...",
-            "label": "het dossier",
+            "label": "Bestand",
             "open": "Open Analytische bestanden",
             "paste": "Plakken",
             "redo": "Klaar",
@@ -356,6 +359,7 @@
         "description": "Het beschermen van de privacy van het individu is belangrijk voor ons. We verzamelen alleen de informatie die u ons wilt geven, en we verwerken deze met uw toestemming. We willen zo transparant mogelijk zijn. Lumi is echter afhankelijk van sommige verbindingen en gegevensoverdrachten om te werken."
     },
     "updates": {
+        "badge": "Update beschikbaar",
         "checkForUpdate": {
             "checkButton": "Rekening",
             "description": "Controleren op updates",
@@ -364,15 +368,11 @@
         "consent": "Ik sta deze applicatie toe om automatisch te controleren op updates.",
         "description": "Download automatisch de laatste versie.",
         "restartAndInstall": "Installeren en herstarten",
-        "title": "Automatische updates",
-        "badge": "Update beschikbaar"
+        "title": "Automatische updates"
     },
     "usage_statistics": {
         "consent": "Ik sta deze applicatie toe om anonieme gebruiksstatistieken te verzenden.",
         "description": " Help ons onze software en services te verbeteren door anonieme gebruiksstatistieken te verzenden.",
         "title": "Gebruiksstatistieken"
-    },
-    "cloudhub": {
-        "description": "Zoek naar inhoud of publiceer uw inhoud."
     }
 }
