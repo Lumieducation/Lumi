@@ -42,11 +42,14 @@
     "bug_report": {
         "consent": "Yo permito que esta aplicación envíe informes de errores y fallas.",
         "description": "Ayúdenos a mejorar nuestro software y servicios enviando informes anónimos de fallos y errores.",
-        "title": "Informes de fallos y errores",
         "email": {
-            "subject": "Informe de problemas de Lumi",
-            "body": "Para obtener una solución rápida a su problema, escriba sobre:\n\n  - Versión Lumi: <rellenar aquí>, Sistema operativo: <rellenar aquí>\n  - describe el problema\n  - describir cómo podemos reproducir el problema en nuestras máquinas\n  - envíenos un archivo .h5p de muestra o archivos exportados si el problema está relacionado con los archivos\n\nSi nos envía mensajes en un idioma que no sea inglés o alemán, usaremos una herramienta de traducción automática para traducir su mensaje."
-        }
+            "body": "Para obtener una solución rápida a su problema, escriba sobre:\n\n  - Versión Lumi: <rellenar aquí>, Sistema operativo: <rellenar aquí>\n  - describe el problema\n  - describir cómo podemos reproducir el problema en nuestras máquinas\n  - envíenos un archivo .h5p de muestra o archivos exportados si el problema está relacionado con los archivos\n\nSi nos envía mensajes en un idioma que no sea inglés o alemán, usaremos una herramienta de traducción automática para traducir su mensaje.",
+            "subject": "Informe de problemas de Lumi"
+        },
+        "title": "Informes de fallos y errores"
+    },
+    "cloudhub": {
+        "description": "Busque contenido o publique su contenido."
     },
     "dialog": {
         "close": "Cerrar"
@@ -54,11 +57,28 @@
     "editor": {
         "default_name": "nuevo H5P",
         "exportDialog": {
+            "addFunctionality": {
+                "embed": "Mostrar enlace para insertar",
+                "rights": "Mostrar derechos y permisos",
+                "title": "Agregar funcionalidad"
+            },
             "cancelButton": "Cancelar",
+            "cssFilePicker": {
+                "formatName": "Archivo CSS"
+            },
             "defaults": {
                 "authorName": "Autor del H5P",
                 "filename": "Mi exportación H5P",
                 "title": "Contenido del H5P"
+            },
+            "displayOptions": {
+                "addCss": "Agregar archivo CSS",
+                "chooseCssFile": "escoger",
+                "marginX": "Margen derecho e izquierdo",
+                "marginY": "Margen superior e inferior",
+                "maximumWidth": "Ancho máximo",
+                "restrictWidthAndAlign": "Restringir el ancho y alinear centralmente",
+                "title": "opciones de pantalla"
             },
             "exportButton": "Exportar ahora",
             "filePicker": {
@@ -81,6 +101,7 @@
                 },
                 "title": "Formato"
             },
+            "pixelsAbbreviation": "px",
             "reporter": {
                 "hint": "Si agrega al reportero, los estudiantes pueden guardar un archivo con su progreso y enviárselo.",
                 "learnMoreLink": "Obtenga más información al respecto aquí.",
@@ -89,27 +110,9 @@
             "title": "Exportar configuraciones",
             "validationErrors": {
                 "errorNaN": "El valor introducido no es un número",
-                "errorRangeMin": "El valor debe ser mayor que {{min}}",
+                "errorRange": "El valor debe estar entre {{min}} y {{max}}",
                 "errorRangeMax": "El valor debe ser menor que {{max}}",
-                "errorRange": "El valor debe estar entre {{min}} y {{max}}"
-            },
-            "addFunctionality": {
-                "title": "Agregar funcionalidad",
-                "rights": "Mostrar derechos y permisos",
-                "embed": "Mostrar enlace para insertar"
-            },
-            "displayOptions": {
-                "marginX": "Margen derecho e izquierdo",
-                "marginY": "Margen superior e inferior",
-                "restrictWidthAndAlign": "Restringir el ancho y alinear centralmente",
-                "maximumWidth": "Ancho máximo",
-                "addCss": "Agregar archivo CSS",
-                "chooseCssFile": "escoger",
-                "title": "opciones de pantalla"
-            },
-            "pixelsAbbreviation": "px",
-            "cssFilePicker": {
-                "formatName": "Archivo CSS"
+                "errorRangeMin": "El valor debe ser mayor que {{min}}"
             }
         },
         "extensionName": "Paquete H5P",
@@ -183,7 +186,7 @@
             "services": "Servicios",
             "unhide": "Mostrar todo"
         },
-        "quit": "Renunciar",
+        "quit": "Salir",
         "run": {
             "label": "Correr",
             "upload": "Subir a Lumi Run"
@@ -356,6 +359,7 @@
         "description": "Proteger la privacidad del individuo es importante para nosotros. Solo recopilamos la información que usted elige darnos y la procesamos con su consentimiento. Queremos ser lo más transparentes posible. Sin embargo, Lumi depende de algunas conexiones y transferencias de datos para funcionar."
     },
     "updates": {
+        "badge": "Actualización disponible",
         "checkForUpdate": {
             "checkButton": "Cheque",
             "description": "Buscar actualizaciones",
@@ -364,15 +368,11 @@
         "consent": "Yo permito que esta aplicación busque actualizaciones automáticamente.",
         "description": "Obtenga la última versión automáticamente.",
         "restartAndInstall": "Instalar y reiniciar",
-        "title": "Actualizaciones Automáticas",
-        "badge": "Actualización disponible"
+        "title": "Actualizaciones Automáticas"
     },
     "usage_statistics": {
         "consent": "Yo permito que esta aplicación envíe estadísticas de uso anónimas.",
         "description": " Ayúdenos a mejorar nuestro software y servicios enviando estadísticas de uso anónimas.",
         "title": "Estadísticas de uso"
-    },
-    "cloudhub": {
-        "description": "Busque contenido o publique su contenido."
     }
 }
