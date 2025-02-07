@@ -62,6 +62,9 @@ var onCompleted = function (result) {
     }
 };
 
+// Some H5P content types require this to be set on the platform in order to allow submission of results
+H5PIntegration.reportingIsEnabled = true;
+
 H5P.externalDispatcher.on('xAPI', function (event) {
     if (event.data.statement.result) {
         onCompleted(event.data.statement.result);
