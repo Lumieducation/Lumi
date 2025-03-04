@@ -1,18 +1,23 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
-        "esModuleInterop": true,
-        "experimentalDecorators": true,
-        "removeComments": false,
-        "noImplicitAny": false,
-        "allowJs": true,
-        "resolveJsonModule": true,
-        "outDir": "./build/server",
-        "sourceMap": true
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "resolveJsonModule": true,
+    "declaration": true,
+    "paths": {
+      "src/*": ["src/*"],
+      "test/*": ["test/*"]
     },
-    "exclude": ["node_modules"],
-    "include": ["server/src/**/*.ts"],
-    "preset": "ts-jest"
+    "outDir": "./build"
+  },
+  "exclude": ["node_modules", "build", "commitlint.config.cjs"],
+  "include": ["**/*.ts", "**/*.tsx", "src/**/*"]
 }

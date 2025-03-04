@@ -1,33 +1,37 @@
-# Logs
-logs
-*.log
-npm-debug.log*
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Environment
-.env
-.env.server
-
-# Compiled files
-build
-coverage
-dist
-
-# libraries
-!test/build
-
-# vscode
-.vscode
-.DS_Store
-microsoft.gpg
-
-# dev artifacts
-.eslintcache
-
-# Dependency directory
+# dependencies
 node_modules
-/h5p/libraries
+.pnp
+.pnp.js
 
-h5p_libs
+# testing
+coverage
+
+# production
+.next
+.swc
+_static
+out
+dist
+build
+
+# environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# misc
+.DS_Store
+.vercel
+.netlify
+.unimportedrc.json
+tsconfig.tsbuildinfo
 google_translate.json
 .json-autotranslate-cache
-.dccache
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

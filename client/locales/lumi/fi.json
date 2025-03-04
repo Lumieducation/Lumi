@@ -1,0 +1,375 @@
+{
+    "editor": {
+        "default_name": "uusi H5P",
+        "tab": {
+            "view": "Näytä",
+            "edit": "Muokata"
+        },
+        "sidebar": {
+            "open": "Avaa H5P-tiedosto",
+            "create": "Uusi H5P-tiedosto",
+            "noOpenFiles": "Ei avattuja tiedostoja"
+        },
+        "startPage": {
+            "title": "H5P-editori",
+            "welcomeMessage": "Lumin H5P Editor on erillinen sovellus, jonka avulla voit tarkastella, muokata ja luoda H5P: tä.",
+            "open": "Avaa olemassa oleva H5P",
+            "create": "luo uusi H5P",
+            "start": "alkaa"
+        },
+        "exportDialog": {
+            "title": "Vie asetukset",
+            "format": {
+                "title": "Muoto",
+                "bundleLabel": "All-in-one HTML-tiedosto",
+                "bundleHint": "Tiedosto voi kasvaa liian suureksi joillekin tietokoneille, jos sisällytät paljon mediatiedostoja.",
+                "externalLabel": "Yksi HTML-tiedosto ja useita mediatiedostoja",
+                "externalHint": "Sinulta pyydetään nimeä HTML-tiedostolle seuraavassa vaiheessa. Mediatiedostot sijoitetaan kansioihin, jotka alkavat samalla nimellä kuin tiedosto.",
+                "scorm": {
+                    "label": "SCORM-paketti",
+                    "masteryScoreLabel": "Mastery pisteet"
+                }
+            },
+            "reporter": {
+                "hint": "Jos lisäät reportterin, opiskelijat voivat tallentaa edistymisensä tiedoston ja lähettää sen sinulle.",
+                "switchLabel": "Sisällytä toimittaja",
+                "learnMoreLink": "Lue lisää täältä."
+            },
+            "cancelButton": "Peruuttaa",
+            "exportButton": "Vie nyt",
+            "filePicker": {
+                "title": "Vie nimellä ...",
+                "buttonLabel": "Viedä",
+                "formatNames": {
+                    "bundle": "All-in-one HTML-tiedosto",
+                    "external": "HTML-tiedosto",
+                    "scorm": "SCORM tiedosto"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P-kirjailija",
+                "title": "H5P-sisältö",
+                "filename": "H5P-vientini"
+            },
+            "validationErrors": {
+                "errorNaN": "Syötetty arvo ei ole numero",
+                "errorRangeMin": "Arvon on oltava suurempi kuin {{min}}",
+                "errorRangeMax": "Arvon on oltava pienempi kuin {{max}}",
+                "errorRange": "Arvon pitää olla välillä {{min}} ja {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Lisää toimintoja",
+                "rights": "Näytä oikeudet ja käyttöoikeudet",
+                "embed": "Näytä upotuslinkki"
+            },
+            "displayOptions": {
+                "marginX": "Oikea ja vasen marginaali",
+                "marginY": "Ylä- ja alamarginaali",
+                "restrictWidthAndAlign": "Rajoita leveyttä ja kohdista keskelle",
+                "maximumWidth": "Suurin leveys",
+                "addCss": "Lisää CSS-tiedosto",
+                "chooseCssFile": "valita",
+                "title": "näytön asetukset"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "CSS-tiedosto"
+            }
+        },
+        "saveAsDialog": {
+            "title": "Tallenna nimellä",
+            "fallbackFilename": "H5P-tiedostoni"
+        },
+        "extensionName": "H5P paketti"
+    },
+    "settings": {
+        "appbar": {
+            "label": "asetukset",
+            "save": "Tallentaa"
+        },
+        "enable": "ota käyttöön",
+        "menu": {
+            "general": "Kenraali",
+            "updates": "Päivitykset",
+            "account": "Tili",
+            "h5p-library-administration": "H5P-kirjastot"
+        },
+        "general": {
+            "header": "Kenraali"
+        },
+        "updates": {
+            "header": "Päivitykset"
+        },
+        "account": {
+            "label": "Tili",
+            "email": {
+                "title": "Sähköposti",
+                "change": "Vaihda sähköposti",
+                "not-set": "Sähköpostiosoitetta ei ole asetettu"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Asennetut H5P-kirjastot",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Lataus onnistui, mutta kirjastoja ei ole asennettu tai päivitetty. Sisältötyyppi on todennäköisesti jo asennettu järjestelmään.",
+                    "success-with-update": "Onnistuneesti asennettu {{installed}} ja päivitetään {{updated}} kirjastoissa.",
+                    "error": "Virhe pakettia ladattaessa."
+                },
+                "delete": {
+                    "success": "Kirjasto {{title}} ( {{version}} ) poistettu.",
+                    "error": "Virhe poistettaessa kirjastoa {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Virhe haettaessa yksityiskohtaisia tietoja kirjastosta {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Lataa ja asenna kirjasto",
+            "details": "Yksityiskohdat",
+            "can-not-be-deleted": "Tätä kirjastoa ei voi poistaa, koska sitä käytetään {{count}} muussa kirjastossa",
+            "can-not-be-deleted_plural": "Tätä kirjastoa ei voi poistaa, koska sitä käytetään {{count}} muussa kirjastossa",
+            "library-details": {
+                "header": "Kirjaston tiedot",
+                "author": "Kirjoittaja",
+                "description": "Kuvaus",
+                "license": "Lisenssi",
+                "standalone": "Itsenäinen sisältötyyppi",
+                "restricted": "Rajoitettu (voidaan käyttää vain etuoikeudella)",
+                "fullscreen": "Tukee koko näyttöä",
+                "addon": "Addon",
+                "embedTypes": "Sallitut upotustyypit",
+                "dependentsCount": "Kirjastoa käyttävien kirjastojen määrä",
+                "instancesCount": "Objektit, jotka on luotu tämän kirjaston pääsisältötyypiksi",
+                "instancesAsDependencyCount": "Objektit, joissa toinen kirjasto käyttää tätä kirjastoa"
+            }
+        },
+        "links": {
+            "header": "Linkit"
+        }
+    },
+    "analytics": {
+        "startPage": {
+            "title": "Lumi Analytics",
+            "welcomeMessage": "Lumin Analytics-työkalun avulla voit tuoda käyttäjäraportteja ja visualisoida ne puolestasi",
+            "start": "alkaa",
+            "learn_more": "lisätietoja",
+            "open": "Valitse kansio .lumi-tiedostoilla"
+        },
+        "name": "Nimi",
+        "average": "Keskiverto",
+        "searchPlaceholder": "Hae opiskelijoiden nimiä ...",
+        "brokenFiles": "Luettelo rikki tiedostoista",
+        "errors": {
+            "no-content-json": "H5P-sisältöä ei lisätty oikein .lumi-tiedostoon.",
+            "json-parse-error": ".Lumi-tiedosto sisältää virheellistä sisältöä (JSON ei jäsennä).",
+            "determine-name": "Opiskelijan nimeä ei voitu määrittää.",
+            "invalid-interactions": "Jotkut vuorovaikutuksista ovat rikki.",
+            "invalid-statements": "Jotkut tallennetuista opiskelijoiden toimista ovat rikki."
+        }
+    },
+    "bug_report": {
+        "title": "Virhe- ja kaatumisraportit",
+        "description": "Auta meitä parantamaan ohjelmistojamme ja palveluitamme lähettämällä nimettömiä kaatumis- ja virheraportteja.",
+        "consent": "Annan tämän sovelluksen lähettää vikailmoituksia.",
+        "email": {
+            "subject": "Lumin ongelmaraportti",
+            "body": "Saadaksesi nopean ratkaisun ongelmaasi, kirjoita aiheesta:\n\n  - Lumi-versio: <täytä tästä>, Käyttöjärjestelmä: <täytä tästä>\n  - kuvaile ongelmaa\n  - kuvaile kuinka voimme toistaa ongelman koneissamme\n  - lähetä meille näyte.h5p-tiedostoja tai vietyjä tiedostoja, jos ongelma liittyy tiedostoihin\n\nJos lähetät meille viestejä muulla kielellä kuin englanniksi tai saksaksi, käytämme automaattista käännöstyökalua viestisi kääntämiseen."
+        }
+    },
+    "usage_statistics": {
+        "title": "Käyttötilastot",
+        "description": " Auta meitä parantamaan ohjelmistojamme ja palveluitamme lähettämällä nimettömiä käyttötilastoja.",
+        "consent": "Annan tämän sovelluksen lähettää nimettömiä käyttötilastoja."
+    },
+    "updates": {
+        "title": "Automaattiset päivitykset",
+        "description": "Hanki uusin versio automaattisesti.",
+        "consent": "Annan tämän sovelluksen tarkistaa automaattisesti päivitykset.",
+        "checkForUpdate": {
+            "title": "Tarkista päivitykset",
+            "description": "Tarkista päivitykset",
+            "checkButton": "Tarkistaa"
+        },
+        "restartAndInstall": "Asenna ja käynnistä uudelleen",
+        "badge": "Päivitys saatavilla"
+    },
+    "language": {
+        "title": "Kieli",
+        "description": "Vaihda sovelluksen kieli.",
+        "help_translate": "Auta meitä kääntämään!"
+    },
+    "privacy_policy": {
+        "title": "Tietosuojakäytäntö",
+        "consent": "Olen lukenut tietosuojakäytännön ja hyväksyn sen."
+    },
+    "setup_dialog": {
+        "description": "Yksilön yksityisyyden suojaaminen on meille tärkeää. Keräämme vain tiedot, jotka päätät antaa meille, ja käsittelemme niitä suostumuksellasi. Haluamme olla mahdollisimman avoimia. Lumi luottaa kuitenkin joihinkin yhteyksiin ja tiedonsiirtoihin työhön.",
+        "consent_warning": "Sinun on ainakin suostuttava tietosuojakäytäntöön tämän sovelluksen käyttämiseksi.",
+        "accept_all": "Hyväksy kaikki",
+        "accept_selected": "Hyväksy valittu"
+    },
+    "menu": {
+        "quit": "Lopettaa",
+        "file": {
+            "label": "Tiedosto",
+            "open": "Avaa analyyttiset tiedostot",
+            "save": "Tallentaa",
+            "save_as": "Tallenna nimellä...",
+            "export": "Viedä...",
+            "edit": "Muokata",
+            "undo": "Kumoa",
+            "redo": "Valmis",
+            "cut": "Leikata",
+            "copy": "Kopio",
+            "paste": "Liitä",
+            "select_all": "Valitse kaikki"
+        },
+        "h5peditor": {
+            "new": "Uusi H5P",
+            "open": "Avaa H5P"
+        },
+        "help": {
+            "label": "auta",
+            "report_issue": "Ilmoita ongelmasta",
+            "toggle_developer_tools": "Toggle Kehittäjän työkalut",
+            "follow_us_on_twitter": "Seuraa meitä Twitterissä",
+            "about": "Noin"
+        },
+        "mac": {
+            "services": "Palvelut",
+            "hide": "Piilota Lumi",
+            "hideothers": "Piilota muut",
+            "unhide": "Näytä kaikki"
+        },
+        "window": {
+            "label": "Ikkuna",
+            "show": "Näytä",
+            "minimize": "Minimoida",
+            "zoom": "Zoomaus",
+            "front": "Tuo kaikki eteen",
+            "close": "kiinni"
+        },
+        "view": {
+            "label": "Näytä",
+            "resetZoom": "Todellinen koko",
+            "zoomIn": "Lähennä",
+            "zoomOut": "Loitontaa",
+            "togglefullscreen": "Vaihda koko näytöllä"
+        },
+        "run": {
+            "label": "Juosta",
+            "upload": "Lataa Lumi Runiin"
+        }
+    },
+    "notifications": {
+        "analytics": {
+            "import": {
+                "error": "Kelvollisia tiedostoja ei löytynyt",
+                "success": "Tuodut raporttitiedostot",
+                "brokenFiles": "{{count}} rikki tiedostoa",
+                "brokenFiles_plural": "{{count}} rikki tiedostoa"
+            }
+        },
+        "h5peditor": {
+            "save": {
+                "success": "H5P tallennettu!",
+                "error": "H5P: tä ei voitu tallentaa."
+            },
+            "open": {
+                "error": "H5P: tä ei voitu avata."
+            },
+            "export_as_html": {
+                "success": "H5P: n vienti onnistui",
+                "error": "H5P: n vienti epäonnistui"
+            }
+        },
+        "general": {
+            "econnrefused": "Internet -yhteydessänne näyttää olevan ongelma."
+        },
+        "updater": {
+            "availableText": "Päivitys on saatavilla. Sovellus asentaa päivityksen ja käynnistyy uudelleen.",
+            "availableTitle": "Asenna päivitykset",
+            "updateDownloaded": "Päivitys ladattiin ja se asennetaan, kun lopetat Lumin."
+        }
+    },
+    "auth": {
+        "set_email": "Aseta sähköposti",
+        "email": "Sähköposti",
+        "code": "Koodi",
+        "verify_code": "Varmistus koodi",
+        "verify_email": "vahvista sähköposti",
+        "notification": {
+            "success": "{{email}} on vahvistettu",
+            "pending": "Vahvistuskoodi on lähetetty numeroon {{email}} . Tarkista sähköpostisi.",
+            "logout": {
+                "success": "Olit kirjautunut ulos."
+            }
+        },
+        "error": {
+            "no-valid-email": "{{email}} ei ole kelvollinen sähköpostiosoite.",
+            "econnrefused": "Yhteyden ottaminen Lumi Auth -palvelimeen ei onnistunut. Tarkista internetyhteytesi."
+        },
+        "cancel": "Peruuttaa",
+        "logout": "Kirjautua ulos"
+    },
+    "dialog": {
+        "close": "kiinni"
+    },
+    "general": {
+        "delete": "Poistaa",
+        "copyClipboard": "Kopioitu {{value}} leikepöydälle"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Yhteys evätty"
+        },
+        "messages": {
+            "econnrefused": "Yhteys evätty"
+        }
+    },
+    "prerelease": {
+        "title": "Esijulkaisuominaisuudet",
+        "description": "Ota kokeelliset ominaisuudet käyttöön ennen niiden julkaisua"
+    },
+    "run": {
+        "description": "Lumi Runin avulla voit ladata ja isännöidä H5P: si yhdellä napsautuksella.",
+        "legal": "Voidaksesi käyttää tätä palvelua sinun on hyväksyttävä käyttöehdot, tietosuojakäytäntö ja annettava meille yhteyssähköposti.",
+        "tos": {
+            "header": "Käyttöehdot",
+            "description": "Olen lukenut ja hyväksyn palveluehdot."
+        },
+        "link": {
+            "header": "Linkki"
+        },
+        "upload": "Lataa",
+        "list": {
+            "header": "Ladattu H5P",
+            "noUploadedH5P": "Ei ladattua H5P: tä",
+            "deleteDialog": {
+                "title": "Poista Suorita {{runId}}",
+                "description": "Haluatko todella poistaa suorituksen {{runId}}",
+                "cancel": "Peruuttaa",
+                "confirm": "Vahvistaa"
+            }
+        },
+        "uploadDialog": {
+            "success": "H5P -laitteesi ladattiin Lumi.run -palveluun. Voit käyttää ja jakaa sen seuraavan linkin avulla.",
+            "uploading": "Ladataan",
+            "processing": "Käsittely",
+            "goToRun": "Mene juoksuihin",
+            "ok": "Ok"
+        },
+        "setupDialog": {
+            "close": "kiinni",
+            "start": "alkaa"
+        },
+        "notifications": {
+            "delete": {
+                "success": "{{id}} poistettiin onnistuneesti osoitteesta Lumi.run"
+            },
+            "upload": {
+                "success": "H5P: n lataaminen Lumi.runiin onnistui"
+            }
+        }
+    }
+}
