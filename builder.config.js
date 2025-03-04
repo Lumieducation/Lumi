@@ -31,7 +31,7 @@ module.exports = {
     ],
     hardenedRuntime: true
   },
-  afterSign: 'scripts/notarize.js',
+  //   afterSign: 'scripts/notarize.js',
   win: {
     icon: 'assets/lumi.png',
     fileAssociations: {
