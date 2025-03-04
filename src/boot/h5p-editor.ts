@@ -1,5 +1,6 @@
 import * as H5P from '@lumieducation/h5p-server';
 
+import UrlGenerator from '../implementations/H5PURLGenerator';
 /**
  * Create a H5PEditor object.
  *
@@ -30,6 +31,8 @@ export default async function bootH5PEditor(
   const libStorage = new H5P.fsImplementations.FileLibraryStorage(
     localLibraryPath
   );
+
+  const urlGenerator = new UrlGenerator(config);
   // Depending on the environment variables we use different implementations
   // of the storage interfaces.
   const h5pEditor = new H5P.H5PEditor(
@@ -41,7 +44,7 @@ export default async function bootH5PEditor(
     new H5P.fsImplementations.FileContentStorage(localContentPath),
     new H5P.fsImplementations.DirectoryTemporaryFileStorage(localTemporaryPath),
     translationCallback,
-    undefined,
+    urlGenerator,
     {
       customization: {
         global: {
