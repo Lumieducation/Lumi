@@ -29,7 +29,13 @@ module.exports = {
         arch: ['arm64', 'x64']
       }
     ],
-    hardenedRuntime: true
+    hardenedRuntime: true,
+    extraResources: [
+      {
+        from: 'node_modules/electron/dist/Electron Framework.framework',
+        to: 'Frameworks/Electron Framework.framework'
+      }
+    ]
   },
   win: {
     icon: 'assets/lumi.png',
