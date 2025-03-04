@@ -31,7 +31,7 @@ jobs:
         with:
           fetch-depth: 0 # Ensure full git history
       - name: Fetch latest changes
-        run: git pull origin master # Get the updated package.json
+        run: git pull origin next # Get the updated package.json
       - name: Use Node.js 22.x
         uses: actions/setup-node@v3
         with:
@@ -64,7 +64,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Fetch latest changes
-        run: git pull origin master
+        run: git pull origin next
       - name: Use Node.js 22.x
         uses: actions/setup-node@v3
         with:
@@ -93,7 +93,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Fetch latest changes
-        run: git pull origin master
+        run: git pull origin next
       - name: Use Node.js 22.x
         uses: actions/setup-node@v3
         with:
