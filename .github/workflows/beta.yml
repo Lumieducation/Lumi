@@ -104,8 +104,13 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Add Snapcraft repository
+        run: |
+          sudo apt update
+          sudo apt install -y snapd
+
       - name: Install Snapcraft
-        run: sudo apt-get install -y snapcraft
+        run: sudo snap install snapcraft --classic
       - name: Publish Linux
         run: npm run publish:linux
         env:
