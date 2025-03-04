@@ -1,4 +1,3 @@
-require('dotenv').config();
 const { notarize } = require('@electron/notarize');
 
 exports.default = async function notarizing(context) {
@@ -14,8 +13,9 @@ exports.default = async function notarizing(context) {
     return await notarize({
       appBundleId: 'education.lumi.lumi',
       appPath: `${appOutDir}/${appName}.app`,
-      appleId: process.env.APPLEID,
-      appleIdPassword: process.env.APPLEIDPASSWORD
+      appleId: process.env.APPLE_ID,
+      appleIdPassword: process.env.APPLE_ID_PASSWORD,
+      teamId: process.env.APPLE_TEAM_ID
       //   ascProvider: process.env.APPLE_ASCPROVIDER
     });
   }
