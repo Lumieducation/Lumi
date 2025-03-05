@@ -32,7 +32,7 @@ module.exports = {
     hardenedRuntime: true,
     extraResources: [
       {
-        from: 'node_modules/electron/dist/Electron Framework.framework',
+        from: 'node_modules/electron/dist/Electron.app/Contents/Frameworks/Electron Framework.framework',
         to: 'Frameworks/Electron Framework.framework'
       }
     ]
