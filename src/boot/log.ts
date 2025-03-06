@@ -1,8 +1,7 @@
 import bunyan from 'bunyan';
+import log from 'electron-log/main';
 
 export default function boot_logger(): bunyan.Logger {
-  return bunyan.createLogger({
-    name: 'lumi',
-    level: process.env.LOG_LEVEL || 'info'
-  });
+  log.initialize();
+  return log;
 }
