@@ -7,9 +7,8 @@ export default async function content_delete(
   ctx: Context,
   content_id: string
 ): Promise<void> {
+  ctx.log.debug(`ops:content_delete`, { content_id });
   const path = content_path(ctx, content_id);
 
   await fs.rmdir(path, { recursive: true });
-
-  ctx.log.info(`Deleted content ${content_id}`);
 }

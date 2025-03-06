@@ -10,6 +10,7 @@ export default async function content_config_read(
   key: string
 ): Promise<string> {
   try {
+    ctx.log.debug(`ops:content_config_read`, { content_id, key });
     const _content_path = content_path(ctx, content_id);
 
     const config_file = path.join(_content_path, 'config.json');

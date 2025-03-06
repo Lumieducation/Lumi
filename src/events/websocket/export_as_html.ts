@@ -12,6 +12,7 @@ export default function event_websocket_export_as_scorm(
   socket: SocketIO.Socket
 ): void {
   socket.on('export_as_html', async (payload) => {
+    context.log.info('events:websocket:export_as_html', payload);
     const { contentId } = payload;
 
     const { file_path } = await dialog_export_save_as_show(

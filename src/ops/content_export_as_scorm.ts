@@ -7,6 +7,10 @@ export default async function content_export_as_scorm(
   content_id: string,
   path: string
 ): Promise<void> {
+  context.log.debug(`ops:content_export_as_scorm`, {
+    content_id,
+    path
+  });
   await exportH5P(
     context,
     path,
@@ -26,11 +30,5 @@ export default async function content_export_as_scorm(
       showEmbed: false,
       showRights: false
     }
-  );
-
-  context.log.info(
-    `Exported content ${content_id} to ${path} as SCORM package.`,
-    content_id,
-    path
   );
 }

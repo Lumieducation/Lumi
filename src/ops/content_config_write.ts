@@ -10,6 +10,7 @@ export default async function content_config_write(
   key: string,
   value: string
 ): Promise<void> {
+  ctx.log.debug(`ops:content_config_write`, { content_id, key, value });
   const _content_path = content_path(ctx, `${content_id}`);
 
   const config_file = path.join(_content_path, 'config.json');
@@ -18,7 +19,7 @@ export default async function content_config_write(
   try {
     config = JSON.parse(fs.readFileSync(config_file, 'utf8'));
   } catch (error) {
-    ctx.log.debug(`No config file found for content ${content_id}`);
+    ctx.log.info(`No config file found for content ${content_id}`);
   }
 
   config[key] = value;

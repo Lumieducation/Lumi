@@ -9,6 +9,11 @@ export default async function content_save_to_file(
   content_id: string,
   path: string
 ): Promise<void> {
+  ctx.log.debug(`ops:content_save_to_file`, {
+    content_id,
+    path
+  });
+
   const stream = fs.createWriteStream(path);
   const packageExporter = new H5P.PackageExporter(
     ctx.h5pEditor.libraryManager,

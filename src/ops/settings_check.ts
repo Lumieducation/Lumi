@@ -6,6 +6,7 @@ import Settings from '../types/Settings';
 import settings_read from './settings_read';
 
 export default async function settings_check(ctx: Context): Promise<void> {
+  ctx.log.debug(`ops:settings_check`);
   const check = await settings_read(ctx);
 
   const default_settings: Settings = {

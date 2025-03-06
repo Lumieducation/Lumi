@@ -5,6 +5,7 @@ import settings_read from './settings_read';
 
 export default async function language_get(ctx: Context): Promise<string> {
   try {
+    ctx.log.debug(`ops:language_get`);
     let language_code = (await settings_read(ctx)).language;
 
     if (!language_code) {

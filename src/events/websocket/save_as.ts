@@ -11,6 +11,7 @@ export default function setup_save(
   socket: SocketIO.Socket
 ): void {
   socket.on('save_as', async (payload) => {
+    context.log.info('events:websocket:save_as', payload);
     const { contentId, file_path } = payload;
 
     await content_config_write(context, contentId, 'path', file_path);

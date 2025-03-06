@@ -6,6 +6,11 @@ export default async function window_snackbar_show(
   message: string,
   variant: string
 ): Promise<void> {
+  context.log.debug(`ops:window_snackbar_show`, {
+    content_id,
+    message,
+    variant
+  });
   context.ws.emit(content_id, {
     type: 'show_snackbar',
     payload: {
@@ -13,5 +18,4 @@ export default async function window_snackbar_show(
       variant
     }
   });
-  context.log.debug(`Showing snackbar for ${content_id}`);
 }

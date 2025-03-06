@@ -11,6 +11,8 @@ export default function setup_save(
   socket: SocketIO.Socket
 ): void {
   socket.on('save', async (payload) => {
+    context.log.info('events:websocket:save', payload);
+
     const { contentId } = payload;
     const path = await content_config_read(context, contentId, 'path');
 

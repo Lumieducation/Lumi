@@ -5,6 +5,7 @@ import { Context } from '../boot';
 export default async function window_settings_open(
   ctx: Context
 ): Promise<BrowserWindow> {
+  ctx.log.info(`ops:window_settings_open`);
   const win = new BrowserWindow({
     width: 960,
     height: 600

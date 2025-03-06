@@ -9,6 +9,7 @@ export default async function window_open(
   ctx: Context,
   content_id: string
 ): Promise<BrowserWindow> {
+  ctx.log.debug(`ops:window_open`, { content_id });
   const win = new BrowserWindow({
     width: 960,
     height: 600

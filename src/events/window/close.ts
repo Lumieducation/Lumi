@@ -9,6 +9,7 @@ export default async function event_window_close(
   window: BrowserWindow
 ): Promise<void> {
   window.on('close', async () => {
+    context.log.info('events:window:close');
     const current_content_id = await window_get_content_id(window);
     await window_close(context, current_content_id);
   });

@@ -5,6 +5,7 @@ import { Context } from '../../boot';
 import window_all_closed from './window-all-closed';
 
 export default async function event_setup(ctx: Context) {
+  ctx.log.info(`events:app:setup`);
   activate(ctx);
   open_file(ctx);
   ready(ctx);

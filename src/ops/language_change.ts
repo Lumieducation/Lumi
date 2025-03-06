@@ -7,10 +7,9 @@ export default async function language_change(
   ctx: Context,
   language_code: string
 ) {
+  ctx.log.debug(`ops:language_change`, { language_code });
   await i18next.loadLanguages(language_code);
   await i18next.changeLanguage(language_code);
 
   setup_menu(ctx);
-
-  ctx.log.info('language_change', language_code);
 }

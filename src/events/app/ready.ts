@@ -8,6 +8,7 @@ import content_open_all_from_working_directory from '../../ops/content_open_all_
 
 export default function ready(context: Context) {
   electron.app.whenReady().then(async () => {
+    context.log.info(`events:app:ready`);
     const content_ids = await content_open_all_from_working_directory(context);
 
     if (content_ids.length === 0) {

@@ -9,6 +9,7 @@ export default function setup_save(
   socket: SocketIO.Socket
 ): void {
   socket.on('language_change', async (payload) => {
+    context.log.info('events:websocket:language_change', payload);
     const { language_code } = payload;
 
     await settings_write(context, { language: language_code });

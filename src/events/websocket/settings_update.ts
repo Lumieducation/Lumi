@@ -8,6 +8,7 @@ export default function settings_update(
   socket: SocketIO.Socket
 ): void {
   socket.on('settings_update', async (payload) => {
+    context.log.info('events:websocket:settings_update', payload);
     await settings_write(context, payload);
   });
 }

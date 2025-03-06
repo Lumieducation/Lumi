@@ -6,6 +6,7 @@ export default async function window_update_open(
   ctx: Context,
   params?: any
 ): Promise<BrowserWindow> {
+  ctx.log.debug('ops:window_update_open');
   const win = new BrowserWindow({
     width: 800,
     height: 600

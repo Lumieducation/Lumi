@@ -7,6 +7,10 @@ export default async function content_export_as_html_external(
   content_id: string,
   path: string
 ): Promise<void> {
+  context.log.debug(`ops:content_export_as_html_external`, {
+    content_id,
+    path
+  });
   await exportH5P(
     context,
     path,
@@ -26,9 +30,5 @@ export default async function content_export_as_html_external(
       showEmbed: false,
       showRights: false
     }
-  );
-
-  context.log.info(
-    `Content ${content_id} exported to ${path} as HTML file with external media.`
   );
 }

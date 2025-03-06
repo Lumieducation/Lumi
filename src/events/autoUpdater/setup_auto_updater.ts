@@ -10,6 +10,9 @@ import update_not_available from './update-not-available';
 
 export default async function setup_auto_updater(ctx: Context) {
   const settings = await settings_read(ctx);
+
+  ctx.log.info(`events:autoUpdater:setup_auto_updater`, settings);
+
   autoUpdater.allowPrerelease = settings.prerelease_features;
   autoUpdater.autoDownload = settings.updates_automatic;
 

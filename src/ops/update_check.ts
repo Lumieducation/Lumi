@@ -7,5 +7,4 @@ export default async function update_check(ctx: Context) {
   autoUpdater.checkForUpdates();
 
   window_snackbar_show(ctx, 'update', `Checking for updates`, 'info');
-  ctx.log.info('update_check');
 }

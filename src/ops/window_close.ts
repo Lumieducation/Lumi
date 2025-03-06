@@ -5,6 +5,7 @@ export default async function window_close(
   ctx: Context,
   content_id: string
 ): Promise<void> {
+  ctx.log.debug(`ops:window_close`, { content_id });
   if (content_id === 'new') {
     return;
   }

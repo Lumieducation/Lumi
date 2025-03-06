@@ -15,6 +15,7 @@ export default function setup_websocket_events(
   context: Context,
   socket: SocketIO.Socket
 ): void {
+  context.log.info('events:websocket:setup_websocket_events');
   save(context, socket);
   save_as(context, socket);
   export_as_scorm(context, socket);

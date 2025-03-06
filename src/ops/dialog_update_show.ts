@@ -13,6 +13,8 @@ export default async function dialog_update_show(
   ctx: Context,
   version: string
 ): Promise<void> {
+  ctx.log.debug(`ops:dialog_update_show`, { version });
+
   const result = await dialog.showMessageBox({
     message: ctx.translate('Update available: {{version}}', { version }),
     type: 'info',
