@@ -16,6 +16,7 @@ export default function lumi_menu(ctx: Context) {
           label: ctx.translate(`Check for updates`),
           click: async () => {
             try {
+              ctx.show_no_update_message = true;
               await autoUpdater.checkForUpdatesAndNotify();
             } catch (error) {
               await dialog_error_show(

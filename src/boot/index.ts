@@ -29,6 +29,7 @@ export interface Context {
   is_test: boolean;
   translate: TFunction;
   open_files: string[];
+  show_no_update_message: boolean;
   paths: {
     settings: string;
     content: string;
@@ -75,6 +76,7 @@ export default async function boot(): Promise<Context> {
       h5pPlayer,
       log,
       is_development,
+      show_no_update_message: false,
       open_files,
       port: 0,
       ws: null,
