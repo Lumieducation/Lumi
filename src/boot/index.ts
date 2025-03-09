@@ -17,6 +17,7 @@ import boot_h5p_player from './h5p-player';
 import boot_express_app from '../express/app';
 import language_get from '../ops/language_get';
 import H5PConfig from '../../config/h5p-config';
+import content_click from '../ops/content_click';
 
 export interface Context {
   h5pEditor: H5P.H5PEditor;
@@ -27,6 +28,7 @@ export interface Context {
   port: number;
   is_test: boolean;
   translate: TFunction;
+  open_files: string[];
   paths: {
     settings: string;
     content: string;
@@ -42,6 +44,11 @@ export default async function boot(): Promise<Context> {
   // eslint-disable-next-line no-async-promise-executor
   return new Promise(async (resolve, reject) => {
     const log = boot_logger();
+
+    // we need to keep track of the files that are opened before the app is ready
+    const open_files: string[] = [];
+    content_click(log, open_files);
+
     log.info('boot started');
     const is_development = process.env.NODE_ENV === 'development';
     const is_test = process.env.NODE_ENV === 'test';
@@ -68,6 +75,7 @@ export default async function boot(): Promise<Context> {
       h5pPlayer,
       log,
       is_development,
+      open_files,
       port: 0,
       ws: null,
       translate: null,

@@ -6,8 +6,8 @@ import window_all_closed from './window-all-closed';
 
 export default async function event_setup(ctx: Context) {
   ctx.log.info(`events:app:setup`);
-  activate(ctx);
   open_file(ctx);
+  activate(ctx);
   ready(ctx);
   window_all_closed(ctx);
 }
