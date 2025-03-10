@@ -11,7 +11,6 @@ import boot_i18n from './i18n';
 import boot_logger from './log';
 import boot_websocket from './websocket';
 // eslint-disable-next-line import/no-named-as-default
-import LumiPaths from '../../config/paths';
 import boot_h5p_editor from './h5p-editor';
 import boot_h5p_player from './h5p-player';
 import boot_express_app from '../express/app';
@@ -34,6 +33,7 @@ export interface Context {
     settings: string;
     content: string;
     app: string;
+    tmp: string;
   };
   update: {
     downloaded: boolean;
@@ -56,20 +56,22 @@ export default async function boot(): Promise<Context> {
 
     const config = await new H5PConfig().load();
 
-    const h5pEditor = await boot_h5p_editor(
-      config,
-      LumiPaths.library_path,
-      LumiPaths.content_path,
-      LumiPaths.temp_path
-    );
-
-    const h5pPlayer = await boot_h5p_player(config, h5pEditor);
-
     const paths = {
       settings: path.join(app.getPath('userData'), 'settings.json'),
       content: path.join(app.getPath('userData'), 'content'),
-      app: `${__dirname}/../../../`
+      library: path.join(app.getPath('userData'), 'libraries'),
+      app: `${__dirname}/../../../`,
+      tmp: path.join(app.getPath('userData'), 'tmp')
     };
+
+    const h5pEditor = await boot_h5p_editor(
+      config,
+      paths.library,
+      paths.content,
+      paths.tmp
+    );
+
+    const h5pPlayer = await boot_h5p_player(config, h5pEditor);
 
     const context = {
       h5pEditor,
