@@ -10,6 +10,7 @@ import window_get_content_id from '../../ops/window_get_content_id';
 export default function file_save(ctx: Context): MenuItem {
   return {
     label: ctx.translate('Save'),
+    enabled: ctx.menu === 'content',
     accelerator: 'CmdOrCtrl+S',
     click: async () => {
       const active_window = window_get_active();

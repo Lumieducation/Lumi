@@ -19,6 +19,7 @@ import H5PConfig from '../../config/h5p-config';
 import content_click from '../ops/content_click';
 
 export interface Context {
+  menu: string;
   h5pEditor: H5P.H5PEditor;
   h5pPlayer: H5P.H5PPlayer;
   log: bunyan.Logger;
@@ -66,6 +67,7 @@ export default async function boot(): Promise<Context> {
     };
 
     const context = {
+      menu: 'content',
       h5pEditor: null,
       h5pPlayer: null,
       log,

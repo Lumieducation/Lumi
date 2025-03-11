@@ -6,6 +6,7 @@ import window_get_content_id from '../../ops/window_get_content_id';
 export default function file_close(ctx: Context): MenuItem {
   return {
     label: ctx.translate('Export..'),
+    enabled: ctx.menu === 'content',
     submenu: [
       {
         label: ctx.translate('SCORM package'),
@@ -17,6 +18,7 @@ export default function file_close(ctx: Context): MenuItem {
       },
       {
         label: ctx.translate('All-in-one HTML file'),
+
         click: async () => {
           const active_window = window_get_active();
           const content_id = await window_get_content_id(active_window);
