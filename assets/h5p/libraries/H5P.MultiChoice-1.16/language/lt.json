@@ -1,0 +1,258 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Tipas",
+          "description": "Pasirenkama medija, rodoma virš klausimo."
+        },
+        {
+          "label": "Išjungti paveikslėlio mastelio keitimą"
+        }
+      ],
+      "label": "Medija"
+    },
+    {
+      "label": "Klausimas"
+    },
+    {
+      "label": "Galimos parinktys",
+      "field": {
+        "label": "Parinktis",
+        "fields": [
+          {
+            "label": "Tekstas"
+          },
+          {
+            "label": "Teisingai"
+          },
+          {
+            "fields": [
+              {
+                "label": "Patarimo tekstas",
+                "description": "Patarimas naudotojui. Tai pasirodys prieš naudotojui patikrinant savo atsakymą / atsakymus."
+              },
+              {
+                "label": "Pranešimas rodomas, jei pasirinktas atsakymas",
+                "description": "Pasirinkus šį atsakymą, pranešimas bus rodomas po atsakymu „Tikrinti“."
+              },
+              {
+                "label": "Pranešimas rodomas, jei atsakymas nepasirinktas",
+                "description": "Jei šis atsakymas nepasirinktas, pranešimas bus rodomas po atsakymu „tikrinti“."
+              }
+            ],
+            "label": "Patarimai ir atsiliepimas"
+          }
+        ]
+      },
+      "entity": "parinktis"
+    },
+    {
+      "label": "Bendras atsiliepimas",
+      "fields": [
+        {
+          "label": "Nustatykite tinkintus atsiliepimus bet kokiam balų diapazonui",
+          "entity": "diapazonas",
+          "field": {
+            "fields": [
+              {
+                "label": "Balų intervalas"
+              },
+              {},
+              {
+                "label": "Atsiliepimai apibrėžtam balų diapazonui",
+                "placeholder": "Užpildykite atsiliepimą"
+              }
+            ]
+          },
+          "widgets": [
+            {
+              "label": "Numatytasis"
+            }
+          ],
+          "description": "Spustelėkite mygtuką „Pridėti diapazoną“, kad pridėtumėte tiek diapazonų, kiek jums reikia. Pavyzdys: 0–20 % blogas balas, 21–91 % vidutinis balas, 91–100 % puikus rezultatas!"
+        }
+      ]
+    },
+    {
+      "label": "Naudotojo sąsajos vertimai kelių pasirinkimų klausimui",
+      "fields": [
+        {
+          "default": "Tikrinti",
+          "label": "„Tikrinti atsakymą“ mygtuko pavadinimas"
+        },
+        {
+          "default": "Pateikti",
+          "label": "„Pateikti atsakymą“ mygtuko pavadinimas"
+        },
+        {
+          "default": "Rodyti sprendimą",
+          "label": "„Rodyti sprendimą“ mygtuko pavadinimas"
+        },
+        {
+          "default": "Bandyti dar kartą",
+          "label": "„Bandyti dar kartą“ mygtuko pavadinimas"
+        },
+        {
+          "default": "Rodyti patarimą",
+          "label": "Patarimo pavadinimas"
+        },
+        {
+          "description": "Galimi kintamieji yra :num ir :total",
+          "label": "Rezultatų juostos tekstinis atvaizdavimas tiems, kurie naudoja skaitytuvą",
+          "default": "Gavote :num iš :total taškų"
+        },
+        {
+          "label": "Galimas patarimas (nerodomas)",
+          "description": "Pritaikymo tekstas, naudojamas skaitymo garsiakalbiams",
+          "default": "Galimas patarimas"
+        },
+        {
+          "default": "Galimi atsiliepimai",
+          "label": "Galimi atsiliepimai (nerodomi)",
+          "description": "Pritaikymo tekstas, naudojamas skaitymo garsiakalbiams"
+        },
+        {
+          "label": "Skaityti atsiliepimus (nerodomas)",
+          "description": "Pritaikymo tekstas, naudojamas skaitymo garsiakalbiams",
+          "default": "Skaityti atsiliepimus"
+        },
+        {
+          "default": "Neteisingas atsakymas",
+          "label": "Neteisingas atsakymas (nerodomas)",
+          "description": "Pritaikomumo tekstas, naudojamas skaitytuvams"
+        },
+        {
+          "label": "Teisingas atsakymas (nerodomas)",
+          "description": "Pritaikomumo tekstas, naudojamas skaitytuvams",
+          "default": "Teisingas atsakymas"
+        },
+        {
+          "default": "Turėjo būti pažymėtas",
+          "label": "Variantas turėjo būti patikrintas"
+        },
+        {
+          "default": "Neturėjo būti pažymėtas",
+          "label": "Nuostata neturėjo būti pažymėtas"
+        },
+        {
+          "default": "Prieš peržiūrėdami sprendimą, atsakykite",
+          "label": "Tekstas pranešimui „Reikalingas atsakymas“"
+        },
+        {
+          "default": "Tikrinti atsakymus. Atsakymai bus pažymėti kaip teisingi, neteisingi arba neatsakyti.",
+          "label": "Mygtuko „Tikrinti\" pagalbinės technologijos aprašymas"
+        },
+        {
+          "default": "Rodyti sprendimą. Užduotis bus pažymėta teisingu jos sprendimu.",
+          "label": "Mygtuko „Rodyti sprendimą\" pagalbinės technologijos aprašymas"
+        },
+        {
+          "default": "Pabandyti atlikti užduotį dar kartą. Iš naujo nustatyti visus atsakymus ir pradėti užduotį iš naujo.",
+          "label": "Mygtuko „Bandyti dar kartą“ pagalbinės technologijos aprašymas"
+        }
+      ]
+    },
+    {
+      "description": "Šios parinktys leis jums valdyti, kaip veikia užduotis.",
+      "fields": [
+        {
+          "label": "Įjungti \"Bandyti dar kartą\" mygtuką"
+        },
+        {
+          "label": "Įjungti mygtuką „Rodyti sprendimą“"
+        },
+        {
+          "label": "Įjungti mygtuką „Tikrinti“"
+        },
+        {
+          "label": "Klausimo tipas",
+          "options": [
+            {
+              "label": "Automatinis"
+            },
+            {
+              "label": "Keli pasirinkimai (žymimieji langeliai)"
+            },
+            {
+              "label": "Vienas pasirinkimas (parinkties akutė)"
+            }
+          ],
+          "description": "Pasirinkite klausimo išvaizdą ir veikimą."
+        },
+        {
+          "description": "Už kelis teisingus atsakymus galima skirti iš viso vieną tašką. Šios galimybės nebus naudojant \"vieno atsakymo\" režimą.",
+          "label": "Duoti vieną balą už visą užduotį"
+        },
+        {
+          "description": "Įgalinti atsitiktinę rodomų atsakymų tvarką.",
+          "label": "Atsitiktinai sudėlioti atsakymus"
+        },
+        {
+          "label": "Reikalauti atsakymo, kad būtų galima peržiūrėti sprendimą"
+        },
+        {
+          "label": "Rodyti patvirtinimo dialogo langą „Tikrinti“"
+        },
+        {
+          "label": "Rodyti patvirtinimo dialogo langą „Bandyti dar kartą“"
+        },
+        {
+          "label": "Automatiškai patikrinti atsakymus",
+          "description": "Įjungus šią parinktį nukentės pritaikomumas, todėl įsitikinkite, kad žinote, ką darote."
+        },
+        {
+          "label": "Išlaikymo procentas",
+          "description": "Šis nustatymas dažnai neturi jokio poveikio. Tai procentinė viso rezultato dalis, reikalinga 1 taškui gauti, kai įjungtas vienas taškas už visą užduotį, ir result.success gavimas xAPI ataskaitose."
+        },
+        {
+          "label": "Rodyti surinktus balus",
+          "description": "Rodyti už kiekvieną atsakymą gautus balus. Šios galimybės nebus \"Vieno atsakymo\" režime arba jei įjungta parinktis \"Suteikti vieną balą už visą užduotį\"."
+        }
+      ],
+      "label": "Veikimo nustatymai"
+    },
+    {
+      "label": "Patikrinti patvirtinimo dialogo langą",
+      "fields": [
+        {
+          "default": "Baigti ?",
+          "label": "Antraštės tekstas"
+        },
+        {
+          "default": "Ar tikrai norite baigti?",
+          "label": "Turinio tekstas"
+        },
+        {
+          "default": "Atšaukti",
+          "label": "„Atšaukti“ mygtuko pavadinimas"
+        },
+        {
+          "default": "Baigti",
+          "label": "„Patvirtinti“ mygtuko pavadinimas"
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "label": "Antraštės tekstas",
+          "default": "Bandyti dar kartą?"
+        },
+        {
+          "label": "Turinio tekstas",
+          "default": "Ar tikrai norite bandyti dar kartą?"
+        },
+        {
+          "label": "„Atšaukti“ mygtuko pavadinimas",
+          "default": "Atšaukti"
+        },
+        {
+          "label": "„Patvirtinti“ mygtuko pavadinimas",
+          "default": "Patvirtinti"
+        }
+      ],
+      "label": "„Bandyti dar kartą“ patvirtinimo langas"
+    }
+  ]
+}

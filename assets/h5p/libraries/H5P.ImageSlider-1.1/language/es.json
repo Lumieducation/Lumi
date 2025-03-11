@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Imágenes",
+      "field": {
+        "label": "Pase de diapositivas",
+        "fields": [
+          {
+            "label": "Pase de diapositivas"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Proporción de aspecto",
+      "description": "Automático significa proporción de aspecto fija, determinada automáticamente y basada en las imágenes",
+      "options": [
+        {
+          "label": "Automática"
+        },
+        {
+          "label": "Personalizada"
+        },
+        {
+          "label": "No fija"
+        }
+      ]
+    },
+    {
+      "label": "Configuración de Proporción de aspecto",
+      "fields": [
+        {
+          "label": "Anchura de proporción de aspecto",
+          "description": "Si usas 4 aquí, y 3 para la altura, la proporción de aspecto será de 4:3"
+        },
+        {
+          "label": "Altura de proporción de aspecto",
+          "description": "Si usas 3 aquí, y 4 para el ancho, la proporción de aspecto será de be 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Accesibilidad del pase de diapositivas",
+      "fields": [
+        {
+          "label": "Etiqueta para botones de Imagen Siguiente",
+          "default": "Imagen Siguiente",
+          "description": "Usado solamente para lectores de pantalla. No se mostrará."
+        },
+        {
+          "label": "Etiqueta para botones Imagen anterior",
+          "default": "Imagen Anterior",
+          "description": "Usado solamente para lectores de pantalla. No se mostrará."
+        },
+        {
+          "label": "Etiqueta para botones de diapositiva",
+          "default": "Ir a la imagen %slide",
+          "description": "Usado solamente para lectores de pantalla. No se mostrará. %slide es una variable y será reemplazada por el número de la imagen."
+        }
+      ]
+    }
+  ]
+}

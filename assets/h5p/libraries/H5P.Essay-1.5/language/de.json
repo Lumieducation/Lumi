@@ -1,0 +1,299 @@
+{
+  "semantics": [
+    {
+      "label": "Medium",
+      "fields": [
+        {
+          "label": "Typ",
+          "description": "Medium, das wahlweise oberhalb der Aufgabe angezeigt wird."
+        },
+        {
+          "label": "Bild-Zoom deaktivieren"
+        }
+      ]
+    },
+    {
+      "label": "Aufgabenbeschreibung",
+      "description": "Die Beschreibung wird oberhalb des Texteingabefeldes erscheinen.",
+      "placeholder": "Fasse das Buch in maximal 500 Zeichen zusammen ..."
+    },
+    {
+      "label": "Hilfetext",
+      "description": "Dieser Text soll die Lernenden am Anfang unterstützen.",
+      "placeholder": "Dieses Buch handelt von ..."
+    },
+    {
+      "label": "Lösungsvorschlag",
+      "description": "Du kannst wahlweise einen Lösungsvorschlag angeben, der angesehen werden kann, wenn die Lernenden ihre Lösung geprüft haben. Es heißt Lösungsvorschlag, weil es sicher mehr als eine richtige Lösung gibt.",
+      "fields": [
+        {
+          "label": "Einleitung",
+          "description": "Du kannst deinem Lösungsvorschlag optional eine Erklärung voranstellen. Sie wird nur angezeigt, wenn du auch einen Vorschlag angibst.",
+          "placeholder": "Bitte bedenke, dass es von dir nicht erwartet war, exakt dieselbe Lösung zu finden. Sie ist lediglich ein gutes Beispiel."
+        },
+        {
+          "label": "Text des Lösungsvorschlags",
+          "description": "Die Lernenden sehen nach dem Prüfen ihrer Lösung einen \"Lösung zeigen\"-Button, wenn du hier Text angibst."
+        }
+      ]
+    },
+    {
+      "label": "Schlagworte",
+      "widgets": [
+        {
+          "label": "Eingabemaske"
+        }
+      ],
+      "entity": "Schlagwort",
+      "field": {
+        "label": "Schlagwort",
+        "fields": [
+          {
+            "label": "Schlagwort",
+            "description": "Gesuchtes Schlagwort oder gesuchte Phrase. Du kannst ein Sternchen '*' als Platzhalter für einen oder mehrerer Buchstaben verwenden. Du kannst Schrägstriche '/' am Anfang und Ende für reguläre Ausdrücke benutzen."
+          },
+          {
+            "label": "Variationen",
+            "description": "Füge dem Schlagwort optional Variationen hinzu. Beispiel: Für 'Stadt' könnten auch 'Ortschaft', 'Gemeinde', etc. passen. Punkte werden für auch für gefundene Alternativen vergeben.",
+            "entity": "Variation",
+            "field": {
+              "label": "Schlagwortvariation"
+            }
+          },
+          {
+            "label": "Punkte, Optionen und Rückmeldung",
+            "fields": [
+              {
+                "label": "Punkte",
+                "description": "Punkte, die Lernende erhalten, wenn sie das Schlagwort oder eine Variation verwenden."
+              },
+              {
+                "label": "Fundstellen",
+                "description": "Lege fest, wie viele Fundstellen desselben Schlagworts oder seiner Variationen mit Punkten versehen werden sollen."
+              },
+              {
+                "label": "Auf Groß-/Kleinschreibung achten",
+                "description": "Stellt sicher, dass die Lösung exakt der Vorgabe entsprechen muss."
+              },
+              {
+                "label": "Kleine Rechtschreibfehler akzeptieren",
+                "description": "Wenn diese Option gewählt wird, wird eine Antwort bei kleinen Rechtschreibfehlern noch als richtig gewertet. (3-9 Zeichen: 1 Fehler, mehr als 9 Zeichen: 2 Fehler)."
+              },
+              {
+                "label": "Rückmeldung, wenn Schlagwort verwendet",
+                "description": "Diese Rückmeldung wird angezeigt, wenn die Lernenden das Schlagwort oder seine Variationen im Text verwendet haben."
+              },
+              {
+                "label": "Rückmeldung, wenn Schlagwort nicht verwendet",
+                "description": "Diese Rückmeldung wird angezeigt, wenn die Lernenden das Schlagwort oder seine Variationen im Text nicht verwendet haben."
+              },
+              {
+                "label": "Wort bei Rückmeldung, wenn Schlagwort verwendet",
+                "description": "Diese Option erlaubt es anzugeben, welches Wort vor der Rückmeldung angezeigt wird, wenn ein Schlagwort verwendet wurde.",
+                "options": [
+                  {
+                    "label": "Schlagwort"
+                  },
+                  {
+                    "label": "gefundene Alternative"
+                  },
+                  {
+                    "label": "gegebene Antwort"
+                  },
+                  {
+                    "label": "nichts"
+                  }
+                ]
+              },
+              {
+                "label": "Wort bei Rückmeldung, wenn Schlagwort nicht verwendet",
+                "description": "Diese Option erlaubt es anzugeben, welches Wort vor der Rückmeldung angezeigt wird, wenn ein Schlagwort verwendet wurde.",
+                "options": [
+                  {
+                    "label": "Schlagwort"
+                  },
+                  {
+                    "label": "nichts"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Allgemeine Rückmeldung",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Vorgabe"
+            }
+          ],
+          "label": "Lege Rückmeldungen für einzelne Punktebereiche fest",
+          "description": "Klicke auf den \"Bereich hinzufügen\"-Button, um so viele Bereiche hinzuzufügen, wie du brauchst. Beispiel: 0-20% Schlechte Punktzahl, 21-91% Durchschnittliche Punktzahl, 91-100% Großartige Punktzahl!",
+          "entity": "Bereich",
+          "field": {
+            "fields": [
+              {
+                "label": "Punktebereich"
+              },
+              {},
+              {
+                "label": "Rückmeldung für festgelegte Punktebereiche",
+                "placeholder": "Trage die Rückmeldung ein"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "description": "Hier kannst Du einstellen, wie sich die Aufgabe verhält.",
+      "fields": [
+        {
+          "label": "Minimale Zeichenzahl",
+          "description": "Gib die minimale Zeichenzahl an, die Lernende eingeben müssen."
+        },
+        {
+          "label": "Maximale Zeichenzahl",
+          "description": "Gib die maximale Zeichenzahl an, die Lernende eingeben dürfen."
+        },
+        {
+          "label": "Größe des Eingabefelds",
+          "description": "Die Größe des Eingabefelds als Zahl der Zeilen",
+          "options": [
+            {
+              "label": "1 Zeile"
+            },
+            {
+              "label": "3 Zeilen"
+            },
+            {
+              "label": "10 Zeilen"
+            }
+          ]
+        },
+        {
+          "label": "\"Wiederholen\" zulassen",
+          "description": "Wenn diese Option angewählt ist, können Lernende die Aufgabe wiederholen."
+        },
+        {
+          "label": "Ignoriere die Bepunktung",
+          "description": "Wenn diese Option gewählt ist, sehen die Lernenden nur deine Rückmeldung, nicht aber die Bepunktung. Es wird nichts gewertet."
+        },
+        {
+          "label": "Punkte im Wirtssystem",
+          "description": "Wird verwendet, um im Wirtssystem Punkte einzig für die Bearbeitung der Aufgabe zu vergeben (wird den Lernenden nicht angezeigt)."
+        },
+        {
+          "label": "Prozentsatz zum Bestehen",
+          "description": "Prozentsatz, der zum Bestehen nötig ist"
+        },
+        {
+          "label": "Prozentsatz zum Meistern",
+          "description": "Prozentsatz, der zum Meistern nötig ist. Ein Prozenzsatz unter 100 % verringert die maximale Punktzahl entsprechend. Lerndenden soll damit Spielraum gegeben werden, statt \"gnädigerweise\" Lösungen ohne alle Schlagworte zu akzeptieren."
+        },
+        {
+          "label": "Einstellung für \"Groß-Kleinschreibung\" überschreiben",
+          "description": "Diese Option legt fest, ob die Option \"Auf Groß-/Kleinschreibung achten\" für alle Schlagworte aktiviert wird oder deaktiviert wird.",
+          "options": [
+            {
+              "label": "Aktiviert"
+            },
+            {
+              "label": "Deaktiviert"
+            }
+          ]
+        },
+        {
+          "label": "Einstellung für \"Kleine Rechtschreibfehler akzeptieren\" überschreiben",
+          "description": "Diese Option legt fest, ob die Option \"Kleine Rechtschreibfehler akzeptieren\" für alle Schlagworte aktiviert wird oder deaktiviert wird.",
+          "options": [
+            {
+              "label": "Aktiviert"
+            },
+            {
+              "label": "Deaktiviert"
+            }
+          ]
+        },
+        {
+          "label": "Ersatz für Zeilenumbrüche",
+          "description": "Standardmäßig werden Zeilenumbrüche durch ein Leerzeichen ersetzt. Falls du auf Zeilenumbrüche prüfen willst, etwa in regulären Ausdrücken, kannst du hier ein anderes Ersatzzeichen wählen.",
+          "options": [
+            {
+              "label": "Leerzeichen"
+            },
+            {
+              "label": "Zeilenumbruch (\\n)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Beschriftung des \"Überprüfen\"-Buttons",
+      "default": "Überprüfen"
+    },
+    {
+      "label": "Beschriftung des \"Absenden\"-Buttons",
+      "default": "Absenden"
+    },
+    {
+      "label": "Beschriftung des \"Wiederholen\"-Buttons",
+      "default": "Wiederholen"
+    },
+    {
+      "label": "Beschriftung des \"Lösung anzeigen\"-Buttons",
+      "default": "Lösung anzeigen"
+    },
+    {
+      "label": "Überschrift für den Abschnitt mit Rückeldung zu den Schlagworten",
+      "default": "Rückmeldung"
+    },
+    {
+      "label": "Beschriftung für den Lösungsvorschlag",
+      "default": "Lösungsvorschlag"
+    },
+    {
+      "label": "Verbleibende Zeichenzahl",
+      "default": "Verbleibende Zeichen: @chars",
+      "description": "Nachricht für die verbleibende Zeichenzahl. Du kannst @chars einsetzen, das später durch die entsprechende Zahl ersetzt wird."
+    },
+    {
+      "label": "Nicht genügend Zeichen",
+      "default": "Du musst mindestens @chars Zeichen eingeben!",
+      "description": "Nachricht die darauf hinweist, dass der Text noch nicht genügend Zeichen umfasst. Du kannst @chars einsetzen, das später durch die entsprechende Zahl ersetzt wird."
+    },
+    {
+      "label": "Speichernachricht",
+      "description": "Nachricht, die darauf hinweist, dass der Text gespeichert wurde",
+      "default": "gespeichert"
+    },
+    {
+      "label": "Dein Ergebnis (nicht angezeigt)",
+      "description": "Anzeigetext für Readspeakers (Barrierefreiheit). @score wird durch die erreichten Punkte ersetzt. @total wird durch die maximal mögliche Punktzahl ersetzt.",
+      "default": "Du hast @score von @total Punkten"
+    },
+    {
+      "label": "Navigationsmeldung (nicht angezeigt)",
+      "description": "Anzeigetext für Readspeakers (Barrierefreiheit)",
+      "default": "Unterhalb des Texteingabefeldes wurde eine Musterlösung eingefügt. Dorthin navigiert."
+    },
+    {
+      "label": "Beschreibung des \"Überprüfen\"-Buttons (für Hilfsmittel zur Barrierefreiheit)",
+      "default": "Die Antwort überprüfen."
+    },
+    {
+      "label": "Beschreibung des \"Lösung anzeigen\"-Buttons (für Hilfsmittel zur Barrierefreiheit)",
+      "default": "Zeige die Lösung an. Du erhältst dann eine Musterlösung."
+    },
+    {
+      "label": "Beschreibung des \"Wiederholen\"-Buttons (für Hilfsmittel zur Barrierefreiheit)",
+      "default": "Wiederhole die Aufgabe. Du kannst deine vorherige Antwort verbessern, sofern dies für diese Aufgabe erlaubt ist."
+    }
+  ]
+}

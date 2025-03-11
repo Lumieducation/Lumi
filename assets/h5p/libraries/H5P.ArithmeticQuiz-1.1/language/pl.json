@@ -1,0 +1,135 @@
+{
+  "semantics": [
+    {
+      "label": "Wprowadzenie",
+      "description": "Tekst wprowadzenia (maksymalnie 100 znaków)"
+    },
+    {
+      "label": "Typ quizu",
+      "options": [
+        {
+          "label": "Quiz z operacji arytmetycznych"
+        },
+        {
+          "label": "Quiz z równań liniowych"
+        }
+      ]
+    },
+    {
+      "label": "Typ arytmetyczny",
+      "options": [
+        {
+          "label": "Dodawanie"
+        },
+        {
+          "label": "Odejmowanie"
+        },
+        {
+          "label": "Mnożenie"
+        },
+        {
+          "label": "Dzielenie"
+        }
+      ]
+    },
+    {
+      "label": "Typ równania",
+      "options": [
+        {
+          "label": "Podstawowe [ 3x = 12 ]"
+        },
+        {
+          "label": "Średniozaawansowany [ 4x - 3 = 13 ]"
+        },
+        {
+          "label": "Zaawansowany [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Włącz ułamki",
+      "description": "Włącz aby zezwolić na ułamki w równaniach."
+    },
+    {
+      "label": "Maksymalna liczba pytań"
+    },
+    {
+      "label": "Tłumaczenia interfejsu użytkownika",
+      "fields": [
+        {
+          "label": "Punktacja podczas quizu",
+          "default": "Wynik:"
+        },
+        {
+          "label": "Czas",
+          "default": "Czas: @time"
+        },
+        {
+          "label": "Nagłówek strony wyników",
+          "default": "Zakończony!"
+        },
+        {
+          "label": "Etykieta Dalej",
+          "default": "Dalej!"
+        },
+        {
+          "label": "Etykieta przycisku Start",
+          "default": "Start"
+        },
+        {
+          "label": "Etykieta przycisku Spróbuj ponownie",
+          "default": "Spróbuj ponownie"
+        },
+        {
+          "label": "Tekst czytany przez syntezator mowy dla prawidłowej odpowiedzi",
+          "default": "Prawidłowa"
+        },
+        {
+          "label": "Tekst czytany przez syntezator mowy dla nieprawidłowej odpowiedzi",
+          "default": "Nieprawidłowa. Prawidłowa odpowiedź brzmiała :num"
+        },
+        {
+          "label": "Etykieta syntezatora mowy dla timera",
+          "default": "Czas trwania w godzinach, minutach i sekundach."
+        },
+        {
+          "label": "Tekst czytany przez syntezator mowy dla pytania",
+          "default": "Ile się równa :arithmetic?"
+        },
+        {
+          "label": "Tekst czytany przez syntezator mowy dla pytania o równanie",
+          "default": "Dla równania :equation, ile równa się :item?"
+        },
+        {
+          "label": "Tekst czytany przez syntezator mowy dla zmiennej równania",
+          "default": "Ile równa się :item?"
+        },
+        {
+          "label": "Tekst operatora dodawania",
+          "default": "dodać"
+        },
+        {
+          "label": "Tekst operatora odejmowania",
+          "default": "odjąć"
+        },
+        {
+          "label": "Tekst operatora mnożenia",
+          "default": "razy"
+        },
+        {
+          "label": "Tekst operatora dzielenia",
+          "default": "podzielić przez"
+        },
+        {
+          "label": "Tekst znaku równości",
+          "default": "równa się"
+        },
+        {
+          "label": "Tekst numeru slajdu",
+          "description": "Wskazuje bieżący slajd i całkowitą liczbę slajdów, zmienne są :num i :total",
+          "default": "Slajd :num z :total"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+[
+  {
+    "name": "imageHotspotQuestion",
+    "type": "group",
+    "widget": "wizard",
+    "label": "Image Hotspot Question Editor",
+    "importance": "high",
+    "fields": [
+      {
+        "name": "backgroundImageSettings",
+        "type": "group",
+        "label": "Background image",
+        "importance": "high",
+        "fields": [
+          {
+            "name": "backgroundImage",
+            "type": "image",
+            "label": "Background image",
+            "importance": "high",
+            "description": "Select an image to use as background for the image hotspot question."
+          }
+        ]
+      },
+      {
+        "name": "hotspotSettings",
+        "type": "group",
+        "label": "Hotspots",
+        "importance": "high",
+        "widget": "imageHotspotQuestion",
+        "description": "Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
+        "fields": [
+          {
+            "name": "taskDescription",
+            "type": "text",
+            "label": "Task description",
+            "importance": "high",
+            "description": "Instructions to the user.",
+            "optional": true
+          },
+          {
+            "name": "hotspot",
+            "type": "list",
+            "label": "Hotspot",
+            "importance": "high",
+            "entity": "Hotspot",
+            "field": {
+              "type": "group",
+              "label": "Hotspot",
+              "importance": "high",
+              "fields": [
+                {
+                  "name": "userSettings",
+                  "type": "group",
+                  "label": "userSettings",
+                  "importance": "low",
+                  "fields": [
+                    {
+                      "name": "correct",
+                      "type": "boolean",
+                      "label": "Correct",
+                      "importance": "low",
+                      "description": "There can be multiple correct hotspots. However, the user gets correct/incorrect feedback immediately after first click."
+                    },
+                    {
+                      "name": "feedbackText",
+                      "type": "text",
+                      "label": "Feedback",
+                      "importance": "low",
+                      "optional": true
+                    }
+                  ]
+                },
+                {
+                  "name": "computedSettings",
+                  "type": "group",
+                  "label": "computedSettings",
+                  "importance": "low",
+                  "fields": [
+                    {
+                      "name": "x",
+                      "type": "number",
+                      "optional": true
+                    },
+                    {
+                      "name": "y",
+                      "type": "number",
+                      "optional": true
+                    },
+                    {
+                      "name": "width",
+                      "type": "number",
+                      "optional": true
+                    },
+                    {
+                      "name": "height",
+                      "type": "number",
+                      "optional": true
+                    },
+                    {
+                      "name": "figure",
+                      "type": "text",
+                      "optional": true
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "name": "noneSelectedFeedback",
+            "type": "text",
+            "label": "Feedback if the user selects an empty spot:",
+            "importance": "low",
+            "placeholder": "You didn't locate any hotspots, try again!",
+            "optional": true
+          },
+          {
+            "name": "showFeedbackAsPopup",
+            "type": "boolean",
+            "label": "Show feedback as a popup",
+            "importance": "low",
+            "default": true,
+            "optional": true
+          },
+          {
+            "label": "Localization",
+            "name": "l10n",
+            "type": "group",
+            "fields": [
+              {
+                "name": "retryText",
+                "label": "Retry button text",
+                "type": "text",
+                "default": "Retry",
+                "optional": true
+              },
+              {
+                "name": "closeText",
+                "label": "Close button text",
+                "type": "text",
+                "default": "Close",
+                "optional": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "scoreBarLabel",
+    "type": "text",
+    "label": "Textual representation of the score bar for those using a readspeaker",
+    "default": "You got :num out of :total points",
+    "importance": "low",
+    "common": true
+  },
+  {
+    "name": "a11yRetry",
+    "type": "text",
+    "label": "Assistive technology description for \"Retry\" button",
+    "default": "Retry the task. Reset all responses and start the task over again.",
+    "importance": "low",
+    "common": true
+  }
+]

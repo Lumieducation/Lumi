@@ -1,0 +1,374 @@
+{
+  "semantics": [
+    {
+      "label": "Média",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Média à afficher au-dessus de la question (facultatif)."
+        },
+        {
+          "label": "Désactiver le zoom sur les images"
+        }
+      ]
+    },
+    {
+      "label": "Consigne",
+      "description": "Décrivez votre tâche ici.",
+      "placeholder": "Veuillez écouter attentivement et écrire ce que vous entendez."
+    },
+    {
+      "label": "Phrases",
+      "widgets": [
+        {
+          "label": "Par défaut"
+        }
+      ],
+      "entity": "Phrase",
+      "field": {
+        "label": "Phrase",
+        "fields": [
+          {
+            "label": "Description",
+            "description": "Vous pouvez éventuellement placer une simple description au-dessus du champ de saisie de texte, utile par exemple pour les dialogues."
+          },
+          {
+            "label": "Échantillon sonore",
+            "description": "Phrase prononcée à vitesse normale"
+          },
+          {
+            "label": "Échantillon sonore lent",
+            "description": "Phrase prononcée à vitesse lente"
+          },
+          {
+            "label": "Texte",
+            "description": "Texte qui doit être écrit. Vous pouvez ajouter des orthographes alternatives à un mot en ajoutant une ligne verticale (|) derrière, suivie d'une alternative."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback général",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Par défaut"
+            }
+          ],
+          "label": "Définissez le feedback pour chaque intervalle de score",
+          "description": "Cliquez sur le bouton \"Ajouter Intervalle\" pour ajouter autant d'intervalles de score que vous souhaitez. Exemple : 0-20% Mauvais score, 21-91% Score moyen, 91-100% Score excellent !",
+          "entity": "intervalle",
+          "field": {
+            "fields": [
+              {
+                "label": "Intervalle de scores"
+              },
+              {
+                "label": "Feedback pour l'intervalle de score défini",
+                "placeholder": "Compléter le feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Paramètres de comportement",
+      "description": "Ces options vous permettent de contrôler le déroulement de vos activités.",
+      "fields": [
+        {
+          "label": "Nombre maximum d'essais",
+          "description": "Limitera le nombre de fois que chaque phrase peut être écoutée."
+        },
+        {
+          "label": "Nombre maximum de tentatives à vitesse lente",
+          "description": "Limite le nombre de fois que les exemples lents peuvent être écoutés pour chaque phrase."
+        },
+        {
+          "label": "Désactiver l'option de pause",
+          "description": "Si cette case est cochée, la mise en pause de l'audio pendant la lecture n'est pas possible."
+        },
+        {
+          "label": "Délai du bouton de lecture",
+          "description": "Définissez éventuellement une période de temps allant jusqu'à trois secondes pendant laquelle la lecture doit être retardée. Ceci est utile si vous souhaitez permettre aux étudiants de saisir le champ de texte avant qu'ils ne commencent à écouter."
+        },
+        {
+          "label": "Mélanger les phrases",
+          "description": "Définit quand les phrases devraient être mélangées.",
+          "options": [
+            {
+              "label": "Jamais"
+            },
+            {
+              "label": "Une fois au début de l'exercice"
+            },
+            {
+              "label": "À chaque essai"
+            }
+          ]
+        },
+        {
+          "label": "Notation",
+          "fields": [
+            {
+              "label": "Ignorer les signes de ponctuation",
+              "description": "Si la case est cochée, les signes de ponctuation ne seront pas pris en compte pour la notation."
+            },
+            {
+              "label": "Mode zéro fautes",
+              "description": "Si la case est cochée, seules les réponses correctes seront prises en compte dans le score. Les fautes ne seront pas pénalisées."
+            },
+            {
+              "label": "Poids des fautes d’orthographe",
+              "description": "Déterminez la manière dont sont comptées les fautes d'orthographe (mot de 3 à 9 caractères : jusqu'à 1 erreur, mot de plus de 9 caractères : jusqu'à 2 erreurs).",
+              "options": [
+                {
+                  "label": "100 %"
+                },
+                {
+                  "label": "50 %"
+                },
+                {
+                  "label": "0 %"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Texte",
+          "fields": [
+            {
+              "label": "Séparateur de mots",
+              "description": "Définissez un séparateur de mots différent du caractère espace pour prendre en charge des réponses alternatives avec un nombre de mots différent."
+            },
+            {
+              "label": "Sens de l'écriture",
+              "description": "Indiquez si le sens de l’écriture est de droite à gauche ou de gauche à droite.",
+              "options": [
+                {
+                  "label": "Détection automatique"
+                },
+                {
+                  "label": "De droite à gauche"
+                },
+                {
+                  "label": "De gauche à droite"
+                }
+              ]
+            },
+            {
+              "label": "Séparation des caractères",
+              "description": "Active la séparation automatique de certains caractères (par exemple les caractères chinois)."
+            }
+          ]
+        },
+        {
+          "label": "Présentation des feedbacks",
+          "fields": [
+            {
+              "label": "Montrer les fautes d’orthographe",
+              "description": "Si la case est cochée, les fautes d’orthographe apparaîtront différemment des autres fautes."
+            },
+            {
+              "label": "Présentation des réponses alternatives",
+              "description": "Déterminez si les réponses alternatives sont affichées ou non en cas d’erreur ou de terme manquant.",
+              "options": [
+                {
+                  "label": "Montrer seulement la première réponse"
+                },
+                {
+                  "label": "Montrer toutes les réponses possibles"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Activer le bouton \"Réessayer\""
+        },
+        {
+          "label": "Activer le bouton \"Voir la réponse\""
+        },
+        {
+          "label": "Afficher la réponse lors de la vérification"
+        }
+      ]
+    },
+    {
+      "label": "Interface utilisateur",
+      "fields": [
+        {
+          "label": "Feedback global",
+          "description": "Vous pouvez utiliser plusieurs champs paramétrables qui seront remplacés par le nombre adéquat : @matches = nombre de correspondances, @total = total des erreurs, @capped = total des erreurs plafonnées, @wrong = mots incorrects, @added = mots supplémentaires, @missing = mots manquants, @typo = fautes d'orthographe",
+          "default": "Tu as commis @total erreur(s)."
+        },
+        {
+          "label": "Feedback global (mode zéro fautes)",
+          "description": "Vous pouvez utiliser plusieurs champs paramétrables qui seront remplacés par le nombre adéquat : @matches = nombre de correspondances, @total = score total, @wrong = mots erronés, @added = mots supplémentaires, @missing = mots manquants, @typo = fautes de frappe",
+          "default": "Vous avez écrit @total mot(s) correctement et @typo mot(s) avec des erreurs mineures."
+        },
+        {
+          "label": "Texte pour le bouton \"Vérifier\"",
+          "default": "Vérifier"
+        },
+        {
+          "label": "Texte pour le bouton \"Vérifier\"",
+          "default": "Vérifier"
+        },
+        {
+          "label": "Texte pour le bouton \"Recommencer\"",
+          "default": "Recommencer"
+        },
+        {
+          "label": "Texte pour le bouton \"Voir la réponse\"",
+          "default": "Voir la réponse"
+        },
+        {
+          "label": "Message audio non supporté",
+          "default": "Votre navigateur ne prend pas en charge cet audio."
+        }
+      ]
+    },
+    {
+      "label": "Lecteur d'écran",
+      "fields": [
+        {
+          "label": "Description du bouton \"Vérifier\" pour les outils d'accessibilité",
+          "default": "Vérifiez les réponses. Les réponses seront marquées comme correctes, incorrectes ou sans réponse."
+        },
+        {
+          "label": "Description du bouton \"Voir la réponse\" pour les outils d'accessibilité",
+          "default": "Voir la réponse. L'exercice s'affichera avec la réponse correcte."
+        },
+        {
+          "label": "Description du bouton \"Recommencer\" pour les outils d'accessibilité",
+          "default": "Recommencer la tâche. Réinitialise toutes les réponses et redémarre l'activité."
+        },
+        {
+          "label": "Bouton de lecture",
+          "default": "Lecture"
+        },
+        {
+          "label": "Bouton de lecture lente",
+          "default": "Lecture lente"
+        },
+        {
+          "label": "Essais à gauche (texte à lire et texte à survoler)",
+          "description": "@number sera remplacé par le nombre actuel d'essais restants.",
+          "default": "Nombre d'essais restants : @number"
+        },
+        {
+          "label": "Infini (texte à lire et texte à survoler)",
+          "default": "infinie"
+        },
+        {
+          "label": "Entrez le champ de texte",
+          "default": "Entrez ce que vous avez entendu."
+        },
+        {
+          "label": "Ton résultat",
+          "description": "@score will be replaced by the number of points. @total will be replaced by the maximum possible points.",
+          "default": "You got @score out of @total points"
+        },
+        {
+          "label": "Solution",
+          "default": "Solution"
+        },
+        {
+          "label": "Phrase",
+          "default": "Phrase"
+        },
+        {
+          "label": "Item",
+          "default": "Item"
+        },
+        {
+          "label": "Correct",
+          "default": "correct"
+        },
+        {
+          "label": "Faux",
+          "default": "Faux"
+        },
+        {
+          "label": "Petite erreur",
+          "default": "Petite erreur"
+        },
+        {
+          "label": "Mot ou symbole manquant",
+          "default": "manquants"
+        },
+        {
+          "label": "Mot ou symbole ajouté",
+          "default": "ajouté"
+        },
+        {
+          "label": "Correct solution",
+          "default": "Should have been"
+        },
+        {
+          "label": "Ou",
+          "default": "ou"
+        },
+        {
+          "label": "Point",
+          "default": "point"
+        },
+        {
+          "label": "Points",
+          "default": "points"
+        },
+        {
+          "label": "Point",
+          "default": "point"
+        },
+        {
+          "label": "Point d'exclamation",
+          "default": "point d'exclamation"
+        },
+        {
+          "label": "Point d'interrogation",
+          "default": "point d'interrogation"
+        },
+        {
+          "label": "Virgule",
+          "default": "virgule"
+        },
+        {
+          "label": "Citation unique",
+          "default": "citation unique"
+        },
+        {
+          "label": "Double citation",
+          "default": "double citation"
+        },
+        {
+          "label": "Double point",
+          "default": "double point"
+        },
+        {
+          "label": "Point-virgule",
+          "default": "point-virgule"
+        },
+        {
+          "label": "Plus",
+          "default": "plus"
+        },
+        {
+          "label": "Moins",
+          "default": "moins"
+        },
+        {
+          "label": "Asterisk",
+          "default": "asterisk"
+        },
+        {
+          "label": "Barre oblique",
+          "default": "barre oblique"
+        }
+      ]
+    }
+  ]
+}

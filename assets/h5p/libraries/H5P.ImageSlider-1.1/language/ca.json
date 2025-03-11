@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Imatges",
+      "field": {
+        "label": "Diapositiva d’imatge",
+        "fields": [
+          {
+            "label": "Diapositiva d’imatge"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Relació d’aspecte",
+      "description": "\"Automàtica\" fa referència a una relació d’aspecte fixa que es determina automàticament en funció de les imatges",
+      "options": [
+        {
+          "label": "Automàtic"
+        },
+        {
+          "label": "Personalitzar"
+        },
+        {
+          "label": "No fixa"
+        }
+      ]
+    },
+    {
+      "label": "Arranjament de la relació d’aspecte",
+      "fields": [
+        {
+          "label": "Amplada de la relació d’aspecte",
+          "description": "Si utilitzeu 3 aquí, i 4 per a l’amplada, la relació d’aspecte serà 4:3"
+        },
+        {
+          "label": "Alçada de la relació d’aspecte",
+          "description": "Si utilitzeu 3 aquí, i 4 per a l’amplada, la relació d’aspecte serà 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibilitat del control lliscant de la imatge",
+      "fields": [
+        {
+          "label": "Etiqueta del botó de diapositiva següent",
+          "default": "Imatge següent",
+          "description": "Només s’utilitza per a altaveus de lectura. No es mostrarà."
+        },
+        {
+          "label": "Etiqueta del botó de diapositiva anterior",
+          "default": "Imatge anterior",
+          "description": "Només s’utilitza per a altaveus de lectura. No es mostrarà."
+        },
+        {
+          "label": "Etiqueta per als botons lliscants",
+          "default": "Ves a la imatge %slide",
+          "description": "Només s’utilitza per a altaveus de lectura. No es mostrarà. %slide és una variable que se substituirà pel número de la imatge."
+        }
+      ]
+    }
+  ]
+}

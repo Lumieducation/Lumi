@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Editor di Branching Question",
+      "fields": [
+        {
+          "label": "Domanda"
+        },
+        {
+          "label": "Alternative disponibili",
+          "entity": "alternativa",
+          "field": {
+            "label": "Alternativa",
+            "fields": [
+              {
+                "label": "Testo"
+              },
+              {
+                "label": "Prossimo contenuto (-1 è la schermata finale)"
+              },
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Titolo del feedback"
+                  },
+                  {
+                    "label": "Testo del feedback"
+                  },
+                  {
+                    "label": "Immagine del feedback"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

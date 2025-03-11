@@ -1,0 +1,96 @@
+{
+  "semantics": [
+    {
+      "label": "Vorschau",
+      "description": "Du kannst die Bilder durch Ziehen verschieben. Du kannst auch ein Bild anwählen und dann die + oder - Tasten auf deiner Tastatur zum Zoomen benutzen oder dafür die Taste Z gedrückt halten und das Mausrad drehen.",
+      "fields": [
+        {
+          "label": "Layout",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "1-1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "2-1"
+            },
+            {
+              "label": "1-2"
+            },
+            {
+              "label": "2-2"
+            },
+            {
+              "label": "3-1"
+            },
+            {
+              "label": "1-3"
+            },
+            {
+              "label": "2-3"
+            },
+            {
+              "label": "3-2"
+            },
+            {
+              "label": "3-3"
+            }
+          ]
+        },
+        {
+          "label": "Darstellungsoptionen",
+          "fields": [
+            {
+              "label": "Höhe"
+            },
+            {
+              "label": "Abstand"
+            },
+            {
+              "label": "Rahmen"
+            }
+          ]
+        },
+        {
+          "label": "Clips",
+          "entity": "Clip",
+          "field": {
+            "label": "Clip",
+            "fields": [
+              {
+                "label": "Bild"
+              },
+              {
+                "label": "Versatz",
+                "fields": [
+                  {
+                    "label": "Oben"
+                  },
+                  {
+                    "label": "Links"
+                  }
+                ]
+              },
+              {
+                "label": "Alternativtext",
+                "description": "Erforderlich. Falls das Bild nicht geladen werden kann, wird dieser Text stattdessen angezeigt. Wird auch von Vorlesewerkzeugen genutzt (Barrierefreiheit)."
+              },
+              {
+                "label": "Mouseover-Text",
+                "description": "Optional. Dieser Text wird angezeigt, wenn der Mauszeiger über dem Bild ruht."
+              },
+              {
+                "label": "Maßstab"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+.h5p-shape-editor .h5peditor-label {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.h5p-shape-editor .field-name-type .h5peditor-label {
+  display: none;
+}
+
+.h5p-shape-editor .h5peditor-label:before {
+  content: "";
+  width: 1.9em;
+  height: 1.9em;
+  margin: 0.3em 1em 0.3em 0.3em;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.h5p-shape-editor .field-name-borderRadius,
+.h5p-shape-editor .field-name-borderStyle,
+.h5p-shape-editor .field-name-borderWidth,
+.h5p-shape-editor .field-name-borderColor,
+.h5p-shape-editor .field-name-fillColor {
+  border-top: 1px solid #e4e4e4;
+}
+
+.h5p-shape-editor > .h5p-editor-widget-show-when {
+  margin-top: 40px;
+}
+
+.h5p-shape-editor .field-name-shape > .title,
+.h5p-shape-editor .field-name-line > .title {
+  display: none;
+}
+
+.h5p-shape-editor .field-name-shape .content,
+.h5p-shape-editor .field-name-line .content {
+  padding: 0;
+  border: 0;
+}
+
+.h5p-shape-editor .field .h5peditor-label-wrapper {
+  float: left;
+}
+
+.h5p-shape-editor .field.group .content .field {
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+.h5p-shape-editor .field select,
+.h5p-shape-editor .field .sp-replacer {
+  float: right;
+  padding: 0.3em;
+  border-radius: 0;
+}
+
+.h5p-shape-editor .field select {
+  padding: 0.5em 2em 0.5em 1em;
+}
+
+.h5p-shape-editor .field .sp-replacer .sp-preview {
+  width: 34px;
+  height: 26px;
+}
+
+.h5p-shape-editor .field .sp-replacer .sp-dd {
+  padding: 6px 0;
+}
+
+/* Custom image radio selector */
+.h5p-shape-editor .h5p-editor-radio-group-container.horizontal {
+  margin: 0 0.3em 1.8em 0;
+  position: relative;
+}
+
+.h5p-shape-editor .h5p-editor-radio-group-container.horizontal input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.h5p-shape-editor .h5p-editor-radio-group-container.horizontal label {
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center;
+  display: inline-block;
+  cursor: pointer;
+  width: 1.8em;
+  height: 1.8em;
+}
+
+.h5p-shape-editor .h5p-editor-radio-group-container.horizontal .rectangle label {
+  background-image: url(../icons/type-rectangle.svg);
+}
+
+.h5p-shape-editor .h5p-editor-radio-group-container.horizontal .circle label {
+  background-image: url(../icons/type-circle.svg);
+}
+
+.h5p-shape-editor .h5p-editor-radio-group-container.horizontal .vertical-line label {
+  background-image: url(../icons/type-vertical-line.svg);
+}
+
+.h5p-shape-editor .h5p-editor-radio-group-container.horizontal .horizontal-line label {
+  background-image: url(../icons/type-horisontal-line.svg);
+}
+
+.h5p-shape-editor .h5p-editor-radio-group-container.horizontal .checked label {
+  box-shadow: 0 0 0 2px #6f6f6f;
+  background-color: #e3e3e3;
+  border-radius: 5px;
+}
+
+.h5p-shape-editor .h5p-editor-radio-group-container.horizontal label span {
+  display: none;
+}
+
+.h5p-shape-editor .h5p-editor-radio-group-container.horizontal .checked label span {
+  display: block;
+  position: absolute;
+  top: 3.25em;
+  left: 0.3em;
+  margin: 0 0.3em;
+}
+
+/* Editor fields icons */
+.h5p-shape-editor .field-name-fillColor .h5peditor-label:before {
+  background: transparent url(../icons/icon-fill-color.svg) no-repeat center;
+}
+
+.h5p-shape-editor .field-name-borderColor .h5peditor-label:before {
+  background: transparent url(../icons/icon-line-color.svg) no-repeat center;
+}
+
+.h5p-shape-editor .field-name-borderWidth .h5peditor-label:before {
+  background: transparent url(../icons/icon-line-weight.svg) no-repeat center;
+}
+
+.h5p-shape-editor .field-name-borderStyle .h5peditor-label:before {
+  background: transparent url(../icons/icon-line-style.svg) no-repeat center;
+}
+
+.h5p-shape-editor .field-name-borderRadius .h5peditor-label:before {
+  background: transparent url(../icons/icon-line-radius.svg) no-repeat center;
+}

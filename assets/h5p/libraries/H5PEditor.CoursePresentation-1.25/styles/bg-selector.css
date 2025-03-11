@@ -1,0 +1,79 @@
+
+.h5p-bg-selector {
+  display: none;
+  padding: 0.5em;
+}
+
+.h5p-bg-selector.show {
+  display: block;
+}
+
+.h5p-bg-selector .field.select select {
+  max-width: 100%;
+}
+
+.h5peditor button.h5p-background-selector-reset {
+  display: none;
+  font-size: 1em;
+  padding: 0.5em 1.6em;
+}
+
+.h5peditor button.h5p-background-selector-reset.show {
+  display: block;
+}
+
+.h5p-background-selector-title {
+  color: #323232;
+  background-color: #f4f4f4;
+  font-size: 1em;
+  padding: 0.5em 0.75em;
+  border-bottom: 1px solid #ccc;
+}
+
+.h5p-background-selector-close {
+  float: right;
+  color: #757575;
+  cursor: pointer;
+}
+
+.h5p-background-selector-close:hover {
+  color: #555;
+}
+
+.h5p-background-selector-close:after {
+  content: "\f057";
+  font-family: 'H5PFontAwesome4';
+}
+
+.h5p-radio-selector-values .field.h5p-color-selector {
+  margin: 1.5em 0 -0.5em;
+}
+
+.h5p-radio-selector-values .sp-container {
+  border: 0;
+  background-color: transparent;
+  margin-left: -0.5em;
+}
+
+.h5p-radio-selector-values .thumbnail > img {
+  max-height: 100px;
+  height: auto;
+  max-width: 10em;
+}
+
+.h5p-bg-selector-description {
+  padding: 0.25em 0 0.5em;
+  font-size: 10px;
+  color: #555555;
+}
+
+.h5p-radio-selector-values > .field {
+  position: inherit;
+}
+.h5p-radio-selector-values > .field > .h5p-editor-dialog {
+  top: 0;
+  margin: 0;
+  right: 0;
+  overflow-y: auto;
+  height: 100%;
+}

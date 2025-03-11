@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Imagens",
+      "field": {
+        "label": "Slide de Imagem",
+        "fields": [
+          {
+            "label": "Slide de Imagem"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Relação de aspecto",
+      "description": "Automático significa relação de aspecto fixa determinada automaticamente com base nas imagens",
+      "options": [
+        {
+          "label": "Automático"
+        },
+        {
+          "label": "Personalizado"
+        },
+        {
+          "label": "Não fixado"
+        }
+      ]
+    },
+    {
+      "label": "Ajustes da relação de aspecto",
+      "fields": [
+        {
+          "label": "Largura da relação de aspecto",
+          "description": "Se você usar 4 aqui, e 3 para a altura a relação de aspecto será 4:3"
+        },
+        {
+          "label": "Altura da relação de aspecto",
+          "description": "Se você usar 3 aqui, e 4 para a largura a relação de aspecto será de 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Acessibilidade do controle deslizante de imagem",
+      "fields": [
+        {
+          "label": "Rótulo para o botão \"Próximo Slide\"",
+          "default": "Próxima Imagem",
+          "description": "Isto só é usado para leitores de tela. Não será exibido."
+        },
+        {
+          "label": "Rótulo do botão \"Slide Anterior\"",
+          "default": "Imagem Anterior",
+          "description": "Isto só é usado para leitores de tela. Não será exibido."
+        },
+        {
+          "label": "Rótulo dos botões Slide",
+          "default": "Ir para a imagem %slide",
+          "description": "Isto só é usado para leitores de tela. Não será exibido. O %slide é uma variável e será substituído pelo número da imagem."
+        }
+      ]
+    }
+  ]
+}

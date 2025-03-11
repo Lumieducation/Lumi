@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Medios",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Medios opcionales mostrados encima de la pregunta."
+        },
+        {
+          "label": "Deshabilitar acercamiento de imagen"
+        }
+      ]
+    },
+    {
+      "label": "Descripción del trabajo",
+      "description": "Describe como el usuario debería resolver el trabajo.",
+      "default": "Arrastrar las palabras a las cajas correctas"
+    },
+    {
+      "label": "Texto",
+      "placeholder": "*Oslo* es la capital de Noruega, *Estocolmo* es la capital de Suecia y *Copenhague* es la capital de Dinamarca. Todas las ciudades están ubicadas en la península *Escandinava:Parte norte de Europa*.",
+      "important": {
+        "description": "<ul><li>Las palabras desplegables se agregan con un asterisco (*) al frente y detrás de la palabra / frase correcta.</li><li>Puede agregar una sugerencia textual, usando dos puntos (:) en frente de la sugerencia.</li><li>Por cada punto vacío solo hay una palabra correcta.</li><li>Puede agregar comentarios que se mostrarán cuando se complete una tarea. Utilizar '\\+' para los correctos '\\-' para comentarios incorrectos.</li></ul>",
+        "example": "El contenido de H5P se puede editar utilizando un *navegador:¿Qué tipo de programa es Chrome?*. <br /> El contenido H5P es *interactivo\\+¡Correcto! \\-¡Incorrecto, prueba de nuevo!*"
+      }
+    },
+    {
+      "label": "Distractores",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Escriba soluciones incorrectas extra como distractores. Use el mismo esquema con asterisco (*) como para el texto."
+    },
+    {
+      "label": "Retroalimentación Global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Predeterminado"
+            }
+          ],
+          "label": "Definir retroalimentación personalizada para cualquier rango de puntaje",
+          "description": "Haga clic en el botón \"Añadir rango\" para añadir cuantos rangos necesite. Ejemplo: 0-20% Mal puntaje, 21-91% Puntaje Promedio, 91-100% ¡Magnífico Puntaje!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango del Puntaje"
+              },
+              {},
+              {
+                "label": "Retroalimentación para rango de puntaje definido",
+                "placeholder": "Complete la retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Texto para botón \"Comprobar\"",
+      "default": "Comprobar"
+    },
+    {
+      "label": "Texto para botón \"Enviar\"",
+      "default": "Enviar"
+    },
+    {
+      "label": "Texto para el botón \"Reintentar\"",
+      "default": "Reintentar"
+    },
+    {
+      "label": "Texto para botón \"Mostrar solución\"",
+      "default": "Mostrar solución"
+    },
+    {
+      "label": "Etiqueta de zona de colocación numerada",
+      "default": "Zona de colocación @index.",
+      "description": "Etiqueta utilizada para accesibilidad, donde el lector de pantalla leerá el índice de una zona de colocación. Variable disponible: @index"
+    },
+    {
+      "label": "Etiqueta para Zona de Colocación vacía",
+      "default": "La zona de Colocación @index está vacía.",
+      "description": "Etiqueta utilizada para la accesibilidad, donde el lector de pantalla leerá que la zona de colocación está vacía"
+    },
+    {
+      "label": "Contiene etiqueta de Zona de Colocación",
+      "default": "La zona de Colocación @index contiene elemento @draggable.",
+      "description": "Etiqueta utilizada para accesibilidad, donde el lector de pantalla leerá que la zona de colocación contiene un elemento que se puede colocar"
+    },
+    {
+      "label": "Etiqueta de elementos que se pueden colocar",
+      "default": "@index de @count elementos que se pueden colocar.",
+      "description": "Etiqueta utilizada para la accesibilidad, donde el lector de pantalla lee que se trata de un elemento que se puede colocar. Variable disponible: @index, @count"
+    },
+    {
+      "label": "Etiqueta para mostrar el botón de pista",
+      "default": "Mostrar pista",
+      "description": "Etiqueta utilizada para accesibilidad, donde el Lector de texto en voz alta la lee antes de leer la pista"
+    },
+    {
+      "label": "Texto de Lector en voz alta para respuesta correcta",
+      "default": "¡Correcto!"
+    },
+    {
+      "label": "Texto del Lector en voz alta para respuesta incorrecta",
+      "default": "¡Incorrecto!"
+    },
+    {
+      "label": "Título del diálogo de confirmación cuando el usuario quiere deshacer una colocación",
+      "default": "Restablecer colocación"
+    },
+    {
+      "label": "Descripción del diálogo de confirmación cuando el usuario quiere deshacer una colocación",
+      "default": "¿Seguro que quieres restablecer esta zona de colocación?"
+    },
+    {
+      "label": "Etiqueta utilizada para accesibilidad, donde el lector de pantalla indica que se inició el arrastre",
+      "default": "El arrastrable está agarrado."
+    },
+    {
+      "label": "Etiqueta utilizada para accesibilidad, donde el Lector de texto en voz alta indica que el arrastre está cancelado",
+      "default": "Arrastre cancelado."
+    },
+    {
+      "label": "Etiqueta utilizada para accesibilidad, donde el Lector de texto en voz alta indica que un texto es la respuesta correcta",
+      "default": "Respuesta correcta:"
+    },
+    {
+      "label": "Encabezado para el panel que contiene retroalimentación para respuestas correctas/incorrectas",
+      "default": "Retroalimentación"
+    },
+    {
+      "label": "Configuraciones del comportamiento.",
+      "description": "Estas opciones le permitirán controlar como se comporta el trabajo.",
+      "fields": [
+        {
+          "label": "Habilitar \"Reintentar\""
+        },
+        {
+          "label": "Habilitar botón \"Mostrar Solución\""
+        },
+        {
+          "label": "Habilitar botón \"Comprobar\""
+        },
+        {
+          "label": "Retroalimentación instantánea"
+        }
+      ]
+    },
+    {
+      "label": "Representación textual de la barra de puntaje para aquellos que usan un lector de texto en voz alta",
+      "default": "Obtuvo :num de un total de :total puntos"
+    },
+    {
+      "label": "Etiqueta para las tecnologías de asistencia para el botón \"Comprobar\"",
+      "default": "Comprobar las respuestas. Las respuestas serán marcadas como correcta, incorrecta o sin contestar."
+    },
+    {
+      "label": "Descripción para las tecnologías de asistencia del botón \"Mostrar solución\"",
+      "default": "Mostrar la solución. El trabajo será calificado con su solución correcta."
+    },
+    {
+      "label": "Descripción para las tecnologías de asistencia del botón \"Reintentar\"",
+      "default": "Reintentar el trabajo. Reiniciar todas las respuestas e iniciar el trabajo de nuevo."
+    }
+  ]
+}

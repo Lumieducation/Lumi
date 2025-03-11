@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Prvky dotazníku",
+      "widgets": [
+        {
+          "label": "Výchozí"
+        }
+      ],
+      "entity": "prvek",
+      "field": {
+        "label": "Vybrat knihovnu",
+        "fields": [
+          {
+            "label": "Knihovna",
+            "description": "Vyberte knihovnu"
+          },
+          {
+            "label": "Povinné pole"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Možnosti obrazovky úspěchu",
+      "fields": [
+        {
+          "label": "Povolit obrazovku úspěchu"
+        },
+        {
+          "label": "Přidat obrázek obrazovky úspěchu",
+          "fields": [
+            {
+              "label": "Nahradit ikonu úspěchu obrázkem"
+            }
+          ]
+        },
+        {
+          "label": "Text, který se má zobrazit při odeslání",
+          "default": "Vyplnili jste dotazník."
+        }
+      ]
+    },
+    {
+      "label": "Prvky uživatelského rozhraní",
+      "fields": [
+        {
+          "label": "Popisky tlačítka",
+          "fields": [
+            {
+              "label": "Popisek tlačítka Zpět",
+              "default": "Zpět"
+            },
+            {
+              "label": "Popisek tlačítka Pokračovat",
+              "default": "Pokračovat"
+            },
+            {
+              "label": "Popisek tlačítka Další",
+              "default": "Další"
+            },
+            {
+              "label": "Popisek tlačítka Odeslat",
+              "default": "Odeslat"
+            }
+          ]
+        },
+        {
+          "label": "Přístupnost",
+          "fields": [
+            {
+              "label": "Popisek tlačítka zprávy požadované ukončení",
+              "default": "Zavřít chybové hlášení"
+            },
+            {
+              "label": "Text ukazatele průběhu",
+              "default": "Otázka %current z %max",
+              "description": "Používá se k tomu, aby řekl podpůrným technologiím, o jakou otázku jde. Proměnné: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Povinná odpověď",
+          "default": "Tato otázka vyžaduje odpověď",
+          "description": "Zobrazí se, pokud je toto pole nezodpovězeno a jde o povinný typ obsahu"
+        },
+        {
+          "label": "Symbol požadovaného textu",
+          "default": "povinné",
+          "description": "Text, který bude doprovázet hvězdičku, aby signalizoval, že je vyžadována otázka"
+        },
+        {
+          "label": "Název obrazovky pro odeslání",
+          "default": "Úspěšně jste odpověděli na všechny otázky"
+        },
+        {
+          "label": "Popis pro obrazovku odeslání",
+          "default": "Kliknutím níže odešlete své odpovědi"
+        }
+      ]
+    }
+  ]
+}

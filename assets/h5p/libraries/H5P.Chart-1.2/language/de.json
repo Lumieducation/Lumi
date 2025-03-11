@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Diagrammtyp",
+      "options": [
+        {
+          "label": "Tortendiagramm"
+        },
+        {
+          "label": "Balkendiagramm"
+        }
+      ]
+    },
+    {
+      "label": "Datenelemente",
+      "entity": "Option",
+      "field": {
+        "label": "Datenelement",
+        "fields": [
+          {
+            "label": "Name"
+          },
+          {
+            "label": "Wert"
+          },
+          {
+            "label": "Farbe"
+          },
+          {
+            "label": "Schriftfarbe"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Text, den ein Vorlesewerkzeug vorliest, um die Abbildung als Diagramm auszuweisen (Barrierefreiheit)",
+      "default": "Diagramm"
+    }
+  ]
+}

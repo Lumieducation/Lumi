@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Consigne",
+      "description": "Put the heading/instructions you'd like to show above the before/after image here.",
+      "placeholder": "Here you can add an optional heading and/or instructions."
+    },
+    {
+      "label": "Première image",
+      "fields": [
+        {
+          "label": "Première image",
+          "description": "La première image. Assurez-vous qu'elle a les mêmes dimensions que la deuxième image."
+        },
+        {
+          "label": "Label pour la première image",
+          "description": "Label à afficher au dessus de la première image."
+        }
+      ]
+    },
+    {
+      "label": "Deuxième image",
+      "fields": [
+        {
+          "label": "Deuxième image",
+          "description": "La deuxième image. Assurez-vous qu'elle a les mêmes dimensions que la première image."
+        },
+        {
+          "label": "Label pour la deuxième image",
+          "description": "Label à afficher au dessus de la deuxième image."
+        }
+      ]
+    },
+    {
+      "label": "Paramètres de comportement",
+      "description": "Position de démarrage du curseur en %",
+      "fields": [
+        {
+          "label": "Orientation du curseur",
+          "description": "Horizontal pour un déplacement vers la gauche ou vers la droite, Vertical pour un déplacement vers le haut ou vers le bas"
+        },
+        {
+          "label": "Slider orientation",
+          "description": "Horizontal will move left and right, vertical will move up and down.",
+          "options": [
+            {
+              "label": "Horizontal"
+            },
+            {
+              "label": "Vertical"
+            }
+          ]
+        },
+        {
+          "label": "Slider color",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Textes pour l'accessibilité",
+      "fields": [
+        {
+          "label": "Image visible message",
+          "default": "Image @percentage % visible",
+          "description": "@pourcentage est un champ de substitution et sera remplacé par la valeur correspondante."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Imagen de fondo",
+      "description": "Imagen mostrada en el fondo."
+    },
+    {
+      "label": "Texto alternativo para imagen de fondo",
+      "description": "Si el navegador no puede cargar la imagen, este texto se mostrará en su lugar. También utilizado por las tecnologías de asistencia."
+    },
+    {
+      "label": "Icono de punto clave",
+      "options": [
+        {
+          "label": "Icono predefinido"
+        },
+        {
+          "label": "Imagen subida"
+        }
+      ]
+    },
+    {
+      "label": "Icono predefinido",
+      "description": "Usando un icono predefinido para el punto clave.",
+      "options": [
+        {
+          "label": "Más"
+        },
+        {
+          "label": "Menos"
+        },
+        {
+          "label": "Por"
+        },
+        {
+          "label": "Comprobar"
+        },
+        {
+          "label": "Pregunta"
+        },
+        {
+          "label": "Información"
+        },
+        {
+          "label": "Exclamación"
+        }
+      ]
+    },
+    {
+      "label": "Imagen subida",
+      "description": "Usa tu propia imagen para el icono de punto clave.<br />75px por 75px es lo recomendado para la imagen."
+    },
+    {
+      "label": "Color del punto clave",
+      "description": "El color de los puntos clave"
+    },
+    {
+      "entity": "punto clave",
+      "label": "Puntos clave",
+      "field": {
+        "label": "Punto clave",
+        "fields": [
+          {
+            "label": "Posición del punto clave",
+            "description": "Haga clic en la imagen en miniatura para colocar el punto clave"
+          },
+          {
+            "label": "Cubrir toda la imagen de fondo",
+            "description": "Cuando el usuario haga clic en el punto clave, la ventana emergente cubrirá toda la imagen de fondo"
+          },
+          {
+            "label": "Encabezado",
+            "description": "Encabezado opcional para el popup. Esto es usado por tecnologías de asistencia."
+          },
+          {
+            "label": "Contenido emergente",
+            "field": {
+              "label": "Elemento del Contenido"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Etiqueta de punto clave para las tecnologías de asistencia",
+      "default": "Punto clave #num",
+      "description": "Ayudará a anunciar a qué puto clave se ha navegado si no hay un encabezado especificado para uno de ellos. #num se puede usar para reemplazar el número del punto clave."
+    },
+    {
+      "label": "Etiqueta de botón de cierre para tecnologías de asistencia",
+      "default": "Cerrar"
+    },
+    {
+      "label": "Label for assistive technologies denoting that hotspot contains Audio/Video",
+      "default": "Contains Audio/Video"
+    }
+  ]
+}

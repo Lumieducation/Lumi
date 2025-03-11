@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Pitanje"
+    },
+    {
+      "label": "Višestruki izbor",
+      "options": [
+        {
+          "label": "Višestruki odgovori"
+        },
+        {
+          "label": "Jedan odgovor"
+        }
+      ]
+    },
+    {
+      "label": "Alternativni odgovori",
+      "entity": "Alternativa",
+      "field": {
+        "label": "Alternativa",
+        "fields": [
+          {
+            "label": "Tekst"
+          },
+          {
+            "label": "Feedback",
+            "fields": [
+              {
+                "label": "Prikazuje se poruka ako je odgovor označen.",
+                "description": "Poruka će se pojaviti ispod odgovora na \"nastavi\" ako je odgovor označen."
+              },
+              {
+                "label": "Prikazuje se poruka ako odgovor nije označen",
+                "description": "Poruka će se pojaviti ispod odgovora na \"nastavi\" ako odgovor nije označen."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

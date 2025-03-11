@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Branching Question Editor",
+      "fields": [
+        {
+          "label": "Question"
+        },
+        {
+          "label": "Available alternatives",
+          "entity": "alternative",
+          "field": {
+            "label": "Alternative",
+            "fields": [
+              {
+                "label": "Text"
+              },
+              {
+                "label": "Next Content (-1 is the end screen)"
+              },
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

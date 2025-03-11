@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Редактор на 3D изображения",
+      "fields": [
+        {
+          "label": "Сцени",
+          "entity": "Сцена",
+          "field": {
+            "fields": [
+              {
+                "label": "Тип на сцена",
+                "options": [
+                  {
+                    "label": "Изображение на 360о"
+                  },
+                  {
+                    "label": "Статично изображение"
+                  }
+                ]
+              },
+              {
+                "label": "Покажи бутон \"Предишен\" ",
+                "description": "Показва бутон за връщане към предишна сцена"
+              },
+              {},
+              {
+                "label": "Заглавие на сцената",
+                "description": "Използва се за идентификация на сцената за автори"
+              },
+              {
+                "label": "Фон на сцената"
+              },
+              {
+                "label": "Описание на сцената",
+                "description": "Текст, който описва сцената за ученика"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Label",
+                      "description": "If left blank no label will be displayed and we'll try to use the title field for screen readers"
+                    },
+                    {
+                      "label": "Label Settings",
+                      "fields": [
+                        {
+                          "label": "Label position",
+                          "description": "Choose where the label should appear",
+                          "options": [
+                            {
+                              "label": "Use behavioral setting"
+                            },
+                            {
+                              "label": "Right aligned"
+                            },
+                            {
+                              "label": "Left aligned"
+                            },
+                            {
+                              "label": "Top aligned"
+                            },
+                            {
+                              "label": "Bottom aligned"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Display Label",
+                          "description": "If hidden - labels will show only on mouse over",
+                          "options": [
+                            {
+                              "label": "Use behavioral setting"
+                            },
+                            {
+                              "label": "Show"
+                            },
+                            {
+                              "label": "Hide"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Стил на бутона",
+                "description": "Решете как ще изглеждат бутоните. За сцени, които са статични и не водят до нови сцени, препоръчваме бутона \"Повече информация\".",
+                "options": [
+                  {
+                    "label": "Нова сцена (стрелка)"
+                  },
+                  {
+                    "label": "Още информация (плюс)"
+                  }
+                ]
+              },
+              {
+                "label": "Аудио запис",
+                "description": "Добави аудио запис за тази сцена."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Аудио запис"
+        }
+      ]
+    },
+    {
+      "label": "Настройки за поведение",
+      "description": "Тези настройки ще ви позволят за контролирате поведението на задачата.",
+      "fields": [
+        {
+          "label": "Глобално аудио",
+          "description": "Добави аудио запис, който ще е достъпен по подразбиране за всички сцени."
+        },
+        {
+          "label": "Качество за визуализиране на сцената",
+          "description": "Изберете ширина и височина за визуализиране на сцената. Това ще се отрази върху качеството. Опитайте да учеличите качеството, ако сцената изглежда размазана. Обърнете внимание, че високото качество ще отнема повече време за зареждане.",
+          "options": [
+            {
+              "label": "Високо качество (128x128)"
+            },
+            {
+              "label": "Средно качество (64x64)"
+            },
+            {
+              "label": "Ниско качество (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Label settings",
+          "fields": [
+            {
+              "label": "Label position",
+              "description": "The default label position. The position may be overriden per interaction",
+              "options": [
+                {
+                  "label": "Right aligned"
+                },
+                {
+                  "label": "Left aligned"
+                },
+                {
+                  "label": "Top aligned"
+                },
+                {
+                  "label": "Bottom aligned"
+                }
+              ]
+            },
+            {
+              "label": "Display Labels",
+              "description": "If unchecked - labels will show only on mouse over"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Localize",
+      "fields": [
+        {
+          "label": "Aria label for content type",
+          "default": "Virtual Tour"
+        },
+        {
+          "label": "Label for to play audio",
+          "default": "Play Audio Track"
+        },
+        {
+          "label": "Label to pause audio",
+          "default": "Pause Audio Track"
+        },
+        {
+          "label": "Title to scene dialog",
+          "default": "Scene Description"
+        },
+        {
+          "label": "Label for button to reset camera",
+          "default": "Reset Camera"
+        },
+        {
+          "label": "Label for the submit dialog button",
+          "default": "Submit Dialog"
+        },
+        {
+          "label": "Label for the close dialog button",
+          "default": "Close Dialog"
+        },
+        {
+          "label": "Aria label for the expand label button",
+          "default": "Expand the visual label"
+        },
+        {
+          "label": "Label for when background image is loading in 360 scene",
+          "default": "Loading background image..."
+        },
+        {
+          "label": "Label for when there is no content",
+          "default": "No content"
+        }
+      ]
+    }
+  ]
+}

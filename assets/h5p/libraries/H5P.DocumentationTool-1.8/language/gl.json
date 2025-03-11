@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "label": "Cabeceira",
+      "default": "Ferramenta de documentación",
+      "description": "Título para a ferramenta de documentación."
+    },
+    {
+      "label": "Elementos",
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
+      "entity": "páxina",
+      "field": {
+        "label": "Tipo de páxina",
+        "description": "Biblioteca para esta diapositiva."
+      }
+    },
+    {
+      "label": "Adaptación local para os botóns da ferramenta de documentación",
+      "fields": [
+        {
+          "label": "Etiqueta para o botón anterior",
+          "default": "Anterior documentation step"
+        },
+        {
+          "label": "Etiqueta para o botón seguinte",
+          "default": "Seguinte documentation step"
+        },
+        {
+          "label": "Etiqueta para o botón pechar",
+          "default": "Pechar"
+        }
+      ]
+    }
+  ]
+}

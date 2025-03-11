@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Fragen",
+      "widgets": [
+        {
+          "label": "Eingabemaske"
+        }
+      ],
+      "entity": "Frage",
+      "field": {
+        "label": "Wähle einen Fragetyp",
+        "fields": [
+          {
+            "label": "Fragetyp",
+            "description": "Wähle einen Fragetyp"
+          },
+          {
+            "label": "Erforderliches Feld"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Optionen für den Erfolgsbildschirm",
+      "fields": [
+        {
+          "label": "Erfolgsbildschirm aktivieren"
+        },
+        {
+          "label": "Füge ein Bild zum Erfolgsbildschirm hinzu",
+          "fields": [
+            {
+              "label": "Ersetze das Erfolgssymbol mit dem Bild"
+            }
+          ]
+        },
+        {
+          "label": "Text, der nach dem Absenden angezeigt wird",
+          "default": "Du hast alle Fragen erfolgreich beantwortet."
+        }
+      ]
+    },
+    {
+      "label": "Elemente der Benutzeroberfläche",
+      "fields": [
+        {
+          "label": "Button-Beschriftungen",
+          "fields": [
+            {
+              "label": "Beschriftung des \"Zurück\"-Buttons",
+              "default": "Zurück"
+            },
+            {
+              "label": "Beschriftung des \"Weiter\"-Buttons",
+              "default": "Weiter"
+            },
+            {
+              "label": "Beschriftung des \"Weiter\"-Buttons",
+              "default": "Weiter"
+            },
+            {
+              "label": "Beschriftung des \"Absenden\"-Buttons",
+              "default": "Absenden"
+            }
+          ]
+        },
+        {
+          "label": "Barrierefreiheit",
+          "fields": [
+            {
+              "label": "Beschriftung des \"Schließe Fehlermeldung\"-Buttons",
+              "default": "Schließe Fehlermeldung"
+            },
+            {
+              "label": "Text der Fortschrittsanzeige",
+              "default": "Frage %current von %max",
+              "description": "Text für Vorlesewerkzeuge, der mitteilt, um welche Frage es sich handelt. Mögliche Platzhalter sind %current und %max."
+            }
+          ]
+        },
+        {
+          "label": "Hinweis, dass eine Antwort erforderlich ist",
+          "default": "Diese Frage muss beantwortet werden.",
+          "description": "Wird angezeigt, wenn diese Frage nicht beantwortet wurde, aber benötigt wird."
+        },
+        {
+          "label": "Beschriftung bei Erforderlichkeit",
+          "default": "erforderlich",
+          "description": "Text, der zusätzlich zum Sternchen darauf hinweist, dass eine Antwort erforderlich ist."
+        },
+        {
+          "label": "Überschrift des Einsendebildschirms",
+          "default": "Du hast alle Fragen beantwortet!"
+        },
+        {
+          "label": "Weiterer Texte auf dem Einsendebildschirm",
+          "default": "Klicke unten auf den Button, um deine Antworten einzusenden!"
+        }
+      ]
+    }
+  ]
+}

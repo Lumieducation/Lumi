@@ -1,0 +1,203 @@
+{
+  "semantics": [
+    {
+      "label": "Mode for door images",
+      "description": "Select whether you want to set each custom door image yourself or let H5P do the work for you based on the calendar background image set in the behavioural settings.",
+      "options": [
+        {
+          "label": "I want to set each door image myself"
+        },
+        {
+          "label": "H5P shall set the door images based on the background image"
+        }
+      ]
+    },
+    {
+      "label": "Puertas",
+      "entity": "puerta",
+      "field": {
+        "fields": [
+          {
+            "label": "Tipo de contenido",
+            "description": "Tipo de contenido que opcionalmente saldrá cuando la puerta es abierta.",
+            "options": [
+              {
+                "label": "Audio"
+              },
+              {
+                "label": "Imagen"
+              },
+              {
+                "label": "Enlace"
+              },
+              {
+                "label": "Texto"
+              },
+              {
+                "label": "Video"
+              }
+            ]
+          },
+          {
+            "label": "Audio"
+          },
+          {
+            "label": "Imagen"
+          },
+          {
+            "label": "Enlace"
+          },
+          {
+            "label": "Texto"
+          },
+          {
+            "label": "Video"
+          },
+          {
+            "label": "Autoreproducir"
+          },
+          {
+            "label": "Imagen de puerta",
+            "description": "Imagen que será usada para la puerta. Necesita tener una proporción de tamaño 1:1 si quiere que la mitad izquierda encaje con la mitad derecha."
+          },
+          {
+            "label": "Imagen de fondo",
+            "description": "Imagen que debe aparecer dentro de la puerta. De forma predeterminada será el número de la puerta."
+          }
+        ]
+      },
+      "widgets": [
+        {
+          "label": "Predeterminado"
+        }
+      ]
+    },
+    {
+      "label": "Visual settings",
+      "description": "These options will let you configure the visual appearance.",
+      "fields": [
+        {
+          "label": "Imagen del fondo del calendario"
+        },
+        {
+          "label": "Plantilla de imagen de puerta",
+          "description": "Si se configura una imagen, será usada para cada puerta a menos que una imagen de puerta específica sea configurada para una sola puerta."
+        },
+        {
+          "label": "Ocultar borde de puerta"
+        },
+        {
+          "label": "Ocultar números de puerta"
+        },
+        {
+          "label": "Ocultar perillas de puerta"
+        },
+        {
+          "label": "Ocultar marco de puerta"
+        },
+        {
+          "label": "Que caiga nieve",
+          "description": "Añadirá caída de nieve al frente del calendario. Nunca llueve en el Sur de Californa, Nunca cae nieve en IE11."
+        }
+      ]
+    },
+    {
+      "label": "Audio settings",
+      "description": "These options will let you configure the audio appearance.",
+      "fields": [
+        {
+          "label": "Música de fondo"
+        },
+        {
+          "label": "Auto-reproducir música de fondo",
+          "description": "Si se activa, la musica de fondo se reproducirá automáticamente una vez que se abra el contenido. Por favor tenga en cuenta: Las políticas para medios de algunos navegadores podrían impedir la auto-reproducción."
+        }
+      ]
+    },
+    {
+      "label": "Configuraciones del comportamiento",
+      "description": "Estas opcones le permitirán cambiar las configuraciones del comportamiento.",
+      "fields": [
+        {
+          "label": "Mode for door placement",
+          "description": "Select whether you want to set a fixed number of columns and rows for the doors or if H5P should decide dynamically depending on the available space. Note that the latter may interfere with the position of the background image and custom door cover images that should be at a particular position.",
+          "options": [
+            {
+              "label": "Fixed"
+            },
+            {
+              "label": "Dynamic"
+            }
+          ]
+        },
+        {
+          "label": "Row-to-column ratio",
+          "description": "Select how many columns and rows the calender should use.",
+          "options": [
+            {
+              "label": "6 × 4"
+            },
+            {
+              "label": "4 × 6"
+            }
+          ]
+        },
+        {
+          "label": "Orden aleatorio",
+          "description": "Barajear el orden de las puertas. Si la opción \"guardar estado del contenido\" está activada en las configuraciones de H5P, ese orden se conservará igual cuando el usuario regrese después."
+        },
+        {
+          "label": "Conservar orden de imágenes",
+          "description": "Barajear puertas, pero conservar las imágenes de cubierta de puertas en sus posiciones fijas comenzando con 1 en la esquina superior izquierda hasta 24 en la esquina inferior derecha."
+        },
+        {
+          "label": "Modo diseñador",
+          "description": "En modo diseñador, todas las puertas pueden abrirse. En caso contrario, las puertas solamente pueden abrirse en diciembre y después de la fecha respectiva indicada por el número de la puerta."
+        }
+      ]
+    },
+    {
+      "label": "Localización",
+      "fields": [
+        {
+          "label": "Nada para ver",
+          "default": "¡Aquí no hay nada para ver!\ud83c\udf84"
+        },
+        {
+          "label": "Dummy",
+          "default": "Dummy"
+        }
+      ]
+    },
+    {
+      "label": "Accesibilidad",
+      "fields": [
+        {
+          "label": "Puerta",
+          "default": "Puerta"
+        },
+        {
+          "label": "Cerrada",
+          "default": "Cerrada. Aun no es hora de abrir esta."
+        },
+        {
+          "description": "Anunciar el contenido. @door es una variable y será remplazada con la descripción de la puerta relacionada.",
+          "label": "Contenido de",
+          "default": "Contenido de @door"
+        },
+        {
+          "label": "Enmudecer audio",
+          "default": "Enmudecer audio"
+        },
+        {
+          "label": "Activar audio",
+          "default": "Activar audio"
+        },
+        {
+          "label": "Cerrrar ventana",
+          "default": "Cerrrar ventana"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Tipas",
+          "description": "Pasirenkama medija, rodoma virš klausimo."
+        },
+        {
+          "label": "Išjungti paveikslėlio mastelio keitimą"
+        }
+      ],
+      "label": "Medija"
+    },
+    {
+      "label": "Užduoties aprašymas",
+      "placeholder": "Apibūdinkite, ką jūsų besimokantieji turėtų daryti...",
+      "description": "Ką turėtų žinoti jūsų besimokantieji."
+    },
+    {
+      "field": {
+        "label": "Pastraipa"
+      },
+      "label": "Pastraipos",
+      "entity": "pastraipa"
+    },
+    {
+      "label": "Bendras atsiliepimas",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Numatytasis"
+            }
+          ],
+          "label": "Nustatykite tinkintus atsiliepimus bet kokiam balų diapazonui",
+          "description": "Spustelėkite mygtuką „Pridėti diapazoną“, kad pridėtumėte tiek diapazonų, kiek jums reikia. Pavyzdys: 0–20 % blogas balas, 21–91 % vidutinis balas, 91–100 % puikus rezultatas!",
+          "entity": "diapazonas",
+          "field": {
+            "fields": [
+              {
+                "label": "Score Range"
+              },
+              {},
+              {
+                "label": "Atsiliepimas apibrėžtam balų diapazonui",
+                "placeholder": "Užpildykite atsiliepimą"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "label": "Scoring mode",
+          "description": "Decide whether to give points for each correctly placed paragraph or for each paragraph that is placed after the paragraph it is supposed to be placed after (\"correct sequence\")",
+          "options": [
+            {
+              "label": "Correct sequence"
+            },
+            {
+              "label": "Correctly placed paragraph"
+            }
+          ]
+        },
+        {
+          "label": "Apply penalties",
+          "description": "Decide whether to deduce a point for each paragraph that's not positioned correctly."
+        },
+        {
+          "label": "Duplicate parapraphs interchangeable",
+          "description": "If set, when checking the answer, duplicate paragraphs will be treated as identical if their plain text is equal."
+        },
+        {
+          "label": "Add buttons for movement",
+          "description": "On mobile devices, buttons for moving paragraphs can offer an extra accessibility benefit. If you prefer, you can deactivate them here."
+        },
+        {
+          "label": "Įjungti mygtuką „Bandyti dar kartą“"
+        },
+        {
+          "label": "Įjungti mygtuką „Rodyti sprendimą“"
+        }
+      ],
+      "label": "Veikimo nustatymai",
+      "description": "Šios parinktys leis jums valdyti, kaip veikia užduotis."
+    },
+    {
+      "label": "Naudotojo sąsaja",
+      "fields": [
+        {
+          "label": "Tekstas mygtukui „Tikrinti“",
+          "default": "Tikrinti"
+        },
+        {
+          "label": "Tekstas mygtukui „Pateikti“",
+          "default": "Pateikti"
+        },
+        {
+          "label": "Text for \"Retry\" button",
+          "default": "Bandyti dar kartą"
+        },
+        {
+          "label": "Mygtuko „Rodyti sprendimą“ tekstas",
+          "default": "Rodyti sprendimą"
+        },
+        {
+          "label": "Title for \"Up\" button",
+          "default": "Up"
+        },
+        {
+          "label": "Title for \"Down\" button",
+          "default": "Down"
+        },
+        {
+          "label": "Title for button that is disabled",
+          "default": "Disabled"
+        }
+      ]
+    },
+    {
+      "label": "Skaitymo garsiakalbis",
+      "fields": [
+        {
+          "label": "Mygtuko „Tikrinti“ pagalbinės technologijos aprašymas",
+          "default": "Check the answers. The responses will be marked as correct or incorrect."
+        },
+        {
+          "label": "Mygtuko „Rodyti sprendimą“ pagalbinės technologijos aprašymas",
+          "default": "Show the solution. The correct solution will be displayed."
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry the task. Reset all elements and start the task over again."
+        },
+        {
+          "label": "Your result",
+          "description": "@score will be replaced by the number of points. @total will be replaced by the maximum possible points.",
+          "default": "You got @score out of @total points"
+        },
+        {
+          "label": "List description",
+          "default": "Sortable list of paragraphs."
+        },
+        {
+          "label": "List description (check answer)",
+          "default": "List of paragraphs with results."
+        },
+        {
+          "label": "List description (show solution)",
+          "default": "List of paragraphs with solutions."
+        },
+        {
+          "label": "Paragraph",
+          "default": "Paragraph"
+        },
+        {
+          "label": "Correct",
+          "default": "correct"
+        },
+        {
+          "label": "Wrong",
+          "default": "wrong"
+        },
+        {
+          "description": "@score will be replaced by 1 or -1.",
+          "label": "Score explanation",
+          "default": "@score point"
+        },
+        {
+          "description": "@current will be replaced by the current paragraph number. @total will be replaced by the number of paragraphs.",
+          "label": "Paragraph numbering",
+          "default": "@current of @total"
+        },
+        {
+          "description": "Will be followed by \"Paragraph numbering\".",
+          "label": "Current position in list",
+          "default": "Current position in list"
+        },
+        {
+          "label": "Instruction when paragraph selected",
+          "default": "Press spacebar to reorder"
+        },
+        {
+          "label": "Instruction when paragraph grabbed",
+          "default": "Press up and down arrow keys to change position, spacebar to drop, escape to cancel"
+        },
+        {
+          "label": "Grabbed",
+          "default": "Grabbed"
+        },
+        {
+          "label": "Moved",
+          "default": "Moved"
+        },
+        {
+          "label": "Dropped",
+          "default": "Dropped"
+        },
+        {
+          "label": "Reorder cancelled",
+          "default": "Reorder cancelled"
+        },
+        {
+          "description": "Will be followed by \"Paragraph numbering\".",
+          "label": "Final position",
+          "default": "Final position"
+        },
+        {
+          "description": "Will be followed by \"correct\" or \"wrong\".",
+          "label": "Next paragraph",
+          "default": "Next paragraph"
+        },
+        {
+          "description": "Will be followed by \"Paragraph numbering\".",
+          "label": "Correct Paragraph",
+          "default": "Correct paragraph at position"
+        }
+      ]
+    }
+  ]
+}

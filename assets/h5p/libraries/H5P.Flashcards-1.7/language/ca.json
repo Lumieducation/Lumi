@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Descripció de la tasca"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Opció predeterminada"
+        }
+      ],
+      "label": "Targetes",
+      "entity": "fitxa",
+      "field": {
+        "label": "Fitxa",
+        "fields": [
+          {
+            "label": "Pregunta",
+            "description": "Pregunta textual opcional per a la targeta. (La targeta pot incloure només una imatge, només text o una combinació d’imatge i text.)"
+          },
+          {
+            "label": "Resposta",
+            "description": "Resposta (solució) per a la targeta. Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "Imatge",
+            "description": "Imatge opcional de la fitxa. (La fitxa pot utilitzar només una imatge, només un text o ambdues)"
+          },
+          {
+            "label": "Text alternatiu per a la imatge"
+          },
+          {
+            "label": "Pista",
+            "fields": [
+              {
+                "label": "Text del consell"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Text del progrés",
+      "default": "Fitxa @card de @total",
+      "description": "Text de progrés, variables disponibles: @card i @total. Exemple: \"Targeta @card de @total\""
+    },
+    {
+      "label": "Text del botó següent",
+      "default": "Següent"
+    },
+    {
+      "label": "Text del botó anterior",
+      "default": "Anterior"
+    },
+    {
+      "label": "Text del botó \"Comprova les respostes\"",
+      "default": "Verifica"
+    },
+    {
+      "label": "Requereix l’entrada de dades per part de l’usuari abans que es pugui visualitzar la solució"
+    },
+    {
+      "label": "Text per al camp d’entrada de la resposta",
+      "default": "La teva resposta"
+    },
+    {
+      "label": "Text per a resposta correcta",
+      "default": "Correcte"
+    },
+    {
+      "label": "Text per a resposta incorrecta",
+      "default": "Incorrecte"
+    },
+    {
+      "label": "Mostra el text de la solució",
+      "default": "Resposta correcta"
+    },
+    {
+      "label": "Text per al títol de resultats",
+      "default": "Resultats"
+    },
+    {
+      "label": "Text per al nombre de respostes correctes",
+      "default": "@score de @total correcte",
+      "description": "Text de resultats, variables disponibles: @score i @total. Exemple: \"Correctes: @score\" de \"@total\""
+    },
+    {
+      "label": "Text per mostrar els resultats",
+      "default": "Mostra els resultats"
+    },
+    {
+      "label": "Text per a l’etiqueta de resposta curta",
+      "default": "A:"
+    },
+    {
+      "label": "Text del botó \"Torna-ho a provar\"",
+      "default": "Torna-ho a provar"
+    },
+    {
+      "label": "Distingeix entre majúscules i minúscules",
+      "description": "Comprova que l’entrada de text de l’usuari sigui exactament igual que la resposta."
+    },
+    {
+      "label": "Text incorrecte per a les tecnologies d’assistència",
+      "default": "Resposta incorrecta. La resposta correcta es @answer",
+      "description": "Text que s’anunciarà a les tecnologies d’assistència. S’utilitza @answer com a variable."
+    },
+    {
+      "label": "Correct feedback text for assistive technologies",
+      "default": "@answer is correct.",
+      "description": "Text that will be announced to assistive technologies when a card is answered correctly. Use @answer as variable."
+    },
+    {
+      "label": "Canvi de targeta per a les tecnologies d’assistència",
+      "default": "Pàgina @current de @total",
+      "description": "Text que s’anunciarà a les tecnologies d’assistència en navegar per les targetes. S’utilitza @current i @total com a variables."
+    },
+    {
+      "label": "Randomize cards",
+      "description": "Enable to randomize the order of cards on display."
+    }
+  ]
+}

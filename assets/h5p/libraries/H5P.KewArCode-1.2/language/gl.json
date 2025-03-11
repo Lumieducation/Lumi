@@ -1,0 +1,512 @@
+{
+  "semantics": [
+    {
+      "label": "Texto de introdución",
+      "description": "Este texto pódese presentar opcionalmente xunto co teu código."
+    },
+    {
+      "label": "Tipo de código",
+      "description": "Selecciona o tipo de código que queres xerar",
+      "options": [
+        {
+          "label": "Contacto"
+        },
+        {
+          "label": "Evento"
+        },
+        {
+          "label": "Enderezo de Email"
+        },
+        {
+          "label": "H5P"
+        },
+        {
+          "label": "Lugar"
+        },
+        {
+          "label": "Número de teléfono"
+        },
+        {
+          "label": "SMS"
+        },
+        {
+          "label": "Texto"
+        },
+        {
+          "label": "URL"
+        }
+      ]
+    },
+    {
+      "label": "Contacto",
+      "fields": [
+        {
+          "label": "Nome",
+          "placeholder": "Pepe López"
+        },
+        {
+          "label": "Organización",
+          "placeholder": "Clube de fans do H5P"
+        },
+        {
+          "label": "Título",
+          "placeholder": "Xefe de nada"
+        },
+        {
+          "label": "Número de teléfono",
+          "description": "Número de teléfono (por favor, usa o formato +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        },
+        {
+          "label": "Enderezo de email",
+          "description": "Enderezo de email ao que escribir a mensaxe",
+          "placeholder": "john@fictional-h5p-fan-club.org"
+        },
+        {
+          "label": "Enderezo",
+          "fields": [
+            {
+              "label": "Enderezo estendido",
+              "description": "información c/o, etc.",
+              "placeholder": "c/o Clube de fans do H5P"
+            },
+            {
+              "label": "Rúa",
+              "description": "Rúa incluíndo o número",
+              "placeholder": "Vilar 15"
+            },
+            {
+              "label": "Localidade",
+              "description": "Nome da cidade,, etc.",
+              "placeholder": "Santiago"
+            },
+            {
+              "label": "Rexión",
+              "description": "Estado, país, etc.",
+              "placeholder": "Galicia"
+            },
+            {
+              "label": "Código postal",
+              "description": "Código postal",
+              "placeholder": "12345"
+            },
+            {
+              "label": "País",
+              "description": "País",
+              "placeholder": "España"
+            }
+          ]
+        },
+        {
+          "label": "Sitio web",
+          "description": "Sitio web ao que enlazar (debe empezar con https:// ou http://)",
+          "placeholder": "https://clube_de_fans_do_H5P.org"
+        },
+        {
+          "label": "Nota",
+          "description": "Nota",
+          "placeholder": "Pepe sempre usa H5P."
+        }
+      ]
+    },
+    {
+      "label": "Evento",
+      "fields": [
+        {
+          "label": "Título",
+          "description": "Título para o evento do calendario",
+          "placeholder": "Conferencia H5P 2021"
+        },
+        {
+          "label": "Evento de día completo",
+          "description": "Comproba se o evento será válido durante todo o día"
+        },
+        {
+          "label": "Data de inicio",
+          "description": "Data de inicio do evento (por favor, usa o formato aaaa/mm/dd)",
+          "placeholder": "2021/05/18"
+        },
+        {
+          "label": "Hora de inicio",
+          "description": "Hora de inicio do evento (por favor, usa o formato hh:mm)",
+          "placeholder": "09:00"
+        },
+        {
+          "label": "Data de fin",
+          "description": "Data de fin do evento (por favor, usa o formato aaaa/mm/dd)",
+          "placeholder": "20/05/2020"
+        },
+        {
+          "label": "Hora de fin",
+          "description": "Hora de fin do evento (por favor, usa o formato hh:mm)",
+          "placeholder": "16:00"
+        },
+        {
+          "label": "Zona Horaria",
+          "description": "Selecciona a zona horaria na que ocorre o evento",
+          "options": [
+            {
+              "label": "UTC-12:00"
+            },
+            {
+              "label": "UTC-11:00"
+            },
+            {
+              "label": "UTC-10:00"
+            },
+            {
+              "label": "UTC-9:30"
+            },
+            {
+              "label": "UTC-9:00"
+            },
+            {
+              "label": "UTC-8:00"
+            },
+            {
+              "label": "UTC-7:00"
+            },
+            {
+              "label": "UTC-6:00"
+            },
+            {
+              "label": "UTC-5:00"
+            },
+            {
+              "label": "UTC-4:00"
+            },
+            {
+              "label": "UTC-3:30"
+            },
+            {
+              "label": "UTC-3:00"
+            },
+            {
+              "label": "UTC-2:00"
+            },
+            {
+              "label": "UTC-1:00"
+            },
+            {
+              "label": "UTC"
+            },
+            {
+              "label": "UTC+1:00"
+            },
+            {
+              "label": "UTC+2:00"
+            },
+            {
+              "label": "UTC+3:00"
+            },
+            {
+              "label": "UTC+3:30"
+            },
+            {
+              "label": "UTC+4:00"
+            },
+            {
+              "label": "UTC+4:30"
+            },
+            {
+              "label": "UTC+5:00"
+            },
+            {
+              "label": "UTC+5:30"
+            },
+            {
+              "label": "UTC+5:45"
+            },
+            {
+              "label": "UTC+6:00"
+            },
+            {
+              "label": "UTC+6:30"
+            },
+            {
+              "label": "UTC+7:00"
+            },
+            {
+              "label": "UTC+8:00"
+            },
+            {
+              "label": "UTC+9:00"
+            },
+            {
+              "label": "UTC+9:30"
+            },
+            {
+              "label": "UTC+10:00"
+            },
+            {
+              "label": "UTC+10:30"
+            },
+            {
+              "label": "UTC+11:00"
+            },
+            {
+              "label": "UTC+12:00"
+            },
+            {
+              "label": "UTC+12:45"
+            },
+            {
+              "label": "UTC+13:00"
+            },
+            {
+              "label": "UTC+14:00"
+            }
+          ]
+        },
+        {
+          "label": "Horario de aforro de enerxía",
+          "description": "Comproba se a zona na que ocorre o evento usa o horario de aforro de enerxía"
+        },
+        {
+          "label": "Lugar",
+          "description": "Nome do lugar",
+          "placeholder": "Santiago, Galicia"
+        },
+        {
+          "label": "Descrición",
+          "description": "Engade unha descrición para o evento",
+          "placeholder": "Conferencia H5P"
+        }
+      ]
+    },
+    {
+      "label": "Enderezo de email",
+      "fields": [
+        {
+          "label": "Enderezo de email",
+          "description": "Enderezo de email ao que escribimos",
+          "placeholder": "john@h5p-fan-club-ficticio.org"
+        }
+      ]
+    },
+    {
+      "label": "Contido H5P",
+      "fields": [
+        {
+          "label": "Contido H5P",
+          "description": "Contido H5P amosado"
+        }
+      ]
+    },
+    {
+      "label": "Localización",
+      "fields": [
+        {
+          "label": "Latitude",
+          "description": "Latitude (por favor, usa o formato 53.864462)",
+          "placeholder": "69.646007"
+        },
+        {
+          "label": "Lonxitude",
+          "description": "Lonxitude (por favor, usa o formato 10.663792)",
+          "placeholder": "18,954036"
+        }
+      ]
+    },
+    {
+      "label": "Número de teléfono",
+      "fields": [
+        {
+          "label": "Número de telono",
+          "description": "Teléfono ao que chamar (por favor, usa o formato +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        }
+      ]
+    },
+    {
+      "label": "SMS",
+      "fields": [
+        {
+          "label": "Número de teléfono",
+          "description": "Número de teléfono ao que enviar (por favor, usa o formato +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        },
+        {
+          "label": "Mensaxe",
+          "description": "Mensaxe a enviar",
+          "placeholder": "Non esquezas o pan!"
+        }
+      ]
+    },
+    {
+      "label": "Texto",
+      "fields": [
+        {
+          "label": "Texto",
+          "description": "Texto para codificar",
+          "placeholder": "Lembra o \n* leite\n* e o pan"
+        }
+      ]
+    },
+    {
+      "label": "URL",
+      "fields": [
+        {
+          "label": "URL",
+          "description": "URL á que enlazar (debe empezar con https:// ou http://)",
+          "placeholder": "https://h5p-fan-club-ficticio.org"
+        }
+      ]
+    },
+    {
+      "label": "Configuración do comportamento",
+      "description": "Estas opcións permítenche controlar o comportamento da tarefa.",
+      "fields": [
+        {
+          "label": "Color do código",
+          "default": "#000000"
+        },
+        {
+          "label": "Color do fondo",
+          "default": "#ffffff"
+        },
+        {
+          "label": "Tamaño máximo",
+          "description": "Tamaño máximo do código dado en notación CSS (píxeles por defecto se só se da un número)"
+        },
+        {
+          "label": "Aliñamento Horizontal",
+          "description": "Establece o aliñamento horizontal se hai un tamaño máximo configurado",
+          "options": [
+            {
+              "label": "esquerda"
+            },
+            {
+              "label": "centro"
+            },
+            {
+              "label": "dereita"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Interface de usuario",
+      "fields": [
+        {
+          "label": "Enderezo",
+          "default": "Enderezo"
+        },
+        {
+          "label": "Contacto",
+          "default": "Contacto"
+        },
+        {
+          "label": "País",
+          "default": "País"
+        },
+        {
+          "label": "Data do fin",
+          "default": "Data do fin"
+        },
+        {
+          "label": "Data de inicio",
+          "default": "Data de inicio"
+        },
+        {
+          "label": "Descrición",
+          "default": "Descrición"
+        },
+        {
+          "label": "Email",
+          "default": "Email"
+        },
+        {
+          "label": "Evento",
+          "default": "Evento"
+        },
+        {
+          "label": "Enderezo estendido",
+          "default": "Enderezo estendido"
+        },
+        {
+          "label": "Latitud",
+          "default": "Latitud"
+        },
+        {
+          "label": "Localidade",
+          "default": "Localidade"
+        },
+        {
+          "label": "Lugar",
+          "default": "Lugar"
+        },
+        {
+          "label": "Lonxitude",
+          "default": "Lonxitude"
+        },
+        {
+          "label": "Mensaxe",
+          "default": "Mensaxe"
+        },
+        {
+          "label": "Nome",
+          "default": "Nome"
+        },
+        {
+          "label": "Nota",
+          "default": "Nota"
+        },
+        {
+          "label": "Organización",
+          "default": "Organización"
+        },
+        {
+          "label": "Teléfono",
+          "default": "Teléfono"
+        },
+        {
+          "label": "Rexión",
+          "default": "Rexión"
+        },
+        {
+          "label": "SMS",
+          "default": "SMS"
+        },
+        {
+          "label": "Rúa",
+          "default": "Rúa"
+        },
+        {
+          "label": "Texto",
+          "default": "Texto"
+        },
+        {
+          "label": "Título",
+          "default": "Título"
+        },
+        {
+          "label": "URL",
+          "default": "URL"
+        },
+        {
+          "label": "Código postal",
+          "default": "Código postal"
+        }
+      ]
+    },
+    {
+      "label": "Lector de pantalla",
+      "fields": [
+        {
+          "label": "Código QR. Amosar información (Texto para lectores de pantalla)",
+          "default": "Código QR. Amosar información."
+        },
+        {
+          "label": "Agachar información (Texto para lectores de pantalla)",
+          "default": "Agachar información."
+        },
+        {
+          "label": "Contido do código (Texto para lectores de pantalla)",
+          "default": ". Contido do código"
+        }
+      ]
+    }
+  ]
+}

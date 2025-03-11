@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Destinacija",
+      "fields": [
+        {
+          "label": "Tip",
+          "options": [
+            {
+              "label": "Kod vremena"
+            },
+            {
+              "label": "Druga stranica (URL)"
+            }
+          ]
+        },
+        {
+          "label": "Idi na",
+          "description": "Ciljano vrijeme koje želi korinik će biti uzeto pritiskom na hotspot.Unesite kod vremena u formatu M:SS."
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "Protokol",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(u odnosu na korijen)"
+                },
+                {
+                  "label": "ostali"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Vizualna svojstva",
+      "fields": [
+        {
+          "label": "Forma",
+          "options": [
+            {
+              "label": "Pravougaoni"
+            },
+            {
+              "label": "Okrugli"
+            },
+            {
+              "label": "Rounded Rectangle"
+            }
+          ]
+        },
+        {
+          "label": "Boja pozadine za hotpost"
+        },
+        {
+          "label": "Koristi kursor"
+        },
+        {
+          "label": "Dodati efekat blinkanja",
+          "description": "Napomena: Efekat blinkanja je uvijek omogućen u editoru kako bi bili u stanju naći transparentne hotspots."
+        }
+      ]
+    },
+    {
+      "label": "Tekstovi",
+      "fields": [
+        {
+          "label": "Alternative Text",
+          "description": "Describe the subject the hotspot covers. Used for readspeakers",
+          "placeholder": "An apple on a table"
+        },
+        {
+          "label": "Hotspot Label"
+        },
+        {
+          "label": "Show label"
+        },
+        {
+          "label": "Label color"
+        }
+      ]
+    }
+  ]
+}

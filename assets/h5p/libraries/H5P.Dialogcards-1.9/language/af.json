@@ -1,0 +1,219 @@
+{
+  "semantics": [
+    {
+      "label": "Opskrif"
+    },
+    {
+      "label": "Modus",
+      "description": "Modus van aanbieding van dialoogkaartjies",
+      "options": [
+        {
+          "label": "Normaal"
+        },
+        {
+          "label": "Herhaling"
+        }
+      ]
+    },
+    {
+      "label": "Taakomskrywing"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Verstek"
+        }
+      ],
+      "label": "Dialoë",
+      "entity": "dialoog",
+      "field": {
+        "label": "Vraag",
+        "fields": [
+          {
+            "label": "Teks",
+            "description": "Wenk vir die eerste deel van die dialoog"
+          },
+          {
+            "label": "Antwoord",
+            "description": "Wenk vir die tweede deel van die dialoog"
+          },
+          {
+            "label": "Beeld",
+            "description": "Moontlike kaartjieprent (Die kaartjie kan 'n prent gebruik, of net teks of beide)"
+          },
+          {
+            "label": "Alternatiewe teks vir die prent"
+          },
+          {
+            "label": "Klankleêrs"
+          },
+          {
+            "label": "Wenke",
+            "fields": [
+              {
+                "label": "Tekswenk",
+                "description": "Wenk vir die eerste deel van die dialoog"
+              },
+              {
+                "label": "Wenk vir antwoord",
+                "description": "Wenk vir die tweede deel van die dialoog"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Instellings.",
+      "description": "Hierdie keuses laat jou toe om te stel hoe die taak reageer.",
+      "fields": [
+        {
+          "label": "Aktiveer \"Probeer weer\" knoppie"
+        },
+        {
+          "label": "Verbied agteruitnavigasie",
+          "description": "Hierdie keuse laat jou slegs toe om vorentoe te beweeg met die dialoogkaartjies"
+        },
+        {
+          "label": "Pas die grote van die teks aan om binne die kaartjie te pas",
+          "description": "Om nie hierdie opsie te merk nie, sal meebring dat die kaartjie sy grote aanpas by die grote van die teks"
+        },
+        {
+          "label": "Ewekansige orde",
+          "description": "Laat toe om ewekansige orde van kaartjies op vooraansig te kies."
+        },
+        {
+          "label": "Maksimum vaardigheidsvlak"
+        },
+        {
+          "label": "Laat spoedige vordering toe",
+          "description": "Indien geaktiveer, kan leerlinge te kenne gee dat hul 'n kaartjie ken sonder om dit om te draai"
+        }
+      ]
+    },
+    {
+      "label": "Teks vir die omdraaiknoppie",
+      "default": "Draai"
+    },
+    {
+      "label": "Teks vir die volgende knoppie",
+      "default": "Volgende"
+    },
+    {
+      "label": "Teks vir die vorige knoppie",
+      "default": "Vorige"
+    },
+    {
+      "label": "Teks vir die 'probeer weer' knoppie",
+      "default": "Probeer weer"
+    },
+    {
+      "label": "Teks vir die \"regte antwoord\" knoppie",
+      "default": "Ek het dit reggekry!"
+    },
+    {
+      "label": "Teks vir \"verkeerde antwoord\" knoppie",
+      "default": "Ek het dit verkeerd gekry"
+    },
+    {
+      "label": "Text vir die \"Ronde\" boodskap onder die kaarte en op die opsommingskerm",
+      "description": "@round sal vervang word met die getal van die huidige rondte",
+      "default": "Rondte @round"
+    },
+    {
+      "label": "Teks vir \"Kaartjies oor\" boodskap",
+      "description": "@number sal vervang word met die aantal kaartjies oor vir hierdie rondte",
+      "default": "Kaartjies oor: @number"
+    },
+    {
+      "label": "Teks vir die \"volgende rondte\" knoppie",
+      "description": "@round sal vervang word met rondtenommer",
+      "default": "Gaan voort na rondte @round"
+    },
+    {
+      "label": "Teks vir die \"Begin weer\" knoppie",
+      "default": "Begin weer"
+    },
+    {
+      "label": "Text vir die \"wys opsomming\" knoppie",
+      "default": "Volgende"
+    },
+    {
+      "label": "Titelteks vir die opsommingbladsy",
+      "default": "Opsomming"
+    },
+    {
+      "label": "Teks vir \"Kaartjies wat jy reggekry het:\"",
+      "default": "Kaartjies wat jy reggekry het:"
+    },
+    {
+      "label": "Teks vir \"Kaartjies wat jy verkeerd gekry het:\"",
+      "default": "Kaartjies wat jy verkeerd gekry het:"
+    },
+    {
+      "label": "Teks vir \"Kaartjies wat nie vertoon het nie:\"",
+      "default": "Kaartjies in poel wat nie vertoon nie:"
+    },
+    {
+      "label": "Teks vir \"Algehele Telling\"",
+      "default": "Algehele Telling"
+    },
+    {
+      "label": "Teks vir \"Kaartjies voltooi\"",
+      "default": "Kaartjies wat jy volledig ken:"
+    },
+    {
+      "label": "Teks vir \"Voltooide rondtes:\"",
+      "default": "Voltooide rondtes:"
+    },
+    {
+      "label": "Boodskap wanneer alle kaartjies bemeester is",
+      "description": "@cards sal vervang word met die aantal kaartjies in die poel. @max sal vervang word met die maksimum vaardigheidsvlak.",
+      "default": "Geluk! Jy het @cards kaartjies @max keer in 'n ry reggekry!"
+    },
+    {
+      "label": "Vorderingteks",
+      "description": "Beskikbare veranderlike is @card en @total.",
+      "default": "Kaartjie @card van @total"
+    },
+    {
+      "label": "Etiket vir kaartjieteks",
+      "description": "Gebruik vir toeganklikheid vir hulptegnologieë",
+      "default": "Kaartjie voorkant"
+    },
+    {
+      "label": "Etiket vir kaartjie agterkant",
+      "description": "Gebruik vir toeganklikheid vir hulptegnologieë",
+      "default": "Kaartjie agterkant"
+    },
+    {
+      "label": "Etiket vir die wys wenk knopppie",
+      "default": "Wys wenk"
+    },
+    {
+      "label": "Klank nie ondersteun nie boodskap",
+      "default": "Jou blaaier ondersteun nie hierdie klank nie"
+    },
+    {
+      "label": "Bevestig dat dialoog oor begin",
+      "fields": [
+        {
+          "label": "Hoofopskrifteks",
+          "default": "Begin weer?"
+        },
+        {
+          "label": "Lyfteks",
+          "default": "Alle vordering sal verloor word. Is jy seker jy wil oor begin?"
+        },
+        {
+          "label": "Kanselleer knoppie etiket",
+          "default": "Kanselleer"
+        },
+        {
+          "label": "Bevestig knoppie etiket",
+          "default": "Begin oor"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Descripción de la tarea"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
+      "label": "Cartas",
+      "entity": "carta",
+      "field": {
+        "label": "Carta",
+        "fields": [
+          {
+            "label": "Pregunta",
+            "description": "Pregunta opcional de texto para la carta. (La carta puede usar sólo una imagen, sólo un texto o ambos)"
+          },
+          {
+            "label": "Respuesta",
+            "description": "Respuesta (solución) para la carta. Use un símbolo de barra / para dividir soluciones alternas. Use \\/ si una solución debería de contener una /."
+          },
+          {
+            "label": "Imagen",
+            "description": "Imagen opcional para la carta. (La carta puede usar sólo una imagen, sólo un texto o ambos)"
+          },
+          {
+            "label": "Texto alternativo para la imagen"
+          },
+          {
+            "label": "Pista",
+            "fields": [
+              {
+                "label": "Texto de pista"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Texto de Progreso",
+      "default": "Carta @card de @total",
+      "description": "Texto de Progreso, variables disponibles: @card y @total. Ejemplo: 'Carta @card de @total'"
+    },
+    {
+      "label": "Texto para el botón Siguiente",
+      "default": "Siguiente"
+    },
+    {
+      "label": "Texto para el botón Anterior",
+      "default": "Anterior"
+    },
+    {
+      "label": "Texto para el botón Revisar respuestas",
+      "default": "Comprobar"
+    },
+    {
+      "label": "Requerir entrada del usuario antes de poder ver la solución"
+    },
+    {
+      "label": "Texto para el campo de ingreso de respuesta",
+      "default": "Tu respuesta"
+    },
+    {
+      "label": "Texto para respuesta correcta",
+      "default": "Correcta"
+    },
+    {
+      "label": "Texto para respuesta incorrecta",
+      "default": "Incorrecta"
+    },
+    {
+      "label": "Mostrar texto de solución",
+      "default": "Respuesta(s) correcta(s)"
+    },
+    {
+      "label": "Texto de título para resultados",
+      "default": "Resultados"
+    },
+    {
+      "label": "Texto para número de aciertos",
+      "default": "@score de @total correctos",
+      "description": "Texto de resultados, variables disponibles: @score y @total. Ejemplo: '@score de @total correctos'"
+    },
+    {
+      "label": "Texto para mostrar resultados",
+      "default": "Mostrar resultados"
+    },
+    {
+      "label": "Texto para etiqueta de respuesta corta",
+      "default": "A:"
+    },
+    {
+      "label": "Texto para botón \"intentar de nuevo\"",
+      "default": "Intentar de nuevo"
+    },
+    {
+      "label": "Diferenciar entre MAYÚSCULAS/minúsculas",
+      "description": "Se asegura de que la entrada del usuario tenga que ser exactamente la misma que la respuesta."
+    },
+    {
+      "label": "Texto de respuesta incorrecta para tecnologías de asistencia",
+      "default": "Respuesta incorrecta. La respuesta correcta era @answer",
+      "description": "Texto anunciado a las tecnologías de asistencia. Usa @answer como variable."
+    },
+    {
+      "label": "Texto de retroalimentación para correcto para tecnologías de asistencia",
+      "default": "@answer es correcta.",
+      "description": "Texto anunciado a las tecnologías de asistencia cuando se contesta una tarjeta correctamente. Usa @answer como variable."
+    },
+    {
+      "label": "Cambio de tarjeta para tecnologías de asistencia",
+      "default": "Página @current de @total",
+      "description": "Texto anunciado a las tecnologías de asistencia al navegar entre cartas. Usa @current y @total como variables."
+    },
+    {
+      "label": "Barajar cartas",
+      "description": "Habilitar para barajar el orden de preguntas mostradas."
+    }
+  ]
+}

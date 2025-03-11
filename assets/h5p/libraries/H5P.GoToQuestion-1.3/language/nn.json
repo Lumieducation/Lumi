@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Question Text",
+      "description": "The question that the user will make a choice based upon."
+    },
+    {
+      "label": "Choices",
+      "entity": "choice",
+      "field": {
+        "fields": [
+          {
+            "label": "Choice Text",
+            "description": "The label that will displayed on the choice button."
+          },
+          {
+            "label": "Go To",
+            "description": "The target time the user will be taken to upon pressing the choice button. Enter timecode in the format M:SS."
+          },
+          {
+            "label": "If Chosen Text",
+            "description": "An optional confirmation text that will be displayed after the user has pressed the choice button."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Continue Button Label",
+      "default": "Hald fram"
+    }
+  ]
+}

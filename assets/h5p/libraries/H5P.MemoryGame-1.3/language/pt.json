@@ -1,0 +1,138 @@
+{
+  "semantics": [
+    {
+      "widgets": [
+        {
+          "label": "Padrão"
+        }
+      ],
+      "label": "Cartões",
+      "entity": "cartão",
+      "field": {
+        "label": "Cartão",
+        "fields": [
+          {
+            "label": "Imagem"
+          },
+          {
+            "label": "Texto alternativo para Imagem",
+            "description": "Descreva o que pode ser visto na foto. O texto será lido para os utilizadores com deficiência visual."
+          },
+          {
+            "label": "Faixa de áudio",
+            "description": "Um som opcional que toca quando o cartão é virado."
+          },
+          {
+            "label": "Imagem correspondente",
+            "description": "Uma imagem opcional para ser combinada em vez de utilizar dois cartões com a mesma imagem."
+          },
+          {
+            "label": "Texto alternativo para a Imagem correspondente",
+            "description": "Descreva o que pode ser visto na foto. O texto será lido para os utilizadores com deficiência visual."
+          },
+          {
+            "label": "Faixa de áudio correspondente",
+            "description": "Um som opcional que toca quando o cartão é virado."
+          },
+          {
+            "label": "Descrição",
+            "description": "Um texto curto opcional que aparecerá quando dois cartões corresponderem corretamente."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Configurações gerais",
+      "description": "Estas opções permitirão que controle como o jogo funciona.",
+      "fields": [
+        {
+          "label": "Posicionar os cartões num quadrado",
+          "description": "Tentará coincidir o número de linhas e colunas quando distribuir os cartões. Depois, os cartões serão dimensionados para preencher o espaço."
+        },
+        {
+          "label": "Número de cartões a utilizar",
+          "description": "Definir um número maior do que 2 fará com que o jogo escolha aleatoriamente os cartões da lista de cartões."
+        },
+        {
+          "label": "Adicionar botão para tentar novamente quando o jogo acabar"
+        }
+      ]
+    },
+    {
+      "label": "Aparência e percepção",
+      "description": "Controla o aspeto visual do jogo.",
+      "fields": [
+        {
+          "label": "Cor do tema",
+          "description": "Escolha uma cor para criar um tema para o seu jogo."
+        },
+        {
+          "label": "Verso do cartão",
+          "description": "Usar um verso personalizado para os seus cartões."
+        }
+      ]
+    },
+    {
+      "label": "Localização",
+      "fields": [
+        {
+          "label": "Texto de virar cartão",
+          "default": "Virar cartão"
+        },
+        {
+          "label": "Texto para tempo gasto",
+          "default": "Tempo gasto"
+        },
+        {
+          "label": "Texto do feedback",
+          "default": "Bom trabalho!"
+        },
+        {
+          "label": "Texto do botão Tentar novamente",
+          "default": "Tentar novamente?"
+        },
+        {
+          "label": "Rótulo do botão Fechar",
+          "default": "Fechar"
+        },
+        {
+          "label": "Rótulo do jogo",
+          "default": "Jogo de memória. Forme pares de cartões."
+        },
+        {
+          "label": "Game instructions",
+          "default": "Use arrow keys left and right to navigate cards. Use space or enter key to turn card."
+        },
+        {
+          "label": "Rótulo de Fim de jogo",
+          "default": "Todas os cartões foram encontrados."
+        },
+        {
+          "label": "Rótulo de Indexação de cartões",
+          "description": "%num and %total are placeholders and will be replaced with the respective values for the card.",
+          "default": "Cartão %num de %total:"
+        },
+        {
+          "label": "Rótulo de Cartão não virado",
+          "default": "Não virado. Click to turn."
+        },
+        {
+          "label": "Card turned label",
+          "default": "Turned."
+        },
+        {
+          "label": "Rótulo de Combinação",
+          "default": "Combinação encontrada."
+        },
+        {
+          "label": "Card matched announcement",
+          "default": "Your cards match!"
+        },
+        {
+          "label": "Card not matched announcement",
+          "default": "Your chosen cards do not match. Turn other cards to try again."
+        }
+      ]
+    }
+  ]
+}

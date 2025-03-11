@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Tipo de gráfico",
+      "options": [
+        {
+          "label": "Gráfico de Pizza"
+        },
+        {
+          "label": "Gráfico de Barras"
+        }
+      ]
+    },
+    {
+      "label": "Dados",
+      "entity": "opção",
+      "field": {
+        "label": "Dados",
+        "fields": [
+          {
+            "label": "Nome"
+          },
+          {
+            "label": "Valor"
+          },
+          {
+            "label": "Cor"
+          },
+          {
+            "label": "Cor da fonte"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Texto lido por leitores de tela definindo a figura como um gráfico.",
+      "default": "Gráfico"
+    }
+  ]
+}

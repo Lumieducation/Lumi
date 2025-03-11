@@ -1,0 +1,156 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Goiburua",
+          "description": "Informazio-arbelerako aukerazko goiburua."
+        },
+        {
+          "label": "Ezaugarriak",
+          "fields": [
+            {
+              "label": "Ezaugarriak",
+              "description": "Sarrerentzako ezaugarriak",
+              "entity": "ezaugarria",
+              "widgets": [
+                {
+                  "label": "Lehenetsitakoa"
+                }
+              ],
+              "field": {
+                "label": "Ezaugarrien elementuak",
+                "fields": [
+                  {
+                    "label": "Etiketa",
+                    "default": "Izenik gabe"
+                  },
+                  {
+                    "label": "Erakutsi ezaugarrien etiketa"
+                  },
+                  {
+                    "label": "Gaitu ezaugarrian bilatzea"
+                  },
+                  {
+                    "label": "Estiloen baliogabetzea",
+                    "fields": [
+                      {
+                        "label": "Lodia"
+                      },
+                      {
+                        "label": "Etzana"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {}
+          ]
+        },
+        {
+          "label": "Panelak",
+          "description": "Arbelerako panelak",
+          "entity": "panela",
+          "widgets": [
+            {
+              "label": "Lehenetsitakoa"
+            }
+          ],
+          "field": {
+            "label": "Sarrera-elementuak",
+            "fields": [
+              {
+                "label": "Panelaren izenburua"
+              },
+              {
+                "label": "Irudia"
+              },
+              {
+                "label": "Sarrerak",
+                "description": "Ezaugarrientzako sarrerak",
+                "entity": "balioa",
+                "widgets": [
+                  {
+                    "label": "Lehenetsitakoa"
+                  }
+                ],
+                "field": {
+                  "label": "Etiketa automatikoki aldatuko da"
+                }
+              },
+              {
+                "label": "Additional keywords",
+                "description": "Add additional keywords separated by a blank space that will be used for filtering but not be visible to the user."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Portaeraren ezarpenak",
+          "description": "Aukera hauek atazaren portaera kontrolatzea ahalbidetzen dizute.",
+          "fields": [
+            {
+              "label": "Erabili B plana falta diren irudietan"
+            },
+            {
+              "label": "Irudia"
+            },
+            {
+              "label": "Irudiaren zabalera",
+              "description": "Irudiaren zabalera pixeletan."
+            },
+            {
+              "label": "Irudiaren zabalera",
+              "description": "Irudiaren altuera pixeletan."
+            },
+            {
+              "label": "Panelaren ordezko atzeko planoa",
+              "description": "Markatuz gero, bigarren panel bakoitzak besteak baino atzeko plano apur bat ilunagoa izango du."
+            },
+            {
+              "label": "Eskaini eremu-iragazkia",
+              "description": "Markatuz gero, erabiltzaileek arbeleko informazioa iragazi ahalko dute."
+            },
+            {
+              "label": "Mode for filter field",
+              "description": "Choose whether the filter should narrow down or broaden the search with every new keyword.",
+              "options": [
+                {
+                  "label": "Narrow down"
+                },
+                {
+                  "label": "Broaden"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Erabiltzaile-interfazea",
+          "fields": [
+            {
+              "label": "Ez da edukirik gehitu",
+              "default": "Egileak ez du ezer gehitu."
+            },
+            {
+              "label": "Ez da aurkitu bat datorren emaitzarik",
+              "description": "@query idatzitako kontsultarekin ordezkatuko den leku-marka da.",
+              "default": "Ez da aurkitu @query kontsultarekin bat datorren emaitzarik."
+            },
+            {
+              "label": "Sakatu Enter iragazteko",
+              "description": "Pantaila irakurleentzako mezua.",
+              "default": "Idatzi kontsulta bat sarrera esanguratsuak iragazteko."
+            },
+            {
+              "label": "Zerrenda aldatu da.",
+              "description": "Pantaila irakurleentzako mezua. @visible eta @total dagozkien balioekin ordezkatuko diren leku-markak dira.",
+              "default": "Zerrenda aldatu da. @total elementutik @visible erakusten ari dira."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

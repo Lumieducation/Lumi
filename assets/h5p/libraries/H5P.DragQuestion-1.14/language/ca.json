@@ -1,0 +1,271 @@
+{
+  "semantics": [
+    {
+      "label": "Botó \"Comprova la resposta\"",
+      "default": "Verifica"
+    },
+    {
+      "label": "Submit answer button",
+      "default": "Submit"
+    },
+    {
+      "label": "Botó \"Torna-ho a provar\"",
+      "default": "Torna-ho a provar"
+    },
+    {
+      "label": "Text de l’explicació de la puntuació",
+      "default": "Amb les respostes correctes se suma 1 punt. Amb les respostes incorrectes es resta 1 punt. La puntuació més baixa possible és 0."
+    },
+    {
+      "fields": [
+        {
+          "label": "Paràmetres",
+          "fields": [
+            {
+              "label": "Imatge de fons",
+              "description": "Opcional. Seleccioneu una imatge per utilitzar de fons a la tasca d’arrossegar i deixar anar."
+            },
+            {
+              "label": "Mida de la tasca",
+              "description": "Especifiqueu la mida (en píxels) que ha de tenir l’àrea de reproducció."
+            }
+          ]
+        },
+        {
+          "label": "Tasca",
+          "description": "Comenceu col·locant les zones on deixar anar.<br />A continuació, col·loqueu els elements que es poden deixar anar i marqueu les zones on deixar anar corresponents.<br />Per últim, torneu a editar la zones on deixar anar i marqueu les respostes correctes.",
+          "fields": [
+            {
+              "label": "Elements",
+              "entity": "element",
+              "field": {
+                "label": "Element",
+                "fields": [
+                  {
+                    "description": "Trieu el tipus de contingut que vulgueu afegir."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Seleccioneu les zones on deixar anar"
+                  },
+                  {
+                    "label": "Opacitat del fons",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Nombre infinit d’instàncies d’elements",
+                    "description": "Clona aquest element perquè es pugui arrossegar a diferents zones per deixar anar."
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Zones on deixar anar",
+              "entity": "Zona on deixar anar",
+              "field": {
+                "label": "Zona on deixar anar",
+                "fields": [
+                  {
+                    "label": "Etiqueta",
+                    "description": "The label is used by assistive technologies."
+                  },
+                  {
+                    "label": "Mostra l’etiqueta"
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Seleccioneu els elements correctes"
+                  },
+                  {
+                    "label": "Opacitat del fons",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Suggerències i informació de retorn",
+                    "fields": [
+                      {
+                        "label": "Text de la pista"
+                      },
+                      {
+                        "label": "Missatge mostrat en la coincidència correcta",
+                        "description": "Missatge que es mostrarà a sota de la tasca, en seleccionar \"Comprova\", si un element es deixar anar correctament."
+                      },
+                      {
+                        "label": "Missatge mostrat en una coincidència incorrecta",
+                        "description": "Missatge que es mostrarà a sota de la tasca, en seleccionar \"Comprova\", si un element es deixar anar incorrectament."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Aquesta zona on deixar anar només pot contenir un element",
+                    "description": "Comproveu que només hi ha una resposta correcta per a aquesta zona on deixar anar"
+                  },
+                  {
+                    "label": "Activa l’alineació automàtica",
+                    "description": "S’alinearan automàticament tots els elements que es puguin arrossegar i que s’hagin deixat en aquesta zona."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Suggeriment general",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Opció predeterminada"
+            }
+          ],
+          "label": "Defineix una valoració per cada rang de puntuació",
+          "description": "Feu clic al botó \"Afegeix un rang\" per afegir tants rangs com necessiteu. Exemple: 0-20 % per a puntuació baixa, 21-91 % per a puntuació mitjana, 91-100 % per a puntuació excel·lent",
+          "entity": "rang",
+          "field": {
+            "fields": [
+              {
+                "label": "Rang de puntuació"
+              },
+              {},
+              {
+                "label": "Retroacció per al rang de puntuació definit",
+                "placeholder": "Introduïu el suggeriment"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Opcions de comportament",
+      "description": "Aquestes opcions et permetran controlar com es comporta la tasca.",
+      "fields": [
+        {
+          "label": "Activa \"Torna-ho a provar\""
+        },
+        {
+          "label": "Activa el botó \"Comprova\""
+        },
+        {
+          "label": "Donar un punt per la tasca sencera",
+          "description": "Desactiva per donar un punt per a cada arrossegable que es col·loca correctament."
+        },
+        {
+          "label": "Aplica penalitzacions",
+          "description": "Apliqueu penalitzacions quan els elements es deixin anar en zones incorrectes. Aquesta opció ha d’estar activada quan els mateixos elements es poden deixar anar en diverses zones o si només hi ha una zona on deixar-los anar. Si l’opció no s’activa, els alumnes podran arrossegar tots elements a totes les zones on es pot deixar anar i sempre rebran la puntuació màxima."
+        },
+        {
+          "label": "Activa l’explicació de les puntuacions",
+          "description": "Quan l’usuari comprovi les seves respostes, mostreu una explicació de la puntuació (sempre que l’opció \"Aplica penalitzacions\" estigui seleccionada)."
+        },
+        {
+          "label": "Opacitat de fons per als elements que es poden arrossegar",
+          "description": "Si s’estableix aquest camp, se substituirà l’opacitat establerta en tots els elements que es poden arrossegar. Ha de ser un número entre 0 i 100, en què 0 significa \"transparència total\" i 100 significa \"sense transparència\""
+        },
+        {
+          "label": "Destacat de la zona on deixar anar",
+          "description": "Trieu quan voleu que es destaquin les zones on es pot deixar anar.",
+          "options": [
+            {
+              "label": "En arrossegar"
+            },
+            {
+              "label": "Sempre"
+            },
+            {
+              "label": "Mai"
+            }
+          ]
+        },
+        {
+          "label": "Espaiat per a l’alineació automàtica (en píxels)"
+        },
+        {
+          "label": "Activa la pantalla completa",
+          "description": "Marqueu aquesta opció per activar el botó de pantalla completa."
+        },
+        {
+          "label": "Mostra la puntuació",
+          "description": "Mostreu els punts obtinguts amb cada resposta. No està disponible quan l’opció \"Atorga un punt a la tasca sencera\" està activada."
+        },
+        {
+          "label": "Mostra el títol",
+          "description": "Desactiveu aquesta opció si no voleu que es mostri aquest títol. El títol només es mostrarà en resums, estadístiques, etc."
+        }
+      ]
+    },
+    {
+      "label": "Localitza",
+      "fields": [
+        {
+          "label": "Etiqueta de pantalla completa",
+          "default": "Pantalla completa"
+        },
+        {
+          "label": "Etiqueta de sortir de la pantalla completa",
+          "default": "Surt de la pantalla completa"
+        }
+      ]
+    },
+    {
+      "label": "Prefix dels elements que es poden agafar",
+      "default": "Se’n poden agafar {num} de {total}."
+    },
+    {
+      "label": "Sufix dels elements que es poden agafar",
+      "default": "Ubicat a la zona on deixar anar {num}."
+    },
+    {
+      "label": "Prefix de la zona on deixar anar",
+      "default": "Zona on deixar anar {num} de {total}."
+    },
+    {
+      "label": "Etiqueta per quan no hi ha cap zona on deixar anar seleccionada",
+      "default": "Cap zona on deixar anar."
+    },
+    {
+      "label": "Etiqueta del botó de mostra el consell",
+      "default": "Mostra el consell."
+    },
+    {
+      "label": "Etiqueta per quan hi ha una pista disponible",
+      "default": "Pista disponible"
+    },
+    {
+      "label": "Etiqueta per a la resposta correcta",
+      "default": "Resposta correcta"
+    },
+    {
+      "label": "Etiqueta per a la resposta incorrecta",
+      "default": "Resposta incorrecta"
+    },
+    {
+      "label": "Encapçalament per al tauler que conté retroacció per a les respostes correctes/incorrectes",
+      "default": "Retroacció"
+    },
+    {
+      "label": "Representació textual de la barra de puntuació pera als que utilitzen un altaveu de lectura",
+      "default": "Heu fet :num de :total punts"
+    },
+    {
+      "label": "Representació textual del botó de l’explicació de la puntuació",
+      "default": "Mostra l’explicació de la puntuació"
+    },
+    {
+      "label": "Etiqueta de la tecnologia d’assistència per al botó \"Comprova\"",
+      "default": "Comprova les respostes. Les respostes es marcaran com a correctes, incorrectes o sense resposta."
+    },
+    {
+      "label": "Etiqueta de la tecnologia d’assistència per a l’etiqueta \"Torna-ho a provar\"",
+      "default": "Intenta de nou la tasca. Reajusta totes les respostes i comença la tasca de nou."
+    }
+  ]
+}

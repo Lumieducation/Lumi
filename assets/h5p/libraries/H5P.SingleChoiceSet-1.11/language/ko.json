@@ -1,0 +1,155 @@
+{
+  "semantics": [
+    {
+      "label": "문제 목록",
+      "entity": "문제",
+      "widgets": [
+        {
+          "label": "기본설정"
+        },
+        {
+          "label": "문자"
+        }
+      ],
+      "field": {
+        "label": "문제와 선택지",
+        "fields": [
+          {
+            "label": "문제"
+          },
+          {
+            "label": "선택지 - 첫 선택지가 정답입니다.",
+            "entity": "정답",
+            "field": {
+              "label": "선택지"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "전체 피드백",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "기본 설정"
+            }
+          ],
+          "label": "점수 범위에 대한 사용자 피드백 정의",
+          "description": "\"범위 추가\" 버튼을 클릭하여 필요한 만큼 범위를 추가하십시오. 예: 0-20% 낮은 점수, 21-91% 평균 점수, 91-100% 높은 점수!",
+          "entity": "범위",
+          "field": {
+            "fields": [
+              {
+                "label": "점수 범위"
+              },
+              {},
+              {
+                "label": "정의된 점수 범위에 대한 피드백",
+                "placeholder": "피드백 작성"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "동작 설정",
+      "fields": [
+        {
+          "label": "자동으로 시작하기",
+          "description": "Automatically go to next question when alternative is selected. This needs to be turned off to make the content fully accessible when using a screen reader."
+        },
+        {
+          "label": "정답 시간 초과",
+          "description": "밀리초 단위의 값"
+        },
+        {
+          "label": "오답 시간 초과",
+          "description": "밀리초 단위의 값"
+        },
+        {
+          "label": "음향 효과 활성화"
+        },
+        {
+          "label": "재시도 버튼 활성화"
+        },
+        {
+          "label": "해답 보이기 버튼 활성화"
+        },
+        {
+          "label": "통과 백분율",
+          "description": "퀴즈 통과를 위해 필요한 총 점수 백분율"
+        }
+      ]
+    },
+    {
+      "label": "맞춤 설정",
+      "fields": [
+        {
+          "label": "\"다음\" 버튼 라벨",
+          "default": "다음 문제"
+        },
+        {
+          "label": "\"해답 보이기\" 버튼 라벨",
+          "default": "해답 보이기"
+        },
+        {
+          "label": "\"재시도\" 버튼 라벨",
+          "default": "재시도"
+        },
+        {
+          "label": "해답 보이기 부분의 제목",
+          "default": "해답 목록"
+        },
+        {
+          "label": "정답에 대한 읽어주기 스피커 텍스트",
+          "default": "정답!"
+        },
+        {
+          "label": "오답에 대한 읽어주기 스피커 텍스트",
+          "default": "오답!"
+        },
+        {
+          "label": "Option should have been selected",
+          "default": "Should have been selected"
+        },
+        {
+          "label": "Option should not have been selected",
+          "default": "Should not have been selected"
+        },
+        {
+          "label": "피드백 음향을 비활성화하기 위한 \"음소거\" 버튼 라벨",
+          "default": "피드백 음향 소거"
+        },
+        {
+          "label": "\"닫기\" 버튼 라벨",
+          "default": "닫기"
+        },
+        {
+          "label": "슬라이드 번호 텍스트",
+          "description": "현재 슬라이드와 총 슬라이스 개수를 알려줍니다. 변수는 :num 과 :total 입니다.",
+          "default": "슬라이드 총 :total 중:num"
+        },
+        {
+          "label": "자동 문장 읽어주기를 사용하는 사람들을 위한 점수 막대의 텍스트 표현",
+          "default": "총점 :total 중 :num 획득하였습니다"
+        },
+        {
+          "label": "해답 목록에서 문제 수에 대한 라벨",
+          "description": "해답 목록에서 현재 문제 인덱스를 알려줍니다. 변수는 :num 입니다.",
+          "default": "문제 :num"
+        },
+        {
+          "label": "\"Show Solution\" 버튼에 대한 보조 기술 설명",
+          "default": "해답 표시. 올바른 해답이 표기될 것입니다."
+        },
+        {
+          "label": "\"Retry\" 버튼에 대한 보조 기술 설명",
+          "default": "시도하세요. 모든 답변을 초기화하고 다시 시도하세요."
+        }
+      ]
+    }
+  ]
+}

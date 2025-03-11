@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Ievada teksts",
+      "default": "Izvēlieties pareizo apgalvojumu.",
+      "description": "Tiks parādīts virs kopsavilkuma uzdevuma."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Pēc noklusējuma"
+        },
+        {
+          "label": "Teksta"
+        }
+      ],
+      "label": "Kopsavilkums",
+      "entity": "apgalvojumi",
+      "field": {
+        "fields": [
+          {
+            "label": "Apgalvojumu saraksts kopsavilkumam – pirmais apgalvojums ir pareizs.",
+            "entity": "apgalvojums",
+            "field": {
+              "label": "Apgalvojums"
+            }
+          },
+          {
+            "label": "Padoms",
+            "fields": [
+              {
+                "label": "Padoma teksts"
+              }
+            ]
+          }
+        ],
+        "label": "Apgalvojumu kopa"
+      }
+    },
+    {
+      "label": "Kopējā atgriezeniskā saite",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Pēc noklusējuma"
+            }
+          ],
+          "label": "Iestatiet pielāgotu atgriezenisko saiti katram rezultātu diapazonam",
+          "entity": "diapazons",
+          "field": {
+            "fields": [
+              {
+                "label": "Rezultātu diapazons"
+              },
+              {},
+              {
+                "label": "Atgriezeniskā saite noteiktajam rezultātu diapazonam",
+                "placeholder": "Aizpildiet atgriezenisko saiti"
+              }
+            ]
+          },
+          "description": "Klikšķiniet pogu \"Pievienot diapazonu\", lai pievienotu tik diapazonus cik vēlaties. Piemēram, 0-20% Slikts rezultāts, 21-91% Viduvējs rezultāts, 91-100% Lielisks rezultāts!"
+        }
+      ]
+    },
+    {
+      "label": "Teksts tiks parādīts pirms kopsavilkuma uzdevumā atrisināto apgalvojumu skaita.",
+      "default": "Progress:",
+      "description": "Tiks parādīts virs apgalvojumiem. Piemērs: 'Progress: 2/5'"
+    },
+    {
+      "default": "Nepareizas atbildes:",
+      "description": "Tiks parādīts virs apgalvojumiem. Piemērs: 'Nepareizas atbildes: 4'",
+      "label": "Teksts tiks parādīts pirms kopsavilkuma uzdevumā neatrisināto apgalvojumu skaita."
+    },
+    {
+      "label": "Kopsavilkuma atgriezeniskās saites galvene",
+      "default": "Tavs rezultāts",
+      "description": "Tiks parādīts virs kopsavilkuma atgriezeniskās saites."
+    },
+    {
+      "default": "Pareizi.",
+      "label": "Pareizās atbildes atskaņošanas teksts asistīvajām tehnoloģijām"
+    },
+    {
+      "label": "Nepareizās atbildes atskaņošanas teksts asistīvajām tehnoloģijām",
+      "default": "Nepareizi! Lūdzu mēģiniet vēlreiz."
+    },
+    {
+      "default": "Nepareizi",
+      "label": "Nepareizās atbildes etiķete asistīvajām tehnoloģijām"
+    },
+    {
+      "label": "Pareizo atbilžu saraksta etiķete",
+      "default": "Pareizās atbildes."
+    },
+    {
+      "label": "Pogas \"Parādīt padomu\" birka",
+      "default": "Parādīt padomu"
+    },
+    {
+      "description": ":num un :total ir īpaši atslēgvārdi, kas tiek programmatiski atjaunināti",
+      "default": "Tu saņēmi :num no :total punktiem",
+      "label": "Rezultātu skalas tekstuālais atspoguļojums tiem, kas izmanto asistīvās tehnoloģijas"
+    },
+    {
+      "label": "Teksts, ko izmanto asistīvās tehnoloģijas, lai paziņotu par progresu",
+      "default": "Progress :num no :total",
+      "description": ":num un :total ir īpaši atslēgvārdi, kas tiek programmatiski atjaunināti"
+    }
+  ]
+}

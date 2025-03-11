@@ -1,0 +1,205 @@
+{
+  "semantics": [
+    {
+      "label": "Washa jalada la kitabu",
+      "description": "Jalada linaloonyesha maelezo kuhusu kitabu kabla ya kukifikia"
+    },
+    {
+      "label": "Ukurasa wa Jalada",
+      "fields": [
+        {
+          "label": "Maelezo ya jalada",
+          "description": "Maandishi haya yatakuwa maelezo ya kitabu chako."
+        },
+        {
+          "label": "Njia ya Jalada",
+          "description": "Njia ya hiari kwa utangulizi."
+        }
+      ]
+    },
+    {
+      "label": "Kurasa",
+      "entity": "Ukurasa",
+      "widgets": [
+        {
+          "label": "Chaguo-msingi"
+        }
+      ],
+      "field": {
+        "label": "Kipengee",
+        "fields": [
+          {
+            "label": "Ukurasa"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Mipangilio ya tabia",
+      "fields": [
+        {
+          "label": "Rangi ya msingi",
+          "description": "Weka rangi ya msingi ambayo itafafanua mpango wa jumla wa rangi ya kitabu. Tafadhali hakikisha kuna utofautishaji wa juu wa kutosha."
+        },
+        {
+          "label": "Onyesha jedwali la yaliyomo kama chaguo-msingi",
+          "description": "Inapowashwa jedwali la yaliyomo huonyeshwa wakati wa kufungua kitabu"
+        },
+        {
+          "label": "Onyesha Viashiria vya Maendeleo",
+          "description": "Inapowashwa kutakuwa na viashirio kwa kila ukurasa vinavyoonyesha mtumiaji ikiwa amemalizana na ukurasa au hapana."
+        },
+        {
+          "label": "Washa maendeleo ya kiotomatiki",
+          "description": "Ikiwashwa ukurasa usio na kazi unazingatiwa kuwa umekamilika unapotazamwa. Ukurasa wenye kazi wakati kazi zote zinafanywa. Ikiwa imezimwa kutakuwa na kitufe chini ya kila ukurasa kwa mtumiaji kubofya anapomalizana na ukurasa."
+        },
+        {
+          "label": "Muhtasari wa onyesho",
+          "description": "Inapowashwa mtumiaji anaweza kuona muhtasari na kuwasilisha maendeleo/majibu"
+        },
+        {
+          "label": "Enable \"Restart\" button",
+          "description": "When enabled the user can initiate a restart on the summary page."
+        }
+      ]
+    },
+    {
+      "label": "Tafsiri kwa \"Soma\"",
+      "default": "Soma"
+    },
+    {
+      "label": "Tafsiri kwa \"Onyesha 'Jedwali la yaliyomo'\"",
+      "default": "Onyesha 'Jedwali la yaliyomo'"
+    },
+    {
+      "label": "Tafsiri kwa \"Ficha 'Jedwali la yaliyomo'\"",
+      "default": "Ficha 'Jedwali la yaliyomo'"
+    },
+    {
+      "label": "Tafsiri kwa \"Ukurasa unaofuata\"",
+      "default": "Ukurasa unaofuata"
+    },
+    {
+      "label": "Tafsiri kwa \"Ukurasa uliotangulia\"",
+      "default": "Ukurasa uliotangulia"
+    },
+    {
+      "label": "Tafsiri ya \"Ukurasa umekamilika!\"",
+      "default": "Ukurasa umekamilika!"
+    },
+    {
+      "label": "Tafsiri ya \"@pages ya @total imekamilika\" (@pages na @total itabadilishwa na thamani halisi)",
+      "default": "@pages kati ya @total imekamilika"
+    },
+    {
+      "label": "Tafsiri ya \"Ukurasa ambao haujakamilika\"",
+      "default": "Ukurasa haujakamilika"
+    },
+    {
+      "label": "Tafsiri kwa \"Nenda hadi juu\"",
+      "default": "Nenda hadi juu"
+    },
+    {
+      "label": "Tafsiri kwa \"Nimemaliza ukurasa huu\"",
+      "default": "Nimemaliza ukurasa huu"
+    },
+    {
+      "label": "Lebo ya kitufe cha skrini kamili",
+      "default": "Skrini nzima"
+    },
+    {
+      "label": "Ondoka kwenye lebo ya kitufe cha skrini kamili",
+      "default": "Toka skrini kamili"
+    },
+    {
+      "label": "Maendeleo ya ukurasa katika kitabu",
+      "description": "\"@count\" itabadilishwa na hesabu ya kurasa, na \"@total\" na idadi ya jumla ya kurasa",
+      "default": "@count kati ya @total kurasa"
+    },
+    {
+      "label": "Maendeleo ya mwingiliano",
+      "description": "\"@count\" itabadilishwa na hesabu ya mwingiliano, na \"@total\" na idadi ya jumla ya mwingiliano",
+      "default": "@count kati ya maingiliano@total"
+    },
+    {
+      "label": "Tafsiri ya \"Wasilisha ripoti\"",
+      "default": "Wasilisha Ripoti"
+    },
+    {
+      "label": "Lebo ya kitufe cha \"kuanzisha tena\"",
+      "default": "Anzisha tena"
+    },
+    {
+      "label": "Kichwa cha muhtasari",
+      "default": "Muhtasari"
+    },
+    {
+      "label": "Tafsiri kwa \"maingiliano yote\"",
+      "default": "Maingiliano yote"
+    },
+    {
+      "label": "Tafsiri ya \"Maingiliano ambayo hayajajibiwa\"",
+      "default": "Maingiliano ambayo hayajajibiwa"
+    },
+    {
+      "label": "Alama",
+      "description": "\"@score\" itabadilishwa na alama ya sasa, na \"@maxscore\" itabadilishwa na alama ya juu inayoweza kufikiwa",
+      "default": "@score /@maxscore"
+    },
+    {
+      "label": "Ukamilishaji wa mwiingiliano kwa kila ukurasa",
+      "description": "\"@left\" itabadilishwa na maingiliano yaliyosalai, na \"@max\" itabadilishwa na jumla ya idadi ya mwingiliano kwenye ukurasa",
+      "default": "@left kati ya @max maingiliano yaliyokamilika"
+    },
+    {
+      "label": "Tafsiri kwa \"Hakuna maingiliano\"",
+      "default": "Hakuna maingiliano"
+    },
+    {
+      "label": "Tafsiri ya \"Alama\"",
+      "default": "Alama"
+    },
+    {
+      "label": "Lebo kwa kitufe cha \"Muhtasari &amp; wasilisha\"",
+      "default": "Muhtasari &amp; wasilisha"
+    },
+    {
+      "label": "Tafsiri ya \"Hujaingiliana na kurasa zozote.\"",
+      "default": "Hujaingiliana na kurasa zozote."
+    },
+    {
+      "label": "Tafsiri ya \"Unapaswa kuingiliana na angalau ukurasa mmoja kabla ya kuona muhtasari.\"",
+      "default": "Unapaswa kuingiliana na angalau ukurasa mmoja kabla ya kuona muhtasari."
+    },
+    {
+      "label": "Tafsiri ya \"Majibu yako yanawasilishwa kwa ukaguzi!\"",
+      "default": "Majibu yako yamewasilishwa kwa ukaguzi!"
+    },
+    {
+      "label": "Lebo ya maendeleo ya muhtasari",
+      "default": "Maendeleo ya kitabu"
+    },
+    {
+      "label": "Lebo ya maendeleo ya maingiliano",
+      "default": "Maendeleo ya maingiliano"
+    },
+    {
+      "label": "Lebo ya jumla ya alama",
+      "default": "Jumla ya alama"
+    },
+    {
+      "label": "Maandishi ya ufikivu",
+      "fields": [
+        {
+          "label": "Maendeleo ya ukurasa mbadala wa maandishi",
+          "description": "Maandishi mbadala kwa ajili ya maendeleo ya ukurasa wa kuona. @page na @total vigezo vinavyopatikana.",
+          "default": "Ukurasa wa @page kati ya @total."
+        },
+        {
+          "label": "Lebo ya kupanua/kukunja menyu ya urambazaji",
+          "default": "Geuza menyu ya urambazaji"
+        }
+      ]
+    }
+  ]
+}

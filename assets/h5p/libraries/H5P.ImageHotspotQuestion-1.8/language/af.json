@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Beeldbrandpunt vraagredigeerder",
+      "fields": [
+        {
+          "label": "Agtergrondprent",
+          "fields": [
+            {
+              "label": "Agtergrond prent",
+              "description": "Kies 'n prent om te gebruik as agtergrond vir die beeldbrandpunt vraag."
+            }
+          ]
+        },
+        {
+          "label": "Brandpunte",
+          "description": "Sleep en laat die gewenste figuur van die werkbalk af om 'n nuwe brandpunt te skep. Dubbelklik om 'n bestaande brandpunt te wysig. Sleep die brandpunt om dit te skuif. Trek die grootte van die grootte in die onderste regterhoek om die grootte te verander.",
+          "fields": [
+            {
+              "label": "Taakomskrywing",
+              "description": "Instruksies vir die gebruiker."
+            },
+            {
+              "label": "Brandpunt",
+              "entity": "Brandpunt",
+              "field": {
+                "label": "Brandpunt",
+                "fields": [
+                  {
+                    "label": "gebruikerInstellings",
+                    "fields": [
+                      {
+                        "label": "Reg",
+                        "description": "Daar kan verskeie regte brandpunte wees. Die gebruiker kry egter regte/verkeerde terugvoer onmiddellik na die eerste klik."
+                      },
+                      {
+                        "label": "Terugvoer"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "berekendeInstellings"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Terugvoer indien die gebruiker 'n leë plek kies:",
+              "placeholder": "Jy het geen brandpunte gevind nie, probeer weer!"
+            },
+            {
+              "label": "Wys terugvoer as 'n opspringer"
+            },
+            {
+              "label": "Lokalisasie",
+              "fields": [
+                {
+                  "label": "Probeer weer knoppie teks",
+                  "default": "Probeer weer"
+                },
+                {
+                  "label": "Sluit knoppieteks",
+                  "default": "Sluit"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Tekstuele tentoonstelling van die telkaart vir diegene wat 'n spreekleser gebruik",
+      "default": "Jy het :num uit :total punte gekry"
+    },
+    {
+      "label": "Hulptegnologieteks beskrywing vir \"Probeer weer\" knoppie",
+      "default": "Probeer die taak weer. Herstel alle antwoorde en begin die taak van nuuts af."
+    }
+  ]
+}

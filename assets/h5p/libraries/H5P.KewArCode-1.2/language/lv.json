@@ -1,0 +1,512 @@
+{
+  "semantics": [
+    {
+      "label": "Introductory text",
+      "description": "This text can optionally be presented along with your code."
+    },
+    {
+      "label": "Koda veids",
+      "description": "Atlasiet, kāda veida kodu vēlaties ģenerēt",
+      "options": [
+        {
+          "label": "Kontaktinformācija"
+        },
+        {
+          "label": "Notikums"
+        },
+        {
+          "label": "Epasta adrese"
+        },
+        {
+          "label": "H5P"
+        },
+        {
+          "label": "Atrašanās vieta"
+        },
+        {
+          "label": "Telefona numurs"
+        },
+        {
+          "label": "SMS"
+        },
+        {
+          "label": "Teksts"
+        },
+        {
+          "label": "URL"
+        }
+      ]
+    },
+    {
+      "label": "Kontaktinformācija",
+      "fields": [
+        {
+          "label": "Vārds",
+          "placeholder": "Jānis Bērziņš"
+        },
+        {
+          "label": "Organizācija",
+          "placeholder": "H5P fanu klubs"
+        },
+        {
+          "label": "Amats",
+          "placeholder": "Lietpratējs"
+        },
+        {
+          "label": "Telefona numurs",
+          "description": "Tālruņa numurs (lūdzu, izmantojiet formātu +371 123 45678)",
+          "placeholder": "+371 123 45678"
+        },
+        {
+          "label": "Epasta adrese",
+          "description": "E-pasta adrese, uz kuru rakstīt ziņu",
+          "placeholder": "janis@fictional-h5p-fan-club.org"
+        },
+        {
+          "label": "Adrese",
+          "fields": [
+            {
+              "label": "Paplašināta adrese",
+              "description": "c/o informāciju utt.",
+              "placeholder": "c/o H5P fanu klubs"
+            },
+            {
+              "label": "Iela",
+              "description": "Iela, ieskaitot numuru",
+              "placeholder": "Brīvības iela 100"
+            },
+            {
+              "label": "Atrašanās vieta",
+              "description": "Pilsētas nosaukums utt.",
+              "placeholder": "Rīga"
+            },
+            {
+              "label": "Novads",
+              "description": "Novads, pagasts utt.",
+              "placeholder": "Rīga"
+            },
+            {
+              "label": "pasta indekss",
+              "description": "pasta indekss",
+              "placeholder": "LV-1010"
+            },
+            {
+              "label": "Valsts",
+              "description": "Valsts",
+              "placeholder": "Latvija"
+            }
+          ]
+        },
+        {
+          "label": "Tīmekļa vietne",
+          "description": "Vietne, uz kuru izveidot saiti (jāsākas ar https:// vai http://)",
+          "placeholder": "https://fictional-h5p-fan-club.org"
+        },
+        {
+          "label": "Piezīme",
+          "description": "Piezīme",
+          "placeholder": "Jānim patīk H5P."
+        }
+      ]
+    },
+    {
+      "label": "Notikums",
+      "fields": [
+        {
+          "label": "Nosaukums",
+          "description": "Kalendāra notikuma nosaukums",
+          "placeholder": "H5P Konference 2020"
+        },
+        {
+          "label": "Pasākums visas dienas garumā",
+          "description": "Norādiet, vai pasākums būs spēkā visas dienas garumā"
+        },
+        {
+          "label": "Sākuma datums",
+          "description": "Notikuma sākuma datums (lūdzu, izmantojiet formātu gggg/mm/dd)",
+          "placeholder": "2020/05/18"
+        },
+        {
+          "label": "Sākuma laiks",
+          "description": "Notikuma sākuma laiks (lūdzu, izmantojiet formātu hh:mm)",
+          "placeholder": "09:00"
+        },
+        {
+          "label": "Beigu datums",
+          "description": "Notikuma beigu datums (lūdzu, izmantojiet formātu gggg/mm/dd)",
+          "placeholder": "2020/05/20"
+        },
+        {
+          "label": "Beigu laiks",
+          "description": "Notikuma beigu laiks (lūdzu, izmantojiet formātu hh:mm)",
+          "placeholder": "16:00"
+        },
+        {
+          "label": "Laika zona",
+          "description": "Norādiet laika joslu, kurā pasākumam jānotiek",
+          "options": [
+            {
+              "label": "UTC-12:00"
+            },
+            {
+              "label": "UTC-11:00"
+            },
+            {
+              "label": "UTC-10:00"
+            },
+            {
+              "label": "UTC-9:30"
+            },
+            {
+              "label": "UTC-9:00"
+            },
+            {
+              "label": "UTC-8:00"
+            },
+            {
+              "label": "UTC-7:00"
+            },
+            {
+              "label": "UTC-6:00"
+            },
+            {
+              "label": "UTC-5:00"
+            },
+            {
+              "label": "UTC-4:00"
+            },
+            {
+              "label": "UTC-3:30"
+            },
+            {
+              "label": "UTC-3:00"
+            },
+            {
+              "label": "UTC-2:00"
+            },
+            {
+              "label": "UTC-1:00"
+            },
+            {
+              "label": "UTC"
+            },
+            {
+              "label": "UTC+1:00"
+            },
+            {
+              "label": "UTC+2:00"
+            },
+            {
+              "label": "UTC+3:00"
+            },
+            {
+              "label": "UTC+3:30"
+            },
+            {
+              "label": "UTC+4:00"
+            },
+            {
+              "label": "UTC+4:30"
+            },
+            {
+              "label": "UTC+5:00"
+            },
+            {
+              "label": "UTC+5:30"
+            },
+            {
+              "label": "UTC+5:45"
+            },
+            {
+              "label": "UTC+6:00"
+            },
+            {
+              "label": "UTC+6:30"
+            },
+            {
+              "label": "UTC+7:00"
+            },
+            {
+              "label": "UTC+8:00"
+            },
+            {
+              "label": "UTC+9:00"
+            },
+            {
+              "label": "UTC+9:30"
+            },
+            {
+              "label": "UTC+10:00"
+            },
+            {
+              "label": "UTC+10:30"
+            },
+            {
+              "label": "UTC+11:00"
+            },
+            {
+              "label": "UTC+12:00"
+            },
+            {
+              "label": "UTC+12:45"
+            },
+            {
+              "label": "UTC+13:00"
+            },
+            {
+              "label": "UTC+14:00"
+            }
+          ]
+        },
+        {
+          "label": "Vasaras laiks",
+          "description": "Norādiet, vai vietā, kurā notiek pasākums, izmanto vasaras laiku"
+        },
+        {
+          "label": "Atrašanās vieta",
+          "description": "Vietas nosaukums",
+          "placeholder": "Rīga, Latvija"
+        },
+        {
+          "label": "Apraksts",
+          "description": "Pievienojiet notikuma aprakstu",
+          "placeholder": "3. H5P konference"
+        }
+      ]
+    },
+    {
+      "label": "Epasta adrese",
+      "fields": [
+        {
+          "label": "Epasta adrese",
+          "description": "E-pasta adrese, uz kuru rakstīt ziņu",
+          "placeholder": "janis@fictional-h5p-fan-club.org"
+        }
+      ]
+    },
+    {
+      "label": "H5P saturs",
+      "fields": [
+        {
+          "label": "H5P saturs",
+          "description": "Parādāmais H5P saturs"
+        }
+      ]
+    },
+    {
+      "label": "Atrašanās vieta",
+      "fields": [
+        {
+          "label": "Ģeogrāfiskais platums",
+          "description": "Ģeogrāfiskais platums (lūdzu, izmantojiet formātu 53.864462)",
+          "placeholder": "69.646007"
+        },
+        {
+          "label": "Ģeogrāfiskais garums",
+          "description": "Ģeogrāfiskais garums (lūdzu, izmantojiet formātu 10.663792)",
+          "placeholder": "18.954036"
+        }
+      ]
+    },
+    {
+      "label": "Telefona numurs",
+      "fields": [
+        {
+          "label": "Telefona numurs",
+          "description": "Tālruņa numurs, uz kuru zvanīt (lūdzu, izmantojiet formātu +371 123 45678)",
+          "placeholder": "+371 123 45678"
+        }
+      ]
+    },
+    {
+      "label": "SMS",
+      "fields": [
+        {
+          "label": "Telefona numurs",
+          "description": "Tālruņa numurs, uz kuru sūtīt (lūdzu, izmantojiet formātu +12 345 67890)",
+          "placeholder": "+371 123 45678"
+        },
+        {
+          "label": "Ziņa",
+          "description": "Ziņa, ko nosūtīt",
+          "placeholder": "Lūdzu, atnes pienu un maizi!"
+        }
+      ]
+    },
+    {
+      "label": "Teksts",
+      "fields": [
+        {
+          "label": "Teksts",
+          "description": "Iekodējamais teksts",
+          "placeholder": "Lūdzu, atnes\n* pienu\n* maizi"
+        }
+      ]
+    },
+    {
+      "label": "URL",
+      "fields": [
+        {
+          "label": "URL",
+          "description": "URL, uz kuru izveidot saiti (jāsākas ar https:// vai http://)",
+          "placeholder": "https://fictional-h5p-fan-club.org"
+        }
+      ]
+    },
+    {
+      "label": "Uzvedības iestatījumi",
+      "description": "Šie iestatījumi ļaus jums kontrolēt uzdevuma uzvedību.",
+      "fields": [
+        {
+          "label": "Koda krāsa",
+          "default": "#000000"
+        },
+        {
+          "label": "Fona krāsa",
+          "default": "#ffffff"
+        },
+        {
+          "label": "Maksimālais izmērs",
+          "description": "Maksimālais koda lielums, kas norādīts CSS notācijā (pēc noklusējuma pikseļos, ja norādīts tikai skaitlis)"
+        },
+        {
+          "label": "Horizontālā līdzināšana",
+          "description": "Iestatiet horizontālo līdzinājumu, ja iestatāt maksimālo izmēru",
+          "options": [
+            {
+              "label": "pa kreisi"
+            },
+            {
+              "label": "centrēt"
+            },
+            {
+              "label": "pa labi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Lietotāja saskarne",
+      "fields": [
+        {
+          "label": "Adrese",
+          "default": "Adrese"
+        },
+        {
+          "label": "Kontaktinformācija",
+          "default": "Kontaktinformācija"
+        },
+        {
+          "label": "Valsts",
+          "default": "Valsts"
+        },
+        {
+          "label": "Beigu datums",
+          "default": "Beigu datums"
+        },
+        {
+          "label": "Sākuma datums",
+          "default": "Sākuma datums"
+        },
+        {
+          "label": "Apraksts",
+          "default": "Apraksts"
+        },
+        {
+          "label": "E-pasts",
+          "default": "E-pasts"
+        },
+        {
+          "label": "Notikums",
+          "default": "Notikums"
+        },
+        {
+          "label": "Paplašināta adrese",
+          "default": "Paplašināta adrese"
+        },
+        {
+          "label": "Ģeogrāfiskais platums",
+          "default": "Ģeogrāfiskais platums"
+        },
+        {
+          "label": "Novads",
+          "default": "Novads"
+        },
+        {
+          "label": "Atrašanās vieta",
+          "default": "Atrašanās vieta"
+        },
+        {
+          "label": "Ģeogrāfiskais garums",
+          "default": "Ģeogrāfiskais garums"
+        },
+        {
+          "label": "Ziņa",
+          "default": "Ziņa"
+        },
+        {
+          "label": "Vārds",
+          "default": "Vārds"
+        },
+        {
+          "label": "Piezīme",
+          "default": "Piezīme"
+        },
+        {
+          "label": "Organizācija",
+          "default": "Organizācija"
+        },
+        {
+          "label": "Tālrunis",
+          "default": "Tālrunis"
+        },
+        {
+          "label": "Novads",
+          "default": "Novads"
+        },
+        {
+          "label": "SMS",
+          "default": "SMS"
+        },
+        {
+          "label": "Iela",
+          "default": "Iela"
+        },
+        {
+          "label": "Teksts",
+          "default": "Teksts"
+        },
+        {
+          "label": "Amats",
+          "default": "Amats"
+        },
+        {
+          "label": "URL",
+          "default": "URL"
+        },
+        {
+          "label": "pasta indekss",
+          "default": "pasta indekss"
+        }
+      ]
+    },
+    {
+      "label": "Ekrāna lasītājs",
+      "fields": [
+        {
+          "label": "QR kods. Rādīt informāciju (teksts asistīvajām tehnoloģijām)",
+          "default": "QR kods. Rādīt informāciju."
+        },
+        {
+          "label": "Paslēpt informāciju (teksts asistīvajām tehnoloģijām)",
+          "default": "Paslēpt informāciju."
+        },
+        {
+          "label": "Code contents (Text for Readspeakers)",
+          "default": ". Code contents"
+        }
+      ]
+    }
+  ]
+}

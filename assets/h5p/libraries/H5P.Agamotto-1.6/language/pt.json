@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Cabeçalho",
+      "placeholder": "Aqui, pode ser adicionado um cabeçalho opcional.",
+      "description": "O cabeçalho que pretende mostrar antes da imagem"
+    },
+    {
+      "label": "Itens",
+      "entity": "artigo",
+      "widgets": [
+        {
+          "label": "Predefinição"
+        }
+      ],
+      "field": {
+        "label": "Artigo",
+        "fields": [
+          {
+            "label": "Imagem"
+          },
+          {
+            "label": "Rótulo",
+            "description": "Rótulo opcional para o marcador. Certifique-se de que não seja demasiado longo, pois ficará oculto."
+          },
+          {
+            "label": "Descrição",
+            "placeholder": "A descrição da minha imagem ...",
+            "description": "Descrição para a imagem (opcional)"
+          },
+          {
+            "label": "Áudio",
+            "description": "Áudio a ouvir quando a imagem é mostrada (Opcional)."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Configurações de comportamento",
+      "description": "Estas opções configuram o comportamento desejado do conteúdo.",
+      "fields": [
+        {
+          "label": "Imagem inicial",
+          "description": "Configurar qual o número da imagem a ser visualizada inicialmente."
+        },
+        {
+          "label": "Controlo deslizante de transição",
+          "description": "Se ativado, o controlo deslizante irá ajustar-se à posição de uma imagem."
+        },
+        {
+          "label": "Visualizar os marcadores das imagens",
+          "description": "Se ativado, a barra de deslocação mostrará um marcador para cada imagem."
+        },
+        {
+          "label": "Mostrar Rótulos",
+          "description": "Se ativado, a barra de deslocação mostrará um rótulo em vez de, ou adicionalmente, aos marcadores."
+        },
+        {
+          "label": "Cor para substituição da transparência",
+          "description": "Selecionar a cor que substituirá as áreas transparentes das imagens."
+        },
+        {
+          "label": "Espaço da imagem no modo ecrã inteiro",
+          "description": "Se tiver descrições além das imagens, defina a porcentagem de espaço que as imagens devem usar no modo de modo ecrã inteiro."
+        }
+      ]
+    },
+    {
+      "label": "ReadSpeaker",
+      "fields": [
+        {
+          "label": "Imagem",
+          "default": "Imagem"
+        },
+        {
+          "label": "Controlo deslizante da imagem",
+          "default": "Controlo deslizante da imagem"
+        },
+        {
+          "label": "Título de desactivar som",
+          "default": "Desactivar som, sem som no momento"
+        },
+        {
+          "label": "Título Activar som",
+          "default": "Activar som, actualmente desactivar som"
+        },
+        {
+          "label": "Título para botão de ecrã inteiro (entrar)",
+          "default": "Entrar no modo ecrã inteiro"
+        },
+        {
+          "label": "Título do botão de ecrã inteiro (sair)",
+          "default": "Sair do modo ecrã inteiro"
+        }
+      ]
+    }
+  ]
+}

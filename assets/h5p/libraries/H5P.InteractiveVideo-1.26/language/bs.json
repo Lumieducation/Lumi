@@ -1,0 +1,508 @@
+{
+  "semantics": [
+    {
+      "label": "Interactive Video Editor",
+      "fields": [
+        {
+          "label": "Postavi/ugradi video",
+          "fields": [
+            {
+              "label": "Dodaj video",
+              "description": "Click below to add a video you wish to use in your interactive video. You can add a video link or upload video files. It is possible to add several versions of the video with different qualities. To ensure maximum support in browsers at least add a version in webm and mp4 formats."
+            },
+            {
+              "label": "Start screen options (unsupported for YouTube videos)",
+              "fields": [
+                {
+                  "label": "The title of this interactive video",
+                  "default": "Interactive Video",
+                  "description": "Koristi se u sažecima, statistikama, itd.."
+                },
+                {
+                  "label": "Sakrij naslov početku videa"
+                },
+                {
+                  "label": "Kratak opis(Neobavezno)",
+                  "description": "Optional. Display a short description text on the video start screen. Does not work for YouTube videos."
+                },
+                {
+                  "label": "Slika prikaza",
+                  "description": "Image displayed before the user launches the video. Does not work for YouTube Videos."
+                }
+              ]
+            },
+            {
+              "label": "Tekst na trakama (unsupported for YouTube videos)",
+              "fields": [
+                {
+                  "label": "Dostupan tekst na trakama",
+                  "entity": "Traka",
+                  "field": {
+                    "label": "Video",
+                    "fields": [
+                      {
+                        "label": "Opis videa",
+                        "description": "Used if you offer multiple tracks and the user has to choose a track. For instance 'Spanish subtitles' could be the label of a Spanish subtitle track.",
+                        "default": "Prijevod"
+                      },
+                      {
+                        "label": "Vrsta trake",
+                        "options": [
+                          {
+                            "label": "Prijevod"
+                          },
+                          {
+                            "label": "Titlovi"
+                          },
+                          {
+                            "label": "Opis"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Za prijevod se mora navesti izvorni jezik",
+                        "default": "en",
+                        "description": "Must be a valid BCP 47 language tag. If 'Subtitles' is the type of text track selected, the source language of the track must be defined."
+                      },
+                      {
+                        "label": "Track source (WebVTT file)"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Default text track",
+                  "description": "If left empty or not matching any of the text tracks the first text track will be used as the default."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Dodati interakcije",
+          "fields": [
+            {
+              "field": {
+                "fields": [
+                  {
+                    "label": "Prikaži vrijeme"
+                  },
+                  {
+                    "label": "Pauziraj video"
+                  },
+                  {
+                    "label": "Prikaži kao",
+                    "description": "<b>Dugme</b> is a collapsed interaction the user must press to open. <b>Poster</b> is an expanded interaction displayed directly on top of the video",
+                    "options": [
+                      {
+                        "label": "Dugme"
+                      },
+                      {
+                        "label": "Poster"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Prelazi u dugme na malim ekranima"
+                  },
+                  {
+                    "label": "Oznaka",
+                    "description": "Label displayed next to interaction icon."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Adaptivnost",
+                    "fields": [
+                      {
+                        "label": "Akcija na svima je tačna",
+                        "fields": [
+                          {
+                            "label": "Traži do",
+                            "description": "Unesi vrijeme formata M:SS"
+                          },
+                          {
+                            "label": "Allow the user to opt out and continue"
+                          },
+                          {
+                            "label": "Poruka"
+                          },
+                          {
+                            "label": "Oznaka za dugme traženja"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Akcija na pogrešna",
+                        "fields": [
+                          {
+                            "label": "Traži do",
+                            "description": "Unesi vrijeme formata M:SS"
+                          },
+                          {
+                            "label": "Allow the user to opt out and continue"
+                          },
+                          {
+                            "label": "Poruka"
+                          },
+                          {
+                            "label": "Oznaka za dugme traženja"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Require full score for task before proceeding",
+                        "description": "For best functionality this option should be used in conjunction with the \"Disable navigation forward in a video\" option of Interactive Video."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Grafika",
+                    "fields": [
+                      {
+                        "label": "Boja pozadine",
+                        "default": "rgb(255, 255, 255)"
+                      },
+                      {
+                        "label": "Box shadow",
+                        "description": "Adds a subtle shadow around the interaction. You might want to disable this for completely transparent interactions"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Na klik idi na",
+                    "fields": [
+                      {
+                        "label": "Tip",
+                        "options": [
+                          {
+                            "label": "Timecode"
+                          },
+                          {
+                            "label": "Druga stranica (URL)"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Idi na",
+                        "description": "The target time the user will be taken to upon pressing the hotspot. Enter timecode in the format M:SS."
+                      },
+                      {
+                        "label": "URL",
+                        "fields": [
+                          {
+                            "label": "Protokol",
+                            "options": [
+                              {
+                                "label": "http://"
+                              },
+                              {
+                                "label": "https://"
+                              },
+                              {
+                                "label": "(u odnosu na)"
+                              },
+                              {
+                                "label": "ostalo"
+                              }
+                            ]
+                          },
+                          {
+                            "label": "URL"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Vizualiziraj",
+                        "description": "Show that interaction can be clicked by adding a border and an icon"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {},
+            {}
+          ]
+        },
+        {
+          "label": "Zadatak sažetka",
+          "fields": [
+            {},
+            {
+              "label": "Prikaći na",
+              "description": "Number of seconds before the video ends."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Podešavanje interakcija",
+      "fields": [
+        {
+          "label": "Video počinje u",
+          "description": "Enter timecode in the format M:SS"
+        },
+        {
+          "label": "Pusti automatski video",
+          "description": "Start playing the video automatically"
+        },
+        {
+          "label": "Premotaj video",
+          "description": "Check if video should run in a loop"
+        },
+        {
+          "label": "Poništi dugme \"Prikaži rješenje\"",
+          "description": "Ova opcija podešava prikazivanje dugmeta \"Prikaži rješenje\" za sva pitanja ili da bude za svako posebno pitanje konfigurirano.",
+          "options": [
+            {
+              "label": "Prikaži"
+            },
+            {
+              "label": "Nemoj prikazati"
+            }
+          ]
+        },
+        {
+          "label": "Poništi dugme \"Ponovi\"",
+          "description": "Ova opcija podešava prikazivanje dugmeta \"Ponovi\" za sva pitanja ili da bude za svako posebno pitanje konfigurirano.",
+          "options": [
+            {
+              "label": "Prikaži"
+            },
+            {
+              "label": "Nemoj prikazati"
+            }
+          ]
+        },
+        {
+          "label": "Započni sa otvorenim menijem za favorite",
+          "description": "This function is not available on iPad when using YouTube as video source."
+        },
+        {
+          "label": "Prikaži dugme za premotavanje od 10 sekundi"
+        },
+        {
+          "label": "Disable navigation",
+          "description": "These options will disable user video navigation as specified.",
+          "options": [
+            {
+              "label": "None"
+            },
+            {
+              "label": "Forward"
+            },
+            {
+              "label": "Forward and backward"
+            }
+          ]
+        },
+        {
+          "label": "Deaktiviraj zvuk",
+          "description": "Enabling this option will deactivate the video's sound and prevent it from being switched on."
+        }
+      ]
+    },
+    {
+      "label": "Podešavanje ponašanja",
+      "fields": [
+        {
+          "label": "Naziv interakcije",
+          "default": "Interaction"
+        },
+        {
+          "label": "Naziv za Pusti",
+          "default": "Pusti"
+        },
+        {
+          "label": "Naziv za Oauza",
+          "default": "Pauza"
+        },
+        {
+          "label": "Naziv za utišaj",
+          "default": "Mute, currently unmuted"
+        },
+        {
+          "label": "Naziv za isključi utišavanje",
+          "default": "Unmute, currently muted"
+        },
+        {
+          "label": "Nazv za video kvalitet",
+          "default": "Video kvalitet"
+        },
+        {
+          "label": "Video captions title",
+          "default": "Titlovi"
+        },
+        {
+          "label": "Close button text",
+          "default": "Zatvori"
+        },
+        {
+          "label": "Fullscreen title",
+          "default": "Cijeli ekran"
+        },
+        {
+          "label": "Exit fullscreen title",
+          "default": "Izađi iz cijelog ekrana"
+        },
+        {
+          "label": "Summary title",
+          "default": "Open summary dialog"
+        },
+        {
+          "label": "Bookmarks title",
+          "default": "Favoriti"
+        },
+        {
+          "label": "Submit screen title",
+          "default": "Dostavi ekran"
+        },
+        {
+          "label": "Default label for adaptivity seek button",
+          "default": "Nastavi"
+        },
+        {
+          "label": "Default label for continue video button",
+          "default": "Nastavi sa videom"
+        },
+        {
+          "label": "Default label for more player options",
+          "default": "More player options"
+        },
+        {
+          "label": "Set playback rate",
+          "default": "Playback rejting"
+        },
+        {
+          "label": "Rewind 10 Seconds",
+          "default": "Vrati 10 sekundi"
+        },
+        {
+          "label": "Navigation is disabled text",
+          "default": "Navigacija je onemogućena"
+        },
+        {
+          "label": "Navigating forward is disabled text",
+          "default": "Navigating forward is disabled"
+        },
+        {
+          "label": "Sound is disabled text",
+          "default": "Zvuk je onemogućen"
+        },
+        {
+          "label": "Warning that the user must answer the question correctly before continuing",
+          "default": "Morate odgovoriti na sva pitanja tačno prije nego nastavite dalje."
+        },
+        {
+          "label": "Oznaka za dugme \"Nazad\"",
+          "default": "Nazad"
+        },
+        {
+          "label": "Passed time hours",
+          "default": "Sati"
+        },
+        {
+          "label": "Passed time minutes",
+          "default": "Minuta"
+        },
+        {
+          "label": "Passed time seconds",
+          "default": "Sekundi"
+        },
+        {
+          "label": "Label for current time",
+          "default": "Trenutno vrijeme:"
+        },
+        {
+          "label": "Label for total time",
+          "default": "Ukupno vrijeme:"
+        },
+        {
+          "label": "Text explaining that a single interaction with a name has come into view",
+          "default": "Interakcija se pojavila:"
+        },
+        {
+          "label": "Text for explaining that multiple interactions have come into view",
+          "default": "Višestruke interakcije su se pojavile."
+        },
+        {
+          "label": "Video is paused announcement",
+          "default": "Video je pauziran"
+        },
+        {
+          "label": "Content label",
+          "default": "Sadržaj"
+        },
+        {
+          "label": "Answered message (@answered will be replaced with the number of answered questions)",
+          "default": "@answered answered"
+        },
+        {
+          "label": "Submit screen title",
+          "default": "@answered Pitanje(a) answered",
+          "description": "@answered će biti zamijenjeno sa brojem odgovorenih pitanja."
+        },
+        {
+          "label": "Submit screen information",
+          "default": "Odgovorili ste na @answered pitanja, klikni ispod i pošalji ih.",
+          "description": "@answered će biti zamijenjeno sa brojem odgovorenih pitanja."
+        },
+        {
+          "label": "Submit screen information when submit button is disabled",
+          "default": "You have answered @answered questions.",
+          "description": "@answered will be replaced by the number of answered questions."
+        },
+        {
+          "label": "Submit screen information for missing answers",
+          "default": "Niste odgovoritli ni na jedno pitanje."
+        },
+        {
+          "label": "Submit screen information for answer needed",
+          "default": "Morate odgovoriti na bar jedno pitanje prije nego možete dostaviti svoje odgovore."
+        },
+        {
+          "label": "Submit screen submit button",
+          "default": "Pošalji odgovore"
+        },
+        {
+          "label": "Submit screen submit message",
+          "default": "Vaši odgovori su poslati!"
+        },
+        {
+          "label": "Submit screen table row title: Answered questions",
+          "default": "Odgovorena pitanja"
+        },
+        {
+          "label": "Submit screen table row title: Score",
+          "default": "Rezultat"
+        },
+        {
+          "label": "Submit screen answered score",
+          "default": "odgovoreno"
+        },
+        {
+          "label": "Submit screen row summary including score (for readspeakers)",
+          "default": "Dobili ste @score od @total poena za @question koje se pojavilo nakon @minutes minuta i @seconds sekundi."
+        },
+        {
+          "label": "Submit screen row summary for no score (for readspeakers)",
+          "default": "Odgovorili ste na @question koje se pojavilo nakon @minutes minuta i @seconds sekundi."
+        },
+        {
+          "label": "Video Progressbar",
+          "default": "Video progress"
+        },
+        {
+          "label": "Text for how to create interactions",
+          "default": "Play the video to start creating interactions"
+        }
+      ]
+    }
+  ]
+}

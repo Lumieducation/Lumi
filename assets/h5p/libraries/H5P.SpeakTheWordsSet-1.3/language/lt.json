@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Įvadas",
+      "fields": [
+        {
+          "label": "Rodyti pristatymą"
+        },
+        {
+          "label": "Įvado paveiksliukas"
+        },
+        {
+          "label": "Alternatyvus tekstas įžanginiam paveikslėliui"
+        },
+        {
+          "label": "Pavadinimas"
+        },
+        {
+          "label": "Įvadinis tekstas",
+          "description": "Šis pavadinimas bus rodomas virš įžanginio teksto."
+        }
+      ]
+    },
+    {
+      "label": "Klausimai",
+      "widgets": [
+        {
+          "label": "Numatytasis"
+        }
+      ],
+      "entity": "Klausimas",
+      "field": {
+        "label": "Klausimas"
+      }
+    },
+    {
+      "label": "Bendras atsiliepimas",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Numatytasis"
+            }
+          ],
+          "label": "Nustatykite tinkintus atsiliepimus bet kokiam balų diapazonui",
+          "description": "Spustelėkite mygtuką „Pridėti diapazoną“, kad pridėtumėte tiek diapazonų, kiek jums reikia. Pavyzdys: 0–20 % blogas balas, 21–91 % vidutinis balas, 91–100 % puikus rezultatas!",
+          "entity": "diapazonas",
+          "field": {
+            "fields": [
+              {
+                "label": "Balų intervalas"
+              },
+              {},
+              {
+                "label": "Atsiliepimai apibrėžtam balų diapazonui",
+                "placeholder": "Užpildykite atsiliepimą"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Įgarsinti žodžius rinkinio pavadinimai ir tekstas",
+      "fields": [
+        {
+          "label": "Įžanginio mygtuko pavadinimas",
+          "default": "Pradėti kursą!"
+        },
+        {
+          "label": "Sprendimo ekrano rezultatų pavadinimas",
+          "default": "Jūsų rezultatai:"
+        },
+        {
+          "label": "„Rodyti sprendimą“ mygtuko pavadinimas",
+          "default": "Rodyti sprendimą"
+        },
+        {
+          "label": "„Bandyti dar kartą“ mygtuko pavadinimas",
+          "default": "Bandyti dar kartą"
+        },
+        {
+          "label": "Tekstas mygtukui „Baigti\"",
+          "default": "Baigti"
+        },
+        {
+          "label": "Sekančio klausimo pritaikomumo pavadinimas",
+          "default": "Kitas klausimas"
+        },
+        {
+          "label": "Ankstesnio klausimo pritaikomumo pavadinimas",
+          "default": "Ankstesnis klausimas"
+        },
+        {
+          "label": "Navigacijos juostos pavadinimas",
+          "description": "Klausimų pavadinimai navigacijos juostoje. \":num\" bus pakeista atitinkamu skaidrės numeriu.",
+          "default": ":num skaidrė"
+        },
+        {
+          "label": "Atsakytų skaidrių pritaikomumo pavadinimas",
+          "default": "Atsakyta"
+        },
+        {
+          "label": "Aktyvios skaidrės pritaikomumo etiketė",
+          "default": "Šiuo metu aktyvi"
+        }
+      ]
+    }
+  ]
+}

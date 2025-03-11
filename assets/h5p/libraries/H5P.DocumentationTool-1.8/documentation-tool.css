@@ -1,0 +1,167 @@
+.h5p-documentation-tool {
+  font-size: 16px;
+}
+
+/* Resets buttons styling */
+.h5p-documentation-tool-main-content button {
+  font-family: Sans-Serif;
+  font-size: 1em;
+  background: none;
+  border: 0;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+}
+.h5p-documentation-tool button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* Fix for box sizing themes */
+.h5p-documentation-tool * {
+  box-sizing: content-box;
+}
+
+.h5p-documentation-tool .joubel-exportable-area {
+  box-sizing: border-box;
+}
+
+.h5p-documentation-tool .h5p-documentation-tool-main-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+}
+
+.h5p-documentation-tool .h5p-documentation-tool-main-content:before {
+  content: none;
+}
+
+.h5p-standalone.h5p-documentation-tool {
+  max-width: 75em;
+}
+
+.h5p-documentation-tool-page-container {
+  position: relative;
+  min-height: 500px;
+  width: 100%;
+  color: #333;
+  padding-bottom: 1.5em;
+}
+
+.h5p-documentation-tool-page-container .h5p-documentation-tool-page {
+  display: block;
+  height: 100%;
+  margin-bottom: 1em;
+  display: none;
+}
+
+.h5p-documentation-tool-page-container .h5p-documentation-tool-page > * {
+  padding: 0.5em 1em;
+}
+
+.h5p-documentation-tool-page-container .h5p-documentation-tool-page.current {
+  display: block;
+}
+
+.h5p-documentation-tool-page-container .h5p-documentation-tool-page * {
+  visibility: hidden;
+}
+
+.h5p-documentation-tool-page-container .h5p-documentation-tool-page.current * {
+  visibility: visible;
+}
+
+/* Make things untabbable when export page is open */
+.h5p-documentation-tool-main-content.hidden .h5p-navigation-menu,
+.h5p-documentation-tool-main-content.hidden .h5p-documentation-tool-page.current * {
+  visibility: hidden;
+}
+
+
+/* Page header */
+.h5p-documentation-tool-page .page-header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  justify-content: space-between;
+  padding: 0.5em 0;
+  outline: none; /* Override focus effect */
+}
+
+.h5p-documentation-tool-page .page-title {
+  font-size: 18px;
+  color: #333;
+}
+
+.h5p-documentation-tool-page .page-help-text {
+  color: #1a73d9;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+.h5p-documentation-tool-page .page-help-text:hover {
+  color: #1a4773;
+}
+
+.h5p-documentation-tool .h5p-documentation-tool-footer {
+  display: block;
+  position: absolute;
+  height: 2.25em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* ------ Documentation Tool Buttons --------------- */
+/* Rounded button css in 'H5P.JoubelUI' library      */
+
+.h5p-documentation-tool .h5p-documentation-tool-nav-button {
+  position: absolute;
+  right: 1em;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 24px;
+}
+
+.h5p-documentation-tool-nav-button:before {
+  font-family: "H5PFontAwesome4";
+  content: "\f104";
+  color: #FFFFFF;
+  font-size: 24px;
+  position: relative;
+  right: -0.375em;
+  line-height: 28px;
+}
+
+/* Active state */
+.h5p-documentation-tool-nav-button:active:before {
+  top: 2px;
+}
+
+.h5p-documentation-tool-nav-button.prev {
+  margin-right: 3em;
+}
+
+.h5p-documentation-tool-nav-button.next:before {
+  content: "\f105";
+  color: #FFFFFF;
+  right: -0.5em;
+}
+
+/* Disable prev button for first page and next button for last page */
+.h5p-documentation-tool-nav-button[aria-disabled="true"] {
+  background-color: #ccc;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ---------------------------- Responsive view ----------------------------- */
+.h5p-documentation-tool .h5p-documentation-tool-main-content.responsive .h5p-documentation-tool-page-container {
+  margin-left: 2.2em;
+}

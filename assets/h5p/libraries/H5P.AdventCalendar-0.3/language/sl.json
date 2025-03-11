@@ -1,0 +1,203 @@
+{
+  "semantics": [
+    {
+      "label": "Način izbire slik za vrata",
+      "description": "Slike vrat je možno dodati ročno ali samodejno na podlagi slike ozadja.",
+      "options": [
+        {
+          "label": "Ročna določitev vsake slike vrat posebej"
+        },
+        {
+          "label": "H5P nastavi slike vrat na podlagi slike ozadja"
+        }
+      ]
+    },
+    {
+      "label": "Vrata",
+      "entity": "vrata",
+      "field": {
+        "fields": [
+          {
+            "label": "Tip vsebine",
+            "description": "Vsebina se prikaže ob odprtju vrat.",
+            "options": [
+              {
+                "label": "Zvočni posnetek"
+              },
+              {
+                "label": "Slika"
+              },
+              {
+                "label": "Spletna povezava"
+              },
+              {
+                "label": "Besedilo"
+              },
+              {
+                "label": "Videoposnetek"
+              }
+            ]
+          },
+          {
+            "label": "Zvočni posnetek"
+          },
+          {
+            "label": "Slika"
+          },
+          {
+            "label": "Spletna povezava"
+          },
+          {
+            "label": "Besedilo"
+          },
+          {
+            "label": "Videoposnetek"
+          },
+          {
+            "label": "Samodejno predvajanje"
+          },
+          {
+            "label": "Slika vrat",
+            "description": "Slika je prikazana ob zaprtih vratih. Da se leva polovica vrat prilega desni polovici je treba naložiti sliko v razmerju 1:1."
+          },
+          {
+            "label": "Slika ozadja",
+            "description": "Slika je prikazana ob odprtih vratih. Privzeto jo nadomešča številka vrat."
+          }
+        ]
+      },
+      "widgets": [
+        {
+          "label": "Privzeto"
+        }
+      ]
+    },
+    {
+      "label": "Vizualna podoba",
+      "description": "Nastavitve vplivajo na izgled koledarja.",
+      "fields": [
+        {
+          "label": "Slika ozadja koledarja"
+        },
+        {
+          "label": "Predloga za sliko vrat",
+          "description": "Razrez slike je uporabljen za samodejno določitev slik vseh vrat. Če je pri posameznih vratih ročno dodana druga slika, bo ta uporabljena kot privzeta."
+        },
+        {
+          "label": "Skrij rob vrat"
+        },
+        {
+          "label": "Skrij številke vrat"
+        },
+        {
+          "label": "Na vratih skrij kljuke"
+        },
+        {
+          "label": "Skrij okvir vrat"
+        },
+        {
+          "label": "Omogoči sneženje",
+          "description": "Pred koledarjem bo dodana animacija sneženja. Funkcionalnost ne deluje v vseh spletnih brskalnikih."
+        }
+      ]
+    },
+    {
+      "label": "Nastavitve zvoka",
+      "description": "Nastavitve vplivajo na zvočno spremljavo koledarja.",
+      "fields": [
+        {
+          "label": "Glasba v ozadju"
+        },
+        {
+          "label": "Samodejno predvajanje glasbe v ozadju",
+          "description": "Odprto vsebino bo spremljala glasba iz ozadja. Na delovanje funkcionalnosti lahko vplivajo nastavitve spletnih brskalnikov."
+        }
+      ]
+    },
+    {
+      "label": "Nastavitve interakcije",
+      "description": "Nastavitve omogočajo nadzor nad interakcijo aktivnosti za udeležence.",
+      "fields": [
+        {
+          "label": "Mode for door placement",
+          "description": "Select whether you want to set a fixed number of columns and rows for the doors or if H5P should decide dynamically depending on the available space. Note that the latter may interfere with the position of the background image and custom door cover images that should be at a particular position.",
+          "options": [
+            {
+              "label": "Statično"
+            },
+            {
+              "label": "Dinamično"
+            }
+          ]
+        },
+        {
+          "label": "Row-to-column ratio",
+          "description": "Select how many columns and rows the calender should use.",
+          "options": [
+            {
+              "label": "6 × 4"
+            },
+            {
+              "label": "4 × 6"
+            }
+          ]
+        },
+        {
+          "label": "Naključni vrstni red",
+          "description": "Vrata bodo razporejena po naključnem vrstnem redu. Od nastavitev sistema je odvisno, ali bo enak vrstni red ostal tudi ob ponovni vrnitvi udeleženca."
+        },
+        {
+          "label": "Ohrani vrstni red slik",
+          "description": "Ob naključni razporeditvi vrat se lahko ohrani statičen prikaz slik na vratih."
+        },
+        {
+          "label": "Način urejanja",
+          "description": "Omogočen način dovoljuje prosto odpiranje vrat. V nasprotnem primeru se lahko vrata odprejo le decembra, in sicer na/po dnevu z izbrano številko vrat."
+        }
+      ]
+    },
+    {
+      "label": "Določitev",
+      "fields": [
+        {
+          "label": "Ni kaj za videti",
+          "default": "Tukaj ni ničesar za videti!\ud83c\udf84"
+        },
+        {
+          "label": "Vzorec",
+          "default": "Vzorec"
+        }
+      ]
+    },
+    {
+      "label": "Bralnik zaslona",
+      "fields": [
+        {
+          "label": "Besedilo za oznako vrat",
+          "default": "Vrata"
+        },
+        {
+          "label": "Besedilo za oznako zaklenjenih vrat",
+          "default": "Vrata so zaklenjena. Čas za odpiranje še ni napočil."
+        },
+        {
+          "description": "Besedilo za napoved vsebine. @door je spremenljivka.",
+          "label": "Vsebina vrat",
+          "default": "Vsebina vrat @door"
+        },
+        {
+          "label": "Besedilo za vklop nemega načina predvajanja",
+          "default": "Utišaj zvok"
+        },
+        {
+          "label": "Besedilo za izhod iz nemega načina predvajanja",
+          "default": "Povrni zvok"
+        },
+        {
+          "label": "Zapri okno",
+          "default": "Zapri okno"
+        }
+      ]
+    }
+  ]
+}

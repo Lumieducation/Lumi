@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Mídia",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Mídia opcional para exibir acima da pergunta."
+        },
+        {
+          "label": "Desactivar o zoom da imagem"
+        }
+      ]
+    },
+    {
+      "label": "Descrição da tarefa",
+      "description": "Descreva a forma como o utilizador deve completar a atividade.",
+      "default": "Arraste as palavras para as caixas corretas"
+    },
+    {
+      "label": "Mensagem",
+      "placeholder": "*Oslo* é a capital da Noruega, *Estocolmo* é a capital da Suécia e *Copenhaga* é a capital da Dinamarca. Todas as cidades estão localizadas na península *Escandinava:Norte da Europa*.",
+      "important": {
+        "description": "<ul><li>Adicione as palavras a largar através de um asterisco (*) no início e no fim da palavra/frase correta.</li><li>Adicione uma dica contextual utilizando os dois pontos (:) à frente do texto da dica.</li><li>Para todos os espaços existe apenas uma palavra correta</li><li>Pode adicionar feedback quando o utilizador completar a atividade. Utilize '\\+' para feedback correto e '\\-' para feedback incorreto.</li></ul>",
+        "example": "O conteúdo H5P pode ser editado utilizando um *navegador:Qual o tipo de programa é o Chrome?*.<br /> O conteúdo H5P é *interativo\\+Correto! \\-Incorreto, tente de novo!*"
+      }
+    },
+    {
+      "label": "Distractors",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Enter extra solutions that are wrong as distractors. Use the same asterisk (*) scheme as for the text."
+    },
+    {
+      "label": "Feedback global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Defina o feedback personalizado para qualquer faixa de pontuação",
+          "description": "Clique em \"Adicionar faixa\" e adicione quantas faixas forem necessárias. Exemplo: 0-20% Insuficiente, 21-91% Suficiente, 91-100% Excelente!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para determinada faixa de pontuação",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Texto para o botão \"Verificar resposta\"",
+      "default": "Verificar resposta"
+    },
+    {
+      "label": "Texto para o botão \"Enviar\"",
+      "default": "Enviar"
+    },
+    {
+      "label": "Texto para o botão \"Repetir\"",
+      "default": "Repetir"
+    },
+    {
+      "label": "Texto para o botão \"Mostrar soluções\"",
+      "default": "Mostrar solução"
+    },
+    {
+      "label": "Etiqueta para zona de largar numerada",
+      "default": "Zona de largar @index.",
+      "description": "Etiqueta utilizada para acessibilidade, onde o leitor de ecrã lê o índice da zona de largar. Variável disponível: @index"
+    },
+    {
+      "label": "Etiqueta para zona de largar vazia",
+      "default": "Zona de largar @index está vazia.",
+      "description": "Etiqueta utilizada para acessibilidade, onde o leitor de ecrã lê que a zona de largar está vazia"
+    },
+    {
+      "label": "Etiqueta para zona de largar com conteúdos",
+      "default": "Zona de largar @index contém o item @draggable.",
+      "description": "Etiqueta utilizada para acessibilidade, onde o leitor de ecrã lê que a zona de largar contém um elemento"
+    },
+    {
+      "label": "Etiqueta para elementos arrastáveis",
+      "default": "@index de @count elementos.",
+      "description": "Etiqueta utilizada para acessibilidade, onde o leitor de ecrã lê que este é um elemento arrastável. Variáveis disponíveis: @index, @count"
+    },
+    {
+      "label": "Etiqueta para o botão de mostrar dica",
+      "default": "Mostrar dica",
+      "description": "Etiqueta utilizada para acessibilidade, onde o leitor de ecrã lê que existe uma dica antes de a mostrar"
+    },
+    {
+      "label": "Texto do leitor de ecrã para resposta correta",
+      "default": "Correto!"
+    },
+    {
+      "label": "Texto do leitor de ecrã para resposta incorreta",
+      "default": "Incorreto!"
+    },
+    {
+      "label": "Texto da caixa de diálogo de confirmação para reinicio dos elementos",
+      "default": "Repor elemento arrastável"
+    },
+    {
+      "label": "Descrição da caixa de diálogo de confirmação para reinicio dos elementos",
+      "default": "Tem a certeza que pretende repor esta zona de largar ao seu estado original?"
+    },
+    {
+      "label": "Etiqueta utilizada para acessibilidade, onde o leitor de ecrã indica que uma ação de arrasto foi iniciada",
+      "default": "Um elemento foi agarrado."
+    },
+    {
+      "label": "Etiqueta utilizada para acessibilidade, onde o leitor de ecrã indica que o arrastamento foi cancelado",
+      "default": "Arrastamento cancelado."
+    },
+    {
+      "label": "Etiqueta utilizada para acessibilidade, onde o leitor de ecrã indica que o texto é uma resposta correta",
+      "default": "Resposta correta:"
+    },
+    {
+      "label": "Cabeçalho para o painel que contém feedback das respostas corretas/incorretas",
+      "default": "Feedback"
+    },
+    {
+      "label": "Configurações gerais.",
+      "description": "Estas opções permitem controlar o comportamento da atividade.",
+      "fields": [
+        {
+          "label": "Ativar \"Repetir\""
+        },
+        {
+          "label": "Ativar botão de \"Mostrar Solução\""
+        },
+        {
+          "label": "Ativar botão de \"Verificar\""
+        },
+        {
+          "label": "Feedback imediato"
+        }
+      ]
+    },
+    {
+      "label": "Representação textual da barra de pontuação para aqueles que usam leitores de ecrã",
+      "default": "Conseguiu :num pontos de um total de :total"
+    },
+    {
+      "label": "Etiqueta de tecnologia assistiva para o botão \"Verificar\"",
+      "default": "Verifique as respostas. As respostas serão marcadas como corretas, incorretas ou sem resposta."
+    },
+    {
+      "label": "Etiqueta de tecnologia assistiva para o botão \"Mostrar solução\"",
+      "default": "Mostrar a solução. A atividade será marcada com a respetiva solução correta."
+    },
+    {
+      "label": "Etiqueta de tecnologia assistiva para o botão \"Repetir\"",
+      "default": "Repetir a atividade. Apagar todas as respostas e reiniciar a atividade."
+    }
+  ]
+}

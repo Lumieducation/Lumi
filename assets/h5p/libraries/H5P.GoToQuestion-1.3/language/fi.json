@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Kysymysteksti",
+      "description": "Kysymys jonka pohjalta käyttäjä tekee valinnan"
+    },
+    {
+      "label": "Valinnat",
+      "entity": "Valinta",
+      "field": {
+        "fields": [
+          {
+            "label": "Valinnan teksti",
+            "description": "Tämä teksti esitetään valintapainikkeessa"
+          },
+          {
+            "label": "Siirry",
+            "description": "Siirtää käyttäjän tiettyyn kohtaan aikajanalla kun hän painaa valintapainiketta. Syötä aikakoodi muodossa M:SS."
+          },
+          {
+            "label": "Jos valittu teksti",
+            "description": "Vapaaahetoinen teksti joka näytetään sen jälkeen kun käyttäjä on painanut valintapainiketta."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Jatka painikkeen teksti",
+      "default": "Jatka"
+    }
+  ]
+}

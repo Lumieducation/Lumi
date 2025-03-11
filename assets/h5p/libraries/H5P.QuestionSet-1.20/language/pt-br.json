@@ -1,0 +1,278 @@
+{
+  "semantics": [
+    {
+      "label": "Introdução do Quiz",
+      "fields": [
+        {
+          "label": "Mostrar introdução"
+        },
+        {
+          "label": "Título",
+          "description": "Este título será exibido acima do texto de introdução."
+        },
+        {
+          "label": "Texto de introdução",
+          "description": "Este texto será exibido antes do início do questionário."
+        },
+        {
+          "label": "Texto do botão Iniciar",
+          "default": "Iniciar o Quiz"
+        },
+        {
+          "label": "Imagem do plano de fundo",
+          "description": "Uma imagem de plano de fundo opcional para a introdução."
+        }
+      ]
+    },
+    {
+      "label": "Imagem de plano de fundo",
+      "description": "Uma imagem de plano de fundo opcional para o conjunto de questões."
+    },
+    {
+      "label": "Indicador de progresso",
+      "description": "Estilo do indicador de progresso do conjunto de questões.",
+      "options": [
+        {
+          "label": "Literal"
+        },
+        {
+          "label": "Pontos"
+        }
+      ]
+    },
+    {
+      "label": "Porcentagem para aprovação",
+      "description": "Porcentagem da pontuação total necessária para passar no questionário."
+    },
+    {
+      "label": "Questões",
+      "widgets": [
+        {
+          "label": "Padrão"
+        },
+        {
+          "label": "Literal"
+        }
+      ],
+      "entity": "questão",
+      "field": {
+        "label": "Tipo de questão",
+        "description": "Biblioteca para esta questão."
+      }
+    },
+    {
+      "label": "Textos de interface no quiz",
+      "fields": [
+        {
+          "label": "Botão Voltar",
+          "default": "Questão anterior"
+        },
+        {
+          "label": "Botão Próximo",
+          "default": "Próxima questão"
+        },
+        {
+          "label": "Botão Finalizar",
+          "default": "Finalizar"
+        },
+        {
+          "label": "Botão Enviar",
+          "default": "Enviar"
+        },
+        {
+          "label": "Texto de progresso",
+          "description": "Texto usado se o progresso textual for selecionado.",
+          "default": "Questão: @current de @total questões"
+        },
+        {
+          "label": "Rótulo para pular para uma determinada questão",
+          "description": "Você deve usar o espaço reservado '%d' em vez do número da questão e %total em vez da quantidade total de perguntas.",
+          "default": "Questão %d de %total"
+        },
+        {
+          "label": "Rótulo da caixa de diálogo de direitos autorais da questão",
+          "default": "Questão"
+        },
+        {
+          "label": "Progresso do leitor de tela",
+          "description": "Você pode usar as variáveis de pergunta @current e @total",
+          "default": "Questão @current de @total"
+        },
+        {
+          "label": "Texto da pergunta não respondida",
+          "default": "Sem resposta"
+        },
+        {
+          "label": "Texto da questão respondida",
+          "default": "Respondido"
+        },
+        {
+          "label": "Texto da questão atual",
+          "default": "Questão atual"
+        },
+        {
+          "label": "Navigation label for readspeakers",
+          "default": "Questions"
+        }
+      ]
+    },
+    {
+      "label": "Desativar a navegação para trás",
+      "description": "Esta opção só permitirá que você avance no Conjunto de Questões"
+    },
+    {
+      "label": "Embaralhar as perguntas",
+      "description": "Ativa o embaralhamento da ordem de exibição das questões."
+    },
+    {
+      "label": "Número de questões a serem exibidas:",
+      "description": "Criar um lote aleatório de questões a partir do total."
+    },
+    {
+      "label": "Quiz finalizado",
+      "fields": [
+        {
+          "label": "Mostrar resultados"
+        },
+        {
+          "label": "Mostrar o botão Mostrar Solução"
+        },
+        {
+          "label": "Mostrar o botão Tentar Novamente"
+        },
+        {
+          "label": "Mensagem não há resultados",
+          "description": "Texto exibido na página final quando \"Mostrar resultados\" está desativado",
+          "default": "Finalizado"
+        },
+        {
+          "label": "Título de feedback",
+          "default": "Seu resultado:",
+          "description": "Este título será exibido no final do questionário quando o usuário tiver respondido a todas as perguntas."
+        },
+        {
+          "label": "Locutor de pontuação",
+          "description": "Este rótulo será usado para anunciar a pontuação final ao usuário na tela final",
+          "default": "Você conseguiu @finals dos pontos @totals"
+        },
+        {
+          "label": "Locutor de pontuação",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Padrão"
+                }
+              ],
+              "label": "Definir feedback personalizado para qualquer faixa de pontuação",
+              "description": "Exemplo: 0-20% Pontuação Ruim, 21-91% Pontuação Média, 91-100% Pontuação Ótima!",
+              "entity": "faixa",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Faixa de pontuação"
+                  },
+                  {},
+                  {
+                    "label": "Feedback para a faixa de pontuação definida",
+                    "placeholder": "Preencha o feedback"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Feedback antigo",
+          "fields": [
+            {
+              "description": "Este texto será exibido acima da pontuação se o usuário for aprovado no questionário.",
+              "label": "Saudação aprovada no teste"
+            },
+            {
+              "label": "Comentário aprovado",
+              "description": "Este comentário será exibido após a pontuação se o usuário tiver passado com sucesso no questionário."
+            },
+            {
+              "label": "Título reprovado no quiz",
+              "description": "Este texto será exibido acima da pontuação se o usuário for reprovado no questionário."
+            },
+            {
+              "description": "Este comentário será exibido após a pontuação se o usuário tiver falhado no questionário.",
+              "label": "Comentário com falha"
+            }
+          ]
+        },
+        {
+          "label": "Rótulo do botão Solução",
+          "default": "Mostrar solução",
+          "description": "Texto para o botão solução."
+        },
+        {
+          "label": "Texto do botão Tentar Novamente",
+          "default": "Tentar Novamente",
+          "description": "Texto para o botão de repetição."
+        },
+        {
+          "label": "Texto do botão Finalizar",
+          "default": "Finalizar"
+        },
+        {
+          "label": "Texto do botão Enviar",
+          "default": "Enviar"
+        },
+        {
+          "label": "Exibir vídeo antes dos resultados do quiz"
+        },
+        {
+          "label": "Enable skip video button"
+        },
+        {
+          "label": "Ativar botão de pular vídeo",
+          "default": "Pular Vídeo"
+        },
+        {
+          "label": "Vídeo aprovado",
+          "description": "Este vídeo será reproduzido se o usuário for aprovado no teste."
+        },
+        {
+          "label": "Falha no vídeo",
+          "description": "Este vídeo será reproduzido se o usuário falhar no teste."
+        }
+      ]
+    },
+    {
+      "label": "Configurações para os botões \"Mostrar solução\" e \"Tentar Novamente\"",
+      "fields": [
+        {
+          "label": "Mostrar o botão \"Verificar\"",
+          "description": "Esta opção determina se o botão \"Verificar\" será exibido para todas as questões."
+        },
+        {
+          "label": "Substituir o botão \"Mostrar Solução\"",
+          "description": "Esta opção determina se o botão \"Mostrar Solução\" será exibido para todas as questões, desativado para todas ou configurado para cada questão individualmente.",
+          "options": [
+            {
+              "label": "Ativado"
+            },
+            {
+              "label": "Desativado"
+            }
+          ]
+        },
+        {
+          "label": "Substituir o botão \"Tentar Novamente\"",
+          "description": "Esta opção determina se o botão \"Tentar Novamente\" será exibido para todas as questões, desativado para todas ou configurado para cada questão individualmente.",
+          "options": [
+            {
+              "label": "Ativado"
+            },
+            {
+              "label": "Desativado"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

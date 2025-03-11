@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Descrição da tarefa"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Padrão"
+        }
+      ],
+      "label": "Cartões",
+      "entity": "cartão",
+      "field": {
+        "label": "Cartão",
+        "fields": [
+          {
+            "label": "Question",
+            "description": "Pergunta textual opcional para o cartão. (O cartão pode utilizar apenas uma imagem, apenas um texto ou ambos)"
+          },
+          {
+            "label": "Resposta",
+            "description": "Optional answer(solution) for the card. Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "Image",
+            "description": "Imagem opcional para o cartão. (O cartão pode utilizar apenas uma imagem, apenas um texto ou ambos)"
+          },
+          {
+            "label": "Texto alternativo para imagem"
+          },
+          {
+            "label": "Tip",
+            "fields": [
+              {
+                "label": "Tip text"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Progress text",
+      "default": "Cartão @card de @total",
+      "description": "Texto de progresso, variáveis disponíveis: @card e @total. Exemplo: 'Cartão @card de @total'."
+    },
+    {
+      "label": "Texto para o botão seguinte",
+      "default": "Next"
+    },
+    {
+      "label": "Texto para o botão anterior",
+      "default": "Anterior"
+    },
+    {
+      "label": "Texto para o botão de verificação de respostas",
+      "default": "Verifique"
+    },
+    {
+      "label": "Exigir a entrada do usuário antes que a solução possa ser visualizada"
+    },
+    {
+      "label": "Texto para o campo de entrada de respostas",
+      "default": "Sua resposta"
+    },
+    {
+      "label": "Texto para a resposta correta",
+      "default": "Correto"
+    },
+    {
+      "label": "Texto para resposta incorreta",
+      "default": "Incorreto"
+    },
+    {
+      "label": "Mostrar texto da solução",
+      "default": "Resposta correcta"
+    },
+    {
+      "label": "Texto para título de resultados",
+      "default": "Resultados"
+    },
+    {
+      "label": "Texto para o número de corretos",
+      "default": "@score de @total corretos",
+      "description": "Texto do resultado, variáveis disponíveis: @score e @total. Exemplo: '@score de @total correto'."
+    },
+    {
+      "label": "Texto para mostrar resultados",
+      "default": "Mostrar resultados"
+    },
+    {
+      "label": "Texto para etiqueta de resposta curta",
+      "default": "A:"
+    },
+    {
+      "label": "Texto para botão de \"repetir\"",
+      "default": "Repetir"
+    },
+    {
+      "label": "Diferenciar maiúsculas de minúsculas",
+      "description": "Garante que o utilizador digita o texto exatamente igual à resposta."
+    },
+    {
+      "label": "Texto incorreto para tecnologias de assistência",
+      "default": "Resposta incorreta. A resposta correta foi @answer",
+      "description": "Texto que será anunciado para as tecnologias de assistência. Use @answer como variável."
+    },
+    {
+      "label": "Texto de feedback correto para tecnologias de assistência",
+      "default": "@answer está correta.",
+      "description": "Texto que será anunciado às tecnologias de assistência quando um cartão for respondido corretamente. Use @answer como variável."
+    },
+    {
+      "label": "Mudança de cartão para tecnologias de assistência",
+      "default": "Página @current de @total",
+      "description": "Texto que será anunciado às tecnologias de assistência na navegação entre cartões. Utilizar @current e @total como variáveis."
+    },
+    {
+      "label": "Aleatorizar cartões",
+      "description": "Habilite para aleatorizar a ordem em que os cartões são exibidos."
+    }
+  ]
+}

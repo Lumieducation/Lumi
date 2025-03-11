@@ -1,0 +1,293 @@
+{
+  "semantics": [
+    {
+      "label": "과제설명",
+      "description": "과제를 이곳에 설명하세요."
+    },
+    {
+      "label": "단어",
+      "widgets": [
+        {
+          "label": "기본값"
+        }
+      ],
+      "entity": "단어",
+      "field": {
+        "label": "단어",
+        "fields": [
+          {
+            "label": "힌트",
+            "description": "답에 대한 힌트"
+          },
+          {
+            "label": "답",
+            "description": "힌트에 대한 답"
+          },
+          {
+            "label": "추가 힌트"
+          },
+          {
+            "label": "크로스워드 보드의 단어 고치기",
+            "description": "크로스워드 보드의 특정 위치의 단어를 고치려면 체크. Words with the same alignment may not be placed touching each other."
+          },
+          {
+            "label": "행",
+            "description": "답이 시작되는 행 인덱스"
+          },
+          {
+            "label": "Column",
+            "description": "답이 시작되는 열 인덱스"
+          },
+          {
+            "label": "방향",
+            "description": "가로 세로 방향",
+            "options": [
+              {
+                "label": "가로"
+              },
+              {
+                "label": "세로"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "전체 해답",
+      "description": "선택사항으로 그리드의 특정 문자에서 파생될 수 있는 솔루션 단어를 추가합니다. It will only be visible if all its characters can be found in the crossword. 참고: 이 기능에 대한 접근성 지원은 아직 없습니다."
+    },
+    {
+      "label": "전체 피드백",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "기본값"
+            }
+          ],
+          "label": "점수 범위에 대한 사용자 정의 피드백 정의",
+          "description": "필요한 만큼 범위를 추가하려면 \"범위 추가\" 버튼을 클릭합니다. 예: 0-20% 집중이 필요합니다, 21-91% 조금 더 노력해보세요, 91-100% 훌륭해요!",
+          "entity": "점수 범위",
+          "field": {
+            "fields": [
+              {
+                "label": "점수 범위"
+              },
+              {},
+              {
+                "label": "정의된 점수 범위에 대한 피드백",
+                "placeholder": "피드백 작성"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Theme",
+      "fields": [
+        {
+          "label": "배경 이미지",
+          "description": "선택 사항인 배경 이미지를 선택합니다. 늘리지 않고 배경에 맞게 스케일링됩니다."
+        },
+        {
+          "label": "배경색",
+          "description": "배경색을 선택하세요. 배경이미지 혹은 투명한 영역에 대한 배경으로 사용됩니다."
+        },
+        {
+          "label": "격자 색",
+          "description": "격자의 색을 선택하세요."
+        },
+        {
+          "label": "칸 배경색",
+          "description": "표의 칸 배경색을 선택하세요."
+        },
+        {
+          "label": "표의 칸 글자색",
+          "description": "표의 칸 글자색을 선택하세요."
+        },
+        {
+          "label": "낱말 힌트 아이디 색",
+          "description": "표의 칸 안에 낱말 힌트 아이디 색을 선택하세요."
+        },
+        {
+          "label": "표의 칸 배경색(강조됨)",
+          "description": "강조되는 표의 칸 색깔을 선택하세요."
+        },
+        {
+          "label": "표의 칸 글자 색(강조됨)",
+          "description": "강조되는 표의 칸 문자색을 선택하세요."
+        },
+        {
+          "label": "표의 칸 아이디 색(강조됨)",
+          "description": "강조되는 표 칸안의 낱말 힌트 아이디 색을 선택하세요."
+        }
+      ]
+    },
+    {
+      "label": "과제 수행 동작 설정",
+      "description": "이 옵션을 사용하면 과제의 동작을 제어할 수 있습니다.",
+      "fields": [
+        {
+          "label": "표시할 단어 수",
+          "description": "풀(여기서는 단어가 모여있는 곳)에서 임의의 단어 묶음을 만듭니다. 이 단어 묶음에는 이 설정과 관계없이 크로스워드 보드에 고정되어 있는 모든 단어들을 항상 포함하게 될 것입니다. 값이 비어 있거나 0이면 모든 단어를 사용할 수 있습니다."
+        },
+        {
+          "label": "즉각 피드백 사용"
+        },
+        {
+          "label": "단어 채점하기",
+          "description": "이 옵션이 활성화되면 점수를 결정하기 위해 단어가 카운트됩니다. 그렇지 않으면 올바른 문자가 카운트됩니다."
+        },
+        {
+          "label": "벌칙 적용",
+          "description": "활성화하면 각 오답에 -1점의 벌점이 주어집니다."
+        },
+        {
+          "label": "\"Retry\"(재시도) 활성화"
+        },
+        {
+          "label": "\"Solution\"(해답) 활성화"
+        },
+        {
+          "label": "Keep correct answers on retry",
+          "description": "If this option is enabled, correct answers will be kept when the user retries the task unless full score was achieved."
+        }
+      ]
+    },
+    {
+      "label": "사용자 인터페이스",
+      "fields": [
+        {
+          "label": "가로에 대한 라벨",
+          "default": "가로"
+        },
+        {
+          "label": "세로에 대한 라벨",
+          "default": "세로"
+        },
+        {
+          "label": "\"Check\"(확인) 버튼 텍스트",
+          "default": "확인"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "\"Retry\"(재시도) 버튼 텍스트",
+          "default": "재시도"
+        },
+        {
+          "label": "\"Show solution\"(해답 보이기) 버튼 텍스트",
+          "default": "해답 보이기"
+        },
+        {
+          "label": "가로 세로 낱말을 만들 수 없습니다.",
+          "default": "주어진 단어로 가로 세로 낱말을 생성할 수 없습니다. 다시 시도하십시오."
+        },
+        {
+          "label": "가로 세로 낱말을 만들 수 없습니다.(너무 적은 단어)",
+          "default": "가로 세로 낱말을 생성할 수 없습니다. 적어도 두 단어가 필요합니다."
+        },
+        {
+          "label": "문제가 있는 단어",
+          "description": "가로 세로 낱말을 생성하는 동안 문제가 생기는 단어들을 목록으로 만드세요. @words 자리표시자로 실제 문제가 발생하는 단어로 대체합니다.",
+          "default": "Some words could not be placed. 고정된 단어를 사용한다면, 그 단어들의 위치가 다른 단어들이 위치되는 것을 막지 않도록 하세요. Words with the same alignment may not be placed touching each other. 문제가 발생하는 단어: @words"
+        },
+        {
+          "label": "추가 단서",
+          "default": "추가 단서"
+        },
+        {
+          "label": "창 닫기",
+          "default": "창 닫기"
+        }
+      ]
+    },
+    {
+      "label": "글 읽어주기",
+      "fields": [
+        {
+          "label": "크로스워드 보드 설명",
+          "default": "크로스워드 보드. 화살표 키를 사용하여 탐색하고 키보드를 사용하여 문자를 입력합니다. 대신에 입력 필드를 사용하려면 탭을 사용하십시오."
+        },
+        {
+          "label": "열",
+          "default": "열"
+        },
+        {
+          "label": "행",
+          "default": "행"
+        },
+        {
+          "label": "가로",
+          "default": "가로"
+        },
+        {
+          "label": "세로",
+          "default": "세로"
+        },
+        {
+          "label": "비어있음",
+          "default": "비어있음"
+        },
+        {
+          "description": "결과 알리기. @clue 는 변수이며 각각의 단서로 대체됩니다.",
+          "label": "결과",
+          "default": "결과: @clue"
+        },
+        {
+          "label": "정답",
+          "default": "정답"
+        },
+        {
+          "label": "오답",
+          "default": "오답"
+        },
+        {
+          "label": "포인트",
+          "default": "포인트"
+        },
+        {
+          "description": "해답 알리기. @clue 와 @solution 는 변수이고 각 값에 의해 대체됩니다.",
+          "label": "해답",
+          "default": "@clue 에 대한 해답: @solution"
+        },
+        {
+          "description": "추가 단서 알리기 @clue 는 변수이고 각 값에 의해 대체됩니다.",
+          "label": "추가 단서",
+          "default": "@clue 에 대한 추가 단서 열기"
+        },
+        {
+          "description": "현재 위치 알리기. @position 와 @length 는 변수이고 각 값에 의해 대체됩니다.",
+          "label": "글자",
+          "default": "@length 중 Letter @position 위치"
+        },
+        {
+          "description": "단어길이 알리기. @length 변수이고 각 값에 의해 대체됩니다.",
+          "label": "단어의 길이",
+          "default": "@length 글자 단어"
+        },
+        {
+          "label": "\"Check\" (확인) 버튼에 대한 보조 기술 설명",
+          "default": "문자를 확인하세요. 응답은 정답, 오답, 미답변으로 표기됩니다."
+        },
+        {
+          "label": "\"Show Solution\"(해답 보이기) 버튼에 대한 보조 기술 설명",
+          "default": "해답 보이기. 크로스워드 보드가 정확한 해답과 함께 채워집니다."
+        },
+        {
+          "label": "\"Retry\"(재시도) 버튼에 대한 보조기술 설명",
+          "default": "다시 해보세요. 모든 응답을 재설정하고 다시 과제를 시작합니다."
+        },
+        {
+          "label": "풀기 결과",
+          "description": "@score 와 @total 은 변수이고 각 값에 의해 대체됩니다.",
+          "default": "전체 @total 점 중 @score 점을 획득하였습니다"
+        }
+      ]
+    }
+  ]
+}

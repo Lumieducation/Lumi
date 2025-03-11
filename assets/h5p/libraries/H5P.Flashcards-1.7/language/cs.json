@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Popis úlohy"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Výchozí"
+        }
+      ],
+      "label": "Karty",
+      "entity": "karta",
+      "field": {
+        "label": "Karta",
+        "fields": [
+          {
+            "label": "Otázka",
+            "description": "Volitelná textová otázka pro kartu. (Karta může používat pouze obrázek, pouze text nebo obojí)"
+          },
+          {
+            "label": "Odpověď",
+            "description": "Odpověď (řešení) pro kartu. Použijte symbol / k rozdělení alternativních řešení. Použijte \\/ pokud by mělo řešení obsahovat /."
+          },
+          {
+            "label": "Obrázek",
+            "description": "Volitelný obrázek pro kartu. (Karta může používat pouze obrázek, pouze text nebo obojí)"
+          },
+          {
+            "label": "Alternativní text pro obrázek"
+          },
+          {
+            "label": "Nápověda",
+            "fields": [
+              {
+                "label": "Text nápovědy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Text pokroku",
+      "default": "Karet @card z @total",
+      "description": "Text pokroku, dostupné proměnné: @card a @total. Příklad: 'Card @card of @total'"
+    },
+    {
+      "label": "Text pro tlačítko další",
+      "default": "Další"
+    },
+    {
+      "label": "Text pro tlačítko předchozí",
+      "default": "Předchozí"
+    },
+    {
+      "label": "Text pro tlačítko kontrola odpovědi",
+      "default": "Zkontrolovat"
+    },
+    {
+      "label": "Před zobrazením řešení je třeba zadat vstup uživatele"
+    },
+    {
+      "label": "Text pro pole pro zadání odpovědi",
+      "default": "Vaše odpověď"
+    },
+    {
+      "label": "Text pro správnou odpověď",
+      "default": "Správně"
+    },
+    {
+      "label": "Text pro nesprávnou odpověď",
+      "default": "Nesprávně"
+    },
+    {
+      "label": "Text pro zobrazit řešení",
+      "default": "Správná odpověď"
+    },
+    {
+      "label": "Text pro nadpis výsledku",
+      "default": "Výsledek"
+    },
+    {
+      "label": "Text pro počet správných",
+      "default": "@score z @total správně",
+      "description": "Výsledný text, dostupné proměnné: @score a @total. Příklad: \"@score z @total správně\""
+    },
+    {
+      "label": "Text pro zobrazení výsledků",
+      "default": "Zobrazit výsledky"
+    },
+    {
+      "label": "Text pro popisek s krátkou odpovědí",
+      "default": "A:"
+    },
+    {
+      "label": "Text tlačítka \"opakovat\"",
+      "default": "Opakovat"
+    },
+    {
+      "label": "Rozlišuje velká a malá písmena",
+      "description": "Zajišťuje, že vstup uživatele musí být přesně stejný jako odpověď."
+    },
+    {
+      "label": "Nesprávný text pro podpůrné technologie",
+      "default": "Nesprávná odpověď. Správná odpověď je @answer",
+      "description": "Text, který bude oznámen podpůrnými technologiemi. Jako proměnnou použijte @answer."
+    },
+    {
+      "label": "Text zpětné vazby při správné odpovědi pro podpůrné technologie",
+      "default": "@answer je správná odpověď.",
+      "description": "Text, který bude při oznámen podpůrnými technologiemi, když je karta zodpovězena správně. Použijte @answer jako proměnnou."
+    },
+    {
+      "label": "Změna karty za podpůrné technologie",
+      "default": "Strana @current z @total",
+      "description": "Text, který bude při navigaci mezi kartami oznámen podpůrnými technologiemi. Jako proměnné použijte @current a @total."
+    },
+    {
+      "label": "Náhodné karty",
+      "description": "Povolit náhodné pořadí karet na displeji."
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "semantics": [
+    {
+      "label": "Navodilo udeležencem",
+      "description": "Opis reševanja zadane naloge."
+    },
+    {
+      "label": "Gesla",
+      "widgets": [
+        {
+          "label": "Privzeto"
+        }
+      ],
+      "entity": "Geslo",
+      "field": {
+        "label": "Geslo",
+        "fields": [
+          {
+            "label": "Namig",
+            "description": "Besedilo namiga, ki vodi do odgovora."
+          },
+          {
+            "label": "Odgovor",
+            "description": "Besedilo odgovora na namig."
+          },
+          {
+            "label": "Dodaten namig"
+          },
+          {
+            "label": "Zakleni geslo na mrežo",
+            "description": "Geslo bo zaklenjeno na točno določeno mesto na mreži. Words with the same alignment may not be placed touching each other."
+          },
+          {
+            "label": "Vrstica",
+            "description": "Indeks vrstice z začetkom gesla na mreži."
+          },
+          {
+            "label": "Stolpec",
+            "description": "Indeks stolpca z začetkom gesla na mreži."
+          },
+          {
+            "label": "Usmerjenost",
+            "description": "Usmerjenost gesla na mreži.",
+            "options": [
+              {
+                "label": "Vodoravno"
+              },
+              {
+                "label": "Navpično"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Skupno geslo",
+      "description": "Neobvezno skupno geslo, ki ga je možno izpeljati iz črk ostalih gesel. Pod mrežo bo vidno le, če so črke dejansko na voljo."
+    },
+    {
+      "label": "Splošna povratna informacija",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Privzeto"
+            }
+          ],
+          "label": "Določi ločeno povratno informacijo za vsak razpon rezultatov",
+          "description": "Kliknite gumb \"Dodaj razpon\" za dodajanje dodatnih razponov. Primer: 0-20 % Slab rezultat, 21-91 % Povprečen rezultat, 91-100 % Odličen rezultat!",
+          "entity": "razpon",
+          "field": {
+            "fields": [
+              {
+                "label": "Razpon rezultatov"
+              },
+              {},
+              {
+                "label": "Povratna informacija za definiran razpon rezultatov",
+                "placeholder": "Vnesite povratno informacijo"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Vizualizacija",
+      "fields": [
+        {
+          "label": "Slika za ozadje",
+          "description": "Neobvezna slika je prikazana kot ozadje mreže."
+        },
+        {
+          "label": "Barva ozadja",
+          "description": "Izbira barvne sheme ozadja. Barva lahko nadomesti sliko ozadja ali prosojna območja."
+        },
+        {
+          "label": "Barva mreže",
+          "description": "Izbira barvne sheme obrob mreže."
+        },
+        {
+          "label": "Barva ozadja celice",
+          "description": "Izbira barvne sheme ozadja celic na mreži."
+        },
+        {
+          "label": "Barva besedila celice",
+          "description": "Izbira barvne sheme besedila v celicah."
+        },
+        {
+          "label": "Barva številke namiga",
+          "description": "Izbira barvne sheme za številko namiga v celicah."
+        },
+        {
+          "label": "Barva ozadja poudarjene celice",
+          "description": "Izbira barvne sheme ozadja za poudarjene celice na mreži."
+        },
+        {
+          "label": "Barva besedila poudarjene celice",
+          "description": "Izbira barvne sheme besedila v poudarjenih celicah."
+        },
+        {
+          "label": "Barva številke poudarjenega namiga",
+          "description": "Izbira barvne sheme za številko namiga v poudarjenih celicah."
+        }
+      ]
+    },
+    {
+      "label": "Nastavitve interakcije",
+      "description": "Nastavitve omogočajo nadzor nad interakcijo aktivnosti za udeležence.",
+      "fields": [
+        {
+          "label": "Število gesel za prikaz",
+          "description": "Iz celotnega bazena bo po naključnem vrstnem redu prikazano le izbrano število gesel. V vsakem primeru bodo prikazana gesla, ki so zaklenjena na mrežo. Prazno polje ali 0 pomeni uporabo vseh gesel."
+        },
+        {
+          "label": "Sprotno preverjaj odgovore"
+        },
+        {
+          "label": "Točkuj gesla",
+          "description": "Omogočena možnost pomeni, da se točkujejo gesla kot celota. V nasprotnem primeru se točkuje vsak znak posebej."
+        },
+        {
+          "label": "Kazenske točke",
+          "description": "Vsak napačen odgovor pomeni kazensko točko."
+        },
+        {
+          "label": "Omogoči gumb \"Poskusi ponovno\""
+        },
+        {
+          "label": "Omogoči gumb \"Prikaži rešitev\""
+        },
+        {
+          "label": "Keep correct answers on retry",
+          "description": "If this option is enabled, correct answers will be kept when the user retries the task unless full score was achieved."
+        }
+      ]
+    },
+    {
+      "label": "Uporabniški vmesnik",
+      "fields": [
+        {
+          "label": "Besedilo za vodoravno postavitev",
+          "default": "Vodoravno"
+        },
+        {
+          "label": "Besedilo za navpično postavitev",
+          "default": "Navpično"
+        },
+        {
+          "label": "Besedilo za gumb \"Preveri\"",
+          "default": "Preveri"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "Besedilo za gumb \"Poskusi ponovno\"",
+          "default": "Poskusi ponovno"
+        },
+        {
+          "label": "Besedilo za gumb \"Prikaži rešitev\"",
+          "default": "Prikaži rešitev"
+        },
+        {
+          "label": "Križanke ni mogoče ustvariti",
+          "default": "Križanke z navedenimi gesli ni bilo mogoče ustvariti. Poskusite znova z manj gesli ali gesli, ki imajo več skupnih znakov."
+        },
+        {
+          "label": "Križanke ni mogoče ustvariti (premalo gesel)",
+          "default": "Križanke z navedenimi gesli ni bilo mogoče ustvariti. Zahtevani sta vsaj dve gesli."
+        },
+        {
+          "label": "Problematična gesla",
+          "description": "Navedba gesel, ki so povzročile težave pri ustvarjanju križanke. @words je spremenljivka.",
+          "default": "Some words could not be placed. Če uporabljate zaklenjena gesla, pazite, da njihov položaj ne preprečuje postavljanja drugih gesel. Words with the same alignment may not be placed touching each other. Problematična gesla: @words"
+        },
+        {
+          "label": "Besedilo za dodaten namig",
+          "default": "Dodaten namig"
+        },
+        {
+          "label": "Zapri okno",
+          "default": "Zapri okno"
+        }
+      ]
+    },
+    {
+      "label": "Bralnik zaslona",
+      "fields": [
+        {
+          "label": "Opis mreže križanke",
+          "default": "Mreža križanke. Za krmarjenje po mreži uporabite puščice, za vnos znakov pa tipkovnico. Med vnosnimi polji z namigi se lahko premikate s tabulatorjem."
+        },
+        {
+          "label": "Stolpec",
+          "default": "Stolpec"
+        },
+        {
+          "label": "Vrstica",
+          "default": "Vrstica"
+        },
+        {
+          "label": "Vodoravno",
+          "default": "Vodoravno"
+        },
+        {
+          "label": "Navpično",
+          "default": "Navpično"
+        },
+        {
+          "label": "Brez odgovora",
+          "default": "Brez odgovora"
+        },
+        {
+          "description": "Pregled odgovorov. @clue je spremenljivka.",
+          "label": "Odgovor za",
+          "default": "Odgovor za: @clue"
+        },
+        {
+          "label": "Pravilno",
+          "default": "Pravilno"
+        },
+        {
+          "label": "Nepravilno",
+          "default": "Nepravilno"
+        },
+        {
+          "label": "Točka",
+          "default": "Točka"
+        },
+        {
+          "description": "Pregled rešitev. @clue in @solution sta spremenljivki.",
+          "label": "Rešitev za",
+          "default": "Rešitev za @clue: @solution"
+        },
+        {
+          "description": "Pregled dodatnih namigov. @clue je spremenljivka.",
+          "label": "Dodaten namig za",
+          "default": "Odpri dodaten namig za @clue"
+        },
+        {
+          "description": "Pregled trenutnega položaja v geslu. @position in @length sta spremenljivki.",
+          "label": "Znak",
+          "default": "Znak @position od @length"
+        },
+        {
+          "description": "Pregled dolžine gesla. @length je spremenljivka.",
+          "label": "Dolžina gesla",
+          "default": "Dolžina gesla: @length"
+        },
+        {
+          "label": "Opis gumba \"Preveri\" za bralnike zaslona",
+          "default": "Preveri pravilnost vnesenih znakov. Odgovori bodo označeni kot pravilni, nepravilni ali brez odgovora."
+        },
+        {
+          "label": "Opis gumba \"Prikaži rešitev\" za bralnike zaslona",
+          "default": "Prikaže rešitev in križanko napolni s pravilnimi gesli."
+        },
+        {
+          "label": "Opis gumba \"Poskusi ponovno\" za bralnike zaslona",
+          "default": "Omogoči ponoven poskus. Ponastavi vse odzive in znova zažene nalogo."
+        },
+        {
+          "label": "Rezultat reševanja",
+          "description": "@score in @total sta spremenljivki.",
+          "default": "Seštevek točk: @score od @total."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "semantics": [
+    {
+      "label": "Медиа",
+      "fields": [
+        {
+          "label": "Тип",
+          "description": "Необязательная медиа, отображающаяся над вопросом."
+        },
+        {
+          "label": "Отключить возможность приближения изображения"
+        }
+      ]
+    },
+    {
+      "label": "Описание задания",
+      "description": "Опишите задание здесь.",
+      "placeholder": "Пожалуйста, слушайте внимательно и записывайте услышанное."
+    },
+    {
+      "label": "Предложения",
+      "widgets": [
+        {
+          "label": "По умолчанию"
+        }
+      ],
+      "entity": "Предложение",
+      "field": {
+        "label": "Предложение",
+        "fields": [
+          {
+            "label": "Описание",
+            "description": "Можете добавить над текстом краткое описание, например, полезно для диалогов."
+          },
+          {
+            "label": "Пример звучания",
+            "description": "Предложение на нормальной скорости"
+          },
+          {
+            "label": "Медленный пример звучания",
+            "description": "Предложение на низкой скорости"
+          },
+          {
+            "label": "Текст",
+            "description": "Текст, который должен быть записан. Можете добавить дополнительную озвучку, добавив вертикальную линию (|)."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Общая обратная связь",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "По умолчанию"
+            }
+          ],
+          "label": "Определите собственную обратную связь для любого диапазона оценок",
+          "description": "Нажмите \"Добавить диапазон\" чтобы добавить столько диапазонов, сколько вам нужно. Например: 0-20% Плохая оценка, 21-91% Средняя оценка, 91-100% Отличная оценка!",
+          "entity": "диапазон",
+          "field": {
+            "fields": [
+              {
+                "label": "Диапазон баллов"
+              },
+              {
+                "label": "Обратная связь для указанного диапазона оценок",
+                "placeholder": "Впишите обратную связь"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Настройки обратной связи",
+      "description": "Эти настройки помогут Вам контролировать обратную связь после игры.",
+      "fields": [
+        {
+          "label": "Максимальное количество попыток",
+          "description": "Ограничивает количество прослушиваний каждого предложения."
+        },
+        {
+          "label": "Максимальное количество попыток медленных аудио",
+          "description": "Ограничивает количество прослушиваний каждого предложения медленной скорости."
+        },
+        {
+          "label": "Disable pause option",
+          "description": "If checked, pausing the audio while playing is not possible."
+        },
+        {
+          "label": "Play button delay",
+          "description": "Optionally set a time period of up to three seconds that playing a button should be delayed. This is useful if you want to allow students to enter the text field before they start listening."
+        },
+        {
+          "label": "Shuffle sentences",
+          "description": "Define when the sentences should be shuffled.",
+          "options": [
+            {
+              "label": "Never"
+            },
+            {
+              "label": "Once when starting exercise"
+            },
+            {
+              "label": "On every try"
+            }
+          ]
+        },
+        {
+          "label": "Scoring",
+          "fields": [
+            {
+              "label": "Игнорировать пунктуацию",
+              "description": "В случае ошибок пунктуации баллы не снижаются."
+            },
+            {
+              "label": "Zero mistakes mode",
+              "description": "If checked, only correct answers will be considered for scoring. Mistakes will not be punished."
+            },
+            {
+              "label": "Количество опечаток",
+              "description": "Установите степень определения опечаток (слово 3-9 характеров: до 1 ошибка, слово с более чем 9 характеров: до 2 ошибок), который будут считаться ошибкой.",
+              "options": [
+                {
+                  "label": "100 %"
+                },
+                {
+                  "label": "50 %"
+                },
+                {
+                  "label": "0 %"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Text",
+          "fields": [
+            {
+              "label": "Word separator",
+              "description": "Define the separator of words different than space character to support alternate solutions with different number of words."
+            },
+            {
+              "label": "Направление письма",
+              "description": "Установите свойственное языку направление справа налево или слева направо.",
+              "options": [
+                {
+                  "label": "Автоматическое направление"
+                },
+                {
+                  "label": "Справа налево"
+                },
+                {
+                  "label": "Слева направо"
+                }
+              ]
+            },
+            {
+              "label": "Разделить характеры",
+              "description": "Включите, если определённые характеры должны автоматически разделяться в отдельные слова."
+            }
+          ]
+        },
+        {
+          "label": "Presentation of feedback",
+          "fields": [
+            {
+              "label": "Сообщение об опечатке",
+              "description": "При проверке, опечатки будут различаться от ошибок и отображены в обычном стиле."
+            },
+            {
+              "label": "Презентация дополнительных решений",
+              "description": "Определите, какие дополнения должны быть представлены в случае неправильных или отсутствующих слов в решении.",
+              "options": [
+                {
+                  "label": "Показать только первую альтернативу"
+                },
+                {
+                  "label": "Показать все альтернативы"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Разрешить \"Повторить\""
+        },
+        {
+          "label": "Разрешить кнопку \"Показать решение\""
+        },
+        {
+          "label": "Show solution on check"
+        }
+      ]
+    },
+    {
+      "label": "Интерфейс пользователя",
+      "fields": [
+        {
+          "label": "Общая обратная связь",
+          "description": "Вы можете использовать подсказки, которые будут заменены на соответствующую цифру: @matches = количество совпадений, @total = ошибок всего, @wrong = неправильные слова, @added = дополнительные слова, @missing = отсутствующие слова, @typo = опечатки",
+          "default": "Ошибок: @total."
+        },
+        {
+          "label": "General feedback (zero mistakes mode)",
+          "description": "You can use several placeholders that will be replaced with the adequate number: @matches = number of matches, @total = total score, @wrong = wrong words, @added = additional words, @missing = missing words, @typo = typing errors",
+          "default": "You have entered @total word(s) correctly and @typo word(s) with minor mistakes."
+        },
+        {
+          "label": "Текст для кнопки \"Проверить\"",
+          "default": "Проверить"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "Текст для кнопки \"Повторить\"",
+          "default": "Повторить"
+        },
+        {
+          "label": "Tекст для кнопки \"Показать решение\"",
+          "default": "Показать решение"
+        },
+        {
+          "label": "Сообщение об ошибке аудио",
+          "default": "Ваш браузер не поддерживает запись аудио."
+        }
+      ]
+    },
+    {
+      "label": "Ассистирующие технологии",
+      "fields": [
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "Show the solution. The task will be marked with its correct solution."
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry the task. Reset all responses and start the task over again."
+        },
+        {
+          "label": "Кнопка играть",
+          "default": "играть"
+        },
+        {
+          "label": "Кнопка играть медленно",
+          "default": "играть медленно"
+        },
+        {
+          "label": "Осталось попыток (текст для ассистирующих технологии и текст подсказки)",
+          "description": "@number будет заменено на количество оставшихся попыток.",
+          "default": "Осталось попыток: @number"
+        },
+        {
+          "label": "Расширение (текст для ассистирующих технологии и текст подсказки)",
+          "default": "Расширение"
+        },
+        {
+          "label": "Область ввода текста",
+          "default": "Запишите услышанное."
+        },
+        {
+          "label": "Ваш результат",
+          "description": "@score будет заменено количеством баллов. @total будет заменено максимальным возможным количеством баллов.",
+          "default": "У тебя @score из @total баллов"
+        },
+        {
+          "label": "Решение",
+          "default": "Решение"
+        },
+        {
+          "label": "Предложение",
+          "default": "Предложение"
+        },
+        {
+          "label": "Значение",
+          "default": "Значение"
+        },
+        {
+          "label": "Верно",
+          "default": "Верно"
+        },
+        {
+          "label": "Неверно",
+          "default": "Неверно"
+        },
+        {
+          "label": "Маленькая ошибка",
+          "default": "Маленькая ошибка"
+        },
+        {
+          "label": "Отсутствующее слово или символ",
+          "default": "Отсутствует"
+        },
+        {
+          "label": "Добавлено слово или символ",
+          "default": "добавлено"
+        },
+        {
+          "label": "Верное решение",
+          "default": "Нужно было"
+        },
+        {
+          "label": "Или",
+          "default": "Или"
+        },
+        {
+          "label": "Балл",
+          "default": "Балл"
+        },
+        {
+          "label": "Баллы",
+          "default": "Баллы"
+        },
+        {
+          "label": "Период",
+          "default": "Период"
+        },
+        {
+          "label": "Восклицание",
+          "default": "Восклицание"
+        },
+        {
+          "label": "Вопросительный знак",
+          "default": "Вопросительный знак"
+        },
+        {
+          "label": "Запятая",
+          "default": "Запятая"
+        },
+        {
+          "label": "Одиночные кавычки",
+          "default": "Одиночные кавычки"
+        },
+        {
+          "label": "Двойные кавычки",
+          "default": "Двойные кавычки"
+        },
+        {
+          "label": "Двоеточие",
+          "default": "Двоеточие"
+        },
+        {
+          "label": "Точка с запятой",
+          "default": "Точка с запятой"
+        },
+        {
+          "label": "Плюс",
+          "default": "Плюс"
+        },
+        {
+          "label": "Минус",
+          "default": "Минус"
+        },
+        {
+          "label": "Звёздочка",
+          "default": "Звёздочка"
+        },
+        {
+          "label": "Косая черта",
+          "default": "Косая черта"
+        }
+      ]
+    }
+  ]
+}

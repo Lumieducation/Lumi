@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Endepunkt",
+      "fields": [
+        {
+          "label": "Type",
+          "options": [
+            {
+              "label": "Tidskode"
+            },
+            {
+              "label": "Annen side (URL)"
+            }
+          ]
+        },
+        {
+          "label": "Gå til",
+          "description": "Tidskoden brukeren tas til ved å trykke på hotspot. Tidskoden må være i formatet M:SS."
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "Protokoll",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(rot relativt)"
+                },
+                {
+                  "label": "andre"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Visuelle egenskaper",
+      "fields": [
+        {
+          "label": "Form",
+          "options": [
+            {
+              "label": "Rektangulær"
+            },
+            {
+              "label": "Sirkulær"
+            },
+            {
+              "label": "Avrundet rektangel"
+            }
+          ]
+        },
+        {
+          "label": "Bakgrunnsfarge for hotspot"
+        },
+        {
+          "label": "Visuell effekt for muse-peker"
+        },
+        {
+          "label": "Vis blinkende effekt",
+          "description": "Blinkende effekt er alltid på i editor så du kan se hvor gjennomsiktige hotspots befinner seg."
+        }
+      ]
+    },
+    {
+      "label": "Tekster",
+      "fields": [
+        {
+          "label": "Alternative Text",
+          "description": "Describe the subject the hotspot covers. Used for readspeakers",
+          "placeholder": "An apple on a table"
+        },
+        {
+          "label": "Hotspot Label"
+        },
+        {
+          "label": "Show label"
+        },
+        {
+          "label": "Label color"
+        }
+      ]
+    }
+  ]
+}

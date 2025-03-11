@@ -1,0 +1,24 @@
+[
+  {
+    "label": "Username on Twitter",
+    "importance": "high",
+    "name": "userName",
+    "type": "text",
+    "description": "The username we'll be fetching tweets from"
+  },
+  {
+    "label": "Show replies",
+    "importance": "low",
+    "name": "showReplies",
+    "type": "boolean"
+  },
+  {
+    "label": "Number of tweets",
+    "importance": "medium",
+    "name": "numTweets",
+    "type": "number",
+    "default": 5,
+    "min": 1,
+    "max": 20
+  }
+]

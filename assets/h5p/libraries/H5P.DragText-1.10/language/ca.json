@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Recurs",
+      "fields": [
+        {
+          "label": "Tipus",
+          "description": "Recursos opcionals per mostrar al damunt de la pregunta."
+        },
+        {
+          "label": "Deshabilita el zoom de les imatges"
+        }
+      ]
+    },
+    {
+      "label": "Descripció de la tasca",
+      "description": "Descriu com l’usuari ha de resoldre la tasca.",
+      "default": "Arrossegueu les paraules a les caselles corresponents"
+    },
+    {
+      "label": "Text",
+      "placeholder": "*Oslo* és la capital de Noruega, *Estocolm* és la capital de Suècia i *Copenhaguen* és la capital de Dinamarca. Totes les ciutats estan situades a la península de *Scandinava: Part nord d’Europa*.",
+      "important": {
+        "description": "<ul><li>Les paraules que es poden deixar anar s’afegeixen amb un asterisc (*) davant i darrere de la paraula o frase correcta.</li><li>Podeu afegir una pista textual amb dos punts (:) davant de la pista.</li><li>Per cada espai buit, només hi ha una paraula correcta.</li><li>Podeu afegir suggeriments perquè es mostrin en completar una tasca. Utilitzeu '\\+' per als suggeriments correctes i '\\-' per als incorrectes.</li></ul>",
+        "example": "El contingut d’H5P es pot editar utilitzant un *navegador:Quin tipus de programa és Chrome?*. <br /> El contingut d’H5P és *interactiu\\+Correcte \\-Incorrecte; torna-ho a provar.*"
+      }
+    },
+    {
+      "label": "Distractors",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Enter extra solutions that are wrong as distractors. Use the same asterisk (*) scheme as for the text."
+    },
+    {
+      "label": "Suggeriment general",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Opció predeterminada"
+            }
+          ],
+          "label": "Defineix una valoració per cada rang de puntuació",
+          "description": "Feu clic al botó \"Afegeix un rang\" per afegir tants rangs com necessiteu. Exemple: 0-20 % per a puntuació baixa, 21-91 % per a puntuació mitjana, 91-100 % per a puntuació excel·lent",
+          "entity": "rang",
+          "field": {
+            "fields": [
+              {
+                "label": "Rang de puntuació"
+              },
+              {},
+              {
+                "label": "Retroacció per al rang de puntuació definit",
+                "placeholder": "Introduïu el suggeriment"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Text del botó \"Verifica\"",
+      "default": "Verifica"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "Text del botó \"Torna-ho a provar\"",
+      "default": "Torna-ho a provar"
+    },
+    {
+      "label": "Text del botó \"Mostra la solució\"",
+      "default": "Mostra la solució"
+    },
+    {
+      "label": "Etiqueta per a Zona on deixar anar numerada",
+      "default": "Zona on deixar anar @index.",
+      "description": "Etiqueta utilitzada per a funcions d’accessibilitat, en què l’altaveu de lectura llegirà l’índex d’una zona on deixar anar. Variable disponible: @index"
+    },
+    {
+      "label": "Etiqueta per a una zona on deixar anar buida",
+      "default": "La zona on deixar anar @index està buida.",
+      "description": "Etiqueta utilitzada per a funcions d’accessibilitat, en què l’altaveu de lectura llegirà que la zona on deixar anar és buida"
+    },
+    {
+      "label": "Etiqueta de Conté una zona on deixar anar",
+      "default": "La zona on deixar anar @index conté @draggable que es pot arrossegar.",
+      "description": "Etiqueta utilitzada per a funcions d’accessibilitat, en què l’altaveu de lectura llegirà que la zona on deixar anar conté un element que es pot arrossegar"
+    },
+    {
+      "label": "Etiqueta dels elements que es poden arrossegar",
+      "default": "@index de @count draggables.",
+      "description": "Etiqueta utilitzada per a funcions d’accessibilitat, en què l’altaveu de lectura llegeix que és un element que es pot arrossegar. Variable disponible: @index, @count"
+    },
+    {
+      "label": "Etiqueta del botó de mostra de la pista",
+      "default": "Mostra la pista",
+      "description": "Etiqueta utilitzada per a funcions d’accessibilitat, en què l’altaveu de lectura llegeix el contingut abans de llegir la pista"
+    },
+    {
+      "label": "Text de l’altaveu de lectura per a una resposta correcta",
+      "default": "Correcte!"
+    },
+    {
+      "label": "Text de l’altaveu de lectura per a una resposta incorrecta",
+      "default": "Incorrecte!"
+    },
+    {
+      "label": "Títol del quadre de diàleg per confirmar que l’usuari vol restablir un element que es pot arrossegar",
+      "default": "Restableix l’element per deixar anar"
+    },
+    {
+      "label": "Descripció del quadre de diàleg per confirmar que l’usuari vol restablir un element que es pot arrossegar",
+      "default": "Confirmeu que voleu restablir aquesta zona on deixar anar?"
+    },
+    {
+      "label": "Etiqueta utilitzada per a funcions d’accessibilitat, en què l’altaveu de lectura indica que la funció d’arrossegar s’ha iniciat",
+      "default": "S’ha agafat un element que es pot arrossegar."
+    },
+    {
+      "label": "Etiqueta utilitzada per a funcions d’accessibilitat, en què l’altaveu de lectura indica que la funció d’arrossegar s’ha cancel·lat",
+      "default": "S’ha cancel·lat l’opció de deixar anar."
+    },
+    {
+      "label": "Etiqueta utilitzada per a funcions d’accessibilitat, en què l’altaveu de lectura indica que un text és la resposta correcta",
+      "default": "Resposta correcta:"
+    },
+    {
+      "label": "Encapçalament per al tauler que conté retroacció per a les respostes correctes/incorrectes",
+      "default": "Retroacció"
+    },
+    {
+      "label": "Opcions de comportament.",
+      "description": "Aquestes opcions et permetran controlar com es comporta la tasca.",
+      "fields": [
+        {
+          "label": "Activa \"Torna-ho a provar\""
+        },
+        {
+          "label": "Activa el botó \"Mostra la solució\""
+        },
+        {
+          "label": "Activa el botó \"Comprova\""
+        },
+        {
+          "label": "Suggeriments instantanis"
+        }
+      ]
+    },
+    {
+      "label": "Representació textual de la barra de puntuació pera als que utilitzen un altaveu de lectura",
+      "default": "Heu fet :num de :total punts"
+    },
+    {
+      "label": "Etiqueta de la tecnologia d’assistència per al botó \"Comprova\"",
+      "default": "Comprova les respostes. Les respostes es marcaran com a correctes, incorrectes o sense resposta."
+    },
+    {
+      "label": "Etiqueta de la tecnologia d’assistència per al botó \"Mostra la solució\"",
+      "default": "Mostra la solució. La tasca es marcarà amb la seva solució correcta."
+    },
+    {
+      "label": "Etiqueta de la tecnologia d’assistència per a l’etiqueta \"Torna-ho a provar\"",
+      "default": "Intenta de nou la tasca. Reajusta totes les respostes i comença la tasca de nou."
+    }
+  ]
+}

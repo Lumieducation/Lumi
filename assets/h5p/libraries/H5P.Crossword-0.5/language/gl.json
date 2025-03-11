@@ -1,0 +1,293 @@
+{
+  "semantics": [
+    {
+      "label": "Descrición da tarefa",
+      "description": "Describe a túa tarefa aquí."
+    },
+    {
+      "label": "palabras",
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
+      "entity": "Palabra",
+      "field": {
+        "label": "Palabra",
+        "fields": [
+          {
+            "label": "Definición",
+            "description": "Definición que debería apuntar á resposta."
+          },
+          {
+            "label": "Resposta",
+            "description": "Resposta á definición."
+          },
+          {
+            "label": "Pista extra"
+          },
+          {
+            "label": "Palabra fixa na grella",
+            "description": "Marca isto se queres fixar a palabra nunha posición específica da grella. Words with the same alignment may not be placed touching each other."
+          },
+          {
+            "label": "Fila",
+            "description": "Indice da fila onde debería empezar a resposta."
+          },
+          {
+            "label": "Columna",
+            "description": "Indice da columna onde debería empezar a resposta."
+          },
+          {
+            "label": "Orientación",
+            "description": "Orientación da resposta.",
+            "options": [
+              {
+                "label": "Horizontal"
+              },
+              {
+                "label": "Vertical"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Palabra de solución xeral",
+      "description": "Engade opcionalmente unha palabra de solución que se pode derivar dun grupo particular de caracteres na grella. Só será visible se todos os seus caracteres pódense atopar na grella. Por favor, lembra que aínda non hai soporte de accesibilidade para esta característica."
+    },
+    {
+      "label": "Retroalimentación xeral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Por defecto"
+            }
+          ],
+          "label": "Define a retroalimentación por defecto para calquera rango de puntuación",
+          "description": "Preme o botón \"Engadir rango\" para engadir tantos rangos como precises. Exemplo: 0-20% Mala Puntuación, 21-91% Puntuación Media, 91-100% Puntuación Xenial!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango de Puntuación"
+              },
+              {},
+              {
+                "label": "Retroalimentación para rango de puntuación definido",
+                "placeholder": "Escribe a retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tema",
+      "fields": [
+        {
+          "label": "Imaxe de fondo",
+          "description": "Selecciona unha imaxe de fondo opcional. Escalarase para que encaixe no fondo sen estirala."
+        },
+        {
+          "label": "Cor de fondo",
+          "description": "Escolle a cor de fondo. Usarase en lugar da imaxe de fondo ou como imaxe de fondo en zonas transparentes."
+        },
+        {
+          "label": "Cor da grella",
+          "description": "Escolle a cor da grella."
+        },
+        {
+          "label": "Cor de fondo da cela",
+          "description": "Escolle a cor de fondo para a cela dunha táboa."
+        },
+        {
+          "label": "Cor do texto da cela",
+          "description": "Escolle a cor do texto da cela dunha táboa."
+        },
+        {
+          "label": "Cor do id dunha definición",
+          "description": "Escolle a cor da id dunha definición dentro da cela dunha táboa."
+        },
+        {
+          "label": "Cor do fondo dunha cela (resaltada)",
+          "description": "Escolle a cor do fondo nunha cela resaltada."
+        },
+        {
+          "label": "Cor do texto da cela (resaltada)",
+          "description": "Escolle a cor do texto nunha cela resaltada."
+        },
+        {
+          "label": "Cor da id da cela (resaltada)",
+          "description": "Escolle a cor da id dunha definición dentro dunha cela resaltada nunha táboa."
+        }
+      ]
+    },
+    {
+      "label": "Configuración de comportamento",
+      "description": "Estas opcións permiten controlar o comportamento da tarefa.",
+      "fields": [
+        {
+          "label": "Número de palabras amosadas",
+          "description": "Crea un grupo de palabras entre as palabras dispoñibles. Este grupo sempre conterá polo menos todas as palabras fixadas na grella independentemente do valor desta configuración. Un valor baleiro de 0 indica que se usarán todas as palabras."
+        },
+        {
+          "label": "Activar comentarios instantáneos"
+        },
+        {
+          "label": "Puntuar palabras",
+          "description": "Se se activa está opción, contaranse as palabras para determinar a puntuación. De non ser así, contaranse os caracteres correctos."
+        },
+        {
+          "label": "Aplicar penalizacións",
+          "description": "Se se activa esta opción, aplicarase a cada resposta incorrecta unha penalización de -1."
+        },
+        {
+          "label": "Activar \"Reintentar\""
+        },
+        {
+          "label": "Activar \"Solución\""
+        },
+        {
+          "label": "Manter as respostas correctas ao volver a tentalo",
+          "description": "Se esta opción está activada, as respostas correctas manteranse cando o usuario volva a tentar a tarefa a non ser que se consiga a puntuación total."
+        }
+      ]
+    },
+    {
+      "label": "Interface de usuario",
+      "fields": [
+        {
+          "label": "Texto para horizontal",
+          "default": "Horizontal"
+        },
+        {
+          "label": "Texto para vertical",
+          "default": "Vertical"
+        },
+        {
+          "label": "Texto para o botón \"Comprobar\"",
+          "default": "Comprobar"
+        },
+        {
+          "label": "Texto para o botón \"Enviar\"",
+          "default": "Enviar"
+        },
+        {
+          "label": "Texto para o botón \"Reintentar\"",
+          "default": "Reintentar"
+        },
+        {
+          "label": "Texto para o botón \"Amosar solución\"",
+          "default": "Amosar solución"
+        },
+        {
+          "label": "Non se pode crear o encrucillado",
+          "default": "Non se puido xerar un encrucillado coas palabras proporcionadas. Por favor, proba outra vez con menos palabras ou con palabras que teñan máis caracteres en común."
+        },
+        {
+          "label": "Non se pode crear o encrucillado (moi poucas palabras)",
+          "default": "Non se puido xerar o encrucillado. Precísase un mínimo de dúas palabras."
+        },
+        {
+          "label": "Palabras problemáticas",
+          "description": "Lista as palabras que causaron problemas durante a xeración do encrucillado. Substituirase @words polas palabras problemáticas.",
+          "default": "Some words could not be placed. Se estás a usar palabras fixadas, asegúrate de que a súa posición non impida a colocación doutras palabras. Words with the same alignment may not be placed touching each other. Palabras(s) problemática(s): @words"
+        },
+        {
+          "label": "Definicion extra",
+          "default": "Definición extra"
+        },
+        {
+          "label": "Pechar fiestra",
+          "default": "Pechar fiestra"
+        }
+      ]
+    },
+    {
+      "label": "Lector de pantalla",
+      "fields": [
+        {
+          "label": "Descrición da grella do encrucillado",
+          "default": "Grella do encrucillado. Usa as teclas de dirección para navegar e o teclado para escribir os caracteres. Tamén podes usar o tabulador para navegar e escribir as respostas nos campos tipo \"Enche os ocos\" en lugar da grella."
+        },
+        {
+          "label": "Columna",
+          "default": "Columna"
+        },
+        {
+          "label": "Fila",
+          "default": "Fila"
+        },
+        {
+          "label": "Horizontal",
+          "default": "Horizontal"
+        },
+        {
+          "label": "Vertical",
+          "default": "Vertical"
+        },
+        {
+          "label": "Baleiro",
+          "default": "Baleiro"
+        },
+        {
+          "description": "Anunciador de resultados. @clue é unha variable que se substituirá pola súa definición correspondente.",
+          "label": "Resultado para",
+          "default": "Resultado para: @clue"
+        },
+        {
+          "label": "Correcto",
+          "default": "Correcto"
+        },
+        {
+          "label": "Incorrecto",
+          "default": "Incorrecto"
+        },
+        {
+          "label": "Punto",
+          "default": "punto"
+        },
+        {
+          "description": "Anunciador de solucións. @clue e @solution son variables que se substituirán polos seus valores respectivos.",
+          "label": "Solución para",
+          "default": "A solución para @clue é: @solution"
+        },
+        {
+          "description": "Anunciador de definicións extra. @clue é unha variable que se substituirá polo seu valor correspondente.",
+          "label": "Definición extra para",
+          "default": "Abrir definición extra para @clue"
+        },
+        {
+          "description": "Anunciando a posición actual. @position e @length son variables que se substituirán polos seus valores respectivos.",
+          "label": "Letra",
+          "default": "Letra @position de @length"
+        },
+        {
+          "description": "Anunciando a lonxitude da palabra. @length é unha variable que se substituirá polo seu valor correspondente.",
+          "label": "Lonxitude da palabra",
+          "default": "Palabra de @length letras"
+        },
+        {
+          "label": "Descrición do botón \"Comprobar\" para as tecnoloxías de asistencia",
+          "default": "Comproba os caracteres. As respostas marcaranse como correctas, incorrectas ou sen responder."
+        },
+        {
+          "label": "Descrición do botón \"Amosar solución\" para as tecnoloxías de asistencia",
+          "default": "Amosar a solución. Completarase o encrucillado coas súas solucións correctas."
+        },
+        {
+          "label": "Descrición do botón \"Reintentar\" para as tecnoloxías de asistencia",
+          "default": "Reintenta a tarefa. Borra todas as respostas e comenza de novo."
+        },
+        {
+          "label": "O teu resultado",
+          "description": "@score e @total son variables que se substituirán polos seus valores correspondentes.",
+          "default": "Obtiveches @score puntos dun total de @total."
+        }
+      ]
+    }
+  ]
+}

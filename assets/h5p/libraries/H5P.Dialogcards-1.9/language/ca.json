@@ -1,0 +1,219 @@
+{
+  "semantics": [
+    {
+      "label": "Encapçalament"
+    },
+    {
+      "label": "Mode",
+      "description": "Mode de presentació de les targetes d’aprenentatge",
+      "options": [
+        {
+          "label": "Normal"
+        },
+        {
+          "label": "Repetició"
+        }
+      ]
+    },
+    {
+      "label": "Descripció de la tasca"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Opció predeterminada"
+        }
+      ],
+      "label": "Diàlegs",
+      "entity": "diàleg",
+      "field": {
+        "label": "Pregunta",
+        "fields": [
+          {
+            "label": "Text",
+            "description": "Pista per a la primera part de la targeta d’aprenentatge"
+          },
+          {
+            "label": "Resposta",
+            "description": "Pista per a la segona part de la targeta d’aprenentatge"
+          },
+          {
+            "label": "Imatge",
+            "description": "Imatge opcional de la fitxa. (La fitxa pot utilitzar només una imatge, només un text o ambdues)"
+          },
+          {
+            "label": "Text alternatiu per a la imatge"
+          },
+          {
+            "label": "Fitxers d’àudio"
+          },
+          {
+            "label": "Pistes",
+            "fields": [
+              {
+                "label": "Pista per al text",
+                "description": "Pista per a la primera part del diàleg"
+              },
+              {
+                "label": "Pista per a la resposta",
+                "description": "Pista per a la segona part del diàleg"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Opcions de comportament",
+      "description": "Aquestes opcions et permetran controlar com es comporta la tasca.",
+      "fields": [
+        {
+          "label": "Activa el botó “Torna-ho a provar”"
+        },
+        {
+          "label": "Desactiva la possibilitat de navegar enrere",
+          "description": "Aquesta opció només us permetrà avançar per les targetes d’aprenentatge."
+        },
+        {
+          "label": "Ajusta el text a la mida de la targeta",
+          "description": "Si desmarqueu aquesta opció, la mida de la carta s’ajustarà a la mida del text."
+        },
+        {
+          "label": "Distribueix les cartes aleatòriament",
+          "description": "Activeu l’ordre aleatori de les cartes a la pantalla."
+        },
+        {
+          "label": "Nivell màxim de competència"
+        },
+        {
+          "label": "Permet la progressió ràpida",
+          "description": "Si s’activa aquesta opció, els alumnes poden optar per indicar que saben la resposta sense girar la targeta."
+        }
+      ]
+    },
+    {
+      "label": "Text del botó “Gira”",
+      "default": "Gira"
+    },
+    {
+      "label": "Text del botó següent",
+      "default": "Següent"
+    },
+    {
+      "label": "Text del botó anterior",
+      "default": "Anterior"
+    },
+    {
+      "label": "Text del botó “Torna-ho a provar”",
+      "default": "Torna-ho a provar"
+    },
+    {
+      "label": "Text del botó “Resposta correcta”",
+      "default": "Ho he fet bé!"
+    },
+    {
+      "label": "Text del botó “Resposta incorrecta”",
+      "default": "Ho he fet malament"
+    },
+    {
+      "label": "Text del missatge “Round” a sota de les targetes i a la pantalla de resum",
+      "description": "@round se substituirà pel número de la ronda actual.",
+      "default": "Ronda @round"
+    },
+    {
+      "label": "Text del missatge “Targetes restants”",
+      "description": "@number se substituirà pel nombre de targetes que queden a la ronda",
+      "default": "Targetes restants: @number"
+    },
+    {
+      "label": "Text del botó “Ronda següent”",
+      "description": "@round se substituirà pel número de la ronda",
+      "default": "Continua a la ronda @round"
+    },
+    {
+      "label": "Text del botó “Torna a començar”",
+      "default": "Torna a començar"
+    },
+    {
+      "label": "Text for the \"show summary\" button",
+      "default": "Següent"
+    },
+    {
+      "label": "Text del títol per a la pàgina de resum",
+      "default": "Resum"
+    },
+    {
+      "label": "Text per a “Targetes correctes:”",
+      "default": "Targetes que heu respost de manera correcta:"
+    },
+    {
+      "label": "Text per a “Targetes incorrectes:”",
+      "default": "Targetes que heu respost de manera incorrecta:"
+    },
+    {
+      "label": "Text per a “Targetes no mostrades:”",
+      "default": "Targetes agrupades que no es mostren:"
+    },
+    {
+      "label": "Text per a “Puntuació total”",
+      "default": "Puntuació total"
+    },
+    {
+      "label": "Text per a “Targetes completades”",
+      "default": "Targetes que heu après:"
+    },
+    {
+      "label": "Text per a “Rondes completades:”",
+      "default": "Rondes completades:"
+    },
+    {
+      "label": "Missatge per indicar que totes les cartes s’han aprés correctament",
+      "description": "@cards se substituirà pel nombre de targetes del grup. @max se substituirà pel nivell màxim de competència.",
+      "default": "L'enhorabona! Has contestat bé a les @cards targetes @max vegades seguides."
+    },
+    {
+      "label": "Text del progrés",
+      "description": "Les variables disponibles són @card i @total.",
+      "default": "Fitxa @card de @total"
+    },
+    {
+      "label": "Etiqueta per al text d’una targeta",
+      "description": "Les tecnologies d’assistència l’utilitzen per a funcions d’accessibilitat.",
+      "default": "Anvers de la targeta"
+    },
+    {
+      "label": "Etiqueta per al revers d’una targeta",
+      "description": "Les tecnologies d’assistència l’utilitzen per a funcions d’accessibilitat.",
+      "default": "Revers de la targeta"
+    },
+    {
+      "label": "Etiqueta del botó “Mostra el consell”",
+      "default": "Mostra el consell"
+    },
+    {
+      "label": "Missatge “L’àudio no s’admet”",
+      "default": "El vostre navegador no admet aquest àudio"
+    },
+    {
+      "label": "Quadre de diàleg per confirmar que es vol començar de zero",
+      "fields": [
+        {
+          "label": "Títol",
+          "default": "Voleu tornar a començar?"
+        },
+        {
+          "label": "Text del cos",
+          "default": "Es perdran tots els avanços. Segur que voleu començar de nou?"
+        },
+        {
+          "label": "Etiqueta del botó “Cancel·la”",
+          "default": "Cancel·la"
+        },
+        {
+          "label": "Etiqueta del botó “Confirma”",
+          "default": "Torna a començar"
+        }
+      ]
+    }
+  ]
+}

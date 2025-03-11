@@ -1,0 +1,40 @@
+{
+  "semantics":[
+    {
+      "label":"Diagramtype",
+      "options":[
+        {
+          "label":"Kakediagram"
+        },
+        {
+          "label":"Søylediagram"
+        }
+      ]
+    },
+    {
+      "label":"Verdier",
+      "entity":"verdi",
+      "field":{
+        "label":"Verdi",
+        "fields":[
+          {
+            "label":"Navn"
+          },
+          {
+            "label":"Verdi"
+          },
+          {
+            "label":"Bakgrunnsfarge"
+          },
+          {
+            "label":"Tekstfarge"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Tekst lest av readspeakers (som definerer figuren som et diagram).",
+      "default": "Diagram"
+    }
+  ]
+}

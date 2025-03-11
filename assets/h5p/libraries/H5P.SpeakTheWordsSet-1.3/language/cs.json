@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Úvod",
+      "fields": [
+        {
+          "label": "Zobrazit úvod"
+        },
+        {
+          "label": "Úvodní obrázek"
+        },
+        {
+          "label": "Alternativní text pro úvodní obrázek"
+        },
+        {
+          "label": "Nadpis"
+        },
+        {
+          "label": "Úvodní text",
+          "description": "Tento nadpis se zobrazí nad úvodním textem."
+        }
+      ]
+    },
+    {
+      "label": "Otázky",
+      "widgets": [
+        {
+          "label": "Výchozí"
+        }
+      ],
+      "entity": "Otázka",
+      "field": {
+        "label": "Otázka"
+      }
+    },
+    {
+      "label": "Celková zpětná vazba",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Výchozí"
+            }
+          ],
+          "label": "Definujte vlastní zpětnou vazbu pro jakýkoli rozsah skóre",
+          "description": "Klepnutím na tlačítko \"Přidat rozsah\" přidejte libovolný počet rozsahů. Příklad: 0-20% špatné skóre, 21-91% průměrné skóre, 91-100% výborné skóre!",
+          "entity": "rozsah",
+          "field": {
+            "fields": [
+              {
+                "label": "Rozsah skóre"
+              },
+              {},
+              {
+                "label": "Zpětná vazba pro definovaný rozsah skóre",
+                "placeholder": "Vyplňte zpětnou vazbu"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Popisky a texty Namluvte slovní sadu",
+      "fields": [
+        {
+          "label": "Popisek tlačítka Úvod",
+          "default": "Zahajení kurzu!"
+        },
+        {
+          "label": "Popisek obrazovky Výsledky řešení",
+          "default": "Vaše výsledky:"
+        },
+        {
+          "label": "Popisek tlačítka Zobrazit řešení",
+          "default": "Zobrazit řešení"
+        },
+        {
+          "label": "Popisek tlačítka Opakovat",
+          "default": "Opakovat"
+        },
+        {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
+          "label": "Popisek Další otázka",
+          "default": "Další otázka"
+        },
+        {
+          "label": "Popisek Předchozí otázka",
+          "default": "Předchozí otázka"
+        },
+        {
+          "label": "Název navigační lišty",
+          "description": "Názvy otázek v navigační liště. \":num\" bude nahrazeno skutečným číslem snímku.",
+          "default": "Snímek :num"
+        },
+        {
+          "label": "Popisek snímku odpovědi",
+          "default": "Odpozeno"
+        },
+        {
+          "label": "Popisek aktivního snímku",
+          "default": "Aktuální snímek"
+        }
+      ]
+    }
+  ]
+}

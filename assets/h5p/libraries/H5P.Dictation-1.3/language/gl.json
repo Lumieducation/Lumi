@@ -1,0 +1,374 @@
+{
+  "semantics": [
+    {
+      "label": "Medios",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Medios opcionais amosados enriba da pregunta."
+        },
+        {
+          "label": "Desactivar zoom de imaxe"
+        }
+      ]
+    },
+    {
+      "label": "Descrición da tarefa",
+      "description": "Describe a túa tarefa aquí.",
+      "placeholder": "Por favor, escoita atentamente e escribe o que oias."
+    },
+    {
+      "label": "Oracións",
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
+      "entity": "Oración",
+      "field": {
+        "label": "Oración",
+        "fields": [
+          {
+            "label": "Descrición",
+            "description": "Podes poñer unha simple descrición opcional sobre a caixa de entrada de texto. Pode resultar útil, por exemplo, en diálogos."
+          },
+          {
+            "label": "Mostra de son",
+            "description": "Oración falada a velocidade normal"
+          },
+          {
+            "label": "Mostra de son lenta",
+            "description": "Oración falada a velocidade lenta"
+          },
+          {
+            "label": "Texto",
+            "description": "Texto que o usuario debería escribir. Pódense engadir alternativas para unha palabra por medio dunha liña vertical (|) seguida pola alternativa."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Retroalimentación Xeral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Por defecto"
+            }
+          ],
+          "label": "Establecer retroalimentación personalizada para calquera rango de puntuación",
+          "description": "Preme o botón \"Engadir rango\" para engadir tantos rangos como precises. Exemplo: 0-20% Mala puntuación, 21-91% Puntuación media, 91-100% Puntuación estupenda!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango de Puntuación"
+              },
+              {
+                "label": "Retroalimentación para rango de puntuación definido",
+                "placeholder": "Escribe a túa retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Configuración do comportamento",
+      "description": "Estas opcións permitiranche controlar o comportamento da tarefa.",
+      "fields": [
+        {
+          "label": "Intentos máximos",
+          "description": "Limita o número de veces que poden escoitarse as mostras de audio para cada oración."
+        },
+        {
+          "label": "Intentos máximos para velocidade lenta",
+          "description": "Limita o número de veces que poden escoitarse as mostras de audio a velocidade lenta para cada oración."
+        },
+        {
+          "label": "Desactivar a opción de pausa",
+          "description": "Se está marcado, non é posible deter o son durante a reprodución."
+        },
+        {
+          "label": "Retraso do botón de reprodución",
+          "description": "Opcionalmente, establece un período de tempo de ata tres segundos para que se retrase a reprodución dun botón. Isto é útil se queres permitir que os estudantes completen un campo de texto antes de comezar a escoitar."
+        },
+        {
+          "label": "Barallar frases",
+          "description": "Define cando se deben barallar as frases.",
+          "options": [
+            {
+              "label": "Nunca"
+            },
+            {
+              "label": "Unha vez ao comezar o exercicio"
+            },
+            {
+              "label": "En cada intento"
+            }
+          ]
+        },
+        {
+          "label": "Puntuación",
+          "fields": [
+            {
+              "label": "Ignorar os signos de puntuación",
+              "description": "Se se marca esta opción, non se terán en conta os signos de puntuación para o resultado."
+            },
+            {
+              "label": "Modo cero erros",
+              "description": "Se se marca esta opción, so śe terán en conta as respostas para a puntuación. Non se penalizarán os erros."
+            },
+            {
+              "label": "Valor dos erros tipográficos",
+              "description": "Determina ata que punto os erros tipográficos contarán como erro real (palabra con 3-9 caracteres: até 1 erro, palabra con máis de 9 caracteres: até 2 erros).",
+              "options": [
+                {
+                  "label": "100 %"
+                },
+                {
+                  "label": "50 %"
+                },
+                {
+                  "label": "0 %"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Text",
+          "fields": [
+            {
+              "label": "Separador de palabras",
+              "description": "Define o separador de palabras diferente do carácter de espazo para admitir solucións alternativas con diferente número de palabras."
+            },
+            {
+              "label": "Dirección da escritura",
+              "description": "Establece se o idioma para as oracións vai de dereita a esquera ou de esquerda a dereita.",
+              "options": [
+                {
+                  "label": "Detección automática"
+                },
+                {
+                  "label": "Dereita a esquerda"
+                },
+                {
+                  "label": "Esquerda a dereita"
+                }
+              ]
+            },
+            {
+              "label": "División de caracteres",
+              "description": "Activa que os caracteres particulares se dividan en palabras separadas automaticamente (por exemplo, caracteres Han Chineses)."
+            }
+          ]
+        },
+        {
+          "label": "Presentación da retroalimentación",
+          "fields": [
+            {
+              "label": "Marcado de erros tipográficos personalizado",
+              "description": "Se se marca esta opción, amosaranse os erros tipográficos cun estilo personalizado, diferente do estilo para erros obvios."
+            },
+            {
+              "label": "Presentación de solucións alternativas",
+              "description": "Define que alternativas deberían presentarse para palabras incorrectas ou ausentes na solución.",
+              "options": [
+                {
+                  "label": "Amosar só a primeira alternativa"
+                },
+                {
+                  "label": "Amosar todas as alternativas"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Activar \"Reintentar\""
+        },
+        {
+          "label": "Activar botón \"Amosar solución\""
+        },
+        {
+          "label": "Mostrar a solución na comprobación"
+        }
+      ]
+    },
+    {
+      "label": "Interface de usuario",
+      "fields": [
+        {
+          "label": "Retroalimentación xeral",
+          "description": "Podes usar varios marcadores que serán substituídos polo número correspondente: @matches = número de coincidencias, @total = erros totais, @capped = erros totais no uso de maiúsculas, @wrong = palabras incorrectas, @added = palabras adicionais, @missing = palabras ausentes, @typo = erros tipográficos",
+          "default": "Cometiches @total erro(s)."
+        },
+        {
+          "label": "Retroalimentación xeral (modo cero erros)",
+          "description": "Podes usar varios marcadores que serán substituídos polo número correspondente: @matches = número de coincidencias, @total = puntuación total, @wrong = palabras incorrectas, @added = palabras adicionais, @missing = palabras ausente, @typo = erros tipográficos",
+          "default": "Escribiches @total palabra(s) correctamente e @typo palabras(s) con erros menores."
+        },
+        {
+          "label": "Texto para o botón \"Comprobar\"",
+          "default": "Comprobar"
+        },
+        {
+          "label": "Texto para o botón \"Enviar\"",
+          "default": "Submit"
+        },
+        {
+          "label": "Text para o botón \"Reintentar\"",
+          "default": "Reintentar"
+        },
+        {
+          "label": "Texto para o botón \"Amosar solución\"",
+          "default": "Amosar solución"
+        },
+        {
+          "label": "Mensaxe de audio non soportado",
+          "default": "O teu navegador non soporta este tipo de audio."
+        }
+      ]
+    },
+    {
+      "label": "Lector de pantalla",
+      "fields": [
+        {
+          "label": "Descrición para as tecnoloxías de asistencia do botón \"Comprobar\"",
+          "default": "Comproba as respostas. As respostas marcaranse como correctas, incorrectas ou non contestadas."
+        },
+        {
+          "label": "Descrición para as tecnoloxías de asistencia do botón \"Amosar solución\"",
+          "default": "Amosar a solución. Marcarase a tarefa coas solucións correctas."
+        },
+        {
+          "label": "Descrición para as tecnoloxías de asistencia do botón \"Tentar de novo\"",
+          "default": "Reintenta a tarefa. Borra todas as respostas e empeza a tarefa de novo."
+        },
+        {
+          "label": "Botón de reprodución",
+          "default": "Reproducir"
+        },
+        {
+          "label": "Botón de reprodución lenta",
+          "default": "Reproducir lentamente"
+        },
+        {
+          "label": "Intentos dispoñibles (texto para lector de pantalla e para cando o cursor do rato pasa por enriba)",
+          "description": "Substituirase @number polo número actual de intentos dispoñibles.",
+          "default": "Número de intentos dispoñibles: @number"
+        },
+        {
+          "label": "Infinitos (texto para lector de pantalla e para cando o cursor do rato pasa por enriba)",
+          "default": "infinitos"
+        },
+        {
+          "label": "Campo para a entrada de texto",
+          "default": "Escribe o que oiches."
+        },
+        {
+          "label": "O teu resultado",
+          "description": "Substituirase @score polo número de puntos. Substituirase @total polo número máximo de puntos.",
+          "default": "Conseguiches @score puntos de @total"
+        },
+        {
+          "label": "Solución",
+          "default": "Solución"
+        },
+        {
+          "label": "Oración",
+          "default": "Oración"
+        },
+        {
+          "label": "Elemento",
+          "default": "Elemento"
+        },
+        {
+          "label": "Correcto",
+          "default": "correcto"
+        },
+        {
+          "label": "Incorrecto",
+          "default": "Incorrecto"
+        },
+        {
+          "label": "Pequeno erro",
+          "default": "pequeno erro"
+        },
+        {
+          "label": "Falta unha palabra ou símbolo",
+          "default": "falta"
+        },
+        {
+          "label": "Palabra ou símbolo engadido",
+          "default": "engadido"
+        },
+        {
+          "label": "Solución correcta",
+          "default": "Debería ter sido"
+        },
+        {
+          "label": "Ou",
+          "default": "ou"
+        },
+        {
+          "label": "Punto",
+          "default": "punto"
+        },
+        {
+          "label": "Puntos",
+          "default": "puntos"
+        },
+        {
+          "label": "Punto",
+          "default": "punto"
+        },
+        {
+          "label": "Signo de exclamación",
+          "default": "signo de exclamación"
+        },
+        {
+          "label": "Signo de interrogación",
+          "default": "signo de interrogación"
+        },
+        {
+          "label": "Coma",
+          "default": "coma"
+        },
+        {
+          "label": "Comiñas simples",
+          "default": "comiñas simples"
+        },
+        {
+          "label": "Comiñas",
+          "default": "comiñas"
+        },
+        {
+          "label": "Dous puntos",
+          "default": "dous puntos"
+        },
+        {
+          "label": "Punto e coma",
+          "default": "punto e coma"
+        },
+        {
+          "label": "Máis",
+          "default": "máis"
+        },
+        {
+          "label": "Menos",
+          "default": "menos"
+        },
+        {
+          "label": "Asterisco",
+          "default": "asterisco"
+        },
+        {
+          "label": "Barra inclinada",
+          "default": "barra inclinada"
+        }
+      ]
+    }
+  ]
+}

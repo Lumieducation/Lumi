@@ -1,0 +1,1028 @@
+{
+  "semantics": [
+    {
+      "label": "Pokaži začetni zaslon",
+      "description": "Na začetnem zaslonu je prikazan kratek opis aktivnosti."
+    },
+    {
+      "label": "Začetni zaslon",
+      "fields": [
+        {
+          "label": "Uvod v aktivnost",
+          "placeholder": "Dobrodošli v..."
+        },
+        {
+          "label": "Medijska vsebina"
+        }
+      ]
+    },
+    {
+      "label": "Naslov",
+      "description": "Neobvezen naslov za naslovno vrstico."
+    },
+    {
+      "label": "Urejevalnik igralnega zemljevida",
+      "fields": [
+        {
+          "label": "Ozadje",
+          "fields": [
+            {
+              "label": "Slika za ozadje",
+              "description": "Izbor slike za ozadje aktivnosti."
+            },
+            {
+              "label": "Background color",
+              "description": "Choose a color to use as the background of the game map."
+            }
+          ]
+        },
+        {
+          "label": "Igralni zemljevid",
+          "fields": [
+            {},
+            {
+              "label": "Elementi",
+              "entity": "Element",
+              "field": {
+                "label": "Elementi",
+                "fields": [
+                  {
+                    "label": "Id"
+                  },
+                  {
+                    "label": "Tip"
+                  },
+                  {
+                    "label": "Oznaka stopnje",
+                    "description": "Oznaka bo prikazana na vrhu naloge in bo pomagala povezati različne stopnje med seboj."
+                  },
+                  {
+                    "label": "Začni tukaj",
+                    "description": "Če je označeno, bo ta stopnja predstavljala začetek naloge. V primeru več ali nobene označene stopnje, bo začetna stopnja izbrana naključno."
+                  },
+                  {
+                    "label": "Omejitev časa",
+                    "description": "Nastavitve v povezavi s časom.",
+                    "fields": [
+                      {
+                        "label": "Omejitev časa",
+                        "description": "Neobvezna časovna omejitev v sekundah. Če udeleženec preseže nastavljeno omejitev, se naloga zapre, ponastavi in vrednoti z izgubo življenja (če so življenja omejena)."
+                      },
+                      {
+                        "label": "Opozorilo o prekoračitvi časa",
+                        "description": "Neobvezna nastavitev časa (število preostalih sekund) za predvajanje zvočnega opozorila o prekoračitvi časa. Zvočni posnetek se izbere v nastavitvah zvoka."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Omejitve dostopa",
+                    "description": "Nastavitve pogojev za odklepanje stopenj.",
+                    "fields": [
+                      {
+                        "label": "All or any restriction set",
+                        "description": "Choose if all or any of the following restrictions need to be met.",
+                        "options": [
+                          {
+                            "label": "All"
+                          },
+                          {
+                            "label": "Any"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Restriction sets",
+                        "entity": "restriction set",
+                        "widgets": [
+                          {
+                            "label": "Default"
+                          }
+                        ],
+                        "field": {
+                          "label": "Restriction set",
+                          "fields": [
+                            {
+                              "label": "All or any restriction",
+                              "description": "Choose if all or any of the following restrictions need to be met.",
+                              "options": [
+                                {
+                                  "label": "All"
+                                },
+                                {
+                                  "label": "Any"
+                                }
+                              ]
+                            },
+                            {
+                              "label": "Restrictions",
+                              "entity": "restriction",
+                              "field": {
+                                "label": "Restriction",
+                                "fields": [
+                                  {
+                                    "label": "Restriction type",
+                                    "options": [
+                                      {
+                                        "label": "Total score"
+                                      },
+                                      {
+                                        "label": "Stage score"
+                                      },
+                                      {
+                                        "label": "Stage progress"
+                                      },
+                                      {
+                                        "label": "Time"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Total score",
+                                    "fields": [
+                                      {
+                                        "label": "Operator for total score",
+                                        "options": [
+                                          {
+                                            "label": "less than"
+                                          },
+                                          {
+                                            "label": "equal to"
+                                          },
+                                          {
+                                            "label": "not equal to"
+                                          },
+                                          {
+                                            "label": "greater than"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Value of total score to compare"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Stage score",
+                                    "fields": [
+                                      {
+                                        "label": "Stage to get score from"
+                                      },
+                                      {
+                                        "label": "Operator for stage score",
+                                        "options": [
+                                          {
+                                            "label": "less than"
+                                          },
+                                          {
+                                            "label": "equal to"
+                                          },
+                                          {
+                                            "label": "not equal to"
+                                          },
+                                          {
+                                            "label": "greater than"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Score score to compare to"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Stage progress",
+                                    "fields": [
+                                      {
+                                        "label": "Stage to get progress from"
+                                      },
+                                      {
+                                        "label": "Operator for stage progress",
+                                        "options": [
+                                          {
+                                            "label": "is"
+                                          },
+                                          {
+                                            "label": "is not"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Progress to compare to",
+                                        "options": [
+                                          {
+                                            "label": "not started"
+                                          },
+                                          {
+                                            "label": "started"
+                                          },
+                                          {
+                                            "label": "completed"
+                                          },
+                                          {
+                                            "label": "completed successfully"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Time",
+                                    "fields": [
+                                      {
+                                        "label": "Operator for time",
+                                        "options": [
+                                          {
+                                            "label": "before"
+                                          },
+                                          {
+                                            "label": "is"
+                                          },
+                                          {
+                                            "label": "is not"
+                                          },
+                                          {
+                                            "label": "after"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Time to compare to"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "label": "dummy"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Contents",
+                    "entity": "content",
+                    "widgets": [
+                      {
+                        "label": "Default"
+                      }
+                    ],
+                    "field": {
+                      "label": "Content",
+                      "fields": [
+                        {
+                          "label": "Vsebina stopnje",
+                          "description": "Izbor tipa vsebine."
+                        },
+                        {
+                          "label": "Dummy"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Poseben tip stopnje",
+                    "options": [
+                      {
+                        "label": "Zaključek"
+                      },
+                      {
+                        "label": "Dodatno življenje"
+                      },
+                      {
+                        "label": "Dodaten čas"
+                      },
+                      {
+                        "label": "Link to external content"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Število dodatnih življenj",
+                    "description": "Vnos dodatnih življenj, ki jih udeleženec prejme ob vstopu v stopnjo."
+                  },
+                  {
+                    "label": "Število sekund dodatnega časa",
+                    "description": "Vnos sekund, ki jih udeleženec prejme za skupno časovno omejitev ob vstopu v stopnjo."
+                  },
+                  {
+                    "label": "URL to link to",
+                    "description": "Set where the user should be sent to when opening this stage."
+                  },
+                  {
+                    "label": "Place to open link in",
+                    "options": [
+                      {
+                        "label": "New tab"
+                      },
+                      {
+                        "label": "Same tab"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Vedno vidno",
+                    "description": "Nastavitev preglasi druge določitve glede vidnosti stopnje in jo vedno prikazuje."
+                  },
+                  {
+                    "label": "Preglasitev simbola ključavnice",
+                    "description": "Nastavitev določa, da se pri zaklenjenih stopnjah namesto ključavnice prikaže simbol za posebno stopnjo."
+                  },
+                  {
+                    "label": "Povezane stopnje"
+                  },
+                  {
+                    "label": "Telemetrija"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Paths",
+              "entity": "path",
+              "field": {
+                "label": "Path",
+                "fields": [
+                  {
+                    "label": "From"
+                  },
+                  {
+                    "label": "To"
+                  },
+                  {
+                    "label": "Visual settings",
+                    "options": [
+                      {
+                        "label": "Use global settings"
+                      },
+                      {
+                        "label": "Use custom settings"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Custom visual settings",
+                    "fields": [
+                      {
+                        "label": "Color path"
+                      },
+                      {
+                        "label": "Path width",
+                        "options": [
+                          {
+                            "label": "thin"
+                          },
+                          {
+                            "label": "medium"
+                          },
+                          {
+                            "label": "thick"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Path style",
+                        "options": [
+                          {
+                            "label": "Solid"
+                          },
+                          {
+                            "label": "Dotted"
+                          },
+                          {
+                            "label": "Dashed"
+                          },
+                          {
+                            "label": "Double"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Končni zaslon",
+      "fields": [
+        {
+          "label": "Neuspešen poskus",
+          "fields": [
+            {
+              "label": "Sporočilo (ob neuspehu)",
+              "placeholder": "Tokrat ni uspelo..."
+            },
+            {
+              "label": "Medijska vsebina (ob neuspehu)"
+            }
+          ]
+        },
+        {
+          "label": "Uspešen poskus",
+          "fields": [
+            {
+              "label": "Sporočilo (ob uspehu)",
+              "placeholder": "Čestitke za uspešen zaključek..."
+            },
+            {
+              "label": "Medijska vsebina (ob uspehu)"
+            }
+          ]
+        },
+        {
+          "label": "Splošna povratna informacija",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Privzeto"
+                }
+              ],
+              "label": "Določi ločeno povratno informacijo za vsak razpon rezultatov",
+              "description": "Kliknite gumb \"Dodaj razpon\" za dodajanje dodatnih razponov. Primer: 0-20 % Slab rezultat, 21-91 % Povprečen rezultat, 91-100 % Odličen rezultat!",
+              "entity": "razpon",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Razpon rezultatov"
+                  },
+                  {},
+                  {
+                    "label": "Povratna informacija za definiran razpon rezultatov",
+                    "placeholder": "Vnos povratne informacije"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Vizualna podoba",
+      "fields": [
+        {
+          "label": "Stopnje",
+          "fields": [
+            {
+              "label": "Barva neobiskanih stopenj"
+            },
+            {
+              "label": "Barva zaklenjenih stopenj"
+            },
+            {
+              "label": "Barva zaključenih stopenj"
+            },
+            {
+              "label": "Show stars for scores",
+              "description": "Choose if and when stars will be displayed on the map for the scores of the stages. Please note that stages without scored exercises will not get the stars.",
+              "options": [
+                {
+                  "label": "Never"
+                },
+                {
+                  "label": "On hover"
+                },
+                {
+                  "label": "Always"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Poti",
+          "fields": [
+            {
+              "label": "Prikaži poti",
+              "description": "Nastavitev omogoči prikaz poti na igralnem zemljevidu. V urejevalnem načinu so poti vedno prikazane."
+            },
+            {
+              "label": "Stil",
+              "fields": [
+                {
+                  "label": "Barva poti"
+                },
+                {
+                  "label": "Barva zaključene poti"
+                },
+                {
+                  "label": "Širina poti",
+                  "options": [
+                    {
+                      "label": "tanka"
+                    },
+                    {
+                      "label": "srednja"
+                    },
+                    {
+                      "label": "široka"
+                    }
+                  ]
+                },
+                {
+                  "label": "Stil poti",
+                  "options": [
+                    {
+                      "label": "enakomerna"
+                    },
+                    {
+                      "label": "pikčasta"
+                    },
+                    {
+                      "label": "črtasta"
+                    },
+                    {
+                      "label": "dvojna"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Razno",
+          "fields": [
+            {
+              "label": "Animiraj zemljevid",
+              "description": "Neglede na izbiro bo vsebina primerno upoštevala nastavitve brskalnika uporabnikov (npr. zmanjšana animacija)."
+            },
+            {
+              "label": "Vzorec"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Nastavitve zvoka",
+      "fields": [
+        {
+          "label": "Glasba v ozadju",
+          "fields": [
+            {
+              "label": "Glasba v ozadju"
+            },
+            {
+              "label": "Utišaj med reševanjem naloge"
+            }
+          ]
+        },
+        {
+          "label": "Dogodki",
+          "fields": [
+            {
+              "label": "Klik na zaklenjeno stopnjo",
+              "description": "Predvajanje zvoka ob kliku na zaklenjeno stopnjo."
+            },
+            {
+              "label": "Preverjanje naloge (brez vseh točk)",
+              "description": "Predvajanje zvoka ob preverjanju naloge, ko vsi odgovori niso pravilni."
+            },
+            {
+              "label": "Preverjanje naloge (vse točke)",
+              "description": "Predvajanje zvoka ob preverjanju naloge, ko so vsi odgovori pravilni."
+            },
+            {
+              "label": "Odklenjena stopnja",
+              "description": "Predvajanje zvoka ob odklenjeni stopnji na zemljevidu."
+            },
+            {
+              "label": "Odprta naloga",
+              "description": "Predvajanje zvoka ob odprtju naloge."
+            },
+            {
+              "label": "Zaprta naloga",
+              "description": "Predvajanje zvoka ob zaprtju naloge."
+            },
+            {
+              "label": "Prikaz pogovornega okna",
+              "description": "Predvajanje zvoka ob prikazu potrditvenega pogovornega okna."
+            },
+            {
+              "label": "Popoln rezultat",
+              "description": "Predvajanje zvoka ob doseženih vseh točkah na zemljevidu."
+            },
+            {
+              "label": "Izguba življenja",
+              "description": "Predvajanje zvoka, ko udeleženec izgubi življenje."
+            },
+            {
+              "label": "Pridobljeno življenje",
+              "description": "Predvajanje zvoka, ko udeleženec pridobi življenje."
+            },
+            {
+              "label": "Konec igre",
+              "description": "Predvajanje zvoka ob končani igri, ko udeleženec ne more več nadaljevati."
+            },
+            {
+              "label": "Pridobljen dodaten čas",
+              "description": "Predvajanje zvoka, ko udeleženec pridobi dodaten čas."
+            },
+            {
+              "label": "Opozorilo o poteku časa",
+              "description": "Predvajanje zvoka ob skorajšnjem poteku časa."
+            },
+            {
+              "label": "Končni zaslon (brez vseh točk)",
+              "description": "Predvajanje zvoka ob prikazu končnega zaslona, ko udeleženec ne doseže vseh točk."
+            },
+            {
+              "label": "Končni zaslon (vse točke)",
+              "description": "Predvajanje zvoka ob prikazu končnega zaslona, ko udeleženec doseže popoln rezultat."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Nastavitve interakcije",
+      "fields": [
+        {
+          "label": "Življenja",
+          "description": "Nastavitev števila življenj, ki jih udeleženci izgubijo ob nepopolnem rezultatu. Zaključek življenj pomeni konec igre. Pustite prazno za neomejeno število življenj."
+        },
+        {
+          "label": "Skupna časovna omejitev",
+          "description": "Neobvezna časovna omejitev v sekundah za celotno igro. Igra se takoj zaključi, če udeleženec preseže zastavljeno časovno omejitev."
+        },
+        {
+          "label": "Opozorilo o prekoračitvi časa",
+          "description": "Neobvezna nastavitev časa (število preostalih sekund) za predvajanje zvočnega opozorila o prekoračitvi časa. Zvočni posnetek se izbere v nastavitvah zvoka."
+        },
+        {
+          "label": "Prag točk za napredovanje",
+          "description": "Neobvezen prag za dosežene točke, ki je lahko nižji od skupne vsote točk iz vseh nalog v igri. Udeleženec lahko na primer zaključi aktivnost, ne da bi rešil vse naloge."
+        },
+        {
+          "label": "Omogoči gumb \"Poskusi ponovno\""
+        },
+        {
+          "label": "Omogoči gumb \"Prikaži rešitev\""
+        },
+        {
+          "label": "Zemljevid",
+          "fields": [
+            {
+              "label": "Prikaži oznake stopenj",
+              "description": "Oznaka se prikaže ob premiku miške nad stopnjo. Nastavitev ne deluje na napravah z zaslonom na dotik."
+            },
+            {
+              "label": "Način raziskovanja",
+              "description": "Nastavitev vpliva na odklepanje stopenj in dinamiko igre.",
+              "options": [
+                {
+                  "label": "Prosto raziskovanje"
+                },
+                {
+                  "label": "Preveri za zaključek stopnje"
+                },
+                {
+                  "label": "Uspešno dokončaj za zaključek stopnje"
+                }
+              ]
+            },
+            {
+              "label": "Obseg vidnosti zemljevida",
+              "description": "Nastavitev obsega vidnosti stopenj.",
+              "options": [
+                {
+                  "label": "Vidne vse stopnje"
+                },
+                {
+                  "label": "Vidne vse odklenjene stopnje in njihove sosede"
+                },
+                {
+                  "label": "Vidne le odklenjene stopnje"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Uporabniški vmesnik",
+      "fields": [
+        {
+          "label": "Začetek",
+          "default": "Začetek"
+        },
+        {
+          "label": "Nadaljuj",
+          "default": "Nadaljuj"
+        },
+        {
+          "label": "Poskusi ponovno",
+          "default": "Poskusi ponovno"
+        },
+        {
+          "label": "Prikaži rešitev",
+          "default": "Prikaži rešitev"
+        },
+        {
+          "label": "Zemljevid zaključen",
+          "default": "Zemljevid je zaključen!"
+        },
+        {
+          "label": "Popoln rezultat in brez življenj",
+          "default": "Dosežene so vse točke, vendar je zmanjkalo življenj!"
+        },
+        {
+          "label": "Popoln rezultat in brez časa",
+          "default": "Dosežene so vse točke, vendar je zmanjkalo časa!"
+        },
+        {
+          "label": "Naslov pogovornega okna za zaključek zemljevida",
+          "default": "Zaključim zemljevid?"
+        },
+        {
+          "label": "Besedilo pogovornega okna za zaključek zemljevida (splošno)",
+          "default": "Po zaključku ne bo več mogoče nadaljnje raziskovanje zemljevida."
+        },
+        {
+          "label": "Besedilo pogovornega okna za zaključek zemljevida (oddaja)",
+          "default": "Dosežene točke bodo oddane."
+        },
+        {
+          "label": "Besedilo pogovornega okna za zaključek zemljevida (vprašanje)",
+          "default": "Resnično zaključim zemljevid?"
+        },
+        {
+          "label": "Naslov pogovornega okna za onemogočen dostop",
+          "default": "Stopnja zaklenjena"
+        },
+        {
+          "label": "Besedilo pogovornega okna za onemogočen dostop (splošno)",
+          "default": "Stopnja zahteva izpolnjene pogoje, preden je na voljo za raziskovanje."
+        },
+        {
+          "label": "Da",
+          "default": "Da"
+        },
+        {
+          "label": "Ne",
+          "default": "Ne"
+        },
+        {
+          "label": "Naslov pogovornega okna za konec igre",
+          "default": "Konec igre!"
+        },
+        {
+          "label": "Besedilo pogovornega okna za konec igre",
+          "default": "Zmanjkalo je življenj. Poskusi znova!"
+        },
+        {
+          "label": "Besedilo pogovornega okna za konec igre zaradi preteka časa",
+          "default": "Zmanjkalo je časa. Poskusi znova!"
+        },
+        {
+          "label": "Naslov pogovornega okna za pretek časa",
+          "default": "Čas je potekel!"
+        },
+        {
+          "label": "Besedilo pogovornega okna za pretek časa",
+          "default": "Zmanjkalo je časa."
+        },
+        {
+          "label": "Besedilo pogovornega okna za pretek časa (izgubljeno življenje)",
+          "default": "Zmanjkalo je časa, zato odštevam eno življenje."
+        },
+        {
+          "label": "Naslov pogovornega okna za nepopoln rezultat",
+          "default": "Nepopoln rezultat!"
+        },
+        {
+          "label": "Besedilo pogovornega okna za nepopoln rezultat (izgubljeno življenje)",
+          "default": "Rezultat ni popoln, zato odštevam eno življenje."
+        },
+        {
+          "label": "Naslov pogovornega okna za popoln rezultat",
+          "default": "Popoln rezultat!"
+        },
+        {
+          "label": "Besedilo pogovornega okna za popoln rezultat",
+          "default": "Dosežen je popoln rezultat za zaključek zemljevida. Preostanek je na voljo za prosto raziskovanje. Your score will be submitted once you finish the map."
+        },
+        {
+          "label": "Besedilo pogovornega okna za popoln rezultat (odštevanje življenj)",
+          "default": "Pozor! Napačni odgovori lahko pomenijo izgubljeno življenje!"
+        },
+        {
+          "label": "V redu",
+          "default": "V redu"
+        },
+        {
+          "label": "Ni veljavnih stopenj",
+          "default": "Za zemljevid ni nastavljenih veljavnih stopenj."
+        },
+        {
+          "label": "Settings",
+          "default": "Settings"
+        },
+        {
+          "label": "Volume of music",
+          "default": "Volume of music"
+        },
+        {
+          "label": "Volume of sound effects",
+          "default": "Volume of sound effects"
+        },
+        {
+          "label": "The stage will not be available unless",
+          "default": "The stage will not be available unless:"
+        },
+        {
+          "label": "The stage will not be available unless any of",
+          "default": "The stage will not be available unless any of:"
+        },
+        {
+          "label": "All of:",
+          "default": "All of:"
+        },
+        {
+          "label": "Any of:",
+          "default": "Any of:"
+        },
+        {
+          "label": "Total score less than",
+          "default": "You have a total score less than @value."
+        },
+        {
+          "label": "Total score equal to",
+          "default": "You have a total score equal to @value."
+        },
+        {
+          "label": "Total score not equal to",
+          "default": "You have a total score not equal to @value."
+        },
+        {
+          "label": "Total score greater than",
+          "default": "You have a total score greater than @value."
+        },
+        {
+          "label": "Stage score less than",
+          "default": "You have a score less than @value in stage @label."
+        },
+        {
+          "label": "Stage score equal to",
+          "default": "You have a score equal to @value in stage @label."
+        },
+        {
+          "label": "Stage score not equal to",
+          "default": "You have a score not equal to @value in stage @label."
+        },
+        {
+          "label": "Stage score greater than",
+          "default": "You have a score greater than @value in stage @label."
+        },
+        {
+          "label": "Stage progress is",
+          "default": "The progress of stage @label is @value."
+        },
+        {
+          "label": "Stage progress is not",
+          "default": "Ths progress of stage @label is not @value."
+        },
+        {
+          "label": "Time before",
+          "default": "The current time is before @value."
+        },
+        {
+          "label": "Time is",
+          "default": "The current time is @value."
+        },
+        {
+          "label": "Time is not",
+          "default": "The current time is not @value."
+        },
+        {
+          "label": "Time after",
+          "default": "The current time is after @value."
+        },
+        {
+          "label": "Not started",
+          "default": "not started"
+        },
+        {
+          "label": "Started",
+          "default": "started"
+        },
+        {
+          "label": "Completed",
+          "default": "completed"
+        },
+        {
+          "label": "Completed successfully",
+          "default": "completed successfully"
+        },
+        {
+          "label": "Missing content",
+          "default": "No content was set for this stage!"
+        }
+      ]
+    },
+    {
+      "label": "Dostopnost vsebine",
+      "fields": [
+        {
+          "label": "Zaključek",
+          "default": "Zaključek zemljevida"
+        },
+        {
+          "label": "Gumb za zvok (predvajanje)",
+          "default": "Utišaj zvok. Trenutno se zvok predvaja."
+        },
+        {
+          "label": "Gumb za zvok (brez zvoka)",
+          "default": "Povrni zvok. Trenutno je zvok utišan."
+        },
+        {
+          "label": "Zapri",
+          "default": "Zapri"
+        },
+        {
+          "label": "Dosežen rezultat",
+          "description": "@score in @total sta spremenljivki.",
+          "default": "Seštevek točk: @score od @total"
+        },
+        {
+          "label": "Odprti zemljevid",
+          "default": "Zemljevid se je odprl."
+        },
+        {
+          "label": "Odprti zemljevid (prikaz rešitev)",
+          "default": "Zemljevid se je odprl v načinu prikaza rešitev."
+        },
+        {
+          "label": "Odprt začetni zaslon",
+          "default": "Začetni zaslon se je odprl."
+        },
+        {
+          "label": "Odprt končni zaslon",
+          "default": "Končni zaslon se je odprl."
+        },
+        {
+          "label": "Oznaka naloge",
+          "description": "@stagelabel je spremenljivka.",
+          "default": "Naloga iz stopnje @stagelabel"
+        },
+        {
+          "label": "Oznaka gumba za stopnjo",
+          "description": "@stagelabel je spremenljivka.",
+          "default": "Stopnja: @stagelabel"
+        },
+        {
+          "label": "Oznaka sosednje stopnje",
+          "description": "@stagelabelOrigin in @stagelabelNeighbor sta spremenljivki.",
+          "default": "Sosednja stopnja @stagelabelOrigin: @stagelabelNeighbor"
+        },
+        {
+          "label": "Zaklenjeno",
+          "default": "Zaklenjeno"
+        },
+        {
+          "label": "Zaključeno",
+          "default": "Zaključeno"
+        },
+        {
+          "label": "Opis navigacije po zemljevidu",
+          "default": "Trenutna stopnja se aktivira s preslednico ali tipko enter. Za premik med sosednjimi stopnjami se uporabijo tipke s puščicami."
+        },
+        {
+          "label": "Opis zemljevida",
+          "default": "Zemljevid"
+        },
+        {
+          "label": "Premik na stopnjo",
+          "description": "@stagelabel je spremenljivka.",
+          "default": "Premik na @stagelabel"
+        },
+        {
+          "label": "Odklenjena stopnja",
+          "description": "@stagelabel je spremenljivka.",
+          "default": "Stopnja @stagelabel je odklenjena."
+        },
+        {
+          "label": "Nadomestna oznaka orodne vrstice",
+          "default": "Zemljevid igre"
+        },
+        {
+          "label": "Celozaslonski način",
+          "default": "Omogoči celozaslonski način"
+        },
+        {
+          "label": "Zapusti celozaslonski način",
+          "default": "Zapusti celozaslonski način"
+        }
+      ]
+    }
+  ]
+}

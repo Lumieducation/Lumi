@@ -1,0 +1,374 @@
+{
+  "semantics": [
+    {
+      "label": "미디어",
+      "fields": [
+        {
+          "label": "유형",
+          "description": "문제 위에 표시할 선택적 미디어"
+        },
+        {
+          "label": "이미지 확대/축소 사용 안 함"
+        }
+      ]
+    },
+    {
+      "label": "태스크 설명",
+      "description": "과제를 여기에 설명합니다.",
+      "placeholder": "잘 듣고 받아 쓰세요."
+    },
+    {
+      "label": "문장",
+      "widgets": [
+        {
+          "label": "기본설정"
+        }
+      ],
+      "entity": "문장",
+      "field": {
+        "label": "문장",
+        "fields": [
+          {
+            "label": "설명",
+            "description": "선택사항으로 텍스트 입력 필드 위에 간단한 설명을 넣을 수 있습니다.(예&gt; 대화에 유용합니다.)"
+          },
+          {
+            "label": "소리 샘플",
+            "description": "정상 속도로 말하는 문장"
+          },
+          {
+            "label": "느린 소리 샘플",
+            "description": "느린 속도로 말하는 문장"
+          },
+          {
+            "label": "텍스트",
+            "description": "작성해야 할 텍스트입니다. 뒤에 세로줄(|)을 추가하고 다른 문자를 추가하여 단어에 대체 철자를 추가할 수 있습니다."
+          }
+        ]
+      }
+    },
+    {
+      "label": "전반적인 피드백",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "기본설정"
+            }
+          ],
+          "label": "모든 점수 범위에 대한 사용자 정의 피드백 정의",
+          "description": "범위 추가 버튼을 클릭하여 필요한 만큼 범위를 추가합니다. 예: 0-20% 노력이 필요한 점수, 21-91% 가능성이 있는 점수, 91-100% 좋은 점수!",
+          "entity": "범위",
+          "field": {
+            "fields": [
+              {
+                "label": "점수 범위"
+              },
+              {
+                "label": "정의된 점수 범위에 대한 피드백",
+                "placeholder": "피드백 작성"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "행동설정",
+      "description": "이 옵션을 사용하면 작업 동작을 제어할 수 있습니다.",
+      "fields": [
+        {
+          "label": "최대 시도",
+          "description": "각 문장에 대해 샘플을 청취할 수 있는 횟수를 제한합니다."
+        },
+        {
+          "label": "저속을 위한 최대 시도",
+          "description": "각 문장에 대해 느린 속도 샘플이 청취될 수 있는 횟수를 제한합니다."
+        },
+        {
+          "label": "Disable pause option",
+          "description": "If checked, pausing the audio while playing is not possible."
+        },
+        {
+          "label": "Play button delay",
+          "description": "Optionally set a time period of up to three seconds that playing a button should be delayed. This is useful if you want to allow students to enter the text field before they start listening."
+        },
+        {
+          "label": "문장 뒤섞기",
+          "description": "언제 문장들이 뒤섞여야 하는지 정의합니다.",
+          "options": [
+            {
+              "label": "안함"
+            },
+            {
+              "label": "받아쓰기를 시작할 때 한 번"
+            },
+            {
+              "label": "매번"
+            }
+          ]
+        },
+        {
+          "label": "Scoring",
+          "fields": [
+            {
+              "label": "구두점 무시",
+              "description": "체크된 경우, 구두점은 점수를 매기는 것으로 간주되지 않습니다"
+            },
+            {
+              "label": "실수 제로 모드",
+              "description": "체크된 경우 정답만 채점을 위해 고려됩니다. 실수에 대해 벌점은 없습니다."
+            },
+            {
+              "label": "오타의 값",
+              "description": "타자 오류를 어느 정도(3-9자 단어: 최대 1개 실수, 9자 이상 단어: 최대 2개 실수)까지 실수로 간주할 지 결정합니다.",
+              "options": [
+                {
+                  "label": "100 %"
+                },
+                {
+                  "label": "50 %"
+                },
+                {
+                  "label": "0 %"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Text",
+          "fields": [
+            {
+              "label": "Word separator",
+              "description": "Define the separator of words different than space character to support alternate solutions with different number of words."
+            },
+            {
+              "label": "쓰기 지시사항",
+              "description": "문장의 언어가 오른쪽에서 왼쪽으로인지 또는 왼쪽에서 오른쪽으로인지 설정합니다.",
+              "options": [
+                {
+                  "label": "자동 감지"
+                },
+                {
+                  "label": "오른쪽에서 왼쪽으로"
+                },
+                {
+                  "label": "왼쪽에서 오른쪽으로"
+                }
+              ]
+            },
+            {
+              "label": "문자의 분할",
+              "description": "특정 문자(예: 한자)가 자동으로 별도의 단어로 분할되어야 하는 경우 활성화합니다."
+            }
+          ]
+        },
+        {
+          "label": "Presentation of feedback",
+          "fields": [
+            {
+              "label": "사용자 정의 오타 표시",
+              "description": "선택한 경우 오타가 명확한 오류와 구별되는 사용자 정의 스타일로 표시됩니다."
+            },
+            {
+              "label": "대안 답 제시",
+              "description": "해답에서 잘못된 단어 또는 누락된 단어에 대해 어떤 대안을 제시해야 하는지 정의하십시오.",
+              "options": [
+                {
+                  "label": "첫 번째 대안만 표시"
+                },
+                {
+                  "label": "모든 대안 표시"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "\"Retry\" (재시도) 버튼 활성화"
+        },
+        {
+          "label": "\"Show solution\" (해답보이기) 버튼 활성화"
+        },
+        {
+          "label": "Show solution on check"
+        }
+      ]
+    },
+    {
+      "label": "사용자 인터페이스",
+      "fields": [
+        {
+          "label": "일반 피드백",
+          "description": "적절한 숫자로 대체되는 여러 자리 표시자를 사용할 수 있습니다.: @matches = 일치하는 수, @total = 실수한 총개수, @capped = 조정된 총 실수, @wrong = 잘못된 단어, @added = 추가 단어, @missing = 놓친 단어, @typo = 타이포",
+          "default": "총 @total 개의 실수를 했습니다.."
+        },
+        {
+          "label": "일반 피드백(실수 0개 모드)",
+          "description": "적절한 숫자로 대체되는 여러 자리 표시자를 사용할 수 있습니다.: @matches = 일치하는 수, @total = 총 점수, @wrong = 잘못된 단어, @added = 추가 단어, @missing = 놓친 단어, @typo = 타이포",
+          "default": "총 @total 단어를 바르게 입력했고 총 @typo 단어에서 실수들이 있었습니다."
+        },
+        {
+          "label": "\"Check\" 체크 버튼 텍스트",
+          "default": "정답 확인"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "\"Retry\" 재시도 버튼 텍스트",
+          "default": "재시도"
+        },
+        {
+          "label": "\"Show solution\" 해답 보이기 버튼 텍스트",
+          "default": "해답 보이기"
+        },
+        {
+          "label": "오디오 미지원 메시지",
+          "default": "현재 브라우저가 이 오디오를 지원하지 않습니다."
+        }
+      ]
+    },
+    {
+      "label": "읽어주기 스피커",
+      "fields": [
+        {
+          "label": "보조 기술에 대한 체크 버튼 설명",
+          "default": "답변을 확인합니다. 응답은 정답, 오답 또는 미답변으로 표시됩니다."
+        },
+        {
+          "label": "보조 기술에 대한 해답 보이기 버튼 설명",
+          "default": "해답 보이기. 과제가 올바른 해답과 함께 표시됩니다."
+        },
+        {
+          "label": "보조 기술에 대한 재시도 버튼 설명",
+          "default": "과제 재시도. 모든 응답을 재설정하고 과제를 다시 시작합니다."
+        },
+        {
+          "label": "플레이 버튼",
+          "default": "플레이"
+        },
+        {
+          "label": "천천히 플레이 하기 버튼",
+          "default": "천천히 플레이 하기"
+        },
+        {
+          "label": "남은 시도(읽어주기 스피커 텍스트와 마우스 커서 텍스트)",
+          "description": "@number 는 현재 남은 시도횟수로 대체됩니다.",
+          "default": "남은 시도 횟수: @number"
+        },
+        {
+          "label": "무한(읽어주기 스피커 텍스트와 마우스 커서 텍스트)",
+          "default": "무한"
+        },
+        {
+          "label": "텍스트 필드 입력",
+          "default": "들은 내용을 입력하십시오."
+        },
+        {
+          "label": "결과",
+          "description": "@score 는 포인트 수로 대체됩니다. @total 은 가능한 최대 포인트로 대체됩니다.",
+          "default": "총 @total 점수에서 @score 점수를 얻었습니다. "
+        },
+        {
+          "label": "해답",
+          "default": "해답"
+        },
+        {
+          "label": "문장",
+          "default": "문장"
+        },
+        {
+          "label": "항목",
+          "default": "항목"
+        },
+        {
+          "label": "정답",
+          "default": "정답"
+        },
+        {
+          "label": "오답",
+          "default": "오답"
+        },
+        {
+          "label": "작은 실수",
+          "default": "작은 실수"
+        },
+        {
+          "label": "놓친 단어 혹은 기호",
+          "default": "놓침"
+        },
+        {
+          "label": "추가된 단어 혹은 기호",
+          "default": "추가됨"
+        },
+        {
+          "label": "올바른 해답",
+          "default": "올바른 해답"
+        },
+        {
+          "label": "혹은",
+          "default": "혹은"
+        },
+        {
+          "label": "포인트",
+          "default": "포인트"
+        },
+        {
+          "label": "포인트",
+          "default": "포인트"
+        },
+        {
+          "label": "기간",
+          "default": "기간"
+        },
+        {
+          "label": "감탄사 포인트",
+          "default": "감탄사 포인트"
+        },
+        {
+          "label": "물음표",
+          "default": "물음표"
+        },
+        {
+          "label": "쉼표",
+          "default": "쉼표"
+        },
+        {
+          "label": "작은 따옴표",
+          "default": "작은 따옴표"
+        },
+        {
+          "label": "큰 따옴표",
+          "default": "큰 따옴표"
+        },
+        {
+          "label": "콜론",
+          "default": "콜론"
+        },
+        {
+          "label": "세미콜론",
+          "default": "세미콜론"
+        },
+        {
+          "label": "플러스",
+          "default": "플러스"
+        },
+        {
+          "label": "마이너스",
+          "default": "마이너스"
+        },
+        {
+          "label": "별표",
+          "default": "별표"
+        },
+        {
+          "label": "슬래시",
+          "default": "슬래시"
+        }
+      ]
+    }
+  ]
+}

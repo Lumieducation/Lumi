@@ -1,0 +1,163 @@
+{
+  "semantics": [
+    {
+      "label": "Recurs",
+      "fields": [
+        {
+          "label": "Tipus",
+          "description": "Recursos opcionals per mostrar al damunt de la pregunta."
+        },
+        {
+          "label": "Desactiva el zoom de les imatges"
+        }
+      ]
+    },
+    {
+      "label": "Pregunta"
+    },
+    {
+      "label": "Resposta correcta",
+      "options": [
+        {
+          "label": "Cert"
+        },
+        {
+          "label": "Fals"
+        }
+      ]
+    },
+    {
+      "label": "Traduccions de la interfície d’usuari per preguntes Cert/Fals",
+      "fields": [
+        {
+          "label": "Etiqueta del botó \"Cert\"",
+          "default": "Cert"
+        },
+        {
+          "label": "Etiqueta del botó \"Fals\"",
+          "default": "Fals"
+        },
+        {
+          "label": "Text de retroacció",
+          "default": "Has aconseguit @score de @total punts",
+          "description": "Text de retroacció, variables disponibles: @score i @total. Per exemple: ’Has aconseguit @score de @total punts’"
+        },
+        {
+          "label": "Text pel botó \"Verificar\"",
+          "default": "Verifica"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "Text pel botó \"Mostrar solució\"",
+          "default": "Mostra la solució"
+        },
+        {
+          "label": "Text del botó \"Torna-ho a provar\"",
+          "default": "Torna-ho a provar"
+        },
+        {
+          "label": "Resposta incorrecta",
+          "default": "Resposta incorrecta"
+        },
+        {
+          "label": "Resposta correcta",
+          "default": "Resposta correcta"
+        },
+        {
+          "label": "Representació textual de la barra de puntuació pera als que utilitzen un altaveu de lectura",
+          "default": "Heu fet :num de :total punts"
+        },
+        {
+          "label": "Descripció de la tecnologia d’assistència per al botó \"Comprova\"",
+          "default": "Comprova les respostes. Les respostes es marcaran com a correctes, incorrectes o sense resposta."
+        },
+        {
+          "label": "Descripció de la tecnologia d’assistència per al botó \"Mostra la solució\"",
+          "default": "Mostra la solució. La tasca es marcarà amb la seva solució correcta."
+        },
+        {
+          "label": "Descripció de la tecnologia d’assistència per al botó \"Torna-ho a provar\"",
+          "default": "Intenta de nou la tasca. Reajusta totes les respostes i comença la tasca de nou."
+        }
+      ]
+    },
+    {
+      "label": "Opcions de comportament",
+      "description": "Aquestes opcions et permetran controlar com es comporta la tasca.",
+      "fields": [
+        {
+          "label": "Activa el botó “Torna-ho a provar”"
+        },
+        {
+          "label": "Activa el botó \"Mostra la solució\""
+        },
+        {
+          "label": "Activa el botó \"Comprova\""
+        },
+        {
+          "label": "Mostra el diàleg de confirmació a \"Verificar\""
+        },
+        {
+          "label": "Mostra el quadre de diàleg de confirmació \"Torna-ho a provar\""
+        },
+        {
+          "label": "Comprovar la resposta automàticament",
+          "description": "Tingues en compte que l’accessibilitat se’n ressentirà si esculls aquesta opció"
+        },
+        {
+          "label": "Text de retroacció per resposta correcta",
+          "description": "Això sobre escriurà el text predeterminat. Variables disponibles: @score i @total"
+        },
+        {
+          "label": "Text de retroacció per resposta incorrecta",
+          "description": "Això sobre escriurà el text predeterminat. Variables disponibles: @score i @total"
+        }
+      ]
+    },
+    {
+      "label": "Comprovar diàleg de confirmació",
+      "fields": [
+        {
+          "label": "Títol",
+          "default": "Voleu finalitzar?"
+        },
+        {
+          "label": "Text del cos",
+          "default": "Estàs segur que vols acabar?"
+        },
+        {
+          "label": "Etiqueta del botó \"Cancel·la\"",
+          "default": "Cancel·la"
+        },
+        {
+          "label": "Etiqueta del botó \"Confirma\"",
+          "default": "Finalitza"
+        }
+      ]
+    },
+    {
+      "label": "Quadre de diàleg de confirmació \"Torna-ho a provar\"",
+      "fields": [
+        {
+          "label": "Títol",
+          "default": "Voleu tornar-ho a provar?"
+        },
+        {
+          "label": "Text del cos",
+          "default": "Confirmeu que voleu tornar-ho a provar?"
+        },
+        {
+          "label": "Etiqueta del botó \"Cancel·la\"",
+          "default": "Cancel·la"
+        },
+        {
+          "label": "Etiqueta del botó \"Confirma\"",
+          "default": "Confirma"
+        }
+      ]
+    }
+  ]
+}

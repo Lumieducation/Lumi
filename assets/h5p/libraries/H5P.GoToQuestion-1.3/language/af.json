@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Vraagteks",
+      "description": "Die vraag op grond waarvan die gebruiker 'n keuse sal maak."
+    },
+    {
+      "label": "Keuses",
+      "entity": "keuse",
+      "field": {
+        "fields": [
+          {
+            "label": "Keuseteks",
+            "description": "Die etiket wat vertoon word op die keuseknoppie."
+          },
+          {
+            "label": "Gaan na",
+            "description": "Die teikentyd wat die gebruiker geneem het wanneer die keuse knoppie gedruk word. Voer tydkode in die formaat M:SS in."
+          },
+          {
+            "label": "Indien geskies teks",
+            "description": "'n Opsionele bevestigingsteks wat vertoon word nadat die gebruiker op die keuse-knoppie gedruk het."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Gaan voort knoppie-etiket",
+      "default": "Gaan voort"
+    }
+  ]
+}

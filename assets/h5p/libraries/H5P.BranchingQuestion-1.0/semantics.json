@@ -1,0 +1,111 @@
+[
+  {
+    "name": "branchingQuestion",
+    "type": "group",
+    "widget": "branchingQuestion",
+    "label": "Branching Question Editor",
+    "importance": "high",
+    "fields": [
+      {
+        "name": "question",
+        "type": "text",
+        "importance": "medium",
+        "widget": "html",
+        "label": "Question",
+        "enterMode": "p",
+        "optional": true,
+        "tags": [
+          "strong",
+          "em",
+          "sub",
+          "sup",
+          "h2",
+          "h3",
+          "pre",
+          "code"
+        ]
+      },
+      {
+        "name": "alternatives",
+        "type": "list",
+        "importance": "high",
+        "label": "Available alternatives",
+        "entity": "alternative",
+        "min": 2,
+        "defaultNum": 2,
+        "field": {
+          "name": "answer",
+          "type": "group",
+          "label": "Alternative",
+          "importance": "high",
+          "fields": [
+            {
+              "name": "text",
+              "type": "text",
+              "importance": "medium",
+              "label": "Text"
+            },
+            {
+              "name": "nextContentId",
+              "type": "number",
+              "label": "Next Content ID (end screens are defined by negative numbers)",
+              "importance": "high",
+              "default": -1
+            },
+            {
+              "name": "feedback",
+              "type": "group",
+              "label": "Feedback",
+              "expanded": true,
+              "fields": [
+                {
+                  "name": "title",
+                  "type": "text",
+                  "label": "Feedback title",
+                  "optional": true,
+                  "widget": "html",
+                  "enterMode": "p",
+                  "tags": [
+                    "strong",
+                    "em",
+                    "del",
+                    "code",
+                    "a"
+                  ]
+                },
+                {
+                  "name": "subtitle",
+                  "type": "text",
+                  "label": "Feedback text",
+                  "optional": true,
+                  "widget": "html",
+                  "enterMode": "p",
+                  "tags": [
+                    "strong",
+                    "em",
+                    "del",
+                    "code",
+                    "a"
+                  ]
+                },
+                {
+                  "name": "image",
+                  "type": "image",
+                  "label": "Feedback image",
+                  "optional": true
+                },
+                {
+                  "name": "endScreenScore",
+                  "type": "number",
+                  "label": "Score for this scenario",
+                  "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario",
+                  "optional": true
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

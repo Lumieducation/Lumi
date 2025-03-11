@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Destino",
+      "fields": [
+        {
+          "label": "Tipo",
+          "options": [
+            {
+              "label": "Código de Tiempo"
+            },
+            {
+              "label": "Otra página (URL)"
+            }
+          ]
+        },
+        {
+          "label": "Ir A",
+          "description": "El tiempo destino a donde será llevado el usuario que presione el hotspot. Ingresar código de tiempo en el formato M:SS."
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "Protocolo",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(relativo a raíz)"
+                },
+                {
+                  "label": "otro"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Visuales",
+      "fields": [
+        {
+          "label": "Forma",
+          "options": [
+            {
+              "label": "Rectangular"
+            },
+            {
+              "label": "Circular"
+            },
+            {
+              "label": "Rectángulo Redondeado"
+            }
+          ]
+        },
+        {
+          "label": "Color del fondo para hotspot"
+        },
+        {
+          "label": "Usar cursor del puntero"
+        },
+        {
+          "label": "Añadir efecto parpadeante",
+          "description": "Nota: El efecto parpadeante siempre está habilitado en el editor para que Usted pueda encontrar los hotspots transparentes"
+        }
+      ]
+    },
+    {
+      "label": "Textos",
+      "fields": [
+        {
+          "label": "Texto Alternativo",
+          "description": "Describir el sujeto que el hotspot cubre . Usado para lectores de texto en voz alta",
+          "placeholder": "Una manzana sobre una mesa"
+        },
+        {
+          "label": "Etiqueta Hotspot"
+        },
+        {
+          "label": "Mostrar Etiqueta"
+        },
+        {
+          "label": "Color de Etiqueta"
+        }
+      ]
+    }
+  ]
+}

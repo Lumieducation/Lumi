@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Tipas",
+          "options": [
+            {
+              "label": "Laiko kodas"
+            },
+            {
+              "label": "Kitas puslapis (URL)"
+            }
+          ]
+        },
+        {
+          "description": "Tikslinis laikas, į kurį naudotojas pereis paspaudęs aktyviąją sritį. Įveskite laiko kodą formatu M:SS.",
+          "label": "Eiti į"
+        },
+        {
+          "fields": [
+            {
+              "label": "Protokolas",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(šakninis reliatyvus)"
+                },
+                {
+                  "label": "kitas"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ],
+          "label": "URL"
+        }
+      ],
+      "label": "Tikslas"
+    },
+    {
+      "label": "Vaizdai",
+      "fields": [
+        {
+          "options": [
+            {
+              "label": "Stačiakampis"
+            },
+            {
+              "label": "Apvali"
+            },
+            {
+              "label": "Suapvalintas stačiakampis"
+            }
+          ],
+          "label": "Forma"
+        },
+        {
+          "label": "Aktyviosios srities fono spalva"
+        },
+        {
+          "label": "Naudoti pelės žymeklį"
+        },
+        {
+          "description": "Pastaba: Redagavimo priemonėje visada įjungtas mirksėjimo efektas, kad galėtumėte rasti permatomas aktyviąsias sritis",
+          "label": "Pridėti mirksėjimo efektą"
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "label": "Alternatyvus tekstas",
+          "placeholder": "Obuolys ant stalo",
+          "description": "Apibūdinkite aktyviosios srities temą. Naudojamas skaitymo garsiakalbiams"
+        },
+        {
+          "label": "Aktyviosios srities pavadinimas"
+        },
+        {
+          "label": "Rodyti pavadinimą"
+        },
+        {
+          "label": "Pavadinimo spalva"
+        }
+      ],
+      "label": "Tekstai"
+    }
+  ]
+}

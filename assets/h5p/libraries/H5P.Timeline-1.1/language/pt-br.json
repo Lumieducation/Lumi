@@ -1,0 +1,295 @@
+{
+  "semantics": [
+    {
+      "label": "Linha do tempo",
+      "fields": [
+        {
+          "label": "Título",
+          "description": "O título principal da linha do tempo vai aqui (primeira página)"
+        },
+        {
+          "label": "Corpo do texto",
+          "description": "O corpo principal da linha do tempo vai aqui (primeira página)."
+        },
+        {
+          "label": "Nível de zoom padrão",
+          "description": "Isso ajustará o nível de zoom padrão. Equivalente a pressionar o botão de mais zoom ou menos zoom o número especificado de vezes. Os números negativos diminuem o zoom. o padrão é 0"
+        },
+        {
+          "label": "Imagem do plano de fundo",
+          "description": "Uma imagem para exibir como plano de fundo."
+        },
+        {
+          "label": "Altura",
+          "description": "A altura em pixels"
+        },
+        {
+          "label": "Ativo",
+          "description": "Aqui você pode adicionar um ativo à sua \"página inicial\" da linha do tempo",
+          "fields": [
+            {
+              "label": "Mídia",
+              "description": "Link para URL de mídia (Twitter, YouTube, Flickr, Vimeo, Google Maps e SoundCloud são atualmente suportados)"
+            },
+            {
+              "label": "Créditos",
+              "description": "Créditos à mídia"
+            },
+            {
+              "label": "Legendas (acessibilidade)",
+              "description": "A descrição da legenda vai aqui"
+            }
+          ]
+        },
+        {
+          "label": "Datas",
+          "description": "Adicione algumas datas à sua linha do tempo!",
+          "field": {
+            "label": "Data",
+            "description": "Data",
+            "fields": [
+              {
+                "label": "Data inicial",
+                "description": "AAAA,MM,DD (Mínimo necessário: AAAA)"
+              },
+              {
+                "label": "Data final",
+                "description": "AAAA,MM,DD (Mínimo necessário: AAAA)"
+              },
+              {
+                "label": "Título",
+                "description": "Título da entrada de data"
+              },
+              {
+                "label": "Corpo do texto",
+                "description": "Texto de corpo da entrada de data"
+              },
+              {
+                "label": "Marcações",
+                "description": "Insira Marcações (categorias)"
+              },
+              {
+                "label": "Ativo",
+                "fields": [
+                  {
+                    "label": "Mídia",
+                    "description": "URL da mídia (Twitter, YouTube, Flickr, Vimeo, Wikipedia, Google Maps e SoundCloud são suportados)."
+                  },
+                  {
+                    "label": "Miniatura",
+                    "description": "Adicione uma miniatura se necessário, 32x32 px"
+                  },
+                  {
+                    "label": "Crédito",
+                    "description": "Créditos à mídia"
+                  },
+                  {
+                    "label": "Legendas (acessibilidade)",
+                    "description": "Texto da legenda de acessibilidade"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Eras",
+          "description": "Adicione uma era à sua linha do tempo",
+          "field": {
+            "label": "Era",
+            "fields": [
+              {
+                "label": "Data inicial",
+                "description": "AAAA,MM,DD (Mínimo necessário: AAAA)"
+              },
+              {
+                "label": "Data final",
+                "description": "AAAA,MM,DD (Mínimo necessário: AAAA)"
+              },
+              {
+                "label": "Título",
+                "description": "Título da Era"
+              },
+              {
+                "label": "Texto",
+                "description": "Texto de corpo da Era"
+              },
+              {
+                "label": "Marcações",
+                "description": "Marcações da Era (categorias)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Idioma",
+          "description": "O idioma da interface de usuário",
+          "options": [
+            {
+              "label": "Africanos"
+            },
+            {
+              "label": "Árabe"
+            },
+            {
+              "label": "Armênio"
+            },
+            {
+              "label": "Basco"
+            },
+            {
+              "label": "Búlgaro"
+            },
+            {
+              "label": "Catalão"
+            },
+            {
+              "label": "Chinês"
+            },
+            {
+              "label": "Croata / Hrvatski"
+            },
+            {
+              "label": "Tcheco"
+            },
+            {
+              "label": "Dinamarquês"
+            },
+            {
+              "label": "Holandês"
+            },
+            {
+              "label": "Inglês"
+            },
+            {
+              "label": "Inglês (24 horas)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estoniano"
+            },
+            {
+              "label": "Feroês"
+            },
+            {
+              "label": "Farsi"
+            },
+            {
+              "label": "Finlandês"
+            },
+            {
+              "label": "Francês"
+            },
+            {
+              "label": "Galego"
+            },
+            {
+              "label": "Georgiano"
+            },
+            {
+              "label": "Germânico / Alemão"
+            },
+            {
+              "label": "Grego"
+            },
+            {
+              "label": "Hebraico"
+            },
+            {
+              "label": "Húngaro"
+            },
+            {
+              "label": "Islandês"
+            },
+            {
+              "label": "Indonésio"
+            },
+            {
+              "label": "Italiano"
+            },
+            {
+              "label": "Japonês"
+            },
+            {
+              "label": "Coreano"
+            },
+            {
+              "label": "Letão"
+            },
+            {
+              "label": "Lituano"
+            },
+            {
+              "label": "Luxemburguês"
+            },
+            {
+              "label": "Malaio"
+            },
+            {
+              "label": "Nepalês"
+            },
+            {
+              "label": "Norueguês"
+            },
+            {
+              "label": "Polonês"
+            },
+            {
+              "label": "Português"
+            },
+            {
+              "label": "Português (Brasileiro)"
+            },
+            {
+              "label": "Romanche"
+            },
+            {
+              "label": "Russo"
+            },
+            {
+              "label": "Sérvio - Cirílico"
+            },
+            {
+              "label": "Sérvio - Latim"
+            },
+            {
+              "label": "Cingalês"
+            },
+            {
+              "label": "Eslovaco"
+            },
+            {
+              "label": "Esloveno"
+            },
+            {
+              "label": "Espanhol"
+            },
+            {
+              "label": "Sueco"
+            },
+            {
+              "label": "Tagalo"
+            },
+            {
+              "label": "Tâmil"
+            },
+            {
+              "label": "Taiwanês"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Turco"
+            },
+            {
+              "label": "Ucraniano"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

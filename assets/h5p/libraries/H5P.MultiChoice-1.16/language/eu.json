@@ -1,0 +1,258 @@
+{
+  "semantics": [
+    {
+      "label": "Multimedia",
+      "fields": [
+        {
+          "label": "Mota",
+          "description": "Galderaren gainean bistaratzeko aukerako multimedia."
+        },
+        {
+          "label": "Desgaitu irudien zooma"
+        }
+      ]
+    },
+    {
+      "label": "Galdera"
+    },
+    {
+      "label": "Eskuragarri dauden aukerak",
+      "entity": "aukera",
+      "field": {
+        "label": "Aukera",
+        "fields": [
+          {
+            "label": "Testua"
+          },
+          {
+            "label": "Zuzena"
+          },
+          {
+            "label": "Argibideak eta feedbacka",
+            "fields": [
+              {
+                "label": "Argibidearen testua",
+                "description": "Argibidea erabiltzailearentzat. Hau agertuko da erabiltzaileak bere erantzuna(k) egiaztatzen d(it)uenean."
+              },
+              {
+                "label": "Erantzuna aukeratuta badago bistaratzen den mezua",
+                "description": "Mezua erantzunaren azpiko \"egiaztatu\" botoian agertuko da erantzun hau aukeratuta badago."
+              },
+              {
+                "label": "Erantzuna aukeratuta ez badago bistaratzen den mezua",
+                "description": "Mezua erantzunaren azpiko \"egiaztatu\" botoian agertuko da erantzun hau aukeratuta ez badago.."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback Orokorra",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Lehenetsitakoa"
+            }
+          ],
+          "label": "Zehaztu ezazu edozein puntuazio-tarterako feedback pertsonalizatua",
+          "description": "Egin klik \"Gehitu tartea\" botoian behar dituzun tarte guztiak gehitzeko. Adibidez: 0-20% Puntuazio eskasa, 21-91% Batez besteko puntuazioa, 91-100% Puntuazio bikaina!",
+          "entity": "tartea",
+          "field": {
+            "fields": [
+              {
+                "label": "Puntuazio tartea"
+              },
+              {},
+              {
+                "label": "Zehaztutako tartearentzako feedbacka",
+                "placeholder": "Idatzi ezazu feedbacka"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Aukera anitzaren erabiltzailearen interfazearen itzulpenak",
+      "fields": [
+        {
+          "label": "Egiaztatu erantzuna botoiaren etiketa",
+          "default": "Egiaztatu"
+        },
+        {
+          "label": "Bidali erantzuna botoiarentzako etiketa",
+          "default": "Submit"
+        },
+        {
+          "label": "Erakutsi emaitza botoiaren etiketa",
+          "default": "Erakutsi emaitza"
+        },
+        {
+          "label": "Saiatu berriro botoiaren etiketa",
+          "default": "Saiatu berriro"
+        },
+        {
+          "label": "Argibidearen etiketa",
+          "default": "Erakutsi argibidea"
+        },
+        {
+          "label": "Puntuazio-barraren testu adierazpena irakurgailua erabiltzen dutenentzat",
+          "description": "Eskuragarri dauden aldagaiak :num eta :total",
+          "default": ":total puntutik :num puntu lortu duzu"
+        },
+        {
+          "label": "Argibidea erabilgarri (ez da bistaratzen)",
+          "default": "Argibidea erabilgarri",
+          "description": "Irakurgailuetarako erabilerraztasun testua"
+        },
+        {
+          "label": "Feedbacka erabilgarri (ez da bistaratzen)",
+          "default": "Feedbacka erabilgarri",
+          "description": "Irakurgailuetarako erabilerraztasun testua"
+        },
+        {
+          "label": "Irakurri feedbacka (ez da bistaratzen)",
+          "default": "Irakurri feedbacka",
+          "description": "Irakurgailuetarako erabilerraztasun testua"
+        },
+        {
+          "label": "Erantzun Okerra (ez da erakusten)",
+          "default": "Erantzun okerra",
+          "description": "Irakurgailuetarako erabilerraztasun testua"
+        },
+        {
+          "label": "Erantzun zuzena (ez da bistaratzen)",
+          "default": "Erantzun zuzena",
+          "description": "Irakurgailuetarako erabilerraztasun testua"
+        },
+        {
+          "label": "Aukera egiaztatu beharko zenuke",
+          "default": "Egiaztatu beharko zenuke"
+        },
+        {
+          "label": "Aukera hau ez zen markatu behar",
+          "default": "Ez zen markatu behar"
+        },
+        {
+          "label": "\"Erantzuna behar du\" mezuaren testua",
+          "default": "Erantzun soluzioa bistaratu aurretik"
+        },
+        {
+          "label": "\"Egiaztatu\" botoiaren laguntza-teknologientzako etiketa",
+          "default": "Egiaztatu erantzunak. Erantzunak zuzen, oker edo erantzun gabe gisa markatuko dira."
+        },
+        {
+          "label": "\"Erakutsi erantzuna\" botoiaren laguntza-teknologientzako etiketa",
+          "default": "Erakutsi erantzun zuzena. Zereginaren erantzun zuzena markatuko da."
+        },
+        {
+          "label": "\"Saiatu berriro\" botoiaren laguntza-teknologientzako etiketa",
+          "default": "Zeregina berriz egiten saiatu. Berrabiarazi erantzun guztiak eta hasi zeregina berriz."
+        }
+      ]
+    },
+    {
+      "label": "Portaeraren ezarpenak",
+      "description": "Aukera hauek lanaren portaera kontrolatzea ahalbidetzen dizute.",
+      "fields": [
+        {
+          "label": "Gaitu \"Berriz saiatu\" botoia"
+        },
+        {
+          "label": "Aktibatu \"Erakutsi Erantzuna\" botoia"
+        },
+        {
+          "label": "Aktibatu \"Egiaztatu\" botoia"
+        },
+        {
+          "label": "Galdera mota",
+          "description": "Aukeratu galderaren itxura eta portaera.",
+          "options": [
+            {
+              "label": "Automatikoa"
+            },
+            {
+              "label": "Aukera anitza (kontrol-laukiak)"
+            },
+            {
+              "label": "Aukera bakarra (Aukera botoia edo botoi borobila)"
+            }
+          ]
+        },
+        {
+          "label": "Eman puntu bat ataza osoarentzat",
+          "description": "Aktibatu ematea denetara puntu bat aukera anitzeko galdera guztiak zuzen emanez gero. Aukera hau ez dago \"Aukera bakarra\" motan."
+        },
+        {
+          "label": "Erantzunak ausazko ordenan",
+          "description": "Aktibatu ausazko ordena pantailako erantzunentzat."
+        },
+        {
+          "label": "Erantzun behar da soluzioa ikusi ahal izateko"
+        },
+        {
+          "label": "Erakutsi \"Egiaztatu\" botoirako baieztapen-mezua"
+        },
+        {
+          "label": "Erakutsi \"Berriz saiatu\" botoirako baieztapen-mezua"
+        },
+        {
+          "label": "Egiaztatu erantzunak automatikoki",
+          "description": "Aukera hau aktibatuta erabilerraztasuna kaltetuko da, ziurtatu badakizula zer egiten ari zaren."
+        },
+        {
+          "label": "Asmatutakoen ehunekoa",
+          "description": "Ezarpen honek sarritan ez du inolako efekturik izango. Zifra honek puntuazio osotik zein ehuneko eduki behar den lortzeko puntu oso bat atazan aktibatuta badago, eta xAPI sailkapenetan postu ona izateko."
+        },
+        {
+          "label": "Erakutsi puntuazioa",
+          "description": "Erantzun bakoitzeko irabazten diren puntuak erakutsi. Honek ez du funtzionatuko 'Aukera bakarra' motako galderetan edo 'Eman puntu bat ataza osoarentzat' aukera hautatuta badago."
+        }
+      ]
+    },
+    {
+      "label": "Egiaztatu baieztapen elkarrizketa",
+      "fields": [
+        {
+          "label": "Goiburuaren testua",
+          "default": "Bukatu?"
+        },
+        {
+          "label": "Gorputzaren testua",
+          "default": "Ziur zaude bukatu nahi duzula?"
+        },
+        {
+          "label": "Utzi botoiaren etiketa",
+          "default": "Utzi"
+        },
+        {
+          "label": "Berretsi botoiaren etiketa",
+          "default": "Bukatu"
+        }
+      ]
+    },
+    {
+      "label": "Saiatu berriro baieztatzeko elkarrizketa",
+      "fields": [
+        {
+          "label": "Goiburuaren testua",
+          "default": "Saiatu berriro?"
+        },
+        {
+          "label": "Gorputzaren testua",
+          "default": "Ziur zaude berriro saiatu nahi duzula?"
+        },
+        {
+          "label": "Utzi botoiaren etiketa",
+          "default": "Utzi"
+        },
+        {
+          "label": "Berretsi botoiaren etiketa",
+          "default": "Berretsi"
+        }
+      ]
+    }
+  ]
+}

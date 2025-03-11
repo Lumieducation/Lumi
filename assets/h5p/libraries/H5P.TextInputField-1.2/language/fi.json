@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Syöttökentän kuvaus",
+      "description": "Kuvaus mitä käyttäjän tulisi syöttää kenttään."
+    },
+    {
+      "label": "Väliaikaisteksti",
+      "description": "Väliaikaisteksti käyttäjälle"
+    },
+    {
+      "label": "Tekstin maksimipituus",
+      "description": "Tekstin maksimimerkkimäärä"
+    },
+    {
+      "label": "Syöttökentän koko",
+      "description": "Kuinka suuri kenttä on johon käyttäjä voi kirjoittaa riveissä.",
+      "options": [
+        {
+          "label": "1 rivi"
+        },
+        {
+          "label": "3 riviä"
+        },
+        {
+          "label": "10 riviä"
+        }
+      ]
+    },
+    {
+      "label": "Pakollinen kenttä",
+      "description": "Valitse tehdäksesi tästä kentästä pakollisen täyttää. Käyttäjän on täytettävä kaikki kentät ennen kuin hän voi ottaa dokumentin ulos."
+    },
+    {
+      "label": "Jäljellä oleva merkkimäärä",
+      "default": "Merkkejä jäljellä: @chars",
+      "description": "Viesti joka näytetään jäljellä oleville merkeille. Voit käyttää muuttujaa @chars joka korvataan jäljellä olevien merkkien lukumäärällä."
+    }
+  ]
+}

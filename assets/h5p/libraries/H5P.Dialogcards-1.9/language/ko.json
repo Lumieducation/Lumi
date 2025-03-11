@@ -1,0 +1,219 @@
+{
+  "semantics": [
+    {
+      "label": "머릿말"
+    },
+    {
+      "label": "형태",
+      "description": "대화 카드 표시 모드",
+      "options": [
+        {
+          "label": "일반형"
+        },
+        {
+          "label": "반복형"
+        }
+      ]
+    },
+    {
+      "label": "태스크 설명"
+    },
+    {
+      "widgets": [
+        {
+          "label": "기본값"
+        }
+      ],
+      "label": "대화",
+      "entity": "대화",
+      "field": {
+        "label": "질문",
+        "fields": [
+          {
+            "label": "텍스트",
+            "description": "대화의 첫 번째 부분에 대한 팁"
+          },
+          {
+            "label": "답",
+            "description": "대화의 두 번째 부분에 대한 팁"
+          },
+          {
+            "label": "이미지",
+            "description": "카드 이미지(선택사항). 카드는 이이지, 텍스트 혹은 둘다 사용가능"
+          },
+          {
+            "label": "이미지 대체 설명글"
+          },
+          {
+            "label": "오디오 파일"
+          },
+          {
+            "label": "팁",
+            "fields": [
+              {
+                "label": "팁을 위한 텍스트",
+                "description": "대화의 첫 번째 부분에 대한 팁"
+              },
+              {
+                "label": "답을 위한 팁",
+                "description": "대화의 두 번째 부분에 대한 팁"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "동작 설정",
+      "description": "이 옵션을 사용하면 과제 수행 과정을 제어할 수 있다.",
+      "fields": [
+        {
+          "label": "\"Retry\" 버튼 활성화"
+        },
+        {
+          "label": "뒤로 가기 사용 안 함",
+          "description": "대화 카드에서 앞으로 가기만 허용"
+        },
+        {
+          "label": "카드에 맞는 텍스트 크기 조정",
+          "description": "이 옵션을 선택하지 않으면 카드의 크기가 텍스트 크기에 맞게 조정됨"
+        },
+        {
+          "label": "카드 무작위 순서 배열",
+          "description": "표시 카드 순서 임의화"
+        },
+        {
+          "label": "최대 숙련도"
+        },
+        {
+          "label": "빠른 진행 허용",
+          "description": "활성화되면 학습자가 카드를 뒤집지 않고 카드를 알고 있음을 나타낼 수 있다"
+        }
+      ]
+    },
+    {
+      "label": "뒤집기 버튼에 대한 텍스트",
+      "default": "뒤집기"
+    },
+    {
+      "label": "다음으로 가기 버튼에 대한 텍스트",
+      "default": "다음"
+    },
+    {
+      "label": "이전으로 가기 버튼에 대한 텍스트",
+      "default": "이전"
+    },
+    {
+      "label": "재시도 버튼에 대한 텍스트",
+      "default": "재시도"
+    },
+    {
+      "label": "\"correct answer\" (정답) 버튼에 대한 텍스트",
+      "default": "정답입니다!"
+    },
+    {
+      "label": "\"incorrect answer\" (오답) 버튼에 대한 텍스트",
+      "default": "오답입니다."
+    },
+    {
+      "label": "요약 화면에서 카드 아래의 \"Round\" (회차) 메시지 텍스트",
+      "description": "@round (회차)는 현재 회차 숫자로 대체",
+      "default": "@round 회차"
+    },
+    {
+      "label": "\"Cards left\" (남은 카드) 메시지",
+      "description": "@number 는 이번 회차의 남은 카드 숫자로 대체",
+      "default": "남은 카드: @number"
+    },
+    {
+      "label": "\"next round\" (다음 회차) 버튼에 대한 텍스트",
+      "description": "@round 는 회차 숫자에 의해 대체",
+      "default": "@round 회차로 진행하세요"
+    },
+    {
+      "label": "\"Start over\" (처음부터 다시 시작) 버튼에 대한 텍스트",
+      "default": "다시 시작"
+    },
+    {
+      "label": "\"show summary\" (요약보기) 버튼에 대한 텍스트",
+      "default": "다음"
+    },
+    {
+      "label": "요약페이지 제목",
+      "default": "요약"
+    },
+    {
+      "label": "\"Cards you got right:\" 맞춘 카드에 대한 텍스트",
+      "default": "맞춘 카드:"
+    },
+    {
+      "label": "\"Cards you got wrong:\" 틀린 카드에 대한 텍스트",
+      "default": "틀린 카드:"
+    },
+    {
+      "label": "\"Cards not shown:\" 안 보여진 카드에 대한 텍스트",
+      "default": "안 보여진 카드:"
+    },
+    {
+      "label": "\"Overall Score\"(전체 점수)에 대한 텍스트",
+      "default": "전체 점수"
+    },
+    {
+      "label": "\"Cards completed\"(완료카드)에 대한 텍스트 ",
+      "default": "학습완료 카드:"
+    },
+    {
+      "label": "\"Completed rounds:\"(완료 회차)에 대한 텍스트 ",
+      "default": "완료 회차:"
+    },
+    {
+      "label": "모든 카드가 능숙하게 학습되었을 때의 메시지",
+      "description": "@cards는 풀에 있는 모든 카드의 숫자로 대체될 것이다. @max는 최대 숙련도 레벨 - 1로 대체될 것이다.",
+      "default": "잘했습니다! @cards 카드를 연속해서 @max 회를 맞추었습니다!"
+    },
+    {
+      "label": "학습진도에 대한 텍스트",
+      "description": "사용 가능한 변수는 @card와 @total.",
+      "default": "총 @total 중 @card 카드"
+    },
+    {
+      "label": "카드 텍스트 라벨",
+      "description": "보조 기술에 의한 접근성에 사용",
+      "default": "카드 앞면"
+    },
+    {
+      "label": "카드 뒷면 에 대한 라벨",
+      "description": "보조 기술에 의한 접근성에 사용",
+      "default": "카드 뒷면"
+    },
+    {
+      "label": "팁보이기 버튼에 대한 라벨",
+      "default": "팁 보이기"
+    },
+    {
+      "label": "오디오 미지원에 대한 메시지",
+      "default": "브라우저가 이 오디오를 지원하지 않음"
+    },
+    {
+      "label": "대화 재시작 확인",
+      "fields": [
+        {
+          "label": "헤더 텍스트",
+          "default": "재시작?"
+        },
+        {
+          "label": "본문 텍스트",
+          "default": "모든 학습진도가 상실됨. 다시 시작하시겠습니까?"
+        },
+        {
+          "label": "취소 버튼 레이블",
+          "default": "취소"
+        },
+        {
+          "label": "확인 버튼 레이블",
+          "default": "새로 시작"
+        }
+      ]
+    }
+  ]
+}

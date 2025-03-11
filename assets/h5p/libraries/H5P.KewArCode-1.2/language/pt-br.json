@@ -1,0 +1,512 @@
+{
+  "semantics": [
+    {
+      "label": "Introductory text",
+      "description": "This text can optionally be presented along with your code."
+    },
+    {
+      "label": "Tipo de código",
+      "description": "Selecione que tipo de código você deseja gerar",
+      "options": [
+        {
+          "label": "Contato"
+        },
+        {
+          "label": "Evento"
+        },
+        {
+          "label": "Endereço de e-mail"
+        },
+        {
+          "label": "H5P"
+        },
+        {
+          "label": "Localização"
+        },
+        {
+          "label": "Número de telefone"
+        },
+        {
+          "label": "SMS"
+        },
+        {
+          "label": "Texto"
+        },
+        {
+          "label": "URL"
+        }
+      ]
+    },
+    {
+      "label": "Contato",
+      "fields": [
+        {
+          "label": "Nome",
+          "placeholder": "John Smith"
+        },
+        {
+          "label": "Organização",
+          "placeholder": "Fã Clube H5P"
+        },
+        {
+          "label": "Título",
+          "placeholder": "Mestre de Nada"
+        },
+        {
+          "label": "Número do telefone",
+          "description": "Número de telefone (utilize o formato +00 00000 0000)",
+          "placeholder": "+00 00000 0000"
+        },
+        {
+          "label": "Endereço de e-mail",
+          "description": "Endereço de e-mail para escrever a mensagem",
+          "placeholder": "john@fictional-h5p-fan-club.org"
+        },
+        {
+          "label": "Endereço",
+          "fields": [
+            {
+              "label": "Complemento do endereço",
+              "description": "informações de c/o, etc.",
+              "placeholder": "c/o Fã Clube H5P"
+            },
+            {
+              "label": "Logradouro",
+              "description": "Logradouro incluindo número",
+              "placeholder": "1308 W. Dayton Street"
+            },
+            {
+              "label": "Bairro",
+              "description": "Município, etc.",
+              "placeholder": "São Paulo"
+            },
+            {
+              "label": "Região",
+              "description": "Unidade da Federação.",
+              "placeholder": "SP"
+            },
+            {
+              "label": "CEP",
+              "description": "CEP",
+              "placeholder": "00000000"
+            },
+            {
+              "label": "País",
+              "description": "País",
+              "placeholder": "Brasil"
+            }
+          ]
+        },
+        {
+          "label": "Site da Web",
+          "description": "Link para o site da web (deve iniciar com https:// or http://)",
+          "placeholder": "https://fictional-h5p-fan-club.org"
+        },
+        {
+          "label": "Observação",
+          "description": "Observação",
+          "placeholder": "John loves H5P."
+        }
+      ]
+    },
+    {
+      "label": "Evento",
+      "fields": [
+        {
+          "label": "Título",
+          "description": "Título para o evento do calendário",
+          "placeholder": "H5P Conference 2020"
+        },
+        {
+          "label": "Evento de dia inteiro",
+          "description": "Verifique se o evento será válido durante todo o dia"
+        },
+        {
+          "label": "Data de início",
+          "description": "Data de início do evento (por favor use o formato aaaa/mm/dd)",
+          "placeholder": "2020/05/18"
+        },
+        {
+          "label": "Hora de início",
+          "description": "Hora de início do evento (use o formato hh:mm)",
+          "placeholder": "09:00"
+        },
+        {
+          "label": "Data final",
+          "description": "Data de término do evento (use o formato aaaa/mm/dd)",
+          "placeholder": "2020/05/20"
+        },
+        {
+          "label": "Tempo final",
+          "description": "Hora de término do evento (use o formato hh:mm)",
+          "placeholder": "16:00"
+        },
+        {
+          "label": "Fuso horário",
+          "description": "Selecione o fuso horário em que o evento deve ocorrer",
+          "options": [
+            {
+              "label": "UTC-12:00"
+            },
+            {
+              "label": "UTC-11:00"
+            },
+            {
+              "label": "UTC-10:00"
+            },
+            {
+              "label": "UTC-9:30"
+            },
+            {
+              "label": "UTC-9:00"
+            },
+            {
+              "label": "UTC-8:00"
+            },
+            {
+              "label": "UTC-7:00"
+            },
+            {
+              "label": "UTC-6:00"
+            },
+            {
+              "label": "UTC-5:00"
+            },
+            {
+              "label": "UTC-4:00"
+            },
+            {
+              "label": "UTC-3:30"
+            },
+            {
+              "label": "UTC-3:00"
+            },
+            {
+              "label": "UTC-2:00"
+            },
+            {
+              "label": "UTC-1:00"
+            },
+            {
+              "label": "UTC"
+            },
+            {
+              "label": "UTC+1:00"
+            },
+            {
+              "label": "UTC+2:00"
+            },
+            {
+              "label": "UTC+3:00"
+            },
+            {
+              "label": "UTC+3:30"
+            },
+            {
+              "label": "UTC+4:00"
+            },
+            {
+              "label": "UTC+4:30"
+            },
+            {
+              "label": "UTC+5:00"
+            },
+            {
+              "label": "UTC+5:30"
+            },
+            {
+              "label": "UTC+5:45"
+            },
+            {
+              "label": "UTC+6:00"
+            },
+            {
+              "label": "UTC+6:30"
+            },
+            {
+              "label": "UTC+7:00"
+            },
+            {
+              "label": "UTC+8:00"
+            },
+            {
+              "label": "UTC+9:00"
+            },
+            {
+              "label": "UTC+9:30"
+            },
+            {
+              "label": "UTC+10:00"
+            },
+            {
+              "label": "UTC+10:30"
+            },
+            {
+              "label": "UTC+11:00"
+            },
+            {
+              "label": "UTC+12:00"
+            },
+            {
+              "label": "UTC+12:45"
+            },
+            {
+              "label": "UTC+13:00"
+            },
+            {
+              "label": "UTC+14:00"
+            }
+          ]
+        },
+        {
+          "label": "Horário de verão",
+          "description": "Verifique se o local em que o evento está ocorrendo utiliza o horário de verão"
+        },
+        {
+          "label": "Localização",
+          "description": "Dê um nome ao local",
+          "placeholder": "São Paulo, Brasil"
+        },
+        {
+          "label": "Descrição",
+          "description": "Adicione uma descrição para o evento",
+          "placeholder": "3ª Conferência H5P"
+        }
+      ]
+    },
+    {
+      "label": "Endereço de e-mail",
+      "fields": [
+        {
+          "label": "Endereço de e-mail",
+          "description": "Endereço de e-mail para escrever a mensagem",
+          "placeholder": "john@fictional-h5p-fan-club.org"
+        }
+      ]
+    },
+    {
+      "label": "Conteúdo H5P",
+      "fields": [
+        {
+          "label": "Conteúdo H5P",
+          "description": "Conteúdo H5P a ser exibido"
+        }
+      ]
+    },
+    {
+      "label": "Localização",
+      "fields": [
+        {
+          "label": "Latitude",
+          "description": "Latitude (use o formato 53.864462)",
+          "placeholder": "69.646007"
+        },
+        {
+          "label": "Longitude",
+          "description": "Longitude (por favor, use o formato 10.663792)",
+          "placeholder": "18.954036"
+        }
+      ]
+    },
+    {
+      "label": "Número de telefone",
+      "fields": [
+        {
+          "label": "Número de telefone",
+          "description": "Número de telefone para ligar (utilize o formato +00 00000 0000)",
+          "placeholder": "+00 00000 0000"
+        }
+      ]
+    },
+    {
+      "label": "SMS",
+      "fields": [
+        {
+          "label": "Número de telefone",
+          "description": "Número de telefone para enviar (por favor, use o formato +00 00000 0000)",
+          "placeholder": "+00 00000 0000"
+        },
+        {
+          "label": "Mensagem",
+          "description": "Mensagem para enviar",
+          "placeholder": "Por favor, traga leite e pão!"
+        }
+      ]
+    },
+    {
+      "label": "Texto",
+      "fields": [
+        {
+          "label": "Texto",
+          "description": "Texto a codificar",
+          "placeholder": "Por favor, traga\n* leite\n* pão"
+        }
+      ]
+    },
+    {
+      "label": "URL",
+      "fields": [
+        {
+          "label": "URL",
+          "description": "URL para o link (deve começar com https:// ou http://)",
+          "placeholder": "https://fictional-h5p-fan-club.org"
+        }
+      ]
+    },
+    {
+      "label": "Configurações comportamentais",
+      "description": "Essas opções permitem controlar como a tarefa se comporta.",
+      "fields": [
+        {
+          "label": "Cor do código",
+          "default": "#000000"
+        },
+        {
+          "label": "Cor do plano de fundo",
+          "default": "#ffffff"
+        },
+        {
+          "label": "Tamanho máximo",
+          "description": "Tamanho máximo para o código fornecido em notação CSS (pixels por padrão se apenas um número for fornecido)"
+        },
+        {
+          "label": "Alinhamento horizontal",
+          "description": "Defina o alinhamento horizontal se você definir um tamanho máximo",
+          "options": [
+            {
+              "label": "esquerda"
+            },
+            {
+              "label": "centro"
+            },
+            {
+              "label": "direita"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Interface de usuário",
+      "fields": [
+        {
+          "label": "Endereço",
+          "default": "Endereço"
+        },
+        {
+          "label": "Contato",
+          "default": "Contato"
+        },
+        {
+          "label": "País",
+          "default": "País"
+        },
+        {
+          "label": "Data final",
+          "default": "Data final"
+        },
+        {
+          "label": "Data de início",
+          "default": "Data de início"
+        },
+        {
+          "label": "Descrição",
+          "default": "Descrição"
+        },
+        {
+          "label": "E-mail",
+          "default": "E-mail"
+        },
+        {
+          "label": "Evento",
+          "default": "Evento"
+        },
+        {
+          "label": "Complemento do endereço",
+          "default": "Complemento do endereço"
+        },
+        {
+          "label": "Latitude",
+          "default": "Latitude"
+        },
+        {
+          "label": "Bairro",
+          "default": "Bairro"
+        },
+        {
+          "label": "Localização",
+          "default": "Localização"
+        },
+        {
+          "label": "Longitude",
+          "default": "Longitude"
+        },
+        {
+          "label": "Mensagem",
+          "default": "Mensagem"
+        },
+        {
+          "label": "Nome",
+          "default": "Nome"
+        },
+        {
+          "label": "Observação",
+          "default": "Observação"
+        },
+        {
+          "label": "Organização",
+          "default": "Organização"
+        },
+        {
+          "label": "Telefone",
+          "default": "Telefone"
+        },
+        {
+          "label": "Região",
+          "default": "Região"
+        },
+        {
+          "label": "SMS",
+          "default": "SMS"
+        },
+        {
+          "label": "Logradouro",
+          "default": "Logradouro"
+        },
+        {
+          "label": "Texto",
+          "default": "Texto"
+        },
+        {
+          "label": "Título",
+          "default": "Título"
+        },
+        {
+          "label": "URL",
+          "default": "URL"
+        },
+        {
+          "label": "CEP",
+          "default": "CEP"
+        }
+      ]
+    },
+    {
+      "label": "Leitor de Tela",
+      "fields": [
+        {
+          "label": "Código QR. Informações de exibição (Texto para leitores de tela)",
+          "default": "Código QR. Exibir informações."
+        },
+        {
+          "label": "Ocultar informações (Texto para Leitores de Tela)",
+          "default": "Ocultar informações."
+        },
+        {
+          "label": "Code contents (Text for Readspeakers)",
+          "default": ". Code contents"
+        }
+      ]
+    }
+  ]
+}

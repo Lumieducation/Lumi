@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Multivide",
+      "fields": [
+        {
+          "label": "Tips",
+          "description": "Papildu multimedijs, kuru atspoguļot virs jautājuma."
+        },
+        {
+          "label": "Atspējot attēla tālummaiņu"
+        }
+      ]
+    },
+    {
+      "label": "Uzdevuma apraksts",
+      "description": "Aprakstiet kā lietotājam vajadzētu risināt uzdevumu.",
+      "default": "Velciet vārdus pareizajos lodziņos"
+    },
+    {
+      "label": "Teksts",
+      "placeholder": "*Oslo* ir Norvēģijas galvaspilsēta, *Stokholma* ir Zviedrijas galvaspilsēta un *Kopenhāgena* ir Dānijas galvaspilsēta. Visas pilsētas atrodas *Skandināvijas:Eiropas ziemeļdaļas* pussalā.",
+      "important": {
+        "description": "<ul><li>Velkamie vārdi tiek pievienoti ar zvaigznīti (*) pareizā vārda/frāzes priekšā un aiz tā.</li><li>Variet pievienot teksta padomu, padoma priekšā pievienojot kolu (:). .</li><li>Katram tukšajam laukumam ir tikai viens pareizs vārds.</li><li>Variett pievienot atgriezenisko saiti, kas tiks parādīta, kad uzdevums ir pabeigts. Izmantojiet '\\+' atgriezeniskajai saitei par pareizu atbildi un '\\-' atgriezeniskajai saitei par nepareizu atbildi.</li></ul>",
+        "example": "H5P saturu var rediģēt, izmantojot *pārlūkprogrammu:Kāda veida programma ir Chrome?*. <br /> H5P saturs ir *interaktīvs\\+Pareizi! \\-Nepareizi, mēģiniet vēlreiz!*"
+      }
+    },
+    {
+      "label": "Distractors",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Enter extra solutions that are wrong as distractors. Use the same asterisk (*) scheme as for the text."
+    },
+    {
+      "label": "Kopējā atgriezeniskā saite",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Pēc noklusējuma"
+            }
+          ],
+          "label": "Iestatiet pielāgotu atgriezenisko saiti katram rezultātu diapazonam",
+          "entity": "diapazons",
+          "field": {
+            "fields": [
+              {
+                "label": "Rezultātu diapazons"
+              },
+              {},
+              {
+                "label": "Norādītā diapazona atgriezeniskā saite",
+                "placeholder": "Aizpildiet atgriezenisko saiti"
+              }
+            ]
+          },
+          "description": "Klikšķiniet pogu \"Pievienot diapazonu\", lai pievienotu tik diapazonus cik vēlaties. Piemēram, 0-20% Slikts rezultāts, 21-91% Viduvējs rezultāts, 91-100% Lielisks rezultāts!"
+        }
+      ]
+    },
+    {
+      "label": "Pogas \"Pārbaudīt\" teksts",
+      "default": "Pārbaudīt"
+    },
+    {
+      "label": "Pogas \"Iesniegt\" teksts",
+      "default": "Iesniegt"
+    },
+    {
+      "label": "Pogas \"Mēģināt vēlreiz\" teksts",
+      "default": "Mēģināt vēlreiz"
+    },
+    {
+      "label": "Pogas \"Parādīt risinājumu\" teksts",
+      "default": "Parādīt risinājumu"
+    },
+    {
+      "label": "Numurētas nomešanas zonas etiķete",
+      "default": "Nomešanas zona @index.",
+      "description": "Pieejamībai izmantotā etiķete, no kura asistīvās tehnoloģijas nolasīs zonas indeksu. Pieejamais mainīgais: @index"
+    },
+    {
+      "label": "Tukšas nomešanas zonas etiķete",
+      "default": "Nomešanas zona @index ir tukša.",
+      "description": "Pieejamībai izmantotā etiķete, no kuras asistīvās tehnoloģijas nolasīs, ka nomešanas zona ir tukša"
+    },
+    {
+      "label": "Satur nomešanas zonu etiķete",
+      "default": "Nomešanas zona @index satur velkamo elementu @draggable.",
+      "description": "Pieejamībai izmantotā etiķete, no kuras asistīvās tehnoloģijas nolasīs, ka nomešanas zona satur velkamo elementu"
+    },
+    {
+      "label": "Velkamo elementu etiķete",
+      "default": "@index no @count velkamajiem elementiem.",
+      "description": "Pieejamībai izmantotā etiķete, no kuras asistīvās tehnoloģijas nolasīs, ka šis ir velkams elements. Pieejami mainīgie: @index, @count"
+    },
+    {
+      "label": "Etiķete pogai Rādīt padomu",
+      "default": "Parādīt padomu",
+      "description": "Pieejamībai izmantotā etiķete, no kuras asistītvās tehnoloģijas nolasa, ka pieejams padoms"
+    },
+    {
+      "label": "Pareizās atbildes atskaņošanas teksts asistīvajām tehnoloģijām",
+      "default": "Pareizi!"
+    },
+    {
+      "label": "Nepareizās atbildes atskaņošanas teksts asistīvajām tehnoloģijām",
+      "default": "Nepareizi!"
+    },
+    {
+      "label": "Apstiprinājuma dialoga nosaukums, kad lietotājs vēlas atiestatīt velkamo elementu",
+      "default": "Atiestatīt nomešanu"
+    },
+    {
+      "default": "Vai tiešām vēlaties atiestatīt šo nomešanas zonu?",
+      "label": "Apstiprinājuma dialoga apraksts, kad lietotājs vēlas atiestatīt velkamo elementu"
+    },
+    {
+      "default": "Velkamais elements ir satverts.",
+      "label": "Pieejamībai izmantotā etiķete, pēc kuras asistīvās tehnoloģijas nosaka, ka uzsākta elementa vilkšana"
+    },
+    {
+      "label": "Pieejamībai izmantotā etiķete, pēc kuras asistīvās tehnoloģijas nosaka, ka elementa vilkšana ir atcelta",
+      "default": "Vilkšana atcelta."
+    },
+    {
+      "label": "Pieejamībai izmantotā etiķete, no kuras asistīvās tehnoloģijas nosaka, ka teksts ir pareizā atbilde",
+      "default": "Pareizā atbilde:"
+    },
+    {
+      "default": "Atgriezeniskā saite",
+      "label": "Paneļa galvene, kurā ir atgriezeniskā saite par pareizām/nepareizām atbildēm"
+    },
+    {
+      "label": "Uzvedības iestatījumi.",
+      "description": "Šie iestatījumi ļaus jums kontrolēt uzdevuma uzvedību.",
+      "fields": [
+        {
+          "label": "Atļaut pogu \"Mēģināt vēlreiz\""
+        },
+        {
+          "label": "Atļaut pogu \"Rādīt risinājumu\""
+        },
+        {
+          "label": "Atļaut pogu \"Pārbaudīt\""
+        },
+        {
+          "label": "Tūlītēja atgriezeniskā saite"
+        }
+      ]
+    },
+    {
+      "default": "Tu saņēmi :num no :total punktiem",
+      "label": "Rezultātu skalas tekstuālais atspoguļojums tiem, kas izmanto asistīvās tehnoloģijas"
+    },
+    {
+      "label": "Pogas \"Pārbaudīt\" etiķete asistīvajām tehnoloģijām",
+      "default": "Pārbaudīt atbildes. Atbildes tiks atzīmētas kā pareizas, nepareizas, vai neatbildētas."
+    },
+    {
+      "label": "Asistīvo tehnoloģiju etiķete pogai \"Rādīt risinājumu\"",
+      "default": "Rādīt risinājumu. Uzdevums tiks atzīmēts ar tā pareizo risinājumu."
+    },
+    {
+      "label": "Pogas \"Mēģināt vēlreiz\" etiķete asistīvajām tehnoloģijām",
+      "default": "Mēģiniet uzdevumu vēlreiz. Dzēst visas iesniegtās atbildes un sākt uzdevumu no sākuma."
+    }
+  ]
+}

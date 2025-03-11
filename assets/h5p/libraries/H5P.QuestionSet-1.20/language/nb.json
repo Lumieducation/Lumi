@@ -1,0 +1,278 @@
+{
+  "semantics": [
+    {
+      "label": "Introduksjon",
+      "fields": [
+        {
+          "label": "Vis introduksjon"
+        },
+        {
+          "label": "Tittel",
+          "description": "Denne tittelen blir vist over introduksjonsteksten."
+        },
+        {
+          "label": "Introduksjonstekst",
+          "description": "Denne teksten vises før oppgavesettet starter."
+        },
+        {
+          "label": "Navn på \"Start\"-knappen",
+          "default": "Start"
+        },
+        {
+          "label": "Bakgrunnsbilde",
+          "description": "Valgfritt bakgrunnsbilde for introduksjonssida."
+        }
+      ]
+    },
+    {
+      "label": "Bakgrunnsbilde",
+      "description": "Valgfritt bakgrunnsbilde for oppgavesettet."
+    },
+    {
+      "label": "Framdriftsindikator",
+      "description": "Velg om framdriften skal vises som prikker (ved få spørsmål) eller som tekst (ved mange spørsmål).",
+      "options": [
+        {
+          "label": "Tekst"
+        },
+        {
+          "label": "Prikker"
+        }
+      ]
+    },
+    {
+      "label": "Krav for å bestå",
+      "description": "Prosent riktige svar som kreves for å bestå oppgavesettet."
+    },
+    {
+      "label": "Oppgaver",
+      "widgets": [
+        {
+          "label": "Standard"
+        },
+        {
+          "label": "Tekstlig"
+        }
+      ],
+      "entity": "Oppgave",
+      "field": {
+        "label": "Oppgavetype",
+        "description": "Velg oppgavetype for denne sida."
+      }
+    },
+    {
+      "label": "Ledetekster",
+      "fields": [
+        {
+          "label": "Navn på \"Forrige\"-knapp",
+          "default": "Forrige"
+        },
+        {
+          "label": "Navn på \"Neste\"-knapp",
+          "default": "Neste"
+        },
+        {
+          "label": "Navn på \"Avslutt\"-knapp",
+          "default": "Avslutt"
+        },
+        {
+          "label": "\"Send inn\"-knapp",
+          "default": "Send inn"
+        },
+        {
+          "label": "Framdriftstekst",
+          "description": "Valgt tekst når framdrift skal vises som tekst. Variabler: @current og @total.",
+          "default": "Oppgave @current av @total"
+        },
+        {
+          "label": "Merkelapp for å gå direkte til et bestemt spørsmål",
+          "description": "Bruk plassholderen %d i stedet for oppgavenummeret, og %total i stedet for totalt antall oppgaver.",
+          "default": "Oppgave %d av %total"
+        },
+        {
+          "label": "Merkelapp for spørsmål om opphavsrett",
+          "default": "Oppgave"
+        },
+        {
+          "label": "Framdriftstekst for skjermleser",
+          "description": "Du kan bruke variablene @current og @total.",
+          "default": "Oppgave @current av @total"
+        },
+        {
+          "label": "Tekst hvis oppgave er ubesvart",
+          "default": "Ubesvart"
+        },
+        {
+          "label": "Tekst for besvart oppgave",
+          "default": "Besvart"
+        },
+        {
+          "label": "Tekst for aktiv oppgave",
+          "default": "Aktiv oppgave"
+        },
+        {
+          "label": "Merkelapp for skjermleser",
+          "default": "Oppgaver"
+        }
+      ]
+    },
+    {
+      "label": "Slå av tilbakenavigering",
+      "description": "Slå på for å hindre at bruker kan gå tilbake i oppgavesettet."
+    },
+    {
+      "label": "Stokk spørsmåla",
+      "description": "Slå på for å vise spørsmåla i tilfeldig rekkefølge."
+    },
+    {
+      "label": "Antall spørsmål som skal vises:",
+      "description": "Lag et tilfeldig sett med spørsmål."
+    },
+    {
+      "label": "Oppgavesett avslutta",
+      "fields": [
+        {
+          "label": "Vis resultater"
+        },
+        {
+          "label": "Vis \"Vis svar\"-knapp"
+        },
+        {
+          "label": "Vis \"Prøv igjen\"-knapp"
+        },
+        {
+          "label": "Melding når resultater mangler",
+          "description": "Tekst som vises på siste side når \"Vis svar\" er deaktivert",
+          "default": "Ferdig"
+        },
+        {
+          "label": "Overskrift for tilbakemelding",
+          "default": "Resultat:",
+          "description": "Denne overskriften vises over tilbakemeldinga helt sist i oppgavesettet."
+        },
+        {
+          "label": "Melding om poengsum",
+          "description": "Denne teksten står på siste side og forteller bruker hva sluttresultatet er.",
+          "default": "Du fikk @finals av @totals poeng."
+        },
+        {
+          "label": "Samla tilbakemelding",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Standardinnstilling"
+                }
+              ],
+              "label": "Lag egendefinerte tilbakemeldinger for poengintervallene",
+              "description": "Bruk knappen \"Legg til poengintervall\" og legg til så mange poengintervaller du trenger. Eksempel: 0–50 % Svakt resultat, 51–80 % Middels resultat, 81–100 % Flott resultat!",
+              "entity": "Intervall",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Poengintervall"
+                  },
+                  {},
+                  {
+                    "label": "Tilbakemelding for spesifisert poengintervall",
+                    "placeholder": "Fyll inn tilbakemelding"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Tidligere tilbakemelding",
+          "fields": [
+            {
+              "label": "Tittel ved bestått oppgavesett",
+              "description": "Denne meldinga vises dersom brukeren har bestått oppgavesettet."
+            },
+            {
+              "label": "Kommentar ved bestått",
+              "description": "Denne meldinga vises etter poengsummen dersom brukeren har bestått oppgavesettet."
+            },
+            {
+              "label": "Overskrift ved ikke bestått",
+              "description": "Denne tittelen vises før poengsummen dersom brukeren ikke har bestått oppgavesettet."
+            },
+            {
+              "label": "Melding ved ikke bestått",
+              "description": "Denne meldinga vises etter poengsummen dersom brukeren ikke har bestått oppgavesettet."
+            }
+          ]
+        },
+        {
+          "label": "Navn på \"Vis svar\"-knapp",
+          "default": "Vis svar",
+          "description": "Navn på \"Vis svar\"-knapp"
+        },
+        {
+          "label": "Navn på \"Prøv igjen\"-knapp",
+          "default": "Prøv igjen",
+          "description": "Navn på \"Prøv igjen\"-knapp"
+        },
+        {
+          "label": "Navn på \"Avslutt\"-knapp",
+          "default": "Avslutt"
+        },
+        {
+          "label": "Navn på \"Send inn\"-knapp",
+          "default": "Send inn"
+        },
+        {
+          "label": "Vis video før resultatene"
+        },
+        {
+          "label": "Tillat å hoppe over video"
+        },
+        {
+          "label": "Navn på \"Hopp over video\"-knapp",
+          "default": "Hopp over video"
+        },
+        {
+          "label": "Video ved bestått",
+          "description": "Denne videoen vises dersom bruker har bestått oppgavesettet."
+        },
+        {
+          "label": "Video ved ikke bestått",
+          "description": "Denne videoen vises dersom bruker ikke har bestått oppgavesettet."
+        }
+      ]
+    },
+    {
+      "label": "Innstillinger for \"Sjekk\", \"Vis svar\" og \"Prøv igjen\"",
+      "fields": [
+        {
+          "label": "Vis \"Sjekk\"-knapper",
+          "description": "Dette valget avgjør om \"Sjekk\"-knappen vises for alle oppgaver."
+        },
+        {
+          "label": "Overstyr \"Vis svar\"-knapp",
+          "description": "Dette valget avgjør om \"Vis svar\"-knappen vises for alle oppgaver, skjules for alle oppgaver eller konfigureres individuelt for hver oppgave.",
+          "options": [
+            {
+              "label": "Aktivert"
+            },
+            {
+              "label": "Deaktivert"
+            }
+          ]
+        },
+        {
+          "label": "Overstyr \"Prøv igjen\"-knapp",
+          "description": "Dette valget avgjør om \"Prøv igjen\"-knappen vises for alle oppgaver, skjules for alle oppgaver eller konfigureres individuelt for hver oppgave.",
+          "options": [
+            {
+              "label": "Aktivert"
+            },
+            {
+              "label": "Deaktivert"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

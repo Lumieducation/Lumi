@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Bakgrundsbild",
+      "description": "Bild som visas i bakgrunden."
+    },
+    {
+      "label": "Alternativ text för bakgrundsbild",
+      "description": "Om webbläsaren inte kan visa bilden så kommer denna text visas istället. Används också av tillgänglighetshjälpmedel."
+    },
+    {
+      "label": "Hotspot-ikon",
+      "options": [
+        {
+          "label": "Fördefinierad ikon"
+        },
+        {
+          "label": "Uppladdad bild"
+        }
+      ]
+    },
+    {
+      "label": "Fördefinierad ikon",
+      "description": "Använder en fördefinierad ikon för denna hotspot.",
+      "options": [
+        {
+          "label": "Plus"
+        },
+        {
+          "label": "Minus"
+        },
+        {
+          "label": "Gånger"
+        },
+        {
+          "label": "Kontrollera"
+        },
+        {
+          "label": "Question"
+        },
+        {
+          "label": "Info"
+        },
+        {
+          "label": "Utrop"
+        }
+      ]
+    },
+    {
+      "label": "Uppladdad bild",
+      "description": "Använd din egen bild för hotspot-ikonen.<br />75px gånger 75px är rekommenderat för din bild."
+    },
+    {
+      "label": "Hotspot-färg",
+      "description": "Färgen på hotspots"
+    },
+    {
+      "entity": "hotspot",
+      "label": "Hotspots",
+      "field": {
+        "label": "Hotspot",
+        "fields": [
+          {
+            "label": "Hotspot-position",
+            "description": "Klicka på miniatyrbilden för att placera hotspot"
+          },
+          {
+            "label": "Täck hela bakgrundsbilden",
+            "description": "När användaren klickar på denna hotspot så kommer popup täcka hela bakgrundsbilden"
+          },
+          {
+            "label": "Rubrik",
+            "description": "Valfri rubrik för popup-fönster. Används av tillgänglighetshjälpmedel."
+          },
+          {
+            "label": "Popup-innehåll",
+            "field": {
+              "label": "Content Item"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Hotspot-etikett för tillgänglighetshjälpmedel",
+      "default": "Hotspot #num",
+      "description": "Hjälper till med att informera vilket hotspot-element som har navigerats till, om det inte finns någon rubrik specificerad för en hotspot. #num kan användas för ersätta hotspot-nummer."
+    },
+    {
+      "label": "Etikett för knappen \"stäng\" som används av tillgänglighetshjälpmedel",
+      "default": "Stäng"
+    },
+    {
+      "label": "Label for assistive technologies denoting that hotspot contains Audio/Video",
+      "default": "Contains Audio/Video"
+    }
+  ]
+}

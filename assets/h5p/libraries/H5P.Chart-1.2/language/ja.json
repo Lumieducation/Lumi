@@ -1,0 +1,40 @@
+{
+  "semantics":[
+    {
+      "label":"グラフの種類",
+      "options":[
+        {
+          "label":"円グラフ"
+        },
+        {
+          "label":"棒グラフ"
+        }
+      ]
+    },
+    {
+      "label":"データ要素",
+      "entity":"option",
+      "field":{
+        "label":"データ要素",
+        "fields":[
+          {
+            "label":"名前"
+          },
+          {
+            "label":"値"
+          },
+          {
+            "label":"色"
+          },
+          {
+            "label":"フォントの色"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Text read by readspeakers defining the figure as a chart.",
+      "default": "Chart"
+    }
+  ]
+}

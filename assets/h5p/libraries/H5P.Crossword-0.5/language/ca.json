@@ -1,0 +1,293 @@
+{
+  "semantics": [
+    {
+      "label": "Descripció de la tasca",
+      "description": "Descriu la tasca."
+    },
+    {
+      "label": "paraules",
+      "widgets": [
+        {
+          "label": "Per defecte"
+        }
+      ],
+      "entity": "Paraula",
+      "field": {
+        "label": "Paraula",
+        "fields": [
+          {
+            "label": "Pista",
+            "description": "Pista que hauria d’apuntar a la resposta."
+          },
+          {
+            "label": "Resposta",
+            "description": "Resposta a la pista."
+          },
+          {
+            "label": "Pista addicional"
+          },
+          {
+            "label": "Corregeix la paraula a la graella",
+            "description": "Comprova si vols fixar la paraula a una posició concreta de la graella. Les paraules amb la mateixa alineació no es poden tocar."
+          },
+          {
+            "label": "Fila",
+            "description": "Índex de la fila on ha de començar la resposta."
+          },
+          {
+            "label": "Columna",
+            "description": "Índex de la columna on ha de començar la resposta."
+          },
+          {
+            "label": "Orientació",
+            "description": "Orientació de la resposta.",
+            "options": [
+              {
+                "label": "Horitzontal"
+              },
+              {
+                "label": "Vertical"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Paraula de solució",
+      "description": "De manera opcional, pots afegir una paraula de solució relacionada amb caràcters concrets de la graella. Només és visible si tots els caràcters ja són a l’encreuat. Tingues en compte que aquesta funció encara té opcions d’accessibilitat."
+    },
+    {
+      "label": "Comentaris generals",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Per defecte"
+            }
+          ],
+          "label": "Defineix comentaris personalitzats per a qualsevol interval de puntuació",
+          "description": "Clica al botó \"Afegeix intervals\" per afegir-ne tants com necessitis. Exemple: 0-20 % puntuació baixa, 21-91 % puntuació mitjana, 91-100 % puntuació excel·lent!",
+          "entity": "interval",
+          "field": {
+            "fields": [
+              {
+                "label": "Interval de puntuació"
+              },
+              {},
+              {
+                "label": "Comentari de l’interval de puntuació definit",
+                "placeholder": "Emplena els comentaris"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tema",
+      "fields": [
+        {
+          "label": "Imatge de fons",
+          "description": "Pots triar una imatge de fons. S’adaptarà al fons sense deformar-se."
+        },
+        {
+          "label": "Color de fons",
+          "description": "Tria un color de fons. Es farà servir en lloc de la imatge de fons o com a fons per a zones transparents."
+        },
+        {
+          "label": "Color de la graella",
+          "description": "Tria un color de fons per a la graella."
+        },
+        {
+          "label": "Color de fons de cel·la",
+          "description": "Tria el color de fons per a una cel·la de la taula."
+        },
+        {
+          "label": "Color del text de la cel·la",
+          "description": "Tria el color del text per a una cel·la de taula."
+        },
+        {
+          "label": "Color d’identificador de pista",
+          "description": "Tria el color de l’identificador de pista en una cel·la."
+        },
+        {
+          "label": "Color de fons de cel·la destacada",
+          "description": "Tria el color de fons d’una cel·la destacada."
+        },
+        {
+          "label": "Color de text de cel·la destacada",
+          "description": "Tria el color de text d’una cel·la de taula destacada."
+        },
+        {
+          "label": "Color d’identificador de cel·la destacada",
+          "description": "Tria el color d’identificador de pista en una cel·la de taula destacada."
+        }
+      ]
+    },
+    {
+      "label": "Configuració del comportament",
+      "description": "Aquestes opcions permeten controlar el comportament de la tasca.",
+      "fields": [
+        {
+          "label": "Nombre de paraules que s’han de mostrar",
+          "description": "Crea un lot aleatori de paraules del grup. El lot sempre ha de contenir almenys totes les paraules fixades a la graella, independentment d’aquesta configuració. Un valor buit o 0 significa fer servir totes les paraules."
+        },
+        {
+          "label": "Activa els comentaris instantanis"
+        },
+        {
+          "label": "Puntua paraules",
+          "description": "Si l’opció està activada, es compten les paraules per determinar la puntuació. En cas contrari, es compten els caràcters correctes."
+        },
+        {
+          "label": "Aplica penalitzacions",
+          "description": "Si l’opció està activada, cada resposta incorrecta resta 1 punt."
+        },
+        {
+          "label": "Activa \"Reintenta\""
+        },
+        {
+          "label": "Activa \"Solució\""
+        },
+        {
+          "label": "Keep correct answers on retry",
+          "description": "If this option is enabled, correct answers will be kept when the user retries the task unless full score was achieved."
+        }
+      ]
+    },
+    {
+      "label": "Interfície d’usuari",
+      "fields": [
+        {
+          "label": "Etiqueta per a horitzontal",
+          "default": "Horitzontal"
+        },
+        {
+          "label": "Etiqueta per a vertical",
+          "default": "vertical"
+        },
+        {
+          "label": "Text per al botó \"Comprova\"",
+          "default": "Comprova"
+        },
+        {
+          "label": "Text per al botó \"Envia\"",
+          "default": "Envia"
+        },
+        {
+          "label": "Text per al botó \"Reintenta\"",
+          "default": "Reintenta"
+        },
+        {
+          "label": "Text per al botó \"Mostra la solució\"",
+          "default": "Mostra la solució"
+        },
+        {
+          "label": "No es pot crear l’encreuat",
+          "default": "No s’ha pogut generar un encreuat amb les paraules donades. Torna-ho a provar amb menys paraules o amb paraules que tinguin més caràcters en comú."
+        },
+        {
+          "label": "No es pot crear l’encreuat (poques paraules)",
+          "default": "No s’ha pogut generar l’encreuat. Necessites almenys dues paraules."
+        },
+        {
+          "label": "Paraules problemàtiques",
+          "description": "Llista de paraules que han causat problemes en generar l’encreuat. @words és un marcador de posició que se substitueix per les paraules problemàtiques reals.",
+          "default": "Algunes paraules no s’han pogut col·locar. Si feu servir paraules fixes, assegureu-vos que no impedeixen col·locar altres paraules. Les paraules amb la mateixa alineació no es poden tocar. Paraules problemàtiques: @words"
+        },
+        {
+          "label": "Pista addicional",
+          "default": "Pista addicional"
+        },
+        {
+          "label": "Tanca la finestra",
+          "default": "Tanca la finestra"
+        }
+      ]
+    },
+    {
+      "label": "Lector en veu alta",
+      "fields": [
+        {
+          "label": "Descripció de la graella de l’encreuat",
+          "default": "Graella de l’encreuat. Moveu el cursor amb les fletxes de desplaçament i introduïu caràcters amb el teclat. També podeu fer servir el tabulador per escriure la resposta al camp d’entrada en comptes de la graella."
+        },
+        {
+          "label": "Columna",
+          "default": "Columna"
+        },
+        {
+          "label": "Fila",
+          "default": "Fila"
+        },
+        {
+          "label": "Horitzontal",
+          "default": "Horitzontal"
+        },
+        {
+          "label": "Vertical",
+          "default": "Vertical"
+        },
+        {
+          "label": "Buit",
+          "default": "Buit"
+        },
+        {
+          "description": "Presentador de resultats. @clue és una variable que se substitueix per la pista corresponent.",
+          "label": "Resultat per a",
+          "default": "Resultat per a: @clue"
+        },
+        {
+          "label": "Correcte",
+          "default": "Correcte"
+        },
+        {
+          "label": "Incorrecte",
+          "default": "Incorrecte"
+        },
+        {
+          "label": "Punt",
+          "default": "punt"
+        },
+        {
+          "description": "Presentador de solucions. @clue i @solution són variables i se substitueixen pels valors corresponents.",
+          "label": "Solució per a",
+          "default": "Per a @clue la solució és @solution"
+        },
+        {
+          "description": "Presentador de pistes addicionals. @clue és una variable i se substitueix pel valor corresponent.",
+          "label": "Pista addicional per a",
+          "default": "Obre una pista addicional per a @clue"
+        },
+        {
+          "description": "Anunci de la posició actual. @position i @length són variables i se substitueixen pels valors corresponents.",
+          "label": "Lletra",
+          "default": "Lletra @position de @length"
+        },
+        {
+          "description": "Anunci de la longitud de la paraula. @length és una variable i se substitueix pel valor corresponent.",
+          "label": "Longitud de la paraula",
+          "default": "Paraula de @length lletres"
+        },
+        {
+          "label": "Descripció d’ajuda per al botó \"Comprova\"",
+          "default": "Comprova els caràcters. Les respostes es marquen com a correctes, incorrectes o sense resposta."
+        },
+        {
+          "label": "Descripció d’ajuda per al botó \"Mostra la solució\"",
+          "default": "Mostra la solució. A l’encreuat apareix la solució correcta."
+        },
+        {
+          "label": "Descripció d’ajuda per al botó \"Reintenta\"",
+          "default": "Reintenta la tasca. Suprimeix les respostes per tornar a començar."
+        },
+        {
+          "label": "Resultat",
+          "description": "@score i @total són variables i se substitueixen pels valors corresponents.",
+          "default": "Has fet @score punts de @total."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Tipo",
+          "options": [
+            {
+              "label": "Código de tempo"
+            },
+            {
+              "label": "Outra páxina (URL)"
+            }
+          ]
+        },
+        {
+          "description": "O punto temporal ao que se enviará ao usuario cando prema no punto clave. Escribe o código de tempo co formato M:SS.",
+          "label": "Ir A"
+        },
+        {
+          "fields": [
+            {
+              "label": "Protocolo",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(relativo á raíz)"
+                },
+                {
+                  "label": "outros"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ],
+          "label": "URL"
+        }
+      ],
+      "label": "Destino"
+    },
+    {
+      "label": "Visuais",
+      "fields": [
+        {
+          "options": [
+            {
+              "label": "Rectangular"
+            },
+            {
+              "label": "Circular"
+            },
+            {
+              "label": "Rectángulo redondeado"
+            }
+          ],
+          "label": "Forma"
+        },
+        {
+          "label": "Cor de fondo para o punto clave"
+        },
+        {
+          "label": "Usa o cursor do punteiro"
+        },
+        {
+          "description": "Nota: o efecto de pestanexo sempre está activado no editor para que poidas atopar puntos clave transparentes",
+          "label": "Engade efecto de pestanexo"
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "label": "Texto alternativo",
+          "placeholder": "Unha mazá sobre unha mesa",
+          "description": "Describe o tema que trata o punto clave. Usado para lectores de pantalla"
+        },
+        {
+          "label": "Etiqueta de punto clave"
+        },
+        {
+          "label": "Amosar etiqueta"
+        },
+        {
+          "label": "Cor da etiqueta"
+        }
+      ],
+      "label": "Textos"
+    }
+  ]
+}

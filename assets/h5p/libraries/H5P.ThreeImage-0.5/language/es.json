@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Editor de Tres Imágenes",
+      "fields": [
+        {
+          "label": "Escenas",
+          "entity": "Escena",
+          "field": {
+            "fields": [
+              {
+                "label": "Tipo de escena",
+                "options": [
+                  {
+                    "label": "Imagen 360"
+                  },
+                  {
+                    "label": "Imagen estática"
+                  }
+                ]
+              },
+              {
+                "label": "Mostrar botón \"Atrás\"",
+                "description": "Mostrar botón para navegar de vuelta a tu escena anterior"
+              },
+              {},
+              {
+                "label": "Título de Escena",
+                "description": "Usado para identificar la escena"
+              },
+              {
+                "label": "Fondo de la Escena"
+              },
+              {
+                "label": "Descripción de la Escena",
+                "description": "Un texto que puede describir la escena para el usuario final"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Etiqueta",
+                      "description": "Si se deja vacío, no se mostrará ninguna etiqueta y trataremos de usar el campo de título para lectores de pantalla"
+                    },
+                    {
+                      "label": "Configuración de Etiquetas",
+                      "fields": [
+                        {
+                          "label": "Posición de la etiqueta",
+                          "description": "Elegir donde debería aparecer la etiqueta",
+                          "options": [
+                            {
+                              "label": "Usar configuraciones del comportamiento"
+                            },
+                            {
+                              "label": "Alineada a la derecha"
+                            },
+                            {
+                              "label": "Alineada a la izquierda"
+                            },
+                            {
+                              "label": "Alineada a la parte superior"
+                            },
+                            {
+                              "label": "Alineada a la parte inferior"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Mostrar Etiqueta",
+                          "description": "Si están ocultas, las etiquetas se mostrarán solo al pasar el ratón por encima",
+                          "options": [
+                            {
+                              "label": "Usar configuración del comportamiento"
+                            },
+                            {
+                              "label": "Mostrar"
+                            },
+                            {
+                              "label": "Ocultar"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Estilo del botón",
+                "description": "Decidir como deberían verse los botones que apuntan a esta escena. Para escenas estáticas que no conduzcan hacia nuevas escenas, recomendamos el botón de \"Más información\" .",
+                "options": [
+                  {
+                    "label": "Nueva escena (flecha)"
+                  },
+                  {
+                    "label": "Más información (más)"
+                  }
+                ]
+              },
+              {
+                "label": "Pista de Audio",
+                "description": "Añadir una pista de audio específica para esta escena."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Pista de Audio"
+        }
+      ]
+    },
+    {
+      "label": "Configuración del comportamiento",
+      "description": "Estas opciones le permitirán controlar como se comporta la tarea.",
+      "fields": [
+        {
+          "label": "Audio Global",
+          "description": "Añadir una pista de audio disponible para todas las escenas por defecto."
+        },
+        {
+          "label": "Calidad de la representación de escena",
+          "description": "Elije la cantidad de segmentos de anchura y altura usados para representar una escena. Esto afecta directamente al nivel de calidad de la escena. Intenta aumentar la calidad si la escena se ve \"pixelada\" o si se ven \"ondulaciones\" dentro de las escenas. Ten en cuenta que una representación a mayor calidad supondrá un mayor tiempo de carga.",
+          "options": [
+            {
+              "label": "Alta Calidad (128x128)"
+            },
+            {
+              "label": "Calidad Media (64x64)"
+            },
+            {
+              "label": "Baja Calidad (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Configuración de etiquetas",
+          "fields": [
+            {
+              "label": "Posición de etiqueta",
+              "description": "La posición predeterminada de la etiqueta. La posición se puede anula mediante interacción",
+              "options": [
+                {
+                  "label": "Alineada a la derecha"
+                },
+                {
+                  "label": "Alineada a la izquierda"
+                },
+                {
+                  "label": "Alineada a la parte superior"
+                },
+                {
+                  "label": "Alineada a la parte inferior"
+                }
+              ]
+            },
+            {
+              "label": "Mostrar Etiquetas",
+              "description": "Si no está marcada, las etiquetas se mostrarán solo al pasar el ratón por encima"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Localizar",
+      "fields": [
+        {
+          "label": "Etiqueta Aria para tipo de contenido",
+          "default": "Tour Virtual"
+        },
+        {
+          "label": "Etiqueta para reproducir audio",
+          "default": "Reproducir Pista de Audio"
+        },
+        {
+          "label": "Etiqueta para pausar audio",
+          "default": "Pausar Pista de Audio"
+        },
+        {
+          "label": "Diálogo de título a escena",
+          "default": "Descripción de Escena"
+        },
+        {
+          "label": "Etiqueta para el botón para reiniciar la cámara",
+          "default": "Reiniciar Cámara"
+        },
+        {
+          "label": "Etiqueta para el botón del diálogo de envío",
+          "default": "Diálogo de Envío"
+        },
+        {
+          "label": "Etiqueta para el botón del diálogo cerrar",
+          "default": "Diálogo Cerrar"
+        },
+        {
+          "label": "Etiqueta Aria para botón expandir etiqueta",
+          "default": "Expandir la etiqueta visual"
+        },
+        {
+          "label": "Etiqueta para cuando la imagen del fondo está cargando en escena 360",
+          "default": "Cargando imagen de fondo..."
+        },
+        {
+          "label": "Etiqueta para cuando no hay contenido",
+          "default": "Sin contenido"
+        }
+      ]
+    }
+  ]
+}

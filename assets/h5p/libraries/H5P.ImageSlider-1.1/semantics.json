@@ -1,0 +1,107 @@
+[
+  {
+    "label": "Images",
+    "name": "imageSlides",
+    "type": "list",
+    "field": {
+      "label": "Image Slide",
+      "name": "imageSlide",
+      "type": "group",
+      "fields": [
+        {
+          "label": "Image Slide",
+          "name": "imageSlide",
+          "type": "library",
+          "options": [
+            "H5P.ImageSlide 1.1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "label": "Aspect ratio",
+    "name": "aspectRatioMode",
+    "type": "select",
+    "description": "Automatic means fixed aspect ratio automatically determined based on the images",
+    "default": "auto",
+    "options": [
+      {
+        "value": "auto",
+        "label": "Automatic"
+      },
+      {
+        "value": "custom",
+        "label": "Custom"
+      },
+      {
+        "value": "notFixed",
+        "label": "Not fixed"
+      }
+    ]
+  },
+  {
+    "label": "Aspect Ratio Settings",
+    "name": "aspectRatio",
+    "type": "group",
+    "widget": "showWhen",
+    "expanded": true,
+    "showWhen": {
+      "rules": [
+        {
+          "field": "aspectRatioMode",
+          "equals": "custom"
+        }
+      ]
+    },
+    "fields": [
+      {
+        "label": "Aspect ratio width",
+        "name": "aspectWidth",
+        "type": "number",
+        "default": 4,
+        "description": "If you use 4 here, and 3 for the height the aspect ratio will be 4:3"
+      },
+      {
+        "label": "Aspect ratio height",
+        "name": "aspectHeight",
+        "type": "number",
+        "default": 3,
+        "description": "If you use 3 here, and 4 for the width the aspect ratio will be 4:3"
+      }
+    ]
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "label": "Image slider accessibility",
+    "importance": "low",
+    "common": true,
+    "fields": [
+      {
+        "name": "nextSlide",
+        "type": "text",
+        "label": "Label for next slide buttons",
+        "importance": "low",
+        "default": "Next Image",
+        "description": "This is only used for read-speakers. It won't be displayed."
+      },
+      {
+        "name": "prevSlide",
+        "type": "text",
+        "label": "Label for previous slide buttons",
+        "importance": "low",
+        "default": "Previous Image",
+        "description": "This is only used for read-speakers. It won't be displayed."
+      },
+      {
+        "name": "gotoSlide",
+        "type": "text",
+        "label": "Label for slide buttons",
+        "importance": "low",
+        "default": "Go to image %slide",
+        "description": "This is only used for read-speakers. It won't be displayed. %slide is a variable and will be replaced with the image number."
+      }
+    ]
+  }
+]

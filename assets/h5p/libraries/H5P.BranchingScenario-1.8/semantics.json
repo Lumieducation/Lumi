@@ -1,0 +1,420 @@
+[
+  {
+    "name": "branchingScenario",
+    "type": "group",
+    "widget": "branchingScenario",
+    "label": "Branching Scenario Editor",
+    "importance": "high",
+    "fields": [
+      {
+        "name": "title",
+        "label": "Title",
+        "type": "text",
+        "importance": "high"
+      },
+      {
+        "name": "startScreen",
+        "label": "Start screen",
+        "type": "group",
+        "importance": "low",
+        "fields": [
+          {
+            "name": "startScreenTitle",
+            "label": "Course Title",
+            "placeholder": "Title for your course",
+            "type": "text",
+            "importance": "medium",
+            "optional": true,
+            "widget": "html",
+            "enterMode": "p",
+            "tags": [
+              "strong",
+              "em",
+              "del",
+              "code",
+              "a"
+            ]
+          },
+          {
+            "name": "startScreenSubtitle",
+            "label": "Course Details",
+            "placeholder": "Details about the course",
+            "type": "text",
+            "importance": "medium",
+            "optional": true,
+            "widget": "html",
+            "enterMode": "p",
+            "tags": [
+              "strong",
+              "em",
+              "del",
+              "code",
+              "a"
+            ]
+          },
+          {
+            "name": "startScreenImage",
+            "label": "Course image",
+            "type": "image",
+            "optional": true,
+            "importance": "medium"
+          },
+          {
+            "name": "startScreenAltText",
+            "label": "Image alternative text",
+            "type": "text",
+            "optional": true,
+            "importance": "medium"
+          }
+        ]
+      },
+      {
+        "name": "endScreens",
+        "label": "List of end screens",
+        "type": "list",
+        "importance": "medium",
+        "field": {
+          "name": "endScreen",
+          "label": "End screen",
+          "type": "group",
+          "importance": "low",
+          "fields": [
+            {
+              "name": "endScreenTitle",
+              "label": "Title",
+              "type": "text",
+              "importance": "medium",
+              "optional": true,
+              "widget": "html",
+              "enterMode": "p",
+              "tags": [
+                "strong",
+                "em",
+                "del",
+                "code",
+                "a"
+              ]
+            },
+            {
+              "name": "endScreenSubtitle",
+              "label": "Text",
+              "type": "text",
+              "importance": "medium",
+              "optional": true,
+              "widget": "html",
+              "enterMode": "p",
+              "tags": [
+                "strong",
+                "em",
+                "del",
+                "code",
+                "a"
+              ]
+            },
+            {
+              "name": "endScreenImage",
+              "label": "Image",
+              "type": "image",
+              "importance": "medium",
+              "optional": true
+            },
+            {
+              "name": "endScreenScore",
+              "label": "Score",
+              "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach the default end scenario.",
+              "type": "number",
+              "default": 0,
+              "optional": true
+            },
+            {
+              "name": "contentId",
+              "label": "Content ID",
+              "type": "number",
+              "max": 0,
+              "widget": "none"
+            }
+          ]
+        }
+      },
+      {
+        "name": "content",
+        "label": "List of branching scenario content",
+        "importance": "high",
+        "type": "list",
+        "min": 1,
+        "entity": "content",
+        "field": {
+          "name": "content",
+          "type": "group",
+          "fields": [
+            {
+              "name": "type",
+              "type": "library",
+              "importance": "high",
+              "options": [
+                "H5P.BranchingQuestion 1.0",
+                "H5P.CoursePresentation 1.25",
+                "H5P.AdvancedText 1.1",
+                "H5P.Image 1.1",
+                "H5P.ImageHotspots 1.10",
+                "H5P.InteractiveVideo 1.26",
+                "H5P.Video 1.6"
+              ]
+            },
+            {
+              "name": "showContentTitle",
+              "label": "Show content title in view",
+              "description": "If selected, the user will see the content title in the top bar above this content.",
+              "type": "boolean",
+              "importance": "high"
+            },
+            {
+              "name": "proceedButtonText",
+              "label": "Text for the proceed button (max length: 50 characters)",
+              "type": "text",
+              "importance": "low",
+              "default": "Proceed",
+              "maxLength": 50
+            },
+            {
+              "name": "forceContentFinished",
+              "type": "select",
+              "label": "Override require content finished",
+              "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+              "optional": "true",
+              "options": [
+                {
+                  "value": "useBehavioural",
+                  "label": "Use behavioural setting"
+                },
+                {
+                  "value": "enabled",
+                  "label": "Enabled"
+                },
+                {
+                  "value": "disabled",
+                  "label": "Disabled"
+                }
+              ],
+              "default": "useBehavioural"
+            },
+            {
+              "name": "nextContentId",
+              "type": "number",
+              "importance": "high",
+              "widget": "none"
+            },
+            {
+              "name": "feedback",
+              "type": "group",
+              "label": "Feedback",
+              "expanded": true,
+              "fields": [
+                {
+                  "name": "title",
+                  "type": "text",
+                  "label": "Feedback title",
+                  "optional": true,
+                  "widget": "html",
+                  "enterMode": "p",
+                  "tags": [
+                    "strong",
+                    "em",
+                    "del",
+                    "code",
+                    "a"
+                  ]
+                },
+                {
+                  "name": "subtitle",
+                  "type": "text",
+                  "label": "Feedback text",
+                  "optional": true,
+                  "widget": "html",
+                  "enterMode": "p",
+                  "tags": [
+                    "strong",
+                    "em",
+                    "del",
+                    "code",
+                    "a"
+                  ]
+                },
+                {
+                  "name": "image",
+                  "type": "image",
+                  "label": "Feedback image",
+                  "optional": true
+                },
+                {
+                  "name": "endScreenScore",
+                  "type": "number",
+                  "label": "Score for this scenario",
+                  "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario",
+                  "optional": true
+                }
+              ]
+            },
+            {
+              "name": "contentBehaviour",
+              "label": "Navigate back",
+              "type": "select",
+              "description": "This will allow user to go back and see the previous content/question in the scenario.",
+              "options": [
+                {
+                  "value": "useBehavioural",
+                  "label": "Use behavioural setting"
+                },
+                {
+                  "value": "enabled",
+                  "label": "Enabled"
+                },
+                {
+                  "value": "disabled",
+                  "label": "Disabled"
+                }
+              ],
+              "default": "useBehavioural"
+            }
+          ]
+        }
+      },
+      {
+        "name": "scoringOptionGroup",
+        "type": "group",
+        "label": "Scoring options",
+        "importance": "low",
+        "fields": [
+          {
+            "name": "scoringOption",
+            "label": "Scoring options",
+            "type": "select",
+            "description": "Select type of scoring.",
+            "options": [
+              {
+                "value": "static-end-score",
+                "label": "Statically set score for each end scenario"
+              },
+              {
+                "value": "dynamic-score",
+                "label": "Dynamically calculate score from user answers"
+              },
+              {
+                "value": "no-score",
+                "label": "No scoring"
+              }
+            ],
+            "default": "no-score"
+          },
+          {
+            "name": "includeInteractionsScores",
+            "label": "Include scores from interactions within the Branching Scenario",
+            "description": "If chosen scores from for instance Interactive Videos will be added to the total score obtained. If not chosen only scores specified in the feedback sections of the content items, branching questions and end scenarios will count.",
+            "type": "boolean",
+            "default": true,
+            "optional": true,
+            "widget": "showWhen",
+            "showWhen": {
+              "rules": [
+                {
+                  "field": "scoringOption",
+                  "equals": "dynamic-score"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "behaviour",
+        "type": "group",
+        "label": "Behavioural settings",
+        "importance": "low",
+        "fields": [
+          {
+            "name": "enableBackwardsNavigation",
+            "label": "Navigate back",
+            "description": "This will allow user to go back and see the previous content/question in the scenario. This can be overridden on a content level.",
+            "type": "boolean",
+            "optional": true,
+            "default": false
+          },
+          {
+            "name": "forceContentFinished",
+            "label": "Required to watch",
+            "description": "Urges viewers to complete the Video, Interactive Video and Course Presentation before proceeding with the scenario. This can be overridden on a content level.",
+            "type": "boolean",
+            "optional": true,
+            "default": false
+          },
+          {
+            "name": "randomizeBranchingQuestions",
+            "label": "Randomize Branching Questions",
+            "description": "Branching questions will be displayed in random order.",
+            "type": "boolean",
+            "optional": true,
+            "default": false
+          }
+        ]
+      },
+      {
+        "name": "l10n",
+        "type": "group",
+        "label": "Localization",
+        "importance": "low",
+        "common": true,
+        "fields": [
+          {
+            "name": "startScreenButtonText",
+            "label": "Text for the button on the start screen",
+            "type": "text",
+            "importance": "low",
+            "default": "Start the course"
+          },
+          {
+            "name": "endScreenButtonText",
+            "label": "Text for the button on the end screen",
+            "type": "text",
+            "importance": "low",
+            "default": "Restart the course"
+          },
+          {
+            "name": "backButtonText",
+            "label": "Text for the back button on each of the library screens and branching questions",
+            "type": "text",
+            "importance": "low",
+            "default": "Back"
+          },
+          {
+            "name": "disableProceedButtonText",
+            "label": "Text for the disabled button on the library screens",
+            "type": "text",
+            "importance": "low",
+            "default": "Require to complete the current module"
+          },
+          {
+            "name": "replayButtonText",
+            "label": "Text for the button used to replay a video",
+            "type": "text",
+            "importance": "low",
+            "default": "Replay the video"
+          },
+          {
+            "name": "scoreText",
+            "label": "Label for score on the end screen",
+            "type": "text",
+            "importance": "low",
+            "default": "Your score:"
+          },
+          {
+            "name": "fullscreenAria",
+            "label": "Aria label for fullscreen button",
+            "type": "text",
+            "importance": "low",
+            "default": "Fullscreen"
+          }
+        ]
+      }
+    ]
+  }
+]

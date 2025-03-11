@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Galdera"
+    },
+    {
+      "label": "Aukera anitzeko mota",
+      "options": [
+        {
+          "label": "Erantzun anitzak"
+        },
+        {
+          "label": "Erantzun bakarra"
+        }
+      ]
+    },
+    {
+      "label": "Erantzunerako aukerak",
+      "entity": "Aukera",
+      "field": {
+        "label": "Aukera",
+        "fields": [
+          {
+            "label": "Testua"
+          },
+          {
+            "label": "Feedbacka",
+            "fields": [
+              {
+                "label": "Aukera hautatuz gero erakusten den mezua",
+                "description": "Mezu hau erantzunaren azpian erakutsiko da \"jarraitzean\" erantzuna aukeratzen bada."
+              },
+              {
+                "label": "Aukera hautatzen ez bada erakusten den mezua",
+                "description": "Mezu hau erantzunaren azpian erakutsiko da \"jarraitzean\" erantzuna aukeratzen ez bada."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

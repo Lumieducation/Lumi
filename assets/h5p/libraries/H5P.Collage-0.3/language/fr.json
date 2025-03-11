@@ -1,0 +1,96 @@
+{
+  "semantics":[
+    {
+      "label":"Aperçu",
+      "description":"Vous pouvez déplacer chaque image en la faisant glisser. Après avoir sélectionné une image, vous pouvez appuyer sur les touches + et - de votre clavier pour zoomer. Sinon, maintenez enfoncée la touche Z du clavier, tout en faisant rouler la molette de la souris.",
+      "fields":[
+        {
+          "label":"Modèle",
+          "options":[
+            {
+              "label":"1"
+            },
+            {
+              "label":"1-1"
+            },
+            {
+              "label":"2"
+            },
+            {
+              "label":"2-1"
+            },
+            {
+              "label":"1-2"
+            },
+            {
+              "label":"2-2"
+            },
+            {
+              "label":"3-1"
+            },
+            {
+              "label":"1-3"
+            },
+            {
+              "label":"2-3"
+            },
+            {
+              "label":"3-2"
+            },
+            {
+              "label":"3-3"
+            }
+          ]
+        },
+        {
+          "label":"Options d'affichage",
+          "fields":[
+            {
+              "label":"Hauteur"
+            },
+            {
+              "label":"Espacement"
+            },
+            {
+              "label":"Cadre"
+            }
+          ]
+        },
+        {
+          "label":"Découpes",
+          "entity":"découpe",
+          "field":{
+            "label":"Découpe",
+            "fields":[
+              {
+                "label":"Image"
+              },
+              {
+                "label":"Décalage (offset)",
+                "fields":[
+                  {
+                    "label":"En haut"
+                  },
+                  {
+                    "label":"A gauche"
+                  }
+                ]
+              },
+              {
+                "label": "Alternative text",
+                "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by readspeakers."
+              },
+              {
+                "label": "Hover text",
+                "description": "Optional. This text is displayed when the user hovers his pointing device over the image."
+              },
+              {
+                "label":"Echelle"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

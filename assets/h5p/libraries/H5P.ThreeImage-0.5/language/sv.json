@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Redigerare för Three Image",
+      "fields": [
+        {
+          "label": "Scener",
+          "entity": "Scen",
+          "field": {
+            "fields": [
+              {
+                "label": "Scentyp",
+                "options": [
+                  {
+                    "label": "360 bild"
+                  },
+                  {
+                    "label": "Statisk bild"
+                  }
+                ]
+              },
+              {
+                "label": "Visa knapp \"Tillbaka\"",
+                "description": "Visa knapp för att navigera bakåt till din föregående scen"
+              },
+              {},
+              {
+                "label": "Scen-titel",
+                "description": "Används för att identifiera scenen"
+              },
+              {
+                "label": "Scen-bakgrund"
+              },
+              {
+                "label": "Scen-beskrivning",
+                "description": "En text som kan beskriva scenen för slutanvändaren"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Etikett",
+                      "description": "Om detta lämnas tomt så kommer ingen etikett att visas och titelfältet kommer istället användas för skärmläsare"
+                    },
+                    {
+                      "label": "Etikett-inställningar",
+                      "fields": [
+                        {
+                          "label": "Etikett-position",
+                          "description": "Välj var etiketten ska visas",
+                          "options": [
+                            {
+                              "label": "Använd beteende-inställning"
+                            },
+                            {
+                              "label": "Högerlinjerad"
+                            },
+                            {
+                              "label": "Vänsterlinjerad"
+                            },
+                            {
+                              "label": "Linjerad i överkant"
+                            },
+                            {
+                              "label": "Linjerad i underkant"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Visa etikett",
+                          "description": "Om dold så kommer etiketter endast visas vid hovring",
+                          "options": [
+                            {
+                              "label": "Använd beteende-inställning"
+                            },
+                            {
+                              "label": "Visa"
+                            },
+                            {
+                              "label": "Dölj"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Knappformat",
+                "description": "Avgör hur knappar som visar på denna scen ska se ut. För scener som är statiska och inte leder till nya scener så rekommenderas knappen \"Mer information\".",
+                "options": [
+                  {
+                    "label": "Ny scen (pil)"
+                  },
+                  {
+                    "label": "Mer information (plus)"
+                  }
+                ]
+              },
+              {
+                "label": "Ljudspår",
+                "description": "Lägg till ett ljudspår som är specifikt för denna scen."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Ljudspår"
+        }
+      ]
+    },
+    {
+      "label": "Beteende-inställningar",
+      "description": "Dessa inställningar avgör hur världen beter sig.",
+      "fields": [
+        {
+          "label": "Globalt ljud",
+          "description": "Lägg till ett ljudspår som är tillgängligt som standard för alla scener."
+        },
+        {
+          "label": "Renderingskvalitet för scen",
+          "description": "Välj hur många bredd- och höjdsegment som ska användas för att tolka (rendera) en scen. Detta har en direkt påverkan på kvalitetsnivån på scenen, pröva att öka kvaliteten om en scen ser \"rutig\" ut eller om \"vågor\" syns i scenerna. Notera att högre renderingskvalitet tar mer tid att ladda.",
+          "options": [
+            {
+              "label": "Hög kvalitet (128x128)"
+            },
+            {
+              "label": "Medium kvalitet (64x64)"
+            },
+            {
+              "label": "Låg kvalitet (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Etikett-inställningar",
+          "fields": [
+            {
+              "label": "Etikett-position",
+              "description": "Förvald etikett-position. Positionen kan ignoreras per interaktion.",
+              "options": [
+                {
+                  "label": "Högerlinjerad"
+                },
+                {
+                  "label": "Vänsterlinjerad"
+                },
+                {
+                  "label": "Linjerad i överkant"
+                },
+                {
+                  "label": "Linjerad i underkant"
+                }
+              ]
+            },
+            {
+              "label": "Visa etiketter",
+              "description": "Om ej ibockat, så kommer etiketter endast visas vid hovring"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Lokalisera",
+      "fields": [
+        {
+          "label": "Aria-etikett för innehållstyp",
+          "default": "Virtual Tour"
+        },
+        {
+          "label": "Etikett för att spela ljud",
+          "default": "Spela ljudspår"
+        },
+        {
+          "label": "Etikett för att pausa ljud",
+          "default": "Pausa ljudspår"
+        },
+        {
+          "label": "Titel för scendialog",
+          "default": "Scenbeskrivning"
+        },
+        {
+          "label": "Etikett för knapp för att återställa kamera",
+          "default": "Återställ kamera"
+        },
+        {
+          "label": "Etikett för skicka-in-dialog-knapp",
+          "default": "Skicka in dialog"
+        },
+        {
+          "label": "Etikett för stäng-dialog-knapp",
+          "default": "Stäng dialog"
+        },
+        {
+          "label": "Aria-etikett för knappen expandera etikett",
+          "default": "Expandera visuell etikett"
+        },
+        {
+          "label": "Etikett som visas när bakgrundsbild laddas i en 360-scen",
+          "default": "Laddar bakgrundsbild ..."
+        },
+        {
+          "label": "Etikett för när det inte finns något innehåll",
+          "default": "Inget innehåll"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Vertakking scenario redakteur",
+      "fields": [
+        {
+          "label": "Titel"
+        },
+        {
+          "label": "Beginskerm",
+          "fields": [
+            {
+              "label": "Beginskerm titel",
+              "placeholder": "Kursustitel"
+            },
+            {
+              "label": "Beginskerm ondertitel",
+              "placeholder": "Kursusbesonderhede"
+            },
+            {
+              "label": "Beginskermprent"
+            },
+            {
+              "label": "Image alternative text"
+            }
+          ]
+        },
+        {
+          "label": "Lys van eindskerms",
+          "field": {
+            "label": "Eindskerm",
+            "fields": [
+              {
+                "label": "Titel"
+              },
+              {
+                "label": "Teks"
+              },
+              {
+                "label": "Prent"
+              },
+              {
+                "label": "Telling",
+                "description": "Die telling sal gestuur word na enige LBS of enige ander verbonde diens wat tellings van H5P vir gebruikers wat die verstek eindscenario bereik ontvang"
+              },
+              {
+                "label": "Inhoud ID"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Lys van vertakking-scenario inhoud",
+          "entity": "inhoud",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Wys inhoudtitel in sig",
+                "description": "Indien verkies, sal die gebruiker die inhoudtitel in die boonste balk bo hierdie inhoud sien"
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Proceed"
+              },
+              {
+                "label": "Vereis om te voltooi",
+                "description": "Versoek kykers om die interaksie te voltooi voordat hulle met die scenario voortgaan. Hierdie instelling sal slegs werk vir interaksies wat voltooi kan word",
+                "options": [
+                  {
+                    "label": "Gebruik gedragsinstellings"
+                  },
+                  {
+                    "label": "Aktiveer"
+                  },
+                  {
+                    "label": "Deaktiveer"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Terugvoer",
+                "fields": [
+                  {
+                    "label": "Terugvoertitel"
+                  },
+                  {
+                    "label": "Terugvoerteks"
+                  },
+                  {
+                    "label": "Terugvoerprent"
+                  },
+                  {
+                    "label": "Telling vir hierdie scenario",
+                    "description": "Die telling sal gestuur word na enige LBS of enige ander verbonde diens wat tellings van H5P vir gebruikers wat hierdie scenario bereik"
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "Hierdie sal gebruikers toelaat om terug te gaan om die vorige inhoud/vrae in die scenario te sien",
+                "options": [
+                  {
+                    "label": "Gebruik gedragsinstellings"
+                  },
+                  {
+                    "label": "Aktiveer"
+                  },
+                  {
+                    "label": "Deaktiveer"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Telling opsies",
+          "fields": [
+            {
+              "label": "Telling opsies",
+              "description": "Kies tipe telling",
+              "options": [
+                {
+                  "label": "Stel telling vir elke eindscenario staties"
+                },
+                {
+                  "label": "Bereken telling van gebruikerantwoorde dinamies"
+                },
+                {
+                  "label": "Geen telling"
+                }
+              ]
+            },
+            {
+              "label": "Include scores from interactions within the Branching Scenario",
+              "description": "If chosen scores from for instance Interactive Videos will be added to the total score obtained. If not chosen only scores specified in the feedback sections of the content items, branching questions and end scenarios will count."
+            }
+          ]
+        },
+        {
+          "label": "Gedragsinstellings",
+          "fields": [
+            {
+              "label": "Negeer agterwaardse navigasie",
+              "description": "Negeer die individuele instelling om agterwaardse navigasie te aktiveer"
+            },
+            {
+              "label": "Oorskryding vereis voltooide inhoud",
+              "description": "Stel die individuele instellings oor om te vereis dat die inhoud klaar moet wees voordat jy die \"Gaan voort\" -knoppie aktiveer. Sal geen effek hê as die inhoud nie aandui of dit 'klaar' is nie, bv. beelde of kursusaanbiedings met net een skyfie."
+            },
+            {
+              "label": "Randomize Branching Questions",
+              "description": "Branching questions will be displayed in random order"
+            }
+          ]
+        },
+        {
+          "label": "Lokalisasie",
+          "fields": [
+            {
+              "label": "Teks vir die knoppies op die beginskerm",
+              "default": "Begin die kursus"
+            },
+            {
+              "label": "Teks vir die knoppies op die eindskerm",
+              "default": "Herbegin kursus"
+            },
+            {
+              "label": "Teks vir die terugknoppie op elk van die biblioteekskerms en vertakkingsvrae",
+              "default": "Terug"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "Teks vir die knoppies wat gebruik is om die video te herspeel",
+              "default": "Speel video weer"
+            },
+            {
+              "label": "Etiket vir telling by eindskerm",
+              "default": "Jou telling:"
+            },
+            {
+              "label": "Aria-etiket vir die volskermknoppie",
+              "default": "Volskerm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

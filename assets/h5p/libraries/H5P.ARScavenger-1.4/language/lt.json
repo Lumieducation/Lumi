@@ -1,0 +1,300 @@
+{
+  "semantics": [
+    {
+      "label": "Rodyti pradžios ekraną",
+      "description": "Jei pažymėta, turinys bus rodomas pradžios ekrane."
+    },
+    {
+      "label": "Pradžios ekranas",
+      "fields": [
+        {
+          "label": "Įvadas",
+          "placeholder": "Sveiki ..."
+        },
+        {
+          "label": "Pradžios ekrano paveikslas"
+        }
+      ]
+    },
+    {
+      "label": "Žymekliai",
+      "fields": [
+        {
+          "label": "Žymekliai",
+          "widgets": [
+            {
+              "label": "Numatytasis"
+            }
+          ],
+          "entity": "žymeklis",
+          "field": {
+            "label": "Žymeklis",
+            "fields": [
+              {
+                "label": "Žymeklio paveikslas (originalus)",
+                "description": "Įkelkite norimo sukurti žymeklio paveikslą. Turi būti kvadratinis paveikslas arba jis bus apkirptas. Atminkite, kad kiekvienam veiksmui reikės unikalaus žymeklio paveikslo.",
+                "importantDescription": {
+                  "description": "Atminkite šiuos gerų žymeklių vaizdų kriterijus:<ul><li>Didelis spalvų kontrastas, gryna juoda ir balta</li><li>Asimetrija</li><li>Vidinė žymeklio skiriamoji geba yra 16 x 16 pikselių, naudojant didesnius vaizdus, žymeklio aptikimas gali pablogėti</li><li>Pavieniai simboliai arba trumpi žodžiai duoda gerų rezultatų</li></ul>"
+                }
+              },
+              {
+                "label": "Žymeklio paveikslas (užpildas)",
+                "description": "Atsisiųskite šį vaizdą, kad galėtumėte naudoti kaip žymeklį, rodomą ekrane arba atspausdintą ant popieriaus."
+              },
+              {
+                "label": "Veiksmo tipas",
+                "description": "Veiksmas, kuris turėtų būti pradėtas, kai randamas žymeklis.",
+                "options": [
+                  {
+                    "label": "H5P sąveika"
+                  },
+                  {
+                    "label": "3D modelio uždanga"
+                  }
+                ]
+              },
+              {
+                "label": "Sąveika",
+                "fields": [
+                  {
+                    "label": "Sąveika"
+                  },
+                  {
+                    "label": "Maketas"
+                  }
+                ]
+              },
+              {
+                "label": "3D Modelis",
+                "fields": [
+                  {
+                    "label": "3D modelio failas",
+                    "description": "Įkelkite glTF (.glb / .gltf) failą čia. Pageidaujamas formatas \"glTF 2.0 binary\" vienam failui."
+                  },
+                  {
+                    "label": "Geometrija",
+                    "fields": [
+                      {
+                        "label": "Skalė",
+                        "description": "Padidinkite arba sumažinkite modelio mastelį, kad jis atitiktų žymeklio dydį.",
+                        "fields": [
+                          {
+                            "label": "Procentinė dalis"
+                          },
+                          {
+                            "label": "Maketas"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Pozicija",
+                        "description": "Nustatykite modelio poslinkio padėtį žymeklio atžvilgiu.",
+                        "fields": [
+                          {
+                            "label": "X-šaka"
+                          },
+                          {
+                            "label": "Y-šaka"
+                          },
+                          {
+                            "label": "Z-šaka"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Sukimas",
+                        "description": "Nustatyti pasukimą laipsniais.",
+                        "fields": [
+                          {
+                            "label": "X-ašis"
+                          },
+                          {
+                            "label": "Y-ašis"
+                          },
+                          {
+                            "label": "Z-ašis"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Rodyti pabaigos ekraną",
+      "description": "Jei pažymėta, parodykite pabaigos ekraną, kai visos sąveikos bus baigtos. Tačiau pabaigos ekranas nebus pasiekiamas, jei naudosite 3D modelius."
+    },
+    {
+      "label": "Pabaigos ekranas",
+      "fields": [
+        {
+          "label": "pabaigos ekrano paveikslas"
+        },
+        {
+          "label": "Pabaigos ekrano tekstas",
+          "placeholder": "Jūs tai atlikote!"
+        },
+        {
+          "label": "Bendras atsiliepimas",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Numatytasis"
+                }
+              ],
+              "label": "Nustatykite suderintus atsiliepimus visiems vertinimo balų diapazonams",
+              "description": "Spustelėkite mygtuką „Pridėti diapazoną“, kad pridėtumėte tiek diapazonų, kiek jums reikia. Pavyzdys: 0–20 % blogas balas, 21–91 % vidutinis balas, 91–100 % puikus rezultatas!",
+              "entity": "diapazonas",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Vertinimo diapazonas"
+                  },
+                  {
+                    "label": "Atsiliepimas apibrėžtam balų diapazonui",
+                    "placeholder": "Užpildykite atsiliepimą"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Veikimo nustatymai",
+      "fields": [
+        {
+          "label": "Įjungti \"Bandyti dar kartą\" mygtuką",
+          "description": "Jei pažymėta, besimokantieji gali pakartoti užduotį."
+        },
+        {
+          "label": "Įjungti \"Sprendimai\" mygtuką",
+          "description": "Jei pažymėta, besimokantieji gali peržiūrėti visų sąveikų sprendimus."
+        },
+        {
+          "label": "Keisti mygtuką „Rodyti sprendimą“",
+          "description": "Ši parinktis leidžia įjungti arba išjungti mygtuką „Rodyti sprendimą“ visam turiniui arba naudoti atitinkamus veikimo nustatymus.",
+          "options": [
+            {
+              "label": "Naudoti veikimo nustatymą"
+            },
+            {
+              "label": "Visada rodyti mygtuką"
+            },
+            {
+              "label": "Niekada nerodyti mygtuko"
+            }
+          ]
+        },
+        {
+          "label": "Keisti mygtuką „Bandyti dar kartą“",
+          "description": "Ši parinktis leidžia įjungti arba išjungti visam turiniui mygtuką „Bandyti dar kartą“ arba naudoti atitinkamus veikimo nustatymus.",
+          "options": [
+            {
+              "label": "Naudoti veikimo nustatymą"
+            },
+            {
+              "label": "Visada rodyti mygtuką"
+            },
+            {
+              "label": "Niekada nerodyti mygtuko"
+            }
+          ]
+        },
+        {
+          "label": "Atsarginis aukštis",
+          "description": "Nustatykite atsarginį aukštį pikseliais tais atvejais, jei kyla originalaus šaltinio bendrinimo (CORS) problemų."
+        }
+      ]
+    },
+    {
+      "label": "Lokalizacija",
+      "fields": [
+        {
+          "label": "Pradėti mygtukas",
+          "default": "Pradėti"
+        },
+        {
+          "label": "Bandyti dar kartą mygtukas",
+          "default": "Bandyti dar kartą"
+        },
+        {
+          "label": "Rasti žymeklį, kad pamatyti sąveiką.",
+          "default": "Rasti žymeklį, kad pamatyti sąveiką."
+        },
+        {
+          "label": "Klaida: naršyklė nepalaikoma",
+          "default": "Deja, atrodo, kad jūsų naršyklė negali paleisti šio tipo turinio."
+        },
+        {
+          "label": "Klaida: nėra prieigos prie kameros",
+          "default": "Kamera nepasiekiama."
+        },
+        {
+          "label": "Klaida: nėra prieigos prie kameros",
+          "default": "Atrodo, kad jūsų naršyklė nepalaiko kameros."
+        },
+        {
+          "label": "Klaida: nėra žymeklių",
+          "default": "Ar kas nors pamiršo pridėti žymeklius?"
+        },
+        {
+          "label": "Įspėjimas: Brave naršyklė",
+          "default": "Panašu, kad naudojate „Brave“ naršyklę. Puiku! Tačiau griežti privatumo nustatymai gali neleisti kamerai veikti."
+        },
+        {
+          "label": "Inicijuojamas turinys",
+          "default": "Inicijuojamas turinys. Nepamirškite leisti prieiti prie kameros."
+        }
+      ]
+    },
+    {
+      "label": "Skaitymo garsiakalbis",
+      "fields": [
+        {
+          "label": "Viso ekrano mygtuko pavadinimas: įveskite",
+          "default": "Įjungti viso ekrano režimą"
+        },
+        {
+          "label": "Viso ekrano mygtuko pavadinimas: išeiti",
+          "default": "Išeiti iš viso ekrano režimo"
+        },
+        {
+          "label": "Mygtuko „Perjungti rodymą“ pavadinimas (kai veiksmas uždarytas)",
+          "default": "Pereiti prie užduoties"
+        },
+        {
+          "label": "Mygtuko „Perjungti rodymą“ pavadinimas (kai veiksmas atidarytas)",
+          "default": "Pereiti į kamerą"
+        },
+        {
+          "label": "„Perjungti rodymo mygtuką\" pranešimas „Mygtukas išjungtas“",
+          "default": "Šiuo metu negalite perjungti rodymo"
+        },
+        {
+          "label": "Mygtuko „Baigti“ pavadinimas",
+          "default": "Baigti ir parodyti įvertinimą"
+        },
+        {
+          "label": "„Mygtukas išjungtas“ pranešimas dėl „išjungimo mygtukas“",
+          "default": "Jūs dar neatlikote visų užduočių"
+        },
+        {
+          "label": "Veiksmas atidarytas",
+          "default": "Vaizdas pasikeitė į užduotį."
+        },
+        {
+          "label": "Veiksmas uždarytas",
+          "default": "Vaizdas persijungė į kamerą."
+        }
+      ]
+    }
+  ]
+}

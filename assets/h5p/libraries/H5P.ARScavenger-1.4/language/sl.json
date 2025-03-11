@@ -1,0 +1,300 @@
+{
+  "semantics": [
+    {
+      "label": "Pokaži začetni zaslon",
+      "description": "Na začetnem zaslonu je prikazan kratek opis aktivnosti."
+    },
+    {
+      "label": "Začetni zaslon",
+      "fields": [
+        {
+          "label": "Navodilo",
+          "placeholder": "V aktivnosti ..."
+        },
+        {
+          "label": "Slika začetnega zaslona"
+        }
+      ]
+    },
+    {
+      "label": "Markerji",
+      "fields": [
+        {
+          "label": "Markerji",
+          "widgets": [
+            {
+              "label": "Privzeto"
+            }
+          ],
+          "entity": "marker",
+          "field": {
+            "label": "Marker",
+            "fields": [
+              {
+                "label": "Slika markerja (izvirnik)",
+                "description": "Naložite sliko, ki jo želite uporabiti kot marker. Slika naj bo kvadratna, sicer bo obrezana. Upoštevajte tudi, da je za vsako interakcijo potrebna unikatna slika markerja.",
+                "importantDescription": {
+                  "description": "Upoštevajte nekaj značilnosti dobrih slik markerjev:<ul><li>visok barvni kontrast (idealno črno-belo)</li><li>asimetrija</li><li>notranja ločljivost markerjev je 16 x 16 slikovnih pik (ang. pixels). Uporaba večjih slik lahko poslabša zaznavanje markerjev</li><li>dobre rezultate dajejo tudi posamezni znaki ali kratke besede</li></ul>"
+                }
+              },
+              {
+                "label": "Slika markerja (vzorec)",
+                "description": "Prenesite to sliko in jo na zaslonu ali natisnjeno na papirju uporabite kot marker."
+              },
+              {
+                "label": "Tip interakcije",
+                "description": "Interakcijo sproži zaznana slika markerja",
+                "options": [
+                  {
+                    "label": "Aktivnost H5P"
+                  },
+                  {
+                    "label": "Prikaz 3D modela"
+                  }
+                ]
+              },
+              {
+                "label": "Interakcija",
+                "fields": [
+                  {
+                    "label": "Interakcija"
+                  },
+                  {
+                    "label": "vzorec"
+                  }
+                ]
+              },
+              {
+                "label": "3D model",
+                "fields": [
+                  {
+                    "label": "Datoteka 3D modela",
+                    "description": "Naložite datoteko v formatu glTF (.glb, .gltf). Prednostna oblika je \"glTF 2.0 binary\" v eni datoteki."
+                  },
+                  {
+                    "label": "Geometrija",
+                    "fields": [
+                      {
+                        "label": "Merilo",
+                        "description": "Povečanje ali zmanjšanje vrednosti spremeni velikost slike glede na marker.",
+                        "fields": [
+                          {
+                            "label": "Odstotek"
+                          },
+                          {
+                            "label": "vzorec"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Položaj",
+                        "description": "Nastavitev odmika 3D modela glede na položaj markerja.",
+                        "fields": [
+                          {
+                            "label": "X-odmik"
+                          },
+                          {
+                            "label": "Y-odmik"
+                          },
+                          {
+                            "label": "Z-odmik"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Vrtenje",
+                        "description": "Nastavitev vrtenja 3d modela v stopinjah.",
+                        "fields": [
+                          {
+                            "label": "X-os"
+                          },
+                          {
+                            "label": "Y-os"
+                          },
+                          {
+                            "label": "Z-os"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Pokaži končni zaslon",
+      "description": "Končni zaslon se pokaže, ko so zaključene vse interakcije. Če so uporabljeni le 3D modeli, končni zaslon ni na voljo."
+    },
+    {
+      "label": "Končni zaslon",
+      "fields": [
+        {
+          "label": "Slika končnega zaslona"
+        },
+        {
+          "label": "Besedilo končnega zaslona",
+          "placeholder": "Čestitke!"
+        },
+        {
+          "label": "Splošna povratna informacija",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Privzeto"
+                }
+              ],
+              "label": "Določi ločeno povratno informacijo za vsak razpon rezultatov",
+              "description": "Kliknite gumb \"Dodaj razpon\" za dodajanje dodatnih razponov. Primer: 0-20 % Slab rezultat, 21-91 % Povprečen rezultat, 91-100 % Odličen rezultat!",
+              "entity": "razpon",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Razpon rezultatov"
+                  },
+                  {
+                    "label": "Povratna informacija za definiran razpon rezultatov",
+                    "placeholder": "Vnesite povratno informacijo"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Nastavitve interakcije",
+      "fields": [
+        {
+          "label": "Omogoči gumb \"Poskusi ponovno\"",
+          "description": "Udeležencem je dovoljena ponovitev aktivnosti."
+        },
+        {
+          "label": "Omogoči gumb \"Prikaži rešitev\"",
+          "description": "Udeležencem se prikažejo rešitve vseh aktivnosti."
+        },
+        {
+          "label": "Določi prikaz gumba \"Prikaži rešitev\"",
+          "description": "Nastavitev vpliva na prikaz rešitve v vseh vprašanjih (npr. onemogočeno povsod, omogočeno individualno).",
+          "options": [
+            {
+              "label": "Upoštevaj posamezne Nastavitve interakcij"
+            },
+            {
+              "label": "Vedno pokaži"
+            },
+            {
+              "label": "Nikoli ne pokaži"
+            }
+          ]
+        },
+        {
+          "label": "Določi prikaz gumba \"Poskusi ponovno\"",
+          "description": "Nastavitev vpliva na možnost ponovnega poskusa v vseh vprašanjih (npr. onemogočeno povsod, omogočeno individualno).",
+          "options": [
+            {
+              "label": "Upoštevaj posamezne Nastavitve interakcij"
+            },
+            {
+              "label": "Vedno pokaži"
+            },
+            {
+              "label": "Nikoli ne pokaži"
+            }
+          ]
+        },
+        {
+          "label": "Nadomestna višina",
+          "description": "Nastavitve nadomestne višine v slikovnih pikah za primere, ko obstajajo težave s skupno rabo virov navzkrižnega izvora (CORS)."
+        }
+      ]
+    },
+    {
+      "label": "Določitev",
+      "fields": [
+        {
+          "label": "Besedilo gumba za začetek",
+          "default": "Začetek"
+        },
+        {
+          "label": "Besedilo gumba za ponoven poskus",
+          "default": "Poskusi ponovno"
+        },
+        {
+          "label": "Poišči marker za prikaz interakcije",
+          "default": "Poišči marker za prikaz interakcije."
+        },
+        {
+          "label": "Napaka: spletni brskalnik ni podprt",
+          "default": "Uporabljen spletni brskalnik žal ni podprt in ne more zagnati te vrste vsebine."
+        },
+        {
+          "label": "Napaka: brez dostopa do kamere",
+          "default": "Brez dostopa do kamere."
+        },
+        {
+          "label": "Napaka: brez podpore za kamero",
+          "default": "Uporabljen spletni brskalnik ne podpira kamere."
+        },
+        {
+          "label": "Napaka: ni markerjev",
+          "default": "Markerjev ni mogoče zaznati."
+        },
+        {
+          "label": "Opozorilo: brskalnik Brave",
+          "default": "Dostop iz brskalnika Brave lahko s strogimi nastavitvami zasebnosti preprečuje delovanje kamere."
+        },
+        {
+          "label": "Določitev vsebine",
+          "default": "Poteka določitev vsebine. Ne pozabite omogočiti dostopa do kamere."
+        }
+      ]
+    },
+    {
+      "label": "Bralnik zaslona",
+      "fields": [
+        {
+          "label": "Besedilo za celozaslonski način",
+          "default": "Celozaslonski način"
+        },
+        {
+          "label": "Besedilo za zaključek celozaslonskega načina",
+          "default": "Zapusti celozaslonski način"
+        },
+        {
+          "label": "Naslov gumba 'Preklop pogleda' po zaprti aktivnosti",
+          "default": "Preklopi pogled na aktivnost"
+        },
+        {
+          "label": "Naslov gumba 'Preklop pogleda' po odprti aktivnosti",
+          "default": "Preklopi pogled na kamero"
+        },
+        {
+          "label": "Sporočilo onemogočenega gumba ob poskusu preklopa pogleda",
+          "default": "Trenutno ni možno preklopiti pogleda."
+        },
+        {
+          "label": "Naslov gumba 'Zaključi'",
+          "default": "Zaključi in pokaži točke"
+        },
+        {
+          "label": "Sporočilo onemogočenega gumba ob poskusu zaključka",
+          "default": "Vse aktivnosti še niso zaključene."
+        },
+        {
+          "label": "Aktivnost odprta",
+          "default": "Pogled se je preklopil na aktivnost."
+        },
+        {
+          "label": "Aktivnost zaprta",
+          "default": "Pogled se je preklopil na kamero."
+        }
+      ]
+    }
+  ]
+}

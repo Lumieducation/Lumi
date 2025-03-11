@@ -1,0 +1,512 @@
+{
+  "semantics": [
+    {
+      "label": "Introductory text",
+      "description": "This text can optionally be presented along with your code."
+    },
+    {
+      "label": "Kode tipe",
+      "description": "Kies watter tipe kode jy wil gebruik",
+      "options": [
+        {
+          "label": "Kontak"
+        },
+        {
+          "label": "Gebeure"
+        },
+        {
+          "label": "Epos adres"
+        },
+        {
+          "label": "H5P"
+        },
+        {
+          "label": "Ligging"
+        },
+        {
+          "label": "Tellefoonnommer"
+        },
+        {
+          "label": "SMS"
+        },
+        {
+          "label": "Teks"
+        },
+        {
+          "label": "URL"
+        }
+      ]
+    },
+    {
+      "label": "Kontak",
+      "fields": [
+        {
+          "label": "Naam",
+          "placeholder": "Piet Pompies"
+        },
+        {
+          "label": "Organisasie",
+          "placeholder": "H5P ondersteunersklub"
+        },
+        {
+          "label": "Titel",
+          "placeholder": "Meester van geen"
+        },
+        {
+          "label": "Tellefoon nommer",
+          "description": "Tellefoonnommer (gebruik asb. die formaat +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        },
+        {
+          "label": "Epos adres",
+          "description": "Epos adres om boodskap te skryf",
+          "placeholder": "piet@fiktiewe-h5p-ondersteunersklub.org"
+        },
+        {
+          "label": "Adres",
+          "fields": [
+            {
+              "label": "Uitgebreide adres",
+              "description": "h/v-inligting, ens.",
+              "placeholder": "h/v H5P-aanhangerklub"
+            },
+            {
+              "label": "Straat",
+              "description": "Straat insluitend getal",
+              "placeholder": "1308 W. Daytonstraat"
+            },
+            {
+              "label": "Lokaliteit",
+              "description": "Stadsnaam, ens.",
+              "placeholder": "Madison"
+            },
+            {
+              "label": "Omgewing",
+              "description": "Provinsie, munisipaliteit, ens.",
+              "placeholder": "WI"
+            },
+            {
+              "label": "Poskode",
+              "description": "Poskode",
+              "placeholder": "53715"
+            },
+            {
+              "label": "Land",
+              "description": "Land",
+              "placeholder": "VSA"
+            }
+          ]
+        },
+        {
+          "label": "Webblad",
+          "description": "Webwerf skakel (moet begin met https: // of http: //)",
+          "placeholder": "https://fictional-h5p-fan-club.org"
+        },
+        {
+          "label": "Nota",
+          "description": "Nota",
+          "placeholder": "Jan is lief vir H5P."
+        }
+      ]
+    },
+    {
+      "label": "Gebeure",
+      "fields": [
+        {
+          "label": "Titel",
+          "description": "Titel vir kalendergebeure",
+          "placeholder": "H5P Konferensie 2020"
+        },
+        {
+          "label": "Heeldaggebeure",
+          "description": "Kyk of gebeure geldig sal wees vir 'n volle dag"
+        },
+        {
+          "label": "Begindatum",
+          "description": "Aanvangsdatum van die geleentheid (gebruik asseblief die formaat jjjj/mm/dd)",
+          "placeholder": "2020/05/18"
+        },
+        {
+          "label": "Begintyd",
+          "description": "Begintyd van die geleentheid (gebruik asb. die formaat hh:mm)",
+          "placeholder": "09:00"
+        },
+        {
+          "label": "Einddatum",
+          "description": "Einddatum van die geleentheid (gebruik asb. die formaat yyyy/mm/dd)",
+          "placeholder": "2020/05/20"
+        },
+        {
+          "label": "Eindtyd",
+          "description": "Eindtyd van die geleentheid (gebruik asb. die formaat hh:mm)",
+          "placeholder": "16:00"
+        },
+        {
+          "label": "Tydsone",
+          "description": "Kies die tydsone waarin die gebeurtenis veronderstel is om plaas te vind",
+          "options": [
+            {
+              "label": "UTC-12:00"
+            },
+            {
+              "label": "UTC-11:00"
+            },
+            {
+              "label": "UTC-10:00"
+            },
+            {
+              "label": "UTC-9:30"
+            },
+            {
+              "label": "UTC-9:00"
+            },
+            {
+              "label": "UTC-8:00"
+            },
+            {
+              "label": "UTC-7:00"
+            },
+            {
+              "label": "UTC-6:00"
+            },
+            {
+              "label": "UTC-5:00"
+            },
+            {
+              "label": "UTC-4:00"
+            },
+            {
+              "label": "UTC-3:30"
+            },
+            {
+              "label": "UTC-3:00"
+            },
+            {
+              "label": "UTC-2:00"
+            },
+            {
+              "label": "UTC-1:00"
+            },
+            {
+              "label": "UTC"
+            },
+            {
+              "label": "UTC+1:00"
+            },
+            {
+              "label": "UTC+2:00"
+            },
+            {
+              "label": "UTC+3:00"
+            },
+            {
+              "label": "UTC+3:30"
+            },
+            {
+              "label": "UTC+4:00"
+            },
+            {
+              "label": "UTC+4:30"
+            },
+            {
+              "label": "UTC+5:00"
+            },
+            {
+              "label": "UTC+5:30"
+            },
+            {
+              "label": "UTC+5:45"
+            },
+            {
+              "label": "UTC+6:00"
+            },
+            {
+              "label": "UTC+6:30"
+            },
+            {
+              "label": "UTC+7:00"
+            },
+            {
+              "label": "UTC+8:00"
+            },
+            {
+              "label": "UTC+9:00"
+            },
+            {
+              "label": "UTC+9:30"
+            },
+            {
+              "label": "UTC+10:00"
+            },
+            {
+              "label": "UTC+10:30"
+            },
+            {
+              "label": "UTC+11:00"
+            },
+            {
+              "label": "UTC+12:00"
+            },
+            {
+              "label": "UTC+12:45"
+            },
+            {
+              "label": "UTC+13:00"
+            },
+            {
+              "label": "UTC+14:00"
+            }
+          ]
+        },
+        {
+          "label": "Dagbesparings",
+          "description": "Kyk of die plek waar die geleentheid plaasvind dagbesparings gebruik"
+        },
+        {
+          "label": "Ligging",
+          "description": "Naam van ligging",
+          "placeholder": "Madison, VSA"
+        },
+        {
+          "label": "Beskrywing",
+          "description": "Voeg 'n beskrywing van die geleentheid by",
+          "placeholder": "3de H5P konferensie"
+        }
+      ]
+    },
+    {
+      "label": "Epos adres",
+      "fields": [
+        {
+          "label": "Epos adres",
+          "description": "Epos adres van geadresseerde",
+          "placeholder": "jan@fiksionele-h5P-aanhangersklub.org"
+        }
+      ]
+    },
+    {
+      "label": "H5P inhoud",
+      "fields": [
+        {
+          "label": "H5P inhoud",
+          "description": "H5P inhoud om te vertoon"
+        }
+      ]
+    },
+    {
+      "label": "Ligging",
+      "fields": [
+        {
+          "label": "Breedtegraad",
+          "description": "Breedtegraad (gebruik asseblief die formaat 53.864462)",
+          "placeholder": "69.646007"
+        },
+        {
+          "label": "Lengtegraad",
+          "description": "Lengtegraad (gebruik asb. die formaat 10.663792)",
+          "placeholder": "18.954036"
+        }
+      ]
+    },
+    {
+      "label": "Tellefoonnommer",
+      "fields": [
+        {
+          "label": "Tellefoonnommer",
+          "description": "Tellefoonnommer om te skakel (gebruik asb. die formaat +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        }
+      ]
+    },
+    {
+      "label": "SMS",
+      "fields": [
+        {
+          "label": "Tellefoonnommer",
+          "description": "Tellefoonommer om na te stuur (gebruik asb. die formaat +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        },
+        {
+          "label": "Boodskap",
+          "description": "Boodskap om te stuur",
+          "placeholder": "Kry asb. my brood en melk!"
+        }
+      ]
+    },
+    {
+      "label": "Teks",
+      "fields": [
+        {
+          "label": "Teks",
+          "description": "Teks om te kodeer",
+          "placeholder": "Kry asb. \n* melk\n* brood"
+        }
+      ]
+    },
+    {
+      "label": "URL",
+      "fields": [
+        {
+          "label": "URL",
+          "description": "URL om te skakel (moet begin met https:// of http://)",
+          "placeholder": "https://fiksionele-h5p-aanhangersklub.org"
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellings",
+      "description": "Hierdie keuses laat jou beheer hoe die onderskeie take uitgevoer moet word.",
+      "fields": [
+        {
+          "label": "Kodekleur",
+          "default": "#000000"
+        },
+        {
+          "label": "Agtergrondkleur",
+          "default": "#ffffff"
+        },
+        {
+          "label": "Maksimum grote",
+          "description": "Maksimum grote vir die kode gegee in CSS notasie (piksels is verstek indien net 'n getal gegee word)"
+        },
+        {
+          "label": "Horisontale belyning",
+          "description": "Stel horisontale belyning indien jy 'n maksimum grote instel",
+          "options": [
+            {
+              "label": "links"
+            },
+            {
+              "label": "middel"
+            },
+            {
+              "label": "regs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Gebruikersaansig",
+      "fields": [
+        {
+          "label": "Adres",
+          "default": "Adres"
+        },
+        {
+          "label": "Kontak",
+          "default": "Kontak"
+        },
+        {
+          "label": "Land",
+          "default": "Land"
+        },
+        {
+          "label": "Einddatum",
+          "default": "Einddatum"
+        },
+        {
+          "label": "Begindatum",
+          "default": "Begindatum"
+        },
+        {
+          "label": "Beskrywing",
+          "default": "Beskrywing"
+        },
+        {
+          "label": "Epos",
+          "default": "Epos"
+        },
+        {
+          "label": "Gebeure",
+          "default": "Gebeure"
+        },
+        {
+          "label": "Uitgebreide adres",
+          "default": "Uitgebreide adres"
+        },
+        {
+          "label": "Breedtegraad",
+          "default": "Breedtegraad"
+        },
+        {
+          "label": "Lokaliteit",
+          "default": "Lokaliteit"
+        },
+        {
+          "label": "Ligging",
+          "default": "Ligging"
+        },
+        {
+          "label": "Lengtegraad",
+          "default": "Lengtegraad"
+        },
+        {
+          "label": "Boodskap",
+          "default": "Boodskap"
+        },
+        {
+          "label": "Naam",
+          "default": "Naam"
+        },
+        {
+          "label": "Nota",
+          "default": "Nota"
+        },
+        {
+          "label": "Organisasie",
+          "default": "Organisasie"
+        },
+        {
+          "label": "Foon",
+          "default": "Foon"
+        },
+        {
+          "label": "Omgewing",
+          "default": "Omgewing"
+        },
+        {
+          "label": "SMS",
+          "default": "SMS"
+        },
+        {
+          "label": "Straat",
+          "default": "Straat"
+        },
+        {
+          "label": "Teks",
+          "default": "Teks"
+        },
+        {
+          "label": "Titel",
+          "default": "Titel"
+        },
+        {
+          "label": "URL",
+          "default": "URL"
+        },
+        {
+          "label": "Poskode",
+          "default": "Poskode"
+        }
+      ]
+    },
+    {
+      "label": "Spreekleser",
+      "fields": [
+        {
+          "label": "QRKode. Vertoon informasie (Teks vir Spreeklesers)",
+          "default": "QRKode. Vertoon informasie."
+        },
+        {
+          "label": "Versteek informasie (Teks vir Spreeklesers)",
+          "default": "Versteek informasie."
+        },
+        {
+          "label": "Code contents (Text for Readspeakers)",
+          "default": ". Code contents"
+        }
+      ]
+    }
+  ]
+}

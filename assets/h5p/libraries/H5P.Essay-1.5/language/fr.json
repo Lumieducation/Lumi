@@ -1,0 +1,299 @@
+{
+  "semantics": [
+    {
+      "label": "Média",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Média à afficher au-dessus de la question (facultatif)."
+        },
+        {
+          "label": "Disable image zooming"
+        }
+      ]
+    },
+    {
+      "label": "Task description",
+      "description": "Décrivez l'activité. Cette description apparaîtra au dessus de la zone de saisie de texte.",
+      "placeholder": "Résumez ce livre dans un texte de 500 caractères maximum."
+    },
+    {
+      "label": "Texte d'aide",
+      "description": "Ce texte doit aider l'utilisateur à commencer son texte.",
+      "placeholder": "Ce livre a pour thème..."
+    },
+    {
+      "label": "Exemple de solution",
+      "description": "Optionnel. Cette solution apparaît après l'introduction de la réponse. Elle sert d'exemple sans être l'unique réponse correcte.",
+      "fields": [
+        {
+          "label": "Introduction",
+          "description": "Optionnel. Vous pouvez fournir des explications sur cette solution. Les explications ne sont affichées que si vous ajoutez un exemple.",
+          "placeholder": "Rappelez-vous que chaque réponse est unique et ne doit pas forcément correspondre à cette solution. Ce n'est qu'un bon exemple."
+        },
+        {
+          "label": "Texte pour la solution",
+          "description": "L'utilisateur verra un bouton \"Afficher la solution\" après soumission si vous entrez un texte ici."
+        }
+      ]
+    },
+    {
+      "label": "Mots clés",
+      "widgets": [
+        {
+          "label": "Par défaut"
+        }
+      ],
+      "entity": "Mot clé",
+      "field": {
+        "label": "Mot clé",
+        "fields": [
+          {
+            "label": "Mot clé",
+            "description": "Mot clé ou phrase que le texte doit comporter. Utilisez un astérisque '*' comme masque de remplacement d'un ou plusieurs caractères. Use a slash '/' at the beginning and the end to use a regular expression."
+          },
+          {
+            "label": "Réponses alternatives",
+            "description": "Optionnel. Ajoutez des alternatives pour ce mot clé. Exemple: Pour 'cité', ajoutez 'ville', 'municipalité', etc. Toutes les alternatives indiquées vont être acceptées comme de bonnes réponses.",
+            "entity": "mot-clé alternatif",
+            "field": {
+              "label": "mot clé"
+            }
+          },
+          {
+            "label": "Points, Options et Feedback",
+            "fields": [
+              {
+                "label": "Points",
+                "description": "Points que l'utilisateur gagne si le mot clé ou ses alternatives sont inclues dans la réponse."
+              },
+              {
+                "label": "Apparitions",
+                "description": "Définit le nombre d'apparations de ce mot clé ou de ses alternatives qui doivent être récompensées par des points."
+              },
+              {
+                "label": "Sensible à la casse",
+                "description": "Impose que la saisie de l'utilisateur soit strictement identique à la réponse attendue."
+              },
+              {
+                "label": "Accepter de petites fautes d'orthographe",
+                "description": "Si cette option est activée, les réponses avec des fautes d'orthographe seront également considérées comme correctes (de 3 à 9 caractères : 1 faute acceptée, plus que 9 caractères : 2 fautes acceptées)."
+              },
+              {
+                "label": "Feedback si le mot clé est inclus",
+                "description": "Ce feedback est affiché si le mot clé ou ses alternatives sont inclus dans la réponse."
+              },
+              {
+                "label": "Feedback si le mot clé est absent",
+                "description": "Ce feedback est affiché si le mot clé ou ses alternatives ne sont pas inclus dans la réponse."
+              },
+              {
+                "label": "Feedback word shown if keyword included",
+                "description": "This option allows you to specify which word should be shown in front of your feedback if a keyword was found in the text.",
+                "options": [
+                  {
+                    "label": "keyword"
+                  },
+                  {
+                    "label": "alternative found"
+                  },
+                  {
+                    "label": "answer given"
+                  },
+                  {
+                    "label": "none"
+                  }
+                ]
+              },
+              {
+                "label": "Feedback word shown if keyword missing",
+                "description": "This option allows you to specify which word should be shown in front of your feedback if a keyword was not found in the text.",
+                "options": [
+                  {
+                    "label": "keyword"
+                  },
+                  {
+                    "label": "none"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback Global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Par défaut"
+            }
+          ],
+          "label": "Définit le feedback pour chaque intervalle de scores",
+          "description": "Cliquez sur \"Ajouter Intervalle\" pour ajouter autant d'intervalles que vous le souhaitez. Exemple: 0-20% Mauvais score, 21-91% Score moyen, 91-100% Score excellent !",
+          "entity": "intervalle",
+          "field": {
+            "fields": [
+              {
+                "label": "Intervalle de scores"
+              },
+              {},
+              {
+                "label": "Feedback de l'intervalle de scores défini",
+                "placeholder": "Définir le feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Behavioural settings",
+      "description": "Ces options permettent de contrôler le déroulement de l'activité.",
+      "fields": [
+        {
+          "label": "Nombre minimum de caractères",
+          "description": "Indiquez le nombre minimum de caractères que doit entrer l'utilisateur."
+        },
+        {
+          "label": "Nombre maximum de caractères",
+          "description": "Indiquez le nombre maximum de caractères que peut entrer l'utilisateur."
+        },
+        {
+          "label": "Taille de la zone de remplissage",
+          "description": "La taille de la zone de remplissage en nombre de lignes qu'elle permet de saisir.",
+          "options": [
+            {
+              "label": "1 ligne"
+            },
+            {
+              "label": "3 lignes"
+            },
+            {
+              "label": "10 lignes"
+            }
+          ]
+        },
+        {
+          "label": "Activer \"Recommencer\"",
+          "description": "Permet aux utilisateurs de recommencer."
+        },
+        {
+          "label": "Ignorer le score obtenu",
+          "description": "Si coché, les utilisateurs verront uniquement les messages de feedback que vous avez fournis pour les mots clés, mais pas le score obtenu."
+        },
+        {
+          "label": "Points in host environment",
+          "description": "Used to award points in host environment merely for answering (not shown to learner)."
+        },
+        {
+          "label": "Seuil de réussite",
+          "description": "Pourcentage à atteindre pour réussir l'activité."
+        },
+        {
+          "label": "Seuil de maîtrise",
+          "description": "Pourcentage à atteindre pour maîtriser l'activité."
+        },
+        {
+          "label": "Surcharger la sensibilité à la casse",
+          "description": "Cette option indique si l'option \"Sensible à la casse\" va être activée pour tous les mot clés.",
+          "options": [
+            {
+              "label": "Activée"
+            },
+            {
+              "label": "Désactivée"
+            }
+          ]
+        },
+        {
+          "label": "Accepter des petites fautes d'orthographe",
+          "description": "Cete option indique si l'option \"Accepter de petites fautes d'orthopraphe\" va être activée pour tous les mot clés.",
+          "options": [
+            {
+              "label": "Activée"
+            },
+            {
+              "label": "Désactivée"
+            }
+          ]
+        },
+        {
+          "label": "Replacement for line breaks",
+          "description": "By default, line breaks will be replaced with a space character. If you want to check for line breaks, e.g. in regular expressions, you can set a different replacement here.",
+          "options": [
+            {
+              "label": "space"
+            },
+            {
+              "label": "line break (\\n)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Texte du bouton \"Vérifier\"",
+      "default": "Vérifier"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "Texte pour le bouton \"Recommencer\"",
+      "default": "Recommencer"
+    },
+    {
+      "label": "Texte pour le bouton \"Montrer la solution\"",
+      "default": "Montrer la solution"
+    },
+    {
+      "label": "En-tête du panneau affichant le feedback pour les mots clés utilisés et manquants",
+      "default": "Feedback"
+    },
+    {
+      "label": "Titre pour la solution",
+      "default": "Exemple de solution"
+    },
+    {
+      "label": "Caractères restants",
+      "default": "Il reste : @chars",
+      "description": "Message indiquant le nombre de caractères restants. La variable @chars va être remplacée par le nombre correspondant."
+    },
+    {
+      "label": "Caractères manquants",
+      "default": "Il faudrait introduire au moins @chars caractères !",
+      "description": "Message pour indiquer que le texte ne contient pas suffisamment de caractères. La variable @chars va être remplacée par le nombre correspondant."
+    },
+    {
+      "label": "Sauvegarder le message",
+      "description": "Message indiquant que le texte a été sauvegardé.",
+      "default": "texte sauvegardé"
+    },
+    {
+      "label": "Your result (not displayed)",
+      "description": "Accessibility text used for readspeakers. @score will be replaced by the number of points. @total will be replaced by the maximum possible points.",
+      "default": "You got @score out of @total points"
+    },
+    {
+      "label": "Navigation message (not displayed)",
+      "description": "Accessibility text used for readspeakers",
+      "default": "Navigated to newly included sample solution after textarea."
+    },
+    {
+      "label": "Assistive technology description for \"Check\" button",
+      "default": "Check the answers."
+    },
+    {
+      "label": "Assistive technology description for \"Show Solution\" button",
+      "default": "Show the solution. You will be provided with a sample solution."
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. You can improve your previous answer if the author allowed that."
+    }
+  ]
+}

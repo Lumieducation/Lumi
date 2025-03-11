@@ -1,0 +1,411 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "field": {
+            "fields": [
+              {
+                "field": {
+                  "fields": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                      "label": "Komentāri",
+                      "description": "Komentāri tiek atspoguļoti, kad lietotājam parāda ieteiktās atbildes visiem slaidiem."
+                    },
+                    {
+                      "label": "Vienmēr rādīt komentārus"
+                    },
+                    {
+                      "label": "Fona caurspīdīgums"
+                    },
+                    {
+                      "label": "Parādīt kā pogu"
+                    },
+                    {
+                      "label": "Pogas izmērs",
+                      "options": [
+                        {
+                          "label": "Mazs"
+                        },
+                        {
+                          "label": "Liels"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Nosaukums"
+                    },
+                    {
+                      "label": "Iet uz",
+                      "options": [
+                        {
+                          "label": "Konkrēta slaida numurs"
+                        },
+                        {
+                          "label": "Nākamais slaids"
+                        },
+                        {
+                          "label": "Iepriekšējais slaids"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Konkrēta slaida numurs",
+                      "description": "Piemērojams tikai tad, ja ir atlasīts “Konkrēta slaida numurs”"
+                    },
+                    {
+                      "label": "Neredzams",
+                      "description": "Noklusējuma kursors, bez nosaukuma un bez cilnes indeksa. Brīdinājums: lietotājiem ar invaliditāti vai lietotājiem, kuri izmanto tikai tastatūru būs problēmas ar šī elementa lietošanu."
+                    }
+                  ]
+                }
+              },
+              {},
+              {
+                "fields": [
+                  {
+                    "label": "Attēls",
+                    "description": "Attēla fona platuma un augstuma attiecībai jābūt 2:1, lai izvairītos no izstiepšanas. Augstas izšķirtspējas attēli tiks labāk parādīti lielākos ekrānos."
+                  },
+                  {
+                    "label": "Izvēlieties krāsu"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Atslēgvārdu saraksts"
+        },
+        {
+          "label": "Vienmēr rādīt"
+        },
+        {
+          "label": "Automātiski paslēpt"
+        },
+        {
+          "label": "Caurspīdīgums"
+        },
+        {
+          "fields": [
+            {
+              "label": "Attēls",
+              "description": "Attēla fona platuma un augstuma attiecībai jābūt 2:1, lai izvairītos no izstiepšanas. Augstas izšķirtspējas attēli tiks labāk parādīti lielākos ekrānos."
+            },
+            {
+              "label": "Izvēlieties krāsu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Lokalizēt",
+      "fields": [
+        {
+          "label": "\"Slaids\" tulkojums",
+          "default": "Slaids"
+        },
+        {
+          "label": "\"Rezultāts\" tulkojums",
+          "default": "Rezultāts"
+        },
+        {
+          "label": "\"Tavs rezultāts\" tulkojums",
+          "default": "Tavs rezultāts"
+        },
+        {
+          "label": "\"Maksimālais rezultāts\" tulkojums",
+          "default": "Maksimālais rezultāts"
+        },
+        {
+          "label": "\"Kopā\" tulkojums",
+          "default": "Kopā"
+        },
+        {
+          "label": "\"Kopējais rezultāts\" tulkojums",
+          "default": "Kopējais rezultāts"
+        },
+        {
+          "label": "Pogas \"Rādīt risinājumus\" nosaukums",
+          "default": "Rādīt risinājumus"
+        },
+        {
+          "label": "Pogas \"Mēģināt vēlreiz\" teksts",
+          "default": "Mēģināt vēlreiz"
+        },
+        {
+          "label": "Eksportēšanas pogas teksts",
+          "default": "Eksportēt tekstu"
+        },
+        {
+          "label": "Paslēpt atslēgvārdu saraksta pogas nosaukumu",
+          "default": "Paslēpt atslēgvārdu sarakstu"
+        },
+        {
+          "label": "Rādīt atslēgvārdu saraksta pogas nosaukumu",
+          "default": "Rādīt atslēgvārdu sarakstu"
+        },
+        {
+          "label": "Pilnekrāna etiķete",
+          "default": "Pilnekrāna režīms"
+        },
+        {
+          "label": "Etiķete iziešanai no pilnekrāna režīma",
+          "default": "Iziet no pilnekrāna režīma"
+        },
+        {
+          "label": "Iepriekšējā slaida etiķete",
+          "default": "Iepriekšējais slaids"
+        },
+        {
+          "label": "Nākamā slaida etiķete",
+          "default": "Nākamais slaids"
+        },
+        {
+          "label": "Pašreizējā slaida etiķete",
+          "default": "Pašreizējais slaids"
+        },
+        {
+          "label": "Pēdējā slaida etiķete",
+          "default": "Pēdējais slaids"
+        },
+        {
+          "label": "Teksts iziešanai no risinājuma režīma",
+          "default": "Iziet no risinājuma režīma"
+        },
+        {
+          "label": "Risinājuma režīma teksts",
+          "default": "Risinājuma režīms"
+        },
+        {
+          "label": "Teksts, ja lapā ir vairāki uzdevumi",
+          "default": "Vairāki uzdevumi"
+        },
+        {
+          "label": "Rezultātu ziņojuma teksts",
+          "default": "Jūs sasniedzāt:"
+        },
+        {
+          "label": "Teksts kopīgošanai Facebook",
+          "default": "Dalīties Facebook"
+        },
+        {
+          "label": "Teksts kopīgošanai Twitter",
+          "default": "Dalīties Twitter"
+        },
+        {
+          "label": "Teksts kopīgošanai Google",
+          "default": "Dalīties Google+"
+        },
+        {
+          "label": "Kopsavilkuma slaida nosaukums",
+          "default": "Kopsavilkums"
+        },
+        {
+          "label": "Komentāru ikonas nosaukums",
+          "default": "Rādīt komentārus"
+        },
+        {
+          "label": "Drukāšanas pogas nosaukums",
+          "default": "Drukāt"
+        },
+        {
+          "label": "Ieiešana drukāšanas dialogā",
+          "default": "Kā jūs vēlētos izdrukāt šo prezentāciju?"
+        },
+        {
+          "label": "Pogas \"Drukāt visus slaidus\" etiķete",
+          "default": "Drukāt visus slaidus"
+        },
+        {
+          "label": "Pogas \"Drukāt šo slaidu\" etiķete",
+          "default": "Drukāt šo slaidu"
+        },
+        {
+          "label": "Etiķete slaidiem bez nosaukuma",
+          "default": "Nav nosaukuma"
+        },
+        {
+          "label": "Slaidu navigācijas skaidrojums asistīvajām tehnoloģijām",
+          "default": "Kad aktivizēta virsma, izmantojiet kreiso un labo bultiņu, lai mainītu slaidu atbilstošajā virzienā"
+        },
+        {
+          "label": "Virsmas etiķete asistīvajām tehnoloģijām",
+          "default": "Prezentācijas virsma. Izmantojiet kreiso un labo bultiņu, lai pārvietotos starp slaidiem."
+        },
+        {
+          "label": "Progressbar label for assistive technologies",
+          "default": "Choose slide to display"
+        },
+        {
+          "label": "Nepabeigtām mijiedarbību etiķete",
+          "default": "@slideName satur nepabeigtu mijiedarbību"
+        },
+        {
+          "label": "Pabeigtu mijiedarbību etiķete",
+          "default": "@slideName satur pabeigtu mijiedarbību"
+        },
+        {
+          "label": "Slaidu skaitītāja etiķete. Mainīgie lielumi ir @index, @total",
+          "default": "Slaids @index no @total"
+        },
+        {
+          "label": "Etiķete slaidiem, kuros ir tikai pareizās atbildes",
+          "default": "@slideName ir tikai pareizās atbildes"
+        },
+        {
+          "label": "Etiķetes slaidiem, kuros ir nepareizas atbildes",
+          "default": "@slideName ir nepareizas atbildes"
+        },
+        {
+          "label": "Etiķete sociālās koplietošanas joslai",
+          "default": "Kopīgot rezultātu"
+        },
+        {
+          "label": "Asistīvo tehnoloģiju paziņojums par kopējo punktu skaitu",
+          "default": "Jūs ieguvāt @score no @maxScore punktiem",
+          "description": "Pieejamie mainīgie ir @score un @maxScore"
+        },
+        {
+          "label": "Asistīvo tehnoloģiju paziņojums par ieiešanu pilnekrāna režīmā",
+          "default": "Atvērts pilnekrāna režīms"
+        },
+        {
+          "label": "Asistīvo tehnoloģiju paziņojums par iziešanu no pilnekrāna režīma",
+          "default": "Iziets no pilnekrāna režīma"
+        },
+        {
+          "label": "Rezultāta iesniegšanas apstiprināšanas dialoga galvene",
+          "default": "Iesniedziet savas atbildes"
+        },
+        {
+          "label": "Rezultāta iesniegšanas apstiprināšanas dialoga teksts",
+          "default": "Jūsu rezultāti tiks iesniegti. Vai vēlaties turpināt?"
+        },
+        {
+          "label": "Apstiprinājuma poga rezultātu iesniegšanas apstiprināšanas dialogā",
+          "default": "Iesniegt un skatīt rezultātus"
+        },
+        {
+          "label": "Slideshow navigation",
+          "default": "Slideshow navigation"
+        },
+        {
+          "label": "Confirm button label",
+          "default": "Confirm"
+        },
+        {
+          "label": "Cancel button label",
+          "default": "Cancel"
+        }
+      ]
+    },
+    {
+      "label": "Uzvedības iestatījumi.",
+      "description": "Šīs iestatījumi ļaus ignorēt uzvedības iestatījumus.",
+      "fields": [
+        {
+          "label": "Ieslēgt aktīvās virsmas režīmu",
+          "description": "Removes navigation controls for the end user. Use Go To Slide to navigate. Summary is not available in this mode."
+        },
+        {
+          "label": "Paslēpt kopsavilkuma slaidu",
+          "description": "Paslēpj kopsavilkuma slaidu."
+        },
+        {
+          "label": "Ignorēt pogu \"Rādīt risinājumu\"",
+          "description": "Šī opcija nosaka, vai poga \"Rādīt risinājumu\" tiks rādīta visiem jautājumiem, atspējota visiem vai konfigurēta katram jautājumam atsevišķi.",
+          "options": [
+            {
+              "label": "Iespējota"
+            },
+            {
+              "label": "Atspējota"
+            }
+          ]
+        },
+        {
+          "label": "Ignorēt pogu \"Mēģināt vēlreiz\"",
+          "description": "Šī opcija nosaka, vai poga \"Mēģināt vēlreiz\" tiks rādīta visiem jautājumiem, atspējota visiem vai konfigurēta katram jautājumam atsevišķi.",
+          "options": [
+            {
+              "label": "Iespējota"
+            },
+            {
+              "label": "Atspējots"
+            }
+          ]
+        },
+        {
+          "label": "Kopsavilkuma slaidā parādīt pogu \"Rādīt risinājumu\"",
+          "description": "Ja iespējots, izglītojamais, sasniedzot kopsavilkuma slaidu, varēs parādīt visu jautājumu risinājumus"
+        },
+        {
+          "label": "Kopsavilkuma slaidā parādīt pogu \"Mēģināt vēlreiz\"",
+          "description": "Ja iespējots, izglītojamais, kad sasniegs kopsavilkuma slaidu, varēs vēlreiz mēģināt visus jautājumus. Ņemiet vērā, ka, atsvaidzinot lapu, dalībnieki varēs mēģināt vēlreiz, pat ja šī poga netiek rādīta."
+        },
+        {
+          "label": "Atļaut drukāšanas pogu",
+          "description": "Iespējo drukāšanas pogu."
+        },
+        {
+          "label": "Sociālie iestatījumi",
+          "description": "Šīs opcijas ļaus ignorēt sociālās uzvedības iestatījumus. Ja tiks nodrošināta saite, tukšās vērtības tiks aizpildītas automātiski, pretējā gadījumā tiks ģenerētas visas vērtības.",
+          "fields": [
+            {
+              "label": "Parādīt Facebook kopīgošanas ikonu"
+            },
+            {
+              "label": "Facebook koplietošanas iestatījumi",
+              "fields": [
+                {
+                  "label": "Dalīties ar saiti Facebook",
+                  "default": "@currentpageurl"
+                },
+                {
+                  "label": "Dalīties ar citātu Facebook",
+                  "default": "Es ieguvu @score no @maxScore par uzdevumu vietnē @currentpageurl."
+                }
+              ]
+            },
+            {
+              "label": "Parādīt Twitter kopīgošanas ikonu"
+            },
+            {
+              "label": "Twitter kopīgošanas iestatījumi",
+              "fields": [
+                {
+                  "label": "Dalīties Twitter paziņojumā",
+                  "default": "Es ieguvu @score no @maxScore par uzdevumu vietnē @currentpageurl."
+                },
+                {
+                  "label": "Dalīties ar saiti Twitter",
+                  "default": "@currentpageurl"
+                },
+                {
+                  "label": "Kopīgot Twitter mirkļbirkas",
+                  "default": "h5p, kurss"
+                }
+              ]
+            },
+            {
+              "label": "Parādīt Google+ kopīgošanas ikonu"
+            },
+            {
+              "label": "Kopīgot saiti ar Google",
+              "default": "@currentpageurl"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

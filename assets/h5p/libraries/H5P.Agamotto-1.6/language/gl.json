@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Cabeceira",
+      "placeholder": "Aquí podes engadir unha cabeceira opcional.",
+      "description": "A cabeceira que che gustaría amosar enriba da imaxe"
+    },
+    {
+      "label": "Elementos",
+      "entity": "elemento",
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
+      "field": {
+        "label": "Elemento",
+        "fields": [
+          {
+            "label": "Imaxe"
+          },
+          {
+            "label": "Etiqueta",
+            "description": "Etiqueta opcional para unha marca de verificación. Agacharase se é demasiado longa."
+          },
+          {
+            "label": "Descrición",
+            "placeholder": "A miña descrición da imaxe ...",
+            "description": "Descrición opcional da imaxe"
+          },
+          {
+            "label": "Audio",
+            "description": "Audio opcional que soa cando se amosa a imaxe."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Configuración do comportamento",
+      "description": "Estas opcións permitiranche controlar o comportamento da tarefa.",
+      "fields": [
+        {
+          "label": "Imaxe inicial",
+          "description": "Establece o número da imaxe inicial."
+        },
+        {
+          "label": "Salto de botón deslizante",
+          "description": "Se se activa, o botón deslizante saltará á posición dunha imaxe."
+        },
+        {
+          "label": "Amosar marcas de verificación",
+          "description": "Se se activa, a barra de deslizamento amosará unha marca de verificación por cada imaxe."
+        },
+        {
+          "label": "Amosar etiquetas",
+          "description": "Se se activa, a barra de deslizamento amosará unha etiqueta en lugar de ou ademais de marcas de verificación."
+        },
+        {
+          "label": "Color de substitución de transparencia",
+          "description": "Establece a cor que substituirá as áreas transparentes das imaxes."
+        },
+        {
+          "label": "Espacio da imaxe en modo de pantalla completa",
+          "description": "Se tes descricións ademais de imaxes, establece a porcentaxe de espacio que deberían usar as imaxes en modo de pantalla completa."
+        }
+      ]
+    },
+    {
+      "label": "Lector de pantalla",
+      "fields": [
+        {
+          "label": "Imaxe",
+          "default": "Imaxe"
+        },
+        {
+          "label": "Galería de imaxes",
+          "default": "Galería de Imaxes"
+        },
+        {
+          "label": "Título para silenciado",
+          "default": "Silenciar, agora non silenciado"
+        },
+        {
+          "label": "Título para activar son",
+          "default": "Activar son, agora silenciado"
+        },
+        {
+          "label": "Título para o botón de pantalla completa (entrar)",
+          "default": "Entrar modo de pantalla completa"
+        },
+        {
+          "label": "Título para botón de modo de pantalla completa (saír)",
+          "default": "Saír de modo de pantalla completa"
+        }
+      ]
+    }
+  ]
+}

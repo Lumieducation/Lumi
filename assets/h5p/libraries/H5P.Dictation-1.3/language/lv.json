@@ -1,0 +1,374 @@
+{
+  "semantics": [
+    {
+      "label": "Multivide",
+      "fields": [
+        {
+          "label": "Tips",
+          "description": "Papildu multivide, kuru atspoguļot virs jautājuma."
+        },
+        {
+          "label": "Atspējot attēla tālummaiņu"
+        }
+      ]
+    },
+    {
+      "label": "Uzdevuma apraksts",
+      "description": "Aprakstiet savu uzdevumu šeit.",
+      "placeholder": "Lūdzu, klausieties uzmanīgi un uzrakstiet to, ko dzirdat."
+    },
+    {
+      "label": "Teikumi",
+      "widgets": [
+        {
+          "label": "Pēc noklusējuma"
+        }
+      ],
+      "entity": "Teikums",
+      "field": {
+        "label": "Teikums",
+        "fields": [
+          {
+            "label": "Apraksts",
+            "description": "Ja vēlaties, variet virs teksta ievades lauka ievietot vienkāršu aprakstu, kas ir noderīgs, piemēram, dialogos."
+          },
+          {
+            "label": "Skaņas paraugs",
+            "description": "Teikums izrunāts normālā ātrumā"
+          },
+          {
+            "label": "Lēns skaņas paraugs",
+            "description": "Lēnā ātrumā izrunāts teikums"
+          },
+          {
+            "label": "Teksts",
+            "description": "Teksts, kas jāraksta. Varat vārdam pievienot alternatīvu pareizrakstību, pievienojot vertikālu līniju (|) aiz vārda, kam seko alternatīva."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Kopējā atgriezeniskā saite",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Pēc noklusējuma"
+            }
+          ],
+          "label": "Iestatiet pielāgotu atgriezenisko saiti katram rezultātu diapazonam",
+          "description": "Klikšķiniet pogu \"Pievienot diapazonu\", lai pievienotu tik diapazonus cik vēlaties. Piemēram, 0-20% Slikts rezultāts, 21-91% Viduvējs rezultāts, 91-100% Lielisks rezultāts!",
+          "entity": "diapazons",
+          "field": {
+            "fields": [
+              {
+                "label": "Rezultātu diapazons"
+              },
+              {
+                "label": "Norādītā diapazona atgriezeniskā saite",
+                "placeholder": "Aizpildiet atgriezenisko saiti"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Uzvedības iestatītījumi",
+      "description": "Šie iestatījumi ļaus jums kontrolēt uzdevuma uzvedību.",
+      "fields": [
+        {
+          "label": "Maksimālais mēģinājumu skaits",
+          "description": "Ierobežos, cik reižu var klausīties katra teikuma paraugus."
+        },
+        {
+          "label": "Maksimālais mēģinājumu skaits lēnam ātrumam",
+          "description": "Ierobežos, cik reižu var klausīties katra teikuma lēnos paraugus."
+        },
+        {
+          "label": "Atspējot pauzes iespēju",
+          "description": "Ja atzīmēts, atskaņošanas apturēšana atskaņošanas laikā nav iespējama."
+        },
+        {
+          "label": "Play button delay",
+          "description": "Optionally set a time period of up to three seconds that playing a button should be delayed. This is useful if you want to allow students to enter the text field before they start listening."
+        },
+        {
+          "label": "Sajaukt teikumus",
+          "description": "Nosakiet, kad teikumi ir jāsajauc.",
+          "options": [
+            {
+              "label": "Nekad"
+            },
+            {
+              "label": "Vienu reizi uzsākot uzdevumu"
+            },
+            {
+              "label": "Katrā mēģinājumā"
+            }
+          ]
+        },
+        {
+          "label": "Vērtēšana",
+          "fields": [
+            {
+              "label": "Ignorēt pieturzīmes",
+              "description": "Ja ir atzīmēts, pieturzīmes netiks ņemtas vērā vērtēšanā."
+            },
+            {
+              "label": "Nulles kļūdu režīms",
+              "description": "Ja ir atzīmēts, vērtēšanā tiks ņemtas vērā tikai pareizās atbildes. Par kļūdām netiks piešķirti sodīta punkti."
+            },
+            {
+              "label": "Drukas kļūdu vērtība",
+              "description": "Nosakiet, cik lielā mērā drukas kļūdas (vārds ar 3–9 rakstzīmēm: līdz vienai kļūdai, vārds ar vairāk nekā 9 rakstzīmēm: līdz divām kļūdām) tiek uzskatītas par īstu kļūdu.",
+              "options": [
+                {
+                  "label": "100 %"
+                },
+                {
+                  "label": "50 %"
+                },
+                {
+                  "label": "0 %"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Teksts",
+          "fields": [
+            {
+              "label": "Vārdu atdalītājs",
+              "description": "Norādiet vārdu atdalītāju, kas atšķiras no atstarpes rakstzīmes, lai atbalstītu alternatīvus risinājumus ar atšķirīgu vārdu skaitu."
+            },
+            {
+              "label": "Rakstīšanas virziens",
+              "description": "Iestatiet, vai teikumu valoda ir no labās uz kreiso vai no kreisās uz labo pusi.",
+              "options": [
+                {
+                  "label": "Automātiska noteikšana"
+                },
+                {
+                  "label": "No labās puses uz kreiso"
+                },
+                {
+                  "label": "No kreisās uz labo"
+                }
+              ]
+            },
+            {
+              "label": "Rakstzīmju sadalīšana",
+              "description": "Aktivizējiet, ja noteiktas rakstzīmes (piemēram, ķīniešu Han rakstzīmes) ir automātiski jāsadala atsevišķos vārdos."
+            }
+          ]
+        },
+        {
+          "label": "Atgriezeniskās saites prezentācija",
+          "fields": [
+            {
+              "label": "Pielāgots drukas kļūdu atspoguļojums",
+              "description": "Ja atzīmēts, drukas kļūdas tiks parādītas pielāgotā stilā, atšķirot tās no skaidrām kļūdām."
+            },
+            {
+              "label": "Alternatīvu risinājumu atspoguļošana",
+              "description": "Iestatiet, kuras alternatīvas ir jāuzrāda nepareiziem vai trūkstošiem vārdiem risinājumā.",
+              "options": [
+                {
+                  "label": "Rādīt tikai pirmo alternatīvu"
+                },
+                {
+                  "label": "Rādīt visas alternatīvas"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Atļaut pogu \"Mēģināt vēlreiz\""
+        },
+        {
+          "label": "Atļaut pogu \"Rādīt risinājumu\""
+        },
+        {
+          "label": "Pie pārbaudes rādīt risinājumu"
+        }
+      ]
+    },
+    {
+      "label": "Lietotāja saskarne",
+      "fields": [
+        {
+          "label": "Vispārīga atgriezeniskā saite",
+          "description": "Variet izmantot vairākus vietturus, kas tiks aizstāti ar atbilstošu skaitu: @matches = atbilstību skaits, @total = kopējais kļūdu skaits, @capped = ierobežots kopējais kļūdu skaits, @wrong = nepareizi vārdi, @added = papildu vārdi, @missing = trūkstošie vārdi, @typo = drukas kļūdas",
+          "default": "Jūs esat pieļāvis @total kļūdu(-as)."
+        },
+        {
+          "label": "Vispārīgas atsauksmes (nulles kļūdu režīms)",
+          "description": "Variet izmantot vairākus vietturus, kas tiks aizstāti ar atbilstošu skaitu: @matches = atbilstību skaits, @total = kopējais rezultāts, @wrong = nepareizie vārdi, @added = papildu vārdi, @missing = trūkst vārdu, @typo = drukas kļūdas",
+          "default": "Jūs esat ievadījis @total vārdu(s) pareizi un @typo vārdu(s) ar nelielām kļūdām."
+        },
+        {
+          "label": "Pogas \"Pārbaudīt\" teksts",
+          "default": "Pārbaudīt"
+        },
+        {
+          "label": "Pogas \"Iesniegt\" teksts",
+          "default": "Iesniegt"
+        },
+        {
+          "label": "Pogas \"Mēģināt vēlreiz\" teksts",
+          "default": "Mēģināt vēlreiz"
+        },
+        {
+          "label": "Pogas \"Parādīt risinājumu\" teksts",
+          "default": "Rādīt risinājumu"
+        },
+        {
+          "label": "Audio neatbalstīšanas paziņojums",
+          "default": "Jūsu pārlūkprogramma neatbalsta šo audio."
+        }
+      ]
+    },
+    {
+      "label": "Ekrāna lasītājs",
+      "fields": [
+        {
+          "label": "Pogas \"Pārbaudīt\" apraksts priekš asistējošajām tehnoloģijām",
+          "default": "Pārbaudīt atbildes. Sniegtās atbildes tiks atzīmētas kā pareizas, nepareizas, vai neatbildētas."
+        },
+        {
+          "label": "Asistīvo tehnoloģiju apraksts pogai \"Rādīt risinājumu\"",
+          "default": "Rādīt risinājumu. Uzdevums tiks atzīmēts ar tā pareizo risinājumu."
+        },
+        {
+          "label": "Pogas \"Mēģināt vēlreiz\" apraksts priekš asistīvajām tehnoloģijām",
+          "default": "Mēģiniet uzdevumu vēlreiz. Dzēst visas iesniegtās atbildes un sākt uzdevumu no sākuma."
+        },
+        {
+          "label": "Atskaņošanas poga",
+          "default": "Atskaņot"
+        },
+        {
+          "label": "Lēnās atskaņošanas poga",
+          "default": "Atskaņot lēnām"
+        },
+        {
+          "label": "Atlikušie mēģinājumi (teksts asistīvajām tehnoloģijām un teksts, kas paredzēts atspoguļošanai pēc kursora novietošanas)",
+          "description": "@number tiks aizstāts ar pašreizējo atlikušo mēģinājumu skaitu.",
+          "default": "Atlikušo mēģinājumu skaits: @number"
+        },
+        {
+          "label": "Bezgalīgs (teksts asistīvajām tehnoloģijām un teksts, kas paredzēts atspoguļošanai pēc kursora novietošanas)",
+          "default": "bezgalīgs"
+        },
+        {
+          "label": "Teksta ievades lauks",
+          "default": "Ievadi dzirdēto."
+        },
+        {
+          "label": "Tavs rezultāts",
+          "description": "@score tiks aizstāts ar punktu skaitu. @total tiks aizstāts ar maksimāli iespējamo punktu skaitu.",
+          "default": "Jūs saņēmāt @score no @total punktiem"
+        },
+        {
+          "label": "Risinājums",
+          "default": "Risinājums"
+        },
+        {
+          "label": "Teikums",
+          "default": "Teikums"
+        },
+        {
+          "label": "Vienums",
+          "default": "Vienums"
+        },
+        {
+          "label": "Pareizi",
+          "default": "pareizi"
+        },
+        {
+          "label": "Nepareizi",
+          "default": "nepareizi"
+        },
+        {
+          "label": "Maza kļūda",
+          "default": "maza kļūda"
+        },
+        {
+          "label": "Trūkstošs vārds vai simbols",
+          "default": "trūkst"
+        },
+        {
+          "label": "Pievienots vārds vai simbols",
+          "default": "pievienots"
+        },
+        {
+          "label": "Pareizs risinājums",
+          "default": "Vajadzēja būt"
+        },
+        {
+          "label": "Vai",
+          "default": "vai"
+        },
+        {
+          "label": "Punkts",
+          "default": "punkts"
+        },
+        {
+          "label": "Punkti",
+          "default": "punkti"
+        },
+        {
+          "label": "Atstarpe",
+          "default": "atstarpe"
+        },
+        {
+          "label": "Izsaukuma zīme",
+          "default": "izsaukuma zīme"
+        },
+        {
+          "label": "Jautājuma zīme",
+          "default": "jautājuma zīme"
+        },
+        {
+          "label": "Komats",
+          "default": "komats"
+        },
+        {
+          "label": "Vienpēdiņas",
+          "default": "vienpēdiņas"
+        },
+        {
+          "label": "Pēdiņas",
+          "default": "pēdiņas"
+        },
+        {
+          "label": "Kols",
+          "default": "kols"
+        },
+        {
+          "label": "Semikols",
+          "default": "semikols"
+        },
+        {
+          "label": "Pluszīme",
+          "default": "pluszīme"
+        },
+        {
+          "label": "Mīnuss",
+          "default": "mīnus"
+        },
+        {
+          "label": "Zvaigznīte",
+          "default": "zvaigznīte"
+        },
+        {
+          "label": "Slīpsvītra",
+          "default": "slīpsvītra"
+        }
+      ]
+    }
+  ]
+}

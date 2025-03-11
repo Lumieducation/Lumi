@@ -1,0 +1,321 @@
+[
+  {
+    "name": "infoWall",
+    "type": "group",
+    "importance": "high",
+    "expanded": true,
+    "widget": "infoWall",
+    "fields": [
+      {
+        "name": "header",
+        "type": "text",
+        "label": "Header",
+        "description": "Optional header for the information wall.",
+        "importance": "high",
+        "optional": true
+      },
+      {
+        "name": "propertiesGroup",
+        "type": "group",
+        "label": "Properties",
+        "importance": "high",
+        "expanded": false,
+        "fields": [
+          {
+            "name": "properties",
+            "type": "list",
+            "label": "Properties",
+            "description": "Properties for the entries",
+            "importance": "high",
+            "entity": "property",
+            "min": 1,
+            "widgets": [
+              {
+                "name": "VerticalTabs",
+                "label": "Default"
+              }
+            ],
+            "field": {
+              "name": "propertyItems",
+              "type": "group",
+              "label": "Property items",
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "label": "Label",
+                  "default": "Unnamed"
+                },
+                {
+                  "name": "showLabel",
+                  "type": "boolean",
+                  "label": "Show property label",
+                  "default": false,
+                  "optional": true
+                },
+                {
+                  "name": "searchInProperty",
+                  "type": "boolean",
+                  "label": "Enable searching in the property",
+                  "default": true,
+                  "optional": true
+                },
+                {
+                  "name": "styling",
+                  "type": "group",
+                  "label": "Styling override",
+                  "fields": [
+                    {
+                      "name": "bold",
+                      "type": "boolean",
+                      "label": "Bold",
+                      "optional": true
+                    },
+                    {
+                      "name": "italic",
+                      "type": "boolean",
+                      "label": "Italic",
+                      "optional": true
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "name": "dummy",
+            "type": "text",
+            "widget": "none"
+          }
+        ]
+      },
+      {
+        "name": "panels",
+        "type": "list",
+        "label": "Panels",
+        "description": "Panels for the wall",
+        "importance": "high",
+        "entity": "panel",
+        "min": 1,
+        "widgets": [
+          {
+            "name": "VerticalTabs",
+            "label": "Default"
+          }
+        ],
+        "field": {
+          "name": "entriesGroup",
+          "type": "group",
+          "label": "Entry items",
+          "fields": [
+            {
+              "name": "panelTitle",
+              "type": "text",
+              "label": "Title for panel"
+            },
+            {
+              "name": "image",
+              "type": "library",
+              "label": "Image",
+              "optional": true,
+              "options": [
+                "H5P.Image 1.1"
+              ]
+            },
+            {
+              "name": "entries",
+              "type": "list",
+              "label": "Entries",
+              "description": "Entries for the properties",
+              "entity": "value",
+              "widgets": [
+                {
+                  "name": "InfoWallPassiveList",
+                  "label": "Default"
+                }
+              ],
+              "min": 1,
+              "field": {
+                "name": "value",
+                "type": "text",
+                "widget": "html",
+                "label": "Label to be changed automatically",
+                "optional": true,
+                "enterMode": "div",
+                "tags": [
+                  "strong",
+                  "em",
+                  "u",
+                  "del",
+                  "sub",
+                  "sup",
+                  "a",
+                  "ul",
+                  "ol",
+                  "h1",
+                  "h2",
+                  "h3",
+                  "h4",
+                  "h5",
+                  "h6",
+                  "hr",
+                  "pre",
+                  "code",
+                  "table"
+                ],
+                "font": {
+                  "size": true,
+                  "color": true,
+                  "background": true
+                }
+              }
+            },
+            {
+              "name": "keywords",
+              "type": "text",
+              "label": "Additional keywords",
+              "description": "Add additional keywords separated by a blank space that will be used for filtering but not be visible to the user.",
+              "optional": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "behaviour",
+        "type": "group",
+        "importance": "low",
+        "label": "Behavioural settings",
+        "description": "These options will let you control how the task behaves.",
+        "fields": [
+          {
+            "name": "useFallbackImage",
+            "type": "boolean",
+            "label": "Use fallback for missing images",
+            "default": false,
+            "optional": true
+          },
+          {
+            "name": "fallbackImage",
+            "type": "library",
+            "label": "Image",
+            "optional": true,
+            "options": [
+              "H5P.Image 1.1"
+            ],
+            "widget": "showWhen",
+            "showWhen": {
+              "rules": [
+                {
+                  "field": "useFallbackImage",
+                  "equals": true
+                }
+              ]
+            }
+          },
+          {
+            "name": "imageWidth",
+            "label": "Image width",
+            "type": "number",
+            "importance": "low",
+            "description": "Image width in px.",
+            "default": 150
+          },
+          {
+            "name": "imageHeight",
+            "label": "Image height",
+            "type": "number",
+            "importance": "low",
+            "description": "Image height in px.",
+            "default": 150
+          },
+          {
+            "name": "alternateBackground",
+            "label": "Alternate panel background",
+            "type": "boolean",
+            "importance": "low",
+            "description": "If checked, each 2nd panel will have slightly darker background than the others.",
+            "default": true,
+            "optional": true
+          },
+          {
+            "name": "offerFilterField",
+            "label": "Offer filter field",
+            "type": "boolean",
+            "importance": "low",
+            "description": "If checked, users will be able to filter the info wall.",
+            "default": true,
+            "optional": true
+          },
+          {
+            "name": "modeFilterField",
+            "label": "Mode for filter field",
+            "type": "select",
+            "importance": "low",
+            "description": "Choose whether the filter should narrow down or broaden the search with every new keyword.",
+            "options": [
+              {
+                "value": "and",
+                "label": "Narrow down"
+              },
+              {
+                "value": "or",
+                "label": "Broaden"
+              }
+            ],
+            "default": "or",
+            "optional": false,
+            "widget": "showWhen",
+            "showWhen": {
+              "rules": [
+                {
+                  "field": "offerFilterField",
+                  "equals": true
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "l10n",
+        "type": "group",
+        "common": true,
+        "label": "User interface",
+        "importance": "low",
+        "fields": [
+          {
+            "name": "noEntriesError",
+            "type": "text",
+            "label": "No content entered",
+            "importance": "low",
+            "default": "The author did not enter anything."
+          },
+          {
+            "name": "noMatchesForFilter",
+            "type": "text",
+            "label": "No matches found",
+            "description": "@query is a placeholder and will be replaced by the respective query that was entered.",
+            "importance": "low",
+            "default": "There are not matches for @query."
+          },
+          {
+            "name": "enterToFilter",
+            "type": "text",
+            "label": "Enter to filter",
+            "description": "Message for screen readers.",
+            "importance": "low",
+            "default": "Enter a query to filter the content for relevant entries."
+          },
+          {
+            "name": "listChanged",
+            "type": "text",
+            "label": "List changed.",
+            "description": "Message for screen readers. @visible and @total are placeholders and will be preplaced with the respective values.",
+            "importance": "low",
+            "default": "List changed. Showing @visible of @total items."
+          }
+        ]
+      }
+    ]
+  }
+]

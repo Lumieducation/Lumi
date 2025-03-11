@@ -1,0 +1,271 @@
+{
+  "semantics": [
+    {
+      "label": "Botão de verificação de resposta",
+      "default": "Verificar"
+    },
+    {
+      "label": "Botão de enviar resposta",
+      "default": "Enviar"
+    },
+    {
+      "label": "Botão de tentar de novo",
+      "default": "Repetir"
+    },
+    {
+      "label": "Texto de explicação da pontuação",
+      "default": "As respostas corretas dão-lhe +1 ponto. As incorretas -1 ponto. A pontuação mínima possível é 0."
+    },
+    {
+      "fields": [
+        {
+          "label": "Configurações",
+          "fields": [
+            {
+              "label": "Imagem de fundo",
+              "description": "Opcional. Escolha uma imagem para utilizar como fundo da sua atividade de arrastar e largar."
+            },
+            {
+              "label": "Tamanho da atividade",
+              "description": "Especifique o tamanho (em píxeis) da área para esta atividade."
+            }
+          ]
+        },
+        {
+          "label": "Atividade",
+          "description": "Comece por definir as áreas onde os elementos vão ser largados.<br />A seguir, coloque os elementos que vão ser arrastados nas zonas apropriadas.<br />Por fim, edite as zonas onde os elementos serão largados e defina as respostas corretas.",
+          "fields": [
+            {
+              "label": "Elementos",
+              "entity": "elemento",
+              "field": {
+                "label": "Elemento",
+                "fields": [
+                  {
+                    "description": "Escolha o tipo de conteúdo que pretende adicionar."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Selecione as zonas onde vão ser largados os elementos"
+                  },
+                  {
+                    "label": "Opacidade do fundo",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Número infinito de instâncias do elemento",
+                    "description": "Clonar este elemento para que possa ser arrastado para múltiplas zonas."
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Zonas de largar",
+              "entity": "Zona de largar",
+              "field": {
+                "label": "Zona de largar",
+                "fields": [
+                  {
+                    "label": "Rótulo",
+                    "description": "The label is used by assistive technologies."
+                  },
+                  {
+                    "label": "Mostrar rótulo"
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Escolha os elementos corretos"
+                  },
+                  {
+                    "label": "Opacidade do fundo",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Dicas e feedback",
+                    "fields": [
+                      {
+                        "label": "Texto da dica"
+                      },
+                      {
+                        "label": "Mensagem para correspondência correta",
+                        "description": "A mensagem vai aparecer por baixo da atividade quando clicar em \"Verificar\", se a correspondência estiver correta."
+                      },
+                      {
+                        "label": "Mensagem para correspondência incorreta",
+                        "description": "A mensagem vai aparecer por baixo da atividade quando clicar em \"Verificar\", se a correspondência estiver correta."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Esta zona de largar só pode conter um elemento",
+                    "description": "Garanta que existe só uma resposta correta para esta zona"
+                  },
+                  {
+                    "label": "Ativar alinhamento automático",
+                    "description": "Alinha automaticamente os elementos arrastados e largados nesta zona."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Feedback global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Defina o feedback personalizado para qualquer faixa de pontuação",
+          "description": "Clique em \"Adicionar faixa\" para adicionar quantas faixas necessitar. Exemplo: 0-20% Insuficiente, 21-91% Suficiente, 91-100% Excelente!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para uma determinada faixa de pontuação",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Configurações comportamentais",
+      "description": "Estas opções permitem-lhe controlar o funcionamento desta atividade.",
+      "fields": [
+        {
+          "label": "Ativar \"Repetir\""
+        },
+        {
+          "label": "Ativar o botão \"Verificar\""
+        },
+        {
+          "label": "Dar um ponto por toda a atividade",
+          "description": "Desative esta opção para atribuir um ponto por cada objeto posicionado corretamente."
+        },
+        {
+          "label": "Ativar penalizações",
+          "description": "Atribuir penalizações a elementos que sejam largados incorretamente fora das áreas definidas. Esta opção deve ser ativada sempre que seja possível largar o(s) mesmo(s) objeto(s) em múltiplas zonas ou se só existir uma zona de largar. Se esta opção não estiver ativa, os alunos conseguirão que todos os elementos correspondam a todas as zonas de largar obtendo assim pontuação máxima."
+        },
+        {
+          "label": "Ativar explicação do resultado",
+          "description": "Mostra a explicação do resultado ao utilizador enquanto este estiver a verificar as suas respostas (se a opção de 'Ativar penalizações' estiver selecionada)."
+        },
+        {
+          "label": "Opacidade do fundo para os elementos arrastáveis",
+          "description": "Se este campo estiver definido, o seu valor vai sobrepor-se ao valor da opacidade em todos os elementos. Este valor deve ser um número entre 0 e 100, onde 0 significa completamente transparente e 100 completamente opaco"
+        },
+        {
+          "label": "Destaque da zona de largar",
+          "description": "Escolha quando destacar as zonas de largar.",
+          "options": [
+            {
+              "label": "Quando está a arrastar"
+            },
+            {
+              "label": "Sempre"
+            },
+            {
+              "label": "Nunca"
+            }
+          ]
+        },
+        {
+          "label": "Espaçamento para alinhamento automático (em píxeis)"
+        },
+        {
+          "label": "Ativar ecrã completo",
+          "description": "Ative esta opção para mostrar o botão de ecrã completo."
+        },
+        {
+          "label": "Mostrar pontuação",
+          "description": "Mostrar a pontuação para cada resposta. Não disponível quando a opção 'Dar um ponto a toda a atividade' estiver ativada."
+        },
+        {
+          "label": "Mostrar título",
+          "description": "Desmarque esta opção se não pretender que este título seja exibido. O título será exibido apenas em resumos, estatísticas, etc."
+        }
+      ]
+    },
+    {
+      "label": "Localizar",
+      "fields": [
+        {
+          "label": "Rótulo para ecrã completo",
+          "default": "Ecrã completo"
+        },
+        {
+          "label": "Rótulo para sair de ecrã completo",
+          "default": "Sair de ecrã completo"
+        }
+      ]
+    },
+    {
+      "label": "Prefixo para elemento arrastável",
+      "default": "Elemento {num} de {total}."
+    },
+    {
+      "label": "Sufixo para elemento arrastável",
+      "default": "Largado na zona {num}."
+    },
+    {
+      "label": "Prefixo da zona de largar",
+      "default": "Zona de largar {num} de {total}."
+    },
+    {
+      "label": "Rótulo para zona de largar inválida",
+      "default": "Zona de largar inválida."
+    },
+    {
+      "label": "Etiqueta para o botão de mostrar dica",
+      "default": "Mostrar dica."
+    },
+    {
+      "label": "Rótulo para dica disponível",
+      "default": "Dica disponível"
+    },
+    {
+      "label": "Rótulo para resposta correta",
+      "default": "Resposta correta"
+    },
+    {
+      "label": "Rótulo para resposta incorreta",
+      "default": "Resposta incorreta"
+    },
+    {
+      "label": "Cabeçalho para o painel que contém o feedback das respostas corretas e incorretas",
+      "default": "Feedback"
+    },
+    {
+      "label": "Representação textual da barra de pontuação para aqueles que usam leitores de ecrã",
+      "default": "Obteve :num de :total pontos"
+    },
+    {
+      "label": "Representação textual do botão de explicação da pontuação",
+      "default": "Mostrar explicação da pontuação"
+    },
+    {
+      "label": "Rótulo da tecnologia assistiva para o botão \"Verificar\"",
+      "default": "Verifique as respostas. As respostas serão marcadas como corretas, incorretas ou sem resposta."
+    },
+    {
+      "label": "Etiqueta de tecnologia assistiva para botão \"Repetir\"",
+      "default": "Repetir a atividade. Apagar todas as respostas e reiniciar a atividade."
+    }
+  ]
+}

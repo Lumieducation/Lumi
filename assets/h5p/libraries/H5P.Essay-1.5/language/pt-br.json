@@ -1,0 +1,299 @@
+{
+  "semantics": [
+    {
+      "label": "Mídia",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Mídia opcional para exibir acima da pergunta."
+        },
+        {
+          "label": "Desativar o zoom da imagem"
+        }
+      ]
+    },
+    {
+      "label": "Descrição da tarefa",
+      "description": "Descreva sua tarefa aqui. A descrição da tarefa aparecerá acima da área de entrada de texto.",
+      "placeholder": "Resuma o livro em 500 caracteres..."
+    },
+    {
+      "label": "Texto de ajuda",
+      "description": "Este texto deve ser uma ajuda para o usuário a começar.",
+      "placeholder": "Este livro é sobre ..."
+    },
+    {
+      "label": "Exemplo de solução",
+      "description": "Opcionalmente, você pode adicionar uma solução de exemplo que é mostrada depois que o aluno cria um texto. É chamado de solução de amostra porque provavelmente não há apenas uma solução.",
+      "fields": [
+        {
+          "label": "Introdução",
+          "description": "Opcionalmente, você pode deixar aos alunos algumas explicações sobre seu exemplo. As explicações só aparecerão se você adicionar um exemplo também.",
+          "placeholder": "Lembre-se de que não era esperado que você apresentasse exatamente a mesma solução. Isto é apenas um bom exemplo."
+        },
+        {
+          "label": "Texto da solução de exemplo",
+          "description": "O aluno verá um botão \"Mostrar solução\" após enviar, se você fornecer algum texto aqui."
+        }
+      ]
+    },
+    {
+      "label": "Palavras-chave",
+      "widgets": [
+        {
+          "label": "Padrão"
+        }
+      ],
+      "entity": "Palavra-chave",
+      "field": {
+        "label": "Palavra-chave",
+        "fields": [
+          {
+            "label": "Palavra-chave",
+            "description": "Palavra-chave ou frase para procurar. Use um asterisco '*' como curinga para um ou mais caracteres. Use uma barra '/' no início e no final para usar uma expressão regular."
+          },
+          {
+            "label": "Variações",
+            "description": "Adicione variações opcionais para esta palavra-chave. Exemplo: Para uma 'cidade' adicione alternativas 'vila', 'município', etc. Os pontos serão concedidos se o usuário incluir qualquer uma das alternativas especificadas.",
+            "entity": "variação",
+            "field": {
+              "label": "Variação de palavra-chave"
+            }
+          },
+          {
+            "label": "Pontos, Opções e Feedback",
+            "fields": [
+              {
+                "label": "Pontos",
+                "description": "Pontos que o usuário obterá se incluir esta palavra-chave ou suas alternativas na resposta."
+              },
+              {
+                "label": "Ocorrências",
+                "description": "Defina quantas ocorrências da palavra-chave ou suas variações devem ser pontuadas."
+              },
+              {
+                "label": "Diferenciar maiúsculas e minúsculas",
+                "description": "Garante que a entrada do usuário seja exatamente igual à resposta."
+              },
+              {
+                "label": "Perdoe pequenos erros",
+                "description": "Isso aceitará pequenos erros de ortografia (3-9 caracteres: 1 erro, mais de 9 caracteres: 2 erros)."
+              },
+              {
+                "label": "Feedback se a palavra-chave for incluída",
+                "description": "Este feedback será exibido se o usuário incluir essa palavra-chave ou suas alternativas na resposta."
+              },
+              {
+                "label": "Feedback se a palavra-chave estiver ausente",
+                "description": "Este feedback será exibido se o usuário não incluir esta palavra-chave ou suas alternativas na resposta."
+              },
+              {
+                "label": "Palavra de feedback exibida se a palavra-chave for incluída",
+                "description": "Esta opção permite que você especifique qual palavra deve ser mostrada na frente do seu feedback se uma palavra-chave for encontrada no texto.",
+                "options": [
+                  {
+                    "label": "Palavra-chave"
+                  },
+                  {
+                    "label": "alternativa encontrada"
+                  },
+                  {
+                    "label": "resposta dada"
+                  },
+                  {
+                    "label": "nenhum"
+                  }
+                ]
+              },
+              {
+                "label": "Palavra de feedback exibida se a palavra-chave estiver ausente",
+                "description": "Esta opção permite que você especifique qual palavra deve ser mostrada na frente do seu feedback se uma palavra-chave não for encontrada no texto.",
+                "options": [
+                  {
+                    "label": "palavra-chave"
+                  },
+                  {
+                    "label": "nenhum"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback Geral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Definir feedback personalizado para qualquer faixa de pontuação",
+          "description": "Clique no botão \"Adicionar faixa\" para adicionar tantos intervalos quantos forem necessários. Exemplo: 0-20% Pontuação ruim, 21-91% Pontuação média, 91-100% Pontuação ótima!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de Pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para uma faixa de pontuação determinada",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Configurações comportamentais",
+      "description": "Estas opções permitirão que você controle como a tarefa se comporta.",
+      "fields": [
+        {
+          "label": "Número mínimo de caracteres",
+          "description": "Especifique o número mínimo de caracteres que o usuário deve inserir."
+        },
+        {
+          "label": "Número máximo de caracteres",
+          "description": "Especifique o número máximo de caracteres que o usuário pode inserir."
+        },
+        {
+          "label": "Tamanho do campo de entrada",
+          "description": "O tamanho do campo de entrada em quantidade de linhas irá cobrir",
+          "options": [
+            {
+              "label": "1 linha"
+            },
+            {
+              "label": "3 linhas"
+            },
+            {
+              "label": "10 linhas"
+            }
+          ]
+        },
+        {
+          "label": "Ativar \"Tentar Novamente\"",
+          "description": "Se marcada, os alunos podem repetir a tarefa."
+        },
+        {
+          "label": "Ignorar pontuação",
+          "description": "Se marcado, os alunos verão apenas o feedback que você forneceu para as palavras-chave, mas nenhuma pontuação."
+        },
+        {
+          "label": "Pontos no ambiente de hospedagem",
+          "description": "Usado para atribuir pontos no ambiente de hospedagem apenas por responder (não mostrado ao aluno)."
+        },
+        {
+          "label": "Porcentagem de aprovação",
+          "description": "Porcentagem necessária para aprovação"
+        },
+        {
+          "label": "Porcentagem de domínio",
+          "description": "Porcentagem necessária para domínio. Definir a porcentagem de domínio abaixo de 100% diminuirá a pontuação máxima possível de acordo. Destina-se a dar alguma margem de manobra aos alunos, não a \"aceitar graciosamente\" soluções que não contenham todas as palavras-chave."
+        },
+        {
+          "label": "Substituir a sensibilidade à maiúsculas e minúsculas",
+          "description": "Esta opção determina se a opção \"Diferenciação de maiúsculas e minúsculas\" será ativada para todas as palavras-chave.",
+          "options": [
+            {
+              "label": "Ativo"
+            },
+            {
+              "label": "Inativo"
+            }
+          ]
+        },
+        {
+          "label": "Substituir perdoar erros",
+          "description": "Esta opção determina se a opção \"Perdoar erros\" será ativada para todas as palavras-chave.",
+          "options": [
+            {
+              "label": "Ativo"
+            },
+            {
+              "label": "Inativo"
+            }
+          ]
+        },
+        {
+          "label": "Replacement for line breaks",
+          "description": "By default, line breaks will be replaced with a space character. If you want to check for line breaks, e.g. in regular expressions, you can set a different replacement here.",
+          "options": [
+            {
+              "label": "space"
+            },
+            {
+              "label": "line break (\\n)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Texto para o botão \"Verificar\"",
+      "default": "Verificar"
+    },
+    {
+      "label": "Texto do botão \"Enviar\"",
+      "default": "Enviar"
+    },
+    {
+      "label": "Texto do botão \"Tentar Novamente\"",
+      "default": "Tentar Novamente"
+    },
+    {
+      "label": "Texto para o botão \"Mostrar solução\"",
+      "default": "Mostrar solução"
+    },
+    {
+      "label": "Cabeçalho do painel contendo comentários para palavras-chave incluídas/ausentes",
+      "default": "Feedback"
+    },
+    {
+      "label": "Rótulo para Solução",
+      "default": "Exemplo de solução"
+    },
+    {
+      "label": "Caracteres restantes",
+      "default": "Caracteres restantes: @chars",
+      "description": "Mensagem para os caracteres restantes. Você pode usar @chars que será substituído pelo número correspondente."
+    },
+    {
+      "label": "Não há caracteres suficientes",
+      "default": "Você deve inserir pelo menos os caracteres @chars !",
+      "description": "Mensagem para indicar que o texto não contém caracteres suficientes. Você pode usar @chars que será substituído pelo número correspondente."
+    },
+    {
+      "label": "Salvar a mensagem",
+      "description": "Mensagem indicando que o texto foi salvo",
+      "default": "salvo"
+    },
+    {
+      "label": "Seu resultado (não exibido)",
+      "description": "Texto de acessibilidade usado para leitores de tela. A variável @score será substituída pelo número de pontos. A variavel @total será substituída pelo máximo de pontos possíveis.",
+      "default": "Você conseguiu @score de @total pontos possíveis"
+    },
+    {
+      "label": "Mensagem de navegação (não exibida)",
+      "description": "Texto de acessibilidade usado para leitores de tela",
+      "default": "Navegou até a nova solução de exemplo incluída após a área de texto."
+    },
+    {
+      "label": "Descrição da tecnologia de assistência para o botão \"Verificar\"",
+      "default": "Confira as respostas."
+    },
+    {
+      "label": "Descrição da tecnologia assistiva para o botão \"Mostrar Solução\"",
+      "default": "Mostrar a solução. Você receberá uma solução de exemplo."
+    },
+    {
+      "label": "Descrição da tecnologia de assistência para o botão \"Tentar Novamente\"",
+      "default": "Repitir a tarefa. Você pode melhorar sua resposta anterior se o autor permitir."
+    }
+  ]
+}

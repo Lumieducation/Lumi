@@ -1,0 +1,219 @@
+{
+  "semantics": [
+    {
+      "label": "Antraštė"
+    },
+    {
+      "label": "Pateikimas",
+      "description": "Dialogo kortelių pateikimo būdas",
+      "options": [
+        {
+          "label": "Normalus"
+        },
+        {
+          "label": "Pasikartojantis"
+        }
+      ]
+    },
+    {
+      "label": "Užduoties aprašymas"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Numatyta"
+        }
+      ],
+      "label": "Dialogai",
+      "entity": "dialogas",
+      "field": {
+        "label": "Klausimas",
+        "fields": [
+          {
+            "label": "Tekstas",
+            "description": "Užuomina dialogo pirmajai daliai"
+          },
+          {
+            "label": "Atsakymas",
+            "description": "Užuomina dialogo antrajai daliai"
+          },
+          {
+            "label": "Paveikslėlis",
+            "description": "Papildomas paveikslėlis kortelei. (Kortelėje gali būti naudojamas tik paveikslėlis, tik tekstas ar abu kartu)"
+          },
+          {
+            "label": "Alternatyvus paveikslėlio tekstas"
+          },
+          {
+            "label": "Garso failai"
+          },
+          {
+            "label": "Patarimai",
+            "fields": [
+              {
+                "label": "Patarimas tekstui",
+                "description": "Patarimas dialogo pirmajai daliai"
+              },
+              {
+                "label": "Patarimas atsakymui",
+                "description": "Užuomina dialogo antrajai daliai"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Sąveikos nustatymai",
+      "description": "Šios parinktys leis jums valdyti, kaip veikia užduotis.",
+      "fields": [
+        {
+          "label": "Įjungti mygtuką „Bandyti dar kartą“"
+        },
+        {
+          "label": "Išjungti naršymą atgal",
+          "description": "Parinktis įgalins judėti tik į priekį naudojant dialogo korteles"
+        },
+        {
+          "label": "Keisti teksto mastelį, kad tekstas tilptų kortelėje",
+          "description": "Nepažymėjus šios parinkties, kortelės dydis keisis pagal teksto dydį"
+        },
+        {
+          "label": "Atsitiktinės kortelės",
+          "description": "Parinktis įgalina kortelių rodymą atsitiktine tvarka."
+        },
+        {
+          "label": "Didžiausias įgūdžių lygis"
+        },
+        {
+          "label": "Leisti greitą pažangą",
+          "description": "Jei pažymėta, besimokantieji gali pažymėti savo žinojimą kortelei neversdami jos"
+        }
+      ]
+    },
+    {
+      "label": "Tekstas kortelės apvertimo mygtukui",
+      "default": "Apversti"
+    },
+    {
+      "label": "Tekstas mygtukui pereiti į kitą kortelę",
+      "default": "Kitas"
+    },
+    {
+      "label": "Tekstas mygtukui grįžti į ankstesnę kortelę",
+      "default": "Ankstesnis"
+    },
+    {
+      "label": "Tekstas kartojimo mygtukui",
+      "default": "Bandyti dar kartą"
+    },
+    {
+      "label": "Tekstas mygtukui \"Teisingas atsakymas\"",
+      "default": "Supratau teisingai!"
+    },
+    {
+      "label": "Tekstas mygtukui \"Neteisingas atsakymas\"",
+      "default": "Supratau neteisingai"
+    },
+    {
+      "label": "Tekstas rodomas pranešime \"Bandymas\" po kortelėmis ir santraukos ekrane",
+      "description": "@round bus pakeistas dabartinio bandymo skaičiumi",
+      "default": "@round bandymas"
+    },
+    {
+      "label": "Tekstas pranešimui \"Likusios kortelės\"",
+      "description": "@number bus pakeistas šiame bandyme likusių kortelių skaičiumi",
+      "default": "Likusios kortelės: @number"
+    },
+    {
+      "label": "Tekstas mygtukui \"Kitas bandymas\"",
+      "description": "@round bus pakeistas bandymo skaičiumi",
+      "default": "Pereiti prie @round bandymo"
+    },
+    {
+      "label": "Tekstas mygtukui \"Pradėti iš naujo\"",
+      "default": "Pradėti iš naujo"
+    },
+    {
+      "label": "Tekstas mygtukui \"Rodyti santrauką\"",
+      "default": "Kitas"
+    },
+    {
+      "label": "Tekstas santraukos puslapio pavadinimui",
+      "default": "Santrauka"
+    },
+    {
+      "label": "Tekstas \"Kortelės, kurias pažymėjote kaip teisingas:\"",
+      "default": "Kortelės, kurias pažymėjote kaip teisingas:"
+    },
+    {
+      "label": "Tekstas \"Kortelės, kurias pažymėjote kaip klaidingas:\"",
+      "default": "Kortelės, kurias pažymėjote kaip klaidingas:"
+    },
+    {
+      "label": "Tekstas \"Neparodytos kortelės:\"",
+      "default": "Neparodytos kortelės:"
+    },
+    {
+      "label": "Tekstas \"Bendras rezultatas\"",
+      "default": "Bendras rezultatas"
+    },
+    {
+      "label": "Tekstas \"Baigtos kortelės\"",
+      "default": "Kortelės, kurias baigėte mokytis:"
+    },
+    {
+      "label": "Tekstas \"Baigti bandymai:\"",
+      "default": "Baigti bandymai:"
+    },
+    {
+      "label": "Pranešimas, kai visos kortelės išmoktos",
+      "description": "@cards bus pakeista visų kortelių telkinyje skaičiumi. @max bus pakeista didžiausiu įgūdžių lygiu.",
+      "default": "Puiku! Jūs pažymėjote visas @cards korteles kaip teisingas @max kartus iš eilės!"
+    },
+    {
+      "label": "Pažangos tekstas",
+      "description": "Galimi kintamieji yra @card ir @total.",
+      "default": "Kortelė @card iš @total"
+    },
+    {
+      "label": "Pavadinimas kortelės tekstui",
+      "description": "Naudojama pritaikymui pagalbinėse technologijose",
+      "default": "Priekinė kortelė"
+    },
+    {
+      "label": "Pavadinimas kortelei atgal",
+      "description": "Naudojama pritaikymui pagalbinėse technologijose",
+      "default": "Kortelė atgal"
+    },
+    {
+      "label": "Pavadinimas patarimo rodymo mygtukui",
+      "default": "Rodyti patarimą"
+    },
+    {
+      "label": "Pranešimas kai nepalaikomas garsas",
+      "default": "Jūsų naršyklė nepalaiko garso"
+    },
+    {
+      "label": "Patvirtinimas pradėti dialogą iš naujo",
+      "fields": [
+        {
+          "label": "Antraštės tekstas",
+          "default": "Pradėti iš naujo?"
+        },
+        {
+          "label": "Turinio tekstas",
+          "default": "Visa pažanga bus prarasta. Ar tikrai norite pradėti iš naujo?"
+        },
+        {
+          "label": "Atšaukimo mygtuko pavadinimas",
+          "default": "Atšaukti"
+        },
+        {
+          "label": "Patvirtinimo mygtuko pavadinimas",
+          "default": "Pradėti iš naujo"
+        }
+      ]
+    }
+  ]
+}

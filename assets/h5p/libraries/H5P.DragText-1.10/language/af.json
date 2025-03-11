@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Optional media to display above the question."
+        },
+        {
+          "label": "Disable image zooming"
+        }
+      ]
+    },
+    {
+      "label": "Taak beskrywing",
+      "description": "Beskryf hoe die gebruiker die taak moet oplos.",
+      "default": "Trek die woorde in die regte boksie in"
+    },
+    {
+      "label": "Teks",
+      "placeholder": "*Oslo* is die hoofstad van Noorweë, *Stockholm* is die hoofstad van Swede en *Kopenhagen* is die hoofstad van Denemarke. Alle stede is geleë in die *Skandinawiese: Noordelike deel van Europa* skiereiland.",
+      "important": {
+        "description": "<ul><li>Valbare woorde word bygevoeg met 'n sterretjie (*) voor en agter die korrekte woord/frase.</li><li>Jy kan 'n tekswenk byvoeg deur middel van 'n dubbelpunt (:) voor die wenk.</li><li>Vir elke leë area is daar net een regte woord.</li><li>Jy kan terugvoer byvoeg wat vertoon moet word wanneer 'n taak voltooi is. Gebruik '\\+' vir reg en '\\-' verkeerd vir verkeerde terugvoer.</li></ul>",
+        "example": "H5P inhoud kan geredigeer word deur middel van 'n *blaaier:Watter tipe program is Chrome?*. <br /> H5P inhoud is *interaktief\\+Reg! \\-Verkeerd, probeer weer!*"
+      }
+    },
+    {
+      "label": "Distractors",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Enter extra solutions that are wrong as distractors. Use the same asterisk (*) scheme as for the text."
+    },
+    {
+      "label": "Algemene terugvoer",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Verstek"
+            }
+          ],
+          "label": "Bepaal verstekterugvoer vir enige reeks tellings",
+          "description": "Kliek op die \"Voeg reeks by\" knoppie om so veel as moontlik reekse by te voeg. Byvoorbeeld: 0-20% Swak Punt, 21-91% Gemiddelde Punt, 91-100% Uitstekende Punt!",
+          "entity": "reeks",
+          "field": {
+            "fields": [
+              {
+                "label": "Telling reeks"
+              },
+              {},
+              {
+                "label": "Terugvoer vir gedefinieerde telling reeks",
+                "placeholder": "Vul die terugvoer in"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Teks vir \"Toets\" knoppie",
+      "default": "Toets"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "Teks vir \"Probeer weer\" knoppie",
+      "default": "Probeer weer"
+    },
+    {
+      "label": "Teks vir \"Wys antwoord\" knoppie",
+      "default": "Wys antwoord"
+    },
+    {
+      "label": "Genommerde valsone etiket",
+      "default": "Valsone @index.",
+      "description": "Etiket gebruik vir toeganklikheid, waar die spreekleser die indeks van 'n valsone sal voorlees. Veranderlike beskikbaar: @index"
+    },
+    {
+      "label": "Leë valsone etiket",
+      "default": "Valsone @index is leeg.",
+      "description": "Etiket gebruik vir toeganklikheid, waar die spreekleser sal lees dat die valsone leeg is"
+    },
+    {
+      "label": "Bevat valsone etiket",
+      "default": "Valsone @index bevat sleepbare @draggable.",
+      "description": "Etiket gebruik vir toeganklikheid, waar die spreekleser sal lees dat die valsone 'n sleepbare bevat"
+    },
+    {
+      "label": "Sleepbare element etiket",
+      "default": "@index van @count sleepbares.",
+      "description": "Etiket gebruik vir toeganklikheid, waar die spreekleser lees dat dit 'n sleepbare element is. Veranderlike beskikbaar: @index, @count"
+    },
+    {
+      "label": "Etiket vir die wys wenk knopppie",
+      "default": "Wys wenk",
+      "description": "Etiket wat gebruik word vir toeganklikheid, waar die spreekleser dit lees voordat die wenk uitgelees word"
+    },
+    {
+      "label": "Spreekleserteks vir regte antwoord",
+      "default": "Reg!"
+    },
+    {
+      "label": "Spreekleserteks vir verkeerde antwoord",
+      "default": "Verkeerd!"
+    },
+    {
+      "label": "Bevestigings dialoog titel dat gebruiker 'n valbare wil herstel",
+      "default": "Stel valbare terug"
+    },
+    {
+      "label": "Bevestigingsdialoog beskrywing dat 'n gebruiker 'n valbare wil herstel",
+      "default": "Is jy seker jy wil hierdie valsone herstel?"
+    },
+    {
+      "label": "Etiket vir toeganklikheid, waar die spreekleser aandui dat sleping begin het",
+      "default": "Valbare is gegryp."
+    },
+    {
+      "label": "Etiket vir toeganklikheid, waar die spreekleser aandui dat sleep gestaak word",
+      "default": "Sleep is gestaak."
+    },
+    {
+      "label": "Etiket vir toeganklikheid, waar die spreekleser aandui dat 'n teks die regte antwoord bevat",
+      "default": "Regte antwoord:"
+    },
+    {
+      "label": "Opskrif vir paneel met terugvoer vir regte/verkeerde antwoorde",
+      "default": "Terugvoer"
+    },
+    {
+      "label": "Gedragsinstellings.",
+      "description": "Hierdie keuses laat jou beheer hoe die onderskeie take uitgevoer moet word.",
+      "fields": [
+        {
+          "label": "Aktiveer \"Probeer weer\""
+        },
+        {
+          "label": "Aktiveer \"Wys antwoord\" knoppie"
+        },
+        {
+          "label": "Aktiveer \"Toets\" knoppie"
+        },
+        {
+          "label": "Onmiddelike terugvoer"
+        }
+      ]
+    },
+    {
+      "label": "Tekstuele tentoonstelling van die telkaart vir diegene wat 'n spreekleser gebruik",
+      "default": "Jy het :num uit :total punte gekry"
+    },
+    {
+      "label": "Hulptegnologieetiket vir \"Toets\" knoppie",
+      "default": "Toets die antwoorde. Die antwoorde sal as reg gemerk, verkeerd of onbeantwoord gemerk word."
+    },
+    {
+      "label": "Hulptegnologie beskrywing vir \"Wys Oplossing\" knoppie",
+      "default": "Wys die oplossing. Die taak sal gemerk word met die regte antwoord."
+    },
+    {
+      "label": "Hulptegnologieetiket vir \"Probeer weer\" knoppie",
+      "default": "Probeer die taak weer. Herstel alle antwoorde en begin die taak van nuuts af."
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "semantics": [
+    {
+      "widgets": [
+        {
+          "label": "Verstek"
+        }
+      ],
+      "label": "Kaarte",
+      "entity": "kaart",
+      "field": {
+        "label": "Kaart",
+        "fields": [
+          {
+            "label": "Beeld"
+          },
+          {
+            "label": "Alternatiewe teks vir prent",
+            "description": "Beskryf wat jy in die foto kan sien. Die teks word gelees deur teks-na-spraak instrumente wat vir visueel beperkte gebruikers gebruik word."
+          },
+          {
+            "label": "Klankgreep",
+            "description": "'n Opsionele klank wat speel wanneer die kaartjie omgedraai word."
+          },
+          {
+            "label": "Passende Prent",
+            "description": "'n Opsionele prent om dit daar teenoor te laat pas in stede daarvan om twee kaartjies met dieselfde prent te gebruik."
+          },
+          {
+            "label": "Alternatiewe teks vir die passende prent",
+            "description": "Beskryf wat jy in die foto kan sien. Die teks word gelees deur teks-na-spraak instrumente wat vir visueel beperkte gebruikers gebruik word."
+          },
+          {
+            "label": "Passende klankgreep",
+            "description": "'n Opsionele klank wat speel wanneer die tweede kaartjie omgedraai word."
+          },
+          {
+            "label": "Beskrywing",
+            "description": "'n Opsionele kort teks wat opspring sodra die twee passende kaartjies gevind is."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Gedragsinstellings",
+      "description": "Hierdie opsies laat jou beheer hoe die spelletjie werk.",
+      "fields": [
+        {
+          "label": "Plaas die kaartjies in 'n vierkant",
+          "description": "Sal probeer om die aantal kolomme en rye te pas wanneer jy die kaarte uitlê. Daarna sal die kaarte volgens die houer se grote aangepas word."
+        },
+        {
+          "label": "Aantal kaartjies om te gebruik",
+          "description": "As jy dit op 'n getal groter as 2 stel, sal die spelletjie willekeurige kaartjies uit die kaartlys kies."
+        },
+        {
+          "label": "Voeg 'n probeer weer knoppie by wanneer die spelletjie verby is"
+        }
+      ]
+    },
+    {
+      "label": "Aansig en gevoel",
+      "description": "Beheer die visuele van die spelletjie.",
+      "fields": [
+        {
+          "label": "Temakleur",
+          "description": "Kies 'n kleur om 'n tema vir jou kaartjie te skep."
+        },
+        {
+          "label": "Kaartjie agterkant",
+          "description": "Gebruik verstek agterkant vir jou kaartjies."
+        }
+      ]
+    },
+    {
+      "label": "Lokalisasie",
+      "fields": [
+        {
+          "label": "Kaartjie draaiteks",
+          "default": "Kaartjie draai"
+        },
+        {
+          "label": "Tyd bestee teks",
+          "default": "Tyd bestee"
+        },
+        {
+          "label": "Terugvoerteks",
+          "default": "Goeie werk!"
+        },
+        {
+          "label": "Probeer weer knoppie teks",
+          "default": "Probeer weer?"
+        },
+        {
+          "label": "Maak toe knoppie etiket",
+          "default": "Maak toe"
+        },
+        {
+          "label": "Spelletjie etiket",
+          "default": "Geheue spelletjie. Vind die passend kaartjies."
+        },
+        {
+          "label": "Game instructions",
+          "default": "Use arrow keys left and right to navigate cards. Use space or enter key to turn card."
+        },
+        {
+          "label": "Speletjie verby etiket",
+          "default": "Al die kaartjies is gevind."
+        },
+        {
+          "label": "Kaart indeks etiket",
+          "description": "%num and %total are placeholders and will be replaced with the respective values for the card.",
+          "default": "Kaartjie %num uit %total:"
+        },
+        {
+          "label": "Onaangeraakte kaartjie etiket",
+          "default": "Onaangeraak. Click to turn."
+        },
+        {
+          "label": "Card turned label",
+          "default": "Turned."
+        },
+        {
+          "label": "Kaartjie gepas etiket",
+          "default": "Pasmaat gevind."
+        },
+        {
+          "label": "Card matched announcement",
+          "default": "Your cards match!"
+        },
+        {
+          "label": "Card not matched announcement",
+          "default": "Your chosen cards do not match. Turn other cards to try again."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Ziel",
+      "fields": [
+        {
+          "label": "Typ",
+          "options": [
+            {
+              "label": "Stelle im Video"
+            },
+            {
+              "label": "Andere Seite (URL)"
+            }
+          ]
+        },
+        {
+          "label": "Gehe zu",
+          "description": "Die Stelle, zu der das Video springt, wenn der Nutzer den Hotspot anklickt. Die Zeitangabe muss im Format M:SS sein."
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "Protokoll",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(relativer Pfad auf aktueller Domain)"
+                },
+                {
+                  "label": "anderes"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Darstellung",
+      "fields": [
+        {
+          "label": "Form",
+          "options": [
+            {
+              "label": "Rechteck"
+            },
+            {
+              "label": "Kreis"
+            },
+            {
+              "label": "Abgerundetes Rechteck"
+            }
+          ]
+        },
+        {
+          "label": "Hintergrundfarbe des Hotspots"
+        },
+        {
+          "label": "Hand-Cursor verwenden"
+        },
+        {
+          "label": "Blinkenden Effekt verwenden",
+          "description": "Hinweis: Dieser Effekt ist im Editor immer aktiv, damit transparente Hotspots auffindbar sind"
+        }
+      ]
+    },
+    {
+      "label": "Texte",
+      "fields": [
+        {
+          "label": "Alternativtext",
+          "description": "Beschreibt inhaltlich, was sich unter dem Hotspot befindet. Für Vorlesewerkzeuge genutzt.",
+          "placeholder": "Ein Apfel auf einem Tisch"
+        },
+        {
+          "label": "Beschriftung des Hotspots"
+        },
+        {
+          "label": "Beschriftung anzeigen"
+        },
+        {
+          "label": "Beschriftungsfarbe"
+        }
+      ]
+    }
+  ]
+}

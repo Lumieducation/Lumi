@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Tipo de gráfico",
+      "options": [
+        {
+          "label": "Gráfico de bolo"
+        },
+        {
+          "label": "Gráfico de barras"
+        }
+      ]
+    },
+    {
+      "label": "Elementos de datos",
+      "entity": "opción",
+      "field": {
+        "label": "Elemento de datos",
+        "fields": [
+          {
+            "label": "Nome"
+          },
+          {
+            "label": "Valor"
+          },
+          {
+            "label": "Cor"
+          },
+          {
+            "label": "Cor da letra"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Texto lido polo lector de pantalla definindo a figura como gráfico.",
+      "default": "Gráfico"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "semantics": [
+    {
+      "label": "Gaitu liburuaren portada",
+      "description": "Liburuan sartu aurretik bere informazioa erakusten duen portada bat"
+    },
+    {
+      "label": "Portadako orria",
+      "fields": [
+        {
+          "label": "Portadaren deskribapena",
+          "description": "Testu hau zure liburuaren deskribapena izango da."
+        },
+        {
+          "label": "Azalaren multimedia",
+          "description": "Azalean bistaratzeko aukerako multimediak."
+        }
+      ]
+    },
+    {
+      "label": "Kapituluak",
+      "entity": "Kapitulua",
+      "widgets": [
+        {
+          "label": "Lehenetsitakoa"
+        }
+      ],
+      "field": {
+        "label": "Elementua",
+        "fields": [
+          {
+            "label": "Kapitulua"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Portaeren ezarpenak",
+      "fields": [
+        {
+          "label": "Oinarrizko kolorea",
+          "description": "Ezarri liburuaren kolore-eskema orokorra definituko duen oinarrizko kolorea. Mesedez, ziurtatu nahikoa kontraste altua."
+        },
+        {
+          "label": "Erakutsi eduki-taula modu lehenetsian",
+          "description": "Gaituz gero eduki-taula erakutsiko da liburua irekitzean"
+        },
+        {
+          "label": "Erakutsi aurrerapenaren adierazleak",
+          "description": "Gaituz gero orri bakoitzean erabiltzaileari orri amaitu duen edo ez erakusten duten adierazleak egongo dira."
+        },
+        {
+          "label": "Gaitu aurrerapen autommatikoa",
+          "description": "Gaituz gero zereginik gabeko orri bat ikusitakoan osatutzat emango da. Zereginak dituen orri bat zeregin guztiak osatzean osatuko da. Desgaituz gero orri bakoitzaren amaieran botoi bat agertuko da erabiltzaileak orria amaitzean klik egin dezan."
+        },
+        {
+          "label": "Erakutsi laburpena",
+          "description": "Gaituz gero erabiltzaileak laburpen bat ikusi eta aurrerapena/erantzunako bidali ditzake"
+        },
+        {
+          "label": "Gaitu \"Berrabiarazi\" botoia",
+          "description": "Gaituta dagoenean, erabiltzaileak laburpen orrian berrabiarazi dezake."
+        }
+      ]
+    },
+    {
+      "label": "\"Read\"-erako itzulpena",
+      "default": "Irakurri"
+    },
+    {
+      "label": "\"Display 'Table of contents'\"-erako itzulpena",
+      "default": "Erakutsi 'Eduki-taulak'"
+    },
+    {
+      "label": "\"Hide 'Table of contents'\"-erako itzulpena",
+      "default": "Ezkutatu 'Eduki-taulak'"
+    },
+    {
+      "label": "\"Next page\"-erako itzulpena",
+      "default": "Hurrengo orria"
+    },
+    {
+      "label": "\"Previous page\"-erako itzulpena",
+      "default": "Aurreko orria"
+    },
+    {
+      "label": "\"Page completed!\"-erako itzulpena",
+      "default": "Kapitulua osatu duzu!"
+    },
+    {
+      "label": "\"@pages of @total completed\"-erako itzulpena (@pages eta @total benetako balioekin ordezkatuko dira)",
+      "default": "@total-(e)tik @pages osatu dituzu"
+    },
+    {
+      "label": "\"Incomplete page\"-erako itzulpena",
+      "default": "Osatu gabeko kapitulua"
+    },
+    {
+      "label": "\"Navigate to the top\"-erako itzulpena",
+      "default": "Nabigatu goraino"
+    },
+    {
+      "label": "\"I have finished this page\"-erako itzulpena",
+      "default": "Orri hau amaitu dut"
+    },
+    {
+      "label": "Pantaila-osoan botoiaren etiketa",
+      "default": "Pantaila-osoan"
+    },
+    {
+      "label": "Irten pantaila-osotik botoiaren etiketa",
+      "default": "Irten pantaila-osotik"
+    },
+    {
+      "label": "Liburuko orrien aurrerapena",
+      "description": "\"@count\" orriaren zenbakiarekin ordezkatuko da, eta \"@total\" guztirako orri kopuruarekin",
+      "default": "@count orri guztirako @total orrietatik"
+    },
+    {
+      "label": "Interakzioaren aurrerapena",
+      "description": "\"@count\" interakzioaren zenbakiarekin ordezkatuko da, eta \"@total\" guztirako interazkio kopuruarekin",
+      "default": "@count guztirako @total interakzioetatik"
+    },
+    {
+      "label": "\"Submit report\" testuaren itzulpena",
+      "default": "Bidali Txostena"
+    },
+    {
+      "label": "\"berrabiarazi\" botoiaren etiketa",
+      "default": "Berrabiarazi"
+    },
+    {
+      "label": "Laburpenaren goiburua",
+      "default": "Laburpena"
+    },
+    {
+      "label": "\"All interactions\" testuaren itzulpena",
+      "default": "Interakzio guztiak"
+    },
+    {
+      "label": "\"Unanswered interactions\" testuaren itzulpena",
+      "default": "Erantzun gabeko interakzioak"
+    },
+    {
+      "label": "Emaitza",
+      "description": "\"@score\" une horretako emaitzarekin ordezkatuko da, eta \"@maxscore\" lortu daitekeen gehienezko emaitzarekin",
+      "default": "@score / @maxscore"
+    },
+    {
+      "label": "Orriko interakzioen osaketa",
+      "description": "\"@left\" geratzen diren interakzioekin ordezkatuko da, eta \"@max\" orriko guztirako interakzio kopuruarekin",
+      "default": "@left geratzen dira orriko @max interakzioetatik"
+    },
+    {
+      "label": "\"No interactions\" testuaren itzulpena",
+      "default": "Interakziorik ez"
+    },
+    {
+      "label": "\"Score\" testuaren itzulpena",
+      "default": "Emaitza"
+    },
+    {
+      "label": "\"Laburpena &amp; bidali\" botoiaren etiketa",
+      "default": "Laburpena &amp; bidali"
+    },
+    {
+      "label": "\"You have not interacted with any pages.\" testuaren itzulpena",
+      "default": "Ez duzu inongo orrirekin interakziorik izan."
+    },
+    {
+      "label": "\"You have to interact with at least one page before you can see the summary.\" testuaren itzulpena",
+      "default": "Gutxienez orri batekin interakzioa izan behar duzu laburpena ikusi aurretik."
+    },
+    {
+      "label": "\"Your answers are submitted for review!\" testuaren itzulpena",
+      "default": "Zure erantzunak berrikusiak izan daitezen bidali dira!"
+    },
+    {
+      "label": "Aurrerapenaren laburpenaren etiketa",
+      "default": "Liburuaren aurrerapena"
+    },
+    {
+      "label": "Interakzioaren aurrerapenaren etiketa",
+      "default": "Interakzioaren aurrerapena"
+    },
+    {
+      "label": "Emaitza guztiraren etiketa",
+      "default": "Emaitza guztira"
+    },
+    {
+      "label": "Eskuragarritasun testuak",
+      "fields": [
+        {
+          "label": "Orri-aurrerapen ordezko testuala",
+          "description": "Orriaren aurrerapen bisualaren ordezko testua. @page eta @total aldagaiak daude eskuragarri.",
+          "default": "@total-(e)tik @page. orria."
+        },
+        {
+          "label": "Nabigazio-menua zabaldu edo tolesteko etiketa",
+          "default": "Zabaldu/Tolestu nabigazio-menua"
+        }
+      ]
+    }
+  ]
+}

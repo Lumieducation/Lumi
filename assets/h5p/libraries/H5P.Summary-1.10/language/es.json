@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Texto de introducción",
+      "default": "Elige la oración correcta.",
+      "description": "Se mostrará encima de la tarea de resumen."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Por defecto"
+        },
+        {
+          "label": "Textual"
+        }
+      ],
+      "label": "Resumen",
+      "entity": "oraciones",
+      "field": {
+        "label": "Conjunto de oraciones",
+        "fields": [
+          {
+            "label": "Lista de oraciones para el resumen: la primera es la correcta.",
+            "entity": "oración",
+            "field": {
+              "label": "Oración"
+            }
+          },
+          {
+            "label": "Pista",
+            "fields": [
+              {
+                "label": "Texto de la pista"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Retroalimentación Global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Por defecto"
+            }
+          ],
+          "label": "Definir retroalimentación personalizada para cualquier rango de puntuación",
+          "description": "Haz clic en el botón \"Añadir rango\" para añadir los rangos que necesites. Ejemplo: 0-20% Mala puntuación, 21-91% Puntuación Media, 91-100% ¡Puntuación Estupenda!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango de Puntuación"
+              },
+              {},
+              {
+                "label": "Realimentación para el rango de puntuación definido",
+                "placeholder": "Escribe tu retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Texto mostrado delante del número de oraciones resueltas en la tarea de resumen.",
+      "default": "Progreso:",
+      "description": "Se mostrará encima de las oraciones. Ejemplo: 'Progreso: 2/5'"
+    },
+    {
+      "label": "Texto mostrado delante de las oraciones incorrectas seleccionadas en la tarea de resumen.",
+      "default": "Respuestas incorrectas:",
+      "description": "Se mostrará encima de las oraciones. Ejemplo: 'Respuestas incorrectas: 4'"
+    },
+    {
+      "label": "Encabezado de retroalimentación del resumen",
+      "default": "Tu resultado",
+      "description": "Se mostrará encima de la retroalimentación del resumen."
+    },
+    {
+      "label": "Texto para lector de pantalla para respuesta correcta",
+      "default": "Correcta."
+    },
+    {
+      "label": "Texto para lector de pantalla para respuesta incorrecta",
+      "default": "¡Incorrecto! Por favor inténtalo otra vez."
+    },
+    {
+      "label": "Texto para lector de pantalla para respuesta incorrecta",
+      "default": "Incorrecto"
+    },
+    {
+      "label": "Lista de etiqueta de respuestas correctas",
+      "default": "Respuestas correctas."
+    },
+    {
+      "label": "Etiqueta para el botón de mostrar pista",
+      "default": "Mostrar pista"
+    },
+    {
+      "label": "Representación textual de la barra de puntuación cuando se usa un lector de pantalla",
+      "description": ":num y :total son palabras clave especiales que se actualizan programáticamente",
+      "default": "Has conseguido :num de un total de :total puntos"
+    },
+    {
+      "label": "Texto utilizado por los lectores de pantalla para comunicar el progreso",
+      "description": ":num y :total son palabras clave especiales actualizadas programáticamente",
+      "default": "Progreso :num de :total"
+    }
+  ]
+}

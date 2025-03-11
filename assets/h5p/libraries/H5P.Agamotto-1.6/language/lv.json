@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "description": "Virsraksts, kuru vēlaties rādīt virs attēla",
+      "label": "Virsraksts",
+      "placeholder": "Šeit variet pievienot papildu virsrakstu."
+    },
+    {
+      "label": "Vienumi",
+      "entity": "vienums",
+      "widgets": [
+        {
+          "label": "Pēc noklusējuma"
+        }
+      ],
+      "field": {
+        "label": "Vienums",
+        "fields": [
+          {
+            "label": "Attēls"
+          },
+          {
+            "label": "Etiķete",
+            "description": "Neobligāta etiķete ķeksītim. Lūdzu, pārliecinieties, ka tā nav pārāk gara, pretējā gadījumā tā tiks paslēpta."
+          },
+          {
+            "label": "Apraksts",
+            "placeholder": "Mana attēla apraksts...",
+            "description": "Neobligāts attēla apraksts"
+          },
+          {
+            "label": "Audio",
+            "description": "Neobligāts audio, kas tiek atskaņots, kad tiek parādīts attēls."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Uzvedības iestatījumi",
+      "fields": [
+        {
+          "label": "Sākuma attēls",
+          "description": "Iestatiet numuru attēlam, ar kuru sākt."
+        },
+        {
+          "label": "Nofiksēt slīdni",
+          "description": "Ja aktivizēts, slīdnis fiksēsies attēla pozīcijā."
+        },
+        {
+          "label": "Parādīt ķeksīšus",
+          "description": "Ja aktivizēts, slīdjoslā katram attēlam tiks parādīts ķeksītis."
+        },
+        {
+          "label": "Parādīt etiķetes",
+          "description": "Ja aktivizēts, slīdjoslā ķeksīšu vietā/papildus ķeksīšiem tiks parādīta etiķete."
+        },
+        {
+          "label": "Caurspīdīguma aizstāšanas krāsa",
+          "description": "Iestatiet krāsu, kas aizstās attēlu caurspīdīgās zonas."
+        },
+        {
+          "label": "Attēla laukums pilnekrāna režīmā",
+          "description": "Ja papildus attēliem jums ir arī apraksti, iestatiet, cik daudz vietas attēliem ir jāizmanto pilnekrāna režīmā."
+        }
+      ],
+      "description": "Šie parametri ļaus jums kontrolēt uzdevuma uzvedību."
+    },
+    {
+      "label": "Ekrāna lasītājs",
+      "fields": [
+        {
+          "label": "Attēls",
+          "default": "Attēls"
+        },
+        {
+          "label": "Attēla slīdnis",
+          "default": "Attēla slīdnis"
+        },
+        {
+          "label": "Skaņas izslēgšanas nosaukums",
+          "default": "Izslēgt skaņu, pašlaik skaņa ieslēgta"
+        },
+        {
+          "label": "Skaņas ieslēgšanas nosaukums",
+          "default": "Ieslēgt skaņu, pašlaik skaņa izslēgta"
+        },
+        {
+          "label": "Pilnekrāna pogas nosaukums (ieslēgšanai)",
+          "default": "Ieiet pilnekrāna režīmā"
+        },
+        {
+          "label": "Pilnekrāna pogas nosaukums (iziešanai)",
+          "default": "Iziet no pilnekrāna režīma"
+        }
+      ]
+    }
+  ]
+}

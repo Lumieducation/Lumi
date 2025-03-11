@@ -1,0 +1,295 @@
+{
+  "semantics": [
+    {
+      "label": "Tijdlijn",
+      "fields": [
+        {
+          "label": "Opschrift",
+          "description": "Hoofdopschrift van de tijdlijn komt hier (eerste pagina)"
+        },
+        {
+          "label": "Hoofdtekst",
+          "description": "Hoofdtekst van de tijdlijn komt hier (eerste pagina)."
+        },
+        {
+          "label": "Standaard zoomniveau",
+          "description": "Dit zal het standaard zoomniveau optimaliseren. Getal staat gelijk aan het aantal keer indrukken van de in- of uitzoomknop. Een negatief getal zoomt uit. Standaard is 0"
+        },
+        {
+          "label": "Achtergrondafbeelding",
+          "description": "Toon een afbeelding als achtergrond."
+        },
+        {
+          "label": "Hoogte",
+          "description": "De hoogte in pixels"
+        },
+        {
+          "label": "Middel",
+          "description": "Hier kan je middelen aan je tijdlijn toevoegen \"voorpagina\"",
+          "fields": [
+            {
+              "label": "Media",
+              "description": "Link naar media URL (Twitter, Youtube, Flickr, Vimeo, Google Maps and SoundCloud worden ondersteund)"
+            },
+            {
+              "label": "Bronvermelding",
+              "description": "Bronvermelding van de media"
+            },
+            {
+              "label": "Ondertitel",
+              "description": "Ondertitelbeschrijving komt hier"
+            }
+          ]
+        },
+        {
+          "label": "Datums",
+          "description": "Voeg datums toe aan je tijdlijn!",
+          "field": {
+            "label": "Datum",
+            "description": "Datum",
+            "fields": [
+              {
+                "label": "Startdatum",
+                "description": "YYYY,MM,DD (YYYY is minimaal vereist)"
+              },
+              {
+                "label": "Einddatum",
+                "description": "YYYY,MM,DD (YYYY is minimaal vereist)"
+              },
+              {
+                "label": "Opschrift",
+                "description": "Opschrift voor de datuminvoer"
+              },
+              {
+                "label": "Hoofdtekst",
+                "description": "Hoofdtekst voor de datuminvoer"
+              },
+              {
+                "label": "Labels",
+                "description": "Labels invoeren (categorieën)"
+              },
+              {
+                "label": "Middel",
+                "fields": [
+                  {
+                    "label": "Media",
+                    "description": "URL naar de media (Twitter, YouTube, Flickr, Vimeo, Wikipedia, Google Maps en SoundCloud worden ondersteund)."
+                  },
+                  {
+                    "label": "Miniatuur",
+                    "description": "Voeg een miniatuur toe indien nodig, 32x32"
+                  },
+                  {
+                    "label": "Bronvermelding",
+                    "description": "Bronvermelding voor de media"
+                  },
+                  {
+                    "label": "Ondertitel",
+                    "description": "Tekst van ondertitel"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Perioden",
+          "description": "Voeg een periode toe aan je tijdlijn",
+          "field": {
+            "label": "Periode",
+            "fields": [
+              {
+                "label": "Startdatum",
+                "description": "YYYY,MM,DD (YYYY is minimaal vereist)"
+              },
+              {
+                "label": "Einddatum",
+                "description": "YYYY,MM,DD (YYYY is minimaal vereist)"
+              },
+              {
+                "label": "Opschrift",
+                "description": "Periode opschrift"
+              },
+              {
+                "label": "Tekst",
+                "description": "Hoofdtekst voor periode"
+              },
+              {
+                "label": "Label",
+                "description": "Labels voor perioden (categorieën)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Taal",
+          "description": "Taal van de gebruikersinterface",
+          "options": [
+            {
+              "label": "Afrikaans"
+            },
+            {
+              "label": "Arabisch"
+            },
+            {
+              "label": "Armeens"
+            },
+            {
+              "label": "Baskisch"
+            },
+            {
+              "label": "Bulgaars"
+            },
+            {
+              "label": "Catalaans"
+            },
+            {
+              "label": "Chinees"
+            },
+            {
+              "label": "Kroatisch / Hrvatski"
+            },
+            {
+              "label": "Tsjechisch"
+            },
+            {
+              "label": "Deens"
+            },
+            {
+              "label": "Nederlands"
+            },
+            {
+              "label": "Engels"
+            },
+            {
+              "label": "Engels (24-uurs tijd opmaak)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Ests"
+            },
+            {
+              "label": "Faeröer"
+            },
+            {
+              "label": "Farsi"
+            },
+            {
+              "label": "Fins"
+            },
+            {
+              "label": "Frans"
+            },
+            {
+              "label": "Galicisch"
+            },
+            {
+              "label": "Georgisch"
+            },
+            {
+              "label": "Duits"
+            },
+            {
+              "label": "Grieks"
+            },
+            {
+              "label": "Hebreeuws"
+            },
+            {
+              "label": "Hongaars"
+            },
+            {
+              "label": "IJslands"
+            },
+            {
+              "label": "Indonesisch"
+            },
+            {
+              "label": "Italiaans"
+            },
+            {
+              "label": "Japans"
+            },
+            {
+              "label": "Koreaans"
+            },
+            {
+              "label": "Lets"
+            },
+            {
+              "label": "Litouws"
+            },
+            {
+              "label": "Luxemburgs"
+            },
+            {
+              "label": "Maleis"
+            },
+            {
+              "label": "Nepalees"
+            },
+            {
+              "label": "Noors"
+            },
+            {
+              "label": "Pools"
+            },
+            {
+              "label": "Portugees"
+            },
+            {
+              "label": "Portugees (Brazilië)"
+            },
+            {
+              "label": "Roemeens"
+            },
+            {
+              "label": "Russisch"
+            },
+            {
+              "label": "Servisch - Cyrillisch"
+            },
+            {
+              "label": "Servisch - Latijn"
+            },
+            {
+              "label": "Singalees"
+            },
+            {
+              "label": "Slowaaks"
+            },
+            {
+              "label": "Sloveens"
+            },
+            {
+              "label": "Spaans"
+            },
+            {
+              "label": "Zweeds"
+            },
+            {
+              "label": "Tagalog"
+            },
+            {
+              "label": "Tamil"
+            },
+            {
+              "label": "Taiwanees"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Turks"
+            },
+            {
+              "label": "Oekraïens"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

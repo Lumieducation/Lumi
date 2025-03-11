@@ -1,0 +1,138 @@
+{
+  "semantics": [
+    {
+      "widgets": [
+        {
+          "label": "Domyślny"
+        }
+      ],
+      "label": "Karty",
+      "entity": "karta",
+      "field": {
+        "label": "Karta",
+        "fields": [
+          {
+            "label": "Obraz"
+          },
+          {
+            "label": "Tekst alternatywny dla Obrazu",
+            "description": "Opisz, co widać na zdjęciu. Tekst jest odczytywany przez narzędzia zamieniające tekst na mowę potrzebne użytkownikom niedowidzącym."
+          },
+          {
+            "label": "Ścieżka dźwiękowa",
+            "description": "Opcjonalny dźwięk odtwarzany po obróceniu karty."
+          },
+          {
+            "label": "Pasujący obraz",
+            "description": "Opcjonalny obraz do dopasowania zamiast dwóch kart z tym samym obrazem."
+          },
+          {
+            "label": "Tekst alternatywny dla Pasującego obrazu",
+            "description": "Opisz, co widać na zdjęciu. Tekst jest odczytywany przez narzędzia zamieniające tekst na mowę potrzebne użytkownikom niedowidzącym."
+          },
+          {
+            "label": "Dopasowana ścieżka dźwiękowa",
+            "description": "Opcjonalny dźwięk odtwarzany po odwróceniu drugiej karty."
+          },
+          {
+            "label": "Opis",
+            "description": "Opcjonalny krótki tekst, który pojawi się po znalezieniu dwóch pasujących kart."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Ustawienia zachowania",
+      "description": "Te opcje pozwolą Ci kontrolować zachowania w grze.",
+      "fields": [
+        {
+          "label": "Ułóż karty w kwadracie",
+          "description": "Podczas układania kart spróbuje dopasować liczbę kolumn i wierszy. Następnie karty zostaną przeskalowane, aby zmieściły się w pojemniku."
+        },
+        {
+          "label": "Liczba kart do użycia",
+          "description": "Ustawienie tego na liczbę większą niż 2 sprawi, że gra wybierze losowe karty z listy kart."
+        },
+        {
+          "label": "Dodaj przycisk do ponawiania próby po zakończeniu gry"
+        }
+      ]
+    },
+    {
+      "label": "Popatrz i poczuj",
+      "description": "Kontroluj efekty wizualne gry.",
+      "fields": [
+        {
+          "label": "Kolor motywu",
+          "description": "Wybierz kolor, aby stworzyć motyw do swojej gry w karty."
+        },
+        {
+          "label": "Rewers karty",
+          "description": "Użyj niestandardowego rewersu dla swoich kart."
+        }
+      ]
+    },
+    {
+      "label": "Tłumaczenie",
+      "fields": [
+        {
+          "label": "Tekst obrotu karty",
+          "default": "Karta obraca się"
+        },
+        {
+          "label": "Tekst upływu czasu",
+          "default": "Czas spędzony"
+        },
+        {
+          "label": "Tekst odpowiedzi",
+          "default": "Dobra robota!"
+        },
+        {
+          "label": "Tekst przycisku Spróbuj ponownie",
+          "default": "Spróbujesz ponownie?"
+        },
+        {
+          "label": "Etykieta przycisku Zamknij",
+          "default": "Zamknij"
+        },
+        {
+          "label": "Etykieta gry",
+          "default": "Gra Memory. Znajdź pasujące karty."
+        },
+        {
+          "label": "Game instructions",
+          "default": "Use arrow keys left and right to navigate cards. Use space or enter key to turn card."
+        },
+        {
+          "label": "Etykieta ukończona gra",
+          "default": "Wszystkie karty zostały znalezione."
+        },
+        {
+          "label": "Etykieta indeksująca karty",
+          "description": "%num and %total are placeholders and will be replaced with the respective values for the card.",
+          "default": "Karta %num z %total:"
+        },
+        {
+          "label": "Etykieta nie odwróconej karty",
+          "default": "Nie odwrócona. Click to turn."
+        },
+        {
+          "label": "Card turned label",
+          "default": "Turned."
+        },
+        {
+          "label": "Etykieta pasującej karty",
+          "default": "Znaleziono dopasowanie."
+        },
+        {
+          "label": "Card matched announcement",
+          "default": "Your cards match!"
+        },
+        {
+          "label": "Card not matched announcement",
+          "default": "Your chosen cards do not match. Turn other cards to try again."
+        }
+      ]
+    }
+  ]
+}

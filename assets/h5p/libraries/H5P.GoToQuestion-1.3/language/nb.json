@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Spørsmålstekst",
+      "description": "Spørsmålet som brukeren blir stilt."
+    },
+    {
+      "label": "Alternativer",
+      "entity": "alternativ",
+      "field": {
+        "fields": [
+          {
+            "label": "Alternativ tekst",
+            "description": "Etiketten som vil vises på alternativ knappen."
+          },
+          {
+            "label": "Gå til",
+            "description": "Tidskoden brukeren vil flyttes til når knappen er trykket. Tidskoden må være på formatet M:SS."
+          },
+          {
+            "label": "Valgt tekst",
+            "description": "En valgfri bekreftelsestekst som vises etter brukeren har gjort et valg."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Tekst på fortsett-knapp",
+      "default": "Fortsett"
+    }
+  ]
+}

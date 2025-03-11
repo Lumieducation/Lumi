@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Urejevalnik",
+      "fields": [
+        {
+          "label": "Prizori",
+          "entity": "Prizor",
+          "field": {
+            "fields": [
+              {
+                "label": "Tip prizora",
+                "options": [
+                  {
+                    "label": "360 slika"
+                  },
+                  {
+                    "label": "Statična slika"
+                  }
+                ]
+              },
+              {
+                "label": "Prikaži gumb \"Nazaj\"",
+                "description": "Udeleženec se z gumbom vrne na prejšnji prizor."
+              },
+              {},
+              {
+                "label": "Naslov prizora",
+                "description": "Omogoča razlikovanje in lažjo navigacijo med prizori."
+              },
+              {
+                "label": "Ozadje prizora"
+              },
+              {
+                "label": "Opis prizora",
+                "description": "Besedilo udeležencem opiše prizor."
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Oznaka",
+                      "description": "Oznaka ne bo prikazana, če polje ostane prazno. V tem primeru bo bralnik zaslona uporabil naslov."
+                    },
+                    {
+                      "label": "Nastavitve oznake",
+                      "fields": [
+                        {
+                          "label": "Položaj oznake",
+                          "description": "Izbor položaja za poravnavo oznake",
+                          "options": [
+                            {
+                              "label": "Uporabi Nastavitve interakcije"
+                            },
+                            {
+                              "label": "Desno"
+                            },
+                            {
+                              "label": "Levo"
+                            },
+                            {
+                              "label": "Zgoraj"
+                            },
+                            {
+                              "label": "Spodaj"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Prikaži oznako",
+                          "description": "Skrite oznake se pokažejo ob preletu miškinega kazalca.",
+                          "options": [
+                            {
+                              "label": "Uporabi Nastavitve interakcije"
+                            },
+                            {
+                              "label": "Prikaži"
+                            },
+                            {
+                              "label": "Skrij"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Vrsta gumba",
+                "description": "Nastavitev določi podobo gumba. Za statične prizore, ki ne vodijo naprej, je priporočena izbira \"Več informacij\".",
+                "options": [
+                  {
+                    "label": "Nov prizor (puščica)"
+                  },
+                  {
+                    "label": "Več informacij (plus)"
+                  }
+                ]
+              },
+              {
+                "label": "Avdioposnetek",
+                "description": "Posnetek naj bo značilen za ta prizor."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Avdioposnetek"
+        }
+      ]
+    },
+    {
+      "label": "Nastavitve interakcije",
+      "description": "Nastavitve omogočajo nadzor nad interakcijo aktivnosti za udeležence.",
+      "fields": [
+        {
+          "label": "Splošen avdioposnetek",
+          "description": "Posnetek se predvaja pri vseh prizorih (privzeto). Značilni posnetki posameznih prizorov se lahko dodajajo pri nastavitvah teh prizorov."
+        },
+        {
+          "label": "Kakovost prikazovanja prizorov",
+          "description": "Izbira velikosti slike v prizorih in posledično njene kakovosti. Upoštevati je potrebno, da se slike višje kakovosti nalagajo dlje časa.",
+          "options": [
+            {
+              "label": "Visoka kakovost (128x128)"
+            },
+            {
+              "label": "Srednja kakovost (64x64)"
+            },
+            {
+              "label": "Nizka kakovost (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Nastavitve oznake",
+          "fields": [
+            {
+              "label": "Položaj oznake",
+              "description": "Privzeta nastavitev položaja za poravnavo oznake. Položaj preglasijo nastavitve posamezne interakcije",
+              "options": [
+                {
+                  "label": "Desno"
+                },
+                {
+                  "label": "Levo"
+                },
+                {
+                  "label": "Zgoraj"
+                },
+                {
+                  "label": "Spodaj"
+                }
+              ]
+            },
+            {
+              "label": "Prikaži oznako",
+              "description": "Skrite oznake se pokažejo ob preletu miškinega kazalca."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Določitev",
+      "fields": [
+        {
+          "label": "Besedilo za poimenovanje tipa vsebine",
+          "default": "Virtualen ogled"
+        },
+        {
+          "label": "Besedilo gumba za predvajanje zvočnega posnetka",
+          "default": "Predvajaj zvok"
+        },
+        {
+          "label": "Besedilo gumba za premor predvajanja zvočnega posnetka",
+          "default": "Zaustavi predvajanje"
+        },
+        {
+          "label": "Naslov okna z opisom prizora",
+          "default": "Opis prizora"
+        },
+        {
+          "label": "Besedilo gumba za ponastavitev kamere",
+          "default": "Ponastavi kamero"
+        },
+        {
+          "label": "Besedilo gumba za dodajanje opisa",
+          "default": "Dodaj opis"
+        },
+        {
+          "label": "Besedilo gumba za zapiranje opisa",
+          "default": "Zapri opis"
+        },
+        {
+          "label": "Besedilo gumba za razširitev prikaza",
+          "default": "Razširi prikaz"
+        },
+        {
+          "label": "Besedilo za nalaganje slike ozadja v načinu 360",
+          "default": "Nalagam sliko ozadja ..."
+        },
+        {
+          "label": "Besedilo za zaslon brez vsebine",
+          "default": "Ni vsebine"
+        }
+      ]
+    }
+  ]
+}

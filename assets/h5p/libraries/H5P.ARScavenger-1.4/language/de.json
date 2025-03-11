@@ -1,0 +1,300 @@
+{
+  "semantics": [
+    {
+      "label": "Zeige Startbildschirm",
+      "description": "Wenn die Option gewählt ist, wird der Startbildschirm zu Beginn angezeigt."
+    },
+    {
+      "label": "Startbildschirm",
+      "fields": [
+        {
+          "label": "Einleitung",
+          "placeholder": "Willkommen zu ..."
+        },
+        {
+          "label": "Bild für den Titelbildschirm"
+        }
+      ]
+    },
+    {
+      "label": "Marker",
+      "fields": [
+        {
+          "label": "Marker",
+          "widgets": [
+            {
+              "label": "Vorgabe"
+            }
+          ],
+          "entity": "Marker",
+          "field": {
+            "label": "Marker",
+            "fields": [
+              {
+                "label": "Markerbild (Original)",
+                "description": "Lade das Bild hoch, aus dem du einen Marker erstellen möchtest. Es sollte quadratisch sein, sonst wird es beschnitten. Bedenke, dass du für jede Interaktion einen neuen Marker brauchst.",
+                "importantDescription": {
+                  "description": "Bitte beachte einige der Kriterien für gute Markerbilder:<ul><li>Hoher Kontrast, idealerweise schwarz und weiß</li><li>Asymmetrie</li><li>Intern haben Marker eine Auflösung von 16 mal 16 Pixeln, und Bilder in höherer Auflösung können die Erkennungsrate verschlechtern</li><li>Einzelne Buchstaben oder kurze Wörter erzielen gute Ergebnisse</li></ul>"
+                }
+              },
+              {
+                "label": "Markerbild (Muster)",
+                "description": "Lade dieses Bild herunter, um es als Marker auf dem Bildschirm oder Papier zu benutzen."
+              },
+              {
+                "label": "Aktionstyp",
+                "description": "Aktion, die ausgelöst werden soll, wenn der Marker gefunden wird.",
+                "options": [
+                  {
+                    "label": "H5P-Interaktion"
+                  },
+                  {
+                    "label": "3D-Modell-Einblendung"
+                  }
+                ]
+              },
+              {
+                "label": "Interaktion",
+                "fields": [
+                  {
+                    "label": "Interaktion"
+                  },
+                  {
+                    "label": "Platzhalter"
+                  }
+                ]
+              },
+              {
+                "label": "3D-Modell",
+                "fields": [
+                  {
+                    "label": "3D-Model-Datei",
+                    "description": "Lade eine glTF-Datei (.glb / .gltf) hoch. Das bevorzugte Format ist \"glTF 2.0 binary\" in einer einzelnen Datei."
+                  },
+                  {
+                    "label": "Geometrie",
+                    "fields": [
+                      {
+                        "label": "Skalierung",
+                        "description": "Skaliere das Modell hoch oder runter, um es der Markergröße anzupassen.",
+                        "fields": [
+                          {
+                            "label": "Prozentsatz"
+                          },
+                          {
+                            "label": "Platzhalter"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Position",
+                        "description": "Lege die Position des Modells relativ zum Marker fest.",
+                        "fields": [
+                          {
+                            "label": "X-Versatz"
+                          },
+                          {
+                            "label": "Y-Versatz"
+                          },
+                          {
+                            "label": "Z-Versatz"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Drehung",
+                        "description": "Lege die Rotation in Grad fest.",
+                        "fields": [
+                          {
+                            "label": "X-Achse"
+                          },
+                          {
+                            "label": "Y-Achse"
+                          },
+                          {
+                            "label": "Z-Achse"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Endbildschirm zeigen",
+      "description": "Wenn die Option gewählt ist, wird der Endbildschirm angezeigt, wenn alle Aufgaben absolviert wurden. Der Endbildschirm ist nicht verfügbar, wenn nur 3D-Modelle genutzt werden."
+    },
+    {
+      "label": "Endbildschirm",
+      "fields": [
+        {
+          "label": "Bild für den Endbildschirm"
+        },
+        {
+          "label": "Text auf dem Endbildschirm",
+          "placeholder": "Geschafft!"
+        },
+        {
+          "label": "Gesamtrückmeldung",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Vorgabewert"
+                }
+              ],
+              "label": "Lege Rückmeldungen für einzelne Punktebereiche fest",
+              "description": "Klicke auf den \"Bereich hinzufügen\"-Button, um so viele Bereiche hinzuzufügen, wie du brauchst. Beispiel: 0-20% Schlechte Punktzahl, 21-91% Durchschnittliche Punktzahl, 91-100% Großartige Punktzahl!",
+              "entity": "Bereich",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Punktebereich"
+                  },
+                  {
+                    "label": "Rückmeldung für jeweiligen Punktebereich",
+                    "placeholder": "Trage die Rückmeldung ein"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "fields": [
+        {
+          "label": "\"Wiederholen\"-Button anzeigen",
+          "description": "Wenn die Option gewählt ist, können Lernende die Aufgabe wiederholen."
+        },
+        {
+          "label": "\"Lösung anzeigen\"-Button anzeigen",
+          "description": "Wenn die Option gewählt ist, können die Lernenden die Lösungen aller Aufgaben ansehen."
+        },
+        {
+          "label": "Überschreiben der Anzeigeoptionen des \\\"Lösungen anzeigen\\\"-Buttons",
+          "description": "Diese Option erlaubt es, den \"Zeige Lösung\"-Button für alle Inhalte ein- oder auszublenden oder die jeweils gewählte Option in den Verhaltenseinstellungen zu benutzen.",
+          "options": [
+            {
+              "label": "Nutze Verhaltenseinstellung"
+            },
+            {
+              "label": "Button immer zeigen"
+            },
+            {
+              "label": "Button nie zeigen"
+            }
+          ]
+        },
+        {
+          "label": "Überschreiben der Anzeigeoptionen des \\\"Wiederholen\\\"-Buttons",
+          "description": "Diese Option erlaubt es, den \"Wiederholen\"-Button für alle Inhalte ein- oder auszublenden oder die jeweils gewählte Option in den Verhaltenseinstellungen zu benutzen.",
+          "options": [
+            {
+              "label": "Nutze Verhaltenseinstellung"
+            },
+            {
+              "label": "Button immer zeigen"
+            },
+            {
+              "label": "Button nie zeigen"
+            }
+          ]
+        },
+        {
+          "label": "Vorgabenhöhe",
+          "description": "Lege eine Vorgabehöhe in px fest für Fälle, in denen es zu \"CORS\"-Problemen kommt."
+        }
+      ]
+    },
+    {
+      "label": "Bezeichnungen und Beschriftungen",
+      "fields": [
+        {
+          "label": "\"Start\"-Button",
+          "default": "Start"
+        },
+        {
+          "label": "\"Wiederholen\"-Button",
+          "default": "Wiederholen"
+        },
+        {
+          "label": "Finde einen Marker, um eine Interaktion zu sehen.",
+          "default": "Finde einen Marker, um eine Interaktion zu sehen."
+        },
+        {
+          "label": "Fehler: Browser wird nicht unterstützt",
+          "default": "Es scheint, dass dein Browser diesen Inhaltstyp leider nicht anzeigen kann."
+        },
+        {
+          "label": "Fehler: Kein Zugang zur Kamera",
+          "default": "Konnte nicht auf die Kamera zugreifen."
+        },
+        {
+          "label": "Fehler: Keine Kameraunterstützung",
+          "default": "Dein Browser scheint keine Kamera zu unterstützen."
+        },
+        {
+          "label": "Fehler: Keine Marker",
+          "default": "Hat jemand vergessen, Marker hinzuzufügen?"
+        },
+        {
+          "label": "Warnung: Brave-Browser",
+          "default": "Du scheinst den Brave-Browser zu benutzen. Cool! Seine strengen Einstellungen zum Schutz der Privatsphäre können verhindern, dass die Kamera genutzt werden kann."
+        },
+        {
+          "label": "Lade Inhalt",
+          "default": "Inhalt wird geladen. Bitte vergiss nicht, Zugang zur Kamera zu erlauben."
+        }
+      ]
+    },
+    {
+      "label": "Vorlesewerkzeug (Barrierefreiheit)",
+      "fields": [
+        {
+          "label": "Vollbild-Button-Beschriftung: aktivieren",
+          "default": "Gehe in den Vollbildmodus"
+        },
+        {
+          "label": "Vollbild-Button-Beschriftung: verlassen",
+          "default": "Verlasse den Vollbildmodus"
+        },
+        {
+          "label": "\"Ansicht wechseln\"-Button-Beschriftung (wenn Aufgabe geschlossen ist)",
+          "default": "Wechsle zur Aufgabe"
+        },
+        {
+          "label": "\"Ansicht wechseln\"-Button-Beschriftung (wenn Aufgabe geöffnet ist)",
+          "default": "Wechsle zur Kamera"
+        },
+        {
+          "label": "\"Knopf deaktiviert\"-Meldung für den \"Ansicht wechseln\"-Button",
+          "default": "Du kannst die Ansicht jetzt nicht wechseln"
+        },
+        {
+          "label": "\"Beenden\"-Button-Beschriftung",
+          "default": "Beenden und Ergebnis anzeigen"
+        },
+        {
+          "label": "\"Noch nicht fertig\"-Meldung für den \"Beenden\"-Button",
+          "default": "Du hast noch nicht alle Aufgaben abgeschlossen"
+        },
+        {
+          "label": "Aufgabe geöffnet",
+          "default": "Die Ansicht hat zu einer Aufgabe gewechselt."
+        },
+        {
+          "label": "Aufgabe geschlossen",
+          "default": "Die Ansicht hat zur Kamera gewechselt."
+        }
+      ]
+    }
+  ]
+}

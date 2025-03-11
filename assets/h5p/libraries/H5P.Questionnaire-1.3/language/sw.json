@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Vipengele vya dodoso",
+      "widgets": [
+        {
+          "label": "Chaguo-msingi"
+        }
+      ],
+      "entity": "kipengele",
+      "field": {
+        "label": "Chagua maktaba",
+        "fields": [
+          {
+            "label": "Maktaba",
+            "description": "Chagua maktaba"
+          },
+          {
+            "label": "Sehemu inayohitajika"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Chaguzi za skrini ya mafanikio",
+      "fields": [
+        {
+          "label": "Washa skrini ya mafanikio"
+        },
+        {
+          "label": "Ongeza picha ya skrini ya mafanikio",
+          "fields": [
+            {
+              "label": "Badilisha aikoni ya mafanikio na picha"
+            }
+          ]
+        },
+        {
+          "label": "Maandishi ya kuonyesha unapowasilisha",
+          "default": "Umekamilisha hojaji."
+        }
+      ]
+    },
+    {
+      "label": "Vipengele vya kiolesura cha mtumiaji",
+      "fields": [
+        {
+          "label": "Lebo za vitufe",
+          "fields": [
+            {
+              "label": "Lebo ya kitufe kilichotangulia",
+              "default": "Nyuma"
+            },
+            {
+              "label": "Lebo ya kitufe cha endelea",
+              "default": "Endelea"
+            },
+            {
+              "label": "Lebo ya kitufe kinachofuata",
+              "default": "Inayofuata"
+            },
+            {
+              "label": "Lebo ya kitufe cha wasilisha",
+              "default": "Wasilisha"
+            }
+          ]
+        },
+        {
+          "label": "Ufikiaji",
+          "fields": [
+            {
+              "label": "Lebo ya kitufe cha kutoka kwenye ujumbe unaohitajika",
+              "default": "Funga ujumbe wa hitilafu"
+            },
+            {
+              "label": "Maandishi ya upau wa maendeleo",
+              "default": "Swali %currentkati ya%max",
+              "description": "Inatumika kuelezea teknolojia za usaidizi ni swali gani. Vigezo ni: [ %current,%max]"
+            }
+          ]
+        },
+        {
+          "label": "Ujumbe unaohitajika",
+          "default": "Swali hili linahitaji jibu",
+          "description": "Itaonyeshwa ikiwa sehemu hii haijajibiwa na inahitajika na aina ya maudhui ya kishikilia vipengele"
+        },
+        {
+          "label": "Maandishi ya ishara yanayohitajika",
+          "default": "inahitajika",
+          "description": "Maandishi ambayo yataambatana na nyota kuashiria kwamba swali linahitajika"
+        },
+        {
+          "label": "Mada ya skrini ya kuwasilisha",
+          "default": "Umejibu maswali yote kwa mafanikio"
+        },
+        {
+          "label": "Mada ya skrini ya kuwasilisha",
+          "default": "Bofya hapa chini kuwasilisha majibu yako"
+        }
+      ]
+    }
+  ]
+}

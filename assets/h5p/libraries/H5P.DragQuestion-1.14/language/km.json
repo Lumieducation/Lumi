@@ -1,0 +1,271 @@
+{
+  "semantics": [
+    {
+      "label": "Check answer button",
+      "default": "ពិនិត្យចម្លើយ"
+    },
+    {
+      "label": "Submit answer button",
+      "default": "Submit"
+    },
+    {
+      "label": "Retry button",
+      "default": "សាកម្តងទៀត"
+    },
+    {
+      "label": "Score explanation text",
+      "default": "ចម្លើយត្រូវបាន ១ ពិន្ទុ។ ចម្លើយមិនត្រឹមត្រូវបាត់បង់ ១ ពិន្ទុ។ ពិន្ទុដែលអាចទាបបំផុតគឺ 0។"
+    },
+    {
+      "fields": [
+        {
+          "label": "Settings",
+          "fields": [
+            {
+              "label": "Background image",
+              "description": "Optional. Select an image to use as background for your drag and drop task."
+            },
+            {
+              "label": "Task size",
+              "description": "Specify how large (in px) the play area should be."
+            }
+          ]
+        },
+        {
+          "label": "Task",
+          "description": "Start by placing your drop zones.<br />Next, place your droppable elements and check off the appropriate drop zones.<br />Last, edit your drop zone again and check off the correct answers.",
+          "fields": [
+            {
+              "label": "Elements",
+              "entity": "element",
+              "field": {
+                "label": "Element",
+                "fields": [
+                  {
+                    "description": "Choose the type of content you would like to add."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Select drop zones"
+                  },
+                  {
+                    "label": "Background Opacity",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Infinite number of element instances",
+                    "description": "Clones this element so that it can be dragged to multiple drop zones."
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Drop Zones",
+              "entity": "Drop Zone",
+              "field": {
+                "label": "Drop Zone",
+                "fields": [
+                  {
+                    "label": "Label",
+                    "description": "The label is used by assistive technologies."
+                  },
+                  {
+                    "label": "Show label"
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Select correct elements"
+                  },
+                  {
+                    "label": "Background Opacity",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Tips and feedback",
+                    "fields": [
+                      {
+                        "label": "Tip text"
+                      },
+                      {
+                        "label": "Message displayed on correct match",
+                        "description": "Message will appear below the task on \"check\" if correct droppable is matched."
+                      },
+                      {
+                        "label": "Message displayed on incorrect match",
+                        "description": "Message will appear below the task on \"check\" if the match is incorrect."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "This drop zone can only contain one element",
+                    "description": "Make sure there is only one correct answer for this dropzone"
+                  },
+                  {
+                    "label": "Enable Auto-Align",
+                    "description": "Will auto-align all draggables dropped in this zone."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Overall Feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Default"
+            }
+          ],
+          "label": "Define custom feedback for any score range",
+          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "Score Range"
+              },
+              {},
+              {
+                "label": "Feedback for defined score range",
+                "placeholder": "Fill in the feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Behavioural settings",
+      "description": "These options will let you control how the task behaves.",
+      "fields": [
+        {
+          "label": "Enable \"Retry\""
+        },
+        {
+          "label": "Enable \"Check\" button"
+        },
+        {
+          "label": "Give one point for the whole task",
+          "description": "Disable to give one point for each draggable that is placed correctly."
+        },
+        {
+          "label": "Apply penalties",
+          "description": "Apply penalties for elements dropped in the wrong drop zones. This must be enabled when the same element(s) are able to be dropped into multiple drop zones, or if there is only one drop-zone. If this is not enabled, learners may match all items to all drop-zones and always receive a full score."
+        },
+        {
+          "label": "Enable score explanation",
+          "description": "Display a score explanation to user when checking their answers (if the 'Apply penalties' option has been selected)."
+        },
+        {
+          "label": "Background opacity for draggables",
+          "description": "If this field is set, it will override opacity set on all draggable elements. This should be a number between 0 and 100, where 0 means full transparency and 100 means no transparency"
+        },
+        {
+          "label": "Drop Zone Highlighting",
+          "description": "Choose when to highlight drop zones.",
+          "options": [
+            {
+              "label": "When dragging"
+            },
+            {
+              "label": "Always"
+            },
+            {
+              "label": "Never"
+            }
+          ]
+        },
+        {
+          "label": "Spacing for Auto-Align (in px)"
+        },
+        {
+          "label": "Enable FullScreen",
+          "description": "Check this option to enable the full screen button."
+        },
+        {
+          "label": "Show score points",
+          "description": "Show points earned for each answer. Not available when the 'Give one point for the whole task' option is enabled."
+        },
+        {
+          "label": "Show Title",
+          "description": "Uncheck this option if you do not want this title to be displayed. The title will only be displayed in summaries, statistics etc."
+        }
+      ]
+    },
+    {
+      "label": "Localize",
+      "fields": [
+        {
+          "label": "Fullscreen label",
+          "default": "ពេញអេក្រង់"
+        },
+        {
+          "label": "Exit fullscreen label",
+          "default": "បិទពេញអេក្រង់"
+        }
+      ]
+    },
+    {
+      "label": "Grabbable prefix",
+      "default": "ធាតុអូស {num} ចំណោម {total}។"
+    },
+    {
+      "label": "Grabbable suffix",
+      "default": "បានដាក់ក្នុងតំបន់ទម្លាក់ {num}។"
+    },
+    {
+      "label": "Dropzone prefix",
+      "default": "តំបន់ទម្លាក់ {num} ចំណោម {total}."
+    },
+    {
+      "label": "No dropzone selection label",
+      "default": "មិនមានតំបន់ទម្លាក់"
+    },
+    {
+      "label": "Label for show tip button",
+      "default": "បង្ហាញគន្លឹះ"
+    },
+    {
+      "label": "Label for tip available",
+      "default": "មានគន្លឹះ"
+    },
+    {
+      "label": "Label for correct answer",
+      "default": "ចម្លើយត្រឹមត្រូវ"
+    },
+    {
+      "label": "Label for incorrect answer",
+      "default": "ចម្លើយខុស"
+    },
+    {
+      "label": "Header for panel containing feedback for correct/incorrect answers",
+      "default": "មូលវិចារណ៍"
+    },
+    {
+      "label": "Textual representation of the score bar for those using a readspeaker",
+      "default": "អ្នកទទួលបានពិន្ទុ :num លើ :total "
+    },
+    {
+      "label": "Textual representation of the score explanation button",
+      "default": "បង្ហាញការបកស្រាយពិន្ទុ"
+    },
+    {
+      "label": "Assistive technology label for \"Check\" button",
+      "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+    },
+    {
+      "label": "Assistive technology label for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
+    }
+  ]
+}

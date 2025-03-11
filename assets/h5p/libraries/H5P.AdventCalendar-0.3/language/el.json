@@ -1,0 +1,203 @@
+{
+  "semantics": [
+    {
+      "label": "Mode for door images",
+      "description": "Select whether you want to set each custom door image yourself or let H5P do the work for you based on the calendar background image set in the behavioural settings.",
+      "options": [
+        {
+          "label": "I want to set each door image myself"
+        },
+        {
+          "label": "H5P shall set the door images based on the background image"
+        }
+      ]
+    },
+    {
+      "label": "Παράθυρο",
+      "entity": "Παράθυρο",
+      "field": {
+        "fields": [
+          {
+            "label": "Τύπος περιεχομένου",
+            "description": "Τύπος περιεχομένου που θα πρέπει προαιρετικά να εμφανίζεται όταν ανοίξει το παράθυρο.",
+            "options": [
+              {
+                "label": "Ήχος"
+              },
+              {
+                "label": "Εικόνα"
+              },
+              {
+                "label": "Σύνδεσμος"
+              },
+              {
+                "label": "Κείμενο"
+              },
+              {
+                "label": "Βίντεο"
+              }
+            ]
+          },
+          {
+            "label": "Ήχος"
+          },
+          {
+            "label": "Εικόνα"
+          },
+          {
+            "label": "Σύνδεσμος"
+          },
+          {
+            "label": "Κείμενο"
+          },
+          {
+            "label": "Βίντεο"
+          },
+          {
+            "label": "Αυτόματη αναπαραγωγή"
+          },
+          {
+            "label": "Εικόνα για το παράθυρο",
+            "description": "Εικόνα που χρησιμοποιείται για το παράθυρο. Απαιτείται αναλογία διαστάσεων 1: 1 εάν το αριστερό μισό πρόκειται να ταιριάζει με το δεξί μισό."
+          },
+          {
+            "label": "Εικόνα φόντου",
+            "description": "Εικόνα που πρέπει να εμφανίζεται πίσω από το παράθυρο. Εάν δεν υπάρχει εικόνα, εμφανίζεται ο αριθμός του παραθύρου."
+          }
+        ]
+      },
+      "widgets": [
+        {
+          "label": "Περιγραφή"
+        }
+      ]
+    },
+    {
+      "label": "Visual settings",
+      "description": "These options will let you configure the visual appearance.",
+      "fields": [
+        {
+          "label": "Εικόνα φόντου για το ημερολόγιο"
+        },
+        {
+          "label": "Εικόνα προτύπου για πόρτες",
+          "description": "Όταν ρυθμίζεται μια εικόνα, χρησιμοποιείται ως το προσκήνιο για κάθε μεμονωμένο παράθυρο για το οποίο δεν έχει καθοριστεί ειδική εικόνα."
+        },
+        {
+          "label": "Κρύψτε το πλαίσιο του παραθύρου"
+        },
+        {
+          "label": "Απόκρυψη των αριθμών για τα παράθυρα"
+        },
+        {
+          "label": "Κρύψτε τα χερούλια του παραθύρου"
+        },
+        {
+          "label": "Απόκρυψη της άκρης του παραθύρου"
+        },
+        {
+          "label": "Ας χιονίσει!",
+          "description": "Προσθέτει λίγο χιόνι στο ημερολόγιο. (δεν λειτουργεί στον IE11)"
+        }
+      ]
+    },
+    {
+      "label": "Audio settings",
+      "description": "These options will let you configure the audio appearance.",
+      "fields": [
+        {
+          "label": "Μουσική φόντου"
+        },
+        {
+          "label": "Αναπαραγωγή μουσικής παρασκηνίου αυτόματα",
+          "description": "Εάν επιλεγεί, η μουσική υπόκρουση θα αναπαράγεται αυτόματα όταν γίνεται πρόσβαση στο περιεχόμενο. Σημείωση: Οι κανόνες ορισμένων προγραμμάτων περιήγησης ενδέχεται να εμποδίζουν την αυτόματη αναπαραγωγή."
+        }
+      ]
+    },
+    {
+      "label": "Ρυθμίσεις συμπεριφοράς",
+      "description": "Αυτές οι επιλογές καθορίζουν λεπτομερώς πώς λειτουργεί το ημερολόγιο.",
+      "fields": [
+        {
+          "label": "Mode for door placement",
+          "description": "Select whether you want to set a fixed number of columns and rows for the doors or if H5P should decide dynamically depending on the available space. Note that the latter may interfere with the position of the background image and custom door cover images that should be at a particular position.",
+          "options": [
+            {
+              "label": "Fixed"
+            },
+            {
+              "label": "Dynamic"
+            }
+          ]
+        },
+        {
+          "label": "Row-to-column ratio",
+          "description": "Select how many columns and rows the calender should use.",
+          "options": [
+            {
+              "label": "6 × 4"
+            },
+            {
+              "label": "4 × 6"
+            }
+          ]
+        },
+        {
+          "label": "Τυχαία σειρά",
+          "description": "Ανακατέψτε τη σειρά των παραθύρων. Αν έχει ενεργοποιηθεί η επιλογή \"αποθήκευση κατάστασης περιεχομένου\" στις ρυθμίσεις H5P, η κατάσταση θα διατηρηθεί όταν οι χρήστες επιστρέψουν αργότερα."
+        },
+        {
+          "label": "Διατήρηση της σειράς των εικόνων",
+          "description": "Ανακατέψτε τα παράθυρα, αλλά κρατήστε τις εικόνες του εξωφύλλου τους στην πραγματική τους θέση ξεκινώντας από το 1 στην επάνω αριστερή γωνία μέχρι το 24 στην κάτω δεξιά γωνία."
+        },
+        {
+          "label": "Λειτουργία σχεδίασης",
+          "description": "Όταν η λειτουργία σχεδίασης είναι ενεργή, μπορούν να ανοίξουν όλα τα παράθυρα. Διαφορετικά, τα παρράθυρα μπορούν να ανοίξουν μόνο τον Δεκέμβριο την ημέρα που αντιστοιχεί στον αριθμό παραθύρου ή μετά από αυτήν."
+        }
+      ]
+    },
+    {
+      "label": "Ονομασίες και ετικέτες",
+      "fields": [
+        {
+          "label": "Δεν υπάρχει τίποτα εδώ!",
+          "default": "Δεν υπάρχει τίποτα να δείτε εδώ!\ud83c\udf84"
+        },
+        {
+          "label": "Δοκιμαστικό κείμενο",
+          "default": "Δοκιμαστικό κείμενο"
+        }
+      ]
+    },
+    {
+      "label": "Προσβασιμότητα",
+      "fields": [
+        {
+          "label": "Παράθυρο",
+          "default": "Παράθυρο"
+        },
+        {
+          "label": "Κλειδωμένο",
+          "default": "Κλειδωμένο. Δεν είναι ώρα να ανοίξουμε ακόμα αυτό το παράθυρο."
+        },
+        {
+          "description": "Ανακοίνωση του περιεχομένου. Το @door είναι μεταβλητή και αντικαθίσταται από την περιγραφή του παραθύρου.",
+          "label": "Περιεχόμενο",
+          "default": "Περιεχόμενο του @door"
+        },
+        {
+          "label": "Σίγαση ήχου",
+          "default": "Σίγαση ήχου"
+        },
+        {
+          "label": "Ενεργοποίηση ήχου",
+          "default": "Ενεργοποίηση ήχου"
+        },
+        {
+          "label": "Κλείσιμο παραθύρου",
+          "default": "Κλείσιμο παραθύρου"
+        }
+      ]
+    }
+  ]
+}

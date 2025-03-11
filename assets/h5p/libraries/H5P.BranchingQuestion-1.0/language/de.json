@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Editor für Branching Question",
+      "fields": [
+        {
+          "label": "Frage"
+        },
+        {
+          "label": "Verfügbare Alternativen",
+          "entity": "Alternative",
+          "field": {
+            "label": "Alternative",
+            "fields": [
+              {
+                "label": "Text"
+              },
+              {
+                "label": "Nächster Inhalt (-1 ist der Endbildschirm)"
+              },
+              {
+                "label": "Rückmeldung",
+                "fields": [
+                  {
+                    "label": "Titel der Rückmeldung"
+                  },
+                  {
+                    "label": "Text der Rückmeldung"
+                  },
+                  {
+                    "label": "Bild für die Rückmeldung"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

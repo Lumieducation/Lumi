@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Introduction text",
+      "default": "Choose the correct statement.",
+      "description": "Will be displayed above the summary task."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Default"
+        },
+        {
+          "label": "Textual"
+        }
+      ],
+      "label": "Summary",
+      "entity": "statements",
+      "field": {
+        "label": "Set of statements",
+        "fields": [
+          {
+            "label": "List of statements for the summary - the first statement is correct.",
+            "entity": "statement",
+            "field": {
+              "label": "Statement"
+            }
+          },
+          {
+            "label": "Tip",
+            "fields": [
+              {
+                "label": "Tip text"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Overall Feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Default"
+            }
+          ],
+          "label": "Define custom feedback for any score range",
+          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "Score Range"
+              },
+              {},
+              {
+                "label": "Feedback for defined score range",
+                "placeholder": "Fill in the feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Text displayed before number of statements solved in the summary task.",
+      "default": "Progress:",
+      "description": "Will be displayed above the statements. Example: 'Progress: 2/5'"
+    },
+    {
+      "label": "Tekst koji se prikazuje ispred pogrešnih tvrdnji označenih u Rezime zadatku.",
+      "default": "pogrešni odgovori:",
+      "description": "Biće prikazano iznad tvrdnji. Primjer: 'Pogrešni odgovori: 4'"
+    },
+    {
+      "label": "Zaglavlje feedbacka za Rezime",
+      "default": "Vaš rezultat",
+      "description": "Biće prikazano iznad feedbacka za Rezime."
+    },
+    {
+      "label": "Čitanje teksta za tačan odgovor",
+      "default": "Tačno."
+    },
+    {
+      "label": "Readspeaker text for announcing incorrect answer",
+      "default": "Incorrect! Please try again."
+    },
+    {
+      "label": "Readspeaker label for incorrect answer",
+      "default": "Incorrect"
+    },
+    {
+      "label": "Lista tačnih odgovora",
+      "default": "Tačni odgovori."
+    },
+    {
+      "label": "Tekst za dugme Prikazati tip.",
+      "default": "Prikazati tip"
+    },
+    {
+      "label": "Tekstualni prikaz rezultata za one koji koriste čitanje.",
+      "description": ":num i :total su specijalne riječi koje se programski automatiziraju.",
+      "default": "Osvojili ste :num od of :total bodova"
+    },
+    {
+      "label": "Tekst koji se koristi u naredovanju pretvaranja teksta u govor",
+      "description": ":num i :total su specijalne riječi koje se programski ažuriraju",
+      "default": "Napredovanje :num od :total"
+    }
+  ]
+}

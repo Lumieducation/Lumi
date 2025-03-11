@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Elements del qüestionari",
+      "widgets": [
+        {
+          "label": "Opció predeterminada"
+        }
+      ],
+      "entity": "element",
+      "field": {
+        "label": "Tria la biblioteca",
+        "fields": [
+          {
+            "label": "Biblioteca",
+            "description": "Trieu una biblioteca"
+          },
+          {
+            "label": "Camp obligatori"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Opcions de la pantalla de compleció satisfactòria",
+      "fields": [
+        {
+          "label": "Activa la pantalla de compleció satisfactòria"
+        },
+        {
+          "label": "Afegeix la imatge de la pantalla de compleció satisfactòria",
+          "fields": [
+            {
+              "label": "Substitueix la icona de resposta correcta per una imatge"
+            }
+          ]
+        },
+        {
+          "label": "Text per mostrar després de l’enviament",
+          "default": "Heu completat el qüestionari."
+        }
+      ]
+    },
+    {
+      "label": "Elements de la Interfície d'usuari",
+      "fields": [
+        {
+          "label": "Etiquetes de botons",
+          "fields": [
+            {
+              "label": "Etiqueta del botó Anterior",
+              "default": "Enrere"
+            },
+            {
+              "label": "Etiqueta del botó “Continua”",
+              "default": "Continua"
+            },
+            {
+              "label": "Etiqueta del botó Següent",
+              "default": "Següent"
+            },
+            {
+              "label": "Etiqueta del botó Envia",
+              "default": "Envia"
+            }
+          ]
+        },
+        {
+          "label": "Accessibilitat",
+          "fields": [
+            {
+              "label": "Etiqueta del botó per sortir del missatge obligatori",
+              "default": "Tanca el missatge d’error"
+            },
+            {
+              "label": "Text de la barra de progrés",
+              "default": "Pregunta %current de %max",
+              "description": "S’utilitza per indicar a les tecnologies d’assistència quina pregunta és. Variables: [%current, %max]."
+            }
+          ]
+        },
+        {
+          "label": "Missatge obligatori",
+          "default": "Aquesta pregunta requereix una resposta",
+          "description": "Es mostrarà si aquest camp no es respon i si ho requereix un tipus de contingut determinat."
+        },
+        {
+          "label": "Text del símbol Obligatori",
+          "default": "obligatori",
+          "description": "Text situat al costat d’un asterisc per indicar que una pregunta és obligatòria"
+        },
+        {
+          "label": "Subtítol per a la pantalla d’enviament",
+          "default": "Heu respost totes les preguntes correctament"
+        },
+        {
+          "label": "Subtítol per a la pantalla d’enviament",
+          "default": "Feu clic més avall per enviar les respostes"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Wprowadzenie",
+      "default": "Wskaż zdanie prawdziwe.",
+      "description": "Tekst wyświetlany nad zadaniem końcowym."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Domyślny"
+        },
+        {
+          "label": "Tekstowy"
+        }
+      ],
+      "label": "Zadanie końcowe",
+      "entity": "zdania",
+      "field": {
+        "label": "Zestaw zdań",
+        "fields": [
+          {
+            "label": "Lista zdań do zadania końcowego – pierwsze jest prawdziwe.",
+            "entity": "zdanie",
+            "field": {
+              "label": "Zdanie"
+            }
+          },
+          {
+            "label": "Podpowiedź",
+            "fields": [
+              {
+                "label": "Treść podpowiedzi"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Informacja zwrotna",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Domyślne"
+            }
+          ],
+          "label": "Zdefiniuj własne komunikaty dla różnych zakresów wyników",
+          "description": "Za pomocą przycisku 'Dodaj zakres' stwórz tyle zakresów, ile potrzebujesz. Np. 0-20% Niestety, słaby wynik, 21-91% Przeciętny wynik, 91-100% Wspaniały wynik!",
+          "entity": "zakres",
+          "field": {
+            "fields": [
+              {
+                "label": "Zakres wyników"
+              },
+              {},
+              {
+                "label": "Komunikat dla tego zakresu wyników",
+                "placeholder": "Wpisz komunikat"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tekst wyświelany przed liczbą zestawów zdań zaliczonych w zadaniu końcowym.",
+      "default": "Postęp:",
+      "description": "Pojawi się nad zdaniami. Np.: 'Postęp: 2/5'"
+    },
+    {
+      "label": "Tekst wyświetlany przed liczbą zestawów zdań, w których udzielono błędnej odpowiedzi.",
+      "default": "Błędy:",
+      "description": "Pojawi się nad zdaniami. Np.: 'Błędy: 4'"
+    },
+    {
+      "label": "Tytuł listy wyników",
+      "default": "Twoje wyniki",
+      "description": "Pojawi się nad listą wyników."
+    },
+    {
+      "label": "Komunikat poprawnej odpowiedzi dla czytników ekranu",
+      "default": "Dobrze."
+    },
+    {
+      "label": "Readspeaker text for announcing incorrect answer",
+      "default": "Incorrect! Please try again."
+    },
+    {
+      "label": "Readspeaker label for incorrect answer",
+      "default": "Incorrect"
+    },
+    {
+      "label": "Nagłówek listy poprawnych odpowiedzi",
+      "default": "Poprawne odpowiedzi."
+    },
+    {
+      "label": "Etykieta przycisku podpowiedzi",
+      "default": "Podpowiedź"
+    },
+    {
+      "label": "Tekstowy opis listy wyników dla czytników ekranu",
+      "description": ":num oraz :total to oznaczenia wartości, które zostaną podstawione przez program",
+      "default": "Masz :num na :total możliwych punktów"
+    },
+    {
+      "label": "Tekst postępu dla czytników ekranu",
+      "description": ":num oraz :total to oznaczenia wartości, które zostaną podstawione przez program",
+      "default": "Postęp :num na :total"
+    }
+  ]
+}

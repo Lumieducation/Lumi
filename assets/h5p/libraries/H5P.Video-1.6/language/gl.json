@@ -1,0 +1,136 @@
+{
+  "semantics": [
+    {
+      "description": "Para asegurarte de que o vídeo funcione en todos os navegadores, deberías engadir fontes de vídeo en ámbolos formatos WebM e MP4.",
+      "label": "Fontes de vídeo"
+    },
+    {
+      "fields": [
+        {
+          "label": "Imaxe do póster"
+        },
+        {
+          "description": "Se non se activa, o reprodutor de vídeo terá a mesma relación de aspecto que o vídeo.",
+          "label": "Fai que o reprodutor de vídeo use todo o espazo dispoñible"
+        },
+        {
+          "description": "Engadir controles ao reprodutor de vídeo. Isto permite que os usuarios reproduzan, poñan en pausa, etc.",
+          "label": "Amosar controles de reprodución de vídeo"
+        }
+      ],
+      "label": "Visuais"
+    },
+    {
+      "fields": [
+        {
+          "label": "Auto-reproducir vídeo",
+          "description": "Empezar a reprodución do vídeo automaticamente. Pode non funcionar en dispositivos móbiles."
+        },
+        {
+          "label": "Reproducir en bucle",
+          "description": "Volver a iniciar o vídeo automaticamente cando remata."
+        }
+      ],
+      "label": "Reprodución"
+    },
+    {
+      "label": "Localización do vídeo",
+      "fields": [
+        {
+          "default": "Vídeo",
+          "label": "Nome",
+          "description": "Axuda a identificar contido deste tipo."
+        },
+        {
+          "label": "Cargando",
+          "default": "Cargando reprodutor de vídeo..."
+        },
+        {
+          "label": "Non se atoparon reprodutores",
+          "default": "Non se atoparon reprodutores de vídeo que soporten o formato de vídeo proporcionado."
+        },
+        {
+          "label": "Non hai fontes",
+          "default": "Faltan as fontes do vídeo."
+        },
+        {
+          "label": "Abortado",
+          "default": "Abortouse a reprodución de medios."
+        },
+        {
+          "label": "Fallo de rede",
+          "default": "Fallo de rede."
+        },
+        {
+          "label": "Non se pode descodificar a fonte do vídeo",
+          "default": "Imposible descodificar medio."
+        },
+        {
+          "label": "Formato non soportado",
+          "default": "Formato de vídeo non soportado."
+        },
+        {
+          "label": "Medio encriptado",
+          "default": "Medio encriptado."
+        },
+        {
+          "label": "Erro descoñecido",
+          "default": "Erro descoñecido."
+        },
+        {
+          "label": "ID de YouTube non válido",
+          "default": "ID de YouTube non válido."
+        },
+        {
+          "label": "ID de YouTube descoñecido",
+          "default": "Non se pode atopar un vídeo co ID de Youtube fornecido."
+        },
+        {
+          "label": "Vídeo de YouTube restrinxido",
+          "default": "O propietario deste vídeo non permite o seu incrustado."
+        }
+      ]
+    },
+    {
+      "label": "Accesibilidade",
+      "fields": [
+        {
+          "entity": "Pista",
+          "field": {
+            "fields": [
+              {
+                "label": "Etiqueta da pista"
+              },
+              {
+                "options": [
+                  {
+                    "label": "Subtítulos"
+                  },
+                  {
+                    "label": "Lendas"
+                  },
+                  {
+                    "label": "Descricións"
+                  },
+                  {
+                    "label": "Capítulos"
+                  }
+                ],
+                "label": "Tipo kind, consultar <a target=\"_blank\" href=\"https://html.spec.whatwg.org/multipage/embedded-content.html#the-track-element\">HTML living standard</a>"
+              },
+              {
+                "label": "Idioma de orixe, debe definirse para os subtítulos",
+                "description": "Debe ser unha etiqueta de idioma BCP 47 válida. Se o atributo kind ten o valor subtítulos, entón debe definirse srclang."
+              },
+              {
+                "label": "Ficheiro de pista (WebVTT)"
+              }
+            ],
+            "label": "Pista"
+          },
+          "label": "Engadir pista de vídeo"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Texte d'introduction",
+      "default": "Choisissez l'affirmation exacte.",
+      "description": "Il sera affiché au-dessus de l'activité Résumé."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Par défaut"
+        },
+        {
+          "label": "Texte"
+        }
+      ],
+      "label": "Résumé",
+      "entity": "Affirmations",
+      "field": {
+        "label": "Affirmations",
+        "fields": [
+          {
+            "label": "Liste des affirmations pour le résumé - la première affirmation de la liste est correcte.",
+            "entity": "affirmation",
+            "field": {
+              "label": "affirmation"
+            }
+          },
+          {
+            "label": "Indice",
+            "fields": [
+              {
+                "label": "Indice"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback général",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Par défaut"
+            }
+          ],
+          "label": "Définissez le feedback pour chaque intervalle de score",
+          "description": "Cliquez sur \"Ajouter Intervalle\" pour ajouter autant d'intervalles de score que vous le souhaitez. Exemple : 0-20% Mauvais score, 21-91% Score moyen, 91-100% Score excellent!",
+          "entity": "intervalle",
+          "field": {
+            "fields": [
+              {
+                "label": "Intervalle de score"
+              },
+              {},
+              {
+                "label": "Feedback pour l'intervalle de score défini",
+                "placeholder": "Remplir le feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Texte affiché avant le nombre d'affirmations correctement sélectionnées dans le résumé.",
+      "default": "Progression :",
+      "description": "Ce sera affiché au-dessus des affirmations. Exemple: 'Progression : 2/5'"
+    },
+    {
+      "label": "Texte affiché au-dessus du nombre d'affirmations sélectionnées par erreur dans le résumé.",
+      "default": "Erreurs :",
+      "description": "Ce sera affiché au-dessus des affirmations. Exemple: 'Erreurs : 4'"
+    },
+    {
+      "label": "Titre de l'appréciation à la fin du résumé",
+      "default": "Votre résultat :",
+      "description": "Ce sera affiché au-dessus de l'appréciation."
+    },
+    {
+      "label": "Texte exprimé par la synthèse vocale en cas de réponse correcte",
+      "default": "Correct."
+    },
+    {
+      "label": "Readspeaker text for announcing incorrect answer",
+      "default": "Incorrect! Please try again."
+    },
+    {
+      "label": "Readspeaker label for incorrect answer",
+      "default": "Incorrect"
+    },
+    {
+      "label": "Liste de réponses correctes",
+      "default": "Réponses correctes."
+    },
+    {
+      "label": "Etiquette pour montrer le bouton d'indice",
+      "default": "Montrer l'indice"
+    },
+    {
+      "label": "Représentation textuelle du panneau du score pour les utilisateurs de la synthèse vocale",
+      "description": ":num et :total sont des mots clés mis à jour automatiquement",
+      "default": "Vous avez :num points sur un total de :total"
+    },
+    {
+      "label": "Représentation textuelle utilisée par la synthèse vocale pour communiquer sur l'avancement",
+      "description": ":num et :total sont des mots clés mis à jour automatiquement",
+      "default": "Progression de :num sur :total"
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Уређивач сценариа за гранање",
+      "fields": [
+        {
+          "label": "Наслов"
+        },
+        {
+          "label": "Почетни екран",
+          "fields": [
+            {
+              "label": "Наслов почетног екрана",
+              "placeholder": "Наслов вашег курса"
+            },
+            {
+              "label": "Поднаслови почетног екрана",
+              "placeholder": "Детаљи о курсу"
+            },
+            {
+              "label": "Start screen image"
+            },
+            {
+              "label": "Image alternative text"
+            }
+          ]
+        },
+        {
+          "label": "Листа завршних екрана",
+          "field": {
+            "label": "Крајњи екран",
+            "fields": [
+              {
+                "label": "Наслов"
+              },
+              {
+                "label": "Текст"
+              },
+              {
+                "label": "Слика"
+              },
+              {
+                "label": "Резултат",
+                "description": "Резултат ће бити послат било којој ЛМС, ЛРС или било којој другој повезаној услузи која прима оцене од Х5П за кориснике који достигну задати крајњи сценарио"
+              },
+              {
+                "label": "Садржај ID"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Листа садржаја сценарија гранања",
+          "entity": "садржај",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Прикажи наслов садржаја у приказу",
+                "description": "Ако је изабрано, корисник ће видети наслов садржаја у горњој траци изнад овог садржаја"
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Proceed"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Могућности бодовања",
+          "fields": [
+            {
+              "label": "Могућности бодовања",
+              "description": "Изаберите врсту бодовања",
+              "options": [
+                {
+                  "label": "Статички постављен резултат за сваки крајњи сценарио"
+                },
+                {
+                  "label": "Динамички израчунајте резултат на основу корисничких одговора"
+                },
+                {
+                  "label": "Нема бодовања"
+                }
+              ]
+            },
+            {
+              "label": "Укључите резултате из интеракција у оквиру сценарија гранања",
+              "description": "Ако се одаберу резултати из, на пример, Интерактивних видео записа, додаће се укупном резултату. Ако нису изабрани, рачунаће се само бодови наведени у одељцима за повратне информације ставки садржаја, питања о гранању и крајњи сценарији."
+            }
+          ]
+        },
+        {
+          "label": "Поставке понашања",
+          "fields": [
+            {
+              "label": "Замени навигацију уназад",
+              "description": "Замените појединачна подешавања за омогућавање навигације уназад"
+            },
+            {
+              "label": "Override require content finished",
+              "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide."
+            },
+            {
+              "label": "Randomize Branching Questions",
+              "description": "Branching questions will be displayed in random order"
+            }
+          ]
+        },
+        {
+          "label": "Локализација",
+          "fields": [
+            {
+              "label": "Текст дугмета на почетном екрану",
+              "default": "Започните курс"
+            },
+            {
+              "label": "Текст дугмета на завршном екрану",
+              "default": "Поново покрените курс"
+            },
+            {
+              "label": "Текст за дугме за повратак на сваком од екрана библиотеке и разграната питања",
+              "default": "Назад"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "Текст дугмета за репродукцију видео записа",
+              "default": "Поново репродукујте видео"
+            },
+            {
+              "label": "Ознака за резултат на крајњем екрану",
+              "default": "Ваш резултат:"
+            },
+            {
+              "label": "Ознака дугмета за Цео екран",
+              "default": "Цео екран"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

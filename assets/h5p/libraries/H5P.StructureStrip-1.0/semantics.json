@@ -1,0 +1,429 @@
+[
+  {
+    "name": "media",
+    "type": "group",
+    "label": "Media",
+    "importance": "medium",
+    "fields": [
+      {
+        "name": "type",
+        "type": "library",
+        "label": "Type",
+        "importance": "medium",
+        "options": [
+          "H5P.Image 1.1",
+          "H5P.Video 1.6",
+          "H5P.Audio 1.5"
+        ],
+        "optional": true,
+        "description": "Optional media to display above the question."
+      },
+      {
+        "name": "disableImageZooming",
+        "type": "boolean",
+        "label": "Disable image zooming",
+        "importance": "low",
+        "default": false,
+        "optional": true,
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "type",
+              "equals": "H5P.Image 1.1"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "taskDescription",
+    "type": "text",
+    "label": "Task description",
+    "description": "Explain to your students what's expected of them.",
+    "widget": "html",
+    "optional": true,
+    "enterMode": "div",
+    "tags": [
+      "strong",
+      "em",
+      "u",
+      "a",
+      "ul",
+      "ol",
+      "h2",
+      "h3",
+      "hr"
+    ]
+  },
+  {
+    "name": "sections",
+    "type": "list",
+    "label": "Sections",
+    "entity": "section",
+    "min": 1,
+    "widgets": [
+      {
+        "name": "VerticalTabs",
+        "label": "Default"
+      }
+    ],
+    "field": {
+      "name": "sectionParams",
+      "type": "group",
+      "label": "Section parameters",
+      "fields": [
+        {
+          "name": "title",
+          "type": "text",
+          "label": "Title"
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "label": "Hints",
+          "description": "Optionally add hints or particular instructions for this section.",
+          "optional": true,
+          "widget": "html",
+          "enterMode": "div",
+          "tags": [
+            "strong",
+            "em",
+            "u",
+            "a",
+            "ul",
+            "ol",
+            "h2",
+            "h3",
+            "hr"
+          ]
+        },
+        {
+          "name": "weight",
+          "type": "number",
+          "label": "Weight",
+          "description": "Determine how long each section is expected to be in relation to the other sections. Example: Section 1 = 1; Section 2 = 3 (triple the length of 1); Section 3 = 1 (same length as section 1).",
+          "min": 1,
+          "default": 1
+        },
+        {
+          "name": "colorBackground",
+          "type": "text",
+          "label": "Background color",
+          "importance": "medium",
+          "optional": true,
+          "default": "#96ceb4",
+          "widget": "colorSelector",
+          "spectrum": {
+            "showInput": true,
+            "showInitial": true,
+            "showPalette": true,
+            "palette": [
+              [
+                "#96ceb4",
+                "#ffeead",
+                "#ff6f69",
+                "ffcc5c",
+                "#88d8b0"
+              ],
+              [
+                "#845ec2",
+                "#d65db1",
+                "#ff6f91",
+                "#ff9671",
+                "#ffc75f"
+              ],
+              [
+                "#a8e6cf",
+                "#dcedc1",
+                "#ffd3b6",
+                "#ffaaa5",
+                "#ff8b94"
+              ],
+              [
+                "#009688",
+                "#35a79c",
+                "#54b2a9",
+                "#65c3ba",
+                "#83d0c9"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "colorText",
+          "type": "text",
+          "label": "Text color",
+          "importance": "medium",
+          "optional": true,
+          "default": "#1c1c1c",
+          "widget": "colorSelector",
+          "spectrum": {
+            "showInput": true,
+            "showPalette": true,
+            "palette": [
+              [
+                "#154c37",
+                "#74682e",
+                "#680000",
+                "#6f4c00",
+                "#005434"
+              ],
+              [
+                "#ffe4ff",
+                "#4a0034",
+                "#6a001d",
+                "#6c1400",
+                "#6e4700"
+              ],
+              [
+                "#25604e",
+                "#586741",
+                "#745139",
+                "#712b2c",
+                "#6d001f"
+              ],
+              [
+                "#002115",
+                "#002a25",
+                "#00332f",
+                "#00423d",
+                "#004d49"
+              ],
+              [
+                "#000000",
+                "#1c1c1c",
+                "#393939",
+                "#555555",
+                "#717171"
+              ],
+              [
+                "#8e8e8e",
+                "#aaaaaa",
+                "#c6c6c6",
+                "#e3e3e3",
+                "#ffffff"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "behaviour",
+    "type": "group",
+    "label": "Behavioural settings",
+    "importance": "low",
+    "description": "These options will let you control how the task behaves.",
+    "fields": [
+      {
+        "name": "enableRetry",
+        "label": "Enable \"Retry\"",
+        "type": "boolean",
+        "importance": "low",
+        "default": true,
+        "optional": true
+      },
+      {
+        "name": "enableSolutionsButton",
+        "label": "Enable \"Solution\"",
+        "type": "boolean",
+        "importance": "low",
+        "default": true,
+        "optional": true,
+        "widget": "none"
+      },
+      {
+        "name": "slack",
+        "label": "Slack",
+        "description": "Slack is built-in flexibility of a section's length, calculated in percentage.",
+        "type": "number",
+        "importance": "low",
+        "default": 10,
+        "min": 0,
+        "max": 50
+      },
+      {
+        "name": "textLengthMin",
+        "label": "Minimum text length",
+        "description": "Define an absolute minimum total text length. Please note that a section's weight compared to other sections is the main driver for the feedback message, not this minimum value.",
+        "type": "number",
+        "importance": "low",
+        "min": 0,
+        "optional": true
+      },
+      {
+        "name": "textLengthMax",
+        "label": "Maximum text length",
+        "description": "Define an absolute maximum total text length. Please note that a section's weight compared to other sections is the main driver for the feedback message, not this maximum value.",
+        "type": "number",
+        "importance": "low",
+        "min": 0,
+        "optional": true
+      },
+      {
+        "name": "feedbackMode",
+        "label": "Feedback mode",
+        "description": "Decide whether you want to display feedback while typing or only when the student requests it.",
+        "type": "select",
+        "importance": "low",
+        "options": [
+          {
+            "label": "On request",
+            "value": "onRequest"
+          },
+          {
+            "label": "While typing",
+            "value": "whileTyping"
+          }
+        ],
+        "default": "onRequest"
+      }
+    ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "common": true,
+    "label": "User interface",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "copy",
+        "type": "text",
+        "label": "Text for \"Copy\" button",
+        "importance": "low",
+        "default": "Copy"
+      },
+      {
+        "name": "checkAnswer",
+        "type": "text",
+        "label": "Text for \"Check\" button",
+        "importance": "low",
+        "default": "Check"
+      },
+      {
+        "name": "tryAgain",
+        "label": "Text for \"Retry\" button",
+        "type": "text",
+        "importance": "low",
+        "default": "Retry"
+      },
+      {
+        "name": "showSolution",
+        "type": "text",
+        "label": "Text for \"Show solution\" button",
+        "importance": "low",
+        "default": "Show solution",
+        "widget": "none"
+      },
+      {
+        "name": "allSectionsGood",
+        "type": "text",
+        "label": "All sections good",
+        "description": "Feedback text shown when all sections are of tolerable length.",
+        "importance": "low",
+        "default": "Your sections' lengths are all fine."
+      },
+      {
+        "name": "sectionTooShort",
+        "type": "text",
+        "label": "Section too short",
+        "description": "Feedback text shown for sections that are too short (@title will be replaced by the section title, @chars will be replaced by the number of characters missing).",
+        "importance": "low",
+        "default": "Your section \"@title\" is too short. You need at least @chars more characters."
+      },
+      {
+        "name": "sectionTooLong",
+        "type": "text",
+        "label": "Section too long",
+        "description": "Feedback text shown for sections that are too long (@title will be replaced by the section title, @chars will be replaced by the number of characters needing removal).",
+        "importance": "low",
+        "default": "Your section \"@title\" is too long. Remove at least @chars characters."
+      },
+      {
+        "name": "tooShort",
+        "type": "text",
+        "label": "Section too short (when typing)",
+        "description": "Status shown when typing for sections that are too short (@chars will be replaced by the number of characters missing).",
+        "importance": "low",
+        "default": "@chars characters too short"
+      },
+      {
+        "name": "tooLong",
+        "type": "text",
+        "label": "Section too long (when typing)",
+        "description": "Status shown when typing for sections that are too long (@chars will be replaced by the number of characters needing removal).",
+        "importance": "low",
+        "default": "@chars characters too long"
+      },
+      {
+        "name": "copyToClipboardSuccess",
+        "type": "text",
+        "label": "Text copied to clipboard",
+        "importance": "low",
+        "default": "Your text was copied to the clipboard"
+      },
+      {
+        "name": "copyToClipboardError",
+        "type": "text",
+        "label": "Cannot copy to clipboard",
+        "importance": "low",
+        "default": "Your text could not be copied to the clipboard"
+      },
+      {
+        "name": "section",
+        "type": "text",
+        "label": "Section",
+        "importance": "low",
+        "default": "Section"
+      },
+      {
+        "name": "messageNoSection",
+        "label": "Text for \"No section\" message",
+        "type": "text",
+        "importance": "low",
+        "default": "There was no section given for this structure strip."
+      }
+    ]
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "common": true,
+    "label": "Readspeaker",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "feedback",
+        "type": "text",
+        "label": "Feedback (text for readspeakers)",
+        "importance": "low",
+        "default": "Feedback"
+      },
+      {
+        "name": "copyToClipboard",
+        "type": "text",
+        "label": "Copy your text to the clipboard (text for readspeakers)",
+        "importance": "low",
+        "default": "Copy text to clipboard"
+      },
+      {
+        "name": "closeWindow",
+        "type": "text",
+        "label": "Close window (text for readspeakers)",
+        "importance": "low",
+        "default": "Close window"
+      },
+      {
+        "name": "showHints",
+        "type": "text",
+        "label": "Show hints (text for readspeakers)",
+        "importance": "low",
+        "default": "Show hints"
+      }
+    ]
+  }
+]

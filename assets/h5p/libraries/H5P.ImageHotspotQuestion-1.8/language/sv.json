@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Fråge-redigerare för hotspot-bild",
+      "fields": [
+        {
+          "label": "Bakgrundsbild",
+          "fields": [
+            {
+              "label": "Bakgrundsbild",
+              "description": "Välj en bild att använda som bakgrundsbild för hotspot-frågan."
+            }
+          ]
+        },
+        {
+          "label": "Hotspots",
+          "description": "Drag och släpp den önskade figuren från verktygsfältet för att skapa en ny hotspot. Dubbelklicka för att redigera en befintlig hotspot. Drag en hotspot för att flytta den. Dra i nedre högre hörnet på en hotspot för att ändra storlek.",
+          "fields": [
+            {
+              "label": "Beskrivning av uppgift",
+              "description": "Instruktioner till användaren."
+            },
+            {
+              "label": "Hotspot",
+              "entity": "Hotspot",
+              "field": {
+                "label": "Hotspot",
+                "fields": [
+                  {
+                    "label": "Användarinställningar",
+                    "fields": [
+                      {
+                        "label": "Korrekt",
+                        "description": "Det kan finnas flera korrekta hotspots. Användaren får omedelbar feedback om det var korrekt eller ej efter första klicket."
+                      },
+                      {
+                        "label": "Feedback"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Beräknade inställningar"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Feedback om användaren väljer ett tomt målfält:",
+              "placeholder": "Du träffade inga hotspots, försök igen!"
+            },
+            {
+              "label": "Visa feedback som popup"
+            },
+            {
+              "label": "Lokalisering",
+              "fields": [
+                {
+                  "label": "Text för knappe \"försök igen\"",
+                  "default": "Försök igen"
+                },
+                {
+                  "label": "Text för stäng-knapp",
+                  "default": "Stäng"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Hur poängfältet beskrivs för användare med skärmläsare.",
+      "default": "Du fick :num av :total poäng"
+    },
+    {
+      "label": "Hur knappen \"Försök igen\" beskrivs för tillgänglighetshjälpmedel",
+      "default": "Försök igen med uppgiften. Nollställer alla svar och börjar om med uppgiften."
+    }
+  ]
+}

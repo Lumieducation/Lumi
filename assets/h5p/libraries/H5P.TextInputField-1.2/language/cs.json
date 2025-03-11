@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Popis vstupního pole",
+      "description": "Popis toho, co by měl uživatel zadat."
+    },
+    {
+      "label": "Zástupný text",
+      "description": "Zástupný text pro uživatele."
+    },
+    {
+      "label": "Maximální délka textu",
+      "description": "Maximální počet znaků pro text."
+    },
+    {
+      "label": "Velikost vstupního pole",
+      "description": "Velikost vstupního pole v počtu řádků, které vytvoří.",
+      "options": [
+        {
+          "label": "1 řádek"
+        },
+        {
+          "label": "3 řádky"
+        },
+        {
+          "label": "10 řádků"
+        }
+      ]
+    },
+    {
+      "label": "Povinné pole",
+      "description": "Zaškrtněte, chcete-li, aby bylo toto pole povinné, musí uživatel odpovědět na všechna povinná pole, aby mohl dokument exportovat."
+    },
+    {
+      "label": "Zbývající znaky",
+      "default": "Zbývající znaky: @chars",
+      "description": "Zpráva pro zbývající znaky. Můžete použít @chars, které budou nahrazeny odpovídajícím číslem."
+    }
+  ]
+}

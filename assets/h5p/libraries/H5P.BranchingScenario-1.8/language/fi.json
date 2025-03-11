@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Haarautuva skenaario",
+      "fields": [
+        {
+          "label": "Otsikko"
+        },
+        {
+          "label": "Aloitusruutu",
+          "fields": [
+            {
+              "label": "Aloitusruudun otsikko",
+              "placeholder": "Kurssisi otsikko"
+            },
+            {
+              "label": "Aloitusruudun teksti",
+              "placeholder": "Kurssin kuvaus"
+            },
+            {
+              "label": "Aloitusruudun kuva"
+            },
+            {
+              "label": "Image alternative text"
+            }
+          ]
+        },
+        {
+          "label": "Lista haaranpäätteistä",
+          "field": {
+            "label": "Haaranpääte",
+            "fields": [
+              {
+                "label": "Otsikko"
+              },
+              {
+                "label": "Teksti"
+              },
+              {
+                "label": "Kuva"
+              },
+              {
+                "label": "Pisteet",
+                "description": "Pisteet lähetetään LSM, LRS tai muille yhdistetyille palveluille (jotka pystyvät ottamaan arvosanatiedon vastaan H5P:n Haarautuvalta skenaariolta) Pisteet lähetetään silloin, kun käyttäjä saavuttaa haaranpäätteen."
+              },
+              {
+                "label": "Aineiston ID"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Lista Haarautuvan skenaarion sisällöstä",
+          "entity": "sisältö",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Show content title in view",
+                "description": "If selected, the user will see the content title in the top bar above this content."
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Proceed"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Pisteytyksen asetukset",
+          "fields": [
+            {
+              "label": "Pisteytyksen asetukset",
+              "description": "Valitse pisteytystyyppi",
+              "options": [
+                {
+                  "label": "Määritän itse haaranpäätteiden pisteytyksen"
+                },
+                {
+                  "label": "Automaattinen pisteytys käyttäjän vastausten perusteella"
+                },
+                {
+                  "label": "Ei pisteytystä"
+                }
+              ]
+            },
+            {
+              "label": "Ota mukaan pisteet Haarautuvan skenaarion vuorovaikutteisista osioista",
+              "description": "Jos valittuna, niin esimerkiksi Interaktiivisten videoiden pisteet lisätään kokonaispistemäärään. Jos ei valittuna, kokonaispistemäärään lasketaan vain sisältökohteiden, haarautuvien kysymysten ja haaranpäätteiden palauteosioissa määritetyt pisteet."
+            }
+          ]
+        },
+        {
+          "label": "Käyttäytymisasetukset",
+          "fields": [
+            {
+              "label": "Yliaja taaksepäin navigointi",
+              "description": "Yliaja yksittäiset asetukset taaksepäin navigoinnin sallimiseksi"
+            },
+            {
+              "label": "Yliaja sisällön loppuun pääsemisen vaatimus",
+              "description": "Yliaja yksittäiset asetukset sisällön loppuun pääsemisen vaatimisesta ennen \"Jatka\" -painikkeen aktivoitumista. Tällä ei ole vaikutusta, jos sisällössä ei määritellä milloin se on \"valmis\", esim. kuvat tai yhden sivun diaesitys."
+            },
+            {
+              "label": "Randomize Branching Questions",
+              "description": "Branching questions will be displayed in random order"
+            }
+          ]
+        },
+        {
+          "label": "Lokalisointi",
+          "fields": [
+            {
+              "label": "Aloitusruudun painikkeen teksti",
+              "default": "Aloita kurssi"
+            },
+            {
+              "label": "Lopetusruudun painikkeen teksti",
+              "default": "Aloita uudelleen alusta"
+            },
+            {
+              "label": "Aineistotyyppien ja haarautuvien kysymysten paluupainikkeen teksti",
+              "default": "Paluu"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "Painikkeen, jolla toistetaan video uudelleen, teksti",
+              "default": "Toista video uudelleen"
+            },
+            {
+              "label": "Loppunäkymän pisteiden teksti",
+              "default": "Pisteesi:"
+            },
+            {
+              "label": "Koko näytön painikkeen teksti",
+              "default": "Koko näyttö"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

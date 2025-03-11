@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Ülesande kirjeldus",
+      "description": "Put the heading/instructions you'd like to show above the before/after image here.",
+      "placeholder": "Here you can add an optional heading and/or instructions."
+    },
+    {
+      "label": "Esimene pilt",
+      "fields": [
+        {
+          "label": "Teine pilt",
+          "description": "Esimene pilt. Palun tee kindlaks, et see on sama suur, kui teine pilt."
+        },
+        {
+          "label": "Silt esimesele pildile",
+          "description": "Silt, mida esimese pildi peale panna"
+        }
+      ]
+    },
+    {
+      "label": "Teine pilt",
+      "fields": [
+        {
+          "label": "Teine pilt",
+          "description": "Teine pilt. Palun tee kindlaks, et see on sama suur, kui esimene pilt."
+        },
+        {
+          "label": "Silt teisele pildile",
+          "description": "Silt, mida teise pildi peale panna"
+        }
+      ]
+    },
+    {
+      "label": "Käitumise seaded",
+      "description": "Need seaded võimaldavad sul näha mõndasid detaile",
+      "fields": [
+        {
+          "label": "Liuguri algpositsioon %-des",
+          "description": "Määrab liuguri algpositsiooni"
+        },
+        {
+          "label": "Liuguri orientatsioon",
+          "description": "Horisontaalne liigub vasakule-paremale, vertikaalne liigub üles-alla.",
+          "options": [
+            {
+              "label": "Horisontaalne"
+            },
+            {
+              "label": "Vertikaalne"
+            }
+          ]
+        },
+        {
+          "label": "Liuguri värv",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Image visible message",
+          "default": "Image @percentage % visible",
+          "description": "@percentage is a placeholder and will be replaced with the respective value."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "description": "Vyombo vya habari vya hiari vya kuonyesha juu ya swali.",
+          "label": "Aina"
+        },
+        {
+          "label": "Zima ukuzaji wa picha"
+        }
+      ],
+      "label": "Vyombo vya habari"
+    },
+    {
+      "description": "Waeleze wanafunzi wako kile kinachotarajiwa kutoka kwao.",
+      "label": "Maelezo ya kazi"
+    },
+    {
+      "entity": "sehemu",
+      "field": {
+        "fields": [
+          {
+            "label": "Mada"
+          },
+          {
+            "description": "Ongeza vidokezo au maagizo maalum ya sehemu hii kwa hiari.",
+            "label": "Vidokezo"
+          },
+          {
+            "description": "Ingiza uzito wa sehemu hii kuhusiana na sehemu zingine. Uzito huamua ni muda gani sehemu inatarajiwa kulinganishwa na sehemu zingine.",
+            "label": "Uzito"
+          },
+          {
+            "default": "#96ceb4",
+            "label": "Rangi ya Mandharinyuma"
+          },
+          {
+            "default": "#1c1c1c",
+            "label": "Rangi ya maandishi"
+          }
+        ],
+        "label": "Vigezo vya sehemu"
+      },
+      "label": "Sehemu",
+      "widgets": [
+        {
+          "label": "Chaguo-msingi"
+        }
+      ]
+    },
+    {
+      "description": "Chaguzi hizi zitakuwezesha kudhibiti jinsi kazi inavyofanya.",
+      "fields": [
+        {
+          "label": "Wezesha \"Jaribu tena\""
+        },
+        {
+          "label": "Washa kitufe cha \"Suluhisho\""
+        },
+        {
+          "description": "Asilimia ya ulegevu ambayo inakubalika kwa urefu wa sehemu.",
+          "label": "Ulegevu"
+        },
+        {
+          "description": "Bainisha urefu wa maandishi kamili wa kima cha chini kabisa. Tafadhali kumbuka kuwa uzito wa sehemu ikilinganishwa na sehemu zingine ndiyo kiendeshi kikuu cha ujumbe wa maoni, siyo thamani hii ya chini.",
+          "label": "Urefu wa chini wa maandishi"
+        },
+        {
+          "description": "Bainisha urefu wa maandishi kamili wa kima cha juu kabisa. Tafadhali kumbuka kuwa uzito wa sehemu ikilinganishwa na sehemu zingine ndiyo kiendeshi kikuu cha ujumbe wa maoni, siyo thamani hii ya juu.",
+          "label": "Urefu wa juu wa maandishi"
+        },
+        {
+          "description": "Amua ikiwa ungependa kuonyesha maoni unapoandika au mwanafunzi anapoomba tu.",
+          "label": "Njia ya maoni",
+          "options": [
+            {
+              "label": "Kwa ombi"
+            },
+            {
+              "label": "Wakati wa kuandika"
+            }
+          ]
+        }
+      ],
+      "label": "Mipangilio ya tabia"
+    },
+    {
+      "fields": [
+        {
+          "default": "Nakili",
+          "label": "Kitufe cha maandishi ya \"nakili\""
+        },
+        {
+          "default": "Weka alama",
+          "label": "Maandishi ya kitufe cha \"Weka alama\""
+        },
+        {
+          "default": "Jaribu tena",
+          "label": "Maandishi kwa kitufe cha \"Jaribu tena\""
+        },
+        {
+          "default": "Onyesha suluhisho",
+          "label": "Maandishi kwa kitufe cha \"Onyesha suluhisho\""
+        },
+        {
+          "default": "Urefu wa sehemu zako zote ni sawa.",
+          "description": "Maandishi ya maoni yanaonyeshwa wakati sehemu zote ni za urefu unaoweza kuvumiliwa.",
+          "label": "Sehemu zote ni nzuri"
+        },
+        {
+          "default": "Sehemu yako \"@title\" ni fupi mno. Unahitaji angalau @charsherufi zaidi.",
+          "description": "Maandishi ya maoni yanayoonyeshwa kwa sehemu ambazo ni fupi mno (@title nafasi yake itachukuliwa na kichwa cha sehemu, @charsnafasi yake itachukuliwa na idadi ya herufi zinazokosekana).",
+          "label": "Sehemu ni fupi mno"
+        },
+        {
+          "default": "Sehemu yako \"@title\" ni ndefu mno. Ondoa angalau@chars herufi.",
+          "description": "Maandishi ya maoni yanayoonyeshwa kwa sehemu ambazo ni ndefu mno (@title yatabadilishwa na mada ya sehemu, @charsyatabadilishwa na idadi ya herufi zinazohitaji kuondolewa).",
+          "label": "Sehemu ni ndefu mno"
+        },
+        {
+          "default": "@charsherufi ni fupi mno",
+          "description": "Hali inayoonyeshwa wakati wa kuchapa kwa sehemu ambazo ni fupi mno (@chars nafasi yake itachukuliwa na idadi ya herufi zinazokosekana).",
+          "label": "Sehemu ni fupi mno (wakati wa kuchapa)"
+        },
+        {
+          "default": "@charsherufi ni ndefu mno",
+          "description": "Hali inayoonyeshwa wakati wa kuchapa kwa sehemu ambazo ni ndefu mno (@chars nafasi yake itachukuliwa na idadi ya herufi zinazohitaji kuondolewa).",
+          "label": "Sehemu ni ndefu mno (wakati wa kuchapa)"
+        },
+        {
+          "default": "Maandishi yako yamenakiliwa kwenye ubao wa kunakili",
+          "label": "Maandishi yamenakiliwa kwenye ubao wa kunakili"
+        },
+        {
+          "default": "Maandishi yako hayakuweza kunakiliwa kwenye ubao wa kunakili",
+          "label": "Haiwezi kunakili kwenye ubao wa kunakili"
+        },
+        {
+          "default": "Sehemu",
+          "label": "Sehemu"
+        },
+        {
+          "default": "Hakukuwa na sehemu iliyotolewa kwa ukanda huu wa muundo.",
+          "label": "Maandishi ya ujumbe \"Hakuna sehemu\""
+        }
+      ],
+      "label": "Kiolesura cha mtumiaji"
+    },
+    {
+      "fields": [
+        {
+          "default": "Maoni",
+          "label": "Maoni (maandishi kwa visoma maandishi)"
+        },
+        {
+          "default": "Nakili maandishi kwenye ubao wa kunakili",
+          "label": "Nakili maandishi yako kwenye ubao wa kunakili (maandishi kwa visoma maandishi)"
+        },
+        {
+          "default": "Funga dirisha",
+          "label": "Funga dirisha (maandishi kwa visoma maandishi)"
+        },
+        {
+          "default": "Onyesha vidokezo",
+          "label": "Onyesha vidokezo (maandishi kwa visoma maandishi)"
+        }
+      ],
+      "label": "Kisoma maandishi"
+    }
+  ]
+}

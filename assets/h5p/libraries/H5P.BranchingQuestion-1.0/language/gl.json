@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Editor de Preguntas Ramificadas",
+      "fields": [
+        {
+          "label": "Pregunta"
+        },
+        {
+          "label": "Alternativas dispoñibles",
+          "entity": "alternativas",
+          "field": {
+            "label": "Alternativa",
+            "fields": [
+              {
+                "label": "Texto"
+              },
+              {
+                "label": "Seguinte Contido (-1 é a pantalla final)"
+              },
+              {
+                "label": "Retroalimentación",
+                "fields": [
+                  {
+                    "label": "Título da retroalimentación"
+                  },
+                  {
+                    "label": "Texto da retroalimentación"
+                  },
+                  {
+                    "label": "Imaxe da retroalimentación"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

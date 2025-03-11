@@ -1,0 +1,69 @@
+[
+  {
+    "name": "taskDescription",
+    "label": "Heading",
+    "importance": "high",
+    "type": "text",
+    "default": "Documentation tool",
+    "description": "Title for the documentation tool.",
+    "optional": true
+  },
+  {
+    "name": "pagesList",
+    "label": "Elements",
+    "importance": "high",
+    "type": "list",
+    "widgets": [
+      {
+        "name": "VerticalTabs",
+        "label": "Default"
+      }
+    ],
+    "min": 1,
+    "entity": "page",
+    "field": {
+      "name": "page",
+      "type": "library",
+      "label": "Page type",
+      "importance": "high",
+      "description": "Library for this slide.",
+      "options": [
+        "H5P.StandardPage 1.5",
+        "H5P.GoalsPage 1.5",
+        "H5P.GoalsAssessmentPage 1.4",
+        "H5P.DocumentExportPage 1.5"
+      ]
+    }
+  },
+  {
+    "label": "Localize documentation tool buttons",
+    "name": "i10n",
+    "type": "group",
+    "common": true,
+    "collapsed": true,
+    "importance": "low",
+    "fields": [
+      {
+        "label": "Previous button label",
+        "name": "previousLabel",
+        "type": "text",
+        "default": "Previous documentation step",
+        "importance": "low"
+      },
+      {
+        "label": "Next button label",
+        "name": "nextLabel",
+        "type": "text",
+        "default": "Next documentation step",
+        "importance": "low"
+      },
+      {
+        "label": "Close button label",
+        "name": "closeLabel",
+        "type": "text",
+        "default": "Close",
+        "importance": "low"
+      }
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Pregunta"
+    },
+    {
+      "label": "Tipus de selecció múltiple",
+      "options": [
+        {
+          "label": "Múltiples respostes"
+        },
+        {
+          "label": "Resposta única"
+        }
+      ]
+    },
+    {
+      "label": "Respostes alternatives",
+      "entity": "Alternativa",
+      "field": {
+        "label": "Alternativa",
+        "fields": [
+          {
+            "label": "Text"
+          },
+          {
+            "label": "Retroacció",
+            "fields": [
+              {
+                "label": "Missatge que es mostra en seleccionar una resposta",
+                "description": "El missatge apareixerà a sota de la resposta \"continuar\" si se selecciona aquesta resposta."
+              },
+              {
+                "label": "Missatge que es mostra si no s’ha seleccionat cap resposta",
+                "description": "Missatge que es mostrarà a sota de la resposta, a \"Continua\", si no se selecciona la resposta."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

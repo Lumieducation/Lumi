@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Bestemming",
+      "fields": [
+        {
+          "label": "Type",
+          "options": [
+            {
+              "label": "Tijdcode"
+            },
+            {
+              "label": "Een andere pagina (URL)"
+            }
+          ]
+        },
+        {
+          "label": "Ga naar",
+          "description": "De doeltijd waar de gebruiker naartoe gaat als hij op de hotspot klikt. Voer de tijdscode in M:SS-formaat in."
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "Protocol",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(t.o.v. root)"
+                },
+                {
+                  "label": "anders"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Visuele effecten",
+      "fields": [
+        {
+          "label": "Vorm",
+          "options": [
+            {
+              "label": "Rechthoekig"
+            },
+            {
+              "label": "Rond"
+            },
+            {
+              "label": "Afgeronde rechthoek"
+            }
+          ]
+        },
+        {
+          "label": "Achtergrondkleur voor hotspot"
+        },
+        {
+          "label": "Gebruik pijlcursor"
+        },
+        {
+          "label": "Voeg knippereffect toe",
+          "description": "Merk op dat het knippereffect altijd is ingeschakeld in de editor zodat je de transparante hotspots kunt vinden"
+        }
+      ]
+    },
+    {
+      "label": "Teksten",
+      "fields": [
+        {
+          "label": "Alternatieve tekst",
+          "description": "Beschrijf het onderdeel waarop de hotspot is geplaatst. Gebruikt voor schermlezers",
+          "placeholder": "Een appel op een tafel"
+        },
+        {
+          "label": "Label voor hotspot"
+        },
+        {
+          "label": "Toon label"
+        },
+        {
+          "label": "Labelkleur"
+        }
+      ]
+    }
+  ]
+}

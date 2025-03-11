@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Bilder",
+      "field": {
+        "label": "Bild",
+        "fields": [
+          {
+            "label": "Bild"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Seitenverhältnis",
+      "description": "Automatisch bedeutet, dass ein festes Seitenverhältnis genutzt wird, das automatisch anhand der Bilder bestimmt wird",
+      "options": [
+        {
+          "label": "Automatisch"
+        },
+        {
+          "label": "Benutzerdefiniert"
+        },
+        {
+          "label": "Nicht festgelegt"
+        }
+      ]
+    },
+    {
+      "label": "Einstellungen zum Seitenverhältnis",
+      "fields": [
+        {
+          "label": "Relative Breite",
+          "description": "Wenn Du hier 4 und für die Höhe 3 verwendest, beträgt das Seitenverhältnis 4:3"
+        },
+        {
+          "label": "Relative Höhe",
+          "description": "Wenn du hier 3 und für die Breite 4 verwendest, beträgt das Seitenverhältnis 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Barrierefreiheit des Image-Sliders",
+      "fields": [
+        {
+          "label": "Beschriftung des \"Nächtes Bild\"-Buttons",
+          "default": "Nächstes Bild",
+          "description": "Dies wird nur für Vorlesewerkzeuge verwendet. Es wird nicht angezeigt."
+        },
+        {
+          "label": "Beschriftung des \"Vorheriges Bild\"-Buttons",
+          "default": "Vorheriges Bild",
+          "description": "Dies wird nur für Vorlesewerkzeuge verwendet. Es wird nicht angezeigt."
+        },
+        {
+          "label": "Beschriftung der Buttons für die Direktnavigation zu Bildern",
+          "default": "Gehe zu Bild %slide",
+          "description": "Dies wird nur für Vorlesewerkzeuge verwendet. Es wird nicht angezeigt. %slide ist ein Platzhalter und wird durch die Bild-Nummer ersetzt."
+        }
+      ]
+    }
+  ]
+}

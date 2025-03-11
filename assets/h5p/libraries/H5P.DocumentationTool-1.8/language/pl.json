@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "label": "Nagłówek",
+      "default": "Narzędzie dokumentacyjne",
+      "description": "Tytuł dla narzędzia dokumentacyjnego."
+    },
+    {
+      "label": "Elementy",
+      "widgets": [
+        {
+          "label": "Domyślny"
+        }
+      ],
+      "entity": "strona",
+      "field": {
+        "label": "Rodzaj strony",
+        "description": "Biblioteka dla tego slajdu."
+      }
+    },
+    {
+      "label": "Przetłumacz przyciski narzędzia dokumentacyjnego",
+      "fields": [
+        {
+          "label": "Etykieta przycisku Wstecz",
+          "default": "Poprzedni etap dokumentacji"
+        },
+        {
+          "label": "Etykieta przycisku Dalej",
+          "default": "Następny etap dokumentacji"
+        },
+        {
+          "label": "Etykieta przycisku zamknij",
+          "default": "Zamknij"
+        }
+      ]
+    }
+  ]
+}

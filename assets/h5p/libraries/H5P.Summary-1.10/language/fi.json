@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Tehtävän kuvaus",
+      "default": "Valitse oikea väittämä.",
+      "description": "Näytetään tehtävän yläpuolella."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Oletus"
+        },
+        {
+          "label": "Teksti"
+        }
+      ],
+      "label": "Yhteenveto",
+      "entity": "väittämät",
+      "field": {
+        "label": "Väittämät",
+        "fields": [
+          {
+            "label": "Väittämät - ensimmäinen vaihtoehto on oikein.",
+            "entity": "väittämä",
+            "field": {
+              "label": "Väittämä"
+            }
+          },
+          {
+            "label": "Vihje",
+            "fields": [
+              {
+                "label": "Vihjeteksti"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Yleinen palaute",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Oletus"
+            }
+          ],
+          "label": "Määritä muokattu palaute pisterajojen mukaan.",
+          "description": "Klikkaa \"Lisää alue\" painiketta lisätäksesi niin monta pisterajaa kuin tarvit. Esimerkiksi: 0-20% Huono tulos, 21-91% Kelpo tulos, 91-100% Mahtava tulos!",
+          "entity": "alue",
+          "field": {
+            "fields": [
+              {
+                "label": "Pisteraja"
+              },
+              {},
+              {
+                "label": "Palaute määritellylle pisterajalle",
+                "placeholder": "Kirjoita palaute"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Ennen ratkaistujen väittämien lukumäärää näytettävä teksti.",
+      "default": "Edistyminen:",
+      "description": "Näytetään väittämien yläpuolella. Esimerkiksi: 'Edistyminen: 2/5'"
+    },
+    {
+      "label": "Ennen väärin valittujen väittämien lukumäärää näytettävä teksti.",
+      "default": "Vääriä vastauksia:",
+      "description": "Näytetään väittämien yläpuolella. Esimerkiksi: 'Vääriä vastauksia : 4'"
+    },
+    {
+      "label": "Tulossivun otsikko",
+      "default": "Tuloksesi",
+      "description": "Näytetään tehtävän palautteen yläpuolella."
+    },
+    {
+      "label": "Ruudunlukijan palaute oikeasta vastauksesta",
+      "default": "Oikein!"
+    },
+    {
+      "label": "Readspeaker text for announcing incorrect answer",
+      "default": "Incorrect! Please try again."
+    },
+    {
+      "label": "Readspeaker label for incorrect answer",
+      "default": "Incorrect"
+    },
+    {
+      "label": "Oikeiden vastauksien listan kuvaus",
+      "default": "Oikeat vastaukset."
+    },
+    {
+      "label": "Näytä vinkki",
+      "default": "Näytä vinkki"
+    },
+    {
+      "label": "Ruuudunlukijan teksti ilmaisemaan pisteitä",
+      "description": "Käytössä muuttujat :num ja :total",
+      "default": "Sinulla on :num/:total pistettä"
+    },
+    {
+      "label": "Ruudunlukijan teksti ilmaisemaan edistymistä",
+      "description": "Käytössä muuttujat :num ja :total",
+      "default": "Edistymisesi :num/:total"
+    }
+  ]
+}

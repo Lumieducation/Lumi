@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Opis vnosnega polja",
+      "description": "Navodilo udeležencu o besedilu za vnos."
+    },
+    {
+      "label": "Nadomestno besedilo",
+      "description": "Nadomestno besedilo za udeleženca."
+    },
+    {
+      "label": "Največje število znakov",
+      "description": "Določitev dolžine največjega dovoljenega obsega besedila."
+    },
+    {
+      "label": "Velikost vnosnega polja",
+      "description": "Velikost določa število vrstic vnosnega polja.",
+      "options": [
+        {
+          "label": "1 vrstica"
+        },
+        {
+          "label": "3 vrstice"
+        },
+        {
+          "label": "10 vrstic"
+        }
+      ]
+    },
+    {
+      "label": "Zahtevano polje",
+      "description": "Udeleženec mora pred izvozom dokumenta izpolniti vsa zahtevana polja."
+    },
+    {
+      "label": "Števec preostalih znakov",
+      "default": "Preostalo število znakov: @chars",
+      "description": "Sporočilo o preostalem številu znakov za besedilo odgovora. @chars je spremenljivka."
+    }
+  ]
+}

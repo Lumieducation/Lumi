@@ -1,0 +1,295 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Antraštė",
+          "description": "Pagrindinė laiko juostos antraštė yra čia (pirmas puslapis)"
+        },
+        {
+          "label": "Turinys",
+          "description": "Pagrindinis laiko juostos turinys pateikiamas čia (pirmasis puslapis)."
+        },
+        {
+          "label": "Numatytasis mastelio lygis",
+          "description": "Tai pakeis numatytąjį mastelio keitimo lygį. Tai prilygsta priartinimo arba mažinimo mygtuko paspaudimui nurodytą skaičių kartų. Neigiami skaičiai mažina. numatytasis yra 0"
+        },
+        {
+          "label": "Fono paveikslėlis",
+          "description": "Paveikslėlis, rodomas kaip fonas."
+        },
+        {
+          "label": "Aukštis",
+          "description": "Aukštis pikseliais"
+        },
+        {
+          "label": "Objektas",
+          "description": "Čia galite pridėti papildomą objektą \"Pagrindinis puslapis\" laiko juostoje",
+          "fields": [
+            {
+              "label": "Medija",
+              "description": "Nuoroda į medijos URL (šiuo metu palaikomi „Twitter“, „YouTube“, „Flickr“, „Vimeo“, „Google Maps“ ir „SoundCloud“)"
+            },
+            {
+              "label": "Autorystė",
+              "description": "Medijos autorystė"
+            },
+            {
+              "label": "Antraštė",
+              "description": "Antraštės aprašymas pateikiamas čia"
+            }
+          ]
+        },
+        {
+          "label": "Datos",
+          "description": "Pridėkite keletą datų į savo laiko juostą!",
+          "field": {
+            "label": "Data",
+            "description": "Data",
+            "fields": [
+              {
+                "label": "Pradžios data",
+                "description": "MMMM,mm,dd (Minimaliai reikia MMMM)"
+              },
+              {
+                "label": "Pabaigos data",
+                "description": "MMMM,mm,dd (Minimaliai reikia MMMM)"
+              },
+              {
+                "label": "Antraštė",
+                "description": "Datos įrašo antraštė"
+              },
+              {
+                "label": "Turinys",
+                "description": "Datos įvedimo pagrindas"
+              },
+              {
+                "label": "Žymos",
+                "description": "Įvesti žymas (kategorijas)"
+              },
+              {
+                "label": "Objektas",
+                "fields": [
+                  {
+                    "label": "Medija",
+                    "description": "URL į mediją (šiuo metu palaikomi „Twitter“, „YouTube“, „Flickr“, „Vimeo“, „Wikipedia“, „Google Maps“ ir „SoundCloud“)."
+                  },
+                  {
+                    "label": "Miniatiūra",
+                    "description": "Jei reikia, pridėkite miniatiūrą, 32 x 32"
+                  },
+                  {
+                    "label": "Autorystė",
+                    "description": "Medijos autorystė"
+                  },
+                  {
+                    "label": "Antraštė",
+                    "description": "Antraštės tekstas"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Eros",
+          "description": "Pridėti erą į savo laiko juostą",
+          "field": {
+            "label": "Laikotarpis",
+            "fields": [
+              {
+                "label": "Pradžios data",
+                "description": "MMMM,mm,dd (Minimaliai reikia MMMM)"
+              },
+              {
+                "label": "Pabaigos data",
+                "description": "MMMM,mm,dd (Minimaliai reikia MMMM)"
+              },
+              {
+                "label": "Antraštė",
+                "description": "Eros antraštė"
+              },
+              {
+                "label": "Tekstas",
+                "description": "Eros turinys"
+              },
+              {
+                "label": "Žyma",
+                "description": "Eros žymos (kategorijos)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Kalba",
+          "description": "Naudotojo sąsajos kalba",
+          "options": [
+            {
+              "label": "Afrikanų"
+            },
+            {
+              "label": "Arabų"
+            },
+            {
+              "label": "Armėnų"
+            },
+            {
+              "label": "Baskų"
+            },
+            {
+              "label": "Bulgarų"
+            },
+            {
+              "label": "Katalonų"
+            },
+            {
+              "label": "Kinų"
+            },
+            {
+              "label": "Kroatų / Hrvatski"
+            },
+            {
+              "label": "Čekų"
+            },
+            {
+              "label": "Danų"
+            },
+            {
+              "label": "Olandų"
+            },
+            {
+              "label": "Anglų"
+            },
+            {
+              "label": "Anglų (24 valandų)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estų"
+            },
+            {
+              "label": "Farerų"
+            },
+            {
+              "label": "Persų"
+            },
+            {
+              "label": "Suomių"
+            },
+            {
+              "label": "Prancūzų"
+            },
+            {
+              "label": "Galų"
+            },
+            {
+              "label": "Sakartvelų"
+            },
+            {
+              "label": "Vokiečių / Deutsch"
+            },
+            {
+              "label": "Graikų"
+            },
+            {
+              "label": "Hebrajų"
+            },
+            {
+              "label": "Vengrų"
+            },
+            {
+              "label": "Islandų"
+            },
+            {
+              "label": "Indoneziečių"
+            },
+            {
+              "label": "Italų"
+            },
+            {
+              "label": "Japonų"
+            },
+            {
+              "label": "Korėjiečių"
+            },
+            {
+              "label": "Latvių"
+            },
+            {
+              "label": "Lietuvių"
+            },
+            {
+              "label": "Liuksemburgiečių"
+            },
+            {
+              "label": "Malajiečių"
+            },
+            {
+              "label": "Nepaliečių"
+            },
+            {
+              "label": "Norvegų"
+            },
+            {
+              "label": "Lenkų"
+            },
+            {
+              "label": "Portugalų"
+            },
+            {
+              "label": "Portugalų (Brazilų)"
+            },
+            {
+              "label": "Romanų"
+            },
+            {
+              "label": "Rusų"
+            },
+            {
+              "label": "Serbų – Kirilica"
+            },
+            {
+              "label": "Serbų – Lotynų"
+            },
+            {
+              "label": "Sinhalų"
+            },
+            {
+              "label": "Slovakų"
+            },
+            {
+              "label": "Slovėnų"
+            },
+            {
+              "label": "Ispanų"
+            },
+            {
+              "label": "Švedų"
+            },
+            {
+              "label": "Tagalogų"
+            },
+            {
+              "label": "Tamilų"
+            },
+            {
+              "label": "Taivaniečių"
+            },
+            {
+              "label": "Telugų"
+            },
+            {
+              "label": "Turkų"
+            },
+            {
+              "label": "Ukrainiečių"
+            }
+          ]
+        }
+      ],
+      "label": "Laiko juosta"
+    }
+  ]
+}

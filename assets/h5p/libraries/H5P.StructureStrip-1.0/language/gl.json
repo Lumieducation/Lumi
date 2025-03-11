@@ -1,0 +1,172 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "description": "Medios adicionais amosados enriba da pregunta.",
+          "label": "Tipo"
+        },
+        {
+          "label": "Desactivar zoom da imaxe"
+        }
+      ],
+      "label": "Medios"
+    },
+    {
+      "description": "Explícalle aos teus alumnos o que teñen que facer.",
+      "label": "Descrición da tarefa"
+    },
+    {
+      "entity": "sección",
+      "field": {
+        "fields": [
+          {
+            "label": "Título"
+          },
+          {
+            "description": "Engade pistas opcionais ou instrucións particulares para esta sección.",
+            "label": "Pistas"
+          },
+          {
+            "description": "Indica a lonxitude para cada sección en relación coas outras. Exemplo: Sección 1 = 1; Sección 2 = 3 (triplo da lonxitude de 1); Sección 3 = 1 (mesma lonxitude que 1).",
+            "label": "Peso"
+          },
+          {
+            "default": "#96ceb4",
+            "label": "Cor de fondo"
+          },
+          {
+            "default": "#1c1c1c",
+            "label": "Cor do texto"
+          }
+        ],
+        "label": "Parámetros da sección"
+      },
+      "label": "Seccións",
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ]
+    },
+    {
+      "description": "Estas opcións permitiranche controlar o comportamento da tarefa.",
+      "fields": [
+        {
+          "label": "Activar \"Tentar de novo\""
+        },
+        {
+          "label": "Activar \"Solución\""
+        },
+        {
+          "description": "Slack é a flexibilidade integrada da lonxitude dunha sección, calculada en porcentaxe.",
+          "label": "Folgura"
+        },
+        {
+          "description": "Define unha lonxitude de texto mínima absoluta. Lembra que a mensaxe de retroalimentación determínase fundamentalmente polo peso dunha sección comparado co de outras, non por este valor mínimo.",
+          "label": "Lonxitude mínima do texto"
+        },
+        {
+          "description": "Define unha lonxitude de texto máxima absoluta. Lembra que a mensaxe de retroalimentación determínase fundamentalmente polo peso dunha sección comparado co de outras, non por este valor máximo.",
+          "label": "Lonxitude máxima do texto"
+        },
+        {
+          "description": "Decide se queres amosar a retroalimentación mentres o alumno está a escribir ou só cando o pida.",
+          "label": "Modo de retroalimentación",
+          "options": [
+            {
+              "label": "Cando o pida"
+            },
+            {
+              "label": "Mentres está a escribir"
+            }
+          ]
+        }
+      ],
+      "label": "Configuración do comportamento"
+    },
+    {
+      "fields": [
+        {
+          "default": "Copiar",
+          "label": "Texto para o botón \"Copiar\""
+        },
+        {
+          "default": "Comprobar",
+          "label": "Texto para o botón \"Comprobar\""
+        },
+        {
+          "default": "Tentar de novo",
+          "label": "Texto para o botón \"Tentar de novo\""
+        },
+        {
+          "default": "Amosar solución",
+          "label": "Texto para o botón \"Amosar solución\""
+        },
+        {
+          "default": "A lonxitude das túas seccións é correcta.",
+          "description": "Texto de retroalimentación amosado cando todas as seccións teñen unha lonxitude tolerable.",
+          "label": "Todas as seccións están ben"
+        },
+        {
+          "default": "A túa sección \"@title\" é demasiado curta. Precisas polo menos @chars caracteres máis.",
+          "description": "Texto de retroalimentación amosado para as seccións que son demasiado curtas (substituirase @title polo título da sección e @chars polo número de caracteres que faltan).",
+          "label": "Sección demasiado curta"
+        },
+        {
+          "default": "A túa sección \"@title\" é demasiado longa. Borrar polo menos @chars caracteres.",
+          "description": "Texto de retroalimentación amosado cando as seccións son demasiado longas (substituirase @title polo título da sección e @chars polo número de caracteres que teñen que borrarse).",
+          "label": "Sección demasiado larga"
+        },
+        {
+          "default": "Faltan @chars caracteres",
+          "description": "Estado amosado mentres se escribe para as seccións que son demasiado curtas (substituirase @chars polo número de caracteres que faltan).",
+          "label": "Sección demasiado curta (mentres escribe)"
+        },
+        {
+          "default": "Sobran @chars caracteres",
+          "description": "Estado amosado mentres se escribe para as seccións que son demasiado longas (substituirase @chars polo número de caracteres que hai que borrar).",
+          "label": "Sección demasiado longa (mentres escribe)"
+        },
+        {
+          "default": "Copiouse o teu texto ao portapapeis",
+          "label": "Texto copiado ao portapapeis"
+        },
+        {
+          "default": "Non se puido copiar o teu texto ao portapapeis",
+          "label": "Non se pode copiar ao portapapeis"
+        },
+        {
+          "default": "Sección",
+          "label": "Sección"
+        },
+        {
+          "default": "Non hai seccións para esta tira de estrutura.",
+          "label": "Texto para a mensaxe \"Non hai seccións\""
+        }
+      ],
+      "label": "Interface de usuario"
+    },
+    {
+      "fields": [
+        {
+          "default": "Retroalimentación",
+          "label": "Retroalimentación (texto para lectores de pantalla)"
+        },
+        {
+          "default": "Copiar texto ao portapapeis",
+          "label": "Copiar texto ao portapapeis (texto para lectores de pantalla)"
+        },
+        {
+          "default": "Pechar fiestra",
+          "label": "Pechar fiestra (texto para lectores de pantalla)"
+        },
+        {
+          "default": "Amosar pistas",
+          "label": "Amosar pistas (texto para lectores de pantalla)"
+        }
+      ],
+      "label": "Lector de pantalla"
+    }
+  ]
+}

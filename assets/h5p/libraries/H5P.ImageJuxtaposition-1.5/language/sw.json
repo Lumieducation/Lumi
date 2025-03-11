@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Maelezo ya kazi",
+      "description": "Weka kichwa/maelekezo ambayo ungependa kuonyesha hapo juu kabla/baada ya picha hapa.",
+      "placeholder": "Hapa unaweza kuongeza kichwa cha hiari na / au maagizo."
+    },
+    {
+      "label": "Picha ya kwanza",
+      "fields": [
+        {
+          "label": "Picha ya kwanza",
+          "description": "Picha ya kwanza. Tafadhali hakikisha kuwa ina ukubwa sawa na picha ya pili."
+        },
+        {
+          "label": "Lebo ya picha ya kwanza",
+          "description": "Lebo ya kuweka juu ya picha ya kwanza"
+        }
+      ]
+    },
+    {
+      "label": "Picha ya pili",
+      "fields": [
+        {
+          "label": "Picha ya pili",
+          "description": "Picha ya pili. Tafadhali hakikisha kuwa ina ukubwa sawa na picha ya kwanza."
+        },
+        {
+          "label": "Lebo ya picha ya pili",
+          "description": "Lebo ya kuweka juu ya picha ya pili"
+        }
+      ]
+    },
+    {
+      "label": "Mipangilio ya kitabia",
+      "description": "Chaguzi hizi zitakuwezesha kuweka maelezo kadhaa",
+      "fields": [
+        {
+          "label": "Nafasi ya kuanza kwa kitelezi katika asilimia au %",
+          "description": "Inaweka msimamo wa kuanza kwa kitelezi"
+        },
+        {
+          "label": "Mwelekeo wa kiteleza",
+          "description": "Mlalo utasonga kushoto na kulia, wima utasonga juu na chini.",
+          "options": [
+            {
+              "label": "Mlalo"
+            },
+            {
+              "label": "Wima"
+            }
+          ]
+        },
+        {
+          "label": "Rangi ya kitelezi",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Image visible message",
+          "default": "Image @percentage % visible",
+          "description": "@percentage is a placeholder and will be replaced with the respective value."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

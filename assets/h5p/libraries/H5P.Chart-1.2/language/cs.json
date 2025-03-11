@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Typ grafu",
+      "options": [
+        {
+          "label": "Koláčový graf"
+        },
+        {
+          "label": "Sloupcový graf"
+        }
+      ]
+    },
+    {
+      "label": "Datové prvky",
+      "entity": "volba",
+      "field": {
+        "label": "Datový prvek",
+        "fields": [
+          {
+            "label": "Název"
+          },
+          {
+            "label": "Hodnota"
+          },
+          {
+            "label": "Barva"
+          },
+          {
+            "label": "Barva písma"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Text čtený čtecím zařízení definující obrázek jako graf.",
+      "default": "Graf"
+    }
+  ]
+}

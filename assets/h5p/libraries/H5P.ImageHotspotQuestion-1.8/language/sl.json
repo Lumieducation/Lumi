@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Urejevalnik iskanja interaktivnih točk",
+      "fields": [
+        {
+          "label": "Ozadje",
+          "fields": [
+            {
+              "label": "Slika ozadja",
+              "description": "Izberi sliko za ozadje aktivnosti."
+            }
+          ]
+        },
+        {
+          "label": "Interaktivne točke",
+          "description": "Izbrano obliko za novo točko se po sistemu povleci in spusti prenese na izbrano mesto ozadja. Meni za urejanje obstoječih točk se prikaže po dvokliku na izbrano točko.",
+          "fields": [
+            {
+              "label": "Navodilo udeležencem",
+              "description": "Opis reševanja zadane naloge."
+            },
+            {
+              "label": "Interaktivna točka",
+              "entity": "Točka",
+              "field": {
+                "label": "Interaktivna točka",
+                "fields": [
+                  {
+                    "label": "Uporabniške nastavitve",
+                    "fields": [
+                      {
+                        "label": "Pravilen odgovor",
+                        "description": "Pravilnih je lahko več interaktivnih točk. Kljub temu dobi udeleženec povratno informacijo takoj po prvi izbiri."
+                      },
+                      {
+                        "label": "Povratna informacija"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Sistemske nastavitve"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Povratna informacija za izbiro praznega prostora na ozadju",
+              "placeholder": "Na tem mestu ni točke. Poskusi ponovno."
+            },
+            {
+              "label": "Povratno informacijo pokaži v pogovornem oknu"
+            },
+            {
+              "label": "Določitev",
+              "fields": [
+                {
+                  "label": "Besedilo za gumb \"Poskusi ponovno\"",
+                  "default": "Poskusi ponovno"
+                },
+                {
+                  "label": "Besedilo za gumb \"Zapri\"",
+                  "default": "Zapri"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Besedilo, ki ga bralnik zaslona uporabi za izražanje napredka",
+      "default": "Dosežene točke: :num od :total"
+    },
+    {
+      "label": "Besedilo za gumb \"Poskusi ponovno\" za bralnik zaslona",
+      "default": "Poskusi ponovno"
+    }
+  ]
+}

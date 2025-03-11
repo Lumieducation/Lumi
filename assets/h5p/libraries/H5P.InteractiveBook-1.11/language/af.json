@@ -1,0 +1,205 @@
+{
+  "semantics": [
+    {
+      "label": "Aktiveer boek voorblad",
+      "description": "'n Voorblad wys informasie oor die boek voor toegang verkry word"
+    },
+    {
+      "label": "Voorblad",
+      "fields": [
+        {
+          "label": "Voorblad beskrywing",
+          "description": "Hierdie teks sal die beskrywing van jou boek wees."
+        },
+        {
+          "label": "Cover media",
+          "description": "Optional media to display on the cover."
+        }
+      ]
+    },
+    {
+      "label": "Bladsye",
+      "entity": "Bladsy",
+      "widgets": [
+        {
+          "label": "Verstek"
+        }
+      ],
+      "field": {
+        "label": "Item",
+        "fields": [
+          {
+            "label": "Bladsy"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Gedragsinstellings",
+      "fields": [
+        {
+          "label": "Base color",
+          "description": "Set the base color that will define the overall color scheme of the book. Please ensure a high enough contrast."
+        },
+        {
+          "label": "Vertoon inhoudsopgawe as verstek",
+          "description": "Indien geaktiveer word die inhoudsopgawe vertoon wanneer die boek oopgemaak word"
+        },
+        {
+          "label": "Vertoon vordering aanwysers",
+          "description": "Indien geaktiveer sal daar bladsyaanwysers vertoon word wat stel of die gebruiker klaar met die bladsy is of nie."
+        },
+        {
+          "label": "Aktiveer outomatiese vordering",
+          "description": "Indien geaktiveer, word 'n bladsy sonder take as afgehandel beskou. 'n Bladsy met take wanneer alle take gedoen is. Indien gedeaktiveer, sal daar onderaan elke bladsy 'n knoppie wees waarop die gebruiker kan klik as hy klaar is met die bladsy."
+        },
+        {
+          "label": "Vertoon opsomming",
+          "description": "Indien dit geaktiveer is, kan die gebruiker 'n opsomming sien en die vordering/antwoorde indien"
+        },
+        {
+          "label": "Enable \"Restart\" button",
+          "description": "When enabled the user can initiate a restart on the summary page."
+        }
+      ]
+    },
+    {
+      "label": "Vertaling vir \"Lees\"",
+      "default": "Lees"
+    },
+    {
+      "label": "Vertaling vir \"Vertoon 'Inhoudsopgawe'\"",
+      "default": "Vertoon 'Inhoudsopgawe'"
+    },
+    {
+      "label": "Vertaling vir \"Versteek 'Inhoudsopgawe'\"",
+      "default": "Versteek 'Inhoudsopgawe'"
+    },
+    {
+      "label": "Vertaling vir \"Volgende bladsy\"",
+      "default": "Volgende bladsy"
+    },
+    {
+      "label": "Vertaling vir \"Vorige bladsy\"",
+      "default": "Vorige bladsy"
+    },
+    {
+      "label": "Vertaling vir \"Bladsy voltooi!\"",
+      "default": "Bladsy voltooi!"
+    },
+    {
+      "label": "Vertaling vir \"@pages van @total voltooi\" (@pages en @total sal vervang word met werklike waardes)",
+      "default": "@pages van @total voltooi"
+    },
+    {
+      "label": "Vertaling vir \"Onvoltooide bladsy\"",
+      "default": "Onvoltooide bladsy"
+    },
+    {
+      "label": "Vertaling vir \"Navigeer na bo\"",
+      "default": "Navigeer na bo"
+    },
+    {
+      "label": "Vertaling vir \"Ek het die bladsy voltooi\"",
+      "default": "Ek het die bladsy voltooi"
+    },
+    {
+      "label": "Volskerm knoppie etiket",
+      "default": "Volskerm"
+    },
+    {
+      "label": "Verlaat volskerm knoppie etiket",
+      "default": "Verlaat volskerm"
+    },
+    {
+      "label": "Bladsy vordering in boek",
+      "description": "\"@count\" sal vervang word deur bladsynommer, en \"@total\" met die totale aantal bladsye",
+      "default": "@count van @total bladsye"
+    },
+    {
+      "label": "Interaksie vordering",
+      "description": "\"@count\" sal vervang word deur interaksienommer, en \"@total\" met die totale aantal interaksies",
+      "default": "@count van @total interaksies"
+    },
+    {
+      "label": "Vertaling vir \"Dien rapport in\"",
+      "default": "Dien rapport in"
+    },
+    {
+      "label": "Etiket vir \"herbegin\" knoppie",
+      "default": "Herbegin"
+    },
+    {
+      "label": "Opsomming opskrif",
+      "default": "Opsomming"
+    },
+    {
+      "label": "Vertaling vir \"Alle interaksies\"",
+      "default": "Alle interaksies"
+    },
+    {
+      "label": "Vertaling vir \"Onbeantwoorde interaksies\"",
+      "default": "Onbeantwoorde interaksies"
+    },
+    {
+      "label": "Telling",
+      "description": "\"@score\" sal vervang word met huidige telling, en \"@maxscore\"sal vervang word met maksimum behaalbare telling",
+      "default": "@score / @maxscore"
+    },
+    {
+      "label": "Per bladsy interaksies voltooiing",
+      "description": "\"@left\"sal vervang word met oorblywende interaksies, en \"@max\" sal vervang word met totale aantal interaksies op die bladsy",
+      "default": "@left van @max interaksies voltooi"
+    },
+    {
+      "label": "Vertaling vir \"Geen interaksies\"",
+      "default": "Geen interaksies"
+    },
+    {
+      "label": "Vertaling vir \"Telling\"",
+      "default": "Telling"
+    },
+    {
+      "label": "Etiket vir \"Opsom &amp; indien\" knoppie",
+      "default": "Opsom &amp; indien"
+    },
+    {
+      "label": "Vertaling vir \"Jy het nog nie interaksies gehad met enige bladsye nie.\"",
+      "default": "Jy het nog nie interaksies gehad met enige bladsye nie."
+    },
+    {
+      "label": "Vertaling vir \"Jy moet 'n interaksie hê met ten minste een bladsy voordat jy die opsomming kan sien.\"",
+      "default": "Jy moet 'n interaksie hê met ten minste een bladsy voordat jy die opsomming kan sien."
+    },
+    {
+      "label": "Vertaling vir \"Jou antwoorde is ingedien vir hersiening!\"",
+      "default": "Jou antwoorde is ingedien vir hersiening!"
+    },
+    {
+      "label": "Opsomming vordering etiket",
+      "default": "Boek vordering"
+    },
+    {
+      "label": "Interaksies vordering etiket",
+      "default": "Interaksies vordering"
+    },
+    {
+      "label": "Totale telling etiket",
+      "default": "Totale telling"
+    },
+    {
+      "label": "Toeganklikheid teks",
+      "fields": [
+        {
+          "label": "Bladsyvordering teksalternatief",
+          "description": "'n Alternatiewe teks vir die visuele bladsyvordering. @page en @total veranderlikes beskikbaar.",
+          "default": "Bladsy @page van @total."
+        },
+        {
+          "label": "Etiket vir uitbreiding/invou navigasie menu",
+          "default": "Skakel navigasie menu"
+        }
+      ]
+    }
+  ]
+}

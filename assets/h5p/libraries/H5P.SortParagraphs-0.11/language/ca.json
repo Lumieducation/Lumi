@@ -1,0 +1,224 @@
+{
+  "semantics": [
+    {
+      "label": "Recurs gràfic",
+      "fields": [
+        {
+          "label": "Tipus",
+          "description": "Recurs gràfic opcional per mostrar a sobre de la pregunta."
+        },
+        {
+          "label": "Desactiva el zoom"
+        }
+      ]
+    },
+    {
+      "placeholder": "Descriu què han de fer els estudiants…",
+      "description": "Què haurien de saber.",
+      "label": "Descripció de la tasca"
+    },
+    {
+      "entity": "paràgraf",
+      "field": {
+        "label": "Paràgraf"
+      },
+      "label": "Paràgrafs"
+    },
+    {
+      "label": "Comentaris generals",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Per defecte"
+            }
+          ],
+          "label": "Defineix comentaris personalitzats per a qualsevol interval de puntuació",
+          "description": "Clica al botó \"Afegeix intervals\" per afegir-ne tants com necessitis. Exemple: 0-20 % puntuació dolenta, 21-91 % puntuació mitjana, 91-100 % puntuació excel·lent!",
+          "entity": "interval",
+          "field": {
+            "fields": [
+              {
+                "label": "Interval de puntuació"
+              },
+              {},
+              {
+                "label": "Comentari de l’interval de puntuació definit",
+                "placeholder": "Emplena els comentaris"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Configuració del comportament",
+      "description": "Aquestes opcions us permeten controlar com es comporta la tasca.",
+      "fields": [
+        {
+          "label": "Mode de puntuació",
+          "description": "Decideix si es donen punts per cada paràgraf col·locat correctament o per cada paràgraf col·locat després del paràgraf que toca (\"seqüència correcta\")",
+          "options": [
+            {
+              "label": "Seqüència correcta"
+            },
+            {
+              "label": "Paràgraf ben col·locat"
+            }
+          ]
+        },
+        {
+          "description": "Decideix si es resta un punt per cada paràgraf mal col·locat.",
+          "label": "Aplica penalitzacions"
+        },
+        {
+          "label": "Paràgrafs duplicats intercanviables",
+          "description": "Si s'activa, en comprovar la resposta els paràgrafs duplicats es tracten com a idèntics si contenen el mateix text."
+        },
+        {
+          "label": "Afegeix botons de desplaçament",
+          "description": "Als dispositius mòbils, els botons per moure paràgrafs poden oferir un avantatge addicional d'accessibilitat. Si ho prefereixes, els pots desactivar aquí."
+        },
+        {
+          "label": "Activa el botó \"Reintenta\""
+        },
+        {
+          "label": "Activa el botó \"Mostra la solució\""
+        }
+      ]
+    },
+    {
+      "label": "Interfície d’usuari",
+      "fields": [
+        {
+          "label": "Text per al botó \"Comprova\"",
+          "default": "Comprova"
+        },
+        {
+          "label": "Text per al botó \"Envia\"",
+          "default": "Envia"
+        },
+        {
+          "label": "Text per al botó \"Reintenta\"",
+          "default": "Reintenta"
+        },
+        {
+          "label": "Text per al botó \"Mostra la solució\"",
+          "default": "Mostra la solució"
+        },
+        {
+          "label": "Títol del botó \"Amunt\"",
+          "default": "Amunt"
+        },
+        {
+          "label": "Títol del botó \"Avall\"",
+          "default": "Avall"
+        },
+        {
+          "label": "Títol del botó que està desactivat",
+          "default": "Desactivat"
+        }
+      ]
+    },
+    {
+      "label": "Lector en veu alta",
+      "fields": [
+        {
+          "label": "Descripció d’ajuda per al botó \"Comprova\"",
+          "default": "Comprova les respostes. Les respostes es marquen com a correctes o incorrectes."
+        },
+        {
+          "label": "Descripció d'ajuda per al botó \"Mostra la solució\"",
+          "default": "Mostra la solució. Es mostra la solució correcta."
+        },
+        {
+          "label": "Descripció d'ajuda per al botó \"Reintenta\"",
+          "default": "Reintenta la tasca. Restableix tots els elements i torna a començar la tasca."
+        },
+        {
+          "label": "Resultat",
+          "description": "@score se substitueix pel nombre de punts. @total se substitueix pel màxim de punts possibles.",
+          "default": "Has fet @score punts de @total"
+        },
+        {
+          "label": "Descripció de la llista",
+          "default": "Llista de paràgrafs ordenables."
+        },
+        {
+          "label": "Descripció de la llista (comprova la resposta)",
+          "default": "Llista de paràgrafs amb resultats."
+        },
+        {
+          "label": "Descripció de la llista (mostra la solució)",
+          "default": "Llista de paràgrafs amb solucions."
+        },
+        {
+          "label": "Paràgraf",
+          "default": "Paràgraf"
+        },
+        {
+          "label": "Correcte",
+          "default": "correcte"
+        },
+        {
+          "label": "Incorrecte",
+          "default": "incorrecte"
+        },
+        {
+          "description": "@score se substitueix per 1 or –1.",
+          "label": "Explicació de la puntuació",
+          "default": "@score punts"
+        },
+        {
+          "description": "@current se substitueix pel número de paràgraf actual. @total se substitueix pel nombre de paràgrafs.",
+          "label": "Numeració de paràgrafs",
+          "default": "@current de @total"
+        },
+        {
+          "description": "Va seguit de \"Numeració de paràgrafs\".",
+          "label": "Posició actual a la llista",
+          "default": "Posició actual a la llista"
+        },
+        {
+          "label": "Instrucció quan se selecciona un paràgraf",
+          "default": "Prem la barra espaiadora per reordenar"
+        },
+        {
+          "label": "Instrucció quan s'agafa un paràgraf",
+          "default": "Prem les tecles de fletxa amunt i avall per canviar-ne la posició, la barra espaiadora per deixar-lo anar i la tecla d'escapada per cancel·lar"
+        },
+        {
+          "label": "Agafat",
+          "default": "Agafat"
+        },
+        {
+          "label": "Mogut",
+          "default": "Mogut"
+        },
+        {
+          "label": "Deixat",
+          "default": "Deixat"
+        },
+        {
+          "label": "S’ha cancel·lat la reordenació",
+          "default": "S’ha cancel·lat la reordenació"
+        },
+        {
+          "description": "Va seguit de \"Numeració de paràgrafs\".",
+          "label": "Posició final",
+          "default": "Posició final"
+        },
+        {
+          "description": "Va seguit de \"correcte\" o \"incorrecte\".",
+          "label": "Paràgraf següent",
+          "default": "Paràgraf següent"
+        },
+        {
+          "description": "Va seguit de \"Numeració de paràgrafs\".",
+          "label": "Paràgraf correcte",
+          "default": "Paràgraf a la posició correcta"
+        }
+      ]
+    }
+  ]
+}

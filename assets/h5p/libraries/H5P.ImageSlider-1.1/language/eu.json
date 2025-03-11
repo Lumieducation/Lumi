@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Irudiak",
+      "field": {
+        "label": "Irudien Aurkezpena",
+        "fields": [
+          {
+            "label": "Irudien Aurkezpena"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Itxura-proportzioa",
+      "description": "Automatikoa aukeratuta irudietan oinarritutako itxura-proportzioa automatikoki zehaztuko da",
+      "options": [
+        {
+          "label": "Automatikoa"
+        },
+        {
+          "label": "Pertsonalizatua"
+        },
+        {
+          "label": "Lotu gabea"
+        }
+      ]
+    },
+    {
+      "label": "Itxura-proportzioaren Ezarpenak",
+      "fields": [
+        {
+          "label": "Itxura-proportzioaren zabalera",
+          "description": "Hemen 4 eta altueran 3 jartzen baduzu itxura-proportzioa 4:3 izango da"
+        },
+        {
+          "label": "Itxura-proportzioaren altuera",
+          "description": "Hemen 3 eta zabaleran 4 jartzen baduzu itxura-proportzioa 4:3 izango da"
+        }
+      ]
+    },
+    {
+      "label": "Irudien Aurkezpenaren Eskuragarritasuna",
+      "fields": [
+        {
+          "label": "Hurrengo diapositibaren botoiarentzako etiketa",
+          "default": "Hurrengo Irudia",
+          "description": "Hau soilik irakurgailu-bozgorailuentzako erabiltzen da. Ez da erakutsiko."
+        },
+        {
+          "label": "Aurreko diapositibaren botoiarentzako etiketa",
+          "default": "Aurreko Irudia",
+          "description": "Hau soilik irakurgailu-bozgorailuentzako erabiltzen da. Ez da erakutsiko."
+        },
+        {
+          "label": "Diapositiba-botoientzako etiketa",
+          "default": "Joan %slide irudira",
+          "description": "Hau soilik irakurgailu-bozgorailuentzako erabiltzen da. Ez da erakutsiko. %slide aldagai bat da eta irudiaren zenbakiarekin ordezkatuko da."
+        }
+      ]
+    }
+  ]
+}

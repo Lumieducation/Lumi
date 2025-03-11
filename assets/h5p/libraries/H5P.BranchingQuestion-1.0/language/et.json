@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Hargneva küsimuse redaktor",
+      "fields": [
+        {
+          "label": "Küsimus"
+        },
+        {
+          "label": "Võimalikud alternatiivid",
+          "entity": "alternatiiv",
+          "field": {
+            "label": "Alternatiiv",
+            "fields": [
+              {
+                "label": "Tekst"
+              },
+              {
+                "label": "Järgmine sisu (-1 on viimane haru)"
+              },
+              {
+                "label": "Tagaside",
+                "fields": [
+                  {
+                    "label": "Tagasiside pealkiri"
+                  },
+                  {
+                    "label": "Tagasiside tekst"
+                  },
+                  {
+                    "label": "Tagasiside pilt"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

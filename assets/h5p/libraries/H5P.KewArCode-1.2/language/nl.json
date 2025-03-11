@@ -1,0 +1,512 @@
+{
+  "semantics": [
+    {
+      "label": "Introductory text",
+      "description": "This text can optionally be presented along with your code."
+    },
+    {
+      "label": "Type voor code",
+      "description": "Selecteer welke soort code je wilt maken",
+      "options": [
+        {
+          "label": "Contact"
+        },
+        {
+          "label": "Evenement"
+        },
+        {
+          "label": "E-mailadres"
+        },
+        {
+          "label": "H5P"
+        },
+        {
+          "label": "Locatie"
+        },
+        {
+          "label": "Telefoonnummer"
+        },
+        {
+          "label": "SMS"
+        },
+        {
+          "label": "Tekst"
+        },
+        {
+          "label": "URL"
+        }
+      ]
+    },
+    {
+      "label": "Contact",
+      "fields": [
+        {
+          "label": "Naam",
+          "placeholder": "Jan de Vries"
+        },
+        {
+          "label": "Organisatie",
+          "placeholder": "H5P-fanclub"
+        },
+        {
+          "label": "Titel",
+          "placeholder": "Doctor in de 'Weet-niet'-kunde"
+        },
+        {
+          "label": "Telefoonnummer",
+          "description": "Telefoonnummer (gebruik de volgende indeling +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        },
+        {
+          "label": "E-mailadres",
+          "description": "E-mailadres om berichten naar te versturen",
+          "placeholder": "jan@fictief-h5p-fanclub.org"
+        },
+        {
+          "label": "Adres",
+          "fields": [
+            {
+              "label": "Uitgebreid adres",
+              "description": "p/a informatie, etc.",
+              "placeholder": "p/a H5P-fanclub"
+            },
+            {
+              "label": "Straat",
+              "description": "Straat inclusief nummer",
+              "placeholder": "Amsterdamseweg 110"
+            },
+            {
+              "label": "Plaats",
+              "description": "Plaatsnaam, etc.",
+              "placeholder": "Amsterdam"
+            },
+            {
+              "label": "Regio",
+              "description": "Provincie, etc.",
+              "placeholder": "Noord-Holland"
+            },
+            {
+              "label": "Postcode",
+              "description": "Postcode",
+              "placeholder": "1000 AA"
+            },
+            {
+              "label": "Land",
+              "description": "Land",
+              "placeholder": "Nederland"
+            }
+          ]
+        },
+        {
+          "label": "Website",
+          "description": "Website om naar te linken (dit moet beginnen met https:// of http://)",
+          "placeholder": "https://fictieve-h5p-fanclub.org"
+        },
+        {
+          "label": "Notitie",
+          "description": "Notitie",
+          "placeholder": "Jan vindt H5P geweldig."
+        }
+      ]
+    },
+    {
+      "label": "Evenement",
+      "fields": [
+        {
+          "label": "Titel",
+          "description": "Titel voor het kalenderevenement",
+          "placeholder": "H5P Conferentie 2020"
+        },
+        {
+          "label": "Evenement voor de gehele dag",
+          "description": "Controleer of het evenement de hele dag duurt"
+        },
+        {
+          "label": "Startdatum",
+          "description": "Startdatum van het evenement (gebruik de volgende opmaak jjjj/mm/dd)",
+          "placeholder": "2020/05/18"
+        },
+        {
+          "label": "Starttijd",
+          "description": "Starttijd van het evenement (gebruik de volgende opmaak hh:mm)",
+          "placeholder": "09:00"
+        },
+        {
+          "label": "Einddatum",
+          "description": "Einddatum van het evenement (gebruik de volgende opmaak jjjj/mm/dd)",
+          "placeholder": "2020/05/20"
+        },
+        {
+          "label": "Eindtijd",
+          "description": "Eindtijd van het evenement (gebruik de volgende opmaak hh:mm)",
+          "placeholder": "16:00"
+        },
+        {
+          "label": "Tijdzone",
+          "description": "Selecteer de tijdzone waarin het evenement zal plaatsvinden",
+          "options": [
+            {
+              "label": "GMT-12:00"
+            },
+            {
+              "label": "GMT-11:00"
+            },
+            {
+              "label": "GMT-10:00"
+            },
+            {
+              "label": "GMT-9:30"
+            },
+            {
+              "label": "GMT-9:00"
+            },
+            {
+              "label": "GMT-8:00"
+            },
+            {
+              "label": "GMT-7:00"
+            },
+            {
+              "label": "GMT-6:00"
+            },
+            {
+              "label": "GMT-5:00"
+            },
+            {
+              "label": "GMT-4:00"
+            },
+            {
+              "label": "GMT-3:30"
+            },
+            {
+              "label": "GMT-3:00"
+            },
+            {
+              "label": "GMT-2:00"
+            },
+            {
+              "label": "GMT-1:00"
+            },
+            {
+              "label": "GMT"
+            },
+            {
+              "label": "GMT+1:00"
+            },
+            {
+              "label": "GMT+2:00"
+            },
+            {
+              "label": "GMT+3:00"
+            },
+            {
+              "label": "GMT+3:30"
+            },
+            {
+              "label": "GMT+4:00"
+            },
+            {
+              "label": "GMT+4:30"
+            },
+            {
+              "label": "GMT+5:00"
+            },
+            {
+              "label": "GMT+5:30"
+            },
+            {
+              "label": "GMT+5:45"
+            },
+            {
+              "label": "GMT+6:00"
+            },
+            {
+              "label": "GMT+6:30"
+            },
+            {
+              "label": "GMT+7:00"
+            },
+            {
+              "label": "GMT+8:00"
+            },
+            {
+              "label": "GMT+9:00"
+            },
+            {
+              "label": "GMT+9:30"
+            },
+            {
+              "label": "GMT+10:00"
+            },
+            {
+              "label": "GMT+10:30"
+            },
+            {
+              "label": "GMT+11:00"
+            },
+            {
+              "label": "GMT+12:00"
+            },
+            {
+              "label": "GMT+12:45"
+            },
+            {
+              "label": "GMT+13:00"
+            },
+            {
+              "label": "GMT+14:00"
+            }
+          ]
+        },
+        {
+          "label": "Zomertijd",
+          "description": "Controleer of de locatie waar het evenement plaatsvindt gebruikt maakt van de zomertijd"
+        },
+        {
+          "label": "Locatie",
+          "description": "Naam van de locatie",
+          "placeholder": "Amsterdam, Nederland"
+        },
+        {
+          "label": "Beschrijving",
+          "description": "Voeg een beschrijving van het evenement toe",
+          "placeholder": "Derde H5P conferentie"
+        }
+      ]
+    },
+    {
+      "label": "E-mailadres",
+      "fields": [
+        {
+          "label": "E-mailadres",
+          "description": "E-mailadres om berichten naar te versturen",
+          "placeholder": "jan@fictief-h5p-fanclub.org"
+        }
+      ]
+    },
+    {
+      "label": "H5P-inhoud",
+      "fields": [
+        {
+          "label": "H5P-inhoud",
+          "description": "H5P-inhoud om te tonen"
+        }
+      ]
+    },
+    {
+      "label": "Locatie",
+      "fields": [
+        {
+          "label": "Breedtegraad",
+          "description": "Breedtegraad (gebruik de volgende indeling 53.864462)",
+          "placeholder": "69.646007"
+        },
+        {
+          "label": "Lengtegraad",
+          "description": "Lengtegraad (gebruik de volgende indeling 10.663792)",
+          "placeholder": "18.954036"
+        }
+      ]
+    },
+    {
+      "label": "Telefoonnummer",
+      "fields": [
+        {
+          "label": "Telefoonnummer",
+          "description": "Telefoonnummer (gebruik de volgende indeling +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        }
+      ]
+    },
+    {
+      "label": "SMS",
+      "fields": [
+        {
+          "label": "Telefoonnummer",
+          "description": "Telefoonnummer (gebruik de volgende indeling +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        },
+        {
+          "label": "Bericht",
+          "description": "Bericht om te verzenden",
+          "placeholder": "Haal alsjeblieft melk en brood!"
+        }
+      ]
+    },
+    {
+      "label": "Tekst",
+      "fields": [
+        {
+          "label": "Tekst",
+          "description": "Te coderen tekst",
+          "placeholder": "Haal alsjeblieft\n* melk\n* brood"
+        }
+      ]
+    },
+    {
+      "label": "URL",
+      "fields": [
+        {
+          "label": "URL",
+          "description": "URL om naar te linken (dit moet beginnen met https:// of http://)",
+          "placeholder": "https://fictieve-h5p-fanclub.org"
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellingen",
+      "description": "Met deze opties kun je bepalen hoe de taak zich gedraagt.",
+      "fields": [
+        {
+          "label": "Code-kleur",
+          "default": "#000000"
+        },
+        {
+          "label": "Achtergrondkleur",
+          "default": "#ffffff"
+        },
+        {
+          "label": "Maximale grootte",
+          "description": "De maximale grootte van de code in CSS-notatie (standaard in pixels als er slechts een getal wordt gegeven)"
+        },
+        {
+          "label": "Horizontale uitlijning",
+          "description": "Stel de horizontale uitlijning in als je een maximale grootte creëert",
+          "options": [
+            {
+              "label": "links"
+            },
+            {
+              "label": "midden"
+            },
+            {
+              "label": "rechts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Gebruikersinterface",
+      "fields": [
+        {
+          "label": "Adres",
+          "default": "Adres"
+        },
+        {
+          "label": "Contact",
+          "default": "Contact"
+        },
+        {
+          "label": "Land",
+          "default": "Land"
+        },
+        {
+          "label": "Einddatum",
+          "default": "Einddatum"
+        },
+        {
+          "label": "Startdatum",
+          "default": "Startdatum"
+        },
+        {
+          "label": "Beschrijving",
+          "default": "Beschrijving"
+        },
+        {
+          "label": "E-mail",
+          "default": "E-mail"
+        },
+        {
+          "label": "Evenement",
+          "default": "Evenement"
+        },
+        {
+          "label": "Uitgebreid adres",
+          "default": "Uitgebreid adres"
+        },
+        {
+          "label": "Breedtegraad",
+          "default": "Breedtegraad"
+        },
+        {
+          "label": "Plaats",
+          "default": "Plaats"
+        },
+        {
+          "label": "Locatie",
+          "default": "Locatie"
+        },
+        {
+          "label": "Lengtegraad",
+          "default": "Lengtegraad"
+        },
+        {
+          "label": "Bericht",
+          "default": "Bericht"
+        },
+        {
+          "label": "Naam",
+          "default": "Naam"
+        },
+        {
+          "label": "Notitie",
+          "default": "Notitie"
+        },
+        {
+          "label": "Organisatie",
+          "default": "Organisatie"
+        },
+        {
+          "label": "Telefoon",
+          "default": "Telefoon"
+        },
+        {
+          "label": "Regio",
+          "default": "Regio"
+        },
+        {
+          "label": "SMS",
+          "default": "SMS"
+        },
+        {
+          "label": "Straat",
+          "default": "Straat"
+        },
+        {
+          "label": "Tekst",
+          "default": "Tekst"
+        },
+        {
+          "label": "Titel",
+          "default": "Titel"
+        },
+        {
+          "label": "URL",
+          "default": "URL"
+        },
+        {
+          "label": "Postcode",
+          "default": "Postcode"
+        }
+      ]
+    },
+    {
+      "label": "Schermlezer",
+      "fields": [
+        {
+          "label": "QR-code. Toon informatie (Tekst voor schermlezers)",
+          "default": "QR-code. Toon informatie."
+        },
+        {
+          "label": "Verberg informatie (Tekst voor schermlezers)",
+          "default": "Verberg informatie."
+        },
+        {
+          "label": "Code contents (Text for Readspeakers)",
+          "default": ". Code contents"
+        }
+      ]
+    }
+  ]
+}

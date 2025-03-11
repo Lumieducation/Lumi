@@ -1,0 +1,104 @@
+[
+  {
+    "name": "description",
+    "label": "Description",
+    "importance": "medium",
+    "type": "text",
+    "widget": "html",
+    "description": "Description of the export page.",
+    "default": "On this page you can choose to export your text, goals and goals assessments.",
+    "enterMode": "p",
+    "tags": [
+      "strong",
+      "em",
+      "u",
+      "a",
+      "ul",
+      "ol",
+      "h2",
+      "h3",
+      "hr",
+      "pre",
+      "code"
+    ],
+    "optional": true
+  },
+  {
+    "name": "createDocumentLabel",
+    "label": "Create document button label",
+    "importance": "low",
+    "type": "text",
+    "description": "Text that will be displayed on the \"Create document\"-button.",
+    "default": "Create document"
+  },
+  {
+    "name": "submitTextLabel",
+    "label": "Submit text button",
+    "importance": "low",
+    "type": "text",
+    "description": "Text that will be displayed on the \"Submit\"-button.",
+    "default": "Submit"
+  },
+  {
+    "name": "submitSuccessTextLabel",
+    "type": "text",
+    "label": "Submit success label",
+    "optional": false,
+    "default": "Your report was submitted successfully!"
+  },
+  {
+    "name": "selectAllTextLabel",
+    "label": "Select all exportable text button label",
+    "importance": "low",
+    "type": "text",
+    "description": "Text that will be displayed on the \"Select all text\"-button.",
+    "default": "Select"
+  },
+  {
+    "name": "exportTextLabel",
+    "label": "Export text button label",
+    "importance": "low",
+    "type": "text",
+    "description": "Text that will be displayed on the \"Export text\"-button.",
+    "default": "Export"
+  },
+  {
+    "name": "helpTextLabel",
+    "label": "Label for help text",
+    "importance": "low",
+    "type": "text",
+    "description": "Label for showing additional helpful information to the user.",
+    "default": "More information"
+  },
+  {
+    "name": "helpText",
+    "label": "Fill in additional help information",
+    "importance": "low",
+    "type": "text",
+    "widget": "html",
+    "description": "Here you can fill in additional helpful information for the user.",
+    "enterMode": "p",
+    "optional": true,
+    "tags": [
+      "strong",
+      "em",
+      "u",
+      "a",
+      "ul",
+      "ol",
+      "h2",
+      "h3",
+      "hr",
+      "pre",
+      "code"
+    ]
+  },
+  {
+    "name": "requiresInputErrorMessage",
+    "label": "Required input missing text",
+    "importance": "low",
+    "type": "text",
+    "description": "An error message which will be displayed if one or more required input fields have not been filled. @pages will be replaced with the titles of affected pages.",
+    "default": "The following pages contain required fields that need to be filled in order to review or submit this document: @pages"
+  }
+]

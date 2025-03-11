@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Editor de Imágenes de Pregunta de Puntos Clave",
+      "fields": [
+        {
+          "label": "Imagen de fondo",
+          "fields": [
+            {
+              "label": "Imagen de fondo",
+              "description": "Seleccione una imagen para usar como fondo de la pregunta de puntos clave en imagen."
+            }
+          ]
+        },
+        {
+          "label": "Puntos clave",
+          "description": "Arrastra y suelta la figura deseada desde la barra de herramientas para crear un nuevo punto clave. Haz doble clic para editar un punto existente. Arrastra el punto para moverlo. Tira del asa de redimensión en la esquina inferior derecha para cambiar el tamaño.",
+          "fields": [
+            {
+              "label": "Descripción de la tarea",
+              "description": "Instrucciones para el usuario."
+            },
+            {
+              "label": "Punto Clave",
+              "entity": "Punto Clave",
+              "field": {
+                "label": "Punto Clave",
+                "fields": [
+                  {
+                    "label": "Ajustes de Usuario",
+                    "fields": [
+                      {
+                        "label": "Correcto",
+                        "description": "Puede haber múltiples puntos clave correctos. Sin embargo, el usuario recibe retroalimentación de correcto/incorrecto inmediatamente después del primer clic."
+                      },
+                      {
+                        "label": "Retroalimentación"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Configuración Calculada"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Retroalimentación si el usuario selecciona un lugar vacío:",
+              "placeholder": "¡No has encontrado ningún punto clave, inténtalo de nuevo!"
+            },
+            {
+              "label": "Mostrar retroalimentación en una ventana emergente"
+            },
+            {
+              "label": "Localización",
+              "fields": [
+                {
+                  "label": "Texto botón Intentar de nuevo",
+                  "default": "Intentar de nuevo"
+                },
+                {
+                  "label": "Texto del botón Cerrar",
+                  "default": "Cerrar"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Representación textual de la barra de puntuación cuando se usa un lector de pantalla",
+      "default": "Has obtenido :num de un total de :total puntos"
+    },
+    {
+      "label": "Descripción para las tecnologías de asistencia del botón \"Intentar de nuevo\"",
+      "default": "Vuelve a intentar la tarea. Borra todas tus respuestas y empieza de nuevo."
+    }
+  ]
+}

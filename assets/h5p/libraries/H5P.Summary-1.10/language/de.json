@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Aufgabenbeschreibung",
+      "default": "Wähle die korrekte Aussage.",
+      "description": "Wird über der Aufgabe angezeigt."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Eingabemaske"
+        },
+        {
+          "label": "In Textfeld eingeben"
+        }
+      ],
+      "label": "Zusammenfassung",
+      "entity": "Aussagen",
+      "field": {
+        "label": "Menge von Aussagen",
+        "fields": [
+          {
+            "label": "Liste von Aussagen für die Zusammenfassung - die erste Aussage ist die richtige.",
+            "entity": "Aussage",
+            "field": {
+              "label": "Aussage"
+            }
+          },
+          {
+            "label": "Tipp",
+            "fields": [
+              {
+                "label": "Tipp-Text"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Gesamtrückmeldung",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Eingabemaske"
+            }
+          ],
+          "label": "Lege Rückmeldungen für einzelne Punktebereiche fest",
+          "description": "Klicke auf den \"Bereich hinzufügen\"-Button, um so viele Bereiche hinzuzufügen, wie du brauchst. Beispiel: 0-20% Schlechte Punktzahl, 21-91% Durchschnittliche Punktzahl, 91-100% Großartige Punktzahl!",
+          "entity": "Bereich",
+          "field": {
+            "fields": [
+              {
+                "label": "Punktebereich"
+              },
+              {},
+              {
+                "label": "Rückmeldung für jeweiligen Punktebereich",
+                "placeholder": "Trage die Rückmeldung ein"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Text, der vor der Anzahl der richtig gewählten Aussagen angezeigt wird.",
+      "default": "Fortschritt:",
+      "description": "Wird über den Aussagen angezeigt. Beispiel: 'Fortschritt: 2/5'"
+    },
+    {
+      "label": "Text, der vor der Anzahl der falsch gewählten Aussagen angezeigt wird.",
+      "default": "Falsche Antworten:",
+      "description": "Wird über den Aussagen angezeigt. Beispiel: 'Falsche Antworten: 4'"
+    },
+    {
+      "label": "Überschrift der abschließend dargestellten Gesamtpunktzahl",
+      "default": "Dein Ergebnis",
+      "description": "Wird über dem Rückmeldungstext mit der Punktzahl angezeigt."
+    },
+    {
+      "label": "Text, den ein Vorlesewerkzeug bei einer richtigen Antwort vorliest (Barrierefreiheit)",
+      "default": "Richtig."
+    },
+    {
+      "label": "Text, den ein Vorlesewerkzeug bei einer falschen Antwort vorliest (Barrierefreiheit)",
+      "default": "Falsch! Bitte versuche es noch einmal."
+    },
+    {
+      "label": "Bezeichnung einer falschen Antwort für Vorlesewerkzeuge (Barrierefreiheit)",
+      "default": "Falsch"
+    },
+    {
+      "label": "Bezeichnung der Liste richtiger Antworten",
+      "default": "Richtige Antwort(en)."
+    },
+    {
+      "label": "Beschriftung des \"Tipp anzeigen\"-Buttons",
+      "default": "Tipp anzeigen"
+    },
+    {
+      "label": "Anzeigetext der Punkteleiste für Vorlesewerkzeuge (Barrierefreiheit)",
+      "description": ":num kann als Platzhalter für die tatsächlich erreichten Punkte verwendet werden, :total für die Maximalpunktzahl",
+      "default": "Du hast :num von :total Punkten erreicht."
+    },
+    {
+      "label": "Text, den Vorlesewerkzeuge nutzen, um den derzeitigen Fortschritt auszugeben",
+      "description": ":num kann als Platzhalter für die tatsächlich erreichten Punkte verwendet werden, :total für die Maximalpunktzahl",
+      "default": "Fortschritt :num von :total"
+    }
+  ]
+}

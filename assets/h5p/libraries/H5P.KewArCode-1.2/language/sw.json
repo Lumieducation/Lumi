@@ -1,0 +1,512 @@
+{
+  "semantics": [
+    {
+      "label": "Aina ya msimbo",
+      "description": "Chagua aina ya msimbo unayotaka kutengeneza"
+    },
+    {
+      "label": "Anwani",
+      "description": "Select what kind of code you want to generate",
+      "options": [
+        {
+          "label": "Contact"
+        },
+        {
+          "label": "Event"
+        },
+        {
+          "label": "Email address"
+        },
+        {
+          "label": "H5P"
+        },
+        {
+          "label": "Location"
+        },
+        {
+          "label": "Phone number"
+        },
+        {
+          "label": "SMS"
+        },
+        {
+          "label": "Text"
+        },
+        {
+          "label": "URL"
+        }
+      ]
+    },
+    {
+      "label": "Tukio",
+      "fields": [
+        {
+          "label": "Mada",
+          "placeholder": "Mkutano wa H5P 2020"
+        },
+        {
+          "label": "Tukio la siku nzima",
+          "placeholder": "H5P fan club"
+        },
+        {
+          "label": "Tarehe ya Kuanza",
+          "placeholder": "2020/05/18"
+        },
+        {
+          "label": "Muda wa kuanza",
+          "description": "Muda wa kuanza wa tukio (tafadhali tumia muundo wa saa: dakika)",
+          "placeholder": "09:00"
+        },
+        {
+          "label": "Tarehe ya mwisho",
+          "description": "Tarehe ya mwisho ya tukio (tafadhali tumia muundo wa mwaka/mwezi/tarehe)",
+          "placeholder": "2020/05/20"
+        },
+        {
+          "label": "Muda wa mwisho",
+          "fields": [
+            {
+              "label": "Extended address",
+              "description": "c/o information, etc.",
+              "placeholder": "c/o H5P Fan Club"
+            },
+            {
+              "label": "Street",
+              "description": "Street including number",
+              "placeholder": "1308 W. Dayton Street"
+            },
+            {
+              "label": "Locality",
+              "description": "City name, etc.",
+              "placeholder": "Madison"
+            },
+            {
+              "label": "Region",
+              "description": "Federal state, county, etc.",
+              "placeholder": "WI"
+            },
+            {
+              "label": "ZIP code",
+              "description": "ZIP code",
+              "placeholder": "53715"
+            },
+            {
+              "label": "Country",
+              "description": "Country",
+              "placeholder": "USA"
+            }
+          ]
+        },
+        {
+          "label": "Saa za eneo",
+          "description": "Chagua saa za eneo ambapo tukio linapaswa kufanyika",
+          "placeholder": "https://fictional-h5p-fan-club.org"
+        },
+        {
+          "label": "Akiba ya mchana",
+          "description": "Weka alama ikiwa eneo ambalo tukio linafanyika mchana linatumia muda wa akiba",
+          "placeholder": "John loves H5P."
+        }
+      ]
+    },
+    {
+      "label": "Anwani ya barua-pepe",
+      "fields": [
+        {
+          "label": "Anwani ya barua-pepe",
+          "description": "Anwani ya barua pepe ili kuandika ujumbe kwa",
+          "placeholder": "john@fictional-h5p-fan-club.org"
+        },
+        {
+          "label": "All day event",
+          "description": "Check if event will be valid all day long"
+        },
+        {
+          "label": "Start date",
+          "description": "Start date of the event (please use the format yyyy/mm/dd)",
+          "placeholder": "2020/05/18"
+        },
+        {
+          "label": "Start time",
+          "description": "Start time of the event (please use the format hh:mm)",
+          "placeholder": "09:00"
+        },
+        {
+          "label": "End date",
+          "description": "End date of the event (please use the format yyyy/mm/dd)",
+          "placeholder": "2020/05/20"
+        },
+        {
+          "label": "End time",
+          "description": "End time of the event (please use the format hh:mm)",
+          "placeholder": "16:00"
+        },
+        {
+          "label": "Timezone",
+          "description": "Select the time zone the event is supposed to take place in",
+          "options": [
+            {
+              "label": "UTC-12:00"
+            },
+            {
+              "label": "UTC-11:00"
+            },
+            {
+              "label": "UTC-10:00"
+            },
+            {
+              "label": "UTC-9:30"
+            },
+            {
+              "label": "UTC-9:00"
+            },
+            {
+              "label": "UTC-8:00"
+            },
+            {
+              "label": "UTC-7:00"
+            },
+            {
+              "label": "UTC-6:00"
+            },
+            {
+              "label": "UTC-5:00"
+            },
+            {
+              "label": "UTC-4:00"
+            },
+            {
+              "label": "UTC-3:30"
+            },
+            {
+              "label": "UTC-3:00"
+            },
+            {
+              "label": "UTC-2:00"
+            },
+            {
+              "label": "UTC-1:00"
+            },
+            {
+              "label": "UTC"
+            },
+            {
+              "label": "UTC+1:00"
+            },
+            {
+              "label": "UTC+2:00"
+            },
+            {
+              "label": "UTC+3:00"
+            },
+            {
+              "label": "UTC+3:30"
+            },
+            {
+              "label": "UTC+4:00"
+            },
+            {
+              "label": "UTC+4:30"
+            },
+            {
+              "label": "UTC+5:00"
+            },
+            {
+              "label": "UTC+5:30"
+            },
+            {
+              "label": "UTC+5:45"
+            },
+            {
+              "label": "UTC+6:00"
+            },
+            {
+              "label": "UTC+6:30"
+            },
+            {
+              "label": "UTC+7:00"
+            },
+            {
+              "label": "UTC+8:00"
+            },
+            {
+              "label": "UTC+9:00"
+            },
+            {
+              "label": "UTC+9:30"
+            },
+            {
+              "label": "UTC+10:00"
+            },
+            {
+              "label": "UTC+10:30"
+            },
+            {
+              "label": "UTC+11:00"
+            },
+            {
+              "label": "UTC+12:00"
+            },
+            {
+              "label": "UTC+12:45"
+            },
+            {
+              "label": "UTC+13:00"
+            },
+            {
+              "label": "UTC+14:00"
+            }
+          ]
+        },
+        {
+          "label": "Daylight savings",
+          "description": "Check if location that the event is taking place in uses daylight savings time"
+        },
+        {
+          "label": "Location",
+          "description": "Name the location",
+          "placeholder": "Madison, USA"
+        },
+        {
+          "label": "Description",
+          "description": "Add a description for the event",
+          "placeholder": "3rd H5P conference"
+        }
+      ]
+    },
+    {
+      "label": "Maudhui ya H5P",
+      "fields": [
+        {
+          "label": "Maudhui ya H5P",
+          "description": "Maudhui ya H5P ya kuonyesha",
+          "placeholder": "john@fictional-h5p-fan-club.org"
+        }
+      ]
+    },
+    {
+      "label": "Eneo",
+      "fields": [
+        {
+          "label": "Latitudo",
+          "description": "Latitudo (tafadhali tumia muundo wa 53.864462)"
+        }
+      ]
+    },
+    {
+      "label": "Nambari ya Simu",
+      "fields": [
+        {
+          "label": "Nambari ya Simu",
+          "description": "Nambari ya simu ya kupiga (tafadhali tumia umbizo la +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        },
+        {
+          "label": "Longitude",
+          "description": "Longitude (please use the format 10.663792)",
+          "placeholder": "18.954036"
+        }
+      ]
+    },
+    {
+      "label": "UJUMBE MFUPI",
+      "fields": [
+        {
+          "label": "Nambari ya Simu",
+          "description": "Nambari ya simu ya kupiga (tafadhali tumia umbizo la +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        }
+      ]
+    },
+    {
+      "label": "Maandishi",
+      "fields": [
+        {
+          "label": "Maandishi",
+          "description": "Maandishi ya kusimba",
+          "placeholder": "Tafadhali chukua mkate wa * maziwa *"
+        },
+        {
+          "label": "Message",
+          "description": "Message to send",
+          "placeholder": "Please fetch milk and bread!"
+        }
+      ]
+    },
+    {
+      "label": "URL",
+      "fields": [
+        {
+          "label": "URL",
+          "description": "URL ya kuunganisha (lazima ianze na https: // or http: //)",
+          "placeholder": "https://fictional-h5p-fan-club.org"
+        }
+      ]
+    },
+    {
+      "label": "Mipangilio ya tabia",
+      "fields": [
+        {
+          "label": "Rangi ya msimbo",
+          "description": "URL to link to (must start with https:// or http://)",
+          "placeholder": "https://fictional-h5p-fan-club.org"
+        }
+      ]
+    },
+    {
+      "label": "Kiolesura cha mtumiaji",
+      "description": "These options will let you control how the task behaves.",
+      "fields": [
+        {
+          "label": "Anwani",
+          "default": "Anwani"
+        },
+        {
+          "label": "Anwani",
+          "default": "Anwani"
+        },
+        {
+          "label": "Nchi",
+          "description": "Maximum size for the code given in CSS notation (pixels by default if only a number is given)"
+        },
+        {
+          "label": "Tarehe ya mwisho",
+          "description": "Set horizontal alignment if you set a maximum size",
+          "options": [
+            {
+              "label": "left"
+            },
+            {
+              "label": "center"
+            },
+            {
+              "label": "right"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Kisoma maandishi",
+      "fields": [
+        {
+          "label": "QRCode. Onyesha habari (Maandishi kwa Visoma maandishi)",
+          "default": "QRCode. Onyesha habari."
+        },
+        {
+          "label": "Ficha habari (Maandishi kwa Visoma maandishi)",
+          "default": "Ficha habari."
+        },
+        {
+          "label": "Country",
+          "default": "Country"
+        },
+        {
+          "label": "End date",
+          "default": "End date"
+        },
+        {
+          "label": "Start date",
+          "default": "Start date"
+        },
+        {
+          "label": "Description",
+          "default": "Description"
+        },
+        {
+          "label": "Email",
+          "default": "Email"
+        },
+        {
+          "label": "Event",
+          "default": "Event"
+        },
+        {
+          "label": "Extended address",
+          "default": "Extended address"
+        },
+        {
+          "label": "Latitude",
+          "default": "Latitude"
+        },
+        {
+          "label": "Locality",
+          "default": "Locality"
+        },
+        {
+          "label": "Location",
+          "default": "Location"
+        },
+        {
+          "label": "Longitude",
+          "default": "Longitude"
+        },
+        {
+          "label": "Message",
+          "default": "Message"
+        },
+        {
+          "label": "Name",
+          "default": "Name"
+        },
+        {
+          "label": "Note",
+          "default": "Note"
+        },
+        {
+          "label": "Organization",
+          "default": "Organization"
+        },
+        {
+          "label": "Phone",
+          "default": "Phone"
+        },
+        {
+          "label": "Region",
+          "default": "Region"
+        },
+        {
+          "label": "SMS",
+          "default": "SMS"
+        },
+        {
+          "label": "Street",
+          "default": "Street"
+        },
+        {
+          "label": "Text",
+          "default": "Text"
+        },
+        {
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "label": "URL",
+          "default": "URL"
+        },
+        {
+          "label": "ZIP code",
+          "default": "ZIP code"
+        }
+      ]
+    },
+    {
+      "label": "Readspeaker",
+      "fields": [
+        {
+          "label": "QRCode. Display information (Text for Readspeakers)",
+          "default": "QRCode. Display information."
+        },
+        {
+          "label": "Hide information (Text for Readspeakers)",
+          "default": "Hide information."
+        },
+        {
+          "label": "Code contents (Text for Readspeakers)",
+          "default": ". Code contents"
+        }
+      ]
+    }
+  ]
+}

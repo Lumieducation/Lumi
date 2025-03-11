@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Mhariri wa Mazingira ya Matawi",
+      "fields": [
+        {
+          "label": "Mada"
+        },
+        {
+          "label": "Anza skrini",
+          "fields": [
+            {
+              "label": "Mada ya anza skrini",
+              "placeholder": "Mada ya kozi yako"
+            },
+            {
+              "label": "Mada ndogo ya anza skrini",
+              "placeholder": "Maelezo kuhusu kozi"
+            },
+            {
+              "label": "Picha ya anza skrini"
+            },
+            {
+              "label": "Maandishi mbadala ya picha"
+            }
+          ]
+        },
+        {
+          "label": "Orodha ya skrini ya mwisho",
+          "field": {
+            "label": "Skrini ya mwisho",
+            "fields": [
+              {
+                "label": "Mada"
+              },
+              {
+                "label": "Maandishi"
+              },
+              {
+                "label": "Picha"
+              },
+              {
+                "label": "Alama",
+                "description": "Alama zitatumwa kwa Mfumo wa Usimamizi wa Kujifunza (LMS), Mpango wa Udhibiti wa Mpangilio (LRS) au huduma yoyote iliyounganishwa inayopokea alama kutoka kwa H5P kwa watumiaji wanaofikia hali ya mwisho ya chaguo-msingi"
+              },
+              {
+                "label": "Kitambulisho cha Maudhui"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Orodha ya maudhui ya mazingira ya tawi",
+          "entity": "maudhui",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Onyesha mada ya maudhui inayoonekana",
+                "description": "Ikichaguliwa, mtumiaji ataona mada ya maudhui kwenye upau wa juu, juu ya maudhui haya"
+              },
+              {
+                "label": "Inahitajika kukamilishwa",
+                "default": "Kuendelea"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Chaguzi za kuweka alama",
+          "fields": [
+            {
+              "label": "Chaguzi za kuweka alama",
+              "description": "Chagua aina ya kuweka alama.",
+              "options": [
+                {
+                  "label": "Kitaratibu weka alama kwa kila tukio la mwisho"
+                },
+                {
+                  "label": "Hesabu kwa nguvu alama kutoka kwa majibu ya mtumiaji"
+                },
+                {
+                  "label": "Hakuna kuweka alama"
+                }
+              ]
+            },
+            {
+              "label": "Jumuisha alama kutoka kwa maingiliano ndani ya Mazingira ya Tawi",
+              "description": "Ikiwa alama zitachaguliwa kutoka kwa mfano Video za Maingiliano zitaongezwa kwa jumla ya alama zilizopatikana. Ikiwa haijachaguliwa alama tu zilizobainishwa katika sehemu za maoni za vipengee vya maudhui, maswali ya matawi na hali ya mwisho tu yatahesabiwa."
+            }
+          ]
+        },
+        {
+          "label": "Mipangilio ya tabia",
+          "fields": [
+            {
+              "label": "Batilisha urambazaji wa nyuma",
+              "description": "Batilisha mipangilio ya kibinafsi kwa kuwezesha urambazaji wa nyuma."
+            },
+            {
+              "label": "Kubatilisha kunahitaji kumaliza maudhui",
+              "description": "Batilisha mipangilio ya kibinafsi kwa kuhitaji kumaliza maudhui kabla ya kuwasha kitufe cha Endelea. Haitakuwa na athari yoyote ikiwa maudhui hayaonyeshi ikiwa \"ilikamilika\" kwa mfano picha au mawasilisho ya kozi yenye slaidi moja tu."
+            },
+            {
+              "label": "Maelezo Mafupi",
+              "description": "Maelezo ya namna yanaenda hapa."
+            }
+          ]
+        },
+        {
+          "label": "Ujanibishaji",
+          "fields": [
+            {
+              "label": "Maandishi ya kitufe kilicho kwenye anza skrini",
+              "default": "Anzisha kozi"
+            },
+            {
+              "label": "Maandishi ya kitufe kilicho kwenye skrini ya mwisho",
+              "default": "Anzisha tena kozi"
+            },
+            {
+              "label": "Maandishi ya kitufe cha nyuma kwenye kila skrini ya maktaba na maswali ya matawi",
+              "default": "Nyuma"
+            },
+            {
+              "label": "Maandishi ya kitufe kwenye kila ya skrini za maktaba",
+              "default": "Endelea"
+            },
+            {
+              "label": "Maandishi ya kitufe kinachotumika kucheza video tena",
+              "default": "Cheza video tena"
+            },
+            {
+              "label": "Lebo ya alama kwenye skrini ya mwisho",
+              "default": "Alama Yako:"
+            },
+            {
+              "label": "Lebo ya alama kwenye skrini ya mwisho",
+              "default": "Alama Yako:"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

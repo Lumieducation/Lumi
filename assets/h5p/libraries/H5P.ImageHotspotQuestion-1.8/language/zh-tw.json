@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "圖像問答任務編輯",
+      "fields": [
+        {
+          "label": "背景圖示",
+          "fields": [
+            {
+              "label": "背景圖示",
+              "description": "請挑選一張照片做為圖像問答任務的背景圖示."
+            }
+          ]
+        },
+        {
+          "label": "任務連結點",
+          "description": "可藉由工具列功能建立任務連結。亦能對既有任務連結點 ─ 點擊2下滑鼠左鍵進行編輯、單點拖曳移動位置、及拉動右下角變更大小.",
+          "fields": [
+            {
+              "label": "任務描述",
+              "description": "使用者操作指南."
+            },
+            {
+              "label": "任務連結點",
+              "entity": "任務連結點",
+              "field": {
+                "label": "任務連結點",
+                "fields": [
+                  {
+                    "label": "使用者設定",
+                    "fields": [
+                      {
+                        "label": "正確",
+                        "description": "可以有多個正確的任務連結點。但是，當使用者第一次點擊時將立即取得正確/不正確的回饋資訊."
+                      },
+                      {
+                        "label": "回饋"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "computedSettings"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "當使用者點選到空白處回饋:",
+              "placeholder": "您沒有找到任務連結點，請再試一次!"
+            },
+            {
+              "label": "顯示即時回饋."
+            },
+            {
+              "label": "在地化",
+              "fields": [
+                {
+                  "label": "重試功能鈕名稱",
+                  "default": "重試"
+                },
+                {
+                  "label": "關閉功能鈕名稱",
+                  "default": "關閉"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "閱讀器導讀文字-評分欄",
+      "default": "您得到了:num 分，總分 :total"
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
+    }
+  ]
+}

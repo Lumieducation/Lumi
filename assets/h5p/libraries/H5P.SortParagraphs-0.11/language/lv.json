@@ -1,0 +1,224 @@
+{
+  "semantics": [
+    {
+      "label": "Multivide",
+      "fields": [
+        {
+          "label": "Tips",
+          "description": "Papildu multivide, kuru atspoguļot virs jautājuma."
+        },
+        {
+          "label": "Atspējot attēla tālummaiņu"
+        }
+      ]
+    },
+    {
+      "label": "Uzdevuma apraksts",
+      "placeholder": "Aprakstiet, kas jūsu izglītojamajiem būtu jādara...",
+      "description": "Kas jāzina jūsu izglītojamajiem."
+    },
+    {
+      "label": "Rindkopas",
+      "entity": "rindkopa",
+      "field": {
+        "label": "Rindkopa"
+      }
+    },
+    {
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Pēc noklusējuma"
+            }
+          ],
+          "label": "Iestatiet pielāgotu atgriezenisko saiti katram rezultātu diapazonam",
+          "entity": "diapazons",
+          "field": {
+            "fields": [
+              {
+                "label": "Rezultātu diapazons"
+              },
+              {},
+              {
+                "label": "Norādītā diapazona atgriezeniskā saite",
+                "placeholder": "Aizpildiet atgriezenisko saiti"
+              }
+            ]
+          },
+          "description": "Klikšķiniet pogu \"Pievienot diapazonu\", lai pievienotu tik diapazonus cik vēlaties. Piemēram, 0-20% Slikts rezultāts, 21-91% Viduvējs rezultāts, 91-100% Lielisks rezultāts!"
+        }
+      ],
+      "label": "Kopējā atgriezeniskā saite"
+    },
+    {
+      "label": "Uzvedības iestatītījumi",
+      "description": "Šie iestatījumi ļaus jums kontrolēt uzdevuma uzvedību.",
+      "fields": [
+        {
+          "label": "Vērtēšanas režīms",
+          "description": "Izlemiet, vai piešķirt punktus par katru pareizi ievietoto rindkopu vai par katru rindkopu, kas ir ievietota aiz rindkopas, pēc kuras tā ir jānovieto (\"pareizā secība\")",
+          "options": [
+            {
+              "label": "Pareiza secība"
+            },
+            {
+              "label": "Pareizi ievietota rindkopa"
+            }
+          ]
+        },
+        {
+          "label": "Piemērot sodus",
+          "description": "Izlemiet, vai atņemt punktu par katru rindkopu, kas nav pareizi novietota."
+        },
+        {
+          "label": "Rindkopu dublikāti ir savstarpēji aizvietojami",
+          "description": "Ja iestatīts, pārbaudot atbildi, rindkopu dublikāti tiks uzskatīti par identiskām rindkopām, ja to teksts ir vienāds."
+        },
+        {
+          "label": "Pievienot kustību pogas",
+          "description": "Mobilajās ierīcēs pogas rindkopu pārvietošanai var piedāvāt papildu pieejamības priekšrocības. Ja vēlaties, varat tās deaktivizēt šeit."
+        },
+        {
+          "label": "Atļaut \"Mēģināt vēlreiz\" pogu"
+        },
+        {
+          "label": "Atļaut pogu \"Rādīt risinājumu\""
+        }
+      ]
+    },
+    {
+      "label": "Lietotāja saskarne",
+      "fields": [
+        {
+          "label": "Pogas \"Pārbaudīt\" teksts",
+          "default": "Pārbaudīt"
+        },
+        {
+          "label": "Pogas \"Iesniegt\" teksts",
+          "default": "Iesniegt"
+        },
+        {
+          "label": "Pogas \"Mēģināt vēlreiz\" teksts",
+          "default": "Mēģināt vēlreiz"
+        },
+        {
+          "label": "Pogas \"Parādīt risinājumu\" teksts",
+          "default": "Rādīt risinājumu"
+        },
+        {
+          "label": "Pogas \"Uz augšu\" nosaukums",
+          "default": "Uz augšu"
+        },
+        {
+          "label": "Pogas \"Uz leju\" nosaukums",
+          "default": "Uz leju"
+        },
+        {
+          "label": "Atspējotas pogas nosaukums",
+          "default": "Atspējota"
+        }
+      ]
+    },
+    {
+      "label": "Ekrāna lasītājs",
+      "fields": [
+        {
+          "default": "Pārbaudiet atbildes. Atbildes tiks atzīmētas kā pareizas vai nepareizas.",
+          "label": "Pogas \"Pārbaudīt\" apraksts priekš asistējošajām tehnoloģijām"
+        },
+        {
+          "label": "Asistīvo tehnoloģiju apraksts pogai \"Rādīt risinājumu\"",
+          "default": "Parādīt risinājumu. Tiks parādīts pareizais risinājums."
+        },
+        {
+          "label": "Pogas \"Mēģināt vēlreiz\" apraksts priekš asistīvajām tehnoloģijām",
+          "default": "Mēģiniet uzdevumu vēlreiz. Dzēst visas iesniegtās atbildes un sākt uzdevumu no sākuma."
+        },
+        {
+          "label": "Tavs rezultāts",
+          "description": "@score tiks aizstāts ar punktu skaitu. @total tiks aizstāts ar maksimāli iespējamo punktu skaitu.",
+          "default": "Jūs ieguvāt @score no @total punktiem"
+        },
+        {
+          "label": "Saraksta apraksts",
+          "default": "Kārtojams rindkopu saraksts."
+        },
+        {
+          "default": "Rindkopu saraksts ar rezultātiem.",
+          "label": "Saraksta apraksts (pārbaudiet atbildi)"
+        },
+        {
+          "label": "Saraksta apraksts (rādīt risinājumu)",
+          "default": "Rindkopu saraksts ar risinājumiem."
+        },
+        {
+          "label": "Rindkopa",
+          "default": "Rindkopa"
+        },
+        {
+          "label": "Pareizi",
+          "default": "pareizi"
+        },
+        {
+          "label": "Nepareizi",
+          "default": "nepareizi"
+        },
+        {
+          "label": "Rezultātu skaidrojums",
+          "default": "@score punkts",
+          "description": "@score tiks aizstāts ar 1 vai -1."
+        },
+        {
+          "label": "Rindkopu numerācija",
+          "default": "@current no @total",
+          "description": "@current tiks aizstāts ar pašreizējās rindkopas numuru. @total tiks aizstāts ar rindkopu skaitu."
+        },
+        {
+          "description": "Šim sekos \"Paragrāfu numerācija\".",
+          "label": "Pašreizējā pozīcija sarakstā",
+          "default": "Pašreizējā pozīcija sarakstā"
+        },
+        {
+          "label": "Instrukcija, izvēloties rindkopu",
+          "default": "Nospiediet atstarpes taustiņu, lai pārkārtotu"
+        },
+        {
+          "label": "Instrukcija, kad rindkopa tiek satverta",
+          "default": "Nospiediet taustiņus augšup un lejup (bultiņas), lai mainītu pozīciju, atstarpes taustiņu, lai nomestu, vai atsoļa (Esc) taustiņu, lai atceltu"
+        },
+        {
+          "label": "Satverts",
+          "default": "Satverts"
+        },
+        {
+          "label": "Pārvietots",
+          "default": "Pārvietots"
+        },
+        {
+          "label": "Nomests",
+          "default": "Nomests"
+        },
+        {
+          "label": "Pārkārtošana atcelta",
+          "default": "Pārkārtošana atcelta"
+        },
+        {
+          "description": "Šim sekos \"Paragrāfu numerācija\".",
+          "label": "Beigu pozīcija",
+          "default": "Beigu pozīcija"
+        },
+        {
+          "description": "Šim sekos \"pareizi\" vai \"nepareizi\".",
+          "label": "Nākamā rindkopa",
+          "default": "Nākamā rindkopa"
+        },
+        {
+          "label": "Pareizā rindkopa",
+          "description": "Šim sekos \"Paragrāfu numerācija\".",
+          "default": "Pareizā rindkopa pareizajā pozīcijā"
+        }
+      ]
+    }
+  ]
+}

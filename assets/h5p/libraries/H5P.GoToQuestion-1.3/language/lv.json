@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Jautājuma teksts",
+      "description": "Jautājums, uz kura pamata lietotājs izdarīs izvēli."
+    },
+    {
+      "label": "Izvēles",
+      "entity": "izvēle",
+      "field": {
+        "fields": [
+          {
+            "label": "Izvēles teksts",
+            "description": "Etiķete, kas tiks parādīta uz izvēles pogas."
+          },
+          {
+            "label": "Iet uz",
+            "description": "Mērķa laiks uz kuru lietotājs tiks novirzīts pēc izvēles pogas nospiešanas. Ievadiet laika kodu formātā M:SS."
+          },
+          {
+            "label": "Teksts, ja izvēlēts",
+            "description": "Neobligāts apstiprinājuma teksts, kas tiks parādīts pēc tam, kad lietotājs būs nospiedis izvēles pogu."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Turpināt pogas etiķete",
+      "default": "Turpināt"
+    }
+  ]
+}

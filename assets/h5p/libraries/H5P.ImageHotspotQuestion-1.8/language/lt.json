@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Fono paveikslėlis",
+          "fields": [
+            {
+              "description": "Pasirinkite paveikslėlį, kurį naudosite kaip klausimo su aktyviąja sritimi foną.",
+              "label": "Fono paveikslėlis"
+            }
+          ]
+        },
+        {
+          "description": "Nuvilkite norimą figūrą iš įrankių juostos, kad sukurtumėte naują prieigos tašką. Dukart spustelėkite, jei norite redaguoti esamą prieigos tašką. Vilkite prieigos tašką, kad jį perkeltumėte. Norėdami pakeisti dydį, traukite apatiniame dešiniajame kampe esančią dydžio keitimo rankenėlę.",
+          "fields": [
+            {
+              "description": "Instrukcijos naudotojui.",
+              "label": "Užduoties aprašymas"
+            },
+            {
+              "entity": "Aktyvioji sritis",
+              "field": {
+                "fields": [
+                  {
+                    "label": "userSettings",
+                    "fields": [
+                      {
+                        "description": "There can be multiple correct hotspots. However, the user gets correct/incorrect feedback immediately after first click.",
+                        "label": "Teisingai"
+                      },
+                      {
+                        "label": "Atsiliepimas"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "computedSettings"
+                  }
+                ],
+                "label": "Aktyvi sritis"
+              },
+              "label": "Aktyvioji sritis"
+            },
+            {
+              "placeholder": "Neradote aktyviųjų sričių, bandykite dar kartą!",
+              "label": "Feedback if the user selects an empty spot:"
+            },
+            {
+              "label": "Rodyti atsiliepimą kaip iššokantįjį langą"
+            },
+            {
+              "label": "Lokalizacija",
+              "fields": [
+                {
+                  "default": "Bandyti dar kartą",
+                  "label": "„Bandyti dar kartą“ mygtuko tekstas"
+                },
+                {
+                  "default": "Uždaryti",
+                  "label": "„Uždaryti“ mygtuko tekstas"
+                }
+              ]
+            }
+          ],
+          "label": "Aktyviosios sritys"
+        }
+      ],
+      "label": "Vaizdo prieigos taško klausimų redaktorius"
+    },
+    {
+      "default": "You got :num out of :total points",
+      "label": "Textual representation of the score bar for those using a readspeaker"
+    },
+    {
+      "default": "Retry the task. Reset all responses and start the task over again.",
+      "label": "Assistive technology description for \"Retry\" button"
+    }
+  ]
+}

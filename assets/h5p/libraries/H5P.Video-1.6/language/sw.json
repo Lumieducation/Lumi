@@ -1,0 +1,136 @@
+{
+  "semantics": [
+    {
+      "label": "Vyanzo vya video",
+      "description": "Ili kuhakikisha kuwa video inafanya kazi katika vivinjari vyote unapaswa kuongeza vyanzo vyote vya WebM na MP4 vilivyopangwa."
+    },
+    {
+      "label": "Vielelezo",
+      "fields": [
+        {
+          "label": "Picha ya bango"
+        },
+        {
+          "label": "Weka kichezaji video kutumia nafasi zote zinazopatikana",
+          "description": "Kama hujaweka kichezaji video itakuwa na uwiano sawa kama video yenyewe."
+        },
+        {
+          "label": "Onyesha vidhibiti vya kichezaji video",
+          "description": "Ongeza vidhibiti kwenye kichezaji video. Hii inaruhusu watumiaji kucheza, kusitisha, na kadhalika."
+        }
+      ]
+    },
+    {
+      "label": "Uchezaji",
+      "fields": [
+        {
+          "label": "Cheza video kiotomatiki",
+          "description": "Anza kucheza video kiotomatiki. Huenda isifanye kazi kwenye vifaa vya runuru."
+        },
+        {
+          "label": "Video ya kitanzi",
+          "description": "Anzisha video kiotomatiki tena inapoisha."
+        }
+      ]
+    },
+    {
+      "label": "Ujanibishaji wa video",
+      "fields": [
+        {
+          "label": "Jina",
+          "default": "Video",
+          "description": "Husaidia kutambua maudhui ya aina hii."
+        },
+        {
+          "label": "Kupakia",
+          "default": "Kichezaji cha video kinapakia..."
+        },
+        {
+          "label": "Hakuna vichezaji vilivyopatikana",
+          "default": "Hakuna vichezaji vya video vinavyounga mkono muundo wa video uliopewa."
+        },
+        {
+          "label": "Hakuna vyanzo",
+          "default": "Video inakosa vyanzo."
+        },
+        {
+          "label": "Imeondolewa",
+          "default": "Uchezaji wa vyombo vya habari umeondolewa."
+        },
+        {
+          "label": "Kushindwa kwa mtandao",
+          "default": "Kushindwa kwa mtandao."
+        },
+        {
+          "label": "Haiwezi kusimbua chanzo cha video",
+          "default": "Kushindwa kusimbua vyombo vya habari."
+        },
+        {
+          "label": "Muundo hauungwi mkono",
+          "default": "Umbizo la video haliungwi mkono."
+        },
+        {
+          "label": "Vyombo vya habari vimesimbwa kwa njia fiche",
+          "default": "Vyombo vya habari vimesimbwa kwa njia fiche."
+        },
+        {
+          "label": "Hitilafu isiyojulikana",
+          "default": "Hitilafu isiyojulikana."
+        },
+        {
+          "label": "Kitambulisho batili cha YouTube",
+          "default": "Kitambulisho batili cha YouTube."
+        },
+        {
+          "label": "Kitambulisho cha YouTube kisichojulikana",
+          "default": "Kushindwa kupata video yenye kitambulisho cha YouTube kilichotolewa."
+        },
+        {
+          "label": "Video ya YouTube iliyozuiliwa",
+          "default": "Mmiliki wa video hii hairuhusu kuingizwa."
+        }
+      ]
+    },
+    {
+      "label": "Ufikiaji",
+      "fields": [
+        {
+          "label": "Ongeza wimbo wa video",
+          "entity": "Wimbo",
+          "field": {
+            "label": "Wimbo",
+            "fields": [
+              {
+                "label": "Lebo ya wimbo"
+              },
+              {
+                "label": "Aina ya aina,<a target=\"_blank\" href=\"https://html.spec.whatwg.org/multipage/embedded-content.html#the-track-element\"> rejelea kiwango cha maisha cha Lugha ya kutunga matini ya mtandao</a>",
+                "options": [
+                  {
+                    "label": "Manukuu"
+                  },
+                  {
+                    "label": "Manukuu"
+                  },
+                  {
+                    "label": "Maelezo"
+                  },
+                  {
+                    "label": "Sura"
+                  }
+                ]
+              },
+              {
+                "label": "Lugha chanzi, lazima ifafanuliwe kwa manukuu",
+                "description": "Lazima iwe ni lebo halali ya lugha ya BCP 47. Ikiwa sifa ya aina imewekwa kwa manukuu, srclang lazima ielezwe."
+              },
+              {
+                "label": "Fuatilia faili (WebVTT)"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

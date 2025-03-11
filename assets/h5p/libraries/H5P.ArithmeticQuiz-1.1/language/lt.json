@@ -1,0 +1,135 @@
+{
+  "semantics": [
+    {
+      "description": "Įvadinis tekstas (daugiausia 100 simbolių)",
+      "label": "Įvadas"
+    },
+    {
+      "options": [
+        {
+          "label": "Aritmetinių veiksmų testas"
+        },
+        {
+          "label": "Tiesinių lygčių testas"
+        }
+      ],
+      "label": "Testo tipas"
+    },
+    {
+      "label": "Aritmetikos tipas",
+      "options": [
+        {
+          "label": "Sudėtis"
+        },
+        {
+          "label": "Atimtis"
+        },
+        {
+          "label": "Daugyba"
+        },
+        {
+          "label": "Dalyba"
+        }
+      ]
+    },
+    {
+      "options": [
+        {
+          "label": "Pagrindinis [ 3x = 12 ]"
+        },
+        {
+          "label": "Vidutinis [ 4x - 3 = 13 ]"
+        },
+        {
+          "label": "Pažengęs [ 5x + 3 = 3x + 15 ]"
+        }
+      ],
+      "label": "Lygties tipas"
+    },
+    {
+      "description": "Įjungti, kad lygtyse būtų galima naudoti trupmenas.",
+      "label": "Įjungti trupmenas"
+    },
+    {
+      "label": "Maksimalus klausimų skaičius"
+    },
+    {
+      "label": "Naudotojo sąsajos vertimai",
+      "fields": [
+        {
+          "default": "Rezultatas:",
+          "label": "Balų skaičiavimas testo metu"
+        },
+        {
+          "default": "Laikas: @time",
+          "label": "Laikas"
+        },
+        {
+          "default": "Baigta!",
+          "label": "Rezultatų puslapio antraštė"
+        },
+        {
+          "default": "Pradėti!",
+          "label": "Pradėti pavadinimas"
+        },
+        {
+          "default": "Pradėti",
+          "label": "Pradėti mygtuko pavadinimas"
+        },
+        {
+          "default": "Bandyti dar kartą",
+          "label": "Kartoti mygtuko pavadinimas"
+        },
+        {
+          "default": "Teisingai",
+          "label": "Skaitytuvo teisingo atsakymo tekstas"
+        },
+        {
+          "default": "Neteisingai. Teisingas atsakymas buvo :num",
+          "label": "Skaitytuvo neteisingo atsakymo tekstas"
+        },
+        {
+          "default": "Trukmė valandomis, minutėmis ir sekundėmis.",
+          "label": "Skaitytuvo laikmačio pavadinimas"
+        },
+        {
+          "default": "Kam lygu :arithmetic?",
+          "label": "Skaitytuvo klausimo tekstas"
+        },
+        {
+          "default": "Lygtyje :equation, kam lygu :item?",
+          "label": "Lygties klausimas skaitytuvui"
+        },
+        {
+          "default": "Kam lygu :item ?",
+          "label": "Lygties kintamojo tekstas skaitytuvui"
+        },
+        {
+          "default": "plius",
+          "label": "Sudėties operatoriaus tekstas"
+        },
+        {
+          "default": "minus",
+          "label": "Atimties operatoriaus tekstas"
+        },
+        {
+          "default": "kartus",
+          "label": "Daugybos operatoriaus tekstas"
+        },
+        {
+          "default": "padalytą",
+          "label": "Dalybos operatoriaus tekstas"
+        },
+        {
+          "default": "lygu",
+          "label": "Lygybės ženklo tekstas"
+        },
+        {
+          "description": "Skelbia esamą skaidrę ir bendrą skaidrių skaičių, kintamieji yra :num ir :total",
+          "label": "Skaidrės numerio tekstas",
+          "default": "Skaidrė :num iš :total"
+        }
+      ]
+    }
+  ]
+}

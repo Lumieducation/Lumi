@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "入力フィールドの説明",
+      "description": "ユーザーが入力すべき内容の説明。"
+    },
+    {
+      "label": "プレースホルダーテキスト",
+      "description": "ユーザーのためのプレースホルダーテキスト。"
+    },
+    {
+      "label": "Maximum text length",
+      "description": "Maximum number of characters for the text."
+    },
+    {
+      "label": "入力フィールドのサイズ",
+      "description": "入力フィールドのサイズ（行数）",
+      "options": [
+        {
+          "label": "1行"
+        },
+        {
+          "label": "3行"
+        },
+        {
+          "label": "10行"
+        }
+      ]
+    },
+    {
+      "label": "必須フィールド",
+      "description": "このフィールドを必須にするためにはチェックしてください。文書をエクスポートするためには、すべての必須フィールドにユーザーが答える必要があります。"
+    },
+    {
+      "label": "Remaining characters",
+      "default": "Remaining characters: @chars",
+      "description": "Message for remaining characters. You can use @chars which will be replaced by the corresponding number."
+    }
+  ]
+}

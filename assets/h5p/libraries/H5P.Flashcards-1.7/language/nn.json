@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Oppgåvebeskriving"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "label": "Kort",
+      "entity": "kort",
+      "field": {
+        "label": "Kort",
+        "fields": [
+          {
+            "label": "Spørsmål",
+            "description": "Valfritt tekstleg spørsmål. (Kortet kan innehalde bilde, tekst, eller begge deler)"
+          },
+          {
+            "label": "Svar",
+            "description": "Svar (fasit) for kortet. Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "Bilde",
+            "description": "Valfritt tekstleg spørsmål. (Kortet kan innehalde bilde, tekst, eller begge deler)"
+          },
+          {
+            "label": "Alternative text for image"
+          },
+          {
+            "label": "Tips",
+            "fields": [
+              {
+                "label": "Tipstekst"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Tekst for framdrift",
+      "default": "Kort @card av @total",
+      "description": "Tekst som viser kva for kort ein er på. Variablar tilgjengelig: @card og @total. Eksempel: 'Kort @card av @total'"
+    },
+    {
+      "label": "Tekst for \"Neste\" knappen",
+      "default": "Neste"
+    },
+    {
+      "label": "Tekst for \"Forrige\" knappen",
+      "default": "Førre"
+    },
+    {
+      "label": "Tekst for \"Sjekk svar\" knappen",
+      "default": "Sjekk"
+    },
+    {
+      "label": "Krev inndata frå brukaren før fasit blir vist."
+    },
+    {
+      "label": "Tekst for \"svar\" feltet",
+      "default": "Ditt svar"
+    },
+    {
+      "label": "Tekst for riktig svar",
+      "default": "Riktig"
+    },
+    {
+      "label": "Tekst for feil svar",
+      "default": "Feil"
+    },
+    {
+      "label": "Tekst for vis svar.",
+      "default": "Riktig svar"
+    },
+    {
+      "label": "Tekst for tittel på Resultatskjerm",
+      "default": "Resultat"
+    },
+    {
+      "label": "Tekst for antall korrekt",
+      "default": "@score av @total korrekt",
+      "description": "Resultattekst. Variablar tilgjengelig: @score og @total. Eksempel: '@score av @total korrekt'"
+    },
+    {
+      "label": "Tekst for \"vis resultatar\"",
+      "default": "Vis resultat"
+    },
+    {
+      "label": "Tekst for kort svartekst",
+      "default": "S:"
+    },
+    {
+      "label": "Text for \"retry\" button",
+      "default": "Prøv igjen"
+    },
+    {
+      "label": "Case sensitive",
+      "description": "Makes sure the user input has to be exactly the same as the answer."
+    },
+    {
+      "label": "Incorrect text for assistive technologies",
+      "default": "Feil svar. Det rette svaret var @answer",
+      "description": "Text that will be announced to assistive technologies. Use @answer as variable."
+    },
+    {
+      "label": "Correct feedback text for assistive technologies",
+      "default": "@answer is correct.",
+      "description": "Text that will be announced to assistive technologies when a card is answered correctly. Use @answer as variable."
+    },
+    {
+      "label": "Card change for assistive technologies",
+      "default": "Side @current av @total",
+      "description": "Text that will be announced to assistive technologies when navigating between cards. Use @current and @total as variables."
+    },
+    {
+      "label": "Randomize cards",
+      "description": "Enable to randomize the order of cards on display."
+    }
+  ]
+}

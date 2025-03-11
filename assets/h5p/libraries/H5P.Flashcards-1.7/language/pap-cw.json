@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Deskripshon di tarea"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Standart"
+        }
+      ],
+      "label": "Karchi",
+      "entity": "karchi",
+      "field": {
+        "label": "Karchi",
+        "fields": [
+          {
+            "label": "Pregunta",
+            "description": "E pregunta opshonal riba e parti dilanti di e karchi. (E karchi por haña un imágen ku/òf un teksto)"
+          },
+          {
+            "label": "Kontesta",
+            "description": "E kontesta opshonal (solushon) riba e parti patras di e karchi. Usa e símbulo / pa duna solushon alternativo. Usa \\/ si un solushon mester tin un /."
+          },
+          {
+            "label": "Imágen",
+            "description": "E imágen opshonal riba e parti dilanti di e karchi. (E karchi por haña un imágen ku/òf un teksto)."
+          },
+          {
+            "label": "Teksto alternativo pa ku e imágen"
+          },
+          {
+            "label": "Tep",
+            "fields": [
+              {
+                "label": "Teksto pa tep"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Teksto di progreso",
+      "default": "Karchi @card di @total",
+      "description": "Teksto di progreso, variabel disponibel: @card ku @total. Ehèmpel: 'Karchi @card di @total'"
+    },
+    {
+      "label": "Teksto pa \"Siguiente\"-boton",
+      "default": "Siguiente"
+    },
+    {
+      "label": "Teksto pa \"Anterior\"-boton",
+      "default": "Anterior"
+    },
+    {
+      "label": "Teksto pa \"Kontrolá\"-boton",
+      "default": "Kontrolá"
+    },
+    {
+      "label": "Mester yena un kontesta promé ku por a wak e solushon"
+    },
+    {
+      "label": "Teksto pa ku e kontesta",
+      "default": "Bo kontesta"
+    },
+    {
+      "label": "Teksto pa ku e kontesta korekto",
+      "default": "Korekto"
+    },
+    {
+      "label": "Teksto pa ku e kontesta robes",
+      "default": "Robes"
+    },
+    {
+      "label": "Mustra e solushon",
+      "default": "Kontesta korekto"
+    },
+    {
+      "label": "Titulo pa e resultadonan",
+      "default": "Resultado"
+    },
+    {
+      "label": "Teksto pa e kantidat ku ta korekto",
+      "default": "@score di @total korekto",
+      "description": "Teksto di resultado, variabel disponibel: @score ku @total. Ehèmpel: '@score di @total korekto'"
+    },
+    {
+      "label": "Teksto pa mustra e resultado",
+      "default": "Mustra resultado"
+    },
+    {
+      "label": "Teksto pa un kontesta kòrtiku",
+      "default": "A:"
+    },
+    {
+      "label": "Teksto pa \"Purba di nobo\"-boton",
+      "default": "Purba di nobo"
+    },
+    {
+      "label": "Hoofdlettergevoelig",
+      "description": "E kontesta mester ta eksaktamente konforme e solushon."
+    },
+    {
+      "label": "Teksto pa robes",
+      "default": "Kontesta robes. E kontesta korekto tabata @answer",
+      "description": "Text that will be announced to assistive technologies. Use @answer as variable."
+    },
+    {
+      "label": "Feedback teksto",
+      "default": "@answer ta korekto.",
+      "description": "Text that will be announced to assistive technologies when a card is answered correctly. Use @answer as variable."
+    },
+    {
+      "label": "Kambia karchi voor ondersteunende technologieën",
+      "default": "Página @current di @total",
+      "description": "Text that will be announced to assistive technologies when navigating between cards. Use @current and @total as variables."
+    },
+    {
+      "label": "Karchinan den sekuensia aleatorio",
+      "description": "Mustra e karchinan den sekuensia aleatorio."
+    }
+  ]
+}

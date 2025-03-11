@@ -1,0 +1,163 @@
+{
+  "semantics": [
+    {
+      "label": "Multivide",
+      "fields": [
+        {
+          "label": "Tips",
+          "description": "Papildu multimedijs, kuru atspoguļot virs jautājuma."
+        },
+        {
+          "label": "Atspējot attēla tālummaiņu"
+        }
+      ]
+    },
+    {
+      "label": "Jautājums"
+    },
+    {
+      "label": "Pareizā atbilde",
+      "options": [
+        {
+          "label": "Patiesi"
+        },
+        {
+          "label": "Aplami"
+        }
+      ]
+    },
+    {
+      "label": "Lietotāja saskarnes tulkojums Patiess/Aplams jautājumiem",
+      "fields": [
+        {
+          "label": "Pogas \"Patiess\" etiķete",
+          "default": "Patiess"
+        },
+        {
+          "label": "Pogas \"Aplams\" etiķete",
+          "default": "Aplams"
+        },
+        {
+          "label": "Atgriezeniskās saites teksts",
+          "default": "Jūs saņēmāt @score no @total punktiem",
+          "description": "Atgriezeniskās saites teksts, pieejami mainīgie: @score un @total. Piemēram: 'Jūs saņēmāt @score no @total iespējamajiem punktiem'"
+        },
+        {
+          "label": "Pogas \"Pārbaudīt\" teksts",
+          "default": "Pārbaudīt"
+        },
+        {
+          "label": "Pogas \"Iesniegt\" teksts",
+          "default": "Iesniegt"
+        },
+        {
+          "label": "Pogas \"Parādīt risinājumu\" teksts",
+          "default": "Parādīt risinājumu"
+        },
+        {
+          "label": "Pogas \"Mēģināt vēlreiz\" teksts",
+          "default": "Mēģināt vēlreiz"
+        },
+        {
+          "label": "Nepareiza atbilde",
+          "default": "Nepareiza atbilde"
+        },
+        {
+          "label": "Pareiza atbilde",
+          "default": "Pareiza atbilde"
+        },
+        {
+          "label": "Punktu skalas tekstuālais atspoguļojums tiem, kuri izmanto asistējošās tehnoloģijas",
+          "default": "Tu saņēmi :num no :total punktiem"
+        },
+        {
+          "label": "Pogas \"Pārbaudīt\" apraksts priekš asistējošajām tehnoloģijām",
+          "default": "Pārbaudīt atbildes. Sniegtās atbildes tiks atzīmētas kā pareizas, nepareizas, vai neatbildētas."
+        },
+        {
+          "label": "Pogas \"Rādīt risinājumu\" apraksts priekš asistējošām tehnoloģijām",
+          "default": "Rādīt risinājumu. Uzdevums tiks atzīmēts ar tā pareizo risinājumu."
+        },
+        {
+          "label": "Pogas \"Mēģināt vēlreiz\" apraksts priekš asistējošām tehnoloģijām",
+          "default": "Mēģināt uzdevumu vēlreiz. Atiestatīt visas sniegtās atbildes un sākt uzdevumu vēlreiz."
+        }
+      ]
+    },
+    {
+      "label": "Uzvedības iestatītījumi",
+      "description": "Šie iestatījumi ļaus jums kontrolēt uzdevuma uzvedību.",
+      "fields": [
+        {
+          "label": "Atļaut pogu \"Mēģināt vēlreiz\""
+        },
+        {
+          "label": "Atļaut pogu \"Rādīt risinājumu\""
+        },
+        {
+          "label": "Atļaut pogu \"Pārbaudīt\""
+        },
+        {
+          "label": "Rādīt apstiprinājuma dialogu pēc \"Pārbaudīt\""
+        },
+        {
+          "label": "Rādīt apstiprinājuma dialogu pēc \"Mēģināt vēlreiz\""
+        },
+        {
+          "label": "Automātiski pārbaudīt atbildi",
+          "description": "Ņemiet vērā, ka šīs opcijas iespējošana negatīvi ietekmēs pieejamību"
+        },
+        {
+          "label": "Atgriezeniskā saite par pareizo atbildi",
+          "description": "Šis iestatījums pārrakstīs noklusēto atgriezeniskās saites tekstu. Pieejamie mainīgie: @score un @total"
+        },
+        {
+          "label": "Atgriezeniskā saite par nepareizu atbildi",
+          "description": "Šis iestatījums pārrakstīs noklusēto atgriezeniskās saites tekstu. Pieejamie mainīgie: @score un @total"
+        }
+      ]
+    },
+    {
+      "label": "Pārbaudes apstiprinājuma dialogs",
+      "fields": [
+        {
+          "label": "Galvenes teksts",
+          "default": "Beigt?"
+        },
+        {
+          "label": "Pamatteksts",
+          "default": "Vai esat pārliecināts, ka vēlaties beigt?"
+        },
+        {
+          "label": "Atcelšanas pogas birka",
+          "default": "Atcelt"
+        },
+        {
+          "label": "Apstiprināšanas pogas etiķete",
+          "default": "Beigt"
+        }
+      ]
+    },
+    {
+      "label": "Atkārtotas mēģināšanas dialogs",
+      "fields": [
+        {
+          "label": "Galvenes teksts",
+          "default": "Mēģināt vēlreiz?"
+        },
+        {
+          "label": "Pamatteksts",
+          "default": "Vai esat pārliecināts, ka vēlaties mēģināt atkārtoti?"
+        },
+        {
+          "label": "Atcelšanas pogas etiķete",
+          "default": "Atcelt"
+        },
+        {
+          "label": "Apstiprinājuma pogas etiķete",
+          "default": "Apstiprināt"
+        }
+      ]
+    }
+  ]
+}

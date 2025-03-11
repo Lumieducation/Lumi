@@ -1,0 +1,155 @@
+{
+  "semantics": [
+    {
+      "label": "Galderen zerrenda",
+      "entity": "galdera",
+      "widgets": [
+        {
+          "label": "Lehenetsia"
+        },
+        {
+          "label": "Testuala"
+        }
+      ],
+      "field": {
+        "label": "Galdera eta aukerak",
+        "fields": [
+          {
+            "label": "Galdera"
+          },
+          {
+            "label": "Aukerak – lehen aukera da zuzena.",
+            "entity": "erantzuna",
+            "field": {
+              "label": "Aukera"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback Orokorra",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Lehenetsia"
+            }
+          ],
+          "label": "Zehaztu ezazu edozein puntuazio-tarterako feedback pertsonalizatua",
+          "description": "Egin klik \"Gehitu tartea\" botoian behar dituzun tarte guztiak gehitzeko. Adibidez: 0-20% Puntuazio eskasa, 21-91% Batez besteko puntuazioa, 91-100% Puntuazio bikaina!",
+          "entity": "tartea",
+          "field": {
+            "fields": [
+              {
+                "label": "Puntuazio tartea"
+              },
+              {},
+              {
+                "label": "Zehaztutako tartearentzako feedbacka",
+                "placeholder": "Idatzi ezazu feedbacka"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Portaeraren ezarpenak",
+      "fields": [
+        {
+          "label": "Jarraitu automatikoki",
+          "description": "Joan automatikoki hurrengo galderara alternatiba hautatzen denean. Hau desaktibatu egin behar da edukia guztiz eskuragarri izateko pantaila-irakurgailua erabiltzen duzunean."
+        },
+        {
+          "label": "Erantzun zuzenen debora-muga",
+          "description": "Balioa milisegundotan"
+        },
+        {
+          "label": "Erantzun okerren debora-muga",
+          "description": "Balioa milisegundotan"
+        },
+        {
+          "label": "Gaitu soinu efektuak"
+        },
+        {
+          "label": "Gaitu \"Saiatu berriro\" botoia"
+        },
+        {
+          "label": "Gaitu erakutsi emaitza botoia"
+        },
+        {
+          "label": "Gainditzeko ehunekoa",
+          "description": "Galdetegia gainditzeko beharrezkoa den puntuazio totalaren ehunekoa."
+        }
+      ]
+    },
+    {
+      "label": "Lokalizatu aukera bakarreko multzoa",
+      "fields": [
+        {
+          "label": "\"Next\" botoiarentzako etiketa",
+          "default": "Hurrengo galdera"
+        },
+        {
+          "label": "\"Erakutsi emaitza\" botoiarentzako etiketa",
+          "default": "Erakutsi emaitza"
+        },
+        {
+          "label": "\"Saiatu berriro\" botoiarentzako etiketa",
+          "default": "Saiatu berriro"
+        },
+        {
+          "label": "Erantzuna erakusteko ikuspegiaren izenburua",
+          "default": "Soluzioen zerrenda"
+        },
+        {
+          "label": "Erantzun zuzenetarako irakurgailuaren testua",
+          "default": "Zuzena!"
+        },
+        {
+          "label": "Erantzun okerretarako irakurgailuaren testua",
+          "default": "Erantzun okerra!"
+        },
+        {
+          "label": "Aukera hautatu behar zen",
+          "default": "Hautatu beharko zen"
+        },
+        {
+          "label": "Aukera ez zen hautatu behar",
+          "default": "Ez zen hautatua izan behar"
+        },
+        {
+          "label": "\"mute\" botoiaren etiketa, feedback-etako soinua desgaitzeko",
+          "default": "Mututu feedback-etako soinua"
+        },
+        {
+          "label": "\"Close\" botoiaren etiketa",
+          "default": "Itxi"
+        },
+        {
+          "label": "Diapositiba zenbakiaren testua",
+          "description": "Oraingo diapositiba eta diapositiba kopuru osoaren berri ematen du, aldagaiak dira :num and :total",
+          "default": "Diapositiba :num / :total"
+        },
+        {
+          "label": "Puntuazio barraren testu adierazpena irakurgailua erabiltzen dutenentzat",
+          "default": ":total puntutik :num puntu lortu duzu"
+        },
+        {
+          "label": "Galdera zenbakiaren testua erantzunen zerrendan",
+          "description": "Oraingo galderaren erantzunen zerrendako indizea erakusten du, aldagaiak :num dira",
+          "default": ":num. galdera"
+        },
+        {
+          "label": "\"Erakutsi emaitza\" botoiaren laguntza-teknologientzako etiketa",
+          "default": "Erakutsi erantzun zuzena. Zereginaren erantzun zuzena markatuko da."
+        },
+        {
+          "label": "\"Saiatu berriro\" botoiaren laguntza-teknologientzako etiketa",
+          "default": "Zeregina berriz egiten saiatu. Berrabiarazi erantzun guztiak eta hasi zeregina berriz."
+        }
+      ]
+    }
+  ]
+}

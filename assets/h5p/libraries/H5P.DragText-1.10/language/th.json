@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "มีด้านสื่อ",
+      "fields": [
+        {
+          "label": "ประเภท",
+          "description": "สื่อที่เพิ่มเติมที่จะแสดงด้านบนของคำถาม (ไม่บังคับ)"
+        },
+        {
+          "label": "ปิดฟังก์ชันซูมรูปภาพ"
+        }
+      ]
+    },
+    {
+      "label": "คำอธิบายงาน",
+      "description": "อธิบายวิธีการแก้ปัญหาที่ผู้ใช้ควรทำ",
+      "default": "ลากคำใส่กล่องที่ถูกต้อง"
+    },
+    {
+      "label": "ข้อความ",
+      "placeholder": "*ออสโล* เป็นเมืองหลวงของประเทศนอร์เวย์, *สต็อกโฮล์ม* เป็นเมืองหลวงของประเทศสวีเดนและ *โคเปนเฮเกิน* เป็นเมืองหลวงของประเทศเดนมาร์ก ทั้งสามเมืองตั้งอยู่ในคาบสมุทรสกาฟเมืองในภูมิภาค *สแกนดิเนเวีย:ส่วนเหนือของยุโรป*",
+      "important": {
+        "description": "<ul><li>คำที่สามารถวางได้จะมีเครื่องหมายดอกจัน (*) อยู่ด้านหน้าและด้านหลังของคำวลีที่ถูกต้อง</li><li>คุณสามารถเพิ่มเคล็ดลับในรูปข้อความโดยใช้เครื่องหมายคอลอน (:) ด้านหน้าข้อความ</li><li>สำหรับทุกช่องว่างจะมีคำตอบที่ถูกต้องเพียงคำเดียว</li><li>คุณสามารถเพิ่มข้อความตอบกลับที่จะแสดงเมื่อภารกิจเสร็จสิ้น ใช้ '\\+' สำหรับข้อความที่ถูกต้องและ '\\-'สำหรับข้อความที่ไม่ถูกต้อง</li></ul>",
+        "example": "เนื้อหา H5P สามารถแก้ไขได้โดยใช้ *เบราว์เซอร์:โปรแกรมประเภทใดคือ Chrome?* <br /> เนื้อหา H5P เป็น *แบบโต้ตอบ\\+ถูกต้องแล้ว! \\-ไม่ถูกต้อง ลองอีกครั้ง!*"
+      }
+    },
+    {
+      "label": "Distractors",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Enter extra solutions that are wrong as distractors. Use the same asterisk (*) scheme as for the text."
+    },
+    {
+      "label": "Overall Feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "ค่าเริ่มต้น"
+            }
+          ],
+          "label": "กำหนดข้อเสนอแนะแบบกำหนดช่วงคะแนนเอง",
+          "description": "คลิกปุ่ม \"เพิ่มช่วง\" เพื่อเพิ่มช่วงที่ต้องการ ตัวอย่าง: 0-20% คะแนนแย่, 21-91% คะแนนปานกลาง, 91-100% คะแนนดีมาก!",
+          "entity": "ช่วง",
+          "field": {
+            "fields": [
+              {
+                "label": "ช่วงคะแนน"
+              },
+              {},
+              {
+                "label": "ข้อเสนอแนะสำหรับช่วงคะแนนที่กำหนด",
+                "placeholder": "กรอกข้อเสนอแนะ"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Text for \"Check\" button",
+      "default": "Check"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "Text for \"Retry\" button",
+      "default": "Retry"
+    },
+    {
+      "label": "Text for \"Show Solution\" button",
+      "default": "Show solution"
+    },
+    {
+      "label": "Numbered Drop zone label",
+      "default": "Drop Zone @index.",
+      "description": "Label used for accessibility, where the Read speaker will read the index of a drop zone. Variable available: @index"
+    },
+    {
+      "label": "Empty Drop Zone label",
+      "default": "Drop Zone @index is empty.",
+      "description": "Label used for accessibility, where the Read speaker will read that the drop zone is empty"
+    },
+    {
+      "label": "Contains Drop Zone label",
+      "default": "Drop Zone @index contains draggable @draggable.",
+      "description": "Label used for accessibility, where the Read speaker will read that the drop zone contains a draggable"
+    },
+    {
+      "label": "Draggable elements label",
+      "default": "@index of @count draggables.",
+      "description": "Label used for accessibility, where the Read speaker reads that this is a draggable element. Variable available: @index, @count"
+    },
+    {
+      "label": "Label for show tip button",
+      "default": "Show tip",
+      "description": "Label used for accessibility, where the Read speaker reads it before the tip is read out"
+    },
+    {
+      "label": "Readspeaker text for correct answer",
+      "default": "Correct!"
+    },
+    {
+      "label": "Readspeaker text for incorrect answer",
+      "default": "Incorrect!"
+    },
+    {
+      "label": "Confirmation dialog title that user wants to reset a droppable",
+      "default": "Reset drop"
+    },
+    {
+      "label": "Confirmation dialog description that user wants to reset a droppable",
+      "default": "Are you sure you want to reset this drop zone?"
+    },
+    {
+      "label": "Label used for accessibility, where the read speaker indicates that dragging is initiated",
+      "default": "Draggable is grabbed."
+    },
+    {
+      "label": "Label used for accessibility, where the read speaker indicates that dragging is canceled",
+      "default": "Cancelled dragging."
+    },
+    {
+      "label": "Label used for accessibility, where the read speaker indicates that a text is the correct answer",
+      "default": "Correct answer:"
+    },
+    {
+      "label": "Header for panel containing feedback for correct/incorrect answers",
+      "default": "Feedback"
+    },
+    {
+      "label": "Behavioural settings.",
+      "description": "These options will let you control how the task behaves.",
+      "fields": [
+        {
+          "label": "Enable \"Retry\""
+        },
+        {
+          "label": "Enable \"Show Solution\" button"
+        },
+        {
+          "label": "Enable \"Check\" button"
+        },
+        {
+          "label": "Instant feedback"
+        }
+      ]
+    },
+    {
+      "label": "Textual representation of the score bar for those using a readspeaker",
+      "default": "You got :num out of :total points"
+    },
+    {
+      "label": "Assistive technology label for \"Check\" button",
+      "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+    },
+    {
+      "label": "Assistive technology label for \"Show Solution\" button",
+      "default": "Show the solution. The task will be marked with its correct solution."
+    },
+    {
+      "label": "Assistive technology label for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
+    }
+  ]
+}

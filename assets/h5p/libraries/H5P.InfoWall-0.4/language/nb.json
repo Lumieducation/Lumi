@@ -1,0 +1,156 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Header",
+          "description": "Optional header for the information wall."
+        },
+        {
+          "label": "Properties",
+          "fields": [
+            {
+              "label": "Properties",
+              "description": "Properties for the entries",
+              "entity": "property",
+              "widgets": [
+                {
+                  "label": "Default"
+                }
+              ],
+              "field": {
+                "label": "Property items",
+                "fields": [
+                  {
+                    "label": "Label",
+                    "default": "Unnamed"
+                  },
+                  {
+                    "label": "Show property label"
+                  },
+                  {
+                    "label": "Enable searching in the property"
+                  },
+                  {
+                    "label": "Styling override",
+                    "fields": [
+                      {
+                        "label": "Bold"
+                      },
+                      {
+                        "label": "Italic"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {}
+          ]
+        },
+        {
+          "label": "Panels",
+          "description": "Panels for the wall",
+          "entity": "panel",
+          "widgets": [
+            {
+              "label": "Default"
+            }
+          ],
+          "field": {
+            "label": "Entry items",
+            "fields": [
+              {
+                "label": "Title for panel"
+              },
+              {
+                "label": "Image"
+              },
+              {
+                "label": "Entries",
+                "description": "Entries for the properties",
+                "entity": "value",
+                "widgets": [
+                  {
+                    "label": "Default"
+                  }
+                ],
+                "field": {
+                  "label": "Label to be changed automatically"
+                }
+              },
+              {
+                "label": "Additional keywords",
+                "description": "Add additional keywords separated by a blank space that will be used for filtering but not be visible to the user."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Behavioural settings",
+          "description": "These options will let you control how the task behaves.",
+          "fields": [
+            {
+              "label": "Use fallback for missing images"
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "Image width",
+              "description": "Image width in px."
+            },
+            {
+              "label": "Image height",
+              "description": "Image height in px."
+            },
+            {
+              "label": "Alternate panel background",
+              "description": "If checked, each 2nd panel will have slightly darker background than the others."
+            },
+            {
+              "label": "Offer filter field",
+              "description": "If checked, users will be able to filter the info wall."
+            },
+            {
+              "label": "Mode for filter field",
+              "description": "Choose whether the filter should narrow down or broaden the search with every new keyword.",
+              "options": [
+                {
+                  "label": "Narrow down"
+                },
+                {
+                  "label": "Broaden"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "User interface",
+          "fields": [
+            {
+              "label": "No content entered",
+              "default": "The author did not enter anything."
+            },
+            {
+              "label": "No matches found",
+              "description": "@query is a placeholder and will be replaced by the respective query that was entered.",
+              "default": "There are not matches for @query."
+            },
+            {
+              "label": "Enter to filter",
+              "description": "Message for screen readers.",
+              "default": "Enter a query to filter the content for relevant entries."
+            },
+            {
+              "label": "List changed.",
+              "description": "Message for screen readers. @visible and @total are placeholders and will be preplaced with the respective values.",
+              "default": "List changed. Showing @visible of @total items."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

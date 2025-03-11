@@ -1,0 +1,295 @@
+{
+  "semantics": [
+    {
+      "label": "Línea de Tiempo",
+      "fields": [
+        {
+          "label": "Título",
+          "description": "El título principal de la línea de tiempo va aquí (primera página)"
+        },
+        {
+          "label": "Texto del Cuerpo",
+          "description": "El cuerpo principal de la línea de tiempo va aquí (primera página)."
+        },
+        {
+          "label": "Nivel de zoom predeterminado",
+          "description": "Esto modificará el nivel de zoom predeterminado. Equivale a presionar el botón acercar o alejar el número especificado de veces. Los números negativos se alejan. el valor predeterminado es 0"
+        },
+        {
+          "label": "Imagen de fondo",
+          "description": "Una imagen para mostrar como fondo."
+        },
+        {
+          "label": "Altura",
+          "description": "La altura en pixeles"
+        },
+        {
+          "label": "Recurso",
+          "description": "Aquí puede agregar un recurso a la \"portada\" de su línea de tiempo",
+          "fields": [
+            {
+              "label": "Medio",
+              "description": "Enlace URL a los medios (Twitter, YouTube, Flickr, Vimeo, Google Maps y SoundCloud son actualmente compatibles)"
+            },
+            {
+              "label": "Créditos",
+              "description": "Créditos de los medios"
+            },
+            {
+              "label": "Letrerito",
+              "description": "La descripción del letrerito va aquí"
+            }
+          ]
+        },
+        {
+          "label": "Fechas",
+          "description": "¡Agregue algunas fechas a su línea de tiempo!",
+          "field": {
+            "label": "Fecha",
+            "description": "Fecha",
+            "fields": [
+              {
+                "label": "Fecha de inicio",
+                "description": "AAAA,MM,DD (Mínimo necesario AAAA)"
+              },
+              {
+                "label": "Fecha final",
+                "description": "AAAA,MM,DD (Mínimo necesario AAAA)"
+              },
+              {
+                "label": "Titulo",
+                "description": "Título para la entrada de fecha"
+              },
+              {
+                "label": "Texto del cuerpo",
+                "description": "Cuerpo para la entrada de la fecha"
+              },
+              {
+                "label": "Etiquetas",
+                "description": "Ingrese las Etiquetas (categorías)"
+              },
+              {
+                "label": "Recurso",
+                "fields": [
+                  {
+                    "label": "Medio",
+                    "description": "URL a los medios (Twitter, YouTube, Flickr, Vimeo, Wikipedia, Google Maps y SoundCloud son actualmente compatibles)."
+                  },
+                  {
+                    "label": "Imagen miniatura",
+                    "description": "Agrega una imagen miniatura si fuera necesario, 32x32"
+                  },
+                  {
+                    "label": "Crédito",
+                    "description": "Créditos a los medios"
+                  },
+                  {
+                    "label": "Letrerito",
+                    "description": "Texto del letrerito"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Épocas",
+          "description": "Agrega una época a su línea de tiempo",
+          "field": {
+            "label": "Época",
+            "fields": [
+              {
+                "label": "Fecha de inicio",
+                "description": "AAAA,MM,DD (Mínimo AAAA requerido)"
+              },
+              {
+                "label": "Fecha final",
+                "description": "AAAA,MM,DD (Mínimo YYYY requerido)"
+              },
+              {
+                "label": "Titular",
+                "description": "Titular de la Época"
+              },
+              {
+                "label": "Texto",
+                "description": "Cuerpo de la Época"
+              },
+              {
+                "label": "Etiqueta",
+                "description": "Etiquetas de la Época (categorías)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Idioma",
+          "description": "El idioma de la interfaz del usuario",
+          "options": [
+            {
+              "label": "Afrikáans"
+            },
+            {
+              "label": "Árabe"
+            },
+            {
+              "label": "Armenio"
+            },
+            {
+              "label": "Vasco"
+            },
+            {
+              "label": "Búlgaro"
+            },
+            {
+              "label": "Catalán"
+            },
+            {
+              "label": "Chino"
+            },
+            {
+              "label": "Croata / Hrvatski"
+            },
+            {
+              "label": "Checo"
+            },
+            {
+              "label": "Danés"
+            },
+            {
+              "label": "Holandés"
+            },
+            {
+              "label": "Inglés"
+            },
+            {
+              "label": "Inglés (horario de 24-horas)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estoniano"
+            },
+            {
+              "label": "Feroés"
+            },
+            {
+              "label": "Persa"
+            },
+            {
+              "label": "Finlandés"
+            },
+            {
+              "label": "Francés"
+            },
+            {
+              "label": "Gallego"
+            },
+            {
+              "label": "Georgiano"
+            },
+            {
+              "label": "Alemán / Deutsch"
+            },
+            {
+              "label": "Griego"
+            },
+            {
+              "label": "Hebreo"
+            },
+            {
+              "label": "Húngaro"
+            },
+            {
+              "label": "Islandés"
+            },
+            {
+              "label": "Indonesio"
+            },
+            {
+              "label": "Italiano"
+            },
+            {
+              "label": "Japonés"
+            },
+            {
+              "label": "Coreano"
+            },
+            {
+              "label": "Latvio"
+            },
+            {
+              "label": "Lituano"
+            },
+            {
+              "label": "Luxemburgués"
+            },
+            {
+              "label": "Malayo"
+            },
+            {
+              "label": "Nepalés"
+            },
+            {
+              "label": "Noruego"
+            },
+            {
+              "label": "Polaco"
+            },
+            {
+              "label": "Portugués"
+            },
+            {
+              "label": "Portugués (Brasileño)"
+            },
+            {
+              "label": "Rumano"
+            },
+            {
+              "label": "Ruso"
+            },
+            {
+              "label": "Serbio - Cirílico"
+            },
+            {
+              "label": "Serbio - Latino"
+            },
+            {
+              "label": "Sinhalés"
+            },
+            {
+              "label": "Eslovaco"
+            },
+            {
+              "label": "Esloveno"
+            },
+            {
+              "label": "Español"
+            },
+            {
+              "label": "Sueco"
+            },
+            {
+              "label": "Tagalo"
+            },
+            {
+              "label": "Tamil"
+            },
+            {
+              "label": "Taiwanés"
+            },
+            {
+              "label": "Télugu"
+            },
+            {
+              "label": "Turco"
+            },
+            {
+              "label": "Ucraniano"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

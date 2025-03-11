@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "label": "Nadpis",
+      "default": "Dokumentační nástroj",
+      "description": "Název nástroje pro dokumentaci."
+    },
+    {
+      "label": "Prvky",
+      "widgets": [
+        {
+          "label": "Výchozí"
+        }
+      ],
+      "entity": "stránka",
+      "field": {
+        "label": "Typ stránky",
+        "description": "Knihovna pro tento snímek."
+      }
+    },
+    {
+      "label": "Lokalizace tlačítka nástrojů dokumentace",
+      "fields": [
+        {
+          "label": "Popisek tlačítka Předchozí",
+          "default": "Předchozí documentation step"
+        },
+        {
+          "label": "Popisek tlačítka Další",
+          "default": "Další documentation step"
+        },
+        {
+          "label": "Popisek tlačítka Zavřít",
+          "default": "Zavřít"
+        }
+      ]
+    }
+  ]
+}

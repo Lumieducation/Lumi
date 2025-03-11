@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "label": "머릿말",
+      "default": "문서화 도구",
+      "description": "문서화 도구에 대한 제목."
+    },
+    {
+      "label": "항목",
+      "widgets": [
+        {
+          "label": "기본값"
+        }
+      ],
+      "entity": "페이지",
+      "field": {
+        "label": "페이지 유형",
+        "description": "이 슬라이드에 대한 라이브러리."
+      }
+    },
+    {
+      "label": "문서 도구 버튼의 맞춤형 설정",
+      "fields": [
+        {
+          "label": "이전 버튼 레이블",
+          "default": "이전 documentation step"
+        },
+        {
+          "label": "다음 버튼 레이블",
+          "default": "다음 documentation step"
+        },
+        {
+          "label": "닫기 버튼 레이블",
+          "default": "닫기"
+        }
+      ]
+    }
+  ]
+}

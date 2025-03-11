@@ -1,0 +1,172 @@
+{
+  "semantics": [
+    {
+      "label": "Mediji",
+      "fields": [
+        {
+          "label": "Tip",
+          "description": "Neobvezna nastavitev dodatnega medija za prikaz nad vprašanjem."
+        },
+        {
+          "label": "Onemogoči povečavo slike"
+        }
+      ]
+    },
+    {
+      "label": "Navodilo udeležencem",
+      "description": "Opis reševanja zadane naloge."
+    },
+    {
+      "label": "Odstavki",
+      "entity": "odstavek",
+      "widgets": [
+        {
+          "label": "Privzeto"
+        }
+      ],
+      "field": {
+        "label": "Nastavitve odstavka",
+        "fields": [
+          {
+            "label": "Naslov"
+          },
+          {
+            "label": "Namigi",
+            "description": "Neobvezen namig ali dodatna navodila glede zapisa odstavka."
+          },
+          {
+            "label": "Utež",
+            "description": "Vrednot uteži pomeni dolžino odstavka v primerjavi z drugimi odstavki. Na primer odstavek z utežjo 3 mora obsegati 3 dolžine odstavka z utežjo 1. Odstavka lahko imata tudi enako utež, če morata biti enako dolga."
+          },
+          {
+            "label": "Barva ozadja",
+            "default": "#ebebeb"
+          },
+          {
+            "label": "Barva besedila",
+            "default": "#1c1c1c"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Nastavitve interakcije",
+      "description": "Nastavitve omogočajo nadzor nad interakcijo aktivnosti za udeležence.",
+      "fields": [
+        {
+          "label": "Omogoči gumb \"Poskusi ponovno\""
+        },
+        {
+          "label": "Omogoči gumb \"Prikaži rešitev\""
+        },
+        {
+          "label": "Sprejemljiv odklon",
+          "description": "Odstotek sprejemljivega odklona glede na predvideno dolžino odstavka (npr. sprejemljivo 10 % podaljšanje vsebine)."
+        },
+        {
+          "label": "Najmanjša dolžina besedila",
+          "description": "Vrednost določa absolutno najmanjšo dolžino besedila. Ne pozabite, da je pri povratni informaciji udeležencu kljub temu ključno razmerje med utežmi posameznih odstavkov."
+        },
+        {
+          "label": "Največja dolžina besedila",
+          "description": "Vrednost določa absolutno največje dolžino besedila. Ne pozabite, da je pri povratni informaciji udeležencu kljub temu ključno razmerje med utežmi posameznih odstavkov."
+        },
+        {
+          "label": "Način povratne informacije",
+          "description": "Nastavitev določa način prikaza povratne informacije.",
+          "options": [
+            {
+              "label": "Na zahtevo z gumbom"
+            },
+            {
+              "label": "Sproti med tipkanjem"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Uporabniški vmesnik",
+      "fields": [
+        {
+          "label": "Besedilo za gumb \"Kopiraj\"",
+          "default": "Kopiraj"
+        },
+        {
+          "label": "Besedilo za gumb \"Preveri\"",
+          "default": "Preveri"
+        },
+        {
+          "label": "Besedilo za gumb \"Poskusi ponovno\"",
+          "default": "Poskusi ponovno"
+        },
+        {
+          "label": "Besedilo za gumb \"Prikaži rešitev\"",
+          "default": "Prikaži rešitev"
+        },
+        {
+          "label": "Vsi odstavki ustrezne dolžine",
+          "description": "Povratna informacija ob odstavkih v določenih dolžinah/razmerjih.",
+          "default": "Vsi odstavki so ustrezne dolžine."
+        },
+        {
+          "label": "Prekratek odstavek (način na zahtevo)",
+          "description": "Povratna informacija ob prekratkem odstavku. @title in @chars sta spremenljivki.",
+          "default": "Odstavek \"@title\" je prekratek. Podaljšati ga je treba za @chars znakov."
+        },
+        {
+          "label": "Predolg odstavek (način na zahtevo)",
+          "description": "Povratna informacija ob predolgem odstavku. @title in @chars sta spremenljivki.",
+          "default": "Odstavek \"@title\" je predolg. Skrajšati ga je treba za @chars znakov."
+        },
+        {
+          "label": "Prekratek odstavek (način med tipkanjem)",
+          "description": "Povratna informacija ob prekratkem odstavku. @chars je spremenljivka.",
+          "default": "@chars znakov prekratko."
+        },
+        {
+          "label": "Predolg odstavek (način med tipkanjem)",
+          "description": "Povratna informacija ob predolgem odstavku. @chars je spremenljivka.",
+          "default": "@chars znakov predolgo."
+        },
+        {
+          "label": "Vsebina kopirana v odložišče",
+          "default": "Vsebina kopirana v odložišče"
+        },
+        {
+          "label": "Ni mogoče kopirati v odložišče",
+          "default": "Vsebine ni bilo mogoče kopirati v odložišče"
+        },
+        {
+          "label": "Odstavek",
+          "default": "Odstavek"
+        },
+        {
+          "label": "Besedilo sporočila \"Manjkajoči odstavki\"",
+          "default": "Ta aktivnost nima določenih odstavkov."
+        }
+      ]
+    },
+    {
+      "label": "Bralnik zaslona",
+      "fields": [
+        {
+          "label": "Obvestilo za bralnike zaslona o povratni informaciji",
+          "default": "Povratna informacija"
+        },
+        {
+          "label": "Obvestilo za bralnike zaslona o kopiranju vsebine v odložišče",
+          "default": "Kopiraj vsebino v odložišče"
+        },
+        {
+          "label": "Obvestilo za bralnike zaslona o možnosti zapri okno",
+          "default": "Zapri okno"
+        },
+        {
+          "label": "Obvestilo za bralnike zaslona o možnosti prikaži namig",
+          "default": "Pokaži namig"
+        }
+      ]
+    }
+  ]
+}

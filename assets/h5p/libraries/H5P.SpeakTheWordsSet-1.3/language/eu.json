@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Sarrera",
+      "fields": [
+        {
+          "label": "Bistaratu sarrera"
+        },
+        {
+          "label": "Sarrerako irudia"
+        },
+        {
+          "label": "Sarrerako irudiaren ordezko testua"
+        },
+        {
+          "label": "Titulua"
+        },
+        {
+          "label": "Sarrerako testua",
+          "description": "Titulu hau bistaratuko da sarrerako testuaren gainean."
+        }
+      ]
+    },
+    {
+      "label": "Galderak",
+      "widgets": [
+        {
+          "label": "Lehentsitakoa"
+        }
+      ],
+      "entity": "Galdera",
+      "field": {
+        "label": "Galdera"
+      }
+    },
+    {
+      "label": "Feedback Orokorra",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Lehenetsitakoa"
+            }
+          ],
+          "label": "Zehaztu ezazu edozein puntuazio-tarterako feedback pertsonalizatua",
+          "description": "Egin klik \"Gehitu tartea\" botoian behar dituzun tarte guztiak gehitzeko. Adibidez: 0-20% Puntuazio eskasa, 21-91% Batez besteko puntuazioa, 91-100% Puntuazio bikaina!",
+          "entity": "tartea",
+          "field": {
+            "fields": [
+              {
+                "label": "Puntazio-tartea"
+              },
+              {},
+              {
+                "label": "Zehaztutako tartearentzako feedbacka",
+                "placeholder": "Idatzi ezazu feedbacka"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Ahozkatu hitzen multzoa etiketak eta testuak",
+      "fields": [
+        {
+          "label": "Sarrerako botoiaren etiketa",
+          "default": "Hasi ariketa!"
+        },
+        {
+          "label": "Soluzioen pantailaren emaitzen etiketa",
+          "default": "Zure emaitzak:"
+        },
+        {
+          "label": "Erakutsi emaitzak botoiaren etiketa",
+          "default": "Erakutsi emaitzak"
+        },
+        {
+          "label": "Saiatu berriro botoiaren etiketa",
+          "default": "Saiatu berriro"
+        },
+        {
+          "label": "Amaitu botoiaren etiketa",
+          "default": "Amaitu"
+        },
+        {
+          "label": "Hurrengo galdera erabilerraztasun etiketa",
+          "default": "Hurrengo galdera"
+        },
+        {
+          "label": "Aurreko galdera erabilerraztasun etiketa",
+          "default": "Aurreko galdera"
+        },
+        {
+          "label": "Nabigazio barraren titulua",
+          "description": "Nabigazio barrako galderen tutuluak. \":num\" zenbakiaren ordez uneko diapositibaren zenbakia agertuko da.",
+          "default": ":num diapositiba"
+        },
+        {
+          "label": "Erantzuna emana diapositibaren erabilerraztasun etiketa",
+          "default": "Erantzuna emana"
+        },
+        {
+          "label": "Diapositiba aktiboaren erabilerraztasun etiketa",
+          "default": "Une honetan aktiboa"
+        }
+      ]
+    }
+  ]
+}

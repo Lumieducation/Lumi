@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Branching Scenario Editor",
+      "fields": [
+        {
+          "label": "Title"
+        },
+        {
+          "label": "Start screen",
+          "fields": [
+            {
+              "label": "Start screen title",
+              "placeholder": "Title for your course"
+            },
+            {
+              "label": "Start screen subtitle",
+              "placeholder": "Details about the course"
+            },
+            {
+              "label": "Start screen image"
+            },
+            {
+              "label": "Image alternative text"
+            }
+          ]
+        },
+        {
+          "label": "List of end screens",
+          "field": {
+            "label": "End screen",
+            "fields": [
+              {
+                "label": "Title"
+              },
+              {
+                "label": "Text"
+              },
+              {
+                "label": "Image"
+              },
+              {
+                "label": "Score",
+                "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach the default end scenario"
+              },
+              {
+                "label": "Content ID"
+              }
+            ]
+          }
+        },
+        {
+          "label": "List of branching scenario content",
+          "entity": "content",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Show content title in view",
+                "description": "If selected, the user will see the content title in the top bar above this content."
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Proceed"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Scoring options",
+          "fields": [
+            {
+              "label": "Scoring options",
+              "description": "Select type of scoring",
+              "options": [
+                {
+                  "label": "Statically set score for each end scenario"
+                },
+                {
+                  "label": "Dynamically calculate score from user answers"
+                },
+                {
+                  "label": "No scoring"
+                }
+              ]
+            },
+            {
+              "label": "Include scores from interactions within the Branching Scenario",
+              "description": "If chosen scores from for instance Interactive Videos will be added to the total score obtained. If not chosen only scores specified in the feedback sections of the content items, branching questions and end scenarios will count."
+            }
+          ]
+        },
+        {
+          "label": "Behavioural settings",
+          "fields": [
+            {
+              "label": "Override require content finished",
+              "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide."
+            },
+            {
+              "label": "Required to watch",
+              "description": "Urges viewers to complete the Video, Interactive Vdeo and Course Presentation before proceeding with the scenario. This can be overridden on a content level"
+            },
+            {
+              "label": "Randomize Branching Questions",
+              "description": "Branching questions will be displayed in random order"
+            }
+          ]
+        },
+        {
+          "label": "Localization",
+          "fields": [
+            {
+              "label": "Text for the button on the start screen",
+              "default": "ចាប់ផ្តើមវគ្គសិក្សា"
+            },
+            {
+              "label": "Text for the button on the end screen",
+              "default": "ផ្តើមវគ្គសិក្សាជាថ្មី"
+            },
+            {
+              "label": "Text for the button on each of the library screens",
+              "default": "ទៅ"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "Label for score on the end screen",
+              "default": "ពិន្ទុរបស់អ្នក:"
+            },
+            {
+              "label": "Label for score on the end screen",
+              "default": "Your score:"
+            },
+            {
+              "label": "Aria label for fullscreen button",
+              "default": "Fullscreen"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

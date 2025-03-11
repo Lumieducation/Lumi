@@ -1,0 +1,219 @@
+{
+  "semantics": [
+    {
+      "label": "Virsraksts"
+    },
+    {
+      "label": "Atspoguļojuma veids",
+      "description": "Dialoga kartīšu atspoguļojuma veids",
+      "options": [
+        {
+          "label": "Parasts"
+        },
+        {
+          "label": "Atkārtojuma"
+        }
+      ]
+    },
+    {
+      "label": "Uzdevuma apraksts"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Pēc noklusējuma"
+        }
+      ],
+      "label": "Dialogi",
+      "entity": "dialogs",
+      "field": {
+        "label": "Jautājums",
+        "fields": [
+          {
+            "label": "Teksts",
+            "description": "Dialoga pirmās daļas padoms"
+          },
+          {
+            "label": "Atbilde",
+            "description": "Dialoga otrās daļas padoms"
+          },
+          {
+            "label": "Attēls",
+            "description": "Neobligāts kartītes attēls. (Kartīte var būt tikai attēls, tikai teksts vai abi)"
+          },
+          {
+            "label": "Attēla alternatīvais teksts"
+          },
+          {
+            "label": "Audio faili"
+          },
+          {
+            "label": "Padomi",
+            "fields": [
+              {
+                "label": "Teksta padoms",
+                "description": "Dialoga pirmās daļas padoms"
+              },
+              {
+                "label": "Atbildes padoms",
+                "description": "Dialoga otrās daļas padoms"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Uzvedības iestatītījumi",
+      "description": "Šie iestatījumi ļaus jums kontrolēt uzdevuma uzvedību.",
+      "fields": [
+        {
+          "label": "Atļaut pogu \"Mēģināt vēlreiz\""
+        },
+        {
+          "label": "Atspējot navigāciju atpakaļ",
+          "description": "Šī opcija ļaus ar Dialoga Kartītēm virzīties tikai uz priekšu"
+        },
+        {
+          "label": "Mērogot tekstu, lai ietilpinātu kartītē",
+          "description": "Šīs opcijas atslēgšana liks kartītei pielāgot tās izmēru teksta izmēram"
+        },
+        {
+          "label": "Izkārtot kartītes jaukti",
+          "description": "Iespējot, lai kartītes atspoguļotu nejaušā secībā."
+        },
+        {
+          "label": "Maksimālais lietpratības līmenis"
+        },
+        {
+          "label": "Atļaut ātru progresu",
+          "description": "Ja aktivizēts, izglītojamie var norādīt, ka zina kartīti bez tās pagriešanas"
+        }
+      ]
+    },
+    {
+      "label": "Pagriešanas pogas teksts",
+      "default": "Pagriezt"
+    },
+    {
+      "label": "Pogas \"Nākamais\" teksts",
+      "default": "Nākamais"
+    },
+    {
+      "label": "Pogas \"Iepriekšējais\" teksts",
+      "default": "Iepriekšējais"
+    },
+    {
+      "label": "Pogas \"Mēģināt vēlreiz\" teksts",
+      "default": "Mēģināt vēlreiz"
+    },
+    {
+      "label": "Pogas \"Pareizā atbilde\" teksts",
+      "default": "Atbildēju pareizi!"
+    },
+    {
+      "label": "Pogas \"Nepareiza atbilde\" teksts",
+      "default": "Atbildēju nepareizi"
+    },
+    {
+      "label": "\"Riņķa\" ziņas teksts zem kartītēm kopsavilkuma ekrānā",
+      "description": "@round tiks aizvietots ar pašreizējā riņķa numuru",
+      "default": "Riņķis @round"
+    },
+    {
+      "label": "Ziņas \"Atlikušas kartītes\" teksts",
+      "description": "@number tiks aizvietots ar riņķī atlikušo kartīšu skaitu",
+      "default": "Atlikušas kartītes: @number"
+    },
+    {
+      "label": "Pogas \"Nākamais riņķis\" teksts",
+      "description": "@round tiks aizvietots ar riņķa numuru",
+      "default": "Turpināt ar @round. riņķi"
+    },
+    {
+      "label": "Pogas \"Sākt no sākuma\" teksts",
+      "default": "Sākt no sākuma"
+    },
+    {
+      "label": "Pogas \"Rādīt kopsavilkumu\" teksts",
+      "default": "Nākamais"
+    },
+    {
+      "label": "Kopsavilkuma lapas nosaukuma teksts",
+      "default": "Kopsavilkums"
+    },
+    {
+      "label": "Teksts priekš \"Pareizi atbildētās kartītes:\"",
+      "default": "Pareizi atbildētās kartītes:"
+    },
+    {
+      "label": "Teksts priekš \"Nepareizi atbildētās kartītes:\"",
+      "default": "Nepareizi atbildētās kartītes:"
+    },
+    {
+      "label": "Teksts priekš \"Neparādītās kartītes:\"",
+      "default": "Neparādītās kartītes:"
+    },
+    {
+      "label": "Teksts priekš \"Kopējais rezultāts\"",
+      "default": "Kopējais rezultāts"
+    },
+    {
+      "label": "Teksts priekš \"Pabeigtās kartītes\"",
+      "default": "Kartītes, kuras esat apguvis:"
+    },
+    {
+      "label": "Teksts priekš \"Pabeigtie riņķi:\"",
+      "default": "Pabeigtie riņķi:"
+    },
+    {
+      "label": "Ziņa, kad visas kartītes apgūtas lietpratēja līmenī",
+      "description": "@cards tiks aizvietots ar kartīšu skaitu kopējā fondā. @max tiks aizvietots ar maksimālo lietpratības līmeni.",
+      "default": "Ļoti labi! @cards kartītes atbildētas pareizi @max reizes pēc kārtas!"
+    },
+    {
+      "label": "Progresa teksts",
+      "description": "Pieejamie mainīgie ir @card un @total.",
+      "default": "Kartīte @card no @total"
+    },
+    {
+      "label": "Etiķete kartītes tekstam",
+      "description": "Izmanto asistīvās tehnoloģijas, lai nodrošinātu pieejamību",
+      "default": "Kartītes priekša"
+    },
+    {
+      "label": "Kartītes aizmugures etiķete",
+      "description": "Izmanto asistīvās tehnoloģijas, lai nodrošinātu pieejamību",
+      "default": "Kartītes aizmugure"
+    },
+    {
+      "label": "Pogas \"Parādīt padomu\" etiķete",
+      "default": "Parādīt padomu"
+    },
+    {
+      "label": "Ziņa par to, ka netiek atbalstīts audio",
+      "default": "Jūsu pārlūkprogramma neatbalsta šo audio"
+    },
+    {
+      "label": "Atsākšanas apstiprinājuma dialogs",
+      "fields": [
+        {
+          "label": "Galvenes teksts",
+          "default": "Sākt vēlreiz?"
+        },
+        {
+          "label": "Pamatteksts",
+          "default": "Viss progress tiks dzēsts. Vai esat pārliecināts, ka vēlaties sākt no sākuma?"
+        },
+        {
+          "label": "Atcelšanas pogas etiķete",
+          "default": "Atcelt"
+        },
+        {
+          "label": "Apstiprinājuma pogas etiķete",
+          "default": "Sākt no sākuma"
+        }
+      ]
+    }
+  ]
+}

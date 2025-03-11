@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "标题",
+      "description": "您想在图像上方显示的标题",
+      "placeholder": "您可以在此处添加可选标题。"
+    },
+    {
+      "label": "第一张图片",
+      "fields": [
+        {
+          "label": "第一张图片",
+          "description": "第一张图。请确保它与第二张图片具有相同的大小。"
+        },
+        {
+          "label": "第一张图片的标签",
+          "description": "放置第一张图片的标签"
+        }
+      ]
+    },
+    {
+      "label": "第二张图片",
+      "fields": [
+        {
+          "label": "第二张图片",
+          "description": "第二张图。请确保它与第一张图片的大小相同。"
+        },
+        {
+          "label": "第二张图片的标签",
+          "description": "放置第二张图片的标签"
+        }
+      ]
+    },
+    {
+      "label": "行为设置",
+      "description": "这些选项将让您设置一些插件细节",
+      "fields": [
+        {
+          "label": "滑块起始位置，以 % 为单位",
+          "description": "设置滑块的起始位置"
+        },
+        {
+          "label": "滑块方向",
+          "description": "水平将左右移动，垂直将上下移动。",
+          "options": [
+            {
+              "label": "水平"
+            },
+            {
+              "label": "垂直"
+            }
+          ]
+        },
+        {
+          "label": "滑块颜色",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Image visible message",
+          "default": "Image @percentage % visible",
+          "description": "@percentage is a placeholder and will be replaced with the respective value."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

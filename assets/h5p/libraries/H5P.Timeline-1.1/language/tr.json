@@ -1,0 +1,295 @@
+{
+  "semantics": [
+    {
+      "label": "Zaman Çizelgesi",
+      "fields": [
+        {
+          "label": "Başlık",
+          "description": "Ana zaman çizelgesi başlığı buraya gelir (ilk sayfa)"
+        },
+        {
+          "label": "Gövde Metni",
+          "description": "Ana zaman çizelgesi gövdesi buraya gelir (ilk sayfa)."
+        },
+        {
+          "label": "Varsayılan yakınlaştırma düzeyi",
+          "description": "Bu, varsayılan yakınlaştırma seviyesini ayarlayacaktır. Yakınlaştırma veya uzaklaştırma düğmesine belirtilen sayıda basmaya eşdeğerdir. Negatif sayılar uzaklaştırır. Varsayılan: 0"
+        },
+        {
+          "label": "Arka plan görüntüsü",
+          "description": "Arka plan olarak görüntülenecek bir resim."
+        },
+        {
+          "label": "Yükseklik",
+          "description": "Piksel cinsinden yükseklik"
+        },
+        {
+          "label": "Varlık",
+          "description": "Burada zaman çizelgenizin \"ön sayfası\"na bir varlık ekleyebilirsiniz.",
+          "fields": [
+            {
+              "label": "Medya",
+              "description": "Medya URL'sine bağlantı (Twitter, YouTube, Flickr, Vimeo, Google Haritalar ve SoundCloud şu anda desteklenmektedir)"
+            },
+            {
+              "label": "Üreticiler",
+              "description": "Medyayı üretenler"
+            },
+            {
+              "label": "Altyazı",
+              "description": "Altyazı açıklaması buraya gelir"
+            }
+          ]
+        },
+        {
+          "label": "Tarihler",
+          "description": "Zaman çizelgenize bazı tarihler ekleyin!",
+          "field": {
+            "label": "Tarih",
+            "description": "Tarih",
+            "fields": [
+              {
+                "label": "Başlangıç ​​tarihi",
+                "description": "YYYY,AA,GG (Minimum YYYY gerekli)"
+              },
+              {
+                "label": "Bitiş tarihi",
+                "description": "YYYY,AA,GG (Minimum YYYY gerekli)"
+              },
+              {
+                "label": "Başlık",
+                "description": "Tarih girişi için başlık"
+              },
+              {
+                "label": "Gövde metni",
+                "description": "Tarih girişi için gövde metni"
+              },
+              {
+                "label": "Etiketler",
+                "description": "Etiketleri Girin (kategoriler)"
+              },
+              {
+                "label": "Varlık",
+                "fields": [
+                  {
+                    "label": "Medya",
+                    "description": "Medyanın URL'si (Twitter, YouTube, Flickr, Vimeo, Wikipedia, Google Haritalar ve SoundCloud şu anda desteklenmektedir)."
+                  },
+                  {
+                    "label": "Küçük resim",
+                    "description": "Gerekirse küçük resim ekleyin, 32x32"
+                  },
+                  {
+                    "label": "Üreticiler",
+                    "description": "Medyayı üretenler"
+                  },
+                  {
+                    "label": "Altyazı",
+                    "description": "Altyazı metni"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Dönemler (Çağlar)",
+          "description": "Zaman çizelgenize bir dönem ekleyin",
+          "field": {
+            "label": "Dönem",
+            "fields": [
+              {
+                "label": "Başlangıç ​​tarihi",
+                "description": "YYYY,AA,GG (Minimum YYYY gerekli)"
+              },
+              {
+                "label": "Bitiş tarihi",
+                "description": "YYYY,AA,GG (Minimum YYYY gerekli)"
+              },
+              {
+                "label": "Başlık",
+                "description": "Dönem başlığı"
+              },
+              {
+                "label": "Metin",
+                "description": "Dönem gövde metni"
+              },
+              {
+                "label": "Etiket",
+                "description": "Dönem etiketleri (kategoriler)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Dil",
+          "description": "Kullanıcı arayüzünün dili",
+          "options": [
+            {
+              "label": "Afrika Dili"
+            },
+            {
+              "label": "Arapça"
+            },
+            {
+              "label": "Ermenice"
+            },
+            {
+              "label": "Baskça"
+            },
+            {
+              "label": "Bulgarca"
+            },
+            {
+              "label": "Katalanca"
+            },
+            {
+              "label": "Çince"
+            },
+            {
+              "label": "Hırvatça"
+            },
+            {
+              "label": "Çekçe"
+            },
+            {
+              "label": "Danca"
+            },
+            {
+              "label": "Flemenkçe"
+            },
+            {
+              "label": "İngilizce"
+            },
+            {
+              "label": "İngilizce (24 saat zamanı)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estonyaca"
+            },
+            {
+              "label": "Faroe dili"
+            },
+            {
+              "label": "Farsça"
+            },
+            {
+              "label": "Fince"
+            },
+            {
+              "label": "Fransızca"
+            },
+            {
+              "label": "Galiçyaca"
+            },
+            {
+              "label": "Gürcüce"
+            },
+            {
+              "label": "Almanca"
+            },
+            {
+              "label": "Yunanca"
+            },
+            {
+              "label": "İbranice"
+            },
+            {
+              "label": "Macarca"
+            },
+            {
+              "label": "İzlandaca"
+            },
+            {
+              "label": "Endonezya dili"
+            },
+            {
+              "label": "İtalyanca"
+            },
+            {
+              "label": "Japonca"
+            },
+            {
+              "label": "Korece"
+            },
+            {
+              "label": "Letonca"
+            },
+            {
+              "label": "Litvanca"
+            },
+            {
+              "label": "Lüksemburgca"
+            },
+            {
+              "label": "Malayca"
+            },
+            {
+              "label": "Nepalce"
+            },
+            {
+              "label": "Norveççe"
+            },
+            {
+              "label": "Lehçe"
+            },
+            {
+              "label": "Portekizce"
+            },
+            {
+              "label": "Portekizce (Brezilya)"
+            },
+            {
+              "label": "Romence"
+            },
+            {
+              "label": "Rusça"
+            },
+            {
+              "label": "Sırpça - Kiril"
+            },
+            {
+              "label": "Sırpça - Latince"
+            },
+            {
+              "label": "Sint"
+            },
+            {
+              "label": "Slovakça"
+            },
+            {
+              "label": "Slovence"
+            },
+            {
+              "label": "İspanyolca"
+            },
+            {
+              "label": "İsveççe"
+            },
+            {
+              "label": "Tagalog"
+            },
+            {
+              "label": "Tamilce"
+            },
+            {
+              "label": "Tay Dili"
+            },
+            {
+              "label": "Telugu Dili"
+            },
+            {
+              "label": "Türkçe"
+            },
+            {
+              "label": "Ukraynaca"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

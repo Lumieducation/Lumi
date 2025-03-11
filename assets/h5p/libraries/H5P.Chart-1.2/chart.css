@@ -1,0 +1,33 @@
+.h5p-chart svg {
+  display: block;
+  margin: 0 auto;
+}
+.h5p-chart-chart {
+  font-size: 0.75em;
+}
+.h5p-chart-bar {
+  width: 100%;
+  height: 100%;
+}
+.h5p-chart-bar .domain {
+  fill: #fff;
+  stroke: #fff;
+  stroke-width: 0.125em;
+}
+.h5p-chart-pie path {
+  stroke: #fff;
+  stroke-width: 0.125em;
+}
+
+.h5p-standalone.h5p-chart .h5p-chart-chart {
+  height: 25em;
+}
+
+.h5p-chart .hidden-but-read {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}

@@ -1,0 +1,224 @@
+{
+  "semantics": [
+    {
+      "label": "Vyombo vya habari",
+      "fields": [
+        {
+          "label": "Aina",
+          "description": "Vyombo vya habari vya hiari vya kuonyesha juu ya swali."
+        },
+        {
+          "label": "Zima ukuzaji wa picha"
+        }
+      ]
+    },
+    {
+      "label": "Maelezo ya kazi",
+      "placeholder": "Eleza kile wanafunzi wako wanapaswa kufanya...",
+      "description": "Kile wanafunzi wako wanapaswa kujua."
+    },
+    {
+      "label": "Aya",
+      "entity": "aya",
+      "field": {
+        "label": "Aya"
+      }
+    },
+    {
+      "label": "Maoni ya Jumla",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Chaguo-msingi"
+            }
+          ],
+          "label": "Bainisha maoni maalum kwa masafa yoyote ya alama",
+          "description": "Bofya kitufe cha \"Ongeza masafa\" ili kuongeza masafa mengi unavyohitaji. Mfano: 0-20% Alama mbaya, 21-91% Alama ya Wastani, 91-100% Alama Nzuri!",
+          "entity": "masafa",
+          "field": {
+            "fields": [
+              {
+                "label": "Masafa ya Alama"
+              },
+              {},
+              {
+                "label": "Maoni kwa masafa ya alama yaliyofafanuliwa",
+                "placeholder": "Jaza maoni"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Mipangilio ya tabia",
+      "description": "Chaguzi hizi zitakuwezesha kudhibiti jinsi kazi inavyofanya.",
+      "fields": [
+        {
+          "label": "Njia ya kuweka alama",
+          "description": "Amua ikiwa utatoa alama kwa kila aya iliyowekwa kwa usahihi au kwa kila aya ambayo imewekwa baada ya aya iliyofaaa kuwekwa baada yake (“mfuatano sahihi”)",
+          "options": [
+            {
+              "label": "Mlolongo sahihi"
+            },
+            {
+              "label": "Aya zilizowekwa kwa usahihi"
+            }
+          ]
+        },
+        {
+          "label": "Tumia adhabu",
+          "description": "Amua iwapo utapunguza pointi kwa kila aya ambayo haijawekwa vizuri."
+        },
+        {
+          "label": "Aya zilizorudufiwa zinaweza kubadilishwa",
+          "description": "Ikiwekwa, wakati wa kuweka alama jibu, aya zilizorudufiwa zitachukuliwa kuwa sawa iwapo maandishi yao wazi ni sawa."
+        },
+        {
+          "label": "Ongeza vitufe kwa uhamisho",
+          "description": "Kwenye vifaa vya rununu, vitufe vya kuhamisha aya vinaweza kutoa faida ya ziada ya ufikiaji. Ukipenda unaweza kuvizima hapa."
+        },
+        {
+          "label": "Washa kitufe cha \"Jaribu tena\""
+        },
+        {
+          "label": "Washa kitufe cha \"Onesha Suluhisho\""
+        }
+      ]
+    },
+    {
+      "label": "Kiolesura cha mtumiaji",
+      "fields": [
+        {
+          "label": "Maandishi ya kitufe cha \"Weka alama\"",
+          "default": "Weka alama"
+        },
+        {
+          "label": "Maandishi ya kitufe cha \"Wasilisha\"",
+          "default": "Wasilisha"
+        },
+        {
+          "label": "Maandishi kwa kitufe cha \"Jaribu tena\"",
+          "default": "Jaribu tena"
+        },
+        {
+          "label": "Maandishi kwa kitufe cha \"Onyesha suluhisho\"",
+          "default": "Onyesha suluhisho"
+        },
+        {
+          "label": "Mada ya kitufe cha \"Juu\"",
+          "default": "Juu"
+        },
+        {
+          "label": "Mada ya kitufe cha \"Chini\"",
+          "default": "Chini"
+        },
+        {
+          "label": "Mada ya kitufe kilichozimwa",
+          "default": "Imezimwa"
+        }
+      ]
+    },
+    {
+      "label": "Kisoma maandishi",
+      "fields": [
+        {
+          "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Weka alama\"",
+          "default": "Weka alama majibu. Majibu yatatiwa alama kuwa sahihi au siyo sahihi."
+        },
+        {
+          "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Onyesha Suluhisho\"",
+          "default": "Onyesha suluhisho hilo. Suluhisho sahihi litaonyeshwa."
+        },
+        {
+          "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Jaribu tena\"",
+          "default": "Jaribu tena kazi hiyo. Weka upya vipengele vyote na uanze kazi tena."
+        },
+        {
+          "label": "Matokeo yako",
+          "description": "@score itabadilishwa na idadi ya pointi.@total itabadilishwa na pointi za juu zinazowezekana.",
+          "default": "Umepata @score kati ya alama@total"
+        },
+        {
+          "label": "Maelezo ya orodha",
+          "default": "Orodha ya aya zinazoweza kupangwa."
+        },
+        {
+          "label": "Maelezo ya orodha (weka alama jibu)",
+          "default": "Orodha ya aya zenye matokeo."
+        },
+        {
+          "label": "Maelezo ya orodha (onyesha suluhisho)",
+          "default": "Orodha ya aya zenye suluhisho."
+        },
+        {
+          "label": "Aya",
+          "default": "Aya"
+        },
+        {
+          "label": "Sahihi",
+          "default": "sahihi"
+        },
+        {
+          "label": "Siyo sahihi",
+          "default": "siyo sahihi"
+        },
+        {
+          "description": "@score itabadilishwa na 1 au -1.",
+          "label": "Ufafanuzi wa alama",
+          "default": "pointi @score"
+        },
+        {
+          "description": "@current itabadilishwa na nambari ya sasa ya aya. @total itabadilishwa na nambari za aya.",
+          "label": "Nambari ya aya",
+          "default": "@current kati ya @total"
+        },
+        {
+          "description": "Itafuatwa na Nambari ya aya.",
+          "label": "Nafasi ya sasa kwenye orodha",
+          "default": "Nafasi ya sasa kwenye orodha"
+        },
+        {
+          "label": "Maelekezo wakati aya imechaguliwa",
+          "default": "Bonyeza upau wa nafasi ili kupanga upya"
+        },
+        {
+          "label": "Maelekezo wakati aya inachukuliwa",
+          "default": "Bonyeza vitufe vya mishale ya juu na ya chini ili kubadilisha nafasi, upau wa nafasi ili kudondosha, na kitufe cha ondoka ili kughairi"
+        },
+        {
+          "label": "Imenyakuliwa",
+          "default": "Imenyakuliwa"
+        },
+        {
+          "label": "Imehamishwa",
+          "default": "Imehamishwa"
+        },
+        {
+          "label": "Imeshuka",
+          "default": "Imeshuka"
+        },
+        {
+          "label": "Kupanga upya kumefutwa",
+          "default": "Kupanga upya kumefutwa"
+        },
+        {
+          "description": "Itafuatwa na Nambari ya aya.",
+          "label": "Nafasi ya mwisho",
+          "default": "Nafasi ya mwisho"
+        },
+        {
+          "description": "Itafuatiwa na “sahihi” au siyo sahihi.",
+          "label": "Aya inayofuata",
+          "default": "Aya inayofuata"
+        },
+        {
+          "description": "Itafuatwa na Nambari ya aya.",
+          "label": "Aya sahihi",
+          "default": "Aya sahihi kwenye nafasi"
+        }
+      ]
+    }
+  ]
+}

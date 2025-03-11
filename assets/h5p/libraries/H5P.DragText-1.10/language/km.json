@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Optional media to display above the question."
+        },
+        {
+          "label": "Disable image zooming"
+        }
+      ]
+    },
+    {
+      "label": "សេចក្តីពណ៌នាពីកិច្ចការ",
+      "description": "ពន្យល់ថាគេត្រូវធ្វើអ្វីខ្លះដើម្បីបំពេញកិច្ចការ",
+      "default": "អូសពាក្យទៅកាន់ប្រអប់ដែលត្រឹមត្រូវ"
+    },
+    {
+      "label": "អត្ថបទ",
+      "placeholder": "*ភ្នំពេញ*ជារាជធានីនៃប្រទេសកម្ពុជា, *បាងកក* ជារាជធានីនៃប្រទេសថៃ ហើយ *ហាណូយ* ជារាជធានីនៃប្រទេសវៀតណាម។ រាជធានីទាំងនេះស្ថិតក្នុង*តំបន់អាស៊ីអាគ្នេហ៍:ទីតាំងមួយក្នុងទ្វីប* ។",
+      "important": {
+        "description": "<ul><li>ពាក្យសម្រាប់អូសត្រូវដាក់ក្នុងចន្លោះសញ្ញាផ្កាយពីរ (*)</li><li>អ្នកក៏អាចផ្តល់ជាគន្លឹះជំនួយជាអត្ថបទ ដោយប្រើសញ្ញា (:) នៅខាងមុខគន្លឹះនោះ។</li><li>ចន្លោះនីមួយៗមានពាក្យត្រឹមត្រូវតែមួយគត់។</li><li>អ្នកក៏អាចផ្តល់នូវមូលវិចារណ៍ដែលនឹងត្រូវបង្ហាញនៅពេលបញ្ចប់កិច្ចការផងដែរ។ ប្រើ '\\+' សម្រាប់មូលវិចារណ៍លើចម្លើយត្រូវ និង '\\-' សម្រាប់មូលវិចារណ៍លើចម្លើយខុស។</li></ul>",
+        "example": "គោត្រូវបានចាត់ទុកជាប្រភេទ*ថនិកសត្វ:សត្វដែលចិញ្ចឹមកូនដោយទឹកដោះ\\+ត្រឹមត្រូវ! \\-មិនត្រឹមត្រូវទេ សូមសាកម្តងទៀត!*។"
+      }
+    },
+    {
+      "label": "Distractors",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Enter extra solutions that are wrong as distractors. Use the same asterisk (*) scheme as for the text."
+    },
+    {
+      "label": "មូលវិចារណ៍ទូទៅ",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "លំនាំដើម"
+            }
+          ],
+          "label": "កំណត់មូលវិចារណ៍តាមបំណងសម្រាប់ចន្លោះពិន្ទុ",
+          "description": "ចុចប៊ូតុង \"បន្ថែមចន្លោះ\" ដើម្បីបន្ថែមចន្លោះពិន្ទុតាមដែលអ្នកចង់បាន។ ឧទា: 0-20% ពិន្ទុខ្សោយ, 21-91% ពិន្ទុមធ្យម, 91-100% ពិន្ទុល្អប្រសើរ!",
+          "entity": "ចន្លោះ",
+          "field": {
+            "fields": [
+              {
+                "label": "ចន្លោះពិន្ទុ"
+              },
+              {},
+              {
+                "label": "មូលវិចារណ៍សម្រាប់ចន្លោះពិន្ទុដែលបានកំណត់",
+                "placeholder": "បញ្ចូលមូលវិចារណ៍"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "ពាក្យប្រើសម្រាប់ប៊ូតុង \"ពិនិត្យចម្លើយ\"",
+      "default": "ពិនិត្យចម្លើយ"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "ពាក្យប្រើសម្រាប់ប៊ូតុង \"សាកម្តងទៀត\"",
+      "default": "សាកម្តងទៀត"
+    },
+    {
+      "label": "ពាក្យប្រើសម្រាប់ប៊ូតុង \"បង្ហាញចម្លើយត្រឹមត្រូវ\"",
+      "default": "បង្ហាញចម្លើយត្រឹមត្រូវ"
+    },
+    {
+      "label": "ពាក្យសម្រាប់តំបន់ទម្លាក់ដែលមានលេខសម្គាល់",
+      "default": "តំបន់ទម្លាក់ @index",
+      "description": "ពាក្យនេះប្រើសម្រាប់មុខងារមធ្យោបាយងាយស្រួល សម្រាប់ឲ្យកុំព្យូទ័រអានលេខសម្គាល់នៃតំបន់ទម្លាក់។ អញ្ញត្តិដែលអាចប្រើបាន: @index"
+    },
+    {
+      "label": "ពាក្យសម្រាប់តំបន់ទម្លាក់ទទេ",
+      "default": "តំបន់ទម្លាក់ @index គឺទទេ។",
+      "description": "ពាក្យនេះប្រើសម្រាប់មុខងារមធ្យោបាយងាយស្រួល សម្រាប់ឲ្យកុំព្យូទ័រអានថាតំបន់ទម្លាក់គឺទទេ។"
+    },
+    {
+      "label": "Contains Drop Zone label",
+      "default": "តំបន់ទម្លាក់ @index មានធាតុអូស @draggable។",
+      "description": "Label used for accessibility, where the Read speaker will read that the drop zone contains a draggable"
+    },
+    {
+      "label": "Draggable elements label",
+      "default": "@index ចំណោមធាតុអូស @count ។",
+      "description": "Label used for accessibility, where the Read speaker reads that this is a draggable element. Variable available: @index, @count"
+    },
+    {
+      "label": "Label for show tip button",
+      "default": "បង្ហាញគន្លឹះ",
+      "description": "Label used for accessibility, where the Read speaker reads it before the tip is read out"
+    },
+    {
+      "label": "Readspeaker text for correct answer",
+      "default": "ត្រឹមត្រូវ!"
+    },
+    {
+      "label": "Readspeaker text for incorrect answer",
+      "default": "មិនត្រឹមត្រូវ!"
+    },
+    {
+      "label": "Confirmation dialog title that user wants to reset a droppable",
+      "default": "កំណត់ការទម្លាក់ឡើងវិញ"
+    },
+    {
+      "label": "Confirmation dialog description that user wants to reset a droppable",
+      "default": "តើអ្នកពិតជាចង់ធ្វើការកំណត់ឡើងវិញសម្រាប់តំបន់ទម្លាក់នេះមែនទេ?"
+    },
+    {
+      "label": "Label used for accessibility, where the read speaker indicates that dragging is initiated",
+      "default": "ធាតុអូសត្រូវបានចាប់។"
+    },
+    {
+      "label": "Label used for accessibility, where the read speaker indicates that dragging is canceled",
+      "default": "បោះបង់ការចាប់"
+    },
+    {
+      "label": "Label used for accessibility, where the read speaker indicates that a text is the correct answer",
+      "default": "ចម្លើយត្រឹមត្រូវ:"
+    },
+    {
+      "label": "Header for panel containing feedback for correct/incorrect answers",
+      "default": "មូលវិចារណ៍"
+    },
+    {
+      "label": "ការកំណត់មុខងារ",
+      "description": "ជម្រើសទាំងនេះនឹងឲ្យអ្នកអាចកំណត់មុខងារផ្សេងៗរបស់កិច្ចការអ្នក។",
+      "fields": [
+        {
+          "label": "អនុញ្ញាត \"សាកម្តងទៀត\""
+        },
+        {
+          "label": "បង្ហាញប៊ូតុង \"បង្ហាញចម្លើយត្រឹមត្រូវ\""
+        },
+        {
+          "label": "បង្ហាញប៊ូតុង \"ពិនិត្យចម្លើយ\""
+        },
+        {
+          "label": "ពិនិត្យចម្លើយភ្លាមៗ"
+        }
+      ]
+    },
+    {
+      "label": "Textual representation of the score bar for those using a readspeaker",
+      "default": "អ្នកទទួលបានពិន្ទុ :num លើ :total"
+    },
+    {
+      "label": "Assistive technology description for \"Check\" button",
+      "default": "ពិនិត្យចម្លើយ។ ចម្លើយនឹងត្រូវបានដាក់សម្គាល់ថាត្រឹមត្រូវ មិនត្រឹមត្រូវ ឬមិនបានឆ្លើយ។"
+    },
+    {
+      "label": "Assistive technology description for \"Show Solution\" button",
+      "default": "បង្ហាញចម្លើយត្រឹមត្រូវ។ កិច្ចការនឹងត្រូវបានដាក់សម្គាល់ដោយចម្លើយត្រឹមត្រូវរបស់វា។"
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "សាកធ្វើកិច្ចការម្តងទៀត។ លុបចម្លើយទាំងអស់ ហើយចាប់ផ្តើមកិច្ចការជាថ្មី។"
+    }
+  ]
+}

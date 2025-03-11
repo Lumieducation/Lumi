@@ -1,0 +1,293 @@
+{
+  "semantics": [
+    {
+      "label": "Uzdevuma apraksts",
+      "description": "Aprakstiet savu uzdevumu šeit."
+    },
+    {
+      "label": "vārdi",
+      "widgets": [
+        {
+          "label": "Pēc noklusējuma"
+        }
+      ],
+      "entity": "Vārds",
+      "field": {
+        "label": "Vārds",
+        "fields": [
+          {
+            "label": "Pavediens",
+            "description": "Mājiens, kuram vajadzētu norādīt uz atbildi."
+          },
+          {
+            "label": "Atbilde",
+            "description": "Atbilde uz pavedienu."
+          },
+          {
+            "label": "Papildu pavediens"
+          },
+          {
+            "label": "Nostiprināt vārdu režģī",
+            "description": "Atzīmējiet, vai vēlaties fiksēt vārdu noteiktā vietā uz režģa. Words with the same alignment may not be placed touching each other."
+          },
+          {
+            "label": "Rinda",
+            "description": "Rindas numurs, kurā jāsākas atbildei."
+          },
+          {
+            "label": "Sleja",
+            "description": "Slejas numurs, kurā jāsākas atbildei."
+          },
+          {
+            "label": "Orientācija",
+            "description": "Atbildes orientācija.",
+            "options": [
+              {
+                "label": "Horizontāli"
+              },
+              {
+                "label": "Vertikāli"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Vispārējā risinājuma vārds",
+      "description": "Ja vēlaties, pievienojiet risinājuma vārdu, ko var atvasināt no konkrētām režģa rakstzīmēm. Tas būs redzams tikai tad, ja krustvārdu mīklā varēs atrast visas tā rakstzīmes. Lūdzu, ņemiet vērā: šai funkcijai vēl nav pieejams pieejamības atbalsts."
+    },
+    {
+      "label": "Kopējā atgriezeniskā saite",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Pēc noklusējuma"
+            }
+          ],
+          "label": "Iestatiet pielāgotu atgriezenisko saiti katram rezultātu diapazonam",
+          "description": "Klikšķiniet pogu \"Pievienot diapazonu\", lai pievienotu tik diapazonus cik vēlaties. Piemēram, 0-20% Slikts rezultāts, 21-91% Viduvējs rezultāts, 91-100% Lielisks rezultāts!",
+          "entity": "diapazons",
+          "field": {
+            "fields": [
+              {
+                "label": "Rezultātu diapazons"
+              },
+              {},
+              {
+                "label": "Norādītā diapazona atgriezeniskā saite",
+                "placeholder": "Aizpildiet atgriezenisko saiti"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tēma",
+      "fields": [
+        {
+          "label": "Fona attēls",
+          "description": "Atlasiet papildu fona attēlu. Tas tiks mērogots, lai tas atbilstu fonam, to neizstiepjot."
+        },
+        {
+          "label": "Fona krāsa",
+          "description": "Izvēlieties fona krāsu. Tas tiks izmantots vai nu fona attēla vietā, vai kā fons caurspīdīgiem laukumiem."
+        },
+        {
+          "label": "Režģa krāsa",
+          "description": "Izvēlieties režģa krāsu."
+        },
+        {
+          "label": "Šūnas fona krāsa",
+          "description": "Izvēlieties tabulas šūnas fona krāsu."
+        },
+        {
+          "label": "Šūnas teksta krāsa",
+          "description": "Izvēlieties tabulas šūnas teksta krāsu."
+        },
+        {
+          "label": "Pavediena ID krāsa",
+          "description": "Izvēlieties pavediena ID krāsu tabulas šūnā."
+        },
+        {
+          "label": "Šūnas fona krāsa (izcelta)",
+          "description": "Izvēlieties fona krāsu izceltai tabulas šūnai."
+        },
+        {
+          "label": "Šūnas teksta krāsa (izcelta)",
+          "description": "Izvēlieties teksta krāsu izceltai tabulas šūnai."
+        },
+        {
+          "label": "Šūnas ID krāsa (izcelta)",
+          "description": "Izvēlieties pavediena ID krāsu iezīmētajā tabulas šūnā."
+        }
+      ]
+    },
+    {
+      "label": "Uzvedības iestatījumi",
+      "description": "Šie iestatījumi ļaus jums kontrolēt uzdevuma uzvedību.",
+      "fields": [
+        {
+          "label": "Parādāmo vārdu skaits",
+          "description": "Izveidojiet nejauši izvēlētu vārdu grupu no kopējā fonda. Neatkarīgi no šī iestatījuma, grupā vienmēr būs vismaz tie vārdi, kas tika fiksēti režģī. Tukša vērtība vai 0 nozīmē izmantot visus vārdus."
+        },
+        {
+          "label": "Iespējot tūlītēju atgriezenisko saiti"
+        },
+        {
+          "label": "Skaitīt vārdus",
+          "description": "Ja šī opcija ir iespējota, lai noteiktu punktu skaitu, tiks izmantots vārdu skaits. Pretējā gadījumā tiks skaitītas pareizās rakstzīmes."
+        },
+        {
+          "label": "Piemērot sodus",
+          "description": "Ja šī opcija ir iespējota, par katru nepareizu atbildi tiks piešķirts soda rezultāts -1."
+        },
+        {
+          "label": "Atļaut \"Mēģināt vēlreiz\""
+        },
+        {
+          "label": "Iespējot \"Risinājums\""
+        },
+        {
+          "label": "Keep correct answers on retry",
+          "description": "If this option is enabled, correct answers will be kept when the user retries the task unless full score was achieved."
+        }
+      ]
+    },
+    {
+      "label": "Lietotāja saskarne",
+      "fields": [
+        {
+          "label": "Horizontāles etiķete",
+          "default": "Horizontāli"
+        },
+        {
+          "label": "Vertikāles etiķete",
+          "default": "Vertikāli"
+        },
+        {
+          "label": "Pogas \"Pārbaudīt\" teksts",
+          "default": "Pārbaudīt"
+        },
+        {
+          "label": "Pogas \"Iesniegt\" teksts",
+          "default": "Iesniegt"
+        },
+        {
+          "label": "Pogas \"Mēģināt vēlreiz\" teksts",
+          "default": "Mēģināt vēlreiz"
+        },
+        {
+          "label": "Pogas \"Parādīt risinājumu\" teksts",
+          "default": "Rādīt risinājumu"
+        },
+        {
+          "label": "Neizdevās izveidot krustvārdu mīklu",
+          "default": "Neizdevās ģenerēt krustvārdu mīklu ar norādītajiem vārdiem. Lūdzu, mēģiniet vēlreiz ar mazāku vārdu skaitu vai vārdiem, kuriem ir vairāk kopīgu rakstzīmju."
+        },
+        {
+          "label": "Neizdodas izveidot krustvārdu mīklu (pārāk maz vārdu)",
+          "default": "Neizdevās ģenerēt krustvārdu mīklu. Jums nepieciešami vismaz divi vārdi."
+        },
+        {
+          "label": "Problemātiskie vārdi",
+          "description": "Uzskaitīt vārdus, kas radīja problēmas krustvārdu mīklas ģenerēšanas laikā. @words ir vietturis, kas tiks aizstāts ar faktiskajiem problemātiskajiem vārdiem.",
+          "default": "Some words could not be placed. Ja izmantojat vārdus, kas piestiprināti dēlim, lūdzu, pārliecinieties, ka to atrašanās vieta netraucē citu vārdu ievietošanu. Words with the same alignment may not be placed touching each other. Problemātiskais(-i) vārds(-i): @words"
+        },
+        {
+          "label": "Papildu pavediens",
+          "default": "Papildu pavediens"
+        },
+        {
+          "label": "Aizvērt logu",
+          "default": "Aizvērt logu"
+        }
+      ]
+    },
+    {
+      "label": "Ekrāna lasītājs",
+      "fields": [
+        {
+          "label": "Krustvārdu mīklas režģa apraksts",
+          "default": "Krustvārdu mīklas režģis. Izmantojiet bulttaustiņus, lai pārvietotos, un tastatūru, lai ievadītu rakstzīmes. Izmantojiet Tab taustiņu, lai tā vietā izmantotu ievades laukus."
+        },
+        {
+          "label": "Sleja",
+          "default": "Sleja"
+        },
+        {
+          "label": "Rinda",
+          "default": "Rinda"
+        },
+        {
+          "label": "Horizontāli",
+          "default": "Horizontāli"
+        },
+        {
+          "label": "Vertikāli",
+          "default": "Vertikāli"
+        },
+        {
+          "label": "Tukšs",
+          "default": "Tukšs"
+        },
+        {
+          "description": "Rezultātu paziņotājs. @clue ir mainīgais, un tas tiks aizstāts ar attiecīgo pavedienu.",
+          "label": "Rezultāts",
+          "default": "Rezultāts: @clue"
+        },
+        {
+          "label": "Pareizi",
+          "default": "Pareizi"
+        },
+        {
+          "label": "Nepareizi",
+          "default": "Nepareizi"
+        },
+        {
+          "label": "Punkts",
+          "default": "punkts"
+        },
+        {
+          "description": "Risinājumu paziņotājs. @clue un @solution ir mainīgie, un tie tiks aizstāti ar attiecīgajām vērtībām.",
+          "label": "Risinājums priekš",
+          "default": "@clue risinājums ir: @solution"
+        },
+        {
+          "description": "Papildu pavedienu paziņotājs. @clue ir mainīgais un tiks aizstāts ar attiecīgo vērtību.",
+          "label": "Papildu pavediens par",
+          "default": "Atveriet papildu pavedienu @clue"
+        },
+        {
+          "description": "Pašreizējās pozīcijas paziņošana. @position un @length ir mainīgie, un tie tiks aizstāti ar to attiecīgajām vērtībām.",
+          "label": "Burts",
+          "default": "Burts @position no @length"
+        },
+        {
+          "description": "Vārda garuma paziņošana. @length ir mainīgs lielums un tiks aizstāts ar attiecīgo vērtību.",
+          "label": "Vārda garums",
+          "default": "@length burtu vārds"
+        },
+        {
+          "label": "Pogas \"Pārbaudīt\" apraksts asistīvajām tehnoloģijām",
+          "default": "Pārbaudīt rakstzīmes. Atbildes tiks atzīmētas kā pareizas, nepareizas, vai neatbildētas."
+        },
+        {
+          "label": "Pogas \"Rādīt risinājumu\" apraksts asistīvajām tehnoloģijām",
+          "default": "Parādīt risinājumu. Krustvārdu mīkla tiks aizpildīta ar pareizo risinājumu."
+        },
+        {
+          "label": "Pogas \"Mēģināt vēlreiz\" apraksts priekš asistīvajām tehnoloģijām",
+          "default": "Mēģiniet uzdevumu vēlreiz. Dzēst visas iesniegtās atbildes un sākt uzdevumu no sākuma."
+        },
+        {
+          "label": "Tavs rezultāts",
+          "description": "@score un @total ir mainīgie, un tie tiks aizstāti ar to attiecīgajām vērtībām.",
+          "default": "Jūs saņēmāt @score no @total punktiem."
+        }
+      ]
+    }
+  ]
+}

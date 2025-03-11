@@ -1,0 +1,163 @@
+{
+  "semantics": [
+    {
+      "label": "Mídia",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Mídia opcional para exibir acima da pergunta."
+        },
+        {
+          "label": "Desactivar o zoom da imagem"
+        }
+      ]
+    },
+    {
+      "label": "Pergunta"
+    },
+    {
+      "label": "Resposta correta",
+      "options": [
+        {
+          "label": "Verdadeiro"
+        },
+        {
+          "label": "Falso"
+        }
+      ]
+    },
+    {
+      "label": "Traduções da interface do utilizador para perguntas de verdadeiro/falso",
+      "fields": [
+        {
+          "label": "Etiqueta para o botão de verdadeiro",
+          "default": "Verdadeiro"
+        },
+        {
+          "label": "Etiqueta para o botão de falso",
+          "default": "Falso"
+        },
+        {
+          "label": "Texto do feedback",
+          "default": "Obteve @score de @total pontos",
+          "description": "Texto de feedback, variáveis disponíveis: @score e @total. Exemplo: 'Obteve @score de @total pontos possíveis'"
+        },
+        {
+          "label": "Texto para o botão \"Verificar\"",
+          "default": "Verificar"
+        },
+        {
+          "label": "Texto para o botão \"Mostrar solução\"",
+          "default": "Mostrar solução"
+        },
+        {
+          "label": "Texto para o botão \"Tentar novamente\"",
+          "default": "Tentar novamente"
+        },
+        {
+          "label": "Resposta incorreta",
+          "default": "Resposta incorreta"
+        },
+        {
+          "label": "Resposta correta",
+          "default": "Resposta correta"
+        },
+        {
+          "label": "Representação textual da barra de pontuação para aqueles que usam leitores de ecrã",
+          "default": "Obteve :num de :total pontos"
+        },
+        {
+          "label": "Descrição para tecnologia assistida para o botão \"Verificar\"",
+          "default": "Verifique as respostas. As respostas serão marcadas como corretas, incorretas ou sem resposta."
+        },
+        {
+          "label": "Descrição para tecnologia assistida para o botão \"Mostrar Solução\"",
+          "default": "Mostrar a solução. A atividade será marcada com a respetiva solução correta."
+        },
+        {
+          "label": "Descrição da tecnologia assistiva para o botão \"Tentar novamente\"",
+          "default": "Repetir a atividade. Apagar todas as respostas e reiniciar a atividade."
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry the task. Reset all responses and start the task over again."
+        }
+      ]
+    },
+    {
+      "label": "Configurações gerais",
+      "description": "Estas opções permitem que controle o comportamento da atividade.",
+      "fields": [
+        {
+          "label": "Ativar o botão \"Tentar novamente\""
+        },
+        {
+          "label": "Ativar o botão \"Mostrar solução\""
+        },
+        {
+          "label": "Ativar o botão \"Verificar\""
+        },
+        {
+          "label": "Mostrar caixa de diálogo de confirmação em \"Verificar\""
+        },
+        {
+          "label": "Mostrar caixa de diálogo de confirmação em \"Tentar novamente\""
+        },
+        {
+          "label": "Verificar resposta automaticamente",
+          "description": "Tenha em atenção que poderão existir problemas de acessibilidade se ativar esta opção"
+        },
+        {
+          "label": "Feedback sobre a resposta correta",
+          "description": "Irá substituir o texto predefinido do feedback. Variáveis disponíveis: @score e @total"
+        },
+        {
+          "label": "Feedback sobre a resposta incorreta",
+          "description": "Irá substituir o texto predefinido do feedback. Variáveis disponíveis: @score e @total"
+        }
+      ]
+    },
+    {
+      "label": "Caixa de diálogo de confirmação de Verificar",
+      "fields": [
+        {
+          "label": "Texto do cabeçalho",
+          "default": "Terminar?"
+        },
+        {
+          "label": "Texto do corpo",
+          "default": "Tem a certeza de que pretende terminar?"
+        },
+        {
+          "label": "Etiqueta do botão Cancelar",
+          "default": "Cancelar"
+        },
+        {
+          "label": "Etiqueta do botão Confirmar",
+          "default": "Terminar"
+        }
+      ]
+    },
+    {
+      "label": "Caixa de diálogo de confirmação de Tentar novamente",
+      "fields": [
+        {
+          "label": "Texto do cabeçalho",
+          "default": "Tentar novamente?"
+        },
+        {
+          "label": "Texto do corpo",
+          "default": "Tem a certeza de que pretende tentar novamente?"
+        },
+        {
+          "label": "Etiqueta do botão Cancelar",
+          "default": "Cancelar"
+        },
+        {
+          "label": "Etiqueta do botão Confirmar",
+          "default": "Confirmar"
+        }
+      ]
+    }
+  ]
+}

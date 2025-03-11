@@ -1,0 +1,293 @@
+{
+  "semantics": [
+    {
+      "label": "Descrição da tarefa",
+      "description": "Descreva aqui a sua tarefa."
+    },
+    {
+      "label": "palavras",
+      "widgets": [
+        {
+          "label": "Padrão"
+        }
+      ],
+      "entity": "Palavra",
+      "field": {
+        "label": "Palavra",
+        "fields": [
+          {
+            "label": "Pista",
+            "description": "Uma pista que deve apontar para a resposta."
+          },
+          {
+            "label": "Resposta",
+            "description": "Resposta para a pista."
+          },
+          {
+            "label": "Pista extra"
+          },
+          {
+            "label": "Fixe a palavra na grade",
+            "description": "Verifique se deseja fixar a palavra numa determinada posição na grade."
+          },
+          {
+            "label": "Linha",
+            "description": "Índice da linha onde a resposta deve começar."
+          },
+          {
+            "label": "Coluna",
+            "description": "Índice da coluna onde a resposta deve começar."
+          },
+          {
+            "label": "Orientação",
+            "description": "Orientação para a resposta.",
+            "options": [
+              {
+                "label": "Horizontal"
+              },
+              {
+                "label": "Para baixo"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Palavra da solução global",
+      "description": "Opcionalmente, adicione uma palavra de solução que pode ser derivada de caracteres particulares na grade. Só será visível se todos os seus caracteres puderem ser encontrados nas palavras cruzadas. Atenção: Ainda não há suporte de acessibilidade para este recurso."
+    },
+    {
+      "label": "Feedback Geral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Definir feedback personalizado para qualquer faixa de pontuação",
+          "description": "Clique no botão \"Adicionar faixa\" para adicionar quantos intervalos precisar. Exemplo: 0-20% Pontuação Péssima, 21-91% Pontuação Média, 91-100% Pontuação Óptima!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de Pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para a faixa de pontuação definida",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tema",
+      "fields": [
+        {
+          "label": "Imagem de fundo",
+          "description": "Selecione uma imagem de fundo opcional. Ela será escalonada para se ajustar ao fundo sem esticá-lo."
+        },
+        {
+          "label": "Cor de fundo",
+          "description": "Escolha uma cor de fundo. Será usada ao invés de uma imagem de fundo ou como fundo para áreas transparentes."
+        },
+        {
+          "label": "Cor da grade",
+          "description": "Escolha uma cor para a grade."
+        },
+        {
+          "label": "Cor de fundo da célula",
+          "description": "Escolha a cor de fundo para uma célula da tabela."
+        },
+        {
+          "label": "Cor do texto da célula",
+          "description": "Escolha a cor do texto para uma célula da tabela."
+        },
+        {
+          "label": "Cor de identificação da pista",
+          "description": "Escolha a cor da identificação da pista dentro de uma célula da tabela."
+        },
+        {
+          "label": "Cor de fundo da célula (destacada)",
+          "description": "Escolha a cor de fundo para uma célula da tabela que é destacada."
+        },
+        {
+          "label": "Cor do texto da célula (destacada)",
+          "description": "Escolha a cor do texto para uma célula da tabela que é destacada."
+        },
+        {
+          "label": "Cor de identificação da célula (destacada)",
+          "description": "Escolha a cor da identificação da pista dentro de uma célula da tabela que é destacada."
+        }
+      ]
+    },
+    {
+      "label": "Configurações comportamentais",
+      "description": "Essas opções permitem controlar como a tarefa se comportará.",
+      "fields": [
+        {
+          "label": "Número de palavras a serem mostradas",
+          "description": "Crie um lote selecionar aleatoriamente as palavras a partir do pool. O lote sempre conterá pelo menos todas as palavras que foram fixadas na grade, independentemente desta configuração. Um valor vazio ou 0 significa usar todas as palavras."
+        },
+        {
+          "label": "Permitir feedback instantâneo"
+        },
+        {
+          "label": "Palavras de pontuação",
+          "description": "Se esta opção for activada, as palavras serão contadas para determinar a pontuação. Caso contrário, os caracteres correctos serão contados."
+        },
+        {
+          "label": "Aplicar penalidades",
+          "description": "Se esta opção for activada, a cada resposta errada será dada uma pontuação de penalidade de -1."
+        },
+        {
+          "label": "Activar \"Tentar Novamente\""
+        },
+        {
+          "label": "Activar \"Solução\""
+        },
+        {
+          "label": "Keep correct answers on retry",
+          "description": "If this option is enabled, correct answers will be kept when the user retries the task unless full score was achieved."
+        }
+      ]
+    },
+    {
+      "label": "Interface de utilizador",
+      "fields": [
+        {
+          "label": "Etiqueta para horizontal",
+          "default": "Horizontal"
+        },
+        {
+          "label": "Etiqueta para vertical",
+          "default": "Para baixo"
+        },
+        {
+          "label": "Texto do botão \"Verificar\"",
+          "default": "Verificar"
+        },
+        {
+          "label": "Texto do botão \"Enviar\"",
+          "default": "Enviar"
+        },
+        {
+          "label": "Texto do botão \"Tentar Novamente\"",
+          "default": "Tentar novamente"
+        },
+        {
+          "label": "Texto para o botão \"Mostrar solução\"",
+          "default": "Mostrar solução"
+        },
+        {
+          "label": "Não foi possível criar as palavras cruzadas",
+          "default": "Não foi possível gerar uma palavra cruzada com as palavras dadas. Por favor, tente novamente com menos palavras ou palavras que tenham mais caracteres em comum. Se estiver usando palavras fixas, certifique-se de que sua posição não impeça que outras palavras sejam colocadas."
+        },
+        {
+          "label": "Não é possível criar palavras cruzadas (muito poucas palavras)",
+          "default": "Não foi possível gerar uma palavra cruzada. Precisa de pelo menos duas palavras."
+        },
+        {
+          "label": "Palavras problemáticas",
+          "description": "Liste as palavras que causaram problemas ao gerar as palavras cruzadas. @words é uma marcador de posição que será substituída pelas palavras problemáticas reais.",
+          "default": "Palavra(s) problemática(s): @words"
+        },
+        {
+          "label": "Pista extra",
+          "default": "Pista extra"
+        },
+        {
+          "label": "Fechar janela",
+          "default": "Fechar janela"
+        }
+      ]
+    },
+    {
+      "label": "ReadSpeaker",
+      "fields": [
+        {
+          "label": "Descrição da grade de palavras cruzadas",
+          "default": "Grade de palavras cruzadas. Use as teclas de seta para navegar e teclado para inserir caracteres. Use a aba para usar os campos de entrada em seu lugar."
+        },
+        {
+          "label": "Coluna",
+          "default": "Coluna"
+        },
+        {
+          "label": "Linha",
+          "default": "Linha"
+        },
+        {
+          "label": "Horizontal",
+          "default": "Horizontal"
+        },
+        {
+          "label": "Para baixo",
+          "default": "Para baixo"
+        },
+        {
+          "label": "Vazio",
+          "default": "Vazio"
+        },
+        {
+          "description": "Anunciador de resultados. @clue é uma variável e será substituída pela respectiva pista.",
+          "label": "Resultado para",
+          "default": "Resultado para: @clue"
+        },
+        {
+          "label": "Correcto",
+          "default": "Correcto"
+        },
+        {
+          "label": "Incorrecto",
+          "default": "Incorrecto"
+        },
+        {
+          "label": "Ponto",
+          "default": "ponto"
+        },
+        {
+          "description": "Anunciador de soluções. @clue e @solution são variáveis e serão substituídas pelos respectivos valores.",
+          "label": "Solução para",
+          "default": "Para @clue, a solução é: @solution"
+        },
+        {
+          "description": "Anunciador de pistas extras. @clue é uma variável e será substituída pelo respectivo valor.",
+          "label": "Pista extra para",
+          "default": "Abrir uma pista extra para @clue"
+        },
+        {
+          "description": "Anunciando a posição atual. @position e @length são variáveis e serão substituídas pelos seus respectivos valores.",
+          "label": "Letra",
+          "default": "Letra @position de @length"
+        },
+        {
+          "description": "Anunciando o comprimento da palavra. @length é uma variável e será substituída pelo respectivo valor.",
+          "label": "Comprimento da palavra",
+          "default": "@length letras na palavra"
+        },
+        {
+          "label": "Descrição da tecnologia de assistência para o botão \"Verificar\"",
+          "default": "Verificar os caracteres. As respostas serão marcadas como correctas, incorrectas, ou sem resposta."
+        },
+        {
+          "label": "Descrição da tecnologia de assistência para o botão \"Mostrar Solução\"",
+          "default": "Mostrar a solução. As palavras cruzadas serão preenchidas com sua solução correcta."
+        },
+        {
+          "label": "Descrição da tecnologia de assistência para o botão \"Tentar Novamente\"",
+          "default": "Tente realizar a tarefa novamente. Redefinir todas as respostas e recomece."
+        },
+        {
+          "label": "Seu resultado",
+          "description": "@score e @total são variáveis e serão substituídas por seus respectivos valores.",
+          "default": "Conseguiu @score de @total pontos."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "semantics": [
+    {
+      "label": "Medya",
+      "fields": [
+        {
+          "label": "Türü",
+          "description": "Sorunun üst tarafında  istege bağlı görüntülenecek ortam (video, resim)."
+        },
+        {
+          "label": "Soru görseli yakınlaştırma işlevini devre dışı bırakın."
+        }
+      ]
+    },
+    {
+      "label": "Soru"
+    },
+    {
+      "label": "Doğru yanıt",
+      "options": [
+        {
+          "label": "Doğru"
+        },
+        {
+          "label": "Yanlış"
+        }
+      ]
+    },
+    {
+      "label": "Doğru/Yanlış soruları için kullanıcı arayüzü çevirileri",
+      "fields": [
+        {
+          "label": "Doğru butonu etiketi",
+          "default": "Doğru"
+        },
+        {
+          "label": "Yanlış butonu etiketi",
+          "default": "Yanlış"
+        },
+        {
+          "label": "Geribildirim metni",
+          "default": "@total puan üzerinden @score puan aldınız",
+          "description": "Geri bildirim metni, mevcut değişkenler: @score ve @total. Örneğin: '@total puan üzerinden @score puan aldınız'"
+        },
+        {
+          "label": "\"Kontrol et\" düğmesi için metin",
+          "default": "Kontrol et"
+        },
+        {
+          "label": "\"Gönder\" düğmesi için metin",
+          "default": "Gönder"
+        },
+        {
+          "label": "\"Çözümü göster\" butonu için metin",
+          "default": "Çözümü göster"
+        },
+        {
+          "label": "\"Yeniden dene\" düğmesi için metin",
+          "default": "Yeniden dene"
+        },
+        {
+          "label": "Yanlış Cevap",
+          "default": "Yanlış yanıt"
+        },
+        {
+          "label": "Doğru Cevap",
+          "default": "Doğru cevap"
+        },
+        {
+          "label": "Seslendirici kullananlar için puan durumunun metinsel gösterimi.",
+          "default": ":total puan üzerinden :num  puan aldınız."
+        },
+        {
+          "label": "\"Kontrol et\" butonu için yardımcı açıklamalar.",
+          "default": "Yanıtlarınız kontrol edin. Soruların yanotları doğru, yanlış veya yanıtsız olarak işaretlenecektir."
+        },
+        {
+          "label": "\"Çözümü göster\" butonu için yardımcı açıklamalar.",
+          "default": "Çözümü göster. Sorunun doğru yanıtı gösterilecektir."
+        },
+        {
+          "label": "\"Yeniden dene\" butonu için yardımcı açıklamalar.",
+          "default": "Yeniden dene. Tüm yanıtları sıfırlar ve testi yeniden başlatır."
+        }
+      ]
+    },
+    {
+      "label": "Davranış yarları",
+      "description": "Bu seçenekler görevin nasıl davranması gerektiğini kontrol etmenizi sağlar.",
+      "fields": [
+        {
+          "label": "\"Yeniden dene\" düğmesini devreye al"
+        },
+        {
+          "label": "\"Çözüm göster\" düğmesini devreye al"
+        },
+        {
+          "label": "\"Kontrol et\" butonunu aktifleştirin."
+        },
+        {
+          "label": "\"Kontrol et\" butonununa tıklandığında onay iste."
+        },
+        {
+          "label": "\"Yeniden dene\" butonununa tıklandığında onay iste."
+        },
+        {
+          "label": "Yanıtları otomatik olarak konntrol et.",
+          "description": "Bu seçenek etkinleştirilirse kullanıcı kontrol et butonuna tıklamadan yanıtları kontrol edilir."
+        },
+        {
+          "label": "Doğru yanıt için geribildirim",
+          "description": "Varsayılan geribildirim metni yerine özel geribildirim metninizi oluşturabilirsiniz. Mevcut değişkenler: @score ve @total"
+        },
+        {
+          "label": "Yanlış yanıt için geribildirim",
+          "description": "Varsayılan geribildirim metni yerine  özel geribildirim metninizi oluşturabilirsiniz. Mevcut değişkenler: @score ve @total"
+        }
+      ]
+    },
+    {
+      "label": "İletişim kutusu ayarlarını kontrol et",
+      "fields": [
+        {
+          "label": "Üstbaşlık Metni",
+          "default": "Bitti mi?"
+        },
+        {
+          "label": "Gövde Metni",
+          "default": "Bitirmek istediğinizden emin misiniz?"
+        },
+        {
+          "label": "İptal et düğmesi etiketi",
+          "default": "İptal et"
+        },
+        {
+          "label": "Onay düğmesi etiketi",
+          "default": "Bitir"
+        }
+      ]
+    },
+    {
+      "label": "Yeniden dene onay kutucuğu",
+      "fields": [
+        {
+          "label": "Üstbaşlık Metni",
+          "default": "Yeniden dene?"
+        },
+        {
+          "label": "Gövde Metni",
+          "default": "Yeniden denemek istediğinizden emin misiniz?"
+        },
+        {
+          "label": "İptal et düğmesi etiketi",
+          "default": "İptal et"
+        },
+        {
+          "label": "Onay düğmesi etiketi",
+          "default": "Onayla"
+        }
+      ]
+    }
+  ]
+}

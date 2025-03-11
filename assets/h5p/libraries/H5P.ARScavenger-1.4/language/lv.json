@@ -1,0 +1,300 @@
+{
+  "semantics": [
+    {
+      "description": "Ja atzīmēts, uzsākot saturu, tiks rādīts virsraksta ekrāns.",
+      "label": "Rādīt sākuma ekrānu"
+    },
+    {
+      "label": "Sākuma ekrāns",
+      "fields": [
+        {
+          "label": "Ievads",
+          "placeholder": "Laipni lūdzam ..."
+        },
+        {
+          "label": "Virsraksta ekrāna attēls"
+        }
+      ]
+    },
+    {
+      "label": "Marķieri",
+      "fields": [
+        {
+          "entity": "marķieris",
+          "field": {
+            "label": "Marķieris",
+            "fields": [
+              {
+                "label": "Marķiera attēls (oriģināls)",
+                "description": "Augšupielādējiet attēlu, kuram vēlaties izveidot marķieri. Tam jābūt kvadrātveida attēlam, pretējā gadījumā tas tiks apgriezts. Ņemiet vērā, ka katrai mijiedarbībai būs nepieciešams unikāls marķiera attēls.",
+                "importantDescription": {
+                  "description": "Lūdzu, ņemiet vērā dažus kritērijus, lai iegūtu labus marķiera attēlus:<ul><li>Augsts krāsu kontrasts, ideālā gadījumā melnbalts</li><li>Asimetrija</li><li>Marķiera iekšējā izšķirtspēja ir 16 x 16 pikseļi, izmantojot lielākus attēlus, var pasliktināties marķieru noteikšana</li><li>Atsevišķas rakstzīmes vai īsi vārdi nodrošina labus rezultātus</li></ul>"
+                }
+              },
+              {
+                "label": "Marķiera attēls (paraugs)",
+                "description": "Lejupielādējiet šo attēlu, lai to izmantotu kā marķieri, kas tiek parādīts ekrānā vai izdrukāts uz papīra."
+              },
+              {
+                "label": "Darbības veids",
+                "description": "Darbība, kas jāaktivizē, kad marķieris ir atrasts.",
+                "options": [
+                  {
+                    "label": "H5P mijiedarbība"
+                  },
+                  {
+                    "label": "3D modeļa pārklājums"
+                  }
+                ]
+              },
+              {
+                "label": "Mijiedarbība",
+                "fields": [
+                  {
+                    "label": "Mijiedarbība"
+                  },
+                  {
+                    "label": "Manekens"
+                  }
+                ]
+              },
+              {
+                "label": "3D modelis",
+                "fields": [
+                  {
+                    "label": "3D modeļa fails",
+                    "description": "Augšupielādējiet glTF (.glb / .gltf) failu šeit. Vēlamais formāts ir \"glTF 2.0 binārs\" vienā failā."
+                  },
+                  {
+                    "label": "Ģeometrija",
+                    "fields": [
+                      {
+                        "label": "Mērogs",
+                        "description": "Mērogojiet modeli uz augšu vai uz leju, lai tas atbilstu marķiera izmēram.",
+                        "fields": [
+                          {
+                            "label": "Procenti"
+                          },
+                          {
+                            "label": "Manekens"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Pozīcija",
+                        "description": "Iestatiet modeļa nobīdes pozīciju attiecībā pret marķieri.",
+                        "fields": [
+                          {
+                            "label": "X-nobīde"
+                          },
+                          {
+                            "label": "Y-nobīde"
+                          },
+                          {
+                            "label": "Z-nobīde"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Rotācija",
+                        "description": "Iestatiet rotāciju grādos.",
+                        "fields": [
+                          {
+                            "label": "X ass"
+                          },
+                          {
+                            "label": "Y ass"
+                          },
+                          {
+                            "label": "Z ass"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "Marķieri",
+          "widgets": [
+            {
+              "label": "Pēc noklusējuma"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Rādīt beigu ekrānu",
+      "description": "Ja atzīmēta, beigu ekrānu tiks parādīts, kad visas mijiedarbības būs pabeigtas. Tomēr beigu ekrāns nebūs pieejams, ja izmantojat tikai 3D modeļus."
+    },
+    {
+      "label": "Beigu ekrāns",
+      "fields": [
+        {
+          "label": "beigu ekrāna attēls"
+        },
+        {
+          "label": "Beigu ekrāna teksts",
+          "placeholder": "Tev izdevās!"
+        },
+        {
+          "label": "Kopējā atgriezeniskā saite",
+          "fields": [
+            {
+              "entity": "diapazons",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Rezultātu diapazons"
+                  },
+                  {
+                    "label": "Atgriezeniskā saite noteiktajam rezultātu diapazonam",
+                    "placeholder": "Aizpildiet atgriezenisko saiti"
+                  }
+                ]
+              },
+              "widgets": [
+                {
+                  "label": "Pēc noklusējuma"
+                }
+              ],
+              "label": "Iestatiet pielāgotu atgriezenisko saiti katram rezultātu intervālam",
+              "description": "Klikšķiniet pogu \"Pievienot diapazonu\", lai pievienotu tik diapazonus cik vēlaties. Piemēram, 0-20% Slikts rezultāts, 21-91% Viduvējs rezultāts, 91-100% Lielisks rezultāts!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Uzvedības iestatījumi",
+      "fields": [
+        {
+          "label": "Atļaut pogu \"Mēģināt vēlreiz\"",
+          "description": "Ja atzīmēts, izglītojamie var mēģināt vēlreiz izpildīt uzdevumu."
+        },
+        {
+          "label": "Atļaut pogu \"Rādīt risinājumus\"",
+          "description": "Ja šī izvēles rūtiņa ir atzīmēta, izglītojamie var skatīt visu mijiedarbību risinājumus."
+        },
+        {
+          "label": "Ignorēt pogu \"Rādīt risinājumu\"",
+          "options": [
+            {
+              "label": "Izmantot uzvedības iestatījumu"
+            },
+            {
+              "label": "Vienmēr rādīt pogu"
+            },
+            {
+              "label": "Nekad nerādīt pogu"
+            }
+          ],
+          "description": "Šī opcija ļauj iespējot vai atspējot pogu \"Rādīt risinājumu\" visiem satura elementiem vai izmantot to specifiskos uzvedības iestatījumus."
+        },
+        {
+          "label": "Ignorēt pogu \"Mēģināt vēlreiz\"",
+          "description": "Šī opcija ļauj iespējot vai atspējot pogu \"Mēģināt vēlreiz\" visiem satura elementiem vai izmantot to specifiskos uzvedības iestatījumus.",
+          "options": [
+            {
+              "label": "Izmantot uzvedības iestatījumu"
+            },
+            {
+              "label": "Vienmēr rādīt pogu"
+            },
+            {
+              "label": "Nekad nerādīt pogu"
+            }
+          ]
+        },
+        {
+          "label": "Atkāpšanās augstums",
+          "description": "Iestatiet atkāpšanās augstumu pikseļos gadījumiem, kad ir radušās problēmas ar pārrobežu izcelsmes resursu koplietošanu (CORS)."
+        }
+      ]
+    },
+    {
+      "label": "Lokalizācija",
+      "fields": [
+        {
+          "label": "Sākšanas poga",
+          "default": "Sākt"
+        },
+        {
+          "label": "Poga Mēģināt vēlreiz",
+          "default": "Mēģināt vēlreiz"
+        },
+        {
+          "default": "Atrodi marķieri, lai redzētu mijiedarbību.",
+          "label": "Atrodi marķieri, lai redzētu mijiedarbību."
+        },
+        {
+          "label": "Kļūda: pārlūkprogramma netiek atbalstīta",
+          "default": "Šķiet, ka jūsu pārlūkprogramma diemžēl nevar palaist šāda veida saturu."
+        },
+        {
+          "label": "Kļūda: nav piekļuves kamerai",
+          "default": "Neizdevās piekļūt kamerai."
+        },
+        {
+          "label": "Kļūda: nav kameras atbalsta",
+          "default": "Šķiet, ka jūsu pārlūkprogramma neatbalsta kameru."
+        },
+        {
+          "label": "Kļūda: nav marķieru",
+          "default": "Vai kāds aizmirsis pievienot marķierus?"
+        },
+        {
+          "label": "Brīdinājums: pārlūkprogramma \"Brave\"",
+          "default": "Šķiet, ka izmantojat pārlūkprogrammu \"Brave\". Jauki! Taču tās stingrie privātuma iestatījumi var neļaut kamerai darboties."
+        },
+        {
+          "label": "Satura inicializācija",
+          "default": "Satura inicializācija. Lūdzu, neaizmirstiet atļaut piekļuvi kamerai."
+        }
+      ]
+    },
+    {
+      "label": "Ekrāna lasītājs",
+      "fields": [
+        {
+          "default": "Ieiet pilnekrāna režīmā",
+          "label": "Pilnekrāna pogas nosaukums: aktivizēšana"
+        },
+        {
+          "default": "Iziet no pilnekrāna režīma",
+          "label": "Pilnekrāna pogas nosaukums: iziešana"
+        },
+        {
+          "label": "Pogas 'Pārslēgt skatu' nosaukums (kad darbība ir aizvērta)",
+          "default": "Pārslēgties uz uzdevumu"
+        },
+        {
+          "default": "Pārslēgties uz kameru",
+          "label": "Pogas 'Pārslēgt skatu' nosaukums (kad darbība ir atvērta)"
+        },
+        {
+          "label": "'Poga atspējota' ziņojums pogai 'Skata pārslēgšana'",
+          "default": "Pašlaik nevarat pārslēgt skatu"
+        },
+        {
+          "label": "Pogas 'Iziet' nosaukums",
+          "default": "Iziet un parādīt novērtējumu"
+        },
+        {
+          "label": "'Poga atspējota' ziņojums pogai 'Iziet'",
+          "default": "Jūs vēl neesat pabeidzis visus uzdevumus"
+        },
+        {
+          "label": "Darbība atvērta",
+          "default": "Skats pārslēgts uz uzdevumu."
+        },
+        {
+          "label": "Darbība aizvērta",
+          "default": "Skats ir pārslēgts uz kameru."
+        }
+      ]
+    }
+  ]
+}

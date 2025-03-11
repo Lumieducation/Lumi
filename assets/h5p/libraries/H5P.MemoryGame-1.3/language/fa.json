@@ -1,0 +1,138 @@
+{
+  "semantics": [
+    {
+      "label": "كارتها",
+      "field": {
+        "label": "كارت",
+        "fields": [
+          {
+            "label": "تصوير"
+          },
+          {
+            "label": "متن جايگزين براي تصوير",
+            "description": "آنچه را که در عکس دیده می شود توضیح دهید. متن توسط ابزارهای تبدیل متن به گفتار مورد نیاز کاربران کم بینا خوانده می شود."
+          },
+          {
+            "label": "صدا",
+            "description": "صدای اختیاری که هنگام چرخاندن کارت پخش می شود."
+          },
+          {
+            "label": "تصوير منطبق",
+            "description": "یک تصویر اختیاری برای مطابقت به جای استفاده از دو کارت با یک تصویر."
+          },
+          {
+            "label": "متن جایگزین برای تصویر منطبق",
+            "description": "آنچه را که در عکس دیده می شود توضیح دهید. متن توسط ابزارهای تبدیل متن به گفتار مورد نیاز کاربران کم بینا خوانده می شود."
+          },
+          {
+            "label": "صداي تطبيق",
+            "description": "صدای اختیاری که با چرخاندن کارت دوم پخش می شود."
+          },
+          {
+            "label": "توصيف",
+            "description": "یک متن کوتاه اختیاری که پس از یافتن دو کارت منطبق ظاهر می شود."
+          }
+        ]
+      },
+      "entity": "card",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ]
+    },
+    {
+      "label": "Behavioural settings",
+      "description": "These options will let you control how the game behaves.",
+      "fields": [
+        {
+          "label": "Position the cards in a square",
+          "description": "Will try to match the number of columns and rows when laying out the cards. Afterward, the cards will be scaled to fit the container."
+        },
+        {
+          "label": "Number of cards to use",
+          "description": "Setting this to a number greater than 2 will make the game pick random cards from the list of cards."
+        },
+        {
+          "label": "Add button for retrying when the game is over"
+        }
+      ]
+    },
+    {
+      "label": "Look and feel",
+      "description": "Control the visuals of the game.",
+      "fields": [
+        {
+          "label": "Theme Color",
+          "description": "Choose a color to create a theme for your card game."
+        },
+        {
+          "label": "Card Back",
+          "description": "Use a custom back for your cards."
+        }
+      ]
+    },
+    {
+      "label": "Localization",
+      "fields": [
+        {
+          "default": "Card turns",
+          "label": "Card turns text"
+        },
+        {
+          "label": "Time spent text",
+          "default": "Time spent"
+        },
+        {
+          "label": "Feedback text",
+          "default": "Good work!"
+        },
+        {
+          "default": "Try again?",
+          "label": "Try again button text"
+        },
+        {
+          "label": "Close button label",
+          "default": "Close"
+        },
+        {
+          "default": "Memory Game. Find the matching cards.",
+          "label": "Game label"
+        },
+        {
+          "label": "Game finished label",
+          "default": "All of the cards have been found."
+        },
+        {
+          "label": "Card indexing label",
+          "default": "Card %num:"
+        },
+        {
+          "label": "Card unturned label",
+          "default": "Unturned.",
+          "description": "%num and %total are placeholders and will be replaced with the respective values for the card."
+        },
+        {
+          "label": "Card matched label",
+          "default": "Match found."
+        },
+        {
+          "label": "Card turned label",
+          "default": "Turned."
+        },
+        {
+          "label": "Card matched label",
+          "default": "Match found."
+        },
+        {
+          "label": "Card matched announcement",
+          "default": "Your cards match!"
+        },
+        {
+          "label": "Card not matched announcement",
+          "default": "Your chosen cards do not match. Turn other cards to try again."
+        }
+      ]
+    }
+  ]
+}

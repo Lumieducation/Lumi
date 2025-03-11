@@ -1,0 +1,96 @@
+{
+  "semantics": [
+    {
+      "label": "Previsualización",
+      "description": "Usted puede mover (pan) las imágenes al arrastrarlas. También puede seleccionar una imagen y entonces usar las teclas + o - en su teclado para acercarse o simplemente mantener oprimida la tecla Z mientras mueve su rueda del ratón.",
+      "fields": [
+        {
+          "label": "Diseño",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "1-1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "2-1"
+            },
+            {
+              "label": "1-2"
+            },
+            {
+              "label": "2-2"
+            },
+            {
+              "label": "3-1"
+            },
+            {
+              "label": "1-3"
+            },
+            {
+              "label": "2-3"
+            },
+            {
+              "label": "3-2"
+            },
+            {
+              "label": "3-3"
+            }
+          ]
+        },
+        {
+          "label": "Opciones de visualización",
+          "fields": [
+            {
+              "label": "Altura"
+            },
+            {
+              "label": "Espaciado"
+            },
+            {
+              "label": "Marco"
+            }
+          ]
+        },
+        {
+          "label": "Recortes",
+          "entity": "recorte",
+          "field": {
+            "label": "Recorte",
+            "fields": [
+              {
+                "label": "Imagen"
+              },
+              {
+                "label": "Sesgo",
+                "fields": [
+                  {
+                    "label": "Superior"
+                  },
+                  {
+                    "label": "Izquierda"
+                  }
+                ]
+              },
+              {
+                "label": "Texto alternativo",
+                "description": "Requerido. Si el navegador no puede cargar la imagen este texto será mostrado en su lugar. También usado por Lectores de texto en voz alta."
+              },
+              {
+                "label": "Texto al pasar ratón encima",
+                "description": "Opcional. Este texto es mostrado cuando el usuario pasa su puntero del ratón sobre la imagen."
+              },
+              {
+                "label": "Escala"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

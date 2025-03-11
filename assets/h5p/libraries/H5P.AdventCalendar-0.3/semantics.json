@@ -1,0 +1,440 @@
+[
+  {
+    "name": "modeDoorImage",
+    "type": "select",
+    "label": "Mode for door images",
+    "description": "Select whether you want to set each custom door image yourself or let H5P do the work for you based on the calendar background image set in the behavioural settings.",
+    "options": [
+      {
+        "value": "manual",
+        "label": "I want to set each door image myself"
+      },
+      {
+        "value": "automatic",
+        "label": "H5P shall set the door images based on the background image"
+      }
+    ],
+    "default": "automatic"
+  },
+  {
+    "name": "doors",
+    "type": "list",
+    "label": "Doors",
+    "entity": "door",
+    "min": 24,
+    "max": 24,
+    "field": {
+      "name": "contentGroup",
+      "type": "group",
+      "fields": [
+        {
+          "name": "type",
+          "type": "select",
+          "label": "Content type",
+          "description": "Content type that shoud optionally pop up when the door is opened.",
+          "options": [
+            {
+              "value": "audio",
+              "label": "Audio"
+            },
+            {
+              "value": "image",
+              "label": "Image"
+            },
+            {
+              "value": "link",
+              "label": "Link"
+            },
+            {
+              "value": "text",
+              "label": "Text"
+            },
+            {
+              "value": "video",
+              "label": "Video"
+            }
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "audio",
+          "label": "Audio",
+          "widget": "showWhen",
+          "showWhen": {
+            "rules": [
+              {
+                "field": "type",
+                "equals": "audio"
+              }
+            ]
+          }
+        },
+        {
+          "name": "image",
+          "type": "library",
+          "label": "Image",
+          "options": [
+            "H5P.Image 1.1"
+          ],
+          "widget": "showWhen",
+          "showWhen": {
+            "rules": [
+              {
+                "field": "type",
+                "equals": "image"
+              }
+            ]
+          }
+        },
+        {
+          "name": "link",
+          "type": "library",
+          "label": "Link",
+          "options": [
+            "H5P.Link 1.3"
+          ],
+          "widget": "showWhen",
+          "showWhen": {
+            "rules": [
+              {
+                "field": "type",
+                "equals": "link"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text",
+          "type": "library",
+          "label": "Text",
+          "options": [
+            "H5P.AdvancedText 1.1"
+          ],
+          "widget": "showWhen",
+          "showWhen": {
+            "rules": [
+              {
+                "field": "type",
+                "equals": "text"
+              }
+            ]
+          }
+        },
+        {
+          "name": "video",
+          "type": "video",
+          "label": "Video",
+          "widget": "showWhen",
+          "showWhen": {
+            "rules": [
+              {
+                "field": "type",
+                "equals": "video"
+              }
+            ]
+          }
+        },
+        {
+          "name": "autoplay",
+          "type": "boolean",
+          "label": "Autoplay",
+          "default": false,
+          "widget": "showWhen",
+          "showWhen": {
+            "type": "or",
+            "rules": [
+              {
+                "field": "type",
+                "equals": "audio"
+              },
+              {
+                "field": "type",
+                "equals": "video"
+              }
+            ]
+          }
+        },
+        {
+          "name": "doorCover",
+          "type": "image",
+          "label": "Door image",
+          "description": "Image that will be used for the door. Needs to have a size ratio of 1:1 if you want the left half fit the right half.",
+          "optional": true,
+          "widget": "showWhen",
+          "showWhen": {
+            "rules": [
+              {
+                "field": "../../modeDoorImage",
+                "equals": "manual"
+              }
+            ]
+          }
+        },
+        {
+          "name": "previewImage",
+          "type": "image",
+          "label": "Background image",
+          "description": "Image that should appear inside the door. Will be the door's number by default.",
+          "optional": true
+        }
+      ]
+    },
+    "widgets": [
+      {
+        "name": "VerticalTabs",
+        "label": "Default"
+      }
+    ]
+  },
+  {
+    "name": "visuals",
+    "type": "group",
+    "label": "Visual settings",
+    "description": "These options will let you configure the visual appearance.",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "backgroundImage",
+        "type": "image",
+        "label": "Calendar background image",
+        "optional": true
+      },
+      {
+        "name": "doorImageTemplate",
+        "type": "image",
+        "label": "Door image template",
+        "description": "If an image is set, it will be used for every door unless a specific door image is set for a single door.",
+        "optional": true,
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "../modeDoorImage",
+              "equals": "manual"
+            }
+          ]
+        }
+      },
+      {
+        "name": "hideDoorBorder",
+        "type": "boolean",
+        "label": "Hide door border",
+        "default": false,
+        "optional": true
+      },
+      {
+        "name": "hideNumbers",
+        "type": "boolean",
+        "label": "Hide door numbers",
+        "default": false,
+        "optional": true
+      },
+      {
+        "name": "hideDoorKnobs",
+        "type": "boolean",
+        "label": "Hide door knobs",
+        "default": false,
+        "optional": true
+      },
+      {
+        "name": "hideDoorFrame",
+        "type": "boolean",
+        "label": "Hide door frame",
+        "default": false,
+        "optional": true
+      },
+      {
+        "name": "snow",
+        "type": "boolean",
+        "label": "Let it snow",
+        "description": "Will add some snow falling in front of the calendar. It never rains in Southern California, it never snows on IE11.",
+        "default": false,
+        "optional": true
+      }
+    ]
+  },
+  {
+    "name": "audio",
+    "type": "group",
+    "label": "Audio settings",
+    "description": "These options will let you configure the audio appearance.",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "backgroundMusic",
+        "type": "audio",
+        "label": "Background music",
+        "optional": true
+      },
+      {
+        "name": "autoplay",
+        "type": "boolean",
+        "label": "Autoplay background music",
+        "description": "If set, the background music will play automatically once the content is opened. Please note: Some browsers' media policy may prevent autoplay.",
+        "default": false,
+        "optional": true
+      }
+    ]
+  },
+  {
+    "name": "behaviour",
+    "type": "group",
+    "label": "Behavioural settings",
+    "description": "These options will let you override behaviour settings.",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "modeDoorPlacement",
+        "type": "select",
+        "label": "Mode for door placement",
+        "description": "Select whether you want to set a fixed number of columns and rows for the doors or if H5P should decide dynamically depending on the available space. Note that the latter may interfere with the position of the background image and custom door cover images that should be at a particular position.",
+        "options": [
+          {
+            "value": "fixed",
+            "label": "Fixed"
+          },
+          {
+            "value": "dynamic",
+            "label": "Dynamic"
+          }
+        ],
+        "default": "dynamic"
+      },
+      {
+        "name": "doorPlacementRatio",
+        "type": "select",
+        "label": "Row-to-column ratio",
+        "description": "Select how many columns and rows the calender should use.",
+        "options": [
+          {
+            "value": "6x4",
+            "label": "6 × 4"
+          },
+          {
+            "value": "4x6",
+            "label": "4 × 6"
+          }
+        ],
+        "default": "6x4",
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "modeDoorPlacement",
+              "equals": "fixed"
+            }
+          ]
+        }
+      },
+      {
+        "name": "randomize",
+        "type": "boolean",
+        "label": "Random order",
+        "description": "Shuffle the order of the doors. If the \"save content state\" option is set in the H5P settings, that order will stay the same when the user returns later.",
+        "default": false,
+        "optional": true
+      },
+      {
+        "name": "keepImageOrder",
+        "type": "boolean",
+        "label": "Keep order of images",
+        "description": "Shuffle doors, but keep the door cover images at their fixed positions starting with 1 in the upper left corner down to 24 in the lower right corner.",
+        "default": false,
+        "optional": true,
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "randomize",
+              "equals": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "designMode",
+        "type": "boolean",
+        "label": "Design mode",
+        "description": "When in design mode, all doors can be opened. Otherwise, the doors can only be opened in December on and after the respective day indicated by the door number.",
+        "default": true,
+        "optional": true
+      }
+    ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "common": true,
+    "label": "Localization",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "nothingToSee",
+        "type": "text",
+        "label": "Nothing to see",
+        "importance": "low",
+        "default": "There is nothing to see here!\ud83c\udf84"
+      },
+      {
+        "name": "dummy",
+        "type": "text",
+        "label": "Dummy",
+        "importance": "low",
+        "default": "Dummy",
+        "widget": "none"
+      }
+    ]
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "common": true,
+    "label": "Accessibility",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "door",
+        "type": "text",
+        "label": "Door",
+        "importance": "low",
+        "default": "Door"
+      },
+      {
+        "name": "locked",
+        "type": "text",
+        "label": "Locked",
+        "importance": "low",
+        "default": "Locked. It is not time to open this one yet."
+      },
+      {
+        "name": "content",
+        "description": "Announce the content. @door is a variable and will be replaced with the related door description.",
+        "type": "text",
+        "label": "Content of",
+        "importance": "low",
+        "default": "Content of @door"
+      },
+      {
+        "name": "mute",
+        "type": "text",
+        "label": "Mute audio",
+        "importance": "low",
+        "default": "Mute audio"
+      },
+      {
+        "name": "unmute",
+        "type": "text",
+        "label": "Unmute audio",
+        "importance": "low",
+        "default": "Unmute audio"
+      },
+      {
+        "name": "closeWindow",
+        "type": "text",
+        "label": "Close window",
+        "importance": "low",
+        "default": "Close window"
+      }
+    ]
+  }
+]

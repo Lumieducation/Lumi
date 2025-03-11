@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Klausimyno elementai",
+      "widgets": [
+        {
+          "label": "Numatytasis"
+        }
+      ],
+      "entity": "elementas",
+      "field": {
+        "label": "Pasirinkite biblioteką",
+        "fields": [
+          {
+            "label": "Biblioteka",
+            "description": "Pasirinkite biblioteką"
+          },
+          {
+            "label": "Privalomas laukas"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Sėkmės ekrano parinktys",
+      "fields": [
+        {
+          "label": "Įgalinti sėkmės ekraną"
+        },
+        {
+          "label": "Pridėkite sėkmės ekrano vaizdą",
+          "fields": [
+            {
+              "label": "Pakeisti sėkmės piktogramą vaizdu"
+            }
+          ]
+        },
+        {
+          "label": "Tekstas, kuris bus rodomas pateikiant",
+          "default": "Jūs užpildėte klausimyną."
+        }
+      ]
+    },
+    {
+      "label": "UI elementai",
+      "fields": [
+        {
+          "label": "Mygtukų pavadinimai",
+          "fields": [
+            {
+              "label": "Mygtuko Ankstesnis pavadinimas",
+              "default": "Atgal"
+            },
+            {
+              "label": "Mygtuko Tęsti pavadinimas",
+              "default": "Tęsti"
+            },
+            {
+              "label": "Mygtuko Kitas pavadinimas",
+              "default": "Kitas"
+            },
+            {
+              "label": "Mygtuko Pateikti pavadinimas",
+              "default": "Pateikti"
+            }
+          ]
+        },
+        {
+          "label": "Prieinamumas",
+          "fields": [
+            {
+              "label": "Required message exit button label",
+              "default": "Uždaryti klaidos pranešimą"
+            },
+            {
+              "label": "Pažangos juostos tekstas",
+              "default": "Klausimas %current iš %max",
+              "description": "Used to tell assistive technologies what question it is. Variables: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Reikalingas pranešimas",
+          "default": "Šis klausimas reikalauja atsakymo",
+          "description": "Will display if this field is unanswered and required by a wrapper content type"
+        },
+        {
+          "label": "Required symbol text",
+          "default": "reikalaujama",
+          "description": "Text that will accompany an asterisk to signal that a question is required"
+        },
+        {
+          "label": "Title for the submit screen",
+          "default": "You successfully answered all of the questions"
+        },
+        {
+          "label": "Subtitle for the submit screen",
+          "default": "Click below to submit your answers"
+        }
+      ]
+    }
+  ]
+}

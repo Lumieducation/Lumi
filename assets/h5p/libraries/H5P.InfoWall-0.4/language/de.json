@@ -1,0 +1,156 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Kopfzeile",
+          "description": "Optionale Kopfzeile für die Info-Wand."
+        },
+        {
+          "label": "Merkmale",
+          "fields": [
+            {
+              "label": "Merkmale",
+              "description": "Merkmale für die Einträge",
+              "entity": "Merkmal",
+              "widgets": [
+                {
+                  "label": "Standard"
+                }
+              ],
+              "field": {
+                "label": "Merkmale",
+                "fields": [
+                  {
+                    "label": "Label",
+                    "default": "Unbenannt"
+                  },
+                  {
+                    "label": "Zeige das Label mit an"
+                  },
+                  {
+                    "label": "Lass das Merkmal durchsuchbar sein"
+                  },
+                  {
+                    "label": "Styling überschreiben",
+                    "fields": [
+                      {
+                        "label": "Fett"
+                      },
+                      {
+                        "label": "Kursiv"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {}
+          ]
+        },
+        {
+          "label": "Leiste",
+          "description": "Leiste für die Wand",
+          "entity": "Leiste",
+          "widgets": [
+            {
+              "label": "Standard"
+            }
+          ],
+          "field": {
+            "label": "Einträge",
+            "fields": [
+              {
+                "label": "Titel für die Leiste"
+              },
+              {
+                "label": "Bild"
+              },
+              {
+                "label": "Einträge",
+                "description": "Einträge für die Merkmale",
+                "entity": "Eintrag",
+                "widgets": [
+                  {
+                    "label": "Standard"
+                  }
+                ],
+                "field": {
+                  "label": "Label wird automatisch ersetzt"
+                }
+              },
+              {
+                "label": "Additional keywords",
+                "description": "Add additional keywords separated by a blank space that will be used for filtering but not be visible to the user."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Verhaltenseinstellungen",
+          "description": "Diese Optionen legen fest, wie die Aufgabe im Detail funktioniert.",
+          "fields": [
+            {
+              "label": "Benutze ein Vorgabebild, wenn keins angegeben wird"
+            },
+            {
+              "label": "Bild"
+            },
+            {
+              "label": "Bildbreite",
+              "description": "Bildbreite in px."
+            },
+            {
+              "label": "Bildhöhe",
+              "description": "Bildhöhe in px."
+            },
+            {
+              "label": "Abwechselnde Hintergrundfarbe für Leisten",
+              "description": "Wenn angewählt, wird jede zweite Leiste leicht dunkler dargestellt."
+            },
+            {
+              "label": "Eingabefeld zum Filtern",
+              "description": "Wenn angewählt, können die Einträge der Info-Wand nach Begriffen gefiltert werden."
+            },
+            {
+              "label": "Mode for filter field",
+              "description": "Choose whether the filter should narrow down or broaden the search with every new keyword.",
+              "options": [
+                {
+                  "label": "Narrow down"
+                },
+                {
+                  "label": "Broaden"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Bezeichnungen und Beschriftungen",
+          "fields": [
+            {
+              "label": "Kein Inhalt eingegeben",
+              "default": "Der Autor/die Autorin hat nichts eingetragen."
+            },
+            {
+              "label": "Keine Übereinstimmung gefunden",
+              "description": "@query ist ein Platzhalter und wird durch den jeweils gewählten Suchbegriff ersetzt.",
+              "default": "Es gibt für @query keine Übereinstimmung."
+            },
+            {
+              "label": "Eingeben zum Filtern",
+              "description": "Nachricht für Screen-Reader.",
+              "default": "Gibt einen Suchbegriff zum Filtern des Inhalts nach relevanten Einträgen ein."
+            },
+            {
+              "label": "Liste verändert.",
+              "description": "Nachricht für Screen-Reader @visible und @total sind Platzhalter und werden durch die jeweiligen Werte ersetzt.",
+              "default": "Liste verändert. Zeige @visible von @total Einträgen."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

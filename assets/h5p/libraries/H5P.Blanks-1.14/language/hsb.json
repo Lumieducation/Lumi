@@ -1,0 +1,214 @@
+{
+  "semantics": [
+    {
+      "label": "medije",
+      "fields": [
+        {
+          "label": "typ",
+          "description": "Móžne medije, kiž so nad prašenjom pokazaja."
+        },
+        {
+          "label": "zoomowanje do wobraza móžne njeje"
+        }
+      ]
+    },
+    {
+      "label": "wopisowanje nadawka",
+      "default": "zapisaj falowace słowa",
+      "description": "Wujasnjenje, kak ma so nadawk rozrisać."
+    },
+    {
+      "label": "tekst",
+      "entity": "tekst",
+      "field": {
+        "label": "tekstowa linka",
+        "placeholder": "Oslo je hłowne město *Norwegskeje*.",
+        "important": {
+          "description": "<ul><li>Prózdnoty woznamjenjeja so z hwěžku (*) před a po jednotliwym słowje.</li><li>Alternatiwne wotmołwy dźěla so z nakósnej smužku (/).</li><li>Z dwojodypkom (:) před pokiwom móžeš pokiw k tekstej zapodać.</li></ul>",
+          "example": "H5P wobsahi hodźa so z *browserom/web-browserom:Něšto, štož wšědnje wužiwaš* wobdźěłać."
+        }
+      }
+    },
+    {
+      "label": "powšitkowny feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "standard"
+            }
+          ],
+          "label": "postaj swójski feedback za kóždu wolenu ličbu dypkow",
+          "description": "Stłóč na tłóčatko \"Dodaj wobłuk\", zo by telko wobłukow dodał/a, kaž trjebaš. Přikład: 0-20% Špatny wuslědk, 21-91% Přerězny wuslědk, 91-100% Wuběrnje!",
+          "entity": "wobłuk",
+          "field": {
+            "fields": [
+              {
+                "label": "wobłuk dypkow"
+              },
+              {},
+              {
+                "label": "feedback za wěsty wobłuk dypkow",
+                "placeholder": "zapisaj feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "tekst za tłóčatko \"pokaž mi rozrisanje\"",
+      "default": "pokaž mi rozrisanje"
+    },
+    {
+      "label": "tekst za tłóčatko \"hišće raz\"",
+      "default": "hišće raz"
+    },
+    {
+      "label": "tekst za tłóčatko \"přepruwuj\"",
+      "default": "přepruwuj"
+    },
+    {
+      "label": "tekst za tłóčatko \"wotpósćel\"",
+      "default": "wotpósćel"
+    },
+    {
+      "label": "tekst za powěsć \"njeje wupjelnjene\"",
+      "default": "wupjelń prošu wšitke prózdnoty, zo by rozrisanje widźał/a"
+    },
+    {
+      "label": "tekst za powěsć \":ans' je prawa\"",
+      "default": "':ans' je prawa"
+    },
+    {
+      "label": "tekst za powěsć \"':ans' je wopak\"",
+      "default": "':ans' je wopak"
+    },
+    {
+      "label": "tekst za powěsć \"prawa wotmołwa\"",
+      "default": "prawa wotmołwa"
+    },
+    {
+      "label": "tekst za powěsć \"wopačna wotmołwa\"",
+      "default": "wopačna wotmołwa"
+    },
+    {
+      "label": "etiket za podpěracu technologiju při rozrisanju",
+      "default": "prawa wotmołwa:"
+    },
+    {
+      "label": "etiket za podpěracu technologiju při zapodaću",
+      "description": "Wužiwaj @num a @total, zo by aktualnu ličbu prózdnotow a cyłkownu ličbu prózdnotow změnił/a",
+      "default": "prózdne zapodaće @num wot @total"
+    },
+    {
+      "label": "etiket za podpěracu technologiju, kiž pokazuje na pokiw",
+      "default": "pokiw je móžny"
+    },
+    {
+      "label": "etiket za symbol \"pokiw\"",
+      "default": "pokiw"
+    },
+    {
+      "label": "Zadźerženske mustry.",
+      "description": "Z tutymi opcijemi móžeš postajić, kak so nadawk zadźerži.",
+      "fields": [
+        {
+          "label": "Zapni \"hišće raz\""
+        },
+        {
+          "label": "zapni tłóčatko \"pokaž mi rozrisanje\""
+        },
+        {
+          "label": "zapni tłóčatko \"přepruwuj\""
+        },
+        {
+          "label": "přepruwuj wotmołwy awtomatisce po zapodaću"
+        },
+        {
+          "label": "dźiwaj na wulke spočatne pismiki",
+          "description": "Zapodate słowo dyrbi dokładnje z wotmołwu identiske być."
+        },
+        {
+          "label": "wšitke prózdnoty dyrbja wupjelnjene być, zo by rozrisanje widźeć było"
+        },
+        {
+          "label": "sadź pola za zapisanje teksta na nowe linki"
+        },
+        {
+          "label": "pokaž přepruwowanski dialog, hdyž stłóčiš na \"přepruwuj\"",
+          "description": "Tuta móžnosć njeje kompatibelna z móžnosću \"přepruwuj wotmołwy awtomatisce po zapodaću\""
+        },
+        {
+          "label": "pokaž přepruwowanski dialog, hdyž stłóčiš na \"hišće raz\""
+        },
+        {
+          "label": "akceptuj snadne prawopisne zmylki",
+          "description": "Hdyž je tole aktiwizowane, akceptuja so tež mjeńše prawopisne zmylki (3-9 znamješkow: 1 prawopisny zmylk, wjace hač 9 znamješkow: 2 prawopisnej zmylkaj)"
+        }
+      ]
+    },
+    {
+      "label": "pruwuj přepruwowanski dialog",
+      "fields": [
+        {
+          "label": "tekst za nadpismo",
+          "default": "Zakónčić?"
+        },
+        {
+          "label": "tekst",
+          "default": "Chceš woprawdźe zakónčić?"
+        },
+        {
+          "label": "wopisanje tłóčatka přetorhnyć",
+          "default": "přetorhnyć"
+        },
+        {
+          "label": "wopisanje tłóčatka wopodstatnić",
+          "default": "zakónčić"
+        }
+      ]
+    },
+    {
+      "label": "wospjetuj wopodstatnjenski dialog",
+      "fields": [
+        {
+          "label": "tekst nadpisma",
+          "default": "Hišće raz?"
+        },
+        {
+          "label": "tekst",
+          "default": "Chceš woprawdźe hišće raz spytać?"
+        },
+        {
+          "label": "wopisanje tłóčatka přetorhnyć",
+          "default": "přetorhnyć"
+        },
+        {
+          "label": "wopisanje tłóčatka wopodstatnić",
+          "default": "wopodstatnić"
+        }
+      ]
+    },
+    {
+      "label": "předstajenje dypkow za někoho, kiž wužiwa předčitansku funkciju",
+      "default": "Twoje dypki su :num wot :total"
+    },
+    {
+      "label": "wopisanje podpěraceje technologije za tłóčatko \"přepruwuj\"",
+      "default": "Přepruwuj wotmołwy. Zapodate słowa hódnoća so jako prawe, wopak abo njewotmołwjene."
+    },
+    {
+      "label": "wopisanje podpěraceje technologije za tłóčatko \"pokaž mi rozrisanje\"",
+      "default": "Pokaž mi rozrisanje. Nadawk markěruje so ze swojim prawym rozrisanjom."
+    },
+    {
+      "label": "wopisanje podpěraceje technologije za tłóčatko \"hišće raz\"",
+      "default": "Spytaj hišće raz. Wšitke wotmołwy so wušmórnu a nadawk so hišće raz wotnowa započina."
+    },
+    {
+      "label": "wopisanje podpěraceje technologije za započinanje nadawka",
+      "default": "kontrolny modus"
+    }
+  ]
+}

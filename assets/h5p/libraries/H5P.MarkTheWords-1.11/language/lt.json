@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Tipas",
+          "description": "Medžiaga klausimo papildymui."
+        },
+        {
+          "label": "Išjungti vaizdo didinimą"
+        }
+      ],
+      "label": "Medija"
+    },
+    {
+      "description": "Aprašykite kaip naudotojas turėtų išspręsti užduotį.",
+      "label": "Užduoties aprašymas",
+      "placeholder": "Paspauskite visus veiksmažodžius pateikiamame tekste."
+    },
+    {
+      "label": "Teksto laukas",
+      "important": {
+        "description": "<ul><li>Marked words are added with an asterisk (*).</li><li>Asterisks can be added within marked words by adding another asterisk, *correctword*** =&gt; correctword*.</li></ul>",
+        "example": "The correct words are marked like this: *correctword*, an asterisk is written like this: *correctword***."
+      },
+      "placeholder": "Atsakymas yra: *answer*."
+    },
+    {
+      "label": "Bendras atsiliepimas",
+      "fields": [
+        {
+          "label": "Define custom feedback for any score range",
+          "entity": "diapazonas",
+          "field": {
+            "fields": [
+              {
+                "label": "Score Range"
+              },
+              {},
+              {
+                "label": "Atsiliepimai apibrėžtam balų diapazonui",
+                "placeholder": "Užpildykite atsiliepimą"
+              }
+            ]
+          },
+          "widgets": [
+            {
+              "label": "Numatytasis"
+            }
+          ],
+          "description": "Spustelėkite mygtuką „Pridėti diapazoną“, kad pridėtumėte tiek diapazonų, kiek jums reikia. Pavyzdys: 0–20 % blogas balas, 21–91 % vidutinis balas, 91–100 % puikus rezultatas!"
+        }
+      ]
+    },
+    {
+      "label": "Tekstas mygtukui „Tikrinti“.",
+      "default": "Tikrinti"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Pateikti"
+    },
+    {
+      "label": "Text for \"Retry\" button",
+      "default": "Retry"
+    },
+    {
+      "label": "Text for \"Show solution\" button",
+      "default": "Show solution"
+    },
+    {
+      "label": "Veiksenos nustatymai.",
+      "fields": [
+        {
+          "label": "Įgalinti „Bandyti dar kartą“"
+        },
+        {
+          "label": "Įgalinti mygtuką „Rodyti sprendimą“."
+        },
+        {
+          "label": "Įgalinti mygtuką „Tikrinti“."
+        },
+        {
+          "description": "Show points earned for each answer.",
+          "label": "Show score points"
+        }
+      ],
+      "description": "These options will let you control how the task behaves."
+    },
+    {
+      "default": "Correct!",
+      "label": "Teisingas atsakymo tekstas",
+      "description": "Text used to indicate that an answer is correct"
+    },
+    {
+      "label": "Incorrect answer text",
+      "description": "Text used to indicate that an answer is incorrect",
+      "default": "Incorrect!"
+    },
+    {
+      "default": "Answer not found!",
+      "label": "Missed answer text",
+      "description": "Text used to indicate that an answer is missing"
+    },
+    {
+      "label": "Description for Display Solution",
+      "description": "This text tells the user that the tasks has been updated with the solution.",
+      "default": "Task is updated to contain the solution."
+    },
+    {
+      "default": "You got :num out of :total points",
+      "label": "Textual representation of the score bar for those using a readspeaker"
+    },
+    {
+      "default": "Full readable text",
+      "label": "Label for the full readable text for assistive technologies"
+    },
+    {
+      "default": "Full text where words can be marked",
+      "label": "Label for the text where words can be marked for assistive technologies"
+    },
+    {
+      "default": "Solution mode",
+      "label": "Solution mode header for assistive technologies"
+    },
+    {
+      "default": "Checking mode",
+      "label": "Checking mode header for assistive technologies"
+    },
+    {
+      "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
+      "label": "Assistive technology description for \"Check\" button"
+    },
+    {
+      "default": "Show the solution. The task will be marked with its correct solution.",
+      "label": "Assistive technology description for \"Show Solution\" button"
+    },
+    {
+      "default": "Retry the task. Reset all responses and start the task over again.",
+      "label": "Assistive technology description for \"Retry\" button"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Encabezado",
+      "placeholder": "Aquí puede añadir un encabezado opcional.",
+      "description": "El encabezado que le gustaría mostrar encima de la imagen"
+    },
+    {
+      "label": "Elementos",
+      "entity": "elemento",
+      "widgets": [
+        {
+          "label": "Predeterminado"
+        }
+      ],
+      "field": {
+        "label": "Elemento",
+        "fields": [
+          {
+            "label": "Imagen"
+          },
+          {
+            "label": "Etiqueta",
+            "description": "Etiqueta opcional para una casilla. Por favor, asegúrese que no sea demasiado larga, o de lo contrario se ocultará."
+          },
+          {
+            "label": "Descripción",
+            "placeholder": "Descripción de mi imagen...",
+            "description": "Descripción opcional para la imagen"
+          },
+          {
+            "label": "Audio",
+            "description": "Audio opcional que se reproduce cuando se muestra una imagen."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Configuraciones del comportamiento",
+      "description": "Estas opciones le permitirán controlar como se comporta el trabajo.",
+      "fields": [
+        {
+          "label": "Imagen inicial",
+          "description": "Configurar el número de la imagen con la cual iniciar."
+        },
+        {
+          "label": "Deslizador ajustado a la imagen",
+          "description": "Si esta opción está activada, el deslizador se ajustará a la posición de la imagen."
+        },
+        {
+          "label": "Mostrar marcas de verificación",
+          "description": "Si esta opción está activada, la barra deslizante mostrará una marca de verificación para cada imagen."
+        },
+        {
+          "label": "Mostrar etiquetas",
+          "description": "Si esta opción está activada, la barra deslizante muestra una etiqueta en lugar de/además de las marcas de verificación."
+        },
+        {
+          "label": "Color de Reemplazo de Transparencia",
+          "description": "Configurar el color que remplazará las áreas transparentes de las imágenes."
+        },
+        {
+          "label": "Espacio de la imagen en modo de pantalla completa",
+          "description": "Si tiene descripciones además de las imágenes, configurar el porcentaje del espacio que debería usar la imagen en modo de pantalla completa."
+        }
+      ]
+    },
+    {
+      "label": "Lector de texto en voz alta",
+      "fields": [
+        {
+          "label": "Imagen",
+          "default": "Imagen"
+        },
+        {
+          "label": "Control deslizante de imagen",
+          "default": "Control deslizante de imagen"
+        },
+        {
+          "label": "Título Mudo",
+          "default": "Mudo, actualmente sonoro"
+        },
+        {
+          "label": "Activar sonido del título",
+          "default": "Activar sonido, actualmente silenciado"
+        },
+        {
+          "label": "Título para botón de pantalla completa (introducir)",
+          "default": "Entrar a modo de pantalla completa"
+        },
+        {
+          "label": "Título para botón de pantalla completa (salir)",
+          "default": "Salir del modo de PantallaCompleta"
+        }
+      ]
+    }
+  ]
+}

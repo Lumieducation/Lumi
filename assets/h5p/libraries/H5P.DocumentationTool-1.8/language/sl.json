@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "label": "Naslov",
+      "default": "Dokumentarna",
+      "description": "Naslov orodja za izdelavo dokumentov."
+    },
+    {
+      "label": "Elementi",
+      "widgets": [
+        {
+          "label": "Privzeto"
+        }
+      ],
+      "entity": "stran",
+      "field": {
+        "label": "Tip strani",
+        "description": "Seznam možnih tipov strani."
+      }
+    },
+    {
+      "label": "Določitev",
+      "fields": [
+        {
+          "label": "Besedilo za gumb \"Nazaj\"",
+          "default": "Nazaj documentation step"
+        },
+        {
+          "label": "Besedilo za gumb \"Naprej\"",
+          "default": "Naprej documentation step"
+        },
+        {
+          "label": "Besedilo za gumb \"Zapri\"",
+          "default": "Zapri"
+        }
+      ]
+    }
+  ]
+}

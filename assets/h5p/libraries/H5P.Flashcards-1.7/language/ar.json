@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "وصف النشاط"
+    },
+    {
+      "widgets": [
+        {
+          "label": "افتراضي"
+        }
+      ],
+      "label": "البطاقات",
+      "entity": "البطاقة",
+      "field": {
+        "label": "البطاقة",
+        "fields": [
+          {
+            "label": "السؤال",
+            "description": "السؤال النصي اختياري للبطاقة. (بطاقة قد تستخدم مجرد صورة، مجرد نص أو كليهما)"
+          },
+          {
+            "label": "الإجابة",
+            "description": "Answer (solution) for the card. Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "صورة",
+            "description": "الصورة اختيارية للحصول على بطاقة. (بطاقة قد تستخدم مجرد صورة، مجرد نص أو كليهما)"
+          },
+          {
+            "label": "Alternative text for image"
+          },
+          {
+            "label": "التلميح",
+            "fields": [
+              {
+                "label": "نص التلميح"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "نص التقدم",
+      "default": "Card @card of @total",
+      "description": "نص التقدم، والمتغيرات المتاحة: البطاقة والمجموع. مثال: بطاقة من الكل "
+    },
+    {
+      "label": "نص الزر التالي",
+      "default": "Next"
+    },
+    {
+      "label": "نص الزر السابق",
+      "default": "Previous"
+    },
+    {
+      "label": "نص الزر التحقق من الإجابات ",
+      "default": "Check"
+    },
+    {
+      "label": "طلب إدخال المستخدم اجابته قبل أن يتم عرضه الحل"
+    },
+    {
+      "label": "Text for the answer input field",
+      "default": "Your answer"
+    },
+    {
+      "label": "Text for correct answer",
+      "default": "Correct"
+    },
+    {
+      "label": "Text for incorrect answer",
+      "default": "Incorrect"
+    },
+    {
+      "label": "Show solution text",
+      "default": "Correct answer(s)"
+    },
+    {
+      "label": "Text for results title",
+      "default": "Results"
+    },
+    {
+      "label": "Text for number of correct",
+      "default": "@score of @total correct",
+      "description": "نص النتيجة والمتغيرات المتاحة: @score و @total. مثال: '@score من @total الصحيح'"
+    },
+    {
+      "label": "Text for show results",
+      "default": "Show results"
+    },
+    {
+      "label": "Text for short answer label",
+      "default": "A:"
+    },
+    {
+      "label": "Text for \"retry\" button",
+      "default": "Retry"
+    },
+    {
+      "label": "Case sensitive",
+      "description": "التأكد من أن معطيات المستخدم يجب أن تكون مطابقة تماماً للإجابة."
+    },
+    {
+      "label": "Incorrect text for assistive technologies",
+      "default": "جواب غير صحيح. الإجابة الصحيحة كانت @answer",
+      "description": "Text that will be announced to assistive technologies. Use @answer as variable."
+    },
+    {
+      "label": "Correct feedback text for assistive technologies",
+      "default": "@answer is correct.",
+      "description": "Text that will be announced to assistive technologies when a card is answered correctly. Use @answer as variable."
+    },
+    {
+      "label": "Card change for assistive technologies",
+      "default": "Page @current of @total",
+      "description": "Text that will be announced to assistive technologies when navigating between cards. Use @current and @total as variables."
+    },
+    {
+      "label": "Randomize cards",
+      "description": "Enable to randomize the order of cards on display."
+    }
+  ]
+}

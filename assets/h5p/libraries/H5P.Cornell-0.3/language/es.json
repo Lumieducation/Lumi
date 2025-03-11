@@ -1,0 +1,123 @@
+{
+  "semantics": [
+    {
+      "label": "Cabecera",
+      "description": "Si se establece, se utilizará para el título del ejercicio en lugar del título del contenido."
+    },
+    {
+      "label": "Instrucciones",
+      "description": "Los alumnos verán estas instrucciones en la parte superior de sus notas."
+    },
+    {
+      "label": "Contenido del ejercicio"
+    },
+    {
+      "label": "Campos de notas",
+      "description": "Configuración para los campos de notas.",
+      "fields": [
+        {
+          "label": "Título del campo de pistas",
+          "default": "Pista",
+          "description": "Título para la sección Recordar."
+        },
+        {
+          "label": "Texto por defecto para el campo pista",
+          "default": "Escribe los comentarios, preguntas, la idea principal, etc. que sacas de tus notas!",
+          "description": "Texto por defecto para la sección de pistas como recordatorio para tus alumnos."
+        },
+        {
+          "label": "Título del campo Notas",
+          "default": "Notas",
+          "description": "Título para la sección Notas."
+        },
+        {
+          "label": "Texto por defecto para el campo Notas",
+          "default": "Escribir fechas, detalles, definiciones, fórmulas, ejemplos, etc. del material fuente!",
+          "description": "Texto por defecto para la sección de notas como recordatorio para tus alumnos."
+        },
+        {
+          "label": "Título del campo del Resumen",
+          "default": "Resumen",
+          "description": "Título para la sección del Resumen."
+        },
+        {
+          "label": "Texto por defecto para el campo resumen",
+          "default": "Haz un resumen de lo que has aprendido!",
+          "description": "Texto por defecto para la sección de resumen como recordatorio para tus alumnos."
+        }
+      ]
+    },
+    {
+      "label": "Localización",
+      "fields": [
+        {
+          "label": "Notas guardadas",
+          "default": "Notas guardadas"
+        },
+        {
+          "label": "Guardar",
+          "default": "Guardar"
+        },
+        {
+          "label": "No se pueden guardar las notas",
+          "default": "La plataforma no es compatible con la función de estado de guardado de contenido o no está activada en la configuración de la plataforma o no has iniciado sesión. ¡Tus notas no se pueden guardar!"
+        },
+        {
+          "label": "Texto para botón \"Copiar\"",
+          "default": "Copiar"
+        },
+        {
+          "label": "Notas copiadas al portapapeles",
+          "default": "Notas copiadas al portapapeles"
+        },
+        {
+          "label": "Las notas no se pudieron copiar al portapapeles",
+          "default": "Las notas no se pudieron copiar al portapapeles"
+        }
+      ]
+    },
+    {
+      "label": "Lector de pantalla",
+      "fields": [
+        {
+          "label": "Título para botón Pantalla Completa (Entrar)",
+          "default": "Pasar al modo de Pantalla Completa"
+        },
+        {
+          "label": "Título de botón Pantalla Completa (salir)",
+          "default": "Salir del modo de Pantalla Completa"
+        },
+        {
+          "label": "Título del botón cambiar (cuando notas está cerrado)",
+          "default": "Abrir notas"
+        },
+        {
+          "label": "Título de botón cambiar (cuando las notas están abiertas)",
+          "default": "Cerrar notas"
+        },
+        {
+          "label": "Notas abiertas",
+          "default": "La vista ha cambiado a tus notas."
+        },
+        {
+          "label": "Notas cerradas",
+          "default": "La vista ha cambiado al ejercicio."
+        },
+        {
+          "label": "Notas guardadas",
+          "default": "Las notas se han guardado en la plataforma."
+        },
+        {
+          "label": "Ocultar anotaciones",
+          "default": "Ocultar @label anotaciones",
+          "description": "@label es un reemplazable y será reemplazado con la etiqueta respectiva del campo de anotaciones."
+        },
+        {
+          "label": "Mostrar anotaciones",
+          "default": "Mostrar @label anotaciones",
+          "description": "@label es un reemplazable y será reemplazado con la etiqueta respectiva del campo de anotaciones."
+        }
+      ]
+    }
+  ]
+}

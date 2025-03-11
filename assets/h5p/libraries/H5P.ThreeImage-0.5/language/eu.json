@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Hiru Irudiak Editorea",
+      "fields": [
+        {
+          "label": "Eszenak",
+          "entity": "Eszena",
+          "field": {
+            "fields": [
+              {
+                "label": "Eszena-mota",
+                "options": [
+                  {
+                    "label": "360 irudia"
+                  },
+                  {
+                    "label": "Irudi estatikoa"
+                  }
+                ]
+              },
+              {
+                "label": "Erakutsi \"Atzera\" botoia",
+                "description": "Erakutsi aurreko eszenara joateko botoia"
+              },
+              {},
+              {
+                "label": "Eszenaren izenburua",
+                "description": "Eszena identifikatzeko erabilia"
+              },
+              {
+                "label": "Eszenaren atzeko planoa"
+              },
+              {
+                "label": "Eszenaren deskribapena",
+                "description": "Erabiltzaileari eszena deskribatzen dion testua"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Etiketa",
+                      "description": "Hutsik utziz gero ez da etiketarik erakutsiko eta pantaila-irakurleentzat izenburuko eremua erabiltzen saiatuko gara"
+                    },
+                    {
+                      "label": "Etiketen Ezarpenak",
+                      "fields": [
+                        {
+                          "label": "Etiketaren kokapena",
+                          "description": "Aukeratu etiketa non agertuko den",
+                          "options": [
+                            {
+                              "label": "Erabili jokaeraren ezarpena"
+                            },
+                            {
+                              "label": "Eskuinera lerrokatuta"
+                            },
+                            {
+                              "label": "Ezkerrera lerrokatuta"
+                            },
+                            {
+                              "label": "Gora lerrokatuta"
+                            },
+                            {
+                              "label": "Behera lerrokatuta"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Erakutsi etiketa",
+                          "description": "Ezkutuan badago - etiketak sagua gainetik pasatzerakoan erakutsiko da",
+                          "options": [
+                            {
+                              "label": "Erabili jokaeraren ezarpena"
+                            },
+                            {
+                              "label": "Erakutsi"
+                            },
+                            {
+                              "label": "Ezkutatu"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Botoi-estiloa",
+                "description": "Erabaki eszena hau erakutsiko duten botoiek izango duten itxura. Estatikoak diren eta beste eszenetara ez doazen eszenetan, \"Informazio gehiago\" botoia gomendatzen dugu.",
+                "options": [
+                  {
+                    "label": "Eszena berria (gezia)"
+                  },
+                  {
+                    "label": "Informazio gehiago (plus)"
+                  }
+                ]
+              },
+              {
+                "label": "Audio-pista",
+                "description": "Gehitu audio-pista bat eszena honentzat."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Audio-pista"
+        }
+      ]
+    },
+    {
+      "label": "Portaeraren ezarpenak",
+      "description": "Aukera hauek munduaren portaera kontrolatzen utziko dizute.",
+      "fields": [
+        {
+          "label": "Audio globala",
+          "description": "Gehitu eszena guztietan modu lehenetsian eskuragarri egongo den audio-pista bat."
+        },
+        {
+          "label": "Eszenaren renderizatze-kalitatea",
+          "description": "Aukeratu eszena bat renderizatzeko erabiliko diren segmentuen zabalera eta altuera. Honek eszenaren kalitatean eragin zuzena dauka, saiatu zaitez kalitatea igotzen eszena pixka bat \"pixelatua\" edo \"lausoa\" ikusten bada. Kontuan izan renderizatze-kalitate handiagoak kargatze-denbora gehiago behar duela.",
+          "options": [
+            {
+              "label": "Kalitate handia (128x128)"
+            },
+            {
+              "label": "Kalitate ertaina (64x64)"
+            },
+            {
+              "label": "Kalitate baxua (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Etiketaren ezarpenak",
+          "fields": [
+            {
+              "label": "Etiketaren kokapena",
+              "description": "Etiketaren kokapen lehenetsia. Kokapena interakzioetan baliogabetu daiteke",
+              "options": [
+                {
+                  "label": "Eskuinera lerrokatuta"
+                },
+                {
+                  "label": "Ezkerrera lerrokatuta"
+                },
+                {
+                  "label": "Gora lerrokatuta"
+                },
+                {
+                  "label": "Behera lerrokatuta"
+                }
+              ]
+            },
+            {
+              "label": "Erakutsi etiketak",
+              "description": "Ezkutatuz gero - etiketak sagua gainetik pasatzerakoan erakutsiko da"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Mugatu",
+      "fields": [
+        {
+          "label": "Aria etiketa eduki motarentzat",
+          "default": "Ibilbide Birtuala"
+        },
+        {
+          "label": "Audioa erreproduzitzeko etiketa",
+          "default": "Erreproduzitu Audio Pista"
+        },
+        {
+          "label": "Audioa geratzeko etiketa",
+          "default": "Geratu Audio Pista"
+        },
+        {
+          "label": "Eszena-elkarrizketarako izenburua",
+          "default": "Eszenaren Deskribapena"
+        },
+        {
+          "label": "Kamera berrabiarazteko botoiaren etiketa",
+          "default": "Berrabiarazi kamera"
+        },
+        {
+          "label": "Elkarrizketa bidaltzeko botoiaren etiketa",
+          "default": "Bidali Elkarrizketa"
+        },
+        {
+          "label": "Elkarrizketa ixteko botoiaren etiketa",
+          "default": "Itxi Elkarrizketa"
+        },
+        {
+          "label": "Zabaldu botoiaren etiketaren Aria etiketa",
+          "default": "Zabaldu etiketa bisuala"
+        },
+        {
+          "label": "Atzeko planoko irudia 360 eszenan zabaltzen ari denerako etiketa",
+          "default": "Atzeko planoko irudia kargatzen..."
+        },
+        {
+          "label": "Edukirik ez dagoenerako etiketa",
+          "default": "Edukirik ez"
+        }
+      ]
+    }
+  ]
+}

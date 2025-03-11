@@ -1,0 +1,374 @@
+{
+  "semantics": [
+    {
+      "label": "Medija",
+      "fields": [
+        {
+          "label": "Tipas",
+          "description": "Pasirenkama medija, rodoma virš klausimo."
+        },
+        {
+          "label": "Išjungti paveikslėlio mastelio keitimą"
+        }
+      ]
+    },
+    {
+      "label": "Užduoties aprašymas",
+      "description": "Čia aprašykite savo užduotį.",
+      "placeholder": "Atidžiai klausykite ir parašykite tai, ką girdite."
+    },
+    {
+      "label": "Sakiniai",
+      "widgets": [
+        {
+          "label": "Numatytasis"
+        }
+      ],
+      "entity": "Sakinys",
+      "field": {
+        "label": "Sakinys",
+        "fields": [
+          {
+            "label": "Aprašymas",
+            "description": "You can optionally put a simple description above the text input field, useful e.g. for dialogues."
+          },
+          {
+            "label": "Garso pavyzdys",
+            "description": "Sakinys pasakytas įprastu greičiu"
+          },
+          {
+            "label": "Lėtas garso pavyzdys",
+            "description": "Sakinys sakomas lėtai"
+          },
+          {
+            "label": "Tekstas",
+            "description": "Text that should be written. You can add alternate spellings to a word by adding a vertical line (|) behind followed by an alternative."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Bendras atsiliepimas",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Numatytasis"
+            }
+          ],
+          "label": "Define custom feedback for any score range",
+          "description": "Spustelėkite mygtuką „Pridėti diapazoną“, kad pridėtumėte tiek diapazonų, kiek jums reikia. Pavyzdys: 0–20 % blogas balas, 21–91 % vidutinis balas, 91–100 % puikus rezultatas!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "Score Range"
+              },
+              {
+                "label": "Atsiliepimas apibrėžtam balų diapazonui",
+                "placeholder": "Užpildykite atsiliepimą"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Veikimo nustatymai",
+      "description": "Šios parinktys leis jums valdyti, kaip veikia užduotis.",
+      "fields": [
+        {
+          "label": "Maksimalus bandymų skaičius",
+          "description": "Will limit the number of times the samples for each sentence can be listened to."
+        },
+        {
+          "label": "Maximum tries for slow speed",
+          "description": "Will limit the number of times the slow samples for each sentence can be listened to."
+        },
+        {
+          "label": "Disable pause option",
+          "description": "If checked, pausing the audio while playing is not possible."
+        },
+        {
+          "label": "Paleidimo mygtuko delsa",
+          "description": "Optionally set a time period of up to three seconds that playing a button should be delayed. This is useful if you want to allow students to enter the text field before they start listening."
+        },
+        {
+          "label": "Sumaišyti sakinius",
+          "description": "Define when the sentences should be shuffled.",
+          "options": [
+            {
+              "label": "Never"
+            },
+            {
+              "label": "Once when starting exercise"
+            },
+            {
+              "label": "On every try"
+            }
+          ]
+        },
+        {
+          "label": "Taškais",
+          "fields": [
+            {
+              "label": "Ignoruoti skyrybos ženklus",
+              "description": "Jei pažymėta, į skyrybos ženklus nebus atsižvelgiama skaičiuojant balus."
+            },
+            {
+              "label": "Nulio klaidų režimas",
+              "description": "Jei pažymėta, skaičiuojant bus atsižvelgiama tik į teisingus atsakymus. Už klaidas nebus baudžiama."
+            },
+            {
+              "label": "Rašymo klaidų vertė",
+              "description": "Determine to which extent typing errors (word with 3-9 characters: up to 1 mistake, word with more than 9 characters: up to 2 mistakes) count as a real mistake.",
+              "options": [
+                {
+                  "label": "100 %"
+                },
+                {
+                  "label": "50 %"
+                },
+                {
+                  "label": "0 %"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Tekstas",
+          "fields": [
+            {
+              "label": "Žodžio skyriklis",
+              "description": "Define the separator of words different than space character to support alternate solutions with different number of words."
+            },
+            {
+              "label": "Rašymo kryptis",
+              "description": "Set whether the sentences' language is right-to-left or left-to-right.",
+              "options": [
+                {
+                  "label": "Automatinis aptikimas"
+                },
+                {
+                  "label": "Iš dešinės į kairę"
+                },
+                {
+                  "label": "Left-to-right"
+                }
+              ]
+            },
+            {
+              "label": "Splitting of characters",
+              "description": "Activate if particular characters (e.g. Chinese Han characters) should be split into separate words automatically."
+            }
+          ]
+        },
+        {
+          "label": "Atsiliepimų pristatymas",
+          "fields": [
+            {
+              "label": "Custom typo display",
+              "description": "If checked, typos will be displayed in a custom style distinguishing them from clear mistakes."
+            },
+            {
+              "label": "Presentation of alternate solutions",
+              "description": "Define which alternatives should be presented for wrong or missing words in the solution.",
+              "options": [
+                {
+                  "label": "Show only first alternative"
+                },
+                {
+                  "label": "Show all alternatives"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Įjungti „Bandyti dar kartą“"
+        },
+        {
+          "label": "Įjungti mygtuką „Rodyti sprendimą“."
+        },
+        {
+          "label": "Show solution on check"
+        }
+      ]
+    },
+    {
+      "label": "User interface",
+      "fields": [
+        {
+          "label": "General feedback",
+          "description": "You can use several placeholders that will be replaced with the adequate number: @matches = number of matches, @total = total mistakes, @capped = capped total mistakes, @wrong = wrong words, @added = additional words, @missing = missing words, @typo = typing errors",
+          "default": "You have made @total mistake(s)."
+        },
+        {
+          "label": "General feedback (zero mistakes mode)",
+          "description": "You can use several placeholders that will be replaced with the adequate number: @matches = number of matches, @total = total score, @wrong = wrong words, @added = additional words, @missing = missing words, @typo = typing errors",
+          "default": "You have entered @total word(s) correctly and @typo word(s) with minor mistakes."
+        },
+        {
+          "label": "Tekstas mygtukui „Tikrinti“",
+          "default": "Tikrinti"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "Text for \"Retry\" button",
+          "default": "Retry"
+        },
+        {
+          "label": "Text for \"Show solution\" button",
+          "default": "Show solution"
+        },
+        {
+          "label": "Audio not supported message",
+          "default": "Your browser does not support this audio."
+        }
+      ]
+    },
+    {
+      "label": "Readspeaker",
+      "fields": [
+        {
+          "label": "Mygtuko „Tikrinti“ pagalbinės technologijos aprašymas",
+          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+        },
+        {
+          "label": "Mygtuko „Rodyti sprendimą“ pagalbinės technologijos aprašymas",
+          "default": "Show the solution. The task will be marked with its correct solution."
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry the task. Reset all responses and start the task over again."
+        },
+        {
+          "label": "Play button",
+          "default": "Play"
+        },
+        {
+          "label": "Play slowly button",
+          "default": "Play slowly"
+        },
+        {
+          "label": "Tries left (text for readspeakers and hover text)",
+          "description": "@number will be replaced by the current number of tries left.",
+          "default": "Number of tries left: @number"
+        },
+        {
+          "label": "Infinite (text for readspeakers and hover text)",
+          "default": "infinite"
+        },
+        {
+          "label": "Enter text field",
+          "default": "Enter what you have heard."
+        },
+        {
+          "label": "Your result",
+          "description": "@score will be replaced by the number of points. @total will be replaced by the maximum possible points.",
+          "default": "You got @score out of @total points"
+        },
+        {
+          "label": "Solution",
+          "default": "Solution"
+        },
+        {
+          "label": "Sentence",
+          "default": "Sentence"
+        },
+        {
+          "label": "Item",
+          "default": "Item"
+        },
+        {
+          "label": "Correct",
+          "default": "correct"
+        },
+        {
+          "label": "Wrong",
+          "default": "wrong"
+        },
+        {
+          "label": "Small mistake",
+          "default": "small mistake"
+        },
+        {
+          "label": "Missing word or symbol",
+          "default": "missing"
+        },
+        {
+          "label": "Added word or symbol",
+          "default": "added"
+        },
+        {
+          "label": "Correct solution",
+          "default": "Should have been"
+        },
+        {
+          "label": "Or",
+          "default": "or"
+        },
+        {
+          "label": "Point",
+          "default": "point"
+        },
+        {
+          "label": "Points",
+          "default": "points"
+        },
+        {
+          "label": "Period",
+          "default": "period"
+        },
+        {
+          "label": "Exclamation point",
+          "default": "exclamation point"
+        },
+        {
+          "label": "Question mark",
+          "default": "question mark"
+        },
+        {
+          "label": "Comma",
+          "default": "comma"
+        },
+        {
+          "label": "Single quote",
+          "default": "single quote"
+        },
+        {
+          "label": "Double quote",
+          "default": "double quote"
+        },
+        {
+          "label": "Colon",
+          "default": "colon"
+        },
+        {
+          "label": "Semicolon",
+          "default": "semicolon"
+        },
+        {
+          "label": "Plus",
+          "default": "plus"
+        },
+        {
+          "label": "Minus",
+          "default": "minus"
+        },
+        {
+          "label": "Asterisk",
+          "default": "asterisk"
+        },
+        {
+          "label": "Forward slash",
+          "default": "forward slash"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Küsimuse tekst",
+      "description": "Küsimus, mille põhjal teeb kasutaja valiku."
+    },
+    {
+      "label": "Valikud",
+      "entity": "valik",
+      "field": {
+        "fields": [
+          {
+            "label": "Valiku tekst",
+            "description": "Silt, mida näidatakse valiku nupul."
+          },
+          {
+            "label": "Mine",
+            "description": "The target time the user will be taken to upon pressing the choice button. Sisesta ajakood formaadis M:SS."
+          },
+          {
+            "label": "Kui valitud tekst",
+            "description": "Valikuline kinnitav tekst, mida näidatakse siis, kui kasutaja on vajutanud Valik-nuppu."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Jätka nupu silt",
+      "default": "Jätka"
+    }
+  ]
+}

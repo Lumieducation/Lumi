@@ -1,0 +1,155 @@
+{
+  "semantics": [
+    {
+      "label": "Lys van vrae",
+      "entity": "vraag",
+      "widgets": [
+        {
+          "label": "Verstek"
+        },
+        {
+          "label": "Tekstueel"
+        }
+      ],
+      "field": {
+        "label": "Vraag &amp; alternatiewe",
+        "fields": [
+          {
+            "label": "Vraag"
+          },
+          {
+            "label": "Alternatiewe - eerste alternatief is die regte een.",
+            "entity": "antwoord",
+            "field": {
+              "label": "Alternatief"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Algehele terugvoer",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Verstek"
+            }
+          ],
+          "label": "Bepaal verstekterugvoer vir enige reeks tellings",
+          "description": "Klik die \"Voeg reeks by\" knoppie by om soveel reekse as wat jy nodig het by te voeg. Byvoorbeeld: 0-20% Swak telling, 21-91% Gemiddelde telling, 91-100% Uitstekende telling!",
+          "entity": "reeks",
+          "field": {
+            "fields": [
+              {
+                "label": "Telling reeks"
+              },
+              {},
+              {
+                "label": "Terugvoer vir gedefinieerde telling reeks",
+                "placeholder": "Vul die terugvoer in"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellings",
+      "fields": [
+        {
+          "label": "Gaan outomaties voort",
+          "description": "Automatically go to next question when alternative is selected. This needs to be turned off to make the content fully accessible when using a screen reader."
+        },
+        {
+          "label": "Uitteltyd vir regte antwoord",
+          "description": "Waarde in millisekondes"
+        },
+        {
+          "label": "Uittelteyd vir verkeerde antwoorde",
+          "description": "Waarde in millisekondes"
+        },
+        {
+          "label": "Aktiveer byklanke"
+        },
+        {
+          "label": "Aktiveer Probeer weer knoppie"
+        },
+        {
+          "label": "Aktiveer Wys antwoord knoppie"
+        },
+        {
+          "label": "Slaag persentasie",
+          "description": "Persentasie van totale telling wat vereis word om vasvra te slaag."
+        }
+      ]
+    },
+    {
+      "label": "Lokaliseer enkel keuse stel",
+      "fields": [
+        {
+          "label": "Etiket vir die \"Volgende\" knoppie",
+          "default": "Volgende vraag"
+        },
+        {
+          "label": "Etiket vir \"Wys antwoord\" knoppie",
+          "default": "Wys antwoord"
+        },
+        {
+          "label": "Etiket vir die \"Probeer weer\" knoppie",
+          "default": "Probeer weer"
+        },
+        {
+          "label": "Titel vir die wys oplossing aansig",
+          "default": "Oplossing lys"
+        },
+        {
+          "label": "Spreekleserteks vir regte antwoord",
+          "default": "Reg!"
+        },
+        {
+          "label": "Spreekleserteks vir verkeerde antwoord",
+          "default": "Verkeerd!"
+        },
+        {
+          "label": "Option should have been selected",
+          "default": "Should have been selected"
+        },
+        {
+          "label": "Option should not have been selected",
+          "default": "Should not have been selected"
+        },
+        {
+          "label": "Etiket vir die \"demp\" knoppie, om terugvoer klank te deaktiveer",
+          "default": "Demp terugvoerklank"
+        },
+        {
+          "label": "Etiket vir die \"Maak toe\" knoppie",
+          "default": "Maak toe"
+        },
+        {
+          "label": "Skyfienommer teks",
+          "description": "Maak huidige skyfie en totale aantal skyfies bekend, veranderlikes is :num en :total",
+          "default": "Skyfie :num van :total"
+        },
+        {
+          "label": "Tekstuele tentoonstelling van die telkaart vir diegene wat 'n spreekleser gebruik",
+          "default": "Jy het :num uit :total punte gekry"
+        },
+        {
+          "label": "Etiket vir die vraagnommer in die antwoordlys",
+          "description": "Maak huidige vraagindeks in antwoordlys bekend, veranderlikes is :num",
+          "default": "Vraag :num"
+        },
+        {
+          "label": "Hulptegnologieë beskrywing vir \"Wys oplossing\" knoppie",
+          "default": "Wys die antwoord. Hierdie taak sal gemerk word met die regte antwoord."
+        },
+        {
+          "label": "Hulptegnologieë beskrywing vir \"Probeer weer\" knoppie",
+          "default": "Probeer die taak weer. Herstel alle antwoorde en begin die taak van nuuts af."
+        }
+      ]
+    }
+  ]
+}

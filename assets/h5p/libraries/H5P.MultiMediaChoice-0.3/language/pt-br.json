@@ -1,0 +1,256 @@
+{
+  "semantics": [
+    {
+      "label": "Mídia",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Mídia opcional para exibir acima da pergunta."
+        },
+        {
+          "label": "Desativar o zoom da imagem"
+        }
+      ]
+    },
+    {
+      "label": "Questão"
+    },
+    {
+      "label": "Opções disponíveis",
+      "entity": "opção",
+      "field": {
+        "label": "Opção",
+        "fields": [
+          {
+            "label": "Mídia",
+            "description": "Media to display as a choice."
+          },
+          {
+            "label": "Poster image"
+          },
+          {
+            "label": "Correto"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback Geral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Definir feedback personalizado para qualquer faixa de pontuação",
+          "description": "Clique no botão \"Adicionar faixa\" para adicionar quantos intervalos você precisar. Exemplo: 0-20% Pontuação Ruim, 21-91% Pontuação Média, 91-100% Pontuação Ótima!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de Pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para a faixa de pontuação definida",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Configurações comportamentais",
+      "description": "Estas opções lhe permitirão controlar como a tarefa se comporta.",
+      "fields": [
+        {
+          "label": "Ativar o botão \"Tentar Novamente\""
+        },
+        {
+          "label": "Ativar o botão \"Mostrar Solução\""
+        },
+        {
+          "label": "Mostrar caixa de diálogo de confirmação em \"Verificar\""
+        },
+        {
+          "label": "Mostrar caixa de diálogo de confirmação em \"Tentar Novamente\""
+        },
+        {
+          "label": "Dê um ponto para toda a questão",
+          "description": "Atribui um ponto à questão se a pontuação percentual for maior que a porcentagem de aprovação"
+        },
+        {
+          "label": "Exigir resposta antes que a solução possa ser visualizada"
+        },
+        {
+          "label": "Tipo de Questão",
+          "description": "Selecione a aparência e o comportamento da questão.",
+          "options": [
+            {
+              "label": "Automático"
+            },
+            {
+              "label": "Múltipla escolha (caixas de seleção)"
+            },
+            {
+              "label": "Escolha única (botões de rádio)"
+            }
+          ]
+        },
+        {
+          "label": "Proporção de aspecto",
+          "description": "Selecione a proporção de aspecto das alternativas",
+          "options": [
+            {
+              "label": "Automático"
+            },
+            {
+              "label": "16:9"
+            },
+            {
+              "label": "4:3"
+            },
+            {
+              "label": "3:2"
+            },
+            {
+              "label": "1:1"
+            }
+          ]
+        },
+        {
+          "label": "Alternativas máximas por linha",
+          "description": "Defina o número máximo de alternativas por linha para garantir que as questões pareçam corretas.",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "3"
+            },
+            {
+              "label": "4"
+            }
+          ]
+        },
+        {
+          "label": "Porcentagem para aprovação",
+          "description": "Este cenário muitas vezes não terá qualquer efeito. Isto é a porcentagem da pontuação total necessária para obter 1 ponto quando um ponto para toda a tarefa é habilitado, e para obter resultado.sucesso nas declarações xAPI."
+        }
+      ]
+    },
+    {
+      "label": "Interface de usuário",
+      "fields": [
+        {
+          "label": "Texto do botão \"Verificar\"",
+          "default": "Verificar"
+        },
+        {
+          "label": "Texto do botão \"Enviar\"",
+          "default": "Enviar"
+        },
+        {
+          "label": "Descrição da tecnologia de assistência para o botão \"Verificar\"",
+          "default": "Verifique as respostas. As respostas serão marcadas como corretas, incorretas, ou sem resposta."
+        },
+        {
+          "label": "Texto do botão \"Mostrar solução\"",
+          "default": "Mostrar solução"
+        },
+        {
+          "label": "Descrição da tecnologia de assistência para o botão \"Mostrar solução\"",
+          "default": "Mostrar a solução. As opções corretas serão verificadas."
+        },
+        {
+          "label": "Resposta Correta (não exibida)",
+          "default": "Resposta correta"
+        },
+        {
+          "label": "Resposta incorreta (não exibida)",
+          "default": "Resposta incorreta"
+        },
+        {
+          "label": "A opção deveria ter sido verificada",
+          "default": "Deveria ter sido verificado"
+        },
+        {
+          "label": "A opção não deveria ter sido verificada",
+          "default": "Não deveria ter sido verificado"
+        },
+        {
+          "label": "Texto para a mensagem \"Resposta obrigatória\"",
+          "default": "Por favor, responda antes de ver a solução"
+        },
+        {
+          "label": "Texto do botão \"Tentar Novamente\"",
+          "default": "Tentar Novamente"
+        },
+        {
+          "label": "Descrição da tecnologia de assistência para o botão \"Tentar Novamente\"",
+          "default": "Tente realizar a tarefa novamente. Reinicialize todas as respostas e recomece."
+        },
+        {
+          "label": "Seu resultado",
+          "description": ":num e :total são variáveis e serão substituídas por seus respectivos valores.",
+          "default": "Você conseguiu :num de :pontos totais possíveis"
+        },
+        {
+          "label": "Verificar diálogo de confirmação",
+          "fields": [
+            {
+              "label": "Texto do cabeçalho",
+              "default": "Finalizar?"
+            },
+            {
+              "label": "Texto do corpo",
+              "default": "Você tem certeza que quer finalizar?"
+            },
+            {
+              "label": "Rótulo do botão Cancelar",
+              "default": "Cancelar"
+            },
+            {
+              "label": "Rótulo do botão Confirmar",
+              "default": "Finalizar"
+            }
+          ]
+        },
+        {
+          "label": "Diálogo de confirmação de nova tentativa",
+          "fields": [
+            {
+              "label": "Texto do cabeçalho",
+              "default": "Tentar Novamente?"
+            },
+            {
+              "label": "Texto do corpo",
+              "default": "Você tem certeza que deseja tentar novamente?"
+            },
+            {
+              "label": "Rótulo do botão Cancelar",
+              "default": "Cancelar"
+            },
+            {
+              "label": "Rótulo do botão Confirmar",
+              "default": "Tentar Novamente"
+            }
+          ]
+        },
+        {
+          "label": "Texto utilizado se faltar texto alternativo para uma imagem",
+          "default": "Texto alternativo ausente"
+        },
+        {
+          "label": "Close modal button label",
+          "default": "Close modal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "semantics": [
+    {
+      "label": "Mode for door images",
+      "description": "Select whether you want to set each custom door image yourself or let H5P do the work for you based on the calendar background image set in the behavioural settings.",
+      "options": [
+        {
+          "label": "I want to set each door image myself"
+        },
+        {
+          "label": "H5P shall set the door images based on the background image"
+        }
+      ]
+    },
+    {
+      "label": "Deuren",
+      "entity": "deur",
+      "field": {
+        "fields": [
+          {
+            "label": "Inhoudstype",
+            "description": "Het inhoudstype dat optioneel verschijnt bij het openen van de deur.",
+            "options": [
+              {
+                "label": "Audio"
+              },
+              {
+                "label": "Afbeelding"
+              },
+              {
+                "label": "Link"
+              },
+              {
+                "label": "Tekst"
+              },
+              {
+                "label": "Video"
+              }
+            ]
+          },
+          {
+            "label": "Audio"
+          },
+          {
+            "label": "Afbeelding"
+          },
+          {
+            "label": "Link"
+          },
+          {
+            "label": "Tekst"
+          },
+          {
+            "label": "Video"
+          },
+          {
+            "label": "Automatisch afspelen"
+          },
+          {
+            "label": "Afbeelding deur",
+            "description": "Beeld dat gebruikt zal worden voor de deur. Je hebt een maatverhouding van 1:1 nodig als je wilt dat de linkerhelft op de rechterhelft past."
+          },
+          {
+            "label": "Achtergrondafbeelding",
+            "description": "De afbeelding die binnenin de deur gaat verschijnen. Dit zal standaard het nummer van de deur zijn."
+          }
+        ]
+      },
+      "widgets": [
+        {
+          "label": "Standaard"
+        }
+      ]
+    },
+    {
+      "label": "Visual settings",
+      "description": "These options will let you configure the visual appearance.",
+      "fields": [
+        {
+          "label": "Achtergrondafbeelding van de kalender"
+        },
+        {
+          "label": "Sjabloon voor deurafbeeldingen",
+          "description": "Als er een afbeelding is ingesteld, wordt deze voor elke deur gebruikt, tenzij er voor een enkele deur een specifieke afbeelding is ingesteld."
+        },
+        {
+          "label": "Verberg de deurposten"
+        },
+        {
+          "label": "Verberg de deurnummers"
+        },
+        {
+          "label": "Verberg de deurknoppen"
+        },
+        {
+          "label": "Verbergingsdeurkozijnen"
+        },
+        {
+          "label": "Laat het sneeuwen",
+          "description": "Dit zal wat sneeuw toevoegen die voor de kalender valt. Het regent nooit in Zuid-Californië, het sneeuwt nooit op IE11."
+        }
+      ]
+    },
+    {
+      "label": "Audio settings",
+      "description": "These options will let you configure the audio appearance.",
+      "fields": [
+        {
+          "label": "Achtergrondmuziek"
+        },
+        {
+          "label": "Automatisch afspelen van de achtergrondmuziek",
+          "description": "Indien ingesteld, wordt de achtergrondmuziek automatisch afgespeeld zodra de inhoud wordt geopend. Let op: het mediabeleid van sommige browsers kan automatisch afspelen verhinderen."
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellingen",
+      "description": "Met deze opties kunt je de gedragsinstellingen overschrijven.",
+      "fields": [
+        {
+          "label": "Mode for door placement",
+          "description": "Select whether you want to set a fixed number of columns and rows for the doors or if H5P should decide dynamically depending on the available space. Note that the latter may interfere with the position of the background image and custom door cover images that should be at a particular position.",
+          "options": [
+            {
+              "label": "Fixed"
+            },
+            {
+              "label": "Dynamic"
+            }
+          ]
+        },
+        {
+          "label": "Row-to-column ratio",
+          "description": "Select how many columns and rows the calender should use.",
+          "options": [
+            {
+              "label": "6 × 4"
+            },
+            {
+              "label": "4 × 6"
+            }
+          ]
+        },
+        {
+          "label": "Willekeurige volgorde",
+          "description": "Schud de volgorde van de deuren. Als de optie \"save content state\" is ingesteld in de H5P instellingen, blijft die volgorde hetzelfde als de gebruiker later terugkomt."
+        },
+        {
+          "label": "Houd de volgorde van de afbeeldingen bij",
+          "description": "Schud de deuren, maar houd de deurbedekkingsafbeeldingen op hun vaste posities beginnend met 1 in de linkerbovenhoek tot 24 in de rechteronderhoek."
+        },
+        {
+          "label": "Ontwerp modus",
+          "description": "In de ontwerpmodus kunnen alle deuren worden geopend. Anders kunnen de deuren alleen in december worden geopend op en na de dag die is aangegeven met het deurnummer."
+        }
+      ]
+    },
+    {
+      "label": "Lokalisatie",
+      "fields": [
+        {
+          "label": "Niets te zien",
+          "default": "Er is hier niets te zien!\ud83c\udf84"
+        },
+        {
+          "label": "Dummy",
+          "default": "Dummy"
+        }
+      ]
+    },
+    {
+      "label": "Toegankelijkheid",
+      "fields": [
+        {
+          "label": "Deur",
+          "default": "Deur"
+        },
+        {
+          "label": "Gesloten",
+          "default": "Gesloten. Het is nog geen tijd om deze te openen."
+        },
+        {
+          "description": "Kondig de inhoud aan. @door is een variabele en zal worden vervangen door de bijbehorende deurbeschrijving.",
+          "label": "Inhoud van",
+          "default": "Inhoud van @door"
+        },
+        {
+          "label": "Geluid dempen",
+          "default": "Geluid dempen"
+        },
+        {
+          "label": "Geluid dempen opheffen",
+          "default": "Geluid dempen opheffen"
+        },
+        {
+          "label": "Scherm sluiten",
+          "default": "Scherm sluiten"
+        }
+      ]
+    }
+  ]
+}

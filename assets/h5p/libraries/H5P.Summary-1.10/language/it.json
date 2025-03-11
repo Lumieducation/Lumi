@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Testo di introduzione",
+      "default": "Scegli l'affermazione corretta",
+      "description": "Sarà mostrato sopra l'attività di riepilogo"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Predefinito"
+        },
+        {
+          "label": "Testuale"
+        }
+      ],
+      "label": "Riepilogo",
+      "entity": "proposizioni",
+      "field": {
+        "label": "Serie di proposizioni",
+        "fields": [
+          {
+            "label": "Elenco di proposizioni per il sommario - la prima è corretta",
+            "entity": "proposizione",
+            "field": {
+              "label": "Proposizione"
+            }
+          },
+          {
+            "label": "Suggerimento",
+            "fields": [
+              {
+                "label": "Testo del suggerimento"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback generale",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Predefinito"
+            }
+          ],
+          "label": "Specifica un feedback per ogni intervallo di punteggio",
+          "description": "Clicca sul pulsante \"Aggiungi intervallo\" per aggiungere gli intervalli che ti servono. Per esempio: 0-20%, Punteggio scarso; 21-90%, Punteggio medio; 91-100% Punteggio ottimo!",
+          "entity": "intervallo",
+          "field": {
+            "fields": [
+              {
+                "label": "Intervallo di punteggio"
+              },
+              {},
+              {
+                "label": "Feedback per un intervallo definito",
+                "placeholder": "Compila il feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Testo mostrato prima del numero di proposizioni risolte nell'attività di riepilogo",
+      "default": "Avanzamento:",
+      "description": "Sarà mostrato sopra le istruzioni. Esempio: 'Avanzamento: 2/5'"
+    },
+    {
+      "label": "Testo mostrato prima del numero di proposizioni sbagliate, selezionato nell'attività di riepilogo",
+      "default": "Risposte sbagliate:",
+      "description": "Sarà mostrato sopra le istruzioni. Esempio: 'Risposte sbagliate: 4'"
+    },
+    {
+      "label": "Intestazione del feedback di riepilogo",
+      "default": "Il tuo risultato",
+      "description": "Sarà mostrato sopra il feedback di riepilogo"
+    },
+    {
+      "label": "Testo del lettore vocale per risposta giusta",
+      "default": "Giusto"
+    },
+    {
+      "label": "Testo del lettore vocale per informare su una risposta sbagliata",
+      "default": "Sbagliato! Prova ancora"
+    },
+    {
+      "label": "Etichetta del lettore vocale per risposta sbagliata",
+      "default": "Sbagliato"
+    },
+    {
+      "label": "Elenco di etichette di risposte giuste",
+      "default": "Risposte giuste"
+    },
+    {
+      "label": "Etichetta per il pulsante \"Mostra suggerimento\"",
+      "default": "Mostra suggerimento"
+    },
+    {
+      "label": "Rappresentazione testuale sulla barra del punteggio per chi usa un lettore vocale",
+      "description": ":num e :total sono parole chiavi speciali programmaticamente aggiornate",
+      "default": "Il tuo punteggio è :num su :total"
+    },
+    {
+      "label": "Messaggio usato dai lettori vocali per comunicare l'avanzamento",
+      "description": ":num e :total sono parole chiavi speciali programmaticamente aggiornate",
+      "default": "Avanzamento: :num su :total"
+    }
+  ]
+}

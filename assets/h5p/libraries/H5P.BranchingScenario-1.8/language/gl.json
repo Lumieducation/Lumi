@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Editor de escenarios ramificados",
+      "fields": [
+        {
+          "label": "Título"
+        },
+        {
+          "label": "Pantalla de inicio",
+          "fields": [
+            {
+              "label": "Título do curso",
+              "placeholder": "Título para o teu curso"
+            },
+            {
+              "label": "Detalles do curso",
+              "placeholder": "Detalles sobre o curso"
+            },
+            {
+              "label": "Imaxe do curso"
+            },
+            {
+              "label": "Texto alternativo da imaxe"
+            }
+          ]
+        },
+        {
+          "label": "Lista de pantallas finais",
+          "field": {
+            "label": "Pantalla final",
+            "fields": [
+              {
+                "label": "Título"
+              },
+              {
+                "label": "Texto"
+              },
+              {
+                "label": "Imaxe"
+              },
+              {
+                "label": "Puntuación",
+                "description": "A puntuación enviarase a calquera LMS, LRS ou a calquera outro servizo que reciba puntuación do H5P para os usuarios que cheguen á pantalla final por defecto."
+              },
+              {
+                "label": "ID do contido"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Lista do contido do escenario ramificado",
+          "entity": "contido",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Amosar o título do contido na vista",
+                "description": "Se se selecciona, o usuario verá o título do contido na barra de contido na parte superior."
+              },
+              {
+                "label": "Texto para o botón Continuar (lonxitude máxima: 50 caracteres)",
+                "default": "Continuar"
+              },
+              {
+                "label": "Anular requirimento de rematado de contido",
+                "options": [
+                  {
+                    "label": "Usar a configuración do comportamento"
+                  },
+                  {
+                    "label": "Activado"
+                  },
+                  {
+                    "label": "Desactivado"
+                  }
+                ],
+                "description": "Anula a configuración individual para esixir que o contido estea rematado antes de activar o botón \"Continuar\". Non terá ningún efecto se o contido non indica se estaba \"acabado\", por exemplo, imaxes ou presentacións de cursos cunha soa diapositiva."
+              },
+              {},
+              {
+                "label": "Retroalimentación",
+                "fields": [
+                  {
+                    "label": "Título da retroalimentación"
+                  },
+                  {
+                    "label": "Texto de retroalimentación"
+                  },
+                  {
+                    "label": "Imaxe da retroalimentación"
+                  },
+                  {
+                    "label": "Puntuación para este escenario",
+                    "description": "A puntuación enviarase a calquera LMS, LRS ou calquera outro servizo conectado que reciba puntuacións de H5P para os usuarios que cheguen a este escenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navegar cara atrás",
+                "description": "Permite que o usuario volva atrás e vexa a pregunta ou contido anterior do escenario.",
+                "options": [
+                  {
+                    "label": "Usar a configuración do comportamento"
+                  },
+                  {
+                    "label": "Activado"
+                  },
+                  {
+                    "label": "Desactivado"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Opcións de puntuación",
+          "fields": [
+            {
+              "label": "Opcións de puntuación",
+              "description": "Selecciona o tipo de puntuación.",
+              "options": [
+                {
+                  "label": "Aplicar puntuación estática para cada pantalla final"
+                },
+                {
+                  "label": "Calcular a puntuación dinamicamente a partir das respostas do usuario"
+                },
+                {
+                  "label": "Sen puntuación"
+                }
+              ]
+            },
+            {
+              "label": "Incluir as puntuacións das interaccións dentro do Escenario Ramificado",
+              "description": "Se se activa, engadiranse as puntuacións do Vídeo Interactivo á puntuación total obtida. En caso contrario, só contarán as puntuacións especificadas nas seccións de retroalimentación dos elementos de contido, preguntas ramificadas e escenarios finais."
+            }
+          ]
+        },
+        {
+          "label": "Configuración de comportamento",
+          "fields": [
+            {
+              "label": "Navegar cara atrás",
+              "description": "Isto permitirá ao usuario volver atrás e ver o contido/pregunta anterior no escenario. Pódese anular a nivel de contido."
+            },
+            {
+              "label": "Vista obrigatoria",
+              "description": "Insta aos espectadores a completar o vídeo, o vídeo interactivo e a presentación do curso antes de continuar co escenario. Pódese anular a nivel de contido."
+            },
+            {
+              "label": "Preguntas de ramificación aleatorias",
+              "description": "As preguntas de ramificación mostraranse en orde aleatoria."
+            }
+          ]
+        },
+        {
+          "label": "Localización",
+          "fields": [
+            {
+              "label": "Texto para o botón na pantalla inicial",
+              "default": "Empezar o curso"
+            },
+            {
+              "label": "Texto para o botón na pantalla final",
+              "default": "Reiniciar o curso"
+            },
+            {
+              "label": "Texto para o botón atrás en cada pantalla da biblioteca e pregunta ramificada",
+              "default": "Atrás"
+            },
+            {
+              "label": "Texto para o botón desactivado nas pantallas da biblioteca",
+              "default": "Requirido para completar o módulo actual"
+            },
+            {
+              "label": "Texto para o botón usado para volver a reproducir o vídeo",
+              "default": "Volver a reproducir o vídeo"
+            },
+            {
+              "label": "Etiqueta para a puntuación na pantalla final",
+              "default": "A túa puntuación:"
+            },
+            {
+              "label": "Etiqueta Aria para botón de pantalla completa",
+              "default": "Pantalla completa"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

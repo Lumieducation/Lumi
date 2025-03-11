@@ -1,0 +1,224 @@
+{
+  "semantics": [
+    {
+      "label": "Média",
+      "fields": [
+        {
+          "label": "Typ",
+          "description": "Volitelná média zobrazená nad otázkou."
+        },
+        {
+          "label": "Zakázat zvětšení obrazu"
+        }
+      ]
+    },
+    {
+      "label": "Popis úlohy",
+      "placeholder": "Popište, co by vaši studenti měli dělat...",
+      "description": "Co by vaši studenti měli vědět."
+    },
+    {
+      "label": "Odstavce",
+      "entity": "odstavec",
+      "field": {
+        "label": "Odstavec"
+      }
+    },
+    {
+      "label": "Celková zpětná vazba",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Výchozí"
+            }
+          ],
+          "label": "Definujte vlastní zpětnou vazbu pro jakýkoli rozsah skóre",
+          "description": "Klepnutím na tlačítko \"Přidat rozsah\" přidáte libovolný počet rozsahů. Příklad: 0-20% špatné skóre, 21-91% průměrné skóre, 91-100% výborné skóre!",
+          "entity": "rozsah",
+          "field": {
+            "fields": [
+              {
+                "label": "Rozsah skóre"
+              },
+              {},
+              {
+                "label": "Zpětná vazba pro definovaný rozsah skóre",
+                "placeholder": "Vyplňte zpětnou vazbu"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Nastavení chování",
+      "description": "Tyto možnosti vám umožní řídit, jak se bude úloha chovat.",
+      "fields": [
+        {
+          "label": "Bodovací režim",
+          "description": "Rozhodněte se, zda udělit body za každý správně umístěný odstavec nebo za každý odstavec, který je umístěn za odstavcem, za kterým má být umístěn („správné pořadí“)",
+          "options": [
+            {
+              "label": "Správná sekvence"
+            },
+            {
+              "label": "Správně umístěný odstavec"
+            }
+          ]
+        },
+        {
+          "label": "Použití sankcí",
+          "description": "Rozhodněte se, zda chcete redukovat bod za každý odstavec, který není správně umístěn."
+        },
+        {
+          "label": "Duplicitní odstavce jsou zaměnitelné",
+          "description": "Je-li nastaveno, při kontrole odpovědi budou duplicitní odstavce považovány za identické, pokud je jejich prostý text stejný."
+        },
+        {
+          "label": "Přidat tlačítka pro pohyb",
+          "description": "Na mobilních zařízeních mohou tlačítka pro přesouvání odstavců nabídnout další výhodu usnadnění. Pokud chcete, můžete je deaktivovat zde."
+        },
+        {
+          "label": "Povolit tlačítko \"Opakovat\""
+        },
+        {
+          "label": "Povolit tlačítko \"Zobrazit řešení\""
+        }
+      ]
+    },
+    {
+      "label": "Uživatelské rozhraní",
+      "fields": [
+        {
+          "label": "Popis tlačítka \"Zkontrolovat\"",
+          "default": "Zkontrolovat"
+        },
+        {
+          "label": "Text pro tlačítko \"Odevzdat\"",
+          "default": "Odeslat"
+        },
+        {
+          "label": "Text pro tlačítko \"Opakovat\"",
+          "default": "Opakovat"
+        },
+        {
+          "label": "Text tlačítka \"Zobrazit řešení\"",
+          "default": "Zobrazit řešení"
+        },
+        {
+          "label": "Název tlačítka „Nahoru“",
+          "default": "Nahoru"
+        },
+        {
+          "label": "Název tlačítka \"Dolů\"",
+          "default": "Dolů"
+        },
+        {
+          "label": "Název tlačítka, že je zakázáno",
+          "default": "Zakázáno"
+        }
+      ]
+    },
+    {
+      "label": "Čtecí zařízení",
+      "fields": [
+        {
+          "label": "Popisek podpůrné technologie pro tlačítko \"Zkontrolovat\"",
+          "default": "Zkontrolovat odpovědi. Odpovědi budou označeny jako správné nebo nesprávné."
+        },
+        {
+          "label": "Popisek podpůrné technologie pro tlačítko „Zobrazit řešení“",
+          "default": "Zobrazit řešení. Zobrazí se správné řešení."
+        },
+        {
+          "label": "Popisek podpůrné technologie pro tlačítko „Opakovat“",
+          "default": "Zopakovat úkol. Resetovat všechny prvky a spustit úlohu znovu."
+        },
+        {
+          "label": "Váš výsledek",
+          "description": "@score bude nahrazeno počtem bodů. @total bude nahrazeno maximálním možným počtem bodů.",
+          "default": "Získal jste @score z @total bodů"
+        },
+        {
+          "label": "Popis seznamu",
+          "default": "Tříditelný seznam odstavců."
+        },
+        {
+          "label": "Popis seznamu (kontrola odpovědi)",
+          "default": "Seznam odstavců s výsledky."
+        },
+        {
+          "label": "Popis seznamu (ukázat řešení)",
+          "default": "Seznam odstavců s řešeními."
+        },
+        {
+          "label": "Odstavec",
+          "default": "Odstavec"
+        },
+        {
+          "label": "Správně",
+          "default": "správně"
+        },
+        {
+          "label": "Špatně",
+          "default": "špatně"
+        },
+        {
+          "description": "@score bude nahrazeno 1 nebo -1.",
+          "label": "Vysvětlení skóre",
+          "default": "@score bodů"
+        },
+        {
+          "description": "@current bude nahrazeno aktuálním číslem odstavce. @total bude nahrazeno počtem odstavců.",
+          "label": "Číslování odstavců",
+          "default": "@current z @total"
+        },
+        {
+          "description": "Bude následovat \"Číslování odstavců\".",
+          "label": "Aktuální pozice v seznamu",
+          "default": "Aktuální pozice v seznamu"
+        },
+        {
+          "label": "Pokyn při výběru odstavce",
+          "default": "Stisknutím mezerníku změníte pořadí"
+        },
+        {
+          "label": "Pokyn při zachycení odstavce",
+          "default": "Stisknutím kláves se šipkami nahoru a dolů změníte polohu, mezerníkem jej upustíte, stisknutím klávesy Escape zrušíte"
+        },
+        {
+          "label": "Zachyceno",
+          "default": "Zachyceno"
+        },
+        {
+          "label": "Přesunuto",
+          "default": "Přesunuto"
+        },
+        {
+          "label": "Umístěno",
+          "default": "Umístěno"
+        },
+        {
+          "label": "Změna řazení zrušena",
+          "default": "Změna řazení zrušena"
+        },
+        {
+          "description": "Bude následovat \"Číslování odstavců\".",
+          "label": "Konečná pozice",
+          "default": "Konečná pozice"
+        },
+        {
+          "description": "Bude následovat „správně“ nebo „špatně“.",
+          "label": "Další odstavec",
+          "default": "Další odstavec"
+        },
+        {
+          "description": "Bude následovat \"Číslování odstavců\".",
+          "label": "Opravit odstavec",
+          "default": "Opravit odstavec na pozici"
+        }
+      ]
+    }
+  ]
+}

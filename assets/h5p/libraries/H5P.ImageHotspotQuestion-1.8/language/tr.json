@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Görüntü Etkin Nokta Soru Düzenleyici",
+      "fields": [
+        {
+          "label": "Arkaplan resmi",
+          "fields": [
+            {
+              "label": "Arkaplan resmi",
+              "description": "Resim etkin noktası sorusu için arka plan olarak kullanmak üzere bir resim seçin."
+            }
+          ]
+        },
+        {
+          "label": "Hotspots",
+          "description": "Yeni bir etkin nokta oluşturmak için araç çubuğundan istediğiniz şekli sürükleyip bırakın. Mevcut bir etkin noktayı düzenlemek için çift tıklayın. Taşımak için etkin noktayı sürükleyin. Yeniden boyutlandırmak için sağ alt köşedeki yeniden boyutlandırma işleyicisini çekin.",
+          "fields": [
+            {
+              "label": "Görev tanımı",
+              "description": "Kullanıcı için talimatlar."
+            },
+            {
+              "label": "Hotspot",
+              "entity": "Hotspot",
+              "field": {
+                "label": "Hotspot",
+                "fields": [
+                  {
+                    "label": "userSettings",
+                    "fields": [
+                      {
+                        "label": "Doğru",
+                        "description": "Birden fazla doğru etkin nokta olabilir. Ancak kullanıcı ilk tıklamadan hemen sonra doğru/yanlış geri bildirim alır."
+                      },
+                      {
+                        "label": "Geribildirim"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "computedSettings"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Kullanıcı boş bir yer seçerse geri bildirim:",
+              "placeholder": "You didn't locate any hotspots, try again!"
+            },
+            {
+              "label": "Geri bildirimi açılır pencere olarak göster"
+            },
+            {
+              "label": "Yerelleştirme",
+              "fields": [
+                {
+                  "label": "Yeniden dene düğmesi metni",
+                  "default": "Yeniden dene"
+                },
+                {
+                  "label": "Düğme metnini kapat",
+                  "default": "Kapat"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Okuma hoparlörü kullananlar için puan çubuğunun metinsel gösterimi",
+      "default": "You got :num out of :total points"
+    },
+    {
+      "label": "\"Tekrar Dene\" düğmesi için yardımcı teknoloji açıklaması",
+      "default": "Görevi yeniden deneyin. Tüm yanıtları sıfırlayın ve görevi yeniden başlatın."
+    }
+  ]
+}

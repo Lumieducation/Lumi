@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Arvjoonise tüüp",
+      "options": [
+        {
+          "label": "Sektorjoonis"
+        },
+        {
+          "label": "Tulpjoonis"
+        }
+      ]
+    },
+    {
+      "label": "Andmeelemendid",
+      "entity": "valik",
+      "field": {
+        "label": "Andmeelement",
+        "fields": [
+          {
+            "label": "Nimi"
+          },
+          {
+            "label": "Väärtus"
+          },
+          {
+            "label": "Värv"
+          },
+          {
+            "label": "Fondi värv"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Tekstilugeri loetud tekst, mis määratleb pildi arvjoonisena.",
+      "default": "Arvjoonis"
+    }
+  ]
+}

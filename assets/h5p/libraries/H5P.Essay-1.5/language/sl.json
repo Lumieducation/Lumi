@@ -1,0 +1,299 @@
+{
+  "semantics": [
+    {
+      "label": "Mediji",
+      "fields": [
+        {
+          "label": "Tip",
+          "description": "Neobvezna nastavitev dodatnega medija za prikaz nad vprašanjem."
+        },
+        {
+          "label": "Onemogoči povečavo slike"
+        }
+      ]
+    },
+    {
+      "label": "Navodilo udeležencem",
+      "description": "Opis reševanja zadane naloge.",
+      "placeholder": "Povzemi knjigo v 500 znakih ..."
+    },
+    {
+      "label": "Pomoč udeležencem",
+      "description": "Besedilo udeležencem pomaga pri začetku pisanja.",
+      "placeholder": "Ta knjiga opisuje ..."
+    },
+    {
+      "label": "Vzorčni primer rešitve",
+      "description": "Neobvezen primer besedila, ki se udeležencu prikaže po lastnem vnosu. Gre za vzorec, saj enoznačna rešitev najverjetneje ne obstaja.",
+      "fields": [
+        {
+          "label": "Pojasnilo",
+          "description": "Neobvezno pojasnilo vzorčnega primera. Prikazano je le, če je na voljo tudi primer.",
+          "placeholder": "Esej ne zahteva popolnoma enakega vnosa. To je zgolj vzorčen primer besedila, ki bi bil ustrezen."
+        },
+        {
+          "label": "Besedilo vzorčnega primera",
+          "description": "Udeležencu se prikaže po izbiri gumba \"Prikaži rešitev\"."
+        }
+      ]
+    },
+    {
+      "label": "Ključne besede",
+      "widgets": [
+        {
+          "label": "Privzeto"
+        }
+      ],
+      "entity": "ključno besedo",
+      "field": {
+        "label": "Ključna beseda",
+        "fields": [
+          {
+            "label": "Ključna beseda",
+            "description": "Iskana ključna beseda ali besedna zveza. Zvezdica '*' nadomesti en ali več znakov. Regularne izraze se na vsaki strani omeji s poševnicama '/'."
+          },
+          {
+            "label": "Alternative",
+            "description": "Neobvezne alternative za ključno besedo, ki se štejejo kot enako pravilen odgovor. Primer: 'besedilo' se lahko zapiše tudi kot 'tekst'.",
+            "entity": "alternativa",
+            "field": {
+              "label": "Alternativa ključne besede"
+            }
+          },
+          {
+            "label": "Točke, možnosti in povratna informacija",
+            "fields": [
+              {
+                "label": "Točke",
+                "description": "Prejete točke za vključeno ključno besedo oz. alternative."
+              },
+              {
+                "label": "Pojavitve",
+                "description": "Število pojavitev, ko se posamezna ključna beseda točkuje."
+              },
+              {
+                "label": "Loči velike/male črke",
+                "description": "Razlikuje med zapisom v velikih ali malih tiskanih črkah."
+              },
+              {
+                "label": "Toleriraj manjše napake",
+                "description": "Nastavitev tolerance in upoštevanje pravilnosti odgovora kljub manjšim napakam (npr. 1 napačen znak v besedah med 3 do 9 znaki, 2 napačna znaka v besedah dolgih nad 9 znakov)."
+              },
+              {
+                "label": "Povratna informacija ob vnosu ključne besede",
+                "description": "Povratna informacija se prikaže, če udeleženec v odgovoru vnese ključno besedo."
+              },
+              {
+                "label": "Povratna informacija ob manjkajoči ključni besedi",
+                "description": "Povratna informacija se prikaže, če udeleženec v odgovoru ne vnese ključne besede."
+              },
+              {
+                "label": "Odgovora ob najdeni ključni besedi",
+                "description": "Izbran odgovor je prikazan pred povratno informacijo, ko je najdena tudi ključna beseda.",
+                "options": [
+                  {
+                    "label": "ključna beseda"
+                  },
+                  {
+                    "label": "najdena alternativa ključne besede"
+                  },
+                  {
+                    "label": "upoštevan odgovor udeleženca"
+                  },
+                  {
+                    "label": "prazno polje"
+                  }
+                ]
+              },
+              {
+                "label": "Odgovor ob manjkajoči ključni besedi",
+                "description": "Izbran odgovor je prikazan pred povratno informacijo, ko ključna beseda manjka.",
+                "options": [
+                  {
+                    "label": "ključna beseda"
+                  },
+                  {
+                    "label": "prazno polje"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Splošna povratna informacija",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Privzeto"
+            }
+          ],
+          "label": "Določi ločeno povratno informacijo za vsak razpon rezultatov",
+          "description": "Kliknite gumb \"Dodaj razpon\" za dodajanje dodatnih razponov. Primer: 0-20 % Slab rezultat, 21-91 % Povprečen rezultat, 91-100 % Odličen rezultat!",
+          "entity": "razpon",
+          "field": {
+            "fields": [
+              {
+                "label": "Razpon rezultatov"
+              },
+              {},
+              {
+                "label": "Povratna informacija za definiran razpon rezultatov",
+                "placeholder": "Vnesite povratno informacijo"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Nastavitve interakcije",
+      "description": "Nastavitve omogočajo nadzor nad interakcijo aktivnosti za udeležence.",
+      "fields": [
+        {
+          "label": "Najmanjše število znakov",
+          "description": "Določitev dolžine najmanjšega dovoljenega obsega besedila."
+        },
+        {
+          "label": "Največje število znakov",
+          "description": "Določitev dolžine največjega dovoljenega obsega besedila."
+        },
+        {
+          "label": "Velikost vnosnega polja",
+          "description": "Velikost določa število vrstic vnosnega polja",
+          "options": [
+            {
+              "label": "1 vrstica"
+            },
+            {
+              "label": "3 vrstice"
+            },
+            {
+              "label": "10 vrstic"
+            }
+          ]
+        },
+        {
+          "label": "Omogoči gumb \"Poskusi ponovno\"",
+          "description": "Udeležencem je dovoljen ponoven vnos besedila."
+        },
+        {
+          "label": "Ne točkuj",
+          "description": "Udeležencem se pokažejo zgolj povratne informacije. Vnos se ne točkuje."
+        },
+        {
+          "label": "Točke v učnem okolju",
+          "description": "Točke so podeljene zgolj za beleženje odgovora in udeležencu niso prikazane."
+        },
+        {
+          "label": "Prag za napredovanje",
+          "description": "Odstotek, ki je potreben za uspešen zaključek naloge."
+        },
+        {
+          "label": "Prag za obvladanje vsebine",
+          "description": "Odstotek, ki je potreben za obvladanje vsebine. Odstotek nižji od 100% bo sorazmerno prilagodil tudi največje možno število točk. Nastavitev je namenjena za pridobitev manevrskega prostora udeležencev in ne za nižanje standardov znanja."
+        },
+        {
+          "label": "Privzeto loči velike/male črke",
+          "description": "Nastavitev vpliva na vse vnesene ključne besede (npr. onemogočeno povsod, omogočeno individualno).",
+          "options": [
+            {
+              "label": "Omogočeno"
+            },
+            {
+              "label": "Onemogočeno"
+            }
+          ]
+        },
+        {
+          "label": "Privzeto toleriraj manjše napake",
+          "description": "Nastavitev vpliva na vse vnesene ključne besede (npr. onemogočeno povsod, omogočeno individualno).",
+          "options": [
+            {
+              "label": "Omogočeno"
+            },
+            {
+              "label": "Onemogočeno"
+            }
+          ]
+        },
+        {
+          "label": "Replacement for line breaks",
+          "description": "By default, line breaks will be replaced with a space character. If you want to check for line breaks, e.g. in regular expressions, you can set a different replacement here.",
+          "options": [
+            {
+              "label": "space"
+            },
+            {
+              "label": "line break (\\n)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Besedilo za gumb \"Preveri\"",
+      "default": "Preveri"
+    },
+    {
+      "label": "Besedilo za gumb \"Oddaj\"",
+      "default": "Oddaj"
+    },
+    {
+      "label": "Besedilo za gumb \"Poskusi ponovno\"",
+      "default": "Poskusi ponovno"
+    },
+    {
+      "label": "Besedilo za gumb \"Prikaži rešitev\"",
+      "default": "Prikaži rešitev"
+    },
+    {
+      "label": "Naslov pogovornega okna s povratno informacijo o vključenih/manjkajočih besedah",
+      "default": "Povratna informacija"
+    },
+    {
+      "label": "Besedilo za naslov vzorčnega primera rešitve",
+      "default": "Vzorčni primer rešitve"
+    },
+    {
+      "label": "Števec preostalih znakov",
+      "default": "Preostalo število znakov: @chars",
+      "description": "Sporočilo o preostalem številu znakov za besedilo odgovora. @chars je spremenljivka."
+    },
+    {
+      "label": "Premalo znakov",
+      "default": "Besedilo mora vsebovati najmanj naslednje število znakov: @chars",
+      "description": "Sporočilo o nedoseganju najmanjšega števila znakov za besedilo odgovora. @chars je spremenljivka."
+    },
+    {
+      "label": "Sporočilo o shranjenem odgovoru",
+      "description": "Besedilo udeležencu potrdi oddajo odgovora.",
+      "default": "shranjeno"
+    },
+    {
+      "label": "Oddan odgovor (ni prikazano)",
+      "description": "Besedilo je namenjeno bralnikom zaslona. @score in @total sta spremenljivki.",
+      "default": "Seštevek točk: @score od @total"
+    },
+    {
+      "label": "Sporočilo o navigaciji po oknu (ni prikazano)",
+      "description": "Besedilo je namenjeno bralnikom zaslona.",
+      "default": "Pomaknjeno do na novo vključenega vzorčnega primera."
+    },
+    {
+      "label": "Besedilo opisa gumba \"Preveri\" za bralnike zaslona",
+      "default": "Preveri odgovore."
+    },
+    {
+      "label": "Besedilo opisa gumba \"Prikaži rešitev\" za bralnike zaslona",
+      "default": "Prikaže vzorčno rešitev naloge."
+    },
+    {
+      "label": "Besedilo opisa gumba \"Poskusi ponovno\" za bralnike zaslona",
+      "default": "Omogoči ponoven poskus in nadgradnjo odgovora."
+    }
+  ]
+}

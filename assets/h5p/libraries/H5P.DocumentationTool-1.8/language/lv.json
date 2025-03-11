@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "default": "Dokumentācijas rīks",
+      "description": "Dokumentācijas rīka nosaukums.",
+      "label": "Virsraksts"
+    },
+    {
+      "label": "Elementi",
+      "widgets": [
+        {
+          "label": "Pēc noklusējuma"
+        }
+      ],
+      "entity": "lapa",
+      "field": {
+        "label": "Lapas tips",
+        "description": "Šī slaida bibliotēka."
+      }
+    },
+    {
+      "label": "Lokalizēt dokumentācijas rīka pogas",
+      "fields": [
+        {
+          "default": "Iepriekšējais documentation step",
+          "label": "Pogas \"Iepriekšējais\" birka"
+        },
+        {
+          "label": "Pogas \"Nākamais\" birka",
+          "default": "Nākamais documentation step"
+        },
+        {
+          "label": "Pogas \"Aizvērt\" birka",
+          "default": "Aizvērt"
+        }
+      ]
+    }
+  ]
+}

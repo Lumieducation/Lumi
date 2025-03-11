@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Descrição da tarefa",
+      "description": "Coloque aqui o título/instruções que você gostaria de mostrar acima da imagem antes/depois.",
+      "placeholder": "Aqui você pode adicionar um título opcional e/ou instruções."
+    },
+    {
+      "label": "Primeira imagem",
+      "fields": [
+        {
+          "label": "Primeira imagem",
+          "description": "Por favor, certifique-se de que a primeira imagem tem o mesmo tamanho que a segunda."
+        },
+        {
+          "label": "Rótulo para a primeira imagem",
+          "description": "Rótulo para colocar sobre a primeira imagem"
+        }
+      ]
+    },
+    {
+      "label": "Segunda imagem",
+      "fields": [
+        {
+          "label": "Segunda imagem",
+          "description": "Por favor, certifique-se de que a segunda imagem tem o mesmo tamanho que a primeira."
+        },
+        {
+          "label": "Rótulo para a segunda imagem",
+          "description": "Rótulo para colocar sobre a segunda imagem"
+        }
+      ]
+    },
+    {
+      "label": "Configurações comportamentais",
+      "description": "Essas opções permitirão que você defina alguns detalhes",
+      "fields": [
+        {
+          "label": "Posição inicial do controle deslizante em porcentagem (%)",
+          "description": "Define a posição inicial do controle deslizante"
+        },
+        {
+          "label": "Orientação do controle deslizante",
+          "description": "A horizontal move-se para a esquerda e para a direita, a vertical move-se para cima e para baixo.",
+          "options": [
+            {
+              "label": "Horizontal"
+            },
+            {
+              "label": "Vertical"
+            }
+          ]
+        },
+        {
+          "label": "Cor do controle deslizante",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Image visible message",
+          "default": "Image @percentage % visible",
+          "description": "@percentage is a placeholder and will be replaced with the respective value."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

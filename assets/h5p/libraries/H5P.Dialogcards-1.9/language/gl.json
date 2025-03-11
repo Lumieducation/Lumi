@@ -1,0 +1,219 @@
+{
+  "semantics": [
+    {
+      "label": "Cabeceira"
+    },
+    {
+      "label": "Modo",
+      "description": "Xeito de presentación das tarxetas de diálogo",
+      "options": [
+        {
+          "label": "Normal"
+        },
+        {
+          "label": "Repetición"
+        }
+      ]
+    },
+    {
+      "label": "Descrición da tarefa"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
+      "label": "Diálogos",
+      "entity": "diálogo",
+      "field": {
+        "label": "Pregunta",
+        "fields": [
+          {
+            "label": "Texto",
+            "description": "Pista para a primeira parte do diálogo"
+          },
+          {
+            "label": "Resposta",
+            "description": "Pista para a segunda parte do diálogo"
+          },
+          {
+            "label": "Imaxe",
+            "description": "Imaxe opcional para a tarxeta. (Unha tarxeta pode usar só unha imaxe, só texto ou ambos)"
+          },
+          {
+            "label": "Texto alternativo para a imaxe"
+          },
+          {
+            "label": "Arquivos de audio"
+          },
+          {
+            "label": "Pistas",
+            "fields": [
+              {
+                "label": "Pista para o texto",
+                "description": "Pista para a primeira parte do diálogo"
+              },
+              {
+                "label": "Pista para a resposta",
+                "description": "Pista para a segunda parte do diálogo"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Configuración do comportamento",
+      "description": "Estas opcións permitiranche controlar o comportamento da tarefa.",
+      "fields": [
+        {
+          "label": "Activar o botón \"Tentar de novo\""
+        },
+        {
+          "label": "Desactivar a navegación cara atrás",
+          "description": "Esta opción só permite o movemento cara adiante nas Tarxetas de Diálogo"
+        },
+        {
+          "label": "Escalar o texto para que colla dentro da tarxeta",
+          "description": "Se está opción está desactivada, a tarxeta adaptará o seu tamaño ao tamaño do texto"
+        },
+        {
+          "label": "Facer aleatorias as tarxetas",
+          "description": "Permite facer aleatoria a orde das tarxetas amosadas."
+        },
+        {
+          "label": "Nivel máximo de perfección"
+        },
+        {
+          "label": "Permite o progreso rápido",
+          "description": "Se esta opción está activa, o usuario pode indicar que coñece unha tarxeta sen xirala"
+        }
+      ]
+    },
+    {
+      "label": "Texto para o botón xirar",
+      "default": "Xirar"
+    },
+    {
+      "label": "Texto para o botón seguinte",
+      "default": "Seguinte"
+    },
+    {
+      "label": "Texto para o botón anterior",
+      "default": "Anterior"
+    },
+    {
+      "label": "Texto para o botón reintentar",
+      "default": "Tentar de novo"
+    },
+    {
+      "label": "Texto para o botón \"resposta correcta\"",
+      "default": "Saíume ben!"
+    },
+    {
+      "label": "Texto para o botón \"resposta incorrecta\"",
+      "default": "Saíume mal"
+    },
+    {
+      "label": "Texto para a mensaxe \"Rolda\" baixo as tarxetas na pantalla de resumo",
+      "description": "Substituirase @round polo número da rolda actual",
+      "default": "Rolda @round"
+    },
+    {
+      "label": "Texto para a mensaxe \"Tarxetas restantes\"",
+      "description": "Substituirase @number polo número de tarxetas restantes nesta rolda",
+      "default": "Tarxetas restantes: @number"
+    },
+    {
+      "label": "Texto para o botón \"seguinte rolda\"",
+      "description": "Substituirase @round polo número da rolda actual",
+      "default": "Continuar á rolda @round"
+    },
+    {
+      "label": "Texto para o botón\"Volver a empezar\"",
+      "default": "Volver a empezar"
+    },
+    {
+      "label": "Texto para o botón \"Amosar resumo\"",
+      "default": "Seguinte"
+    },
+    {
+      "label": "Texto do título da pantalla de resumo",
+      "default": "Resumo"
+    },
+    {
+      "label": "Texto para \"Tarxetas que acertaches:\"",
+      "default": "Tarxetas que acertaches:"
+    },
+    {
+      "label": "Texto para \"Tarxetas que fallaches:\"",
+      "default": "Tarxetas que fallaches:"
+    },
+    {
+      "label": "Texto para \"Tarxetas non amosadas:\"",
+      "default": "Tarxetas non amosadas:"
+    },
+    {
+      "label": "Texto para \"Puntuación Xeral\"",
+      "default": "Puntuación Xeral"
+    },
+    {
+      "label": "Texto para \"Tarxetas Completadas\"",
+      "default": "Tarxetas completadas:"
+    },
+    {
+      "label": "Texto para \"Roldas completadas:\"",
+      "default": "Roldas completadas:"
+    },
+    {
+      "label": "Mensaxe para cando o usuario aprende todas as tarxetas perfectamente",
+      "description": "Substituirase @cards polo número total de tarxetas. Substituirase @max polo nivel máximo de perfección.",
+      "default": "Ben feito! Acertaches todas as tarxetas @max veces seguidas!"
+    },
+    {
+      "label": "Texto de progreso",
+      "description": "As variables dispoñibles son @card e @total.",
+      "default": "Tarxeta @card de @total"
+    },
+    {
+      "label": "Etiqueta para o texto da tarxeta",
+      "description": "Usado polas tecnoloxías de asistencia",
+      "default": "Anverso da tarxeta"
+    },
+    {
+      "label": "Etiqueta para o reverso da tarxeta",
+      "description": "Usado polas tecnoloxías de asistencia",
+      "default": "Reverso da tarxeta"
+    },
+    {
+      "label": "Etiqueta para o botón amosar pista",
+      "default": "Amosar pista"
+    },
+    {
+      "label": "Mensaxe de audio non soportado",
+      "default": "O teu navegador non soporta este audio"
+    },
+    {
+      "label": "Diálogo de confirmación para empezar de novo",
+      "fields": [
+        {
+          "label": "Texto da cabeceira",
+          "default": "Empezar de novo?"
+        },
+        {
+          "label": "Texto do corpo",
+          "default": "Perderás todo o teu progreso. Estás seguro de que queres empezar de novo?"
+        },
+        {
+          "label": "Etiqueta do botón Cancelar",
+          "default": "Cancelar"
+        },
+        {
+          "label": "Etiqueta do botón Confirmar",
+          "default": "Empezar de novo"
+        }
+      ]
+    }
+  ]
+}

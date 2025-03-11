@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Descripción de campodeentrada",
+      "description": "Descripción de lo que debería ingresar el usuario."
+    },
+    {
+      "label": "Texto remplazable",
+      "description": "Un texto reemplazable para el usuario."
+    },
+    {
+      "label": "Longitud máxima del texto",
+      "description": "Número máximo de caracteres para el texto."
+    },
+    {
+      "label": "Tamaño del campo de entrada",
+      "description": "El tamaño del campo de entrada en número de líneas que cubrirá.",
+      "options": [
+        {
+          "label": "1 línea"
+        },
+        {
+          "label": "3 líneas"
+        },
+        {
+          "label": "10 líneas"
+        }
+      ]
+    },
+    {
+      "label": "Campo requerido",
+      "description": "Seleccionar para hacer este campo requerido; el usuario debe contestar todos los campos requeridos para poder exportar un documento."
+    },
+    {
+      "label": "Caracteres restantes",
+      "default": "Caracteres restantes: @chars",
+      "description": "Mensaje para caracteres restantes. Usted puede usar @chars que será remplazado por el número correspondiente."
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "name": "description",
+    "label": "Description",
+    "importance": "medium",
+    "type": "text",
+    "widget": "html",
+    "description": "Description of the goals assessment page.",
+    "default": "Rate the goals that you have chosen in the goals page.",
+    "enterMode": "p",
+    "tags": [
+      "strong",
+      "em",
+      "u",
+      "a",
+      "ul",
+      "ol",
+      "h2",
+      "h3",
+      "hr",
+      "pre",
+      "code"
+    ],
+    "optional": true
+  },
+  {
+    "name": "lowRating",
+    "label": "Low rating text",
+    "importance": "low",
+    "type": "text",
+    "description": "Text for worst rating.",
+    "default": "Learned little"
+  },
+  {
+    "name": "midRating",
+    "label": "Medium rating text",
+    "importance": "low",
+    "type": "text",
+    "description": "Text for middle rating.",
+    "default": "Learned something"
+  },
+  {
+    "name": "highRating",
+    "label": "High rating text",
+    "importance": "low",
+    "type": "text",
+    "description": "Text for great rating.",
+    "default": "Learned a lot"
+  },
+  {
+    "name": "noGoalsText",
+    "label": "No goals text",
+    "importance": "low",
+    "type": "text",
+    "description": "Feedback text when no goals have been created.",
+    "default": "You have not chosen any goals yet."
+  },
+  {
+    "name": "helpTextLabel",
+    "label": "Label for help text",
+    "importance": "low",
+    "type": "text",
+    "description": "Label for showing additional helpful information to the user.",
+    "default": "More information"
+  },
+  {
+    "name": "helpText",
+    "label": "Fill in additional help information",
+    "importance": "low",
+    "type": "text",
+    "widget": "html",
+    "description": "Here you can fill in additional helpful information for the user.",
+    "enterMode": "p",
+    "optional": true,
+    "tags": [
+      "strong",
+      "em",
+      "u",
+      "a",
+      "ul",
+      "ol",
+      "h2",
+      "h3",
+      "hr",
+      "pre",
+      "code"
+    ]
+  },
+  {
+    "name": "legendHeader",
+    "label": "Legend header",
+    "importance": "low",
+    "type": "text",
+    "default": "Possible ratings:"
+  },
+  {
+    "name": "goalHeader",
+    "label": "Goal header",
+    "importance": "low",
+    "type": "text",
+    "default": "Goals"
+  },
+  {
+    "name": "ratingHeader",
+    "label": "Rating header",
+    "importance": "low",
+    "type": "text",
+    "default": "Rating"
+  }
+]

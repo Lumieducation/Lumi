@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Descripción del trabajo",
+      "description": "Ponga el encabezado / las instrucciones que le gustaría mostrar arriba de la imagen de antes/después de aquí.",
+      "placeholder": "Aquí puede añadir un encabezado opcional o instrucciones."
+    },
+    {
+      "label": "Primera imagen",
+      "fields": [
+        {
+          "label": "Primera imagen",
+          "description": "La primera imagen. Por favor asegúrese de que tenga el mismo tamaño que la segunda imagen."
+        },
+        {
+          "label": "Etiqueta para la primera imagen",
+          "description": "Etiqueta para poner sobre la primera imagen"
+        }
+      ]
+    },
+    {
+      "label": "Segunda imagen",
+      "fields": [
+        {
+          "label": "Segunda imagen",
+          "description": "La segunda imagen. Por favor, asegúrese de que tenga el mismo tamaño que la primera imagen."
+        },
+        {
+          "label": "Etiqueta para la segunda imagen",
+          "description": "Etiqueta para poner sobre la segunda imagen"
+        }
+      ]
+    },
+    {
+      "label": "Configuraciones del comportamiento",
+      "description": "Estas opciones le permitirán establecer algunos detalles",
+      "fields": [
+        {
+          "label": "Posición de inicio del control deslizante en %",
+          "description": "Configura la posición inicial del control deslizante"
+        },
+        {
+          "label": "Orientación del control deslizante",
+          "description": "Horizontal moverá izquierda y derecha, vertical moverá arriba y abajo.",
+          "options": [
+            {
+              "label": "Horizontal"
+            },
+            {
+              "label": "Vertical"
+            }
+          ]
+        },
+        {
+          "label": "Color del control deslizante",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Textos de accesibilidad",
+      "fields": [
+        {
+          "label": "Mensaje imagen visible",
+          "default": "El @percentage % de la imagen es visible",
+          "description": "@percentage es un reemplazable que será remplazado con el valor respectivo."
+        },
+        {
+          "label": "Maniquí"
+        }
+      ]
+    }
+  ]
+}

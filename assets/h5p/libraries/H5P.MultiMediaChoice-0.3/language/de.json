@@ -1,0 +1,256 @@
+{
+  "semantics": [
+    {
+      "label": "Medium",
+      "fields": [
+        {
+          "label": "Typ",
+          "description": "Medium, das wahlweise oberhalb der Aufgabe angezeigt wird."
+        },
+        {
+          "label": "Bild-Zoom deaktivieren"
+        }
+      ]
+    },
+    {
+      "label": "Frage"
+    },
+    {
+      "label": "Verfügbare Optionen",
+      "entity": "Option",
+      "field": {
+        "label": "Option",
+        "fields": [
+          {
+            "label": "Medium",
+            "description": "Media to display as a choice."
+          },
+          {
+            "label": "Poster image"
+          },
+          {
+            "label": "Richtig"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Gesamtrückmeldung",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Voreinstellung"
+            }
+          ],
+          "label": "Lege Rückmeldungen für einzelne Punktebereiche fest",
+          "description": "Klicke auf den \"Bereich hinzufügen\"-Button, um so viele Bereiche hinzuzufügen, wie du brauchst. Beispiel: 0-20% Schlechte Punktzahl, 21-91% Durchschnittliche Punktzahl, 91-100% Großartige Punktzahl!",
+          "entity": "Bereich",
+          "field": {
+            "fields": [
+              {
+                "label": "Punktebereich"
+              },
+              {},
+              {
+                "label": "Rückmeldung für jeweiligen Punktebereich",
+                "placeholder": "Trage die Rückmeldung ein"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "description": "Diese Optionen kontrollieren, wie sich die Aufgabe verhält.",
+      "fields": [
+        {
+          "label": "\"Wiederholen\"-Button anzeigen"
+        },
+        {
+          "label": "\"Lösung zeigen\"-Button anzeigen"
+        },
+        {
+          "label": "Zeige Bestätigungsdialog bei \"Überprüfen\""
+        },
+        {
+          "label": "Zeige Bestätigungsdialog bei \"Wiederholen\""
+        },
+        {
+          "label": "Gib einen Punkt für die ganze Aufgabe",
+          "description": "Vergibt einen Punkt für die Aufgabe, falls der prozentuale Punktestand größer ist als der zum Bestehen benötigte"
+        },
+        {
+          "label": "Lösung wird erst angezeigt, wenn eine Antwort eingegeben wurde"
+        },
+        {
+          "label": "Frageart",
+          "description": "Wähle Aussehen und Verhalten der Frage.",
+          "options": [
+            {
+              "label": "Automatisch"
+            },
+            {
+              "label": "Multiple Choice (Checkboxen)"
+            },
+            {
+              "label": "Single Choice (Radio Buttons)"
+            }
+          ]
+        },
+        {
+          "label": "Seitenverhältnis",
+          "description": "Wähle das Seitenverhältnis der Alternativen",
+          "options": [
+            {
+              "label": "Automatisch"
+            },
+            {
+              "label": "16:9"
+            },
+            {
+              "label": "4:3"
+            },
+            {
+              "label": "3:2"
+            },
+            {
+              "label": "1:1"
+            }
+          ]
+        },
+        {
+          "label": "Maximale Zahl der Alternativen pro Zeile",
+          "description": "Setze die maximale Zahl der Alternativen pro Zeile, um eine gute Optik zu gewährleisten.",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "3"
+            },
+            {
+              "label": "4"
+            }
+          ]
+        },
+        {
+          "label": "Prozentsatz zum Bestehen",
+          "description": "Diese Einstellung hat oft keinen Effekt. Wenn aktiviert ist, dass es nur einen einzigen Punkt für die ganze Aufgabe gibt, dann beschreibt die Einstellung den Prozentsatz der Gesamtpunktzahl, die zum Erhalt eines Punktes nötig ist und für \"result.success\" in xAPI-Statements."
+        }
+      ]
+    },
+    {
+      "label": "Bedienoberfläche",
+      "fields": [
+        {
+          "label": "Beschriftung des \"Überprüfen\"-Buttons",
+          "default": "Prüfen"
+        },
+        {
+          "label": "Beschriftung des \"Absenden\"-Buttons",
+          "default": "Submit"
+        },
+        {
+          "label": "Beschreibung des \"Überprüfen\"-Buttons (für Hilfsmittel zur Barrierefreiheit)",
+          "default": "Die Antworten überprüfen. Die Eingaben werden als richtig, falsch oder unbeantwortet markiert."
+        },
+        {
+          "label": "Beschriftung des \"Lösung anzeigen\"-Buttons",
+          "default": "Lösung anzeigen"
+        },
+        {
+          "label": "Beschreibung des \"Lösung anzeigen\"-Buttons (für Hilfsmittel zur Barrierefreiheit)",
+          "default": "Zeige die Lösung. Die korrekten Optionen werden markiert."
+        },
+        {
+          "label": "Richtige Antwort (nicht dargestellt)",
+          "default": "Richtige Antwort"
+        },
+        {
+          "label": "Falsche Antwort (nicht dargestellt)",
+          "default": "Falsche Antwort"
+        },
+        {
+          "label": "Option hätte gewählt werden müssen",
+          "default": "Hätte gewählt werden müssen"
+        },
+        {
+          "label": "Option hätte nicht gewählt werden sollen",
+          "default": "Hätte nicht gewählt werden sollen"
+        },
+        {
+          "label": "Text für \"Erfordert Antwort\"-Hinweis",
+          "default": "Bitte antworte, bevor du die Lösung ansiehst"
+        },
+        {
+          "label": "Beschriftung des \"Wiederholen\"-Buttons",
+          "default": "Wiederholen"
+        },
+        {
+          "label": "Beschreibung des \"Wiederholen\"-Buttons (für Hilfsmittel zur Barrierefreiheit)",
+          "default": "Die Aufgabe wiederholen. Alle Versuche werden zurückgesetzt und die Aufgabe wird erneut gestartet."
+        },
+        {
+          "label": "Dein Ergebnis",
+          "description": ":num und :total sind Platzhalter und werden durch die entsprechenden Werte ersetzt.",
+          "default": "Du hast :num von :total Punkten erreicht"
+        },
+        {
+          "label": "Bestätigungsdialog beim Überprüfen",
+          "fields": [
+            {
+              "label": "Text der Überschrift",
+              "default": "Beenden?"
+            },
+            {
+              "label": "Text des Hauptteils",
+              "default": "Bist du sicher, dass du die Aufgabe beenden möchtest?"
+            },
+            {
+              "label": "Beschriftung des \"Abbrechen\"-Buttons",
+              "default": "Abbrechen"
+            },
+            {
+              "label": "Beschriftung des \"Bestätigen\"-Buttons",
+              "default": "Beenden"
+            }
+          ]
+        },
+        {
+          "label": "Bestätigungsdialog beim Wiederholen",
+          "fields": [
+            {
+              "label": "Text der Überschrift",
+              "default": "Wiederholen?"
+            },
+            {
+              "label": "Text des Hauptteils",
+              "default": "Ganz sicher wiederholen?"
+            },
+            {
+              "label": "Beschriftung des \"Abbrechen\"-Buttons",
+              "default": "Abbrechen"
+            },
+            {
+              "label": "Beschriftung des \"Bestätigen\"-Buttons",
+              "default": "Wiederholen"
+            }
+          ]
+        },
+        {
+          "label": "Text, der benutzt wird, falls kein Alternativtext für ein Bild angegeben wird",
+          "default": "Kein Alternativtext angegeben"
+        },
+        {
+          "label": "Close modal button label",
+          "default": "Close modal"
+        }
+      ]
+    }
+  ]
+}

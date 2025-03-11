@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "label": "Multimedia",
+      "fields": [
+        {
+          "label": "Mota",
+          "description": "Galderaren gainean bistaratzeko aukerako multimedia."
+        },
+        {
+          "label": "Desgaitu irudien zooma"
+        }
+      ]
+    },
+    {
+      "label": "Atazaren deskribapena",
+      "description": "Deskribatu zereginaren irtenbidea aurkitzeko modua.",
+      "placeholder": "Klik egin ondoko testuaren aditz guztietan."
+    },
+    {
+      "label": "Testu eremua",
+      "placeholder": "Hau erantzun bat da: *erantzuna*.",
+      "important": {
+        "description": "<ul><li>Markatutako hitzak izartxo batekin (*) eransten dira.</li><li>Markatutako hitzetan izartxo bat erantsi nahi bada bigarren izartxo bat erantsi behar da, *correctword*** =&gt; correctword*.</li></ul>",
+        "example": "Hitz zuzenak honela markatu behar dira: *hitz-zuzena*, izartxo bat honela \" behar da: *hitz-zuzena***."
+      }
+    },
+    {
+      "label": "Feedback Orokorra",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Lehenetsitakoa"
+            }
+          ],
+          "label": "Zehaztu ezazu edozein puntuazio-tarterako feedback pertsonalizatua",
+          "description": "Egin klik \"Gehitu tartea\" botoian behar dituzun tarte guztiak gehitzeko. Adibidez: 0-20% Puntuazio eskasa, 21-91% Batez besteko puntuazioa, 91-100% Puntuazio bikaina!",
+          "entity": "tartea",
+          "field": {
+            "fields": [
+              {
+                "label": "Puntazio-tartea"
+              },
+              {},
+              {
+                "label": "Zehaztutako tartearentzako feedbacka",
+                "placeholder": "Idatzi ezazu feedbacka"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "\"Egiaztatu\" botoiarentzako testua",
+      "default": "Egiaztatu"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "\"Erakutsi emaitza\" botoiaren testua",
+      "default": "Saiatu berriro"
+    },
+    {
+      "label": "\"Erakutsi soluzioa\" botoiarentzako testua",
+      "default": "Erakutsi erantzuna"
+    },
+    {
+      "label": "Portaeraren ezarpenak.",
+      "description": "Aukera hauek lanaren portaera kontrolatzea ahalbidetzen dizute.",
+      "fields": [
+        {
+          "label": "Gaitu \"Berriz saiatu\""
+        },
+        {
+          "label": "Gaitu \"Erakutsi erantzuna\" botoia"
+        },
+        {
+          "label": "Gaitu \"Egiaztatu\" botoia"
+        },
+        {
+          "label": "Erakutsi puntuazioa",
+          "description": "Erakutsi erantzun bakoitzean lortutako puntuazioa."
+        }
+      ]
+    },
+    {
+      "label": "Erantzun zuzenaren testua",
+      "default": "Zuzena!",
+      "description": "Erantzuna zuzena dela adierazteko testua"
+    },
+    {
+      "label": "Erantzun okerraren testua",
+      "default": "Erantzun okerra!",
+      "description": "Erantzuna okerra dela adierazteko testua"
+    },
+    {
+      "label": "Falta diren erantzunentzako testua",
+      "default": "Falta da!",
+      "description": "Erantzuna falta dela adierazteko testua"
+    },
+    {
+      "label": "Erakutsi soluzioarentzako deskribapena",
+      "default": "Zeregina eguneratzen da soluzioa adierazteko.",
+      "description": "Testu honek erabiltzaileari informatzen dio zeregina eguneratu dela soluzioa adierazteko."
+    },
+    {
+      "label": "Puntuazio barraren testu adierazpena irakurgailua erabiltzen dutenentzat",
+      "default": ":total puntutik :num puntu lortu duzu"
+    },
+    {
+      "label": "Testu irakurgarri osorako etiketa laguntzarako teknologietan",
+      "default": "Testu irakurgarri osoa"
+    },
+    {
+      "label": "Markatu daitezkeen hitzentzako testurako etiketa laguntzarako teknologietan",
+      "default": "Hitzak markatu daitezkeen testu osoa"
+    },
+    {
+      "label": "Ebazpen-modurako goiburua laguntzarako teknologietan",
+      "default": "Ebazpen-modua"
+    },
+    {
+      "label": "Egiaztapen-modurako goiburua laguntzarako teknologietan",
+      "default": "Egiaztapen-modua"
+    },
+    {
+      "label": "\"Egiaztatu\" botoiaren laguntza-teknologientzako etiketa",
+      "default": "Egiaztatu erantzunak. Erantzunak zuzen, oker edo erantzun gabe gisa markatuko dira."
+    },
+    {
+      "label": "\"Erakutsi erantzun zuzena\" botoiaren laguntza-teknologientzako etiketa",
+      "default": "Erakutsi erantzun zuzena. Zereginaren erantzun zuzena markatuko da."
+    },
+    {
+      "label": "\"Berriz saiatu\" botoiaren laguntza-teknologientzako etiketa",
+      "default": "Zeregina berriz egiten saiatu. Berrabiarazi erantzun guztiak eta hasi zeregina berriz."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Description du champ de saisie",
+      "description": "Description de l'information que l'utilisateur doit saisir."
+    },
+    {
+      "label": "Texte de l'espace réservé",
+      "description": "Un texte de l'espace réservé pour l'utilisateur."
+    },
+    {
+      "label": "Taille du champ de saisie",
+      "description": "La taille du champ de saisie en nombre de lignes qu'il peut contenir."
+    },
+    {
+      "label": "Champ requis",
+      "description": "Cocher pour indiquer que ce champ est requis. L'utilisateur doit compléter tous les champs requis pour être en mesure d'exporter le document.",
+      "options": [
+        {
+          "label": "1 line"
+        },
+        {
+          "label": "3 lines"
+        },
+        {
+          "label": "10 lines"
+        }
+      ]
+    },
+    {
+      "label": "Required field",
+      "description": "Check to make this field required, the user must answer all required fields to be able to export a document."
+    },
+    {
+      "label": "Remaining characters",
+      "default": "Remaining characters: @chars",
+      "description": "Message for remaining characters. You can use @chars which will be replaced by the corresponding number."
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "semantics": [
+    {
+      "label": "Título"
+    },
+    {
+      "label": "Modo",
+      "description": "Modo de apresentação dos cartões de diálogo",
+      "options": [
+        {
+          "label": "Normal"
+        },
+        {
+          "label": "Repetição"
+        }
+      ]
+    },
+    {
+      "label": "Descrição da atividade"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Padrão"
+        }
+      ],
+      "label": "Diálogos",
+      "entity": "diálogo",
+      "field": {
+        "label": "Pergunta",
+        "fields": [
+          {
+            "label": "Texto",
+            "description": "Texto da primeira parte do diálogo"
+          },
+          {
+            "label": "Resposta",
+            "description": "Texto da segunda parte do diálogo"
+          },
+          {
+            "label": "Imagem",
+            "description": "Imagem opcional para o cartão. (O cartão pode conter apenas uma imagem, apenas um texto ou ambos)"
+          },
+          {
+            "label": "Texto alternativo para a imagem"
+          },
+          {
+            "label": "Ficheiros de áudio"
+          },
+          {
+            "label": "Dicas",
+            "fields": [
+              {
+                "label": "Dica para o texto",
+                "description": "Dica para a primeira parte do diálogo"
+              },
+              {
+                "label": "Dica para a resposta",
+                "description": "Dica para a segunda parte do diálogo"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Configurações gerais",
+      "description": "Estas opções permitem que controle o comportamento da atividade.",
+      "fields": [
+        {
+          "label": "Ativar o botão \"Tentar novamente\""
+        },
+        {
+          "label": "Desativar navegação para trás",
+          "description": "Esta opção permitirá apenas que navegue para a frente nos cartões de diálogo"
+        },
+        {
+          "label": "Dimensionar o texto para ajustar-se dentro do cartão",
+          "description": "Desmarcar esta opção fará com que o cartão adapte o seu tamanho ao tamanho do texto"
+        },
+        {
+          "label": "Cartões aleatórios",
+          "description": "Esta opção torna aleatória a ordem em que os cartões são exibidos."
+        },
+        {
+          "label": "Nível máximo de proficiência"
+        },
+        {
+          "label": "Permitir progressão rápida",
+          "description": "Se ativado, os alunos podem decidir indicar que conhecem um cartão sem virá-lo"
+        }
+      ]
+    },
+    {
+      "label": "Texto para o botão de virar",
+      "default": "Virar"
+    },
+    {
+      "label": "Texto para o botão de seguinte",
+      "default": "Seguinte"
+    },
+    {
+      "label": "Texto para o botão de anterior",
+      "default": "Anterior"
+    },
+    {
+      "label": "Texto para o botão de tentar novamente",
+      "default": "Tentar novamente"
+    },
+    {
+      "label": "Texto para o botão de resposta correta",
+      "default": "Acertei!"
+    },
+    {
+      "label": "Texto para o botão de resposta incorreta",
+      "default": "Errei"
+    },
+    {
+      "label": "Texto para a mensagem \"Rodada\" abaixo dos cartões e no resumo",
+      "description": "@round será substituído pelo número da rodada atual",
+      "default": "Rodada @round"
+    },
+    {
+      "label": "Texto para a mensagem de cartões restantes",
+      "description": "@number será substituído pelo número de cartões restantes nesta rodada",
+      "default": "Cartões restantes: @number"
+    },
+    {
+      "label": "Texto para o botão de próxima rodada",
+      "description": "@round será substituído pelo número da rodada",
+      "default": "Prosseguir para a rodada @round"
+    },
+    {
+      "label": "Texto para o botão de recomeçar",
+      "default": "Recomeçar"
+    },
+    {
+      "label": "Texto para o botão de mostrar resumo",
+      "default": "Seguinte"
+    },
+    {
+      "label": "Texto do título da página de resumo",
+      "default": "Resumo"
+    },
+    {
+      "label": "Texto para \"cartões que você acertou:\"",
+      "default": "Cartões que acertou:"
+    },
+    {
+      "label": "Texto para \"Cartões que você errou:\"",
+      "default": "Cartões que errou:"
+    },
+    {
+      "label": "Texto para \"Cartões não exibidos:\"",
+      "default": "Cartões não mostrados:"
+    },
+    {
+      "label": "Texto para pontuação global",
+      "default": "Pontuação global"
+    },
+    {
+      "label": "Texto para cartões concluídos",
+      "default": "Cartões que concluiu a aprendizagem:"
+    },
+    {
+      "label": "Texto para \"Rodadas concluídas:\"",
+      "default": "Rodadas concluídas:"
+    },
+    {
+      "label": "Mensagem quando todos os cartões forem aprendidos com proficiência",
+      "description": "@cards será substituído pelo número total de cartões. @max será substituído pelo nível máximo de proficiência.",
+      "default": "Excelente! Acertou em todos os @card cartões @max vezes consecutivamente!"
+    },
+    {
+      "label": "Texto de progresso",
+      "description": "As variáveis disponíveis são @card e @total.",
+      "default": "Cartão @card de @total"
+    },
+    {
+      "label": "Rótulo para o texto do cartão",
+      "description": "Usado para acessibilidade por tecnologias assistivas",
+      "default": "Frente do cartão"
+    },
+    {
+      "label": "Rótulo para o verso do cartão",
+      "description": "Usado para acessibilidade por tecnologias assistivas",
+      "default": "Verso do cartão"
+    },
+    {
+      "label": "Rótulo para o botão de mostrar dica",
+      "default": "Mostrar dica"
+    },
+    {
+      "label": "Mensagem para áudio não suportado",
+      "default": "O seu navegador não suporta este áudio"
+    },
+    {
+      "label": "Diálogo para confirmar o recomeço",
+      "fields": [
+        {
+          "label": "Texto do cabeçalho",
+          "default": "Recomeçar?"
+        },
+        {
+          "label": "Texto do corpo",
+          "default": "Todo o progresso será perdido. Tem a certeza de que pretende recomeçar?"
+        },
+        {
+          "label": "Rótulo para botão cancelar",
+          "default": "Cancelar"
+        },
+        {
+          "label": "Rótulo para botão confirmar",
+          "default": "Recomeçar"
+        }
+      ]
+    }
+  ]
+}

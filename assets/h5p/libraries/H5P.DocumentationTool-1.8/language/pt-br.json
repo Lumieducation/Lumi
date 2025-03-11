@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "label": "Cabeçalho",
+      "default": "Ferramenta de documentação",
+      "description": "Título para a ferramenta de documentação."
+    },
+    {
+      "label": "Elementos",
+      "widgets": [
+        {
+          "label": "Padrão"
+        }
+      ],
+      "entity": "página",
+      "field": {
+        "label": "Tipo de página",
+        "description": "Biblioteca para este slide."
+      }
+    },
+    {
+      "label": "Localizar botões de ferramentas de documentação",
+      "fields": [
+        {
+          "label": "Rótulo do botão Anterior",
+          "default": "Anterior documentation step"
+        },
+        {
+          "label": "Rótulo do botão Próximo",
+          "default": "Próximo documentation step"
+        },
+        {
+          "label": "Rótulo do botão Fechar",
+          "default": "Fechar"
+        }
+      ]
+    }
+  ]
+}

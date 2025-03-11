@@ -1,0 +1,1028 @@
+{
+  "semantics": [
+    {
+      "label": "显示标题屏幕",
+      "description": "如勾选，启动时将显示标题屏幕。"
+    },
+    {
+      "label": "标题屏幕",
+      "fields": [
+        {
+          "label": "介绍",
+          "placeholder": "欢迎来到 ..."
+        },
+        {
+          "label": "标题屏幕媒介"
+        }
+      ]
+    },
+    {
+      "label": "标题",
+      "description": "标题栏的可选标题。"
+    },
+    {
+      "label": "游戏地图编辑器",
+      "fields": [
+        {
+          "label": "背景",
+          "fields": [
+            {
+              "label": "背景图片",
+              "description": "选择要用作游戏地图背景的图片文件。"
+            },
+            {
+              "label": "Background color",
+              "description": "Choose a color to use as the background of the game map."
+            }
+          ]
+        },
+        {
+          "label": "游戏地图",
+          "fields": [
+            {},
+            {
+              "label": "元素",
+              "entity": "元素",
+              "field": {
+                "label": "元素",
+                "fields": [
+                  {
+                    "label": "Id"
+                  },
+                  {
+                    "label": "类型"
+                  },
+                  {
+                    "label": "关卡标签",
+                    "description": "此标签将显示在您的内容顶部，并帮助您将不同的关卡相互连接。"
+                  },
+                  {
+                    "label": "起点关卡设置",
+                    "description": "如勾选，此关卡将是用户开始游戏的关卡。如果没有设置起点关卡或设置了多个可以作为起点的关卡，则可以随机选择一个起点关卡。"
+                  },
+                  {
+                    "label": "时间限制",
+                    "description": "定义计时器相关设置。",
+                    "fields": [
+                      {
+                        "label": "时间限制",
+                        "description": "可选时间限制（以秒为单位）。如果用户超过这个时间限制，练习将自动关闭并重置。如果设置了生命，用户超时将失去一次生命。"
+                      },
+                      {
+                        "label": "超时警告时间设置",
+                        "description": "（可选）设置何时播放超时警告音频（剩余秒数）。需要在音频设置中设置超时警告音频。"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "访问限制",
+                    "description": "定义解锁限制。",
+                    "fields": [
+                      {
+                        "label": "All or any restriction set",
+                        "description": "Choose if all or any of the following restrictions need to be met.",
+                        "options": [
+                          {
+                            "label": "All"
+                          },
+                          {
+                            "label": "Any"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Restriction sets",
+                        "entity": "restriction set",
+                        "widgets": [
+                          {
+                            "label": "Default"
+                          }
+                        ],
+                        "field": {
+                          "label": "Restriction set",
+                          "fields": [
+                            {
+                              "label": "All or any restriction",
+                              "description": "Choose if all or any of the following restrictions need to be met.",
+                              "options": [
+                                {
+                                  "label": "All"
+                                },
+                                {
+                                  "label": "Any"
+                                }
+                              ]
+                            },
+                            {
+                              "label": "Restrictions",
+                              "entity": "restriction",
+                              "field": {
+                                "label": "Restriction",
+                                "fields": [
+                                  {
+                                    "label": "Restriction type",
+                                    "options": [
+                                      {
+                                        "label": "Total score"
+                                      },
+                                      {
+                                        "label": "Stage score"
+                                      },
+                                      {
+                                        "label": "Stage progress"
+                                      },
+                                      {
+                                        "label": "Time"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Total score",
+                                    "fields": [
+                                      {
+                                        "label": "Operator for total score",
+                                        "options": [
+                                          {
+                                            "label": "less than"
+                                          },
+                                          {
+                                            "label": "equal to"
+                                          },
+                                          {
+                                            "label": "not equal to"
+                                          },
+                                          {
+                                            "label": "greater than"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Value of total score to compare"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Stage score",
+                                    "fields": [
+                                      {
+                                        "label": "Stage to get score from"
+                                      },
+                                      {
+                                        "label": "Operator for stage score",
+                                        "options": [
+                                          {
+                                            "label": "less than"
+                                          },
+                                          {
+                                            "label": "equal to"
+                                          },
+                                          {
+                                            "label": "not equal to"
+                                          },
+                                          {
+                                            "label": "greater than"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Score score to compare to"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Stage progress",
+                                    "fields": [
+                                      {
+                                        "label": "Stage to get progress from"
+                                      },
+                                      {
+                                        "label": "Operator for stage progress",
+                                        "options": [
+                                          {
+                                            "label": "is"
+                                          },
+                                          {
+                                            "label": "is not"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Progress to compare to",
+                                        "options": [
+                                          {
+                                            "label": "not started"
+                                          },
+                                          {
+                                            "label": "started"
+                                          },
+                                          {
+                                            "label": "completed"
+                                          },
+                                          {
+                                            "label": "completed successfully"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Time",
+                                    "fields": [
+                                      {
+                                        "label": "Operator for time",
+                                        "options": [
+                                          {
+                                            "label": "before"
+                                          },
+                                          {
+                                            "label": "is"
+                                          },
+                                          {
+                                            "label": "is not"
+                                          },
+                                          {
+                                            "label": "after"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Time to compare to"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "label": "dummy"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Contents",
+                    "entity": "content",
+                    "widgets": [
+                      {
+                        "label": "Default"
+                      }
+                    ],
+                    "field": {
+                      "label": "Content",
+                      "fields": [
+                        {
+                          "label": "关卡内容设置",
+                          "description": "选择要添加的内容类型。"
+                        },
+                        {
+                          "label": "Dummy"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "特殊关卡类型",
+                    "options": [
+                      {
+                        "label": "结束"
+                      },
+                      {
+                        "label": "额外生命"
+                      },
+                      {
+                        "label": "额外时间"
+                      },
+                      {
+                        "label": "Link to external content"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "额外生命数量",
+                    "description": "设置用户进入此关卡时将获得多少条生命。"
+                  },
+                  {
+                    "label": "额外时间秒数",
+                    "description": "设置用户进入此关卡时全局时间限制将增加多少秒。"
+                  },
+                  {
+                    "label": "URL to link to",
+                    "description": "Set where the user should be sent to when opening this stage."
+                  },
+                  {
+                    "label": "Place to open link in",
+                    "options": [
+                      {
+                        "label": "New tab"
+                      },
+                      {
+                        "label": "Same tab"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Always visible",
+                    "description": "If checked, this stage will always be visible, even if the map's visibility range settings dictate otherswise."
+                  },
+                  {
+                    "label": "Override lock symbol",
+                    "description": "If checked, locked stages will not use the lock symbol, but the symbol for the special stage type."
+                  },
+                  {
+                    "label": "连接的关卡"
+                  },
+                  {
+                    "label": "遥测"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Paths",
+              "entity": "path",
+              "field": {
+                "label": "Path",
+                "fields": [
+                  {
+                    "label": "From"
+                  },
+                  {
+                    "label": "To"
+                  },
+                  {
+                    "label": "Visual settings",
+                    "options": [
+                      {
+                        "label": "Use global settings"
+                      },
+                      {
+                        "label": "Use custom settings"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Custom visual settings",
+                    "fields": [
+                      {
+                        "label": "Color path"
+                      },
+                      {
+                        "label": "Path width",
+                        "options": [
+                          {
+                            "label": "thin"
+                          },
+                          {
+                            "label": "medium"
+                          },
+                          {
+                            "label": "thick"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Path style",
+                        "options": [
+                          {
+                            "label": "Solid"
+                          },
+                          {
+                            "label": "Dotted"
+                          },
+                          {
+                            "label": "Dashed"
+                          },
+                          {
+                            "label": "Double"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "结束屏幕",
+      "fields": [
+        {
+          "label": "用户失败",
+          "fields": [
+            {
+              "label": "消息",
+              "placeholder": "很遗憾，你失败了..."
+            },
+            {
+              "label": "结束屏幕媒体"
+            }
+          ]
+        },
+        {
+          "label": "用户成功",
+          "fields": [
+            {
+              "label": "消息（用户成功）",
+              "placeholder": "你成功了..."
+            },
+            {
+              "label": "结束屏幕媒体(用户成功)"
+            }
+          ]
+        },
+        {
+          "label": "总体反馈",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "默认"
+                }
+              ],
+              "label": "为分数范围设置自定义反馈",
+              "description": "单击“添加范围”按钮以根据需要添加任意数量的分数范围。如：0-20% 低分，21-91% 平均分，91-100% 高分！",
+              "entity": "范围",
+              "field": {
+                "fields": [
+                  {
+                    "label": "分数范围"
+                  },
+                  {},
+                  {
+                    "label": "定义分数范围的反馈",
+                    "placeholder": "在此输入针对该范围的自定义反馈信息"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "视觉设置",
+      "fields": [
+        {
+          "label": "关卡颜色设置",
+          "fields": [
+            {
+              "label": "正常关卡"
+            },
+            {
+              "label": "待解锁关卡"
+            },
+            {
+              "label": "已通过关卡"
+            },
+            {
+              "label": "Show stars for scores",
+              "description": "Choose if and when stars will be displayed on the map for the scores of the stages. Please note that stages without scored exercises will not get the stars.",
+              "options": [
+                {
+                  "label": "Never"
+                },
+                {
+                  "label": "On hover"
+                },
+                {
+                  "label": "Always"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "路径设置",
+          "fields": [
+            {
+              "label": "显示路径",
+              "description": "选择是否在地图上显示路径。请注意：路径在编辑器中始终可见。"
+            },
+            {
+              "label": "风格设置",
+              "fields": [
+                {
+                  "label": "路径颜色"
+                },
+                {
+                  "label": "已清除路径颜色"
+                },
+                {
+                  "label": "路径宽度",
+                  "options": [
+                    {
+                      "label": "细"
+                    },
+                    {
+                      "label": "中等"
+                    },
+                    {
+                      "label": "宽"
+                    }
+                  ]
+                },
+                {
+                  "label": "路径样式",
+                  "options": [
+                    {
+                      "label": "实线"
+                    },
+                    {
+                      "label": "点虚线"
+                    },
+                    {
+                      "label": "横虚线"
+                    },
+                    {
+                      "label": "双线"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "其它设置",
+          "fields": [
+            {
+              "label": "地图动画效果",
+              "description": "是否为地图添加动画效果。请注意：即使设置了此选项，也将首先遵循用户浏览器减少动作的设置。"
+            },
+            {
+              "label": "Dummy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "音频设置",
+      "fields": [
+        {
+          "label": "背景音乐",
+          "fields": [
+            {
+              "label": "背景音乐"
+            },
+            {
+              "label": "在用户做练习时静音"
+            }
+          ]
+        },
+        {
+          "label": "事件设置",
+          "fields": [
+            {
+              "label": "点击锁定的关卡",
+              "description": "点击锁定的关卡时播放。"
+            },
+            {
+              "label": "检查练习（非满分）",
+              "description": "在检查答案且用户未获得满分时播放。"
+            },
+            {
+              "label": "检查练习（满分）",
+              "description": "在检查答案且用户获得满分时播放。"
+            },
+            {
+              "label": "解锁关卡",
+              "description": "在解锁关卡时播放。"
+            },
+            {
+              "label": "打开练习",
+              "description": "在练习开始时播放。"
+            },
+            {
+              "label": "关闭练习",
+              "description": "在练习结束时播放。"
+            },
+            {
+              "label": "显示对话框",
+              "description": "在显示确认对话框时播放。"
+            },
+            {
+              "label": "满分",
+              "description": "在用户获得满分时播放。"
+            },
+            {
+              "label": "失去了一条命",
+              "description": "在用户失去生命时播放。"
+            },
+            {
+              "label": "获得生命",
+              "description": "当用户获得生命时播放的声音。"
+            },
+            {
+              "label": "游戏结束",
+              "description": "在游戏结束且用户无法继续时播放。"
+            },
+            {
+              "label": "获得额外时间",
+              "description": "当用户获得额外时间时播放的声音。"
+            },
+            {
+              "label": "Timeout warning",
+              "description": "Will be played when the user is running out of time for an exercise or if the global time runs out."
+            },
+            {
+              "label": "结束画面（非满分）",
+              "description": "当用户没有获得满分，在结束屏幕上播放。"
+            },
+            {
+              "label": "结束画面（满分）",
+              "description": "当用户获得了满分，在结束屏幕上播放。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "行为设置",
+      "fields": [
+        {
+          "label": "生命",
+          "description": "设置用户的生命数，留空为无限生命。当用户在某一关卡没有得到满分时，将失去一条生命。一旦用户失去所有生命，则游戏结束。"
+        },
+        {
+          "label": "全局时间限制",
+          "description": "整个游戏的可选时间限制，以秒为单位。如果用户超过此时间，游戏将立即结束。"
+        },
+        {
+          "label": "超时警告时间设置",
+          "description": "（可选）设置何时播放超时警告音频（剩余秒数）。需要在音频设置中设置超时警告音频。"
+        },
+        {
+          "label": "完赛得分",
+          "description": "可选分数。可以低于所有练习的总分数，因此用户无需完成所有练习即可获得满分。"
+        },
+        {
+          "label": "启用“重试”按钮"
+        },
+        {
+          "label": "启用“显示解决方案”按钮"
+        },
+        {
+          "label": "地图",
+          "fields": [
+            {
+              "label": "显示关卡标签",
+              "description": "选择在使用鼠标悬停关卡时是否显示关卡的标签。标签不会显示在触摸设备上。"
+            },
+            {
+              "label": "自由漫游",
+              "description": "选择用户是否可以自由漫游所有关卡，是否需要完成某个关卡才能访问该关卡的邻居，或需要通过某个关卡才能访问该关卡的邻居。",
+              "options": [
+                {
+                  "label": "自由漫游"
+                },
+                {
+                  "label": "完成以解锁"
+                },
+                {
+                  "label": "成功通关以解锁"
+                }
+              ]
+            },
+            {
+              "label": "关卡可见范围",
+              "description": "选择用户可以看到的关卡",
+              "options": [
+                {
+                  "label": "可以看到所有关卡"
+                },
+                {
+                  "label": "所有未锁定的关卡及其邻居"
+                },
+                {
+                  "label": "仅未锁定的关卡"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "用户界面",
+      "fields": [
+        {
+          "label": "开始",
+          "default": "开始"
+        },
+        {
+          "label": "继续",
+          "default": "继续"
+        },
+        {
+          "label": "重新开始",
+          "default": "重新开始"
+        },
+        {
+          "label": "显示解决方案",
+          "default": "显示解决方案"
+        },
+        {
+          "label": "完成地图",
+          "default": "您已完成地图！"
+        },
+        {
+          "label": "满分，但没有生命了",
+          "default": "你已经取得了满分，但失去了所有的生命！"
+        },
+        {
+          "label": "满分，但超时",
+          "default": "您已经获得满分，但游戏时间已用尽！"
+        },
+        {
+          "label": "完成地图对话框标题",
+          "default": "完成地图？"
+        },
+        {
+          "label": "完成地图对话框标题：常规",
+          "default": "如果现在完成，您将无法再浏览地图。"
+        },
+        {
+          "label": "完成地图对话框标题：提交",
+          "default": "您的分数将被提交。"
+        },
+        {
+          "label": "完成地图对话框标题：问题",
+          "default": "你真的要完成地图吗？"
+        },
+        {
+          "label": "访问被拒绝对话框标题: ",
+          "default": "关卡已锁定"
+        },
+        {
+          "label": "访问被拒绝对话框文本：常规",
+          "default": "此关卡要求您满足一些目标，然后才能打开。"
+        },
+        {
+          "label": "是的",
+          "default": "是的"
+        },
+        {
+          "label": "取消",
+          "default": "取消"
+        },
+        {
+          "label": "游戏结束对话框标题",
+          "default": "游戏结束！"
+        },
+        {
+          "label": "游戏结束对话文本",
+          "default": "你已经失去了所有的生命。请重试！"
+        },
+        {
+          "label": "超时游戏结束对话框文本",
+          "default": "很遗憾，游戏时间已用尽。请再试一次！"
+        },
+        {
+          "label": "超时对话框标题",
+          "default": "超时啦！"
+        },
+        {
+          "label": "对话框文本超时",
+          "default": "你没时间了。"
+        },
+        {
+          "label": "超时对话框文本：失去一条生命",
+          "default": "你超时了！很遗憾，你失去了一条生命。"
+        },
+        {
+          "label": "对话框标题：得分不完整",
+          "default": "未达到满分！"
+        },
+        {
+          "label": "对话框文本：得分不完整（失去一条生命）",
+          "default": "您没有达到满分，失去了一条生命。"
+        },
+        {
+          "label": "满分对话框标题",
+          "default": "你取得了满分！"
+        },
+        {
+          "label": "满分对话框文本",
+          "default": "您已经得到了足够的分数，以满分完成了这张地图。如果您愿意，您可以自由探索其余部分。Your score will be submitted once you finish the map."
+        },
+        {
+          "label": "对话框文本满分（修订，如果生命值已设置）",
+          "default": "但还是要小心！你仍然可能失去生命！"
+        },
+        {
+          "label": "OK",
+          "default": "知道了"
+        },
+        {
+          "label": "未设置关卡",
+          "default": "未为地图设置任何有效关卡。"
+        },
+        {
+          "label": "Settings",
+          "default": "Settings"
+        },
+        {
+          "label": "Volume of music",
+          "default": "Volume of music"
+        },
+        {
+          "label": "Volume of sound effects",
+          "default": "Volume of sound effects"
+        },
+        {
+          "label": "The stage will not be available unless",
+          "default": "The stage will not be available unless:"
+        },
+        {
+          "label": "The stage will not be available unless any of",
+          "default": "The stage will not be available unless any of:"
+        },
+        {
+          "label": "All of:",
+          "default": "All of:"
+        },
+        {
+          "label": "Any of:",
+          "default": "Any of:"
+        },
+        {
+          "label": "Total score less than",
+          "default": "You have a total score less than @value."
+        },
+        {
+          "label": "Total score equal to",
+          "default": "You have a total score equal to @value."
+        },
+        {
+          "label": "Total score not equal to",
+          "default": "You have a total score not equal to @value."
+        },
+        {
+          "label": "Total score greater than",
+          "default": "You have a total score greater than @value."
+        },
+        {
+          "label": "Stage score less than",
+          "default": "You have a score less than @value in stage @label."
+        },
+        {
+          "label": "Stage score equal to",
+          "default": "You have a score equal to @value in stage @label."
+        },
+        {
+          "label": "Stage score not equal to",
+          "default": "You have a score not equal to @value in stage @label."
+        },
+        {
+          "label": "Stage score greater than",
+          "default": "You have a score greater than @value in stage @label."
+        },
+        {
+          "label": "Stage progress is",
+          "default": "The progress of stage @label is @value."
+        },
+        {
+          "label": "Stage progress is not",
+          "default": "Ths progress of stage @label is not @value."
+        },
+        {
+          "label": "Time before",
+          "default": "The current time is before @value."
+        },
+        {
+          "label": "Time is",
+          "default": "The current time is @value."
+        },
+        {
+          "label": "Time is not",
+          "default": "The current time is not @value."
+        },
+        {
+          "label": "Time after",
+          "default": "The current time is after @value."
+        },
+        {
+          "label": "Not started",
+          "default": "not started"
+        },
+        {
+          "label": "Started",
+          "default": "started"
+        },
+        {
+          "label": "Completed",
+          "default": "completed"
+        },
+        {
+          "label": "Completed successfully",
+          "default": "completed successfully"
+        },
+        {
+          "label": "Missing content",
+          "default": "No content was set for this stage!"
+        }
+      ]
+    },
+    {
+      "label": "辅助功能文本",
+      "fields": [
+        {
+          "label": "完成",
+          "default": "完成地图"
+        },
+        {
+          "label": "音频按钮（未静音）",
+          "default": "将音频静音。当前未静音。"
+        },
+        {
+          "label": "音频按钮（静音）",
+          "default": "取消音频静音。当前已静音。"
+        },
+        {
+          "label": "关闭",
+          "default": "关闭"
+        },
+        {
+          "label": "您的得分",
+          "description": "@score 将被你的分数替代。 @total 将被最大可获得的总分替代.",
+          "default": "你的得分： @score / @total 分。"
+        },
+        {
+          "label": "地图已打开",
+          "default": "地图已打开。"
+        },
+        {
+          "label": "地图已打开（解决方案模式）",
+          "default": "地图在解决方案模式下打开。"
+        },
+        {
+          "label": "开始屏幕已打开",
+          "default": "开始屏幕已打开。"
+        },
+        {
+          "label": "结束屏幕已打开",
+          "default": "结束屏幕打开。"
+        },
+        {
+          "label": "练习标签",
+          "description": "@stagelabel 是一个占位符，将替换为相应的练习标签。",
+          "default": ".  @stagelabel 的练习"
+        },
+        {
+          "label": "关卡按钮标签",
+          "description": "@stagelabel 是一个占位符，将替换为相应的关卡标签。",
+          "default": "关卡： @stagelabel"
+        },
+        {
+          "label": "相邻关卡标签",
+          "description": "@stagelabelOrigin 和 @stagelabelNeighbor 是占位符，将替换为相应的关卡标签。",
+          "default": "@stagelabelOrigin 的相邻关卡： @stagelabelNeighbor"
+        },
+        {
+          "label": "锁定",
+          "default": "锁定"
+        },
+        {
+          "label": "已解锁",
+          "default": "已解锁"
+        },
+        {
+          "label": "地图导航说明",
+          "default": "使用空格键或回车键激活当前关卡。使用箭头键选择相邻关卡。使用空格或在相邻关卡上按输入键以导航到该位置。"
+        },
+        {
+          "label": "地图说明",
+          "default": "地图"
+        },
+        {
+          "label": "移至关卡",
+          "description": "@stagelabel 是一个占位符，将替换为相应的关卡标签。",
+          "default": "移动到关卡： @stagelabel"
+        },
+        {
+          "label": "解锁关卡",
+          "description": "@stagelabel 是一个占位符，将替换为相应的关卡标签。",
+          "default": "关卡 @stagelabel 已解锁。"
+        },
+        {
+          "label": "工具栏回退标签",
+          "default": "游戏地图"
+        },
+        {
+          "label": "进入全屏",
+          "default": "进入全屏模式"
+        },
+        {
+          "label": "退出全屏",
+          "default": "退出全屏模式"
+        }
+      ]
+    }
+  ]
+}

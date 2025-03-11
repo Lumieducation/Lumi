@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Aufgabenbeschreibung"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Eingabemaske"
+        }
+      ],
+      "label": "Karten",
+      "entity": "Karte",
+      "field": {
+        "label": "Karte",
+        "fields": [
+          {
+            "label": "Frage",
+            "description": "Optionaler Fragetext für die Karte. (Es ist nur ein Text, nur ein Bild oder beides möglich)"
+          },
+          {
+            "label": "Antwort",
+            "description": "Antwort (Lösung) für die Karte. Benutze einen Schrägstrich /, um alternative Lösungen voneinander abzugrenzen. Benutze \\/, falls eine Lösung ein / enthalten muss."
+          },
+          {
+            "label": "Bild",
+            "description": "Optionales Bild für die Karte. (Es ist nur ein Text, nur ein Bild oder beides möglich)"
+          },
+          {
+            "label": "Alternativtext für das Bild"
+          },
+          {
+            "label": "Tipp",
+            "fields": [
+              {
+                "label": "Tipp-Text"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Text der Fortschrittsanzeige",
+      "default": "Karte @card von @total",
+      "description": "Verfügbare Platzhalter: @card und @total. Beispiel: 'Karte @card von @total'"
+    },
+    {
+      "label": "Beschriftung des \"Weiter\"-Buttons",
+      "default": "Weiter"
+    },
+    {
+      "label": "Beschriftung des \"Zurück\"-Buttons",
+      "default": "Zurück"
+    },
+    {
+      "label": "Beschriftung des \"Überprüfen\"-Buttons",
+      "default": "Überprüfen"
+    },
+    {
+      "label": "Lösung kann erst angezeigt werden, wenn eine Antwort eingegeben wurde"
+    },
+    {
+      "label": "Platzhalter im Antwort-Eingabefeld",
+      "default": "Deine Antwort"
+    },
+    {
+      "label": "Beschriftung für \"Richtige Antwort\"",
+      "default": "Richtig"
+    },
+    {
+      "label": "Beschriftung für \"Falsche Antwort\"",
+      "default": "Falsch"
+    },
+    {
+      "label": "Beschriftung der Lösung",
+      "default": "Richtige Antwort(en)"
+    },
+    {
+      "label": "Überschrift der Ergebnisseite",
+      "default": "Ergebnisse"
+    },
+    {
+      "label": "Text, der angibt, wie viele Karten richtig waren",
+      "default": "@score von @total richtig",
+      "description": "Verfügbare Platzhalter: @score und @total. Beispiel: '@score von @total richtig'"
+    },
+    {
+      "label": "Beschriftung des \"Ergebnisse anzeigen\"-Buttons",
+      "default": "Ergebnisse anzeigen"
+    },
+    {
+      "label": "Kurzform von \"Antwort\"",
+      "default": "A:"
+    },
+    {
+      "label": "Beschriftung des \"Wiederholen\"-Buttons",
+      "default": "Wiederholen"
+    },
+    {
+      "label": "Auf Groß-/Kleinschreibung achten",
+      "description": "Stellt sicher, dass die Lösung exakt der Vorgabe entspricht."
+    },
+    {
+      "label": "Bezeichnung einer falschen Antwort für Vorlesewerkzeuge",
+      "default": "Falsche Antwort. Die richtige Antwort ist @answer",
+      "description": "Text, der von Vorlesewerkzeugen vorgelesen wird (Barrierefreiheit). Verwende @answer als Platzhalter."
+    },
+    {
+      "label": "Bezeichnung einer richtigen Antwort für Vorlesewerkzeuge",
+      "default": "@answer ist richtig.",
+      "description": "Text, der durch Vorlesewerkzeuge (Barrierefreiheit) vorgelesen wird, wenn eine Karte richtig beantwortet wird. Nutze @answer als Platzhalter."
+    },
+    {
+      "label": "Text zum Kartenwechsel für Vorlesewerkzeuge",
+      "default": "Karte @current von @total",
+      "description": "Text, der von Vorlesewerkzeugen vorgelesen wird, wenn zwischen Karten gewechselt wird (Barrierefreiheit). Verwende @current und @total als Platzhalter."
+    },
+    {
+      "label": "Karten mischen",
+      "description": "Anwählen, um die Karten zufällig anzuordnen."
+    }
+  ]
+}

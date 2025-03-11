@@ -1,0 +1,85 @@
+[
+  {
+    "name": "graphMode",
+    "type": "select",
+    "label": "Type of chart",
+    "importance": "high",
+    "options": [
+      {
+        "value": "pieChart",
+        "label": "Pie Chart"
+      },
+      {
+        "value": "barChart",
+        "label": "Bar Chart"
+      }
+    ],
+    "default": "pieChart"
+  },
+  {
+    "name": "listOfTypes",
+    "type": "list",
+    "label": "Data elements",
+    "importance": "high",
+    "entity": "option",
+    "min": 1,
+    "defaultNum": 2,
+    "field": {
+      "name": "type",
+      "type": "group",
+      "label": "Data element",
+      "importance": "high",
+      "fields": [
+        {
+          "name": "text",
+          "type": "text",
+          "label": "Name",
+          "importance": "medium"
+        },
+        {
+          "name": "value",
+          "type": "number",
+          "label": "Value",
+          "importance": "low",
+          "default": 1,
+          "min": 0.0001,
+          "decimals": 4
+        },
+        {
+          "name": "color",
+          "type": "text",
+          "widget": "colorSelector",
+          "label": "Color",
+          "importance": "low",
+          "default": "#000",
+          "optional": true,
+          "spectrum": {
+            "showInput": true,
+            "preferredFormat": "hex"
+          }
+        },
+        {
+          "name": "fontColor",
+          "type": "text",
+          "widget": "colorSelector",
+          "label": "Font Color",
+          "importance": "low",
+          "default": "#fff",
+          "optional": true,
+          "spectrum": {
+            "showInput": true,
+            "preferredFormat": "hex"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "figureDefinition",
+    "type": "text",
+    "label": "Text read by readspeakers defining the figure as a chart.",
+    "importance": "low",
+    "default": "Chart",
+    "common": true
+  }
+]

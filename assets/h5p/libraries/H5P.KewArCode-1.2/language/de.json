@@ -1,0 +1,512 @@
+{
+  "semantics": [
+    {
+      "label": "Einleitungstext",
+      "description": "Dieser Text kann optional zusammen mit deinem Code angezeigt werden."
+    },
+    {
+      "label": "Code-Typ",
+      "description": "Wähle, welchen Typ Code du erstellen möchtest",
+      "options": [
+        {
+          "label": "Kontakt"
+        },
+        {
+          "label": "Ereignis"
+        },
+        {
+          "label": "E-Mail-Adresse"
+        },
+        {
+          "label": "H5P"
+        },
+        {
+          "label": "Standort"
+        },
+        {
+          "label": "Telefonnummer"
+        },
+        {
+          "label": "SMS"
+        },
+        {
+          "label": "Text"
+        },
+        {
+          "label": "URL"
+        }
+      ]
+    },
+    {
+      "label": "Kontakt",
+      "fields": [
+        {
+          "label": "Name",
+          "placeholder": "Erika Mustermann"
+        },
+        {
+          "label": "Organisation",
+          "placeholder": "H5P-Fan-Club"
+        },
+        {
+          "label": "Position",
+          "placeholder": "Mädchen für alles"
+        },
+        {
+          "label": "Telefonnummer",
+          "description": "Telefonnummer (Bitte nutze das Format +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        },
+        {
+          "label": "E-Mail-Adresse",
+          "description": "E-Mail-Adresse, an die geschrieben werden soll",
+          "placeholder": "erika@fiktiver-h5p-fan-club.de"
+        },
+        {
+          "label": "Adresse",
+          "fields": [
+            {
+              "label": "Erweiterte Adresse",
+              "description": "c/o-Informationen, usw.",
+              "placeholder": "c/o H5P-Fan-Club"
+            },
+            {
+              "label": "Straße",
+              "description": "Straße inklusive Hausnummer",
+              "placeholder": "Musterstraße 1"
+            },
+            {
+              "label": "Ort",
+              "description": "Stadtname, usw.",
+              "placeholder": "Musterdorf"
+            },
+            {
+              "label": "Region",
+              "description": "Bundesland, Bezirk, usw.",
+              "placeholder": "WI"
+            },
+            {
+              "label": "Postleitzahl",
+              "description": "Postleitzahl",
+              "placeholder": "12345"
+            },
+            {
+              "label": "Land",
+              "description": "Land",
+              "placeholder": "Deutschland"
+            }
+          ]
+        },
+        {
+          "label": "Website",
+          "description": "Website zum verlinken (muss mit https:// oder http:// anfangen)",
+          "placeholder": "https://fiktiver-h5p-fan-club.de"
+        },
+        {
+          "label": "Notiz",
+          "description": "Notiz",
+          "placeholder": "Erika liebt H5P."
+        }
+      ]
+    },
+    {
+      "label": "Ereignis",
+      "fields": [
+        {
+          "label": "Titel",
+          "description": "Titel für das Kalenderereignis",
+          "placeholder": "H5P-Konferenz 2020"
+        },
+        {
+          "label": "Ganztägiges Ereignis",
+          "description": "Wähle die Option an, wenn das Ereignis den ganzen Tag über dauert"
+        },
+        {
+          "label": "Anfangsdatum",
+          "description": "Datum, an dem das Ereignis beginnt (bitte nutze das Format JJJJ/MM/TT)",
+          "placeholder": "2020/05/18"
+        },
+        {
+          "label": "Anfangszeit",
+          "description": "Uhrzeit, zu der das Ereignis beginnt (bitte Nutze das Format hh:mm)",
+          "placeholder": "09:00"
+        },
+        {
+          "label": "Enddatum",
+          "description": "Datum, an dem das Ereignis endet (bitte nutze das Format yyyy/mm/dd)",
+          "placeholder": "2020/05/20"
+        },
+        {
+          "label": "Endzeit",
+          "description": "Uhrzeit, zu der das Ereignis endet (bitte nutze das Format hh:mm)",
+          "placeholder": "16:00"
+        },
+        {
+          "label": "Zeitzone",
+          "description": "Bitte wähle die Zeitzone, in der das Ereignis stattfinden soll",
+          "options": [
+            {
+              "label": "UTC-12:00"
+            },
+            {
+              "label": "UTC-11:00"
+            },
+            {
+              "label": "UTC-10:00"
+            },
+            {
+              "label": "UTC-9:30"
+            },
+            {
+              "label": "UTC-9:00"
+            },
+            {
+              "label": "UTC-8:00"
+            },
+            {
+              "label": "UTC-7:00"
+            },
+            {
+              "label": "UTC-6:00"
+            },
+            {
+              "label": "UTC-5:00"
+            },
+            {
+              "label": "UTC-4:00"
+            },
+            {
+              "label": "UTC-3:30"
+            },
+            {
+              "label": "UTC-3:00"
+            },
+            {
+              "label": "UTC-2:00"
+            },
+            {
+              "label": "UTC-1:00"
+            },
+            {
+              "label": "UTC"
+            },
+            {
+              "label": "UTC+1:00"
+            },
+            {
+              "label": "UTC+2:00"
+            },
+            {
+              "label": "UTC+3:00"
+            },
+            {
+              "label": "UTC+3:30"
+            },
+            {
+              "label": "UTC+4:00"
+            },
+            {
+              "label": "UTC+4:30"
+            },
+            {
+              "label": "UTC+5:00"
+            },
+            {
+              "label": "UTC+5:30"
+            },
+            {
+              "label": "UTC+5:45"
+            },
+            {
+              "label": "UTC+6:00"
+            },
+            {
+              "label": "UTC+6:30"
+            },
+            {
+              "label": "UTC+7:00"
+            },
+            {
+              "label": "UTC+8:00"
+            },
+            {
+              "label": "UTC+9:00"
+            },
+            {
+              "label": "UTC+9:30"
+            },
+            {
+              "label": "UTC+10:00"
+            },
+            {
+              "label": "UTC+10:30"
+            },
+            {
+              "label": "UTC+11:00"
+            },
+            {
+              "label": "UTC+12:00"
+            },
+            {
+              "label": "UTC+12:45"
+            },
+            {
+              "label": "UTC+13:00"
+            },
+            {
+              "label": "UTC+14:00"
+            }
+          ]
+        },
+        {
+          "label": "Sommerzeit",
+          "description": "Bitte wähle die Option an, wenn das Ereignis in der Sommerzeit stattfindet"
+        },
+        {
+          "label": "Ort",
+          "description": "Name des Orts",
+          "placeholder": "Madison, USA"
+        },
+        {
+          "label": "Beschreibung",
+          "description": "Beschreibung des Ereignisses",
+          "placeholder": "3. H5P-Konferenz"
+        }
+      ]
+    },
+    {
+      "label": "E-Mail-Adresse",
+      "fields": [
+        {
+          "label": "E-Mail-Adresse",
+          "description": "E-Mail-Adresse, an die geschrieben werden soll",
+          "placeholder": "erika@fiktiver-h5p-fan-club.de"
+        }
+      ]
+    },
+    {
+      "label": "H5P-Inhalt",
+      "fields": [
+        {
+          "label": "H5P-Inhalt",
+          "description": "H5P-Inhalt, der angezeigt werden soll"
+        }
+      ]
+    },
+    {
+      "label": "Standort",
+      "fields": [
+        {
+          "label": "Breitengrad",
+          "description": "Breitengrad (bitte nutze das Format 53.864462)",
+          "placeholder": "69.646007"
+        },
+        {
+          "label": "Längengrad",
+          "description": "Längengrad (bitte nutze das Format 10.663792)",
+          "placeholder": "18.954036"
+        }
+      ]
+    },
+    {
+      "label": "Telefonnummer",
+      "fields": [
+        {
+          "label": "Telefonnummer",
+          "description": "Telefonnummer, die angerufen werden soll (bitte nutze das Format +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        }
+      ]
+    },
+    {
+      "label": "SMS",
+      "fields": [
+        {
+          "label": "Telefonnummer",
+          "description": "Telefonnummer, an die eine Nachricht geschickt werden soll (bitte nutze das Format +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        },
+        {
+          "label": "Nachricht",
+          "description": "Zu sendende Nachricht",
+          "placeholder": "Bitte bring Milch und Brot mit!"
+        }
+      ]
+    },
+    {
+      "label": "Text",
+      "fields": [
+        {
+          "label": "Text",
+          "description": "Zu codierender Text",
+          "placeholder": "Bitte hole\n* Milch\n* Brot"
+        }
+      ]
+    },
+    {
+      "label": "URL",
+      "fields": [
+        {
+          "label": "URL",
+          "description": "URL, zu der verlinkt werden soll (muss mit https:// oder http:// anfangen)",
+          "placeholder": "https://fiktiver-h5p-fan-club.de"
+        }
+      ]
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "description": "Diese Optionen legen fest, wie die Aufgabe im Detail funktioniert.",
+      "fields": [
+        {
+          "label": "Code-Farbe",
+          "default": "#000000"
+        },
+        {
+          "label": "Hintergrundfarbe",
+          "default": "#ffffff"
+        },
+        {
+          "label": "Maximale Größe",
+          "description": "Maximale Größe für den Code in CSS-Notation (Pixel als Vorgabe, wenn nur eine Zahl angegeben wird)"
+        },
+        {
+          "label": "Horizontale Ausrichtung",
+          "description": "Lege die horizontale Ausrichtung fest, falls du eine maximale Größe festgelegt hast",
+          "options": [
+            {
+              "label": "Links"
+            },
+            {
+              "label": "Zentriert"
+            },
+            {
+              "label": "Rechts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Bedienoberfläche",
+      "fields": [
+        {
+          "label": "Adresse",
+          "default": "Adresse"
+        },
+        {
+          "label": "Kontakt",
+          "default": "Kontakt"
+        },
+        {
+          "label": "Land",
+          "default": "Land"
+        },
+        {
+          "label": "Enddatum",
+          "default": "Enddatum"
+        },
+        {
+          "label": "Startdatum",
+          "default": "Startdatum"
+        },
+        {
+          "label": "Beschreibung",
+          "default": "Beschreibung"
+        },
+        {
+          "label": "E-Mail",
+          "default": "E-Mail"
+        },
+        {
+          "label": "Ereignis",
+          "default": "Ereignis"
+        },
+        {
+          "label": "Erweiterte Adresse",
+          "default": "Erweiterte Adresse"
+        },
+        {
+          "label": "Breitengrad",
+          "default": "Breitengrad"
+        },
+        {
+          "label": "Ort",
+          "default": "Ort"
+        },
+        {
+          "label": "Standort",
+          "default": "Standort"
+        },
+        {
+          "label": "Längengrad",
+          "default": "Längengrad"
+        },
+        {
+          "label": "Nachricht",
+          "default": "Nachricht"
+        },
+        {
+          "label": "Name",
+          "default": "Name"
+        },
+        {
+          "label": "Notiz",
+          "default": "Notiz"
+        },
+        {
+          "label": "Organisation",
+          "default": "Organisation"
+        },
+        {
+          "label": "Telefonnummer",
+          "default": "Telefonnummer"
+        },
+        {
+          "label": "Region",
+          "default": "Region"
+        },
+        {
+          "label": "SMS",
+          "default": "SMS"
+        },
+        {
+          "label": "Straße",
+          "default": "Straße"
+        },
+        {
+          "label": "Text",
+          "default": "Text"
+        },
+        {
+          "label": "Titel",
+          "default": "Titel"
+        },
+        {
+          "label": "URL",
+          "default": "URL"
+        },
+        {
+          "label": "Postleitzahl",
+          "default": "Postleitzahl"
+        }
+      ]
+    },
+    {
+      "label": "Vorlesewerkzeug (Barrierefreiheit)",
+      "fields": [
+        {
+          "label": "QRCode. Informationen einblenden (Text für Vorlesewerkzeug/Barrierefreiheit)",
+          "default": "QRCode. Informationen einblenden."
+        },
+        {
+          "label": "Informationen ausblenden (Text für Vorlesewerkzeug/Barrierefreiheit)",
+          "default": "Informationen ausblenden."
+        },
+        {
+          "label": "Inhalt des Codes (Text für Vorlesewerkzeuge)",
+          "default": ". Inhalte des Codes"
+        }
+      ]
+    }
+  ]
+}

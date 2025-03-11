@@ -1,0 +1,299 @@
+{
+  "semantics": [
+    {
+      "label": "Medio",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Medio opcional a mostrar arriba de la pregunta."
+        },
+        {
+          "label": "Deshabilitar acercamiento de imagen"
+        }
+      ]
+    },
+    {
+      "label": "Descripción del trabajo",
+      "description": "Describa aquí su trabajo. La descripción del trabajo aparecerá arriba del área para la entrada del texto.",
+      "placeholder": "Resuma el libro en 500 caracteres ..."
+    },
+    {
+      "label": "Texto de ayuda",
+      "description": "Este texto debería ayudarle al usuario a comenzar.",
+      "placeholder": "Este libro es acerca de ..."
+    },
+    {
+      "label": "Solución de muestra",
+      "description": "Opcionalmente Usted puede añadir una solución de muestra sencilla que es mostrada después que el estudiante creó un texto. Se llama solución de muestra porque probablemente no sea la única solución.",
+      "fields": [
+        {
+          "label": "Introducción",
+          "description": "Opcionalmente Usted puede dejarles a los estudiantes unas explicaciones acerca de su ejemplo. La explicación solamente se mostrará si Usted también añade un ejemplo.",
+          "placeholder": "Por favor recuerde que no se espera que Usted proporcione exactamente la misma solución. Solamente es un buen ejemplo."
+        },
+        {
+          "label": "Texto de solución de muestra",
+          "description": "El estudiante verá un botón para \"Mostrar solución\" después de enviar si Usted proporciona un texto aquí."
+        }
+      ]
+    },
+    {
+      "label": "Palabras clave",
+      "widgets": [
+        {
+          "label": "Predeterminado"
+        }
+      ],
+      "entity": "Palabra clave",
+      "field": {
+        "label": "Palabra clave",
+        "fields": [
+          {
+            "label": "Palabra clave",
+            "description": "Palabra clave o frase a buscar. Use un asterisco '*' como un comodín para uno o más caracteres. Use una diagonal '/' al principio y al final para emplear una expresión regular."
+          },
+          {
+            "label": "Variaciones",
+            "description": "Añada variaciones opcionales para esta palabra clave. Ejemplo: Para una 'ciudad' añada las alternativas 'poblado', 'municipio' etc. Se otorgarán puntos si el usuario incluye cualquiera de las alternativas especificadas.",
+            "entity": "variación",
+            "field": {
+              "label": "Variación de palabra clave"
+            }
+          },
+          {
+            "label": "Puntos, Opciones y Retroalimentación",
+            "fields": [
+              {
+                "label": "Puntos",
+                "description": "Puntos que obtendrá el usuario si incluye esta palabra clave o sus alternativas en la respuesta."
+              },
+              {
+                "label": "Ocurrencias",
+                "description": "Define cuantas ocurrencias de la palabra clave o sus variaciones deberían ser recompensadas con puntos."
+              },
+              {
+                "label": "MAYÚSCULAS/minúsculas si importan",
+                "description": "Asegurarse que la entrada del usuario tenga que ser exactamente la misma que la respuesta."
+              },
+              {
+                "label": "Perdonar errores menores",
+                "description": "Esto aceptará errores tipográficos menores (3-9 caracteres: 1 error, más de 9 caracteres: 2 errores)."
+              },
+              {
+                "label": "Retroalimentación si palabra clave incluida",
+                "description": "Esta retroalimentación será mostrada si el usuario incluye esta palabra clave o sus alternativas en la respuesta."
+              },
+              {
+                "label": "Retroalimentación si palabra clave falta",
+                "description": "Esta retroalimentación será mostrada si el usuario no incluye esta palabra clave o sus alternativas en la respuesta."
+              },
+              {
+                "label": "Palabra de retroalimentación mostrada si palabra clave incluida",
+                "description": "Esta opción le permite especificar cual palabra será mostrada al frente de su retroalimentación si una palabra clave fue encontrada en el texto.",
+                "options": [
+                  {
+                    "label": "palabra clave"
+                  },
+                  {
+                    "label": "alternativa encontrada"
+                  },
+                  {
+                    "label": "respuesta dada"
+                  },
+                  {
+                    "label": "ninguna"
+                  }
+                ]
+              },
+              {
+                "label": "Palabra de Retroalimentación mostrada si palabra clave falta",
+                "description": "Esta opción le permite especificar cual palabra clave será mostrada al frente de su retroalimentación si una palabra clave no fue encontrada en el texto.",
+                "options": [
+                  {
+                    "label": "palabra clave"
+                  },
+                  {
+                    "label": "ninguna"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Retroalimentación Global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Predeterminado"
+            }
+          ],
+          "label": "Definir retroalimentación personalizada para cualquier rango de puntaje",
+          "description": "Hacer clic en el botón \"Añadir rango\" para añadir cuantos rangos necesite. Ejemplo: 0-20% Mal puntaje, 21-91% Puntaje Promedio, 91-100% ¡Magnífico Puntaje!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango de Puntaje"
+              },
+              {},
+              {
+                "label": "Retroalimentación para rango definido de puntaje",
+                "placeholder": "Complete la retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Configuraciones del comportamiento",
+      "description": "Estas opciones le permitirán controlar como se comporta el trabajo.",
+      "fields": [
+        {
+          "label": "Número mínimo de caracteres",
+          "description": "Especificar el número mínimo de caracteres que debe ingresar el usuario."
+        },
+        {
+          "label": "Número máximo de caracteres",
+          "description": "Especificar el número máximo de caracteres que puede ingresar el usuario."
+        },
+        {
+          "label": "Tamaño de campo de entrada",
+          "description": "El tamaño del campo para entrada en cantidad de líneas que cubrirá",
+          "options": [
+            {
+              "label": "1 línea"
+            },
+            {
+              "label": "3 líneas"
+            },
+            {
+              "label": "10 líneas"
+            }
+          ]
+        },
+        {
+          "label": "Habilitar \"Reintentar\"",
+          "description": "Si se activa, los estudiantes pueden reintentar el trabajo."
+        },
+        {
+          "label": "Ignorar puntaje",
+          "description": "Si se activa, los estudiantes solamente verán la retroalimentación que Usted proporcione para las palabras clave, pero sin puntaje."
+        },
+        {
+          "label": "Puntos en el entorno del anfitrión",
+          "description": "Usado para otorgar puntos en el entorno del anfitrión meramente por contestar (no mostrado al estudiante)."
+        },
+        {
+          "label": "Porcentaje aprobatorio",
+          "description": "Porcentaje que es necesario para pasar"
+        },
+        {
+          "label": "Porcentaje de dominio",
+          "description": "Porcentaje que es necesario para el dominio. Configurar el porcentaje de dominio debajo de 100 % disminuirá el puntaje máximo posible respectivamente. Se usa para darle holgura a los estudiantes, no es para \"aceptar graciosamente\" soluciones que no contienen todas las palabras clave."
+        },
+        {
+          "label": "Anular sensibilidad a MAYÚSCULAS/minúsculas",
+          "description": "Esta opción determina si la opción de \"MAYÚSCULAS/minúsculas importan\" estará activada para todas las palabras clave.",
+          "options": [
+            {
+              "label": "Habilitada"
+            },
+            {
+              "label": "Deshabilitada"
+            }
+          ]
+        },
+        {
+          "label": "Anular perdonar errores",
+          "description": "Esta opción determina si la opción para \"Perdonar errores\" estará activada para todas las palabras clave.",
+          "options": [
+            {
+              "label": "Habilitada"
+            },
+            {
+              "label": "Deshabilitada"
+            }
+          ]
+        },
+        {
+          "label": "Remplazo para saltos de línea",
+          "description": "De forma predeterminada, los saltos de línea serán remplazados con un caracter de espacio. Si quiere comprobar los saltos de línea; por ejemplo, en expresiones regulares, puede configurar aquí un remplazo diferente.",
+          "options": [
+            {
+              "label": "espacio"
+            },
+            {
+              "label": "salto de línea (\\n)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Texto para botón \"Comprobar\"",
+      "default": "Comprobar"
+    },
+    {
+      "label": "Texto para botón \"Enviar\"",
+      "default": "Submit"
+    },
+    {
+      "label": "Texto para botón \"Reintentar\"",
+      "default": "Reintentar"
+    },
+    {
+      "label": "Texto para botón \"Mostrar solución\"",
+      "default": "Mostrar solución"
+    },
+    {
+      "label": "Encabezado para panel que contiene retroalimentación para palabras clave incluidas/faltantes",
+      "default": "Retroalimentación"
+    },
+    {
+      "label": "Etiqueta para solución",
+      "default": "Solución de muestra"
+    },
+    {
+      "label": "Caracteres restantes",
+      "default": "Caracteres restantes: @chars",
+      "description": "Mensaje para caracteres restantes. Puede usar @chars que será remplazado por el número correspondiente."
+    },
+    {
+      "label": "No hay suficientes caracteres",
+      "default": "¡Usted debe ingresar al menos @chars caracteres!",
+      "description": "Mensaje para indicar que el texto no contiene suficientes caracteres. Puede usar @chars que será remplazado por el número correspondiente."
+    },
+    {
+      "label": "Guardar mensaje",
+      "description": "Mensaje que indica que el texto ha sido guardado",
+      "default": "guardado"
+    },
+    {
+      "label": "Su resultado (no mostrado)",
+      "description": "Texto de accesibilidad usado para lectores en voz alta. @score será remplazado por el número de puntos. @total será remplazado por los puntos posibles máximos.",
+      "default": "Usted obtuvo @score de un total de @total puntos"
+    },
+    {
+      "label": "Mensaje de navegación (no mostrado)",
+      "description": "Texto de accesibilidad usado para lectores en voz alta",
+      "default": "Navegado a solución de muestra recientemente incluida después de área de texto."
+    },
+    {
+      "label": "Descripción de tecnología asistiva para botón \"Comprobar\"",
+      "default": "Comprobar las respuestas."
+    },
+    {
+      "label": "Descripción de tecnología asistiva para botón \"Mostrar Solución\"",
+      "default": "Mostrar la solución. Se le proporcionará una solución de muestra."
+    },
+    {
+      "label": "Descripción de tecnología asistiva para botón \"Reintentar\"",
+      "default": "Reintentar el trabajo. Puede mejorar su respuesta anterior si el autor lo permitió."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "label": "Overskrift",
+      "default": "Documentation tool",
+      "description": "Title for the documentation tool."
+    },
+    {
+      "label": "Innholdselementer",
+      "widgets": [
+        {
+          "label": "Standard"
+        }
+      ],
+      "entity": "Element",
+      "field": {
+        "label": "Innholdstype",
+        "description": "Bibliotek som brukes for dette elementet."
+      }
+    },
+    {
+      "label": "Localize documentation tool buttons",
+      "fields": [
+        {
+          "label": "Previous button label",
+          "default": "Forrige documentation step"
+        },
+        {
+          "label": "Next button label",
+          "default": "Neste documentation step"
+        },
+        {
+          "label": "Close button label",
+          "default": "Lukk"
+        }
+      ]
+    }
+  ]
+}

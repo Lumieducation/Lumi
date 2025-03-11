@@ -1,0 +1,205 @@
+{
+  "semantics": [
+    {
+      "label": "Bật bìa sách",
+      "description": "Bìa hiển thị thông tin về cuốn sách trước khi truy cập"
+    },
+    {
+      "label": "Trang bìa",
+      "fields": [
+        {
+          "label": "Mô tả bìa",
+          "description": "Văn bản này sẽ là mô tả của cuốn sách của bạn."
+        },
+        {
+          "label": "Che trung bình",
+          "description": "Phương tiện tùy chọn cho phần giới thiệu."
+        }
+      ]
+    },
+    {
+      "label": "Trang",
+      "entity": "Trang",
+      "widgets": [
+        {
+          "label": "Mặc định"
+        }
+      ],
+      "field": {
+        "label": "Mục",
+        "fields": [
+          {
+            "label": "Trang"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "fields": [
+        {
+          "label": "Màu cơ bản",
+          "description": "Đặt màu cơ bản sẽ xác định bảng màu tổng thể của cuốn sách. Vui lòng đảm bảo độ tương phản đủ cao."
+        },
+        {
+          "label": "Hiển thị mục lục theo mặc định",
+          "description": "Khi được bật, mục lục sẽ hiển thị khi mở sách"
+        },
+        {
+          "label": "Hiển thị các chỉ báo tiến độ",
+          "description": "Khi được kích hoạt, sẽ có các chỉ báo trên mỗi trang hiển thị cho người dùng xem anh ta đã hoàn tất trang đó hay chưa."
+        },
+        {
+          "label": "Bật tiến trình tự động",
+          "description": "Nếu được bật, một trang không có nhiệm vụ được coi là hoàn thành khi xem. Một trang với các nhiệm vụ khi tất cả các nhiệm vụ được hoàn thành. Nếu bị vô hiệu hóa, sẽ có một nút ở cuối mỗi trang để người dùng nhấp vào khi hoàn tất trang."
+        },
+        {
+          "label": "Hiển thị tóm tắt",
+          "description": "Khi được bật, người dùng có thể xem tóm tắt và gửi tiến trình / câu trả lời"
+        },
+        {
+          "label": "Enable \"Restart\" button",
+          "description": "When enabled the user can initiate a restart on the summary page."
+        }
+      ]
+    },
+    {
+      "label": "Bản dịch cho \"Đọc\"",
+      "default": "Đọc"
+    },
+    {
+      "label": "Bản dịch cho \"Hiển thị 'Mục lục'\"",
+      "default": "Hiển thị 'Mục lục'"
+    },
+    {
+      "label": "Bản dịch cho \"Ẩn 'Mục lục'\"",
+      "default": "Ẩn 'Mục lục'"
+    },
+    {
+      "label": "Bản dịch cho \"Trang tiếp theo\"",
+      "default": "Trang tiếp theo"
+    },
+    {
+      "label": "Bản dịch cho \"Trang trước\"",
+      "default": "Trang trước"
+    },
+    {
+      "label": "Bản dịch cho \"Trang đã hoàn thành!\"",
+      "default": "Trang đã hoàn thành!"
+    },
+    {
+      "label": "Bản dịch cho \"@pages of @total đã hoàn thành\" (@pages và @total sẽ được thay thế bằng các giá trị thực tế)",
+      "default": "@pages của @total đã hoàn thành"
+    },
+    {
+      "label": "Bản dịch cho \"Trang chưa hoàn chỉnh\"",
+      "default": "Trang chưa hoàn chỉnh"
+    },
+    {
+      "label": "Bản dịch cho \"Điều hướng lên đầu\"",
+      "default": "Điều hướng lên đầu"
+    },
+    {
+      "label": "Bản dịch cho \"Tôi đã hoàn thành trang này\"",
+      "default": "Tôi đã hoàn thành trang này"
+    },
+    {
+      "label": "Fullscreen button label",
+      "default": "Fullscreen"
+    },
+    {
+      "label": "Exit fullscreen button label",
+      "default": "Exit fullscreen"
+    },
+    {
+      "label": "Page progress in book",
+      "description": "\"@count\" will be replaced by page count, and \"@total\" with the total number of pages",
+      "default": "@count of @total pages"
+    },
+    {
+      "label": "Interaction progress",
+      "description": "\"@count\" will be replaced by interaction count, and \"@total\" with the total number of interactions",
+      "default": "@count of @total interactions"
+    },
+    {
+      "label": "Translation for \"Submit report\"",
+      "default": "Submit Report"
+    },
+    {
+      "label": "Label for \"restart\" button",
+      "default": "Restart"
+    },
+    {
+      "label": "Summary header",
+      "default": "Summary"
+    },
+    {
+      "label": "Translation for \"All interactions\"",
+      "default": "All interactions"
+    },
+    {
+      "label": "Translation for \"Unanswered interactions\"",
+      "default": "Unanswered interactions"
+    },
+    {
+      "label": "Score",
+      "description": "\"@score\" will be replaced with current score, and \"@maxscore\" will be replaced with max achievable score",
+      "default": "@score / @maxscore"
+    },
+    {
+      "label": "Per page interactions completion",
+      "description": "\"@left\" will be replaced with remaining interactions, and \"@max\" will be replaced with total number of interactions on the page",
+      "default": "@left of @max interactions completed"
+    },
+    {
+      "label": "Translation for \"No interactions\"",
+      "default": "No interactions"
+    },
+    {
+      "label": "Translation for \"Score\"",
+      "default": "Score"
+    },
+    {
+      "label": "Label for \"Summary &amp; submit\" button",
+      "default": "Summary &amp; submit"
+    },
+    {
+      "label": "Translation for \"You have not interacted with any pages.\"",
+      "default": "You have not interacted with any pages."
+    },
+    {
+      "label": "Translation for \"You have to interact with at least one page before you can see the summary.\"",
+      "default": "You have to interact with at least one page before you can see the summary."
+    },
+    {
+      "label": "Translation for \"Your answers are submitted for review!\"",
+      "default": "Your answers are submitted for review!"
+    },
+    {
+      "label": "Summary progress label",
+      "default": "Book progress"
+    },
+    {
+      "label": "Interactions progress label",
+      "default": "Interactions progress"
+    },
+    {
+      "label": "Total score label",
+      "default": "Total score"
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Page progress textual alternative",
+          "description": "An alternative text for the visual page progress. @page and @total variables available.",
+          "default": "Page @page of @total."
+        },
+        {
+          "label": "Label for expanding/collapsing navigation menu",
+          "default": "Toggle navigation menu"
+        }
+      ]
+    }
+  ]
+}

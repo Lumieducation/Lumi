@@ -1,0 +1,231 @@
+[
+  {
+    "name": "headline",
+    "type": "text",
+    "label": "Headline",
+    "importance": "low",
+    "optional": true,
+    "description": "If set, will be used for the headline of the exercise instead of the content title."
+  },
+  {
+    "label": "Instructions",
+    "importance": "medium",
+    "name": "instructions",
+    "type": "text",
+    "optional": true,
+    "description": "Students will see these instructions on top of the notes.",
+    "widget": "html",
+    "enterMode": "div",
+    "tags": [
+      "strong",
+      "em",
+      "u",
+      "a",
+      "ul",
+      "ol",
+      "h2",
+      "h3",
+      "hr"
+    ]
+  },
+  {
+    "label": "Exercise content",
+    "importance": "medium",
+    "name": "exerciseContent",
+    "type": "library",
+    "options": [
+      "H5P.Audio 1.5",
+      "H5P.AdvancedText 1.1",
+      "H5P.Video 1.6"
+    ],
+    "optional": false
+  },
+  {
+    "name": "notesFields",
+    "label": "Notes fields",
+    "description": "Settings for the notes fields.",
+    "importance": "low",
+    "type": "group",
+    "fields": [
+      {
+        "label": "Cue field title",
+        "importance": "low",
+        "name": "recallTitle",
+        "type": "text",
+        "default": "Cue",
+        "optional": true,
+        "description": "Title for the recall section."
+      },
+      {
+        "label": "Cue field placeholder",
+        "importance": "low",
+        "name": "recallPlaceholder",
+        "type": "text",
+        "default": "Enter your comments, questions, the main idea, etc. that you derive from your notes!",
+        "optional": true,
+        "description": "Placeholder for the cue section as a reminder for your students."
+      },
+      {
+        "label": "Notes field title",
+        "importance": "low",
+        "name": "notesTitle",
+        "type": "text",
+        "default": "Notes",
+        "optional": true,
+        "description": "Title for the notes section."
+      },
+      {
+        "label": "Notes field placeholder",
+        "importance": "low",
+        "name": "notesPlaceholder",
+        "type": "text",
+        "default": "Enter dates, details, definitions, formulas, examples, etc. from the source material!",
+        "optional": true,
+        "description": "Placeholder for the notes section as a reminder for your students."
+      },
+      {
+        "label": "Summary field title",
+        "importance": "low",
+        "name": "summaryTitle",
+        "type": "text",
+        "default": "Summary",
+        "optional": true,
+        "description": "Title for the summary section."
+      },
+      {
+        "label": "Summary field placeholder",
+        "importance": "low",
+        "name": "summaryPlaceholder",
+        "type": "text",
+        "default": "Summarize what you have learned!",
+        "optional": true,
+        "description": "Placeholder for the summary section as a reminder for your students."
+      }
+    ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "common": true,
+    "label": "Localization",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "notesSaved",
+        "type": "text",
+        "label": "Notes saved",
+        "importance": "low",
+        "default": "Notes saved"
+      },
+      {
+        "name": "save",
+        "type": "text",
+        "label": "Save",
+        "importance": "low",
+        "default": "Save"
+      },
+      {
+        "name": "noSaveContentState",
+        "type": "text",
+        "label": "Notes cannot be saved",
+        "importance": "low",
+        "default": "The platform either does not support the save content state feature or it is not activated in the platform's settings or you are not logged in. Your notes cannot be saved!"
+      },
+      {
+        "name": "copy",
+        "type": "text",
+        "label": "Text for \"Copy\" button",
+        "importance": "low",
+        "default": "Copy"
+      },
+      {
+        "name": "copyToClipboardSuccess",
+        "type": "text",
+        "label": "Notes copied to clipboard",
+        "importance": "low",
+        "default": "Notes copied to clipboard"
+      },
+      {
+        "name": "copyToClipboardError",
+        "type": "text",
+        "label": "Notes could not be copied to clipboard",
+        "importance": "low",
+        "default": "Notes could not be copied to clipboard"
+      }
+    ]
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "common": true,
+    "label": "Readspeaker",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "buttonFullscreenEnter",
+        "type": "text",
+        "label": "Fullscreen button title (enter)",
+        "importance": "low",
+        "default": "Enter fullscreen mode"
+      },
+      {
+        "name": "buttonFullscreenExit",
+        "type": "text",
+        "label": "Fullscreen button title (exit)",
+        "importance": "low",
+        "default": "Exit fullscreen mode"
+      },
+      {
+        "name": "buttonToggleOpenNotes",
+        "type": "text",
+        "label": "Toggle button title (when notes closed)",
+        "importance": "low",
+        "default": "Open notes"
+      },
+      {
+        "name": "buttonToggleCloseNotes",
+        "type": "text",
+        "label": "Toggle button title (when notes opened)",
+        "importance": "low",
+        "default": "Close notes"
+      },
+      {
+        "name": "notesOpened",
+        "type": "text",
+        "label": "Notes opened",
+        "importance": "low",
+        "default": "The view has switched to your notes."
+      },
+      {
+        "name": "notesClosed",
+        "type": "text",
+        "label": "Notes closed",
+        "importance": "low",
+        "default": "The view has switched to the exercise."
+      },
+      {
+        "name": "notesSaved",
+        "type": "text",
+        "label": "Notes saved",
+        "importance": "low",
+        "default": "The notes were saved to the platform."
+      },
+      {
+        "name": "notesHide",
+        "type": "text",
+        "label": "Hide notes",
+        "importance": "low",
+        "default": "Hide @label notes",
+        "description": "@label is a placeholder and will be replaced with the respective label of the notes field."
+      },
+      {
+        "name": "notesShow",
+        "type": "text",
+        "label": "Show notes",
+        "importance": "low",
+        "default": "Show @label notes",
+        "description": "@label is a placeholder and will be replaced with the respective label of the notes field."
+      }
+    ]
+  }
+]

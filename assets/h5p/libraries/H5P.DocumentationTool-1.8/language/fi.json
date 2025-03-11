@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "label": "Otsikko",
+      "default": "Dokumentaatiotyökalu",
+      "description": "Dokumentaatiotyökalun otsikko"
+    },
+    {
+      "label": "Osat",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "entity": "Sivu",
+      "field": {
+        "label": "Sivun muoto",
+        "description": "Vaihtoehdot sivun muodolle"
+      }
+    },
+    {
+      "label": "Omat tekstit",
+      "fields": [
+        {
+          "label": "Painikkeen Edellinen teksti",
+          "default": "Edellinen documentation step"
+        },
+        {
+          "label": "Painikkeen Seuraava teksti",
+          "default": "Seuraava documentation step"
+        },
+        {
+          "label": "Painikkeen Sulje teksti",
+          "default": "Sulje"
+        }
+      ]
+    }
+  ]
+}

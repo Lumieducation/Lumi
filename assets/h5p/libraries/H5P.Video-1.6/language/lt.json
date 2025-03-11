@@ -1,0 +1,136 @@
+{
+  "semantics": [
+    {
+      "description": "Norėdami užtikrinti, kad vaizdo įrašas veiktų visose naršyklėse, turėtumėte pridėti ir WebM, ir MP4 formato šaltinius.",
+      "label": "Vaizdo įrašų šaltiniai"
+    },
+    {
+      "fields": [
+        {
+          "label": "Iškabos paveikslėlis"
+        },
+        {
+          "description": "Jei nenustatyta, vaizdo įrašų grotuvo kraštinių santykis bus toks pat kaip ir vaizdo įrašo.",
+          "label": "Įdėkite vaizdo grotuvą, kad išnaudotumėte visą turimą vietą"
+        },
+        {
+          "description": "Pridėti valdiklius prie vaizdo įrašų grotuvo. Tai leidžia naudotojams paleisti, pristabdyti ir pan.",
+          "label": "Rodyti vaizdo įrašų grotuvo valdiklius"
+        }
+      ],
+      "label": "Visuals"
+    },
+    {
+      "fields": [
+        {
+          "label": "Automatiškai paleisti vaizdo įrašą",
+          "description": "Automatiškai leisti vaizdo įrašą. Gali neveikti mobiliuosiuose įrenginiuose."
+        },
+        {
+          "label": "Kartoti vaizdo įrašą",
+          "description": "Automatiškai paleisti vaizdo įrašą iš naujo, kai jis pasibaigs."
+        }
+      ],
+      "label": "Groti"
+    },
+    {
+      "label": "Video lokalizacija",
+      "fields": [
+        {
+          "default": "Vaizdo įrašas",
+          "label": "Pavadinimas",
+          "description": "Padeda atpažinti tokio tipo turinį."
+        },
+        {
+          "label": "Įkeliama",
+          "default": "Vaizdo įrašų grotuvas įkeliamas..."
+        },
+        {
+          "label": "Grotuvai nerasti",
+          "default": "Nerasta vaizdo grotuvų, palaikančių nurodytą vaizdo įrašo formatą."
+        },
+        {
+          "label": "Nėra šaltinių",
+          "default": "Nerastas video šaltinis."
+        },
+        {
+          "label": "Atšaukta",
+          "default": "Medijos grojimas atšauktas."
+        },
+        {
+          "label": "Tinklo sutrikimas",
+          "default": "Tinklo sutrikimas."
+        },
+        {
+          "label": "Negalima dekoduoti video",
+          "default": "Negalima dekoduoti medijos."
+        },
+        {
+          "label": "Formatas nepalaikomas",
+          "default": "Vaizdo įrašo formatas nepalaikomas."
+        },
+        {
+          "label": "Medija užšifruota",
+          "default": "Medija užšifruota."
+        },
+        {
+          "label": "Nežinoma klaida",
+          "default": "Nežinoma klaida."
+        },
+        {
+          "label": "Neteisingas YouTube ID",
+          "default": "Neteisingas YouTube ID."
+        },
+        {
+          "label": "Nežinomas YouTube ID",
+          "default": "Nepavyko rasti vaizdo įrašo su nurodytu „YouTube“ ID."
+        },
+        {
+          "label": "Uždraustas YouTube video",
+          "default": "Šio vaizdo įrašo savininkas neleidžia jo įterpti."
+        }
+      ]
+    },
+    {
+      "label": "Pritaikomumas",
+      "fields": [
+        {
+          "entity": "Takelis",
+          "field": {
+            "fields": [
+              {
+                "label": "Takelio pavadinimas"
+              },
+              {
+                "options": [
+                  {
+                    "label": "Subtitrai"
+                  },
+                  {
+                    "label": "Titrai"
+                  },
+                  {
+                    "label": "Aprašymai"
+                  },
+                  {
+                    "label": "Skyriai"
+                  }
+                ],
+                "label": "Įveskite tipą, žr. <a target=\"_blank\" href=\"https://html.spec.whatwg.org/multipage/embedded-content.html#the-track-element\">HTML living standard</a>"
+              },
+              {
+                "label": "Originalo kalba turi būti apibrėžta subtitrams",
+                "description": "Turi būti galiojanti BCP 47 kalbos žyma. Jei tipo atributas nustatytas į subtitrus, tada reikia apibrėžti srclang."
+              },
+              {
+                "label": "Failo takelis (WebVTT)"
+              }
+            ],
+            "label": "Takelis"
+          },
+          "label": "Pridėti vaizdo įrašo takelį"
+        }
+      ]
+    }
+  ]
+}

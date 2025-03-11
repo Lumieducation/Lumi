@@ -1,0 +1,256 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Optional media to display above the question."
+        },
+        {
+          "label": "Disable image zooming"
+        }
+      ]
+    },
+    {
+      "label": "Question"
+    },
+    {
+      "label": "Available options",
+      "entity": "option",
+      "field": {
+        "label": "Option",
+        "fields": [
+          {
+            "label": "Media",
+            "description": "Media to display as a choice."
+          },
+          {
+            "label": "Poster image"
+          },
+          {
+            "label": "Correct"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Overall Feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Default"
+            }
+          ],
+          "label": "Define custom feedback for any score range",
+          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "Score Range"
+              },
+              {},
+              {
+                "label": "Feedback for defined score range",
+                "placeholder": "Fill in the feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Behavioural settings",
+      "description": "These options will let you control how the task behaves.",
+      "fields": [
+        {
+          "label": "Enable \"Retry\" button"
+        },
+        {
+          "label": "Enable \"Show Solution\" button"
+        },
+        {
+          "label": "Show confirmation dialog on \"Check\""
+        },
+        {
+          "label": "Show confirmation dialog on \"Retry\""
+        },
+        {
+          "label": "Give one point for the whole question",
+          "description": "Awards one point to the question if the percentage score is higher than the pass percentage"
+        },
+        {
+          "label": "Require answer before the solution can be viewed"
+        },
+        {
+          "label": "Question Type",
+          "description": "Select the look and behaviour of the question.",
+          "options": [
+            {
+              "label": "Automatic"
+            },
+            {
+              "label": "Multiple Choice (Checkboxes)"
+            },
+            {
+              "label": "Single Choice (Radio Buttons)"
+            }
+          ]
+        },
+        {
+          "label": "Aspect ratio",
+          "description": "Select the aspect ratio of the alternatives",
+          "options": [
+            {
+              "label": "Automatic"
+            },
+            {
+              "label": "16:9"
+            },
+            {
+              "label": "4:3"
+            },
+            {
+              "label": "3:2"
+            },
+            {
+              "label": "1:1"
+            }
+          ]
+        },
+        {
+          "label": "Maximum alternatives per row",
+          "description": "Set the maximum number of alternatives per row to ensure the questions look alright.",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "3"
+            },
+            {
+              "label": "4"
+            }
+          ]
+        },
+        {
+          "label": "Pass percentage",
+          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+        }
+      ]
+    },
+    {
+      "label": "User interface",
+      "fields": [
+        {
+          "label": "Text for \"Check\" button",
+          "default": "查看"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "提交"
+        },
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "查看答案。回答會評為正確、錯誤或未回答。"
+        },
+        {
+          "label": "Text for \"Show solution\" button",
+          "default": "顯示解答"
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "顯示解答。此測試會以正解評分。"
+        },
+        {
+          "label": "Correct Answer (not displayed)",
+          "default": "Correct answer"
+        },
+        {
+          "label": "Wrong Answer (not displayed)",
+          "default": "Wrong answer"
+        },
+        {
+          "label": "Option should have been checked",
+          "default": "Should have been checked"
+        },
+        {
+          "label": "Option should not have been checked",
+          "default": "Should not have been checked"
+        },
+        {
+          "label": "Text for \"Requires answer\" message",
+          "default": "Please answer before viewing the solution"
+        },
+        {
+          "label": "Text for \"Retry\" button",
+          "default": "重試"
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "重新嘗試。重置所有回答，重新開始測試。"
+        },
+        {
+          "label": "Your result",
+          "description": ":num and :total are variables and will be replaced by their respective values.",
+          "default": "You got :num out of :total points"
+        },
+        {
+          "label": "Check confirmation dialog",
+          "fields": [
+            {
+              "label": "Header text",
+              "default": "完成嗎?"
+            },
+            {
+              "label": "Body text",
+              "default": "你確定要完成嗎？"
+            },
+            {
+              "label": "Cancel button label",
+              "default": "取消"
+            },
+            {
+              "label": "Confirm button label",
+              "default": "完成嗎"
+            }
+          ]
+        },
+        {
+          "label": "Retry confirmation dialog",
+          "fields": [
+            {
+              "label": "Header text",
+              "default": "重試?"
+            },
+            {
+              "label": "Body text",
+              "default": "Are you sure you wish to retry?"
+            },
+            {
+              "label": "Cancel button label",
+              "default": "取消"
+            },
+            {
+              "label": "Confirm button label",
+              "default": "重試"
+            }
+          ]
+        },
+        {
+          "label": "Text if alt text is missing for an image",
+          "default": "Alt text missing"
+        },
+        {
+          "label": "Close modal button label",
+          "default": "Close modal"
+        }
+      ]
+    }
+  ]
+}

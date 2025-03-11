@@ -1,0 +1,163 @@
+{
+  "semantics": [
+    {
+      "label": "Média",
+      "fields": [
+        {
+          "label": "Typ",
+          "description": "Volitelná média zobrazená nad otázkou."
+        },
+        {
+          "label": "Zakázat zvětšení obrazu"
+        }
+      ]
+    },
+    {
+      "label": "Otázka"
+    },
+    {
+      "label": "Správná odpověď",
+      "options": [
+        {
+          "label": "Pravda"
+        },
+        {
+          "label": "Nepravda"
+        }
+      ]
+    },
+    {
+      "label": "Překlady uživatelského rozhraní pro otázky Pravda/Nepravda",
+      "fields": [
+        {
+          "label": "Popisek pro tlačítko pravda",
+          "default": "Pravda"
+        },
+        {
+          "label": "Popisek pro tlačítko nepravda",
+          "default": "Nepravda"
+        },
+        {
+          "label": "Text zpětné vazby",
+          "default": "Získal jste @score z @total bodů",
+          "description": "Text zpětné vazby, dostupné proměnné @score a @total. Příklad: \"Získal jste @score z @total možných bodů\""
+        },
+        {
+          "label": "Text pro tlačítko \"Zkontrolovat\"",
+          "default": "Zkontrolovat"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "Text pro tlačítko \"Zobrazit řešení\"",
+          "default": "Zobrazit řešení"
+        },
+        {
+          "label": "Text pro tlačítko \"Opakovat\"",
+          "default": "Opakovat"
+        },
+        {
+          "label": "Špatná odpověď",
+          "default": "Špatná odpověď"
+        },
+        {
+          "label": "Správná odpověď",
+          "default": "Správná odpověď"
+        },
+        {
+          "label": "Textové znázornění výsledkové lišty pro ty, kteří používají čtecí zařízení",
+          "default": "Získal jste :num z :total bodů"
+        },
+        {
+          "label": "Popisek podpůrné technologie pro tlačítko \"Zkontrolovat\"",
+          "default": "Zkontrolovat odpovědi. Odpovědi budou označeny jako správné, nesprávné nebo nezodpovězené."
+        },
+        {
+          "label": "Popisek podpůrné technologie pro tlačítko \"Zobrazit řešení\"",
+          "default": "Zobrazit řešení. Úkol bude zobrazen se správným řešením."
+        },
+        {
+          "label": "Popisek podpůrné technologie pro tlačítko \"Opakovat\"",
+          "default": "Zopakovat úkol. Resetovat všechny odpovědi a spustit úlohu znovu."
+        }
+      ]
+    },
+    {
+      "label": "Nastavení chování",
+      "description": "Tyto možnosti vám umožní řídit, jak se bude úloha chovat.",
+      "fields": [
+        {
+          "label": "Povolit tlačítko \"Opakovat\""
+        },
+        {
+          "label": "Povolit tlačítko \"Zobrazit řešení\""
+        },
+        {
+          "label": "Povolit tlačítko \"Zkontrolovat\""
+        },
+        {
+          "label": "Zobrazit potvrzovací dialog \"Zkontrolovat\""
+        },
+        {
+          "label": "Zobrazit potvrzovací dialog \"Opakovat\""
+        },
+        {
+          "label": "Automaticky zkontrolovat odpovědi",
+          "description": "Pokud tuto možnost povolíte, bude přístupnost narušena"
+        },
+        {
+          "label": "Zpětná vazba na správnou odpověď",
+          "description": "Toto přepíše výchozí text zpětné vazby. Dostupné proměnné: @score a @total"
+        },
+        {
+          "label": "Zpětná vazba na špatnou odpověď",
+          "description": "Toto přepíše výchozí text zpětné vazby. Dostupné proměnné: @score a @total"
+        }
+      ]
+    },
+    {
+      "label": "Potvrzovací dialog kontroly",
+      "fields": [
+        {
+          "label": "Text záhlaví",
+          "default": "Ukončit ?"
+        },
+        {
+          "label": "Tělo textu",
+          "default": "Opravdu chcete akci ukončit ?"
+        },
+        {
+          "label": "Popisek tlačítka zrušení",
+          "default": "Zrušit"
+        },
+        {
+          "label": "Popis potvrzovacího tlačítka",
+          "default": "Konec"
+        }
+      ]
+    },
+    {
+      "label": "Dialog pro potvrzení opakování",
+      "fields": [
+        {
+          "label": "Text záhlaví",
+          "default": "Opakovat?"
+        },
+        {
+          "label": "Tělo textu",
+          "default": "Opravdu chcete akci opakovat ?"
+        },
+        {
+          "label": "Popisek tlačítka zrušení",
+          "default": "Zrušit"
+        },
+        {
+          "label": "Popisek potvrzovacího tlačítka",
+          "default": "Potvrdit"
+        }
+      ]
+    }
+  ]
+}

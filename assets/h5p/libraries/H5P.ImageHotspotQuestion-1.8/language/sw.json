@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Mhariri wa Swali la Eneo lenye Mtandao",
+      "fields": [
+        {
+          "label": "Picha ya mandharinyuma",
+          "fields": [
+            {
+              "label": "Picha ya mandharinyuma",
+              "description": "Chagua picha ya kutumia kama mandharinyuma kwa picha ya swali la eneo lenye mtandao."
+            }
+          ]
+        },
+        {
+          "label": "Maeneo yenye mtandao",
+          "description": "Buruta na udondoshe kielelezo unachotaka kutoka kwa upau wa zana ili kuunda eneo lenye mtandao jipya. Bofya mara mbili ili kuhariri eneo lenye mtandao lililopo. Buruta eneo hilo lenye mtandao ili ulihamishe. Vuta kipete cha ukubwa kwenye kona ya chini ya kulia ili kubadilisha ukubwa.",
+          "fields": [
+            {
+              "label": "Maelezo ya kazi",
+              "description": "Maelekezo kwa mtumiaji."
+            },
+            {
+              "label": "Eneo lenye mtandao",
+              "entity": "Eneo lenye mtandao",
+              "field": {
+                "label": "Eneo lenye mtandao",
+                "fields": [
+                  {
+                    "label": "Mipangilio ya mtumiaji",
+                    "fields": [
+                      {
+                        "label": "Sahihi",
+                        "description": "Kunaweza kuwa na maeneo mengi sahihi yenye mtandao. Hata hivyo, mtumiaji anapata maoni sahihi/yasiyo sahihi mara baada ya kubofya mara ya kwanza."
+                      },
+                      {
+                        "label": "Maoni"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Mipangilio iliyokokotwa"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Maoni ikiwa mtumiaji atachagua sehemu tupu:",
+              "placeholder": "Hukupata maeneo yoyote yenye mtandao, jaribu tena!"
+            },
+            {
+              "label": "Onyesha maoni kama kiibukizi"
+            },
+            {
+              "label": "Ujanibishaji",
+              "fields": [
+                {
+                  "label": "Maandishi ya kitufe cha kujaribu tena",
+                  "default": "Jaribu tena"
+                },
+                {
+                  "label": "Funga maandishi ya kitufe",
+                  "default": "Funga"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Uwakilishi wa maandishi wa upau wa alama kwa wale wanaotumia kisoma maandishi",
+      "default": "Umepata :num kati ya alama:total"
+    },
+    {
+      "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Jaribu tena\"",
+      "default": "Jaribu tena kazi hiyo. Weka upya majibu yote na uanze kazi tena."
+    }
+  ]
+}

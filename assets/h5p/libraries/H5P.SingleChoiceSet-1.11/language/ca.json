@@ -1,0 +1,155 @@
+{
+  "semantics": [
+    {
+      "label": "Llista de preguntes",
+      "entity": "pregunta",
+      "widgets": [
+        {
+          "label": "Opció predeterminada"
+        },
+        {
+          "label": "Textual"
+        }
+      ],
+      "field": {
+        "label": "Pregunta i opcions",
+        "fields": [
+          {
+            "label": "Pregunta"
+          },
+          {
+            "label": "Opcions: la primera opció és la correcta.",
+            "entity": "resposta",
+            "field": {
+              "label": "Alternativa"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Suggeriment general",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Opció predeterminada"
+            }
+          ],
+          "label": "Defineix una valoració per cada rang de puntuació",
+          "description": "Feu clic al botó \"Afegeix un rang\" per afegir tants rangs com necessiteu. Exemple: 0-20 % per a puntuació baixa, 21-91 % per a puntuació mitjana, 91-100 % per a puntuació excel·lent",
+          "entity": "rang",
+          "field": {
+            "fields": [
+              {
+                "label": "Rang de puntuació"
+              },
+              {},
+              {
+                "label": "Retroacció per al rang de puntuació definit",
+                "placeholder": "Introduïu el suggeriment"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Opcions de comportament",
+      "fields": [
+        {
+          "label": "Continua automàticament",
+          "description": "Automatically go to next question when alternative is selected. This needs to be turned off to make the content fully accessible when using a screen reader."
+        },
+        {
+          "label": "Temps d’espera en respostes correctes",
+          "description": "Valor en mil·lisegons"
+        },
+        {
+          "label": "Temps d’espera en respostes errònies",
+          "description": "Valor en mil·lisegons"
+        },
+        {
+          "label": "Activa els efectes de so"
+        },
+        {
+          "label": "Activa el botó \"Torna-ho a provar\""
+        },
+        {
+          "label": "Activa el botó per mostrar la solució"
+        },
+        {
+          "label": "Percentatge per aprovar el qüestionari",
+          "description": "Percentatge de la puntuació total requerida per aprovar el qüestionari."
+        }
+      ]
+    },
+    {
+      "label": "Localitza el conjunt de selecció única",
+      "fields": [
+        {
+          "label": "Etiqueta del botó \"Següent\"",
+          "default": "Pregunta següent"
+        },
+        {
+          "label": "Etiqueta per al botó \"Mostra la solució\"",
+          "default": "Mostra la solució"
+        },
+        {
+          "label": "Etiqueta del botó \"Torna-ho a provar\"",
+          "default": "Torna-ho a provar"
+        },
+        {
+          "label": "Títol per a la vista de mostra de solució",
+          "default": "Solució"
+        },
+        {
+          "label": "Text de l’altaveu de lectura per a una resposta correcta",
+          "default": "Correcte!"
+        },
+        {
+          "label": "Text de l’altaveu de lectura per a una resposta incorrecta",
+          "default": "Incorrecte!"
+        },
+        {
+          "label": "Option should have been selected",
+          "default": "Should have been selected"
+        },
+        {
+          "label": "Option should not have been selected",
+          "default": "Should not have been selected"
+        },
+        {
+          "label": "Etiqueta per al botó \"Silencia\", per desactivar el so dels suggeriments",
+          "default": "Silencia el so dels suggeriments"
+        },
+        {
+          "label": "Etiqueta del botó \"Tanca\"",
+          "default": "Tanca"
+        },
+        {
+          "label": "Text del número de diapositiva",
+          "description": "Anuncia la diapositiva actual i el nombre total de diapositives, les variables són :num i :total",
+          "default": "Diapositiva :num de :total"
+        },
+        {
+          "label": "Representació textual de la barra de puntuació pera als que utilitzen un altaveu de lectura",
+          "default": "Heu fet :num de :total punts"
+        },
+        {
+          "label": "Etiqueta del número de pregunta a la llista de solucions",
+          "description": "Anuncia l’índex de preguntes actual a la llista de solucions; les variables són :num",
+          "default": "Pregunta :num"
+        },
+        {
+          "label": "Descripció de la tecnologia d’assistència per al botó \"Mostra la solució\"",
+          "default": "Mostra la solució. La tasca es marcarà amb la seva solució correcta."
+        },
+        {
+          "label": "Descripció de la tecnologia d’assistència per al botó \"Torna-ho a provar\"",
+          "default": "Intenta de nou la tasca. Reajusta totes les respostes i comença la tasca de nou."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+[
+  {
+    "name": "elementList",
+    "label": "Elements",
+    "importance": "high",
+    "type": "list",
+    "entity": "element",
+    "field": {
+      "name": "element",
+      "type": "library",
+      "label": "Element type",
+      "importance": "high",
+      "description": "Library for this page.",
+      "options": [
+        "H5P.Text 1.1",
+        "H5P.TextInputField 1.2",
+        "H5P.Image 1.1",
+        "H5P.Accordion 1.0"
+      ]
+    }
+  },
+  {
+    "name": "helpTextLabel",
+    "label": "Label for help text",
+    "importance": "low",
+    "type": "text",
+    "description": "Label for showing additional helpful information to the user.",
+    "default": "More information"
+  },
+  {
+    "name": "helpText",
+    "label": "Fill in additional help information",
+    "importance": "low",
+    "type": "text",
+    "widget": "html",
+    "description": "Here you can fill in additional information for the user, which will be available when clicked.",
+    "enterMode": "p",
+    "optional": true,
+    "tags": [
+      "strong",
+      "em",
+      "u",
+      "a",
+      "ul",
+      "ol",
+      "h2",
+      "h3",
+      "hr",
+      "pre",
+      "code"
+    ]
+  }
+]

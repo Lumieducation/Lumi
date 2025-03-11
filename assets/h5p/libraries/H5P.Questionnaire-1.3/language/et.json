@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Küsitluse elemendid",
+      "widgets": [
+        {
+          "label": "Vaikimisi"
+        }
+      ],
+      "entity": "element",
+      "field": {
+        "label": "Vali teek",
+        "fields": [
+          {
+            "label": "Teek",
+            "description": "Vali teek"
+          },
+          {
+            "label": "Nõutud väli"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Edukuva valikud",
+      "fields": [
+        {
+          "label": "Luba edukuva"
+        },
+        {
+          "label": "Lisa edukuva pilt",
+          "fields": [
+            {
+              "label": "Asenda eduikoon pildiga"
+            }
+          ]
+        },
+        {
+          "label": "Tekst, mida näidata esitamisel",
+          "default": "Oled küsitluse täitnud."
+        }
+      ]
+    },
+    {
+      "label": "Kasutajaliidese elemendid",
+      "fields": [
+        {
+          "label": "Nuppude sildid",
+          "fields": [
+            {
+              "label": "Eelmine nupu silt",
+              "default": "Tagasi"
+            },
+            {
+              "label": "Jätka nupu silt",
+              "default": "Jätka"
+            },
+            {
+              "label": "Järgmine nupu silt",
+              "default": "Järgmine"
+            },
+            {
+              "label": "Esita nupu silt",
+              "default": "Esita"
+            }
+          ]
+        },
+        {
+          "label": "Puudega kasutaja",
+          "fields": [
+            {
+              "label": "Nõutud teade, välju nupu silt",
+              "default": "Sulge veateade"
+            },
+            {
+              "label": "Edenemisriba tekst",
+              "default": "Küsimus %current kokku %max küsimusest",
+              "description": "Kasutatakse assisteeriva tehnoloogiaga, et öelda, mis küsimusega on tegu. Muutujad: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Nõutud teade",
+          "default": "See küsimus vajab vastust",
+          "description": "Näidatakse, kui väli on täitmata, kuigi täitmine on nõutud ümbrise sisutüübi poolt"
+        },
+        {
+          "label": "Nõutud sümboli tekst",
+          "default": "nõutud",
+          "description": "Tekst, mis saadab tärni, osutamaks, et küsimus on nõutud"
+        },
+        {
+          "label": "Esita kuva pealkiri",
+          "default": "Oled edukalt vastanud kõigile küsimustele"
+        },
+        {
+          "label": "Esita kuva subtiiter",
+          "default": "Oma vastuste esitamiseks kliki allpool"
+        }
+      ]
+    }
+  ]
+}

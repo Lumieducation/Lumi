@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Описание задачи",
+      "description": "Put the heading/instructions you'd like to show above the before/after image here.",
+      "placeholder": "Here you can add an optional heading and/or instructions."
+    },
+    {
+      "label": "Первое изображение",
+      "fields": [
+        {
+          "label": "Первое изображение",
+          "description": "Первое изображение. Пожалуйста, убедитесь, что размер изображения совпадает со вторым изображением."
+        },
+        {
+          "label": "Название изображения",
+          "description": "Название под первым изображением."
+        }
+      ]
+    },
+    {
+      "label": "Второе изображение",
+      "fields": [
+        {
+          "label": "Второе изображение",
+          "description": "Второе изображение. Пожалуйста, убедитесь, что размер изображения совпадает с первым изображением."
+        },
+        {
+          "label": "Название второго изображения",
+          "description": "Название под вторым изображением"
+        }
+      ]
+    },
+    {
+      "label": "Настройки обратной связи",
+      "description": "Это позволит настроить некоторые детали.",
+      "fields": [
+        {
+          "label": "Позиция слайдера в начале %",
+          "description": "Настраивает первоначальную позицию слайдера."
+        },
+        {
+          "label": "Направление слайдера",
+          "description": "Горизонтальное позволяет двигать слайдер направо и налево, вертикальное вверх и вниз.",
+          "options": [
+            {
+              "label": "Горизонтально"
+            },
+            {
+              "label": "Вертикально"
+            }
+          ]
+        },
+        {
+          "label": "Цвет слайдера",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Image visible message",
+          "default": "Image @percentage % visible",
+          "description": "@percentage is a placeholder and will be replaced with the respective value."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

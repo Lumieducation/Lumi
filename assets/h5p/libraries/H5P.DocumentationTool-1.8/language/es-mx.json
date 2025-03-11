@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "label": "Encabezado",
+      "default": "Herramienta de documentación",
+      "description": "Título para la herramienta de documentación."
+    },
+    {
+      "label": "Elementos",
+      "widgets": [
+        {
+          "label": "Predeterminado"
+        }
+      ],
+      "entity": "página",
+      "field": {
+        "label": "Tipo de página",
+        "description": "Biblioteca para esta diapositiva."
+      }
+    },
+    {
+      "label": "Traducir los botones de la herramienta de documentación",
+      "fields": [
+        {
+          "label": "Etiqueta del botón anterior",
+          "default": "Paso de documentación anterior"
+        },
+        {
+          "label": "Etiqueta del botón siguiente",
+          "default": "Paso de documentación siguiente"
+        },
+        {
+          "label": "Etiqueta del botón cerrar",
+          "default": "Cerrar"
+        }
+      ]
+    }
+  ]
+}

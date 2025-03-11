@@ -1,0 +1,521 @@
+[
+  {
+    "name": "media",
+    "type": "group",
+    "label": "Media",
+    "importance": "medium",
+    "fields": [
+      {
+        "name": "type",
+        "type": "library",
+        "label": "Type",
+        "importance": "medium",
+        "options": [
+          "H5P.Image 1.1",
+          "H5P.Video 1.6",
+          "H5P.Audio 1.5"
+        ],
+        "optional": true,
+        "description": "Optional media to display above the question."
+      },
+      {
+        "name": "disableImageZooming",
+        "type": "boolean",
+        "label": "Disable image zooming",
+        "importance": "low",
+        "default": false,
+        "optional": true,
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "type",
+              "equals": "H5P.Image 1.1"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "question",
+    "type": "text",
+    "importance": "high",
+    "widget": "html",
+    "label": "Question",
+    "enterMode": "p",
+    "tags": [
+      "strong",
+      "em",
+      "sub",
+      "sup",
+      "h2",
+      "h3",
+      "pre",
+      "code"
+    ]
+  },
+  {
+    "name": "options",
+    "type": "list",
+    "importance": "high",
+    "label": "Available options",
+    "entity": "option",
+    "min": 2,
+    "max": 20,
+    "defaultNum": 2,
+    "field": {
+      "name": "option",
+      "type": "group",
+      "label": "Option",
+      "importance": "high",
+      "fields": [
+        {
+          "name": "media",
+          "type": "library",
+          "label": "Media",
+          "optional": false,
+          "description": "Media to display as a choice.",
+          "options": [
+            "H5P.Image 1.1",
+            "H5P.Video 1.6",
+            "H5P.Audio 1.5"
+          ]
+        },
+        {
+          "name": "poster",
+          "type": "image",
+          "label": "Poster image",
+          "importance": "low",
+          "widget": "showWhen",
+          "showWhen": {
+            "rules": [
+              {
+                "field": "media",
+                "equals": "H5P.Audio 1.5"
+              }
+            ]
+          }
+        },
+        {
+          "name": "correct",
+          "type": "boolean",
+          "label": "Correct",
+          "importance": "low"
+        }
+      ]
+    }
+  },
+  {
+    "name": "overallFeedback",
+    "type": "group",
+    "label": "Overall Feedback",
+    "importance": "low",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "overallFeedback",
+        "type": "list",
+        "widgets": [
+          {
+            "name": "RangeList",
+            "label": "Default"
+          }
+        ],
+        "importance": "high",
+        "label": "Define custom feedback for any score range",
+        "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+        "entity": "range",
+        "min": 1,
+        "defaultNum": 1,
+        "optional": true,
+        "field": {
+          "name": "overallFeedback",
+          "type": "group",
+          "importance": "low",
+          "fields": [
+            {
+              "name": "from",
+              "type": "number",
+              "label": "Score Range",
+              "min": 0,
+              "max": 100,
+              "default": 0,
+              "unit": "%"
+            },
+            {
+              "name": "to",
+              "type": "number",
+              "min": 0,
+              "max": 100,
+              "default": 100,
+              "unit": "%"
+            },
+            {
+              "name": "feedback",
+              "type": "text",
+              "label": "Feedback for defined score range",
+              "importance": "low",
+              "placeholder": "Fill in the feedback",
+              "optional": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "behaviour",
+    "type": "group",
+    "label": "Behavioural settings",
+    "importance": "low",
+    "description": "These options will let you control how the task behaves.",
+    "fields": [
+      {
+        "name": "enableRetry",
+        "label": "Enable \"Retry\" button",
+        "type": "boolean",
+        "importance": "low",
+        "default": true,
+        "optional": true
+      },
+      {
+        "name": "enableSolutionsButton",
+        "label": "Enable \"Show Solution\" button",
+        "type": "boolean",
+        "importance": "low",
+        "default": true,
+        "optional": true
+      },
+      {
+        "name": "confirmCheckDialog",
+        "label": "Show confirmation dialog on \"Check\"",
+        "importance": "low",
+        "type": "boolean",
+        "default": false,
+        "optional": true
+      },
+      {
+        "name": "confirmRetryDialog",
+        "label": "Show confirmation dialog on \"Retry\"",
+        "importance": "low",
+        "type": "boolean",
+        "default": false,
+        "optional": true
+      },
+      {
+        "name": "singlePoint",
+        "type": "boolean",
+        "label": "Give one point for the whole question",
+        "importance": "low",
+        "description": "Awards one point to the question if the percentage score is higher than the pass percentage",
+        "default": false
+      },
+      {
+        "label": "Require answer before the solution can be viewed",
+        "importance": "low",
+        "name": "showSolutionsRequiresInput",
+        "type": "boolean",
+        "default": true,
+        "optional": true
+      },
+      {
+        "name": "questionType",
+        "type": "select",
+        "label": "Question Type",
+        "importance": "low",
+        "description": "Select the look and behaviour of the question.",
+        "default": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "label": "Automatic"
+          },
+          {
+            "value": "multi",
+            "label": "Multiple Choice (Checkboxes)"
+          },
+          {
+            "value": "single",
+            "label": "Single Choice (Radio Buttons)"
+          }
+        ]
+      },
+      {
+        "name": "aspectRatio",
+        "type": "select",
+        "label": "Aspect ratio",
+        "importance": "low",
+        "description": "Select the aspect ratio of the alternatives",
+        "default": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "label": "Automatic"
+          },
+          {
+            "value": "16to9",
+            "label": "16:9"
+          },
+          {
+            "value": "4to3",
+            "label": "4:3"
+          },
+          {
+            "value": "3to2",
+            "label": "3:2"
+          },
+          {
+            "value": "1to1",
+            "label": "1:1"
+          }
+        ]
+      },
+      {
+        "name": "maxAlternativesPerRow",
+        "type": "select",
+        "label": "Maximum alternatives per row",
+        "description": "Set the maximum number of alternatives per row to ensure the questions look alright.",
+        "default": "4",
+        "options": [
+          {
+            "value": "1",
+            "label": "1"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ]
+      },
+      {
+        "label": "Pass percentage",
+        "name": "passPercentage",
+        "type": "number",
+        "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements.",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 100
+      }
+    ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "common": true,
+    "label": "User interface",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "checkAnswerButtonText",
+        "type": "text",
+        "label": "Text for \"Check\" button",
+        "importance": "low",
+        "default": "Check"
+      },
+      {
+        "name": "submitAnswerButtonText",
+        "type": "text",
+        "label": "Text for \"Submit\" button",
+        "importance": "low",
+        "default": "Submit"
+      },
+      {
+        "name": "checkAnswer",
+        "type": "text",
+        "label": "Assistive technology description for \"Check\" button",
+        "importance": "low",
+        "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+      },
+      {
+        "name": "showSolutionButtonText",
+        "type": "text",
+        "label": "Text for \"Show solution\" button",
+        "importance": "low",
+        "default": "Show solution"
+      },
+      {
+        "name": "showSolution",
+        "type": "text",
+        "label": "Assistive technology description for \"Show Solution\" button",
+        "importance": "low",
+        "default": "Show the solution. The correct options will be marked."
+      },
+      {
+        "name": "correctAnswer",
+        "type": "text",
+        "label": "Correct Answer (not displayed)",
+        "importance": "low",
+        "default": "Correct answer"
+      },
+      {
+        "name": "wrongAnswer",
+        "type": "text",
+        "label": "Wrong Answer (not displayed)",
+        "importance": "low",
+        "default": "Wrong answer"
+      },
+      {
+        "name": "shouldCheck",
+        "type": "text",
+        "label": "Option should have been checked",
+        "importance": "low",
+        "default": "Should have been checked",
+        "optional": true
+      },
+      {
+        "name": "shouldNotCheck",
+        "type": "text",
+        "label": "Option should not have been checked",
+        "importance": "low",
+        "default": "Should not have been checked",
+        "optional": true
+      },
+      {
+        "label": "Text for \"Requires answer\" message",
+        "importance": "low",
+        "name": "noAnswer",
+        "type": "text",
+        "default": "Please answer before viewing the solution",
+        "optional": true
+      },
+      {
+        "name": "retryText",
+        "type": "text",
+        "label": "Text for \"Retry\" button",
+        "importance": "low",
+        "default": "Retry"
+      },
+      {
+        "name": "retry",
+        "type": "text",
+        "label": "Assistive technology description for \"Retry\" button",
+        "importance": "low",
+        "default": "Retry the task. Reset all responses and start the task over again."
+      },
+      {
+        "name": "result",
+        "type": "text",
+        "label": "Your result",
+        "description": ":num and :total are variables and will be replaced by their respective values.",
+        "importance": "low",
+        "default": "You got :num out of :total points"
+      },
+      {
+        "label": "Check confirmation dialog",
+        "importance": "low",
+        "name": "confirmCheck",
+        "type": "group",
+        "common": true,
+        "fields": [
+          {
+            "label": "Header text",
+            "importance": "low",
+            "name": "header",
+            "type": "text",
+            "default": "Finish?"
+          },
+          {
+            "label": "Body text",
+            "importance": "low",
+            "name": "body",
+            "type": "text",
+            "default": "Are you sure you want to finish?",
+            "widget": "html",
+            "enterMode": "p",
+            "tags": [
+              "strong",
+              "em",
+              "del",
+              "u",
+              "code"
+            ]
+          },
+          {
+            "label": "Cancel button label",
+            "importance": "low",
+            "name": "cancelLabel",
+            "type": "text",
+            "default": "Cancel"
+          },
+          {
+            "label": "Confirm button label",
+            "importance": "low",
+            "name": "confirmLabel",
+            "type": "text",
+            "default": "Finish"
+          }
+        ]
+      },
+      {
+        "label": "Retry confirmation dialog",
+        "importance": "low",
+        "name": "confirmRetry",
+        "type": "group",
+        "common": true,
+        "fields": [
+          {
+            "label": "Header text",
+            "importance": "low",
+            "name": "header",
+            "type": "text",
+            "default": "Retry?"
+          },
+          {
+            "label": "Body text",
+            "importance": "low",
+            "name": "body",
+            "type": "text",
+            "default": "Are you sure you wish to retry?",
+            "widget": "html",
+            "enterMode": "p",
+            "tags": [
+              "strong",
+              "em",
+              "del",
+              "u",
+              "code"
+            ]
+          },
+          {
+            "label": "Cancel button label",
+            "importance": "low",
+            "name": "cancelLabel",
+            "type": "text",
+            "default": "Cancel"
+          },
+          {
+            "label": "Confirm button label",
+            "importance": "low",
+            "name": "confirmLabel",
+            "type": "text",
+            "default": "Retry"
+          }
+        ]
+      },
+      {
+        "label": "Text if alt text is missing for an image",
+        "importance": "low",
+        "name": "missingAltText",
+        "type": "text",
+        "default": "Alt text missing"
+      },
+      {
+        "label": "Close modal button label",
+        "importance": "low",
+        "name": "closeModalText",
+        "type": "text",
+        "default": "Close modal"
+      }
+    ]
+  }
+]

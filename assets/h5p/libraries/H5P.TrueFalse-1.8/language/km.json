@@ -1,0 +1,163 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Optional media to display above the question."
+        },
+        {
+          "label": "Disable image zooming"
+        }
+      ]
+    },
+    {
+      "label": "Question"
+    },
+    {
+      "label": "Correct answer",
+      "options": [
+        {
+          "label": "True"
+        },
+        {
+          "label": "False"
+        }
+      ]
+    },
+    {
+      "label": "User interface translations for True/False Questions",
+      "fields": [
+        {
+          "label": "Label for true button",
+          "default": "ត្រឹមត្រូវ"
+        },
+        {
+          "label": "Label for false button",
+          "default": "មិនត្រឹមត្រូវ"
+        },
+        {
+          "label": "Feedback text",
+          "default": "អ្នកបានពិន្ទុ @score លើ @total",
+          "description": "Feedback text, variables available: @score and @total. Example: 'You got @score of @total possible points'"
+        },
+        {
+          "label": "Text for \"Check\" button",
+          "default": "ពិនិត្យចម្លើយ"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "Text for \"Show solution\" button",
+          "default": "បង្ហាញចម្លើយត្រឹមត្រូវ"
+        },
+        {
+          "label": "Text for \"Retry\" button",
+          "default": "សាកម្តងទៀត"
+        },
+        {
+          "label": "Wrong Answer",
+          "default": "ចម្លើយមិនត្រឹមត្រូវ"
+        },
+        {
+          "label": "Correct Answer",
+          "default": "ចម្លើយត្រឹមត្រូវ"
+        },
+        {
+          "label": "Textual representation of the score bar for those using a readspeaker",
+          "default": "អ្នកទទួលបានពិន្ទុ :num លើ :total"
+        },
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "Show the solution. The task will be marked with its correct solution."
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry the task. Reset all responses and start the task over again."
+        }
+      ]
+    },
+    {
+      "label": "Behavioural settings",
+      "description": "These options will let you control how the task behaves.",
+      "fields": [
+        {
+          "label": "Enable \"Retry\" button"
+        },
+        {
+          "label": "Enable \"Show Solution\" button"
+        },
+        {
+          "label": "Enable \"Check\" button"
+        },
+        {
+          "label": "Show confirmation dialog on \"Check\""
+        },
+        {
+          "label": "Show confirmation dialog on \"Retry\""
+        },
+        {
+          "label": "Automatically check answer",
+          "description": "Note that accessibility will suffer if enabling this option"
+        },
+        {
+          "label": "Feedback on correct answer",
+          "description": "This will override the default feedback text. Variables available: @score and @total"
+        },
+        {
+          "label": "Feedback on wrong answer",
+          "description": "This will override the default feedback text. Variables available: @score and @total"
+        }
+      ]
+    },
+    {
+      "label": "Check confirmation dialog",
+      "fields": [
+        {
+          "label": "Header text",
+          "default": "បញ្ចប់ ?"
+        },
+        {
+          "label": "Body text",
+          "default": "តើអ្នកពិតជាចង់បញ្ចប់មែនទេ?"
+        },
+        {
+          "label": "Cancel button label",
+          "default": "បោះបង់"
+        },
+        {
+          "label": "Confirm button label",
+          "default": "បញ្ចប់"
+        }
+      ]
+    },
+    {
+      "label": "Retry confirmation dialog",
+      "fields": [
+        {
+          "label": "Header text",
+          "default": "សាកម្តងទៀត ?"
+        },
+        {
+          "label": "Body text",
+          "default": "តើអ្នកពិតជាចង់សាកម្តងទៀតមែនទេ?"
+        },
+        {
+          "label": "Cancel button label",
+          "default": "បោះបង់"
+        },
+        {
+          "label": "Confirm button label",
+          "default": "យល់ព្រម"
+        }
+      ]
+    }
+  ]
+}

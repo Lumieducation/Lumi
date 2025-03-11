@@ -1,0 +1,278 @@
+{
+  "semantics": [
+    {
+      "label": "Testa ievads",
+      "fields": [
+        {
+          "label": "Parādīt ievadu"
+        },
+        {
+          "label": "Nosaukums",
+          "description": "Šis nosaukums tiks parādīts virs ievada teksta."
+        },
+        {
+          "label": "Ievada teksts",
+          "description": "Šis teksts tiks parādīts pirms testa sākuma."
+        },
+        {
+          "label": "Sākšanas pogas teksts",
+          "default": "Sākt testu"
+        },
+        {
+          "label": "Fona attēls",
+          "description": "Neobligāts fona attēls ievadam."
+        }
+      ]
+    },
+    {
+      "label": "Fona attēls",
+      "description": "Neobligāts fona attēls jautājumu kopai."
+    },
+    {
+      "label": "Progresa indikators",
+      "description": "Jautājumu kopas progresa indikatora stils.",
+      "options": [
+        {
+          "label": "Teksta"
+        },
+        {
+          "label": "Punkti"
+        }
+      ]
+    },
+    {
+      "label": "Nokārtošanas procents",
+      "description": "Kopējā rezultāta procents, kas jāsasniedz, lai nokārtotu pārbaudījumu."
+    },
+    {
+      "label": "Jautājumi",
+      "widgets": [
+        {
+          "label": "Pēc noklusējuma"
+        },
+        {
+          "label": "Teksta"
+        }
+      ],
+      "entity": "jautājums",
+      "field": {
+        "label": "Jautājuma veids",
+        "description": "Bibliotēka šim jautājumam."
+      }
+    },
+    {
+      "label": "Testa saskarnes teksti",
+      "fields": [
+        {
+          "label": "Poga navigācijai atpakaļ",
+          "default": "Iepriekšējais jautājums"
+        },
+        {
+          "label": "Nākamā jautājuma poga",
+          "default": "Nākamais jautājums"
+        },
+        {
+          "label": "Pabeigšanas poga",
+          "default": "Beigt"
+        },
+        {
+          "label": "Poga Iesniegt",
+          "default": "Iesniegt"
+        },
+        {
+          "label": "Progresa teksts",
+          "description": "Teksts tiek izmantots, ja ir izvēlēta progresa atspoguļošana tekstā.",
+          "default": "Jautājums: @current no @total jautājumiem"
+        },
+        {
+          "label": "Etiķete, lai pārietu uz noteiktu jautājumu",
+          "description": "Jautājuma numura vietā jāizmanto vietturis '%d', bet kopējā jautājumu skaita vietā – %total.",
+          "default": "Jautājums %d no %total"
+        },
+        {
+          "label": "Autortiesību dialoga jautājuma etiķete",
+          "default": "Jautājums"
+        },
+        {
+          "label": "Asistīvo tehnoloģiju progress",
+          "description": "Var izmantot jautājumu mainīgos @current un @total",
+          "default": "Jautājums @current no @total"
+        },
+        {
+          "label": "Neatbildēta jautājuma teksts",
+          "default": "Neatbildēts"
+        },
+        {
+          "label": "Atbildēta jautājuma teksts",
+          "default": "Atbildēts"
+        },
+        {
+          "label": "Pašreizējā jautājuma teksts",
+          "default": "Pašreizējais jautājums"
+        },
+        {
+          "label": "Navigācijas etiķete ekrānlasītājiem",
+          "default": "Jautājumi"
+        }
+      ]
+    },
+    {
+      "label": "Atspējot navigāciju atpakaļ",
+      "description": "Šī opcija ļaus jautājumu kopā virzīties tikai uz priekšu"
+    },
+    {
+      "label": "Jautājumus izkārtot jaukti",
+      "description": "Iespējot, lai jautājumus atspoguļotu nejaušā secībā."
+    },
+    {
+      "label": "Parādāmo jautājumu skaits:",
+      "description": "Izveidojiet nejauši izvēlētu jautājumu kopumu no kopējā daudzuma."
+    },
+    {
+      "label": "Tests pabeigts",
+      "fields": [
+        {
+          "label": "Parādīt rezultātus"
+        },
+        {
+          "label": "Risinājuma parādīšanas poga"
+        },
+        {
+          "label": "Parādīt atkārtota mēģinājuma pogu"
+        },
+        {
+          "label": "Nav rezultātu ziņojums",
+          "description": "Teksts tiek rādīts beigu lapā, ja ir atspējota opcija “Rādīt rezultātus”",
+          "default": "Pabeigts"
+        },
+        {
+          "label": "Atgriezeniskās saites virsraksts",
+          "default": "Tavs rezultāts:",
+          "description": "Šis virsraksts tiks parādīts testa beigās, kad lietotājs būs atbildējis uz visiem jautājumiem."
+        },
+        {
+          "label": "Score announcer",
+          "description": "Šī etiķete tiks izmantota, lai lietotājam beigu ekrānā paziņotu gala rezultātu",
+          "default": "Jūs ieguvāt @finals no @totals punktiem"
+        },
+        {
+          "label": "Kopējā atgriezeniskā saite",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Pēc noklusējuma"
+                }
+              ],
+              "label": "Iestatiet pielāgotu atgriezenisko saiti katram rezultātu diapazonam",
+              "description": "Klikšķiniet pogu \"Pievienot diapazonu\", lai pievienotu tik diapazonus cik vēlaties. Piemēram, 0-20% Slikts rezultāts, 21-91% Viduvējs rezultāts, 91-100% Lielisks rezultāts!",
+              "entity": "diapazons",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Rezultātu diapazons"
+                  },
+                  {},
+                  {
+                    "label": "Atgriezeniskā saite noteiktajam rezultātu diapazonam",
+                    "placeholder": "Aizpildiet atgriezenisko saiti"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Vecās atgriezeniskās saites",
+          "fields": [
+            {
+              "label": "Testa nokārtošanas paziņojums",
+              "description": "Šis teksts tiks parādīts virs rezultāta, ja lietotājs būs veiksmīgi nokārtojis testu."
+            },
+            {
+              "label": "Nokārtošanas komentārs",
+              "description": "Šis komentārs tiks parādīts pēc rezultāta, ja lietotājs būs veiksmīgi nokārtojis testu."
+            },
+            {
+              "label": "Testa nenokārtošanas virsraksts",
+              "description": "Šis teksts tiks parādīts virs rezultāta, ja lietotājs nebūs nokārtojis testu."
+            },
+            {
+              "label": "Nenokārtošanas komentārs",
+              "description": "Šis teksts tiks parādīts pēc rezultāta, ja lietotājs nebūs nokārtojis testu."
+            }
+          ]
+        },
+        {
+          "label": "Rādīt risinājumu pogas etiķete",
+          "default": "Rādīt risinājumu",
+          "description": "Pogas \"Parādīt risinājumu\" teksts."
+        },
+        {
+          "label": "Mēģināt vēlreiz pogas etiķete",
+          "default": "Mēģināt vēlreiz",
+          "description": "Pogas \"Mēģināt vēlreiz\" teksts."
+        },
+        {
+          "label": "Pabeigšanas pogas teksts",
+          "default": "Beigt"
+        },
+        {
+          "label": "Iesniegšanas pogas teksts",
+          "default": "Iesniegt"
+        },
+        {
+          "label": "Parādīt video pirms testa rezultātiem"
+        },
+        {
+          "label": "Iespējot video izlaišanas pogu"
+        },
+        {
+          "label": "Video izlaišanas pogas etiķete",
+          "default": "Izlaist video"
+        },
+        {
+          "label": "Sekmīgas nokārtošanas video",
+          "description": "Šis videoklips tiks atskaņots, ja lietotājs sekmīgi nokārtos testu."
+        },
+        {
+          "label": "Nenokārtošanas video",
+          "description": "Šis videoklips tiks atskaņots, ja lietotājs nenokārtos testu."
+        }
+      ]
+    },
+    {
+      "label": "\"Pārbaudīt\", \"Rādīt risinājumu\" un \"Mēģināt vēlreiz\" iestatījumi",
+      "fields": [
+        {
+          "label": "Rādīt pogas \"Pārbaudīt\"",
+          "description": "Šī opcija nosaka, vai poga \"Pārbaudīt\" tiks parādīta visiem jautājumiem."
+        },
+        {
+          "label": "Ignorēt pogu \"Rādīt risinājumu\"",
+          "description": "Šī opcija nosaka, vai poga \"Rādīt risinājumu\" tiks rādīta visiem jautājumiem, atspējota visiem vai konfigurēta katram jautājumam atsevišķi.",
+          "options": [
+            {
+              "label": "Iespējota"
+            },
+            {
+              "label": "Atspējota"
+            }
+          ]
+        },
+        {
+          "label": "Ignorēt pogu \"Mēģināt vēlreiz\"",
+          "description": "Šī opcija nosaka, vai poga \"Mēģināt vēlreiz\" tiks rādīta visiem jautājumiem, atspējota visiem vai konfigurēta katram jautājumam atsevišķi.",
+          "options": [
+            {
+              "label": "Iespējota"
+            },
+            {
+              "label": "Atspējota"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

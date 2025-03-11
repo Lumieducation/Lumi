@@ -1,0 +1,96 @@
+{
+  "semantics": [
+    {
+      "label": "Rhagolwg",
+      "description": "Gallwch chi symud delweddau o gwmpas (tremio) gan eu llusgo. Gallwch chi hefyd ddewis delwedd a defnyddio'r allweddi + neu - i chwyddo neu, yn syml, dal yr allwedd Z tra'n symud olwyn y llygoden.",
+      "fields": [
+        {
+          "label": "Gosodiad",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "1-1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "2-1"
+            },
+            {
+              "label": "1-2"
+            },
+            {
+              "label": "2-2"
+            },
+            {
+              "label": "3-1"
+            },
+            {
+              "label": "1-3"
+            },
+            {
+              "label": "2-3"
+            },
+            {
+              "label": "3-2"
+            },
+            {
+              "label": "3-3"
+            }
+          ]
+        },
+        {
+          "label": "Opsiynau arddangos",
+          "fields": [
+            {
+              "label": "Uchder"
+            },
+            {
+              "label": "Bylchiad"
+            },
+            {
+              "label": "Ffrâm"
+            }
+          ]
+        },
+        {
+          "label": "Clipiau",
+          "entity": "clip",
+          "field": {
+            "label": "Clip",
+            "fields": [
+              {
+                "label": "Delwedd"
+              },
+              {
+                "label": "Atred (offset)",
+                "fields": [
+                  {
+                    "label": "Top"
+                  },
+                  {
+                    "label": "Chwith"
+                  }
+                ]
+              },
+              {
+                "label": "Testun amgen",
+                "description": "Angenrheidiol. Os yw'r porwr yn methu â llwytho'ch delwedd, caiff y testun hwn ei arddangos. Hefyd, caiff ei ddefnyddio gan ddarlenyddion."
+              },
+              {
+                "label": "Testun hofro",
+                "description": "Opsiynol. Caiff y testun hwn ei arddaangos wrth i'r defnyddiwr hofro'i ddyfais bwyntio (e.e. llygoden) dros y ddelwedd."
+              },
+              {
+                "label": "Graddfa"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

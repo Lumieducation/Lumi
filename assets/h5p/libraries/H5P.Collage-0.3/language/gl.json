@@ -1,0 +1,96 @@
+{
+  "semantics": [
+    {
+      "label": "Vista previa",
+      "description": "Podes moverte polas imaxes arrastrándoas. Tamén podes seleccionar unha imaxe e usar as teclas + ou - do teclado para facer zoom ou simplemente premer a tecla Z mentras moves a roda do rato.",
+      "fields": [
+        {
+          "label": "Deseño",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "1-1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "2-1"
+            },
+            {
+              "label": "1-2"
+            },
+            {
+              "label": "2-2"
+            },
+            {
+              "label": "3-1"
+            },
+            {
+              "label": "1-3"
+            },
+            {
+              "label": "2-3"
+            },
+            {
+              "label": "3-2"
+            },
+            {
+              "label": "3-3"
+            }
+          ]
+        },
+        {
+          "label": "Opcións de visualización",
+          "fields": [
+            {
+              "label": "Altura"
+            },
+            {
+              "label": "Espazado"
+            },
+            {
+              "label": "Marco"
+            }
+          ]
+        },
+        {
+          "label": "Clips",
+          "entity": "clip",
+          "field": {
+            "label": "Clip",
+            "fields": [
+              {
+                "label": "Imaxe"
+              },
+              {
+                "label": "Compensación",
+                "fields": [
+                  {
+                    "label": "Superior"
+                  },
+                  {
+                    "label": "Esquerda"
+                  }
+                ]
+              },
+              {
+                "label": "Texto alternativo",
+                "description": "Requerido. Amosarase esta mensaxe se o navegador non pode amosar a imaxe. Usado tamén polos lectores de pantalla."
+              },
+              {
+                "label": "Texto baixo o cursor",
+                "description": "Opcional. Este texto amosarase cando o usuario poña o punteiro do rato enriba da imaxe."
+              },
+              {
+                "label": "Escala"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

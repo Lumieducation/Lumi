@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Küsimus"
+    },
+    {
+      "label": "Mitmikvaliku tüüp",
+      "options": [
+        {
+          "label": "Mitu vastust"
+        },
+        {
+          "label": "Üks vastus"
+        }
+      ]
+    },
+    {
+      "label": "Vastuse alternatiivid",
+      "entity": "Alternatiiv",
+      "field": {
+        "label": "Alternatiiv",
+        "fields": [
+          {
+            "label": "Tekst"
+          },
+          {
+            "label": "Tagasiside",
+            "fields": [
+              {
+                "label": "Teade, mida näidatakse, kui vastus on valitud",
+                "description": "Teade ilmub vastuse alla, kui vastus on valitud ja vajutatakse \"Jätka\" nuppu."
+              },
+              {
+                "label": "Teade, mida näidatakse, kui vastus ei ole valitud",
+                "description": "Teade ilmub vastuse alla, kui vastus ei ole valitud ja vajutatakse \"Jätka\" nuppu."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

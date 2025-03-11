@@ -1,0 +1,300 @@
+{
+  "semantics": [
+    {
+      "description": "Markatuz gero, edukia hastean izenburu-pantaila erakutsiko da.",
+      "label": "Erakutsi hasiera-pantaila"
+    },
+    {
+      "label": "Hasiera-pantaila",
+      "fields": [
+        {
+          "label": "Sarrera",
+          "placeholder": "Ongi etorri..."
+        },
+        {
+          "label": "Pantaila-irudiko izenburua"
+        }
+      ]
+    },
+    {
+      "label": "Markatzaileak",
+      "fields": [
+        {
+          "label": "Markatzaileak",
+          "widgets": [
+            {
+              "label": "Lehenetsitakoa"
+            }
+          ],
+          "entity": "markatzailea",
+          "field": {
+            "label": "Markatzailea",
+            "fields": [
+              {
+                "label": "Markatzailearen irudia (originala)",
+                "description": "Igo ezazu markatzailea sortu nahi diozun irudia. Irudi karratua izan beharko da, eta bestela moztuko da. Kontuan izan interakzio bakoitzarentzako markatzailearen irudi bakarra beharko duzu.",
+                "importantDescription": {
+                  "description": "Kontuan izan itzazu markatzaileen irudi onentzako irizpideak:<ul><li>Kontraste handiko koloreak, idealki zuri eta beltza</li><li>Asimetria</li><li>Markatzailearen barne-erresoluzioa 16 x 16 pixeleko da, irudi handiagoak erabiltzeak markatzailearen antzemate okerra eragin dezakete</li><li>Karaktere solteak edo hitz laburrek emaitza hobeak ematen dituzte</li></ul>"
+                }
+              },
+              {
+                "label": "Markatzailearen irudia (patroia)",
+                "description": "Jaitsi ezazu irudi hau pantailan edo inprimatutako paperean markatzaile gisa erabiltzeko."
+              },
+              {
+                "label": "Ekintza mota",
+                "options": [
+                  {
+                    "label": "H5P interakzioa"
+                  },
+                  {
+                    "label": "3D maketaren estaldura"
+                  }
+                ],
+                "description": "Markatzailea aurkitzen denean abiarazi beharko den ekintza."
+              },
+              {
+                "label": "Interakzioa",
+                "fields": [
+                  {
+                    "label": "Interakzioa"
+                  },
+                  {
+                    "label": "Manikia"
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "label": "3D maketaren fitxategia",
+                    "description": "Igo ezazu hona gITF fitxategia (.glb / .gltf). Hobetsitako formatua fitxategi bakarreko \"gITF 2.0 bitarra\" da."
+                  },
+                  {
+                    "fields": [
+                      {
+                        "fields": [
+                          {
+                            "label": "Ehunekoa"
+                          },
+                          {
+                            "label": "Manikia"
+                          }
+                        ],
+                        "label": "Eskala",
+                        "description": "Eskalatu maketa gora edo behera zure markatzailearen tamainarekin bat egiteko."
+                      },
+                      {
+                        "description": "Zehaztu maketaren offset-aren markatzailearekiko posizio erlatiboa.",
+                        "label": "Posizioa",
+                        "fields": [
+                          {
+                            "label": "X-offseta"
+                          },
+                          {
+                            "label": "Y-offseta"
+                          },
+                          {
+                            "label": "Z-offseta"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Biraketa",
+                        "description": "Zehaztu ezazu biraketa gradutan.",
+                        "fields": [
+                          {
+                            "label": "X-ardatza"
+                          },
+                          {
+                            "label": "Y-ardatza"
+                          },
+                          {
+                            "label": "Z-ardatza"
+                          }
+                        ]
+                      }
+                    ],
+                    "label": "Geometria"
+                  }
+                ],
+                "label": "3D Maketa"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Erakutsi amaiera-pantaila",
+      "description": "Markatuz gero, osatutako interakzio guztiak erakusten dituen amaiera-pantaila bat erakutsiko da. Amaiera-pantaila ez da eskuragarri egongo soilik 3d maketak erabiltzen badituzu."
+    },
+    {
+      "label": "Amaiera-pantaila",
+      "fields": [
+        {
+          "label": "amaiera-pantailako irudia"
+        },
+        {
+          "label": "Amaiera-pantailaren testua",
+          "placeholder": "Lortu duzu!"
+        },
+        {
+          "label": "Feedback Orokorra",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Lehenetsitakoa"
+                }
+              ],
+              "label": "Zehaztu ezazu edozein puntuazio-tarterako feedback pertsonalizatua",
+              "entity": "tartea",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Puntuazio-tartea"
+                  },
+                  {
+                    "label": "Zehaztutako tartearentzako feedbacka",
+                    "placeholder": "Idatzi ezazu feedbacka"
+                  }
+                ]
+              },
+              "description": "Egin klik \"Gehitu tartea\" botoian behar dituzun tarte guztiak gehitzeko. Adibidez: 0-20% Puntuazio eskasa, 21-91% Batez besteko puntuazioa, 91-100% Puntuazio bikaina!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "label": "Gaitu \"Saiatu berriro\" botoia",
+          "description": "Markatuz gero, ikasleek lana berriz egiten saiatu ahalko dira."
+        },
+        {
+          "label": "Gaitu \"Erantzunak\" botoia",
+          "description": "Markatuz gero, ikasleek interakzio guztien erantzunak ikusi ahalko dituzte."
+        },
+        {
+          "label": "Baliogabetu \"Erakutsi emaitza\" botoia",
+          "options": [
+            {
+              "label": "Erabili portaeraren ezarpena"
+            },
+            {
+              "label": "Erakutsi beti botoia"
+            },
+            {
+              "label": "Ezkutatu beti botoia"
+            }
+          ],
+          "description": "Aukera honek \"Erakutsi emaitza\" botoia eduki guztientzako gaitu ala desgaitzea edo bestela dagozkien portaera-ezarpenak erabiltzea ahalbidetzen du."
+        },
+        {
+          "label": "Baliogabetu \"Saiatu berriro\" botoia",
+          "description": "Aukera honek \"Saiatu berriro\" botoia eduki guztientzako gaitu ala desgaitzea edo bestela dagozkien portaera-ezarpenak erabiltzea ahalbidetzen du.",
+          "options": [
+            {
+              "label": "Erabili portaeraren ezarpena"
+            },
+            {
+              "label": "Erakutsi beti botoia"
+            },
+            {
+              "label": "Ezkutatu beti botoia"
+            }
+          ]
+        },
+        {
+          "label": "B planaren altuera",
+          "description": "Zehaztu ezazu B planaren altuera pixeletan cross origin resource sharing (CORS) arazoak dauden kasuetarako."
+        }
+      ],
+      "label": "Portaeraren ezarpenak"
+    },
+    {
+      "label": "Kokapena",
+      "fields": [
+        {
+          "label": "Hasi botoia",
+          "default": "Hasi"
+        },
+        {
+          "label": "Saiatu berriro botoia",
+          "default": "Saiatu berriro"
+        },
+        {
+          "default": "Aurkitu ezazu markatzaile bat interakzioa ikusteko.",
+          "label": "Aurkitu ezazu markatzaile bat interakzioa ikusteko."
+        },
+        {
+          "label": "Errorea: nabigatzaile ez sostengatua",
+          "default": "Ematen duenez zure nabigatzailea tamalez ez da eduki mota hau erakusteko gai."
+        },
+        {
+          "label": "Errorea: Kamerara sarbiderik ez",
+          "default": "Ezin da lortu kamerarako sarbiderik."
+        },
+        {
+          "label": "Errorea: Kamerarako sostengurik ez",
+          "default": "Zure nabigatzaileak kamera baterako sostengurik ez duela ematen du."
+        },
+        {
+          "label": "Errorea: markatzailerik ez",
+          "default": "Norbaitek markatzaileak gehitzea ahaztu du?"
+        },
+        {
+          "label": "Oharra: Brave nabigatzailea",
+          "default": "Brave nabigatzailea erabiltzen ari zarela dirudi. Ondo! Baina bere pribatutsun-ezarpen zorrotzek kamerak funtzionatzeko arazoak sortu ditzakete."
+        },
+        {
+          "label": "Edukia abiarazten",
+          "default": "Edukia abiarazten. Ez ahaztu mesedez kamerarako sarbidea baimentzea."
+        }
+      ]
+    },
+    {
+      "label": "Irakurtzen duen bozgorailua",
+      "fields": [
+        {
+          "label": "PantailaOsoa botoiaren izenburua: sartu",
+          "default": "Sartu pantaila-osoko moduan"
+        },
+        {
+          "label": "PantailaOsoa botoiaren izenburua: irten",
+          "default": "Irten pantaila-osoko modutik"
+        },
+        {
+          "default": "Aldatu ariketara",
+          "label": "'Aldatu ikuspegia' botoiaren izenburua (ekintzak itxita daudenean)"
+        },
+        {
+          "label": "'Aldatu ikuspegia' botoiaren izenburua (ekintza zabalik dagoenean)",
+          "default": "Aldatu kamerara"
+        },
+        {
+          "label": "'Desgaitutako botoia' mezua 'aldatu ikuspegia botoia'-rentzat",
+          "default": "Ezin duzu une honetan ikuspegia aldatu"
+        },
+        {
+          "label": "'Irten' botoiaren izenburua",
+          "default": "Irten eta erakutsi ebaluazioa"
+        },
+        {
+          "label": "'Desgaitutako botoia' mezua 'aldatu irten botoia'-rentzat",
+          "default": "Oraindik ez dituzu ariketa guztiak amaitu"
+        },
+        {
+          "label": "Ekintza irekita",
+          "default": "Ikuspegia ariketa batera aldatu da."
+        },
+        {
+          "label": "Ekintza itxita",
+          "default": "Ikuspegia kamerara aldatu da."
+        }
+      ]
+    }
+  ]
+}

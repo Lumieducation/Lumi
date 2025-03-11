@@ -1,0 +1,293 @@
+{
+  "semantics": [
+    {
+      "label": "Consigne",
+      "description": "Décrivez votre tâche ici."
+    },
+    {
+      "label": "mots",
+      "widgets": [
+        {
+          "label": "Par défaut"
+        }
+      ],
+      "entity": "Mot",
+      "field": {
+        "label": "Mot",
+        "fields": [
+          {
+            "label": "Indice",
+            "description": "Indice permettant de trouver la réponse."
+          },
+          {
+            "label": "Réponse",
+            "description": "Réponse correspondant à l'indice."
+          },
+          {
+            "label": "Indice supplémentaire"
+          },
+          {
+            "label": "Fixer le mot sur la grille",
+            "description": "Cochez si vous souhaitez fixer le mot à une position particulière sur la grille. Les mots avec le même alignement ne peuvent pas être placés en contact les uns avec les autres."
+          },
+          {
+            "label": "Ligne",
+            "description": "Index de la ligne où la réponse doit commencer."
+          },
+          {
+            "label": "Colonne",
+            "description": "Index de la colonne où la réponse doit commencer."
+          },
+          {
+            "label": "Orientation",
+            "description": "Orientation de la réponse.",
+            "options": [
+              {
+                "label": "Horizontal"
+              },
+              {
+                "label": "Vertical"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Mot solution",
+      "description": "Ajouter un mot solution optionnel qui peut être découvert à partir de certaines lettres sur la grille. Sera seulement visible si chacune de ses lettres peuvent être trouvées dans le mot-croisé. Veuillez noter qu'il n'y a pour l'instant aucun support pour les technologies d'accessibilité pour cette fonctionnalité."
+    },
+    {
+      "label": "Feedback général",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Par défaut"
+            }
+          ],
+          "label": "Définissez le feedback pour chaque intervalle de score",
+          "description": "Cliquez sur le bouton \"Ajouter Intervalle\" pour ajouter autant d'intervalles de score que vous souhaitez. Exemple: 0-20% Mauvais score, 21-91% Score moyen, 91-100% Score excellent !",
+          "entity": "intervalle",
+          "field": {
+            "fields": [
+              {
+                "label": "Intervalle de score"
+              },
+              {},
+              {
+                "label": "Feedback pour l'intervalle de score défini",
+                "placeholder": "Saisir le message de feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Thème",
+      "fields": [
+        {
+          "label": "Image d'arrière-plan",
+          "description": "Sélectionnez une image d'arrière-plan pour votre activité (facultatif). Elle sera mise à l’échelle pour s'adapter à l'arrière-plan sans être étirée."
+        },
+        {
+          "label": "Couleur d'arrière-plan",
+          "description": "Choisir une couleur d'arrière-plan. Elle sera utilisée soit pour remplacer l'image de fond ou comme arrière-plan pour les zones transparentes."
+        },
+        {
+          "label": "Couleur de la grille",
+          "description": "Choisir une couleur pour la grille."
+        },
+        {
+          "label": "Couleur d'arrière-plan de la cellule",
+          "description": "Choisir la couleur d'arrière-plan d'une cellule du tableau."
+        },
+        {
+          "label": "Couleur du texte de la cellule",
+          "description": "Choisir la couleur du texte d'une cellule du tableau."
+        },
+        {
+          "label": "Couleur des indices numériques",
+          "description": "Choisir la couleur des indices numériques dans les cellules du tableau."
+        },
+        {
+          "label": "Couleur de fond des cellules sélectionnées",
+          "description": "Choisir la couleur de fond pour une cellule qui est sélectionnée."
+        },
+        {
+          "label": "Couleur du texte d'une cellule (sélectionnée)",
+          "description": "Choisir la couleur du texte d'une cellule quand elle est sélectionnée."
+        },
+        {
+          "label": "Couleur des indices numériques des cellules sélectionnées",
+          "description": "Choisir la couleur des indices numériques dans les cellules des cellules sélectionnées."
+        }
+      ]
+    },
+    {
+      "label": "Paramètres de comportement",
+      "description": "Ces options permettent de contrôler le comportement de l'activité.",
+      "fields": [
+        {
+          "label": "Nombre de mots à afficher",
+          "description": "Créer un lot aléatoire de mots à partir de l'ensemble. Le lot contiendra toujours au moins tous les mots qui ont été fixés sur la grille quel que soit ce paramètre. Une valeur vide ou 0 signifie qu'il faut utiliser tous les mots."
+        },
+        {
+          "label": "Activer le feedback instantané"
+        },
+        {
+          "label": "Compter par mot",
+          "description": "Si cette option est activée, les mots seront comptés pour déterminer le score. Autrement le score sera calculé par caractère."
+        },
+        {
+          "label": "Appliquer les pénalités",
+          "description": "Si cette option est activée, chaque réponse incorrecte entrainera une pénalité de -1 point au score."
+        },
+        {
+          "label": "Activer le bouton \"Recommencer\""
+        },
+        {
+          "label": "Activer le bouton \"Solution\""
+        },
+        {
+          "label": "Keep correct answers on retry",
+          "description": "If this option is enabled, correct answers will be kept when the user retries the task unless full score was achieved."
+        }
+      ]
+    },
+    {
+      "label": "Interface utilisateur",
+      "fields": [
+        {
+          "label": "Étiquette pour Horizontal",
+          "default": "Horizontal"
+        },
+        {
+          "label": "Étiquette pour Vertical",
+          "default": "Vertical"
+        },
+        {
+          "label": "Étiquette pour le bouton \"Vérifier\"",
+          "default": "Vérifier"
+        },
+        {
+          "label": "Étiquette pour le bouton \"Envoyer\"",
+          "default": "Envoyer"
+        },
+        {
+          "label": "Étiquette pour le bouton \"Recommencer\"",
+          "default": "Recommencer"
+        },
+        {
+          "label": "Étiquette pour le bouton \"Afficher la solution\"",
+          "default": "Afficher la solution"
+        },
+        {
+          "label": "Impossible de générer les mots-croisés",
+          "default": "Impossible de générer les mots-croisés avec les mots saisis. Veuillez réessayer avec moins de mots ou utiliser des mots qui ont plus de caractères en commun."
+        },
+        {
+          "label": "Impossible de générer les mots-croisés (trop peu de mots)",
+          "default": "Impossible de générer les mots-croisés. Vous devez saisir au moins deux mots."
+        },
+        {
+          "label": "Mots problématiques",
+          "description": "Liste des mots qui ont causé des problèmes lors de la génération des mots-croisés. L'identifiant @words sera remplacé par la liste de mots problématiques.",
+          "default": "Certains mots n'ont pas pu être placés. Si vous utilisez des mots à position fixe, veuillez vous assurer que leur position n'empêche pas les autres mots d'être placés sur la grille. Les mots avec le même alignement ne doivent pas se toucher. Mot(s) problématique(s): @words"
+        },
+        {
+          "label": "Indice supplémentaire",
+          "default": "Indice supplémentaire"
+        },
+        {
+          "label": "Fermer la fenêtre",
+          "default": "Fermer la fenêtre"
+        }
+      ]
+    },
+    {
+      "label": "Lecteur d'écran",
+      "fields": [
+        {
+          "label": "Description de la grille de mots croisés",
+          "default": "Utiliser les touches fléchées pour naviguer et les lettres du clavier pour saisir les caractères. Utiliser Tab pour faire usage des champs d'entrée au lieu de la grille."
+        },
+        {
+          "label": "Colonne",
+          "default": "Colonne"
+        },
+        {
+          "label": "Ligne",
+          "default": "Ligne"
+        },
+        {
+          "label": "Horizontal",
+          "default": "Horizontal"
+        },
+        {
+          "label": "Vertical",
+          "default": "Vertical"
+        },
+        {
+          "label": "Vide",
+          "default": "Vide"
+        },
+        {
+          "description": "Annonce du résultat. La variable @clue sera remplacée par l'indice concerné.",
+          "label": "Résultat",
+          "default": "Résultat pour : @clue"
+        },
+        {
+          "label": "Réponse correcte",
+          "default": "Réponse correcte"
+        },
+        {
+          "label": "Faux",
+          "default": "Faux"
+        },
+        {
+          "label": "Point",
+          "default": "point"
+        },
+        {
+          "description": "Annonce de la solution. Les variables @clue et @solution seront remplacées par l'indice et la solution, respectivement.",
+          "label": "Solution pour",
+          "default": "Pour @clue, la solution est : @solution"
+        },
+        {
+          "description": "Annonce d'indice supplémentaire. La variable @clue sera remplacée par l'indice.",
+          "label": "Indice supplémentaire pour",
+          "default": "Afficher l'indice supplémentaire pour @clue"
+        },
+        {
+          "description": "Annonce la position actuelle. Les variables @position et @length seront remplacées par la position et la longueur du mot, respectivement.",
+          "label": "Lettre",
+          "default": "Lettre @position de @length"
+        },
+        {
+          "description": "Annonce de la longueur du mot. La variable @length sera remplacée par la longueur du mot.",
+          "label": "Longueur du mot",
+          "default": "Mot de @length lettres"
+        },
+        {
+          "label": "Description des technologies d'assistance pour le bouton \"Vérifier\"",
+          "default": "Vérifier les caractères. Les réponses seront marquées correctes, incorrectes ou sans réponse."
+        },
+        {
+          "label": "Description des technologies d'assistance pour le bouton \"Afficher la solution\"",
+          "default": "Afficher la solution. Le mot-croisé sera ensuite rempli avec la solution correcte."
+        },
+        {
+          "label": "Description des technologies d'assistance pour le bouton \"Réessayer\"",
+          "default": "Réessayer la tâche. Réinitialiser toutes les réponses et recommencer l'activité."
+        },
+        {
+          "label": "Votre résultat",
+          "description": "Les variables @score et @total seront remplacées par le score obtenu et le score maximum, respectivement.",
+          "default": "Vous avez obtenu @score sur @total points."
+        }
+      ]
+    }
+  ]
+}

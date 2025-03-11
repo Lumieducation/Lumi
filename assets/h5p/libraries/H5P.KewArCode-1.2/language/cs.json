@@ -1,0 +1,512 @@
+{
+  "semantics": [
+    {
+      "label": "Úvodní text",
+      "description": "Tento text může být volitelně prezentován spolu s vaším kódem."
+    },
+    {
+      "label": "Typ kódu",
+      "description": "Vyberte druh kódu, jaký chcete vygenerovat",
+      "options": [
+        {
+          "label": "Kontakt"
+        },
+        {
+          "label": "Událost"
+        },
+        {
+          "label": "Emailová adresa"
+        },
+        {
+          "label": "H5P"
+        },
+        {
+          "label": "Místo"
+        },
+        {
+          "label": "Telefonní číslo"
+        },
+        {
+          "label": "SMS"
+        },
+        {
+          "label": "Text"
+        },
+        {
+          "label": "URL"
+        }
+      ]
+    },
+    {
+      "label": "Kontakt",
+      "fields": [
+        {
+          "label": "Jméno",
+          "placeholder": "Petr Novák"
+        },
+        {
+          "label": "Organizace",
+          "placeholder": "Moodle fan klub"
+        },
+        {
+          "label": "Pozice",
+          "placeholder": "Moodler"
+        },
+        {
+          "label": "Telefonní číslo",
+          "description": "Telefonní číslo (použijte formát +420 602 678 123)",
+          "placeholder": "+420 602 678 123"
+        },
+        {
+          "label": "E-mailová adresa",
+          "description": "E-mailová adresa, na kterou chcete napsat zprávu",
+          "placeholder": "petr@seznam.cz"
+        },
+        {
+          "label": "Adresa",
+          "fields": [
+            {
+              "label": "Rozšířená adresa",
+              "description": "informace atd.",
+              "placeholder": "c/o Moodle Fan klub"
+            },
+            {
+              "label": "Ulice",
+              "description": "Ulice včetně čísla",
+              "placeholder": "Masarykova 1"
+            },
+            {
+              "label": "Místo",
+              "description": "Jméno města, atd.",
+              "placeholder": "Brno"
+            },
+            {
+              "label": "Region",
+              "description": "Federální stát, kraj atd.",
+              "placeholder": "JM"
+            },
+            {
+              "label": "PSČ",
+              "description": "PSČ",
+              "placeholder": "602 00"
+            },
+            {
+              "label": "Země",
+              "description": "Země",
+              "placeholder": "Česká republika"
+            }
+          ]
+        },
+        {
+          "label": "Webové stránky",
+          "description": "Web, na který chcete odkazovat (musí začínat https:// nebo http://)",
+          "placeholder": "https://moodle-fan-club.cz"
+        },
+        {
+          "label": "Poznámka",
+          "description": "Poznámka",
+          "placeholder": "Petr je pro Moodle."
+        }
+      ]
+    },
+    {
+      "label": "Událost",
+      "fields": [
+        {
+          "label": "Název",
+          "description": "Název události kalendáře",
+          "placeholder": "Moodle konference 2020"
+        },
+        {
+          "label": "Celodenní událost",
+          "description": "Zatrhnětete, když událost bude trvat celý den"
+        },
+        {
+          "label": "Datum zahájení",
+          "description": "Datum zahájení události (použijte formát dd.mm.yyy)",
+          "placeholder": "18.5.2020"
+        },
+        {
+          "label": "Čas zahájení",
+          "description": "Čas zahájení události (použijte prosím formát hh:mm)",
+          "placeholder": "09:00"
+        },
+        {
+          "label": "Datum ukončení",
+          "description": "Datum ukončení události (použijte formát dd.mm.yyy)",
+          "placeholder": "20.5.2020"
+        },
+        {
+          "label": "Čas ukončení",
+          "description": "Čas ukončení události (použijte prosím formát hh:mm)",
+          "placeholder": "16:00"
+        },
+        {
+          "label": "Časové pásmo",
+          "description": "Vyberte časové pásmo, ve kterém se má událost konat",
+          "options": [
+            {
+              "label": "UTC-12:00"
+            },
+            {
+              "label": "UTC-11:00"
+            },
+            {
+              "label": "UTC-10:00"
+            },
+            {
+              "label": "UTC-9:30"
+            },
+            {
+              "label": "UTC-9:00"
+            },
+            {
+              "label": "UTC-8:00"
+            },
+            {
+              "label": "UTC-7:00"
+            },
+            {
+              "label": "UTC-6:00"
+            },
+            {
+              "label": "UTC-5:00"
+            },
+            {
+              "label": "UTC-4:00"
+            },
+            {
+              "label": "UTC-3:30"
+            },
+            {
+              "label": "UTC-3:00"
+            },
+            {
+              "label": "UTC-2:00"
+            },
+            {
+              "label": "UTC-1:00"
+            },
+            {
+              "label": "UTC"
+            },
+            {
+              "label": "UTC+1:00"
+            },
+            {
+              "label": "UTC+2:00"
+            },
+            {
+              "label": "UTC+3:00"
+            },
+            {
+              "label": "UTC+3:30"
+            },
+            {
+              "label": "UTC+4:00"
+            },
+            {
+              "label": "UTC+4:30"
+            },
+            {
+              "label": "UTC+5:00"
+            },
+            {
+              "label": "UTC+5:30"
+            },
+            {
+              "label": "UTC+5:45"
+            },
+            {
+              "label": "UTC+6:00"
+            },
+            {
+              "label": "UTC+6:30"
+            },
+            {
+              "label": "UTC+7:00"
+            },
+            {
+              "label": "UTC+8:00"
+            },
+            {
+              "label": "UTC+9:00"
+            },
+            {
+              "label": "UTC+9:30"
+            },
+            {
+              "label": "UTC+10:00"
+            },
+            {
+              "label": "UTC+10:30"
+            },
+            {
+              "label": "UTC+11:00"
+            },
+            {
+              "label": "UTC+12:00"
+            },
+            {
+              "label": "UTC+12:45"
+            },
+            {
+              "label": "UTC+13:00"
+            },
+            {
+              "label": "UTC+14:00"
+            }
+          ]
+        },
+        {
+          "label": "Letní čas",
+          "description": "Zatrhnětete, když místo, kde se událost odehrává, využívá letní čas"
+        },
+        {
+          "label": "Místo",
+          "description": "Název místa",
+          "placeholder": "Brno, ČR"
+        },
+        {
+          "label": "Popis",
+          "description": "Přidejte popis události",
+          "placeholder": "Výroční Moodle konference"
+        }
+      ]
+    },
+    {
+      "label": "Emailová adresa",
+      "fields": [
+        {
+          "label": "Emailová adresa",
+          "description": "E-mailová adresa, na kterou chcete napsat zprávu",
+          "placeholder": "petr@seznam.cz"
+        }
+      ]
+    },
+    {
+      "label": "H5P obsah",
+      "fields": [
+        {
+          "label": "H5P obsah",
+          "description": "H5P obsah k zobrazení"
+        }
+      ]
+    },
+    {
+      "label": "Umístění",
+      "fields": [
+        {
+          "label": "Zeměpisná šířka",
+          "description": "Zeměpisná šířka (použijte formát 53.864462)",
+          "placeholder": "69.646007"
+        },
+        {
+          "label": "Zeměpisná délka",
+          "description": "Zeměpisná délka (použijte formát 10.663792)",
+          "placeholder": "18.954036"
+        }
+      ]
+    },
+    {
+      "label": "Telefonní číslo",
+      "fields": [
+        {
+          "label": "Telefonní číslo",
+          "description": "Telefonní číslo pro volání (použijte formát +420 602 678 123)",
+          "placeholder": "+420 602 678 123"
+        }
+      ]
+    },
+    {
+      "label": "SMS",
+      "fields": [
+        {
+          "label": "Telefonní číslor",
+          "description": "Telefonní číslo pro odeslání (použijte formát +420 602 678 123)",
+          "placeholder": "+420 602 678 123"
+        },
+        {
+          "label": "Zpráva",
+          "description": "Zpráva k odeslání",
+          "placeholder": "Přines prosím mléko a chléb!"
+        }
+      ]
+    },
+    {
+      "label": "Text",
+      "fields": [
+        {
+          "label": "Text",
+          "description": "Text ke kódování",
+          "placeholder": "Přines prosím\n* mléko\n* chléb"
+        }
+      ]
+    },
+    {
+      "label": "URL",
+      "fields": [
+        {
+          "label": "URL",
+          "description": "URL, na kterou se má odkazovat (musí začínat https:// nebo http://)",
+          "placeholder": "https://moodle-fan-club.cz"
+        }
+      ]
+    },
+    {
+      "label": "Nastavení chování",
+      "description": "Tyto možnosti vám umožní ovládat, jak se úkol chová.",
+      "fields": [
+        {
+          "label": "Barva kódu",
+          "default": "#000000"
+        },
+        {
+          "label": "Barva pozadí",
+          "default": "#ffffff"
+        },
+        {
+          "label": "Maximální velikost",
+          "description": "Maximální velikost kódu uvedeného v notaci CSS (pixely ve výchozím nastavení, pokud je uveden pouze počet)"
+        },
+        {
+          "label": "Horizontální zarovnání",
+          "description": "Pokud nastavíte maximální velikost, nastavte vodorovné zarovnání",
+          "options": [
+            {
+              "label": "vlevo"
+            },
+            {
+              "label": "doprostřed"
+            },
+            {
+              "label": "vpravo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Uživatelské rozhraní",
+      "fields": [
+        {
+          "label": "Adresa",
+          "default": "Adresa"
+        },
+        {
+          "label": "Kontakt",
+          "default": "Kontakt"
+        },
+        {
+          "label": "Země",
+          "default": "Země"
+        },
+        {
+          "label": "Datum ukončení",
+          "default": "Datum ukončení"
+        },
+        {
+          "label": "Datum zahájení",
+          "default": "Datum zahájení"
+        },
+        {
+          "label": "Popis",
+          "default": "Popis"
+        },
+        {
+          "label": "E-mail",
+          "default": "E-mail"
+        },
+        {
+          "label": "Událost",
+          "default": "Událost"
+        },
+        {
+          "label": "Rozšířená adresa",
+          "default": "Rozšířená adresa"
+        },
+        {
+          "label": "Zeměpisná šířka",
+          "default": "Zeměpisná šířka"
+        },
+        {
+          "label": "Lokalita",
+          "default": "Lokalita"
+        },
+        {
+          "label": "Místo",
+          "default": "Místo"
+        },
+        {
+          "label": "Zeměpisná délka",
+          "default": "Zeměpisná délka"
+        },
+        {
+          "label": "Zpráva",
+          "default": "Zpráva"
+        },
+        {
+          "label": "Jméno",
+          "default": "Jméno"
+        },
+        {
+          "label": "Poznámka",
+          "default": "Poznámka"
+        },
+        {
+          "label": "Organizace",
+          "default": "Organizace"
+        },
+        {
+          "label": "Telefon",
+          "default": "Telefon"
+        },
+        {
+          "label": "Region",
+          "default": "Region"
+        },
+        {
+          "label": "SMS",
+          "default": "SMS"
+        },
+        {
+          "label": "Ulice",
+          "default": "Ulice"
+        },
+        {
+          "label": "Text",
+          "default": "Text"
+        },
+        {
+          "label": "Titul",
+          "default": "Titul"
+        },
+        {
+          "label": "URL",
+          "default": "URL"
+        },
+        {
+          "label": "PSČ",
+          "default": "PSČ"
+        }
+      ]
+    },
+    {
+      "label": "Čtecí zařízení",
+      "fields": [
+        {
+          "label": "QR kód. Zobrazit informace (Text pro čtecí zařízení)",
+          "default": "QR kód. Zobrazit informace."
+        },
+        {
+          "label": "Skrýt informace (Text pro čtečtecí zařízení)",
+          "default": "Skrýt informace."
+        },
+        {
+          "label": "Obsah kódu (Text pro čtenáře)",
+          "default": ". Obsah kódu"
+        }
+      ]
+    }
+  ]
+}

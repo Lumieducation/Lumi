@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Taak beskrywing",
+      "description": "Put the heading/instructions you'd like to show above the before/after image here.",
+      "placeholder": "Here you can add an optional heading and/or instructions."
+    },
+    {
+      "label": "Eerste prent",
+      "fields": [
+        {
+          "label": "Eerste prent",
+          "description": "Die eerste prent. Maak asb. seker dat dit die selfde groote as die tweede prent is."
+        },
+        {
+          "label": "Etiket vir eerste prent",
+          "description": "Etiket om oor die eerste prent te plaas"
+        }
+      ]
+    },
+    {
+      "label": "Tweede beeld",
+      "fields": [
+        {
+          "label": "Tweede beeld",
+          "description": "Die tweede prent. Maak asb. seker dat dit die selfde groote as die tweede prent is."
+        },
+        {
+          "label": "Etiket vir tweede beeld",
+          "description": "Etiket om oor tweede beeld te plaas"
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellings",
+      "description": "Hierdie opsies sal jou bepaalde besonderhede laat instel",
+      "fields": [
+        {
+          "label": "Skuiwer beginposisie in %",
+          "description": "Stel die beginposisie van die skuiwer"
+        },
+        {
+          "label": "Skuiwer oriëntasie",
+          "description": "Horisontaal wil links en regs skuif, vertikaal sal op en af skuif.",
+          "options": [
+            {
+              "label": "Horisontaal"
+            },
+            {
+              "label": "Vertikaal"
+            }
+          ]
+        },
+        {
+          "label": "Skuiwerkleur",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Image visible message",
+          "default": "Image @percentage % visible",
+          "description": "@percentage is a placeholder and will be replaced with the respective value."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

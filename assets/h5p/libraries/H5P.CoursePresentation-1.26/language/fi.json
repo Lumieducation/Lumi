@@ -1,0 +1,411 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "field": {
+            "fields": [
+              {
+                "field": {
+                  "fields": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                      "label": "Kommentit",
+                      "description": "Kommentit tulevat näkyviin, kun käyttäjälle näytetään lopussa oikeat vastaukset."
+                    },
+                    {
+                      "label": "Pidä kommentit koko ajan näkyvissä"
+                    },
+                    {
+                      "label": "Taustan läpinäkyvyys 0-100 (0 = läpinäkyvä, 100 = valkoinen)"
+                    },
+                    {
+                      "label": "Näytä painikkeena"
+                    },
+                    {
+                      "label": "Painikkeen koko",
+                      "options": [
+                        {
+                          "label": "Pieni"
+                        },
+                        {
+                          "label": "Suuri"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Otsikko"
+                    },
+                    {
+                      "label": "Mene",
+                      "options": [
+                        {
+                          "label": "Määritä sivunumero"
+                        },
+                        {
+                          "label": "Seuraava sivu"
+                        },
+                        {
+                          "label": "Edellinen sivu"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Siirry sivulle",
+                      "description": "Käytössä vain kun 'määritä sivunumero' -asetus on valittuna"
+                    },
+                    {
+                      "label": "Näkymätön",
+                      "description": "Ankkuriruutu ei näy kun hiirenkursori viedään sen päälle. Varoitus: Esteettömyys toteutuu huonommin tällä vaihtoehdolla ja tämän lisäksi pelkkää näppäimistöä navigoimiseen käyttävät henkilöt eivät voi käyttää tätä elementtiä helposti."
+                    }
+                  ]
+                }
+              },
+              {},
+              {
+                "fields": [
+                  {
+                    "label": "Kuva",
+                    "description": "Venymisen estämiseksi kuvasuhteen tulisi olla 2:1."
+                  },
+                  {
+                    "label": "Valitse väri"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Sisällysluettelo"
+        },
+        {
+          "label": "Näytä aina"
+        },
+        {
+          "label": "Automaattinen piilotus"
+        },
+        {
+          "label": "Taustan läpinäkyvyys 0-100 (0 = läpinäkyvä, 100 = valkoinen)"
+        },
+        {
+          "fields": [
+            {
+              "label": "Kuva",
+              "description": "Venymisen estämiseksi kuvasuhteen tulisi olla 2:1."
+            },
+            {
+              "label": "Valitse väri"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Muokkaa",
+      "fields": [
+        {
+          "label": "Käännös tekstille \"Sivu\"",
+          "default": "Sivu"
+        },
+        {
+          "label": "Käännös tekstille \"Pisteet\"",
+          "default": "Pisteet"
+        },
+        {
+          "label": "Käännös tekstille \"Pisteesi\"",
+          "default": "Pisteesi"
+        },
+        {
+          "label": "Käännös tekstille \"Maksimipisteet\"",
+          "default": "Maksimipisteet"
+        },
+        {
+          "label": "Käännös sanalle yhteensä \"Total\"",
+          "default": "Yhteensä"
+        },
+        {
+          "label": "Käännös tekstille Kokonaispisteet \"Total Score\"",
+          "default": "Kokonaispisteet"
+        },
+        {
+          "label": "\"Näytä oikeat vastaukset\"-painikkeen teksti",
+          "default": "Näytä oikeat vastaukset"
+        },
+        {
+          "label": "Teksti \"Yritä uudelleen\"-painikkeelle",
+          "default": "Yritä uudelleen"
+        },
+        {
+          "label": "\"Vie tekstiä\"-painikkeessa näytettävä teksti",
+          "default": "Vie tekstiä"
+        },
+        {
+          "label": "\"Piilota sisällysluettelo\"-painikkeen teksti",
+          "default": "Piilota sisällysluettelo"
+        },
+        {
+          "label": "\"Näytä sisällysluettelo\"painikkeen teksti",
+          "default": "Näytä sisällysluettelo"
+        },
+        {
+          "label": "\"Koko ruutu\"-painikkeen teksti",
+          "default": "Koko ruutu"
+        },
+        {
+          "label": "\"Poistu koko ruudun tilasta\"-painikkeen teksti",
+          "default": "Poistu kokoruudun tilasta"
+        },
+        {
+          "label": "\"Edellinen sivu\"-painikkeen teksti",
+          "default": "Edellinen sivu"
+        },
+        {
+          "label": "\"Seuraava sivu\"-painikkeen teksti",
+          "default": "Seuraava sivu"
+        },
+        {
+          "label": "\"Nykyinen sivu\"-painikkeen teksti",
+          "default": "Nykyinen sivu"
+        },
+        {
+          "label": "\"Viimeinen sivu\"-painikkeen teksti",
+          "default": "Viimeinen sivu"
+        },
+        {
+          "label": "\"Palaa yhteenvetosivulle\"-painikkeen teksti",
+          "default": "Palaa yhteenvetosivulle"
+        },
+        {
+          "label": "\"Palaa yhteenvetosivulle\" teksti",
+          "default": "Palaa yhteenvetosivulle"
+        },
+        {
+          "label": "Teksti, jos sivulla on useita tehtäviä",
+          "default": "Useita tehtäviä"
+        },
+        {
+          "label": "Pistemäärän yhteydessä näytettävä teksti",
+          "default": "Tulos:"
+        },
+        {
+          "label": "\"Jaa Facebookissa\"-teksti",
+          "default": "Jaa Facebookissa"
+        },
+        {
+          "label": "\"Jaa Twitterissä\"-teksti",
+          "default": "Jaa Twitterissä"
+        },
+        {
+          "label": "\"Jaa Google+ palvelussa\" -teksti",
+          "default": "Jaa Google+ palvelussa"
+        },
+        {
+          "label": "\"Yhteenveto\"-sivun otsikko",
+          "default": "Yhteenveto"
+        },
+        {
+          "label": "Kommentti-ikonin teksti",
+          "default": "Näytä kommentit"
+        },
+        {
+          "label": "Tulostuspainikkeen teksti",
+          "default": "Tulosta"
+        },
+        {
+          "label": "Tulosikkunan johdantoteksti",
+          "default": "Miten haluat tulostaa tämän esityksen?"
+        },
+        {
+          "label": "\"Tulosta kaikki sivut\"-painikkeen teksti",
+          "default": "Tulosta kaikki sivut"
+        },
+        {
+          "label": "\"Tulosta nykyinen sivu\"-painikkeen teksti",
+          "default": "Tulosta nykyinen sivu"
+        },
+        {
+          "label": "Teksti sivuille joilla ei ole otsikkoa",
+          "default": "Ei otsikkoa"
+        },
+        {
+          "label": "Navigaation selite avustaville teknologioille",
+          "default": "Käytä vasenta tai oikeaa nuolinäppäintä siirtyäksesi eteen- tai taaksepäin tässä esityksessä silloin kun dia on valittuna."
+        },
+        {
+          "label": "Piirtoalueen slite avustaville teknologioille",
+          "default": "Piirtoalue. Käytä vasenta tai oikeaa nuolinäppäintä siirtyäksesi eteen- tai taaksepäin tässä esityksessä silloin kun dia on valittuna."
+        },
+        {
+          "label": "Progressbar label for assistive technologies",
+          "default": "Choose slide to display"
+        },
+        {
+          "label": "Selite suorittamatta oleville interaktioille",
+          "default": "@slideName sisältää suorittamattoman interaktion"
+        },
+        {
+          "label": "Selite suoritetuille interaktioille",
+          "default": "@slideName sisältää suoritetun interaktion"
+        },
+        {
+          "label": "Selite dialaskurille. Muuttujat ovat @index, @total",
+          "default": "Dia @index kautta @total"
+        },
+        {
+          "label": "Selite dialle joka sisältää vain oikeita vastauksia",
+          "default": "@slideName sisältää vain oikeita vastauksia"
+        },
+        {
+          "label": "Selite dialle joka sisältää vääriä vastauksia",
+          "default": "@slideName sisältää vääriä vastauksia"
+        },
+        {
+          "label": "Selite sosiaalisen jakamisen palkille",
+          "default": "Jaa tuloksesi sosiaaliseen mediaan"
+        },
+        {
+          "label": "Kokonaispisteiden ilmoittaminen avustaville teknologioille",
+          "default": "Sait @score pistettä @maxScore pisteestä",
+          "description": "Käytässä olevat muuttujat ovat @score ja @maxScore"
+        },
+        {
+          "label": "Koko näytön tila käytössä -ilmoitus avustavalle teknologialle",
+          "default": "Koko näytön tila käytössä"
+        },
+        {
+          "label": "Koko näytön tilasta poistuttu -ilmoitus avustavalle teknologialle",
+          "default": "Koko näytön tilasta poistuttu"
+        },
+        {
+          "label": "Header of submit result confirmation dialog",
+          "default": "Submit your answers"
+        },
+        {
+          "label": "Text of submit result confirmation dialog",
+          "default": "This will submit your results, do you want to continue?"
+        },
+        {
+          "label": "Confirmation button of submit result confirmation dialog",
+          "default": "Submit and see results"
+        },
+        {
+          "label": "Slideshow navigation",
+          "default": "Slideshow navigation"
+        },
+        {
+          "label": "Confirm button label",
+          "default": "Confirm"
+        },
+        {
+          "label": "Cancel button label",
+          "default": "Cancel"
+        }
+      ]
+    },
+    {
+      "label": "Asetukset",
+      "description": "Nämä asetukset mahdollistavat oletusasetusten yliajamisen.",
+      "fields": [
+        {
+          "label": "Ota käyttöön Active Surface -tila",
+          "description": "Removes navigation controls for the end user. Use Go To Slide to navigate. Summary is not available in this mode."
+        },
+        {
+          "label": "Piilota yhteenvetosivu",
+          "description": "Valitse tämä, jos et halua esityksen viimeisen sivun olevan yhteenveto tehtävien pistemääristä. Huom! Tulokset eivät tallennu ilman tätä sivua."
+        },
+        {
+          "label": "\"Näytä vastaus\"-painike",
+          "description": "Ota käyttöön kaikissa kysymyksissä, ei yhdessäkään, tai jätä tyhjäksi käyttääksesi tehtäväkohtaisia asetuksia",
+          "options": [
+            {
+              "label": "Käytössä kaikissa"
+            },
+            {
+              "label": "Pois käytöstä"
+            }
+          ]
+        },
+        {
+          "label": "\"Yritä uudelleen\"-painike",
+          "description": "Ota käyttöön kaikissa kysymyksissä, ei yhdessäkään, tai jätä tyhjäksi käyttääksesi tehtäväkohtaisia asetuksia.",
+          "options": [
+            {
+              "label": "Käytössä kaikissa"
+            },
+            {
+              "label": "Pois käytöstä"
+            }
+          ]
+        },
+        {
+          "label": "Näytä \"Show solution\" painike yhteenvetosivulla",
+          "description": "Jos asetus otetaan käyttöön niin opiskelija näkee \"näytä oikeat vastaukset\"-painikkeen yhteenvetosivulla."
+        },
+        {
+          "label": "Näytä \"Retry\" painike yhteenvetosivulla",
+          "description": "Jos asetus otetaan käyttöön niin opiskelijalle näytetään \"yritä uudelleen\"-painike yhteenvetosivulla. Kannattaa huomioida että vaikka painiketta ei näytettäisi niin opiskelijat voivat aina halutessaan päivittää selaimensa näkymän ja yrittää kysymystä uudelleen."
+        },
+        {
+          "label": "Näytä tulostuspainike",
+          "description": "Näytä tulostuspainike esityksen alakulmassa."
+        },
+        {
+          "label": "Sosiaalisen median asetukset",
+          "description": "Nämä asetukset mahdollistavat sosiaalisen median asetusten yliajamisen. Tyhjät arvot täytetään automaattisesti jos tarjolla on linkki, muutoin arvot generoidaan.",
+          "fields": [
+            {
+              "label": "Näytä jaa Facebookissa-ikoni"
+            },
+            {
+              "label": "Facebookin asetukset",
+              "fields": [
+                {
+                  "label": "Facebookkiin jaettavan sivun linkki",
+                  "default": "@currentpageurl"
+                },
+                {
+                  "label": "Facebookkiin jaettava teksti",
+                  "default": "Sain @score pistettä @maxScore pisteestä aineistosta sivustolla @currentpageurl."
+                }
+              ]
+            },
+            {
+              "label": "Näytä jaa Twitteriin-ikoni"
+            },
+            {
+              "label": "Twitter asetukset",
+              "fields": [
+                {
+                  "label": "Twitteriin jaettava teksti",
+                  "default": "Sain @score pistettä @maxScore pisteestä sivustolla @currentpageurl."
+                },
+                {
+                  "label": "Twitteriin jaettavan sivuston linkki",
+                  "default": "@currentpageurl"
+                },
+                {
+                  "label": "Jaa twitteriin seuraavilla hashtageilla/aihetunnisteilla",
+                  "default": "h5p, kurssi"
+                }
+              ]
+            },
+            {
+              "label": "Näytä jaa Google+ palveluun -ikoni"
+            },
+            {
+              "label": "Google+ palveluun jaettavan sivuston linkki",
+              "default": "@currentpageurl"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

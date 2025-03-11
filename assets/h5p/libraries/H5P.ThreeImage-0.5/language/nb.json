@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Three Image Editor",
+      "fields": [
+        {
+          "label": "Scener",
+          "entity": "scene",
+          "field": {
+            "fields": [
+              {
+                "label": "Scenetype",
+                "options": [
+                  {
+                    "label": "360-graders bilde"
+                  },
+                  {
+                    "label": "Statisk bilde"
+                  }
+                ]
+              },
+              {
+                "label": "Vis tilbakeknapp",
+                "description": "Vis knapp for å navigere tilbake til forrige scene"
+              },
+              {},
+              {
+                "label": "Scenetittel",
+                "description": "Brukes for å identifisere scenen"
+              },
+              {
+                "label": "Scenebakgrunn"
+              },
+              {
+                "label": "Scenebeskrivelse",
+                "description": "En beskrivelse av scenen"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Merkelapp",
+                      "description": "Hvis denne ikke fylles inn, vises ingen merkelapp, og vi vil prøve å bruke tittel-feltet for skjermlesere"
+                    },
+                    {
+                      "label": "Innstillinger for merkelapp",
+                      "fields": [
+                        {
+                          "label": "Posisjon",
+                          "description": "Velg hvor merkelapp skal vises",
+                          "options": [
+                            {
+                              "label": "Bruk innstillinger for oppgaveoppførsel"
+                            },
+                            {
+                              "label": "På høyre side"
+                            },
+                            {
+                              "label": "På venstre side"
+                            },
+                            {
+                              "label": "Over"
+                            },
+                            {
+                              "label": "Under"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Vis merkelapp",
+                          "description": "Hvis skjult er valgt, vil merkelapper bare vises når musepeker svever over",
+                          "options": [
+                            {
+                              "label": "Bruk innstillinger for oppgaveoppførsel"
+                            },
+                            {
+                              "label": "Vis"
+                            },
+                            {
+                              "label": "Skjul"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Knappetype",
+                "description": "Decide how buttons pointing to this scene should look. For scenes that are static and does not lead to new scenes, we recommend the \"More information\" button.",
+                "options": [
+                  {
+                    "label": "Ny scene (pil)"
+                  },
+                  {
+                    "label": "Mer informasjon (pluss)"
+                  }
+                ]
+              },
+              {
+                "label": "Lydspor",
+                "description": "Add an audio track that's specific for this scene."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Lydspor"
+        }
+      ]
+    },
+    {
+      "label": "Innstillinger for oppgaveoppførsel",
+      "description": "These options will let you control how the world behaves.",
+      "fields": [
+        {
+          "label": "Global lyd",
+          "description": "Add an audio track that's available for all of the scenes by default."
+        },
+        {
+          "label": "Kvalitet på scene-rendering",
+          "description": "Choose the amount of width and height segments used to render a scene. This directly affects the quality level of the scene, try increasing the quality if a scene looks \"blocky\" or \"waves\" are seen within the scenes. Note that higher quality rendering takes more time to load.",
+          "options": [
+            {
+              "label": "Høy kvalitet (128x128)"
+            },
+            {
+              "label": "Medium kvalitet (64x64)"
+            },
+            {
+              "label": "Lav kvalitet (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Innstillinger for merkelapper",
+          "fields": [
+            {
+              "label": "Label position",
+              "description": "The default label position. The position may be overriden per interaction",
+              "options": [
+                {
+                  "label": "Right aligned"
+                },
+                {
+                  "label": "Left aligned"
+                },
+                {
+                  "label": "Top aligned"
+                },
+                {
+                  "label": "Bottom aligned"
+                }
+              ]
+            },
+            {
+              "label": "Display Labels",
+              "description": "If unchecked - labels will show only on mouse over"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Ledetekster",
+      "fields": [
+        {
+          "label": "Aria label for content type",
+          "default": "Virtuell tur"
+        },
+        {
+          "label": "Label for to play audio",
+          "default": "Play Audio Track"
+        },
+        {
+          "label": "Label to pause audio",
+          "default": "Pause Audio Track"
+        },
+        {
+          "label": "Title to scene dialog",
+          "default": "Scenebeskrivelse"
+        },
+        {
+          "label": "Label for button to reset camera",
+          "default": "Reset Camera"
+        },
+        {
+          "label": "Label for the submit dialog button",
+          "default": "Submit Dialog"
+        },
+        {
+          "label": "Label for the close dialog button",
+          "default": "Lukk dialog"
+        },
+        {
+          "label": "Aria label for the expand label button",
+          "default": "Expand the visual label"
+        },
+        {
+          "label": "Label for when background image is loading in 360 scene",
+          "default": "Laster bakgrunnsbilde..."
+        },
+        {
+          "label": "Label for when there is no content",
+          "default": "No content"
+        }
+      ]
+    }
+  ]
+}

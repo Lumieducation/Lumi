@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Τίτλος",
+      "placeholder": "Εδώ μπορείτε να προσθέσετε έναν τίτλο (προαιρετικό).",
+      "description": "Ο τίτλος που θα θέλατε να εμφανίζεται πάνω από την εικόνα"
+    },
+    {
+      "label": "Στοιχεία",
+      "entity": "στοιχειου",
+      "widgets": [
+        {
+          "label": "Βασικό"
+        }
+      ],
+      "field": {
+        "label": "Στοιχείο",
+        "fields": [
+          {
+            "label": "Εικόνα"
+          },
+          {
+            "label": "Ετικέτα",
+            "description": "Προαιρετική ετικέτα σημείου επιλογής. Βεβαιωθείτε ότι δεν είναι εκτενής ειδάλλως δεν θα εμφανίζεται."
+          },
+          {
+            "label": "Περιγραφή",
+            "placeholder": "Η περιγραφή της εικόνας μου...",
+            "description": "Περιγραφή της εικόνας (προαιρετικό)"
+          },
+          {
+            "label": "Audio",
+            "description": "Optional audio that plays when an image is shown."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Ρυθμίσεις άσκησης",
+      "description": "Αυτές οι ρυθμίσεις σας επιτρέπουν να καθορίσετε τον τρόπο λειτουργίας της άσκησης.",
+      "fields": [
+        {
+          "label": "Εικόνα εκκίνησης",
+          "description": "Ορίστε τον αριθμό της εικόνας εκκίνησης."
+        },
+        {
+          "label": "Σταθεροποίηση μπάρας εναλλαγής εικόνων",
+          "description": "Αν ενεργοποιηθεί, η μπάρα εναλλαγής εικόνων θα σταθεροποιηθεί στη θέση μιας εικόνας."
+        },
+        {
+          "label": "Εμφάνιση σημείων επιλογής",
+          "description": "Αν είναι ενεργοποιημένη, η μπάρα εναλλαγής εικόνων θα εμφανίσει ένα σημείο επιλογής για κάθε εικόνα."
+        },
+        {
+          "label": "Εμφάνιση ετικετών",
+          "description": "Αν ενεργοποιηθεί, η μπάρα εναλλαγής εικόνων θα εμφανίσει μια ετικέτα αντί για/εκτός από τα σημάδια επιλογής."
+        },
+        {
+          "label": "Χρώμα αντί για διαφάνεια",
+          "description": "Επιλέξτε το χρώμα που θα αντικαταστήσει τα διάφανα τμήματα των εικόνων."
+        },
+        {
+          "label": "Image space in fullscreen mode",
+          "description": "If you have descriptions in addition to the images, set the the percentage of space that the images should use in fullscreen mode."
+        }
+      ]
+    },
+    {
+      "label": "Ακουστική υποβοήθηση",
+      "fields": [
+        {
+          "label": "Εικόνα",
+          "default": "Εικόνα"
+        },
+        {
+          "label": "Slider εικόνας",
+          "default": "Slider εικόνας"
+        },
+        {
+          "label": "Mute title",
+          "default": "Σίγαση, για την ώρα χωρίς σίγαση"
+        },
+        {
+          "label": "Unmute title",
+          "default": "Κατάργηση σίγασης, προς το παρόν σε σίγαση"
+        },
+        {
+          "label": "Title for fullscreen button (enter)",
+          "default": "Enter fullscreen mode"
+        },
+        {
+          "label": "Title for fullscreen button (exit)",
+          "default": "Exit fullscreen mode"
+        }
+      ]
+    }
+  ]
+}

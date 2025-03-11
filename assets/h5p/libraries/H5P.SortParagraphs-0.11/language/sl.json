@@ -1,0 +1,224 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Optional media to display above the question."
+        },
+        {
+          "label": "Disable image zooming"
+        }
+      ]
+    },
+    {
+      "label": "Navodilo udeležencem",
+      "placeholder": "Določi pravilen vrstni red odstavkov.",
+      "description": "Opis reševanja zadane naloge."
+    },
+    {
+      "label": "Odstavki",
+      "entity": "odstavek",
+      "field": {
+        "label": "Odstavek"
+      }
+    },
+    {
+      "label": "Splošna povratna informacija",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Privzeto"
+            }
+          ],
+          "label": "Določi ločeno povratno informacijo za vsak razpon rezultatov",
+          "description": "Kliknite gumb \"Dodaj razpon\" za dodajanje dodatnih razponov. Primer: 0-20 % Slab rezultat, 21-91 % Povprečen rezultat, 91-100 % Odličen rezultat!",
+          "entity": "razpon",
+          "field": {
+            "fields": [
+              {
+                "label": "Razpon rezultatov"
+              },
+              {},
+              {
+                "label": "Povratna informacija za definiran razpon rezultatov",
+                "placeholder": "Vnesite povratno informacijo"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Nastavitve interakcije",
+      "description": "Nastavitve omogočajo nadzor nad interakcijo aktivnosti za udeležence.",
+      "fields": [
+        {
+          "label": "Način točkovanja",
+          "description": "Točkuje se lahko postavitev odstavka na \"Pravilno mesto\", ali pravilna postavitev glede na drug odstavek, ki bi naj predhodnemu sledil (\"Pravilno zaporedje\").",
+          "options": [
+            {
+              "label": "Pravilno zaporedje"
+            },
+            {
+              "label": "Pravilno mesto odstavka"
+            }
+          ]
+        },
+        {
+          "label": "Kazenske točke",
+          "description": "Nepravilna postavitev odstavka (v načinu \"Pravilno mesto\") pomeni eno kazensko točko."
+        },
+        {
+          "label": "Podvojeni odstavki so zamenljivi",
+          "description": "Pri preverjanju odgovora se podvojeni odstavki z istim besedilom obravnavajo kot enaki. Sicer je pomembno na katerem mestu je kateri."
+        },
+        {
+          "label": "Dodaj gumbe za premik",
+          "description": "Na mobilnih napravah lahko gumbi za premikanje odstavkov nudijo dodatno podporo za uporabnike s posebnimi potrebami. Na tem mestu jih je mogoče onemogočiti."
+        },
+        {
+          "label": "Omogoči gumb \"Poskusi ponovno\""
+        },
+        {
+          "label": "Omogoči gumb \"Prikaži rešitev\""
+        }
+      ]
+    },
+    {
+      "label": "Uporabniški vmesnik",
+      "fields": [
+        {
+          "label": "Besedilo za gumb \"Preveri\"",
+          "default": "Preveri"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "Besedilo za gumb \"Poskusi ponovno\"",
+          "default": "Poskusi ponovno"
+        },
+        {
+          "label": "Besedilo za gumb \"Prikaži rešitev\"",
+          "default": "Prikaži rešitev"
+        },
+        {
+          "label": "Besedilo za gumb \"Gor\"",
+          "default": "Gor"
+        },
+        {
+          "label": "Besedilo za gumb \"Dol\"",
+          "default": "Dol"
+        },
+        {
+          "label": "Besedilo za gumb, ki je onemogočen",
+          "default": "Onemogočen"
+        }
+      ]
+    },
+    {
+      "label": "Bralnik zaslona",
+      "fields": [
+        {
+          "label": "Opis gumba \"Preveri\" za bralnike zaslona",
+          "default": "Preveri pravilnost. Odgovori bodo označeni kot pravilni ali nepravilni."
+        },
+        {
+          "label": "Opis gumba \"Prikaži rešitev\" za bralnike zaslona",
+          "default": "Prikaže rešitev. Prikazani bodo pravilni odgovori."
+        },
+        {
+          "label": "Opis gumba \"Poskusi ponovno\" za bralnike zaslona",
+          "default": "Omogoči ponoven poskus. Ponastavi vse odzive in znova zažene nalogo."
+        },
+        {
+          "label": "Rezultat reševanja",
+          "description": "@score in @total sta spremenljivki.",
+          "default": "Seštevek točk: @score od @total"
+        },
+        {
+          "label": "Opis seznama",
+          "default": "Seznam odstavkov za razvrščanje."
+        },
+        {
+          "label": "Opis seznama (preveri odgovor)",
+          "default": "Seznam odstavkov z odgovori."
+        },
+        {
+          "label": "Opis seznama (prikaži rešitev)",
+          "default": "Seznam odstavkov z rešitvami."
+        },
+        {
+          "label": "Odstavek",
+          "default": "Odstavek"
+        },
+        {
+          "label": "Pravilno",
+          "default": "pravilno"
+        },
+        {
+          "label": "Nepravilno",
+          "default": "nepravilno"
+        },
+        {
+          "description": "@score bo zamenjan z 1 ali -1.",
+          "label": "Razlaga točk",
+          "default": "Točke: @score"
+        },
+        {
+          "description": "@current bo zamenjan z vrstnim številom trenutnega odstavka. @total bo zamenjan s številom vseh odstavkov.",
+          "label": "Oštevilčenje odstavkov",
+          "default": "@current od @total"
+        },
+        {
+          "description": "Sledi \"Oštevilčenje odstavkov\".",
+          "label": "Trenutno mesto na seznamu",
+          "default": "Trenutno mesto na seznamu"
+        },
+        {
+          "label": "Navodilo pri izbiri odstavka",
+          "default": "Pritisnite preslednico za spremembo vrstnega reda"
+        },
+        {
+          "label": "Navodilo pri izbranem odstavku",
+          "default": "S puščicami navzgor in navzdol spremenite vrstni red odstavka, s preslednico ga spustite, s tipko Escape pa prekličete izbiro"
+        },
+        {
+          "label": "Izbran",
+          "default": "Izbran"
+        },
+        {
+          "label": "Prestavljen",
+          "default": "Prestavljen"
+        },
+        {
+          "label": "Spuščen",
+          "default": "Spuščen"
+        },
+        {
+          "label": "Sprememba vrstnega reda preklicana",
+          "default": "Sprememba vrstnega reda preklicana"
+        },
+        {
+          "description": "Sledi \"Oštevilčenje odstavka\".",
+          "label": "Končni položaj",
+          "default": "Končni položaj"
+        },
+        {
+          "description": "Sledi \"Pravilen\" ali \"Nepravilen\".",
+          "label": "Naslednji odstavek",
+          "default": "Naslednji odstavek"
+        },
+        {
+          "description": "Sledi \"Oštevilčenje odstavka\".",
+          "label": "Pravilen odstavek",
+          "default": "Odstavek je na pravilnem položaju"
+        }
+      ]
+    }
+  ]
+}

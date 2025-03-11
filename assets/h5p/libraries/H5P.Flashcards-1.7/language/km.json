@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Task description"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "label": "Cards",
+      "entity": "card",
+      "field": {
+        "label": "Card",
+        "fields": [
+          {
+            "label": "Question",
+            "description": "Optional textual question for the card. (The card may use just an image, just a text or both)"
+          },
+          {
+            "label": "Answer",
+            "description": "Answer (solution) for the card. Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "Image",
+            "description": "Optional image for the card. (The card may use just an image, just a text or both)"
+          },
+          {
+            "label": "Alternative text for image"
+          },
+          {
+            "label": "Tip",
+            "fields": [
+              {
+                "label": "Tip text"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Progress text",
+      "default": "កាត @card ចំណោម @total",
+      "description": "Progress text, variables available: @card and @total. Example: 'Card @card of @total'"
+    },
+    {
+      "label": "Text for the next button",
+      "default": "បន្ទាប់"
+    },
+    {
+      "label": "Text for the previous button",
+      "default": "មុន"
+    },
+    {
+      "label": "Text for the check answers button",
+      "default": "ពិនិត្យចម្លើយ"
+    },
+    {
+      "label": "Require user input before the solution can be viewed"
+    },
+    {
+      "label": "Text for the answer input field",
+      "default": "ចម្លើយ​របស់​អ្នក"
+    },
+    {
+      "label": "Text for correct answer",
+      "default": "ត្រឹមត្រូវ"
+    },
+    {
+      "label": "Text for incorrect answer",
+      "default": "មិនត្រឹមត្រូវ"
+    },
+    {
+      "label": "Show solution text",
+      "default": "ចម្លើយ​ត្រឹមត្រូវ"
+    },
+    {
+      "label": "Text for results title",
+      "default": "លទ្ធផល"
+    },
+    {
+      "label": "Text for number of correct",
+      "default": "ចម្លើយ @score ចំណោម @total ត្រឹមត្រូវ",
+      "description": "Result text, variables available: @score and @total. Example: '@score of @total correct'"
+    },
+    {
+      "label": "Text for show results",
+      "default": "បង្ហាញលទ្ធផល"
+    },
+    {
+      "label": "Text for short answer label",
+      "default": "ច:"
+    },
+    {
+      "label": "Text for \"retry\" button",
+      "default": "សាកម្តងទៀត"
+    },
+    {
+      "label": "Case sensitive",
+      "description": "Makes sure the user input has to be exactly the same as the answer."
+    },
+    {
+      "label": "Incorrect text for assistive technologies",
+      "default": "ចម្លើយមិនត្រឹមត្រូវ។ ចម្លើយត្រឹមត្រូវគឺ @answer",
+      "description": "Text that will be announced to assistive technologies. Use @answer as variable."
+    },
+    {
+      "label": "Correct feedback text for assistive technologies",
+      "default": "@answer is correct.",
+      "description": "Text that will be announced to assistive technologies when a card is answered correctly. Use @answer as variable."
+    },
+    {
+      "label": "Card change for assistive technologies",
+      "default": "ទំព័រ @current ចំណោម @total",
+      "description": "Text that will be announced to assistive technologies when navigating between cards. Use @current and @total as variables."
+    },
+    {
+      "label": "Randomize cards",
+      "description": "Enable to randomize the order of cards on display."
+    }
+  ]
+}

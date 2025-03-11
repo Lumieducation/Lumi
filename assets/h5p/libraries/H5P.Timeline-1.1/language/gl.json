@@ -1,0 +1,295 @@
+{
+  "semantics": [
+    {
+      "label": "Liña temporal",
+      "fields": [
+        {
+          "label": "Cabeceira",
+          "description": "Aquí vai a cabeceira da liña temporal principal (primeira páxina)"
+        },
+        {
+          "label": "Texto do Corpo",
+          "description": "Aquí vai o corpo da liña temporal principal (primeira páxina)."
+        },
+        {
+          "label": "Nivel de zoom por defecto",
+          "description": "Isto establece o nivel de zoom por defecto. Equivale a premer os botóns de aumento ou diminución de zoom o número de veces especificado. Os números negativos diminúen o zoom. O valor por defecto é 0"
+        },
+        {
+          "label": "Imaxe de fondo",
+          "description": "Imaxe amosada como fondo."
+        },
+        {
+          "label": "Altura",
+          "description": "A altura en píxeles"
+        },
+        {
+          "label": "Referencias",
+          "description": "Aquí podes engadir referencias á \"páxina principal\" da túa liña temporal",
+          "fields": [
+            {
+              "label": "Medios",
+              "description": "Enlaces a medios (Neste momento están soportados Twitter, YouTube, Flickr, Vimeo, Google Maps e SoundCloud)"
+            },
+            {
+              "label": "Créditos",
+              "description": "Créditos dos medios"
+            },
+            {
+              "label": "Lema",
+              "description": "A descrición do lema vai aquí"
+            }
+          ]
+        },
+        {
+          "label": "Datas",
+          "description": "Engade datas á túa liña temporal!",
+          "field": {
+            "label": "Data",
+            "description": "Data",
+            "fields": [
+              {
+                "label": "Data de inicio",
+                "description": "AAAA,MM,DD (AAAA requirido como mínimo)"
+              },
+              {
+                "label": "Data de remate",
+                "description": "AAAA,MM,DD (AAAA requirido como mínimo)"
+              },
+              {
+                "label": "Cabeceira",
+                "description": "Cabeceira para a entrada temporal"
+              },
+              {
+                "label": "Texto do corpo",
+                "description": "Corpo para a entrada temporal"
+              },
+              {
+                "label": "Etiquetas",
+                "description": "Escribe etiquetas (categorías)"
+              },
+              {
+                "label": "Referencias",
+                "fields": [
+                  {
+                    "label": "Medios",
+                    "description": "Enlaces a medios (Neste momento están soportados Twitter, YouTube, Flickr, Vimeo, Google Maps e SoundCloud)."
+                  },
+                  {
+                    "label": "Miniatura",
+                    "description": "Engade unha miniatura se o precisas, 32x32"
+                  },
+                  {
+                    "label": "Créditos",
+                    "description": "Créditos dos medios"
+                  },
+                  {
+                    "label": "Lema",
+                    "description": "Texto do lema"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Eras",
+          "description": "Engade unha era á túa liña temporal",
+          "field": {
+            "label": "Era",
+            "fields": [
+              {
+                "label": "Data de inicio",
+                "description": "AAAA,MM,DD (AAAA requirido como mínimo)"
+              },
+              {
+                "label": "Data de remate",
+                "description": "AAAA,MM,DD (AAAA requirido como mínimo)"
+              },
+              {
+                "label": "Cabeceira",
+                "description": "Cabeceira da era"
+              },
+              {
+                "label": "Texto",
+                "description": "Corpo da era"
+              },
+              {
+                "label": "Etiqueta",
+                "description": "Etiquetas da era (categorías)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Idioma",
+          "description": "O idioma da interface de usuario",
+          "options": [
+            {
+              "label": "Afrikaans"
+            },
+            {
+              "label": "Árabe"
+            },
+            {
+              "label": "Armenio"
+            },
+            {
+              "label": "Vasco"
+            },
+            {
+              "label": "Búlgaro"
+            },
+            {
+              "label": "Catalán"
+            },
+            {
+              "label": "Chines"
+            },
+            {
+              "label": "Croata / Hrvatski"
+            },
+            {
+              "label": "Checo"
+            },
+            {
+              "label": "Danés"
+            },
+            {
+              "label": "Holandés"
+            },
+            {
+              "label": "Inglés"
+            },
+            {
+              "label": "Inglés (formato 24 horas)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estonio"
+            },
+            {
+              "label": "Faroes"
+            },
+            {
+              "label": "Farsi"
+            },
+            {
+              "label": "Finlandés"
+            },
+            {
+              "label": "Francés"
+            },
+            {
+              "label": "Galego"
+            },
+            {
+              "label": "Georgiano"
+            },
+            {
+              "label": "Alemán / Deutsch"
+            },
+            {
+              "label": "Grego"
+            },
+            {
+              "label": "Hebreo"
+            },
+            {
+              "label": "Húngaro"
+            },
+            {
+              "label": "Islandés"
+            },
+            {
+              "label": "Indonesio"
+            },
+            {
+              "label": "Italiano"
+            },
+            {
+              "label": "Xaponés"
+            },
+            {
+              "label": "Koreano"
+            },
+            {
+              "label": "Latvio"
+            },
+            {
+              "label": "Lituano"
+            },
+            {
+              "label": "Luxemburgués"
+            },
+            {
+              "label": "Malaio"
+            },
+            {
+              "label": "Nepalés"
+            },
+            {
+              "label": "Noruego"
+            },
+            {
+              "label": "Polaco"
+            },
+            {
+              "label": "Portugués"
+            },
+            {
+              "label": "Portugués (Brasileiro)"
+            },
+            {
+              "label": "Romanés"
+            },
+            {
+              "label": "Ruso"
+            },
+            {
+              "label": "Serbio - Cirílico"
+            },
+            {
+              "label": "Serbio - Latín"
+            },
+            {
+              "label": "Cingalés"
+            },
+            {
+              "label": "Eslovaco"
+            },
+            {
+              "label": "Sloveno"
+            },
+            {
+              "label": "Español"
+            },
+            {
+              "label": "Sueco"
+            },
+            {
+              "label": "Tagalo"
+            },
+            {
+              "label": "Tamil"
+            },
+            {
+              "label": "Taiwanes"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Turco"
+            },
+            {
+              "label": "Ukraniano"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

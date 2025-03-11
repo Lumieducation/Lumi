@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Otázka"
+    },
+    {
+      "label": "Typ s více možnostmi výběru",
+      "options": [
+        {
+          "label": "Více odpovědí"
+        },
+        {
+          "label": "Jedna odpověď"
+        }
+      ]
+    },
+    {
+      "label": "Alternativy odpovědí",
+      "entity": "Alternativa",
+      "field": {
+        "label": "Alternativa",
+        "fields": [
+          {
+            "label": "Text"
+          },
+          {
+            "label": "Zpětná vazba",
+            "fields": [
+              {
+                "label": "Zpráva se zobrazí, pokud je vybrána odpověď",
+                "description": "Pokud je vybrána tato odpověď, zobrazí se pod odpovědí \"pokračovat\" ."
+              },
+              {
+                "label": "Zpráva se zobrazí, pokud není vybrána odpověď",
+                "description": "Pokud není vybrána tato odpověď, zobrazí se pod odpovědí \"pokračovat\" ."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

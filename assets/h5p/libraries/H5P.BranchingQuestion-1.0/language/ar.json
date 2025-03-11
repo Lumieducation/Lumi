@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Branching Question Editor",
+      "fields": [
+        {
+          "label": "سؤال"
+        },
+        {
+          "label": "الخيارات المتاحة",
+          "entity": "option",
+          "field": {
+            "label": "خيار",
+            "fields": [
+              {
+                "label": "نص"
+              },
+              {
+                "label": "المحتوى التالي (-1 هي شاشة النهاية)"
+              },
+              {
+                "label": "ردود فعل",
+                "fields": [
+                  {
+                    "label": "تسمية نص ردود الفعل"
+                  },
+                  {
+                    "label": "نص ردود الفعل"
+                  },
+                  {
+                    "label": "صورة ردود  الفعل"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

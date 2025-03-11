@@ -1,0 +1,205 @@
+{
+  "semantics": [
+    {
+      "label": "Kitap kapağını etkinleştir",
+      "description": "Etkinlikten önce kitapla ilgili bilgileri gösteren bir kapak"
+    },
+    {
+      "label": "Kapak Sayfası",
+      "fields": [
+        {
+          "label": "Kapak açıklaması",
+          "description": "Bu metin kitabınızın açıklaması olacaktır."
+        },
+        {
+          "label": "Cover media",
+          "description": "Optional media to display on the cover."
+        }
+      ]
+    },
+    {
+      "label": "Sayfalar",
+      "entity": "Sayfa",
+      "widgets": [
+        {
+          "label": "Varsayılan"
+        }
+      ],
+      "field": {
+        "label": "Öge",
+        "fields": [
+          {
+            "label": "Sayfa"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Etkinlik Ayarları",
+      "fields": [
+        {
+          "label": "Base color",
+          "description": "Set the base color that will define the overall color scheme of the book. Please ensure a high enough contrast."
+        },
+        {
+          "label": "İçindekileri varsayılan olarak görüntüle",
+          "description": "Etkinleştirildiğinde, kitap açılırken içindekiler tablosu gösterilir"
+        },
+        {
+          "label": "İlerleme Göstergelerini Görüntüle",
+          "description": "Etkinleştirildiğinde, kullanıcının sayfayla işinin bitip bitmediğini gösteren sayfa başına göstergeler olacaktır."
+        },
+        {
+          "label": "Otomatik ilerlemeyi etkinleştir",
+          "description": "Etkinleştirilirse, etkinlik olmayan bir sayfa görüntülendiğinde tamamlanmış olarak kabul edilir. Tüm görevler tamamlandığında yeni görevleri içeren bir sayfaya ilerler. Devre dışı bırakılırsa, her sayfanın altında, kullanıcının sayfayla işi bittiğinde tıklaması için bir düğme olacaktır."
+        },
+        {
+          "label": "Özeti görüntüle",
+          "description": "Etkinleştirildiğinde, kullanıcı bir özeti görebilir ve ilerlemeyi/cevapları gönderebilir"
+        },
+        {
+          "label": "Enable \"Restart\" button",
+          "description": "When enabled the user can initiate a restart on the summary page."
+        }
+      ]
+    },
+    {
+      "label": "\"Oku\" için çeviri",
+      "default": "Oku"
+    },
+    {
+      "label": "\"'İçindekiler'i Görüntüle\" için çeviri",
+      "default": "'İçindekiler'i göster"
+    },
+    {
+      "label": "\"'İçindekiler'i gizle\" çevirisi",
+      "default": "'İçindekiler'i gizle"
+    },
+    {
+      "label": "\"Sonraki sayfa\" için çeviri",
+      "default": "Sonraki Sayfa"
+    },
+    {
+      "label": "\"Önceki sayfa\" için çeviri",
+      "default": "Önceki sayfa"
+    },
+    {
+      "label": "\"Sayfa tamamlandı!\" için çeviri",
+      "default": "Sayfa tamamlandı!"
+    },
+    {
+      "label": "\"@total sayfadan @pages sayfa tamamlandı\"nın çevirisi (@pages ve @total gerçek değerlerle değiştirilecektir)",
+      "default": "@total sayfadan @pages sayfa tamamlandı"
+    },
+    {
+      "label": "\"Tamamlanmamış sayfa\" için çeviri",
+      "default": "Tamamlanmamış sayfa"
+    },
+    {
+      "label": "\"En üste git\"in çevirisi",
+      "default": "En üste git"
+    },
+    {
+      "label": "\"Bu sayfayı bitirdim\"in çevirisi",
+      "default": "Bu sayfayı bitirdim"
+    },
+    {
+      "label": "Tam ekran düğme etiketi",
+      "default": "Tam ekran"
+    },
+    {
+      "label": "Tam ekrandan çık düğme etiketi",
+      "default": "Tam ekrandan çık"
+    },
+    {
+      "label": "Kitapta sayfa ilerlemesi",
+      "description": "\"@count\" sayfa sayısıyla ve \"@total\" toplam sayfa sayısıyla değiştirilecektir",
+      "default": "@total sayfadan @count sayfa"
+    },
+    {
+      "label": "Etkileşim ilerlemesi",
+      "description": "\"@count\" yerine etkileşim sayısı, \"@toplam\" ise toplam etkileşim sayısıyla değiştirilir",
+      "default": "@total etkileşimden @count etkileşim"
+    },
+    {
+      "label": "\"Raporu Gönder\"in çevirisi",
+      "default": "Raporu Gönder"
+    },
+    {
+      "label": "\"Yeniden Başlat\" düğmesi için etiket",
+      "default": "Yeniden Başlat"
+    },
+    {
+      "label": "Özet başlığı",
+      "default": "Özet"
+    },
+    {
+      "label": "\"Tüm Etkileşimler\" için çeviri",
+      "default": "Tüm Etkileşimler"
+    },
+    {
+      "label": "\"Cevaplanmamış Etkileşimler\"in çevirisi",
+      "default": "Cevaplanmamış Etkileşimler"
+    },
+    {
+      "label": "Puan",
+      "description": "\"@score\" geçerli puanla değiştirilecek ve \"@maxscore\" elde edilebilecek maksimum puanla değiştirilecek",
+      "default": "@score / @maxscore"
+    },
+    {
+      "label": "Sayfa başına etkileşim tamamlama",
+      "description": "\"@left\" kalan etkileşimlerle değiştirilecek ve \"@max\" sayfadaki toplam etkileşim sayısıyla değiştirilecek",
+      "default": "@max etkileşimden @left etkileşim tamamlandı"
+    },
+    {
+      "label": "\"Etkileşim Yok\" çevirisi",
+      "default": "Etkileşim Yok"
+    },
+    {
+      "label": "\"Puan\" için çeviri",
+      "default": "Puan"
+    },
+    {
+      "label": "\"Özet &amp; gönder\" düğmesi için etiket",
+      "default": "Özet &amp; gönder"
+    },
+    {
+      "label": "\"Hiçbir sayfayla etkileşim kurmadınız\"ın çevirisi",
+      "default": "Hiçbir sayfayla etkileşim kurmadınız."
+    },
+    {
+      "label": "\"Özeti görebilmeniz için en az bir sayfayla etkileşim kurmanız gerekir\"in çevirisi",
+      "default": "Özeti görebilmeniz için en az bir sayfayla etkileşim kurmanız gerekir."
+    },
+    {
+      "label": "\"Yanıtlarınız incelemeye gönderildi!\" için çeviri",
+      "default": "Yanıtlarınız incelemeye gönderildi!"
+    },
+    {
+      "label": "Özet ilerleme etiketi",
+      "default": "Kitap ilerlemesi"
+    },
+    {
+      "label": "Etkileşim ilerleme etiketi",
+      "default": "Etkileşim ilerlemesi"
+    },
+    {
+      "label": "Toplam puan etiketi",
+      "default": "Toplam puan"
+    },
+    {
+      "label": "Erişilebilirlik metinleri",
+      "fields": [
+        {
+          "label": "Sayfa ilerleme metni alternatifi",
+          "description": "Görsel sayfa ilerlemesi için alternatif bir metin. @page yerine sayfa sayısı ve @total yerine toplam sayfa sayısı getirilecek.",
+          "default": "@total sayfadan @page. sayfa."
+        },
+        {
+          "label": "Genişleyen/daraltan gezinme menüsü için etiket",
+          "default": "Gezinme menüsünü aç/kapat"
+        }
+      ]
+    }
+  ]
+}

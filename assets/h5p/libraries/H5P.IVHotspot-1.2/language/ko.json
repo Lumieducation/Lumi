@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "핫스팟 장소",
+      "fields": [
+        {
+          "label": "유형",
+          "options": [
+            {
+              "label": "타임코드"
+            },
+            {
+              "label": "다른 페이지 (URL)"
+            }
+          ]
+        },
+        {
+          "label": "이동",
+          "description": "핫스팟을 누를 때 사용자가 취할 목표 시간. 시간코드를 M:SS 형식으로 입력하십시오."
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "프로토콜",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(root relative) (상대경로)"
+                },
+                {
+                  "label": "기타"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "시각화",
+      "fields": [
+        {
+          "label": "모양",
+          "options": [
+            {
+              "label": "사각형"
+            },
+            {
+              "label": "원"
+            },
+            {
+              "label": "모서리 둥근 사각형"
+            }
+          ]
+        },
+        {
+          "label": "핫스팟의 배경 색상"
+        },
+        {
+          "label": "포인터 커서 사용"
+        },
+        {
+          "label": "깜빡이 효과 주기",
+          "description": "참고: 항상 편집기에서 깜박임 효과가 활성화되므로 투명한 핫스팟을 찾을 수 있음"
+        }
+      ]
+    },
+    {
+      "label": "텍스트",
+      "fields": [
+        {
+          "label": "대체 텍스트",
+          "description": "핫스팟이 다루는 주제에 대해 설명하십시오. 자동문장 읽어주기에 사용됨",
+          "placeholder": "테이블에 있는 사과"
+        },
+        {
+          "label": "핫스팟 라벨"
+        },
+        {
+          "label": "라벨 표시"
+        },
+        {
+          "label": "라벨 색상"
+        }
+      ]
+    }
+  ]
+}

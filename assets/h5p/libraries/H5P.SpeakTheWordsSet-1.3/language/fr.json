@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Introduction",
+      "fields": [
+        {
+          "label": "Montrer l'introduction"
+        },
+        {
+          "label": "Image d'introduction"
+        },
+        {
+          "label": "Texte alternatif pour l'image d'introduction"
+        },
+        {
+          "label": "Titre"
+        },
+        {
+          "label": "Texte d'introduction",
+          "description": "Ce texte apparaît en-dessous du titre."
+        }
+      ]
+    },
+    {
+      "label": "Questions",
+      "widgets": [
+        {
+          "label": "Par défaut"
+        }
+      ],
+      "entity": "Question",
+      "field": {
+        "label": "Question"
+      }
+    },
+    {
+      "label": "Feedback global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Par défaut"
+            }
+          ],
+          "label": "Définissez le feedback pour chaque intervalle de score",
+          "description": "Cliquez sur le bouton \"Ajouter Intervalle\" pour ajouter autant d'intervalles que vous le souhaitez. Exemple : 0-20% Mauvais score, 21-91% Score moyen, 91-100% Score excellent!",
+          "entity": "intervalle",
+          "field": {
+            "fields": [
+              {
+                "label": "Intervalle de score"
+              },
+              {},
+              {
+                "label": "Feedback une intervalle de score",
+                "placeholder": "Remplir le feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Ensemble des activités Prononcez les mots",
+      "fields": [
+        {
+          "label": "Intitulé du bouton d'introduction",
+          "default": "Commencer le cours !"
+        },
+        {
+          "label": "Message de l'écran des résultats",
+          "default": "Vos résultats :"
+        },
+        {
+          "label": "Bouton \"Montrer la solution\"",
+          "default": "Montrer la solution"
+        },
+        {
+          "label": "Bouton \"Recommencer\"",
+          "default": "Recommencer"
+        },
+        {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
+          "label": "Accès à la question suivante",
+          "default": "Question suivante"
+        },
+        {
+          "label": "Accès à la question précédente",
+          "default": "Question précédente"
+        },
+        {
+          "label": "Intitulé de la barre de navigation",
+          "description": "Les intitulés pour les questions dans la barre de navigation. \":num\" va être remplacé par le numéro de diapositive.",
+          "default": "Diapositive :num"
+        },
+        {
+          "label": "Étiquette d'accessibilité à la diapositive répondue",
+          "default": "Répondue"
+        },
+        {
+          "label": "Étiquette d'accessibilité à la diapositive active",
+          "default": "En cours"
+        }
+      ]
+    }
+  ]
+}

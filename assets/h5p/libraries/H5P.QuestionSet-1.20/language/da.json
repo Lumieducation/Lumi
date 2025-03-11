@@ -1,0 +1,278 @@
+{
+  "semantics": [
+    {
+      "label": "Quizzens introduktion",
+      "fields": [
+        {
+          "label": "Vis introduktionen"
+        },
+        {
+          "label": "Title",
+          "description": "Titlen vises over introduktionsteksten."
+        },
+        {
+          "label": "introduktionstekst",
+          "description": "Denne tekst vises før quizzen starter."
+        },
+        {
+          "label": "Teksten på startknappen",
+          "default": "Start quizzen"
+        },
+        {
+          "label": "Baggrundsbillede",
+          "description": "Et valgfrit baggrundsbillde til introduktionen."
+        }
+      ]
+    },
+    {
+      "label": "Baggrundsbillede",
+      "description": "Et valgfrit baggrundsbillde til quizzen."
+    },
+    {
+      "label": "Progress indicator",
+      "description": "Question set progress indicator style.",
+      "options": [
+        {
+          "label": "Textual"
+        },
+        {
+          "label": "Dots"
+        }
+      ]
+    },
+    {
+      "label": "Beståelsesprocent",
+      "description": "Percentage of Total score required for passing the quiz."
+    },
+    {
+      "label": "Spørgsmål",
+      "widgets": [
+        {
+          "label": "Default"
+        },
+        {
+          "label": "Textual"
+        }
+      ],
+      "entity": "Spørgsmål",
+      "field": {
+        "label": "Spørgsmålstype",
+        "description": "Library for this question."
+      }
+    },
+    {
+      "label": "Interface texts in quiz",
+      "fields": [
+        {
+          "label": "Tilbage-knap",
+          "default": "Previous question"
+        },
+        {
+          "label": "Fremad-knap",
+          "default": "Næste spørgsmål"
+        },
+        {
+          "label": "Færdiggør-Knap",
+          "default": "Færdig"
+        },
+        {
+          "label": "Aflever-knap",
+          "default": "Aflever"
+        },
+        {
+          "label": "Progress text",
+          "description": "Text used if textual progress is selected.",
+          "default": "Question: @current of @total questions"
+        },
+        {
+          "label": "Label for jumping to a certain question",
+          "description": "You must use the placeholder '%d' instead of the question number, and %total instead of total amount of questions.",
+          "default": "Question %d of %total"
+        },
+        {
+          "label": "Copyright dialog question label",
+          "default": "Spørgsmål"
+        },
+        {
+          "label": "Readspeaker progress",
+          "description": "May use @current and @total question variables",
+          "default": "Question @current of @total"
+        },
+        {
+          "label": "Unanswered question text",
+          "default": "Ubesvarede"
+        },
+        {
+          "label": "Answered question text",
+          "default": "Besvarede"
+        },
+        {
+          "label": "Current question text",
+          "default": "Current question"
+        },
+        {
+          "label": "Navigation label for readspeakers",
+          "default": "Spørgsmål"
+        }
+      ]
+    },
+    {
+      "label": "Disable backwards navigation",
+      "description": "This option will only allow you to move forward in Question Set"
+    },
+    {
+      "label": "Randomize questions",
+      "description": "Enable to randomize the order of questions on display."
+    },
+    {
+      "label": "Number of questions to be shown:",
+      "description": "Create a randomized batch of questions from the total."
+    },
+    {
+      "label": "Quiz finished",
+      "fields": [
+        {
+          "label": "Display results"
+        },
+        {
+          "label": "Display solution button"
+        },
+        {
+          "label": "Display retry button"
+        },
+        {
+          "label": "No results message",
+          "description": "Text displayed on end page when \"Display results\" is disabled",
+          "default": "Finished"
+        },
+        {
+          "label": "Feedback heading",
+          "default": "Your result:",
+          "description": "This heading will be displayed at the end of the quiz when the user has answered all questions."
+        },
+        {
+          "label": "Score announcer",
+          "description": "This label will be used for announcing the final score to the user on the end screen",
+          "default": "You got @finals out of @totals points"
+        },
+        {
+          "label": "Overall Feedback",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Default"
+                }
+              ],
+              "label": "Define custom feedback for any score range",
+              "description": "Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+              "entity": "range",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Score Range"
+                  },
+                  {},
+                  {
+                    "label": "Feedback for defined score range",
+                    "placeholder": "Fill in the feedback"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Old Feedback",
+          "fields": [
+            {
+              "label": "Quiz passed greeting",
+              "description": "This text will be displayed above the score if the user has successfully passed the quiz."
+            },
+            {
+              "label": "Passed comment",
+              "description": "This comment will be displayed after the score if the user has successfully passed the quiz."
+            },
+            {
+              "label": "Quiz failed title",
+              "description": "This text will be displayed above the score if the user has failed the quiz."
+            },
+            {
+              "label": "Failed comment",
+              "description": "This comment will be displayed after the score if the user has failed the quiz."
+            }
+          ]
+        },
+        {
+          "label": "Solution button label",
+          "default": "Show solution",
+          "description": "Text for the solution button."
+        },
+        {
+          "label": "Retry button label",
+          "default": "Retry",
+          "description": "Text for the retry button."
+        },
+        {
+          "label": "Finish button text",
+          "default": "Finish"
+        },
+        {
+          "label": "Submit button text",
+          "default": "Submit"
+        },
+        {
+          "label": "Display video before quiz results"
+        },
+        {
+          "label": "Enable skip video button"
+        },
+        {
+          "label": "Skip video button label",
+          "default": "Skip video"
+        },
+        {
+          "label": "Passed video",
+          "description": "This video will be played if the user successfully passed the quiz."
+        },
+        {
+          "label": "Fail video",
+          "description": "This video will be played if the user fails the quiz."
+        }
+      ]
+    },
+    {
+      "label": "Settings for \"Show solution\" and \"Retry\" buttons",
+      "fields": [
+        {
+          "label": "Show \"Check\" buttons",
+          "description": "This option determines if the \"Check\" button will be shown for all questions."
+        },
+        {
+          "label": "Overskriv \"Vi svar\"-knap",
+          "description": "Dette valg afgør om \"Vis svar\"-knappen skal vises på alle spørgsmål, skjules for alle eller konfigureres individuelt til hvert spørgsmål.",
+          "options": [
+            {
+              "label": "Aktiveret"
+            },
+            {
+              "label": "Deaktiveret"
+            }
+          ]
+        },
+        {
+          "label": "Overskriv \"Prøv igen\"-knap",
+          "description": "Dette valg afgør om \"Prøv igen\"-knappen skal vises på alle spørgsmål, skjules for alle eller konfigureres individuelt til hvert spørgsmål.",
+          "options": [
+            {
+              "label": "Aktiveret"
+            },
+            {
+              "label": "Deaktiveret"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

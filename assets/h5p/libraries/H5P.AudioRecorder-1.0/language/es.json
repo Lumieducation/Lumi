@@ -1,0 +1,90 @@
+{
+  "semantics": [
+    {
+      "label": "Descripción de la tarea",
+      "description": "Texto opcional a mostrar encima de la grabadora de audio"
+    },
+    {
+      "label": "Localización",
+      "fields": [
+        {
+          "label": "Texto botón Grabar",
+          "default": "Grabar"
+        },
+        {
+          "label": "Texto botón Pausa",
+          "default": "Pausa"
+        },
+        {
+          "label": "Texto botón Continuar",
+          "default": "Continuar"
+        },
+        {
+          "label": "Texto botón Descargar",
+          "default": "Descargar"
+        },
+        {
+          "label": "Texto botón Hecho",
+          "default": "Hecho"
+        },
+        {
+          "label": "Texto botón Intentar de nuevo",
+          "default": "Intentar de nuevo"
+        },
+        {
+          "label": "Mensaje de error de Micrófono no soportado",
+          "default": "Micrófono no soportado. Asegúrate de usar un navegador que permita grabación con micrófono."
+        },
+        {
+          "label": "Mensaje de error micrófono inaccesible",
+          "default": "El micrófono no es accesible. Asegúrate de que el micrófono del navegador esté habilitado."
+        },
+        {
+          "label": "Mensaje mostrado cuando no está permitido el acceso no seguro",
+          "description": "Algunos navegadores no permiten usar el micrófono cuando la página se sirve usando HTTP. Este mensaje se mostrará en ese caso",
+          "default": "El acceso al micrófono no está permitido en tu navegador porque esta página no está disponible usando HTTPS. Por favor ponte en contacto con el autor, y pídele que la haga disponible usando HTTPS"
+        },
+        {
+          "label": "Mensaje de estado para listo para grabar",
+          "default": "Presiona el botón inferior para grabar tu respuesta."
+        },
+        {
+          "label": "Mensaje de estado grabando",
+          "default": "Grabando..."
+        },
+        {
+          "label": "Mensaje de estado para en pausa",
+          "default": "Grabación en pausa. Presiona un botón para continuar grabando."
+        },
+        {
+          "label": "Mensaje de estado para grabación terminada",
+          "default": "¡Has grabado tu respuesta correctamente! Puedes escuchar tu grabación en la parte inferior."
+        },
+        {
+          "label": "Mensaje para descargar grabación",
+          "default": "Descargar esta grabación o intentarlo de nuevo."
+        },
+        {
+          "label": "Texto de encabezado del diálogo para intentar de nuevo",
+          "default": "¿Intentar grabación de nuevo?"
+        },
+        {
+          "label": "Texto del cuerpo del diálogo para intentar de nuevo",
+          "default": "Al presionar \"Intentar de nuevo\" perderás tu grabación actual."
+        },
+        {
+          "label": "Texto para el diálogo de confirmación de Intentar de nuevo",
+          "default": "Intentar de nuevo"
+        },
+        {
+          "label": "Texto de diálogo de cancelación para Intentar de nuevo",
+          "default": "Cancelar"
+        },
+        {
+          "label": "Mensaje de estado cuando no se puede crear archivo de audio",
+          "default": "No se puede crear el archivo de audio."
+        }
+      ]
+    }
+  ]
+}

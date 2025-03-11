@@ -1,0 +1,136 @@
+{
+  "semantics": [
+    {
+      "label": "Źródła wideo",
+      "description": "Aby upewnić się, że wideo działa we wszystkich przeglądarkach, należy dodać źródła w formacie WebM i MP4."
+    },
+    {
+      "label": "Wizualizacje",
+      "fields": [
+        {
+          "label": "Obraz plakatu"
+        },
+        {
+          "label": "Dopasuj odtwarzacz wideo, aby wykorzystać całą dostępną przestrzeń ekranu",
+          "description": "Jeśli nie jest ustawiony, odtwarzacz wideo będzie miał takie same proporcje jak wideo."
+        },
+        {
+          "label": "Pokaż panel sterujący odtwarzacza wideo",
+          "description": "Dodaj elementy panelu sterującego do odtwarzacza wideo. Pozwala to użytkownikom na odtwarzanie, wstrzymywanie itp."
+        }
+      ]
+    },
+    {
+      "label": "Odtwarzanie nagranego dźwięku",
+      "fields": [
+        {
+          "label": "Automatyczne odtwarzanie wideo",
+          "description": "Rozpocznij automatyczne odtwarzanie wideo. Może nie działać na urządzeniach mobilnych."
+        },
+        {
+          "label": "Zapętl wideo",
+          "description": "Automatycznie rozpocznij odtwarzanie wideo od nowa po jego zakończeniu."
+        }
+      ]
+    },
+    {
+      "label": "Tłumaczenie wideo",
+      "fields": [
+        {
+          "label": "Nazwa",
+          "default": "Wideo",
+          "description": "Pomaga zidentyfikować treści tego typu."
+        },
+        {
+          "label": "Ładowanie",
+          "default": "Ładowanie odtwarzacza wideo..."
+        },
+        {
+          "label": "Nie znaleziono odtwarzaczy",
+          "default": "Nie znaleziono odtwarzaczy wideo obsługujących dany format wideo."
+        },
+        {
+          "label": "Brak źródeł",
+          "default": "Brak źródeł dla wideo"
+        },
+        {
+          "label": "Przerwane",
+          "default": "Odtwarzanie multimediów zostało przerwane."
+        },
+        {
+          "label": "Awaria sieci",
+          "default": "Awaria sieci."
+        },
+        {
+          "label": "Nie można odkodować źródła wideo",
+          "default": "Nie można odkodować multimediów."
+        },
+        {
+          "label": "Nieobsługiwany format",
+          "default": "Nieobsługiwany format wideo."
+        },
+        {
+          "label": "Zaszyfrowane multimedia",
+          "default": "Zaszyfrowane multimedia."
+        },
+        {
+          "label": "Nieznany błąd",
+          "default": "Nieznany błąd."
+        },
+        {
+          "label": "Nieważne YouTube ID",
+          "default": "Nieważne YouTube ID."
+        },
+        {
+          "label": "Nieznane YouTube ID",
+          "default": "Nie można znaleźć wideo z podanym YouTube ID."
+        },
+        {
+          "label": "Ograniczone wideo YouTube",
+          "default": "Właściciel tego wideo nie pozwala na jego osadzenie."
+        }
+      ]
+    },
+    {
+      "label": "Dostępność",
+      "fields": [
+        {
+          "label": "Dodaj ścieżkę wideo",
+          "entity": "Ścieżka",
+          "field": {
+            "label": "Ścieżka",
+            "fields": [
+              {
+                "label": "Etykieta ścieżki"
+              },
+              {
+                "label": "Wpisz rodzaj, który odnosi się do <a target=\"_blank\" href=\"https://html.spec.whatwg.org/multipage/embedded-content.html#the-track-element\">HTML living standard</a>",
+                "options": [
+                  {
+                    "label": "Napisy"
+                  },
+                  {
+                    "label": "Podpisy"
+                  },
+                  {
+                    "label": "Opisy"
+                  },
+                  {
+                    "label": "Rozdziały"
+                  }
+                ]
+              },
+              {
+                "label": "Język źródłowy, musi być zdefiniowany dla napisów",
+                "description": "Musi być prawidłowym tagiem języka BCP 47. Jeśli atrybut rodzaju jest ustawiony na napisy, należy zdefiniować srclang (język źródłowy)."
+              },
+              {
+                "label": "Plik ścieżki (WebVTT)"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

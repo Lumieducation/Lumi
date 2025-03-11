@@ -1,0 +1,258 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Tipe",
+          "description": "Opsionele media wat bo die vraag vertoon word."
+        },
+        {
+          "label": "Deaktiveer zoomfunksie by prente"
+        }
+      ]
+    },
+    {
+      "label": "Vraag"
+    },
+    {
+      "label": "Beskikbare opsies",
+      "entity": "opsie",
+      "field": {
+        "label": "Opsie",
+        "fields": [
+          {
+            "label": "Teks"
+          },
+          {
+            "label": "Reg"
+          },
+          {
+            "label": "Wenke en terugvoer",
+            "fields": [
+              {
+                "label": "Wenkteks",
+                "description": "Wenk vir die gebruiker. Dit sal verskyn voordat die gebruiker sy antwoord/antwoorde toets."
+              },
+              {
+                "label": "Boodskap wat vertoon as antwoorde verkies word",
+                "description": "'n Boodskap sal onder die antwoord by 'toets 'verskyn as hierdie antwoord gekies word."
+              },
+              {
+                "label": "Boodskap wat vertoon word as antwoord nie gekies word nie",
+                "description": "Boodskap wat onder die antwoord by \"toets\" sal verskyn indien hierdie antwoord nie gekies word nie."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Algehele terugvoer",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Verstek"
+            }
+          ],
+          "label": "Bepaal verstekterugvoer vir enige reeks tellings",
+          "description": "Kliek op die \"Voeg reeks by\" knoppie om so veel as moontlik reekse by te voeg. Byvoorbeeld: 0-20% Swak Punt, 21-91% Gemiddelde Punt, 91-100% Uitstekende Punt!",
+          "entity": "reeks",
+          "field": {
+            "fields": [
+              {
+                "label": "Telling reeks"
+              },
+              {},
+              {
+                "label": "Terugvoer vir gedefinieerde telling reeks",
+                "placeholder": "Vul die terugvoer in"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Gebruikerkoppelvlak vertalings vir meerkeuse",
+      "fields": [
+        {
+          "label": "Toets antwoord knoppie etiket",
+          "default": "Toets"
+        },
+        {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
+          "label": "Wys die antwoord etiketknoppie",
+          "default": "Wys antwoord"
+        },
+        {
+          "label": "Probeer weer knoppie etiket",
+          "default": "Probeer weer"
+        },
+        {
+          "label": "Wenketiket",
+          "default": "Wys wenk"
+        },
+        {
+          "label": "Tekstuele tentoonstelling van die telkaart vir diegene wat 'n spreekleser gebruik",
+          "description": "Beskikbare veranderlikes is :num en :total",
+          "default": "Jy het :num uit :total punte gekry"
+        },
+        {
+          "label": "Wenk beskikbaar (word nie vertoon nie)",
+          "default": "Wenk beskikbaar",
+          "description": "Toeganklikheidsteks om te gebruik met spreeklesers"
+        },
+        {
+          "label": "Terugvoer beskikbaar (word nie vertoon nie)",
+          "default": "Terugvoer beskikbaar",
+          "description": "Toeganklikheidsteks om te gebruik met spreeklesers"
+        },
+        {
+          "label": "Lees terugvoer (word nie vertoon nie)",
+          "default": "Lees terugvoer",
+          "description": "Toeganklikheidsteks om te gebruik met spreeklesers"
+        },
+        {
+          "label": "Verkeerde antwoord (word nie vertoon nie)",
+          "default": "Verkeerde antwoord",
+          "description": "Toeganklikheidsteks om te gebruik met spreeklesers"
+        },
+        {
+          "label": "Regte antwoord (word nie vertoon nie)",
+          "default": "Regte antwoord",
+          "description": "Toeganklikheidsteks om te gebruik met spreeklesers"
+        },
+        {
+          "label": "Opsies moes afgemerk gewees het",
+          "default": "Moes afgemerk gewees het"
+        },
+        {
+          "label": "Opsies moes nie afgemerk gewees het nie",
+          "default": "Moes nie afgemerk gewees het nie"
+        },
+        {
+          "label": "Teks vir \"Vereis antwoord\" boodskap",
+          "default": "Antwoord asb. voor jy die antwoord besigtig"
+        },
+        {
+          "label": "Hulptegnologieë beskrywing vir \"Toets\" knoppie",
+          "default": "Kyk na die antwoorde. Die antwoorde sal as korrek, verkeerd of onbeantwoord gemerk word."
+        },
+        {
+          "label": "Hulptegnologieë beskrywing vir \"Wys oplossing\" knoppie",
+          "default": "Wys die antwoord. Hierdie taak sal gemerk word met die regte antwoord."
+        },
+        {
+          "label": "Hulptegnologieë beskrywing vir \"Probeer weer\" knoppie",
+          "default": "Probeer die taak weer. Herstel alle antwoorde en begin die taak van nuuts af."
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellings",
+      "description": "Hierdie keuses laat jou beheer hoe die onderskeie take uitgevoer moet word.",
+      "fields": [
+        {
+          "label": "Aktiveer \"Probeer weer\" knoppie"
+        },
+        {
+          "label": "Aktiveer \"Wys antwoord\" knoppie"
+        },
+        {
+          "label": "Aktiveer \"Toets\" knoppie"
+        },
+        {
+          "label": "Vraagtipe",
+          "description": "Kies die aansig en gedrag van die vraag.",
+          "options": [
+            {
+              "label": "Outomaties"
+            },
+            {
+              "label": "Meervoudige keuse (Merkboksies)"
+            },
+            {
+              "label": "Enkel keuse (Radio knoppies)"
+            }
+          ]
+        },
+        {
+          "label": "Gee een punt vir die hele taak",
+          "description": "Aktiveer om 'n totaal van een punt vir verskeie regte antwoorde te gee. Hierdie sal nie 'n opsie in \"Enkel antwoord\" modus wees nie."
+        },
+        {
+          "label": "Skommel antwoorde",
+          "description": "Laat toe om ewekansige orde van antwoorde op vooraansig te kies."
+        },
+        {
+          "label": "Vereis die antwoord voor die oplossing besigtig kan word"
+        },
+        {
+          "label": "Wys bevestigingdialoog op \"Toets\""
+        },
+        {
+          "label": "Wys bevestigingdialoog op \"Probeer weer\""
+        },
+        {
+          "label": "Toets antwoorde outomaties",
+          "description": "As jy hierdie opsie aktiveer, sal dit minder toeganklik wees, maak seker dat jy weet wat jy doen."
+        },
+        {
+          "label": "Slaag persentasie",
+          "description": "Hierdie instelling het dikwels geen effek nie. Dit is die persentasie van die totale telling wat nodig is om 1 punt te behaal wanneer een punt vir die hele taak geaktiveer is, en om resultate te behaal in xAPI-stellings."
+        },
+        {
+          "label": "Wys puntetelling",
+          "description": "Wys verdiende punte vir elke antwoord. Dit is nie 'n opsie in die modus 'Enkel antwoord', of as 'Gee een punt vir die hele taak' geaktiveer is nie."
+        }
+      ]
+    },
+    {
+      "label": "Toets bevestigingsdialoog",
+      "fields": [
+        {
+          "label": "Hoofopskrifteks",
+          "default": "Klaar ?"
+        },
+        {
+          "label": "Liggaamteks",
+          "default": "Is jy seker jy wil klaarmaak ?"
+        },
+        {
+          "label": "Kanseleer knoppie etiket",
+          "default": "Kanselleer"
+        },
+        {
+          "label": "Bevestig knoppie etiket",
+          "default": "Klaar"
+        }
+      ]
+    },
+    {
+      "label": "Probeer weer bevestigingsdialoog",
+      "fields": [
+        {
+          "label": "Hoofopskrifteks",
+          "default": "Probeer weer ?"
+        },
+        {
+          "label": "Lyfteks",
+          "default": "Is jy seker jy wil weer probeer ?"
+        },
+        {
+          "label": "Kanseleer knoppie etiket",
+          "default": "Kanselleer"
+        },
+        {
+          "label": "Bevestig knoppie etiket",
+          "default": "Bevestig"
+        }
+      ]
+    }
+  ]
+}

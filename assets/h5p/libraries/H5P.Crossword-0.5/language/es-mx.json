@@ -1,0 +1,293 @@
+{
+  "semantics": [
+    {
+      "label": "Descripción del trabajo",
+      "description": "Describa aquí su trabajo."
+    },
+    {
+      "label": "palabras",
+      "widgets": [
+        {
+          "label": "Predeterminado"
+        }
+      ],
+      "entity": "Palabra",
+      "field": {
+        "label": "Palabra",
+        "fields": [
+          {
+            "label": "Pista",
+            "description": "Pista que debería apuntar a la respuesta."
+          },
+          {
+            "label": "Respuesta",
+            "description": "Respuesta a la pista."
+          },
+          {
+            "label": "Pista extra"
+          },
+          {
+            "label": "Fijar palabra en rejilla",
+            "description": "Comprobar si desea fijar la palabra a una posición particular en la rejilla. Las palabras con la misma alineación podrían no estar colocadas tocándose ambas."
+          },
+          {
+            "label": "Fila",
+            "description": "Índice de fila donde debería comenzar la respuesta."
+          },
+          {
+            "label": "Columna",
+            "description": "Índice de la columna donde debería comenzar la respuesta."
+          },
+          {
+            "label": "Orientación",
+            "description": "Orientación para la respuesta.",
+            "options": [
+              {
+                "label": "Horizontal"
+              },
+              {
+                "label": "Vertical"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Palabra de solución global",
+      "description": "Opcionalmente, incluya una palabra de solución global que puede estar derivada de caracteres particulares en la rejilla. Solamente será visible si todos sus caracteres pueden ser encontrados en el crucigrama. Por favor, tenga en cuenta que aun no hay soporte de accesibilidad para esta característica."
+    },
+    {
+      "label": "Retroalimentación Global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Predeterminado"
+            }
+          ],
+          "label": "Definir retroalimentación personalizada para cualquier rango de puntaje",
+          "description": "Haga clic en el botón \"Añadir rango\" para añadir cuantos rangos necesite. Ejemplo: 0-20% Mal puntaje, 21-91% Puntaje Promedio, 91-100% ¡Magnífico Puntaje!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango del Puntaje"
+              },
+              {},
+              {
+                "label": "Retroalimentación para rango de puntaje definido",
+                "placeholder": "Complete la retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tema",
+      "fields": [
+        {
+          "label": "Imagen de fondo",
+          "description": "Seleccione una imagen opcional de fondo. Será escalada para que quepa en el fondo sin estirarla."
+        },
+        {
+          "label": "Color del fondo",
+          "description": "Elija un color de fondo. Será usado, ya sea en lugar de una imagen de fondo, o como un fondo para las áreas transparentes."
+        },
+        {
+          "label": "Color de rejilla",
+          "description": "Elija un color para la rejilla."
+        },
+        {
+          "label": "Color del fondo de celda",
+          "description": "Elija el color del fondo para una celda de la tabla."
+        },
+        {
+          "label": "Color del texto de la celda",
+          "description": "Elegir el color del texto para una celda de la tabla."
+        },
+        {
+          "label": "Color de ID de pista",
+          "description": "Elija el color de la ID de pista dentro de una celda de tabla."
+        },
+        {
+          "label": "Color del fondo de la celda (resaltada)",
+          "description": "Elija el color del fondo para una celda de tabla que está resaltada."
+        },
+        {
+          "label": "Color del texto de celda (resaltada)",
+          "description": "Elija el color del texto para una celda de tabla que está resaltada."
+        },
+        {
+          "label": "Color de ID de celda (resaltada)",
+          "description": "Elija el color de la ID de pista dentro de una celda de tabla que está resaltada."
+        }
+      ]
+    },
+    {
+      "label": "Configuraciones del comportamiento",
+      "description": "Estas opciones le permitirán controlar como se comporta el trabajo.",
+      "fields": [
+        {
+          "label": "Número de palabras a ser mostradas",
+          "description": "Crear un lote aleatorizado de palabras a partir del conjunto. El lote siempre contendrá al menos todas las palabras que fueron arregladas en la rejilla sin importar esta configuración. Un valor vacío de 0 significa usar todas las palabras."
+        },
+        {
+          "label": "Habilitar retroalimentación instantánea"
+        },
+        {
+          "label": "Dar puntaje a palabras",
+          "description": "Si esta opción es habilitada, las palabras serán contadas para determinar el puntaje. En caso contrario, los caracteres correctos serán contados."
+        },
+        {
+          "label": "Aplicar penalizaciones",
+          "description": "Si esta opción es habilitada, por cada respuesta incorrecta será dada una penalización del puntaje de -1."
+        },
+        {
+          "label": "Habilitar \"Reintentar\""
+        },
+        {
+          "label": "Habilitar \"Solución\""
+        },
+        {
+          "label": "Mantener las respuestas correctas al volver a intentarlo",
+          "description": "Si esta opción está habilitada, las respuestas correctas se conservarán cuando el usuario vuelva a intentar la tarea, a menos que haya alcanzado la puntuación completa."
+        }
+      ]
+    },
+    {
+      "label": "Interfaz del usuario",
+      "fields": [
+        {
+          "label": "Etiqueta para horizontal",
+          "default": "Horizontal"
+        },
+        {
+          "label": "Etiqueta para vertical",
+          "default": "Vertical"
+        },
+        {
+          "label": "Texto para botón \"Comprobar\"",
+          "default": "Comprobar"
+        },
+        {
+          "label": "Texto para botón \"Enviar\"",
+          "default": "Enviar"
+        },
+        {
+          "label": "Texto para botón \"Reintentar\"",
+          "default": "Reintentar"
+        },
+        {
+          "label": "Texto para botón \"Mostrar solución\"",
+          "default": "Mostrar solución"
+        },
+        {
+          "label": "No se puede crear crucigrama",
+          "default": "No se pudo generar un crucigrama con las palabras dadas. Por favor intente nuevamente con menos palabras, o con palabras que tengan más caracteres en común."
+        },
+        {
+          "label": "No se puede crear crucigrama (muy pocas palabras)",
+          "default": "No se pudo generar un crucigrama. Usted necesita por lo menos dos palabras."
+        },
+        {
+          "label": "Palabras problemáticas",
+          "description": "Enlistar palabras que causaron problema al generar el rompecabezas. @words es un reemplazable que será remplazado por las palabras problemáticas actuales.",
+          "default": "Algunas palabras no pudieron ser colocadas. Si está usando palabras fijadas, por favor asegúrese de que su posición no impida que otras palabras sean colocadas. Las palabras con la misma alineación podrían no estar colocadas tocándose ambas. Palabras problemáticas: @words"
+        },
+        {
+          "label": "Clave extra",
+          "default": "Clave extra"
+        },
+        {
+          "label": "Cerrar ventana",
+          "default": "Cerrar ventana"
+        }
+      ]
+    },
+    {
+      "label": "Lector de texto en voz alta",
+      "fields": [
+        {
+          "label": "Descripción de rejilla del crucigrama",
+          "default": "Cuadrícula de crucigramas. Use las teclas de flecha para navegar y el teclado para ingresar caracteres. También puede usar la tecla Tab para navegar y escribir las respuestas en los campos de estilo \"Rellenar los espacios en blanco\" en lugar de la cuadrícula."
+        },
+        {
+          "label": "Columna",
+          "default": "Columna"
+        },
+        {
+          "label": "Fila",
+          "default": "Fila"
+        },
+        {
+          "label": "Horizontal",
+          "default": "Horizontal"
+        },
+        {
+          "label": "Vertical",
+          "default": "Vertical"
+        },
+        {
+          "label": "Vacío",
+          "default": "Vacío"
+        },
+        {
+          "description": "Anunciador del resultado. @clue es una variable y será remplazada por la pista respectiva.",
+          "label": "Resultado para",
+          "default": "Resultado para: @clue"
+        },
+        {
+          "label": "Correcto",
+          "default": "Correcto"
+        },
+        {
+          "label": "Incorrecto",
+          "default": "Incorrecto"
+        },
+        {
+          "label": "Punto",
+          "default": "punto"
+        },
+        {
+          "description": "Anunciador de solución. @clue y @solution son variables que serán remplazadas por los valores respectivos.",
+          "label": "Solución para",
+          "default": "Para @clue la solución es: @solution"
+        },
+        {
+          "description": "Anunciador de solución extra. @clue es una variable y será remplazada por el valor respectivo.",
+          "label": "Pista extra para",
+          "default": "Abrir pista extra para @clue"
+        },
+        {
+          "description": "Anunciando la posición actual. @position y @length son variables y serán remplazadas por sus valores respectivos.",
+          "label": "Letra",
+          "default": "Letra @position de @length"
+        },
+        {
+          "description": "Anunciando la longitud de la palabra. @length es una variable y será remplazada por su valor respectivo.",
+          "label": "Longitud de la palabra",
+          "default": "palabra de @length letras"
+        },
+        {
+          "label": "Descripción para las tecnologías de asistencia del botón \"Comprobar\"",
+          "default": "Comprobar los caracteres. Las respuestas serán marcadas como correcta, incorrecta, o sin contestar."
+        },
+        {
+          "label": "Descripción para las tecnologías de asistencia del botón \"Mostrar solución\"",
+          "default": "Mostrar la solución. El crucigrama se completará con su solución correcta."
+        },
+        {
+          "label": "Descripción para las tecnologías de asistencia del botón \"Intentar de nuevo\"",
+          "default": "Volver a intentar la tarea. Borra todas las respuestas y empezar de nuevo."
+        },
+        {
+          "label": "Su resultado",
+          "description": "@score y @total son variables y serán remplazadas por sus valores respectivos.",
+          "default": "Usted obtuvo @score de un total de @total puntos."
+        }
+      ]
+    }
+  ]
+}

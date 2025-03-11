@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Encapçalament",
+      "placeholder": "Aquí podeu afegir un encapçalament opcional.",
+      "description": "L’encapçalament que voleu que es mostri a sobre de la imatge"
+    },
+    {
+      "label": "Elements",
+      "entity": "element",
+      "widgets": [
+        {
+          "label": "Opció predeterminada"
+        }
+      ],
+      "field": {
+        "label": "Element",
+        "fields": [
+          {
+            "label": "Imatge"
+          },
+          {
+            "label": "Etiqueta",
+            "description": "Etiqueta opcional per a una marca de verificació. Comproveu que no sigui massa llarga; en cas contrari, quedarà oculta."
+          },
+          {
+            "label": "Descripció",
+            "placeholder": "Descripció de la meva imatge...",
+            "description": "Descripció opcional de la imatge"
+          },
+          {
+            "label": "Àudio",
+            "description": "Àudio opcional que es reprodueix quan es mostra una imatge."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Opcions de comportament",
+      "description": "Aquestes opcions et permetran controlar com es comporta la tasca.",
+      "fields": [
+        {
+          "label": "Imatge d’inici",
+          "description": "Establiu el nombre de la imatge amb què començar."
+        },
+        {
+          "label": "Control lliscant d’enfocament",
+          "description": "Si s’activa aquesta funció, el control lliscant enfocarà la posició de la imatge."
+        },
+        {
+          "label": "Mostra les marques de verificació",
+          "description": "Si s’activa aquesta funció, la barra lliscant mostrarà una marca de verificació per a cada imatge."
+        },
+        {
+          "label": "Mostra les etiquetes",
+          "description": "Si s’activa aquesta funció, la barra lliscant mostrarà una etiqueta, a més de les marques de verificació o en substitució d’aquestes marques."
+        },
+        {
+          "label": "Color per substituir la transparència",
+          "description": "Establiu el color que substituirà les àrees transparents de les imatges."
+        },
+        {
+          "label": "Espai de la imatge en mode pantalla completa",
+          "description": "Si teniu descripcions acompanyant les imatges, establiu el percentatge d'espai que les imatges haurien d'utilitzar en mode pantalla completa."
+        }
+      ]
+    },
+    {
+      "label": "Altaveu de lectura",
+      "fields": [
+        {
+          "label": "Imatge",
+          "default": "Imatge"
+        },
+        {
+          "label": "Botó de desplaçament de la imatge",
+          "default": "Botó de desplaçament de la imatge"
+        },
+        {
+          "label": "Silencia el títol",
+          "default": "Silencia"
+        },
+        {
+          "label": "Activa el so del títol",
+          "default": "Activa el so"
+        },
+        {
+          "label": "Títol per al botó de pantalla completa (intro)",
+          "default": "Enter fullscreen mode"
+        },
+        {
+          "label": "Títol per al botó de pantalla completa (surt)",
+          "default": "Surt del mode pantalla completa"
+        }
+      ]
+    }
+  ]
+}

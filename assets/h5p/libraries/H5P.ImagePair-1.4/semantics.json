@@ -1,0 +1,119 @@
+[
+  {
+    "label": "Task Description",
+    "name": "taskDescription",
+    "type": "text",
+    "default": "Drag images from the left to match them with corresponding images on the right",
+    "description": "A guide telling the user how to solve this task.",
+    "importance": "high"
+  },
+  {
+    "name": "cards",
+    "type": "list",
+    "widgets": [
+      {
+        "name": "VerticalTabs",
+        "label": "Default"
+      }
+    ],
+    "label": "Cards",
+    "importance": "high",
+    "entity": "card",
+    "min": 2,
+    "max": 100,
+    "field": {
+      "type": "group",
+      "name": "card",
+      "label": "Card",
+      "importance": "high",
+      "fields": [
+        {
+          "name": "image",
+          "type": "image",
+          "label": "Image",
+          "importance": "high",
+          "ratio": 1
+        },
+        {
+          "name": "imageAlt",
+          "type": "text",
+          "label": "Alternative text for Image",
+          "importance": "high",
+          "description": "Describe what can be seen in the photo. The text is read by text-to-speech tools needed by visually impaired users."
+        },
+        {
+          "name": "match",
+          "type": "image",
+          "label": "Matching Image",
+          "importance": "low",
+          "optional": true,
+          "description": "An optional image to match against instead of using two cards with the same image.",
+          "ratio": 1
+        },
+        {
+          "name": "matchAlt",
+          "type": "text",
+          "label": "Alternative text for Matching Image",
+          "importance": "low",
+          "optional": true,
+          "description": "Describe what can be seen in the photo. The text is read by text-to-speech tools needed by visually impaired users."
+        }
+      ]
+    }
+  },
+  {
+    "name": "behaviour",
+    "type": "group",
+    "label": "Behavioural settings",
+    "importance": "low",
+    "description": "These options will let you control how the game behaves.",
+    "optional": true,
+    "fields": [
+      {
+        "name": "allowRetry",
+        "type": "boolean",
+        "label": "Add button for retrying when the game is over",
+        "importance": "low",
+        "default": true
+      }
+    ]
+  },
+  {
+    "label": "Localization",
+    "importance": "low",
+    "name": "l10n",
+    "type": "group",
+    "common": true,
+    "fields": [
+      {
+        "label": "Text for \"Check\" button",
+        "importance": "low",
+        "name": "checkAnswer",
+        "type": "text",
+        "default": "Check"
+      },
+      {
+        "label": "Text for \"Retry\" button",
+        "importance": "low",
+        "name": "tryAgain",
+        "type": "text",
+        "default": "Retry"
+      },
+      {
+        "label": "Text for \"ShowSolution\" button",
+        "importance": "low",
+        "name": "showSolution",
+        "type": "text",
+        "default": "Show Solution"
+      },
+      {
+        "label": "Feedback text",
+        "importance": "low",
+        "name": "score",
+        "type": "text",
+        "default": "You got @score of @total points",
+        "description": "Feedback text, variables available: @score and @total. Example: 'You got @score of @total possible points'"
+      }
+    ]
+  }
+]

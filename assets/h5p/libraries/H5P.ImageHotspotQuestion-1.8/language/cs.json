@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Editor otázek aktivních bodů",
+      "fields": [
+        {
+          "label": "Obrázek na pozadí",
+          "fields": [
+            {
+              "label": "Obrázek na pozadí",
+              "description": "Vyberte obrázek, který chcete použít jako pozadí pro otázku aktivního bodu obrázku."
+            }
+          ]
+        },
+        {
+          "label": "Aktivní body",
+          "description": "Přetažením požadované položky z panelu nástrojů vytvořte nový aktivní bod. Poklepáním upravte existující aktivní bod. Přetažením aktivního bodu jej přesuňte. Chcete-li změnit velikost, zatáhněte za bod změny velikosti v pravém dolním rohu.",
+          "fields": [
+            {
+              "label": "Popis úlohy",
+              "description": "Pokyny pro uživatele."
+            },
+            {
+              "label": "Aktivní bod",
+              "entity": "Aktivní bod",
+              "field": {
+                "label": "Aktivní bod",
+                "fields": [
+                  {
+                    "label": "userSettings",
+                    "fields": [
+                      {
+                        "label": "Správně",
+                        "description": "Může existovat více správných aktivních bodů. Uživatel však dostane správnou/nesprávnou zpětnou vazbu ihned po prvním kliknutí."
+                      },
+                      {
+                        "label": "Zpětná vazba"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "computedSettings"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Zpětná vazba, pokud uživatel vybere prázdné místo:",
+              "placeholder": "Nenalezli jste žádné aktivní body, zkuste to znovu!"
+            },
+            {
+              "label": "Zobrazit zpětnou vazbu jako vyskakovací okno"
+            },
+            {
+              "label": "Lokalizace",
+              "fields": [
+                {
+                  "label": "Text opakovacího tlačítka",
+                  "default": "Opakovat"
+                },
+                {
+                  "label": "Text tlačítka zavřít",
+                  "default": "Zavřít"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Textové znázornění výsledkové lišty pro ty, kteří používají čtecí zařízení",
+      "default": "Získal jste :num ze :total bodů"
+    },
+    {
+      "label": "Popisek podpůrné technologie pro tlačítko \"Opakovat\"",
+      "default": "Zopakovat úkol. Resetovat všechny odpovědi a spustit úlohu znovu."
+    }
+  ]
+}

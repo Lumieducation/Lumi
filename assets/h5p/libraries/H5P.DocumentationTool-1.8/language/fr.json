@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "label": "En-tête",
+      "default": "Outil de documentation",
+      "description": "Titre de l'outil de documentation."
+    },
+    {
+      "label": "Eléments",
+      "widgets": [
+        {
+          "label": "Par défaut"
+        }
+      ],
+      "entity": "page",
+      "field": {
+        "label": "Type de Page",
+        "description": "Bibliothèque pour cette page."
+      }
+    },
+    {
+      "label": "Traduire les boutons de l'outil de documentation",
+      "fields": [
+        {
+          "label": "Etiquette du bouton Précédent",
+          "default": "Précédent documentation step"
+        },
+        {
+          "label": "Etiquette du bouton Suivant",
+          "default": "Suivant documentation step"
+        },
+        {
+          "label": "Etiquette du bouton Fermer",
+          "default": "Fermer"
+        }
+      ]
+    }
+  ]
+}

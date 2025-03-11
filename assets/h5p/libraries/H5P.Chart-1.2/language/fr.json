@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Type de graphique",
+      "options": [
+        {
+          "label": "Camembert"
+        },
+        {
+          "label": "Graphique en barres"
+        }
+      ]
+    },
+    {
+      "label": "Données",
+      "entity": "option",
+      "field": {
+        "label": "Données",
+        "fields": [
+          {
+            "label": "Nom"
+          },
+          {
+            "label": "Valeur"
+          },
+          {
+            "label": "Couleur"
+          },
+          {
+            "label": "Couleur de la police"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Texte lu par l'orateur (readspeaker) et qui définit la figure comme étant un graphique.",
+      "default": "Graphique"
+    }
+  ]
+}

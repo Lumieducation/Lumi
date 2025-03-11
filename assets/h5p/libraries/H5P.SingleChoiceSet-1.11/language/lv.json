@@ -1,0 +1,155 @@
+{
+  "semantics": [
+    {
+      "label": "Jautājumu saraksts",
+      "entity": "jautājums",
+      "widgets": [
+        {
+          "label": "Pēc noklusējuma"
+        },
+        {
+          "label": "Teksta"
+        }
+      ],
+      "field": {
+        "label": "Jautājums un atbilžu varianti",
+        "fields": [
+          {
+            "label": "Jautājums"
+          },
+          {
+            "label": "Atbilžu varianti - pirmais variants ir pareizais.",
+            "entity": "atbilde",
+            "field": {
+              "label": "Atbildes variants"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Kopējā atgriezeniskā saite",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Pēc noklusējuma"
+            }
+          ],
+          "label": "Iestatiet pielāgotu atgriezenisko saiti katram rezultātu diapazonam",
+          "description": "Klikšķiniet pogu \"Pievienot diapazonu\", lai pievienotu tik diapazonus cik vēlaties. Piemēram, 0-20% Slikts rezultāts, 21-91% Viduvējs rezultāts, 91-100% Lielisks rezultāts!",
+          "entity": "diapazons",
+          "field": {
+            "fields": [
+              {
+                "label": "Rezultātu diapazons"
+              },
+              {},
+              {
+                "label": "Norādītā diapazona atgriezeniskā saite",
+                "placeholder": "Aizpildiet atgriezenisko saiti"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Uzvedības iestatījumi",
+      "fields": [
+        {
+          "label": "Automātiski turpināt",
+          "description": "Automatically go to next question when alternative is selected. This needs to be turned off to make the content fully accessible when using a screen reader."
+        },
+        {
+          "label": "Pareizo atbilžu noildze",
+          "description": "Vērtība milisekundēs"
+        },
+        {
+          "label": "Nepareizo atbilžu noildze",
+          "description": "Vērtība milisekundēs"
+        },
+        {
+          "label": "Atļaut skaņas efektus"
+        },
+        {
+          "label": "Atļaut atkārtošanas pogu"
+        },
+        {
+          "label": "Atļaut risinājuma rādīšanas pogu"
+        },
+        {
+          "label": "Nokārtošanas procents",
+          "description": "Kopējā rezultāta procents, kas jāsasniedz, lai nokārtotu pārbaudījumu."
+        }
+      ]
+    },
+    {
+      "label": "Lokalizēt vienas izvēles kopu",
+      "fields": [
+        {
+          "label": "Pogas \"Turpināt\" birka",
+          "default": "Nākamais jautājums"
+        },
+        {
+          "label": "Pogas \"Rādīt risinājumu\" birka",
+          "default": "Rādīt risinājumu"
+        },
+        {
+          "label": "Pogas \"Atkārtot\" birka",
+          "default": "Atkārtot"
+        },
+        {
+          "label": "Risinājumu parādīšanas skata virsraksts",
+          "default": "Risinājumu saraksts"
+        },
+        {
+          "label": "Pareizās atbildes atskaņošanas teksts",
+          "default": "Pareizi!"
+        },
+        {
+          "label": "Nepareizās atbildes atskaņošanas teksts",
+          "default": "Nepareizi!"
+        },
+        {
+          "label": "Option should have been selected",
+          "default": "Should have been selected"
+        },
+        {
+          "label": "Option should not have been selected",
+          "default": "Should not have been selected"
+        },
+        {
+          "label": "Pogas \"Kluss\" birka, lai atspējotu atgriezeniskās saites skaņu",
+          "default": "Apklusināt atgriezeniskās saites skaņu"
+        },
+        {
+          "label": "Pogas \"Aizvērt\" birka",
+          "default": "Aizvērt"
+        },
+        {
+          "label": "Slaida numura teksts",
+          "description": "Paziņo pašreizējo slaidu un kopējo slaidu skaitu, mainīgie ir :num un :total",
+          "default": "Slaids :num no :total"
+        },
+        {
+          "label": "Punktu skalas tekstuālais atspoguļojums tiem, kuri izmanto asistējošās tehnoloģijas",
+          "default": "Tu saņēmi :num no :total punktiem"
+        },
+        {
+          "label": "Jautājuma numura birka jautājumu sarakstā",
+          "description": "Paziņo pašreizējā jautājuma indeksu risinājumu sarakstā, mainīgais ir :num",
+          "default": "Jautājums :num"
+        },
+        {
+          "label": "Pogas \"Rādīt risinājumu\" apraksts priekš asistējošām tehnoloģijām",
+          "default": "Rādīt risinājumu. Uzdevums tiks atzīmēts ar tā pareizo risinājumu."
+        },
+        {
+          "label": "Pogas \"Mēģināt vēlreiz\" apraksts priekš asistējošām tehnoloģijām",
+          "default": "Mēģināt uzdevumu vēlreiz. Atiestatīt visas sniegtās atbildes un sākt uzdevumu vēlreiz."
+        }
+      ]
+    }
+  ]
+}

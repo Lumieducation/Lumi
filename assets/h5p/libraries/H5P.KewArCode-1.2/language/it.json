@@ -1,0 +1,512 @@
+{
+  "semantics": [
+    {
+      "label": "Introductory text",
+      "description": "This text can optionally be presented along with your code."
+    },
+    {
+      "label": "Tipo di codice",
+      "description": "Seleziona il tipo di codice che vuoi generare",
+      "options": [
+        {
+          "label": "Contatti"
+        },
+        {
+          "label": "Evento"
+        },
+        {
+          "label": "Indirizzo email"
+        },
+        {
+          "label": "H5P"
+        },
+        {
+          "label": "Luogo"
+        },
+        {
+          "label": "Numero di telefono"
+        },
+        {
+          "label": "SMS"
+        },
+        {
+          "label": "Testo"
+        },
+        {
+          "label": "URL"
+        }
+      ]
+    },
+    {
+      "label": "Contatti",
+      "fields": [
+        {
+          "label": "Nome",
+          "placeholder": "Mario Rossi"
+        },
+        {
+          "label": "Organizzazione",
+          "placeholder": "Fan club di H5P"
+        },
+        {
+          "label": "Titolo",
+          "placeholder": "Maestro del Nulla"
+        },
+        {
+          "label": "Numero di telefono",
+          "description": "Numero di telefono (formato +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        },
+        {
+          "label": "Indirizzo email",
+          "description": "Indirizzo email al quale inviare un messaggio",
+          "placeholder": "mario@fan-club-h5p-fittizio.org"
+        },
+        {
+          "label": "Indirizzo",
+          "fields": [
+            {
+              "label": "Indirizzo completo",
+              "description": "c/o informazioni ecc.",
+              "placeholder": "c/o Fan club di H5P"
+            },
+            {
+              "label": "Via",
+              "description": "Via e numero",
+              "placeholder": "Via Daytona, 1308"
+            },
+            {
+              "label": "Località",
+              "description": "Nome della città ecc.",
+              "placeholder": "Madison"
+            },
+            {
+              "label": "Regione",
+              "description": "Stato, provincia ecc.",
+              "placeholder": "WI"
+            },
+            {
+              "label": "CAP",
+              "description": "CAP",
+              "placeholder": "53715"
+            },
+            {
+              "label": "Nazione",
+              "description": "Nazione",
+              "placeholder": "USA"
+            }
+          ]
+        },
+        {
+          "label": "Sito web",
+          "description": "Sito web al quale collegarsi (deve iniziare con https:// o con http://)",
+          "placeholder": "https://fan-club-h5p.fittizio.org"
+        },
+        {
+          "label": "Nota",
+          "description": "Nota",
+          "placeholder": "Mario ama H5P"
+        }
+      ]
+    },
+    {
+      "label": "Evento",
+      "fields": [
+        {
+          "label": "Titolo",
+          "description": "Titolo per l'evento del calendario",
+          "placeholder": "Conferenza H5P del 2020"
+        },
+        {
+          "label": "Evento di tutto il giorno",
+          "description": "Attivare se l'evento sarà valido tutto il giorno"
+        },
+        {
+          "label": "Data d'inizio",
+          "description": "Data di inizio dell'evento (formato aaaa/mm/dd)",
+          "placeholder": "2020/05/18"
+        },
+        {
+          "label": "Start time",
+          "description": "Start time of the event (please use the format hh:mm)",
+          "placeholder": "09:00"
+        },
+        {
+          "label": "End date",
+          "description": "End date of the event (please use the format yyyy/mm/dd)",
+          "placeholder": "2020/05/20"
+        },
+        {
+          "label": "End time",
+          "description": "End time of the event (please use the format hh:mm)",
+          "placeholder": "16:00"
+        },
+        {
+          "label": "Timezone",
+          "description": "Select the time zone the event is supposed to take place in",
+          "options": [
+            {
+              "label": "UTC-12:00"
+            },
+            {
+              "label": "UTC-11:00"
+            },
+            {
+              "label": "UTC-10:00"
+            },
+            {
+              "label": "UTC-9:30"
+            },
+            {
+              "label": "UTC-9:00"
+            },
+            {
+              "label": "UTC-8:00"
+            },
+            {
+              "label": "UTC-7:00"
+            },
+            {
+              "label": "UTC-6:00"
+            },
+            {
+              "label": "UTC-5:00"
+            },
+            {
+              "label": "UTC-4:00"
+            },
+            {
+              "label": "UTC-3:30"
+            },
+            {
+              "label": "UTC-3:00"
+            },
+            {
+              "label": "UTC-2:00"
+            },
+            {
+              "label": "UTC-1:00"
+            },
+            {
+              "label": "UTC"
+            },
+            {
+              "label": "UTC+1:00"
+            },
+            {
+              "label": "UTC+2:00"
+            },
+            {
+              "label": "UTC+3:00"
+            },
+            {
+              "label": "UTC+3:30"
+            },
+            {
+              "label": "UTC+4:00"
+            },
+            {
+              "label": "UTC+4:30"
+            },
+            {
+              "label": "UTC+5:00"
+            },
+            {
+              "label": "UTC+5:30"
+            },
+            {
+              "label": "UTC+5:45"
+            },
+            {
+              "label": "UTC+6:00"
+            },
+            {
+              "label": "UTC+6:30"
+            },
+            {
+              "label": "UTC+7:00"
+            },
+            {
+              "label": "UTC+8:00"
+            },
+            {
+              "label": "UTC+9:00"
+            },
+            {
+              "label": "UTC+9:30"
+            },
+            {
+              "label": "UTC+10:00"
+            },
+            {
+              "label": "UTC+10:30"
+            },
+            {
+              "label": "UTC+11:00"
+            },
+            {
+              "label": "UTC+12:00"
+            },
+            {
+              "label": "UTC+12:45"
+            },
+            {
+              "label": "UTC+13:00"
+            },
+            {
+              "label": "UTC+14:00"
+            }
+          ]
+        },
+        {
+          "label": "Daylight savings",
+          "description": "Check if location that the event is taking place in uses daylight savings time"
+        },
+        {
+          "label": "Location",
+          "description": "Name the location",
+          "placeholder": "Madison, USA"
+        },
+        {
+          "label": "Description",
+          "description": "Add a description for the event",
+          "placeholder": "3rd H5P conference"
+        }
+      ]
+    },
+    {
+      "label": "Email address",
+      "fields": [
+        {
+          "label": "Email address",
+          "description": "Email address to write message to",
+          "placeholder": "john@fictional-h5p-fan-club.org"
+        }
+      ]
+    },
+    {
+      "label": "H5P content",
+      "fields": [
+        {
+          "label": "H5P content",
+          "description": "H5P content to display"
+        }
+      ]
+    },
+    {
+      "label": "Location",
+      "fields": [
+        {
+          "label": "Latitude",
+          "description": "Latitude (please use the format 53.864462)",
+          "placeholder": "69.646007"
+        },
+        {
+          "label": "Longitude",
+          "description": "Longitude (please use the format 10.663792)",
+          "placeholder": "18.954036"
+        }
+      ]
+    },
+    {
+      "label": "Phone number",
+      "fields": [
+        {
+          "label": "Phone number",
+          "description": "Phone number to call (please use the format +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        }
+      ]
+    },
+    {
+      "label": "SMS",
+      "fields": [
+        {
+          "label": "Phone number",
+          "description": "Phone number to send to (please use the format +12 345 67890)",
+          "placeholder": "+12 345 67890"
+        },
+        {
+          "label": "Message",
+          "description": "Message to send",
+          "placeholder": "Please fetch milk and bread!"
+        }
+      ]
+    },
+    {
+      "label": "Text",
+      "fields": [
+        {
+          "label": "Text",
+          "description": "Text to encode",
+          "placeholder": "Please fetch\n* milk\n* bread"
+        }
+      ]
+    },
+    {
+      "label": "URL",
+      "fields": [
+        {
+          "label": "URL",
+          "description": "URL to link to (must start with https:// or http://)",
+          "placeholder": "https://fictional-h5p-fan-club.org"
+        }
+      ]
+    },
+    {
+      "label": "Behavioural settings",
+      "description": "These options will let you control how the task behaves.",
+      "fields": [
+        {
+          "label": "Code color",
+          "default": "#000000"
+        },
+        {
+          "label": "Background color",
+          "default": "#ffffff"
+        },
+        {
+          "label": "Maximum size",
+          "description": "Maximum size for the code given in CSS notation (pixels by default if only a number is given)"
+        },
+        {
+          "label": "Horizontal alignment",
+          "description": "Set horizontal alignment if you set a maximum size",
+          "options": [
+            {
+              "label": "left"
+            },
+            {
+              "label": "center"
+            },
+            {
+              "label": "right"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "User interface",
+      "fields": [
+        {
+          "label": "Address",
+          "default": "Address"
+        },
+        {
+          "label": "Contact",
+          "default": "Contact"
+        },
+        {
+          "label": "Country",
+          "default": "Country"
+        },
+        {
+          "label": "End date",
+          "default": "End date"
+        },
+        {
+          "label": "Start date",
+          "default": "Start date"
+        },
+        {
+          "label": "Description",
+          "default": "Description"
+        },
+        {
+          "label": "Email",
+          "default": "Email"
+        },
+        {
+          "label": "Event",
+          "default": "Event"
+        },
+        {
+          "label": "Extended address",
+          "default": "Extended address"
+        },
+        {
+          "label": "Latitude",
+          "default": "Latitude"
+        },
+        {
+          "label": "Locality",
+          "default": "Locality"
+        },
+        {
+          "label": "Location",
+          "default": "Location"
+        },
+        {
+          "label": "Longitude",
+          "default": "Longitude"
+        },
+        {
+          "label": "Message",
+          "default": "Message"
+        },
+        {
+          "label": "Name",
+          "default": "Name"
+        },
+        {
+          "label": "Note",
+          "default": "Note"
+        },
+        {
+          "label": "Organization",
+          "default": "Organization"
+        },
+        {
+          "label": "Phone",
+          "default": "Phone"
+        },
+        {
+          "label": "Region",
+          "default": "Region"
+        },
+        {
+          "label": "SMS",
+          "default": "SMS"
+        },
+        {
+          "label": "Street",
+          "default": "Street"
+        },
+        {
+          "label": "Text",
+          "default": "Text"
+        },
+        {
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "label": "URL",
+          "default": "URL"
+        },
+        {
+          "label": "ZIP code",
+          "default": "ZIP code"
+        }
+      ]
+    },
+    {
+      "label": "Readspeaker",
+      "fields": [
+        {
+          "label": "QRCode. Display information (Text for Readspeakers)",
+          "default": "QRCode. Display information."
+        },
+        {
+          "label": "Hide information (Text for Readspeakers)",
+          "default": "Nascondi l'informazione."
+        },
+        {
+          "label": "Code contents (Text for Readspeakers)",
+          "default": ". Code contents"
+        }
+      ]
+    }
+  ]
+}

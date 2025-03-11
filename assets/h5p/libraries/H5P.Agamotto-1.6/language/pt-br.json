@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Cabeçalho",
+      "placeholder": "Aqui você pode adicionar um título opcional.",
+      "description": "O título que você gostaria de mostrar acima da imagem"
+    },
+    {
+      "label": "Ítems",
+      "entity": "ítem",
+      "widgets": [
+        {
+          "label": "Padrão"
+        }
+      ],
+      "field": {
+        "label": "Ítem",
+        "fields": [
+          {
+            "label": "Imagem"
+          },
+          {
+            "label": "Rótulo",
+            "description": "Rótulo opcional para uma marcação. Por favor, certifique-se de que não seja muito longo, ou ficará oculto."
+          },
+          {
+            "label": "Descrição",
+            "placeholder": "Descrição da minha imagem ...",
+            "description": "Descrição opcional para a imagem"
+          },
+          {
+            "label": "Áudio",
+            "description": "Áudio opcional que será reproduzido quando uma imagem for exibida."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Configurações comportamentais",
+      "description": "Essas opções permitem controlar como a tarefa se comporta.",
+      "fields": [
+        {
+          "label": "Imagem inicial",
+          "description": "Defina o número da imagem para começar por ela."
+        },
+        {
+          "label": "Encaixar controle deslizante",
+          "description": "Se ativado, o controle deslizante se encaixará na posição de uma imagem."
+        },
+        {
+          "label": "Exibir marcas de escala",
+          "description": "Se ativado, a barra deslizante exibirá uma marca de verificação para cada imagem."
+        },
+        {
+          "label": "Mostrar rótulos",
+          "description": "Se ativado, a barra deslizante exibirá um rótulo em vez de/além de marcas de verificação."
+        },
+        {
+          "label": "Cor de Substituição da Transparência",
+          "description": "Definir a cor que substituirá as áreas transparentes das imagens."
+        },
+        {
+          "label": "Espaço da imagem no modo de tela cheia",
+          "description": "Se você tiver descrições além das imagens, defina a porcentagem de espaço que as imagens devem usar no modo de tela cheia."
+        }
+      ]
+    },
+    {
+      "label": "Leitor de tela",
+      "fields": [
+        {
+          "label": "Imagem",
+          "default": "Imagem"
+        },
+        {
+          "label": "Controle deslizante de imagem",
+          "default": "Controle deslizante de imagem"
+        },
+        {
+          "label": "Título de \"Mudo\"",
+          "default": "Mudo, sem som no momento"
+        },
+        {
+          "label": "Título \"Ativar som\"",
+          "default": "Ativar som, atualmente desativado"
+        },
+        {
+          "label": "Título para o botão de entrar em modo de tela cheia",
+          "default": "Entrar no modo de tela cheia"
+        },
+        {
+          "label": "Título para o botão de sair do modo de tela cheia",
+          "default": "Sair do modo de tela cheia"
+        }
+      ]
+    }
+  ]
+}

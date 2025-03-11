@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Câu hỏi"
+    },
+    {
+      "label": "Loại nhiều đáp án",
+      "options": [
+        {
+          "label": "Nhiều đáp án"
+        },
+        {
+          "label": "Một đáp án"
+        }
+      ]
+    },
+    {
+      "label": "Answer alternatives",
+      "entity": "Alternative",
+      "field": {
+        "label": "Alternative",
+        "fields": [
+          {
+            "label": "Text"
+          },
+          {
+            "label": "Feedback",
+            "fields": [
+              {
+                "label": "Message displayed if answer is selected",
+                "description": "Message will appear below the answer on \"continue\" if this answer is selected."
+              },
+              {
+                "label": "Message displayed if answer is not selected",
+                "description": "Message will appear below the answer on \"continue\" if this answer is not selected."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

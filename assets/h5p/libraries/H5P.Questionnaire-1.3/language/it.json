@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Elementi del questionario",
+      "widgets": [
+        {
+          "label": "Predefinito"
+        }
+      ],
+      "entity": "elemento",
+      "field": {
+        "label": "Scegli libreria",
+        "fields": [
+          {
+            "label": "Libreria",
+            "description": "Scegli una libreria"
+          },
+          {
+            "label": "Campo obbligatorio"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Opzioni della schermata di successo",
+      "fields": [
+        {
+          "label": "Abilita schermata di successo"
+        },
+        {
+          "label": "Aggiungi immagine alla schermata di successo",
+          "fields": [
+            {
+              "label": "Sostituisci l'icona di successo con un'immagine"
+            }
+          ]
+        },
+        {
+          "label": "Testo da mostrare su invio",
+          "default": "Hai completato il questionario"
+        }
+      ]
+    },
+    {
+      "label": "Elementi di UI",
+      "fields": [
+        {
+          "label": "Etichette dei pulsanti",
+          "fields": [
+            {
+              "label": "Etichetta del pulsante Precedente",
+              "default": "Precedente"
+            },
+            {
+              "label": "Etichetta per pulsante Continua",
+              "default": "Continua"
+            },
+            {
+              "label": "Etichetta del pulsante Prossimo",
+              "default": "Prossimo"
+            },
+            {
+              "label": "Etichetta del pulsante Invio",
+              "default": "Invio"
+            }
+          ]
+        },
+        {
+          "label": "Accessibilità",
+          "fields": [
+            {
+              "label": "Etichetta del messaggio obbligatorio per pulsante di uscita",
+              "default": "Messaggio di errore di chiusura"
+            },
+            {
+              "label": "Testo della barra di avanzamento",
+              "default": "Domanda %current di %max",
+              "description": "Usato per comunicare alle tecnologie assistive quale domanda è. Variabili: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Messaggio obbligatorio",
+          "default": "Questa domanda richiede una risposta",
+          "description": "Sarà mostrato se questo campo non contiene risposta ma è richiesto da un tipo di contenuto inglobato"
+        },
+        {
+          "label": "Richiede testo in formato di simbolo",
+          "default": "obbligatorio",
+          "description": "Testo che accompagnerà un asterisco per indicare che una domanda è necessaria"
+        },
+        {
+          "label": "Titolo per la schermata di invio",
+          "default": "Hai risposto positivamente a tutte le domande"
+        },
+        {
+          "label": "Sottotitolo per la schermata di invio",
+          "default": "Clicca qui sotto per inviare le tue risposte"
+        }
+      ]
+    }
+  ]
+}

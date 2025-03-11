@@ -1,0 +1,299 @@
+{
+  "semantics": [
+    {
+      "label": "Multimedia",
+      "fields": [
+        {
+          "label": "Mota",
+          "description": "Galderaren gainean bistaratzeko aukerako multimedia."
+        },
+        {
+          "label": "Desgaitu irudien zooma"
+        }
+      ]
+    },
+    {
+      "label": "Atazaren deskribapena",
+      "description": "Deskribatu ezazu hemen zure lana. Lanaren deskribapena idazteko testu-eremuaren gainean agertuko da.",
+      "placeholder": "Laburtu ezazu liburua 500 karaktereetan..."
+    },
+    {
+      "label": "Laguntza-testua",
+      "description": "Testu honek erabiltzaileari hasten lagundu beharko lioke.",
+      "placeholder": "Liburu hau honi buruz da..."
+    },
+    {
+      "label": "Adibidezko emaitza",
+      "description": "Nahi baduzu emaitzaren adibide bat gehitu dezakezu ikasleak testua sortu ondoren erakusteko. Adibidezko emaitza deitzen zaio emaitza zuzen bat baino gehiago egon daitekeelako.",
+      "fields": [
+        {
+          "label": "Sarrera",
+          "description": "Zure adibidearen inguruko ikasleentzako azalpena gehitu dezakezu. Azalpena soilik erakutsiko da adibide bat ere gehitzen baduzu.",
+          "placeholder": "Gogoratu ezazu mesedez ez duzula zertan emaitza berbera derrigorrez eman behar. Adibide on bat baino ez da."
+        },
+        {
+          "label": "Emaitza-adibidearen testua",
+          "description": "Ikasleak bidalketa egin ondoren \"Erakutsi emaitza\" botoia ikusiko du hemen testu bat idazten baduzu."
+        }
+      ]
+    },
+    {
+      "label": "Hitz-gakoak",
+      "widgets": [
+        {
+          "label": "Lehenetsitakoa"
+        }
+      ],
+      "entity": "Hitz-gakoa",
+      "field": {
+        "label": "Hitz-gakoa",
+        "fields": [
+          {
+            "label": "Hitz-gakoa",
+            "description": "Bilatu beharreko hitz-gako edo esaldia. Izartxoa '*' erabili ezazu karaktere bat edo gehiagoren komodin gisa. Barra '/' erabili ezazu hasiera eta amaieran adierazpen erregular bat erabiltzeko."
+          },
+          {
+            "label": "Aldakuntzak",
+            "description": "Gehitu hitz-gako honentzako aukerazko bariazioak. Adibidez, 'hiria' gakoaren alternatibak 'herria', 'udalerria'... izan daitezke. Erabiltzaileak puntuak eskuratuko ditu zehaztutako alternatibaren bat idazten badu.",
+            "entity": "aldakuntza",
+            "field": {
+              "label": "Aldakuntzaren hitz-gakoa"
+            }
+          },
+          {
+            "label": "Puntuak, Aukerak eta Feedbacka",
+            "fields": [
+              {
+                "label": "Puntuak",
+                "description": "Erabiltzaileak erantzunean hitz-gako hau edo alternatibaren bat idazten badu lortuko dituen puntuak."
+              },
+              {
+                "label": "Gertakariak",
+                "description": "Hitz-gakoa edo bere aldakuntzei puntuatu beharko diren gertakari kopurua definitzen du."
+              },
+              {
+                "label": "Bereizi maiuskulak eta minuskulak",
+                "description": "Erabiltzaileak idatzitakoa erantzunaren berdin-berdina dela ziurtatzen du."
+              },
+              {
+                "label": "Barkatu akats txikiak",
+                "description": "Honek letreiatze-akats txikiak onartuko ditu (3-9 karakteretan: akats 1, 9 karaktere baino gehiagotan: 2 akats)."
+              },
+              {
+                "label": "Feedbacka hitz-gakoa badago",
+                "description": "Feedback hau erakutsiko da erabiltzaileak erantzunean hitz-gako hau edo bere alternatibak gehitzen baditu."
+              },
+              {
+                "label": "Feedbacka hitz-gakoa falta bada",
+                "description": "Feedback hau erakutsiko da erabiltzaileak erantzunean ez badu hitz-gako hau edo bere alternatibak sartzen."
+              },
+              {
+                "label": "Erakutsi beharrezko feedback-hitza hitz-gakoa badago",
+                "description": "Aukera honek hitz-gako bat testuan agertuz gero zure feedbackaren aurrean erakutsiko den hitza zehaztea ahalbidetzen du.",
+                "options": [
+                  {
+                    "label": "hitz-gakoa"
+                  },
+                  {
+                    "label": "alternatiba aurkitu da"
+                  },
+                  {
+                    "label": "emandako erantzuna"
+                  },
+                  {
+                    "label": "bat ere ez"
+                  }
+                ]
+              },
+              {
+                "label": "Erakutsi beharrezko feedback-hitza hitz-gakoa ez badago",
+                "description": "Aukera honek hitz-gako bat testuan ez bada agertzen zure feedbackaren aurrean erakutsiko den hitza zehaztea ahalbidetzen du.",
+                "options": [
+                  {
+                    "label": "hitz-gakoa"
+                  },
+                  {
+                    "label": "bat ere ez"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback Orokorra",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Lehenetsitakoa"
+            }
+          ],
+          "label": "Zehaztu ezazu edozein puntuazio-tarterako feedback pertsonalizatua",
+          "description": "Egin klik \"Gehitu tartea\" botoian behar dituzun tarte guztiak gehitzeko. Adibidez: 0-20% Puntuazio eskasa, 21-91% Batez besteko puntuazioa, 91-100% Puntuazio bikaina!",
+          "entity": "tartea",
+          "field": {
+            "fields": [
+              {
+                "label": "Puntuazio-tartea"
+              },
+              {},
+              {
+                "label": "Zehaztutako tartearentzako feedbacka",
+                "placeholder": "Idatzi ezazu feedbacka"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Portaeraren ezarpenak",
+      "description": "Aukera hauek lanaren portaera kontrolatzea ahalbidetzen dizute.",
+      "fields": [
+        {
+          "label": "Gutxienezko karaktere kopurua",
+          "description": "Zehaztu ezazu erabiltzaileak idatzi beharreko gutxieneko karaktere kopurua."
+        },
+        {
+          "label": "Gehieneko karaktere kopurua",
+          "description": "Zehaztu ezazu erabiltzaileak idatzi dezakeen gehienezko karaktere kopurua."
+        },
+        {
+          "label": "Sarrera-eremuaren tamaina",
+          "description": "Sarrera-eremuaren tamaina (erakutsiko dituen errenkada kopurua)",
+          "options": [
+            {
+              "label": "lerro 1"
+            },
+            {
+              "label": "3 lerro"
+            },
+            {
+              "label": "10 lerro"
+            }
+          ]
+        },
+        {
+          "label": "Gaitu \"Saiatu berriro\"",
+          "description": "Markatuz gero, ikasleek lana berriz egiten saiatu ahalko dira."
+        },
+        {
+          "label": "Alde batera utzi puntuazioa",
+          "description": "Markatuz gero, ikasleek emandako hitz-gakoentzako zuk emandako feedbacka ikusiko dute, baina puntuaziorik ez."
+        },
+        {
+          "label": "Harrera-inguruneko puntuak",
+          "description": "Harrera-ingurunean soilik erantzun izanagatik puntuak emateko erabilia (ez zaio ikasleari erakusten)."
+        },
+        {
+          "label": "Gainditzeko ehunekoa",
+          "description": "Gainditzeko lortu beharreko ehunekoa"
+        },
+        {
+          "label": "Domeinua erakusteko ehunekoa",
+          "description": "Domeinua erakusteko lortu beharreko ehunekoa. Domeinua erakusteko ehunekoa %100etik behera zehazteak gehienezko puntuazioa neurri berean jaitsiko du. Ikasleei tarte pixka bat emateko pentsatuta dago, eta ez hitz-gako guztiak ez dituzten emaitzak \"adeitasunez onartzeko\"."
+        },
+        {
+          "label": "Baliogabetu maiuskulak eta minuskulak bereiztea",
+          "description": "Aukera honek \"Bereizi maiuskulak eta minuskulak\" aukera hitz-gako guztientzako gaituko den zehazten du.",
+          "options": [
+            {
+              "label": "Gaituta"
+            },
+            {
+              "label": "Desgaituta"
+            }
+          ]
+        },
+        {
+          "label": "Baliogabetu akatsak barkatzea",
+          "description": "Aukera honek \"Barkatu akats txikiak\" aukera hitz-gako guztientzat gaituko den zehazten du.",
+          "options": [
+            {
+              "label": "Gaituta"
+            },
+            {
+              "label": "Desgaituta"
+            }
+          ]
+        },
+        {
+          "label": "Replacement for line breaks",
+          "description": "By default, line breaks will be replaced with a space character. If you want to check for line breaks, e.g. in regular expressions, you can set a different replacement here.",
+          "options": [
+            {
+              "label": "space"
+            },
+            {
+              "label": "line break (\\n)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "\"Egiaztatu\" botoiarentzako testua",
+      "default": "Egiaztatu"
+    },
+    {
+      "label": "\"Bidali\" botoiaren testua",
+      "default": "Bidali"
+    },
+    {
+      "label": "\"Saiatu berriro\" botoiarentzako testua",
+      "default": "Saiatu berriro"
+    },
+    {
+      "label": "\"Erakutsi emaitza\" botoiaren testua",
+      "default": "Erakutsi emaitza"
+    },
+    {
+      "label": "Gehitutako/falta diren hitz-gakoen feedbackaren panelarentzako goiburua",
+      "default": "Feedbacka"
+    },
+    {
+      "label": "Emaitzarentzako etiketa",
+      "default": "Adibidezko emaitza"
+    },
+    {
+      "label": "Falta diren karaktereak",
+      "default": "Falta diren karaktereak: @chars",
+      "description": "Falta diren karaktereentzako mezua. Dagokion zenbakiarekin ordezkatuko den @chars aldagaia erabili dezakezu."
+    },
+    {
+      "label": "Ez dago karaktere nahikorik",
+      "default": "Gutxienez @chars karaktere idatzi behar dituzu!",
+      "description": "Mezuak behar beste karaktere ez dituela adierazteko mezua. Dagokion zenbakiarekin ordezkatuko den @chars aldagaia erabili dezakezu."
+    },
+    {
+      "label": "Gorde mezua",
+      "description": "Testua gorde dela adierazteko mezua",
+      "default": "gordeta"
+    },
+    {
+      "label": "Zure emaitza (ez erakutsia)",
+      "description": "Irakurgailuetarako erabilerraztasun testua. @score lortutako puntuazioarekin ordezkatuko da. @total lortu daitezkeen gehienezko puntuekin ordezkatuko da.",
+      "default": "@total puntutatik @score puntu lortu duzu"
+    },
+    {
+      "label": "Nabigazio-mezua (ez da erakusten)",
+      "description": "Irakurgailuetarako erabilerraztasun testua",
+      "default": "Testu-eremuaren ondoren duela gutxi gehitutako adibidezko erantzunera nabigatuta."
+    },
+    {
+      "label": "\"Egiaztatu\" botoiaren laguntza-teknologientzako etiketa",
+      "default": "Egiaztatu erantzunak."
+    },
+    {
+      "label": "\"Erakutsi emaitza\" botoiaren laguntza-teknologientzako etiketa",
+      "default": "Erakutsi emaitza. Adibiderako erantzun bat emango zaizu."
+    },
+    {
+      "label": "\"Saiatu berriro\" botoiaren laguntza-teknologientzako etiketa",
+      "default": "Ataza berriz egiten saiatu. Egileak baimenduz gero zure aurreko erantzunaren emaitza hobetu dezakezu."
+    }
+  ]
+}

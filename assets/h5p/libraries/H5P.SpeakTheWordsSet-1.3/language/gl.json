@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Introdución",
+      "fields": [
+        {
+          "label": "Amosar a introdución"
+        },
+        {
+          "label": "Imaxe de introdución"
+        },
+        {
+          "label": "Texto alternativo para a imaxe de introdución"
+        },
+        {
+          "label": "Título"
+        },
+        {
+          "label": "Texto de introdución",
+          "description": "Este título amosarase enriba do texto de introdución."
+        }
+      ]
+    },
+    {
+      "label": "Preguntas",
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
+      "entity": "Pregunta",
+      "field": {
+        "label": "Pregunta"
+      }
+    },
+    {
+      "label": "Retroalimentación xeral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Por defecto"
+            }
+          ],
+          "label": "Definir comentarios personalizados para calquera rango de puntuación",
+          "description": "Preme o botón \"Engadir rango\" para engadir tantos rangos como precises. Exemplo: 0-20% Mala puntuación, 21-91% Puntuación Media, 91-100% Puntuación estupenda!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango de Puntuación"
+              },
+              {},
+              {
+                "label": "Retroalimentación para rango de puntuación definido",
+                "placeholder": "Escribe a túa retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Etiquetas e textos para o Conxunto de Di as Palabras",
+      "fields": [
+        {
+          "label": "Etiqueta do botón de introdución",
+          "default": "Comeza o curso!"
+        },
+        {
+          "label": "Etiqueta de resultados da pantalla da solución",
+          "default": "Os teus resultados:"
+        },
+        {
+          "label": "Etiqueta para botón amosar resposta",
+          "default": "Amosar a solución"
+        },
+        {
+          "label": "Etiqueta para o botón Tentar de novo",
+          "default": "Tentar de novo"
+        },
+        {
+          "label": "Etiqueta do botón Finalizar",
+          "default": "Rematar"
+        },
+        {
+          "label": "Etiqueta de accesibilidade para seguinte pregunta",
+          "default": "Seguinte pregunta"
+        },
+        {
+          "label": "Etiqueta de accesibilidade para pregunta anterior",
+          "default": "Pregunta anterior"
+        },
+        {
+          "label": "Título da barra de navegación",
+          "description": "Títulos para preguntas na barra de navegación. Substituirase \":num\" polo número de diapositiva actual.",
+          "default": "Diapositiva: núm"
+        },
+        {
+          "label": "Etiqueta de accesibilidade para diapositiva contestada",
+          "default": "Contestada"
+        },
+        {
+          "label": "Etiqueta de accesibilidade para diapositiva activa",
+          "default": "Actualmente activo"
+        }
+      ]
+    }
+  ]
+}

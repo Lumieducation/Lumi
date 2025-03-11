@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Naslov vsebine",
+      "placeholder": "Neobvezen naslov vsebine.",
+      "description": "Besedilo je prikazano nad sliko."
+    },
+    {
+      "label": "Elementi",
+      "entity": "element",
+      "widgets": [
+        {
+          "label": "Privzet"
+        }
+      ],
+      "field": {
+        "label": "Element",
+        "fields": [
+          {
+            "label": "Slika"
+          },
+          {
+            "label": "Oznaka",
+            "description": "Neobvezna oznaka za točko na drsniku. Prikazana je le, če zapis ni predolg."
+          },
+          {
+            "label": "Opis",
+            "placeholder": "Moj opis slike ...",
+            "description": "Neobvezen opis prikazanega na sliki"
+          },
+          {
+            "label": "Zvočni posnetek",
+            "description": "Neobvezen zvočni posnetek, ki se predvaja ob prikazu slike."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Nastavitve interakcije",
+      "description": "Nastavitve omogočajo nadzor nad interakcijo aktivnosti za udeležence.",
+      "fields": [
+        {
+          "label": "Začetna slika",
+          "description": "Ob zagonu bo prikazana slika vnesene zaporedne številke."
+        },
+        {
+          "label": "Točkovni drsnik",
+          "description": "Drsnik je možno postaviti le na točko posamezne slike in ne prosto (kot videoposnetek)."
+        },
+        {
+          "label": "Prikaži točke",
+          "description": "Točke so za vsako sliko posebej prikazane na drsniku."
+        },
+        {
+          "label": "Prikaži oznake",
+          "description": "Nad točkami na drsniku so prikazane tudi oznake."
+        },
+        {
+          "label": "Nadomestna barva za prosojnost",
+          "description": "Izbrana barva nadomesti prosojna področja slik."
+        },
+        {
+          "label": "Odstotek slike v celozaslonskem načinu",
+          "description": "Nastavitev omogoča določitev prostora za prikaz slike v odstotkih. Preostali delež je namenjen dodatnim opisom."
+        }
+      ]
+    },
+    {
+      "label": "Bralnik zaslona",
+      "fields": [
+        {
+          "label": "Slika",
+          "default": "Slika"
+        },
+        {
+          "label": "Drsnik",
+          "default": "Drsnik"
+        },
+        {
+          "label": "Besedilo za vklop nemega načina predvajanja",
+          "default": "Utišaj zvok"
+        },
+        {
+          "label": "Besedilo za izhod iz nemega načina predvajanja",
+          "default": "Povrni zvok"
+        },
+        {
+          "label": "Besedilo za celozaslonski način",
+          "default": "Celozaslonski način"
+        },
+        {
+          "label": "Besedilo za zaključek celozaslonskega načina",
+          "default": "Zapusti celozaslonski način"
+        }
+      ]
+    }
+  ]
+}

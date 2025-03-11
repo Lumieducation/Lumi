@@ -1,0 +1,295 @@
+{
+  "semantics": [
+    {
+      "label": "Часова шкала",
+      "fields": [
+        {
+          "label": "Заголовок",
+          "description": "Основна назва часової шкали (перша сторінка)"
+        },
+        {
+          "label": "Основний текст",
+          "description": "Основний текст часової шкали (перша сторінка)."
+        },
+        {
+          "label": "Розмір наближення за замовчуванням",
+          "description": "Це налаштування змінює розмір наближення за замовчуванням. Дорівнює кількості натискань кнопки наближення або віддалення. Негативні показники віддаляють. За замовчуванням рівно 0"
+        },
+        {
+          "label": "Фонове зображення",
+          "description": "Зображення на задньому фоні."
+        },
+        {
+          "label": "Висота",
+          "description": "Висота в пікселях"
+        },
+        {
+          "label": "Об'єкт",
+          "description": "Сюди можете додати доповнення до змінної шкали \"головна сторінка\"",
+          "fields": [
+            {
+              "label": "Медіа",
+              "description": "Посилання на медію (Twitter, YouTube, Flickr, Vimeo, Google Maps та SoundCloud на даний момент підтримуються)"
+            },
+            {
+              "label": "Джерело",
+              "description": "Джерело"
+            },
+            {
+              "label": "Тітри",
+              "description": "Сюди можете додати опис тітрів"
+            }
+          ]
+        },
+        {
+          "label": "Дати",
+          "description": "Додайте дати на часову шкалу!",
+          "field": {
+            "label": "Дата",
+            "description": "Дата",
+            "fields": [
+              {
+                "label": "Початок",
+                "description": "РРРР,MM,ДД (Мінімально РРРР)"
+              },
+              {
+                "label": "Кінец",
+                "description": "РРРР,MM,ДД (Мінімально РРРР)"
+              },
+              {
+                "label": "Заголовок",
+                "description": "Заголовок для введення дати"
+              },
+              {
+                "label": "Основний текст",
+                "description": "Основне для введення дати"
+              },
+              {
+                "label": "Мітки",
+                "description": "Додайте мітки (категорії)"
+              },
+              {
+                "label": "Об'єкт",
+                "fields": [
+                  {
+                    "label": "Медіа",
+                    "description": "Посилання на медію (Twitter, YouTube, Flickr, Vimeo, Wikipedia, Google Maps та SoundCloud на даний момент підтримуються)."
+                  },
+                  {
+                    "label": "Ікона",
+                    "description": "При необхідності додати ікону, 32x32"
+                  },
+                  {
+                    "label": "Джерело",
+                    "description": "Джерело медії"
+                  },
+                  {
+                    "label": "Титри",
+                    "description": "Текст титрів"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Ера",
+          "description": "Додати еру на часову шкалу",
+          "field": {
+            "label": "Ера",
+            "fields": [
+              {
+                "label": "Початок",
+                "description": "РРРР,MM,ДД (Мінімально РРРР)"
+              },
+              {
+                "label": "Кінець",
+                "description": "ГГГГ,MM,ДД (Мінімально РРРР)"
+              },
+              {
+                "label": "Заголовок",
+                "description": "Заголовок для ери"
+              },
+              {
+                "label": "Текст",
+                "description": "Текст"
+              },
+              {
+                "label": "Мітки",
+                "description": "Мітки для ери (категорії)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Мова",
+          "description": "Мова інтерфейсу користувача",
+          "options": [
+            {
+              "label": "Afrikaans"
+            },
+            {
+              "label": "Arabic"
+            },
+            {
+              "label": "Armenian"
+            },
+            {
+              "label": "Basque"
+            },
+            {
+              "label": "Bulgarian"
+            },
+            {
+              "label": "Catalan"
+            },
+            {
+              "label": "Chinese"
+            },
+            {
+              "label": "Croatian / Hrvatski"
+            },
+            {
+              "label": "Czech"
+            },
+            {
+              "label": "Danish"
+            },
+            {
+              "label": "Dutch"
+            },
+            {
+              "label": "English"
+            },
+            {
+              "label": "English (24-hour time)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estonian"
+            },
+            {
+              "label": "Faroese"
+            },
+            {
+              "label": "Farsi"
+            },
+            {
+              "label": "Finnish"
+            },
+            {
+              "label": "French"
+            },
+            {
+              "label": "Galician"
+            },
+            {
+              "label": "Georgian"
+            },
+            {
+              "label": "German / Deutsch"
+            },
+            {
+              "label": "Greek"
+            },
+            {
+              "label": "Hebrew"
+            },
+            {
+              "label": "Hungarian"
+            },
+            {
+              "label": "Icelandic"
+            },
+            {
+              "label": "Indonesian"
+            },
+            {
+              "label": "Italian"
+            },
+            {
+              "label": "Japanese"
+            },
+            {
+              "label": "Korean"
+            },
+            {
+              "label": "Latvian"
+            },
+            {
+              "label": "Lithuanian"
+            },
+            {
+              "label": "Luxembourgish"
+            },
+            {
+              "label": "Malay"
+            },
+            {
+              "label": "Nepali"
+            },
+            {
+              "label": "Norwegian"
+            },
+            {
+              "label": "Polish"
+            },
+            {
+              "label": "Portuguese"
+            },
+            {
+              "label": "Portuguese (Brazilian)"
+            },
+            {
+              "label": "Romansh"
+            },
+            {
+              "label": "Русский"
+            },
+            {
+              "label": "Serbian - Cyrillic"
+            },
+            {
+              "label": "Serbian - Latin"
+            },
+            {
+              "label": "Sinhalese"
+            },
+            {
+              "label": "Slovak"
+            },
+            {
+              "label": "Slovenian"
+            },
+            {
+              "label": "Spanish"
+            },
+            {
+              "label": "Swedish"
+            },
+            {
+              "label": "Tagalog"
+            },
+            {
+              "label": "Tamil"
+            },
+            {
+              "label": "Taiwanese"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Turkish"
+            },
+            {
+              "label": "Українська"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

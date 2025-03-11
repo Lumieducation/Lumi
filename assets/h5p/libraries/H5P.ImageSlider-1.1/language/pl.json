@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Obrazy",
+      "field": {
+        "label": "Slajd z obrazem",
+        "fields": [
+          {
+            "label": "Slajd z obrazem"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Współczynnik proporcji",
+      "description": "Automatyczny oznacza stały współczynnik proporcji automatycznie określany na podstawie obrazów",
+      "options": [
+        {
+          "label": "Automatyczny"
+        },
+        {
+          "label": "Niestandardowy"
+        },
+        {
+          "label": "Nie określony"
+        }
+      ]
+    },
+    {
+      "label": "Ustawienia współczynnika proporcji",
+      "fields": [
+        {
+          "label": "Szerokość współczynnika proporcji",
+          "description": "Jeśli użyjesz tu 4, a dla wysokości 3, to współczynnik wyniesie 4:3"
+        },
+        {
+          "label": "Wysokość współczynnika proporcji",
+          "description": "Jeśli wpiszesz tu 3, a dla szerokości 4, to współczynnik wyniesie 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Dostępność slidera",
+      "fields": [
+        {
+          "label": "Etykieta przycisku Dalej",
+          "default": "Dalej",
+          "description": "Wyłącznie dla czytników. Tekst nie zostanie wyświetlony."
+        },
+        {
+          "label": "Etykieta przycisku Wstecz",
+          "default": "Wstecz",
+          "description": "Wyłącznie dla czytników. Tekst nie zostanie wyświetlony."
+        },
+        {
+          "label": "Etykieta dla przycisków slajdów",
+          "default": "Idź do obrazu %slide",
+          "description": "Wyłącznie dla czytników. Tekst nie zostanie wyświetlony. %slide jest zmienną i zostanie zastąpiony numerem obrazu."
+        }
+      ]
+    }
+  ]
+}

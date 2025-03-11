@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Taak beskrywing"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Verstek"
+        }
+      ],
+      "label": "Kaarte",
+      "entity": "kaart",
+      "field": {
+        "label": "Kaart",
+        "fields": [
+          {
+            "label": "Vraag",
+            "description": "Optionele geskrewe vraag vir die kaart. (Die kaart kan slegs 'n prentjie, of slegs teks of albei bevat)"
+          },
+          {
+            "label": "Antwoord",
+            "description": "Antwoord (oplossing) vir die kaart. Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "Prent",
+            "description": "Optionele prent vir die kaart . (Die kaart kan slegs 'n prentjie, of slegs teks of albei bevat)"
+          },
+          {
+            "label": "Alternatiewe teks vir prent"
+          },
+          {
+            "label": "Wenk",
+            "fields": [
+              {
+                "label": "Wenk teks"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Vordering teks",
+      "default": "Kaartjie @card van @total",
+      "description": "Vordering teks, veranderlike beskikbaar: @card en @total. Byvoorbeeld: 'Kaartjie @card van @total'"
+    },
+    {
+      "label": "Teks vir die volgende knoppie",
+      "default": "Volgende"
+    },
+    {
+      "label": "Teks vir die vorige knoppie",
+      "default": "Vorige"
+    },
+    {
+      "label": "Teks vir die 'Toets antwoord' knoppie",
+      "default": "Toets"
+    },
+    {
+      "label": "Vereis gebruiker om iets in te sleutel voordat die antwoord gewys word"
+    },
+    {
+      "label": "Teks vir die antwoord invoerveld",
+      "default": "Jou antwoord"
+    },
+    {
+      "label": "Teks vir die regte antwoord",
+      "default": "Reg"
+    },
+    {
+      "label": "Teks vir die verkeerde antwoord",
+      "default": "Verkeerd"
+    },
+    {
+      "label": "Wys antwoord teks",
+      "default": "Regte antwoord"
+    },
+    {
+      "label": "Titelteks vir uitslae",
+      "default": "Uitslae"
+    },
+    {
+      "label": "Teks vir aantal regte antwoorde",
+      "default": "@score van @total reg",
+      "description": "Uitslae teks, veranderlike beskikbaar: @score en @total. Byvoorbeeld: '@score van @total reg'"
+    },
+    {
+      "label": "Teks vir wys uitslae",
+      "default": "Wys uitslae"
+    },
+    {
+      "label": "Teks vir kort antwoord etiket",
+      "default": "A:"
+    },
+    {
+      "label": "Teks vir \"probeer weer\" knoppie",
+      "default": "Probeer weer"
+    },
+    {
+      "label": "Hooflettergevoelig",
+      "description": "Maak seker dat die gebruiker se antwoord presies dieselfde as die vereisde antwoord is."
+    },
+    {
+      "label": "Verkeerde teks vir hulptegnologieë",
+      "default": "Verkeerde antwoord. Die regte antwoord was @answer",
+      "description": "Teks wat vertoon sal word vir hulptegnologieë. Gebruik @answer as veranderlike."
+    },
+    {
+      "label": "Correct feedback text for assistive technologies",
+      "default": "@answer is correct.",
+      "description": "Text that will be announced to assistive technologies when a card is answered correctly. Use @answer as variable."
+    },
+    {
+      "label": "Kaartjie verandering vir hulptegnologieë",
+      "default": "Bladsy @current van @total",
+      "description": "Teks wat aangekondig sal word as hulptegnologieë wanneer u tussen kaarte navigeer. Gebruik @current en @total as veranderlikes."
+    },
+    {
+      "label": "Randomize cards",
+      "description": "Enable to randomize the order of cards on display."
+    }
+  ]
+}

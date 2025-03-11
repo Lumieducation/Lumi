@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Elementy kwestionariusza",
+      "widgets": [
+        {
+          "label": "Domyślny"
+        }
+      ],
+      "entity": "element",
+      "field": {
+        "label": "Wybierz bibliotekę",
+        "fields": [
+          {
+            "label": "Biblioteka",
+            "description": "Wybierz bibliotekę"
+          },
+          {
+            "label": "Pole wymagane"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Opcje ekranu sukcesu",
+      "fields": [
+        {
+          "label": "Włącz ekran sukcesu"
+        },
+        {
+          "label": "Dodaj obraz ekranu sukcesu",
+          "fields": [
+            {
+              "label": "Zastąp ikonę sukcesu obrazem"
+            }
+          ]
+        },
+        {
+          "label": "Tekst do wyświetlenia przy przesłaniu",
+          "default": "Wypełniłeś/aś kwestionariusz."
+        }
+      ]
+    },
+    {
+      "label": "Elementy UI",
+      "fields": [
+        {
+          "label": "Etykiety przycisków",
+          "fields": [
+            {
+              "label": "Poprzednia etykieta przycisku",
+              "default": "Wróć"
+            },
+            {
+              "label": "Etykieta przycisku Kontynuuj",
+              "default": "Kontynuuj"
+            },
+            {
+              "label": "Etykieta przycisku Następny",
+              "default": "Następny"
+            },
+            {
+              "label": "Etykieta przycisku Prześlij",
+              "default": "Prześlij"
+            }
+          ]
+        },
+        {
+          "label": "Dostępność",
+          "fields": [
+            {
+              "label": "Wymagana etykieta przycisku wyjścia z wiadomości",
+              "default": "Zamknij komunikat o błędzie"
+            },
+            {
+              "label": "Tekst paska postępu",
+              "default": "Pytanie %current z %max",
+              "description": "Służy do informowania technologii wspomagających, jakie to pytanie. Zmienne: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Wymagana wiadomość",
+          "default": "To pytanie wymaga odpowiedzi",
+          "description": "Wyświetli się, jeśli to pole zostanie puste, a jest wymagane przez typ zawartości wrappera"
+        },
+        {
+          "label": "Tekst wymaganego symbolu",
+          "default": "wymagany",
+          "description": "Tekst, który będzie oznaczony gwiazdką, aby zasygnalizować, że pytanie jest wymagane"
+        },
+        {
+          "label": "Tytuł ekranu przesyłania",
+          "default": "Udało Ci się odpowiedzieć na wszystkie pytania"
+        },
+        {
+          "label": "Podtytuł ekranu przesyłania",
+          "default": "Kliknij poniżej, aby przesłać swoje odpowiedzi"
+        }
+      ]
+    }
+  ]
+}

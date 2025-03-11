@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Fragetext",
+      "description": "Die Frage, zu der der Nutzer eine Entscheidung trifft."
+    },
+    {
+      "label": "Wahlmöglichkeiten",
+      "entity": "Wahlmöglichkeit",
+      "field": {
+        "fields": [
+          {
+            "label": "Text",
+            "description": "Die Beschriftung, die auf dem Button angezeigt wird."
+          },
+          {
+            "label": "Gehe zu",
+            "description": "Die Stelle, zu der das Video springt, wenn der Nutzer den Button drückt. Die Zeitangabe muss im Format M:SS sein."
+          },
+          {
+            "label": "Bestätigungstext",
+            "description": "Ein optionaler Text, der angezeigt wird, nachdem der Nutzer auf diese Wahlmöglichkeit geklickt hat."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Beschriftung des \"Weiter\"-Buttons",
+      "default": "Weiter"
+    }
+  ]
+}

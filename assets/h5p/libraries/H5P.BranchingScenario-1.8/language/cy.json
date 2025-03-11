@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Golygydd Senario Ganghennog",
+      "fields": [
+        {
+          "label": "Teitl"
+        },
+        {
+          "label": "Sgrin gychwyn",
+          "fields": [
+            {
+              "label": "Teitl y sgrin gychwyn",
+              "placeholder": "Teitl ar gyfer eich cwrs"
+            },
+            {
+              "label": "Is-deitl y sgrin gychwyn",
+              "placeholder": "Manylion y cwrs"
+            },
+            {
+              "label": "Delwedd y sgrin gychwyn"
+            },
+            {
+              "label": "Image alternative text"
+            }
+          ]
+        },
+        {
+          "label": "Rhestr sgriniau diweddu",
+          "field": {
+            "label": "Sgrin ddiweddu",
+            "fields": [
+              {
+                "label": "Teitl"
+              },
+              {
+                "label": "Testun"
+              },
+              {
+                "label": "Delwedd"
+              },
+              {
+                "label": "Sgôr",
+                "description": "Caiff y sgôr ei anfon i unrhyw 'LMS', 'LRS' neu unrhyw wasanaeth gysylltiedig sydd yn derbyn sgoriau oddi wrth H5P am ddefnyddwyr sydd yn cyrraedd y senario ddiweddu diofyn"
+              },
+              {
+                "label": "ID Cynnwys"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Rhestr cynnwys senario ganghennog",
+          "entity": "cynnwys",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Show content title in view",
+                "description": "If selected, the user will see the content title in the top bar above this content."
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Proceed"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+	      {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Opsiynau Sgorio",
+          "fields": [
+            {
+              "label": "Opsiynau sgorio",
+              "description": "Dewiswch math y sgorio",
+              "options": [
+                {
+                  "label": "Gosodwch (yn statig) y sgôr ar gyfer pob senario diweddu"
+                },
+                {
+                  "label": "Cyfrifwch y sgôr (yn ddeinamig) o atebion defnyddwyr"
+                },
+                {
+                  "label": "Dim sgorio"
+                }
+              ]
+            },
+            {
+              "label": "Include scores from interactions within the Branching Scenario",
+              "description": "If chosen scores from for instance Interactive Videos will be added to the total score obtained. If not chosen only scores specified in the feedback sections of the content items, branching questions and end scenarios will count."
+            }
+          ]
+        },
+        {
+          "label": "Behavioural settings",
+          "fields": [
+            {
+              "label": "Override require content finished",
+              "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide."
+            },
+            {
+              "label": "Required to watch",
+              "description": "Urges viewers to complete the Video, Interactive Vdeo and Course Presentation before proceeding with the scenario. This can be overridden on a content level"
+            },
+            {
+              "label": "Randomize Branching Questions",
+              "description": "Branching questions will be displayed in random order"
+            }
+          ]
+        },
+        {
+          "label": "Lleoleiddio",
+          "fields": [
+            {
+              "label": "testun ar gyfer y botwm ar y sgrin gychwyn",
+              "default": "Dechreuwch y cwrs"
+            },
+            {
+              "label": "Testun ar gyfer y botwm ar y sgrin ddiweddu",
+              "default": "Ailddechreuwch y cwrs"
+            },
+            {
+              "label": "Testun ar gyfer y botwm ar bob un o'r sgriniau llyfrgell",
+              "default": "Bwrw ymlaen"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "Label ar gyfer y sgôr ar y sgrin diweddu",
+              "default": "Eich sgôr:"
+            },
+            {
+              "label": "Label for score on the end screen",
+              "default": "Your score:"
+            },
+            {
+              "label": "Aria label for fullscreen button",
+              "default": "Fullscreen"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Editor de Escenarios Ramificados",
+      "fields": [
+        {
+          "label": "Título"
+        },
+        {
+          "label": "Pantalla inicial",
+          "fields": [
+            {
+              "label": "Título del Curso",
+              "placeholder": "Título para tu curso"
+            },
+            {
+              "label": "Detalles del Curso",
+              "placeholder": "Detalles sobre el curso"
+            },
+            {
+              "label": "Imagen del Curso"
+            },
+            {
+              "label": "Texto alterno para la imagen"
+            }
+          ]
+        },
+        {
+          "label": "Lista de pantallas finales",
+          "field": {
+            "label": "Pantalla final",
+            "fields": [
+              {
+                "label": "Título"
+              },
+              {
+                "label": "Texto"
+              },
+              {
+                "label": "Imagen"
+              },
+              {
+                "label": "Puntaje",
+                "description": "El puntaje será enviada a cualquier LMS, LRS o cualquier otro servicio que reciba puntajes de H5P de los usuarios que alcancen el escenario final por defecto."
+              },
+              {
+                "label": "Identificador del contenido"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Lista del contenido del escenario ramificado",
+          "entity": "contenido",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Mostrar título del contenido en vista",
+                "description": "Si se selecciona, el usuario verá el título del contenido en la barra superior arriba de este contenido."
+              },
+              {
+                "label": "Texto para el botón Proceder (longitud máxima: 50 caracteres)",
+                "default": "Proceder"
+              },
+              {
+                "label": "Anular requerir contenido terminado",
+                "description": "Anular las configuraciones individuales que requieren que el contenido esté terminado antes de activar el botón para \"Proceder\". No tendrá ningún efecto i el contenido no indica si estuvo \"terminado\", como por ejemplo imágenes o presentaciones de curso con solamente una página.",
+                "options": [
+                  {
+                    "label": "Usar la configuración del comportamiento"
+                  },
+                  {
+                    "label": "Habilitado"
+                  },
+                  {
+                    "label": "Deshabilitado"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Retroalimentación",
+                "fields": [
+                  {
+                    "label": "Título de la retroalimentación"
+                  },
+                  {
+                    "label": "Texto de la retroalimentación"
+                  },
+                  {
+                    "label": "Imagen de la retroalimentación"
+                  },
+                  {
+                    "label": "Puntaje para este escenario",
+                    "description": "El puntaje será enviado a cualquier LMS, LRS o cualquier otro servicio conectado que reciba puntajes de H5P para usuarios que alcanzan este escenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navegar atrás",
+                "description": "Esto permitirá que el usuario regrese y vea el contenido/la pregunta anterior en el escenario.",
+                "options": [
+                  {
+                    "label": "Usar la configuración del comportamiento"
+                  },
+                  {
+                    "label": "Habilitado"
+                  },
+                  {
+                    "label": "Deshabilitado"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Opciones de puntaje",
+          "fields": [
+            {
+              "label": "Opciones de puntaje",
+              "description": "Selecciona el tipo de puntaje.",
+              "options": [
+                {
+                  "label": "Establecer el puntaje estáticamente para cada escenario final"
+                },
+                {
+                  "label": "Calcular el puntaje dinámicamente según las respuestas de los usuarios"
+                },
+                {
+                  "label": "Sin puntaje"
+                }
+              ]
+            },
+            {
+              "label": "Incluir los puntajes de interacciones dentro del Escenario Ramificado",
+              "description": "Si se activa, se añadirá al puntaje total obtenidos los puntajes de los vídeos interactivos. En caso contrario, sólo contarán los puntajes especificados en las secciones de retroalimentación de los elementos de contenido, preguntas ramificadas y escenarios finales."
+            }
+          ]
+        },
+        {
+          "label": "Configuraciones del comportamiento",
+          "fields": [
+            {
+              "label": "Navegar atrás",
+              "description": "Esto le permitirá que usuario regrese y vea el contenido o pregunta anterior en el escenario. Puede anularse a nivel de contenido."
+            },
+            {
+              "label": "Requerido mirar",
+              "description": "Insta a los usuarios a completar el vídeo, vídeo interactivo y presentación del curso antes de continuar con el escenario. Puede anularse a nivel de contenido."
+            },
+            {
+              "label": "Aleatorizar Preguntas Ramificadas",
+              "description": "Las preguntas ramificadas se mostrarán en orden aleatorio."
+            }
+          ]
+        },
+        {
+          "label": "Localización",
+          "fields": [
+            {
+              "label": "Texto para el botón de la pantalla inicial",
+              "default": "Comienza el curso"
+            },
+            {
+              "label": "Texto para el botón de la pantalla final",
+              "default": "Reinicia el curso"
+            },
+            {
+              "label": "Texto para el botón Retroceder en cada una de las pantallas de la biblioteca y preguntas ramificadas",
+              "default": "Atrás"
+            },
+            {
+              "label": "Texto para el botón deshabilitado en las pantallas de biblioteca",
+              "default": "Requerir completar el módulo actual"
+            },
+            {
+              "label": "Texto para el botón usado para volver a reproducir un vídeo",
+              "default": "Volver a reproducir el vídeo"
+            },
+            {
+              "label": "Etiqueta para el puntaje en la pantalla final",
+              "default": "Tu puntaje:"
+            },
+            {
+              "label": "Etiqueta Aria para botón de pantalla completa",
+              "default": "Pantalla Completa"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

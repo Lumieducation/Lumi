@@ -1,0 +1,54 @@
+[
+  {
+    "name": "text",
+    "type": "text",
+    "label": "Question Text",
+    "importance": "high",
+    "description": "The question that the user will make a choice based upon."
+  },
+  {
+    "name": "choices",
+    "type": "list",
+    "label": "Choices",
+    "importance": "high",
+    "entity": "choice",
+    "min": 2,
+    "field": {
+      "name": "choice",
+      "type": "group",
+      "fields": [
+        {
+          "name": "text",
+          "type": "text",
+          "label": "Choice Text",
+          "importance": "high",
+          "description": "The label that will displayed on the choice button."
+        },
+        {
+          "name": "goTo",
+          "type": "number",
+          "widget": "timecode",
+          "label": "Go To",
+          "importance": "high",
+          "description": "The target time the user will be taken to upon pressing the choice button. Enter timecode in the format M:SS."
+        },
+        {
+          "name": "ifChosenText",
+          "type": "text",
+          "optional": true,
+          "label": "If Chosen Text",
+          "importance": "low",
+          "description": "An optional confirmation text that will be displayed after the user has pressed the choice button."
+        }
+      ]
+    }
+  },
+  {
+    "name": "continueButtonLabel",
+    "type": "text",
+    "label": "Continue Button Label",
+    "importance": "low",
+    "default": "Continue",
+    "common": true
+  }
+]

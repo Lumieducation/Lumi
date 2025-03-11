@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Galdetegiaren elementuak",
+      "widgets": [
+        {
+          "label": "Lehenetsia"
+        }
+      ],
+      "entity": "elementua",
+      "field": {
+        "label": "Aukeratu liburutegia",
+        "fields": [
+          {
+            "label": "Liburutegia",
+            "description": "Aukeratu liburutegi bat"
+          },
+          {
+            "label": "Beharrezko eremua"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Arrakasta pantailaren aukerak",
+      "fields": [
+        {
+          "label": "Gaitu arrakasta pantaila"
+        },
+        {
+          "label": "Gehitu arrakasta pantailaren irudia",
+          "fields": [
+            {
+              "label": "Jarri irudia arrakasta ikonoaren ordez"
+            }
+          ]
+        },
+        {
+          "label": "Bidalketan erakusteko testua",
+          "default": "Bukatu duzu galdetegia."
+        }
+      ]
+    },
+    {
+      "label": "Interfazearen elementuak",
+      "fields": [
+        {
+          "label": "Botoien etiketak",
+          "fields": [
+            {
+              "label": "Aurrekoa botoiaren etiketa",
+              "default": "Aurrekoa"
+            },
+            {
+              "label": "Jarraitu botoiaren etiketa",
+              "default": "Jarraitu"
+            },
+            {
+              "label": "Hurrengoa botoiaren etiketa",
+              "default": "Hurrengoa"
+            },
+            {
+              "label": "Bidali botoiaren etiketa",
+              "default": "Bidali"
+            }
+          ]
+        },
+        {
+          "label": "Erabilerraztasuna",
+          "fields": [
+            {
+              "label": "Beharrezko mezua irteera botoiaren etiketa",
+              "default": "Itxi errore mezua"
+            },
+            {
+              "label": "Aurrerapen barraren testua",
+              "default": "%max galderetatik %current -garrena",
+              "description": "Laguntza teknologiei uneko galdera zein den adierazteko erabili da. Aldagaiak: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Beharrezko mezua",
+          "default": "Galdera hau erantzun behar da",
+          "description": "Erakutsik du eremu honek ez dauka erantzunik eta eduki motaren paketerentzat ezinbestekoa dela"
+        },
+        {
+          "label": "Beharrezko ikurra testua",
+          "default": "beharrezkoa",
+          "description": "Galdera batek erantzuna eskatzen duela adierazten duen izartxoari laguntzen dion testua"
+        },
+        {
+          "label": "Bidalketa pantailaren izenburua",
+          "default": "Galdera guztiak zuzen erantzun dituzu"
+        },
+        {
+          "label": "Bidalketa pantailaren azpititulua",
+          "default": "Egin klik azpian zure erantzunak bidaltzeko"
+        }
+      ]
+    }
+  ]
+}

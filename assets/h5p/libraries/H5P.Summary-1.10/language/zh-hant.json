@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "說明文字",
+      "default": "下列何項敘述正確，請選擇。",
+      "description": "會顯示在摘要任務的上方。"
+    },
+    {
+      "widgets": [
+        {
+          "label": "視覺模式"
+        },
+        {
+          "label": "文字模式"
+        }
+      ],
+      "label": "摘要",
+      "entity": "敘述",
+      "field": {
+        "label": "敘述集",
+        "fields": [
+          {
+            "label": "摘要敘述的列表-注意第一個要放正確的敘述。",
+            "entity": "敘述",
+            "field": {
+              "label": "敘述"
+            }
+          },
+          {
+            "label": "提示",
+            "fields": [
+              {
+                "label": "提示文字"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "結果回饋",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "預設"
+            }
+          ],
+          "label": "為不同分數區間的用戶分別回饋訊息",
+          "description": "點擊「添加範圍」按鈕，加入你想要的範圍，例如 0%-59% 請加油、60%-79% 再努力、80%-100% 太棒了。",
+          "entity": "範圍",
+          "field": {
+            "fields": [
+              {
+                "label": "分數區間"
+              },
+              {},
+              {
+                "label": "自訂區間回饋訊息",
+                "placeholder": "填入回饋訊息"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "進度前綴文字",
+      "default": "進度：",
+      "description": "在摘要任務已解答數量前顯示的文字。例如進度：2/5"
+    },
+    {
+      "label": "錯誤前綴文字",
+      "default": "答錯：",
+      "description": "在摘要任務已解答數量前顯示的文字。例如答錯：4"
+    },
+    {
+      "label": "回饋訊息標題文字",
+      "default": "你的結果：",
+      "description": "將在結果反饋上方顯示。"
+    },
+    {
+      "label": "報讀器答對文本",
+      "default": "答對了！"
+    },
+    {
+      "label": "Readspeaker text for announcing incorrect answer",
+      "default": "Incorrect! Please try again."
+    },
+    {
+      "label": "Readspeaker label for incorrect answer",
+      "default": "Incorrect"
+    },
+    {
+      "label": "正確答案的文字列表",
+      "default": "正確答案。"
+    },
+    {
+      "label": "顯示提示按鈕的顯示文字",
+      "default": "顯示提示"
+    },
+    {
+      "label": "報讀器得分條文本",
+      "description": "用於報讀器的輔助文本，非顯示用。",
+      "default": "你得到 :num 分，總分 :total 分。"
+    },
+    {
+      "label": "報讀器進度條文本",
+      "description": "用於報讀器的輔助文本，非顯示用。",
+      "default": "進度：第 :num 題，共 :total 題。"
+    }
+  ]
+}

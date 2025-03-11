@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Images",
+      "field": {
+        "label": "Image Slide",
+        "fields": [
+          {
+            "label": "Image Slide"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Aspect ratio",
+      "description": "Automatic means fixed aspect ratio automatically determined based on the images",
+      "options": [
+        {
+          "label": "Automatic"
+        },
+        {
+          "label": "Custom"
+        },
+        {
+          "label": "Not fixed"
+        }
+      ]
+    },
+    {
+      "label": "Aspect Ratio Settings",
+      "fields": [
+        {
+          "label": "Aspect ratio width",
+          "description": "If you use 4 here, and 3 for the height the aspect ratio will be 4:3"
+        },
+        {
+          "label": "Aspect ratio height",
+          "description": "If you use 3 here, and 4 for the width the aspect ratio will be 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Image slider accessibility",
+      "fields": [
+        {
+          "label": "Label for next slide buttons",
+          "default": "Next Image",
+          "description": "This is only used for read-speakers. It won't be displayed."
+        },
+        {
+          "label": "Label for previous slide buttons",
+          "default": "Previous Image",
+          "description": "This is only used for read-speakers. It won't be displayed."
+        },
+        {
+          "label": "Label for slide buttons",
+          "default": "Go to image %slide",
+          "description": "This is only used for read-speakers. It won't be displayed. %slide is a variable and will be replaced with the image number."
+        }
+      ]
+    }
+  ]
+}

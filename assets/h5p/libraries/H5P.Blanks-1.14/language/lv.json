@@ -1,0 +1,214 @@
+{
+  "semantics": [
+    {
+      "label": "Multivide",
+      "fields": [
+        {
+          "label": "Tips",
+          "description": "Papildu multimedijs, kuru atspoguļot virs jautājuma."
+        },
+        {
+          "label": "Atspējot attēla tālummaiņu"
+        }
+      ]
+    },
+    {
+      "label": "Uzdevuma apraksts",
+      "default": "Aizpildiet trūkstošos vārdus",
+      "description": "Pamācība lietotājam kā pildīt šo uzdevumu."
+    },
+    {
+      "label": "Teksta bloki",
+      "entity": "teksta bloks",
+      "field": {
+        "label": "Teksta rinda",
+        "placeholder": "Oslo ir *Norvēģijas* galvaspilsēta.",
+        "important": {
+          "description": "<ul><li>Tukši lauki tiek pievienoti ar zvaigznīti (*) pirms un pēc pareizā vārda/frāzes. </li><li>Papildu pareizie atbilžu varianti tiek atdalīti ar slīpsvītru (/).</li><li>Jūs variet pievienot teksta padomu izmantojot kolu (:) pirms padoma teksta.</li></ul>",
+          "example": "H5P saturs ir rediģējams izmantojot *pārlūkprogrammu/interneta pārlūkprogrammu:Kaut kas ko lietojat katru dienu*."
+        }
+      }
+    },
+    {
+      "label": "Kopējā atgriezeniskā saite",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Pēc noklusējuma"
+            }
+          ],
+          "label": "Iestatiet pielāgotu atgriezenisko saiti katram rezultātu diapazonam",
+          "description": "Klikšķiniet pogu \"Pievienot diapazonu\", lai pievienotu tik diapazonus cik vēlaties. Piemēram, 0-20% Slikts rezultāts, 21-91% Viduvējs rezultāts, 91-100% Lielisks rezultāts!",
+          "entity": "diapazons",
+          "field": {
+            "fields": [
+              {
+                "label": "Rezultātu diapazons"
+              },
+              {},
+              {
+                "label": "Norādītā diapazona atgriezeniskā saite",
+                "placeholder": "Aizpildiet atgriezenisko saiti"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Pogas \"Rādīt risinājumus\" teksts",
+      "default": "Rādīt risinājumu"
+    },
+    {
+      "label": "Pogas \"Mēģināt vēlreiz\" teksts",
+      "default": "Mēģināt vēlreiz"
+    },
+    {
+      "label": "Pogas \"Pārbaudīt\" teksts",
+      "default": "Pārbaudīt"
+    },
+    {
+      "label": "Pogas \"Iesniegt\" teksts",
+      "default": "Iesniegt"
+    },
+    {
+      "label": "Ziņas \"Nav aizpildīts\" teksts",
+      "default": "Lūdzu aizpildiet visus tukšos laukus, lai skatītu risinājumu"
+    },
+    {
+      "label": "Ziņas \"':ans' ir pareizi\" teksts",
+      "default": "':ans' ir pareizi"
+    },
+    {
+      "label": "Ziņas \"':ans' ir nepareizi\" teksts",
+      "default": "':ans' ir nepareizi"
+    },
+    {
+      "label": "Ziņas \"Atbildēts pareizi\" teksts",
+      "default": "Atbildēts pareizi"
+    },
+    {
+      "label": "Ziņas \"Atbildēts nepareizi\" teksts",
+      "default": "Atbildēts nepareizi"
+    },
+    {
+      "label": "Risinājuma etiķete asistīvajām tehnoloģijām",
+      "default": "Pareizā atbilde:"
+    },
+    {
+      "label": "Ievada lauka birka asistīvajām tehnoloģijām",
+      "description": "Izmantojiet @num un @total lai aizvietotu pašreizējo klozes numuru un kopējo klozes numuru",
+      "default": "@num. tukšais lauks no @total"
+    },
+    {
+      "label": "Asistīvo tehnoloģiju etiķete, lai pateiktu, ka ievades laukam ir piesaistīts padoms",
+      "default": "Pieejams padoms"
+    },
+    {
+      "label": "Padoma ikonas etiķete",
+      "default": "Padoms"
+    },
+    {
+      "label": "Uzvedības iestatījumi.",
+      "description": "Šie parametri ļaus jums kontrolēt uzdevuma uzvedību.",
+      "fields": [
+        {
+          "label": "Atļaut \"Mēģināt vēlreiz\""
+        },
+        {
+          "label": "Atļaut pogu \"Rādīt risinājumu\""
+        },
+        {
+          "label": "Atļaut pogu \"Pārbaudīt\""
+        },
+        {
+          "label": "Automātiski pārbaudīt atbildes pēc ievades"
+        },
+        {
+          "label": "Reģistrjutīgs",
+          "description": "Nodrošina, ka lietotāja ievadītais teksts ir identisks atbildei."
+        },
+        {
+          "label": "Pieprasīt, lai visi lauki ir aizpildīti pirms var skatīt risinājumu"
+        },
+        {
+          "label": "Ievades laukus izkārtot atsevišķās rindās"
+        },
+        {
+          "label": "Rādīt apstiprinājuma dialogu pēc \"Pārbaudīt\"",
+          "description": "Šis iestatījums nav savietojams ar iestatījumu \"Automātiski pārbaudīt atbildes pēc ievades\""
+        },
+        {
+          "label": "Rādīt apstiprinājuma dialogu pēc \"Mēģināt vēlreiz\""
+        },
+        {
+          "label": "Atļaut nelielas pareizrakstības kļūdas",
+          "description": "Ja aktivizēts, atbilde tiks ieskaitīta kā pareiza arī ar nelielām pareizrakstības kļūdām (3-9 simboli: 1 rakstības kļūda, vairāk nekā 9 simboli: 2 rakstības kļūdas)"
+        }
+      ]
+    },
+    {
+      "label": "Pārbaudīšanas apstiprinājuma dialogs",
+      "fields": [
+        {
+          "label": "Galvenes teksts",
+          "default": "Beigt?"
+        },
+        {
+          "label": "Pamata teksts",
+          "default": "Vai esat pārliecināts, ka vēlaties beigt ?"
+        },
+        {
+          "label": "Pogas \"Atcelt\" birka",
+          "default": "Atcelt"
+        },
+        {
+          "label": "Pogas \"Apstiprināt\" birka",
+          "default": "Beigt"
+        }
+      ]
+    },
+    {
+      "label": "Atkārtota mēģinājuma apstiprināšanas dialogs",
+      "fields": [
+        {
+          "label": "Galvenes teksts",
+          "default": "Mēģināt vēlreiz ?"
+        },
+        {
+          "label": "Pamatteksts",
+          "default": "Esat pārliecināts, ka vēlaties mēģināt vēlreiz ?"
+        },
+        {
+          "label": "Pogas \"Atcelt\" birka",
+          "default": "Atcelt"
+        },
+        {
+          "label": "Pogas \"Apstiprināt\" birka",
+          "default": "Apstiprināt"
+        }
+      ]
+    },
+    {
+      "label": "Rezultātu skalas tekstuālais atspoguļojums tiem, kas izmanto asistīvās tehnoloģijas",
+      "default": "Tu saņēmi :num no :total punktiem"
+    },
+    {
+      "label": "Pogas \"Pārbaudīt\" apraksts asistīvajām tehnoloģijām",
+      "default": "Pārbaudīt atbildes. Atbildes tiks atzīmētas kā pareizas, nepareizas, vai neatbildētas."
+    },
+    {
+      "label": "Pogas \"Rādīt risinājumu\" apraksts asistīvajām tehnoloģijām",
+      "default": "Rādīt risinājumu. Uzdevums tiks atzīmēts ar tā pareizo risinājumu."
+    },
+    {
+      "label": "Pogas \"Mēģināt vēlreiz\" apraksts asistīvajām tehnoloģijām",
+      "default": "Mēģināt uzdevumu vēlreiz. Dzēst visas sniegtās atbildes un sākt uzdevumu vēlreiz."
+    },
+    {
+      "label": "Uzdevuma sākšanas apraksts asistīvajām tehnoloģijām",
+      "default": "Pārbaudīšanas režīms"
+    }
+  ]
+}

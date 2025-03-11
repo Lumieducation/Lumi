@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Beskrivelse av inntastingsfelt",
+      "description": "En beskrivelse av hva brukeren skal fylle inn."
+    },
+    {
+      "label": "Valgfri fylltekst ved tomt tekstfelt",
+      "description": "Her kan du oppgi en fylltekst som skal vises når inntastingsfeltet er tomt."
+    },
+    {
+      "label": "Maximum text length",
+      "description": "Maximum number of characters for the text."
+    },
+    {
+      "label": "Størrelse på inntastingsfelt",
+      "description": "Størrelse på inntastingsfelt oppgitt i antall linjer inntastingsfeltet vil romme.",
+      "options": [
+        {
+          "label": "1 linje"
+        },
+        {
+          "label": "3 linjer"
+        },
+        {
+          "label": "10 linjer"
+        }
+      ]
+    },
+    {
+      "label": "Obligatorisk felt",
+      "description": "Skru på for å gjøre dette inntastingsfeltet obligatorisk. Det vil føre til at man ikke kan eksportere et dokument før dette inntastingsfeltet er fylt ut."
+    },
+    {
+      "label": "Remaining characters",
+      "default": "Remaining characters: @chars",
+      "description": "Message for remaining characters. You can use @chars which will be replaced by the corresponding number."
+    }
+  ]
+}

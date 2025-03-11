@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Leku berodun irudien galderen editorea",
+      "fields": [
+        {
+          "label": "Atzeko planoko irudia",
+          "fields": [
+            {
+              "label": "Atzeko planoko irudia",
+              "description": "Hautatu leku berodun irudien galderen atzeko planoko irudirako."
+            }
+          ]
+        },
+        {
+          "label": "Leku beroak",
+          "description": "Arrastatu eta jaregin tresna barratik nahi duzun irudia leku bero berri bat sortzeko. Klik bikoitza egin dagoen leku bero bat editatzeko. Arrastatu leku beroa tokiz aldatzeko. Tamaina aldatzeko tiratu beheko eskuineko izkinako kontrolatzailetik.",
+          "fields": [
+            {
+              "label": "Zereginaren deskribapena",
+              "description": "Erabiltzailearentzako jarraibideak."
+            },
+            {
+              "label": "Leku beroa",
+              "entity": "Leku beroa",
+              "field": {
+                "label": "Leku beroa",
+                "fields": [
+                  {
+                    "label": "erabiltzaile-ezarpenak",
+                    "fields": [
+                      {
+                        "label": "Zuzena",
+                        "description": "Baliteke leku bero ugari izatea. Hala ere, erabiltzaileak zuzena/okerra feedbacka lehenengo klik egin eta instantean lortzen du."
+                      },
+                      {
+                        "label": "Feedbacka"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Ezarpen konputatuak"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Erabiltzaileak leku huts bat hautatzen duenean agertzen den feedbacka:",
+              "placeholder": "Ez duzu leku bero bakar bat ere kokatu, saiatu berriro!"
+            },
+            {
+              "label": "Erakutsi feedbacka popup moduan"
+            },
+            {
+              "label": "Kokapena",
+              "fields": [
+                {
+                  "label": "Saiatu berriro botoiaren testua",
+                  "default": "Saiatu berriro"
+                },
+                {
+                  "label": "Itxi botoiaren testua",
+                  "default": "Itxi"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Puntuazio barraren testu adierazpena irakurgailua erabiltzen dutenentzat",
+      "default": ":total puntutik :num puntu lortu duzu"
+    },
+    {
+      "label": "\"Saiatu berriro\" botoiaren laguntza-teknologientzako etiketa",
+      "default": "Zeregina berriz egiten saiatu. Berrabiarazi erantzun guztiak eta hasi zeregina berriz."
+    }
+  ]
+}

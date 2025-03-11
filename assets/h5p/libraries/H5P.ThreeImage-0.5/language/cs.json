@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Editor 3D obrázků",
+      "fields": [
+        {
+          "label": "Scény",
+          "entity": "Scéna",
+          "field": {
+            "fields": [
+              {
+                "label": "Typ scény",
+                "options": [
+                  {
+                    "label": "360 obrázek"
+                  },
+                  {
+                    "label": "Statický obrázek"
+                  }
+                ]
+              },
+              {
+                "label": "Zobrazit tlačítko \"Zpět\"",
+                "description": "Zobrazit tlačítko pro navigaci zpět na předchozí scénu"
+              },
+              {},
+              {
+                "label": "Název scény",
+                "description": "Slouží k identifikaci"
+              },
+              {
+                "label": "Pozadí scény"
+              },
+              {
+                "label": "Popis scény",
+                "description": "Text, který může popsat scénu pro koncového uživatele"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Popisek",
+                      "description": "Pokud nevyplníte, nebude zobrazen žádný popisek a my se pokusíme použít pole nadpisu pro čtečky obrazovky"
+                    },
+                    {
+                      "label": "Nastavení popisku",
+                      "fields": [
+                        {
+                          "label": "Pozice popisku",
+                          "description": "Vybrat, kde se má popisek objevit",
+                          "options": [
+                            {
+                              "label": "Použít nastavení chování"
+                            },
+                            {
+                              "label": "Zarovnáno doprava"
+                            },
+                            {
+                              "label": "Zarovnáno doleva"
+                            },
+                            {
+                              "label": "Zarovnáno nahoru"
+                            },
+                            {
+                              "label": "Zarovnáno dolů"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Zobrazit popisek",
+                          "description": "Pokud jsou skryté - popisky se zobrazí pouze při najetí myší",
+                          "options": [
+                            {
+                              "label": "Použít nastavení chování"
+                            },
+                            {
+                              "label": "Zobrazit"
+                            },
+                            {
+                              "label": "Skrýt"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Typ tlačítka",
+                "description": "Rozhodněte se, jak by měla vypadat tlačítka směřující k této scéně. Pro scény, které jsou statické a nevedou k novým scénám, doporučujeme tlačítko \"Více informací\" .",
+                "options": [
+                  {
+                    "label": "Nová scéna (šipka)"
+                  },
+                  {
+                    "label": "Více informací (plus)"
+                  }
+                ]
+              },
+              {
+                "label": "Zvuková stopa",
+                "description": "Přidat zvukovou stopu, která je specifická pro tuto scénu."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Zvuková stopa"
+        }
+      ]
+    },
+    {
+      "label": "Nastavení chování",
+      "description": "Tyto možnosti vám umožní řídit, jak se budou scény chovat.",
+      "fields": [
+        {
+          "label": "Globální zvuk",
+          "description": "Přidejte zvukovou stopu, která je ve výchozím nastavení dostupná pro všechny scény."
+        },
+        {
+          "label": "Kvalita vykreslování scén",
+          "description": "Vyberte velikost segmentů šířky a výšky použitých k vykreslení scény. To přímo ovlivňuje úroveň kvality scény, zkuste zvýšit kvalitu, pokud scéna vypadá tak, že jsou ve scénách vidět \"bloky \" nebo \"vlny \". Upozorňujeme, že načítání ve vyšší kvalitě trvá déle.",
+          "options": [
+            {
+              "label": "Vysoká kvalita (128x128)"
+            },
+            {
+              "label": "Střední kvalita (64x64)"
+            },
+            {
+              "label": "Nízká kvalita (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Nastavení popisku",
+          "fields": [
+            {
+              "label": "Pozice popisku",
+              "description": "Výchozí poloha popisku. Pozici lze přepsat interakcí",
+              "options": [
+                {
+                  "label": "Zarovnáno doprava"
+                },
+                {
+                  "label": "Zarovnáno doleva"
+                },
+                {
+                  "label": "Zarovnáno nahoru"
+                },
+                {
+                  "label": "Zarovnáno dolů"
+                }
+              ]
+            },
+            {
+              "label": "Zobrazit popisky",
+              "description": "Pokud není zaškrtnuto - popisky se zobrazí pouze při najetí myší"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Lokalizace",
+      "fields": [
+        {
+          "label": "Popisek pro typ obsahu",
+          "default": "Virtuální prohlídka"
+        },
+        {
+          "label": "Popisek pro přehrávání zvuku",
+          "default": "Přehrát zvukovou stopu"
+        },
+        {
+          "label": "Popisek pro pozastavení zvuku",
+          "default": "Pozastavit zvukovou stopu"
+        },
+        {
+          "label": "Název scény",
+          "default": "Popis scény"
+        },
+        {
+          "label": "Popisek tlačítka pro resetování kamery",
+          "default": "Resetovat kameru"
+        },
+        {
+          "label": "Popisek pro dialogové okno odeslání",
+          "default": "Odeslat dialog"
+        },
+        {
+          "label": "Popisek tlačítka pro zavírání dialogu",
+          "default": "Zavřít dialog"
+        },
+        {
+          "label": "Popisek pro rozbalení vizuálníno popisku",
+          "default": "Rozbalit vizuální popisek"
+        },
+        {
+          "label": "Popisek pro načítání obrázku na pozadí ve scéně 360",
+          "default": "Načítání obrázku na pozadí ...."
+        },
+        {
+          "label": "Popisek pro případ, že není žádný obsah",
+          "default": "Bez obsahu"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "semantics": [
+    {
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
+      "label": "Tarxetas",
+      "entity": "tarxeta",
+      "field": {
+        "label": "Tarxeta",
+        "fields": [
+          {
+            "label": "Imaxe"
+          },
+          {
+            "label": "Texto alternativo para a imaxe",
+            "description": "Describe o que pode verse na imaxe. Este texto será lido polas ferramentas de texto a voz que precisan os usuarios con discapaciade visual."
+          },
+          {
+            "label": "Pista de audio",
+            "description": "Son opcional que se escoita ao xirar a tarxeta."
+          },
+          {
+            "label": "Imaxe Coincidente",
+            "description": "Imaxe opcional coa que coincidir en lugar de usar dúas tarxetas coa mesma imaxe."
+          },
+          {
+            "label": "Texto alternativo para imaxe coincidente",
+            "description": "Describe o que se pode ver na imaxe. Este texto será lido polas ferramentas de texto a voz que precisan os usuarios con discapaciade visual."
+          },
+          {
+            "label": "Pista de audio coincidente",
+            "description": "Un son opcional que se escoita ao xirar a segunda tarxeta."
+          },
+          {
+            "label": "Descrición",
+            "description": "Texto curto opcional que aparece cando se emparellan as dúas tarxetas."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Configuración de comportamento",
+      "description": "Estas opcións permiten controlar o comportamento do xogo.",
+      "fields": [
+        {
+          "label": "Colocar as tarxetas nun cadrado",
+          "description": "Intentará emparellar o número de filas e columnas ao colocar as tarxetas. Despois, escalaranse as tarxetas para que encaixen no contedor."
+        },
+        {
+          "label": "Número de tarxetas a usar",
+          "description": "Se este valor e maior que 2, o xogo escollerá tarxetas ao chou da lista de tarxetas."
+        },
+        {
+          "label": "Engadir botón para reintentar cando remate o xogo"
+        }
+      ]
+    },
+    {
+      "label": "Aspecto",
+      "description": "Controla o aspecto visual do xogo.",
+      "fields": [
+        {
+          "label": "Cor do tema",
+          "description": "Escolle unha cor para crear un tema para o teu xogo de tarxetas."
+        },
+        {
+          "label": "Reverso da tarxeta",
+          "description": "Usar un reverso personalizado nas tarxetas."
+        }
+      ]
+    },
+    {
+      "label": "Localización",
+      "fields": [
+        {
+          "label": "Texto para xiros de tarxeta",
+          "default": "Xiros de tarxeta"
+        },
+        {
+          "label": "Texto para tempo transcorrido",
+          "default": "Tempo transcorrido"
+        },
+        {
+          "label": "Texto de retroalimentación",
+          "default": "Bo traballo!"
+        },
+        {
+          "label": "Texto para o botón reintentar",
+          "default": "Restablecer"
+        },
+        {
+          "label": "Etiqueta para o botón pechar",
+          "default": "Pechar"
+        },
+        {
+          "label": "Etiqueta do xogo",
+          "default": "Xogo de memoria. Atopa as tarxetas coincidentes."
+        },
+        {
+          "label": "Instrucións do xogo",
+          "default": "Usa as frechas cara á esquerda e á dereita para navegar polas tarxetas. Usa espazo ou tecla Intro para virar a tarxeta."
+        },
+        {
+          "label": "Etiqueta para xogo rematado",
+          "default": "Atoparonse todas as tarxetas."
+        },
+        {
+          "label": "Etiqueta para o índice das tarxetas",
+          "description": "%num e %total son marcadores de posición e substituiranse polos valores respectivos para a tarxeta.",
+          "default": "Tarxeta %num de %total:"
+        },
+        {
+          "label": "Etiqueta para as tarxetas non xiradas",
+          "default": "Sen xirar. Click to turn."
+        },
+        {
+          "label": "Etiqueta para as tarxetas xiradas",
+          "default": "Xirada."
+        },
+        {
+          "label": "Etiqueta para coincidencia atopada",
+          "default": "Coincidencia atopada."
+        },
+        {
+          "label": "Anuncio de tarxeta coincidente",
+          "default": "As túas tarxetas coinciden!"
+        },
+        {
+          "label": "Anuncio de tarxeta non coincidente",
+          "default": "As túas tarxetas escollidas non coinciden. Xira outras tarxetas para tentalo de novo."
+        }
+      ]
+    }
+  ]
+}

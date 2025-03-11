@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "مقدمة النص",
+      "default": "Choose the correct statement.",
+      "description": "سيتم عرضها فوق المهمة الموجزة"
+    },
+    {
+      "widgets": [
+        {
+          "label": "افتراضي"
+        },
+        {
+          "label": "النصية"
+        }
+      ],
+      "label": "الملخص",
+      "entity": "البيانات",
+      "field": {
+        "label": "البيانات",
+        "fields": [
+          {
+            "label": "قائمة بيانات للملخص. البيان الأول هو الصحيح",
+            "entity": "بيان",
+            "field": {
+              "label": "بيان"
+            }
+          },
+          {
+            "label": "تلميح",
+            "fields": [
+              {
+                "label": "نص التلميح"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "شفافية خلفية العناصر",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "افتراضي"
+            }
+          ],
+          "label": "Define custom feedback for any score range",
+          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "Score Range"
+              },
+              {},
+              {
+                "label": "Feedback for defined score range",
+                "placeholder": "Fill in the feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "النص المعروض قبل عدد من البيانات حلها في المهمة الموجزة",
+      "default": "Progress:",
+      "description": "سيتم عرضها فوق البيانات. على سبيل المثال: \"التقدم من: ٢/٥\""
+    },
+    {
+      "label": "النص المعروض قبل عدد من البيانات خاطئة المحدد في المهمة الموجزة",
+      "default": "Wrong answers:",
+      "description": "سيتم عرض فوق البيانات. مثال: \"الإجابات خاطئة: ٤\""
+    },
+    {
+      "label": "راس ملاحظات الملخص",
+      "default": "Your result",
+      "description": "سيتم عرضه فوق ملاحظات الملخص"
+    },
+    {
+      "label": "النص Readspeaker عن الإجابة الصحيحة",
+      "default": "Correct."
+    },
+    {
+      "label": "Readspeaker text for announcing incorrect answer",
+      "default": "Incorrect! Please try again."
+    },
+    {
+      "label": "Readspeaker label for incorrect answer",
+      "default": "Incorrect"
+    },
+    {
+      "label": "Label list of correct answers",
+      "default": "Correct answers."
+    },
+    {
+      "label": "Label for the show tip button",
+      "default": "Show tip"
+    },
+    {
+      "label": "Textual representation of the score bar for those using a readspeaker",
+      "description": ":num and :total are special keywords which are programmatically updated",
+      "default": "You got :num out of :total points"
+    },
+    {
+      "label": "Text used for readspeakers to communicate progress",
+      "description": ":num and :total are special keywords which are programmatically updated",
+      "default": "Progress :num of :total"
+    }
+  ]
+}

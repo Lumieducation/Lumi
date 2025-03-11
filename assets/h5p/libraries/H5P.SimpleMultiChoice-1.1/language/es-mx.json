@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Pregunta"
+    },
+    {
+      "label": "Tipo de opción múltiple",
+      "options": [
+        {
+          "label": "Respuestas múltiples"
+        },
+        {
+          "label": "Respuesta única"
+        }
+      ]
+    },
+    {
+      "label": "Respuestas alternativas",
+      "entity": "Alternativa",
+      "field": {
+        "label": "Alternativa",
+        "fields": [
+          {
+            "label": "Texto"
+          },
+          {
+            "label": "Retroalimentación",
+            "fields": [
+              {
+                "label": "Mensaje mostrado si respuesta es seleccionada",
+                "description": "Mensaje aparecerá debajo de respuesta en \"continuar\" si esta respuesta es seleccionada."
+              },
+              {
+                "label": "Mensaje mostrado si respuesta no es seleccionada",
+                "description": "Mensaje aparecerá debajo de respuesta en \"continuar\" si esta respuesta no es seleccionada."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

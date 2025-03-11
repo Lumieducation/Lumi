@@ -1,0 +1,278 @@
+{
+  "semantics": [
+    {
+      "label": "Utangulizi wa jaribio",
+      "fields": [
+        {
+          "label": "Onyesha utangulizi"
+        },
+        {
+          "label": "Mada",
+          "description": "Mada hii itaonyeshwa juu ya maandishi ya utangulizi."
+        },
+        {
+          "label": "Maandishi ya utangulizi",
+          "description": "Maandishi haya yataoneshwa kabla ya jaribio kuanza."
+        },
+        {
+          "label": "Maandishi ya kitufe cha Anza",
+          "default": "Anza Jaribio"
+        },
+        {
+          "label": "Picha ya mandharinyuma",
+          "description": "Picha ya hiari ya mandharinyuma kwa utangulizi."
+        }
+      ]
+    },
+    {
+      "label": "Picha ya mandharinyuma",
+      "description": "Picha ya hiari ya mandharinyuma kwa Swali lililowekwa."
+    },
+    {
+      "label": "Kiashiria cha maendeleo",
+      "description": "Swali kuwekwa mtindo wa kiashiria cha maendeleo.",
+      "options": [
+        {
+          "label": "Kimaandishi"
+        },
+        {
+          "label": "Vitone"
+        }
+      ]
+    },
+    {
+      "label": "Asilimia ya ufaulu",
+      "description": "Asilimia ya alama ya Jumla inayohitajika kwa kupita jaribio."
+    },
+    {
+      "label": "Maswali",
+      "widgets": [
+        {
+          "label": "Chaguo-msingi"
+        },
+        {
+          "label": "Kimaandishi"
+        }
+      ],
+      "entity": "swali",
+      "field": {
+        "label": "Aina ya swali",
+        "description": "Maktaba kwa swali hili."
+      }
+    },
+    {
+      "label": "Maandishi ya kiolesura katika jaribio",
+      "fields": [
+        {
+          "label": "Kitufe cha nyuma",
+          "default": "Swali la awali"
+        },
+        {
+          "label": "Kitufe kinachofuata",
+          "default": "Swali linalofuata"
+        },
+        {
+          "label": "Kitufe cha kumaliza",
+          "default": "Maliza"
+        },
+        {
+          "label": "Kitufe cha kuwasilisha",
+          "default": "Wasilisha"
+        },
+        {
+          "label": "Maandishi ya maendeleo",
+          "description": "Maandishi yanayotumika ikiwa maendeleo ya kimaandishi yamechaguliwa.",
+          "default": "Swali:@current kati ya maswali @total"
+        },
+        {
+          "label": "Lebo ya kurukia kwa swali fulani",
+          "description": "Lazima utumie kishikanafasi '%d’ badala ya nambari ya swali, na %totalbadala ya jumla ya maswali.",
+          "default": "Swali %dkati ya%total"
+        },
+        {
+          "label": "Lebo ya maswali ya mazungumzo ya hakimiliki",
+          "default": "Swali"
+        },
+        {
+          "label": "Maendeleo ya kisoma maandishi",
+          "description": "Unaweza kutumia @currentna @totalkuuliza vigezo",
+          "default": "Swali @currentkati ya@total"
+        },
+        {
+          "label": "Maandishi ya swali lisilojibiwa",
+          "default": "Halikujibiwa"
+        },
+        {
+          "label": "Maandishi ya swali lililojibiwa",
+          "default": "Lilijibiwa"
+        },
+        {
+          "label": "Maandishi ya swali la sasa",
+          "default": "Swali la sasa"
+        },
+        {
+          "label": "Navigation label for readspeakers",
+          "default": "Questions"
+        }
+      ]
+    },
+    {
+      "label": "Zima urambazaji wa kurudi nyuma",
+      "description": "Chaguo hili litakuruhusu tu kusonga mbele katika Seti ya Maswali"
+    },
+    {
+      "label": "Maswali ya kubahatisha",
+      "description": "Wezesha kubahatisha mpangilio wa maswali kwenye onyesho."
+    },
+    {
+      "label": "Idadi ya maswali yatakayoonyeshwa:",
+      "description": "Unda kundi la maswali bila mpangilio kutoka kwa jumla."
+    },
+    {
+      "label": "Jaribio limemalizika",
+      "fields": [
+        {
+          "label": "Onyesha matokeo"
+        },
+        {
+          "label": "Onyesha kitufe cha suluhisho"
+        },
+        {
+          "label": "Onyesha kitufe cha jaribu tena"
+        },
+        {
+          "label": "Hakuna ujumbe wa matokeo",
+          "description": "Maandishi yaliyoonyeshwa kwenye ukurasa wa mwisho wakati \"Onyesha matokeo\" imezimwa",
+          "default": "Imemalizika"
+        },
+        {
+          "label": "Kichwa cha maoni",
+          "default": "Matokeo yako:",
+          "description": "Kichwa hiki kitaonyeshwa mwishoni mwa jaribio wakati mtumiaji amejibu maswali yote."
+        },
+        {
+          "label": "Mtangazaji wa alama",
+          "description": "Lebo hii itatumika kutangaza alama ya mwisho kwa mtumiaji kwenye skrini ya mwisho",
+          "default": "Umepata @finals kati ya alama@totals"
+        },
+        {
+          "label": "Maoni ya Jumla",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Chaguo-msingi"
+                }
+              ],
+              "label": "Bainisha maoni maalum kwa masafa yoyote ya alama",
+              "description": "Mfano: 0-20% Alama mbaya, 21-91% Alama ya Wastani, 91-100% Alama Nzuri!",
+              "entity": "masafa",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Masafa ya Alama"
+                  },
+                  {},
+                  {
+                    "label": "Maoni kwa masafa ya alama yaliyofafanuliwa",
+                    "placeholder": "Jaza maoni"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Maoni ya zamani",
+          "fields": [
+            {
+              "label": "Salamu ya waliopita jaribio",
+              "description": "Maandishi haya yataonyeshwa juu ya alama ikiwa mtumiaji amefanikiwa kupitisha jaribio."
+            },
+            {
+              "label": "Maoni yaliyopitishwa",
+              "description": "Maoni haya yataonyeshwa baada ya alama ikiwa mtumiaji amefaulu jaribio."
+            },
+            {
+              "label": "Mada ya kushindwa jaribio",
+              "description": "Maandishi haya yataonyeshwa juu ya alama ikiwa mtumiaji ameshindwa jaribio."
+            },
+            {
+              "label": "Maoni ya kushindwa",
+              "description": "Maoni haya yataonyeshwa baada ya alama ikiwa mtumiaji ameshindwa jaribio."
+            }
+          ]
+        },
+        {
+          "label": "Lebo ya kitufe cha suluhisho",
+          "default": "Onyesha suluhisho",
+          "description": "Maandishi kwa kitufe cha suluhisho chini."
+        },
+        {
+          "label": "Lebo ya kitufe cha jaribu tena",
+          "default": "Jaribu tena",
+          "description": "Maandishi kwa kitufe cha jaribu tena."
+        },
+        {
+          "label": "Maandishi ya kitufe cha kumaliza",
+          "default": "Maliza"
+        },
+        {
+          "label": "Tuma maandishi ya kitufe",
+          "default": "Wasilisha"
+        },
+        {
+          "label": "Onyesha video kabla ya matokeo ya jaribio"
+        },
+        {
+          "label": "Washa kitufe cha kuruka video"
+        },
+        {
+          "label": "Ruka lebo ya kitufe cha video",
+          "default": "Ruka video"
+        },
+        {
+          "label": "Video iliyopitishwa",
+          "description": "Video hii itachezwa ikiwa mtumiaji alifaulu jaribio hilo."
+        },
+        {
+          "label": "Video ya kushindwa",
+          "description": "Video hii itachezwa ikiwa mtumiaji atashindwa jaribio."
+        }
+      ]
+    },
+    {
+      "label": "Mipangilio kwa vifungo vya Onyesha suluhisho na Jaribu tena",
+      "fields": [
+        {
+          "label": "Onyesha vifungo vya \"Weka alama\"",
+          "description": "Chaguo hili linaamua ikiwa kitufe cha \"Weka alama\" kitaonyeshwa kwa maswali yote."
+        },
+        {
+          "label": "Batilisha kitufe cha Onyesha Suluhisho",
+          "description": "Chaguo hili huamua ikiwa kitufe cha \"Onyesha Suluhisho\" kitaonyeshwa kwa maswali yote, kimezimwa kwa yote au kusanidiwa kwa kila swali kivyake.",
+          "options": [
+            {
+              "label": "Imewashwa"
+            },
+            {
+              "label": "Imezimwa"
+            }
+          ]
+        },
+        {
+          "label": "Batilisha kitufe cha Jaribu tena",
+          "description": "Chaguo hili huamua ikiwa kitufe cha \"Jaribu tena\" kitaonyeshwa kwa maswali yote, kimezimwa kwa yote au kusanidiwa kwa kila swali kivyake.",
+          "options": [
+            {
+              "label": "Imewashwa"
+            },
+            {
+              "label": "Imezimwa"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

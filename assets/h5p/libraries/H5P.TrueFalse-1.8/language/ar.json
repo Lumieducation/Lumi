@@ -1,0 +1,163 @@
+{
+  "semantics": [
+    {
+      "label": "الوسائط",
+      "fields": [
+        {
+          "label": "النوع",
+          "description": "وسائط إضافية اختيارية تُعرض أعلى السؤال."
+        },
+        {
+          "label": "إيقاف ميزة تكبير الصور"
+        }
+      ]
+    },
+    {
+      "label": "سؤال"
+    },
+    {
+      "label": "اجابه صحيحه",
+      "options": [
+        {
+          "label": "صح"
+        },
+        {
+          "label": "خطاء"
+        }
+      ]
+    },
+    {
+      "label": "ترجمة مظهر المستخدم لاسئلة صح ام خطاء",
+      "fields": [
+        {
+          "label": "تسمية زر الصواب",
+          "default": "صواب"
+        },
+        {
+          "label": "تسمية زر الخطاء",
+          "default": "خطأ"
+        },
+        {
+          "label": "نص الاراء",
+          "default": "لقد حصلت على @score من @total",
+          "description": "نص الملاحظات، المتغيرات المتاحة: @score و @total. مثال: 'جمعت من النقاط @score من @total'"
+        },
+        {
+          "label": "نص زر التحقق",
+          "default": "اختبر"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "زر نص \"مشاهدة الحل\"",
+          "default": "عرض الحل"
+        },
+        {
+          "label": "نص زر \"إعادة المحاولة \"",
+          "default": "أعد المحاولة"
+        },
+        {
+          "label": "اجابه خاطئه",
+          "default": "إجابة خاطئة"
+        },
+        {
+          "label": "اجابه صحيحه",
+          "default": "إجابة صحيحة"
+        },
+        {
+          "label": "عرض كتابي للنتيجه لمستخدمي القارئ المتكلم",
+          "default": "You got :num out of :total points"
+        },
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "Show the solution. The task will be marked with its correct solution."
+        },
+        {
+          "label": "وصف التقنية المساعدة لزر إعادة المحاولة",
+          "default": "إعادة المحاولة للمهمة. إعادة ضبط جميع الردود والبدء بالمهمة مرة أخرى."
+        }
+      ]
+    },
+    {
+      "label": "إعدادت النشاط",
+      "description": "وهذه الخيارات تمكنك من التحكم في كيفية سلوك هذا النشاط",
+      "fields": [
+        {
+          "label": "تمكين \"إعادة المحاولة \""
+        },
+        {
+          "label": "تمكين \"مشاهدة الحل \" الزر"
+        },
+        {
+          "label": "Enable \"Check\" button"
+        },
+        {
+          "label": "Show confirmation dialog on \"Check\""
+        },
+        {
+          "label": "Show confirmation dialog on \"Retry\""
+        },
+        {
+          "label": "Automatically check answer",
+          "description": "Note that accessibility will suffer if enabling this option"
+        },
+        {
+          "label": "Feedback on correct answer",
+          "description": "This will override the default feedback text. Variables available: @score and @total"
+        },
+        {
+          "label": "Feedback on wrong answer",
+          "description": "This will override the default feedback text. Variables available: @score and @total"
+        }
+      ]
+    },
+    {
+      "label": "Check confirmation dialog",
+      "fields": [
+        {
+          "label": "Header text",
+          "default": "Finish ?"
+        },
+        {
+          "label": "النص الأساسي",
+          "default": "Are you sure you wish to finish ?"
+        },
+        {
+          "label": "Cancel button label",
+          "default": "Cancel"
+        },
+        {
+          "label": "Confirm button label",
+          "default": "Finish"
+        }
+      ]
+    },
+    {
+      "label": "Retry confirmation dialog",
+      "fields": [
+        {
+          "label": "Header text",
+          "default": "Retry ?"
+        },
+        {
+          "label": "النص الأساسي",
+          "default": "Are you sure you wish to retry ?"
+        },
+        {
+          "label": "Cancel button label",
+          "default": "Cancel"
+        },
+        {
+          "label": "Confirm button label",
+          "default": "Confirm"
+        }
+      ]
+    }
+  ]
+}

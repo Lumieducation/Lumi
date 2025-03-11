@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Descrición da tarefa"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
+      "label": "Tarxetas",
+      "entity": "tarxeta",
+      "field": {
+        "label": "Tarxeta",
+        "fields": [
+          {
+            "label": "Pregunta",
+            "description": "Pregunta de texto opcional para a tarxeta. (A tarxeta pode usar só unha imaxe, só texto ou ambos)"
+          },
+          {
+            "label": "Resposta",
+            "description": "Resposta (solución) para a tarxeta. Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "Imaxe",
+            "description": "Imaxe opcional para a tarxeta. (A tarxeta pode usar só unha imaxe, só texto ou ambos)"
+          },
+          {
+            "label": "Texto alternativo para a imaxe"
+          },
+          {
+            "label": "Pista",
+            "fields": [
+              {
+                "label": "Texto da pista"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Texto de progreso",
+      "default": "Tarxeta @card de @total",
+      "description": "Texto de progreso; variables dispoñibles: @card e @total. Exemplo: 'Tarxeta @card de @total'"
+    },
+    {
+      "label": "Texto para o botón seguinte",
+      "default": "Seguinte"
+    },
+    {
+      "label": "Texto para o botón anterior",
+      "default": "Anterior"
+    },
+    {
+      "label": "Texto para o botón comprobar respostas",
+      "default": "Comprobar"
+    },
+    {
+      "label": "Requerir resposta do usuario antes de que poida ver a solución"
+    },
+    {
+      "label": "Texto para o campo de resposta",
+      "default": "A túa resposta"
+    },
+    {
+      "label": "Texto para resposta correcta",
+      "default": "Correcto"
+    },
+    {
+      "label": "Texto para resposta incorrecta",
+      "default": "Incorrecta"
+    },
+    {
+      "label": "Texto para amosar a solución",
+      "default": "Resposta(s) correcta(s)"
+    },
+    {
+      "label": "Texto para o título dos resultados",
+      "default": "Resultados"
+    },
+    {
+      "label": "Texto para número de respostas correctas",
+      "default": "@score de @total son correctas",
+      "description": "Texto para resultados, variables dispoñibles: @score e @total. Exemplo: '@score de @total son correctas'"
+    },
+    {
+      "label": "Texto para amosar resultados",
+      "default": "Amosar resultados"
+    },
+    {
+      "label": "Texto para etiqueta de resposta curta",
+      "default": "R:"
+    },
+    {
+      "label": "Texto para o botón \"reintentar\"",
+      "default": "Reintentar"
+    },
+    {
+      "label": "Diferencia entre maiúsculas e minúsculas",
+      "description": "Fai que o texto introducido polo usuario teña que ser exactamente igual que a resposta."
+    },
+    {
+      "label": "Texto de resposta incorrecta para tecnoloxías de asistencia",
+      "default": "Resposta incorrecta. A resposta correcta era @answer",
+      "description": "O texto pasarase ás tecnoloxías de asistencia. Usa @answer como variable."
+    },
+    {
+      "label": "Texto de retroalimentación de resposta correcta para as tecnoloxías de asistencia",
+      "default": "@answer é correcta.",
+      "description": "Texto que se anunciará ás tecnoloxías de asistencia cando o usuario responde a unha tarxeta correctamente. Usa @answer como variable."
+    },
+    {
+      "label": "Cambio de tarxeta para as tecnoloxías de asistencia",
+      "default": "Páxina @current de @total",
+      "description": "O texto pasarase ás tecnoloxías de asistencia cando se navegue entre tarxetas. Usa @current e @total como variables."
+    },
+    {
+      "label": "Facer aleatorias as tarxetas",
+      "description": "Activar para facer aleatoria a orde das tarxetas amosadas."
+    }
+  ]
+}

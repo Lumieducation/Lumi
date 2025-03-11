@@ -1,0 +1,205 @@
+{
+  "semantics": [
+    {
+      "label": "Luba tiitelleht",
+      "description": "Leht, mis näitab teavet raamatu kohta enne selle avamist"
+    },
+    {
+      "label": "Tiitelleht",
+      "fields": [
+        {
+          "label": "Tiitellehe kirjeldus",
+          "description": "See tekst kirjeldab sinu raamatut."
+        },
+        {
+          "label": "Cover media",
+          "description": "Optional media to display on the cover."
+        }
+      ]
+    },
+    {
+      "label": "Peatükid",
+      "entity": "Peatükk",
+      "widgets": [
+        {
+          "label": "Vaikimisi"
+        }
+      ],
+      "field": {
+        "label": "Üksus",
+        "fields": [
+          {
+            "label": "Peatükk"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Käitumisseaded",
+      "fields": [
+        {
+          "label": "Base color",
+          "description": "Set the base color that will define the overall color scheme of the book. Please ensure a high enough contrast."
+        },
+        {
+          "label": "Kuva vaikimisi sisukorda",
+          "description": "Kui on lubatud, siis raamatu avamisel näidatakse sisukorda"
+        },
+        {
+          "label": "Näida edenemisosutit",
+          "description": "Kui on lubatud, siis on lehel osutid, mis näitavad kasutajale, kas ta on lehega lõpule jõudnud või mitte."
+        },
+        {
+          "label": "Võimalda automaatne edenemine",
+          "description": "Kui on lubatud, siis ülesanneteta lehekülg loetakse vaatamisel läbituks, ülesannetega lehekülg peale kõigi ülesannete täitmist. Kui keelatud, siis on iga lehe all nupp, mida kasutaja peab lehe läbituks märkimiseks vajutama."
+        },
+        {
+          "label": "Kuva kokkuvõtet",
+          "description": "Kui lubatud, siis kasutaja näeb kokkuvõtet ning saab oma tulemused edastada/vaadata"
+        },
+        {
+          "label": "Enable \"Restart\" button",
+          "description": "When enabled the user can initiate a restart on the summary page."
+        }
+      ]
+    },
+    {
+      "label": "\"Loe\" nupu tõlge",
+      "default": "Loe"
+    },
+    {
+      "label": "\"Kuva 'sisukord'\" nupu tõlge",
+      "default": "Kuva 'sisukord'"
+    },
+    {
+      "label": "\"Peida 'sisukord'\" nupu tõlge",
+      "default": "Peida 'sisukord'"
+    },
+    {
+      "label": "\"Järgmine lehekülg\" nupu tõlge",
+      "default": "Järgmine lehekülg"
+    },
+    {
+      "label": "\"Eelmine lehekülg\" nupu tõlge",
+      "default": "Eelmine lehekülg"
+    },
+    {
+      "label": "\"Peatükk läbitud!\" tõlge",
+      "default": "Peatükk läbitud!"
+    },
+    {
+      "label": "Tõlge tehtud \"@pages leheküljele @total leheküljest\" (@pages ja @total asendatakse tegelike väärtusega)",
+      "default": "@pages / @total läbitud"
+    },
+    {
+      "label": "\"Peatükk pooleli\" tõlge",
+      "default": "Peatükk pooleli"
+    },
+    {
+      "label": "\"Liigu lehekülje ülaossa\" tõlge",
+      "default": "Liigu lehkülje ülaossa"
+    },
+    {
+      "label": "\"Olen selle lehe läbinud\" tõlge",
+      "default": "Olen selle lehe läbinud"
+    },
+    {
+      "label": "Täisekraan nupu silt",
+      "default": "Täisekraan"
+    },
+    {
+      "label": "Välju täisekraanilt nupu silt",
+      "default": "Välju täisekraanilt"
+    },
+    {
+      "label": "Page progress in book",
+      "description": "\"@count\" will be replaced by page count, and \"@total\" with the total number of pages",
+      "default": "@count of @total pages"
+    },
+    {
+      "label": "Interaction progress",
+      "description": "\"@count\" will be replaced by interaction count, and \"@total\" with the total number of interactions",
+      "default": "@count of @total interactions"
+    },
+    {
+      "label": "Translation for \"Submit report\"",
+      "default": "Submit Report"
+    },
+    {
+      "label": "Label for \"restart\" button",
+      "default": "Restart"
+    },
+    {
+      "label": "Summary header",
+      "default": "Kokkuvõte"
+    },
+    {
+      "label": "Translation for \"All interactions\"",
+      "default": "Kõik harjutused"
+    },
+    {
+      "label": "Translation for \"Unanswered interactions\"",
+      "default": "Vastamata harjutused"
+    },
+    {
+      "label": "Tulemus",
+      "description": "\"@score\" will be replaced with current score, and \"@maxscore\" will be replaced with max achievable score",
+      "default": "@score / @maxscore"
+    },
+    {
+      "label": "Harjutuste edenemine lehe kohta",
+      "description": "\"@left\" will be replaced with remaining interactions, and \"@max\" will be replaced with total number of interactions on the page",
+      "default": "@left / @max harjutusest täidetud"
+    },
+    {
+      "label": "Translation for \"No interactions\"",
+      "default": "Harjutused puuduvad"
+    },
+    {
+      "label": "Translation for \"Score\"",
+      "default": "Tulemus"
+    },
+    {
+      "label": "Label for \"Summary &amp; submit\" button",
+      "default": "Kokkuvõte &amp; vastuste esitamine"
+    },
+    {
+      "label": "Translation for \"You have not interacted with any pages.\"",
+      "default": "Sa ei ole veel lehtesid vaadanud."
+    },
+    {
+      "label": "Translation for \"You have to interact with at least one page before you can see the summary.\"",
+      "default": "Pead vähemalt ühte lehte vaatama enne kui soovid kokkuvõtte lehte vaadata."
+    },
+    {
+      "label": "Translation for \"Your answers are submitted for review!\"",
+      "default": "Vastused on edastatud ülevaatamiseks!"
+    },
+    {
+      "label": "Summary progress label",
+      "default": "Edenemine"
+    },
+    {
+      "label": "Interactions progress label",
+      "default": "Harjutuste edenemine"
+    },
+    {
+      "label": "Total score label",
+      "default": "Tulemused"
+    },
+    {
+      "label": "Puudega inimest toetavad tekstid",
+      "fields": [
+        {
+          "label": "Lehekülje edenemise tekstialternatiiv",
+          "description": "Alternatiivtekst visuaalsele lehel edenemise osutile. Kasutatavad muutujad on @page ja @total.",
+          "default": "Lehekülg @page kokku @total lehest."
+        },
+        {
+          "label": "Silt navigeerimismenüü avamiseks ja sulgemiseks",
+          "default": "Ava või sulge navigeerimismenüü"
+        }
+      ]
+    }
+  ]
+}

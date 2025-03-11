@@ -1,0 +1,205 @@
+{
+  "semantics": [
+    {
+      "label": "Įjungti knygos viršelį",
+      "description": "Viršelis, kuriame pateikiama informacija apie knygą prieš ją atveriant"
+    },
+    {
+      "label": "Viršelis",
+      "fields": [
+        {
+          "label": "Viršelio aprašymas",
+          "description": "Šis tekstas bus jūsų knygos aprašymas."
+        },
+        {
+          "label": "Viršelio medija",
+          "description": "Pasirenkama viršelio medija"
+        }
+      ]
+    },
+    {
+      "label": "Puslapiai",
+      "entity": "Puslapis",
+      "widgets": [
+        {
+          "label": "Numatytasis"
+        }
+      ],
+      "field": {
+        "label": "Elementas",
+        "fields": [
+          {
+            "label": "Puslapis"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Veikimo nustatymai",
+      "fields": [
+        {
+          "label": "Bazinė spalva",
+          "description": "Nustatykite pagrindinę spalvą, kuri nurodys bendrą knygos spalvų schemą. Užtikrinkite pakankamai didelį kontrastą."
+        },
+        {
+          "label": "Rodyti Turinį kaip numatyta",
+          "description": "Kai įjungta, atidarant knygą rodomas turinys"
+        },
+        {
+          "label": "Rodyti eigos indikatorius",
+          "description": "Kai įjungta, kiekviename puslapyje bus rodomi indikatoriai, rodantys naudotojui, ar jis baigė darbą, ar ne."
+        },
+        {
+          "label": "Įjungti automatinę eigą",
+          "description": "Jei įjungta, puslapis be užduočių laikomas atliktu kai peržiūrimas. Puslapis su užduotimis, kai visos užduotys yra atliktos. Jei išjungta, kiekvieno puslapio apačioje bus mygtukas, kurį vartotojas galės spustelėti baigęs dirbti su puslapiu."
+        },
+        {
+          "label": "Rodyti santrauką",
+          "description": "Kai įjungta, naudotojas gali matyti santrauką ir pateikti pažangą/atsakymus"
+        },
+        {
+          "label": "Enable \"Restart\" button",
+          "description": "When enabled the user can initiate a restart on the summary page."
+        }
+      ]
+    },
+    {
+      "label": "„Skaityti“ vertimas",
+      "default": "Skaityti"
+    },
+    {
+      "label": "Vertimas „Rodyti „Turinys““",
+      "default": "Rodyti „Turinys“"
+    },
+    {
+      "label": "„Slėpti turinį“ vertimas",
+      "default": "„Slėpti turinį“"
+    },
+    {
+      "label": "„Kitas puslapis“ vertimas",
+      "default": "Kitas puslapis"
+    },
+    {
+      "label": "„Ankstesnis puslapis“ vertimas",
+      "default": "Ankstesnis puslapis"
+    },
+    {
+      "label": "Vertimas „Puslapis baigtas!“",
+      "default": "Puslapis baigtas!"
+    },
+    {
+      "label": "Translation for \"@pages of @total completed\" (@pages and @total will be replaced by actual values)",
+      "default": "@pages iš @total baigta"
+    },
+    {
+      "label": "Translation for \"Incomplete page\"",
+      "default": "Neužbaigtas puslapis"
+    },
+    {
+      "label": "Translation for \"Navigate to the top\"",
+      "default": "Navigate to the top"
+    },
+    {
+      "label": "Translation for \"I have finished this page\"",
+      "default": "Aš baigiau šį puslapį"
+    },
+    {
+      "label": "Fullscreen button label",
+      "default": "Visas ekranas"
+    },
+    {
+      "label": "Exit fullscreen button label",
+      "default": "Išeiti iš viso ekrano"
+    },
+    {
+      "label": "Page progress in book",
+      "description": "\"@count\" will be replaced by page count, and \"@total\" with the total number of pages",
+      "default": "@count iš @total puslapių"
+    },
+    {
+      "label": "Sąveikos progresas",
+      "description": "\"@count\" will be replaced by interaction count, and \"@total\" with the total number of interactions",
+      "default": "@count of @total interactions"
+    },
+    {
+      "label": "Translation for \"Submit report\"",
+      "default": "Submit Report"
+    },
+    {
+      "label": "Label for \"restart\" button",
+      "default": "Perkrauti"
+    },
+    {
+      "label": "Summary header",
+      "default": "Summary"
+    },
+    {
+      "label": "Translation for \"All interactions\"",
+      "default": "All interactions"
+    },
+    {
+      "label": "Translation for \"Unanswered interactions\"",
+      "default": "Unanswered interactions"
+    },
+    {
+      "label": "Score",
+      "description": "\"@score\" will be replaced with current score, and \"@maxscore\" will be replaced with max achievable score",
+      "default": "@score / @maxscore"
+    },
+    {
+      "label": "Per page interactions completion",
+      "description": "\"@left\" will be replaced with remaining interactions, and \"@max\" will be replaced with total number of interactions on the page",
+      "default": "@left of @max interactions completed"
+    },
+    {
+      "label": "Translation for \"No interactions\"",
+      "default": "No interactions"
+    },
+    {
+      "label": "Translation for \"Score\"",
+      "default": "Score"
+    },
+    {
+      "label": "Label for \"Summary &amp; submit\" button",
+      "default": "Summary &amp; submit"
+    },
+    {
+      "label": "Translation for \"You have not interacted with any pages.\"",
+      "default": "You have not interacted with any pages."
+    },
+    {
+      "label": "Translation for \"You have to interact with at least one page before you can see the summary.\"",
+      "default": "You have to interact with at least one page before you can see the summary."
+    },
+    {
+      "label": "Translation for \"Your answers are submitted for review!\"",
+      "default": "Your answers are submitted for review!"
+    },
+    {
+      "label": "Summary progress label",
+      "default": "Book progress"
+    },
+    {
+      "label": "Interactions progress label",
+      "default": "Interactions progress"
+    },
+    {
+      "label": "Total score label",
+      "default": "Total score"
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Page progress textual alternative",
+          "description": "An alternative text for the visual page progress. @page and @total variables available.",
+          "default": "Page @page of @total."
+        },
+        {
+          "label": "Label for expanding/collapsing navigation menu",
+          "default": "Toggle navigation menu"
+        }
+      ]
+    }
+  ]
+}

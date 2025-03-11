@@ -1,0 +1,136 @@
+{
+  "semantics": [
+    {
+      "label": "Video kaynakları",
+      "description": "Videonun tüm tarayıcılarda çalışmasını sağlamak için hem WebM hem de MP4 formatlı kaynaklar eklemelisiniz."
+    },
+    {
+      "label": "Görseller",
+      "fields": [
+        {
+          "label": "Poster resmi"
+        },
+        {
+          "label": "Mevcut tüm alanı kullanmak için video oynatıcıyı sığdır",
+          "description": "Ayarlanmazsa, video oynatıcı video ile aynı en boy oranına sahip olacaktır."
+        },
+        {
+          "label": "Video oynatıcı kontrollerini göster",
+          "description": "Video oynatıcıya kontroller ekleyiniz. Bu, kullanıcılara oynatma, duraklatma vb. izinler verir."
+        }
+      ]
+    },
+    {
+      "label": "Oynatma",
+      "fields": [
+        {
+          "label": "Videoyu otomatik oynat",
+          "description": "Videoyu otomatik olarak oynatmaya başlayınız. Mobil cihazlarda çalışmayabilir."
+        },
+        {
+          "label": "Videoyu tekrarla",
+          "description": "Bittiğinde videoyu otomatik olarak yeniden başlatınız."
+        }
+      ]
+    },
+    {
+      "label": "Video bölge ve dil seçenekleri",
+      "fields": [
+        {
+          "label": "İsim",
+          "default": "Video",
+          "description": "Bu türdeki içeriği tanımlamaya yardımcı olur."
+        },
+        {
+          "label": "Yükleniyor",
+          "default": "Video oynatıcı yükleniyor..."
+        },
+        {
+          "label": "Video oynatıcı bulunamadı",
+          "default": "Verilen video biçimini destekleyen hiçbir video oynatıcı bulunamadı."
+        },
+        {
+          "label": "Kaynak yok",
+          "default": "Videonun kaynakları eksik."
+        },
+        {
+          "label": "İptal edildi",
+          "default": "Medya oynatma durduruldu."
+        },
+        {
+          "label": "Ağ hatası",
+          "default": "Ağ hatası."
+        },
+        {
+          "label": "Video kaynağının kodu çözülemiyor",
+          "default": "Medyanın kodu çözülemiyor."
+        },
+        {
+          "label": "Biçim desteklenmiyor",
+          "default": "Video formatı desteklenmiyor."
+        },
+        {
+          "label": "Medya şifrelenmiş",
+          "default": "Medya şifrelenmiş."
+        },
+        {
+          "label": "Bilinmeyen hata",
+          "default": "Bilinmeyen hata."
+        },
+        {
+          "label": "Geçersiz YouTube Kimliği (ID)",
+          "default": "Geçersiz YouTube Kimliği (ID)."
+        },
+        {
+          "label": "Bilinmeyen YouTube Kimliği (ID)",
+          "default": "Verilen YouTube kimliğine (ID) sahip video bulunamadı."
+        },
+        {
+          "label": "Kısıtlanmış YouTube videosu",
+          "default": "Bu videonun sahibi, videonun yerleştirilmesine izin vermiyor."
+        }
+      ]
+    },
+    {
+      "label": "Erişilebilirlik",
+      "fields": [
+        {
+          "label": "Video alt yazısı ekle",
+          "entity": "Alt Yazı",
+          "field": {
+            "label": "Alt Yazı",
+            "fields": [
+              {
+                "label": "Alt Yazı etiketi"
+              },
+              {
+                "label": "Tür yazın, <a target=\"_blank\" href=\"https://html.spec.whatwg.org/multipage/embedded-content.html#the-track-element\">HTML yaşam standardına</a> bakın",
+                "options": [
+                  {
+                    "label": "Altyazılar"
+                  },
+                  {
+                    "label": "Başlıklar"
+                  },
+                  {
+                    "label": "Açıklamalar"
+                  },
+                  {
+                    "label": "Bölümler"
+                  }
+                ]
+              },
+              {
+                "label": "Kaynak dil, altyazılar için tanımlanmalıdır",
+                "description": "Geçerli bir BCP 47 dil etiketi olmalıdır. Tür niteliği altyazılara ayarlanmışsa, srclang tanımlanmalıdır."
+              },
+              {
+                "label": "İzleme dosyası (WebVTT)"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

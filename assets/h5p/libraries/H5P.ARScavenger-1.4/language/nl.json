@@ -1,0 +1,300 @@
+{
+  "semantics": [
+    {
+      "label": "Toon startscherm",
+      "description": "Indien aangevinkt, wordt startscherm getoond bij aanvang."
+    },
+    {
+      "label": "Startscherm",
+      "fields": [
+        {
+          "label": "Introductie",
+          "placeholder": "Welkom bij ..."
+        },
+        {
+          "label": "Afbeelding voor titelscherm"
+        }
+      ]
+    },
+    {
+      "label": "Markeringen",
+      "fields": [
+        {
+          "label": "Markeringen",
+          "widgets": [
+            {
+              "label": "Standaard"
+            }
+          ],
+          "entity": "markering",
+          "field": {
+            "label": "Markering",
+            "fields": [
+              {
+                "label": "Markeringsafbeelding (origineel)",
+                "description": "Upload de afbeelding waaruit je een markering wilt maken. Het moet een vierkant zijn anders wordt die bijgesneden. Onthoud dat je een aparte markeringsafbeelding nodig hebt voor ieder interactie.",
+                "importantDescription": {
+                  "description": "Houd de volgende criteria voor goede markeringsafbeeldingen in gedachte:<ul><li>Hoog kleurcontrast, idealiter zwart-wit</li><li>Asymmetrie</li><li>De interne resolutie van een markering is 16 x 16 pixels, grotere afbeeldingen kunnen detectie van markering bemoeilijken</li><li>Enkel teken of korte woorden geven goede resultaten</li></ul>"
+                }
+              },
+              {
+                "label": "Markeringsafbeelding (patroon)",
+                "description": "Download deze afbeelding om het als markering voor op het beeldscherm of papier te gebruiken."
+              },
+              {
+                "label": "Actietype",
+                "description": "Actie die wordt gestart wanneer de markering is gevonden.",
+                "options": [
+                  {
+                    "label": "H5P-interactie"
+                  },
+                  {
+                    "label": "3D-model-inpassing"
+                  }
+                ]
+              },
+              {
+                "label": "Interactie",
+                "fields": [
+                  {
+                    "label": "Interactie"
+                  },
+                  {
+                    "label": "Dummy"
+                  }
+                ]
+              },
+              {
+                "label": "3D-model",
+                "fields": [
+                  {
+                    "label": "3D-model bestand",
+                    "description": "Upload hier een glTF (.glb / .gltf)-bestand. De voorkeursopmaak is \"glTF 2.0 binary\" in een enkel bestand."
+                  },
+                  {
+                    "label": "Geometrie",
+                    "fields": [
+                      {
+                        "label": "Schaal",
+                        "description": "Schaal het model op of af overeenkomstig je markeringsgrootte.",
+                        "fields": [
+                          {
+                            "label": "Percentage"
+                          },
+                          {
+                            "label": "Dummy"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Positie",
+                        "description": "Stel de offset-positie van het model in t.o.v. de markering.",
+                        "fields": [
+                          {
+                            "label": "X-speling"
+                          },
+                          {
+                            "label": "Y-speling"
+                          },
+                          {
+                            "label": "Z-speling"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Rotatie",
+                        "description": "Stel de rotatie in graden in.",
+                        "fields": [
+                          {
+                            "label": "X-as"
+                          },
+                          {
+                            "label": "Y-as"
+                          },
+                          {
+                            "label": "Z-as"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Toon eindscherm",
+      "description": "Indien aangevinkt, wordt een eindscherm getoond als alle interacties zijn voltooid. Het eindscherm is niet beschikbaar als je enkel 3D-modellen gebruikt."
+    },
+    {
+      "label": "Eindscherm",
+      "fields": [
+        {
+          "label": "afbeelding voor eindscherm"
+        },
+        {
+          "label": "Tekst van eindscherm",
+          "placeholder": "Gelukt!"
+        },
+        {
+          "label": "Algehele feedback",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Standaard"
+                }
+              ],
+              "label": "Definieer aangepaste feedback voor elke scorereeks",
+              "description": "Druk op de \"Voeg scorereeks\"-knop om zoveel reeksen toe te voegen als nodig. Voorbeeld: 0-20% Onvoldoende, 21-91% Gemiddelde score, 91-100% Uitstekende score!",
+              "entity": "reeks",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Scorereeks"
+                  },
+                  {
+                    "label": "Feedback voor de gedefinieerde scorereeks",
+                    "placeholder": "Vul de feedback in"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellingen",
+      "fields": [
+        {
+          "label": "Schakel \"Opnieuw\"-knop in",
+          "description": "Indien aangevinkt, kunnen gebruikers de taak opnieuw proberen."
+        },
+        {
+          "label": "Schakel \"Oplossing\"-knop in",
+          "description": "Indien aangevinkt, kunnen gebruikers de oplossing van alle interacties bekijken."
+        },
+        {
+          "label": "Overschrijf \"Toon oplossing\"-knop",
+          "description": "Deze optie staat het in- of uitschakelen van de \"Toon oplossing\"-knop toe voor alle inhoud of om hun betreffende gedragsinstellingen te gebruiken.",
+          "options": [
+            {
+              "label": "Gebruik gedragsinstelling"
+            },
+            {
+              "label": "Knop altijd tonen"
+            },
+            {
+              "label": "Knop nooit tonen"
+            }
+          ]
+        },
+        {
+          "label": "Overschrijf \"Opnieuw\"-knop",
+          "description": "Deze optie staat het in- of uitschakelen van de \"Opnieuw\"-knop toe of om hun betreffende gedragsinstellingen te gebruiken.",
+          "options": [
+            {
+              "label": "Gebruik gedragsinstelling"
+            },
+            {
+              "label": "Knop altijd tonen"
+            },
+            {
+              "label": "Knop nooit tonen"
+            }
+          ]
+        },
+        {
+          "label": "Hoogte terugval-optie",
+          "description": "Stel een terugval hoogte in px in voor gevallen waarin het tot \"CORS\"-problemen komt."
+        }
+      ]
+    },
+    {
+      "label": "Localisatie",
+      "fields": [
+        {
+          "label": "Tekst van \"Start\"-knop",
+          "default": "Start"
+        },
+        {
+          "label": "Tekst van \"Opnieuw\"-knop",
+          "default": "Opnieuw"
+        },
+        {
+          "label": "Zoek een markering om een interactie te zien.",
+          "default": "Zoek een markering om een interactie te zien."
+        },
+        {
+          "label": "Fout: browser niet ondersteund",
+          "default": "Het lijkt erop dat je browser dit inhoudstype jammer genoeg niet ondersteunt."
+        },
+        {
+          "label": "Fout: Geen toegang tot camera",
+          "default": "Kon geen toegang krijgen tot camera."
+        },
+        {
+          "label": "Fout: Geen camera-ondersteuning",
+          "default": "Je browser lijkt geen camera's te ondersteunen."
+        },
+        {
+          "label": "Fout: Geen markeringen",
+          "default": "Is iemand vergeten markeringen toe te voegen?"
+        },
+        {
+          "label": "Waarschuwing: Brave browser",
+          "default": "Het lijkt er op dat je de Brave browser gebruikt. Leuk! Maar de strikte privacy-instellingen daarvan verhinderen mogelijk de werking van de camera."
+        },
+        {
+          "label": "Initialiseren inhoud",
+          "default": "Initialiseren inhoud. Vergeet niet toegang tot camera toe te staan."
+        }
+      ]
+    },
+    {
+      "label": "Schermlezer",
+      "fields": [
+        {
+          "label": "Titel van \"Volledig scherm\"-knop: start",
+          "default": "Volledig scherm starten"
+        },
+        {
+          "label": "Titel van \"Volledig scherm\"-knop: afsluiten",
+          "default": "Volledig scherm afsluiten"
+        },
+        {
+          "label": "\"Weergave wisselen\"-knoptitel (als opgave gesloten is)",
+          "default": "Wissel naar opgave"
+        },
+        {
+          "label": "\"Weergave wisselen\"-knoptitel (als opgave geopend is)",
+          "default": "Wissel naar camera"
+        },
+        {
+          "label": "\"Knop uitgeschakeld\"-bericht voor \"Wissel weergave\"-knop",
+          "default": "Je kunt de weergave nu niet wisselen"
+        },
+        {
+          "label": "Titel van \"Stoppen\"-knop",
+          "default": "Stoppen en resultaat tonen"
+        },
+        {
+          "label": "\"Knop uitgeschakeld\"-bericht voor \"Stoppen\"-knop",
+          "default": "Je hebt nog niet alle opgaven voltooid"
+        },
+        {
+          "label": "Actie geopend",
+          "default": "De weergave is gewisseld naar een opgave."
+        },
+        {
+          "label": "Actie gesloten",
+          "default": "De weergave is gewisseld naar de camera."
+        }
+      ]
+    }
+  ]
+}

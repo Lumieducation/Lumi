@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Elementos do cuestionario",
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
+      "entity": "elemento",
+      "field": {
+        "label": "Escoller biblioteca",
+        "fields": [
+          {
+            "label": "Biblioteca",
+            "description": "Escolle unha biblioteca"
+          },
+          {
+            "label": "Campo requirido"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Opcións da pantalla de acerto",
+      "fields": [
+        {
+          "label": "Activar pantalla de acerto"
+        },
+        {
+          "label": "Engadir imaxe de pantalla de acerto",
+          "fields": [
+            {
+              "label": "Substituir o icono de acerto por unha imaxe"
+            }
+          ]
+        },
+        {
+          "label": "Texto amosado ao enviar",
+          "default": "Completaches o cuestionario."
+        }
+      ]
+    },
+    {
+      "label": "Elementos da interface de usuario",
+      "fields": [
+        {
+          "label": "Texto dos botóns",
+          "fields": [
+            {
+              "label": "Texto do botón atrás",
+              "default": "Atrás"
+            },
+            {
+              "label": "Texto do botón continuar",
+              "default": "Continuar"
+            },
+            {
+              "label": "Texto do botón seguinte",
+              "default": "Seguinte"
+            },
+            {
+              "label": "Texto do botón enviar",
+              "default": "Enviar"
+            }
+          ]
+        },
+        {
+          "label": "Accesibilidade",
+          "fields": [
+            {
+              "label": "Texto de mensaxe requirida para o botón de saída",
+              "default": "Mensaxe de erro na saída"
+            },
+            {
+              "label": "Texto para a barra de progreso",
+              "default": "Pregunta %current de %max",
+              "description": "Usada para dicirlle ás tecnoloxías de asistenca que pregunta é. Variables: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Mensaxe de resposta requirida",
+          "default": "Esta pregunta require unha resposta",
+          "description": "Amosarase se este campo non ten resposta e é requirido por un tipo de contido wrapper"
+        },
+        {
+          "label": "Texto de símbolo requirido",
+          "default": "requirido",
+          "description": "Texto que acompaña a un asterisco para indicar que a pregunta é requirida"
+        },
+        {
+          "label": "Título para a xanela de envío",
+          "default": "Respostaches todas as preguntas correctamente"
+        },
+        {
+          "label": "Subtítulo para a xanela de envío",
+          "default": "Preme na parte inferior para enviar as túas respostas"
+        }
+      ]
+    }
+  ]
+}

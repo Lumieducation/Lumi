@@ -1,0 +1,271 @@
+{
+  "semantics": [
+    {
+      "label": "Navn på \"Sjekk\"-knapp",
+      "default": "Sjekk"
+    },
+    {
+      "label": "Navn på \"Send inn\"-knapp",
+      "default": "Send inn"
+    },
+    {
+      "label": "Navn på \"Prøv igjen\"-knapp",
+      "default": "Prøv igjen"
+    },
+    {
+      "label": "Poengforklaring",
+      "default": "Riktig svar gir 1 poeng, feil svar gir –1 poeng. Poengsummen kan ikke bli negativ."
+    },
+    {
+      "fields": [
+        {
+          "label": "Innstillinger",
+          "fields": [
+            {
+              "label": "Bakgrunnsbilde",
+              "description": "Legg til et bakgrunnsbilde for oppgaven. (Valgfritt)"
+            },
+            {
+              "label": "Oppgavefelt",
+              "description": "Spesifiser størrelsen på oppgavefeltet (i piksler)."
+            }
+          ]
+        },
+        {
+          "label": "Oppgave",
+          "description": "Begynn med å opprette slippsoner.<br />Opprett så flyttbare elementer, og merk av hvilke slippsoner de skal kunne dras til.<br />Rediger til slutt slippsonene igjen ved å merke av elementene som hører til den enkelte slippsonen. Da har du laget fasit.",
+          "fields": [
+            {
+              "label": "Elementer",
+              "entity": "Element",
+              "field": {
+                "label": "Element",
+                "fields": [
+                  {
+                    "description": "Velg typen innhold du vil legge til."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Velg slippsoner"
+                  },
+                  {
+                    "label": "Gjennomsiktighet for bakgrunn",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Elementet kan dras til slippsoner flere ganger.",
+                    "description": "Kopierer dette elementet slik at det kan dras til flere slippsoner."
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Slippsoner",
+              "entity": "Slippsone",
+              "field": {
+                "label": "Slippsone",
+                "fields": [
+                  {
+                    "label": "Tittel",
+                    "description": "The label is used by assistive technologies."
+                  },
+                  {
+                    "label": "Vis tittel"
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Velg riktige elementer for denne slippsonen"
+                  },
+                  {
+                    "label": "Gjennomsiktighet for bakgrunn",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Tips og tilbakemelding",
+                    "fields": [
+                      {
+                        "label": "Tipstekst"
+                      },
+                      {
+                        "label": "Melding ved plassering i riktig slippsone",
+                        "description": "Etter at bruker har valgt \"Sjekk\", vises denne meldinga dersom elementet er plassert i riktig slippsone."
+                      },
+                      {
+                        "label": "Melding ved plassering i feil slippsone",
+                        "description": "Etter at bruker har valgt \"Sjekk\", vises denne meldinga dersom elementet er plassert i feil slippsone."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Denne slippsonen kan bare inneholde ett element.",
+                    "description": "Sørg for at det bare finnes ett riktig svar for denne slippsonen."
+                  },
+                  {
+                    "label": "Aktiver automatisk justering",
+                    "description": "Vil automatisk justere alle elementene plassert i denne slippsonen"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Tilbakemelding",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Standardinnstilling"
+            }
+          ],
+          "label": "Lag tilbakemeldinger for de enkelte poengområdene",
+          "description": "Velg \"Legg til poengområde\"-knappen for å legge til så mange poengområder som du ønsker. Eksempel: 0–90 % Gjør øvinga en gang til. 91–100 % Dette kan du!",
+          "entity": "Poengområde",
+          "field": {
+            "fields": [
+              {
+                "label": "Poengområde"
+              },
+              {},
+              {
+                "label": "Tilbakemelding for definert poengområde",
+                "placeholder": "Skriv inn tilbakemelding"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Oppgaveinnstillinger",
+      "description": "Disse instillingene lar deg bestemme hvordan oppgaven skal oppføre seg.",
+      "fields": [
+        {
+          "label": "Aktiver \"Prøv igjen\"-knapp"
+        },
+        {
+          "label": "Aktiver \"Sjekk\"-knapp"
+        },
+        {
+          "label": "Gi ett poeng for hele oppgaven",
+          "description": "Ikke aktiver denne om du vil gi ett poeng for hvert element som er plassert riktig."
+        },
+        {
+          "label": "Gi minuspoeng",
+          "description": "Gir minuspoeng for elementer som er plassert i feil slippsone. Funksjonen må aktiveres når samme element kan plasseres i flere slippsoner, eller når det bare finnes én slippsone. Dersom funksjonen ikke er aktivert, kan brukeren få maksimal poengsum selv ved tilfeldige valg."
+        },
+        {
+          "label": "Vis poengforklaring",
+          "description": "Dersom \"Gi minuspoeng\" er aktivert: Vis poengforklaring når bruker sjekker svar."
+        },
+        {
+          "label": "Gjennomsiktighet på flyttbare elementer",
+          "description": "Hvis denne verdien er satt, vil den overstyre innstillingene til alle elementer. Feltet skal inneholde verdier fra 0 til 100. 0 betyr full gjennomsiktighet, 100 betyr ingen gjennomsiktighet."
+        },
+        {
+          "label": "Slippsoneframheving",
+          "description": "Velg når slippsoner skal framheves.",
+          "options": [
+            {
+              "label": "Når elementer flyttes"
+            },
+            {
+              "label": "Alltid"
+            },
+            {
+              "label": "Aldri"
+            }
+          ]
+        },
+        {
+          "label": "Mellomrom ved automatisk justering (i piksler)"
+        },
+        {
+          "label": "Tillat fullskjermvisning",
+          "description": "Hak av for å vise fullskjermknapp."
+        },
+        {
+          "label": "Vis poengsum",
+          "description": "Hak av for å vise oppnådde poeng for hvert svar. Ikke tilgjengelig dersom funksjonen \"Gi ett poeng for hele oppgaven\" er aktivert."
+        },
+        {
+          "label": "Vis tittel",
+          "description": "Fjern hake hvis du ikke ønsker å vise tittelen. Tittelen vises bare ved oppsummeringer, statistikk osv."
+        }
+      ]
+    },
+    {
+      "label": "Tilpass språk",
+      "fields": [
+        {
+          "label": "Navn på \"Fullskjerm\"-knapp",
+          "default": "Fullskjerm"
+        },
+        {
+          "label": "Navn på \"Avslutt fullskjerm\"-knapp",
+          "default": "Avslutt fullskjerm"
+        }
+      ]
+    },
+    {
+      "label": "Prefiks (nummerering) for flyttbart element",
+      "default": "Flyttbart element {num} av {total}."
+    },
+    {
+      "label": "Suffiks (informasjon om plassering) for flyttbart element",
+      "default": "Plassert i slippsone {num}."
+    },
+    {
+      "label": "Prefiks (nummerering) for slippsone",
+      "default": "Slippsone {num} av {total}."
+    },
+    {
+      "label": "Tekst når ingen slippsone er valgt",
+      "default": "Ingen slippsone."
+    },
+    {
+      "label": "Navn på \"Vis tips\"-knapp",
+      "default": "Vis tips"
+    },
+    {
+      "label": "Tekst for \"Tips tilgjengelig\"",
+      "default": "Tips tilgjengelig"
+    },
+    {
+      "label": "Merkelapp for \"Riktig svar\"",
+      "default": "Riktig svar"
+    },
+    {
+      "label": "Merkelapp for \"Feil svar\"",
+      "default": "Feil svar"
+    },
+    {
+      "label": "Tittel på avsnittet som gir bruker tilbakemelding om riktige og feil svar",
+      "default": "Tilbakemelding"
+    },
+    {
+      "label": "Tekstalternativ til resultatlinja (for skjermleser)",
+      "default": "Du fikk :num av :total poeng"
+    },
+    {
+      "label": "Tekstalternativ til \"Poengforklaring\"-knapp",
+      "default": "Vis poengforklaring"
+    },
+    {
+      "label": "Beskrivelse av \"Sjekk\"-knappen for assisterende teknologi",
+      "default": "Sjekk svar. Svara blir merka som riktig, feil eller ubesvart."
+    },
+    {
+      "label": "Beskrivelse av \"Prøv igjen\"-knapp (for assisterende teknologi)",
+      "default": "Prøv igjen. Alle svar blir nullstilt, og oppgaven starter på nytt."
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "학습 가지 시나리오 편집기",
+      "fields": [
+        {
+          "label": "제목"
+        },
+        {
+          "label": "화면 시작",
+          "fields": [
+            {
+              "label": "화면 제목 시작",
+              "placeholder": "코스 제목"
+            },
+            {
+              "label": "화면 부제목 시작",
+              "placeholder": "코스 세부 내용"
+            },
+            {
+              "label": "스크린 이미지 시작"
+            },
+            {
+              "label": "이미지 대안 텍스트"
+            }
+          ]
+        },
+        {
+          "label": "마지막 화면 리스트",
+          "field": {
+            "label": "화면 끝내기",
+            "fields": [
+              {
+                "label": "제목"
+              },
+              {
+                "label": "텍스트"
+              },
+              {
+                "label": "이미지"
+              },
+              {
+                "label": "점수",
+                "description": "기본 종료 시나리오에 도달한 사용자를 위해 H5P로부터 점수를 받는 모든 LMS, LRS 또는 기타 연결된 서비스에 점수를 전송함."
+              },
+              {
+                "label": "콘텐츠 ID"
+              }
+            ]
+          }
+        },
+        {
+          "label": "학습 가지 시나리오 콘텐츠 리스트",
+          "entity": "콘텐츠",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Show content title in view",
+                "description": "If selected, the user will see the content title in the top bar above this content."
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Proceed"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "채점 기준",
+          "fields": [
+            {
+              "label": "채점 기준",
+              "description": "채점 유형 선택",
+              "options": [
+                {
+                  "label": "각 엔드 시나리오에 대해 정적으로 점수를 설정"
+                },
+                {
+                  "label": "사용자 답변에서 동적으로 점수 계산"
+                },
+                {
+                  "label": "점수 없음"
+                }
+              ]
+            },
+            {
+              "label": "분기 시나리오 내의 상호 작용 점수 포함",
+              "description": "선택되면 예를 들어 대화형 비디오에서 선택한 점수가 획득한 총 점수에 추가됩니다. 선택되지 않으면 컨텐츠 항목, 분기 질문 및 종료 시나리오의 피드백 섹션에 지정된 점수만 반영됩니다."
+            }
+          ]
+        },
+        {
+          "label": "행동설정",
+          "fields": [
+            {
+              "label": "콘텐츠 완료 필수 재정의",
+              "description": "\"Proceed\" (진행) 버튼 활성화 전에 콘텐츠 완료 필수에 대한 개별 설정을 다시 합니다. \"finished\" (완료)되었음을 표시하지 않는 콘텐츠(예&gt;이미지 혹은 한 장의 슬라이드만 있는 코스 프레젠테이션)이면 영향을 받지 않습니다."
+            },
+            {
+              "label": "시청 필수",
+              "description": "시나리오를 진행하기 전에 시청자에게 비디오, 상호작용형 비디오 및 코스 프레젠테이션을 완료하도록 요청합니다. 내용 수준에서 재정의할 수 있습니다."
+            },
+            {
+              "label": "Randomize Branching Questions",
+              "description": "Branching questions will be displayed in random order"
+            }
+          ]
+        },
+        {
+          "label": "맞춤 설정",
+          "fields": [
+            {
+              "label": "시작 화면의 버튼에 대한 텍스트",
+              "default": "코스 시작"
+            },
+            {
+              "label": "끝 화면의 버튼에 대한 텍스트",
+              "default": "코스 재시작"
+            },
+            {
+              "label": "각 라이브러리 화면의 버튼에 대한 텍스트",
+              "default": "진행"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "Text for the button used to replay a video",
+              "default": "Replay the video"
+            },
+            {
+              "label": "최종 스크린에서 점수에 대한 라벨",
+              "default": "점수:"
+            },
+            {
+              "label": "전체 화면 라벨",
+              "default": "전체화면"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

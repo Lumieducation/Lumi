@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Editor delle domande di Image Hotspot",
+      "fields": [
+        {
+          "label": "Immagine di sfondo",
+          "fields": [
+            {
+              "label": "Immagine di sfondo",
+              "description": "Seleziona un'immagine da usare come sfondo per la domanda di Image Hotspot"
+            }
+          ]
+        },
+        {
+          "label": "Hotspot",
+          "description": "Trascina e rilascia la figura desiderata dalla barra degli strumenti per creare un nuovo hotspot. Fai doppio clic per modificare un hotspot esistente. Trascina l'hotspot per spostarlo. Tira il punto nell'angolo basso a destra per ridimensionarlo",
+          "fields": [
+            {
+              "label": "Descrizione del compito",
+              "description": "Istruzioni per l'apprendente"
+            },
+            {
+              "label": "Hotspot",
+              "entity": "Hotspot",
+              "field": {
+                "label": "Hotspot",
+                "fields": [
+                  {
+                    "label": "Impostazioni utente",
+                    "fields": [
+                      {
+                        "label": "Corretto",
+                        "description": "Ci possono essere più hotspot corretti. Tuttavia, l'utente ottiene un feedback corretto/sbagliato subito dopo il primo clic"
+                      },
+                      {
+                        "label": "Feedback"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Impostazioni calcolate"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Feedback se l'utente seleziona una zona vuota:",
+              "placeholder": "Non hai individuato nessun hotspot. Riprova!"
+            },
+            {
+              "label": "Mostra il feedback come popup"
+            },
+            {
+              "label": "Localizzazione",
+              "fields": [
+                {
+                  "label": "Testo del pulsante \"Riprova\"",
+                  "default": "Riprova"
+                },
+                {
+                  "label": "Testo del pulsante \"Chiudi\"",
+                  "default": "Chiudi"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Rappresentazione testuale sulla barra del punteggio per chi usa un lettore vocale",
+      "default": "Il tuo punteggio è :num su :total"
+    },
+    {
+      "label": "Descrizione della tecnologia assistiva per il pulsante \"Riprova\"",
+      "default": "Riprova l'esercizio. Risetta tutte le risposte e inizia di nuovo l'esercizio."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Destino",
+      "fields": [
+        {
+          "label": "Tipo",
+          "options": [
+            {
+              "label": "Código de Tiempo"
+            },
+            {
+              "label": "Otra página (URL)"
+            }
+          ]
+        },
+        {
+          "label": "Ir A",
+          "description": "El tiempo de destino a donde se llevará al usuario que presione el punto de acceso. Escribe código de tiempo en formato M:SS."
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "Protocolo",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(relativo a raíz)"
+                },
+                {
+                  "label": "otros"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Efectos visuales",
+      "fields": [
+        {
+          "label": "Forma",
+          "options": [
+            {
+              "label": "Rectangular"
+            },
+            {
+              "label": "Circular"
+            },
+            {
+              "label": "Rectángulo Redondeado"
+            }
+          ]
+        },
+        {
+          "label": "Color de fondo para el punto de acceso"
+        },
+        {
+          "label": "Usar cursor del ratón"
+        },
+        {
+          "label": "Añadir efecto de parpadeo",
+          "description": "Nota: El efecto de parpadeo siempre está habilitado en el editor para que puedas encontrar los puntos de acceso transparentes"
+        }
+      ]
+    },
+    {
+      "label": "Textos",
+      "fields": [
+        {
+          "label": "Texto Alternativo",
+          "description": "Describir el tema que cubre el punto de acceso. Usado para lectores de pantalla",
+          "placeholder": "Una manzana sobre una mesa"
+        },
+        {
+          "label": "Etiqueta Punto de acceso"
+        },
+        {
+          "label": "Mostrar Etiqueta"
+        },
+        {
+          "label": "Color de Etiqueta"
+        }
+      ]
+    }
+  ]
+}

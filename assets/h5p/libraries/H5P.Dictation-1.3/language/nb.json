@@ -1,0 +1,374 @@
+{
+    "semantics": [
+      {
+        "label": "Mediainnhold",
+        "fields": [
+          {
+            "label": "Type",
+            "description": "Valgfritt mediainnhold å vise før spørsmålet."
+          },
+          {
+            "label": "Deaktiver bildeforstørring"
+          }
+        ]
+      },
+      {
+        "label": "Oppgavebeskrivelse",
+        "description": "Beskriv oppgaven din her.",
+        "placeholder": "Lytt nøye og skriv det du hører."
+      },
+      {
+        "label": "Setninger",
+        "widgets": [
+          {
+            "label": "Forhåndsinnstilling"
+          }
+        ],
+        "entity": "Setning",
+        "field": {
+          "label": "Setning",
+          "fields": [
+            {
+              "label": "Beskrivelse",
+              "description": "Du kan velge å legge inn en enkel beskrivelse over tekstfeltet. Kan være nyttig for eksempelvis dialoger."
+            },
+            {
+              "label": "Lydklipp",
+              "description": "Setning uttalt i normal hastighet"
+            },
+            {
+              "label": "Lydklipp med lav hastighet",
+              "description": "Setning uttalt i lav hastighet"
+            },
+            {
+              "label": "Tekst",
+              "description": "Tekst som skal skrives. Du kan legge til alternative stavemåter til et ord ved å legge til en vertikal linje (|) bak etterfulgt av et alternativ."
+            }
+          ]
+        }
+      },
+      {
+        "label": "Generell tilbakemelding",
+        "fields": [
+          {
+            "widgets": [
+              {
+                "label": "Forhåndsinnstilling"
+              }
+            ],
+            "label": "Lag egendefinerte tilbakemeldinger for poengintervallene",
+            "description": "Bruk knappen \"Legg til poengintervall\" og legg til så mange poengintervaller du trenger. Eksempel: 0–50 % Svakt resultat, 51–80 % Middels resultat, 81–100 % Flott resultat!",
+            "entity": "range",
+            "field": {
+              "fields": [
+                {
+                  "label": "Poengintervall"
+                },
+                {
+                  "label": "Tilbakemelding for spesifisert poengintervall",
+                  "placeholder": "Fyll inn tilbakemelding"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "label": "Oppgaveinnstillinger",
+        "description": "Disse valga lar deg styre noen detaljfunksjoner i oppgava.",
+        "fields": [
+          {
+            "label": "Maks forsøk",
+            "description": "Begrenser antall ganger hvert lydklipp kan avspilles."
+          },
+          {
+            "label": "Maks forsøk for lav hastighet",
+            "description": "Begrenser antall ganger hvert lydklipp med lav hastighet kan avspilles."
+          },
+          {
+            "label": "Deaktiver mulighet for pause",
+            "description": "Det vil ikke være mulig å sette lyden på pause dersom dette valget er avkrysset."
+          },
+          {
+            "label": "Forsinket avspillingsknapp",
+            "description": "Angi eventuelt en tidsperiode på opptil tre sekunder for at avspilling av en knapp skal forsinkes. Dette kan være nyttig hvis du vil la brukeren gå inn i tekstfeltet før de begynner å lytte."
+          },
+          {
+            "label": "Bland setninger",
+            "description": "Definer når setningene skal blandes.",
+            "options": [
+              {
+                "label": "Aldri"
+              },
+              {
+                "label": "Én gang når oppgaves startes"
+              },
+              {
+                "label": "På hvert forsøk"
+              }
+            ]
+          },
+          {
+            "label": "Poenggivning",
+            "fields": [
+              {
+                "label": "Ignorer tegnsetting",
+                "description": "Tegnsetting vil ikke bli regnet med i poenggivningen dersom feltet er avkrysset."
+              },
+              {
+                "label": "Ikke godta feil",
+                "description": "Bare korrekte svar vil bli med i poenggivningen dersom feltet er avkrysset. Feil svar blir ikke straffet."
+              },
+              {
+                "label": "Grad av skrivefeil",
+                "description": "Bestem i hvilken grad skrivefeil (ord med 3-9 tegn: opptil 1 feil, ord med mer enn 9 tegn: opptil 2 feil) teller som en reell feil.",
+                "options": [
+                  {
+                    "label": "100 %"
+                  },
+                  {
+                    "label": "50 %"
+                  },
+                  {
+                    "label": "0 %"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Tekst",
+            "fields": [
+              {
+                "label": "Skilletegn for ord",
+                "description": "Definer skilletegnet for å dele inn ord som fungerer som alternative løsninger. Ordene kan ikke skilles med mellomromstast."
+              },
+              {
+                "label": "Skriveretning",
+                "description": "Velg om setningenes skriveretning går fra høyre til venstre eller venstre til høyre.",
+                "options": [
+                  {
+                    "label": "Automatisk"
+                  },
+                  {
+                    "label": "Høyre til venstre"
+                  },
+                  {
+                    "label": "Venstre til høyre"
+                  }
+                ]
+              },
+              {
+                "label": "Inndeling av tegn",
+                "description": "Aktiver denne innstillingen dersom ulike tegn (f.eks. kinesiske tegn) skal deles opp i enkeltord automatisk."
+              }
+            ]
+          },
+          {
+            "label": "Visning av tilbakemelding",
+            "fields": [
+              {
+                "label": "Egendefinert visning av skrivefeil",
+                "description": "Dersom feltet er avkrysset vil skrivefeil vises i en egendefinert stil som skiller dem fra klare feil."
+              },
+              {
+                "label": "Visning av alternative løsninger",
+                "description": "Definer hvilke alternativer som skal presenteres for feil eller manglende ord i løsningen.",
+                "options": [
+                  {
+                    "label": "Vis bare første alternativ"
+                  },
+                  {
+                    "label": "Vis alle alternativer"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Aktiver \"Prøv igjen\"-knapp"
+          },
+          {
+            "label": "Aktiver \"Vis svar\"-knapp"
+          },
+          {
+            "label": "Vis svar"
+          }
+        ]
+      },
+      {
+        "label": "Brukergrensesnitt",
+        "fields": [
+          {
+            "label": "Generell tilbakemelding",
+            "description": "Du kan bruke flere plassholdere som vil bli erstattet med tilstrekkelig antall: @matches = antall riktige, @total = totalt antall feil, @capped = begrenset antall feil, @wrong = feil ord, @added = flere ord, @missing = mangler ord, @typo = skrivefeil",
+            "default": "Du har @total feil."
+          },
+          {
+            "label": "Generell tilbakemelding (ikke godta feil)",
+            "description": "Du kan bruke flere plassholdere som vil bli erstattet med tilstrekkelig antall: @matches = antall riktige, @total = total poengsum, @wrong = feil ord, @added = flere ord, @missing = manglende ord, @typo = skrivefeil",
+            "default": "Du skrev inn @total ord riktig og @typo ord med mindre feil."
+          },
+          {
+            "label": "Navn på \"Sjekk\"-knapp",
+            "default": "Sjekk"
+          },
+          {
+            "label": "Navn på \"Send inn\"-knapp",
+            "default": "Send inn"
+          },
+          {
+            "label": "Navn på \"Prøv igjen\"-knapp",
+            "default": "Prøv igjen"
+          },
+          {
+            "label": "Navn på \"Vis svar\"-knapp",
+            "default": "Vis svar"
+          },
+          {
+            "label": "Melding for at lyd ikke er støttet",
+            "default": "Din nettleser har ikke støtte for dette lydklippet."
+          }
+        ]
+      },
+      {
+        "label": "Skjermleser",
+        "fields": [
+          {
+            "label": "Beskrivelse av \"Sjekk\"-knapp for assisterende teknologi",
+            "default": "Sjekk svar. Svara blir merket som riktig, feil eller ubesvart."
+          },
+          {
+            "label": "Beskrivelse av \"Vis svar\"-knapp for assisterende teknologi",
+            "default": "Vis svar. Oppgaven blir merket med riktige svar."
+          },
+          {
+            "label": "Beskrivelse av \"Prøv igjen\"-knapp for assisterende teknologi",
+            "default": "Prøv igjen. Alle svar blir nullstilt, og oppgaven starter på nytt."
+          },
+          {
+            "label": "Navn på knapp for avspilling",
+            "default": "Spill av"
+          },
+          {
+            "label": "Navn på knapp for å avspilling med lav hastighet ",
+            "default": "Spill av med lav hastighet"
+          },
+          {
+            "label": "Forsøk igjen (tekst for skjermlesere og når musepeker holdes over element)",
+            "description": "@number vil erstattes av antall forsøk igjen.",
+            "default": "Antall forsøk igjen: @number"
+          },
+          {
+            "label": "Uendelig (tekst for skjermlesere og når musepeker holdes over element)",
+            "default": "uendelig"
+          },
+          {
+            "label": "Tekstfelt for svar",
+            "default": "Skriv inn det du har hørt"
+          },
+          {
+            "label": "Ditt resultat",
+            "description": "@score vil bli erstattet av antall poeng. @total vil bli erstattet av maksimalt mulig poeng.",
+            "default": "Du fikk @score av @total poeng"
+          },
+          {
+            "label": "Løsning",
+            "default": "Løsning"
+          },
+          {
+            "label": "Setning",
+            "default": "Setning"
+          },
+          {
+            "label": "Element",
+            "default": "Element"
+          },
+          {
+            "label": "Riktig",
+            "default": "riktig"
+          },
+          {
+            "label": "Feil",
+            "default": "feil"
+          },
+          {
+            "label": "Små feil",
+            "default": "små feil"
+          },
+          {
+            "label": "Mangler ord eller tegn",
+            "default": "mangler"
+          },
+          {
+            "label": "Ekstra ord eller tegn",
+            "default": "ekstra"
+          },
+          {
+            "label": "Visning av korrekt svar",
+            "default": "Skulle vært"
+          },
+          {
+            "label": "Eller",
+            "default": "eller"
+          },
+          {
+            "label": "Poeng",
+            "default": "poeng"
+          },
+          {
+            "label": "Poeng (flertall)",
+            "default": "poeng"
+          },
+          {
+            "label": "Punktum",
+            "default": "punktum"
+          },
+          {
+            "label": "Utropstegn",
+            "default": "utropstegn"
+          },
+          {
+            "label": "Spørsmålstegn",
+            "default": "spørsmålstegn"
+          },
+          {
+            "label": "Komma",
+            "default": "komma"
+          },
+          {
+            "label": "Apostrof",
+            "default": "apostrof"
+          },
+          {
+            "label": "Sitattegn",
+            "default": "sitattegn"
+          },
+          {
+            "label": "Kolon",
+            "default": "kolon"
+          },
+          {
+            "label": "Semikolon",
+            "default": "semikolon"
+          },
+          {
+            "label": "Pluss",
+            "default": "pluss"
+          },
+          {
+            "label": "Minus",
+            "default": "minus"
+          },
+          {
+            "label": "Asterisk",
+            "default": "asterisk"
+          },
+          {
+            "label": "Forover skråstrek",
+            "default": "forover skråstrek"
+          }
+        ]
+      }
+    ]
+  }

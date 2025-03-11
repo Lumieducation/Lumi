@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Introdução",
+      "fields": [
+        {
+          "label": "Mostrar introdução"
+        },
+        {
+          "label": "Imagem de introdução"
+        },
+        {
+          "label": "Texto alternativo para imagem de introdução"
+        },
+        {
+          "label": "Título"
+        },
+        {
+          "label": "Texto de introdução",
+          "description": "Este título será exibido acima do texto de introdução."
+        }
+      ]
+    },
+    {
+      "label": "Questões",
+      "widgets": [
+        {
+          "label": "Padrão"
+        }
+      ],
+      "entity": "Questão",
+      "field": {
+        "label": "Questão"
+      }
+    },
+    {
+      "label": "Feedback Geral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Definir feedback personalizado para qualquer faixa de pontuação",
+          "description": "Clique no botão \"Adicionar faixa\" para adicionar quantos intervalos precisar. Exemplo: 0-20% Pontuação Péssima, 21-91% Pontuação Média, 91-100% Pontuação Óptima!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de Pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para a faixa de pontuação definida",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Fale o conjunto de palavras de etiqueta e textos",
+      "fields": [
+        {
+          "label": "Etiqueta do botão Introdução",
+          "default": "Comece o Curso!"
+        },
+        {
+          "label": "Etiqueta de resultados da tela da solução",
+          "default": "Seus resultados:"
+        },
+        {
+          "label": "Mostrar etiqueta do botão Mostrar Soluções",
+          "default": "Mostrar solução"
+        },
+        {
+          "label": "Notificação do botão Tentar Novamente",
+          "default": "Tentar novamente"
+        },
+        {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
+          "label": "Etiqueta de acessibilidade da próxima questão",
+          "default": "Próxima questão"
+        },
+        {
+          "label": "Etiqueta de acessibilidade da questão anterior",
+          "default": "Questão anterior"
+        },
+        {
+          "label": "Título da barra de navegação",
+          "description": "Títulos para perguntas na barra de navegação. \":num\" será substituído pelo número real do slide.",
+          "default": "Slide :num"
+        },
+        {
+          "label": "Etiqueta de acessibilidade do slide activo",
+          "default": "Atualmente activo"
+        },
+        {
+          "label": "Active slide accessibility label",
+          "default": "Currently active"
+        }
+      ]
+    }
+  ]
+}

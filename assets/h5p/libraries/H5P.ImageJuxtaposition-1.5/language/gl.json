@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Descrición da tarefa",
+      "description": "Escribe aquí a cabeceira ou instrucións que che gustaría amosar antes ou despois da imaxe.",
+      "placeholder": "Aquí podes engadir cabeceiras e/ou instrucións opcionais."
+    },
+    {
+      "label": "Primeira imaxe",
+      "fields": [
+        {
+          "label": "Primeira imaxe",
+          "description": "A primeira imaxe. Por favor, asegúrate de que ten o mesmo tamaño que a segunda."
+        },
+        {
+          "label": "Etiqueta para a primeira imaxe",
+          "description": "Etiqueta para poñer enriba da primeira imaxe"
+        }
+      ]
+    },
+    {
+      "label": "Segunda imaxe",
+      "fields": [
+        {
+          "label": "Segunda imaxe",
+          "description": "A segunda imaxe. Por favor, asegúrate de que ten o mesmo tamaño que a primeira."
+        },
+        {
+          "label": "Etiqueta para a segunda imaxe",
+          "description": "Etiqueta para poñer enriba da segunda imaxe"
+        }
+      ]
+    },
+    {
+      "label": "Configuración do comportamento",
+      "description": "Estas opción permitiranche configurar certos detalles",
+      "fields": [
+        {
+          "label": "Posición inicial da galería en %",
+          "description": "Establece a posición de inicio da galería"
+        },
+        {
+          "label": "Orientación da galería",
+          "description": "Horizontal moverase de esquera a dereita, vertical de arriba a abaixo.",
+          "options": [
+            {
+              "label": "Horizontal"
+            },
+            {
+              "label": "Vertical"
+            }
+          ]
+        },
+        {
+          "label": "Cor da galería",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Textos de accesibilidade",
+      "fields": [
+        {
+          "label": "Mensaxe de imaxe visible",
+          "default": "Imaxe @percentage % visible",
+          "description": "@percentage é un marcador de posición e substituirase polo valor respectivo."
+        },
+        {
+          "label": "Maniquí"
+        }
+      ]
+    }
+  ]
+}

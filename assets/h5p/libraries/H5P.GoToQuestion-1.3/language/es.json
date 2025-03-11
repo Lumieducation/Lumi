@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Texto de la pregunta",
+      "description": "La pregunta sobre la cual el usuario hará una elección."
+    },
+    {
+      "label": "Opciones",
+      "entity": "opción",
+      "field": {
+        "fields": [
+          {
+            "label": "Texto de la Opción",
+            "description": "La etiqueta que se mostrará en el botón de la opción."
+          },
+          {
+            "label": "Ir A",
+            "description": "El punto temporal al que el se llevará al usuario al apretar el botón de la opción. Escribe un código de tiempo con el formato M:SS."
+          },
+          {
+            "label": "Texto si es elegida",
+            "description": "Un texto opcional de confirmación que se mostrará después de que el usuario haya apretado el botón de la opción."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Etiqueta de Botón Continuar",
+      "default": "Continuar"
+    }
+  ]
+}

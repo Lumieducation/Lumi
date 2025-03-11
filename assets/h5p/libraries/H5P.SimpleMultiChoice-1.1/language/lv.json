@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Jautājums"
+    },
+    {
+      "options": [
+        {
+          "label": "Vairākas atbildes"
+        },
+        {
+          "label": "Viena atbilde"
+        }
+      ],
+      "label": "Daudzizvēļu tips"
+    },
+    {
+      "label": "Atbilžu varianti",
+      "entity": "Atbildes variants",
+      "field": {
+        "label": "Atbildes variants",
+        "fields": [
+          {
+            "label": "Teksts"
+          },
+          {
+            "fields": [
+              {
+                "label": "Ziņa, kas tiek parādīta ja atbilde izvēlēta",
+                "description": "Ziņa, kas tiks parādīta zem atbildes pie \"Turpināt\", ja šī atbilde ir izvēlēta."
+              },
+              {
+                "label": "Ziņa, kas tiek parādīta ja atbilde nav izvēlēta",
+                "description": "Ziņa, kas tiks parādīta zem atbildes pie \"Turpināt\", ja šī atbilde nav izvēlēta."
+              }
+            ],
+            "label": "Atgriezeniskā saite"
+          }
+        ]
+      }
+    }
+  ]
+}

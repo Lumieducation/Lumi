@@ -1,0 +1,271 @@
+{
+  "semantics": [
+    {
+      "label": "Botão Verificar Resposta",
+      "default": "Verificar"
+    },
+    {
+      "label": "Botão Enviar resposta",
+      "default": "Enviar"
+    },
+    {
+      "label": "Botão Tentar Novamente",
+      "default": "Tentar Novamente"
+    },
+    {
+      "label": "Texto de explicação da pontuação",
+      "default": "Respostas corretas dão +1 ponto. Respostas incorretas dão -1 ponto. A menor pontuação possível é 0."
+    },
+    {
+      "fields": [
+        {
+          "label": "Configurações",
+          "fields": [
+            {
+              "label": "Imagem de fundo",
+              "description": "Opcional. Selecione uma imagem para ser utilizada como fundo de sua tarefa 'arraste e solte'."
+            },
+            {
+              "label": "Tamanho da tarefa",
+              "description": "Especifique o tamanho (em pixels) que a área da tarefa deve ter."
+            }
+          ]
+        },
+        {
+          "label": "Tarefa",
+          "description": "Comece posicionando suas zonas de soltura.<br />Em seguida, posicione os elementos arrastáveis e marque-os nas zonas de soltura apropriadas.<br />Por último, edite suas zonas de soltura novamente e marque as respostas corretas.",
+          "fields": [
+            {
+              "label": "Elementos",
+              "entity": "elemento",
+              "field": {
+                "label": "Elemento",
+                "fields": [
+                  {
+                    "description": "Escolha o tipo de conteúdo que deseja adicionar."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Selecione as zonas de soltura"
+                  },
+                  {
+                    "label": "Opacidade do Plano de Fundo",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Número infinito de instâncias do elemento",
+                    "description": "Clona este elemento para que ele possa ser arrastado para múltiplas zonas de soltura."
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Zonas de soltura",
+              "entity": "Zona de Soltura",
+              "field": {
+                "label": "Zona de Soltura",
+                "fields": [
+                  {
+                    "label": "Rótulo",
+                    "description": "The label is used by assistive technologies."
+                  },
+                  {
+                    "label": "Mostrar rótulo"
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Selecione o(s) elemento(s) correto(s)"
+                  },
+                  {
+                    "label": "Opacidade do Plano de Fundo",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Dicas e feedback",
+                    "fields": [
+                      {
+                        "label": "Texto da dica"
+                      },
+                      {
+                        "label": "Mensagem exibida quando a combinação estiver correta",
+                        "description": "A mensagem aparecerá abaixo da tarefa em \"verificar\" se a zona de soltura combinar."
+                      },
+                      {
+                        "label": "Mensagem exibida quando a combinação estiver incorreta",
+                        "description": "A mensagem aparecerá abaixo da tarefa em \"verificar\" se a combinação estiver incorreta."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Esta zona de soltura pode possuir apenas um elemento",
+                    "description": "Certifique-se de que haja apenas uma resposta correta para esta zona de soltura"
+                  },
+                  {
+                    "label": "Ativar o auto alinhamento",
+                    "description": "Alinhará automaticamente todos os objetos de arrasto deixados nesta zona."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Feedback Geral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Definir feedback personalizado para qualquer faixa de pontuação",
+          "description": "Clique no botão \"Adicionar faixa\" para adicionar tantos intervalos quantos forem necessários. Exemplo: 0-20% Pontuação ruim, 21-91% Pontuação média, 91-100% Pontuação ótima!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de Pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para uma faixa de pontuação determinada",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Configurações comportamentais",
+      "description": "Estas opções permitirão que você controle como a tarefa se comporta.",
+      "fields": [
+        {
+          "label": "Ativar o botão \"Tentar Novamente\""
+        },
+        {
+          "label": "Ativar o botão \"Verificar\""
+        },
+        {
+          "label": "Dar um ponto para toda a tarefa",
+          "description": "Desative para dar um ponto para cada elemento arrastável que for colocado corretamente."
+        },
+        {
+          "label": "Aplicar penalidades",
+          "description": "Aplicar penalidades para elementos deixados cair nas zonas de soltura erradas. Isto deve ser ativado quando o(s) mesmo(s) elemento(s) puder(em) ser lançado(s) em múltiplas zonas de soltura, ou se houver apenas uma zona de soltura. Se isso não for ativado, os alunos podem combinar todos os itens com todas as zonas de soltura e receber sempre uma pontuação completa."
+        },
+        {
+          "label": "Ativar a explicação da pontuação",
+          "description": "Exibir uma explicação de pontuação para o usuário ao verificar suas respostas (se a opção \"Aplicar penalidades\" tiver sido selecionada)."
+        },
+        {
+          "label": "Opacidade do plano de fundo para os elementos arrastáveis",
+          "description": "Se este campo estiver marcado irá sobrepor as configurações de opacidade para todos os elementos arrastáveis. Deve ser um número entre 0 e 100, onde 0 significa transparência total e 100 significa nenhuma transparência"
+        },
+        {
+          "label": "Destacar as Zonas de Soltura",
+          "description": "Escolha quando destacar as zonas de soltura.",
+          "options": [
+            {
+              "label": "Ao arrastar"
+            },
+            {
+              "label": "Sempre"
+            },
+            {
+              "label": "Nunca"
+            }
+          ]
+        },
+        {
+          "label": "Espaçamento para auto alinhamento (em pixels)"
+        },
+        {
+          "label": "Ativar Tela Cheia",
+          "description": "Marque esta opção para ativar o botão de Tela Cheia."
+        },
+        {
+          "label": "Mostrar o placar de pontuação",
+          "description": "Mostrar os pontos ganhos para cada resposta. Não disponível quando a opção \"Dar um ponto para toda a tarefa\" estiver ativada."
+        },
+        {
+          "label": "Mostrar Título",
+          "description": "Desmarque esta opção se você não quiser que este título seja exibido. O título só será exibido em resumos, estatísticas, etc."
+        }
+      ]
+    },
+    {
+      "label": "Localizar",
+      "fields": [
+        {
+          "label": "Rótulo de Tela Cheia",
+          "default": "Tela Cheia"
+        },
+        {
+          "label": "Rótulo de Sair da Tela Cheia",
+          "default": "Sair da Tela Cheia"
+        }
+      ]
+    },
+    {
+      "label": "Prefixo de elemento arrastável",
+      "default": "Elemento Arrastável {num} de {total}."
+    },
+    {
+      "label": "Sufixo do elemento arrastável",
+      "default": "Colocado na zona de soltura {num}."
+    },
+    {
+      "label": "Prefixo de Zona de Soltura",
+      "default": "Zona de soltura {num} de {total}."
+    },
+    {
+      "label": "Rótulo de zona de soltura não selecionada",
+      "default": "Nenhuma zona de soltura."
+    },
+    {
+      "label": "Rótulo para o botão de Mostrar Dica",
+      "default": "Mostrar dica."
+    },
+    {
+      "label": "Rótulo para Dica Disponível",
+      "default": "Dica Disponível"
+    },
+    {
+      "label": "Rótulo para resposta correta",
+      "default": "Resposta correta"
+    },
+    {
+      "label": "Rótulo para resposta incorreta",
+      "default": "Resposta incorreta"
+    },
+    {
+      "label": "Cabeçalho do painel contendo feedback para respostas corretas/incorretas",
+      "default": "Feedback"
+    },
+    {
+      "label": "Representação textual da barra de pontuação para aqueles que usam leitores de telas",
+      "default": "Você conseguiu :num de :total pontos possíveis"
+    },
+    {
+      "label": "Representação textual do botão de explicação da pontuação",
+      "default": "Mostrar explicação da pontuação"
+    },
+    {
+      "label": "Rótulo da tecnologia de assistência para botão \"Verificar\"",
+      "default": "Verifique as respostas. As respostas serão marcadas como corretas, incorretas, ou sem resposta."
+    },
+    {
+      "label": "Rótulo da tecnologia de assistência para o botão \"Tentar Novamente\"",
+      "default": "Tente realizar a tarefa novamente. Reinicialize todas as respostas e recomece."
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Editeur Three Image",
+      "fields": [
+        {
+          "label": "Scènes",
+          "entity": "Scène",
+          "field": {
+            "fields": [
+              {
+                "label": "Type de scène",
+                "options": [
+                  {
+                    "label": "Image à 360°"
+                  },
+                  {
+                    "label": "Image statique"
+                  }
+                ]
+              },
+              {
+                "label": "Afficher un bouton \"Retour\"",
+                "description": "Affichez un bouton pour revenir à la scène précédente"
+              },
+              {},
+              {
+                "label": "Titre de la scène",
+                "description": "Utilisé pour identifier la scène"
+              },
+              {
+                "label": "Image de fond de la scène"
+              },
+              {
+                "label": "Description de la scène",
+                "description": "Un texte pour décirire la scène à l'utilisateur final"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Vignette",
+                      "description": "If left blank no label will be displayed and we'll try to use the title field for screen readers"
+                    },
+                    {
+                      "label": "Label Settings",
+                      "fields": [
+                        {
+                          "label": "Position de la vignette",
+                          "description": "Choisit où la vignette devrait apparaître",
+                          "options": [
+                            {
+                              "label": "Utiliser un paramètre comportemental"
+                            },
+                            {
+                              "label": "Aligné à droite"
+                            },
+                            {
+                              "label": "Aligné à gauche"
+                            },
+                            {
+                              "label": "Aligné en haut"
+                            },
+                            {
+                              "label": "Aligné en bas"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Vignette d’affichage",
+                          "description": "Si elles sont cachées, les vignettes ne s'afficheront qu'au passage de la souris",
+                          "options": [
+                            {
+                              "label": "Utiliser un paramètre comportemental"
+                            },
+                            {
+                              "label": "Afficher"
+                            },
+                            {
+                              "label": "Masquer"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Style du bouton",
+                "description": "Décidez à quoi devraient ressembler les boutons pointant vers cette scène. Pour les scènes statiques qui ne conduisent pas à de nouvelles scènes, nous vous recommandons le bouton \"Plus d'informations \".",
+                "options": [
+                  {
+                    "label": "Nouvelle scène (arrow)"
+                  },
+                  {
+                    "label": "Plus d'informations (plus)"
+                  }
+                ]
+              },
+              {
+                "label": "Piste audio",
+                "description": "Ajoutez une piste audio spécifique à cette scène."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Piste audio"
+        }
+      ]
+    },
+    {
+      "label": "Paramètres comportementaux",
+      "description": "Ces options vous permettront de contrôler comment le monde doit se comporter.",
+      "fields": [
+        {
+          "label": "Piste audio globale",
+          "description": "Ajoutez une piste audio globale disponible par défaut pour toutes les scènes."
+        },
+        {
+          "label": "Qualité de rendu de la scène",
+          "description": "Choisissez la résolution pour le rendu d'une scène. Ceci affecte directement le niveau de qualité de la scène. Essayez d’augmenter la qualité si une scène a l’air figée ou si des \"vagues\" sont visibles dans les scènes. Notez qu'un rendu de meilleure qualité prend plus de temps à charger.",
+          "options": [
+            {
+              "label": "Haute qualité (128x128)"
+            },
+            {
+              "label": "Moyenne qualité (64x64)"
+            },
+            {
+              "label": "Basse qualité (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Paramètres de vignette",
+          "fields": [
+            {
+              "label": "Position de la vignette",
+              "description": "La position par défaut de la vignette. La position peut être contournée par interaction",
+              "options": [
+                {
+                  "label": "Aligné à droite"
+                },
+                {
+                  "label": "Aligné à gauche"
+                },
+                {
+                  "label": "Aligné en haut"
+                },
+                {
+                  "label": "Aligné en bas"
+                }
+              ]
+            },
+            {
+              "label": "Vignettes d’affichage",
+              "description": "Si cette option n'est pas cochée, les vignettes ne s'afficheront qu'au passage de la souris"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Localiser",
+      "fields": [
+        {
+          "label": "Vignette Aria pour le type de contenu",
+          "default": "Visite virtuelle"
+        },
+        {
+          "label": "Vignette pour la lecture de l'audio",
+          "default": "Lecture de la piste audio"
+        },
+        {
+          "label": "Vignette pour pauser l’audio",
+          "default": "Pauser la piste audio"
+        },
+        {
+          "label": "Boîte de dialogue pour le titre de la scène",
+          "default": "Description de la scène"
+        },
+        {
+          "label": "Vignette pour la touche pour réinitialiser la caméra",
+          "default": "Réinitialiser la caméra"
+        },
+        {
+          "label": "Vignette de la touche de la boîte de dialogue Soumettre",
+          "default": "Boîte de dialogue Soumettre"
+        },
+        {
+          "label": "Vignette pour la touche Fermer la boîte de dialogue",
+          "default": "Fermer la boîte de dialogue"
+        },
+        {
+          "label": "Vignette Aria pour la touche d’extension de la vignette",
+          "default": "Élargir la vignette visuelle"
+        },
+        {
+          "label": "Vignette pour le chargement de l'image de fond dans une scène 360",
+          "default": "Chargement de l'image de fond..."
+        },
+        {
+          "label": "Vignette pour les cas où il n'y a pas de contenu",
+          "default": "Pas de contenu"
+        }
+      ]
+    }
+  ]
+}

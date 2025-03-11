@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Oppgavebeskrivelse",
+      "description": "Skriv inn tekst som skal vises over før/etter-bildet.",
+      "placeholder": "Her kan du legge til ei valgfri overskrift eller forklaring."
+    },
+    {
+      "label": "Bilde 1",
+      "fields": [
+        {
+          "label": "Bilde 1",
+          "description": "Bilde 1. Sørg for at det har samme størrelse som bilde 2."
+        },
+        {
+          "label": "Tittel på bilde 1",
+          "description": "Tekst som skal vises over bilde 1"
+        }
+      ]
+    },
+    {
+      "label": "Bilde 2",
+      "fields": [
+        {
+          "label": "Bilde 2",
+          "description": "Bilde 2. Sørg for at det har samme størrelse som bilde 1."
+        },
+        {
+          "label": "Tittel på bilde 2",
+          "description": "Tekst som skal vises over bilde 2"
+        }
+      ]
+    },
+    {
+      "label": "Oppgaveinnstillinger",
+      "description": "Disse valga lar deg styre noen detaljfunksjoner i oppgava.",
+      "fields": [
+        {
+          "label": "Startposisjon for skyvelinja i %",
+          "description": "Her stiller du inn startposisjonen for skyvelinja."
+        },
+        {
+          "label": "Retning for skyvelinja",
+          "description": "Velg horisontal for bevegelse mot venstre og høyre, vertikal for bevegelse opp og ned.",
+          "options": [
+            {
+              "label": "Horisontal"
+            },
+            {
+              "label": "Vertikal"
+            }
+          ]
+        },
+        {
+          "label": "Farge på skyvelinja",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Image visible message",
+          "default": "Image @percentage % visible",
+          "description": "@percentage is a placeholder and will be replaced with the respective value."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

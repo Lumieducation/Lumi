@@ -1,0 +1,163 @@
+{
+  "semantics": [
+    {
+      "label": "Medios",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Medios adicionais amosados enriba da pregunta."
+        },
+        {
+          "label": "Desactivar zoom da imaxe"
+        }
+      ]
+    },
+    {
+      "label": "Pregunta"
+    },
+    {
+      "label": "Resposta correcta",
+      "options": [
+        {
+          "label": "Verdadeiro"
+        },
+        {
+          "label": "Falso"
+        }
+      ]
+    },
+    {
+      "label": "Tradución da interface de usuario para as preguntas Verdadeiro/Falso",
+      "fields": [
+        {
+          "label": "Etiqueta para o botón Verdadeiro",
+          "default": "Verdadeiro"
+        },
+        {
+          "label": "Etiqueta para o botón falso",
+          "default": "Falso"
+        },
+        {
+          "label": "Texto de retroalimentación",
+          "default": "Conseguiches @score puntos de @total",
+          "description": "Texto de retroalimentación, variables dispoñibles: @score e @total. Exemplo: 'Conseguiches @score de @total puntos posibles'"
+        },
+        {
+          "label": "Texto para o botón \"Comprobar\"",
+          "default": "Comprobar"
+        },
+        {
+          "label": "Texto para o botón \"Enviar\"",
+          "default": "Submit"
+        },
+        {
+          "label": "Texto para o botón \"Amosar solución\"",
+          "default": "Amosar solución"
+        },
+        {
+          "label": "Texto para o botón \"Reintentar\"",
+          "default": "Reintentar"
+        },
+        {
+          "label": "Resposta incorrecta",
+          "default": "Resposta incorrecta"
+        },
+        {
+          "label": "Resposta correcta",
+          "default": "Resposta correcta"
+        },
+        {
+          "label": "Representación textual da barra de puntuación cando se usa un lector de pantalla",
+          "default": "Conseguiches :num de :total puntos"
+        },
+        {
+          "label": "Descrición do botón\"Comprobar\" para tecnoloxías de asistencia",
+          "default": "Comproba as respostas. As respostas marcaranse como correctas, incorrectas ou non respondidas."
+        },
+        {
+          "label": "Descrición do botón \"Amosar solución\" para tecnoloxías de asistencia",
+          "default": "Amosar a solución. A tarefa marcarase coa solución correcta."
+        },
+        {
+          "label": "Descrición do botón \"Reintentar\" para tecnoloxías de asistencia",
+          "default": "Reintentar a tarefa. Borrar todas as respostas e empezar a tarefa de novo."
+        }
+      ]
+    },
+    {
+      "label": "Configuración de comportamento",
+      "description": "Estas opcións permitiranche controlar o comportamento da tarefa.",
+      "fields": [
+        {
+          "label": "Activar o botón \"Tentar de novo\""
+        },
+        {
+          "label": "Activar o botón \"Amosar Solución\""
+        },
+        {
+          "label": "Activar botón \"Comprobar\""
+        },
+        {
+          "label": "Amosar diálogo de confirmación para \"Comprobar\""
+        },
+        {
+          "label": "Amosar diálogo de confirmación para \"Reintentar\""
+        },
+        {
+          "label": "Comprobar resposta automaticamente",
+          "description": "A tarefa perderá accesibilidade se se activa esta opción"
+        },
+        {
+          "label": "Retroalimentación para resposta correcta",
+          "description": "Isto anula o texto de retroalimentación por defecto. Variables dispoñibles: @score e @total"
+        },
+        {
+          "label": "Retroalimentación para resposta incorrecta",
+          "description": "Isto anula o texto de retroalimentación por defecto. Variables dispoñibles: @score e @total"
+        }
+      ]
+    },
+    {
+      "label": "Diálogo de confirmación da comprobación",
+      "fields": [
+        {
+          "label": "Texto da cabeceira",
+          "default": "Rematar ?"
+        },
+        {
+          "label": "texto do corpo",
+          "default": "Estás seguro de que queres rematar ?"
+        },
+        {
+          "label": "Etiqueta do botón Cancelar",
+          "default": "Cancelar"
+        },
+        {
+          "label": "Etiqueta do botón Confirmar",
+          "default": "Rematar"
+        }
+      ]
+    },
+    {
+      "label": "Diálogo de confirmación do reintento",
+      "fields": [
+        {
+          "label": "Texto da cabeceira",
+          "default": "Reintentar ?"
+        },
+        {
+          "label": "Texto do corpo",
+          "default": "Estás seguro de que queres reintentar ?"
+        },
+        {
+          "label": "Etiqueta do botón Cancelar",
+          "default": "Cancelar"
+        },
+        {
+          "label": "Etiqueta do botón Confirmar",
+          "default": "Confirmar"
+        }
+      ]
+    }
+  ]
+}

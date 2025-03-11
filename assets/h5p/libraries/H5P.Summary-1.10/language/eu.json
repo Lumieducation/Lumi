@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Sarrera-testua",
+      "default": "Aukeratu adierazpen egokia.",
+      "description": "Laburpen-zereginaren gainean erakutsiko da."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Lehentsitakoa"
+        },
+        {
+          "label": "Testuala"
+        }
+      ],
+      "label": "Laburpena",
+      "entity": "adierazpenak",
+      "field": {
+        "label": "Adierazpen-multzoa",
+        "fields": [
+          {
+            "label": "Laburpenerako adierazpenen zerrenda – lehen adierazpena zuzena da.",
+            "entity": "adierazpena",
+            "field": {
+              "label": "Adierazpena"
+            }
+          },
+          {
+            "label": "Argibidea",
+            "fields": [
+              {
+                "label": "Argibidearen testua"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback Orokorra",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Lehenetsitakoa"
+            }
+          ],
+          "label": "Zehaztu ezazu edozein puntuazio-tarterako feedback pertsonalizatua",
+          "description": "Egin klik \"Gehitu tartea\" botoian behar dituzun tarte guztiak gehitzeko. Adibidez: 0-20% Puntuazio eskasa, 21-91% Batez besteko puntuazioa, 91-100% Puntuazio bikaina!",
+          "entity": "tartea",
+          "field": {
+            "fields": [
+              {
+                "label": "Puntazio-tartea"
+              },
+              {},
+              {
+                "label": "Zehaztutako tartearentzako feedbacka",
+                "placeholder": "Idatzi ezazu feedbacka"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Laburpen-zereginean ebatzitako adierazpen-kopuruaren aurretik erakutsiko den testua.",
+      "default": "Aurrerapena:",
+      "description": "Adierazpenen aurretik erakutsiko da. Adibidez: 'Aurrerapena: 2/5'"
+    },
+    {
+      "label": "Laburpen-zeregineko adierazpen okerren kopuruaren aurretik erakutsiko den testua.",
+      "default": "Erantzun okerrak:",
+      "description": "Adierazpenen aurretik erakutsiko da. Adibidez: 'Erantzun okerrak: 4'"
+    },
+    {
+      "label": "Laburpenaren feedbackaren goiburua",
+      "default": "Zure emaitza",
+      "description": "Laburpenaren feedbacakren aurretik erakutsiko da."
+    },
+    {
+      "label": "Erantzun zuzenetarako irakurgailuaren testua",
+      "default": "Erantzun zuzena."
+    },
+    {
+      "label": "Erantzun okerretarako irakurgailuaren testua",
+      "default": "Okerra! Mesedez berriz saiatu zaitez."
+    },
+    {
+      "label": "Erantzun okerren zerrendarako etiketa",
+      "default": "Erantzun okerra"
+    },
+    {
+      "label": "Erantzun zuzenen zerrendarako etiketa",
+      "default": "Erantzun zuzenak."
+    },
+    {
+      "label": "Argibidea erakusteko botoiarentzako etiketa",
+      "default": "Erakutsi argibidea"
+    },
+    {
+      "label": "Puntuazio barraren testu adierazpena irakurgailua erabiltzen dutenentzat",
+      "description": ":num eta :total programak eguneratzen dituen hitz-gako bereziak dira",
+      "default": ":total puntutik :num puntu lortu duzu"
+    },
+    {
+      "label": "Aurrerapena adierazteko irakurgailuek erabilitako testua",
+      "description": ":num eta :total programak eguneratzen dituen hitz-gako bereziak dira",
+      "default": "Aurrerapena: :total puntutik :num"
+    }
+  ]
+}

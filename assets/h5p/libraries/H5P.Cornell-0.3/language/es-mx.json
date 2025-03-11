@@ -1,0 +1,123 @@
+{
+  "semantics": [
+    {
+      "label": "Encabezado",
+      "description": "Si se establece, se utilizará para el título del ejercicio en lugar del título del contenido."
+    },
+    {
+      "label": "Instrucciones",
+      "description": "Los estudiantes verán estas instrucciones en la parte superior de sus anotaciones."
+    },
+    {
+      "label": "Contenido del ejercicio"
+    },
+    {
+      "label": "Campos de anotaciones",
+      "description": "Configuraciones para los campos de anotaciones.",
+      "fields": [
+        {
+          "label": "Título del campo de pistas",
+          "default": "Pista",
+          "description": "Título para la sección Recordar."
+        },
+        {
+          "label": "Reemplazable del campo de pista",
+          "default": "¡Escriba sus comentarios, preguntas, la idea principal, etc. que usted deriva de sus anotaciones!",
+          "description": "Reemplazable para la sección de pistas como un recordatorio para sus estudiantes."
+        },
+        {
+          "label": "Título de campo anotaciones",
+          "default": "Anotaciones",
+          "description": "Título para la sección de Anotaciones."
+        },
+        {
+          "label": "Reemplazable de campo Anotaciones",
+          "default": "¡Escribir fechas, detalles, definiciones, fórmulas, ejemplos, etc. del material original!",
+          "description": "Reemplazable para la sección de anotaciones como un recordatorio para sus estudiantes."
+        },
+        {
+          "label": "Título del campo del Resumen",
+          "default": "Resumen",
+          "description": "Título para la sección del Resumen."
+        },
+        {
+          "label": "Reemplazable para el campo del Resumen",
+          "default": "¡Haga un resumen de lo que ha aprendido!",
+          "description": "Reemplazable para la sección del resumen como un recordatorio para sus estudiantes."
+        }
+      ]
+    },
+    {
+      "label": "Adaptación local",
+      "fields": [
+        {
+          "label": "Anotaciones guardadas",
+          "default": "Anotaciones guardadas"
+        },
+        {
+          "label": "Guardar",
+          "default": "Guardar"
+        },
+        {
+          "label": "No se pueden guardar las anotaciones",
+          "default": "La plataforma no soporta la característica de guardar el estado del contenido, o no está activada en las configuraciones de la plataforma, o usted no está ingresado en el sitio. ¡Sus anotaciones no pueden ser guardadas!"
+        },
+        {
+          "label": "Texto para botón \"Copiar\"",
+          "default": "Copiar"
+        },
+        {
+          "label": "Anotaciones copiadas al portapapeles",
+          "default": "Anotaciones copiadas al portapapeles"
+        },
+        {
+          "label": "Las anotaciones no se pudieron copiar al portapapeles",
+          "default": "Las anotaciones no se pudieron copiar al portapapeles"
+        }
+      ]
+    },
+    {
+      "label": "Lector de texto en voz alta",
+      "fields": [
+        {
+          "label": "Título de botón Pantalla Completa (Entrar)",
+          "default": "Pasar al modo de Pantalla Completa"
+        },
+        {
+          "label": "Título de botón Pantalla Completa (salida)",
+          "default": "Salir del modo de Pantalla Completa"
+        },
+        {
+          "label": "Alternar Título del botón (cuando anotaciones cerrado)",
+          "default": "Abrir anotaciones"
+        },
+        {
+          "label": "Alternar Título de botón (cuando anotaciones abierto)",
+          "default": "Cerrar anotaciones"
+        },
+        {
+          "label": "Anotaciones abiertas",
+          "default": "La vista ha cambiado a sus anotaciones."
+        },
+        {
+          "label": "Anotaciones cerradas",
+          "default": "La vista ha cambiado al ejercicio."
+        },
+        {
+          "label": "Anotaciones guardadas",
+          "default": "Las anotaciones fueron guardadas en la plataforma."
+        },
+        {
+          "label": "Ocultar anotaciones",
+          "default": "Ocultar @label anotaciones",
+          "description": "@label es un reemplazable y será reemplazado con la etiqueta respectiva del campo de anotaciones."
+        },
+        {
+          "label": "Mostrar anotaciones",
+          "default": "Mostrar @label anotaciones",
+          "description": "@label es un reemplazable y será reemplazado con la etiqueta respectiva del campo de anotaciones."
+        }
+      ]
+    }
+  ]
+}

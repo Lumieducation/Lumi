@@ -1,0 +1,156 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Koptekst",
+          "description": "Optionele koptekst voor de informatiemuur."
+        },
+        {
+          "label": "Eigenschappen",
+          "fields": [
+            {
+              "label": "Eigenschappen",
+              "description": "Eigenschappen voor de vermeldingen",
+              "entity": "eigenschap",
+              "widgets": [
+                {
+                  "label": "Standaard"
+                }
+              ],
+              "field": {
+                "label": "Onderdeel-eigenschappen",
+                "fields": [
+                  {
+                    "label": "Label",
+                    "default": "Naamloos"
+                  },
+                  {
+                    "label": "Toon label-eigenschap"
+                  },
+                  {
+                    "label": "Schakel zoeken in de eigenschap in"
+                  },
+                  {
+                    "label": "Vormgeving overschrijven",
+                    "fields": [
+                      {
+                        "label": "Vet"
+                      },
+                      {
+                        "label": "Cursief"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {}
+          ]
+        },
+        {
+          "label": "Panelen",
+          "description": "Panelen voor de informatiemuur",
+          "entity": "paneel",
+          "widgets": [
+            {
+              "label": "Standaard"
+            }
+          ],
+          "field": {
+            "label": "Invoeren onderdelen",
+            "fields": [
+              {
+                "label": "Titel van paneel"
+              },
+              {
+                "label": "Afbeelding"
+              },
+              {
+                "label": "Vermeldingen",
+                "description": "Vermeldingen van de eigenschappen",
+                "entity": "waarde",
+                "widgets": [
+                  {
+                    "label": "Standaard"
+                  }
+                ],
+                "field": {
+                  "label": "Label wordt automatisch gewijzigd"
+                }
+              },
+              {
+                "label": "Additional keywords",
+                "description": "Add additional keywords separated by a blank space that will be used for filtering but not be visible to the user."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Gedragsinstellingen",
+          "description": "Met deze opties kun je bepalen hoe de opgave zich gedraagt.",
+          "fields": [
+            {
+              "label": "Gebruik deze uitwijkmogelijkheid voor ontbrekende afbeeldingen"
+            },
+            {
+              "label": "Afbeelding"
+            },
+            {
+              "label": "Afbeeldingsbreedte",
+              "description": "Afbeeldingsbreedte in px."
+            },
+            {
+              "label": "Afbeeldingshoogte",
+              "description": "Afbeeldingshoogte in px."
+            },
+            {
+              "label": "Alternatieve paneelachtergrond",
+              "description": "Indien aangevinkt, zal elk 2e paneel een iets donkerder achtergrond hebben dan de andere."
+            },
+            {
+              "label": "Invoerveld voor filteren",
+              "description": "Indien aangevinkt, kunnen de gebruikers de informatiemuur filteren."
+            },
+            {
+              "label": "Mode for filter field",
+              "description": "Choose whether the filter should narrow down or broaden the search with every new keyword.",
+              "options": [
+                {
+                  "label": "Narrow down"
+                },
+                {
+                  "label": "Broaden"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Gebruikersinterface",
+          "fields": [
+            {
+              "label": "Geen inhoud ingevoerd",
+              "default": "De auteur heeft niets ingevoerd."
+            },
+            {
+              "label": "Geen overeenkomsten gevonden",
+              "description": "@query is een tijdelijke tekst en wordt vervangen door de respectievelijke zoekterm die werd ingevoerd.",
+              "default": "Er zijn geen overeenkomsten voor @query."
+            },
+            {
+              "label": "Invoeren om te filteren",
+              "description": "Bericht voor schermlezers.",
+              "default": "Voer een zoekterm in om de inhoud te filteren op relevante vermeldingen."
+            },
+            {
+              "label": "Lijst gewijzigd.",
+              "description": "Bericht voor schermlezers. @visible en @total zijn tijdelijke teksten en worden vervangen door de respectievelijke waarden.",
+              "default": "Lijst gewijzigd. Toon @visible van @total onderdelen."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

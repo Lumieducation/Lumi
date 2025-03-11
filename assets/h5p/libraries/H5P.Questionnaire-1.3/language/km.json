@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Questionnaire elements",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "entity": "element",
+      "field": {
+        "label": "Choose library",
+        "fields": [
+          {
+            "label": "Library",
+            "description": "Choose a library"
+          },
+          {
+            "label": "Required field"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Success screen options",
+      "fields": [
+        {
+          "label": "Enable success screen"
+        },
+        {
+          "label": "Add success screen image",
+          "fields": [
+            {
+              "label": "Replace success icon with image"
+            }
+          ]
+        },
+        {
+          "label": "Text to display on submit",
+          "default": "អ្នកបានបំពេញកម្រងសំណួររួចហើយ។"
+        }
+      ]
+    },
+    {
+      "label": "UI Elements",
+      "fields": [
+        {
+          "label": "Button labels",
+          "fields": [
+            {
+              "label": "Previous button label",
+              "default": "ត្រឡប់"
+            },
+            {
+              "label": "Continue button label",
+              "default": "បន្ត"
+            },
+            {
+              "label": "Next button label",
+              "default": "បន្ទាប់"
+            },
+            {
+              "label": "Submit button label",
+              "default": "ប្រគល់"
+            }
+          ]
+        },
+        {
+          "label": "Accessibility",
+          "fields": [
+            {
+              "label": "Required message exit button label",
+              "default": "បិទសារកំហុស"
+            },
+            {
+              "label": "Progress bar text",
+              "default": "សំណួរទី %current ចំណោម %max",
+              "description": "Used to tell assistive technologies what question it is. Variables: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Required message",
+          "default": "សំណួរនេះទាមទារចម្លើយ",
+          "description": "Will display if this field is unanswered and required by a wrapper content type"
+        },
+        {
+          "label": "Required symbol text",
+          "default": "ទាមទារ",
+          "description": "Text that will accompany an asterisk to signal that a question is required"
+        },
+        {
+          "label": "Title for the submit screen",
+          "default": "អ្នកបានឆ្លើយសំនួរទាំងអស់ដោយជោគជ័យ"
+        },
+        {
+          "label": "Subtitle for the submit screen",
+          "default": "ចុចខាងក្រោមដើម្បីប្រគល់ចម្លើយរបស់អ្នក"
+        }
+      ]
+    }
+  ]
+}

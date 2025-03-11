@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Média",
+      "fields": [
+        {
+          "label": "Typ",
+          "description": "Volitelná média zobrazená nad otázkou."
+        },
+        {
+          "label": "Zakázat zvětšení obrazu"
+        }
+      ]
+    },
+    {
+      "label": "Popis úlohy",
+      "description": "Popište, jak by měl uživatel úlohu vyřešit.",
+      "default": "Přetáhněte slova do správných polí"
+    },
+    {
+      "label": "Text",
+      "placeholder": "*Oslo* je hlavním městem Norska, *Stockholm* je hlavním městem Švédska a *Copenhagen* je hlavním městem Dánska. Všechna města se nacházejí na poloostrově *Skandinávie: Severní část Evropy* .",
+      "important": {
+        "description": "<ul><li>Přetahovatelná slova jsou přidána s hvězdičkou (*) před a za správným slovem/frází.</li><li>Můžete přidat textovou nápovědu pomocí dvojtečky (:) před nápovědou.</li><li>Pro každé prázdné místo je pouze jedno správné slovo.</li><li>Můžete přidat zpětnou vazbu, která se zobrazí po dokončení úlohy. Použijte '\\+' pro správnou a '\\-' pro nesprávnou zpětnou vazbu.</li></ul>",
+        "example": "Obsah H5P lze upravovat pomocí *prohlížeče:Jaký typ programu je Chrome?*. <br /> H5P obsah je *interaktivní\\+Správně! \\-Nesprávně, zkuste znovu!*"
+      }
+    },
+    {
+      "label": "Distraktory",
+      "placeholder": "*Reykjavík* *Helsinky*",
+      "description": "Zadejte další řešení, která jsou chybná jako distraktory. Použijte stejné schéma hvězdičky (*) jako pro text."
+    },
+    {
+      "label": "Celková zpětná vazba",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Výchozí"
+            }
+          ],
+          "label": "Definujte vlastní zpětnou vazbu pro jakýkoli rozsah skóre",
+          "description": "Klepnutím na tlačítko \"Přidat rozsah\" přidáte libovolný počet rozsahů. Příklad: 0-20% špatné skóre, 21-91% průměrné skóre, 91-100% výborné skóre!",
+          "entity": "rozsah",
+          "field": {
+            "fields": [
+              {
+                "label": "Rozsah skóre"
+              },
+              {},
+              {
+                "label": "Zpětná vazba pro definovaný rozsah skóre",
+                "placeholder": "Vyplňte zpětnou vazbu"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Popisek tlačítka \"Zkontrolovat\"",
+      "default": "Zkontrolovat"
+    },
+    {
+      "label": "Text pro tlačítko „Odeslat“",
+      "default": "Submit"
+    },
+    {
+      "label": "Popisek tlačítka \"Opakovat\"",
+      "default": "Opakovat"
+    },
+    {
+      "label": "Popisek tlačítka \"Zobrazit řešení\"",
+      "default": "Zobrazit řešení"
+    },
+    {
+      "label": "Popisek číslované zóna přetažení",
+      "default": "Zóna přetažení @index.",
+      "description": "Popisek používaný pro usnadnění přístupu, kde čtecí zařízení přečte index zóny přetažení. K dispozici je proměnná : @index"
+    },
+    {
+      "label": "Popisek Zóna přetažení je prázdná",
+      "default": "Zóna přetažení @index je prázdná.",
+      "description": "Popisek používaný pro usnadnění přístupu, kde čtecí zařízení přečte, že zóna přetažení je prázdná"
+    },
+    {
+      "label": "Popisek Obsah zóny přetažení",
+      "default": "Zóna přetažení @index obsahuje přetahovatelné @draggable.",
+      "description": "Štítek používaný pro usnadnění přístupu, kde čtecí zařízení přečte, že zóna přetažení obsahuje přetahovatelné prvky"
+    },
+    {
+      "label": "Popisek tahatelných prvků",
+      "default": "@index z @count přetahovatelných.",
+      "description": "Popisek používaný pro usnadnění přístupu, kde čtecí zařízení přečte, že se jedná o přetahovatelný prvek. Dostupná proměnná: @index, @count"
+    },
+    {
+      "label": "Popisek tlačítka pro zobrazení nápovědy",
+      "default": "Zobrazit nápovědu",
+      "description": "Štítek používaný pro usnadnění přístupu, kde čtecí zařízení přečte nápovědu"
+    },
+    {
+      "label": "Text čtecího zařízení pro správnou odpověď",
+      "default": "Správně!"
+    },
+    {
+      "label": "Text čtecího zařízení pro nesprávnou odpověď",
+      "default": "Nesprávně!"
+    },
+    {
+      "label": "Název dialogového okna s potvrzením, že uživatel chce resetovat přetažení",
+      "default": "Reset přetažení"
+    },
+    {
+      "label": "Popis dialogového okna s potvrzením, že uživatel chce resetovat přetažení",
+      "default": "Opravdu chcete resetovat tuto zónu přetažení?"
+    },
+    {
+      "label": "Popisek používaný pro usnadnění přístupu, kde čtecí zařízení indikuje zahájení přetažení",
+      "default": "Přetažení je zahájeno."
+    },
+    {
+      "label": "Popisek používaný pro usnadnění přístupu, kde čtecí zařízení indikuje, že přetažení je zrušeno",
+      "default": "Zrušené přetažení."
+    },
+    {
+      "label": "Popisek používaný pro usnadnění přístupu, kde řečený zařízení indikuje, že text je správná odpověď",
+      "default": "Správná odpověď:"
+    },
+    {
+      "label": "Záhlaví panelu obsahující zpětnou vazbu pro správné/nesprávné odpovědi",
+      "default": "Zpětná vazba"
+    },
+    {
+      "label": "Nastavení chování.",
+      "description": "Tyto možnosti vám umožní řídit, jak se úloha bude chovat.",
+      "fields": [
+        {
+          "label": "Povolit \"Opakovat\""
+        },
+        {
+          "label": "Povolit tlačítko \"Zobrazit řešení\""
+        },
+        {
+          "label": "Povolit tlačítko \"Zkontrolovat\""
+        },
+        {
+          "label": "Okamžitá zpětná vazba"
+        }
+      ]
+    },
+    {
+      "label": "Textové znázornění výsledkové lišty pro ty, kteří používají čtecí zařízení",
+      "default": "Získal jste :num z :total bodů"
+    },
+    {
+      "label": "Popisek podpůrné technologie pro tlačítko „Zkontrolovat“",
+      "default": "Zkontrolovat odpovědi. Odpovědi budou označeny jako správné, nesprávné nebo nezodpovězené."
+    },
+    {
+      "label": "Popisek podpůrné technologie pro tlačítko „Zobrazit řešení“",
+      "default": "Zobrazit řešení. Úkol bude zobrazen se správným řešením."
+    },
+    {
+      "label": "Popisek podpůrné technologie pro tlačítko „Opakovat“",
+      "default": "Zopakovat úkol. Resetovat všechny odpovědi a spustit úlohu znovu."
+    }
+  ]
+}

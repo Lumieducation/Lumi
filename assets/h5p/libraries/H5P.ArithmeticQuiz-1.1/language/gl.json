@@ -1,0 +1,135 @@
+{
+  "semantics": [
+    {
+      "label": "Introdución",
+      "description": "O texto de introdución (máximo 100 caracteres)"
+    },
+    {
+      "label": "Tipo de cuestionario",
+      "options": [
+        {
+          "label": "Cuestionario de Operacións Aritméticas"
+        },
+        {
+          "label": "Cuestinario de Operacións Lineais"
+        }
+      ]
+    },
+    {
+      "label": "Tipo Aritmético",
+      "options": [
+        {
+          "label": "Adición"
+        },
+        {
+          "label": "Resta"
+        },
+        {
+          "label": "Multiplicación"
+        },
+        {
+          "label": "División"
+        }
+      ]
+    },
+    {
+      "label": "Tipo de Ecuación",
+      "options": [
+        {
+          "label": "Básica [ 3x = 12 ]"
+        },
+        {
+          "label": "Intermedia [ 4x - 3 = 13 ]"
+        },
+        {
+          "label": "Advanzada [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Permitir fraccións",
+      "description": "Permitir fraccións nas ecuacións."
+    },
+    {
+      "label": "Número máximo de preguntas"
+    },
+    {
+      "label": "Traducións da interface de usuario",
+      "fields": [
+        {
+          "label": "Puntuación durante o cuestionario",
+          "default": "Puntuación:"
+        },
+        {
+          "label": "Tempo",
+          "default": "Tempo: @time"
+        },
+        {
+          "label": "Cabeceira da páxina de resultados",
+          "default": "Rematado!"
+        },
+        {
+          "label": "Etiqueta para empezar",
+          "default": "XA!"
+        },
+        {
+          "label": "Etiqueta para o botón de inicio",
+          "default": "Iniciar"
+        },
+        {
+          "label": "Etiqueta para o botón reintentar",
+          "default": "Reintentar"
+        },
+        {
+          "label": "Texto lido para respostas correctas",
+          "default": "Correcto"
+        },
+        {
+          "label": "Texto lido para respostas incorrectas",
+          "default": "Incorrecto. A resposta correcta era :num"
+        },
+        {
+          "label": "Texto lido para o temporizador",
+          "default": "Duración en horas, minutos e segundos."
+        },
+        {
+          "label": "Texto lido para as preguntas",
+          "default": "Canto é :arithmetic?"
+        },
+        {
+          "label": "Texto lido para preguntas con ecuación",
+          "default": "Para a ecuación :equation, canto vale :item?"
+        },
+        {
+          "label": "Texto lido para variables de ecuación",
+          "default": "Canto vale :item?"
+        },
+        {
+          "label": "Texto para signo +",
+          "default": "máis"
+        },
+        {
+          "label": "Texto para o operador de resta",
+          "default": "menos"
+        },
+        {
+          "label": "Texto para o operador de multiplicación",
+          "default": "por"
+        },
+        {
+          "label": "Texto para o operador de división",
+          "default": "dividido por"
+        },
+        {
+          "label": "Texto para o signo igual",
+          "default": "igual a"
+        },
+        {
+          "label": "Texto para número de diapositiva",
+          "description": "Anuncia a diapositiva actual e o número total de diapositivas, as variables son :num e :total",
+          "default": "Diapositiva :num de :total"
+        }
+      ]
+    }
+  ]
+}

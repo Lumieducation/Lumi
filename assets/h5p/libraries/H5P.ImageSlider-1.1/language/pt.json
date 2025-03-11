@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Imagens",
+      "field": {
+        "label": "Slides",
+        "fields": [
+          {
+            "label": "Slides"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Proporção",
+      "description": "Automático significa proporção fixa determinada automaticamente com base nas imagens",
+      "options": [
+        {
+          "label": "Automático"
+        },
+        {
+          "label": "Personalizado"
+        },
+        {
+          "label": "Variável"
+        }
+      ]
+    },
+    {
+      "label": "Configurações da proporção do ecrã",
+      "fields": [
+        {
+          "label": "Largura",
+          "description": "Se usar 4 aqui e 3 para a altura, a proporção será de 4:3"
+        },
+        {
+          "label": "Altura",
+          "description": "Se usar 3 aqui e 4 para a largura, a proporção será de 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Acessibilidade do controlo deslizante de imagem",
+      "fields": [
+        {
+          "label": "Etiqueta para os botões de próxima imagem",
+          "default": "Imagem seguinte",
+          "description": "É usado apenas para altifalantes de leitura. Não será mostrado."
+        },
+        {
+          "label": "Etiqueta para os botões de imagem anterior",
+          "default": "Imagem anterior",
+          "description": "É usado apenas para altifalantes de leitura. Não será mostrado."
+        },
+        {
+          "label": "Etiqueta para os botões de escolha de imagem",
+          "default": "Ir para a imagem %slide",
+          "description": "É usado apenas para altifalantes de leitura. Não será mostrado. %slide é uma variável e será substituída pelo número da imagem."
+        }
+      ]
+    }
+  ]
+}

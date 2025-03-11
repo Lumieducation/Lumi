@@ -1,0 +1,214 @@
+{
+  "semantics": [
+    {
+      "label": "Medija",
+      "fields": [
+        {
+          "label": "Tipas",
+          "description": "Pasirenkama medija, rodoma virš klausimo."
+        },
+        {
+          "label": "Išjungti paveikslėlio mastelio keitimą"
+        }
+      ]
+    },
+    {
+      "label": "Užduoties aprašymas",
+      "default": "Įrašykite praleistus žodžius",
+      "description": "Vadovas, nurodantis naudotojui, kaip atsakyti į šią užduotį."
+    },
+    {
+      "label": "Teksto blokai",
+      "entity": "teksto blokas",
+      "field": {
+        "label": "Tketo eilutė",
+        "placeholder": "Oslas yra *Norvegijos* sostinė.",
+        "important": {
+          "description": "<ul><li>Tuščios vietos pridedamos su žvaigždute (*) prieš ir už teisingo žodžio / frazės.</li><li>Alternatyvūs atsakymai atskiriami pasviruoju brūkšniu (/).</li><li>Galite pridėti tekstinį patarimą naudodami dvitaškį (:) prieš galiuką.</li></ul>",
+          "example": "H5P turinį galima redaguoti naudojant *naršyklė/žiniatinklio naršyklė: Kažkas, ką naudojate kiekvieną dieną*."
+        }
+      }
+    },
+    {
+      "label": "Bendras atsiliepimas",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Numatytasis"
+            }
+          ],
+          "label": "Nustatykite tinkintus atsiliepimus bet kokiam balų intervalui",
+          "description": "Spustelėkite mygtuką „Pridėti diapazoną“, kad pridėtumėte tiek diapazonų, kiek jums reikia. Pavyzdys: 0–20 % blogas balas, 21–91 % vidutinis balas, 91–100 % puikus rezultatas!",
+          "entity": "diapazonas",
+          "field": {
+            "fields": [
+              {
+                "label": "Balų intervalas"
+              },
+              {},
+              {
+                "label": "Atsiliepimai apibrėžtam balų diapazonui",
+                "placeholder": "Parašykite atsiliepimą"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Mygtuko „Rodyti sprendimą“ tekstas",
+      "default": "Rodyti sprendimą"
+    },
+    {
+      "label": "Tekstas mygtukui „Bandyti dar kartą“",
+      "default": "Bandyti dar kartą"
+    },
+    {
+      "label": "Tekstas mygtukui „Tikrinti“",
+      "default": "Tikrinti"
+    },
+    {
+      "label": "\"Pateikti\" mygtukos tekstas",
+      "default": "Pateikti"
+    },
+    {
+      "label": "Pranešimo \"Neužpildyta\" tekstas",
+      "default": "Norėdami pamatyti sprendimą, užpildykite visus tuščius laukus"
+    },
+    {
+      "label": "Tekstas pranešimui\"':ans' Teisingai\"",
+      "default": "':ans' yra teisinga"
+    },
+    {
+      "label": "Tekstas pranešimui \"':ans' Neteisingai\"",
+      "default": "':ans' yra klaidingas"
+    },
+    {
+      "label": "Tekstas pranešimui „Atsakyta teisingai“",
+      "default": "Atsakyta teisingai"
+    },
+    {
+      "label": "Tekstas pranešimui \"Atsakyta neteisingai\"",
+      "default": "Atsakyta neteisingai"
+    },
+    {
+      "label": "Pagalbinio patarimo sprendimui pavadinimas",
+      "default": "Teisingas atsakymas:"
+    },
+    {
+      "label": "Pagalbinio patarimo pavadinimo įvedimo laukas",
+      "description": "Naudokite @num ir @total kad pakeisti dabartinį ir bendrą blokavimų skaičių",
+      "default": "Tuščių įvesčių @num iš @total"
+    },
+    {
+      "label": "Patarimo pavadinimas, sakantis, kad įvestis turi priedą",
+      "default": "Patarimas galimas"
+    },
+    {
+      "label": "Patarimo paveikslo pavadinimas",
+      "default": "Patarimas"
+    },
+    {
+      "label": "Veikimo nustatymai.",
+      "description": "Šios parinktys leis jums valdyti, kaip veikia užduotis.",
+      "fields": [
+        {
+          "label": "Įgalinti \"Kartoti\""
+        },
+        {
+          "label": "Įjungti mygtuką \"Rodyti sprendimą\""
+        },
+        {
+          "label": "Įjungti mygtuką \"Įvesti\""
+        },
+        {
+          "label": "Automatiškai tikrinti atsakymus po įvedimo"
+        },
+        {
+          "label": "Svarbu dydžiosios ir mažosios raidės",
+          "description": "Įsitikina, kad vartotojo įvestis yra lygiai tokia pati kaip atsakymas."
+        },
+        {
+          "label": "Kad būtų galima peržiūrėti sprendimą, reikalaujama užpildyti visus laukus"
+        },
+        {
+          "label": "Įvesties laukus sudėkite į atskiras eilutes"
+        },
+        {
+          "label": "Rodyti dialogą ant \"Tikrinti\"",
+          "description": "Šios parinktys nesuderinamos su parinktimi „Automatiškai tikrinti atsakymus po įvesties“"
+        },
+        {
+          "label": "Rodyti patvirtinimo dialogą \"Bandyti dar kartą\""
+        },
+        {
+          "label": "Priimkite nedideles rašybos klaidas",
+          "description": "Jei suaktyvinta, atsakymas taip pat bus laikomas teisingu su nedidelėmis rašybos klaidomis (3–9 simboliai: 1 rašybos klaida, daugiau nei 9 simboliai: 2 rašybos klaidos)"
+        }
+      ]
+    },
+    {
+      "label": "Patikrinkite patvirtinimo dialogo langą",
+      "fields": [
+        {
+          "label": "Pavadinimo tekstas",
+          "default": "Baigti ?"
+        },
+        {
+          "label": "Pagrindinis tekstas",
+          "default": "Ar tikrai norite užbaigti ?"
+        },
+        {
+          "label": "Atšaukti mygtuko pavadinimas",
+          "default": "Atšaukti"
+        },
+        {
+          "label": "Patvirtinti mygtuko pvadinimas",
+          "default": "Baigti"
+        }
+      ]
+    },
+    {
+      "label": "Kartojimo patvirtinimo dialogas",
+      "fields": [
+        {
+          "label": "Pavadinimo tekstas",
+          "default": "Kartoti ?"
+        },
+        {
+          "label": "Pagrindinis tekstas",
+          "default": "Ar tikrai norite kartoti ?"
+        },
+        {
+          "label": "Atšaukti mygtuko pavadinimas",
+          "default": "Atšaukti"
+        },
+        {
+          "label": "Patvirtinti mygtuko pavadinimas",
+          "default": "Patvirtinti"
+        }
+      ]
+    },
+    {
+      "label": "Tekstinis taškų juostos vaizdavimas tiems, kurie naudoja skaitymo garsiakalbį",
+      "default": "Jūs surinkote :num iš :total balų"
+    },
+    {
+      "label": "Mygtuko „Patikrinti“ patarimo aprašymas",
+      "default": "Patikrinkite atsakymus. Atsakymai bus pažymėti kaip teisingi, neteisingi arba neatsakyti."
+    },
+    {
+      "label": "Mygtuko „Rodyti sprendimą“ pagalbinės technologijos aprašymas",
+      "default": "Parodykite sprendimą. Užduotis bus pažymėta teisingu jos sprendimu."
+    },
+    {
+      "label": "Patarimo aprašymas mygtukui „Bandyti dar kartą“",
+      "default": "Pabandykite atlikti užduotį dar kartą. Iš naujo nustatykite visus atsakymus ir pradėkite užduotį iš naujo."
+    },
+    {
+      "label": "Patarimo aprašymas pradedant užduotį",
+      "default": "Patikrinimo režimas"
+    }
+  ]
+}

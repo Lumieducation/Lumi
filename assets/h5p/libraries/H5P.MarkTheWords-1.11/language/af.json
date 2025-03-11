@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Optional media to display above the question."
+        },
+        {
+          "label": "Disable image zooming"
+        }
+      ]
+    },
+    {
+      "label": "Taak beskrywing",
+      "description": "Beskryf hoe die gebruiker die taak moet oplos.",
+      "placeholder": "Klik op al die werkwoorde in die teks wat volg."
+    },
+    {
+      "label": "Teksveld",
+      "placeholder": "Hierdie is 'n antwoord: *answer*.",
+      "important": {
+        "description": "<ul><li>Gemerkte woorde word bygevoeg met 'n sterretjie (*).</li><li>Asteriske kan bygevoeg word binne woorde deur nog 'n asterisk by te voeg, *correctword*** =&gt; correctword*.</li></ul>",
+        "example": "Regte woorde word soos dit geskryf: *correctword*, 'n asterisk word soos dit geskryf: *correctword***."
+      }
+    },
+    {
+      "label": "Algemene terugvoer",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Verstek"
+            }
+          ],
+          "label": "Bepaal verstekterugvoer vir enige reeks tellings",
+          "description": "Kliek op die \"Voeg reeks by\" knoppie om so veel as moontlik reekse by te voeg. Byvoorbeeld: 0-20% Swak Punt, 21-91% Gemiddelde Punt, 91-100% Uitstekende Punt!",
+          "entity": "reeks",
+          "field": {
+            "fields": [
+              {
+                "label": "Telling reeks"
+              },
+              {},
+              {
+                "label": "Terugvoer vir gedefinieerde telling reeks",
+                "placeholder": "Vul die terugvoer in"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Teks vir \"Toets\" knoppie",
+      "default": "Toets"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "Teks vir \"Probeer weer\" knoppie",
+      "default": "Probeer weer"
+    },
+    {
+      "label": "Teks vir \"Wys antwoord\" knoppie",
+      "default": "Wys antwoord"
+    },
+    {
+      "label": "Gedragsinstellings.",
+      "description": "Hierdie keuses laat jou beheer hoe die onderskeie take uitgevoer moet word.",
+      "fields": [
+        {
+          "label": "Aktiveer \"Probeer weer\""
+        },
+        {
+          "label": "Aktiveer \"Wys antwoord\" knoppie"
+        },
+        {
+          "label": "Aktiveer \"Toets\" knoppie"
+        },
+        {
+          "label": "Wys puntetelling",
+          "description": "Wys verdiende punte vir elke antwoord."
+        }
+      ]
+    },
+    {
+      "label": "Regte antwoordteks",
+      "default": "Reg!",
+      "description": "Teks gebruik om aan te dui dat die antwoord reg is"
+    },
+    {
+      "label": "Verkeerde antwoordteks",
+      "default": "Verkeerd!",
+      "description": "Teks wat gebruik word om aan te dui dat die antwoord verkeerd is"
+    },
+    {
+      "label": "Vermisde antwoordteks",
+      "default": "Antwoord nie gevind nie!",
+      "description": "Teks gebruik om aan te dui dat 'n antwoord ontbreek"
+    },
+    {
+      "label": "Beskrywing vir Wys Antwoord",
+      "default": "Taak opdateer om die antwoord te bevat.",
+      "description": "Hierdie teks vertel die gebruiker dat die take opdateer is met die antwoord."
+    },
+    {
+      "label": "Tekstuele tentoonstelling van die telkaart vir diegene wat 'n spreekleser gebruik",
+      "default": "Jy het :num uit :total punte gekry"
+    },
+    {
+      "label": "Etiket vir die volledig leesbare teks vir hulptegnologieë",
+      "default": "Volle leesbare teks"
+    },
+    {
+      "label": "Etiket vir die teks waar die woorde gemerk kan word vir hulptegnologieë",
+      "default": "Volteks waar woorde gemerk kan word"
+    },
+    {
+      "label": "Antwoordmodus opskrif vir hulptegnologieë",
+      "default": "Antwoordmodus"
+    },
+    {
+      "label": "Toetsmodusopskrif vir hulptegnologieë",
+      "default": "Toetsmodus"
+    },
+    {
+      "label": "Hulptegnologie-beskrywing vir die \"Toets\" -knoppie",
+      "default": "Toets die antwoorde. Die antwoorde sal as reg gemerk, verkeerd of onbeantwoord gemerk word."
+    },
+    {
+      "label": "Hulptegnologie beskrywing vir \"Wys Oplossing\" knoppie",
+      "default": "Wys die antwoord. Hierdie taak sal gemerk word met die regte antwoord."
+    },
+    {
+      "label": "Hulptegnologieë beskrywing vir \"Probeer weer\" knoppie",
+      "default": "Probeer die taak weer. Herstel alle antwoorde en begin die taak van nuuts af."
+    }
+  ]
+}

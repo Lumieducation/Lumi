@@ -1,0 +1,512 @@
+{
+  "semantics": [
+    {
+      "label": "Introductory text",
+      "description": "This text can optionally be presented along with your code."
+    },
+    {
+      "label": "Namen kode",
+      "description": "Izbira namena za katerega bo koda uporabljena.",
+      "options": [
+        {
+          "label": "Stik"
+        },
+        {
+          "label": "Dogodek"
+        },
+        {
+          "label": "E-naslov"
+        },
+        {
+          "label": "Vsebina H5P"
+        },
+        {
+          "label": "Lokacija"
+        },
+        {
+          "label": "Telefonska številka"
+        },
+        {
+          "label": "SMS sporočilo"
+        },
+        {
+          "label": "Besedilo"
+        },
+        {
+          "label": "Spletna povezava"
+        }
+      ]
+    },
+    {
+      "label": "Stik",
+      "fields": [
+        {
+          "label": "Ime in priimek",
+          "placeholder": "Martin Krpan"
+        },
+        {
+          "label": "Naziv organizacije",
+          "placeholder": "Pripovedke d. o. o."
+        },
+        {
+          "label": "Naziv",
+          "placeholder": "Gospod"
+        },
+        {
+          "label": "Telefonska številka",
+          "description": "Telefonska številka za klic (prosimo, uporabite format +386 12 345678).",
+          "placeholder": "+386 12 345678"
+        },
+        {
+          "label": "E-naslov",
+          "description": "E-naslov prejemnika sporočila.",
+          "placeholder": "martin@krpan.org"
+        },
+        {
+          "label": "Naslov",
+          "fields": [
+            {
+              "label": "Razširjen naslov",
+              "description": "Razširjene informacije o prejemniku (npr. za osebo, 1. nadstropje).",
+              "placeholder": "Za uredništvo"
+            },
+            {
+              "label": "Ulica",
+              "description": "Ulica s hišno številko (poštni predal ipd.).",
+              "placeholder": "Dunajska ulica 1"
+            },
+            {
+              "label": "Kraj",
+              "description": "Kraj",
+              "placeholder": "Ljubljana"
+            },
+            {
+              "label": "Regija",
+              "description": "Regija, zvezna država, okrožje itd.",
+              "placeholder": "SI"
+            },
+            {
+              "label": "Poštna številka",
+              "description": "Poštna številka",
+              "placeholder": "1000"
+            },
+            {
+              "label": "Država",
+              "description": "Država",
+              "placeholder": "Slovenija"
+            }
+          ]
+        },
+        {
+          "label": "Spletna stran",
+          "description": "Povezava spletne strani se mora začeti s https:// oz. http://",
+          "placeholder": "https://namisljeni-martin-krpan.org"
+        },
+        {
+          "label": "Opomba",
+          "description": "Besedilo za opombo.",
+          "placeholder": "Zahvala Franu Levstiku za odlično delo."
+        }
+      ]
+    },
+    {
+      "label": "Dogodek",
+      "fields": [
+        {
+          "label": "Naslov",
+          "description": "Naslov dogodka za prikaz v koledarju.",
+          "placeholder": "Konferenca H5P 2021"
+        },
+        {
+          "label": "Celodnevni dogodek",
+          "description": "Označitev, če gre za celodnevni dogodek."
+        },
+        {
+          "label": "Datum začetka",
+          "description": "Datum začetka dogodka (prosimo, uporabite format llll/mm/dd).",
+          "placeholder": "2022/05/18"
+        },
+        {
+          "label": "Ura začetka",
+          "description": "Ura začetka dogodka (prosimo, uporabite format uu:mm).",
+          "placeholder": "09:00"
+        },
+        {
+          "label": "Datum zaključka",
+          "description": "Datum zaključka dogodka (prosimo, uporabite format llll/mm/dd).",
+          "placeholder": "2022/05/20"
+        },
+        {
+          "label": "Ura zaključka",
+          "description": "Ura zaključka dogodka (prosimo, uporabite format uu:mm).",
+          "placeholder": "16:00"
+        },
+        {
+          "label": "Časovni pas",
+          "description": "Izbira časovnega pasa, v katerem se bo dogodek odvijal.",
+          "options": [
+            {
+              "label": "UTC-12:00"
+            },
+            {
+              "label": "UTC-11:00"
+            },
+            {
+              "label": "UTC-10:00"
+            },
+            {
+              "label": "UTC-9:30"
+            },
+            {
+              "label": "UTC-9:00"
+            },
+            {
+              "label": "UTC-8:00"
+            },
+            {
+              "label": "UTC-7:00"
+            },
+            {
+              "label": "UTC-6:00"
+            },
+            {
+              "label": "UTC-5:00"
+            },
+            {
+              "label": "UTC-4:00"
+            },
+            {
+              "label": "UTC-3:30"
+            },
+            {
+              "label": "UTC-3:00"
+            },
+            {
+              "label": "UTC-2:00"
+            },
+            {
+              "label": "UTC-1:00"
+            },
+            {
+              "label": "UTC"
+            },
+            {
+              "label": "UTC+1:00"
+            },
+            {
+              "label": "UTC+2:00"
+            },
+            {
+              "label": "UTC+3:00"
+            },
+            {
+              "label": "UTC+3:30"
+            },
+            {
+              "label": "UTC+4:00"
+            },
+            {
+              "label": "UTC+4:30"
+            },
+            {
+              "label": "UTC+5:00"
+            },
+            {
+              "label": "UTC+5:30"
+            },
+            {
+              "label": "UTC+5:45"
+            },
+            {
+              "label": "UTC+6:00"
+            },
+            {
+              "label": "UTC+6:30"
+            },
+            {
+              "label": "UTC+7:00"
+            },
+            {
+              "label": "UTC+8:00"
+            },
+            {
+              "label": "UTC+9:00"
+            },
+            {
+              "label": "UTC+9:30"
+            },
+            {
+              "label": "UTC+10:00"
+            },
+            {
+              "label": "UTC+10:30"
+            },
+            {
+              "label": "UTC+11:00"
+            },
+            {
+              "label": "UTC+12:00"
+            },
+            {
+              "label": "UTC+12:45"
+            },
+            {
+              "label": "UTC+13:00"
+            },
+            {
+              "label": "UTC+14:00"
+            }
+          ]
+        },
+        {
+          "label": "Poletni čas",
+          "description": "Označitev, če dogodek poteka na lokaciji s poletnim časom."
+        },
+        {
+          "label": "Lokacija",
+          "description": "Opis lokacije",
+          "placeholder": "Maribor, Slovenija"
+        },
+        {
+          "label": "Opis",
+          "description": "Opis dogodka",
+          "placeholder": "3. mednarodna konferenca H5P"
+        }
+      ]
+    },
+    {
+      "label": "E-naslov",
+      "fields": [
+        {
+          "label": "E-naslov",
+          "description": "E-naslov prejemnika sporočila.",
+          "placeholder": "namisljeni@naslov.si"
+        }
+      ]
+    },
+    {
+      "label": "Vsebina H5P",
+      "fields": [
+        {
+          "label": "Vsebina H5P",
+          "description": "Vsebina H5P za prikaz"
+        }
+      ]
+    },
+    {
+      "label": "Lokacija",
+      "fields": [
+        {
+          "label": "Zemljepisna širina",
+          "description": "Koordinate zemljepisne širine (prosimo, uporabite format 46.55915).",
+          "placeholder": "46.55915"
+        },
+        {
+          "label": "Zemljepisna dolžina",
+          "description": "Koordinate zemljepisne dolžine (prosimo, uporabite format 15.64335).",
+          "placeholder": "15.64335"
+        }
+      ]
+    },
+    {
+      "label": "Telefonska številka",
+      "fields": [
+        {
+          "label": "Telefonska številka",
+          "description": "Telefonska številka za klic (prosimo, uporabite format +386 12 345678).",
+          "placeholder": "+386 12 345678"
+        }
+      ]
+    },
+    {
+      "label": "SMS sporočilo",
+      "fields": [
+        {
+          "label": "Telefonska številka",
+          "description": "Telefonska številka prejemnika sporočila (prosimo, uporabite format +386 12 345678).",
+          "placeholder": "+386 12 345678"
+        },
+        {
+          "label": "Sporočilo",
+          "description": "Vsebina sporočila za pošiljanje.",
+          "placeholder": "Posredujem sporočilo s svojim kontaktom."
+        }
+      ]
+    },
+    {
+      "label": "Besedilo",
+      "fields": [
+        {
+          "label": "Besedilo",
+          "description": "Besedilo za prikaz v kodi.",
+          "placeholder": "Prosimo, poskrbite za:\n* nasmeh\n* širjenje dobre volje"
+        }
+      ]
+    },
+    {
+      "label": "Spletna povezava",
+      "fields": [
+        {
+          "label": "Spletna povezava (URL)",
+          "description": "Povezava spletne strani se mora začeti s https:// oz. http://",
+          "placeholder": "https://namisljena-stran.si"
+        }
+      ]
+    },
+    {
+      "label": "Nastavitve interakcije",
+      "description": "Nastavitve omogočajo nadzor nad interakcijo aktivnosti za udeležence.",
+      "fields": [
+        {
+          "label": "Barva QR kode",
+          "default": "#000000"
+        },
+        {
+          "label": "Barva ozadja",
+          "default": "#ffffff"
+        },
+        {
+          "label": "Največja velikost",
+          "description": "Največja dovoljena velikost kode v zapisu CSS (privzeto v slikovnih točkah, če je podana samo številka)."
+        },
+        {
+          "label": "Vodoravna poravnava",
+          "description": "Zahtevano v primeru nastavitve največje velikosti kode.",
+          "options": [
+            {
+              "label": "poravnaj levo"
+            },
+            {
+              "label": "sredinsko"
+            },
+            {
+              "label": "poravnaj desno"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Uporabniški vmesnik",
+      "fields": [
+        {
+          "label": "Naslov",
+          "default": "Naslov"
+        },
+        {
+          "label": "Stik",
+          "default": "Stik"
+        },
+        {
+          "label": "Država",
+          "default": "Država"
+        },
+        {
+          "label": "Datum zaključka",
+          "default": "Datum zaključka"
+        },
+        {
+          "label": "Datum začetka",
+          "default": "Datum začetka"
+        },
+        {
+          "label": "Opis",
+          "default": "Opis"
+        },
+        {
+          "label": "E-naslov",
+          "default": "E-naslov"
+        },
+        {
+          "label": "Dogodek",
+          "default": "Dogodek"
+        },
+        {
+          "label": "Razširjen naslov",
+          "default": "Razširjen naslov"
+        },
+        {
+          "label": "Zemljepisna širina",
+          "default": "Zemljepisna širina"
+        },
+        {
+          "label": "Kraj",
+          "default": "Kraj"
+        },
+        {
+          "label": "Lokacija",
+          "default": "Lokacija"
+        },
+        {
+          "label": "Zemljepisna dolžina",
+          "default": "Zemljepisna dolžina"
+        },
+        {
+          "label": "Sporočilo",
+          "default": "Sporočilo"
+        },
+        {
+          "label": "Ime in priimek",
+          "default": "Ime in priimek"
+        },
+        {
+          "label": "Opomba",
+          "default": "Opomba"
+        },
+        {
+          "label": "Naziv organizacije",
+          "default": "Naziv organizacije"
+        },
+        {
+          "label": "Telefonska številka",
+          "default": "Telefonska številka"
+        },
+        {
+          "label": "Regija",
+          "default": "Regija"
+        },
+        {
+          "label": "SMS",
+          "default": "SMS"
+        },
+        {
+          "label": "Ulica",
+          "default": "Ulica"
+        },
+        {
+          "label": "Besedilo",
+          "default": "Besedilo"
+        },
+        {
+          "label": "Naziv",
+          "default": "Naziv"
+        },
+        {
+          "label": "Spletna povezava URL",
+          "default": "Spletna povezava"
+        },
+        {
+          "label": "Poštna številka",
+          "default": "Poštna številka"
+        }
+      ]
+    },
+    {
+      "label": "Bralnik zaslona",
+      "fields": [
+        {
+          "label": "Koda QR. Prikaži informacije (besedilo za bralnik zaslona)",
+          "default": "Koda QR. Prikaži informacije."
+        },
+        {
+          "label": "Skrij informacije (besedilo za bralnik zaslona)",
+          "default": "Skrij informacije."
+        },
+        {
+          "label": "Code contents (Text for Readspeakers)",
+          "default": ". Code contents"
+        }
+      ]
+    }
+  ]
+}

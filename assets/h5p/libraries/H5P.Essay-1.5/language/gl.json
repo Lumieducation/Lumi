@@ -1,0 +1,299 @@
+{
+  "semantics": [
+    {
+      "label": "Medios",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Medios opcionais amosados enriba das preguntas."
+        },
+        {
+          "label": "Desactivar o zoom da imaxe"
+        }
+      ]
+    },
+    {
+      "label": "Descrición da tarefa",
+      "description": "Describe aquí a túa tarefa. A descrición aparecerá enriba da área de entrada de texto.",
+      "placeholder": "Resume o libro en 500 caracteres ..."
+    },
+    {
+      "label": "Texto de axuda",
+      "description": "Este texto debería axudar a que o usuario soupese como comezar a tarefa.",
+      "placeholder": "Este libro trata de ..."
+    },
+    {
+      "label": "Exemplo de solución",
+      "description": "Podes engadir un exemplo de solución opcional que se amosará despois de que o alumno cree un texto. Chámase exemplo de solución porque probablemente non sexa a única solución posible.",
+      "fields": [
+        {
+          "label": "Introdución",
+          "description": "Podes proporcionar explicacións opcionais sobre o teu exemplo. As explicacións só se amosarán se ti tamén engades un exemplo.",
+          "placeholder": "Por favor, lembra que non tes porqué dar exactamente esta mesma solución. Só é un bo exemplo."
+        },
+        {
+          "label": "Texto do exemplo de solución",
+          "description": "O alumno verá un botón \"Amosar solución\" despois de enviar o seu traballo se escribes un texto aquí."
+        }
+      ]
+    },
+    {
+      "label": "Palabras chave",
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
+      "entity": "Palabra chave",
+      "field": {
+        "label": "Palabra chave",
+        "fields": [
+          {
+            "label": "Palabra chave",
+            "description": "Palabra ou frase chave que buscar. Podes usar un asterísco como comodín para un ou máis caracteres. Usa unha barra '/' ao principio e ao final para usar unha expresión regular."
+          },
+          {
+            "label": "Variacións",
+            "description": "Engade variacións opcionais para esta palabra chave. Exemplo: Para unha 'cidade', engade as alternativas 'pobo', 'municipalidade' etc. O usuario conseguirá puntos se inclúe calquera das alternativas especificadas.",
+            "entity": "variación",
+            "field": {
+              "label": "Variación da palabra chave"
+            }
+          },
+          {
+            "label": "Puntos, Opcións e Retroalimentación",
+            "fields": [
+              {
+                "label": "Puntos",
+                "description": "Puntos que o usuario recibirá se inclúe na resposta esta palabra chave ou as súas alternativas."
+              },
+              {
+                "label": "Coincidencias",
+                "description": "Define cantas coincidencias da palabra chave ou as súas variacións deberían recibir puntos."
+              },
+              {
+                "label": "Distinguir entre maiúsculas e minúsculas",
+                "description": "Fau que a entrada do usuario teña que ser exactamente igual que a resposta."
+              },
+              {
+                "label": "Perdoar erros menores",
+                "description": "Aceptar erros ortográficos menores (3-9 caracteres: 1 erro, máis de 9 caracteres: 2 erros)."
+              },
+              {
+                "label": "Retroalimentación para palabra chave incluída",
+                "description": "Esta retroalimentación amosarase se o usuario inclúe na súa resposta esta palabra chave ou as súas alternativas."
+              },
+              {
+                "label": "Retroalimentación para palabra chave ausente",
+                "description": "Esta retroalimentación amosarase se o usuario non inclúe na súa resposta esta palabra chave ou as súas alternativas."
+              },
+              {
+                "label": "Palabra de retroalimentación amosada se se inclúe unha palabra chave",
+                "description": "Esta opción permite especificar que palabra debería amosarse diante da túa retroalimentación se se atopa unha palabra chave no texto.",
+                "options": [
+                  {
+                    "label": "palabra chave"
+                  },
+                  {
+                    "label": "alternativa atopada"
+                  },
+                  {
+                    "label": "resposta dada"
+                  },
+                  {
+                    "label": "ninguha"
+                  }
+                ]
+              },
+              {
+                "label": "Palabra de retroalimentación en caso de ausencia de palabra chave",
+                "description": "Esta opción permite especificar que palabra debería amosarse diante da túa retroalimentación se non se atopa unha plabra chave no texto.",
+                "options": [
+                  {
+                    "label": "palabra chave"
+                  },
+                  {
+                    "label": "ningunha"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Retroalimentación Xeral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Por defecto"
+            }
+          ],
+          "label": "Definir retroalimentación personalizada para calquera rango de puntuación",
+          "description": "Preme o botón \"Engadir rango\" para engadir todos os rangos que precises. Exemplo: 0-20% Puntuación mala, 21-91% Puntuación media, 91-100% Puntuación xenial!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango de puntuación"
+              },
+              {},
+              {
+                "label": "Retroalimentación para rango de puntuación definido",
+                "placeholder": "Escribe a retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Configuración do comportamento",
+      "description": "Estas opcións permitiranche controlar o comportamento da tarefa.",
+      "fields": [
+        {
+          "label": "Número mínimo de caracteres",
+          "description": "Especifica o número mínimo de caracteres que debe escribir o usuario."
+        },
+        {
+          "label": "Número máximo de caracteres",
+          "description": "Especifica o número máximo de caracteres que pode escribir o usuario."
+        },
+        {
+          "label": "Tamaño do campo de entrada",
+          "description": "O número de liñas que ocupará o campo de entrada",
+          "options": [
+            {
+              "label": "1 liña"
+            },
+            {
+              "label": "3 liñas"
+            },
+            {
+              "label": "10 liñas"
+            }
+          ]
+        },
+        {
+          "label": "Activar \"Reintentar\"",
+          "description": "Os usuarios poderán tentar de novo a tarefa se se activa."
+        },
+        {
+          "label": "Ignorar puntuación",
+          "description": "Se se activa, os usuarios verán a retroalimentación proporcionada para as palabras chave pero non a puntuación."
+        },
+        {
+          "label": "Puntos no entorno anfitrión",
+          "description": "Usada para dar puntos no entorno anfitrión simplemente por contestar (non amosados ao usuario)."
+        },
+        {
+          "label": "Porcentaxe para aprobar",
+          "description": "Porcentaxe necesaria para aprobar"
+        },
+        {
+          "label": "Porcentaxe de mestría",
+          "description": "Porcentaxe requirido para a mestría. Unha porcentaxe de mestría por debaixo do 100 % fará que baixe a puntuación máxima proporcionalmente. O seu propósito é dar aos alumnos certa marxe de manobra, non \"aceptar xenerosamente\" as solucióons que non conteñan todas as plabras chave."
+        },
+        {
+          "label": "Anular distinción entre maiúsculas e minúsculas",
+          "description": "Esta opción determina se se activará a opción \"Distinguir entre maiúsculas e minúsculas\" para todas as palabras chave.",
+          "options": [
+            {
+              "label": "Activada"
+            },
+            {
+              "label": "Desactivada"
+            }
+          ]
+        },
+        {
+          "label": "Anular perdoar erros",
+          "description": "Esta opción determina se se activará a opción \"Perdoar erros\" para todas as palabras chave.",
+          "options": [
+            {
+              "label": "Activada"
+            },
+            {
+              "label": "Desactivada"
+            }
+          ]
+        },
+        {
+          "label": "Substitución de saltos de liña",
+          "description": "Por defecto, os saltos de liña substituiranse por un espazo. Se quere comprobar se hai saltos de liña, p. ex. nas expresións regulares, pode establecer unha substitución diferente.",
+          "options": [
+            {
+              "label": "espazo"
+            },
+            {
+              "label": "salto de liña (\\n)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Texto para o botón \"Comprobar\"",
+      "default": "Comprobar"
+    },
+    {
+      "label": "Texto para o botón \"Enviar\"",
+      "default": "Submit"
+    },
+    {
+      "label": "Texto para o botón \"Reintentar\"",
+      "default": "Reintentar"
+    },
+    {
+      "label": "Texto para o botón \"Amosar solución\"",
+      "default": "Amosar solución"
+    },
+    {
+      "label": "Cabeceira para o panel que contén a retroalimentación para palabras chave incluídas ou ausentes",
+      "default": "Retroalimentación"
+    },
+    {
+      "label": "Etiqueta para a solución",
+      "default": "Exemplo de solución"
+    },
+    {
+      "label": "Caracteres restantes",
+      "default": "Caracteres restantes: @chars",
+      "description": "Mensaxe para caracteres restantes. Podes usar @chars que se substituirá polo número correspondente."
+    },
+    {
+      "label": "Caracteres insufucientes",
+      "default": "Debes escribir polo menos @chars caracteres!",
+      "description": "Mensaxe para indicar que o texto non contén caracteres abondos. Podes usar @chars que se substituirá polo número correspondente."
+    },
+    {
+      "label": "Mensaxe de gardado",
+      "description": "Mensaxe indicando que o texto foi gardado",
+      "default": "gardado"
+    },
+    {
+      "label": "O teu resultado (non amosado)",
+      "description": "Texto de accesibilidade usado para os lectores de pantalla. @score substituirase polo número de puntos e @total polo número máximo de puntos posibles.",
+      "default": "Conseguiches @score puntos de @total"
+    },
+    {
+      "label": "Mensaxe de navegación (non amosado)",
+      "description": "Texto de accesibilidade usado para os lectores de pantalla",
+      "default": "Navegaches ao exemplo de solución recentemente incluído despois da área de texto."
+    },
+    {
+      "label": "Descrición para as tecnoloxías de asistencia do botón \"Comprobar\"",
+      "default": "Comproba as respostas."
+    },
+    {
+      "label": "Descrición para as tecnoloxías de asistencia do botón \"Amosar Solución\"",
+      "default": "Amosar a solución. Proporcionarase un exemplo de solución."
+    },
+    {
+      "label": "Descrición para as tecnoloxías de asistencia do botón \"Reintentar\"",
+      "default": "Reintenta a tarefa. Podes mellorar a resposta anterior se o autor o permite."
+    }
+  ]
+}

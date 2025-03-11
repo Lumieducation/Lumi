@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Zereginaren deskribapena",
+      "description": "Zehaztu hemen aurreko/ondoko irudiaren gainean erakutsi nahi dituzun goiburua/argibideak.",
+      "placeholder": "Hemen aukerazko goiburu edo argibideak gehitu ditzakezu."
+    },
+    {
+      "label": "Lehen irudia",
+      "fields": [
+        {
+          "label": "Lehen irudia",
+          "description": "Lehen irudia. Ziurtatu ezazu mesedez bigarren irudiaren tamaina bera duela."
+        },
+        {
+          "label": "Lehen irudiarentzako etiketa",
+          "description": "Lehen irudiaren gainean jartzeko etiketa"
+        }
+      ]
+    },
+    {
+      "label": "Bigarren irudia",
+      "fields": [
+        {
+          "label": "Bigarren irudia",
+          "description": "Bigarren irudia. Ziurtatu ezazu mesedez lehen irudiaren tamaina bera duela."
+        },
+        {
+          "label": "Bigarren irudiarentzako etiketa",
+          "description": "Bigarren irudiaren gainean jartzeko etiketa"
+        }
+      ]
+    },
+    {
+      "label": "Portaeraren ezarpenak",
+      "description": "Aukera hauek hainbat xehetasun zehaztea ahalbidetzen dute",
+      "fields": [
+        {
+          "label": "Karruselaren hasiera ehunekotan",
+          "description": "Karruselaren hasierako kokapena zehazten du"
+        },
+        {
+          "label": "Karruselaren orientazioa",
+          "description": "Horizontala ezker-eskuin mugituko da, eta bertikala gora eta behera.",
+          "options": [
+            {
+              "label": "Horizontala"
+            },
+            {
+              "label": "Bertikala"
+            }
+          ]
+        },
+        {
+          "label": "Karruselaren kolorea",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Irisgarritasun testuak",
+      "fields": [
+        {
+          "label": "Irudia ikusgai dagoen mezua",
+          "default": "Irudia ikusgai % @percentage -an",
+          "description": "@percentage behin behineko bat da eta dagokion balioarekin ordezkatuko da."
+        },
+        {
+          "label": "Manikia"
+        }
+      ]
+    }
+  ]
+}
