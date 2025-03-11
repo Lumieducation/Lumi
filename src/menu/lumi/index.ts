@@ -1,3 +1,4 @@
+import { app, dialog } from 'electron';
 import { autoUpdater } from 'electron-updater';
 
 import { Context } from '../../boot';
@@ -10,7 +11,19 @@ export default function lumi_menu(ctx: Context) {
       label: 'Lumi',
       submenu: [
         {
-          label: ctx.translate(`About Lumi`)
+          label: ctx.translate(`About Lumi`),
+          click: async () => {
+            dialog.showMessageBox({
+              title: ctx.translate(`About Lumi`),
+              message: ctx.translate(
+                `Lumi v{{version}} \n (C) 2025 Lumi Education UG (hb) \n Written by \n Jan Philip Schellenberg \n  Sebastian Rettig \n AGPL 3.0 License`,
+                {
+                  version: app.getVersion()
+                }
+              ),
+              buttons: [ctx.translate(`OK`)]
+            });
+          }
         },
         {
           label: ctx.translate(`Check for updates`),
