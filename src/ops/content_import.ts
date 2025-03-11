@@ -12,8 +12,6 @@ export default async function content_import(
   ctx: Context,
   file_paths: string[]
 ): Promise<Result[]> {
-  ctx.log.debug(`ops:content_import`, { file_paths });
-
   const result: Result[] = [];
   // eslint-disable-next-line no-restricted-syntax
   for (const file_path of file_paths) {
