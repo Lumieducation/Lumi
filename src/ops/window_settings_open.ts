@@ -1,6 +1,7 @@
 import { BrowserWindow } from 'electron';
 
 import { Context } from '../boot';
+import { show_settings_menu } from '../menu';
 
 export default async function window_settings_open(
   ctx: Context
@@ -18,6 +19,10 @@ export default async function window_settings_open(
   if (ctx.is_development) {
     win.webContents.openDevTools();
   }
+
+  win.on('focus', () => {
+    show_settings_menu(ctx);
+  });
 
   ctx.log.info(`Opened settings window`);
 

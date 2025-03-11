@@ -1,7 +1,7 @@
 import i18next from 'i18next';
 
-import setup_menu from '../menu';
 import { Context } from '../boot';
+import { show_settings_menu } from '../menu';
 
 export default async function language_change(
   ctx: Context,
@@ -11,5 +11,5 @@ export default async function language_change(
   await i18next.loadLanguages(language_code);
   await i18next.changeLanguage(language_code);
 
-  setup_menu(ctx);
+  show_settings_menu(ctx);
 }
