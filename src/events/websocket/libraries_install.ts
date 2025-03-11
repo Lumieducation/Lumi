@@ -22,5 +22,6 @@ export default function libraries_install(
     await libraries_copy(context);
 
     app.relaunch();
+    app.quit();
   });
 }
