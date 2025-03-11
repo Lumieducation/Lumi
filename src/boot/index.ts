@@ -34,6 +34,7 @@ export interface Context {
   paths: {
     settings: string;
     content: string;
+    libraries: string;
     app: string;
     tmp: string;
   };
@@ -61,7 +62,7 @@ export default async function boot(): Promise<Context> {
     const paths = {
       settings: path.join(app.getPath('userData'), 'settings.json'),
       content: path.join(app.getPath('userData'), 'content'),
-      library: path.join(app.getPath('userData'), 'libraries'),
+      libraries: path.join(app.getPath('userData'), 'libraries'),
       app: `${__dirname}/../../../`,
       tmp: path.join(app.getPath('userData'), 'tmp')
     };
@@ -92,7 +93,7 @@ export default async function boot(): Promise<Context> {
 
     const h5pEditor = await boot_h5p_editor(
       config,
-      paths.library,
+      paths.libraries,
       paths.content,
       paths.tmp,
       translate

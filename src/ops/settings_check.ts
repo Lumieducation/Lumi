@@ -13,6 +13,9 @@ export default async function settings_check(ctx: Context): Promise<void> {
     language: app.getLocale(),
     prerelease_features: true,
     updates_automatic: true,
+
+    show_setup: true,
+
     theme_mode: 'light',
     theme_direction: 'ltr',
     theme_contrast: 'default',

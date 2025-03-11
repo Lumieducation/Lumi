@@ -3,6 +3,8 @@ export default interface Settings {
   prerelease_features: boolean;
   updates_automatic: boolean;
 
+  show_setup: boolean;
+
   theme_mode: string;
   theme_direction: string;
   theme_contrast: string;
