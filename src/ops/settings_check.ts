@@ -12,7 +12,13 @@ export default async function settings_check(ctx: Context): Promise<void> {
   const default_settings: Settings = {
     language: app.getLocale(),
     prerelease_features: true,
-    updates_automatic: true
+    updates_automatic: true,
+    theme_mode: 'light',
+    theme_direction: 'ltr',
+    theme_contrast: 'default',
+    theme_layout: 'vertical',
+    theme_color_presets: 'default',
+    theme_stretch: false
   };
 
   const settings = {
