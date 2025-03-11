@@ -23,10 +23,13 @@ export default async (
 ): Promise<express.Express> => {
   const app = express();
 
-  app.use((req: any, res: any, next) => {
+  app.use(async (req: any, res: any, next) => {
     req.ctx = ctx;
     req.log = log;
 
+    const languageCode = ctx.language_code;
+    req.language = languageCode;
+    req.languages = [languageCode, 'en'];
     req.user = new User();
 
     next();

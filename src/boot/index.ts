@@ -27,6 +27,7 @@ export interface Context {
   port: number;
   is_test: boolean;
   translate: TFunction;
+  language_code: string;
   open_files: string[];
   show_no_update_message: boolean;
   paths: {
@@ -64,24 +65,16 @@ export default async function boot(): Promise<Context> {
       tmp: path.join(app.getPath('userData'), 'tmp')
     };
 
-    const h5pEditor = await boot_h5p_editor(
-      config,
-      paths.library,
-      paths.content,
-      paths.tmp
-    );
-
-    const h5pPlayer = await boot_h5p_player(config, h5pEditor);
-
     const context = {
-      h5pEditor,
-      h5pPlayer,
+      h5pEditor: null,
+      h5pPlayer: null,
       log,
       is_development,
       show_no_update_message: false,
       open_files,
       port: 0,
       ws: null,
+      language_code: null,
       translate: null,
       is_test,
       paths,
@@ -92,7 +85,21 @@ export default async function boot(): Promise<Context> {
     };
 
     const language_code = await language_get(context);
+    context.language_code = language_code;
     const translate = await boot_i18n(language_code, is_development);
+
+    const h5pEditor = await boot_h5p_editor(
+      config,
+      paths.library,
+      paths.content,
+      paths.tmp,
+      translate
+    );
+
+    const h5pPlayer = await boot_h5p_player(config, h5pEditor);
+
+    context.h5pEditor = h5pEditor;
+    context.h5pPlayer = h5pPlayer;
 
     const expressApp = await boot_express_app(context, context.log);
     const server = http.createServer(expressApp);

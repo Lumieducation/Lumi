@@ -41,9 +41,20 @@ export default async function initI18n(
     lng: language_code || 'en',
     fallbackLng: 'en',
     load: 'all',
+    ns: [
+      'client',
+      'copyright-semantics',
+      'hub',
+      'library-metadata',
+      'lumi',
+      'metadata-semantics',
+      'server',
+      'storage-file-implementations'
+    ],
     debug: is_development,
+    defaultNS: 'lumi',
     backend: {
-      loadPath: `${__dirname}/../../../assets/translations/{{lng}}.json`
+      loadPath: `${__dirname}/../../../assets/translations/{{ns}}/{{lng}}.json`
     }
   });
 
