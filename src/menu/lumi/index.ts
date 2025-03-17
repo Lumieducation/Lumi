@@ -46,6 +46,14 @@ export default function lumi_menu(ctx: Context) {
           click: () => {
             window_settings_open(ctx);
           }
+        },
+        { type: 'separator' },
+        {
+          label: ctx.translate(`Quit`),
+          accelerator: 'CmdOrCtrl+Q',
+          click: () => {
+            app.quit();
+          }
         }
       ]
     }
