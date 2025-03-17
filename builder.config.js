@@ -2,6 +2,7 @@ module.exports = {
   appId: 'education.lumi.lumi',
   productName: 'Lumi',
   asar: true,
+  asarUnpack: ['assets/h5p/libraries/**'],
   icon: 'assets/lumi.icns',
   files: [
     'build/**/*',
