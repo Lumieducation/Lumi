@@ -13,7 +13,7 @@ export default function event_websocket_export_as_html_external(
 ): void {
   socket.on('export_as_html_external', async (payload) => {
     context.log.info('events:websocket:export_as_html_external', payload);
-    const { contentId } = payload;
+    const { contentId, options } = payload;
 
     const { file_path } = await dialog_export_save_as_show(
       context.translate('Export as HTML with external media files'),
@@ -27,7 +27,12 @@ export default function event_websocket_export_as_html_external(
 
     await window_backdrop_show(context, contentId);
 
-    await content_export_as_html_external(context, contentId, file_path);
+    await content_export_as_html_external(
+      context,
+      contentId,
+      file_path,
+      options
+    );
 
     await window_backdrop_hide(context, contentId);
     await window_snackbar_show(

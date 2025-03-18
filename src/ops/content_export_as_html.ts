@@ -5,7 +5,16 @@ import exportH5P from './export-h5p';
 export default async function content_export_as_html(
   context: Context,
   content_id: string,
-  path: string
+  path: string,
+  options: {
+    marginX: number;
+    marginY: number;
+    masteryScore: number;
+    maxWidth: number;
+    restrictWidthAndCenter: boolean;
+    showEmbed: boolean;
+    showRights: boolean;
+  }
 ): Promise<void> {
   context.log.debug(`ops:content_export_as_html`, {
     content_id,
@@ -28,7 +37,8 @@ export default async function content_export_as_html(
       maxWidth: 0,
       restrictWidthAndCenter: false,
       showEmbed: false,
-      showRights: false
+      showRights: false,
+      ...options
     }
   );
 }
