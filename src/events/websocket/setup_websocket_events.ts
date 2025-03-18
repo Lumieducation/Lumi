@@ -11,6 +11,7 @@ import settings_update from './settings_update';
 import language_change from './language_change';
 import export_as_html_external from './export_as_html_external';
 import libraries_install from './libraries_install';
+import setup from './setup';
 
 export default function setup_websocket_events(
   context: Context,
@@ -27,4 +28,5 @@ export default function setup_websocket_events(
   update_install(context, socket);
   language_change(context, socket);
   libraries_install(context, socket);
+  setup(context, socket);
 }
