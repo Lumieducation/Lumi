@@ -14,4 +14,7 @@ export default interface Settings {
 
   https_proxy: string;
   http_proxy: string;
+
+  hub_content_types_endpoint: string;
+  hub_registration_endpoint: string;
 }

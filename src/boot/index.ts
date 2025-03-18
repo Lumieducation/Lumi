@@ -18,6 +18,7 @@ import language_get from '../ops/language_get';
 import H5PConfig from '../../config/h5p-config';
 import content_click from '../ops/content_click';
 import proxy_setup from '../ops/proxy_setup';
+import settings_read from '../ops/settings_read';
 
 export interface Context {
   menu: string;
@@ -95,6 +96,11 @@ export default async function boot(): Promise<Context> {
     const language_code = await language_get(context);
     context.language_code = language_code;
     const translate = await boot_i18n(language_code, is_development);
+
+    const settings = await settings_read(context);
+
+    config.hubContentTypesEndpoint = settings.hub_content_types_endpoint;
+    config.hubRegistrationEndpoint = settings.hub_registration_endpoint;
 
     const h5pEditor = await boot_h5p_editor(
       config,

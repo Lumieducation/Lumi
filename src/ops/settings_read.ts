@@ -2,6 +2,7 @@ import fs from 'fs';
 
 import { Context } from '../boot';
 import Settings from '../types/Settings';
+import default_settings from '../../config/default_settings';
 
 export default async function settings_read(ctx: Context): Promise<Settings> {
   try {
@@ -10,6 +11,6 @@ export default async function settings_read(ctx: Context): Promise<Settings> {
     return settings;
   } catch (error) {
     ctx.log.warn(`Failed to read settings`);
-    return undefined;
+    return default_settings;
   }
 }
