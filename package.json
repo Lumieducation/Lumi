@@ -16,7 +16,7 @@
     "publish:win": "cp -r assets/appx build && builder-configs\\build.win.bat --publish always && rm -rf build/appx",
     "publish:linux": "npm run build && ./builder-configs/build.linux.sh --publish always",
     "translate:scan": "npx i18next-scanner --config config/i18next-scanner.config.cjs",
-    "localize": "json-autotranslate -f -d --directory-structure ngx-translate -c google_translate.json -s google-translate -i assets/translations  -m i18next && prettier --write \"assets/translations/*.json\"",
+    "localize": "json-autotranslate -f -d --directory-structure ngx-translate -c google_translate.json -s google-translate -i assets/translations/lumi  -m i18next && prettier --write \"assets/translations/lumi/*.json\"",
     "translate": "npm run translate:scan && npm run localize",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",

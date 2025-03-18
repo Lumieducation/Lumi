@@ -1,6 +1,6 @@
 module.exports = {
   input: ['src/**/*.{ts,tsx}', '!**/node_modules/**'],
-  output: './assets/translations',
+  output: './assets/translations/lumi',
   options: {
     debug: true,
     keySeparator: false,
