@@ -13,7 +13,7 @@ export default function event_websocket_export_as_scorm(
 ): void {
   socket.on('export_as_scorm', async (payload) => {
     context.log.info('events:websocket:export_as_scorm', payload);
-    const { contentId } = payload;
+    const { contentId, options } = payload;
 
     const { file_path } = await dialog_export_save_as_show(
       context.translate('Export as SCORM'),
@@ -27,7 +27,7 @@ export default function event_websocket_export_as_scorm(
 
     await window_backdrop_show(context, contentId);
 
-    await content_export_as_scorm(context, contentId, file_path);
+    await content_export_as_scorm(context, contentId, file_path, options);
 
     await window_backdrop_hide(context, contentId);
     await window_snackbar_show(
