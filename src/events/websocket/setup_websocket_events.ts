@@ -1,7 +1,9 @@
 import * as SocketIO from 'socket.io';
 
 import save from './save';
+import setup from './setup';
 import save_as from './save_as';
+import relaunch from './relaunch';
 import { Context } from '../../boot';
 import update_check from './update_check';
 import export_as_html from './export_as_html';
@@ -9,9 +11,8 @@ import update_install from './update_install';
 import export_as_scorm from './export_as_scorm';
 import settings_update from './settings_update';
 import language_change from './language_change';
-import export_as_html_external from './export_as_html_external';
 import libraries_install from './libraries_install';
-import setup from './setup';
+import export_as_html_external from './export_as_html_external';
 
 export default function setup_websocket_events(
   context: Context,
@@ -29,4 +30,5 @@ export default function setup_websocket_events(
   language_change(context, socket);
   libraries_install(context, socket);
   setup(context, socket);
+  relaunch(context, socket);
 }

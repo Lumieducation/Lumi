@@ -17,6 +17,7 @@ import boot_express_app from '../express/app';
 import language_get from '../ops/language_get';
 import H5PConfig from '../../config/h5p-config';
 import content_click from '../ops/content_click';
+import proxy_setup from '../ops/proxy_setup';
 
 export interface Context {
   menu: string;
@@ -86,6 +87,10 @@ export default async function boot(): Promise<Context> {
         quit_and_install: false
       }
     };
+
+    if (!is_test) {
+      await proxy_setup(context);
+    }
 
     const language_code = await language_get(context);
     context.language_code = language_code;

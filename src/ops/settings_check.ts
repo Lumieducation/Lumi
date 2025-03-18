@@ -21,7 +21,10 @@ export default async function settings_check(ctx: Context): Promise<void> {
     theme_contrast: 'default',
     theme_layout: 'vertical',
     theme_color_presets: 'default',
-    theme_stretch: false
+    theme_stretch: false,
+
+    https_proxy: '',
+    http_proxy: ''
   };
 
   const settings = {

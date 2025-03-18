@@ -11,4 +11,7 @@ export default interface Settings {
   theme_layout: string;
   theme_color_presets: string;
   theme_stretch: boolean;
+
+  https_proxy: string;
+  http_proxy: string;
 }
