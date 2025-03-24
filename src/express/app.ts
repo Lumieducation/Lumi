@@ -4,7 +4,10 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import fileUpload from 'express-fileupload';
 // import i18next, { TFunction } from 'i18next';
-import { h5pAjaxExpressRouter } from '@lumieducation/h5p-express';
+import {
+  h5pAjaxExpressRouter,
+  libraryAdministrationExpressRouter
+} from '@lumieducation/h5p-express';
 
 import User from '../models/User';
 import { Context } from '../boot';
@@ -53,6 +56,11 @@ export default async (
   app.use(editContent);
   app.use(saveContent);
   app.use(getSettings);
+
+  app.use(
+    `/api/v1/libraries`,
+    libraryAdministrationExpressRouter(ctx.h5pEditor)
+  );
 
   app.use(
     ctx.h5pEditor.config.baseUrl,
