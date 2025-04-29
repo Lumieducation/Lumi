@@ -6,6 +6,9 @@ export default async function window_get_content_id(
   window: BrowserWindow
 ): Promise<string> {
   const url = await window_get_url(window);
-  const content_id = url.split('/').pop();
+  const _url = new URL(url);
+  const { pathname } = _url;
+  const path_parts = pathname.split('/');
+  const content_id = path_parts[path_parts.length - 1];
   return content_id;
 }
