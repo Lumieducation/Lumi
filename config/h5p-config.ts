@@ -27,7 +27,7 @@ export default class H5PConfig implements IH5PConfig {
 
   public setFinishedEnabled: boolean;
 
-  public contentUserStateSaveInterval: number | boolean;
+  public contentUserStateSaveInterval: number | boolean = false;
 
   public contentUserDataUrl: string = '/contentUserData';
 
