@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Mhariri wa Picha Tatu",
+      "fields": [
+        {
+          "label": "Maonyesho",
+          "entity": "Onyesho",
+          "field": {
+            "fields": [
+              {
+                "label": "Aina ya onyesho",
+                "options": [
+                  {
+                    "label": "Picha ya 360"
+                  },
+                  {
+                    "label": "Picha mgando"
+                  }
+                ]
+              },
+              {
+                "label": "Onyesha kitufe cha \"Nyuma\"",
+                "description": "Onyesha kitufe cha kurejea kwenye onyesho lako la awali"
+              },
+              {},
+              {
+                "label": "Mada ya Onyesho",
+                "description": "Hutumika kutambua onyesho"
+              },
+              {
+                "label": "Mandharinyuma ya onyesho"
+              },
+              {
+                "label": "Maelezo ya onyesho",
+                "description": "Maandishi yanayoweza kuelezea onyesho kwa mtumiaji wa mwisho"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Lebo",
+                      "description": "Ikiachwa wazi hakuna lebo itakayoonyeshwa na tutajaribu kutumia sehemu ya mada kwa visoma skrini"
+                    },
+                    {
+                      "label": "Mipangilio ya Lebo",
+                      "fields": [
+                        {
+                          "label": "Sehemu ya lebo",
+                          "description": "Chagua mahali ambapo lebo inapaswa kuonekana",
+                          "options": [
+                            {
+                              "label": "Tumia mpangilio wa kitabia"
+                            },
+                            {
+                              "label": "Imepangiliwa kulia"
+                            },
+                            {
+                              "label": "Imepangiliwa kushoto"
+                            },
+                            {
+                              "label": "Imepangiliwa juu"
+                            },
+                            {
+                              "label": "Imepangiliwa chini"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Lebo ya Kuonyesha",
+                          "description": "Ikiwa imefichwa - lebo zitaonyesha tu kwenye kiteuzi",
+                          "options": [
+                            {
+                              "label": "Tumia mpangilio wa kitabia"
+                            },
+                            {
+                              "label": "Onyesha"
+                            },
+                            {
+                              "label": "Ficha"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Mtindo wa kitufe",
+                "description": "Amua jinsi gani vitufe vinavyoelekeza kwenye eneo hili vinapaswa kuonekana. Kwa maonyesho ambayo ni mgando na hayaelekezi kwenye maonyesho mapya, tunapendekeza kitufe cha “Maelezo zaidi”.",
+                "options": [
+                  {
+                    "label": "Onyesho jipya (mshale)"
+                  },
+                  {
+                    "label": "Maelezo zaidi (jumlisha)"
+                  }
+                ]
+              },
+              {
+                "label": "Wimbo wa Sauti",
+                "description": "Ongeza wimbo wa sauti ambao ni maalumu kwa onyesho hili."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Wimbo wa sauti"
+        }
+      ]
+    },
+    {
+      "label": "Mipangilio ya kitabia",
+      "description": "Chaguzi hizi zitakuwezesha kudhibiti jinsi ulimwengu unavyofanya.",
+      "fields": [
+        {
+          "label": "Sauti ya Kimataifa",
+          "description": "Ongeza wimbo wa sauti uliopo kwa maonyesho yote kwa chaguo-msingi."
+        },
+        {
+          "label": "Ubora wa uwasilishaji wa onyesho",
+          "description": "Chagua kiasi cha upana na urefu wa sehemu zinazotumika kuwasilisha onyesho. Hii huathiri kiwango cha ubora wa tukio moja kwa moja, jaribu kuongeza ubora iwapo onyesho linaonekana “kuzuia” au “mawimbi” yanaonekana ndani ya onyesho. Kumbuka kuwa uwasilishaji wa ubora wa juu huchukua muda zaidi kufungua.",
+          "options": [
+            {
+              "label": "Ubora wa Juu (128x128)"
+            },
+            {
+              "label": "Ubora wa Wastani (64x64)"
+            },
+            {
+              "label": "Ubora wa Chini (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Mipangilio ya lebo",
+          "fields": [
+            {
+              "label": "Sehemu ya lebo",
+              "description": "Nafasi ya chaguo-msingi ya lebo. Nafasi inaweza kubatilishwa kwa kila mwingiliano",
+              "options": [
+                {
+                  "label": "Imepangiliwa kulia"
+                },
+                {
+                  "label": "Imepangiliwa kushoto"
+                },
+                {
+                  "label": "Imepangiliwa juu"
+                },
+                {
+                  "label": "Imepangiliwa chini"
+                }
+              ]
+            },
+            {
+              "label": "Lebo za Kuonyesha",
+              "description": "Ikiwa haijawekwa alama - lebo zitaonyesha tu kwenye juu ya kiteuzi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Janibisha",
+      "fields": [
+        {
+          "label": "Lebo ya Aria ya aina ya maudhui",
+          "default": "Ziara ya Mtandaoni"
+        },
+        {
+          "label": "Lebo ya kucheza sauti",
+          "default": "Cheza Wimbo wa Sauti"
+        },
+        {
+          "label": "Lebo ya kusitisha sauti",
+          "default": "Sitisha Wimbo wa Sauti"
+        },
+        {
+          "label": "Mada ya mazungumzo ya onyesho",
+          "default": "Maelezo ya onyesho"
+        },
+        {
+          "label": "Lebo ya kitufe cha kuweka kamera upya",
+          "default": "Weka Kamera Upya"
+        },
+        {
+          "label": "Lebo ya kitufe cha kuwasilisha mazungumzo",
+          "default": "Wasilisha Mazungumzo"
+        },
+        {
+          "label": "Lebo ya kitufe cha kufunga mazungumzo",
+          "default": "Funga Mazungumzo"
+        },
+        {
+          "label": "Lebo ya Aria ya kitufe cha lebo ya kupanua",
+          "default": "Panua lebo ya kuona"
+        },
+        {
+          "label": "Lebo ya wakati picha ya mandharinyuma inapakia katika onyesho la 360",
+          "default": "Inapakia picha ya mandharinyuma..."
+        },
+        {
+          "label": "Lebo ya wakati hakuna maudhui",
+          "default": "Hakuna maudhui"
+        }
+      ]
+    }
+  ]
+}

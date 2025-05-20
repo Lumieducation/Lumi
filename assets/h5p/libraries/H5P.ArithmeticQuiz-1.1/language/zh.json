@@ -1,0 +1,135 @@
+{
+  "semantics": [
+    {
+      "label": "测验说明",
+      "description": "关于测验的说明文字（不超过 100 个字符）"
+    },
+    {
+      "label": "测验类型",
+      "options": [
+        {
+          "label": "算术运算测验"
+        },
+        {
+          "label": "线性方程"
+        }
+      ]
+    },
+    {
+      "label": "算术类型",
+      "options": [
+        {
+          "label": "加法"
+        },
+        {
+          "label": "减法"
+        },
+        {
+          "label": "乘法"
+        },
+        {
+          "label": "除法"
+        }
+      ]
+    },
+    {
+      "label": "方程式",
+      "options": [
+        {
+          "label": "初级 [ 3x = 12 ]"
+        },
+        {
+          "label": "中级 [ 4x - 3 = 13 ]"
+        },
+        {
+          "label": "高级 [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "启用分数",
+      "description": "允许在方程式中使用分数。"
+    },
+    {
+      "label": "最大允许题目数"
+    },
+    {
+      "label": "用户界面翻译",
+      "fields": [
+        {
+          "label": "测验期间显示分数",
+          "default": "得分："
+        },
+        {
+          "label": "测验耗时",
+          "default": "时间：@time"
+        },
+        {
+          "label": "测验结果页面标题",
+          "default": "测验结束！"
+        },
+        {
+          "label": "测验开始说明文字",
+          "default": "开始！"
+        },
+        {
+          "label": "测验开始按钮上的文字",
+          "default": "开始测验"
+        },
+        {
+          "label": "重新测验按钮文字",
+          "default": "重新测验"
+        },
+        {
+          "label": "正确答案的读屏工具文本",
+          "default": "答案正确"
+        },
+        {
+          "label": "错误答案的读屏工具文本",
+          "default": "答案错误，正确答案是： :num"
+        },
+        {
+          "label": "测验耗时的读屏工具文本",
+          "default": "测验耗时以小时，分钟和秒为单位表示。"
+        },
+        {
+          "label": "题目的读屏工具文本",
+          "default": ":arithmetic 等于什么？"
+        },
+        {
+          "label": "方程类问题的读屏工具文本",
+          "default": "对于这个方程 :equation, :item 等于什么？"
+        },
+        {
+          "label": "方程变量的读屏工具文本",
+          "default": ":item 等于什么?"
+        },
+        {
+          "label": "加号的读屏工具文本",
+          "default": "加"
+        },
+        {
+          "label": "减号的读屏工具文本",
+          "default": "减"
+        },
+        {
+          "label": "乘号的读屏文具文本",
+          "default": "乘"
+        },
+        {
+          "label": "除号的读屏工具文本",
+          "default": "除以"
+        },
+        {
+          "label": "等号的文字",
+          "default": "等于"
+        },
+        {
+          "label": "题号显示方式",
+          "description": "在页面上显示当前题号和总题数，分別用变量 :num 与 :total 表示",
+          "default": "目前为第 :num 题，共 :total 題"
+        }
+      ]
+    }
+  ]
+}

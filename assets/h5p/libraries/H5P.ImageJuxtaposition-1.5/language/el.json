@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Περιγραφή άσκησης",
+      "description": "Put the heading/instructions you'd like to show above the before/after image here.",
+      "placeholder": "Here you can add an optional heading and/or instructions."
+    },
+    {
+      "label": "Πρώτη εικόνα",
+      "fields": [
+        {
+          "label": "Πρώτη εικόνα",
+          "description": "Η πρώτη εικόνα. Βεβαιωθείτε ότι έχει το ίδιο μέγεθος με τη δεύτερη εικόνα."
+        },
+        {
+          "label": "Ετικέτα για την πρώτη εικόνα",
+          "description": "Λεζάντα πρώτης εικόνας"
+        }
+      ]
+    },
+    {
+      "label": "Δεύτερη εικόνα",
+      "fields": [
+        {
+          "label": "Δεύτερη εικόνα",
+          "description": "Η δεύτερη εικόνα. Βεβαιωθείτε ότι έχει το ίδιο μέγεθος με την πρώτη εικόνα."
+        },
+        {
+          "label": "Ετικέτα για τη δεύτερη εικόνα",
+          "description": "Λεζάντα δεύτερης εικόνας"
+        }
+      ]
+    },
+    {
+      "label": "Ρυθμίσεις άσκησης",
+      "description": "Αυτές οι επιλογές σας επιτρέπουν να καθορίσετε ορισμένες λεπτομέρειες",
+      "fields": [
+        {
+          "label": "Η εναλλαγή εικόνων ξεκινά από το %",
+          "description": "Καθορίζει από ποιο σημείο θα ξεκινά η εναλλαγή εικόνων"
+        },
+        {
+          "label": "Προσανατολισμός εναλλαγής εικόνων",
+          "description": "Οριζόντια σημαίνει κίνηση από αριστερά προς τα δεξιά, κάθετα σημαίνει κίνηση από πάνω προς τα κάτω.",
+          "options": [
+            {
+              "label": "Οριζόντια"
+            },
+            {
+              "label": "Κάθετα"
+            }
+          ]
+        },
+        {
+          "label": "Χρώμα εναλλαγής εικόνων",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Image visible message",
+          "default": "Image @percentage % visible",
+          "description": "@percentage is a placeholder and will be replaced with the respective value."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

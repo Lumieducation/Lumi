@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "任务描述"
+    },
+    {
+      "widgets": [
+        {
+          "label": "默认"
+        }
+      ],
+      "label": "所有卡片",
+      "entity": "卡片",
+      "field": {
+        "label": "卡片",
+        "fields": [
+          {
+            "label": "问题",
+            "description": "卡片的可选文本问题 (可以使用图像卡，或者文字卡，也可以是图像配文字的卡片)"
+          },
+          {
+            "label": "答案",
+            "description": "卡片的可选答案 (解决方案) . Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "图像",
+            "description": "卡片的可选图像. (可以使用图像卡，或者文字卡，也可以是图像配文字的卡片)"
+          },
+          {
+            "label": "Alternative text for image"
+          },
+          {
+            "label": "提示",
+            "fields": [
+              {
+                "label": "提示文本"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "进度文本",
+      "default": "卡片 @total中的@card",
+      "description": "进度文本，可用变量: @card 和 @total. 例如: 卡片 @total中的@card"
+    },
+    {
+      "label": "下一个按钮的文本",
+      "default": "下一个"
+    },
+    {
+      "label": "前一个按钮的文本",
+      "default": "前一个"
+    },
+    {
+      "label": "检查答案按钮的文本",
+      "default": "检查"
+    },
+    {
+      "label": "在查看解决方案之前需要用户输入"
+    },
+    {
+      "label": "答案输入字段的文本",
+      "default": "你的答案"
+    },
+    {
+      "label": "正确答案的文本",
+      "default": "正确"
+    },
+    {
+      "label": "错误答案的文本",
+      "default": "错误"
+    },
+    {
+      "label": "显示解决方案文本",
+      "default": "正确答案"
+    },
+    {
+      "label": "成绩标题的文本",
+      "default": "成绩"
+    },
+    {
+      "label": "正确答案数量的文本",
+      "default": "@total中的@score 正确",
+      "description": "成绩文本, 变量可用: @score 和 @total. 例如: @total中的@score 正确"
+    },
+    {
+      "label": "显示成绩的文本",
+      "default": "显示成绩"
+    },
+    {
+      "label": "短答案标签的文本",
+      "default": "A:"
+    },
+    {
+      "label": "重试 按钮的文本",
+      "default": "重试"
+    },
+    {
+      "label": "区分大小写",
+      "description": "确认用户输入内容必须与答案完全相同."
+    },
+    {
+      "label": "Incorrect text for assistive technologies",
+      "default": "Incorrect answer. Correct answer was @answer",
+      "description": "Text that will be announced to assistive technologies. Use @answer as variable."
+    },
+    {
+      "label": "Correct feedback text for assistive technologies",
+      "default": "@answer is correct.",
+      "description": "Text that will be announced to assistive technologies when a card is answered correctly. Use @answer as variable."
+    },
+    {
+      "label": "Card change for assistive technologies",
+      "default": "Page @current of @total",
+      "description": "Text that will be announced to assistive technologies when navigating between cards. Use @current and @total as variables."
+    },
+    {
+      "label": "Randomize cards",
+      "description": "Enable to randomize the order of cards on display."
+    }
+  ]
+}

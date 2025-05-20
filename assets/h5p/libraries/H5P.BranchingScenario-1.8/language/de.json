@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Editor für Branching Scenario",
+      "fields": [
+        {
+          "label": "Titel"
+        },
+        {
+          "label": "Startbildschirm",
+          "fields": [
+            {
+              "label": "Kurstitel",
+              "placeholder": "Titel für den Kurs"
+            },
+            {
+              "label": "Kursdetails",
+              "placeholder": "Details zum Kurs"
+            },
+            {
+              "label": "Kursbild"
+            },
+            {
+              "label": "Alternativtext für das Bild"
+            }
+          ]
+        },
+        {
+          "label": "Liste der Endbildschirme",
+          "field": {
+            "label": "Endbildschirm",
+            "fields": [
+              {
+                "label": "Titel"
+              },
+              {
+                "label": "Text"
+              },
+              {
+                "label": "Bild"
+              },
+              {
+                "label": "Punkte",
+                "description": "Wenn Lernende den Standard-Endbildschirm erreichen, werden die Punkte an ein LMS, einen LRS oder einen anderen Dienste geschickt, der Ergebnisse von H5P empfängt."
+              },
+              {
+                "label": "Inhalts-ID"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Liste der Branching-Scenario-Inhalte",
+          "entity": "Inhalt",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Titel anzeigen",
+                "description": "Wenn diese Einstellung angewählt wird, sehen die Lernenden den Inhaltstitel in der Titelzeile über dem Inhalt."
+              },
+              {
+                "label": "Beschriftung des \"Weiter\"-Buttons (maximale Länge: 50 Zeichen)",
+                "default": "Weiter"
+              },
+              {
+                "label": "Überschreibe Einstellungen für Abschlussverfolgung",
+                "description": "Überschreibe die individuellen Einstellungen, die festlegen, ob ein Inhalt abgeschlossen sein muss, bevor der \"Weiter\"-Button aktiviert wird. Hat keinen Einfluss, wenn ein Inhalt nicht angibt, dass er \"beended\" wurde, z. B. Bilder oder Course Presentations mit nur einem Schaubild.",
+                "options": [
+                  {
+                    "label": "Benutze die Verhaltenseinstellungen"
+                  },
+                  {
+                    "label": "Aktiviert"
+                  },
+                  {
+                    "label": "Deaktiviert"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Rückmeldung",
+                "fields": [
+                  {
+                    "label": "Rückmeldungstitel"
+                  },
+                  {
+                    "label": "Rückmeldungstext"
+                  },
+                  {
+                    "label": "Rückmeldungsbild"
+                  },
+                  {
+                    "label": "Punkte für dieses Szenario",
+                    "description": "Die Punkte werden für Nutzende, die dieses Szenario erreichen, an ein LMS, LRS oder anderen Dienst geschickt, der Punkte von H5P aufnimmt."
+                  }
+                ]
+              },
+              {
+                "label": "Rückwärts gehen",
+                "description": "Diese Einstellung erlaubt es Nutzenden, rückwärts zu gehen und die vorherige Frage/den vorherigen Inhalt zu sehen.",
+                "options": [
+                  {
+                    "label": "Benutze die Verhaltenseinstellungen"
+                  },
+                  {
+                    "label": "Aktiviert"
+                  },
+                  {
+                    "label": "Deaktiviert"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Optionen für die Bepunktung",
+          "fields": [
+            {
+              "label": "Optionen für die Bepunktung",
+              "description": "Wähle die Art der Bepunktung.",
+              "options": [
+                {
+                  "label": "Stelle die Punktzahl für jedes Endszenario fest ein"
+                },
+                {
+                  "label": "Berechne die Punktzahl für die Antworten der Lernenden dynamisch"
+                },
+                {
+                  "label": "Keine Bepunktung"
+                }
+              ]
+            },
+            {
+              "label": "Verwende die Punkte der Interaktionen innerhalb des Branching Scenario",
+              "description": "Wenn diese Option gewählt ist, werden Punkte aus Inhalten wie Interactive Video zur Gesamtpunktzahl hinzugezählt. Wenn die Option nicht angewählt ist, werden nur die Punkte gezählt, die bei den Rückmeldungen zu Inhalten, bei verzweigenden Fragen und bei den Endszenarios vergeben wurden."
+            }
+          ]
+        },
+        {
+          "label": "Interaktionseinstellungen",
+          "fields": [
+            {
+              "label": "Zurück navigieren",
+              "description": "Erlaubt den Nutzenden zurückzugehen und den vorherigen Inhalt/die vorherige Frage zu sehen. Kann auf Inhalts-Ebene überschrieben werden."
+            },
+            {
+              "label": "Anschauen nötig",
+              "description": "Hält Nutzer dazu an, das Video, Interaktive Video oder die Kurspräsentation anzusehen, bevor sie mit dem Szenario weitermachen können. Dies kann auf Inhalts-Ebene überschrieben werden."
+            },
+            {
+              "label": "Verzweigende Fragen zufällig anordnen",
+              "description": "Die sich verzweigenden Fragen werden in einer zufälligen Reihenfolge angezeigt."
+            }
+          ]
+        },
+        {
+          "label": "Bezeichnungen und Beschriftungen",
+          "fields": [
+            {
+              "label": "Text des Buttons auf dem Startbildschirm",
+              "default": "Kurs starten"
+            },
+            {
+              "label": "Text des Buttons auf dem Endbildschirm",
+              "default": "Kurs neu starten"
+            },
+            {
+              "label": "Text des \"Zurück\"-Buttons auf jedem Inhaltsbildschirm und jeder Verzweigung",
+              "default": "Zurück"
+            },
+            {
+              "label": "Text für den \"deaktiviert\"-Button auf den Bibliotheks-Ansichten",
+              "default": "Nötig, um das aktuelle Modul abzuschließen"
+            },
+            {
+              "label": "Text für den Button, der das Video erneut abspielen lässt",
+              "default": "Video wiederholen"
+            },
+            {
+              "label": "Beschriftung der Punkte auf dem Endbildschirm",
+              "default": "Deine Punktzahl:"
+            },
+            {
+              "label": "Aria-Beschriftung des Vollbild-Buttons",
+              "default": "Vollbild"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

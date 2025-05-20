@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Tutvustus",
+      "fields": [
+        {
+          "label": "Kuva tutvustus"
+        },
+        {
+          "label": "Tutvustuspilt"
+        },
+        {
+          "label": "Tutvustuspildi alternatiivtekst"
+        },
+        {
+          "label": "Pealkiri"
+        },
+        {
+          "label": "Tutvustustekst",
+          "description": "Seda tiitlit näidatakse tutvustusteksti üleval."
+        }
+      ]
+    },
+    {
+      "label": "Küsimused",
+      "widgets": [
+        {
+          "label": "Vaikimisi"
+        }
+      ],
+      "entity": "Küsimus",
+      "field": {
+        "label": "Küsimus"
+      }
+    },
+    {
+      "label": "Üldine tagasiside",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Vaikimisi"
+            }
+          ],
+          "label": "Määratle kohandatud tagasiside igale punktisummavahemikule",
+          "description": "Vajuta \"Lisa vahemik\" nuppu vajalike vahemike lisamiseks. Näiteks: 0-20% halb tulemus, 21-91% keskmine tulemus, 91-100% suurepärane tulemus!",
+          "entity": "vahemik",
+          "field": {
+            "fields": [
+              {
+                "label": "Punktisumma vahemik"
+              },
+              {},
+              {
+                "label": "Määratletud punktisummavahemiku tagasiside",
+                "placeholder": "Sisesta tagasiside"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Räägi silte ja tekste",
+      "fields": [
+        {
+          "label": "Tutvustusnupu silt",
+          "default": "Alusta kursust!"
+        },
+        {
+          "label": "Lahenduskuva tulemuste silt",
+          "default": "Sinu tulemused:"
+        },
+        {
+          "label": "Näita lahendusi nupu silt",
+          "default": "Näita lahendusi"
+        },
+        {
+          "label": "Proovi uuesti nupu silt",
+          "default": "Proovi uuesti"
+        },
+        {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
+          "label": "Järgmine küsimus tekstilugeri silt",
+          "default": "Järgmine küsimus"
+        },
+        {
+          "label": "Eelmine küsimus tekstilugeri silt",
+          "default": "Eelmine küsimus"
+        },
+        {
+          "label": "Navigeerimisriba tiitel",
+          "description": "Küsimuste tiitlid navigeerimisribal. \":num\" asendatakse tegeliku leheküljenumbriga.",
+          "default": "Lehekülg :num"
+        },
+        {
+          "label": "Vastatud lehekülje tekstilugeri silt",
+          "default": "Vastatud"
+        },
+        {
+          "label": "Aktiivse lehekülje tekstilugeri silt",
+          "default": "Parasjagu aktiivne"
+        }
+      ]
+    }
+  ]
+}

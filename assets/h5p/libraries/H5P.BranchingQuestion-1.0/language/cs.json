@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Editor větvení otázek",
+      "fields": [
+        {
+          "label": "Otázka"
+        },
+        {
+          "label": "Dostupné alternativy",
+          "entity": "alternativa",
+          "field": {
+            "label": "Alternativa",
+            "fields": [
+              {
+                "label": "Text"
+              },
+              {
+                "label": "Další obsah(-1 je poslední obrazovka)"
+              },
+              {
+                "label": "Zpětná vazba",
+                "fields": [
+                  {
+                    "label": "Nadpis Zpětné vazby"
+                  },
+                  {
+                    "label": "Text Zpětné vazby"
+                  },
+                  {
+                    "label": "Obrázek Zpětné vazby"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

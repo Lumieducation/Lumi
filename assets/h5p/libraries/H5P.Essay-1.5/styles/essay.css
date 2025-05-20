@@ -1,0 +1,98 @@
+@keyframes h5p-essay-input-field-message-save-opacity {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.h5p-essay {
+}
+.h5p-essay .h5p-essay-title {
+  width: auto;
+  overflow-y: auto;
+}
+
+.h5p-essay .h5p-essay-solution-container {
+  margin: 0 1em 0.5em 1em;
+  padding: 1em;
+  background: #FAFAFA;
+}
+
+.h5p-essay .h5p-essay-solution-title {
+  font-size: 1.125em;
+  margin-bottom: 0.5em;
+}
+
+.h5p-essay .h5p-essay-solution-introduction {
+  font-size: 1em;
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+
+.h5p-essay .h5p-essay-solution-sample {
+  background: #FFFFFF;
+  border: 1px solid #e0e0e0;
+  overflow: auto;
+  overflow-x: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.h5p-essay .h5p-essay-solution-sample-text {
+  padding: 0.5em 1em 0.5em 1em;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.h5p-essay .h5p-essay-input-field-textfield {
+  padding: 0.25em 0.4em;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  border: 1px solid #C7C7C7;
+  border-top: 2px solid #C7C7C7;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.h5p-essay .h5p-essay-input-field-textfield:focus {
+  background-color: #fff;
+}
+
+/* Reduce bottom and top margin of children */
+.h5p-essay .h5p-essay-input-field-label > * {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.h5p-essay .h5p-essay-input-field-message-wrapper {
+  overflow:auto;
+}
+
+.h5p-essay .h5p-essay-input-field-message-char {
+  font-size: 0.8em;
+  float: left;
+}
+
+.h5p-essay .h5p-essay-input-field-message-char-important {
+  font-weight: bold;
+}
+
+.h5p-essay .h5p-essay-input-field-message-save {
+  font-size: 0.8em;
+  float: right;
+}
+
+.h5p-essay .h5p-essay-input-field-message-save-animation {
+  animation-name: h5p-essay-input-field-message-save-opacity;
+  animation-duration: 1s;
+}
+
+.h5p-essay .h5p-essay-feedback-empty {
+  color: #999999;
+}
+
+.h5p-essay .h5p-question-explanation-container {
+  margin: 0 1em;
+}

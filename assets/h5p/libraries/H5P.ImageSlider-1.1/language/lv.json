@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Attēli",
+      "field": {
+        "label": "Attēla slaids",
+        "fields": [
+          {
+            "label": "Attēla slaids"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Malu attiecība",
+      "description": "Automātiski nozīmē fiksētu malu attiecību, kas tiek automātiski noteikta, pamatojoties uz attēliem",
+      "options": [
+        {
+          "label": "Automātiski"
+        },
+        {
+          "label": "Pielāgots"
+        },
+        {
+          "label": "Nav nemainīgs"
+        }
+      ]
+    },
+    {
+      "label": "Malu attiecību iestatījumi",
+      "fields": [
+        {
+          "label": "Malu attiecības platums",
+          "description": "Ja šeit izmantojat 4 un augstumam 3, malu attiecība būs 4:3"
+        },
+        {
+          "label": "Malu attiecības augstums",
+          "description": "Ja šeit izmantojat 3 un platumam 4, malu attiecība būs 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Attēlu slīdņa pieejamība",
+      "fields": [
+        {
+          "default": "Nākamais attēls",
+          "description": "Tiek izmantots tikai ekrāna lasītājiem. Netiks atspoguļots.",
+          "label": "Nākamā slaida pogu etiķete"
+        },
+        {
+          "label": "Iepriekšējā slaida pogu etiķete",
+          "default": "Iepriekšējais attēls",
+          "description": "Tiek izmantots tikai ekrāna lasītājiem. Netiks atspoguļots."
+        },
+        {
+          "label": "Slaidu pogu etiķete",
+          "default": "Dodieties uz attēlu %slide",
+          "description": "To izmanto tikai ekrāna lasītājiem. Tas netiks parādīts. %slide ir mainīgais un tiks aizstāts ar attēla numuru."
+        }
+      ]
+    }
+  ]
+}

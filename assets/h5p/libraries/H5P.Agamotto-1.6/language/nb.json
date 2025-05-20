@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Overskrift",
+      "placeholder": "Du kan legge til en valgfri overskrift her.",
+      "description": "Overskriften til å vise over bildet"
+    },
+    {
+      "label": "Elementer",
+      "entity": "element",
+      "widgets": [
+        {
+          "label": "Standard"
+        }
+      ],
+      "field": {
+        "label": "Element",
+        "fields": [
+          {
+            "label": "Bilde"
+          },
+          {
+            "label": "Merking",
+            "description": "Optional label for a tick. Please make sure it's not too long, or it will be hidden."
+          },
+          {
+            "label": "Description",
+            "placeholder": "My image description ...",
+            "description": "Optional description for the image"
+          },
+          {
+            "label": "Audio",
+            "description": "Optional audio that plays when an image is shown."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Behavioural settings",
+      "description": "These options will let you control how the task behaves.",
+      "fields": [
+        {
+          "label": "Start image",
+          "description": "Set the number of the image to start with."
+        },
+        {
+          "label": "Snap slider",
+          "description": "If activated, the slider will snap to an image's position."
+        },
+        {
+          "label": "Display tick marks",
+          "description": "If activated, the slider bar will display a tick mark for each image."
+        },
+        {
+          "label": "Display labels",
+          "description": "If activated, the slider bar will display a label instead of/in addition to tick marks."
+        },
+        {
+          "label": "Transparency Replacement Color",
+          "description": "Set the color that will replace transparent areas of the images."
+        },
+        {
+          "label": "Image space in fullscreen mode",
+          "description": "If you have descriptions in addition to the images, set the the percentage of space that the images should use in fullscreen mode."
+        }
+      ]
+    },
+    {
+      "label": "Readspeaker",
+      "fields": [
+        {
+          "label": "Image",
+          "default": "Image"
+        },
+        {
+          "label": "Image Slider",
+          "default": "Image Slider"
+        },
+        {
+          "label": "Mute title",
+          "default": "Demp, for tiden ikke dempet"
+        },
+        {
+          "label": "Unmute title",
+          "default": "Slå på demp, for tiden dempet"
+        },
+        {
+          "label": "Title for fullscreen button (enter)",
+          "default": "Enter fullscreen mode"
+        },
+        {
+          "label": "Title for fullscreen button (exit)",
+          "default": "Exit fullscreen mode"
+        }
+      ]
+    }
+  ]
+}

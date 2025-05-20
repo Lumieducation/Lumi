@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Elementos del cuestionario",
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
+      "entity": "elemento",
+      "field": {
+        "label": "Elegir biblioteca",
+        "fields": [
+          {
+            "label": "Biblioteca",
+            "description": "Elegir una biblioteca"
+          },
+          {
+            "label": "Campo obligatorio"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Opciones de la pantalla de éxito",
+      "fields": [
+        {
+          "label": "Habilitar pantalla de éxito"
+        },
+        {
+          "label": "Añadir imagen a la pantalla de éxito",
+          "fields": [
+            {
+              "label": "Remplazar icono de éxito con imagen"
+            }
+          ]
+        },
+        {
+          "label": "Texto a mostrar al enviar",
+          "default": "Has completado el cuestionario."
+        }
+      ]
+    },
+    {
+      "label": "Elementos de la interfaz de usuario",
+      "fields": [
+        {
+          "label": "Etiquetas de botón",
+          "fields": [
+            {
+              "label": "Etiqueta botón Anterior",
+              "default": "Atrás"
+            },
+            {
+              "label": "Etiqueta botón Continuar",
+              "default": "Continuar"
+            },
+            {
+              "label": "Etiqueta botón Siguiente",
+              "default": "Siguiente"
+            },
+            {
+              "label": "Etiqueta botón Enviar",
+              "default": "Enviar"
+            }
+          ]
+        },
+        {
+          "label": "Accesibilidad",
+          "fields": [
+            {
+              "label": "Etiqueta del botón de salida del mensaje obligatorio",
+              "default": "Mensaje de error al cerrar"
+            },
+            {
+              "label": "Texto de Barra del Progreso",
+              "default": "Pregunta %current de %max",
+              "description": "Usado para decirle a tecnologías de asistencia qué pregunta es. Variables: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Mensaje Obligatorio",
+          "default": "Esta pregunta requiere una respuesta",
+          "description": "Se mostrará si este campo no ha sido contestado y es requerido por un tipo de contenido wrapper"
+        },
+        {
+          "label": "Texto de símbolo Obligatorio",
+          "default": "obligatorio",
+          "description": "Texto que acompañará a un asterisco para señalar que una pregunta es obligatoria"
+        },
+        {
+          "label": "Título para la pantalla para enviar",
+          "default": "Has conseguido contestar todas las preguntas"
+        },
+        {
+          "label": "Subtítulo para la pantalla para envío",
+          "default": "Hacer clic en la parte inferior para enviar tus respuestas"
+        }
+      ]
+    }
+  ]
+}

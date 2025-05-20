@@ -1,0 +1,134 @@
+[
+  {
+    "label": "Task Description",
+    "importance": "high",
+    "name": "title",
+    "type": "text",
+    "widget": "textarea",
+    "description": "Optional text to display above the audio recorder",
+    "optional": true
+  },
+  {
+    "label": "Localization",
+    "name": "l10n",
+    "type": "group",
+    "common": true,
+    "fields": [
+      {
+        "name": "recordAnswer",
+        "label": "Record button text",
+        "type": "text",
+        "default": "Record"
+      },
+      {
+        "name": "pause",
+        "label": "Pause button text",
+        "type": "text",
+        "default": "Pause"
+      },
+      {
+        "name": "continue",
+        "label": "Continue button text",
+        "type": "text",
+        "default": "Continue"
+      },
+      {
+        "name": "download",
+        "label": "Download button text",
+        "type": "text",
+        "default": "Download"
+      },
+      {
+        "name": "done",
+        "label": "Done button text",
+        "type": "text",
+        "default": "Done"
+      },
+      {
+        "name": "retry",
+        "label": "Retry button text",
+        "type": "text",
+        "default": "Retry"
+      },
+      {
+        "name": "microphoneNotSupported",
+        "label": "Microphone not supported error message",
+        "type": "text",
+        "default": "Microphone not supported. Make sure you are using a browser that allows microphone recording."
+      },
+      {
+        "name": "microphoneInaccessible",
+        "label": "Microphone inaccessible error message",
+        "type": "text",
+        "default": "Microphone is not accessible. Make sure that the browser microphone is enabled."
+      },
+      {
+        "name": "insecureNotAllowed",
+        "type": "text",
+        "label": "Message displayed when insecure access is not allowed",
+        "description": "Some browsers do not allow using the microphone when the page is served using HTTP. This message will be displayed if that is the case",
+        "default": "Access to microphone is not allowed in your browser since this page is not served using HTTPS. Please contact the author, and ask him to make this available using HTTPS"
+      },
+      {
+        "name": "statusReadyToRecord",
+        "label": "Ready to record status message",
+        "type": "text",
+        "default": "Press a button below to record your answer."
+      },
+      {
+        "name": "statusRecording",
+        "label": "Recording status message",
+        "type": "text",
+        "default": "Recording..."
+      },
+      {
+        "name": "statusPaused",
+        "label": "Paused status message",
+        "type": "text",
+        "default": "Recording paused. Press a button to continue recording."
+      },
+      {
+        "name": "statusFinishedRecording",
+        "label": "Finished recording status message",
+        "type": "text",
+        "default": "You have successfully recorded your answer! Listen to the recording below."
+      },
+      {
+        "name": "downloadRecording",
+        "label": "Download recording message",
+        "type": "text",
+        "default": "Download this recording or retry."
+      },
+      {
+        "name": "retryDialogHeaderText",
+        "label": "Retry dialog header text",
+        "type": "text",
+        "default": "Retry recording?"
+      },
+      {
+        "name": "retryDialogBodyText",
+        "label": "Retry dialog body text",
+        "type": "text",
+        "default": "By pressing \"Retry\" you will lose your current recording."
+      },
+      {
+        "name": "retryDialogConfirmText",
+        "label": "Retry dialog confirm text",
+        "type": "text",
+        "default": "Retry"
+      },
+      {
+        "name": "retryDialogCancelText",
+        "label": "Retry dialog cancel text",
+        "type": "text",
+        "default": "Cancel"
+      },
+      {
+        "name": "statusCantCreateTheAudioFile",
+        "label": "Can't create audio file status message",
+        "type": "text",
+        "default": "Can't create the audio file."
+      }
+    ]
+  }
+]

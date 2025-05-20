@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Rubrique",
+      "placeholder": "Ici vous pouvez ajouter un titre facultatif.",
+      "description": "La rubrique que vous souhaiteriez afficher au-dessus de l'image"
+    },
+    {
+      "label": "Éléments",
+      "entity": "élément",
+      "widgets": [
+        {
+          "label": "Par défaut"
+        }
+      ],
+      "field": {
+        "label": "Élément",
+        "fields": [
+          {
+            "label": "Image"
+          },
+          {
+            "label": "Vignette",
+            "description": "Vignette facultative pour une coche. Assurez-vous qu'elle n'est pas trop longue, sinon elle sera cachée."
+          },
+          {
+            "label": "Description",
+            "placeholder": "Description de mon image...",
+            "description": "Description facultative pour l’image"
+          },
+          {
+            "label": "Audio",
+            "description": "Audio facultatif qui joue lorsqu'une image est affichée."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Paramètres comportementaux",
+      "description": "Ces options vous permettront de contrôler le déroulement de la tâche.",
+      "fields": [
+        {
+          "label": "Démarrer une image",
+          "description": "Pour commencer, définir le numéro de l'image."
+        },
+        {
+          "label": "Curseur de positionnement",
+          "description": "S'il est activé, le curseur se positionnera sur la position d'une image."
+        },
+        {
+          "label": "Afficher les coches de contrôle",
+          "description": "Si elle est activée, la barre de défilement affichera une coche de contrôle pour chaque image."
+        },
+        {
+          "label": "Vignettes d’affichage",
+          "description": "Si activée, la barre de défilement affichera une vignette au lieu/en plus des coches de contrôle."
+        },
+        {
+          "label": "Couleur de remplacement de transparence",
+          "description": "Définir la couleur qui remplacera les zones transparentes des images."
+        },
+        {
+          "label": "Espace image en mode plein écran",
+          "description": "Si vous avez des descriptions en plus des images, définissez le pourcentage d'espace que les images devraient utiliser en mode plein écran."
+        }
+      ]
+    },
+    {
+      "label": "ReadSpeaker",
+      "fields": [
+        {
+          "label": "Image",
+          "default": "Image"
+        },
+        {
+          "label": "Curseur de l'image",
+          "default": "Curseur de l'image"
+        },
+        {
+          "label": "Titre silencieux",
+          "default": "Silencieux, actuellement activé"
+        },
+        {
+          "label": "Activer le titre",
+          "default": "Activer, actuellement désactivé"
+        },
+        {
+          "label": "Titre du Bouton plein écran (Entrée)",
+          "default": "Saisir en mode plein écran"
+        },
+        {
+          "label": "Titre du Bouton plein écran (Quitter)",
+          "default": "Quitter le mode plein écran"
+        }
+      ]
+    }
+  ]
+}

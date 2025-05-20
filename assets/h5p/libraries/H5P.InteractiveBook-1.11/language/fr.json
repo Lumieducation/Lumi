@@ -1,0 +1,205 @@
+{
+  "semantics": [
+    {
+      "label": "Activer la couverture du livre",
+      "description": "Une couverture  montre les informations concernant le livre avant l'accès"
+    },
+    {
+      "label": "Page de couverture",
+      "fields": [
+        {
+          "label": "Description de la couverture",
+          "description": "Ce texte sera la description de votre livre"
+        },
+        {
+          "label": "Cover media",
+          "description": "Optional media to display on the cover."
+        }
+      ]
+    },
+    {
+      "label": "Pages",
+      "entity": "Page",
+      "widgets": [
+        {
+          "label": "Par défaut"
+        }
+      ],
+      "field": {
+        "label": "Item",
+        "fields": [
+          {
+            "label": "Page"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Paramètres comportementaux",
+      "fields": [
+        {
+          "label": "Base color",
+          "description": "Set the base color that will define the overall color scheme of the book. Please ensure a high enough contrast."
+        },
+        {
+          "label": "Afficher la table des matières par défaut",
+          "description": "Lorsque cette option est activée, la table des matières s'affiche à l'ouverture du livre"
+        },
+        {
+          "label": "Afficher les indicateurs de progrès",
+          "description": "Lorsqu'il est activé, il y aura des indicateurs par page indiquant à l'utilisateur s'il en a fini ou non avec la page."
+        },
+        {
+          "label": "Activer la progression automatique",
+          "description": "Si elle est activée, une page sans tâches est considérée comme terminée lorsqu'elle est visualisée. Une page avec des tâches lorsque toutes les tâches sont effectuées. Si elle est désactivée, un bouton sera placé au bas de chaque page pour que l'utilisateur puisse cliquer lorsqu'il a terminé la page."
+        },
+        {
+          "label": "Afficher le résumé",
+          "description": "Lorsqu'il est activé, l'utilisateur peut voir un résumé et soumettre les progrès/réponses"
+        },
+        {
+          "label": "Enable \"Restart\" button",
+          "description": "When enabled the user can initiate a restart on the summary page."
+        }
+      ]
+    },
+    {
+      "label": "Intitulé pour \"Lire\"",
+      "default": "Lire"
+    },
+    {
+      "label": "Intitulé pour \"Afficher la 'Table des matières'\"",
+      "default": "Afficher la 'Table des matières'"
+    },
+    {
+      "label": "Intitulé pour \"Cacher la 'Table des matières'\"",
+      "default": "Cacher la 'Table des matières'"
+    },
+    {
+      "label": "Intitulé pour \"Page suivante\"",
+      "default": "Page suivante"
+    },
+    {
+      "label": "Intitulé pour \"Page précédente\"",
+      "default": "Page précédente"
+    },
+    {
+      "label": "Intitulé pour \"Page terminée!\"",
+      "default": "Page terminée!"
+    },
+    {
+      "label": "Intitulé pour \"@pages sur @total terminé\" (@pages et @total sera remplacé par des valeurs réelles)",
+      "default": "@pages sur @total terminé"
+    },
+    {
+      "label": "Intitulé pour \"Page non terminée\"",
+      "default": "Page non terminée"
+    },
+    {
+      "label": "Intitulé pour \"Revenir en haut\"",
+      "default": "Revenir en haut"
+    },
+    {
+      "label": "Intitulé pour \"J'ai terminé cette page\"",
+      "default": "J'ai terminé cette page"
+    },
+    {
+      "label": "Libellé du bouton plein écran",
+      "default": "Plein écran"
+    },
+    {
+      "label": "Libellé du bouton de sortie en plein écran",
+      "default": "Réduire"
+    },
+    {
+      "label": "Avancement de la lecture",
+      "description": "\"@count\" sera remplacé par le nombre de pages lues et \"@total\" par le nombre total de pages",
+      "default": "@count sur @total pages"
+    },
+    {
+      "label": "Avancement dans les interactions",
+      "description": "\"@count\" sera remplacé par le nombre d'interactions accomplies et \"@total\" avec le nombre total d'interactions",
+      "default": "@count sur @total interactions"
+    },
+    {
+      "label": "Intitulé pour \"Soumettre le rapport\"",
+      "default": "Soumettre le rapport"
+    },
+    {
+      "label": "Libellé du bouton \"relancer\"",
+      "default": "Relancer"
+    },
+    {
+      "label": "Sommaire",
+      "default": "Sommaire"
+    },
+    {
+      "label": "Intitulé pour \"Toutes les interactions\"",
+      "default": "Toutes les interactions"
+    },
+    {
+      "label": "Intitulé pour \"Interactions sans réponse\"",
+      "default": "Interactions sans réponse"
+    },
+    {
+      "label": "Score",
+      "description": "\"@score\" sera remplacé par le score actuel, et \"@maxscore\" sera remplacé par le score maximum réalisable",
+      "default": "@score / @maxscore"
+    },
+    {
+      "label": "Achèvement des interactions par page",
+      "description": "\"@left\" sera remplacé par les interactions restantes, et \"@max\" sera remplacé par le nombre total d'interactions sur la page",
+      "default": "@left sur @max interactions réalisées"
+    },
+    {
+      "label": "Intitulé pour \"Aucune interaction\"",
+      "default": "Aucune interaction"
+    },
+    {
+      "label": "Intitulé pour \"Score\"",
+      "default": "Score"
+    },
+    {
+      "label": "Libellé du bouton \"Résumé et transmission\"",
+      "default": "Résumé et transmission"
+    },
+    {
+      "label": "Intitulé pour \"Vous n'avez interagi avec aucune page.\"",
+      "default": "Vous n'avez interagi avec aucune page."
+    },
+    {
+      "label": "Intitulé pour \"Vous devez interagir avec au moins une page avant de pouvoir voir le résumé.\"",
+      "default": "Vous devez interagir avec au moins une page avant de pouvoir voir le résumé."
+    },
+    {
+      "label": "Intitulé pour \"Vos réponses sont soumises à examen !\"",
+      "default": "Vos réponses sont soumises à examen !"
+    },
+    {
+      "label": "Étiquette de progression dans le sommaire",
+      "default": "Avancement dans la lecture"
+    },
+    {
+      "label": "Intitulé pour Avancement dans les interactions",
+      "default": "Avancement des interactions"
+    },
+    {
+      "label": "Intitulé pour Score total",
+      "default": "Score total"
+    },
+    {
+      "label": "Textes pour l'accessibilité",
+      "fields": [
+        {
+          "label": "Texte alternatif pour l'avancement dans la lecture",
+          "description": "Un texte alternatif pour la progression visuelle de la page. Les variables @page et @total sont disponibles.",
+          "default": "Page @page sur @total."
+        },
+        {
+          "label": "Intitulé pour étendre/réduire le menu de navigation",
+          "default": "Étendre/Réduire le menu"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Editor de perguntas com ramificação",
+      "fields": [
+        {
+          "label": "Pergunta"
+        },
+        {
+          "label": "Opções disponíveis",
+          "entity": "opção",
+          "field": {
+            "label": "Opção",
+            "fields": [
+              {
+                "label": "Texto"
+              },
+              {
+                "label": "Próximo conteúdo (-1 é o ecrã final)"
+              },
+              {
+                "label": "Comentários de retorno",
+                "fields": [
+                  {
+                    "label": "Título do Feedback"
+                  },
+                  {
+                    "label": "Texto do feedback"
+                  },
+                  {
+                    "label": "Imagem do feedback"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

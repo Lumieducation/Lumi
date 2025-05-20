@@ -1,0 +1,374 @@
+{
+  "semantics": [
+    {
+      "label": "Meedia",
+      "fields": [
+        {
+          "label": "Tüüp",
+          "description": "Valikuline meedia pildi kohal näitamiseks."
+        },
+        {
+          "label": "Keela pildi suumimine."
+        }
+      ]
+    },
+    {
+      "label": "Ülesande kirjeldus",
+      "description": "Kirjelda oma ülesannet siin.",
+      "placeholder": "Palun kuula hoolikalt ja kirjuta üles, mida sa kuuled."
+    },
+    {
+      "label": "Laused",
+      "widgets": [
+        {
+          "label": "Vaikimisi"
+        }
+      ],
+      "entity": "Lause",
+      "field": {
+        "label": "Lause",
+        "fields": [
+          {
+            "label": "Kirjeldus",
+            "description": "Sa saad tahtmisel panna tekstisisestusvälja kohale lihtsa kirjelduse, kasulik näiteks dialoogide jaoks."
+          },
+          {
+            "label": "Heliklipp",
+            "description": "Lause räägitud normaalsel kiirusel."
+          },
+          {
+            "label": "Aeglane heliklipp",
+            "description": "Lause räägitud aeglaselt."
+          },
+          {
+            "label": "Tekst",
+            "description": "Tekst, mida peaks kirjutama. Sa saad sõnale lisada alternatiivseid kirjaviise, lisades sõna taha vertikaalse joone (|) ja selle järele alternatiivse sõna."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Üldine tagasiside",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Vaikimisi"
+            }
+          ],
+          "label": "Määratle kohandatud tagasiside ükskõik mis tulemusvahemiku jaoks",
+          "description": "Vajuta \"Lisa vahemik\" nuppu, et lisada nii mitu vahemikku, kui sul vaja on. Näide: 0-20% Halb tulemus, 21-91% Keskmine tulemus, 91-100% Hea tulemus!",
+          "entity": "vahemik",
+          "field": {
+            "fields": [
+              {
+                "label": "Tulemusvahemik"
+              },
+              {
+                "label": "Tagasiside määratud tulemusvahemiku jaoks",
+                "placeholder": "Kirjuta tagasiside"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Käitumise seaded",
+      "description": "Need seaded lasevad sul juhtida, kuidas ülesanne käitub.",
+      "fields": [
+        {
+          "label": "Maksimaalne proovimiste arv",
+          "description": "Limiteerib, kui mitu korda iga lause heliklippe kuulata saab."
+        },
+        {
+          "label": "Maksimaalne proovimiste arv aeglasel kiirusel",
+          "description": "Limiteerib, kui mitu korda iga lause aeglaseid heliklippe kuulata saab."
+        },
+        {
+          "label": "Disable pause option",
+          "description": "If checked, pausing the audio while playing is not possible."
+        },
+        {
+          "label": "Play button delay",
+          "description": "Optionally set a time period of up to three seconds that playing a button should be delayed. This is useful if you want to allow students to enter the text field before they start listening."
+        },
+        {
+          "label": "Shuffle sentences",
+          "description": "Define when the sentences should be shuffled.",
+          "options": [
+            {
+              "label": "Never"
+            },
+            {
+              "label": "Once when starting exercise"
+            },
+            {
+              "label": "On every try"
+            }
+          ]
+        },
+        {
+          "label": "Scoring",
+          "fields": [
+            {
+              "label": "Eira kirjavahemärke",
+              "description": "Kui valitud, siis kirjavahemärke ei võeta hindamisel arvesse."
+            },
+            {
+              "label": "Zero mistakes mode",
+              "description": "If checked, only correct answers will be considered for scoring. Mistakes will not be punished."
+            },
+            {
+              "label": "Trükivigade väärtused",
+              "description": "Määra, mis ulatuses trükivead (3-9 tähega sõna: kuni 1 viga, sõna rohkem kui 9 tähega: kuni 2 viga) loevad päris vigadena.",
+              "options": [
+                {
+                  "label": "100 %"
+                },
+                {
+                  "label": "50 %"
+                },
+                {
+                  "label": "0 %"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Text",
+          "fields": [
+            {
+              "label": "Word separator",
+              "description": "Define the separator of words different than space character to support alternate solutions with different number of words."
+            },
+            {
+              "label": "Kirjutamissuund",
+              "description": "Määra, kas lausete keel on paremalt vasakule või vasakult paremale.",
+              "options": [
+                {
+                  "label": "Automaatne tuvastus"
+                },
+                {
+                  "label": "Paremalt vasakule"
+                },
+                {
+                  "label": "Vasakult paremale"
+                }
+              ]
+            },
+            {
+              "label": "Karakterite poolitamine",
+              "description": "Aktiveeri, kui kindlat karakterid (nt Hiina Han karakterid) peaksid olema automaatselt eraldi sõnadeks poolitatud."
+            }
+          ]
+        },
+        {
+          "label": "Presentation of feedback",
+          "fields": [
+            {
+              "label": "Kohandatud trükiveakuva",
+              "description": "Kui valitud, siis trükivigu näidatakse kohandatud, ilmselgetest vigadest eristavas stiilis."
+            },
+            {
+              "label": "Asenduslahenduste esitus",
+              "description": "Määra, milliseid asendusi peaks lahenduses näitama valede või puuduvate sõnade jaoks.",
+              "options": [
+                {
+                  "label": "Näita ainult esimest asendust"
+                },
+                {
+                  "label": "Näita kõiki asendusi"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Luba \"Proovi uuesti\""
+        },
+        {
+          "label": "Luba \"Näita lahendust\" nupp"
+        },
+        {
+          "label": "Show solution on check"
+        }
+      ]
+    },
+    {
+      "label": "Kasutajaliides",
+      "fields": [
+        {
+          "label": "Üldine tagasiside",
+          "description": "Sa saad kasutada mitmeid kohahoidjaid, mida asendatakse vastavate numbritega: @matches = vastete arv, @total = vigu kokku, @capped = vigade ülempiir kokku, @wrong = valed sõnad, @added = täiendavad sõnad, @missing = puuduvad sõnad, @typo = trükivead",
+          "default": "Sa oled teinud @total viga/vea."
+        },
+        {
+          "label": "General feedback (zero mistakes mode)",
+          "description": "You can use several placeholders that will be replaced with the adequate number: @matches = number of matches, @total = total score, @wrong = wrong words, @added = additional words, @missing = missing words, @typo = typing errors",
+          "default": "You have entered @total word(s) correctly and @typo word(s) with minor mistakes."
+        },
+        {
+          "label": "Tekst \"Kontrolli\" nupule",
+          "default": "Kontrolli"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "Tekst \"Proovi uuesti\" nupule",
+          "default": "Proovi uuesti"
+        },
+        {
+          "label": "Tekst \"Näita lahendust\" nupule",
+          "default": "Näita vastust"
+        },
+        {
+          "label": "Heli pole toetatud sõnum",
+          "default": "Sinu brauser ei toeta seda heli."
+        }
+      ]
+    },
+    {
+      "label": "Lugeja",
+      "fields": [
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "Show the solution. The task will be marked with its correct solution."
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry the task. Reset all responses and start the task over again."
+        },
+        {
+          "label": "Esita nupp",
+          "default": "Esita"
+        },
+        {
+          "label": "Esita aeglaselt nupp",
+          "default": "Esita aeglaselt"
+        },
+        {
+          "label": "Proove järel (tekst lugejate ja hõljuva teksti jaoks)",
+          "description": "@number asendatakse alles jäänud proovide arvuga.",
+          "default": "Proove alles: @number"
+        },
+        {
+          "label": "Lõpmatu (tekst lugejate ja hõljuva teksti jaoks)",
+          "default": "Lõpmatu"
+        },
+        {
+          "label": "Sisesta tekst väli",
+          "default": "Sisesta, mida sa kuulsid."
+        },
+        {
+          "label": "Sinu tulemus",
+          "description": "@score asendatakse punktide arvuga. @total asendatakse maksimaalse võimaliku punktide arvuga.",
+          "default": "Sa said @score @total-st punktist."
+        },
+        {
+          "label": "Lahendus",
+          "default": "Lahendus"
+        },
+        {
+          "label": "Lause",
+          "default": "Lause"
+        },
+        {
+          "label": "Objekt",
+          "default": "Objekt"
+        },
+        {
+          "label": "Õige",
+          "default": "õige"
+        },
+        {
+          "label": "Vale",
+          "default": "vale"
+        },
+        {
+          "label": "Väike viga",
+          "default": "väike viga"
+        },
+        {
+          "label": "Puuduv sõna või sümbol",
+          "default": "puuduv"
+        },
+        {
+          "label": "Lisatud sõna või sümbol",
+          "default": "lisatud"
+        },
+        {
+          "label": "Õige lahendus",
+          "default": "Oleks pidanud olema"
+        },
+        {
+          "label": "Või",
+          "default": "või"
+        },
+        {
+          "label": "Punkt",
+          "default": "punkt"
+        },
+        {
+          "label": "Punkte",
+          "default": "punkte"
+        },
+        {
+          "label": "Periood",
+          "default": "periood"
+        },
+        {
+          "label": "Hüüumärk",
+          "default": "hüüumärk"
+        },
+        {
+          "label": "Küsimärk",
+          "default": "küsimärk"
+        },
+        {
+          "label": "Koma",
+          "default": "koma"
+        },
+        {
+          "label": "Ühekordne jutumärk",
+          "default": "ühekordne jutumärk"
+        },
+        {
+          "label": "Kahekordsed jutumärgid",
+          "default": "Kahekordsed jutumärgid"
+        },
+        {
+          "label": "Koolon",
+          "default": "koolon"
+        },
+        {
+          "label": "Semikoolon",
+          "default": "semikoolon"
+        },
+        {
+          "label": "Pluss",
+          "default": "pluss"
+        },
+        {
+          "label": "Miinus",
+          "default": "miinus"
+        },
+        {
+          "label": "Asterisk",
+          "default": "asterisk"
+        },
+        {
+          "label": "Kaldkriips",
+          "default": "kaldkriips"
+        }
+      ]
+    }
+  ]
+}

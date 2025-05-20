@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Užduoties aprašymas",
+      "description": "Įdėkite antraštę ar instrukciją, kurią norite rodyti prieš ar po paveikslu.",
+      "placeholder": "Čia galite įdėti papildomą antraštę ir/arba instrukciją."
+    },
+    {
+      "label": "Pirmas paveikslas",
+      "fields": [
+        {
+          "label": "Pirmas paveikslas",
+          "description": "Pirmas paveikslas. Įsitikinkite, kad jis tokio paties dydžio kaip ir antras."
+        },
+        {
+          "label": "Pirmo paveikslo pavadinimas",
+          "description": "Pavadinimas po pirmuoju paveikslu"
+        }
+      ]
+    },
+    {
+      "label": "Antras paveikslas",
+      "fields": [
+        {
+          "label": "Antras paveikslas",
+          "description": "Antras paveikslas. Įsitikinkite, kad jis tokio paties dydžio kaip pirmasis paveikslas."
+        },
+        {
+          "label": "Antro paveikslo pavadinimas",
+          "description": "Pavadinimas po antruoju paveikslu"
+        }
+      ]
+    },
+    {
+      "label": "Veikimo nustatymai",
+      "description": "Šios parinktys leis nustatyti tam tikrą informaciją",
+      "fields": [
+        {
+          "label": "Slankiklio pradžios padėtis %",
+          "description": "Nustato slankiklio pradinę padėtį"
+        },
+        {
+          "label": "Slankiklio kryptis",
+          "description": "Horizontaliai judės į kairę ir dešinę, vertikaliai – aukštyn ir žemyn.",
+          "options": [
+            {
+              "label": "Horizontaliai"
+            },
+            {
+              "label": "Vertikaliai"
+            }
+          ]
+        },
+        {
+          "label": "Slankiklio spalva",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Pritaikomumo tekstai",
+      "fields": [
+        {
+          "label": "Paveikslėlyje matoma žinutė",
+          "default": "Paveiksliukas @percentage % matomas",
+          "description": "@percentage yra pakaitos simbolis, kuris bus pakeistas atitinkama reikšme."
+        },
+        {
+          "label": "Maketas"
+        }
+      ]
+    }
+  ]
+}

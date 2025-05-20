@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Texto introdutório",
+      "default": "Escolha a afirmação correta.",
+      "description": "Será mostrado acima da tarefa de revisão."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Padrão"
+        },
+        {
+          "label": "Textual"
+        }
+      ],
+      "label": "Resumo",
+      "entity": "afirmações",
+      "field": {
+        "label": "Conjunto de afirmações",
+        "fields": [
+          {
+            "label": "Lista de afirmações para o resumo - a primeira afirmação é a correta.",
+            "entity": "afirmação",
+            "field": {
+              "label": "Afirmação"
+            }
+          },
+          {
+            "label": "Dica",
+            "fields": [
+              {
+                "label": "Texto da dica"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Defina o feedback personalizado para qualquer faixa de pontuação",
+          "description": "Clique em \"Adicionar faixa\" e adicione quantas faixas forem necessárias. Exemplo: 0-20% Insuficiente, 21-91% Suficiente, 91-100% Excelente!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para uma determinada faixa de pontuação",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Texto mostrado antes do número de afirmações resolvidas na atividade de resumo.",
+      "default": "Progresso:",
+      "description": "Será mostrado acima das afirmações. Exemplo: 'Progresso: 2/5'"
+    },
+    {
+      "label": "Texto mostrado antes do número de afirmações erradas selecionadas na atividade de resumo.",
+      "default": "Respostas erradas:",
+      "description": "Será mostrado acima das afirmações. Exemplo: 'Respostas erradas: 4'"
+    },
+    {
+      "label": "Cabeçalho do feedback do resumo",
+      "default": "O seu resultado",
+      "description": "Será mostrado acima do cabeçalho do feedback do resumo."
+    },
+    {
+      "label": "Texto para o leitor de ecrã para resposta correta",
+      "default": "Correto."
+    },
+    {
+      "label": "Texto do leitor de ecrã para anunciar resposta incorreta",
+      "default": "Incorreto! Por favor, tente novamente."
+    },
+    {
+      "label": "Texto do leitor de ecrã para resposta incorreta",
+      "default": "Incorreto"
+    },
+    {
+      "label": "Rótulo da lista de respostas corretas",
+      "default": "Respostas corretas."
+    },
+    {
+      "label": "Rótulo do botão de mostrar dica",
+      "default": "Mostrar dica"
+    },
+    {
+      "label": "Representação textual da barra de pontuação para aqueles que usam leitores de ecrã",
+      "description": ":num e :total são palavras-chave especiais que são atualizadas automaticamente",
+      "default": "Obteve :num de :total pontos"
+    },
+    {
+      "label": "Texto usado por leitores de ecrã para informar progresso",
+      "description": ":num e :total são palavras-chave especiais que são atualizadas automaticamente",
+      "default": "Progresso :num de :total"
+    }
+  ]
+}

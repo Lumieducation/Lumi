@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Urejevalnik scenarijev",
+      "fields": [
+        {
+          "label": "Naslov"
+        },
+        {
+          "label": "Začetni zaslon",
+          "fields": [
+            {
+              "label": "Naslov začetnega zaslona",
+              "placeholder": "Naslov učne enote"
+            },
+            {
+              "label": "Podnaslov začetnega zaslona",
+              "placeholder": "Podrobnosti o učni enoti"
+            },
+            {
+              "label": "Slika začetnega zaslona"
+            },
+            {
+              "label": "Nadomestno besedilo slike"
+            }
+          ]
+        },
+        {
+          "label": "Seznam končnih zaslonov",
+          "field": {
+            "label": "Končni zaslon",
+            "fields": [
+              {
+                "label": "Naslov"
+              },
+              {
+                "label": "Besedilo"
+              },
+              {
+                "label": "Slika"
+              },
+              {
+                "label": "Točke",
+                "description": "Rezultat udeležencev je lahko poslan drugi povezani storitvi (npr. LMS, LRS)."
+              },
+              {
+                "label": "ID vsebine"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Seznam vsebine",
+          "entity": "vsebina",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Show content title in view",
+                "description": "If selected, the user will see the content title in the top bar above this content."
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Proceed"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Nastavitve točkovanja",
+          "fields": [
+            {
+              "label": "Nastavitve točkovanja",
+              "description": "Izbira načina točkovanja.",
+              "options": [
+                {
+                  "label": "Statična nastavitev točk za vsak zaključek scenarija"
+                },
+                {
+                  "label": "Dinamična določitev točk na podlagi odgovorov udeležencev"
+                },
+                {
+                  "label": "Brez točkovanja"
+                }
+              ]
+            },
+            {
+              "label": "V scenariju poteka upoštevaj točke interakcij",
+              "description": "Pri končnem rezultatu bodo upoštevane tudi točke iz posamezne vsebine (npr. v interaktivnem videoposnetku. Sicer upošteva le točke, ki so določene v scenariju."
+            }
+          ]
+        },
+        {
+          "label": "Nastavitve interakcije",
+          "fields": [
+            {
+              "label": "Preglasi navigacijo nazaj",
+              "description": "Nastavitev preglasi posamezna dovoljenja za vrnitev nazaj na vprašanja."
+            },
+            {
+              "label": "Zahtevaj zaključek vsebine",
+              "description": "Nastavitev preglasi posamezne zahteve po zaključku vsebine in vpliva na uporabo gumba \"Nadaljuj\". Nastavitev nima vpliva, če vsebine ni mogoče zaključiti (npr. slika brez interakcije)."
+            },
+            {
+              "label": "Naključna razporeditev odločitvenih vprašanj",
+              "description": "Omogoči prikaz odločitvenih vprašanj po naključnem vrstnem redu."
+            }
+          ]
+        },
+        {
+          "label": "Določitev",
+          "fields": [
+            {
+              "label": "Besedilo gumba za začetek aktivnosti na začetnem zaslonu",
+              "default": "Začetek"
+            },
+            {
+              "label": "Besedilo gumba za ponoven začetek aktivnosti na končnem zaslonu",
+              "default": "Začni znova"
+            },
+            {
+              "label": "Besedilo gumba za vrnitev na odločitvena vprašanja",
+              "default": "Nazaj"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "Besedilo gumba za ponovno predvajanje videoposnetka",
+              "default": "Ponovno predvajaj videoposnetek"
+            },
+            {
+              "label": "Besedilo za prikaz rezultatov na končnem zaslonu",
+              "default": "Rezultat:"
+            },
+            {
+              "label": "Besedilo za celozaslonski način",
+              "default": "Celozaslonski način"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

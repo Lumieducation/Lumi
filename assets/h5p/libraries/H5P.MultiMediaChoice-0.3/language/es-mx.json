@@ -1,0 +1,256 @@
+{
+  "semantics": [
+    {
+      "label": "Medios",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Medios opcionales mostrados encima de la pregunta."
+        },
+        {
+          "label": "Deshabilitar acercamiento de imagen"
+        }
+      ]
+    },
+    {
+      "label": "Pregunta"
+    },
+    {
+      "label": "Opciones disponibles",
+      "entity": "opción",
+      "field": {
+        "label": "Opción",
+        "fields": [
+          {
+            "label": "Medio",
+            "description": "Medio a mostrar como una opción."
+          },
+          {
+            "label": "Imagen del poster"
+          },
+          {
+            "label": "Correcto"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Retroalimentación Global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Predeterminado"
+            }
+          ],
+          "label": "Definir retroalimentación personalizada para cualquier rango de puntaje",
+          "description": "Haga clic en el botón \"Añadir rango\" para añadir cuantos rangos necesite. Ejemplo: 0-20% Mal puntaje, 21-91% Puntaje Promedio, 91-100% ¡Magnífico Puntaje!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango del Puntaje"
+              },
+              {},
+              {
+                "label": "Retroalimentación para rango de puntaje definido",
+                "placeholder": "Complete la retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Configuraciones del comportamiento",
+      "description": "Estas opciones le permitirán controlar como se comporta el trabajo.",
+      "fields": [
+        {
+          "label": "Habilitar botón \"Reintentar\""
+        },
+        {
+          "label": "Habilitar botón \"Mostrar Solución\""
+        },
+        {
+          "label": "Mostrar diálogo de confirmación en \"Comprobar\""
+        },
+        {
+          "label": "Mostrar el diálogo de confirmación en \"Reintentar\""
+        },
+        {
+          "label": "Dar un punto para la pregunta completa",
+          "description": "Otorga un punto a la pregunta si el puntaje en porcentaje es mayor que el porcentaje aprobatorio"
+        },
+        {
+          "label": "Requerir respuesta antes de que se pueda ver la solución"
+        },
+        {
+          "label": "Tipo de Pregunta",
+          "description": "Seleccione el aspecto y comportamiento de la pregunta.",
+          "options": [
+            {
+              "label": "Automático"
+            },
+            {
+              "label": "Opción Múltiple (Casillas de Verificación)"
+            },
+            {
+              "label": "Selección Única (Botones)"
+            }
+          ]
+        },
+        {
+          "label": "Proporción de aspecto",
+          "description": "Seleccionar la proporción de aspecto de las alternativas",
+          "options": [
+            {
+              "label": "Automático"
+            },
+            {
+              "label": "16:9"
+            },
+            {
+              "label": "4:3"
+            },
+            {
+              "label": "3:2"
+            },
+            {
+              "label": "1:1"
+            }
+          ]
+        },
+        {
+          "label": "Alternativas máximas por fila",
+          "description": "Configurar el número máximo de alternativas por fila para asegurar que la pregunta se vea bien.",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "3"
+            },
+            {
+              "label": "4"
+            }
+          ]
+        },
+        {
+          "label": "Porcentaje aprobatorio",
+          "description": "Esta configuración a menudo no tendrá ningún efecto. Es el porcentaje del puntaje total requerido para obtener 1 punto cuando se habilita un punto para todo el trabajo, y para obtener un result.success en declaraciones xAPI."
+        }
+      ]
+    },
+    {
+      "label": "Interfaz del usuario",
+      "fields": [
+        {
+          "label": "Texto para botón \"Comprobar\"",
+          "default": "Comprobar"
+        },
+        {
+          "label": "Texto para botón \"Enviar\"",
+          "default": "Submit"
+        },
+        {
+          "label": "Descripción de tecnología asistiva para botón \"Comprobar\"",
+          "default": "Comprobar las respuestas. Las respuestas serán marcadas como correcta, incorrecta, o sin contestar."
+        },
+        {
+          "label": "Texto para botón \"Mostrar solución\"",
+          "default": "Mostrar solución"
+        },
+        {
+          "label": "Descripción de tecnología asistiva para botón \"Mostrar Solución\"",
+          "default": "Mostrar la solución. Las opciones correctas serán marcadas."
+        },
+        {
+          "label": "Respuesta Correcta (no se muestra)",
+          "default": "Respuesta correcta"
+        },
+        {
+          "label": "Respuesta Incorrecta (no mostrada)",
+          "default": "Respuesta incorrecta"
+        },
+        {
+          "label": "La opción debería de haberse seleccionado",
+          "default": "Debería de haberse seleccionado"
+        },
+        {
+          "label": "La opción no debería de haberse seleccionado",
+          "default": "No debería haber sido seleccionada"
+        },
+        {
+          "label": "Texto para mensaje \"Requiere respuesta\"",
+          "default": "Por favor responda antes de ver la solución"
+        },
+        {
+          "label": "Texto para botón \"Reintentar\"",
+          "default": "Reintentar"
+        },
+        {
+          "label": "Descripción de tecnología asistiva para botón \"Reintentar\"",
+          "default": "Reintentar el trabajo. Reiniciar todas las respuestas e iniciar el trabajo de nuevo."
+        },
+        {
+          "label": "Su resultado",
+          "description": ":num y :total son variables y serán remplazadas por sus respectivos valores.",
+          "default": "Obtuvo :num de un total de :total puntos"
+        },
+        {
+          "label": "Diálogo de confirmación para Comprobar",
+          "fields": [
+            {
+              "label": "Texto del encabezado",
+              "default": "¿Terminado?"
+            },
+            {
+              "label": "Texto del cuerpo",
+              "default": "¿Está seguro de querer termina?"
+            },
+            {
+              "label": "Etiqueta botón Cancelar",
+              "default": "Cancelar"
+            },
+            {
+              "label": "Etiqueta del botón Confirmar",
+              "default": "Terminar"
+            }
+          ]
+        },
+        {
+          "label": "Diálogo de confirmación Reintentar",
+          "fields": [
+            {
+              "label": "Texto del encabezado",
+              "default": "¿Reintentar?"
+            },
+            {
+              "label": "Texto del cuerpo",
+              "default": "¿Seguro que desea reintentar?"
+            },
+            {
+              "label": "Etiqueta botón Cancelar",
+              "default": "Cancelar"
+            },
+            {
+              "label": "Etiqueta del botón Confirmar",
+              "default": "Reintentar"
+            }
+          ]
+        },
+        {
+          "label": "Texto si faltara el texto alterno para una imagen",
+          "default": "Falta el texto alterno"
+        },
+        {
+          "label": "Etiqueta de cierre de botón modal",
+          "default": "Cerrar modal"
+        }
+      ]
+    }
+  ]
+}

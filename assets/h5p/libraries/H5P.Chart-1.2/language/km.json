@@ -1,0 +1,41 @@
+  
+{
+  "semantics": [
+    {
+      "label": "Type of chart",
+      "options": [
+        {
+          "label": "Pie Chart"
+        },
+        {
+          "label": "Bar Chart"
+        }
+      ]
+    },
+    {
+      "label": "Data elements",
+      "entity": "option",
+      "field": {
+        "label": "Data element",
+        "fields": [
+          {
+            "label": "Name"
+          },
+          {
+            "label": "Value"
+          },
+          {
+            "label": "Color"
+          },
+          {
+            "label": "Font Color"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Text read by readspeakers defining the figure as a chart.",
+      "default": "ក្រាប"
+    }
+  ]
+}

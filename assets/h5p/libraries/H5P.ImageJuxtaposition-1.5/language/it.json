@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Descrizione del compito",
+      "description": "Put the heading/instructions you'd like to show above the before/after image here.",
+      "placeholder": "Here you can add an optional heading and/or instructions."
+    },
+    {
+      "label": "Prima immagine",
+      "fields": [
+        {
+          "label": "Prima immagine",
+          "description": "Prima immagine: accertati che abbia le stesse dimensioni della seconda"
+        },
+        {
+          "label": "Etichetta per la prima immagine",
+          "description": "Etichetta da mettere sulla prima immagine"
+        }
+      ]
+    },
+    {
+      "label": "Seconda immagine",
+      "fields": [
+        {
+          "label": "Seconda immagine",
+          "description": "Seconda immagine: accertati che abbia le stesse dimensioni della prima"
+        },
+        {
+          "label": "Etichetta per la seconda immagine",
+          "description": "Etichetta da mettere sulla seconda immagine"
+        }
+      ]
+    },
+    {
+      "label": "Impostazioni di esecuzione",
+      "description": "Queste opzioni ti permettono di impostare alcuni dettagli",
+      "fields": [
+        {
+          "label": "Posizione iniziale del cursore:",
+          "description": "Imposta la posizione iniziale del cursore"
+        },
+        {
+          "label": "Orientamento del cursore",
+          "description": "Orizzontale: si muove da sinistra a destra. Verticale: si muove dall'alto in basso",
+          "options": [
+            {
+              "label": "Orizzontale"
+            },
+            {
+              "label": "Verticale"
+            }
+          ]
+        },
+        {
+          "label": "Colore del cursore",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Image visible message",
+          "default": "Image @percentage % visible",
+          "description": "@percentage is a placeholder and will be replaced with the respective value."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

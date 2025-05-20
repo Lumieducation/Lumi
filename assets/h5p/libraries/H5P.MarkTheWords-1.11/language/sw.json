@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "label": "Vyombo vya habari",
+      "fields": [
+        {
+          "label": "Aina",
+          "description": "Vyombo vya habari vya hiari vya kuonyesha juu ya swali."
+        },
+        {
+          "label": "Zima ukuzaji wa picha"
+        }
+      ]
+    },
+    {
+      "label": "Maelezo ya kazi",
+      "description": "Eleza jinsi gani mtumiaji anapaswa kutatua kazi.",
+      "placeholder": "Bofya kwenye vitenzi vyote katika maandishi yanayofuata."
+    },
+    {
+      "label": "Eneo la maandishi",
+      "placeholder": "Hili ni jibu: *jibu*.",
+      "important": {
+        "description": "<ul><li>Maneno yaliyowekwa alama huongezwa na nyota (*).</li><li>Nyota zinaweza kuongezwa ndani ya maneno yaliyowekwa alama kwa kuongeza nyota nyingine, *neno sahihi *** =&gt; neno sahihi*.</li></ul>",
+        "example": "Maneno sahihi yamewekwa alama kama hii: *neno sahihi*, nyota imeandikwa hivi: *neno sahihi***."
+      }
+    },
+    {
+      "label": "Maoni ya Jumla",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Chaguo-msingi"
+            }
+          ],
+          "label": "Bainisha maoni maalum kwa masafa yoyote ya alama",
+          "description": "Bofya kitufe cha \"Ongeza masafa\" ili kuongeza masafa mengi unavyohitaji. Mfano: 0-20% Alama mbaya, 21-91% Alama ya Wastani, 91-100% Alama Nzuri!",
+          "entity": "masafa",
+          "field": {
+            "fields": [
+              {
+                "label": "Masafa ya Alama"
+              },
+              {},
+              {
+                "label": "Maoni kwa masafa ya alama yaliyofafanuliwa",
+                "placeholder": "Jaza maoni"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Maandishi ya kitufe cha \"Weka alama\"",
+      "default": "Weka alama"
+    },
+    {
+      "label": "Maandishi ya kitufe cha \"Wasilisha\"",
+      "default": "Wasilisha"
+    },
+    {
+      "label": "Maandishi kwa kitufe cha \"Jaribu tena\"",
+      "default": "Jaribu tena"
+    },
+    {
+      "label": "Maandishi kwa kitufe cha \"Onyesha suluhisho\"",
+      "default": "Onyesha suluhisho"
+    },
+    {
+      "label": "Mipangilio ya tabia.",
+      "description": "Chaguzi hizi zitakuwezesha kudhibiti jinsi kazi inavyofanya.",
+      "fields": [
+        {
+          "label": "Wezesha \"Jaribu tena\""
+        },
+        {
+          "label": "Wezesha kitufe cha \"Onyesha suluhisho\""
+        },
+        {
+          "label": "Wezesha kitufe cha \"Weka alama\""
+        },
+        {
+          "label": "Onyesha pointi za alama",
+          "description": "Onyesha pointi zilizopatikana kwa kila jibu."
+        }
+      ]
+    },
+    {
+      "label": "Maandishi ya jibu sahihi",
+      "default": "Sahihi!",
+      "description": "Maandishi yanayotumika kuonyesha kuwa jibu ni sahihi"
+    },
+    {
+      "label": "Maandishi ya jibu lisilo sahihi",
+      "default": "Siyo sahihi!",
+      "description": "Maandishi yanayotumika kuonyesha kuwa jibu siyo sahihi"
+    },
+    {
+      "label": "Maandishi ya jibu lililokosekana",
+      "default": "Jibu halipatikani!",
+      "description": "Maandishi yanayotumika kuonyesha kuwa jibu halipo"
+    },
+    {
+      "label": "Maelezo ya Suluhisho la Kuonyesha",
+      "default": "Kazi imesasishwa ili kuwa na suluhisho.",
+      "description": "Kifungu hiki kinamwambia mtumiaji kwamba kazi zimesasishwa na suluhisho hilo."
+    },
+    {
+      "label": "Uwakilishi wa maandishi wa upau wa alama kwa wale wanaotumia kisoma maandishi",
+      "default": "Umepata :num kati ya alama:total"
+    },
+    {
+      "label": "Lebo ya maandishi kamili yanayosomeka kwa teknolojia za usaidizi",
+      "default": "Maandishi yanayosomeka kikamilifu"
+    },
+    {
+      "label": "Lebo kwa maandishi ambapo maneno yanaweza kuwekwa alama kwa teknolojia za usaidizi",
+      "default": "Maandishi kamili ambapo maneno yanaweza kuwekwa alama"
+    },
+    {
+      "label": "Kichwa cha njia ya suluhisho kwa teknolojia za usaidizi",
+      "default": "Njia ya suluhisho"
+    },
+    {
+      "label": "Kichwa cha njia ya kuweka alama kwa teknolojia za usaidizi",
+      "default": "Njia ya kuweka alama"
+    },
+    {
+      "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Weka alama\"",
+      "default": "Weka alama majibu. Majibu yatatiwa alama kuwa sahihi, siyo sahihi au haijajibiwa."
+    },
+    {
+      "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Onyesha Suluhisho\"",
+      "default": "Onyesha suluhisho hilo. Kazi hiyo itawekwa alama na suluhisho lake sahihi."
+    },
+    {
+      "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Jaribu tena\"",
+      "default": "Jaribu tena kazi hiyo. Weka upya majibu yote na uanze kazi tena."
+    }
+  ]
+}

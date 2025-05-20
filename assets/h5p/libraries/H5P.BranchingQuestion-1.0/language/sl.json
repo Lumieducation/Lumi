@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Urejevalnik",
+      "fields": [
+        {
+          "label": "Vprašanje"
+        },
+        {
+          "label": "Možni odgovori",
+          "entity": "odgovor",
+          "field": {
+            "label": "Odgovor",
+            "fields": [
+              {
+                "label": "Besedilo"
+              },
+              {
+                "label": "Naslednja vsebina (-1 je zaključna)"
+              },
+              {
+                "label": "Povratna informacija",
+                "fields": [
+                  {
+                    "label": "Naslov povratne informacije"
+                  },
+                  {
+                    "label": "Vsebina povratne informacije"
+                  },
+                  {
+                    "label": "Slika povratne informacije"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Kohde",
+      "fields": [
+        {
+          "label": "Tyyppi",
+          "options": [
+            {
+              "label": "Aikakoodi"
+            },
+            {
+              "label": "Toinen sivu (URL)"
+            }
+          ]
+        },
+        {
+          "label": "Siirry kohtaan",
+          "description": "Käyttäjä siirretään määritettyyn ajankohtaan aikajanalla kun hän painaa hotspot-pistettä. Syötä aikakoodi muodossa M:SS."
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "Protokolla",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(suhteellinen päähakemistoon)"
+                },
+                {
+                  "label": "muu"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Visuaalit",
+      "fields": [
+        {
+          "label": "Muodot",
+          "options": [
+            {
+              "label": "Suorakulma"
+            },
+            {
+              "label": "Pyöreä"
+            },
+            {
+              "label": "Pyöristetty suorakulmio"
+            }
+          ]
+        },
+        {
+          "label": "Hotspot-pisteen taustaväri"
+        },
+        {
+          "label": "Käytä osoitinkursoria"
+        },
+        {
+          "label": "Lisää välähdys-efekti",
+          "description": "Huomio: Välähdysefekti on aina päällä editorissa jotta löydät läpinäkyvät hotspot-pisteet."
+        }
+      ]
+    },
+    {
+      "label": "Tekstit",
+      "fields": [
+        {
+          "label": "Vaihtoehtoinen teksti",
+          "description": "Kuvaile aihetta jonka hotspot-pitse peittää, tämä on ruudunlukijoita varten.",
+          "placeholder": "Omena pöydällä."
+        },
+        {
+          "label": "Hotspotin etiketti"
+        },
+        {
+          "label": "Näytä etiketti"
+        },
+        {
+          "label": "Etiketin väri"
+        }
+      ]
+    }
+  ]
+}

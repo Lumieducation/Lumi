@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Medieelement",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Valgfritt medieelement. Elementet vil bli plassert over spørsmålet."
+        },
+        {
+          "label": "Deaktiver zoomfunksjon."
+        }
+      ]
+    },
+    {
+      "label": "Oppgavebeskrivelse",
+      "description": "Forklar hvordan brukeren skal løse oppgaven.",
+      "default": "Dra ordene inn i de riktige boksene."
+    },
+    {
+      "label": "Tekst",
+      "placeholder": "*Oslo* er hovedstaden i Norge, *Stockholm* er hovedstaden i Sverige, og *København* er hovedstaden i Danmark. Alle byene er lokalisert i *Skandinavia:den nordlige delen av Europa*.",
+      "important": {
+        "description": "<ul><li>Flyttbare ord eller uttrykk markeres med en asterisk (*) foran og etter ordet/uttrykket.</li><li>Du kan også legge til et hint ved å bruke kolon (:). Eksempel: *Skandinavia:den nordlige delen av Europa*</li><li>Det finnes bare ett rett svar for hver tekstboks.</li><li>Det er mulig å legge til ei tilbakemelding som vises når oppgaven er fullført. Bruk '\\+' for positiv og '\\-' for negativ tilbakemelding.</li></ul>",
+        "example": "H5P-innhold kan redigeres med en *nettleser:Hva slags program er Chrome?*.<br />H5P-innhold er *interaktivt\\+Riktig!\\-Feil, prøv igjen*."
+      }
+    },
+    {
+      "label": "Svaralternativer som er feil",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Legg inn ekstra svaralternativer som er feil, for å gjøre oppgaven vanskeligere. Bruk stjerne (*) på samme måten som for korrekte svar i teksten."
+    },
+    {
+      "label": "Tilbakemelding på hele oppgaven",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Forhåndsinnstilling"
+            }
+          ],
+          "label": "Opprett poengområder og legg inn tilbakemeldinger.",
+          "description": "Klikk på knappen \"Legg til poengområde\" og legg til så mange poengområder du trenger. Eksempel: 0–40 % Svakt resultat, 41–80 % Gjennomsnittlig resultat, 81–100 % Flott resultat!",
+          "entity": "Område",
+          "field": {
+            "fields": [
+              {
+                "label": "Poengområde"
+              },
+              {},
+              {
+                "label": "Tilbakemelding for definert poengområde",
+                "placeholder": "Skriv inn tilbakemelding."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Navn på\"Sjekk\"-knapp",
+      "default": "Sjekk"
+    },
+    {
+      "label": "Navn på \"Send inn\"-knapp",
+      "default": "Send inn"
+    },
+    {
+      "label": "Navn på \"Prøv igjen\"-knapp",
+      "default": "Prøv igjen"
+    },
+    {
+      "label": "Navn på \"Vis svar\"-knapp",
+      "default": "Vis svar"
+    },
+    {
+      "label": "Merkelapp for nummerert slippsone",
+      "default": "Slippsone @index.",
+      "description": "Merking for tilgjengelighet. Skjermleser leser nummeret på slippsonen. Tilgjengelig variabel: @index"
+    },
+    {
+      "label": "Merkelapp for tom slippsone",
+      "default": "Slippsone @index er tom.",
+      "description": "Merking for tilgjengelighet. Skjermleser leser at slippsonen er tom."
+    },
+    {
+      "label": "Merkelapp: Slippsonen inneholder flyttbart element",
+      "default": "Slippsone @index inneholder flyttbart element @draggable.",
+      "description": "Merkelapp for tilgjengelighet. Skjermleser leser at slippsonen inneholder et flyttbart element."
+    },
+    {
+      "label": "Merkelapp for flyttbare elementer",
+      "default": "@index av @count flyttbare elementer",
+      "description": "Merking for tilgjengelighet. Skjermleser leser at dette er et flyttbart element. Tilgjengelige variabler: @index, @count"
+    },
+    {
+      "label": "Navn på \"Vis tips\"-knapp",
+      "default": "Vis tips",
+      "description": "Merking for tilgjengelighet. Skjermleser leser dette før selve tipset blir lest opp."
+    },
+    {
+      "label": "Skjermlesertekst ved riktig svar",
+      "default": "Riktig"
+    },
+    {
+      "label": "Skjermlesertekst ved feil svar",
+      "default": "Feil"
+    },
+    {
+      "label": "Tittel på bekreftelsesdialog om at bruker vil nullstille et flyttbart element",
+      "default": "Nullstill flyttbart element"
+    },
+    {
+      "label": "Tekst i bekreftelsesdialog når bruker vil nullstille et flyttbart element",
+      "default": "Er du sikker på at du vil nullstille dette elementet?"
+    },
+    {
+      "label": "Merkelapp for tilgjengelighet. Skjermleser sier at flytting har startet.",
+      "default": "Flyttbart element er tatt tak i."
+    },
+    {
+      "label": "Merkelapp for tilgjengelighet. Skjermleser sier at flytting er avbrutt.",
+      "default": "Flytting er avbrutt."
+    },
+    {
+      "label": "Merkelapp for tilgjengelighet. Skjermleser sier at svaret er korrekt.",
+      "default": "Riktig svar:"
+    },
+    {
+      "label": "Tittel på avsnittet som gir bruker tilbakemelding om riktige og feil svar",
+      "default": "Tilbakemelding"
+    },
+    {
+      "label": "Oppgaveinnstillinger",
+      "description": "Disse innstillingene lar deg bestemme hvordan oppgaven skal oppføre seg.",
+      "fields": [
+        {
+          "label": "Aktiver \"Prøv igjen\"-knapp"
+        },
+        {
+          "label": "Aktiver \"Vis svar\"-knapp"
+        },
+        {
+          "label": "Aktiver \"Sjekk\"-knapp"
+        },
+        {
+          "label": "Øyeblikkelig tilbakemelding"
+        }
+      ]
+    },
+    {
+      "label": "Tekstalternativ til resultatlinja for skjermleserbrukere",
+      "default": "Du fikk :num av :total poeng."
+    },
+    {
+      "label": "Merkelapp for \"Sjekk\"-knapp for assisterende teknologi",
+      "default": "Sjekk svar. Svara blir merket som riktig, feil eller ubesvart."
+    },
+    {
+      "label": "Assistive technology label for \"Show Solution\" button",
+      "default": "Show the solution. The task will be marked with its correct solution."
+    },
+    {
+      "label": "Assistive technology label for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
+    }
+  ]
+}

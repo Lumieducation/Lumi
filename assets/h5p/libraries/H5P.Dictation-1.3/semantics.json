@@ -1,0 +1,700 @@
+[
+  {
+    "name": "media",
+    "type": "group",
+    "label": "Media",
+    "importance": "medium",
+    "fields": [
+      {
+        "name": "type",
+        "type": "library",
+        "label": "Type",
+        "importance": "medium",
+        "options": [
+          "H5P.Image 1.1",
+          "H5P.Video 1.6",
+          "H5P.Audio 1.5"
+        ],
+        "optional": true,
+        "description": "Optional media to display above the question."
+      },
+      {
+        "name": "disableImageZooming",
+        "type": "boolean",
+        "label": "Disable image zooming",
+        "importance": "low",
+        "default": false,
+        "optional": true,
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "type",
+              "equals": "H5P.Image 1.1"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "taskDescription",
+    "label": "Task description",
+    "type": "text",
+    "widget": "html",
+    "importance": "high",
+    "description": "Describe your task here.",
+    "placeholder": "Please listen carefully and write what you hear.",
+    "enterMode": "div",
+    "tags": [
+      "strong",
+      "em",
+      "u",
+      "a",
+      "ul",
+      "ol",
+      "h2",
+      "h3",
+      "hr",
+      "pre",
+      "code"
+    ]
+  },
+  {
+    "name": "sentences",
+    "label": "Sentences",
+    "importance": "high",
+    "type": "list",
+    "widgets": [
+      {
+        "name": "VerticalTabs",
+        "label": "Default"
+      }
+    ],
+    "min": 1,
+    "entity": "Sentence",
+    "field": {
+      "name": "sentence",
+      "type": "group",
+      "label": "Sentence",
+      "fields": [
+        {
+          "name": "description",
+          "type": "text",
+          "label": "Description",
+          "description": "You can optionally put a simple description above the text input field, useful e.g. for dialogues.",
+          "importance": "medium",
+          "optional": true
+        },
+        {
+          "name": "sample",
+          "type": "audio",
+          "label": "Sound sample",
+          "description": "Sentence spoken in normal speed",
+          "importance": "medium",
+          "widgetExtensions": [
+            "AudioRecorder"
+          ]
+        },
+        {
+          "name": "sampleAlternative",
+          "type": "audio",
+          "label": "Sound sample slow",
+          "description": "Sentence spoken in slow speed",
+          "importance": "medium",
+          "optional": true,
+          "widgetExtensions": [
+            "AudioRecorder"
+          ]
+        },
+        {
+          "name": "text",
+          "type": "text",
+          "label": "Text",
+          "description": "Text that should be written. You can add alternate spellings to a word by adding a vertical line (|) behind followed by an alternative.",
+          "importance": "medium",
+          "maxLength": 1000
+        }
+      ]
+    }
+  },
+  {
+    "name": "overallFeedback",
+    "type": "group",
+    "label": "Overall Feedback",
+    "importance": "low",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "overallFeedback",
+        "type": "list",
+        "widgets": [
+          {
+            "name": "RangeList",
+            "label": "Default"
+          }
+        ],
+        "importance": "high",
+        "label": "Define custom feedback for any score range",
+        "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+        "entity": "range",
+        "min": 1,
+        "defaultNum": 1,
+        "optional": true,
+        "field": {
+          "name": "overallFeedback",
+          "type": "group",
+          "importance": "low",
+          "fields": [
+            {
+              "name": "from",
+              "type": "number",
+              "label": "Score Range",
+              "min": 0,
+              "max": 100,
+              "default": 0,
+              "unit": "%"
+            },
+            {
+              "name": "to",
+              "type": "number",
+              "min": 0,
+              "max": 100,
+              "default": 100,
+              "unit": "%"
+            },
+            {
+              "name": "feedback",
+              "type": "text",
+              "label": "Feedback for defined score range",
+              "importance": "low",
+              "placeholder": "Fill in the feedback",
+              "optional": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "behaviour",
+    "type": "group",
+    "label": "Behavioural settings",
+    "importance": "low",
+    "description": "These options will let you control how the task behaves.",
+    "fields": [
+      {
+        "name": "tries",
+        "type": "number",
+        "label": "Maximum tries",
+        "description": "Will limit the number of times the samples for each sentence can be listened to.",
+        "optional": true,
+        "min": 1
+      },
+      {
+        "name": "triesAlternative",
+        "type": "number",
+        "label": "Maximum tries for slow speed",
+        "description": "Will limit the number of times the slow samples for each sentence can be listened to.",
+        "optional": true,
+        "min": 1
+      },
+      {
+        "name": "disablePause",
+        "type": "boolean",
+        "label": "Disable pause option",
+        "description": "If checked, pausing the audio while playing is not possible.",
+        "default": false,
+        "optional": true
+      },
+      {
+        "name": "playButtonDelay",
+        "type": "number",
+        "label": "Play button delay",
+        "description": "Optionally set a time period of up to three seconds that playing a button should be delayed. This is useful if you want to allow students to enter the text field before they start listening.",
+        "optional": true,
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "shuffleSentences",
+        "type": "select",
+        "label": "Shuffle sentences",
+        "description": "Define when the sentences should be shuffled.",
+        "options": [
+          {
+            "value": "never",
+            "label": "Never"
+          },
+          {
+            "value": "once",
+            "label": "Once when starting exercise"
+          },
+          {
+            "value": "onRetry",
+            "label": "On every try"
+          }
+        ],
+        "default": "never"
+      },
+      {
+        "name": "scoring",
+        "type": "group",
+        "label": "Scoring",
+        "expanded": false,
+        "fields": [
+          {
+            "name": "ignorePunctuation",
+            "type": "boolean",
+            "label": "Ignore Punctuation marks",
+            "description": "If checked, punctuation marks will not be considered for scoring.",
+            "optional": false,
+            "default": true
+          },
+          {
+            "name": "zeroMistakeMode",
+            "type": "boolean",
+            "label": "Zero mistakes mode",
+            "description": "If checked, only correct answers will be considered for scoring. Mistakes will not be punished.",
+            "default": false,
+            "optional": false
+          },
+          {
+            "name": "typoFactor",
+            "type": "select",
+            "label": "Value of typos",
+            "description": "Determine to which extent typing errors (word with 3-9 characters: up to 1 mistake, word with more than 9 characters: up to 2 mistakes) count as a real mistake.",
+            "options": [
+              {
+                "value": "100",
+                "label": "100 %"
+              },
+              {
+                "value": "50",
+                "label": "50 %"
+              },
+              {
+                "value": "0",
+                "label": "0 %"
+              }
+            ],
+            "default": "100"
+          }
+        ]
+      },
+      {
+        "name": "textual",
+        "type": "group",
+        "label": "Text",
+        "expanded": false,
+        "fields": [
+          {
+            "name": "wordSeparator",
+            "type": "text",
+            "label": "Word separator",
+            "description": "Define the separator of words different than space character to support alternate solutions with different number of words.",
+            "optional": true,
+            "default": " "
+          },
+          {
+            "name": "overrideRTL",
+            "type": "select",
+            "label": "Writing direction",
+            "description": "Set whether the sentences' language is right-to-left or left-to-right.",
+            "options": [
+              {
+                "value": "auto",
+                "label": "Automatic detection"
+              },
+              {
+                "value": "on",
+                "label": "Right-to-left"
+              },
+              {
+                "value": "off",
+                "label": "Left-to-right"
+              }
+            ],
+            "default": "auto"
+          },
+          {
+            "name": "autosplit",
+            "type": "boolean",
+            "label": "Splitting of characters",
+            "description": "Activate if particular characters (e.g. Chinese Han characters) should be split into separate words automatically.",
+            "importance": "low",
+            "default": true
+          }
+        ]
+      },
+      {
+        "name": "feedbackPresentation",
+        "type": "group",
+        "label": "Presentation of feedback",
+        "expanded": false,
+        "fields": [
+          {
+            "name": "customTypoDisplay",
+            "type": "boolean",
+            "label": "Custom typo display",
+            "description": "If checked, typos will be displayed in a custom style distinguishing them from clear mistakes.",
+            "default": false,
+            "optional": false
+          },
+          {
+            "name": "alternateSolution",
+            "type": "select",
+            "label": "Presentation of alternate solutions",
+            "description": "Define which alternatives should be presented for wrong or missing words in the solution.",
+            "options": [
+              {
+                "value": "first",
+                "label": "Show only first alternative"
+              },
+              {
+                "value": "all",
+                "label": "Show all alternatives"
+              }
+            ],
+            "default": "first"
+          }
+        ]
+      },
+      {
+        "name": "enableRetry",
+        "label": "Enable \"Retry\"",
+        "type": "boolean",
+        "importance": "low",
+        "default": true,
+        "optional": true
+      },
+      {
+        "name": "enableSolutionsButton",
+        "label": "Enable \"Show solution\" button",
+        "type": "boolean",
+        "importance": "low",
+        "default": true,
+        "optional": true
+      },
+      {
+        "name": "enableSolutionOnCheck",
+        "label": "Show solution on check",
+        "type": "boolean",
+        "importance": "low",
+        "default": false,
+        "optional": true,
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "enableSolutionsButton",
+              "equals": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "common": true,
+    "label": "User interface",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "generalFeedback",
+        "type": "text",
+        "label": "General feedback",
+        "description": "You can use several placeholders that will be replaced with the adequate number: @matches = number of matches, @total = total mistakes, @capped = capped total mistakes, @wrong = wrong words, @added = additional words, @missing = missing words, @typo = typing errors",
+        "importance": "low",
+        "default": "You have made @total mistake(s)."
+      },
+      {
+        "name": "generalFeedbackZeroMistakesMode",
+        "type": "text",
+        "label": "General feedback (zero mistakes mode)",
+        "description": "You can use several placeholders that will be replaced with the adequate number: @matches = number of matches, @total = total score, @wrong = wrong words, @added = additional words, @missing = missing words, @typo = typing errors",
+        "importance": "low",
+        "default": "You have entered @total word(s) correctly and @typo word(s) with minor mistakes."
+      },
+      {
+        "name": "checkAnswer",
+        "type": "text",
+        "label": "Text for \"Check\" button",
+        "importance": "low",
+        "default": "Check"
+      },
+      {
+        "name": "submitAnswer",
+        "type": "text",
+        "label": "Text for \"Submit\" button",
+        "importance": "low",
+        "default": "Submit"
+      },
+      {
+        "name": "tryAgain",
+        "label": "Text for \"Retry\" button",
+        "type": "text",
+        "importance": "low",
+        "default": "Retry"
+      },
+      {
+        "name": "showSolution",
+        "type": "text",
+        "label": "Text for \"Show solution\" button",
+        "importance": "low",
+        "default": "Show solution"
+      },
+      {
+        "name": "audioNotSupported",
+        "type": "text",
+        "label": "Audio not supported message",
+        "importance": "low",
+        "default": "Your browser does not support this audio."
+      }
+    ]
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "common": true,
+    "label": "Readspeaker",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "check",
+        "type": "text",
+        "label": "Assistive technology description for \"Check\" button",
+        "importance": "low",
+        "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+      },
+      {
+        "name": "showSolution",
+        "type": "text",
+        "label": "Assistive technology description for \"Show Solution\" button",
+        "importance": "low",
+        "default": "Show the solution. The task will be marked with its correct solution."
+      },
+      {
+        "name": "retry",
+        "type": "text",
+        "label": "Assistive technology description for \"Retry\" button",
+        "importance": "low",
+        "default": "Retry the task. Reset all responses and start the task over again."
+      },
+      {
+        "name": "play",
+        "type": "text",
+        "label": "Play button",
+        "importance": "low",
+        "default": "Play"
+      },
+      {
+        "name": "playSlowly",
+        "type": "text",
+        "label": "Play slowly button",
+        "importance": "low",
+        "default": "Play slowly"
+      },
+      {
+        "name": "triesLeft",
+        "type": "text",
+        "label": "Tries left (text for readspeakers and hover text)",
+        "description": "@number will be replaced by the current number of tries left.",
+        "importance": "low",
+        "default": "Number of tries left: @number"
+      },
+      {
+        "name": "infinite",
+        "type": "text",
+        "label": "Infinite (text for readspeakers and hover text)",
+        "importance": "low",
+        "default": "infinite"
+      },
+      {
+        "name": "enterText",
+        "type": "text",
+        "label": "Enter text field",
+        "importance": "low",
+        "default": "Enter what you have heard."
+      },
+      {
+        "name": "yourResult",
+        "type": "text",
+        "label": "Your result",
+        "description": "@score will be replaced by the number of points. @total will be replaced by the maximum possible points.",
+        "importance": "low",
+        "default": "You got @score out of @total points"
+      },
+      {
+        "name": "solution",
+        "type": "text",
+        "label": "Solution",
+        "importance": "low",
+        "default": "Solution"
+      },
+      {
+        "name": "sentence",
+        "type": "text",
+        "label": "Sentence",
+        "importance": "low",
+        "default": "Sentence"
+      },
+      {
+        "name": "item",
+        "type": "text",
+        "label": "Item",
+        "importance": "low",
+        "default": "Item"
+      },
+      {
+        "name": "correct",
+        "type": "text",
+        "label": "Correct",
+        "importance": "low",
+        "default": "correct"
+      },
+      {
+        "name": "wrong",
+        "type": "text",
+        "label": "Wrong",
+        "importance": "low",
+        "default": "wrong"
+      },
+      {
+        "name": "typo",
+        "type": "text",
+        "label": "Small mistake",
+        "importance": "low",
+        "default": "small mistake"
+      },
+      {
+        "name": "missing",
+        "type": "text",
+        "label": "Missing word or symbol",
+        "importance": "low",
+        "default": "missing"
+      },
+      {
+        "name": "added",
+        "type": "text",
+        "label": "Added word or symbol",
+        "importance": "low",
+        "default": "added"
+      },
+      {
+        "name": "shouldHaveBeen",
+        "type": "text",
+        "label": "Correct solution",
+        "importance": "low",
+        "default": "Should have been"
+      },
+      {
+        "name": "or",
+        "type": "text",
+        "label": "Or",
+        "importance": "low",
+        "default": "or"
+      },
+      {
+        "name": "point",
+        "type": "text",
+        "label": "Point",
+        "importance": "low",
+        "default": "point"
+      },
+      {
+        "name": "points",
+        "type": "text",
+        "label": "Points",
+        "importance": "low",
+        "default": "points"
+      },
+      {
+        "name": "period",
+        "type": "text",
+        "label": "Period",
+        "importance": "low",
+        "default": "period"
+      },
+      {
+        "name": "exclamationPoint",
+        "type": "text",
+        "label": "Exclamation point",
+        "importance": "low",
+        "default": "exclamation point"
+      },
+      {
+        "name": "questionMark",
+        "type": "text",
+        "label": "Question mark",
+        "importance": "low",
+        "default": "question mark"
+      },
+      {
+        "name": "comma",
+        "type": "text",
+        "label": "Comma",
+        "importance": "low",
+        "default": "comma"
+      },
+      {
+        "name": "singleQuote",
+        "type": "text",
+        "label": "Single quote",
+        "importance": "low",
+        "default": "single quote"
+      },
+      {
+        "name": "doubleQuote",
+        "type": "text",
+        "label": "Double quote",
+        "importance": "low",
+        "default": "double quote"
+      },
+      {
+        "name": "colon",
+        "type": "text",
+        "label": "Colon",
+        "importance": "low",
+        "default": "colon"
+      },
+      {
+        "name": "semicolon",
+        "type": "text",
+        "label": "Semicolon",
+        "importance": "low",
+        "default": "semicolon"
+      },
+      {
+        "name": "plus",
+        "type": "text",
+        "label": "Plus",
+        "importance": "low",
+        "default": "plus"
+      },
+      {
+        "name": "minus",
+        "type": "text",
+        "label": "Minus",
+        "importance": "low",
+        "default": "minus"
+      },
+      {
+        "name": "asterisk",
+        "type": "text",
+        "label": "Asterisk",
+        "importance": "low",
+        "default": "asterisk"
+      },
+      {
+        "name": "forwardSlash",
+        "type": "text",
+        "label": "Forward slash",
+        "importance": "low",
+        "default": "forward slash"
+      }
+    ]
+  }
+]

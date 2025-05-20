@@ -1,0 +1,123 @@
+{
+  "semantics": [
+    {
+      "label": "Headline",
+      "description": "If set, will be used for the headline of the exercise instead of the content title."
+    },
+    {
+      "label": "안내",
+      "description": "학생들이 이 안내사항을 노트 위에 볼 것입니다."
+    },
+    {
+      "label": "연습 내용"
+    },
+    {
+      "label": "노트 영역",
+      "description": "노트 영역 설정",
+      "fields": [
+        {
+          "label": "영역 제목 불러오기",
+          "default": "불러오기",
+          "description": "불러오기 영역 제목"
+        },
+        {
+          "label": "불러오기 영역 자리",
+          "default": "키워드, 질문, 요지 등을 입력하세요.",
+          "description": "학생들에게 상기시키기 위한 영역 자리"
+        },
+        {
+          "label": "노트 영역 제목",
+          "default": "노트",
+          "description": "노트 영역에 대한 제목"
+        },
+        {
+          "label": "노트 영역 자리",
+          "default": "일자, 세부사항, 정의, 공식, 예시 등 입력",
+          "description": "학생들에게 상기시키기 위한 영역 자리"
+        },
+        {
+          "label": "요약 영역 제목",
+          "default": "요약",
+          "description": "요약 영역 제목"
+        },
+        {
+          "label": "요약 영역 자리",
+          "default": "요약을 입력하세요",
+          "description": "학생들에게 상기시키기 위한 영역 자리"
+        }
+      ]
+    },
+    {
+      "label": "Localization",
+      "fields": [
+        {
+          "label": "Notes saved",
+          "default": "Notes saved"
+        },
+        {
+          "label": "Save",
+          "default": "Save"
+        },
+        {
+          "label": "Notes cannot be saved",
+          "default": "The platform either does not support the save content state feature or it is not activated in the platform's settings or you are not logged in. Your notes cannot be saved!"
+        },
+        {
+          "label": "Text for \"Copy\" button",
+          "default": "Copy"
+        },
+        {
+          "label": "Notes copied to clipboard",
+          "default": "Notes copied to clipboard"
+        },
+        {
+          "label": "Notes could not be copied to clipboard",
+          "default": "Notes could not be copied to clipboard"
+        }
+      ]
+    },
+    {
+      "label": "읽어주기 기능 텍스트",
+      "fields": [
+        {
+          "label": "전체 화면 버튼 제목",
+          "default": "전체 화면 모드로 전환"
+        },
+        {
+          "label": "전체 화면 버튼 제목(종료)",
+          "default": "전체 화면 모드 종료"
+        },
+        {
+          "label": "토글(Toggle) 버튼 제목(노트가 닫혀 있을 때)",
+          "default": "노트 열기"
+        },
+        {
+          "label": "토글(Toggle) 버튼 제목(노트가 열려 있을 때)",
+          "default": "노트 닫기"
+        },
+        {
+          "label": "노트가 열렸을 때",
+          "default": "보기가 노트로 전환되었습니다."
+        },
+        {
+          "label": "노트가 닫혔을 때",
+          "default": "보기가 연습 문제로 전환되었습니다."
+        },
+        {
+          "label": "Notes saved",
+          "default": "The notes were saved to the platform."
+        },
+        {
+          "label": "Hide notes",
+          "default": "Hide @label notes",
+          "description": "@label is a placeholder and will be replaced with the respective label of the notes field."
+        },
+        {
+          "label": "Show notes",
+          "default": "Show @label notes",
+          "description": "@label is a placeholder and will be replaced with the respective label of the notes field."
+        }
+      ]
+    }
+  ]
+}

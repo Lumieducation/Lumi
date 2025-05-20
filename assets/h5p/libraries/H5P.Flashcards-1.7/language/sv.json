@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Uppgiftsbeskrivning"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Standard"
+        }
+      ],
+      "label": "Kort",
+      "entity": "kort",
+      "field": {
+        "label": "Kort",
+        "fields": [
+          {
+            "label": "Fråga",
+            "description": "Valfri text för kortet. (Kortet kan bestå av enbart en bild, enbart en text, eller båda.)"
+          },
+          {
+            "label": "Svar",
+            "description": "Svar (lösning) för kortet. Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "Bild",
+            "description": "Valfri bild för kortet. (Kortet kan bestå av enbart en bild, enbart en text, eller båda.)"
+          },
+          {
+            "label": "Alternativ text för bild"
+          },
+          {
+            "label": "Tips",
+            "fields": [
+              {
+                "label": "Tipstext"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Framstegstext",
+      "default": "Kort @card av @total",
+      "description": "Framstegstext, variabler inkluderar : @card och @total. Exempel: 'Kort @card av @total'"
+    },
+    {
+      "label": "Text för nästa-knappen",
+      "default": "Nästa"
+    },
+    {
+      "label": "Text för föregående-knappen",
+      "default": "Föregående"
+    },
+    {
+      "label": "Text för knappen \"Svara\"",
+      "default": "Svara"
+    },
+    {
+      "label": "Kräv att användaren anger svar innan lösning kan visas"
+    },
+    {
+      "label": "Text för svarsinmatningsfält",
+      "default": "Ditt svar"
+    },
+    {
+      "label": "Text vid korrekt svar",
+      "default": "Rätt"
+    },
+    {
+      "label": "Text vid felaktigt svar",
+      "default": "Fel"
+    },
+    {
+      "label": "Visa lösningstext",
+      "default": "Rätt svar"
+    },
+    {
+      "label": "Rubrik för resultat",
+      "default": "Resultat"
+    },
+    {
+      "label": "Text för antal korrekta",
+      "default": "@score av @total var rätt",
+      "description": "Resultattext, variabler som finns är : @score och @total. Example: '@score av @total var rätt'"
+    },
+    {
+      "label": "Text för visa resultat",
+      "default": "Vis resultat"
+    },
+    {
+      "label": "Text för kort svarsetikett",
+      "default": "A:"
+    },
+    {
+      "label": "Text för knappen \"försök igen\"",
+      "default": "Försök igen"
+    },
+    {
+      "label": "Skiftlägeskänsligt",
+      "description": "Kräv att användarens svar är exakt samma som svaret."
+    },
+    {
+      "label": "Text vid felaktigt svar för tillgänglighetshjälpmedel",
+      "default": "Felaktigt svar. Rätt svar var @answer",
+      "description": "Text som kommer användas av tillgänglighetshjälpmedel. Använd @answer som variabel."
+    },
+    {
+      "label": "Text för korrekt feedback text för tillgänglighetshjälpmedel",
+      "default": "@answer är korrekt",
+      "description": "Text som beskrivs för tillgänglighetshjälpmedel när ett kort är besvarat korrekt. Använd @answer som variabel."
+    },
+    {
+      "label": "Byte av kort vid tillgänglighetshjälpmedel",
+      "default": "Sida @current av @total",
+      "description": "Text som kommer användas av tillgänglighetshjälpmedel vid navigering mellan kort. Använd @current och @total som variabler."
+    },
+    {
+      "label": "Slumpa kort",
+      "description": "Aktivera för att skapa slumpmässig ordning på hur korten visas."
+    }
+  ]
+}

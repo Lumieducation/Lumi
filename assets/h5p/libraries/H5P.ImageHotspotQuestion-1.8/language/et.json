@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Pildi tulipunkti redaktor",
+      "fields": [
+        {
+          "label": "Taustapilt",
+          "fields": [
+            {
+              "label": "Taustapilt",
+              "description": "Vali pildi tulipunkti küsimuse taustapilt."
+            }
+          ]
+        },
+        {
+          "label": "Tulipunktid",
+          "description": "Lohista soovitud kujund tööriistaribalt uue tulipunkti loomiseks. Olemasoleva tulipunkti töötlemiseks topelt-kliki sellel. Tulipunkti liigutamiseks lohista seda. Suuruse muutmiseks tõmba sanga paremal all nurgas.",
+          "fields": [
+            {
+              "label": "Ülesande kirjeldus",
+              "description": "Juhised kasutajale."
+            },
+            {
+              "label": "Tulipunkt",
+              "entity": "Tulipunkt",
+              "field": {
+                "label": "Tulipunkt",
+                "fields": [
+                  {
+                    "label": "Kasutajaseaded",
+                    "fields": [
+                      {
+                        "label": "Õige",
+                        "description": "Õigeid tulipunkte võib olla mitmeid. Kasutaja saab siiski õige/vale tagasiside kohe peale esimest klikki."
+                      },
+                      {
+                        "label": "Tagasiside"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "computedSettings"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Tagasiside, kui kasutaja valib tühja koha:",
+              "placeholder": "Sa ei valinud ühtegi tulipunkti, proovi uuesti!"
+            },
+            {
+              "label": "Näita tagasisidet hüpikaknana"
+            },
+            {
+              "label": "Kohandamine",
+              "fields": [
+                {
+                  "label": "Proovi uuesti nupu tekst",
+                  "default": "Proovi uuesti"
+                },
+                {
+                  "label": "Sulge nupu tekst",
+                  "default": "Sulge"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Punktisumma riba tekstiline esitamine neile, kes kasutavad tekstilugerit",
+      "default": "Sa said :num punkti :total punktist"
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
+    }
+  ]
+}

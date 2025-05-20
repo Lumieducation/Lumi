@@ -1,0 +1,256 @@
+{
+  "semantics": [
+    {
+      "label": "Mediji",
+      "fields": [
+        {
+          "label": "Tip",
+          "description": "Neobvezna nastavitev dodatnega medija za prikaz nad vprašanjem."
+        },
+        {
+          "label": "Onemogoči povečavo slike"
+        }
+      ]
+    },
+    {
+      "label": "Vprašanje"
+    },
+    {
+      "label": "Razpoložljive možnosti",
+      "entity": "možnost",
+      "field": {
+        "label": "Možnost",
+        "fields": [
+          {
+            "label": "Medij",
+            "description": "Media to display as a choice."
+          },
+          {
+            "label": "Poster image"
+          },
+          {
+            "label": "Pravilen odgovor"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Splošna povratna informacija",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Privzeto"
+            }
+          ],
+          "label": "Določi ločeno povratno informacijo za vsak razpon rezultatov",
+          "description": "Kliknite gumb \"Dodaj razpon\" za dodajanje dodatnih razponov. Primer: 0-20 % Slab rezultat, 21-91 % Povprečen rezultat, 91-100 % Odličen rezultat!",
+          "entity": "razpon",
+          "field": {
+            "fields": [
+              {
+                "label": "Razpon rezultatov"
+              },
+              {},
+              {
+                "label": "Povratna informacija za definiran razpon rezultatov",
+                "placeholder": "Vnesite povratno informacijo"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Nastavitve interakcije",
+      "description": "Nastavitve omogočajo nadzor nad interakcijo aktivnosti za udeležence.",
+      "fields": [
+        {
+          "label": "Omogoči gumb \"Poskusi ponovno\""
+        },
+        {
+          "label": "Omogoči gumb \"Prikaži rešitev\""
+        },
+        {
+          "label": "Pred oddajo odgovora z gumbom \"Preveri\" zahtevaj potrditev"
+        },
+        {
+          "label": "Pred ponovitvijo aktivnosti z gumbom \"Poskusi ponovno\" zahtevaj potrditev"
+        },
+        {
+          "label": "Nalogo oceni z 1 točko kot celoto",
+          "description": "Točka je podeljena, ko je odstotek uspešnosti pri nalogi višji od zastavljenega odstotka za prag napredovanja."
+        },
+        {
+          "label": "Pred ogledom rešitve je potrebno podati odgovor"
+        },
+        {
+          "label": "Tip vprašanja",
+          "description": "Ureditev videza in vedenja vprašanja.",
+          "options": [
+            {
+              "label": "Določi samodejno"
+            },
+            {
+              "label": "Več odgovorov (Checkboxes)"
+            },
+            {
+              "label": "En odgovor (Radio Buttons)"
+            }
+          ]
+        },
+        {
+          "label": "Razmerje stranic",
+          "description": "Določitev razmerja stranic pri prikazu slik z možnimi odgovori",
+          "options": [
+            {
+              "label": "Samodejno"
+            },
+            {
+              "label": "16:9"
+            },
+            {
+              "label": "4:3"
+            },
+            {
+              "label": "3:2"
+            },
+            {
+              "label": "1:1"
+            }
+          ]
+        },
+        {
+          "label": "Dovoljeno število slik na vrstico",
+          "description": "Določitev najvišjega dovoljenega števila slik z odgovori na vrstico. Vpliva na izgled aktivnosti.",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "3"
+            },
+            {
+              "label": "4"
+            }
+          ]
+        },
+        {
+          "label": "Prag za napredovanje",
+          "description": "Odstotek, ki je potreben za uspešen zaključek naloge oz. prejeto 1 točko. Nastavitev ima učinek zgolj pri izbiri \"Nalogo oceni z 1 točko kot celoto\" in beleženjem dosežka kot stavka xAPI."
+        }
+      ]
+    },
+    {
+      "label": "Preglasitve besedil in prevodov",
+      "fields": [
+        {
+          "label": "Besedilo za gumb \"Preveri\"",
+          "default": "Preveri"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "Opis gumba \"Preveri\" za bralnike zaslona",
+          "default": "Preveri pravilnost. Odgovori bodo označeni kot pravilni, napačni ali brez odgovorov."
+        },
+        {
+          "label": "Besedilo za gumb \"Prikaži rešitev\"",
+          "default": "Prikaži rešitev"
+        },
+        {
+          "label": "Opis gumba \"Prikaži rešitev\" za bralnike zaslona",
+          "default": "Prikaže rešitev. Pravilni odgovori bodo označeni."
+        },
+        {
+          "label": "Pravilen odgovor (ni prikazan)",
+          "default": "Pravilen odgovor"
+        },
+        {
+          "label": "Nepravilen odgovor (ni prikazan)",
+          "default": "Nepravilen odgovor"
+        },
+        {
+          "label": "Možnost bi morala biti izbrana",
+          "default": "Možnost bi morala biti izbrana"
+        },
+        {
+          "label": "Možnost ne bi smela biti izbrana",
+          "default": "Možnost ne bi smela biti izbrana"
+        },
+        {
+          "label": "Besedilo za sporočilo o manjkajočem odgovoru",
+          "default": "Pred ogledom rešitve podajte odgovor"
+        },
+        {
+          "label": "Besedilo za gumb \"Poskusi ponovno\"",
+          "default": "Poskusi ponovno"
+        },
+        {
+          "label": "Opis gumba \"Poskusi ponovno\" za bralnike zaslona",
+          "default": "Omogoči ponoven poskus. Ponastavi vse odzive in znova zažene nalogo."
+        },
+        {
+          "label": "Rezultat reševanja",
+          "description": "Spremenljivki sta :num in :total.",
+          "default": "Seštevek točk: :num od :total"
+        },
+        {
+          "label": "Pogovorno okno pred oddajo odgovora",
+          "fields": [
+            {
+              "label": "Naslov",
+              "default": "Zaključi?"
+            },
+            {
+              "label": "Besedilo telesa pogovornega okna",
+              "default": "Ste prepričani, da želite zaključiti?"
+            },
+            {
+              "label": "Besedilo gumba Prekliči",
+              "default": "Prekliči"
+            },
+            {
+              "label": "Besedilo gumba Potrdi",
+              "default": "Potrdi"
+            }
+          ]
+        },
+        {
+          "label": "Pogovorno okno pred ponovitvijo aktivnosti",
+          "fields": [
+            {
+              "label": "Naslov",
+              "default": "Poskusi ponovno?"
+            },
+            {
+              "label": "Besedilo telesa pogovornega okna",
+              "default": "Ste prepričani, da želite poskusiti ponovno?"
+            },
+            {
+              "label": "Besedilo gumba Prekliči",
+              "default": "Prekliči"
+            },
+            {
+              "label": "Besedilo gumba Potrdi",
+              "default": "Potrdi"
+            }
+          ]
+        },
+        {
+          "label": "Besedilo, če za sliko manjka nadomestno besedilo",
+          "default": "Nadomestno besedilo manjka"
+        },
+        {
+          "label": "Close modal button label",
+          "default": "Close modal"
+        }
+      ]
+    }
+  ]
+}

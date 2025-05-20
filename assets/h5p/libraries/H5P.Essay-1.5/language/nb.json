@@ -1,0 +1,299 @@
+{
+  "semantics": [
+    {
+      "label": "Medieelement",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Valgfritt medieelement. Elementet vil bli plassert over spørsmålet."
+        },
+        {
+          "label": "Deaktiver zoomingfunksjon."
+        }
+      ]
+    },
+    {
+      "label": "Oppgavebeskrivelse",
+      "description": "Describe your task here. The task description will appear above text input area.",
+      "placeholder": "Summarize the book in 500 characters ..."
+    },
+    {
+      "label": "Help text",
+      "description": "This text should help the user to get started.",
+      "placeholder": "This book is about ..."
+    },
+    {
+      "label": "Sample solution",
+      "description": "You can optionally add a sample solution that's shown after the student created a text. It's called sample solution because there probably is not only one solution.",
+      "fields": [
+        {
+          "label": "Introduction",
+          "description": "You can optionally leave the students some explanations about your example. The explanations will only show up if you add an example, too.",
+          "placeholder": "Please remember that you were not expected to come up with the exact same solution. It's just a good example."
+        },
+        {
+          "label": "Sample solution text",
+          "description": "The student will see a \"Show solution\" button after submitting if you provide some text here."
+        }
+      ]
+    },
+    {
+      "label": "Keywords",
+      "widgets": [
+        {
+          "label": "Standard"
+        }
+      ],
+      "entity": "Keyword",
+      "field": {
+        "label": "Keyword",
+        "fields": [
+          {
+            "label": "Keyword",
+            "description": "Keyword or phrase to look for. Use an asterisk '*' as a wildcard for one or more characters. Use a slash '/' at the beginning and the end to use a regular expression."
+          },
+          {
+            "label": "Variations",
+            "description": "Add optional variations for this keyword. Example: For a 'city' add alternatives 'town', 'municipality' etc. Points will be awarded if the user includes any of the specified alternatives.",
+            "entity": "variation",
+            "field": {
+              "label": "Keyword variation"
+            }
+          },
+          {
+            "label": "Points, Options and Feedback",
+            "fields": [
+              {
+                "label": "Points",
+                "description": "Points that the user will get if he/she includes this keyword or its alternatives in the answer."
+              },
+              {
+                "label": "Occurrences",
+                "description": "Define how many occurrences of the keyword or its variations should be awarded with points."
+              },
+              {
+                "label": "Case sensitive",
+                "description": "Makes sure the user input has to be exactly the same as the answer."
+              },
+              {
+                "label": "Forgive minor mistakes",
+                "description": "This will accept minor spelling mistakes (3-9 characters: 1 mistake, more than 9 characters: 2 mistakes)."
+              },
+              {
+                "label": "Feedback if keyword included",
+                "description": "This feedback will be displayed if the user includes this keyword or its alternatives in the answer."
+              },
+              {
+                "label": "Feedback if keyword missing",
+                "description": "This feedback will be displayed if the user doesn’t include this keyword or its alternatives in the answer."
+              },
+              {
+                "label": "Feedback word shown if keyword included",
+                "description": "This option allows you to specify which word should be shown in front of your feedback if a keyword was found in the text.",
+                "options": [
+                  {
+                    "label": "keyword"
+                  },
+                  {
+                    "label": "alternative found"
+                  },
+                  {
+                    "label": "answer given"
+                  },
+                  {
+                    "label": "none"
+                  }
+                ]
+              },
+              {
+                "label": "Feedback word shown if keyword missing",
+                "description": "This option allows you to specify which word should be shown in front of your feedback if a keyword was not found in the text.",
+                "options": [
+                  {
+                    "label": "keyword"
+                  },
+                  {
+                    "label": "none"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Overall Feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Default"
+            }
+          ],
+          "label": "Define custom feedback for any score range",
+          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "Score Range"
+              },
+              {},
+              {
+                "label": "Feedback for defined score range",
+                "placeholder": "Fill in the feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Behavioural settings",
+      "description": "These options will let you control how the task behaves.",
+      "fields": [
+        {
+          "label": "Minimum number of characters",
+          "description": "Specify the minimum number of characters that the user must enter."
+        },
+        {
+          "label": "Maximum number of characters",
+          "description": "Specify the maximum number of characters that the user can enter."
+        },
+        {
+          "label": "Input field size",
+          "description": "The size of the input field in amount of lines it will cover",
+          "options": [
+            {
+              "label": "1 line"
+            },
+            {
+              "label": "3 lines"
+            },
+            {
+              "label": "10 lines"
+            }
+          ]
+        },
+        {
+          "label": "Enable \"Retry\"",
+          "description": "If checked, learners can retry the task."
+        },
+        {
+          "label": "Ignore scoring",
+          "description": "If checked, learners will only see the feedback that you provided for the keywords, but no score."
+        },
+        {
+          "label": "Points in host environment",
+          "description": "Used to award points in host environment merely for answering (not shown to learner)."
+        },
+        {
+          "label": "Passing percentage",
+          "description": "Percentage that's necessary for passing"
+        },
+        {
+          "label": "Mastering percentage",
+          "description": "Percentage that's necessary for mastering. Setting the mastering percentage below 100 % will lower the maximum possible score accordingly. It's intended to give some leeway to students, not to \"graciously accept\" solutions that do not contain all keywords."
+        },
+        {
+          "label": "Override case sensitive",
+          "description": "This option determines if the \"Case sensitive\" option will be activated for all keywords.",
+          "options": [
+            {
+              "label": "Enabled"
+            },
+            {
+              "label": "Disabled"
+            }
+          ]
+        },
+        {
+          "label": "Override forgive mistakes",
+          "description": "This option determines if the \"Forgive mistakes\" option will be activated for all keywords.",
+          "options": [
+            {
+              "label": "Enabled"
+            },
+            {
+              "label": "Disabled"
+            }
+          ]
+        },
+        {
+          "label": "Replacement for line breaks",
+          "description": "By default, line breaks will be replaced with a space character. If you want to check for line breaks, e.g. in regular expressions, you can set a different replacement here.",
+          "options": [
+            {
+              "label": "space"
+            },
+            {
+              "label": "line break (\\n)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Text for \"Check\" button",
+      "default": "Check"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "Text for \"Retry\" button",
+      "default": "Retry"
+    },
+    {
+      "label": "Text for \"Show solution\" button",
+      "default": "Show solution"
+    },
+    {
+      "label": "Header for panel containing feedback for included/missing keywords",
+      "default": "Feedback"
+    },
+    {
+      "label": "Label for solution",
+      "default": "Sample solution"
+    },
+    {
+      "label": "Remaining characters",
+      "default": "Remaining characters: @chars",
+      "description": "Message for remaining characters. You can use @chars which will be replaced by the corresponding number."
+    },
+    {
+      "label": "Not enough characters",
+      "default": "You must enter at least @chars characters!",
+      "description": "Message to indicate that the text doesn't contain enough characters. You can use @chars which will be replaced by the corresponding number."
+    },
+    {
+      "label": "Save message",
+      "description": "Message indicating that the text has been saved",
+      "default": "saved"
+    },
+    {
+      "label": "Your result (not displayed)",
+      "description": "Accessibility text used for readspeakers. @score will be replaced by the number of points. @total will be replaced by the maximum possible points.",
+      "default": "You got @score out of @total points"
+    },
+    {
+      "label": "Navigation message (not displayed)",
+      "description": "Accessibility text used for readspeakers",
+      "default": "Navigated to newly included sample solution after textarea."
+    },
+    {
+      "label": "Assistive technology description for \"Check\" button",
+      "default": "Check the answers."
+    },
+    {
+      "label": "Assistive technology description for \"Show Solution\" button",
+      "default": "Show the solution. You will be provided with a sample solution."
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. You can improve your previous answer if the author allowed that."
+    }
+  ]
+}

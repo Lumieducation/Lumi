@@ -1,0 +1,374 @@
+{
+  "semantics": [
+    {
+      "label": "Mediji",
+      "fields": [
+        {
+          "label": "Tip",
+          "description": "Neobvezna nastavitev dodatnega medija za prikaz nad vprašanjem."
+        },
+        {
+          "label": "Onemogoči povečavo slike"
+        }
+      ]
+    },
+    {
+      "label": "Navodilo udeležencem",
+      "description": "Opis reševanja zadane aktivnosti.",
+      "placeholder": "Pazljivo poslušaj posnetek in zapiši slišano."
+    },
+    {
+      "label": "Stavki",
+      "widgets": [
+        {
+          "label": "Privzeto"
+        }
+      ],
+      "entity": "Stavek",
+      "field": {
+        "label": "Stavek",
+        "fields": [
+          {
+            "label": "Opis",
+            "description": "Neobvezen opis posnetka (npr. dialogov) nad vnosnim poljem za odgovor udeleženca."
+          },
+          {
+            "label": "Zvočni posnetek",
+            "description": "Posnetek stavka v običajni hitrosti."
+          },
+          {
+            "label": "Zvočni posnetek (upočasnjen)",
+            "description": "Posnetek stavka v upočasnjenem načinu (npr. s premori med posameznimi besedami)."
+          },
+          {
+            "label": "Besedilo",
+            "description": "Besedilo, ki ga morajo vnesti udeleženci. Nadomestne besede se lahko doda za zapisom navpične črte (|), in sicer neposredno za izbrano besedo (npr. München|Muenchen)."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Splošna povratna informacija",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Privzeto"
+            }
+          ],
+          "label": "Določi ločeno povratno informacijo za vsak razpon rezultatov",
+          "description": "Kliknite gumb \"Dodaj razpon\" za dodajanje dodatnih razponov. Primer: 0-20 % Slab rezultat, 21-91 % Povprečen rezultat, 91-100 % Odličen rezultat!",
+          "entity": "razpon",
+          "field": {
+            "fields": [
+              {
+                "label": "Razpon rezultatov"
+              },
+              {
+                "label": "Povratna informacija za definiran razpon rezultatov",
+                "placeholder": "Vnesite povratno informacijo"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Nastavitve interakcije",
+      "description": "Nastavitve omogočajo nadzor nad interakcijo aktivnosti za udeležence.",
+      "fields": [
+        {
+          "label": "Število predvajanj posnetka",
+          "description": "Omejitev možnega števila predvajanja posnetka (za vsak stavek posebej)."
+        },
+        {
+          "label": "Število predvajanj upočasnjenega posnetka",
+          "description": "Omejitev možnega števila predvajanja upočasnjenega posnetka (za vsak stavek posebej)."
+        },
+        {
+          "label": "Onemogoči premor",
+          "description": "Omejitev možnosti zaustavitve predvajanja posnetka."
+        },
+        {
+          "label": "Play button delay",
+          "description": "Optionally set a time period of up to three seconds that playing a button should be delayed. This is useful if you want to allow students to enter the text field before they start listening."
+        },
+        {
+          "label": "Premešaj stavke",
+          "description": "Določitev načina prikaza stavkov v naključnem vrstnem redu.",
+          "options": [
+            {
+              "label": "Nikoli"
+            },
+            {
+              "label": "Enkrat ob začetku naloge"
+            },
+            {
+              "label": "Ob vsakem poskusu reševanja"
+            }
+          ]
+        },
+        {
+          "label": "Točkovanje",
+          "fields": [
+            {
+              "label": "Ne upoštevaj ločil",
+              "description": "V primeru onemogočene nastavitve se bo v stavkih točkoval tudi vnos ločil."
+            },
+            {
+              "label": "Način brez napak",
+              "description": "Udeleženec prejme točke le za pravilne odgovore. Napake sicer niso kaznovane."
+            },
+            {
+              "label": "Vrednost tipkarskih napak",
+              "description": "Odstotek točkovanja tipkarskih napak (npr. 0 % samo opozori, 50 % točkuje s 1/2 točke). Vrednost točk je odvisna tudi od obsega tipkarske napake, ko se le-ta šteje kot očitna napaka (npr. beseda s 3-9 znaki: do 1 napaka, beseda nad 9 znakov: do 2 napaki).",
+              "options": [
+                {
+                  "label": "100 %"
+                },
+                {
+                  "label": "50 %"
+                },
+                {
+                  "label": "0 %"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Besedilo",
+          "fields": [
+            {
+              "label": "Ločilo besed",
+              "description": "Določi ločilo med besedami, ki ni presledek. Ločilo omogoča zapis nadomestnih odgovorov z različnim številom besed."
+            },
+            {
+              "label": "Smer pisanja",
+              "description": "Nastavitev smeri pisanja oz. prebiranja besedila.",
+              "options": [
+                {
+                  "label": "Samodejna zaznava"
+                },
+                {
+                  "label": "Desno proti levi"
+                },
+                {
+                  "label": "Levo proti desni"
+                }
+              ]
+            },
+            {
+              "label": "Razdeli znake",
+              "description": "Neobvezna nastavitev, ki omogočena samodejno razdelitev določenih znakov (npr. kitajski znaki Han)."
+            }
+          ]
+        },
+        {
+          "label": "Predstavitev povratne informacije",
+          "fields": [
+            {
+              "label": "Tipkarske napake prikaži ločeno",
+              "description": "Omogočena nastavitev bo ločila med tipkarskimi in očitnimi napakami ter jih prikazala ločeno."
+            },
+            {
+              "label": "Prikaz nadomestnih rešitev",
+              "description": "Nastavitev prikaza nadomestnih besed kot napačnih ali manjkajočih besed v rešitvi.",
+              "options": [
+                {
+                  "label": "Prikaži samo prvo nadomestno besedo"
+                },
+                {
+                  "label": "Prikaži vse nadomestne besede"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Omogoči gumb \"Poskusi ponovno\""
+        },
+        {
+          "label": "Omogoči gumb \"Prikaži rešitev\""
+        },
+        {
+          "label": "Ob preverjanju odgovorov prikaži rešitve"
+        }
+      ]
+    },
+    {
+      "label": "Uporabniški vmesnik",
+      "fields": [
+        {
+          "label": "Splošna povratna informacija",
+          "description": "Na voljo je več spremenljivk: @matches = število ujemanj, @total = število napak, @capped = število delnih napak, @wrong = napačnih besed, @added = dodatnih besed, @missing = manjkajočih besed, @typo = tipkarskih napak",
+          "default": "Število napak: @total."
+        },
+        {
+          "label": "Splošna povratna informacija (Način brez napak)",
+          "description": "Na voljo je več spremenljivk: @matches = število ujemanj, @total = število napak, @wrong = napačnih besed, @added = dodatnih besed, @missing = manjkajočih besed, @typo = tipkarskih napak",
+          "default": "Število napak: @total. Število tipkarskih napak: @typo."
+        },
+        {
+          "label": "Besedilo za gumb \"Preveri\"",
+          "default": "Preveri"
+        },
+        {
+          "label": "Besedilo za gumb \"Oddaj\"",
+          "default": "Oddaj"
+        },
+        {
+          "label": "Besedilo za gumb \"Poskusi ponovno\"",
+          "default": "Poskusi ponovno"
+        },
+        {
+          "label": "Besedilo za gumb \"Prikaži rešitev\"",
+          "default": "Prikaži rešitev"
+        },
+        {
+          "label": "Sporočilo o nepodprtosti zvočnega posnetka",
+          "default": "Spletni brskalnik ne podpira tega zvočnega posnetka."
+        }
+      ]
+    },
+    {
+      "label": "Bralniki zaslona",
+      "fields": [
+        {
+          "label": "Opis gumba \"Preveri\" za bralnike zaslona",
+          "default": "Preveri pravilnost. Odgovori bodo označeni kot pravilni, napačni ali brez odgovorov."
+        },
+        {
+          "label": "Opis gumba \"Prikaži rešitev\" za bralnike zaslona",
+          "default": "Prikaže rešitev. Pravilni odgovori bodo označeni."
+        },
+        {
+          "label": "Opis gumba \"Poskusi ponovno\" za bralnike zaslona",
+          "default": "Omogoči ponoven poskus. Ponastavi vse odzive in znova zažene nalogo."
+        },
+        {
+          "label": "Gumb za predvajanje",
+          "default": "Predvajaj"
+        },
+        {
+          "label": "Gumb za upočasnjeno predvajanje",
+          "default": "Predvajaj upočasnjeno"
+        },
+        {
+          "label": "Število poskusov (besedilo za bralnike zaslonov in besedilo ob preletu miške)",
+          "description": "Spremenljivka je @number.",
+          "default": "Število reševanj: @number"
+        },
+        {
+          "label": "Neomejeno (besedilo za bralnike zaslonov in besedilo ob preletu miške)",
+          "default": "Neomejeno"
+        },
+        {
+          "label": "Besedilo za vnosno polje",
+          "default": "Poslušaj posnetek in zapiši slišano."
+        },
+        {
+          "label": "Rezultat reševanja",
+          "description": "Spremenljivki sta @score in @total.",
+          "default": "Seštevek točk: @score od @total"
+        },
+        {
+          "label": "Rešitev",
+          "default": "Rešitev"
+        },
+        {
+          "label": "Stavek",
+          "default": "Stavek"
+        },
+        {
+          "label": "Predmet",
+          "default": "Predmet"
+        },
+        {
+          "label": "Pravilno",
+          "default": "Pravilno"
+        },
+        {
+          "label": "Nepravilno",
+          "default": "Nepravilno"
+        },
+        {
+          "label": "Manjša napaka",
+          "default": "manjša napaka"
+        },
+        {
+          "label": "Manjkajoča beseda ali znak",
+          "default": "manjka"
+        },
+        {
+          "label": "Dodana beseda ali znak",
+          "default": "dodano"
+        },
+        {
+          "label": "Pravilna rešitev",
+          "default": "Pravilno bi bilo"
+        },
+        {
+          "label": "Ali",
+          "default": "ali"
+        },
+        {
+          "label": "Točka",
+          "default": "točka"
+        },
+        {
+          "label": "Točk",
+          "default": "točk"
+        },
+        {
+          "label": "Čas",
+          "default": "čas"
+        },
+        {
+          "label": "Klicaj",
+          "default": "klicaj"
+        },
+        {
+          "label": "Vprašaj",
+          "default": "vprašaj"
+        },
+        {
+          "label": "Vejica",
+          "default": "vejica"
+        },
+        {
+          "label": "Enojni narekovaj",
+          "default": "enojni narekovaj"
+        },
+        {
+          "label": "Dvojni narekovaj",
+          "default": "dvojni narekovaj"
+        },
+        {
+          "label": "Dvopičje",
+          "default": "dvopičje"
+        },
+        {
+          "label": "Podpičje",
+          "default": "podpičje"
+        },
+        {
+          "label": "Plus",
+          "default": "plus"
+        },
+        {
+          "label": "Minus",
+          "default": "minus"
+        },
+        {
+          "label": "Zvezdica",
+          "default": "zvezdica"
+        },
+        {
+          "label": "Poševnica",
+          "default": "poševnica"
+        }
+      ]
+    }
+  ]
+}

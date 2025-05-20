@@ -1,0 +1,77 @@
+/* Overriding max-width */
+.h5p.shepherd-element.shepherd-theme-arrows {
+  max-width: 400px;
+  font-size: 15px;
+  z-index: 1;
+}
+
+/* Override main button background color */
+.shepherd-element.shepherd-theme-default .shepherd-content footer .shepherd-buttons li .shepherd-button-primary {
+  background: #1a73d9;
+}
+
+.shepherd-element .shepherd-content footer .shepherd-buttons li .shepherd-button-primary:hover {
+  background: #155ba7 !important;
+}
+.shepherd-element .shepherd-content footer .shepherd-buttons li .shepherd-button-secondary:hover {
+  background: #eee !important;
+}
+
+/* Override header */
+.h5p.shepherd-element.shepherd-theme-arrows.shepherd-has-title .shepherd-content header {
+  background: #eee;
+  color: #333;
+}
+
+/* No arrow please */
+.shepherd-element.shepherd-theme-arrows.h5p-guided-tour-step-no-arrow .shepherd-content:before,
+.shepherd-element.shepherd-theme-arrows.h5p-guided-tour-step-no-arrow .shepherd-content:after {
+  display: none;
+}
+
+/* More contrast, please */
+.h5p.shepherd-element.shepherd-theme-arrows .shepherd-content {
+  border: 1px solid #ccc;
+  -webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
+}
+
+/* A little less paddings */
+.h5p.shepherd-element.shepherd-theme-arrows .shepherd-content .shepherd-text {
+  padding: .5em 1em;
+}
+
+.shepherd-element.shepherd-theme-arrows.shepherd-element-attached-left.shepherd-element-attached-middle .shepherd-content:before {
+  border-right-color: #ccc;
+}
+.shepherd-element.shepherd-theme-arrows.shepherd-element-attached-top.shepherd-element-attached-center.shepherd-has-title .shepherd-content:before,
+.shepherd-element.shepherd-theme-arrows.shepherd-element-attached-top.shepherd-element-attached-right.shepherd-target-attached-bottom.shepherd-has-title .shepherd-content:before,
+.shepherd-element.shepherd-theme-arrows.shepherd-element-attached-top.shepherd-element-attached-left.shepherd-target-attached-bottom.shepherd-has-title .shepherd-content:before,
+.shepherd-element.shepherd-theme-arrows.shepherd-element-attached-top.shepherd-element-attached-center .shepherd-content:before {
+  border-bottom-color: #ccc;
+}
+.shepherd-element.shepherd-theme-arrows .shepherd-content:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 16px;
+  border-style: solid;
+  pointer-events: none;
+}
+.shepherd-element.shepherd-theme-arrows.shepherd-element-attached-left.shepherd-element-attached-middle .shepherd-content:after {
+  right: 100%;
+  top: 50%;
+  margin-top: -16px;
+  border-right-color: #fff;
+  transform: translateX(1px);
+}
+.shepherd-element.shepherd-theme-arrows.shepherd-element-attached-top.shepherd-element-attached-center .shepherd-content:after {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -16px;
+  border-bottom-color: #eee;
+  transform: translateY(1px);
+}

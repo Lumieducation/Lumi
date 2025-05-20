@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Texte de la question",
+      "description": "La question sur laquelle l'utilisateur doit se fonder pour faire un choix."
+    },
+    {
+      "label": "Choix",
+      "entity": "Choix",
+      "field": {
+        "fields": [
+          {
+            "label": "Intitulé du choix",
+            "description": "Cet intitulé sera affiché sur le bouton de choix."
+          },
+          {
+            "label": "Aller vers",
+            "description": "Le moment cible vers lequel l'utilisateur sera redirigé en cliquant sur ce bouton de choix. Entrer un horodatage au format M:SS"
+          },
+          {
+            "label": "Texte de confirmation de choix",
+            "description": "Optionnel. Le texte de confirmation apparaît après le clic sur ce bouton de choix."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Titre du bouton \"Continuer\"",
+      "default": "Continuer"
+    }
+  ]
+}

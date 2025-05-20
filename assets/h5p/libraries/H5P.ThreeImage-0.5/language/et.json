@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Three Image pildiredaktor",
+      "fields": [
+        {
+          "label": "Stseenid",
+          "entity": "Stseen",
+          "field": {
+            "fields": [
+              {
+                "label": "Stseeni tüüp",
+                "options": [
+                  {
+                    "label": "360 pilt"
+                  },
+                  {
+                    "label": "Staatiline pilt"
+                  }
+                ]
+              },
+              {
+                "label": "Kuva \"Tagasi\" nupp",
+                "description": "Näita Tagasi nuppu, millega saab navigeerida eelmisele stseenile"
+              },
+              {},
+              {
+                "label": "Stseeni tiitel",
+                "description": "Kasutatakse stseeni autorite näitamiseks"
+              },
+              {
+                "label": "Stseeni taust"
+              },
+              {
+                "label": "Stseeni kirjeldus",
+                "description": "Tekst, mis saab stseeni kirjeldada lõpp-kasutaja jaoks"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Silt",
+                      "description": "If left blank no label will be displayed and we'll try to use the title field for screen readers"
+                    },
+                    {
+                      "label": "Label Settings",
+                      "fields": [
+                        {
+                          "label": "Label position",
+                          "description": "Choose where the label should appear",
+                          "options": [
+                            {
+                              "label": "Use behavioral setting"
+                            },
+                            {
+                              "label": "Right aligned"
+                            },
+                            {
+                              "label": "Left aligned"
+                            },
+                            {
+                              "label": "Top aligned"
+                            },
+                            {
+                              "label": "Bottom aligned"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Display Label",
+                          "description": "If hidden - labels will show only on mouse over",
+                          "options": [
+                            {
+                              "label": "Use behavioral setting"
+                            },
+                            {
+                              "label": "Show"
+                            },
+                            {
+                              "label": "Hide"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Button style",
+                "description": "Decide how buttons pointing to this scene should look. For scenes that are static and does not lead to new scenes, we recommend the \"More information\" button.",
+                "options": [
+                  {
+                    "label": "New scene (arrow)"
+                  },
+                  {
+                    "label": "More information (plus)"
+                  }
+                ]
+              },
+              {
+                "label": "Heliriba",
+                "description": "Lisa stseenile omane heliriba."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Heliriba"
+        }
+      ]
+    },
+    {
+      "label": "Käitumisseaded",
+      "description": "Need valikud määravad, kuidas maailm käitub.",
+      "fields": [
+        {
+          "label": "Üldine heli",
+          "description": "Lisa heliriba, mis on vaikimisi kättesaadav kõikidele stseenidele."
+        },
+        {
+          "label": "Stseeni renderdamise kvaliteet",
+          "description": "Vali laius- ja kõrgussegmentide arv, mida kasutatakse stseeni renderdamiseks. See mõjutab otseselt stseeni kvaliteeti. Stseeni parema välimuse saavutamiseks võid proovida kvaliteeti tõsta - samas laadib kõrgema kvaliteedi korral stseen aeglasemalt.",
+          "options": [
+            {
+              "label": "Kõrge kvaliteet (128x128)"
+            },
+            {
+              "label": "Keskmine kvaliteet (64x64)"
+            },
+            {
+              "label": "Madal kvaliteet (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Label settings",
+          "fields": [
+            {
+              "label": "Label position",
+              "description": "The default label position. The position may be overriden per interaction",
+              "options": [
+                {
+                  "label": "Right aligned"
+                },
+                {
+                  "label": "Left aligned"
+                },
+                {
+                  "label": "Top aligned"
+                },
+                {
+                  "label": "Bottom aligned"
+                }
+              ]
+            },
+            {
+              "label": "Display Labels",
+              "description": "If unchecked - labels will show only on mouse over"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Localize",
+      "fields": [
+        {
+          "label": "Aria label for content type",
+          "default": "Virtual Tour"
+        },
+        {
+          "label": "Label for to play audio",
+          "default": "Play Audio Track"
+        },
+        {
+          "label": "Label to pause audio",
+          "default": "Pause Audio Track"
+        },
+        {
+          "label": "Title to scene dialog",
+          "default": "Scene Description"
+        },
+        {
+          "label": "Label for button to reset camera",
+          "default": "Reset Camera"
+        },
+        {
+          "label": "Label for the submit dialog button",
+          "default": "Submit Dialog"
+        },
+        {
+          "label": "Label for the close dialog button",
+          "default": "Close Dialog"
+        },
+        {
+          "label": "Aria label for the expand label button",
+          "default": "Expand the visual label"
+        },
+        {
+          "label": "Label for when background image is loading in 360 scene",
+          "default": "Loading background image..."
+        },
+        {
+          "label": "Label for when there is no content",
+          "default": "No content"
+        }
+      ]
+    }
+  ]
+}

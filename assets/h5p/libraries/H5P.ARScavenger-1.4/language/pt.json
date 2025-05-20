@@ -1,0 +1,300 @@
+{
+  "semantics": [
+    {
+      "label": "Mostrar ecrã inicial",
+      "description": "Se marcado, o conteúdo mostrará a tela de título ao iniciar."
+    },
+    {
+      "label": "Ecrã inicial",
+      "fields": [
+        {
+          "label": "Introdução",
+          "placeholder": "Bem-vindo ao ..."
+        },
+        {
+          "label": "Imagem da tela de título"
+        }
+      ]
+    },
+    {
+      "label": "Marcadores",
+      "fields": [
+        {
+          "label": "Marcadores",
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "entity": "marcador",
+          "field": {
+            "label": "Marcador",
+            "fields": [
+              {
+                "label": "Imagem do marcador (original)",
+                "description": "Carregue a imagem para a qual deseja criar um marcador. Deve ser uma imagem quadrada ou será cortada. Lembre-se de que precisará de uma imagem de marcador exclusiva para cada interacção.",
+                "importantDescription": {
+                  "description": "Lembre-se de alguns critérios para boas imagens de marcadores:<ul><li>Alto contraste de cores, de preferência em preto e branco</li><li>Assimetria</li><li>A resolução interna de um marcador é 16 x 16 pixels, o uso de imagens maiores pode piorar a detecção de marcadores</li><li>Caracteres simples ou palavras curtas geram bons resultados</li></ul>"
+                }
+              },
+              {
+                "label": "Imagem do marcador (padrão)",
+                "description": "Baixe esta imagem para usar como marcador exibido numa tela ou impresso em papel."
+              },
+              {
+                "label": "Tipo de acção",
+                "description": "Acção que deve ser accionada quando o marcador for encontrado.",
+                "options": [
+                  {
+                    "label": "Interacção H5P"
+                  },
+                  {
+                    "label": "Sobreposição de modelo 3D"
+                  }
+                ]
+              },
+              {
+                "label": "Interação",
+                "fields": [
+                  {
+                    "label": "Interação"
+                  },
+                  {
+                    "label": "Fictício"
+                  }
+                ]
+              },
+              {
+                "label": "Modelo 3D",
+                "fields": [
+                  {
+                    "label": "Arquivo de modelo 3D",
+                    "description": "Carregue aqui um arquivo glTF (.glb / .gltf). O formato preferencial é glTF 2.0 binário\" num arquivo único."
+                  },
+                  {
+                    "label": "Geometria",
+                    "fields": [
+                      {
+                        "label": "Escala",
+                        "description": "Dimensione o modelo para cima ou para baixo para corresponder ao tamanho do marcador.",
+                        "fields": [
+                          {
+                            "label": "Percentagem"
+                          },
+                          {
+                            "label": "Fictício"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Posição",
+                        "description": "Definir a posição de deslocamento do modelo em relação ao marcador.",
+                        "fields": [
+                          {
+                            "label": "Deslocamento-X"
+                          },
+                          {
+                            "label": "Deslocamento-Y"
+                          },
+                          {
+                            "label": "Deslocamento-Z"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Rotação",
+                        "description": "Defina a rotação em graus.",
+                        "fields": [
+                          {
+                            "label": "Eixo-X"
+                          },
+                          {
+                            "label": "Eixo-Y"
+                          },
+                          {
+                            "label": "Eixo-Z"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Mostrar tela final",
+      "description": "Se marcado, mostra uma tela final quando todas as interacções forem concluídas. A tela final não estará disponível se usar apenas modelos 3D."
+    },
+    {
+      "label": "Tela Final",
+      "fields": [
+        {
+          "label": "imagem da tela final"
+        },
+        {
+          "label": "Texto da tela final",
+          "placeholder": "Boa, conseguiu!"
+        },
+        {
+          "label": "Feedback Geral",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Padrão"
+                }
+              ],
+              "label": "Definir feedback personalizado para qualquer faixa de pontuação",
+              "description": "Clique no botão \"Adicionar faixa\" para adicionar quantos intervalos precisar. Exemplo: 0-20% Pontuação Péssima, 21-91% Pontuação Média, 91-100% Pontuação Óptima!",
+              "entity": "faixa",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Faixa de Pontuação"
+                  },
+                  {
+                    "label": "Feedback para a faixa de pontuação definida",
+                    "placeholder": "Preencha o feedback"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Configurações comportamentais",
+      "fields": [
+        {
+          "label": "Activar o botão \"Tentar Novamente\"",
+          "description": "Se marcada, os alunos podem tentar novamente."
+        },
+        {
+          "label": "Activar o botão \"Solução\"",
+          "description": "Se marcado, os alunos podem visualizar as soluções de todas as interações."
+        },
+        {
+          "label": "Anular o botão \"Mostrar Solução\"",
+          "description": "Esta opção permite activar ou desactivar o botão \"Mostrar Solução\" para todos os conteúdos ou utilizar suas respectivas configurações comportamentais.",
+          "options": [
+            {
+              "label": "Usar as Configurações Comportamentais"
+            },
+            {
+              "label": "Sempre mostrar o botão"
+            },
+            {
+              "label": "Nunca mostrar o botão"
+            }
+          ]
+        },
+        {
+          "label": "Anular o botão \"Tentar Novamente",
+          "description": "Esta opção permite activar ou desactivar o botão \"Tentar Novamente\" para todos os conteúdos ou utilizar suas respectivas configurações comportamentais.",
+          "options": [
+            {
+              "label": "Usar as Configurações Comportamentais"
+            },
+            {
+              "label": "Sempre mostrar o botão"
+            },
+            {
+              "label": "Nunca mostrar o botão"
+            }
+          ]
+        },
+        {
+          "label": "Nível de recuperação de dados",
+          "description": "Defina o nível de recuperação de dados em px para casos em que há problemas de partilha de recursos de origem cruzada (CORS)."
+        }
+      ]
+    },
+    {
+      "label": "Localização",
+      "fields": [
+        {
+          "label": "Botão Iniciar",
+          "default": "Iniciar"
+        },
+        {
+          "label": "Botão Tentar Novamente",
+          "default": "Tentar novamente"
+        },
+        {
+          "label": "Encontre um marcador para ver uma interacção.",
+          "default": "Encontre um marcador para ver uma interacção."
+        },
+        {
+          "label": "Erro: navegador não suportado",
+          "default": "Infelizmente, parece que o seu navegador não pode executar esse tipo de conteúdo, infelizmente."
+        },
+        {
+          "label": "Erro: Sem acesso à câmera",
+          "default": "Não foi possível acessar a câmera."
+        },
+        {
+          "label": "Erro: Não há suporte para câmera",
+          "default": "O seu navegador parece não suportar uma câmera."
+        },
+        {
+          "label": "Erro: Sem marcadores",
+          "default": "Alguém esqueceu de adicionar marcadores?"
+        },
+        {
+          "label": "Aviso: navegador BRAVE",
+          "default": "Parece estar a usar o navegador BRAVE. Parabéns! Mas as configurações de privacidade estritas podem impedir que a câmera funcione."
+        },
+        {
+          "label": "A inicializar o conteúdo",
+          "default": "A inicializar o conteúdo. Por favor, não se esqueça de permitir o acesso à câmera."
+        }
+      ]
+    },
+    {
+      "label": "ReadSpeaker",
+      "fields": [
+        {
+          "label": "Botão de ecrã inteiro: enter",
+          "default": "Entrar no modo ecrã inteiro"
+        },
+        {
+          "label": "Botão de ecrã inteiro: exit",
+          "default": "Sair do modo ecrã inteiro"
+        },
+        {
+          "label": "Título do botão 'Alterar visualização' (quando a acção é fechada)",
+          "default": "Mudar para o exercício"
+        },
+        {
+          "label": "Título do botão 'Alternar visualização' (quando a acção é aberta)",
+          "default": "Mudar para a câmera"
+        },
+        {
+          "label": "Mensagem 'Botão desactivar' para 'botão alterar visualização'",
+          "default": "Não pode mudar a visualização agora"
+        },
+        {
+          "label": "Título do botão 'Sair",
+          "default": "Sair e mostrar avaliação"
+        },
+        {
+          "label": "Mensagem 'Botão desactivar' para 'botão sair'",
+          "default": "Ainda não completou todos os exercícios"
+        },
+        {
+          "label": "Acção aberta",
+          "default": "A visualização mudou para um exercício."
+        },
+        {
+          "label": "Acção encerrada",
+          "default": "A visualização mudou para a câmera."
+        }
+      ]
+    }
+  ]
+}

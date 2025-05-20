@@ -1,0 +1,172 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "description": "Medios opcionales mostrados encima de la pregunta.",
+          "label": "Tipo"
+        },
+        {
+          "label": "Deshabilitar acercamiento de imagen"
+        }
+      ],
+      "label": "Medios"
+    },
+    {
+      "description": "Explique a sus estudiantes lo que se espera de ellos.",
+      "label": "Descripción del trabajo"
+    },
+    {
+      "entity": "sección",
+      "field": {
+        "fields": [
+          {
+            "label": "Título"
+          },
+          {
+            "description": "Opcionalmente añada pistas o instrucciones particulares para esta sección.",
+            "label": "Pistas"
+          },
+          {
+            "description": "Determine que tan larga se espera que sea cada sección con relación a las otras secciones. Ejemplo: Sección 1 = 1; Sección 2 = 3 (el triple de largo de 1); Sección 3 = 1 (mismo largo que sección 1).",
+            "label": "Ponderación"
+          },
+          {
+            "default": "#96ceb4",
+            "label": "Color del fondo"
+          },
+          {
+            "default": "#1c1c1c",
+            "label": "Color del texto"
+          }
+        ],
+        "label": "Parámetros de sección"
+      },
+      "label": "Secciones",
+      "widgets": [
+        {
+          "label": "Predeterminado"
+        }
+      ]
+    },
+    {
+      "description": "Estas opciones le permitirán controlar como se comporta el trabajo.",
+      "fields": [
+        {
+          "label": "Habilitar \"Reintentar\""
+        },
+        {
+          "label": "Habilitar \"Solución\""
+        },
+        {
+          "description": "La holgura es flexibilidad incorporada de una sección, calculada en porcentaje.",
+          "label": "Holgura"
+        },
+        {
+          "description": "Defina una longitud absoluta mínima total del texto. Por favor tenga en cuenta que la ponderación de una sección comparada con otras secciones es la principal causa del mensaje de retroalimentación, no este valor mínimo.",
+          "label": "Longitud mínima del texto"
+        },
+        {
+          "description": "Defina una longitud máxima absoluta total del texto.Por favor tenga en cuenta que la ponderación de una sección comparada con otras secciones es la principal causa del mensaje de retroalimentación, no este valor mínimo.",
+          "label": "Longitud máxima del texto"
+        },
+        {
+          "description": "Decidir si es que quiere o no mostrar retroalimentación mientras se escribe o solamente cuando el estudiante lo solicita.",
+          "label": "Modo de retroalimentación",
+          "options": [
+            {
+              "label": "Por solicitud"
+            },
+            {
+              "label": "Mientras se escribe"
+            }
+          ]
+        }
+      ],
+      "label": "Configuraciones del comportamiento"
+    },
+    {
+      "fields": [
+        {
+          "default": "Copiar",
+          "label": "Texto para botón \"Copiar\""
+        },
+        {
+          "default": "Comprobar",
+          "label": "Texto para botón \"Comprobar\""
+        },
+        {
+          "default": "Reintentar",
+          "label": "Texto para botón \"Reintentar\""
+        },
+        {
+          "default": "Mostrar solución",
+          "label": "Texto para botón \"Mostrar solución\""
+        },
+        {
+          "default": "Las longitudes de sus secciones están todas bien.",
+          "description": "Texto de retroalimentación mostrado cuando todas las secciones son de longitud tolerable.",
+          "label": "Todas las secciones bien"
+        },
+        {
+          "default": "Su sección \"@title\" es demasiado corta. Usted necesita al menos @chars caracteres más.",
+          "description": "Texto de retroalimentación mostrado para secciones que son demasiado cortas (@title será remplazado por el título de la sección, @chars será remplazado por el número de caracteres faltantes).",
+          "label": "Sección demasiado corta"
+        },
+        {
+          "default": "Su sección \"@title\" es demasiado larga. Quite al menos @chars caracteres.",
+          "description": "Texto de retroalimentación mostrado para secciones que son demasiado largas (@title será remplazado por el título de la sección, @chars será remplazado por el número de caracteres que necesitan quitarse).",
+          "label": "Sección demasiado larga"
+        },
+        {
+          "default": "@chars caracteres demasiado corta",
+          "description": "Estado mostrado al escribir para secciones que son demasiado cortas (@chars será remplazado por el número de caracteres faltantes).",
+          "label": "Sección demasiado corta (al escribir)"
+        },
+        {
+          "default": "@chars caracteres demasiado larga",
+          "description": "Estado mostrado al escribir para secciones que son demasiado largas (@chars será remplazado por el número de caracteres que es necesario quitar).",
+          "label": "Sección demasiado larga (al escribir)"
+        },
+        {
+          "default": "Su texto fue copiado al portapapeles",
+          "label": "Texto copiado al portapapeles"
+        },
+        {
+          "default": "Su texto no pudo ser copiado al portapapeles",
+          "label": "No se puede copiar al portapapeles"
+        },
+        {
+          "default": "Sección",
+          "label": "Sección"
+        },
+        {
+          "default": "No hubo sección dada para esta tira de estructura.",
+          "label": "Texto para mensaje \"No hay sección\""
+        }
+      ],
+      "label": "Interfaz del usuario"
+    },
+    {
+      "fields": [
+        {
+          "default": "Retroalimentación",
+          "label": "Retroalimentación (texto para lector de texto en voz alta)"
+        },
+        {
+          "default": "Copiar texto al portapapeles",
+          "label": "Copiar su texto al portapapeles (texto para lector de texto en voz alta)"
+        },
+        {
+          "default": "Cerrar ventana",
+          "label": "Cerrar ventana (texto para lector de texto en voz alta)"
+        },
+        {
+          "default": "Mostrar pistas",
+          "label": "Mostrar pistas (texto para lector de texto en voz alta)"
+        }
+      ],
+      "label": "Lector de texto en voz alta"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Texto de introdución",
+      "default": "Escolle a frase correcta.",
+      "description": "Amosarase enriba do tarefa de resumo."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Por defecto"
+        },
+        {
+          "label": "Textual"
+        }
+      ],
+      "label": "Resumo",
+      "entity": "frases",
+      "field": {
+        "label": "Conxunto de frases",
+        "fields": [
+          {
+            "label": "Lista de frases para o resumo - a primeira frase é correcta.",
+            "entity": "frase",
+            "field": {
+              "label": "Frase"
+            }
+          },
+          {
+            "label": "Pista",
+            "fields": [
+              {
+                "label": "Texto da pista"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Retroalimentación xeral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Por defecto"
+            }
+          ],
+          "label": "Definir comentarios personalizados para calquera rango de puntuación",
+          "description": "Preme o botón \"Engadir rango\" para engadir tantos rangos como precises. Exemplo: 0-20% Mala puntuación, 21-91% Puntuación Media, 91-100% Puntuación estupenda!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango de Puntuación"
+              },
+              {},
+              {
+                "label": "Retroalimentación para rango de puntuación definido",
+                "placeholder": "Escribe a túa retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Texto amosado antes do número de frases resoltas na tarefa de resumo.",
+      "default": "Progreso:",
+      "description": "Amosarase enriba das frases. Exemplo: 'Progreso: 2/5'"
+    },
+    {
+      "label": "Texto amosado antes do número de frases incorrectas seleccionadas na tarefa de resumo.",
+      "default": "Respostas incorrectas:",
+      "description": "Amosarase enriba das frases. Exemplo: 'Respostas incorrectas: 4'"
+    },
+    {
+      "label": "Cabeceira da retroalimentación do resumo",
+      "default": "O teu resultado",
+      "description": "Amosarase enriba da retroalimentación do resumo."
+    },
+    {
+      "label": "Texto do lector de pantalla para resposta correcta",
+      "default": "Correcto."
+    },
+    {
+      "label": "Texto do lector de pantalla para anunciar unha resposta incorrecta",
+      "default": "Incorrecto! Por favor, proba outra vez."
+    },
+    {
+      "label": "Etiqueta do lector de pantalla para resposta incorreta",
+      "default": "Incorrecto"
+    },
+    {
+      "label": "Etiqueta para a lista de respostas correctas",
+      "default": "Respostas correctas."
+    },
+    {
+      "label": "Etiqueta para amosar o botón da pista",
+      "default": "Amosar pista"
+    },
+    {
+      "label": "Representación textual da barra de puntuación cando se está a usar un lector de pantalla",
+      "description": ":num e :total son palabras chave especiais actualizadas programaticamente",
+      "default": "Conseguiches :num dun total de :total puntos"
+    },
+    {
+      "label": "Texto do lector de pantalla para indicar progreso",
+      "description": ":num e :total son palabras chave especiais actualizadas programaticamente",
+      "default": "Progreso :num de :total"
+    }
+  ]
+}

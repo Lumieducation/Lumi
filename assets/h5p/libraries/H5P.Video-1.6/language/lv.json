@@ -1,0 +1,136 @@
+{
+  "semantics": [
+    {
+      "label": "Video avoti",
+      "description": "Lai video strādātu visās pārlūkprogrammās, jums jāpievieno avots WebM un MP4 formātos."
+    },
+    {
+      "label": "Vizualizācija",
+      "fields": [
+        {
+          "label": "Afišas attēls"
+        },
+        {
+          "label": "Pielāgot video atskaņotāju, lai izmantotu visu pieejamo laukumu",
+          "description": "Ja nav atzīmēts, video atskaņotāja izmērs būs tāds pats kā video malu attiecība."
+        },
+        {
+          "label": "Rādīt video atskaņotāja vadīklas",
+          "description": "Pievienot video atskaņotājam vadīklas. Tas ļaus lietotājiem atskaņot, pauzēt utml."
+        }
+      ]
+    },
+    {
+      "label": "Atskaņošana",
+      "fields": [
+        {
+          "label": "Video automātiskā atskaņošana",
+          "description": "Sākt atskaņot video automātiski. Var darboties ne visās mobilajās ierīcēs."
+        },
+        {
+          "label": "Riņķot video",
+          "description": "Automātiski sākt video no jauna, kad tas beidzas."
+        }
+      ]
+    },
+    {
+      "label": "Video lokalizācija",
+      "fields": [
+        {
+          "label": "Nosaukums",
+          "default": "Video",
+          "description": "Palīdz identificēt šāda tipa saturu."
+        },
+        {
+          "label": "Ielāde",
+          "default": "Video atskaņotāja ielāde..."
+        },
+        {
+          "label": "Video atskaņotāji nav atrasti",
+          "default": "Nav atrasti video atskaņotāji, kas atbalsta doto video formātu."
+        },
+        {
+          "label": "Nav avotu",
+          "default": "Video trūkst avotu."
+        },
+        {
+          "label": "Pārtraukts",
+          "default": "Medija atskaņošana tika pārtraukta."
+        },
+        {
+          "label": "Tīkla kļūme",
+          "default": "Tīkla kļūme."
+        },
+        {
+          "label": "Neizdodas dekodēt video avotu",
+          "default": "Neizdodas dekodēt multividi."
+        },
+        {
+          "label": "Formāts netiek atbalstīts",
+          "default": "Video formāts netiek atbalstīts."
+        },
+        {
+          "label": "Multivide ir šifrēta",
+          "default": "Multivide ir šifrēta."
+        },
+        {
+          "label": "Nezināma kļūda",
+          "default": "Nezināma kļūda."
+        },
+        {
+          "label": "Nederīgs YouTube ID",
+          "default": "Nederīgs YouTube ID."
+        },
+        {
+          "label": "Nezināms YouTube ID",
+          "default": "Neizdevās atrast video ar doto YouTube ID."
+        },
+        {
+          "label": "Ierobežots YouTube video",
+          "default": "Šī video īpašnieks neatļauj to iegult."
+        }
+      ]
+    },
+    {
+      "label": "Pieejamība",
+      "fields": [
+        {
+          "label": "Pievienot video celiņu",
+          "entity": "Celiņš",
+          "field": {
+            "label": "Celiņš",
+            "fields": [
+              {
+                "label": "Celiņa apzīmējums"
+              },
+              {
+                "label": "Ievadiet tipu, izmantojiet <a target=\"_blank\" href=\"https://html.spec.whatwg.org/multipage/embedded-content.html#the-track-element\">HTML living standartu</a>",
+                "options": [
+                  {
+                    "label": "Subtitri"
+                  },
+                  {
+                    "label": "Titri"
+                  },
+                  {
+                    "label": "Apraksti"
+                  },
+                  {
+                    "label": "Nodaļas"
+                  }
+                ]
+              },
+              {
+                "label": "Jānorāda subtitru valoda",
+                "description": "Jāizmanto derīga BCP 47 valodas birka. Ja subtitriem ir norādīts atribūts \"tips\", jānorāda arī avota valoda."
+              },
+              {
+                "label": "Celiņa fails (WebVTT)"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

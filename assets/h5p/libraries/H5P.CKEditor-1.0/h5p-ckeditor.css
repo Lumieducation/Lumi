@@ -1,0 +1,72 @@
+.h5p-ckeditor {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.h5p-ckeditor .ck-editor__main,
+.h5p-ckeditor .ck-editor__main .ck-editor__editable {
+  height: 100%;
+}
+
+/* Inside ckeditor, needed for changes to default */
+.ck {
+  .ck-text-fragment-language-dropdown .ck-dropdown__panel,
+  .ck-heading-dropdown .ck-dropdown__panel {
+    max-height: 20em;
+    overflow-y: scroll;
+  }
+
+  .ck-fontsize-option .ck-button__label {
+    line-height: normal !important;
+  }
+
+  .ck-content {
+    pre {
+      background: initial;
+      border: initial;
+      border-radius: initial;
+      padding: 0;
+    }
+
+    figure.table {
+      float: left;
+
+      table {
+        border-width: 1px;
+        border-color:  #494949;
+        border-style: none;
+
+        td, th {
+          padding: 1px;
+          border-style: none;
+          border-color:  #494949;
+          border-bottom-style: solid;
+          height: auto;
+        }
+
+        td {
+          border-width: 0.083em;
+        }
+
+        th {
+          border-width: .167em;
+          background-color: transparent;
+        }
+
+        tr:last-child > td {
+          border-bottom-style: none;
+        }
+      }
+
+      figcaption {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.ck-powered-by-balloon {
+  display: none !important;
+}

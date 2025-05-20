@@ -1,0 +1,256 @@
+{
+  "semantics": [
+    {
+      "label": "Multivide",
+      "fields": [
+        {
+          "label": "Tips",
+          "description": "Papildu multimedijs, kuru atspoguļot virs jautājuma."
+        },
+        {
+          "label": "Atspējot attēla tālummaiņu"
+        }
+      ]
+    },
+    {
+      "label": "Jautājums"
+    },
+    {
+      "label": "Pieejamās izvēles",
+      "entity": "izvēle",
+      "field": {
+        "label": "Izvēle",
+        "fields": [
+          {
+            "label": "Multivide",
+            "description": "Media to display as a choice."
+          },
+          {
+            "label": "Poster image"
+          },
+          {
+            "label": "Pareizi"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Kopējā atgriezeniskā saite",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Pēc noklusējuma"
+            }
+          ],
+          "label": "Iestatiet pielāgotu atgriezenisko saiti katram rezultātu diapazonam",
+          "description": "Klikšķiniet pogu \"Pievienot diapazonu\", lai pievienotu tik diapazonus cik vēlaties. Piemēram, 0-20% Slikts rezultāts, 21-91% Viduvējs rezultāts, 91-100% Lielisks rezultāts!",
+          "entity": "diapazons",
+          "field": {
+            "fields": [
+              {
+                "label": "Rezultātu diapazons"
+              },
+              {},
+              {
+                "label": "Norādītā diapazona atgriezeniskā saite",
+                "placeholder": "Aizpildiet atgriezenisko saiti"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Uzvedības iestatītījumi",
+      "description": "Šie iestatījumi ļaus jums kontrolēt uzdevuma uzvedību.",
+      "fields": [
+        {
+          "label": "Atļaut pogu \"Mēģināt vēlreiz\""
+        },
+        {
+          "label": "Atļaut pogu \"Rādīt risinājumu\""
+        },
+        {
+          "label": "Rādīt apstiprinājuma dialogu pēc \"Pārbaudīt\""
+        },
+        {
+          "label": "Rādīt apstiprinājuma dialogu pēc \"Mēģināt vēlreiz\""
+        },
+        {
+          "label": "Piešķirt vienu punktu par visu jautājumu",
+          "description": "Piešķir vienu punktu jautājumam, ja rezultātu procents ir lielāks par nokārtošanas procentu"
+        },
+        {
+          "label": "Pieprasīt atbildi pirms atļauts skatīt risinājumu"
+        },
+        {
+          "label": "Jautājuma veids",
+          "description": "Izvēlieties jautājuma izskatu un uzvedību.",
+          "options": [
+            {
+              "label": "Automātiski"
+            },
+            {
+              "label": "Vairākas izvēles iespējas (izvēles rūtiņas)"
+            },
+            {
+              "label": "Viena izvēle (radiopogas)"
+            }
+          ]
+        },
+        {
+          "label": "Malu attiecība",
+          "description": "Izvēlieties malu attiecību atbilžu variantiem",
+          "options": [
+            {
+              "label": "Automātiski"
+            },
+            {
+              "label": "16:9"
+            },
+            {
+              "label": "4:3"
+            },
+            {
+              "label": "3:2"
+            },
+            {
+              "label": "1:1"
+            }
+          ]
+        },
+        {
+          "label": "Maksimālais izvēļu skaits rindā",
+          "description": "Iestatiet maksimālo izvēļu skaitu rindā, lai nodrošinātu, ka jautājumi izskatās pareizi.",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "3"
+            },
+            {
+              "label": "4"
+            }
+          ]
+        },
+        {
+          "label": "Nokārtošanas procents",
+          "description": "Šim iestatījumam bieži nebūs nekādas ietekmes. Tā ir procentuālā daļa no kopējā rezultāta, kas nepieciešams, lai iegūtu 1 punktu, ja ir iespējota viena punkta piešķiršana par visu uzdevumu. Tiek izmantots arī lai iegūtu result.success xAPI ziņojumos."
+        }
+      ]
+    },
+    {
+      "label": "Lietotāja saskarne",
+      "fields": [
+        {
+          "label": "Pogas \"Pārbaudīt\" teksts",
+          "default": "Pārbaudīt"
+        },
+        {
+          "label": "Pogas \"Iesniegt\" teksts",
+          "default": "Iesniegt"
+        },
+        {
+          "label": "Pogas \"Pārbaudīt\" apraksts asistīvajām tehnoloģijām",
+          "default": "Pārbaudīt atbildes. Atbildes tiks atzīmētas kā pareizas, nepareizas, vai neatbildētas."
+        },
+        {
+          "label": "Pogas \"Parādīt risinājumu\" teksts",
+          "default": "Rādīt risinājumu"
+        },
+        {
+          "label": "Asistīvo tehnoloģiju apraksts pogai \"Rādīt risinājumu\"",
+          "default": "Rādīt risinājumu. Tiks atzīmētas pareizās izvēles."
+        },
+        {
+          "label": "Pareiza atbilde (netiek rādīts)",
+          "default": "Pareiza atbilde"
+        },
+        {
+          "label": "Nepareiza atbilde (netiek rādīts)",
+          "default": "Nepareiza atbilde"
+        },
+        {
+          "label": "Izvēli vajadzēja atzīmēt",
+          "default": "Vajadzēja atzīmēt"
+        },
+        {
+          "label": "Izvēli nevajadzēja atzīmēt",
+          "default": "Nevajadzēja atzīmēt"
+        },
+        {
+          "label": "Teksts ziņojumam “Nepieciešama atbilde”",
+          "default": "Lūdzu, atbildiet pirms risinājuma skatīšanas"
+        },
+        {
+          "label": "Pogas \"Mēģināt vēlreiz\" teksts",
+          "default": "Atkārtot"
+        },
+        {
+          "label": "Asistīvo tehnoloģiju apraksts pogai \"Mēģināt vēlreiz\"",
+          "default": "Mēģināt uzdevumu vēlreiz. Atiestatīt visas sniegtās atbildes un sākt uzdevumu vēlreiz."
+        },
+        {
+          "label": "Tavs rezultāts",
+          "description": "@score un @total ir mainīgie, un tie tiks aizstāti ar to attiecīgajām vērtībām.",
+          "default": "Tu saņēmi :num no :total punktiem"
+        },
+        {
+          "label": "Pārbaudīšanas apstiprinājuma dialogs",
+          "fields": [
+            {
+              "label": "Galvenes teksts",
+              "default": "Beigt?"
+            },
+            {
+              "label": "Pamata teksts",
+              "default": "Vai esat pārliecināts, ka vēlaties beigt ?"
+            },
+            {
+              "label": "Atcelšanas pogas etiķete",
+              "default": "Atcelt"
+            },
+            {
+              "label": "Apstiprinājuma pogas etiķete",
+              "default": "Beigt"
+            }
+          ]
+        },
+        {
+          "label": "Pārbaudīšanas apstiprinājuma dialogs",
+          "fields": [
+            {
+              "label": "Galvenes teksts",
+              "default": "Beigt?"
+            },
+            {
+              "label": "Pamatteksts",
+              "default": "Vai esat pārliecināts, ka vēlaties mēģināt vēlreiz?"
+            },
+            {
+              "label": "Atcelšanas pogas etiķete",
+              "default": "Atcelt"
+            },
+            {
+              "label": "Apstiprinājuma pogas etiķete",
+              "default": "Beigt"
+            }
+          ]
+        },
+        {
+          "label": "Teksts, ja attēlam trūkst alternatīvā teksta",
+          "default": "Trūkst alternatīvā teksta"
+        },
+        {
+          "label": "Close modal button label",
+          "default": "Close modal"
+        }
+      ]
+    }
+  ]
+}

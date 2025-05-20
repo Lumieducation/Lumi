@@ -1,0 +1,156 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "헤더",
+          "description": "정보게시판에 대한 선택적 헤더"
+        },
+        {
+          "label": "속성",
+          "fields": [
+            {
+              "label": "속성",
+              "description": "항목에 대한 속성",
+              "entity": "속성",
+              "widgets": [
+                {
+                  "label": "기본값"
+                }
+              ],
+              "field": {
+                "label": "속성 항목",
+                "fields": [
+                  {
+                    "label": "라벨",
+                    "default": "이름 없음"
+                  },
+                  {
+                    "label": "속성 라벨 표시"
+                  },
+                  {
+                    "label": "속성에서 검색 사용"
+                  },
+                  {
+                    "label": "스타일 설정",
+                    "fields": [
+                      {
+                        "label": "굵게"
+                      },
+                      {
+                        "label": "기울임체"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {}
+          ]
+        },
+        {
+          "label": "패널",
+          "description": "게시판 패널",
+          "entity": "패널",
+          "widgets": [
+            {
+              "label": "기본값"
+            }
+          ],
+          "field": {
+            "label": "항목",
+            "fields": [
+              {
+                "label": "패널 제목"
+              },
+              {
+                "label": "이미지"
+              },
+              {
+                "label": "엔트리",
+                "description": "속성 항목",
+                "entity": "값",
+                "widgets": [
+                  {
+                    "label": "기본값"
+                  }
+                ],
+                "field": {
+                  "label": "자동으로 변경할 라벨"
+                }
+              },
+              {
+                "label": "Additional keywords",
+                "description": "Add additional keywords separated by a blank space that will be used for filtering but not be visible to the user."
+              }
+            ]
+          }
+        },
+        {
+          "label": "과제수행 환경설정",
+          "description": "이 옵션을 사용하면 과제가 수행되는 방식을 제어할 수 있습니다",
+          "fields": [
+            {
+              "label": "누락된 이미지에 예비 이미지 사용"
+            },
+            {
+              "label": "이미지"
+            },
+            {
+              "label": "이미지 너비",
+              "description": "이미지 너비(px 단위)"
+            },
+            {
+              "label": "이미지 높이",
+              "description": "이미지 높이(px 단위)"
+            },
+            {
+              "label": "대체 패널 배경",
+              "description": "선택할 경우 각 두 번째 패널의 배경은 다른 패널보다 약간 어둡습니다."
+            },
+            {
+              "label": "필터 영역 제공",
+              "description": "선택한 경우 사용자는 정보 게시판을 필터링할 수 있습니다."
+            },
+            {
+              "label": "Mode for filter field",
+              "description": "Choose whether the filter should narrow down or broaden the search with every new keyword.",
+              "options": [
+                {
+                  "label": "Narrow down"
+                },
+                {
+                  "label": "Broaden"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "사용자 인터페이스",
+          "fields": [
+            {
+              "label": "입력된 내용이 없습니다",
+              "default": "작성자가 아무것도 입력하지 않았습니다."
+            },
+            {
+              "label": "일치하는 항목이 없습니다",
+              "description": "@query 는 자리 표시자이며 입력한 각 쿼리로 대체됩니다.",
+              "default": "@query 와 일치하는 항목이 없습니다"
+            },
+            {
+              "label": "필터링을 위해 입력",
+              "description": "화면 읽어주기를 위한 메시지",
+              "default": "관련 항목의 내용을 필터링할 쿼리를 입력합니다."
+            },
+            {
+              "label": "목록이 변경되었습니다.",
+              "description": "화면 읽어주기를 위한 메시지. @visible 과 @total 은 자리표시자이며, 각 값과 함께 미리 배치됩니다.",
+              "default": "목록이 변경되었습니다. 총 @total 항목 중 @visible 항목을 표시합니다."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

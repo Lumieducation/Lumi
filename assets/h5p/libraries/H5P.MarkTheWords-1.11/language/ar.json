@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "label": "وسائط",
+      "fields": [
+        {
+          "label": "النوع",
+          "description": "وسائط إضافية اختيارية تُعرض أعلى السؤال."
+        },
+        {
+          "label": "إيقاف ميزة تكبير الصور"
+        }
+      ]
+    },
+    {
+      "label": "وصف النشاط",
+      "description": "وصف الكيفية التي ينبغي للمستخدم حل النشاط",
+      "placeholder": "Click on all the verbs in the text that follows."
+    },
+    {
+      "label": "الحقل النصي",
+      "placeholder": "هذه إجابة: *الإجابة*.",
+      "important": {
+        "description": "<ul><li>الكلمات المميزة تضاف بعلامة النجمة (*).</li><li>يمكن إضافة العلامات النجمية داخل الكلمات المحددة عن طريق إضافة علامة نجمية أخرى، *الكلمة الصحيحة*** =&gt; الكلمة الصحيحة*.</li></ul>",
+        "example": "تم وضع علامة على الكلمات الصحيحة كما يلي: *الكمة الصحيحة*، تم كتابة علامة النجمة على النحو التالي: *الكلمة الصحيحة***."
+      }
+    },
+    {
+      "label": "شفافية خلفية العناصر",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "الافتراضي"
+            }
+          ],
+          "label": "تحديد الملاحظات المخصصة لأي نطاق درجة",
+          "description": "انقر على زر \"إضافة نطاق\" لإضافة ما ترغب به من نطاقات، ومثال على ذلك: 0-20٪ نتيجة سيئة، 21-91٪ نتيجة متوسطة، 91-100٪ نتيجة رائعة!",
+          "entity": "النطاق",
+          "field": {
+            "fields": [
+              {
+                "label": "نطاق الدرجة"
+              },
+              {},
+              {
+                "label": "ملاحظات لنطاق درجة محدد",
+                "placeholder": "أدخل الملاحظات"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "النص ل \"تحقق \" الزر",
+      "default": "Check"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "النص ل \"إعادة المحاولة \" الزر",
+      "default": "إعادة المحاولة"
+    },
+    {
+      "label": "النص  \"مشاهدة الحل \" لزر",
+      "default": "مشاهدة الحل"
+    },
+    {
+      "label": "إعدادت النشاط",
+      "description": "وهذه الخيارات تمكنك من التحكم في كيفية سلوك هذا النشاط",
+      "fields": [
+        {
+          "label": "تمكين \"إعادة المحاولة \""
+        },
+        {
+          "label": "تمكين زر \"مشاهدة الحل\""
+        },
+        {
+          "label": "تمكين زر \"التحقق\""
+        },
+        {
+          "label": "إظهار نقاط العلامة",
+          "description": "عرض النقاط المكتسبة لكل إجابة."
+        }
+      ]
+    },
+    {
+      "label": "نص الجواب الصحيح",
+      "default": "صحيح!",
+      "description": "Text used to indicate that an answer is correct"
+    },
+    {
+      "label": "نص الجواب غير صحيح",
+      "default": "غير صحيح!",
+      "description": "Text used to indicate that an answer is incorrect"
+    },
+    {
+      "label": "غاب نص الجواب",
+      "default": "افتقد!",
+      "description": "النص المُشير إلى أن الإجابة مفقودة"
+    },
+    {
+      "label": "وصف لعرض الحل",
+      "default": "يتم تحديث مهمة لاحتواء الحل.",
+      "description": "يخبر هذا النص المستخدم أنه تم تحديث المهام مع الحل."
+    },
+    {
+      "label": "Textual representation of the score bar for those using a readspeaker",
+      "default": "You got :num out of :total points"
+    },
+    {
+      "label": "Label for the full readable text for assistive technologies",
+      "default": "Full readable text"
+    },
+    {
+      "label": "Label for the text where words can be marked for assistive technologies",
+      "default": "Full text where words can be marked"
+    },
+    {
+      "label": "Solution mode header for assistive technologies",
+      "default": "Solution mode"
+    },
+    {
+      "label": "Checking mode header for assistive technologies",
+      "default": "Checking mode"
+    },
+    {
+      "label": "Assistive technology description for \"Check\" button",
+      "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+    },
+    {
+      "label": "وصف تقنية المساعدة لزر \"عرض الحلول\"",
+      "default": "اعرض الحل. سيتم تمييز المهمة بالحل الصحيح الخاص بها."
+    },
+    {
+      "label": "وصف التقنية المساعدة لزر إعادة المحاولة",
+      "default": "إعادة المحاولة للمهمة. إعادة ضبط جميع الردود والبدء بالمهمة مرة أخرى."
+    }
+  ]
+}

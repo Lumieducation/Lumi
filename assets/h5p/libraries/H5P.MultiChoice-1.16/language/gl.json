@@ -1,0 +1,258 @@
+{
+  "semantics": [
+    {
+      "label": "Medios",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Medios adicionais amosados enriba da pregunta."
+        },
+        {
+          "label": "Desactivar zoom da imaxe"
+        }
+      ]
+    },
+    {
+      "label": "Pregunta"
+    },
+    {
+      "label": "Opcións dispoñibles",
+      "entity": "opción",
+      "field": {
+        "label": "Opción",
+        "fields": [
+          {
+            "label": "Texto"
+          },
+          {
+            "label": "Correcto"
+          },
+          {
+            "label": "Pistas e retroalimentación",
+            "fields": [
+              {
+                "label": "Texto da pista",
+                "description": "Axuda para o usuario. Aparecerá antes de que o usuario comprobe a(s) súa(s) resposta(s)."
+              },
+              {
+                "label": "Mensaxe amosada cando se selecciona a resposta",
+                "description": "A mensaxe aparecerá baixo a resposta en \"comprobar\" ao seleccionar esta resposta."
+              },
+              {
+                "label": "Mensaxe amosada se non se selecciona a resposta",
+                "description": "A mensaxe aparecerá baixo a esposta en \"comprobar\" se non se selecciona esta resposta."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Retroalimentación xeral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Por defecto"
+            }
+          ],
+          "label": "Define a retroalimentación por defecto para calquera rango de puntuación",
+          "description": "Preme o botón \"Engadir rango\" para engadir tantos rangos como precises. Exemplo: 0-20% Mala Puntuación, 21-91% Puntuación Media, 91-100% Puntuación Xenial!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango de Puntuación"
+              },
+              {},
+              {
+                "label": "Retroalimentación para rango de puntuación definido",
+                "placeholder": "Escribe a retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Traducións da interface de usuario para a escolla múltiple",
+      "fields": [
+        {
+          "label": "Etiqueta para botón comprobar resposta",
+          "default": "Comprobar"
+        },
+        {
+          "label": "Etiqueta para o botón enviar resposta",
+          "default": "Submit"
+        },
+        {
+          "label": "Etiqueta para botón amosar resposta",
+          "default": "Amosar Resposta"
+        },
+        {
+          "label": "Etiqueta para botón reintentar",
+          "default": "Reintentar"
+        },
+        {
+          "label": "Etiqueta para pista",
+          "default": "Amosar Pista"
+        },
+        {
+          "label": "Representación textual da barra de puntuación cando se usa un lector de pantalla",
+          "description": "Variables dispoñibles :num e :total",
+          "default": "Conseguiches :num puntos de :total"
+        },
+        {
+          "label": "Pista dispoñible (non amosada)",
+          "default": "Pista Dispoñible",
+          "description": "Texto de accesibilidade usado para lectores de pantalla"
+        },
+        {
+          "label": "Retroalimentación dispoñible (non amosada)",
+          "default": "Retroalimentación dispoñible",
+          "description": "Texto de accesibilidade usado para lectores de pantalla"
+        },
+        {
+          "label": "Ler Retroalimentación (non amosada)",
+          "default": "Ler retroalimentación",
+          "description": "Texto de accesibilidade usado para lectores de pantalla"
+        },
+        {
+          "label": "Resposta Incorrecta (non amosada)",
+          "default": "Resposta Incorrecta",
+          "description": "Texto de accesibilidade usado para lectores de pantalla"
+        },
+        {
+          "label": "Resposta Correcta (non amosada)",
+          "default": "Resposta Correcta",
+          "description": "Texto de accesibilidade usado para lectores de pantalla"
+        },
+        {
+          "label": "Deberíase ter marcado a opción",
+          "default": "Deberíase ter marcado"
+        },
+        {
+          "label": "Non se debería ter marcado",
+          "default": "Non se debería ter marcado"
+        },
+        {
+          "label": "Texto para a mensaxe \"Resposta requirida\"",
+          "default": "Por favor, responde antes de ver a solución"
+        },
+        {
+          "label": "Descrición asistida para o botón \"Comprobar\"",
+          "default": "Comproba as túas respostas. As respostas marcaranse como correctas, incorrectas ou non contestadas."
+        },
+        {
+          "label": "Descrición asistida para o botón \"Amosar solución\"",
+          "default": "Amosar a solución. A tarefa marcarase coa súa resposta correcta."
+        },
+        {
+          "label": "Descrición asistida para o botón \"Reintentar\"",
+          "default": "Reintentar a tarefa. Borrar todas as respostas e empezar a tarefa de novo."
+        }
+      ]
+    },
+    {
+      "label": "Configuración de comportamento",
+      "description": "Estas opcións permiten controlar o comportamento da tarefa.",
+      "fields": [
+        {
+          "label": "Activar botón \"Reintentar\""
+        },
+        {
+          "label": "Activar o botón \"Amosar Solución\""
+        },
+        {
+          "label": "Activar o botón \"Comprobar\""
+        },
+        {
+          "label": "Tipo de Pregunta",
+          "description": "Selecciona o aspecto e comportamento da pregunta.",
+          "options": [
+            {
+              "label": "Automática"
+            },
+            {
+              "label": "Escolla Múltiple (Caixas de selección)"
+            },
+            {
+              "label": "Escolla Simple (Botóns de Radio)"
+            }
+          ]
+        },
+        {
+          "label": "Dar un punto pola tarefa completa",
+          "description": "Activa a posibilidade de dar un total dun punto por múltiples respostas correctas. Esta opción non estará dispoñible en modo \"Reposta única\"."
+        },
+        {
+          "label": "Facer as respostas aleatorias",
+          "description": "Permite facer aleatoria a orde das preguntas amosadas."
+        },
+        {
+          "label": "Requirir unha resposta antes de poder ver a solución"
+        },
+        {
+          "label": "Amosar diálogo de confirmación ao premer en \"Comprobar\""
+        },
+        {
+          "label": "Amosar diálogo de confirmación ao premer en \"Reintentar\""
+        },
+        {
+          "label": "Comprobar respostas automaticamente",
+          "description": "A activación desta opción perxudicará a accesibilidade; ollo co que fas."
+        },
+        {
+          "label": "Porcentaxe para aprobar",
+          "description": "Esta opción non ten efecto a miúdo. É a porcentaxe da puntuación total requirida para obter 1 punto cando se activa a opción de obter 1 punto pola tarefa completa, e para obter result.success en sentenzas xAPI."
+        },
+        {
+          "label": "Amosar a puntuación",
+          "description": "Amosar os puntos obtidos por cada resposta. Opción non dispoñible se está activado o modo 'Resposta única' ou se está activada a opción 'Dar un punto pola tarefa completa'."
+        }
+      ]
+    },
+    {
+      "label": "Diálogo de confirmación da comprobación",
+      "fields": [
+        {
+          "label": "Texto da cabeceira",
+          "default": "Rematado ?"
+        },
+        {
+          "label": "Texto do corpo",
+          "default": "Seguro que queres rematar ?"
+        },
+        {
+          "label": "Etiqueta do botón Cancelar",
+          "default": "Cancelar"
+        },
+        {
+          "label": "Etiqueta do botón Confirmar",
+          "default": "Rematar"
+        }
+      ]
+    },
+    {
+      "label": "Diálogo de confirmación de reintento",
+      "fields": [
+        {
+          "label": "Texto da cabeceira",
+          "default": "Reintentar ?"
+        },
+        {
+          "label": "Texto do corpo",
+          "default": "Seguro que queres reintentar ?"
+        },
+        {
+          "label": "Etiqueta do botón Cancelar",
+          "default": "Cancelar"
+        },
+        {
+          "label": "Etiqueta do botón Confirmar",
+          "default": "Confirmar"
+        }
+      ]
+    }
+  ]
+}

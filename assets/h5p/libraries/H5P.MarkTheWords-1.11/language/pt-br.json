@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "label": "Mídia",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Mídia opcional para exibir acima da pergunta."
+        },
+        {
+          "label": "Desativar o zoom da imagem"
+        }
+      ]
+    },
+    {
+      "label": "Descrição da tarefa",
+      "description": "Descreva como o usuário deve resolver a tarefa.",
+      "placeholder": "Clique em todos os verbos no texto a seguir."
+    },
+    {
+      "label": "Campo de texto",
+      "placeholder": "Esta é uma resposta: *answer*.",
+      "important": {
+        "description": "<ul><li>Palavras marcadas são adicionadas com um asterisco(*).</li><li>Asteriscos podem ser adicionados junto às palavras marcadas adicionando outro asterisco, *palavracorreta*** =&gt; palavracorreta*.</li></ul>",
+        "example": "As palavras corretas são marcadas desta maneira: *palavra correta*, e um asterisco pode ser escrito da seguinte maneira: *palavracorreta***."
+      }
+    },
+    {
+      "label": "Feedback Geral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Definir feedback personalizado para qualquer faixa de pontuação",
+          "description": "Clique no botão \"Adicionar faixa\" para adicionar quantos intervalos você precisar. Exemplo: 0-20% Pontuação Ruim, 21-91% Pontuação Média, 91-100% Pontuação Ótima!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de Pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para a faixa de pontuação definida",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Texto do botão \"Verificar \"",
+      "default": "Verificar"
+    },
+    {
+      "label": "Texto do botão \"Enviar\"",
+      "default": "Enviar"
+    },
+    {
+      "label": "Texto para o botão \"Tentar Novamente\"",
+      "default": "Tentar Novamente"
+    },
+    {
+      "label": "Texto para o botão \"Mostrar solução\"",
+      "default": "Mostrar solução"
+    },
+    {
+      "label": "Configurações comportamentais.",
+      "description": "Estas opções permitirão que você controle como a tarefa se comporta.",
+      "fields": [
+        {
+          "label": "Ativar o botão \"Tentar Novamente\""
+        },
+        {
+          "label": "Ativar o botão \"Mostrar solução\""
+        },
+        {
+          "label": "Ativar o botão \"Verificar\""
+        },
+        {
+          "label": "Mostrar pontuação",
+          "description": "Mostrar pontos ganhos para cada resposta."
+        }
+      ]
+    },
+    {
+      "label": "Texto para resposta correta",
+      "default": "Correto!",
+      "description": "Texto usado para indicar que uma resposta está correta"
+    },
+    {
+      "label": "Texto para resposta incorreta",
+      "default": "Incorreto!",
+      "description": "Texto usado para indicar que uma resposta está incorreta"
+    },
+    {
+      "label": "Texto para questão não respondida",
+      "default": "Questão não respondida!",
+      "description": "Texto usado para indicar que a questão não foi respondida"
+    },
+    {
+      "label": "Descrição para Solução de Visualização",
+      "default": "A tarefa está atualizada com a solução.",
+      "description": "Este texto informa ao usuário que a tarefa foi atualizada com a solução."
+    },
+    {
+      "label": "Representação textual da barra de pontuação para aqueles que utilizam um leitor de tela",
+      "default": "Você conseguiu :num de :total pontos possíveis"
+    },
+    {
+      "label": "Rótulo para o texto legível completo para tecnologias de assistência",
+      "default": "Texto legível completo"
+    },
+    {
+      "label": "Rótulo das tecnologias de assistência para o texto onde as palavras podem ser marcadas",
+      "default": "Texto completo onde as palavras podem ser marcadas"
+    },
+    {
+      "label": "Cabeçalho do modo de solução para tecnologias de assistência",
+      "default": "Modo Solução"
+    },
+    {
+      "label": "Cabeçalho do modo de verificação de tecnologias de assistência",
+      "default": "Modo de verificação"
+    },
+    {
+      "label": "Descrição da tecnologia de assistência para o botão \"Verificar\"",
+      "default": "Verifique as respostas. As respostas serão marcadas como corretas, incorretas, ou sem resposta."
+    },
+    {
+      "label": "Descrição da tecnologia assistiva para o botão \"Mostrar Solução\"",
+      "default": "Mostrar a solução. A tarefa será marcada com sua solução correta."
+    },
+    {
+      "label": "Descrição da tecnologia de assistência para o botão \"Tentar Novamente\"",
+      "default": "Tente realizar a tarefa novamente. Reinicialize todas as respostas e recomece."
+    }
+  ]
+}

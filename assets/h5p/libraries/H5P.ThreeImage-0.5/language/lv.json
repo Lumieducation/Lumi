@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Trīs attēlu redaktors",
+      "fields": [
+        {
+          "label": "Ainas",
+          "entity": "Aina",
+          "field": {
+            "fields": [
+              {
+                "label": "Ainas veids",
+                "options": [
+                  {
+                    "label": "360 grādu attēls"
+                  },
+                  {
+                    "label": "Statisks attēls"
+                  }
+                ]
+              },
+              {
+                "label": "Parādīt pogu \"Atpakaļ\"",
+                "description": "Saskarnes poga, lai pārvietotos atpakaļ uz iepriekšējo ainu"
+              },
+              {},
+              {
+                "label": "Ainas nosaukums",
+                "description": "Izmanto, lai identificētu ainu"
+              },
+              {
+                "label": "Ainas fons"
+              },
+              {
+                "label": "Ainas apraksts",
+                "description": "Teksts, kas var aprakstīt ainu gala lietotājam"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Etiķete",
+                      "description": "Ja lauks tiks atstāts tukšs, etiķete netiks rādīta, un mēs mēģināsim ekrāna lasītājos izmantot virsraksta lauku"
+                    },
+                    {
+                      "label": "Etiķešu iestatījumi",
+                      "fields": [
+                        {
+                          "label": "Etiķetes pozīcija",
+                          "description": "Izvēlieties, kur jāparādās etiķetei",
+                          "options": [
+                            {
+                              "label": "Izmantot uzvedības iestatījumu"
+                            },
+                            {
+                              "label": "Līdzināts pa labi"
+                            },
+                            {
+                              "label": "Līdzināts pa kreisi"
+                            },
+                            {
+                              "label": "Līdzināts augšpusē"
+                            },
+                            {
+                              "label": "Līdzināts apakšā"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Parādīt etiķetes",
+                          "description": "Ja paslēpts, etiķetes tiks rādītas tikai pēc kursora novietošanas",
+                          "options": [
+                            {
+                              "label": "Izmantot uzvedības iestatījumu"
+                            },
+                            {
+                              "label": "Rādīt"
+                            },
+                            {
+                              "label": "Paslēpt"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Pogas stils",
+                "options": [
+                  {
+                    "label": "Jauna aina (bultiņa)"
+                  },
+                  {
+                    "label": "Vairāk informācijas (pluszīme)"
+                  }
+                ],
+                "description": "Izlemiet, kā vajadzētu izskatīties pogām, kas norāda uz šo ainu. Ainām, kas ir statiskas un nenoved uz jaunām ainām, iesakām pogu \"Papildinformācija\"."
+              },
+              {
+                "label": "Audio celiņš",
+                "description": "Pievienot šai ainai raksturīgu audio celiņu."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Audio celiņš"
+        }
+      ]
+    },
+    {
+      "label": "Uzvedības iestatījumi",
+      "description": "Šie parametri ļaus jums kontrolēt pasaules uzvedību.",
+      "fields": [
+        {
+          "label": "Globālais audio",
+          "description": "Pievienojiet audio celiņu, kas pēc noklusējuma ir pieejams visām ainām."
+        },
+        {
+          "label": "Ainu atveidošanas kvalitāte",
+          "options": [
+            {
+              "label": "Augsta kvalitāte (128x128)"
+            },
+            {
+              "label": "Vidēja kvalitāte (64x64)"
+            },
+            {
+              "label": "Zema kvalitāte (16x16)"
+            }
+          ],
+          "description": "Izvēlieties platuma un augstuma segmentu daudzumu, kas tiek izmantots ainas renderēšanai. Tas tiešā veidā ietekmē ainas kvalitātes līmeni, mēģiniet uzlabot kvalitāti, ja aina izskatās \"blokaina\" vai ainās ir redzami \"viļņi\". Ņemiet vērā, ka augstākas kvalitātes renderēšanas ielāde prasa vairāk laika."
+        },
+        {
+          "label": "Etiķetes iestatījumi",
+          "fields": [
+            {
+              "label": "Etiķetes pozīcija",
+              "description": "Noklusējuma etiķetes pozīcija. Pozīcija var tikt ignorēta katrā mijiedarbībā",
+              "options": [
+                {
+                  "label": "Līdzināta pa labi"
+                },
+                {
+                  "label": "Līdzināta pa kreisi"
+                },
+                {
+                  "label": "Līdzināta augšpusē"
+                },
+                {
+                  "label": "Līdzināta apakšā"
+                }
+              ]
+            },
+            {
+              "label": "Parādīt etiķetes",
+              "description": "Ja paslēpts, etiķetes tiks rādītas tikai pēc kursora novietošanas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Lokalizēt",
+      "fields": [
+        {
+          "label": "Lauka etiķete satura veidam",
+          "default": "Virtuālā tūre"
+        },
+        {
+          "label": "Etiķete audio atskaņošanai",
+          "default": "Atskaņot audio celiņu"
+        },
+        {
+          "label": "Etiķete audio apturēšanai",
+          "default": "Apturēt audio celiņu"
+        },
+        {
+          "label": "Ainas dialoga nosaukums",
+          "default": "Ainas apraksts"
+        },
+        {
+          "label": "Etiķete kameras atiestatīšanas pogai",
+          "default": "Atiestatīt kameru"
+        },
+        {
+          "label": "Iesniegšanas dialoga pogas etiķete",
+          "default": "Iesniegšanas dialogs"
+        },
+        {
+          "label": "Dialoga aizvēršanas pogas etiķete",
+          "default": "Aizvērt dialogu"
+        },
+        {
+          "label": "Lauka etiķete izvēršanas pogai",
+          "default": "Vizuālā elementa paplašināšanas etiķete"
+        },
+        {
+          "label": "360 grādu ainas ielādes fona attēla etiķete",
+          "default": "Notiek fona attēla ielāde..."
+        },
+        {
+          "label": "Etiķete gadījumiem, kad nav satura",
+          "default": "Nav satura"
+        }
+      ]
+    }
+  ]
+}

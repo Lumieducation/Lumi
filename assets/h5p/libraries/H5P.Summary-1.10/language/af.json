@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Inleidende teks",
+      "default": "Kies die regte stelling.",
+      "description": "Dit sal bo-aan die opsomming taak vertoon word."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Verstek"
+        },
+        {
+          "label": "Tekstuele"
+        }
+      ],
+      "label": "Opsomming",
+      "entity": "stellings",
+      "field": {
+        "label": "Stel stellings",
+        "fields": [
+          {
+            "label": "Lys van stellings vir die opsomming - die eerste stelling is reg.",
+            "entity": "stelling",
+            "field": {
+              "label": "Stelling"
+            }
+          },
+          {
+            "label": "Wenk",
+            "fields": [
+              {
+                "label": "Wenk teks"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Algemene terugvoer",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Verstek"
+            }
+          ],
+          "label": "Bepaal verstekterugvoer vir enige reeks tellings",
+          "description": "Kliek op die \"Voeg reeks by\" knoppie om so veel as moontlik reekse by te voeg. Byvoorbeeld: 0-20% Swak Punt, 21-91% Gemiddelde Punt, 91-100% Uitstekende Punt!",
+          "entity": "reeks",
+          "field": {
+            "fields": [
+              {
+                "label": "Telling reeks"
+              },
+              {},
+              {
+                "label": "Terugvoer vir gedefinieerde telling reeks",
+                "placeholder": "Vul die terugvoer in"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Teks wat vertoon word bo die aantal stellings wat reg beantwoord is in die opsomming taak.",
+      "default": "Vordering:",
+      "description": "Sal bo-aan die stellings vertoon word: Byvoorbeeld: 'Vordering: 2/5'"
+    },
+    {
+      "label": "Teks wat vertoon word bo-aan die aantal stellings wat verkeerd beantwoord is in die opsomming taak.",
+      "default": "Verkeerde antwoorde:",
+      "description": "Sal bo die stellings vertoon word. Byvoorbeeld: 'Verkeerde antwoord:4'"
+    },
+    {
+      "label": "Opsomming terugvoer opskrif",
+      "default": "Jou uitslag",
+      "description": "Dit sal bo-aan die opsomming taak vertoon word."
+    },
+    {
+      "label": "Spreekleserteks vir regte antwoord",
+      "default": "Reg."
+    },
+    {
+      "label": "Spreekleserteks vir aankondiging van verkeerde antwoord",
+      "default": "Verkeerd! Probeer asb. weer."
+    },
+    {
+      "label": "Spreekleserteks etiket vir verkeerde antwoord",
+      "default": "Verkeerd"
+    },
+    {
+      "label": "Etiketlys van verkeerde antwoorde",
+      "default": "Regte antwoorde."
+    },
+    {
+      "label": "Etiket vir die wys wenk knoppie",
+      "default": "Wys wenk"
+    },
+    {
+      "label": "Tekstuele tentoonstelling van die telkaart vir diegene wat 'n spreekleser gebruik",
+      "description": ":num en :total is spesiale sleutelwoorde wat programmaties opgedateer word",
+      "default": "Jy het :num uit :total punte gekry"
+    },
+    {
+      "label": "Teks gebruik vir spreekleser kommunikasie vordering",
+      "description": ":num en :total is spesiale sleutelwoorde wat programmaties opgedateer word",
+      "default": "Vordering :num van :total"
+    }
+  ]
+}

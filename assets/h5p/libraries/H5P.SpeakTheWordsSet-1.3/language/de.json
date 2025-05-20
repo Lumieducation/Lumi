@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Einführung",
+      "fields": [
+        {
+          "label": "Zeige Einführung"
+        },
+        {
+          "label": "Einführungsbild"
+        },
+        {
+          "label": "Alternativtext für das Einführungsbild"
+        },
+        {
+          "label": "Titel"
+        },
+        {
+          "label": "Einführungstext",
+          "description": "Dieser Titel wird über dem Einführungstext angezeigt."
+        }
+      ]
+    },
+    {
+      "label": "Fragen",
+      "widgets": [
+        {
+          "label": "Eingabemaske"
+        }
+      ],
+      "entity": "Frage",
+      "field": {
+        "label": "Frage"
+      }
+    },
+    {
+      "label": "Gesamtrückmeldung",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Eingabemaske"
+            }
+          ],
+          "label": "Lege Rückmeldungen für einzelne Punktebereiche fest",
+          "description": "Klicke auf den \"Bereich hinzufügen\"-Button, um so viele Bereiche hinzuzufügen, wie du brauchst. Beispiel: 0-20% Schlechte Punktzahl, 21-91% Durchschnittliche Punktzahl, 91-100% Großartige Punktzahl!",
+          "entity": "Bereich",
+          "field": {
+            "fields": [
+              {
+                "label": "Punktebereich"
+              },
+              {},
+              {
+                "label": "Rückmeldung für jeweiligen Punktebereich",
+                "placeholder": "Trage die Rückmeldung ein"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Bezeichnungen und Beschriftungen",
+      "fields": [
+        {
+          "label": "Beschriftung des \"Start\"-Buttons",
+          "default": "Beginnen!"
+        },
+        {
+          "label": "Beschriftung des Ergebnisbildschirms",
+          "default": "Dein Ergebnis:"
+        },
+        {
+          "label": "Beschriftung des \"Lösung anzeigen\"-Buttons",
+          "default": "Lösung anzeigen"
+        },
+        {
+          "label": "Beschriftung des \"Wiederholen\"-Buttons",
+          "default": "Wiederholen"
+        },
+        {
+          "label": "Beschriftung des \"Beenden\"-Buttons",
+          "default": "Beenden"
+        },
+        {
+          "label": "Beschriftung des \"Weiter\"-Buttons für Vorlesewerkzeuge (Barrierefreiheit)",
+          "default": "Nächste Frage"
+        },
+        {
+          "label": "Beschriftung des \"Zurück\"-Buttons für Vorlesewerkzeuge (Barrierefreiheit)",
+          "default": "Vorherige Frage"
+        },
+        {
+          "label": "Beschriftung der Navigationsleiste",
+          "description": "Bezeichnung für Fragen in der Navigationsleiste. \":num\" wird durch die Nummer der aktuellen Frage ersetzt.",
+          "default": "Frage :num"
+        },
+        {
+          "label": "Ausgabetext von \"Frage beantwortet\" für Vorlesewerkzeuge (Barrierefreiheit)",
+          "default": "Frage beantwortet"
+        },
+        {
+          "label": "Ausgabetext von \"Derzeitige Frage\" für Vorlesewerkzeuge (Barrierefreiheit)",
+          "default": "Derzeit aktiv"
+        }
+      ]
+    }
+  ]
+}

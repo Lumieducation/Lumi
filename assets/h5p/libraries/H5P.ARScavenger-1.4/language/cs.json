@@ -1,0 +1,300 @@
+{
+  "semantics": [
+    {
+      "label": "Show start screen",
+      "description": "If checked, the content will show the title screen when starting."
+    },
+    {
+      "label": "Start screen",
+      "fields": [
+        {
+          "label": "Introduction",
+          "placeholder": "Welcome to ..."
+        },
+        {
+          "label": "Title screen image"
+        }
+      ]
+    },
+    {
+      "label": "Markers",
+      "fields": [
+        {
+          "label": "Markers",
+          "widgets": [
+            {
+              "label": "Default"
+            }
+          ],
+          "entity": "marker",
+          "field": {
+            "label": "Marker",
+            "fields": [
+              {
+                "label": "Marker image (original)",
+                "description": "Upload the image that you want to create a marker for. Should be a square image or it will be cropped. Keep in mind that you will need a unique marker image for every interaction.",
+                "importantDescription": {
+                  "description": "Please keep in mind some criteria for good marker images:<ul><li>High color contrast, ideally black and white</li><li>Asymmetry</li><li>The internal resolution of a marker is 16 x 16 pixels, using larger images can make marker detection worse</li><li>Single characters or short words yield good results</li></ul>"
+                }
+              },
+              {
+                "label": "Marker image (pattern)",
+                "description": "Download this image to use as a marker displayed on a screen or printed on paper."
+              },
+              {
+                "label": "Action type",
+                "description": "Action that should be triggered when the marker is found.",
+                "options": [
+                  {
+                    "label": "H5P interaction"
+                  },
+                  {
+                    "label": "3D model overlay"
+                  }
+                ]
+              },
+              {
+                "label": "Interaction",
+                "fields": [
+                  {
+                    "label": "Interaction"
+                  },
+                  {
+                    "label": "Dummy"
+                  }
+                ]
+              },
+              {
+                "label": "3D Model",
+                "fields": [
+                  {
+                    "label": "3D model file",
+                    "description": "Upload a glTF (.glb / .gltf) file here. The preferred format is \"glTF 2.0 binary\" in a single file."
+                  },
+                  {
+                    "label": "Geometry",
+                    "fields": [
+                      {
+                        "label": "Scale",
+                        "description": "Scale the model up or down to match your marker size.",
+                        "fields": [
+                          {
+                            "label": "Percentage"
+                          },
+                          {
+                            "label": "Dummy"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Position",
+                        "description": "Set the model's offset position relative to the marker.",
+                        "fields": [
+                          {
+                            "label": "X-offset"
+                          },
+                          {
+                            "label": "Y-offset"
+                          },
+                          {
+                            "label": "Z-offset"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Rotation",
+                        "description": "Set the rotation in degrees.",
+                        "fields": [
+                          {
+                            "label": "X-axis"
+                          },
+                          {
+                            "label": "Y-axis"
+                          },
+                          {
+                            "label": "Z-axis"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Show end screen",
+      "description": "If checked, show an end screen when all interactions have been completed. The end screen will not be available if you only use 3D models though."
+    },
+    {
+      "label": "End screen",
+      "fields": [
+        {
+          "label": "end screen image"
+        },
+        {
+          "label": "End screen text",
+          "placeholder": "You did it!"
+        },
+        {
+          "label": "Overall Feedback",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Default"
+                }
+              ],
+              "label": "Define custom feedback for any score range",
+              "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+              "entity": "range",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Score Range"
+                  },
+                  {
+                    "label": "Feedback for defined score range",
+                    "placeholder": "Fill in the feedback"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Behavioural settings",
+      "fields": [
+        {
+          "label": "Enable \"Retry\" button",
+          "description": "If checked, learners can retry the task."
+        },
+        {
+          "label": "Enable \"Solutions\" button",
+          "description": "If checked, learners can view the solutions of all interactions."
+        },
+        {
+          "label": "Override \"Show Solution\" button",
+          "description": "This option allows to enable or disable the \"Show Solution\" button for all contents or to use their respective behavioural settings.",
+          "options": [
+            {
+              "label": "Use behavioural setting"
+            },
+            {
+              "label": "Always show button"
+            },
+            {
+              "label": "Never show button"
+            }
+          ]
+        },
+        {
+          "label": "Override \"Retry\" button",
+          "description": "This option allows to enable or disable the \"Retry\" button for all contents or to use their respective behavioural settings.",
+          "options": [
+            {
+              "label": "Use behavioural setting"
+            },
+            {
+              "label": "Always show button"
+            },
+            {
+              "label": "Never show button"
+            }
+          ]
+        },
+        {
+          "label": "Fallback height",
+          "description": "Set a fallback heigth in px for cases when there are cross orgin resource sharing (CORS) issues."
+        }
+      ]
+    },
+    {
+      "label": "Localization",
+      "fields": [
+        {
+          "label": "Start button",
+          "default": "Start"
+        },
+        {
+          "label": "Retry button",
+          "default": "Retry"
+        },
+        {
+          "label": "Find a marker to see an interaction.",
+          "default": "Find a marker to see an interaction."
+        },
+        {
+          "label": "Error: browser not supported",
+          "default": "It seems that your browser cannot run this content type, unfortunately."
+        },
+        {
+          "label": "Error: No camera access",
+          "default": "Could not access camera."
+        },
+        {
+          "label": "Error: No camera support",
+          "default": "Your browser does not seem to support a camera."
+        },
+        {
+          "label": "Error: No markers",
+          "default": "Did someone forget to add markers?"
+        },
+        {
+          "label": "Warning: Brave browser",
+          "default": "You seem to be using the Brave browser. Nice! But its strict privacy settings may prevent the camera from working."
+        },
+        {
+          "label": "Initializing content",
+          "default": "Initializing content. Please don't forget to allow camera access."
+        }
+      ]
+    },
+    {
+      "label": "Readspeaker",
+      "fields": [
+        {
+          "label": "FullScreen button title: enter",
+          "default": "Enter fullscreen mode"
+        },
+        {
+          "label": "FullScreen button title: exit",
+          "default": "Exit fullscreen mode"
+        },
+        {
+          "label": "'Switch view' button title (when action closed)",
+          "default": "Switch to exercise"
+        },
+        {
+          "label": "'Switch view' button title (when action opened)",
+          "default": "Switch to camera"
+        },
+        {
+          "label": "'Button disabled' message for 'switch view button'",
+          "default": "You cannot switch the view right now"
+        },
+        {
+          "label": "'Quit' button title",
+          "default": "Quit and show evaluation"
+        },
+        {
+          "label": "'Button disabled' message for 'quit button'",
+          "default": "You have not yet completed all exercises"
+        },
+        {
+          "label": "Action opened",
+          "default": "The view has switched to an exercise."
+        },
+        {
+          "label": "Action closed",
+          "default": "The view has switched to the camera."
+        }
+      ]
+    }
+  ]
+}

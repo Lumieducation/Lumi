@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Achtergrondafbeelding",
+      "description": "Afbeelding die op de achtergrond wordt getoond."
+    },
+    {
+      "label": "Alternatieve tekst voor achtergrondafbeelding",
+      "description": "Als de browser de afbeelding niet kan laden, wordt deze tekst getoond. Ook gebruikt door ondersteunende technologieën."
+    },
+    {
+      "label": "Hotspot pictogram",
+      "options": [
+        {
+          "label": "Vooringesteld pictogram"
+        },
+        {
+          "label": "Geüploade afbeelding"
+        }
+      ]
+    },
+    {
+      "label": "Vooringesteld pictogram",
+      "description": "Gebruik een vooringesteld pictogram voor de hotspot.",
+      "options": [
+        {
+          "label": "Plus"
+        },
+        {
+          "label": "Min"
+        },
+        {
+          "label": "Keer"
+        },
+        {
+          "label": "Vink"
+        },
+        {
+          "label": "Vraagteken"
+        },
+        {
+          "label": "Info"
+        },
+        {
+          "label": "Uitroepteken"
+        }
+      ]
+    },
+    {
+      "label": "Geüploade afbeelding",
+      "description": "Gebruik uw eigen afbeelding voor de hotspot pictogram.<br />75px bij 75px is de aanbevolen afmeting voor uw afbeelding."
+    },
+    {
+      "label": "Hotspot kleur",
+      "description": "De kleur van de hotspots"
+    },
+    {
+      "entity": "hotspot",
+      "label": "Hotspots",
+      "field": {
+        "label": "Hotspot",
+        "fields": [
+          {
+            "label": "Hotspot positie",
+            "description": "Klik op de miniatuurafbeelding om de hotspot te plaatsen"
+          },
+          {
+            "label": "Gehele achtergrondafbeelding afdekken",
+            "description": "Wanneer de gebruiker op de hotspot klikt, zal de pop-up de gehele achtergrondafbeelding afdekken"
+          },
+          {
+            "label": "Koptekst",
+            "description": "Optional header for the popup. This is used by assistive technologies."
+          },
+          {
+            "label": "Pop-up inhoud",
+            "field": {
+              "label": "Inhoud item"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Hotspot label voor ondersteunende technologieën",
+      "default": "Hotspot #num",
+      "description": "Kan vertellen naar welk hotspot element er is genavigeerd als er geen koptekst is opgegeven voor de hotspot. #num kan worden gebruikt als vervanging voor het hotspot nummer."
+    },
+    {
+      "label": "Label voor \"Afsluiten\"-knop voor ondersteunende technologieën",
+      "default": "Afsluiten"
+    },
+    {
+      "label": "Label for assistive technologies denoting that hotspot contains Audio/Video",
+      "default": "Contains Audio/Video"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Editor de preguntes relacionades amb les zones sensibles de la imatge",
+      "fields": [
+        {
+          "label": "Imatge de fons",
+          "fields": [
+            {
+              "label": "Imatge de fons",
+              "description": "Seleccioneu una imatge per utilitzar-la com a fons de la pregunta relacionada amb les zones sensibles de la imatge."
+            }
+          ]
+        },
+        {
+          "label": "Zones sensibles",
+          "description": "Arrossegueu i deixeu anar la figura desitjada de la barra d’eines per crear una zona sensible. Feu doble clic per editar una zona sensible existent. Arrossegueu la zona sensible per moure-la. Estireu el punter de l’extrem inferior dret per canviar-ne la mida.",
+          "fields": [
+            {
+              "label": "Descripció de la tasca",
+              "description": "Instruccions per a l’usuari."
+            },
+            {
+              "label": "Zona sensible",
+              "entity": "Zona sensible",
+              "field": {
+                "label": "Zona sensible",
+                "fields": [
+                  {
+                    "label": "userSettings",
+                    "fields": [
+                      {
+                        "label": "Correcte",
+                        "description": "Hi pot haver diverses zones sensibles correctes. Tanmateix, s’indica a l’usuari si la resposta és correcta o incorrecta després de fer-hi clic per primera vegada."
+                      },
+                      {
+                        "label": "Retroacció"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "computedSettings"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Retroacció si l’usuari selecciona un lloc buit:",
+              "placeholder": "No heu localitzat cap zona sensible; torneu-ho a provar!"
+            },
+            {
+              "label": "Mostra els suggeriments com a contingut emergent"
+            },
+            {
+              "label": "Localització",
+              "fields": [
+                {
+                  "label": "Text del botó \"Torna-ho a provar\"",
+                  "default": "Torna-ho a provar"
+                },
+                {
+                  "label": "Text del botó de tancar",
+                  "default": "Tanca"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Representació textual de la barra de puntuació pera als que utilitzen un altaveu de lectura",
+      "default": "Heu fet :num de :total punts"
+    },
+    {
+      "label": "Descripció de la tecnologia d’assistència per al botó \"Torna-ho a provar\"",
+      "default": "Intenta de nou la tasca. Reajusta totes les respostes i comença la tasca de nou."
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "说明文字",
+      "default": "请选择正确的陈述。",
+      "description": "将显示在‘概要’任务的上方。"
+    },
+    {
+      "widgets": [
+        {
+          "label": "默认"
+        },
+        {
+          "label": "文本"
+        }
+      ],
+      "label": "概要",
+      "entity": "陈述",
+      "field": {
+        "label": "陈述集",
+        "fields": [
+          {
+            "label": "概要陈述列表 - 注意：正确的陈述放在第一行。",
+            "entity": "陈述",
+            "field": {
+              "label": "陈述"
+            }
+          },
+          {
+            "label": "提示",
+            "fields": [
+              {
+                "label": "提示文字"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "总体反馈",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "默认"
+            }
+          ],
+          "label": "为任何分数范围自定义反馈",
+          "description": "单击“添加范围”按钮可根据需要添加任意分数范围。示例：0-20％请加油，21-91％继续努力，91-100％你真棒！",
+          "entity": "范围",
+          "field": {
+            "fields": [
+              {
+                "label": "分数区间"
+              },
+              {},
+              {
+                "label": "自定义区间反馈信息",
+                "placeholder": "输入反馈信息"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "显示进度文本",
+      "default": "进度：",
+      "description": "将显示在陈述的上方。例如：‘进度：2/5’"
+    },
+    {
+      "label": "错误信息文本",
+      "default": "答错：",
+      "description": "将显示在陈述的上方，例如答错：4"
+    },
+    {
+      "label": "反馈信息标题",
+      "default": "你的结果：",
+      "description": "将显示在概要反馈的上方。"
+    },
+    {
+      "label": "回答正确时的反馈文本",
+      "default": "正确！"
+    },
+    {
+      "label": "Readspeaker text for announcing incorrect answer",
+      "default": "Incorrect! Please try again."
+    },
+    {
+      "label": "Readspeaker label for incorrect answer",
+      "default": "Incorrect"
+    },
+    {
+      "label": "正确答案的标签列表",
+      "default": "正确答案。"
+    },
+    {
+      "label": "显示提示按钮的标签",
+      "default": "显示提示"
+    },
+    {
+      "label": "得分情况的文本描述",
+      "description": ":num 和:total 是特殊字符，程序会自动进行更新。",
+      "default": "你得到 :num 分，总分 :total 分。"
+    },
+    {
+      "label": "答题进度的文本描述",
+      "description": ":num 和:total 是特殊字符，程序会自动进行更新。",
+      "default": "进度：第 :num 题，共 :total 题。"
+    }
+  ]
+}

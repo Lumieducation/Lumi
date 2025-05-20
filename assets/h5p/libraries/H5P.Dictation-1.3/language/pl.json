@@ -1,0 +1,374 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Typ",
+          "description": "Opcjonalne media do wyświetlenia nad pytaniem."
+        },
+        {
+          "label": "Wyłącz powiększenie obrazu"
+        }
+      ]
+    },
+    {
+      "label": "Opis zadania",
+      "description": "Opisz tu swoje zadanie.",
+      "placeholder": "Słuchaj uważnie i zapisz co słyszysz."
+    },
+    {
+      "label": "Zdania",
+      "widgets": [
+        {
+          "label": "Domyślny"
+        }
+      ],
+      "entity": "Zdanie",
+      "field": {
+        "label": "Zdanie",
+        "fields": [
+          {
+            "label": "Opis",
+            "description": "Opcjonalnie, możesz dodać prosty opis nad polem wpisywania tekstu, co jest przydatne m.in. przy dialogach."
+          },
+          {
+            "label": "Próbka dźwięku",
+            "description": "Zdanie wypowiedziane w normalnym tempie"
+          },
+          {
+            "label": "Spowolniona próbka dźwięku",
+            "description": "Zdanie wypowiedziane w zwolnionym tempie"
+          },
+          {
+            "label": "Tekst",
+            "description": "Tekst wymagający zapisania. Możesz dodać alternatywną pisownię słowa dodając pionową linię (|) a następnie alternatywę."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Całkowita informacja zwrotna",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Domyślny"
+            }
+          ],
+          "label": "Podaj niestandardową informację zwrotną dla dowolnego zakresu punktów",
+          "description": "Kliknij przycisk \"Dodaj zakres\", aby dodać tak dużo zakres, ile potrzebujesz. Przykład: 0-20% Zły wynik, 21-91% Przeciętny wynik, 91-100% Świetny wynik!",
+          "entity": "zakres",
+          "field": {
+            "fields": [
+              {
+                "label": "Zakres punktacji"
+              },
+              {
+                "label": "Informacja zwrotna dla zdefiniowanego zakresu wyniku",
+                "placeholder": "Uzupełnij informację zwrotną"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "label": "Maksymalna liczba podejść",
+          "description": "Ograniczy liczbę odsłuchań próbek dla każdego zdania."
+        },
+        {
+          "label": "Maksymalna liczba podejść dla spowolnionego tempa",
+          "description": "Ograniczy liczbę odsłuchań spowolnonych próbek dla każdego ze zdań."
+        },
+        {
+          "label": "Wyłącz opcję pauzy",
+          "description": "Jeśli jest zaznaczone, uniemożliwia wstrzymanie nagrania."
+        },
+        {
+          "label": "Opóźnienie przycisku odtwarzania",
+          "description": "Opcjonalnie, ustaw czas do 3 sekund opóźnienia dla odtwarzania. Ta opcja jest przydatna, kiedy chcesz dać uczącym się czas na wejście w pole tekstowe zanim zaczną słuchać."
+        },
+        {
+          "label": "Przetasuj zdania",
+          "description": "Określ, kiedy zdania powinny zostać przetasowane.",
+          "options": [
+            {
+              "label": "Nigdy"
+            },
+            {
+              "label": "Raz, przy rozpoczęciu ćwiczenia"
+            },
+            {
+              "label": "Przy każdej próbie"
+            }
+          ]
+        },
+        {
+          "label": "Punktacja",
+          "fields": [
+            {
+              "label": "Ignoruj interpunkcję",
+              "description": "Jeśli zaznaczone, interpunkcja nie będzie wliczana w punktację."
+            },
+            {
+              "label": "Tryb zera pomyłek",
+              "description": "Jeśli zaznaczone, tylko prawidłowe odpowiedzi będą uwzględniane w punktacji. Błędy nie będą karane."
+            },
+            {
+              "label": "Wartość literówek",
+              "description": "Określ, w jakim stopniu literówki (słowo składające się z 3-9 liter: do 1 błędu, słowo zawierające więcej niż 9 liter: do 2 błędów) liczą się jako prawdziwe błędy.",
+              "options": [
+                {
+                  "label": "100 %"
+                },
+                {
+                  "label": "50 %"
+                },
+                {
+                  "label": "0 %"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Tekst",
+          "fields": [
+            {
+              "label": "Znaki przestankowe",
+              "description": "Określ znaki przestankowe inne niż spacja dla wspierania alternatywnych rozwiązań składających się z innej liczby słów."
+            },
+            {
+              "label": "Kierunek pisma",
+              "description": "Zaznacz czy kierunek zdań jest od prawej do lewej czy od lewej do prawej.",
+              "options": [
+                {
+                  "label": "Automatyczne wykrywanie"
+                },
+                {
+                  "label": "Od prawej do lewej"
+                },
+                {
+                  "label": "Od lewej do prawej"
+                }
+              ]
+            },
+            {
+              "label": "Dzielenie liter",
+              "description": "Włącz jeśli konkretne litery (np. chińskie) powinny być automatycznie rozdzielane na oddzielne słowa."
+            }
+          ]
+        },
+        {
+          "label": "Wyświetlenie informacji zwrtonej",
+          "fields": [
+            {
+              "label": "Niestandardowe wyświetlanie literówek",
+              "description": "Jeśli zaznaczone, literówki będą wyświetlane w niestandardowym stylu, co odróżni je od innych błędów."
+            },
+            {
+              "label": "Prezentacja alternatywnych rozwiązań",
+              "description": "Określ, które alternatywy powinny zostać wyświetlone zamiast złych lub brakujących słów w rozwiązaniu.",
+              "options": [
+                {
+                  "label": "Pokaż tylko pierwszą alternatywę"
+                },
+                {
+                  "label": "Pokaż wszystkie alternatywy"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Włącz \"Spróbuj jeszcze raz\""
+        },
+        {
+          "label": "Włącz przycisk \"Pokaż rozwiązanie\""
+        },
+        {
+          "label": "Pokaż rozwiązanie podczas sprawdzania"
+        }
+      ],
+      "label": "Ustawienia zachowiań",
+      "description": "Te opcje pozwolą Ci kontrolować zachowanie zadania."
+    },
+    {
+      "fields": [
+        {
+          "label": "Ogólna informacja zwrotna",
+          "description": "Możesz używać kilku symboli zastępczych, które zostaną zastąpione liczbą: @matches = liczba trafień, @total = wszystkie błędy, @capped = ograniczona liczna błędów, @wrong = niewłaściwe słowa, @added = dodatkowe słowa, @missing = brakujące słowa, @typo = literówki",
+          "default": "Masz @total błędów."
+        },
+        {
+          "label": "Ogólna informacja zwrotna (tryb braku błędów)",
+          "description": "Możesz używać kilku symboli zastępczych, które zostaną zastąpione liczbą: @matches = liczba trafień, @total = wszystkie błędy, @capped = ograniczona liczna błędów, @wrong = niewłaściwe słowa, @added = dodatkowe słowa, @missing = brakujące słowa, @typo = literówki",
+          "default": "Masz wprowadzonych @total słów prawidłowo i @typo słów z małymi błędami."
+        },
+        {
+          "label": "Tekst przycisku \"Sprawdź\"",
+          "default": "Sprawdź"
+        },
+        {
+          "label": "Tekst przycisku \"Prześlij\"",
+          "default": "Prześlij"
+        },
+        {
+          "label": "Tekst przycisku \"Spróbuj ponownie\"",
+          "default": "Spróbuj ponownie"
+        },
+        {
+          "label": "Tekst przycisku \"Pokaż rozwiązanie\"",
+          "default": "Pokaż rozwiązanie"
+        },
+        {
+          "label": "Wiadomość o braku obsługi dźwięku",
+          "default": "Twoja przeglądarka nie obsługuje tego dźwięku."
+        }
+      ],
+      "label": "Interfejs użytkownika"
+    },
+    {
+      "label": "Syntezator mowy",
+      "fields": [
+        {
+          "label": "Opis technologii wspomagającej dla przycisku \"Sprawdź\"",
+          "default": "Sprawdź odpowiedzi. Zostaną one oznaczone jako prawidłowe, nieprawidłowe lub bez odpowiedzi."
+        },
+        {
+          "label": "Opis technologii wspomagającej dla przycisku \"Pokaż rozwiązanie\"",
+          "default": "Pokaż rozwiązanie. Zadanie zostanie oznaczone prawidłowym rozwiązaniem."
+        },
+        {
+          "label": "Opis technologii wspomagającej dla przycisku \"Spróbuj ponownie\"",
+          "default": "Spróbuj ponownie wykonać zadanie. Zresetuj wszystkie odpowiedzi i rozpocznij zadanie od nowa."
+        },
+        {
+          "label": "Przycisk odtwarzania",
+          "default": "Odtwórz"
+        },
+        {
+          "label": "Przycisk powolnego odtwarzania",
+          "default": "Odtwórz powoli"
+        },
+        {
+          "label": "Pozostałych prób (tekst dla czytających Readspeakerem i tekst po najechaniu kursorem)",
+          "description": "@number zostanie zastąpiony aktualną liczbą pozostałych prób.",
+          "default": "Liczba pozostałych prób: @number"
+        },
+        {
+          "label": "Nieskończony (tekst dla czytających Readspeakerem i tekst po najechaniu kursorem)",
+          "default": "nieskończony"
+        },
+        {
+          "label": "Wprowadź pole tekstowe",
+          "default": "Wpisz to, co usłyszałeś/-aś."
+        },
+        {
+          "label": "Twój wynik",
+          "description": "@score zostanie zastąpiony liczbą punktów. @total zostanie zastąpiony maksymalną możliwą liczbą punktów.",
+          "default": "Zdobyłeś/-aś @score z @total punktów"
+        },
+        {
+          "label": "Rozwiązanie",
+          "default": "Rozwiązanie"
+        },
+        {
+          "label": "Zdanie",
+          "default": "Zdanie"
+        },
+        {
+          "label": "Przedmiot",
+          "default": "Przedmiot"
+        },
+        {
+          "label": "Prawidłowa",
+          "default": "prawidłowa"
+        },
+        {
+          "label": "Nieprawidłowa",
+          "default": "nieprawidłowa"
+        },
+        {
+          "label": "Mała pomyłka",
+          "default": "mała pomyłka"
+        },
+        {
+          "label": "Brakujące słowo lub symbol",
+          "default": "brakujące"
+        },
+        {
+          "label": "Dodane słowo lub symbol",
+          "default": "dodane"
+        },
+        {
+          "label": "Prawidłowe rozwiązanie",
+          "default": "Powinno być"
+        },
+        {
+          "label": "Lub",
+          "default": "lub"
+        },
+        {
+          "label": "Punkt",
+          "default": "punkt"
+        },
+        {
+          "label": "Punkty",
+          "default": "punkty"
+        },
+        {
+          "label": "Okres",
+          "default": "okres"
+        },
+        {
+          "label": "Wykrzyknik",
+          "default": "wykrzyknik"
+        },
+        {
+          "label": "Znak zapytania",
+          "default": "znak zapytania"
+        },
+        {
+          "label": "Przecinek",
+          "default": "przecinek"
+        },
+        {
+          "label": "Pojedynczy cytat",
+          "default": "pojedynczy cytat"
+        },
+        {
+          "label": "Podwójny cytat",
+          "default": "podwójny cytat"
+        },
+        {
+          "label": "Dwukropek",
+          "default": "dwukropek"
+        },
+        {
+          "label": "Średnik",
+          "default": "średnik"
+        },
+        {
+          "label": "Plus",
+          "default": "plus"
+        },
+        {
+          "label": "Minus",
+          "default": "minus"
+        },
+        {
+          "label": "Gwiazdka",
+          "default": "gwiazdka"
+        },
+        {
+          "label": "Ukośnik do przodu",
+          "default": "ukośnik do przodu"
+        }
+      ]
+    }
+  ]
+}

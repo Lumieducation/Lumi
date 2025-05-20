@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Maandishi ya utangulizi",
+      "default": "Chagua kauli sahihi.",
+      "description": "Itaonyeshwa juu ya kazi ya muhtasari."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Chaguo-msingi"
+        },
+        {
+          "label": "Kimaandishi"
+        }
+      ],
+      "label": "Muhtasari",
+      "entity": "kauli",
+      "field": {
+        "label": "Seti ya kauli",
+        "fields": [
+          {
+            "label": "Orodha ya kauli za muhtasari - kauli ya kwanza ni sahihi.",
+            "entity": "kauli",
+            "field": {
+              "label": "Kauli"
+            }
+          },
+          {
+            "label": "Kidokezo",
+            "fields": [
+              {
+                "label": "Maandishi ya kidokezo"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Maoni ya Jumla",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Chaguo-msingi"
+            }
+          ],
+          "label": "Bainisha maoni maalum kwa masafa yoyote ya alama",
+          "description": "Bofya kitufe cha \"Ongeza masafa\" ili kuongeza masafa mengi unavyohitaji. Mfano: 0-20% Alama mbaya, 21-91% Alama ya Wastani, 91-100% Alama Nzuri!",
+          "entity": "masafa",
+          "field": {
+            "fields": [
+              {
+                "label": "Masafa ya Alama"
+              },
+              {},
+              {
+                "label": "Maoni kwa masafa ya alama yaliyofafanuliwa",
+                "placeholder": "Jaza maoni"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Maandishi yaliyoonyeshwa kabla ya idadi ya kauli zilizotatuliwa katika kazi ya muhtasari.",
+      "default": "Maendeleo:",
+      "description": "Itaonyeshwa juu yakauli za hapo juui. Mfano: ‘Maendeleo: 2/5'"
+    },
+    {
+      "label": "Maandishi yaliyoonyeshwa kabla ya idadi ya kauli zisizo sahihi zilizochaguliwa katika kazi ya muhtasari.",
+      "default": "Majibu yasiyo sahihi:",
+      "description": "Itaonyeshwa juu yakauli za hapo juui. Mfano: ‘Majibu yasiyo sahihi: 4'"
+    },
+    {
+      "label": "Kichwa cha maoni ya muhtasari",
+      "default": "Matokeo yako",
+      "description": "Yataonyeshwa juu ya kazi ya muhtasari."
+    },
+    {
+      "label": "Maandishi ya kisoma maandishi kwa jibu sahihi",
+      "default": "Sahihi."
+    },
+    {
+      "label": "Maandishi ya kisoma maandishi kwa kutangaza jibu lisilo sahihi",
+      "default": "Siyo sahihi! Tafadhali jaribu tena."
+    },
+    {
+      "label": "Lebo ya kisoma maandishi kwa jibu lisilo sahihi",
+      "default": "Siyo sahihi"
+    },
+    {
+      "label": "Orodha ya lebo ya majibu sahihi",
+      "default": "Majibu sahihi."
+    },
+    {
+      "label": "Lebo ya kitufe cha kidokezi cha onyesho",
+      "default": "Kidokezo cha onyesho"
+    },
+    {
+      "label": "Uwakilishi wa maandishi wa upau wa alama kwa wale wanaotumia kisoma maandishi",
+      "description": ":num na:total ni maneno muhimu maalum ambayo yanasasishwa kwa programu",
+      "default": "Umepata :num kati ya alama:total"
+    },
+    {
+      "label": "Maandishi yanayotumika kwa visoma maandishi kuwasilisha maendeleo",
+      "description": ":num na:total ni maneno muhimu maalum ambayo yanasasishwa kwa programu",
+      "default": "Maendeleo :num kati ya:total"
+    }
+  ]
+}

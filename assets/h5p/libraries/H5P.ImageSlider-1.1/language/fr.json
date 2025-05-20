@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Images",
+      "field": {
+        "label": "Diapositive",
+        "fields": [
+          {
+            "label": "Diapositive"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Ratio de l'affichage",
+      "description": "Indiquez : \"Automatique\" pour un ratio d'affichage déterminé par celui des images de l'album nécessitant la plus grande hauteur d'affichage, \"Personnalisé\" pour fixer un ratio de votre choix pour tout l'album, et \"Variable\" pour un ratio qui s'adaptera à celui de chaque image de l'album.",
+      "options": [
+        {
+          "label": "Automatique"
+        },
+        {
+          "label": "Personnalisé"
+        },
+        {
+          "label": "Variable"
+        }
+      ]
+    },
+    {
+      "label": "Paramétrages du ratio de l'affichage",
+      "fields": [
+        {
+          "label": "Ratio en largeur de l'affichage :",
+          "description": "Si vous indiquez 4 ici, et 3 pour la hauteur, le ratio de l'affichage de l'album qui en résultera sera de quatre-tiers : 4:3."
+        },
+        {
+          "label": "Ratio en hauteur de l'affichage :",
+          "description": "Si vous indiquez 3 ici, et 4 pour la largeur, le ratio de l'affichage de l'album qui en résultera sera de quatre-tiers : 4:3."
+        }
+      ]
+    },
+    {
+      "label": "Paramètres d'accessibilité de l'album d'images",
+      "fields": [
+        {
+          "label": "Libellé du bouton image suivante",
+          "default": "Image suivante",
+          "description": "Cette mention n'apparaîtra pas à l'écran et ne sera employée que par les outils d'accessibilité améliorée par synthèse vocale."
+        },
+        {
+          "label": "Libellé du bouton image précédente",
+          "default": "Image précédente",
+          "description": "Cette mention n'apparaîtra pas à l'écran et ne sera employée que par les outils d'accessibilité améliorée par synthèse vocale."
+        },
+        {
+          "label": "Libellé pour le bouton des diapositives",
+          "default": "Aller à l'image numéro %slide",
+          "description": "Cette mention n'apparaîtra pas à l'écran et ne sera employée que par les outils d'accessibilité améliorée par synthèse vocale. La mention %slide est un texte générique auquel se substituera le numéro effectif dans l'album de l'image affichée à ce moment-là."
+        }
+      ]
+    }
+  ]
+}

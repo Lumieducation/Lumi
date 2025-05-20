@@ -1,0 +1,205 @@
+{
+  "semantics": [
+    {
+      "label": "Ota kansisivu käyttöön",
+      "description": "Kansisivu sisältää tietoa kirjasta ennen sen avaamista."
+    },
+    {
+      "label": "Kansisivu",
+      "fields": [
+        {
+          "label": "Alaotsikko",
+          "description": "Tämä teksti näkyy pienemmässä koossa pääotsikon alapuolella."
+        },
+        {
+          "label": "Cover media",
+          "description": "Optional media to display on the cover."
+        }
+      ]
+    },
+    {
+      "label": "Kappaleet",
+      "entity": "Kappale",
+      "widgets": [
+        {
+          "label": "Oletus"
+        }
+      ],
+      "field": {
+        "label": "Osio",
+        "fields": [
+          {
+            "label": "Kappale"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Käyttäytymisasetukset",
+      "fields": [
+        {
+          "label": "Base color",
+          "description": "Set the base color that will define the overall color scheme of the book. Please ensure a high enough contrast."
+        },
+        {
+          "label": "Sisällysluettelon näkyminen oletuksena",
+          "description": "Näyttää sisällysluettelon kirjan avaamisen yhteydessä."
+        },
+        {
+          "label": "Näytä edistymispalkki",
+          "description": "Näyttää kappaleissa palkin, joka ilmaisee, kuinka paljon kirjan sisältöä on jäljellä."
+        },
+        {
+          "label": "Ota automaattinen edistyminen käyttöön",
+          "description": "Merkitsee heti katselun yhteydessä suoritetuksi kappaleen, jolla ei ole tehtäviä. Tehtäviä sisältävät kappaleet merkitään suoritetuiksi, kun kaikki tehtävät on tehty. Jos tämä asetus on poissa käytöstä, jokaisen kappaleen alareunassa on painike, jota klikkaamalla käyttäjä merkitsee kappaleen suoritetuksi."
+        },
+        {
+          "label": "Näytä yhteenveto",
+          "description": "Näyttää käyttäjälle yhteenvedon vastauksista, ennen kuin ne lähetetään tarkistettavaksi."
+        },
+        {
+          "label": "Enable \"Restart\" button",
+          "description": "When enabled the user can initiate a restart on the summary page."
+        }
+      ]
+    },
+    {
+      "label": "\"Lue\"-painikkeen teksti",
+      "default": "Lue"
+    },
+    {
+      "label": "\"Näytä sisällysluettelo\" -painikkeen teksti",
+      "default": "Näytä sisällysluettelo"
+    },
+    {
+      "label": "\"Piilota sisällysluettelo\" -painikkeen teksti",
+      "default": "Piilota sisällysluettelo"
+    },
+    {
+      "label": "\"Seuraava sivu\" -painikkeen teksti",
+      "default": "Seuraava sivu"
+    },
+    {
+      "label": "\"Edellinen sivu\" -painikkeen teksti",
+      "default": "Edellinen sivu"
+    },
+    {
+      "label": "Käännös tekstille \"Kappale suoritettu!\"",
+      "default": "Kappale suoritettu!"
+    },
+    {
+      "label": "Käännös tekstille \"@pages / @total kappaletta suoritettu\" (tekstien @pages ja @total tilalla näkyvät todelliset arvot)",
+      "default": "@pages / @total kappaletta suoritettu"
+    },
+    {
+      "label": "Käännös tekstille \"Keskeneräinen kappale\"",
+      "default": "Keskeneräinen kappale"
+    },
+    {
+      "label": "\"Siirry ylös\" -painikkeen teksti",
+      "default": "Siirry ylös"
+    },
+    {
+      "label": "\"Olen suorittanut tämän kappaleen.\" -painikkeen teksti",
+      "default": "Olen suorittanut tämän kappaleen."
+    },
+    {
+      "label": "Kokoruututila-painikkeen teksti",
+      "default": "Kokoruututila"
+    },
+    {
+      "label": "Poistu kokoruututilasta -painikkeen teksti",
+      "default": "Poistu kokoruututilasta"
+    },
+    {
+      "label": "Kappaleita suoritettu",
+      "description": "Tekstin \"@count\" tilalla on suoritettujen kappaleiden lukumäärä ja tekstin \"@total\" tilalla on kaikkien kappaleiden lukumäärä",
+      "default": "@count / @total kappaletta"
+    },
+    {
+      "label": "Tehtäviä suoritettu",
+      "description": "Tekstin \"@count\" tilalla on suoritettujen tehtävien lukumäärä ja tekstin \"@total\" tilalla on kaikkien tehtävien lukumäärä",
+      "default": "@count / @total tehtävää"
+    },
+    {
+      "label": "\"Lähetä tarkistettavaksi\" -painikkeen teksti",
+      "default": "Lähetä tarkistettavaksi"
+    },
+    {
+      "label": "\"Aloita uudelleen\" -painikkeen teksti",
+      "default": "Aloita uudelleen"
+    },
+    {
+      "label": "Yhteenveto-sivun otsikko",
+      "default": "Yhteenveto"
+    },
+    {
+      "label": "\"Kaikki tehtävät\" -pudotusvalikkotekstin käännös",
+      "default": "Kaikki tehtävät"
+    },
+    {
+      "label": "\"Vastaamattomat tehtävät\" -pudotusvalikkotekstin käännös",
+      "default": "Vastaamattomat tehtävät"
+    },
+    {
+      "label": "Pistemäärä",
+      "description": " Muuttujan \"@score\" tilalla näytetään saavutettu pistemäärä ja muuttujan \"@maxscore\" tilalla näytetään korkein mahdollinen pistemäärä.",
+      "default": "@score / @maxscore"
+    },
+    {
+      "label": "Suoritetut tehtävät kappalekohtaisesti",
+      "description": " Muuttujan \"@left\" tilalla näytetään kappaleen vastaamattomien tehtävien määrä ja muuttujan \"@max\" tilalla näytetään kappaleessa olevien tehtävien lukumäärä.",
+      "default": "@left / @max tehtävää suoritettu"
+    },
+    {
+      "label": "Käännös tekstille \"Ei tehtäviä\"",
+      "default": "Ei tehtäviä"
+    },
+    {
+      "label": "Pistemäärän yhteydessä näytettävän \"Tulos\"-tekstin käännös",
+      "default": "Tulos"
+    },
+    {
+      "label": "\"Yhteenveto &amp; lähetys\" -painikkeen teksti",
+      "default": "Yhteenveto &amp; lähetys"
+    },
+    {
+      "label": "Käännös tekstille \"Et ole tehnyt yhtään tehtävää.\"",
+      "default": "Et ole tehnyt yhtään tehtävää."
+    },
+    {
+      "label": "Käännös tekstille \"Sinun on suoritettava vähintään yksi tehtävä ennen kuin voit nähdä yhteenvedon.\"",
+      "default": "Sinun on suoritettava vähintään yksi tehtävä ennen kuin voit nähdä yhteenvedon."
+    },
+    {
+      "label": "Käännös tekstille \"Vastauksesi on lähetetty tarkistettavaksi!\"",
+      "default": "Your answers are submitted for review!"
+    },
+    {
+      "label": "Kirjan edistyminen -otsikko",
+      "default": "Kirjan edistyminen"
+    },
+    {
+      "label": "Tehtävien edistyminen -otsikko",
+      "default": "Tehtävien edistyminen"
+    },
+    {
+      "label": "Yhteispisteet-otsikko",
+      "default": "Yhteispisteet"
+    },
+    {
+      "label": "Saavutettavuuteen liittyvät tekstit",
+      "fields": [
+        {
+          "label": "Kappaleita suoritettu -palkin vaihtoehtoinen teksti",
+          "description": "Vaihtoehtoinen teksti kappaleiden edistymisen seurannan palkille. Käytössä muuttujat @page ja @total.",
+          "default": "Suoritettu @page kappaletta. Kappaleita on yhteensä @total."
+        },
+        {
+          "label": "Näytä/piilota navigaatiovalikko -painikkeen teksti",
+          "default": "Näytä/piilota navigaatiovalikko"
+        }
+      ]
+    }
+  ]
+}

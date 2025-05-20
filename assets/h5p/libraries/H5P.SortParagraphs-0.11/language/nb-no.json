@@ -1,0 +1,224 @@
+{
+  "semantics": [
+    {
+      "label": "Medieelement",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Valgfritt medieelement. Elementet vil bli plassert over spørsmålet."
+        },
+        {
+          "label": "Deaktiver zoomingfunksjon."
+        }
+      ]
+    },
+    {
+      "placeholder": "Skriv en kort instruksjon.",
+      "label": "Oppgavebeskrivelse",
+      "description": "Hva bør den lærende få vite?"
+    },
+    {
+      "label": "Avsnitt",
+      "entity": "avsnitt",
+      "field": {
+        "label": "Avsnitt"
+      }
+    },
+    {
+      "label": "Tilbakemelding på hele oppgava",
+      "fields": [
+        {
+          "label": "Opprett poengområder og legg inn tilbakemeldinger.",
+          "description": "Klikk på knappen \"Legg til poengområde\" og legg til så mange poengområder du trenger. Eksempel: 0–40 % Svakt resultat, 41–80 % Gjennomsnittlig resultat, 81–100 % Flott resultat!",
+          "widgets": [
+            {
+              "label": "Forhandsinnstilling"
+            }
+          ],
+          "entity": "Område",
+          "field": {
+            "fields": [
+              {
+                "label": "Poengområde"
+              },
+              {},
+              {
+                "label": "Tilbakemelding for definert poengområde",
+                "placeholder": "Skriv inn tilbakemelding."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "description": "Velg om du vil gi poeng for hvert avsnitt som er plassert på rett sted i strukturen, eller om du vil gi poeng for korrekt rekkefølge, det vil si for hvert avsnitt som er plassert etter det avsnittet det er ment å stå etter.",
+          "label": "Vurderingsmåte",
+          "options": [
+            {
+              "label": "Rett rekkefølge"
+            },
+            {
+              "label": "Korrekt plassert avsnitt"
+            }
+          ]
+        },
+        {
+          "label": "Bruk poengtrekk.",
+          "description": "Avgjør om det skal trekkes et poeng for hvert avsnitt som er plassert på feil sted."
+        },
+        {
+          "label": "Identiske avsnitt kan bytte plass innbyrdes.",
+          "description": "Velger du dette alternativet, vil svarsjekken behandle avsnitt med identisk ordlyd som identiske."
+        },
+        {
+          "label": "Legg til knapper for flytting av avsnitt.",
+          "description": "På mobiltelefoner kan knapper for flytting av avsnitt bidra til bedre tilgjengelighet. Du kan også deaktivere denne funksjonen her."
+        },
+        {
+          "label": "Vis \"Prøv igjen\"-knappen."
+        },
+        {
+          "label": "Vis \"Vis svar\"-knappen."
+        }
+      ],
+      "label": "Oppgaveinnstillinger",
+      "description": "Disse valga lar deg styre ulike funksjoner i oppgava."
+    },
+    {
+      "fields": [
+        {
+          "label": "Tekst for \"Sjekk svar\"-knapp",
+          "default": "Sjekk"
+        },
+        {
+          "label": "Tekst for \"Send inn\"-knapp",
+          "default": "Send inn"
+        },
+        {
+          "label": "Tekst for \"Prøv igjen\"-knapp",
+          "default": "Prøv igjen"
+        },
+        {
+          "label": "Tekst for \"Vis svar\"-knapp",
+          "default": "Vis svar"
+        },
+        {
+          "label": "Tekst for \"Opp\"-knapp",
+          "default": "Opp"
+        },
+        {
+          "label": "Tekst for \"Ned\"-knapp",
+          "default": "Ned"
+        },
+        {
+          "label": "Tekst for knapp som er deaktivert",
+          "default": "Deaktivert"
+        }
+      ],
+      "label": "Brukergrensesnitt"
+    },
+    {
+      "fields": [
+        {
+          "default": "Sjekk svara. Svara vil bli markert som rett eller feil.",
+          "label": "Skjermleser-beskrivelse for \"Sjekk\"-knappen"
+        },
+        {
+          "label": "Skjermleser-beskrivelse for \"Vis svar\"-knappen",
+          "default": "Vis svar. Rett løsning vil bli vist."
+        },
+        {
+          "default": "Prøv igjen. Alle svara nulles ut, og oppgava starter forfra.",
+          "label": "Skjermleser-beskrivelse for \"Prøv igjen\"-knappen"
+        },
+        {
+          "label": "Resultatet ditt",
+          "description": "@score blir erstatta av oppnådd poengsum. @total blir erstatta av maksimalt oppnåelig poengsum.",
+          "default": "Du fikk @score av @total poeng."
+        },
+        {
+          "label": "Beskrivelse av lista",
+          "default": "Sorterbar liste med tekstelementer"
+        },
+        {
+          "default": "Liste med avsnitt i valgt rekkefølge, og med resultat",
+          "label": "Beskrivelse av lista (i \"Sjekk svar\"-modus)"
+        },
+        {
+          "label": "Beskrivelse av lista (i \"Vis svar\"-modus)",
+          "default": "Liste over avsnitt, med løsning"
+        },
+        {
+          "label": "Avsnitt",
+          "default": "Avsnitt"
+        },
+        {
+          "label": "Rett",
+          "default": "rett"
+        },
+        {
+          "default": "feil",
+          "label": "Feil"
+        },
+        {
+          "description": "@score erstattes med 1 eller -1.",
+          "label": "Forklaring på poengberegning",
+          "default": "@score poeng"
+        },
+        {
+          "description": "@current erstattes av det aktuelle avsnittsnummeret. @total erstattes av antall avsnitt totalt.",
+          "label": "Avsnittsnummerering",
+          "default": "@current av @total"
+        },
+        {
+          "description": "Etterfølges av \"Avsnittsnummerering\"",
+          "default": "Aktuell plass i lista",
+          "label": "Aktuell plass i lista"
+        },
+        {
+          "label": "Instruksjon når avsnittet velges",
+          "default": "Klikk på mellomromstasten hvis du vil sortere på ny."
+        },
+        {
+          "default": "Trykk på piltast opp eller ned for å flytte avsnittet. Bruk mellomromstast for å slippe avsnittet, og Escape-tast for å avbryte.",
+          "label": "Instruksjonstekst når et avsnitt er valgt"
+        },
+        {
+          "default": "Valgt",
+          "label": "Valgt"
+        },
+        {
+          "label": "Flytta",
+          "default": "Flytta"
+        },
+        {
+          "label": "Sluppet",
+          "default": "Sluppet"
+        },
+        {
+          "label": "Sortering avbrutt",
+          "default": "Sortering avbrutt"
+        },
+        {
+          "description": "Etterfølges av \"Avsnittsnummerering\"",
+          "label": "Endelig plassering",
+          "default": "Endelig plassering"
+        },
+        {
+          "description": "Etterfølges av \"rett\" eller \"feil\"",
+          "label": "Neste avsnitt",
+          "default": "Neste avsnitt"
+        },
+        {
+          "description": "Etterfølges av \"Avsnittsnummerering\"",
+          "label": "Rett avsnitt",
+          "default": "Rett avsnitt på plass"
+        }
+      ],
+      "label": "Skjermleser"
+    }
+  ]
+}

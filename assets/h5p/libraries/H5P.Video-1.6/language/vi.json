@@ -1,0 +1,136 @@
+{
+  "semantics": [
+    {
+      "label": "Nguồn video",
+      "description": "Để đảm bảo video phát được trong mọi trình duyệt, bạn nên thêm cả hai nguồn có định dạng WebM và MP4."
+    },
+    {
+      "label": "Visuals",
+      "fields": [
+        {
+          "label": "Poster image"
+        },
+        {
+          "label": "Fit video player to use all available space",
+          "description": "If not set the video player will have the same aspect ratio as the video."
+        },
+        {
+          "label": "Show video player controls",
+          "description": "Add controls to the video player. This allows users to play, pause, etc."
+        }
+      ]
+    },
+    {
+      "label": "Playback",
+      "fields": [
+        {
+          "label": "Tự động phát video",
+          "description": "Tự động phát video. Có thể không hoạt động trên thiết bị di động."
+        },
+        {
+          "label": "Lặp video",
+          "description": "Tự động phát lại video khi hết."
+        }
+      ]
+    },
+    {
+      "label": "Video localization",
+      "fields": [
+        {
+          "label": "Tên",
+          "default": "Video",
+          "description": "Helps identify content of this type."
+        },
+        {
+          "label": "Đang tải",
+          "default": "Đang tải trình phát video..."
+        },
+        {
+          "label": "Không tìm thấy trình phát",
+          "default": "Không tìm thấy trình phát hỗ trợ định dạng video này."
+        },
+        {
+          "label": "Không có nguồn",
+          "default": "Video bị thiếu nguồn."
+        },
+        {
+          "label": "Đã ngừng",
+          "default": "Đã ngừng phát video."
+        },
+        {
+          "label": "Lỗi mạng",
+          "default": "Lỗi mạng."
+        },
+        {
+          "label": "Cannot decode video source",
+          "default": "Unable to decode media."
+        },
+        {
+          "label": "Không hỗ trợ định dạng",
+          "default": "Định dạng của video không được hỗ trợ."
+        },
+        {
+          "label": "Media encrypted",
+          "default": "Media encrypted."
+        },
+        {
+          "label": "Lỗi không xác định",
+          "default": "Lỗi không xác định."
+        },
+        {
+          "label": "ID YouTube không hợp lệ",
+          "default": "ID YouTube không hợp lệ."
+        },
+        {
+          "label": "Không tìm thấy ID YouTube",
+          "default": "Không tìm thấy video nào có ID YouTube này."
+        },
+        {
+          "label": "Video YouTube bị hạn chế",
+          "default": "Người sở hữu video này không cho phép nhúng video này."
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "fields": [
+        {
+          "label": "Add video track",
+          "entity": "Track",
+          "field": {
+            "label": "Track",
+            "fields": [
+              {
+                "label": "Track label"
+              },
+              {
+                "label": "Type kind, refer to <a target=\"_blank\" href=\"https://html.spec.whatwg.org/multipage/embedded-content.html#the-track-element\">HTML living standard</a>",
+                "options": [
+                  {
+                    "label": "Phụ đề"
+                  },
+                  {
+                    "label": "Phụ đề"
+                  },
+                  {
+                    "label": "Mô tả"
+                  },
+                  {
+                    "label": "Chương"
+                  }
+                ]
+              },
+              {
+                "label": "Source language, must be defined for subtitles",
+                "description": "Must be a valid BCP 47 language tag. If the kind attribute is set to subtitles, then srclang must be defined."
+              },
+              {
+                "label": "Track file (WebVTT)"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

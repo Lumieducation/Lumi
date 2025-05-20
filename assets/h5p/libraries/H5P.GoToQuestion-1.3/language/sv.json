@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Frågetext",
+      "description": "Den fråga som användaren ska besvara med ett svarsalternativ."
+    },
+    {
+      "label": "Alternativ",
+      "entity": "alternativ",
+      "field": {
+        "fields": [
+          {
+            "label": "Alternativ",
+            "description": "Etiketten som kommer att visas på alternativ-knappen."
+          },
+          {
+            "label": "Gå till",
+            "description": "Tidskoden som användaren kommer att flyttas till när knappen används. Tidskoden måste vara i formatet M:SS."
+          },
+          {
+            "label": "Om valt-text",
+            "description": "En valfri bekräftelsetext som visas när användaren valt ett svarsalternativ."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Text på fortsätt-knapp",
+      "default": "Fortsätt"
+    }
+  ]
+}

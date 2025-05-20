@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Opis zadatka"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Standard"
+        }
+      ],
+      "label": "Karte",
+      "entity": "kart",
+      "field": {
+        "label": "Karte",
+        "fields": [
+          {
+            "label": "Pitanje",
+            "description": "Opcionalni tekst za pitanje. (Pitanje može biti tekst, slika ili oboje)"
+          },
+          {
+            "label": "Odgovor",
+            "description": "Odgovor (Rješenje) za kartu. Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "Slika",
+            "description": "Opcionalna slika za kartu. (Pitanje može biti tekst, slika ili oboje)"
+          },
+          {
+            "label": "Alternativni tekst za sliku"
+          },
+          {
+            "label": "Savjet",
+            "fields": [
+              {
+                "label": "Savjet"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Početni tekst",
+      "default": "Karte @card od @total",
+      "description": "Početni tekst, dostupne varijable: @card i @total. Primjer: 'Karte @card od @total'"
+    },
+    {
+      "label": "Tekst za dugme Naprijed",
+      "default": "Naprijed"
+    },
+    {
+      "label": "Tekst za dugme Nazad",
+      "default": "Nazad"
+    },
+    {
+      "label": "Tekst za dugme Potvrdi",
+      "default": "Potvrdi"
+    },
+    {
+      "label": "Obavezno je učešće korisnika, prije nego rješenje bude prikazano"
+    },
+    {
+      "label": "Text for the answer input field",
+      "default": "Vaš odgovor"
+    },
+    {
+      "label": "Text for correct answer",
+      "default": "Tačno"
+    },
+    {
+      "label": "Text for incorrect answer",
+      "default": "Netačno"
+    },
+    {
+      "label": "Show solution text",
+      "default": "Tačan odgovor"
+    },
+    {
+      "label": "Text for results title",
+      "default": "Rezultati"
+    },
+    {
+      "label": "Text for number of correct",
+      "default": "@score od @total tačno",
+      "description": "Tekst za rezultat, dostupne varijable: @score i @total. Primjer: '@score od @total tačno'"
+    },
+    {
+      "label": "Tekst za prikaži rezultat.",
+      "default": "Prikaži rezultate"
+    },
+    {
+      "label": "Text for short answer label",
+      "default": "A:"
+    },
+    {
+      "label": "Teskt za \"ponovi\" dugme",
+      "default": "Ponovi"
+    },
+    {
+      "label": "Pazi na velika i mala slova",
+      "description": "Uneseni tekst mora biti tačan i precizan kao odgovor."
+    },
+    {
+      "label": "Incorrect text for assistive technologies",
+      "default": "Netačan odgovor. Tačan odgovor je bio @answer",
+      "description": "Text that will be announced to assistive technologies. Use @answer as variable."
+    },
+    {
+      "label": "Correct feedback text for assistive technologies",
+      "default": "@answer is correct.",
+      "description": "Text that will be announced to assistive technologies when a card is answered correctly. Use @answer as variable."
+    },
+    {
+      "label": "Card change for assistive technologies",
+      "default": "Stranica @current od @total",
+      "description": "Text that will be announced to assistive technologies when navigating between cards. Use @current and @total as variables."
+    },
+    {
+      "label": "Randomize cards",
+      "description": "Enable to randomize the order of cards on display."
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "semantics": [
+    {
+      "label": "Afficher l'écran d'accueil",
+      "description": "Si coché, le guide pour les créateurs de contenu affichera l'écran titre au démarrage."
+    },
+    {
+      "label": "Écran d'accueil",
+      "fields": [
+        {
+          "label": "Introduction",
+          "placeholder": "Bienvenue à..."
+        },
+        {
+          "label": "Image de l'écran titre"
+        }
+      ]
+    },
+    {
+      "label": "Marqueurs",
+      "fields": [
+        {
+          "label": "Marqueurs",
+          "widgets": [
+            {
+              "label": "Par défaut"
+            }
+          ],
+          "entity": "marqueur",
+          "field": {
+            "label": "Marqueur",
+            "fields": [
+              {
+                "label": "Image du marqueur (originale)",
+                "description": "Téléchargez l'image pour laquelle vous souhaitez créer un marqueur. L'image doit être carrée, sinon elle sera recadrée. Souvenez-vous que vous aurez besoin d'une image de marqueur unique pour chaque interaction.",
+                "importantDescription": {
+                  "description": "Veuillez garder à l'esprit certains critères pour de bonnes images de marqueur :<ul><li>Contraste des couleurs élevé, idéalement noir et blanc</li><li>Asymétrie</li><li>La résolution interne d'un marqueur est de 16 x 16 pixels, l'utilisation d'images plus grandes peut nuire à la détection du marqueur</li><li>Les caractères simples ou les mots courts donnent de bons résultats</li></ul>"
+                }
+              },
+              {
+                "label": "Image du marqueur (motif)",
+                "description": "Télécharger cette image pour l'utiliser comme marqueur affiché sur un écran ou imprimé sur papier."
+              },
+              {
+                "label": "Type d’action",
+                "description": "Action qui doit être déclenchée lorsque le marqueur est trouvé.",
+                "options": [
+                  {
+                    "label": "Interaction H5P"
+                  },
+                  {
+                    "label": "Superposition de modèles 3D"
+                  }
+                ]
+              },
+              {
+                "label": "Interaction",
+                "fields": [
+                  {
+                    "label": "Interaction"
+                  },
+                  {
+                    "label": "Factice"
+                  }
+                ]
+              },
+              {
+                "label": "Modèle 3D",
+                "fields": [
+                  {
+                    "label": "Fichier du modèle 3D",
+                    "description": "Télécharger un fichier gITF (.glb / .gltf) ici. Le format préféré est « glTF 2.0 binary » dans un seul fichier."
+                  },
+                  {
+                    "label": "Géométrie",
+                    "fields": [
+                      {
+                        "label": "Échelle",
+                        "description": "Redimensionnez le modèle vers le haut ou vers le bas pour qu'il corresponde à la taille de votre marqueur.",
+                        "fields": [
+                          {
+                            "label": "Pourcentage"
+                          },
+                          {
+                            "label": "Factice"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Position",
+                        "description": "Définir la position de décalage du modèle par rapport au marqueur.",
+                        "fields": [
+                          {
+                            "label": "Offset-X"
+                          },
+                          {
+                            "label": "Offset-Y"
+                          },
+                          {
+                            "label": "Offset-Z"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Rotation",
+                        "description": "Régler la rotation en degrés.",
+                        "fields": [
+                          {
+                            "label": "Axe-X"
+                          },
+                          {
+                            "label": "Axe-Y"
+                          },
+                          {
+                            "label": "Axe-Z"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Afficher l'écran de fin",
+      "description": "Si coché, afficher un écran de fin lorsque toutes les interactions sont terminées. L'écran de fin ne sera pas disponible si vous n'utilisez que des modèles 3D."
+    },
+    {
+      "label": "Écran de fin",
+      "fields": [
+        {
+          "label": "image de l'écran de fin"
+        },
+        {
+          "label": "Texte de l'écran de fin",
+          "placeholder": "Tu as réussi !"
+        },
+        {
+          "label": "Feedback général",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Par défaut"
+                }
+              ],
+              "label": "Définir un feedback personnalisé pour n'importe quelle gamme de note",
+              "description": "Cliquez sur la touche « Ajouter une gamme » pour ajouter autant de gammes que nécessaire. Exemple : 0-20 % mauvaise note, 21-91 % note moyenne, 91-100 % excellente note !",
+              "entity": "gamme",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Gamme de notes"
+                  },
+                  {
+                    "label": "Feedback pour une gamme de notes définie",
+                    "placeholder": "Compléter le feedback"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Paramètres comportementaux",
+      "fields": [
+        {
+          "label": "Activer la touche « Réessayer »",
+          "description": "Si cette case est cochée, les apprenants peuvent réessayer la tâche."
+        },
+        {
+          "label": "Activer la touche « Solutions »",
+          "description": "Si cette case est cochée, les apprenants peuvent afficher les solutions de toutes les interactions."
+        },
+        {
+          "label": "Contourner la touche « Afficher la solution »",
+          "description": "Cette option permet d'activer ou de bloquer la touche « Afficher la solution » pour tous les contenus ou d'utiliser leurs paramètres de comportement respectifs.",
+          "options": [
+            {
+              "label": "Utiliser les paramètres comportementaux"
+            },
+            {
+              "label": "Toujours afficher la touche"
+            },
+            {
+              "label": "Ne jamais afficher la touche"
+            }
+          ]
+        },
+        {
+          "label": "Contourner la touche « Réessayer »",
+          "description": "Cette option permet d'activer ou de bloquer la touche « Réessayer » pour tous les contenus ou d'utiliser leurs paramètres de comportement respectifs.",
+          "options": [
+            {
+              "label": "Utiliser les paramètres comportementaux"
+            },
+            {
+              "label": "Toujours afficher la touche"
+            },
+            {
+              "label": "Ne jamais afficher la touche"
+            }
+          ]
+        },
+        {
+          "label": "Hauteur du texte de remplacement",
+          "description": "Définissez une hauteur du texte de remplacement en px pour les cas où il y a des problèmes de partage des ressources d'origine croisée (CORS)."
+        }
+      ]
+    },
+    {
+      "label": "Localisation",
+      "fields": [
+        {
+          "label": "Touche de démarrage",
+          "default": "Commencer"
+        },
+        {
+          "label": "Touche réessayer",
+          "default": "Réessayer"
+        },
+        {
+          "label": "Trouver un marqueur pour voir une interaction.",
+          "default": "Trouver un marqueur pour voir une interaction."
+        },
+        {
+          "label": "Erreur : navigateur non compatible",
+          "default": "Il semble que votre navigateur ne puisse malheureusement pas exécuter ce type de contenu."
+        },
+        {
+          "label": "Erreur : Pas d'accès à la caméra",
+          "default": "Impossible d'accéder à la caméra."
+        },
+        {
+          "label": "Erreur : Pas de compatibilité avec la caméra",
+          "default": "Votre navigateur ne semble être compatible avec la caméra."
+        },
+        {
+          "label": "Erreur : Pas de marqueurs",
+          "default": "Quelqu'un a-t-il oublié d'ajouter des marqueurs ?"
+        },
+        {
+          "label": "Attention : Navigateur Brave",
+          "default": "Vous semblez utiliser le navigateur Brave. C'est bien ! Mais ses paramètres de confidentialité stricts peuvent empêcher la caméra de fonctionner."
+        },
+        {
+          "label": "Initialisation du guide pour les créateurs de contenu",
+          "default": "Initialisation du contenu. N'oubliez pas d'autoriser l'accès à la caméra."
+        }
+      ]
+    },
+    {
+      "label": "ReadSpeaker",
+      "fields": [
+        {
+          "label": "Titre du bouton plein écran : entrer",
+          "default": "Saisir en mode plein écran"
+        },
+        {
+          "label": "Titre du bouton plein écran : sortir",
+          "default": "Quitter le mode plein écran"
+        },
+        {
+          "label": "Titre de la touche « changer de vue » (lorsque l'action est fermée)",
+          "default": "Passer à l'exercice"
+        },
+        {
+          "label": "Titre de la touche « changer de vue » (lorsque l'action est ouverte)",
+          "default": "Passer à la caméra"
+        },
+        {
+          "label": "Message « touche inactivée » pour la touche « changer de vue »",
+          "default": "Vous ne pouvez pas changer de vue pour le moment"
+        },
+        {
+          "label": "Titre de la touche « quitter »",
+          "default": "Quitter et afficher l'évaluation"
+        },
+        {
+          "label": "Message « touche inactivée » pour « quitter la touche »",
+          "default": "Tu n'as pas encore terminé tous les exercices"
+        },
+        {
+          "label": "Action ouverte",
+          "default": "La vue est passée à un exercice."
+        },
+        {
+          "label": "Action clôturée",
+          "default": "La vue est passée à la caméra."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Prente",
+      "field": {
+        "label": "Prent skyfie",
+        "fields": [
+          {
+            "label": "Prent Skyfie"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Beeldverhouding",
+      "description": "Met outomaties word 'n vaste beeldverhouding bedoel wat outomaties bepaal word op grond van die prente",
+      "options": [
+        {
+          "label": "Outomaties"
+        },
+        {
+          "label": "Pasgemaak"
+        },
+        {
+          "label": "Nie vasgestel nie"
+        }
+      ]
+    },
+    {
+      "label": "Beeldverhouding instellings",
+      "fields": [
+        {
+          "label": "Beeldverhouding wydte",
+          "description": "Indien jy 4 hier en 3 vir die hoogte gebruik, is die beeldverhouding 4:3"
+        },
+        {
+          "label": "Beeldverhouding hoogte",
+          "description": "As jy hier 3 en 4 vir die breedte gebruik, is die beeldverhouding 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Beeldskyfie toeganklikheid",
+      "fields": [
+        {
+          "label": "Etiket vir volgende skyfie knoppies",
+          "default": "Volgende Prent",
+          "description": "Hierdie word slegs vir spreeklesers gebruik. Dit sal nie vertoon word nie."
+        },
+        {
+          "label": "Etiket vir vorige skyfie knoppie",
+          "default": "Vorige Prent",
+          "description": "Hierdie word slegs vir spreeklesers gebruik. Dit sal nie vertoon word nie."
+        },
+        {
+          "label": "Etiket vir skyfieknoppie",
+          "default": "Gaan na prent %slide",
+          "description": "Hierdie word slegs vir spreeklesers gebruik. Dit sal nie vertoon word nie. %slide is 'n veranderlike en sal vervang word deur 'n prentnommer."
+        }
+      ]
+    }
+  ]
+}

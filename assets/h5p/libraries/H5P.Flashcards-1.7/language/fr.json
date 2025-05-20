@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Consigne"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Par défaut"
+        }
+      ],
+      "label": "Cartes",
+      "entity": "carte",
+      "field": {
+        "label": "Carte",
+        "fields": [
+          {
+            "label": "Question",
+            "description": "Question facultative pour la carte. (La carte peut contenir une image seule, un texte seul ou les deux combinés)"
+          },
+          {
+            "label": "Réponse",
+            "description": "Réponse (solution) pour la carte. Utiliser une barre oblique / pour séparer les solutions alternatives. Utilisez \\/ si une solution doit contenir un /."
+          },
+          {
+            "label": "Image",
+            "description": "Image facultative pour la carte. (La carte peut contenir une image seule, un texte seul ou les deux combinés)"
+          },
+          {
+            "label": "Texte alternatif pour l'image"
+          },
+          {
+            "label": "Indice",
+            "fields": [
+              {
+                "label": "Texte de l'indice"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Texte de progression",
+      "default": "Carte @card sur @total",
+      "description": "Texte de progression, variables possibles : @card et @total. (Exemple : 'Carte @card sur @total')"
+    },
+    {
+      "label": "Texte pour le bouton \"Suivant\"",
+      "default": "Suivant"
+    },
+    {
+      "label": "Texte pour le bouton \"Précédent\"",
+      "default": "Précédent"
+    },
+    {
+      "label": "Texte pour le bouton \"Vérifier\"",
+      "default": "Vérifier"
+    },
+    {
+      "label": "Obliger l'utilisateur à entrer une réponse avant de pouvoir afficher la correction"
+    },
+    {
+      "label": "Texte pour le champ de saisie de la réponse",
+      "default": "Votre réponse"
+    },
+    {
+      "label": "Texte pour la bonne réponse",
+      "default": "Réponse exacte"
+    },
+    {
+      "label": "Texte pour une mauvaise réponse",
+      "default": "Réponse inexacte"
+    },
+    {
+      "label": "Afficher le texte de la solution",
+      "default": "Réponse(s) correcte(s)"
+    },
+    {
+      "label": "Texte pour l'intitulé des résultats",
+      "default": "Résultats"
+    },
+    {
+      "label": "Texte pour le nombre de bonnes réponses",
+      "default": "@score réponses correctes sur un total de @total",
+      "description": "Texte des résultats, variables disponibles: @score et @total. Exemple: '@score réponses correctes sur un total de @total'"
+    },
+    {
+      "label": "Texte pour montrer les résultats",
+      "default": "Montrer les résultats"
+    },
+    {
+      "label": "Texte pour l'intitulé de réponse courte",
+      "default": "R :"
+    },
+    {
+      "label": "Texte pour le bouton \"Recommencer\"",
+      "default": "Recommencer"
+    },
+    {
+      "label": "Sensible à la casse",
+      "description": "Impose que la saisie de l'utilisateur soit strictement identique à la réponse attendue."
+    },
+    {
+      "label": "Texte de réponse incorrecte pour les outils d'accessibilité",
+      "default": "Réponse incorrecte. La réponse correcte était @answer",
+      "description": "Texte qui sera annoncé aux outils d'accessibilité. Utilisez @réponse comme variable."
+    },
+    {
+      "label": "Feedback de réponse correcte pour les outils d'accessibilité",
+      "default": "@answer est correct.",
+      "description": "Texte qui sera annoncé aux outils d'accessibilité lorsqu'une réponse correcte est donnée. Utilisez @réponse comme variable."
+    },
+    {
+      "label": "Changement de carte pour les outils d'accessibilité",
+      "default": "Page @current de @total",
+      "description": "Texte qui sera annoncé aux outils d'accessibilité lors de la navigation entre les cartes. Utilisez @current et @total comme variables."
+    },
+    {
+      "label": "Mélanger les cartes",
+      "description": "Activer l'affichage des réponses dans un ordre aléatoire."
+    }
+  ]
+}

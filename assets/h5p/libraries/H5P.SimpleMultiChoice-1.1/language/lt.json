@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Klausimas"
+    },
+    {
+      "label": "Kelių pasirinkimų klausimo tipas",
+      "options": [
+        {
+          "label": "Keli atsakymai"
+        },
+        {
+          "label": "Vienas atsakymas"
+        }
+      ]
+    },
+    {
+      "label": "Atsakymų pasirinkimai",
+      "entity": "Pasirinkimas",
+      "field": {
+        "label": "Pasirinkimas",
+        "fields": [
+          {
+            "label": "Tekstas"
+          },
+          {
+            "label": "Atsiliepimas",
+            "fields": [
+              {
+                "label": "Rodomas pranešimas, jei atsakymas pasirinktas",
+                "description": "Jei atsakymas pasirinktas, šis pranešimas bus rodomas po atsakymu spustelėjus \"Tęsti\"."
+              },
+              {
+                "label": "Rodomas pranešimas, jei atsakymas nepasirinktas",
+                "description": "Jei atsakymas nepasirinktas, šis pranešimas bus rodomas po atsakymu spustelėjus \"Tęsti\"."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

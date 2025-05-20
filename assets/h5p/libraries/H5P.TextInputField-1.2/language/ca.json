@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Descripció del camp d’introducció de text",
+      "description": "Descripció del que l’usuari hauria d’introduir."
+    },
+    {
+      "label": "Text de l’espai reservat",
+      "description": "Text de l’espai reservat per a l’usuari."
+    },
+    {
+      "label": "Llargada màxima del text",
+      "description": "Nombre màxim de caràcters per al text."
+    },
+    {
+      "label": "Mida del camp d’introducció de text",
+      "description": "La mida del camp d’introducció de text en la quantitat de línies que ocuparà.",
+      "options": [
+        {
+          "label": "1 línia"
+        },
+        {
+          "label": "3 línies"
+        },
+        {
+          "label": "10 línies"
+        }
+      ]
+    },
+    {
+      "label": "Camp requerit",
+      "description": "Marqueu aquesta opció perquè aquest camp sigui obligatori. L’usuari haurà de respondre tots els camps obligatoris per poder exportar un document."
+    },
+    {
+      "label": "Caràcters restants",
+      "default": "Caràcters restants: @chars",
+      "description": "Missatge per als caràcters restants. Podeu utilitzar @chars, que se substituirà pel número corresponent."
+    }
+  ]
+}

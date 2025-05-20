@@ -1,0 +1,156 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Cabeçalho",
+          "description": "Cabeçalho opcional para o mural de informações."
+        },
+        {
+          "label": "Propriedades",
+          "fields": [
+            {
+              "label": "Propriedades",
+              "description": "Propriedades das entradas",
+              "entity": "propriedade",
+              "widgets": [
+                {
+                  "label": "Padrão"
+                }
+              ],
+              "field": {
+                "label": "Itens de propriedade",
+                "fields": [
+                  {
+                    "label": "Rótulo",
+                    "default": "Sem nome"
+                  },
+                  {
+                    "label": "Mostrar rótulo de propriedade"
+                  },
+                  {
+                    "label": "Ativar pesquisa na propriedade"
+                  },
+                  {
+                    "label": "Sobreposição de estilo",
+                    "fields": [
+                      {
+                        "label": "Negrito"
+                      },
+                      {
+                        "label": "Itálico"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {}
+          ]
+        },
+        {
+          "label": "Painéis",
+          "description": "Painéis para o mural",
+          "entity": "painel",
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "field": {
+            "label": "Itens de entrada",
+            "fields": [
+              {
+                "label": "Título do painel"
+              },
+              {
+                "label": "Imagem"
+              },
+              {
+                "label": "Entradas",
+                "description": "Entradas para as propriedades",
+                "entity": "valor",
+                "widgets": [
+                  {
+                    "label": "Padrão"
+                  }
+                ],
+                "field": {
+                  "label": "Rótulo a ser alterado automaticamente"
+                }
+              },
+              {
+                "label": "Additional keywords",
+                "description": "Add additional keywords separated by a blank space that will be used for filtering but not be visible to the user."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Configurações comportamentais",
+          "description": "Estas opções lhe permitirão controlar como a tarefa se comporta.",
+          "fields": [
+            {
+              "label": "Usar substitutos (fallback) para imagens ausentes"
+            },
+            {
+              "label": "Imagem"
+            },
+            {
+              "label": "Largura da imagem",
+              "description": "Largura da imagem em px (pixel)."
+            },
+            {
+              "label": "Altura da imagem",
+              "description": "Altura da imagem em px (pixel)."
+            },
+            {
+              "label": "Plano de fundo alternativo do painel",
+              "description": "Se marcado, cada 2º painel terá um fundo ligeiramente mais escuro que os outros."
+            },
+            {
+              "label": "Campo de filtro de oferta",
+              "description": "Se marcado, os usuários poderão filtrar o mural de informações."
+            },
+            {
+              "label": "Mode for filter field",
+              "description": "Choose whether the filter should narrow down or broaden the search with every new keyword.",
+              "options": [
+                {
+                  "label": "Narrow down"
+                },
+                {
+                  "label": "Broaden"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Interface de usuário",
+          "fields": [
+            {
+              "label": "Nenhum conteúdo inserido",
+              "default": "O autor não digitou nada."
+            },
+            {
+              "label": "Nenhuma combinação encontrada",
+              "description": "@query é uma variável e será substituída pela respectiva consulta que foi inserida.",
+              "default": "Não há correspondências para @query."
+            },
+            {
+              "label": "Entre para filtrar",
+              "description": "Mensagem para leitores de tela.",
+              "default": "Insira uma consulta para filtrar o conteúdo para entradas relevantes."
+            },
+            {
+              "label": "Lista alterada.",
+              "description": "Mensagem para leitores de tela. As variáveis @visible e @total são espaços reservados e serão pré-colocados com os respectivos valores.",
+              "default": "Lista alterada. Mostrando @visible de @total itens."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

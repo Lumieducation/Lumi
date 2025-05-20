@@ -1,0 +1,47 @@
+.h5p-moving {
+  cursor: move;
+  opacity: 0.6;
+}
+
+.h5peditor .h5p-dragnbar-element.focused,
+.h5peditor .h5p-dragnbar-element:hover {
+  outline: 1px solid #0099ff;
+}
+
+/* Display outline on label for h5p nil */
+.h5p-dragnbar-element.h5p-nil-interaction.focused,
+.h5p-dragnbar-element.h5p-nil-interaction:hover {
+  outline: none;
+}
+
+.h5peditor .h5p-dragnbar-element.h5p-nil-interaction.focused > .h5p-interaction-label,
+.h5peditor .h5p-dragnbar-element.h5p-nil-interaction:hover > .h5p-interaction-label {
+  outline: 1px solid #0099ff;
+}
+
+.h5peditor .hardware-accelerated {
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.h5peditor .h5peditor-dragnbar .h5p-dragnbar-li .h5p-dragnbar-tooltip {
+  visibility: hidden;
+  position: absolute;
+  padding: 0 0.5em;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.6em;
+  line-height: 2em;
+  content: attr(data-label);
+  white-space: pre;
+}
+
+.h5peditor .h5peditor-dragnbar .h5p-dragnbar-li:hover > .h5p-dragnbar-tooltip {
+  visibility: visible;
+}

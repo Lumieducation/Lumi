@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Uzdevuma apraksts",
+      "description": "Ievietojiet virsrakstu/norādījumus, ko vēlaties rādīt virs attēla pirms/pēc attēla.",
+      "placeholder": "Šeit varat pievienot papildu virsrakstu un/vai norādījumus."
+    },
+    {
+      "label": "Pirmais attēls",
+      "fields": [
+        {
+          "label": "Pirmais attēls",
+          "description": "Pirmais attēls. Lūdzu, pārliecinieties, ka tam ir tāds pats izmērs kā otrajam attēlam."
+        },
+        {
+          "label": "Etiķete pirmajam attēlam",
+          "description": "Etiķete, kas jāliek virs pirmā attēla"
+        }
+      ]
+    },
+    {
+      "label": "Otrais attēls",
+      "fields": [
+        {
+          "label": "Otrais attēls",
+          "description": "Otrais attēls. Lūdzu, pārliecinieties, ka tam ir tāds pats izmērs kā pirmajam attēlam."
+        },
+        {
+          "label": "Etiķete otrajam attēlam",
+          "description": "Etiķete, kas jāliek virs otrā attēla"
+        }
+      ]
+    },
+    {
+      "label": "Uzvedības iestatījumi",
+      "description": "Šīs opcijas ļaus jums iestatīt dažas detaļas",
+      "fields": [
+        {
+          "label": "Slīdņa sākuma pozīcija %",
+          "description": "Iestata slīdņa sākuma pozīciju"
+        },
+        {
+          "label": "Slīdņa orientācija",
+          "description": "Horizontāls pārvietoties pa kreisi un pa labi, vertikāls pārvietosies uz augšu un uz leju.",
+          "options": [
+            {
+              "label": "Horizontāls"
+            },
+            {
+              "label": "Vertikāls"
+            }
+          ]
+        },
+        {
+          "label": "Slīdņa krāsa",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Image visible message",
+          "default": "Image @percentage % visible",
+          "description": "@percentage is a placeholder and will be replaced with the respective value."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

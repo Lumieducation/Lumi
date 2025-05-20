@@ -1,0 +1,508 @@
+{
+  "semantics": [
+    {
+      "label": "Editor de Video Interactivo",
+      "fields": [
+        {
+          "label": "Subir/incrustar video",
+          "fields": [
+            {
+              "label": "Añadir un video",
+              "description": "Haga clic debajo para añadir un video que desea utilizar en su video interactivo. Puede añadir un enlace de video o subir archivos de video. Es posible añadir varias versiones del video en diferentes calidades. Para asegurar máximo soporte en los navegadores por lo menos agregar una versión en formatos webm y mp4."
+            },
+            {
+              "label": "Opciones de pantalla de inicio (no soportado para videos de YouTube)",
+              "fields": [
+                {
+                  "label": "El título de este video interactivo",
+                  "default": "Video Interactivo",
+                  "description": "Usado en resúmenes, estadísticas, etc."
+                },
+                {
+                  "label": "Ocultar el título en pantalla de inicio del video"
+                },
+                {
+                  "label": "Descripción corta (Opcional)",
+                  "description": "Opcional. Mostrar un texto con una breve descripción en la pantalla inicial del video. No funciona para videos de YouTube."
+                },
+                {
+                  "label": "Cartel",
+                  "description": "Imagen que se muestra antes de que el usuario inicie el video. No funciona para Videos de YouTube."
+                }
+              ]
+            },
+            {
+              "label": "Pistas de texto (no soportado para vídeos de YouTube)",
+              "fields": [
+                {
+                  "label": "Pistas de texto disponibles",
+                  "entity": "Pista",
+                  "field": {
+                    "label": "Pista",
+                    "fields": [
+                      {
+                        "label": "Etiqueta de pista",
+                        "description": "Se usa si ofreces múltiples pistas y el usuario tiene que elegir una. Por ejemplo \"Subtítulos en español\" podría ser la etiqueta para una pista con subtítulos en ese idioma.",
+                        "default": "Subtítulos"
+                      },
+                      {
+                        "label": "Tipo de pista de texto",
+                        "options": [
+                          {
+                            "label": "Subtítulos"
+                          },
+                          {
+                            "label": "Letreritos"
+                          },
+                          {
+                            "label": "Descripciones"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Idioma de origen, debe estar definido para los subtítulos",
+                        "default": "en",
+                        "description": "Debe ser una etiqueta de idioma válida BCP 47. Si 'Subtítulos' es el tipo de pista de texto seleccionado, se debe definir el idioma de origen de la pista."
+                      },
+                      {
+                        "label": "Origen de la pista (archivo WebVTT)"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Pista de texto predeterminada",
+                  "description": "Si se deja vacío o no coincide con ninguna de las pistas de texto, la primera pista de texto se utilizará como predeterminada."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Agregar interacciones",
+          "fields": [
+            {
+              "field": {
+                "fields": [
+                  {
+                    "label": "Mostrar tiempo"
+                  },
+                  {
+                    "label": "Pausar video"
+                  },
+                  {
+                    "label": "Mostrar como",
+                    "description": "<b>Botón</b> es una interacción colapsada que el usuario debe presionar para abrir. <b>Cartel</b> es una interacción expandida mostrada directamente sobre del video",
+                    "options": [
+                      {
+                        "label": "Botón"
+                      },
+                      {
+                        "label": "Cartel"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Convertir en botón en pantallas pequeñas"
+                  },
+                  {
+                    "label": "Etiqueta",
+                    "description": "Etiqueta que aparece junto al icono de interacción."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Adaptabilidad",
+                    "fields": [
+                      {
+                        "label": "Acción en todas correctas",
+                        "fields": [
+                          {
+                            "label": "Buscar",
+                            "description": "Introduzca el código de tiempo en el formato M:SS"
+                          },
+                          {
+                            "label": "Permitir al usuario no responder y seguir"
+                          },
+                          {
+                            "label": "Mensaje"
+                          },
+                          {
+                            "label": "Etiqueta para el botón de Buscar"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Acción en incorrecta",
+                        "fields": [
+                          {
+                            "label": "Ir a",
+                            "description": "Introduzca el código de tiempo en el formato M:SS"
+                          },
+                          {
+                            "label": "Permitir al usuario no responder y continuar"
+                          },
+                          {
+                            "label": "Mensaje"
+                          },
+                          {
+                            "label": "Etiqueta para el botón de Buscar"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Requerir puntaje máximo para el trabajo antes de seguir",
+                        "description": "Para mejor funcionalidad, esta opción debería ser usada en conjunto con la opción de \"Deshabilitar navegación adelantada en un video\" del Video interactivo."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Efectos visuales",
+                    "fields": [
+                      {
+                        "label": "Color del fondo",
+                        "default": "rgb(255, 255, 255)"
+                      },
+                      {
+                        "label": "Sombra de caja",
+                        "description": "Agrega una sombra sutil alrededor de la interacción. Usted puede desactivar esto si prefiere interacciones totalmente transparentes"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Ir a al hacer clic",
+                    "fields": [
+                      {
+                        "label": "Tipo",
+                        "options": [
+                          {
+                            "label": "Código de tiempo"
+                          },
+                          {
+                            "label": "Otra página (URL)"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Ir A",
+                        "description": "El punto del video al que moverá el usuario al pulsar el hotspot. Introduzca el código de tiempo en el formato M:SS."
+                      },
+                      {
+                        "label": "URL",
+                        "fields": [
+                          {
+                            "label": "Protocolo",
+                            "options": [
+                              {
+                                "label": "http://"
+                              },
+                              {
+                                "label": "https://"
+                              },
+                              {
+                                "label": "(relativa a raíz)"
+                              },
+                              {
+                                "label": "otro"
+                              }
+                            ]
+                          },
+                          {
+                            "label": "URL"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Visualizar",
+                        "description": "Mostrar que se puede hacer clic en la interacción añadiendo un borde y un icono"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {},
+            {}
+          ]
+        },
+        {
+          "label": "Resumen del trabajo",
+          "fields": [
+            {},
+            {
+              "label": "Mostrar en",
+              "description": "Número de segundos antes de que termine el video."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Configuraciones del comportamiento",
+      "fields": [
+        {
+          "label": "Iniciar vídeo en",
+          "description": "Introduzca el código de tiempo en el formato M:SS"
+        },
+        {
+          "label": "Auto-reproducir video",
+          "description": "Comenzar a reproducir el video automáticamente"
+        },
+        {
+          "label": "Bucle de video",
+          "description": "Activar si el video debería correr en un bucle"
+        },
+        {
+          "label": "Anular botón \"Mostrar Solución\"",
+          "description": "Esta opción determina si el botón \"Mostrar Solución\" se mostrará para todas las preguntas, se desactivará para todas o se configurará para cada pregunta individualmente.",
+          "options": [
+            {
+              "label": "Habilitado"
+            },
+            {
+              "label": "Deshabilitado"
+            }
+          ]
+        },
+        {
+          "label": "Anular botón \"Reintentar\"",
+          "description": "Esta opción determina si el botón \"Reintentar\" será mostrado para todas las preguntas, deshabilitado para todas, o configurado para cada pregunta individualmente.",
+          "options": [
+            {
+              "label": "Habilitado"
+            },
+            {
+              "label": "Deshabilitado"
+            }
+          ]
+        },
+        {
+          "label": "Iniciar con el menú de marcadores abierto",
+          "description": "Esta función no está disponible en iPad cuando se utiliza YouTube como fuente de video."
+        },
+        {
+          "label": "Mostrar botón para rebobinar 10 segundos"
+        },
+        {
+          "label": "Deshabilitar navegación",
+          "description": "Estas opciones deshabilitarán la navegación del video del usuario como están especificadas.",
+          "options": [
+            {
+              "label": "Ninguno"
+            },
+            {
+              "label": "Adelante"
+            },
+            {
+              "label": "Adelante y atrás"
+            }
+          ]
+        },
+        {
+          "label": "Desactivar sonido",
+          "description": "Habilitar esta opción desactiva el sonido del vídeo y evitará que se active."
+        }
+      ]
+    },
+    {
+      "label": "Adaptación local",
+      "fields": [
+        {
+          "label": "Título de la interacción",
+          "default": "Interacción"
+        },
+        {
+          "label": "Reproducir título",
+          "default": "Reproducir"
+        },
+        {
+          "label": "Pausar título",
+          "default": "Pausa"
+        },
+        {
+          "label": "Silenciar título",
+          "default": "Enmudecer, actualmente sonoro"
+        },
+        {
+          "label": "Activar sonido del título",
+          "default": "Activar sonido, actualmente mudo"
+        },
+        {
+          "label": "Título de la calidad de vídeo",
+          "default": "Calidad del Video"
+        },
+        {
+          "label": "Título de los letreritos del video",
+          "default": "Letreritos"
+        },
+        {
+          "label": "Texto del botón Cerrar",
+          "default": "Cerrar"
+        },
+        {
+          "label": "Título de PantallaCompleta",
+          "default": "PantallaCompleta"
+        },
+        {
+          "label": "Título de Salir de PantallaCompleta",
+          "default": "Salir de PantallaCompleta"
+        },
+        {
+          "label": "Título del Resumen",
+          "default": "Abrir diálogo de resumen"
+        },
+        {
+          "label": "Título de marcadores",
+          "default": "Marcadores"
+        },
+        {
+          "label": "Título de pantalla de envío",
+          "default": "Pantalla de Envío"
+        },
+        {
+          "label": "Etiqueta predeterminada para el botón de búsqueda de adaptabilidad",
+          "default": "Continuar"
+        },
+        {
+          "label": "Etiqueta predeterminada para el botón de continuar video",
+          "default": "Continuar con el video"
+        },
+        {
+          "label": "Etiqueta predeterminada para más opciones del reproductor",
+          "default": "Más opciones del reproductor"
+        },
+        {
+          "label": "Establecer la velocidad de reproducción",
+          "default": "Velocidad de Reproducción"
+        },
+        {
+          "label": "Retroceder 10 segundos",
+          "default": "Retroceder 10 segundos"
+        },
+        {
+          "label": "Texto para Navegación está deshabilitada",
+          "default": "La navegación está deshabilitada"
+        },
+        {
+          "label": "Texto la navegación hacia adelante está deshabilitada",
+          "default": "La navegación hacia adelante está deshabilitada"
+        },
+        {
+          "label": "Texto para cuando sonido está deshabilitado",
+          "default": "El sonido está deshabilitado"
+        },
+        {
+          "label": "Advertencia de que el usuario debe responder a la pregunta correctamente antes de continuar",
+          "default": "Debe responder correctamente a todas las preguntas antes de continuar."
+        },
+        {
+          "label": "Botón de Retroceso",
+          "default": "Retroceder"
+        },
+        {
+          "label": "Tiempo transcurrido en horas",
+          "default": "Horas"
+        },
+        {
+          "label": "Tiempo transcurrido en minutos",
+          "default": "Minutos"
+        },
+        {
+          "label": "Tiempo transcurrido en segundos",
+          "default": "Segundos"
+        },
+        {
+          "label": "Etiqueta para tiempo actual",
+          "default": "Tiempo actual:"
+        },
+        {
+          "label": "Etiqueta para tiempo total",
+          "default": "Tiempo total:"
+        },
+        {
+          "label": "Texto explicando que una interacción simple con un nombre ha aparecido",
+          "default": "Interacción aparecida:"
+        },
+        {
+          "label": "Texto para explicar que múltiples interacciones han aparecido",
+          "default": "Múltiples interacciones han aparecido."
+        },
+        {
+          "label": "Anuncio de que el video ha sido pausado",
+          "default": "Video en pausa"
+        },
+        {
+          "label": "Etiqueta del contenido",
+          "default": "Contenido"
+        },
+        {
+          "label": "Mensaje de contestadas (@answered será reemplazada por el número de preguntas contestadas)",
+          "default": "@answered contestadas"
+        },
+        {
+          "label": "Título de pantalla de envío",
+          "default": "@answered Pregunta(s) contestada(s)",
+          "description": "@answered será reemplazada por el número de preguntas contestadas."
+        },
+        {
+          "label": "Información de pantalla de envío",
+          "default": "Usted ha contestado @answered preguntas; haga clic debajo para enviar sus respuestas.",
+          "description": "@answered será remplazado por el número de preguntas no contestadas."
+        },
+        {
+          "label": "Información de la pantalla de envío cuando el botón de envío está deshabilitado",
+          "default": "Usted ha contestado @answered preguntas.",
+          "description": "@answered será reemplazada por el número de preguntas contestadas."
+        },
+        {
+          "label": "Información de pantalla de envío para respuestas faltantes",
+          "default": "Usted no ha respondido ninguna pregunta."
+        },
+        {
+          "label": "Información de pantalla de envío para respuesta necesaria",
+          "default": "Usted debe responder al menos una pregunta antes de poder enviar sus respuestas."
+        },
+        {
+          "label": "Botón de envío en la pantalla de envío",
+          "default": "Enviar Respuestas"
+        },
+        {
+          "label": "Mensaje de envío en pantalla de envío",
+          "default": "¡Sus respuestas han sido enviadas!"
+        },
+        {
+          "label": "Título de fila de tabla en pantalla de envío: Preguntas respondidas",
+          "default": "Preguntas respondidas"
+        },
+        {
+          "label": "Título de fila de tabla de pantalla de envío: Puntaje",
+          "default": "Puntaje"
+        },
+        {
+          "label": "Puntaje de respondidas de pantalla de envío",
+          "default": "respondidas"
+        },
+        {
+          "label": "Resumen de fila de pantalla de envío incluyendo puntaje (para lectores de texto en voz alta)",
+          "default": "Usted tuvo @score de un total de @total puntos para la @question que apareció después de @minutes minutos y @seconds segundos."
+        },
+        {
+          "label": "Resumen de fila de pantalla de envío para sin puntuación (para lectores de texto en voz alta)",
+          "default": "Usted ha contestado la @question que apareció después de @minutes minutos y @seconds segundos."
+        },
+        {
+          "label": "Barra de progreso del vídeo",
+          "default": "Progreso del video"
+        },
+        {
+          "label": "Texto para como crear interacciones",
+          "default": "Reproducir el video para comenzar a crear interacciones"
+        }
+      ]
+    }
+  ]
+}

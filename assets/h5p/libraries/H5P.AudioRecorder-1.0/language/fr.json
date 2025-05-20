@@ -1,0 +1,90 @@
+{
+  "semantics": [
+    {
+      "label": "Consigne",
+      "description": "Texte facultatif affiché au dessus de l'enregistreur audio"
+    },
+    {
+      "label": "Options et textes",
+      "fields": [
+        {
+          "label": "Texte pour le bouton \"Enregistrer\"",
+          "default": "Enregistrer"
+        },
+        {
+          "label": "Texte pour le bouton \"Pause\"",
+          "default": "Pause"
+        },
+        {
+          "label": "Texte pour le bouton \"Reprendre\"",
+          "default": "Reprendre"
+        },
+        {
+          "label": "Texte pour le bouton \"Télécharger\"",
+          "default": "Télécharger"
+        },
+        {
+          "label": "Texte pour le bouton \"Terminer\"",
+          "default": "Terminer"
+        },
+        {
+          "label": "Texte pour le bouton \"Recommencer\"",
+          "default": "Recommencer"
+        },
+        {
+          "label": "Message d'erreur si le micro n'est pas pris en charge",
+          "default": "Le micro n'est pas pris en charge. Assurez-vous d'utiliser un navigateur qui autorise l'enregistrement audio."
+        },
+        {
+          "label": "Message d'erreur si le micro n'est pas accessible",
+          "default": "Le micro n'est pas accessible. Assurez-vous d'avoir bien autorisé le navigateur à utiliser votre micro."
+        },
+        {
+          "label": "Message d'erreur lors d'un accès non sécurisé",
+          "description": "Certains navigateurs n'autorisent pas l'utilisation du micro si la page n'est pas sécurisée avec HTTPS. Ce message apparaît si la page n'est pas sécurisée (HTTP)",
+          "default": "L'accès au micro n'est pas autorisé par votre navigateur car cette page n'utilise pas le protocole HTTPS. Contacter l'auteur pour lui demander de rendre ce contenu accessible en utilisant HTTPS."
+        },
+        {
+          "label": "Message à afficher avant l'enregistrement",
+          "default": "Cliquer sur la touche ci-dessous pour enregistrer votre réponse."
+        },
+        {
+          "label": "Message pendant l'enregistrement",
+          "default": "Enregistrement..."
+        },
+        {
+          "label": "Message pendant une pause",
+          "default": "Enregistrement en pause. Cliquer sur un bouton pour reprendre."
+        },
+        {
+          "label": "Message à la fin de l'enregistrement",
+          "default": "Votre réponse a bien été enregistrée. Ecoutez l'enregistrement ci-dessous."
+        },
+        {
+          "label": "Message pour le téléchargement",
+          "default": "Téléchargez cet enregistrement ou recommencez."
+        },
+        {
+          "label": "Titre du message \"Recommencer\"",
+          "default": "Recommencer cet enregistrement ?"
+        },
+        {
+          "label": "Texte du message \"Recommencer\"",
+          "default": "En appuyant sur \"Recommencer\" vous effacerez cet enregistrement."
+        },
+        {
+          "label": "Texte de confirmation pour \"Recommencer\"",
+          "default": "Recommencer"
+        },
+        {
+          "label": "Texte d'annulation pour \"Recommencer\"",
+          "default": "Annuler"
+        },
+        {
+          "label": "Message d'erreur à la création de l'enregistrement",
+          "default": "Impossible de créer le fichier audio."
+        }
+      ]
+    }
+  ]
+}

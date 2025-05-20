@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Intestazione",
+      "placeholder": "Qui puoi aggiungere un'intestazione aggiuntiva",
+      "description": "L'intestazione che ti piacerebbe mostrare sopra l'immagine"
+    },
+    {
+      "label": "Item",
+      "entity": "item",
+      "widgets": [
+        {
+          "label": "Predefinito"
+        }
+      ],
+      "field": {
+        "label": "Item",
+        "fields": [
+          {
+            "label": "Immagine"
+          },
+          {
+            "label": "Etichetta",
+            "description": "Etichetta facoltativa per un segno di spunta. Assicurati che non sia troppo lunga o verrà nascosta"
+          },
+          {
+            "label": "Descrizione",
+            "placeholder": "La descrizione della mia immagine...",
+            "description": "Descrizione facoltativa per l'immagine"
+          },
+          {
+            "label": "Audio",
+            "description": "Optional audio that plays when an image is shown."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Impostazioni di esecuzione",
+      "description": "Queste opzioni ti permettono di controllare il comportamento del compito",
+      "fields": [
+        {
+          "label": "Immagine di avvio",
+          "description": "Imposta il numero dell'immagine con cui iniziare"
+        },
+        {
+          "label": "Cursore a scatto",
+          "description": "Se attivato, il cursore salterà alla posizione di un'immagine"
+        },
+        {
+          "label": "Visualizza i segni di spunta",
+          "description": "Se attivata, la barra del cursore visualizzerà un segno di spunta per ogni immagine"
+        },
+        {
+          "label": "Visualizza etichette",
+          "description": "Se attivata, la barra del cursore visualizzerà un'etichetta invece o in aggiunta ai segni di spunta"
+        },
+        {
+          "label": "Colore di sostituzione della trasparenza",
+          "description": "Imposta il colore che sostituirà le aree di trasparenza delle immagini"
+        },
+        {
+          "label": "Image space in fullscreen mode",
+          "description": "If you have descriptions in addition to the images, set the the percentage of space that the images should use in fullscreen mode."
+        }
+      ]
+    },
+    {
+      "label": "Lettore vocale",
+      "fields": [
+        {
+          "label": "Immagine",
+          "default": "Immagine"
+        },
+        {
+          "label": "Image Slider",
+          "default": "Image Slider"
+        },
+        {
+          "label": "Mute title",
+          "default": "Mute"
+        },
+        {
+          "label": "Unmute title",
+          "default": "Unmute"
+        },
+        {
+          "label": "Title for fullscreen button (enter)",
+          "default": "Enter fullscreen mode"
+        },
+        {
+          "label": "Title for fullscreen button (exit)",
+          "default": "Exit fullscreen mode"
+        }
+      ]
+    }
+  ]
+}

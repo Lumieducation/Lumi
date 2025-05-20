@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Elfennau holiadur",
+      "widgets": [
+        {
+          "label": "Diofyn"
+        }
+      ],
+      "entity": "elfen",
+      "field": {
+        "label": "Dewis Llyfrgell",
+        "fields": [
+          {
+            "label": "Llyfrgell",
+            "description": "Dewiswch lyfrgell"
+          },
+          {
+            "label": "Maes angenrheidiol"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Opsiynau sgrin lwyddiant",
+      "fields": [
+        {
+          "label": "Galluogwch sgrin lwyddiant"
+        },
+        {
+          "label": "Ychwanegu delwedd sgrin lwyddiant",
+          "fields": [
+            {
+              "label": "Amnweidiwch eicon llwyddiant gyda delwedd"
+            }
+          ]
+        },
+        {
+          "label": "Testun i'w ddangos wrth gyflwyno",
+          "default": "Rydych chi wedi cwblhau'r holiadur."
+        }
+      ]
+    },
+    {
+      "label": "Elfennau UI",
+      "fields": [
+        {
+          "label": "Labelau botymau",
+          "fields": [
+            {
+              "label": "Label botwm blaenorol",
+              "default": "Nôl"
+            },
+            {
+              "label": "Label botwm parhau",
+              "default": "Parhau"
+            },
+            {
+              "label": "Label botwm nesaf",
+              "default": "Nesaf"
+            },
+            {
+              "label": "Label botwm cyflwyno",
+              "default": "Cyflwyno"
+            }
+          ]
+        },
+        {
+          "label": "Hygyrchedd",
+          "fields": [
+            {
+              "label": "Neges angenrheidiol ar label botwm cau",
+              "default": "Cau gwallneges"
+            },
+            {
+              "label": "Testun ar y bar cynnydd",
+              "default": "Cwestiwn %current o %max",
+              "description": "Defnyddiwyd er mwyn cyfathrebu pa gwestiwn ydyw i dechnolegau cynorthwyol. Newidynnau: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Neges angenrheidiol",
+          "default": "Mae angen ateb i'r cwestiwn hwn",
+          "description": "Caiff ei ddangos os yw'r maes heb ei ateb a bod ei angen gan lapiwr (math cynnwys)"
+        },
+        {
+          "label": "Testun symbol angenrheidiol",
+          "default": "angenrheidiol",
+          "description": "Testun sydd yn mynd gyda seren (*) i ddangos bod y cwestiwn yn angenrheidiol"
+        },
+        {
+          "label": "Teitl ar gyfer y sgrin cyflwyno",
+          "default": "Rydych chi wedi ateb yr holl gwestiynau"
+        },
+        {
+          "label": "Is-deitl ar gyfer y sgrin gyflwyno",
+          "default": "Cliciwch isod i gyflwyno eich atebion"
+        }
+      ]
+    }
+  ]
+}

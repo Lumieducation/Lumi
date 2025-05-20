@@ -1,0 +1,138 @@
+{
+  "semantics": [
+    {
+      "widgets": [
+        {
+          "label": "Standaard"
+        }
+      ],
+      "label": "Kaarten",
+      "entity": "kaart",
+      "field": {
+        "label": "Kaart",
+        "fields": [
+          {
+            "label": "Afbeelding"
+          },
+          {
+            "label": "Alternatieve tekst voor afbeelding",
+            "description": "Beschrijf wat er op de foto te zien is. De tekst wordt gelezen door tekst-naar-spraak tools voor visueel-beperkte gebruikers."
+          },
+          {
+            "label": "Geluidsbestand",
+            "description": "Een optioneel geluid dat afspeelt wanneer de kaart wordt omgedraaid."
+          },
+          {
+            "label": "Overeenkomstige afbeelding",
+            "description": "Een optionele tweede afbeelding die met de eerste een paar van overeenkomst vormt, in plaats van twee dezelfde afbeeldingen."
+          },
+          {
+            "label": "Alternatieve tekst voor bijpassende afbeelding",
+            "description": "Beschrijf wat er op de foto te zien is. De tekst wordt gelezen door tekst-naar-spraak tools voor visueel-beperkte gebruikers."
+          },
+          {
+            "label": "Geluidsbestand bij bijpassende afbeelding",
+            "description": "Een optioneel geluid dat afspeelt wanneer de tweede kaart wordt omgedraaid."
+          },
+          {
+            "label": "Beschrijving",
+            "description": "Een optionele korte tekst die zal verschijnen zodra de 2 overeenkomende kaarten zijn gevonden."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Gedragsinstellingen",
+      "description": "Met deze opties kun je bepalen hoe het spel zich gedraagt.",
+      "fields": [
+        {
+          "label": "Plaats de kaarten in een vierkant",
+          "description": "Bij het leggen van de kaarten zullen het aantal kolommen en rijen op elkaar worden afgestemd. Daarna zal de omvang van de kaarten worden aangepast om in de beschikbare omgeving te passen."
+        },
+        {
+          "label": "Het aantal te gebruiken kaarten",
+          "description": "Als je dit getal instelt op een aantal groter dan 2, dan zal het spel willekeurig kaarten kiezen uit de complete lijst met kaarten."
+        },
+        {
+          "label": "Voeg \"Opnieuw\"-knop toe als het spel is afgelopen"
+        }
+      ]
+    },
+    {
+      "label": "De vormgeving",
+      "description": "Stel de visuele effecten van het spel in.",
+      "fields": [
+        {
+          "label": "Themakleur",
+          "description": "Kies een themakleur voor kaarten van je spel."
+        },
+        {
+          "label": "Achterkant kaart",
+          "description": "Gebruik een aangepaste achterkant voor je kaarten."
+        }
+      ]
+    },
+    {
+      "label": "Localisatie",
+      "fields": [
+        {
+          "label": "Tekst bij gedraaide kaarten",
+          "default": "Gedraaide kaarten"
+        },
+        {
+          "label": "Tekst bij gebruikte tijd",
+          "default": "Gebruikte tijd"
+        },
+        {
+          "label": "Feedbacktekst",
+          "default": "Goed gedaan!"
+        },
+        {
+          "label": "Label voor \"Opnieuw\"-knop",
+          "default": "Opnieuw?"
+        },
+        {
+          "label": "Label voor \"Afsluiten\"-knop",
+          "default": "Afsluiten"
+        },
+        {
+          "label": "Label spel",
+          "default": "Geheugenspel. Vind de overeenkomende kaarten."
+        },
+        {
+          "label": "Game instructions",
+          "default": "Use arrow keys left and right to navigate cards. Use space or enter key to turn card."
+        },
+        {
+          "label": "Label einde spel",
+          "default": "Alle kaarten zijn gevonden."
+        },
+        {
+          "label": "Label kaartenindex",
+          "description": "%num and %total are placeholders and will be replaced with the respective values for the card.",
+          "default": "Kaart %num de %total:"
+        },
+        {
+          "label": "Label niet gedraaide kaarten",
+          "default": "Niet gedraaid. Click to turn."
+        },
+        {
+          "label": "Card turned label",
+          "default": "Turned."
+        },
+        {
+          "label": "Label overeenkomende kaarten",
+          "default": "Paar gevonden."
+        },
+        {
+          "label": "Card matched announcement",
+          "default": "Your cards match!"
+        },
+        {
+          "label": "Card not matched announcement",
+          "default": "Your chosen cards do not match. Turn other cards to try again."
+        }
+      ]
+    }
+  ]
+}

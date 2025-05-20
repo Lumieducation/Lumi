@@ -1,0 +1,155 @@
+{
+  "semantics": [
+    {
+      "label": "Lista de preguntas",
+      "entity": "pregunta",
+      "widgets": [
+        {
+          "label": "Por defecto"
+        },
+        {
+          "label": "Textual"
+        }
+      ],
+      "field": {
+        "label": "Preguntas &amp; alternativas",
+        "fields": [
+          {
+            "label": "Pregunta"
+          },
+          {
+            "label": "Alternativas - a primeira alternativa é a correcta.",
+            "entity": "resposta",
+            "field": {
+              "label": "Alternativa"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Retroalimentación xeral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Por defecto"
+            }
+          ],
+          "label": "Definir retroalimentación personalizada para calquera rango de puntuación",
+          "description": "Preme o botón \"Engadir rango\" para engadir os rangos que precises. Exemplo: 0-20% Puntuación mala, 21-91% Puntuacion media, 91-100% Puntuación xenial!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango de puntuación"
+              },
+              {},
+              {
+                "label": "Retroalimentación para o rango de puntuación definido",
+                "placeholder": "Escribe a túa retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Configuración do comportamento",
+      "fields": [
+        {
+          "label": "Continuar automaticamente",
+          "description": "Ir automaticamente á seguinte pregunta cando se selecciona a alternativa. Isto debe desactivarse para que o contido sexa totalmente accesible cando se utiliza un lector de pantalla."
+        },
+        {
+          "label": "Tempo límite para respostas correctas",
+          "description": "Valor en milisegundos"
+        },
+        {
+          "label": "Tempo límite para respostas incorrectas",
+          "description": "Valor en milisegundos"
+        },
+        {
+          "label": "Activar efectos de son"
+        },
+        {
+          "label": "Activar botón reintentar"
+        },
+        {
+          "label": "Activar botón amosar solución"
+        },
+        {
+          "label": "Porcentaxe para aprobar",
+          "description": "Porcentaxe da puntuación total requirida para aprobar a actividade."
+        }
+      ]
+    },
+    {
+      "label": "Adaptación local do grupo de escolla simple",
+      "fields": [
+        {
+          "label": "Etiqueta para o botón \"Seguinte\"",
+          "default": "Seguinte pregunta"
+        },
+        {
+          "label": "Etiqueta para o botón \"Amosar solución\"",
+          "default": "Amosar solución"
+        },
+        {
+          "label": "Etiqueta para o botón \"Reintentar\"",
+          "default": "Reintentar"
+        },
+        {
+          "label": "Título para a pantalla amosar solución",
+          "default": "Lista da solución"
+        },
+        {
+          "label": "Texto para resposta correcta para o lector de pantalla",
+          "default": "Correcto!"
+        },
+        {
+          "label": "Texto para resposta incorrecta para o lector de pantalla",
+          "default": "Incorrecto!"
+        },
+        {
+          "label": "Deberíase ter marcado a opción",
+          "default": "Deberíase terse marcado"
+        },
+        {
+          "label": "No se debería ter marcado a opción",
+          "default": "Non se debería ter marcado"
+        },
+        {
+          "label": "Etiqueta para o botón \"Silenciar\", que desactiva o son de retroalimentación",
+          "default": "Silenciar son de retroalimentación"
+        },
+        {
+          "label": "Etiqueta para o botón \"Pechar\"",
+          "default": "Pechar"
+        },
+        {
+          "label": "Texto para o número de diapositiva",
+          "description": "Anuncia a diapositiva actual e o total de diapositivas, as variables son :num e :total",
+          "default": "Diapositiva :num de :total"
+        },
+        {
+          "label": "Representación textual da barra de puntuación cando se está a usar un lector de pantalla",
+          "default": "Conseguiches :num puntos de :total"
+        },
+        {
+          "label": "Etiqueta para o número de pregunta na lista de solucións",
+          "description": "Anuncia o número de índice da pregunta actual na lista de solucións, a variable é :num",
+          "default": "Pregunta :num"
+        },
+        {
+          "label": "Descrición para as tecnoloxías de asistencia do botón \"Amosar solución\"",
+          "default": "Amosar a solución. A tarefa marcarase coa solución correcta."
+        },
+        {
+          "label": "Descrición para as tecnoloxías de asistencia do botón \"Reintentar\"",
+          "default": "Reintenta a tarefa. Borras todas as respostas e empeza a tarefa de novo."
+        }
+      ]
+    }
+  ]
+}

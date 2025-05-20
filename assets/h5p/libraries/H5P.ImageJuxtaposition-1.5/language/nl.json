@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Beschrijving taak",
+      "description": "Plaats hier de koptekst/instructies die je wilt tonen boven de voor/na afbeelding.",
+      "placeholder": "Hier kun je optionele koptekst en/of instructies toevoegen."
+    },
+    {
+      "label": "Eerste afbeelding",
+      "fields": [
+        {
+          "label": "Eerste afbeelding",
+          "description": "De eerste afbeelding. Zorg ervoor dat deze dezelfde grootte heeft als de tweede."
+        },
+        {
+          "label": "Label voor eerste afbeelding",
+          "description": "Het label dat op de eerste afbeelding wordt getoond"
+        }
+      ]
+    },
+    {
+      "label": "Tweede afbeelding",
+      "fields": [
+        {
+          "label": "Tweede afbeelding",
+          "description": "De tweede afbeelding. Zorg ervoor dat deze dezelfde grootte heeft als de eerste."
+        },
+        {
+          "label": "Label voor tweede afbeelding",
+          "description": "Het label dat op de tweede afbeelding wordt getoond"
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellingen",
+      "description": "Met deze opties kun je een aantal gegevens instellen",
+      "fields": [
+        {
+          "label": "Startpositie schuifregelaar in %",
+          "description": "Stelt de startpositie van de schuifregelaar in"
+        },
+        {
+          "label": "Oriëntatie van schuifregelaar",
+          "description": "Horizontaal beweegt van links naar rechts, verticaal beweegt op en neer.",
+          "options": [
+            {
+              "label": "Horizontaal"
+            },
+            {
+              "label": "Verticaal"
+            }
+          ]
+        },
+        {
+          "label": "Kleur van schuifregelaar",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Image visible message",
+          "default": "Image @percentage % visible",
+          "description": "@percentage is a placeholder and will be replaced with the respective value."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

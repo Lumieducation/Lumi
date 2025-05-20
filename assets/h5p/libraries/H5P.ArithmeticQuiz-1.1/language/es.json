@@ -1,0 +1,135 @@
+{
+  "semantics": [
+    {
+      "label": "Introducción",
+      "description": "El texto introductorio (máximo 100 caracteres)"
+    },
+    {
+      "label": "Tipo de prueba",
+      "options": [
+        {
+          "label": "Cuestionario de operaciones aritméticas"
+        },
+        {
+          "label": "Cuestionario de ecuaciones lineales"
+        }
+      ]
+    },
+    {
+      "label": "Tipo Aritmético",
+      "options": [
+        {
+          "label": "Suma"
+        },
+        {
+          "label": "Resta"
+        },
+        {
+          "label": "Multiplicación"
+        },
+        {
+          "label": "División"
+        }
+      ]
+    },
+    {
+      "label": "Tipo de ecuación",
+      "options": [
+        {
+          "label": "Básica [ 3x = 12 ]"
+        },
+        {
+          "label": "Intermedia [ 4x - 3 = 13 ]"
+        },
+        {
+          "label": "Avanzada [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Habilitar fracciones",
+      "description": "Activar para permitir fracciones en ecuaciones."
+    },
+    {
+      "label": "Número máximo de preguntas"
+    },
+    {
+      "label": "Traducciones de la Interfaz de usuario",
+      "fields": [
+        {
+          "label": "Puntuación durante la prueba",
+          "default": "Puntuación:"
+        },
+        {
+          "label": "Tiempo",
+          "default": "Tiempo: @time"
+        },
+        {
+          "label": "Encabezado de página de resultados",
+          "default": "¡Terminado!"
+        },
+        {
+          "label": "Etiqueta Ir",
+          "default": "¡VAMOS!"
+        },
+        {
+          "label": "Etiqueta botón Iniciar",
+          "default": "Iniciar"
+        },
+        {
+          "label": "Etiqueta botón Intentar de nuevo",
+          "default": "Intentar de nuevo"
+        },
+        {
+          "label": "Texto para lectores de pantalla para respuesta correcta",
+          "default": "Correcta"
+        },
+        {
+          "label": "Texto para lectores de pantalla para respuesta incorrecta",
+          "default": "Incorrecta. La respuesta correcta era :num"
+        },
+        {
+          "label": "Etiqueta para lectores de pantalla para el cronómetro",
+          "default": "Duración en horas, minutos y segundos."
+        },
+        {
+          "label": "Texto para lectores de pantalla para preguntas",
+          "default": "¿Cuanto es :arithmetic ?"
+        },
+        {
+          "label": "Texto para lectores de pantalla para pregunta de ecuación",
+          "default": "Para la ecuación :equation, ¿cuanto es :item ?"
+        },
+        {
+          "label": "Texto para lectores de pantalla para variable de ecuación",
+          "default": "¿Cuanto es :item ?"
+        },
+        {
+          "label": "Texto operador Más",
+          "default": "más"
+        },
+        {
+          "label": "Texto operador resta",
+          "default": "menos"
+        },
+        {
+          "label": "Texto operador multiplicación",
+          "default": "multiplicado por"
+        },
+        {
+          "label": "Texto operador división",
+          "default": "dividido por"
+        },
+        {
+          "label": "Texto de signo Igual",
+          "default": "es igual a"
+        },
+        {
+          "label": "Texto del número de diapositiva",
+          "description": "Anuncia la diapositiva actual y el número total de diapositivas, las variables son :num y :total",
+          "default": "Diapositiva :num de :total"
+        }
+      ]
+    }
+  ]
+}

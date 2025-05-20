@@ -1,0 +1,155 @@
+{
+  "semantics": [
+    {
+      "label": "Frågelista",
+      "entity": "fråga",
+      "widgets": [
+        {
+          "label": "Standard"
+        },
+        {
+          "label": "Textformat"
+        }
+      ],
+      "field": {
+        "label": "Fråga och svarsalternativ",
+        "fields": [
+          {
+            "label": "Fråga"
+          },
+          {
+            "label": "Svarsalternativ - första ska vara det rätta svaret.",
+            "entity": "svar",
+            "field": {
+              "label": "Svar"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Övergripande feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Standard"
+            }
+          ],
+          "label": "Ge feedback utifrån poängresultat",
+          "description": "Klicka på \"Nytt intervall\"-knappen för att lägga till ett nytt poängintervall där du vill ge speciell feedback. Exempel: 0-20% Underkänt, 21-91% Godkänt, 91-100% Mycket väl godkänt.",
+          "entity": "intervall",
+          "field": {
+            "fields": [
+              {
+                "label": "Poängintervall"
+              },
+              {},
+              {
+                "label": "Feedback för detta intervall",
+                "placeholder": "Skriv in feedback här"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Beteende-inställningar",
+      "fields": [
+        {
+          "label": "Fortsätt automatiskt",
+          "description": "Automatically go to next question when alternative is selected. This needs to be turned off to make the content fully accessible when using a screen reader."
+        },
+        {
+          "label": "Paus efter rätt svar",
+          "description": "Värde i millisekunder. (1000 millisekunder = 1 sekund)."
+        },
+        {
+          "label": "Paus efter fel svar",
+          "description": "Värde i millisekunder. (1000 millisekunder = 1 sekund)."
+        },
+        {
+          "label": "Aktivera ljudeffekter"
+        },
+        {
+          "label": "Aktivera knappen \"Försök igen\""
+        },
+        {
+          "label": "Aktivera knappen \"Visa lösning\""
+        },
+        {
+          "label": "Krav för godkänt",
+          "description": "Procent av total poäng som krävs för att få godkänt på testet."
+        }
+      ]
+    },
+    {
+      "label": "Ändra texter",
+      "fields": [
+        {
+          "label": "Etikett för knappen \"Nästa\"",
+          "default": "Nästa fråga"
+        },
+        {
+          "label": "Etikett för knappen \"Visa lösning\"",
+          "default": "Visa lösning"
+        },
+        {
+          "label": "Etikett för knappen \"Försök igen\"",
+          "default": "Försök igen"
+        },
+        {
+          "label": "Titel för sidan Visa lösning",
+          "default": "Lösning"
+        },
+        {
+          "label": "Skärmläsartext för korrekt svar",
+          "default": "Rätt svar!"
+        },
+        {
+          "label": "Skärmläsartext för fel svar",
+          "default": "Fel"
+        },
+        {
+          "label": "Alternativ skulle ha valts",
+          "default": "Skulle ha valts"
+        },
+        {
+          "label": "Alternativ skulle inte ha valts",
+          "default": "Skulle inte ha valts"
+        },
+        {
+          "label": "Beskrivning av knappen \"stäng av ljudet\"",
+          "default": "Stäng av ljudet för feedback"
+        },
+        {
+          "label": "Beskrivning av knappen \"Stäng\"",
+          "default": "Stäng"
+        },
+        {
+          "label": "Sidnummer text",
+          "description": "Visar sidnummer för aktuell sida och totala antalet sidor. Variabler är :num och :total",
+          "default": "Sida :num av :total"
+        },
+        {
+          "label": "Texten som läses upp när poängen presenteras för användare med skärmläsare",
+          "default": "Du fick :num av :total poäng"
+        },
+        {
+          "label": "Etikett för frågans nummer i lösningslistan",
+          "description": "Visar aktuell index över fråga i lösningslistan, variabler är :num",
+          "default": "Fråga :num"
+        },
+        {
+          "label": "Beskrivning för tillgänglighetshjälpmedel för knappen \"Visa lösning\"",
+          "default": "Visa lösningen. Uppgiften kommer att markeras med dess rätta lösning."
+        },
+        {
+          "label": "Beskrivning för tillgänglighetshjälpmedel för knappen \"Försök igen\"",
+          "default": "Gör nytt försök på uppgiften. Nollställer alla svar och startar om uppgiften."
+        }
+      ]
+    }
+  ]
+}

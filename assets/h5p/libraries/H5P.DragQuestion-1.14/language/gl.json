@@ -1,0 +1,271 @@
+{
+  "semantics": [
+    {
+      "label": "Botón comprobar resposta",
+      "default": "Comprobar"
+    },
+    {
+      "label": "Botón para enviar resposta",
+      "default": "Enviar"
+    },
+    {
+      "label": "Botón tentar de novo",
+      "default": "Tentar de novo"
+    },
+    {
+      "label": "Texto de explicación da puntuación",
+      "default": "As respostas correctas dan +1 punto. As respostas incorrectas dan -1 punto. A mínima puntuación posible é 0."
+    },
+    {
+      "fields": [
+        {
+          "label": "Configuración",
+          "fields": [
+            {
+              "label": "Imaxe de fondo",
+              "description": "Opcional. Selecciona unha imaxe para usala como fondo da tarefa de arrastrar e soltar."
+            },
+            {
+              "label": "Tamaño da tarefa",
+              "description": "Especifica o tamaño da área de xogo (en px)."
+            }
+          ]
+        },
+        {
+          "label": "Tarefa",
+          "description": "Empeza colocando as túas zonas de solta.<br />Logo, coloca os elementos a soltar e marca as zonas de solta correspondentes.<br />Finalmente, edita as zonas de solta outra vez e marca as respostas correctas.",
+          "fields": [
+            {
+              "label": "Elementos",
+              "entity": "elemento",
+              "field": {
+                "label": "Elemento",
+                "fields": [
+                  {
+                    "description": "Escolle o tipo de contido que che gustaría engadir."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Selecciona zonas de solta"
+                  },
+                  {
+                    "label": "Opacidade do Fondo",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Número infinito de aparicións deste elemento",
+                    "description": "Clona este elemento de xeito que poidas arrastralo a múltiples zonas de solta."
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Zonas de Solta",
+              "entity": "Zona de Solta",
+              "field": {
+                "label": "Zona de Solta",
+                "fields": [
+                  {
+                    "label": "Etiqueta",
+                    "description": "The label is used by assistive technologies."
+                  },
+                  {
+                    "label": "Amosar etiqueta"
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Selecciona os elementos correctos"
+                  },
+                  {
+                    "label": "Opacidade do Fondo",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Pistas e retroalimentación",
+                    "fields": [
+                      {
+                        "label": "Texto da pista"
+                      },
+                      {
+                        "label": "Mensaxe amosado para emparellamento correcto",
+                        "description": "A mensaxe aparecerá debaixo da tarefa cando se prema \"comprobar\" se o elemento arrastrado coincide."
+                      },
+                      {
+                        "label": "Mensaxe amosado para emparellamento incorrecto",
+                        "description": "A mensaxe aparecerá debaixo da tarefa cando se prema \"comprobar\" se o elemento arrastrado non coincide."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Esta zona de solta só pode conter un elemento",
+                    "description": "Asegúrase de que só haxa unha resposta correcta para esta zona de solta"
+                  },
+                  {
+                    "label": "Activar aliñamento automático",
+                    "description": "Aliñará automaticamente todos os elementos arrastrables soltados nesta zona."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Retroalimentación Xeral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Por defecto"
+            }
+          ],
+          "label": "Define a retroalimentación personalizada para calquera rango de puntuación",
+          "description": "Preme o botón \"Engadir rango\" para engadir todos os rangos que precises. Exemplo: 0-20% Puntuación mala, 21-91% Puntuación media, 91-100% Puntuación xenial!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango de Puntuación"
+              },
+              {},
+              {
+                "label": "Retroalimentación para o rango de puntuación definido",
+                "placeholder": "Escribe a retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Configuración do comportamento",
+      "description": "Estas opcións permitiranche controlar o comportamento da tarefa.",
+      "fields": [
+        {
+          "label": "Activar \"Tentar de novo\""
+        },
+        {
+          "label": "Activar botón \"Comprobar\""
+        },
+        {
+          "label": "Dar un punto á tarefa completa",
+          "description": "Desactiva isto se queres dar un punto por cada elemento arrastrable colocado correctamente."
+        },
+        {
+          "label": "Aplicar penalizacións",
+          "description": "Aplicar penalizacións aos elementos arrastrables colocados en zonas de solta incorrectas. Esta opción débese activar cando permitimos soltar un mesmo elemento en múltiples zonas de solta, ou se só hai unha zona de solta. Se non está activado, os alumnos poderán emparellar todos os elementos con todas as zonas de solta e sempre recibirán a puntuación máxima."
+        },
+        {
+          "label": "Activar explicación da puntuación",
+          "description": "Amosar aos usuarios unha explicación da puntuación cando comproben as súas respostas (se está activa a opción 'Aplicar penalizacións')."
+        },
+        {
+          "label": "Opacidade do fondo para elementos arrastrables",
+          "description": "Se este campo está activado, anulará a opacidade coa que se configuraron todos os elementos arrastrables. O valor debería ser un número entre 0 e 100, onde 0 equivale a transparencia completa e 100 a sen transparencia"
+        },
+        {
+          "label": "Destacado de Zona de Solta",
+          "description": "Escolle cando destacar as zonas de solta.",
+          "options": [
+            {
+              "label": "Ao arrastralas"
+            },
+            {
+              "label": "Sempre"
+            },
+            {
+              "label": "Nunca"
+            }
+          ]
+        },
+        {
+          "label": "Espazado para aliñamento automático (en px)"
+        },
+        {
+          "label": "Permitir Pantalla Completa",
+          "description": "Marca esta opción para activar o botón de pantalla completa."
+        },
+        {
+          "label": "Amosar puntuación",
+          "description": "Amosar os puntos gañados con cada resposta. Non dispoñible se está marcada a opción 'Dar un punto á tarefa completa'."
+        },
+        {
+          "label": "Amosar Título",
+          "description": "Desmarca esta opción se non queres que se amose este título. O título amosarase só en resumos, estatísticas, etc."
+        }
+      ]
+    },
+    {
+      "label": "Localizar",
+      "fields": [
+        {
+          "label": "Etiqueta para pantalla completa",
+          "default": "Pantalla Completa"
+        },
+        {
+          "label": "Etiqueta para saír de pantalla completa",
+          "default": "Saír de Pantalla Completa"
+        }
+      ]
+    },
+    {
+      "label": "Prefixo para elementos arrastrables",
+      "default": "Arrastrable {num} de {total}."
+    },
+    {
+      "label": "Sufixo para elementos arrastrables",
+      "default": "Colocado na zona de solta {num}."
+    },
+    {
+      "label": "Prefixo de zona de solta",
+      "default": "Zona de solta {num} de {total}."
+    },
+    {
+      "label": "Etiqueta de zona de solta non seleccionada",
+      "default": "Non hai zona de solta."
+    },
+    {
+      "label": "Etiqueta para o botón amosar pista",
+      "default": "Amosar pista."
+    },
+    {
+      "label": "Etiqueta para pista dispoñible",
+      "default": "Pista dispoñible"
+    },
+    {
+      "label": "Etiqueta para resposta correcta",
+      "default": "Resposta correcta"
+    },
+    {
+      "label": "Etiqueta para resposta incorrecta",
+      "default": "Resposta incorrecta"
+    },
+    {
+      "label": "Cabeceira do panel que contén a retroalimentación para respostas correctas/incorrectas",
+      "default": "Retroalimentación"
+    },
+    {
+      "label": "Representación textual da barra de puntuación cando se está a usar un lector de pantalla",
+      "default": "Conseguiches :num puntos de :total"
+    },
+    {
+      "label": "Representación textual do botón de explicación da puntuación",
+      "default": "Amosar explicación da puntuación"
+    },
+    {
+      "label": "Etiqueta do o botón \"Comprobar\" para as tecnoloxías de asistencia",
+      "default": "Comproba as respostas. As respostas marcaranse como correctas, incorrectas ou non contestadas."
+    },
+    {
+      "label": "Etiqueta do o botón \"Tentar de novo\" para as tecnoloxías de asistencia",
+      "default": "Tentar de novo a tarefa. Borra todas as respostas e empeza a tarefa de novo."
+    }
+  ]
+}

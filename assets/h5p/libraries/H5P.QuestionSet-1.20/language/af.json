@@ -1,0 +1,278 @@
+{
+  "semantics": [
+    {
+      "label": "Vasvra inleiding",
+      "fields": [
+        {
+          "label": "Vertoon inleiding"
+        },
+        {
+          "label": "Titel",
+          "description": "Hierdie titel sal bo die inleidende teks vertoon word."
+        },
+        {
+          "label": "Inleidende teks",
+          "description": "Hierdie teks sal vertoon word voor die vasvra begin."
+        },
+        {
+          "label": "Beginknoppie teks",
+          "default": "Begin vasvra"
+        },
+        {
+          "label": "Agtergrondprent",
+          "description": "'n Opsionele agtergrondprent vir die inleiding."
+        }
+      ]
+    },
+    {
+      "label": "Agtergrondprent",
+      "description": "'n Vrywillige agtergrondprent vir die vraagstel."
+    },
+    {
+      "label": "Vorderingaanwyser",
+      "description": "Vraagstel vorderingaanwyser styl.",
+      "options": [
+        {
+          "label": "Tekstueel"
+        },
+        {
+          "label": "Kolletjies"
+        }
+      ]
+    },
+    {
+      "label": "Slaag persentasie",
+      "description": "Persentasie van totale telling wat vereis word om vasvra te slaag."
+    },
+    {
+      "label": "Vrae",
+      "widgets": [
+        {
+          "label": "Verstek"
+        },
+        {
+          "label": "Tekstueel"
+        }
+      ],
+      "entity": "vraag",
+      "field": {
+        "label": "Vraagtipe",
+        "description": "Biblioteek vir hierdie vraag."
+      }
+    },
+    {
+      "label": "Koppelvlaktekste in vasvra",
+      "fields": [
+        {
+          "label": "Terug knoppie",
+          "default": "Vorige vraag"
+        },
+        {
+          "label": "Volgende knoppie",
+          "default": "Volgende vraag"
+        },
+        {
+          "label": "Klaar knoppie",
+          "default": "Klaar"
+        },
+        {
+          "label": "Submit button",
+          "default": "Submit"
+        },
+        {
+          "label": "Vordering teks",
+          "description": "Teks gebruik indien tektuele vordering gekies is.",
+          "default": "Vraag: @current van @total vrae"
+        },
+        {
+          "label": "Etiket om te spring tot 'n bepaalde vraag",
+          "description": "Jy moet die plekhouer '%d' in stede van die vraagnommer, en %total in stede van die totale aantal vrae gebruik.",
+          "default": "Vraag %d van %total"
+        },
+        {
+          "label": "Kopiereg dialoog vraagetiket",
+          "default": "Vraag"
+        },
+        {
+          "label": "Spreekleser vordering",
+          "description": "Mag @current en @total vraagveranderlikes gebruik",
+          "default": "Vraag @current uit @total"
+        },
+        {
+          "label": "Onbeantwoorde vraagteks",
+          "default": "Onbeantwoord"
+        },
+        {
+          "label": "Beantwoorde vraagteks",
+          "default": "Beantwoord"
+        },
+        {
+          "label": "Huidige vraagteks",
+          "default": "Huidige vraag"
+        },
+        {
+          "label": "Navigation label for readspeakers",
+          "default": "Questions"
+        }
+      ]
+    },
+    {
+      "label": "Verbied agteruitnavigasie",
+      "description": "Hierdie keuse laat jou slegs toe om vorentoe te beweeg met die vraagstel"
+    },
+    {
+      "label": "Skommel vrae",
+      "description": "Aktiveer ewekansige orde van vrae op vooraansig."
+    },
+    {
+      "label": "Aantal vrae om te wys:",
+      "description": "Skep 'n ewekansige bondel vrae uit die somtotaal."
+    },
+    {
+      "label": "Vasvra klaar",
+      "fields": [
+        {
+          "label": "Vertoon uitslae"
+        },
+        {
+          "label": "Vertoon oplossing knoppie"
+        },
+        {
+          "label": "Vertoon probeer weer knoppie"
+        },
+        {
+          "label": "Geen uitslae boodskap",
+          "description": "Teks word op die eindblad vertoon wanneer 'Vertoonresultate' gedeaktiveer is",
+          "default": "Klaar"
+        },
+        {
+          "label": "Terugvoer opskrif",
+          "default": "Jou uitslae:",
+          "description": "Hierdie opskrif sal aan die einde van die vasvra vertoon wanneer die gebruiker al die vrae beantwoord het."
+        },
+        {
+          "label": "Score announcer",
+          "description": "This label will be used for announcing the final score to the user on the end screen",
+          "default": "You got @finals out of @totals points"
+        },
+        {
+          "label": "Algehele terugvoer",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Verstek"
+                }
+              ],
+              "label": "Bepaal verstekterugvoer vir enige reeks tellings",
+              "description": "Voorbeeld: 0-20% Swak telling, 21-91% Gemiddelde telling, 91-100% Uitstekende telling!",
+              "entity": "reeks",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Telreeks"
+                  },
+                  {},
+                  {
+                    "label": "Terugvoer vir gedefinieerde telreeks",
+                    "placeholder": "Vul die terugvoer in"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Ou terugvoer",
+          "fields": [
+            {
+              "label": "Vasvra geslaag begroeting",
+              "description": "Hierdie teks sal bo die telling vertoon word sodra die gebruiker die vasvra suksesvol geslaag het."
+            },
+            {
+              "label": "Geslaag kommentaar",
+              "description": "Hierdie opmerking sal na die telling vertoon word as die gebruiker die vasvra suksesvol geslaag het."
+            },
+            {
+              "label": "Vasvra misluk titel",
+              "description": "Hierdie teks sal bo die telling vertoon word as die gebruiker nie die vasvra het nie."
+            },
+            {
+              "label": "Gedruip kommentaar",
+              "description": "Hierdie opmerking sal na die telling vertoon word as die gebruiker die vasvra gedruip het."
+            }
+          ]
+        },
+        {
+          "label": "Antwoord knoppie-etiket",
+          "default": "Wys antwoord",
+          "description": "Teks vir die antwoord knoppie."
+        },
+        {
+          "label": "Probeer weer knoppie etiket",
+          "default": "Probeer weer",
+          "description": "Teks vir die probeer weer knoppie."
+        },
+        {
+          "label": "Klaar knoppieteks",
+          "default": "Klaar"
+        },
+        {
+          "label": "Submit button text",
+          "default": "Submit"
+        },
+        {
+          "label": "Vertoon video voor vasvra uitslae"
+        },
+        {
+          "label": "Aktiveer slaan video oor knoppie"
+        },
+        {
+          "label": "Slaan video oor etiket",
+          "default": "Slaan video oor"
+        },
+        {
+          "label": "Video geslaag",
+          "description": "Hierdie video sal gespeel word indien die gebruiker die vasvra geslaag het."
+        },
+        {
+          "label": "Druip video",
+          "description": "Hierdie video sal gespeel word indien die gebruiker die vasvra gedruip het."
+        }
+      ]
+    },
+    {
+      "label": "Instellings vir die \"Wys antwoord\" en \"Probeer weer\" knoppies",
+      "fields": [
+        {
+          "label": "Wys \"Toets\" knoppies",
+          "description": "Hierdie opsie bepaal of die \"Toets\" knoppie vir alle vrae gewys sal word."
+        },
+        {
+          "label": "Oorskry \"Wys oplossing\" knoppie",
+          "description": "Hierdie opsie bepaal of die \"Wys antwoord\" -knoppie vir alle vrae getoon word, vir almal uitgeskakel of afsonderlik vir elke vraag ingestel word.",
+          "options": [
+            {
+              "label": "Aktiveer"
+            },
+            {
+              "label": "Deaktiveer"
+            }
+          ]
+        },
+        {
+          "label": "Oorskry \"Probeer weer\" knoppie",
+          "description": "Hierdie opsie bepaal of die \"Probeer weer\" -knoppie vir alle vrae getoon word, vir almal uitgeskakel of afsonderlik vir elke vraag ingestel word.",
+          "options": [
+            {
+              "label": "Aktiveer"
+            },
+            {
+              "label": "Deaktiveer"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

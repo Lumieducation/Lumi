@@ -1,0 +1,300 @@
+{
+  "semantics": [
+    {
+      "label": "Mostrar pantalla inicial",
+      "description": "Si se activa, el contenido mostrará la pantalla del título al inicio."
+    },
+    {
+      "label": "Pantalla inicial",
+      "fields": [
+        {
+          "label": "Introducción",
+          "placeholder": "BienVenido a ..."
+        },
+        {
+          "label": "Imagen de pantalla del título"
+        }
+      ]
+    },
+    {
+      "label": "Marcadores",
+      "fields": [
+        {
+          "label": "Marcadores",
+          "widgets": [
+            {
+              "label": "Predeterminado"
+            }
+          ],
+          "entity": "marcador",
+          "field": {
+            "label": "Marcador",
+            "fields": [
+              {
+                "label": "Imagen del marcador (original)",
+                "description": "Subir la imagen que quiere para crearle un marcador. Debería ser una imagen cuadrada o será recortada. Tenga en mente que usted necesitará una imagen única de marcador para cada interacción.",
+                "importantDescription": {
+                  "description": "Por favor tenga en cuenta algunos criterios para buenas imágenes de marcadores:<ul><li>Alto contraste de color, idealmente blanco y negro</li><li>Asimetría</li><li>La resolución interna de un marcador es de 16 por 16 pixeles, el usar imágenes más grandes puede hacer que empeore la detección del marcador</li><li>Un único caracter o palabras cortas dan buenos resultados</li></ul>"
+                }
+              },
+              {
+                "label": "Imagen del marcador (patrón)",
+                "description": "Descargar esta imagen para usarla como un marcador mostrado en una pantalla o impresa en papel."
+              },
+              {
+                "label": "Tipo de acción",
+                "description": "Acción que debería ejecutarse cuando se encuentra el marcador.",
+                "options": [
+                  {
+                    "label": "Interacción H5P"
+                  },
+                  {
+                    "label": "Superposición de modelo 3D"
+                  }
+                ]
+              },
+              {
+                "label": "Interacción",
+                "fields": [
+                  {
+                    "label": "Interacción"
+                  },
+                  {
+                    "label": "Maniquí"
+                  }
+                ]
+              },
+              {
+                "label": "Modelo 3D",
+                "fields": [
+                  {
+                    "label": "Archivo de modelo 3D",
+                    "description": "Subir aquí un archivo glTF (.glb / .gltf). El formato preferido es \"glTF 2.0 binary\" en un solo archivo."
+                  },
+                  {
+                    "label": "Geometría",
+                    "fields": [
+                      {
+                        "label": "Escala",
+                        "description": "Aumentar o disminuir el tamaño del modelo para que coincida con el tamaño del marcador.",
+                        "fields": [
+                          {
+                            "label": "Porcentaje"
+                          },
+                          {
+                            "label": "Maniquí"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Posición",
+                        "description": "Configura la posición de compensación del modelo relativa al marcador.",
+                        "fields": [
+                          {
+                            "label": "Compensación-X"
+                          },
+                          {
+                            "label": "Compensación-Y"
+                          },
+                          {
+                            "label": "Compensación-Z"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Rotación",
+                        "description": "Configurar la rotación en grados.",
+                        "fields": [
+                          {
+                            "label": "eje-X"
+                          },
+                          {
+                            "label": "eje-Y"
+                          },
+                          {
+                            "label": "eje-Z"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Mostrar pantalla final",
+      "description": "Si se activa, mostrar una pantalla final cuando todas las interacciones hayan sido completadas. Aunque la pantalla final no estará disponible si usted solamente usa modelos 3D."
+    },
+    {
+      "label": "Pantalla final",
+      "fields": [
+        {
+          "label": "imagen de pantalla final"
+        },
+        {
+          "label": "Texto de pantalla inicial",
+          "placeholder": "¡Lo lograste!"
+        },
+        {
+          "label": "Retroalimentación Global",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Predeterminado"
+                }
+              ],
+              "label": "Definir retroalimentación personalizada para cualquier rango de puntaje",
+              "description": "Haga clic en el botón \"Añadir rango\" para añadir cuantos rangos necesite. Ejemplo: 0-20% Mal puntaje, 21-91% Puntaje Promedio, 91-100% ¡Magnífico Puntaje!",
+              "entity": "rango",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Rango del Puntaje"
+                  },
+                  {
+                    "placeholder": "Complete la retroalimentación",
+                    "label": "Retroalimentación para rango de puntaje definido"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Configuraciones del comportamiento",
+      "fields": [
+        {
+          "label": "Habilitar botón \"Reintentar\"",
+          "description": "Si se activa, los estudiantes pueden intentar la tarea de nuevo."
+        },
+        {
+          "label": "Habilitar botón \"Mostrar soluciones\"",
+          "description": "Si se activa, los estudiantes pueden ver las soluciones de todas las interacciones."
+        },
+        {
+          "label": "Ocultar el botón \"Mostrar soluciones\"",
+          "description": "Esta opción permite habilitar o deshabilitar el botón \"Mostrar Solución\" para todos los contenidos o usar sus respectivas configuraciones del comportamiento.",
+          "options": [
+            {
+              "label": "Usar la configuración del comportamiento"
+            },
+            {
+              "label": "Siempre mostrar botón"
+            },
+            {
+              "label": "Nunca mostrar botón"
+            }
+          ]
+        },
+        {
+          "label": "Anular botón \"Intentar de nuevo\"",
+          "description": "Esta opción permite habilitar o deshabilitar el botón \"Intentar de nuevo\" para todos los contenidos o usar sus respectivas configuraciones del comportamiento.",
+          "options": [
+            {
+              "label": "Usar la configuración del comportamiento"
+            },
+            {
+              "label": "Siempre mostrar botón"
+            },
+            {
+              "label": "Nunca mostrar botón"
+            }
+          ]
+        },
+        {
+          "label": "Altura por defecto",
+          "description": "Configurar una altura por defecto en px para casos en los que haya problemas de compartimiento de recursos de origen cruzado (CORS)."
+        }
+      ]
+    },
+    {
+      "label": "Adaptación local",
+      "fields": [
+        {
+          "label": "Botón Iniciar",
+          "default": "Iniciar"
+        },
+        {
+          "label": "Botón Intentar de nuevo",
+          "default": "Reintentar"
+        },
+        {
+          "label": "Encontrar un marcador para ver una interacción.",
+          "default": "Encontrar un marcador para ver una interacción."
+        },
+        {
+          "label": "Error: navegador no soportado",
+          "default": "Al parecer, desafortunadamente, tu navegador no puede ejecutar este tipo de contenido."
+        },
+        {
+          "label": "Error: Sin acceso a cámara",
+          "default": "No se pudo acceder a cámara."
+        },
+        {
+          "label": "Error: Sin soporte de cámara",
+          "default": "Su navegador al parecer no soporta una cámara."
+        },
+        {
+          "label": "Error: Sin marcadores",
+          "default": "¿A alguien se le olvidó añadir los marcadores?"
+        },
+        {
+          "label": "Advertencia: Navegador Brave",
+          "default": "Parece que Usted está usando el navegador Brave. ¡Lindo! Pero sus configuraciones de privacidad estrictas pueden impedir que funcione la cámara."
+        },
+        {
+          "label": "Inicializando contenido",
+          "default": "Inicializando contenido. Por favor no olvide permitir el acceso a la cámara."
+        }
+      ]
+    },
+    {
+      "label": "Lector de texto en voz alta",
+      "fields": [
+        {
+          "label": "Título de botón PantalllaCompleta: entrar",
+          "default": "Entrar a modo PantallaCompleta"
+        },
+        {
+          "label": "Título de botón PantallaCompleta: salir",
+          "default": "Salir del modo de PantallaCompleta"
+        },
+        {
+          "label": "Título de botón 'Cambiar vista' (cuando la acción está cerrada)",
+          "default": "Cambiar al ejercicio"
+        },
+        {
+          "label": "Título de botón 'Cambiar vista' (cuando la acción está abierta)",
+          "default": "Cambiar a cámara"
+        },
+        {
+          "label": "Mensaje 'Botón deshabilitado' para 'botón para cambiar vista'",
+          "default": "Usted no puede cambiar la vista en este momento"
+        },
+        {
+          "label": "Título de botón 'Salir'",
+          "default": "Salir y mostrar evaluación"
+        },
+        {
+          "label": "Mensaje 'Botón deshabilitado' para 'botón abandonar'",
+          "default": "Usted aun no ha completado todos los ejercicios"
+        },
+        {
+          "label": "Acción abierto",
+          "default": "La vista ha cambiado a un ejercicio."
+        },
+        {
+          "label": "Acción cerrado",
+          "default": "La vista ha cambiado a la cámara."
+        }
+      ]
+    }
+  ]
+}

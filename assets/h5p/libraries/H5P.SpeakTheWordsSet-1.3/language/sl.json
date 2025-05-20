@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Uvod v aktivnost",
+      "fields": [
+        {
+          "label": "Prikaži uvod"
+        },
+        {
+          "label": "Slika"
+        },
+        {
+          "label": "Alternativno besedilo slike v uvodu"
+        },
+        {
+          "label": "Naslov"
+        },
+        {
+          "label": "Vsebina uvoda",
+          "description": "Besedilo je prikazano pred začetkom reševanja aktivnosti."
+        }
+      ]
+    },
+    {
+      "label": "Vprašanja",
+      "widgets": [
+        {
+          "label": "Privzeto"
+        }
+      ],
+      "entity": "Vprašanje",
+      "field": {
+        "label": "Vprašanje"
+      }
+    },
+    {
+      "label": "Splošna povratna informacija",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Privzeto"
+            }
+          ],
+          "label": "Določi ločeno povratno informacijo za vsak razpon rezultatov",
+          "description": "Primer: 0-20 % Slab rezultat, 21-91 % Povprečen rezultat, 91-100 % Odličen rezultat!",
+          "entity": "razpon",
+          "field": {
+            "fields": [
+              {
+                "label": "Razpon rezultatov"
+              },
+              {},
+              {
+                "label": "Povratna informacija za definiran razpon rezultatov",
+                "placeholder": "Vnesite povratno informacijo"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Prevodi uporabniškega vmesnika",
+      "fields": [
+        {
+          "label": "Besedilo gumba za začetek aktivnosti",
+          "default": "Začetek"
+        },
+        {
+          "label": "Besedilo za prikaz rezultatov",
+          "default": "Rezultat:"
+        },
+        {
+          "label": "Besedilo za gumb \"Prikaži rešitev\"",
+          "default": "Prikaži rešitev"
+        },
+        {
+          "label": "Besedilo za gumb \"Poskusi ponovno\"",
+          "default": "Poskusi ponovno"
+        },
+        {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
+          "label": "Besedilo za gumb \"Naslednje vprašanje\"",
+          "default": "Naslednje vprašanje"
+        },
+        {
+          "label": "Besedilo za gumb \"Prejšnje vprašanje\"",
+          "default": "Prejšnje vprašanje"
+        },
+        {
+          "label": "Naslov vrstice za krmarjenje",
+          "description": "Spremenljivka je \":num\".",
+          "default": "Stran :num"
+        },
+        {
+          "label": "Besedilo za izražanje odgovorjenih vprašanj",
+          "default": "Odgovorjeno"
+        },
+        {
+          "label": "Besedilo za izražanje trenutno aktivnega vprašanja",
+          "default": "Trenutno aktivno"
+        }
+      ]
+    }
+  ]
+}

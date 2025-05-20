@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Редактор на разделящи се сценарии",
+      "fields": [
+        {
+          "label": "Заглавие"
+        },
+        {
+          "label": "Начален екран",
+          "fields": [
+            {
+              "label": "Заглавие на начален екран",
+              "placeholder": "Заглавие на вашия курс"
+            },
+            {
+              "label": "Подзаглавие на начален екран",
+              "placeholder": "Подробности за курса"
+            },
+            {
+              "label": "Изображение на начален екран"
+            },
+            {
+              "label": "Image alternative text"
+            }
+          ]
+        },
+        {
+          "label": "Списък на крайните екрани",
+          "field": {
+            "label": "Краен екран",
+            "fields": [
+              {
+                "label": "Заглавие"
+              },
+              {
+                "label": "Текст"
+              },
+              {
+                "label": "Изображение"
+              },
+              {
+                "label": "Резултат",
+                "description": "Резултатът ще бъде изпратен до всяка LMS, LRS или всяка друга свързана услуга, която получава резултати от H5P за потребители, които достигат сценария за крайно неизпълнение"
+              },
+              {
+                "label": "Content ID"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Списък със съдрржанието на разклоняващите се сценарии",
+          "entity": "Съдържание",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Показване на заглавията на съдържанието при преглед",
+                "description": "Ако е избрано, потребителят ще види заглавието на съдържанието в горната лента над това съдържание"
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Proceed"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Опции при точкуването",
+          "fields": [
+            {
+              "label": "Опции при точкуването",
+              "description": "Избери начин на точкуване",
+              "options": [
+                {
+                  "label": "Статично зададен резултат за всеки краен сценарий"
+                },
+                {
+                  "label": "Динамично изчисляване на резултата от потребителските отговори"
+                },
+                {
+                  "label": "Без точки"
+                }
+              ]
+            },
+            {
+              "label": "Include scores from interactions within the Branching Scenario",
+              "description": "If chosen scores from for instance Interactive Videos will be added to the total score obtained. If not chosen only scores specified in the feedback sections of the content items, branching questions and end scenarios will count."
+            }
+          ]
+        },
+        {
+          "label": "Behavioural settings",
+          "fields": [
+            {
+              "label": "Override require content finished",
+              "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide."
+            },
+            {
+              "label": "Required to watch",
+              "description": "Urges viewers to complete the Video, Interactive Vdeo and Course Presentation before proceeding with the scenario. This can be overridden on a content level"
+            },
+            {
+              "label": "Randomize Branching Questions",
+              "description": "Branching questions will be displayed in random order"
+            }
+          ]
+        },
+        {
+          "label": "Локализация",
+          "fields": [
+            {
+              "label": "Текст за бутона в началния екран",
+              "default": "Начало на курса"
+            },
+            {
+              "label": "Текст за бутона за крайния екран",
+              "default": "Започни отново този курс"
+            },
+            {
+              "label": "Текст за бутона на всеки екран",
+              "default": "Продължи"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "Етикет за резултата на крайния прозорец",
+              "default": "Вашият резултат:"
+            },
+            {
+              "label": "Label for score on the end screen",
+              "default": "Your score:"
+            },
+            {
+              "label": "Aria label for fullscreen button",
+              "default": "Fullscreen"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

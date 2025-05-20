@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Aukerako Erantzunen Editorea",
+      "fields": [
+        {
+          "label": "Erantzuna"
+        },
+        {
+          "label": "Aukera erabilgarriak",
+          "entity": "aukera",
+          "field": {
+            "label": "Aukera",
+            "fields": [
+              {
+                "label": "Testua"
+              },
+              {
+                "label": "Hurrengo edukia (-1 azken pantaila da)"
+              },
+              {
+                "label": "Feedbacka",
+                "fields": [
+                  {
+                    "label": "Feedbackaren titulua"
+                  },
+                  {
+                    "label": "Feedbackaren testua"
+                  },
+                  {
+                    "label": "Feedbackaren irudia"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Afbeeldingen",
+      "field": {
+        "label": "Afbeeldingsdia",
+        "fields": [
+          {
+            "label": "Afbeeldingsdia"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Beeldverhouding",
+      "description": "Automatisch betekent een vaste beeldverhouding die vanzelf wordt bepaald op basis van de beelden",
+      "options": [
+        {
+          "label": "Automatisch"
+        },
+        {
+          "label": "Aangepast"
+        },
+        {
+          "label": "Niet gefixeerd"
+        }
+      ]
+    },
+    {
+      "label": "Instellingen beeldverhouding",
+      "fields": [
+        {
+          "label": "De breedte van de beeldverhouding",
+          "description": "Als je hier 4 en 3 voor de hoogte gebruikt, dan is de beeldverhouding 4:3"
+        },
+        {
+          "label": "De hoogte van de beeldverhouding",
+          "description": "Als je hier 3 en 4 voor de breedte gebruikt, dan is de beeldverhouding 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Toegankelijkheid van afbeeldingsschuifregelaar",
+      "fields": [
+        {
+          "label": "Label voor \"Volgende dia\"-knoppen",
+          "default": "Volgende afbeelding",
+          "description": "Dit wordt alleen gebruikt voor schermlezers. Het wordt niet getoond."
+        },
+        {
+          "label": "Label voor \"Vorige dia\"-knoppen",
+          "default": "Vorige afbeelding",
+          "description": "Dit wordt alleen gebruikt voor schermlezers. Het wordt niet getoond."
+        },
+        {
+          "label": "Label voor \"Dia\"-knoppen",
+          "default": "Ga naar afbeelding %slide",
+          "description": "Dit wordt alleen gebruikt voor schermlezers. Het wordt niet getoond. %slide is een variabele en zal worden vervangen door het afbeeldingsnummer."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Dallanma Senaryo Editörü",
+      "fields": [
+        {
+          "label": "Başlık"
+        },
+        {
+          "label": "Başlangıç ​​ekranı",
+          "fields": [
+            {
+              "label": "Başlangıç ​​ekranı başlığı",
+              "placeholder": "Kursunuzun başlığı"
+            },
+            {
+              "label": "Başlat ekranı altyazısı",
+              "placeholder": "Kurs hakkında detaylar"
+            },
+            {
+              "label": "Başlangıç ​​ekranı görüntüsü"
+            },
+            {
+              "label": "Image alternative text"
+            }
+          ]
+        },
+        {
+          "label": "Bitiş ekranlarının listesi",
+          "field": {
+            "label": "Bitiş ekranı",
+            "fields": [
+              {
+                "label": "Başlık"
+              },
+              {
+                "label": "Metin"
+              },
+              {
+                "label": "Resim"
+              },
+              {
+                "label": "Puan",
+                "description": "Puan, varsayılan bitiş senaryosuna ulaşan kullanıcılar için H5P'den puan alan herhangi bir LMS (Ör: EBA), LRS veya diğer bağlı hizmete gönderilecektir."
+              },
+              {
+                "label": "İçerik Kimliği"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Dallanma senaryosu içeriğinin listesi",
+          "entity": "içerik",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "İçerik başlığını görünümde göster",
+                "description": "Seçilirse, kullanıcı bu içeriğin üstündeki üst çubukta içerik başlığını görecektir."
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Proceed"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Puanlama seçenekleri",
+          "fields": [
+            {
+              "label": "Puanlama seçenekleri",
+              "description": "Puanlama türünü seçin",
+              "options": [
+                {
+                  "label": "Her bitiş senaryosu için statik olarak belirlenen puan"
+                },
+                {
+                  "label": "Kullanıcı yanıtlarından puanı dinamik olarak hesaplayın"
+                },
+                {
+                  "label": "Puanlama yok"
+                }
+              ]
+            },
+            {
+              "label": "Dallanma Senaryosu içindeki etkileşimlerden alınan puanları dahil et",
+              "description": "Örneğin Etkileşimli Videolardan seçilen puanlar, elde edilen toplam puana eklenecektir. Yalnızca içerik öğelerinin geri bildirim bölümlerinde belirtilen puanlar seçilmezse, dallanma soruları ve bitiş senaryoları sayılacaktır."
+            }
+          ]
+        },
+        {
+          "label": "Etkinlik Ayarları",
+          "fields": [
+            {
+              "label": "Geri gezinmeyi geçersiz kıl",
+              "description": "Geriye doğru gezinmeyi etkinleştirmek için bireysel ayarları geçersiz kılar"
+            },
+            {
+              "label": "İçerğinin tamamlanması gerekir ayarını geçersiz kıl",
+              "description": "\"Devam\" düğmesini etkinleştirmeden önce içeriğin tamamlanmasını gerektiren bireysel ayarları geçersiz kılar. İçerik \"bitti\" olarak belirtilmiyorsa hiçbir etkisi olmayacak. Ör: görüntü ve sunum tek slayttan oluşuyorsa."
+            },
+            {
+              "label": "Randomize Branching Questions",
+              "description": "Branching questions will be displayed in random order"
+            }
+          ]
+        },
+        {
+          "label": "Bölge ve dil seçenekleri",
+          "fields": [
+            {
+              "label": "Başlangıç ​​ekranındaki düğme için metin",
+              "default": "Kursa başla"
+            },
+            {
+              "label": "Bitiş ekranındaki düğme için metin",
+              "default": "Kursu yeniden başlat"
+            },
+            {
+              "label": "Her bir kitaplık ekranındaki geri düğmesi ve dallanma soruları için metin",
+              "default": "Geri"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "Bir videoyu tekrar oynatmak için kullanılan düğmenin metni",
+              "default": "Videoyu tekrar oynat"
+            },
+            {
+              "label": "Bitiş ekranında puan etiketi",
+              "default": "Puanın:"
+            },
+            {
+              "label": "Tam ekran düğmesi için alan etiketi",
+              "default": "Tam ekran"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

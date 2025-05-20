@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label":"عناصر الاستبيان",
+      "widgets":[
+        {
+          "label":"افتراضي"
+        }
+      ],
+      "entity":"element",
+      "field":{
+        "label":"اختر المكتبة",
+        "fields":[
+          {
+            "label":"مكتبة",
+            "description":"اختر مكتبة"
+          },
+          {
+            "label":"حقل مطلوب"
+          }
+        ]
+      }
+    },
+    {
+      "label":"خيارات شاشة النجاح",
+      "fields":[
+        {
+          "label":"تمكين شاشة النجاح"
+        },
+        {
+          "label":"أضف صورة شاشة النجاح",
+          "fields":[
+            {
+              "label":"استبدال ايقونة النجاح مع الصوورة"
+            }
+          ]
+        },
+        {
+          "label":"النص الذي سيتم عرضه عند الإرسال",
+          "default":"You have completed the questionnaire."
+        }
+      ]
+    },
+    {
+      "label":"UI عناصر",
+      "fields":[
+        {
+          "label": "Button labels",
+          "fields": [
+            {
+              "label":"تسمية الزر السابق",
+              "default":"Back"
+            },
+            {
+              "label":"تسمية زر المتابعة",
+              "default":"Continue"
+            },
+            {
+              "label":"تسمية الزر التالي",
+              "default":"Next"
+            },
+            {
+              "label":"تسمية زر الارسال",
+              "default":"Submit"
+            }
+          ]
+        },
+        {
+          "label":"إمكانية الوصول",
+          "fields":[
+            {
+              "label":"الرسالة المطلوبة لتسمية زر الخروج",
+              "default":"Close error message"
+            },
+            {
+              "label":"نص شريط الانجاز",
+              "default":"Question %current of %max",
+              "description":"Used to tell assistive technologies what question it is. Variables: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label":"الرسالة المطلوبة",
+          "default":"This question requires an answer",
+          "description":"سيظهر إذا كان هذا الحقل بدون إجابة ويتطلبه نوع محتوى المجمع"
+        },
+        {
+          "label":"نص رمز مطلوب",
+          "default":"required",
+          "description":"النص الذي سيصاحب علامة النجمة للإشارة إلى أن السؤال مطلوب"
+        },
+        {
+          "label":"عنوان شاشة التقديم",
+          "default":"You successfully answered all of the questions"
+        },
+        {
+          "label":"العنوان الفرعي لشاشة التقديم",
+          "default":"Click below to submit your answers"
+        }
+      ]
+    }
+  ]
+}

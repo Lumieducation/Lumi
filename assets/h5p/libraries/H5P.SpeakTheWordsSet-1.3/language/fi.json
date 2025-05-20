@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Johdanto",
+      "fields": [
+        {
+          "label": "Näytä johdanto"
+        },
+        {
+          "label": "Johdannon kuva"
+        },
+        {
+          "label": "Vapaaehtoinen teksti kuvaamaan johdannon kuvaa."
+        },
+        {
+          "label": "Otsikko"
+        },
+        {
+          "label": "Johdannon otsikko",
+          "description": "Tämä otsikko näytetään johdantotekstin yläpuolella."
+        }
+      ]
+    },
+    {
+      "label": "Kysymykset",
+      "widgets": [
+        {
+          "label": "Oletus"
+        }
+      ],
+      "entity": "Kysymys",
+      "field": {
+        "label": "Kysymys"
+      }
+    },
+    {
+      "label": "Yleispalaute",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Oletus"
+            }
+          ],
+          "label": "Määritä räätälöity palaute pisterajoille",
+          "description": "Klikkaa \"Add range\" painiketta lisätäksesi niin monta pisterajariviä kuin tarvitset. Esimerkki: 0-20% Huono arvosana, 21-91% Keskinkertainen arvosana, 91-100% Loistava arvosana!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "Pisteraja"
+              },
+              {},
+              {
+                "label": "Pisterajan palaute",
+                "placeholder": "Syötä palaute tähän"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Etiketit ja tekstit",
+      "fields": [
+        {
+          "label": "Johdanto-painikkeen teksti",
+          "default": "Aloita kurssi!"
+        },
+        {
+          "label": "Tulosruudun teksti",
+          "default": "Tuloksesi:"
+        },
+        {
+          "label": "Näytä vastaukset painikkeen teksti",
+          "default": "Näytä vastaukset"
+        },
+        {
+          "label": "Yritä uudelleen painikkeen teksti",
+          "default": "Yritä uudelleen"
+        },
+        {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
+          "label": "Ruudunlukijan seuraava kysymys teksti",
+          "default": "Seuraava kysymys"
+        },
+        {
+          "label": "Ruudunlukijan edellinen kysymys teksti",
+          "default": "Edellinen kysymys"
+        },
+        {
+          "label": "Navigatiopalkin otsikko.",
+          "description": "Kysymysten otsikot navigaatiopalkissa. Muuttuja \":num\" korvataan dian numerolla.",
+          "default": "Dia :num"
+        },
+        {
+          "label": "Vastatun dian estettömyysteksti ruudunlukijalle",
+          "default": "Vastattu"
+        },
+        {
+          "label": "Aktiivisen dian osoittava teksti ruudunlukijoille",
+          "default": "Tällä hetkellä aktiivinen dia"
+        }
+      ]
+    }
+  ]
+}

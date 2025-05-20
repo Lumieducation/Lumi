@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Editor de Três Imagens",
+      "fields": [
+        {
+          "label": "Cenas",
+          "entity": "Cena",
+          "field": {
+            "fields": [
+              {
+                "label": "Tipo de cena",
+                "options": [
+                  {
+                    "label": "Imagem 360"
+                  },
+                  {
+                    "label": "Imagem estática"
+                  }
+                ]
+              },
+              {
+                "label": "Mostrar o botão \"Voltar\"",
+                "description": "Mostra o botão para navegar para sua cena anterior"
+              },
+              {},
+              {
+                "label": "Título da cena",
+                "description": "Utilizado para identificar a cena"
+              },
+              {
+                "label": "Plano de Fundo da Cena"
+              },
+              {
+                "label": "Descrição da cena",
+                "description": "O texto que pode descrever a cena para o utilizador final"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Etiqueta",
+                      "description": "Se for deixado em branco, nenhum etiqueta será exibido e tentaremos usar o campo de título para leitores de ecrã"
+                    },
+                    {
+                      "label": "Definições de Etiqueta",
+                      "fields": [
+                        {
+                          "label": "Posição do etiqueta",
+                          "description": "Escolha onde o etiqueta deve aparecer",
+                          "options": [
+                            {
+                              "label": "Usar configuração comportamental"
+                            },
+                            {
+                              "label": "Alinhado à direita"
+                            },
+                            {
+                              "label": "Alinhado à esquerda"
+                            },
+                            {
+                              "label": "Alinhado ao topo"
+                            },
+                            {
+                              "label": "Alinhado abaixo"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Mostrar etiqueta",
+                          "description": "Se estiverem escondido - as etiquetas só aparecerão com o mouse",
+                          "options": [
+                            {
+                              "label": "Usar configuração comportamental"
+                            },
+                            {
+                              "label": "Mostrar"
+                            },
+                            {
+                              "label": "Oculto"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Estilo de botão",
+                "description": "Decidir como os botões que estão apontando para esta cena deverão parecer. Para cenas que são estáticas e não levam para novas cenas, nós recomendamos o botão \"Mais informações\".",
+                "options": [
+                  {
+                    "label": "Nova cena (seta)"
+                  },
+                  {
+                    "label": "Mais informações (extra)"
+                  }
+                ]
+              },
+              {
+                "label": "Faixa de Áudio",
+                "description": "Adicione uma faixa de áudio específica para esta cena."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Faixa de áudio"
+        }
+      ]
+    },
+    {
+      "label": "Configurações Comportamentais",
+      "description": "Estas opções permitem-lhe controlar a forma como o mundo se comporta.",
+      "fields": [
+        {
+          "label": "Áudio Global",
+          "description": "Adicione uma faixa de áudio que esta disponível para todas as cenas, por padrão."
+        },
+        {
+          "label": "Qualidade de renderização de cenas",
+          "description": "Escolha o segmento de altura e largura para renderizar a cena. Isto afetará diretamente o nível de qualidade da cena. .Isto afeta diretamente o nível de qualidade da cena, tente aumentar a qualidade se uma cena parecer \"em bloco\" ou \"ondas\" for vista dentro das cenas. Perceba que quanto maior a qualidade maior o tempo para renderizar e carregar.",
+          "options": [
+            {
+              "label": "Alta Qualidade (128x128)"
+            },
+            {
+              "label": "Qualidade Média (64x64)"
+            },
+            {
+              "label": "Baixa Qualidade (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Definições de etiqueta",
+          "fields": [
+            {
+              "label": "Posição do etiqueta",
+              "description": "Posição padrão do etiqueta. A posição pode ser anulada por interação",
+              "options": [
+                {
+                  "label": "Alinhado à direita"
+                },
+                {
+                  "label": "Alinhado à esquerda"
+                },
+                {
+                  "label": "Alinhado ao topo"
+                },
+                {
+                  "label": "Alinhado abaixo"
+                }
+              ]
+            },
+            {
+              "label": "Exibir etiquetas",
+              "description": "Se é desmarcado - os etiquetas serão exibidos apenas ao passar o mouse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Localizar",
+      "fields": [
+        {
+          "label": "Etiqueta Aria para tipo de conteúdo",
+          "default": "Passeio Virtual"
+        },
+        {
+          "label": "Etiqueta para reproduzir áudio",
+          "default": "Reproduzir faixa de áudio"
+        },
+        {
+          "label": "Etiqueta para pausar o áudio",
+          "default": "Pausar faixa de áudio"
+        },
+        {
+          "label": "Titulo do diálogo para cena",
+          "default": "Descrição da cena"
+        },
+        {
+          "label": "Etiqueta do botão para redefinir a câmera",
+          "default": "Redefinir câmera"
+        },
+        {
+          "label": "Etiqueta para o botão de diálogo de envio",
+          "default": "Caixa de diálogo Enviar"
+        },
+        {
+          "label": "Etiqueta para o botão de fechar a caixa de diálogo",
+          "default": "Fechar caixa de diálogo"
+        },
+        {
+          "label": "Etiqueta Aria para o botão expandir etiqueta",
+          "default": "Expandir o etiqueta visual"
+        },
+        {
+          "label": "Etiqueta para quando a imagem de fundo é carregada em cena 360",
+          "default": "Carregando imagem de fundo..."
+        },
+        {
+          "label": "Etiqueta para quando não houver guia do autor do conteúdo",
+          "default": "Sem guia do autor do conteúdo"
+        }
+      ]
+    }
+  ]
+}

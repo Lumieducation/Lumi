@@ -1,0 +1,135 @@
+{
+  "semantics": [
+    {
+      "description": "Ievada teksts (maksimums 100 rakstzīmes)",
+      "label": "Ievads"
+    },
+    {
+      "label": "Testa veids",
+      "options": [
+        {
+          "label": "Aritmētisko operāciju tests"
+        },
+        {
+          "label": "Lineāro vienādojumu tests"
+        }
+      ]
+    },
+    {
+      "label": "Aritmētikas veids",
+      "options": [
+        {
+          "label": "Saskaitīšana"
+        },
+        {
+          "label": "Atņemšana"
+        },
+        {
+          "label": "Reizināšana"
+        },
+        {
+          "label": "Dalīšana"
+        }
+      ]
+    },
+    {
+      "label": "Vienādojuma veids",
+      "options": [
+        {
+          "label": "Pamata [ 3x = 12 ]"
+        },
+        {
+          "label": "Vidējs [ 4x - 3 = 13 ]"
+        },
+        {
+          "label": "Sarežģīts [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Iespējot daļskaitļus",
+      "description": "Iespējot, lai vienādojumos atļautu daļskaitļus."
+    },
+    {
+      "label": "Maksimālais jautājumu skaits"
+    },
+    {
+      "label": "Lietotāja saskarnes tulkojumi",
+      "fields": [
+        {
+          "label": "Vērtēšana testa laikā",
+          "default": "Rezultāts:"
+        },
+        {
+          "label": "Laiks",
+          "default": "Laiks: @time"
+        },
+        {
+          "label": "Rezultātu lapas galvene",
+          "default": "Pabeigts!"
+        },
+        {
+          "label": "Sākšanas etiķete",
+          "default": "AIZIET!"
+        },
+        {
+          "label": "Sākšanas pogas etiķete",
+          "default": "Sākt"
+        },
+        {
+          "default": "Mēģināt vēlreiz",
+          "label": "Atkārtota mēģinājuma pogas etiķete"
+        },
+        {
+          "label": "Pareizās atbildes atskaņošanas teksts asistīvajām tehnoloģijām",
+          "default": "Pareizi"
+        },
+        {
+          "default": "Nepareizi. Pareizā atbilde bija :num",
+          "label": "Nepareizās atbildes atskaņošanas teksts asistīvajām tehnoloģijām"
+        },
+        {
+          "default": "Ilgums stundās, minūtēs un sekundēs.",
+          "label": "Taimera etiķete asistīvajām tehnoloģijām"
+        },
+        {
+          "label": "Jautājuma teksts asistīvajām tehnoloģijām",
+          "default": "Ar ko vienāds :arithmetic?"
+        },
+        {
+          "label": "Vienādojuma jautājuma teksts asistīvajām tehnoloģijām",
+          "default": "Vienādojumā :equation, ar ko vienāds :item?"
+        },
+        {
+          "label": "Vienādojuma mainīgā teksts asistīvajām tehnoloģijām",
+          "default": "Ar ko vienāds :item?"
+        },
+        {
+          "label": "Saskaitīšanas operatora teksts",
+          "default": "plus"
+        },
+        {
+          "label": "Atņemšanas operatora teksts",
+          "default": "mīnus"
+        },
+        {
+          "label": "Reizināšanas operatora teksts",
+          "default": "reiz"
+        },
+        {
+          "default": "dalīts ar",
+          "label": "Dalīšanas operatora teksts"
+        },
+        {
+          "label": "Vienādības zīmes teksts",
+          "default": "vienāds ar"
+        },
+        {
+          "label": "Slaida numura teksts",
+          "default": "Slaids :num no :total",
+          "description": "Paziņo pašreizējo slaidu un kopējo slaidu skaitu, mainīgie ir :num un :total"
+        }
+      ]
+    }
+  ]
+}

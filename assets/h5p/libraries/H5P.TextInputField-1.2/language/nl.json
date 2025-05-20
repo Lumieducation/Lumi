@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Beschrijving van invoerveld",
+      "description": "Beschrijving van wat de gebruiker moet invoeren."
+    },
+    {
+      "label": "Tijdelijke tekst",
+      "description": "Een tijdelijke tekst voor de gebruiker."
+    },
+    {
+      "label": "Maximum tekstlengte",
+      "description": "Maximum aantal tekens voor de tekst."
+    },
+    {
+      "label": "Invoerveld grootte",
+      "description": "De grootte van het invoerveld in aantal regels die het kan bevatten.",
+      "options": [
+        {
+          "label": "1 regel"
+        },
+        {
+          "label": "3 regels"
+        },
+        {
+          "label": "10 regels"
+        }
+      ]
+    },
+    {
+      "label": "Vereist veld",
+      "description": "Aanvinken om dit veld vereist te maken, de gebruiker moet alle vereiste velden beantwoorden om een document te kunnen exporteren."
+    },
+    {
+      "label": "Resterende tekens",
+      "default": "Resterende tekens: @chars",
+      "description": "Bericht voor resterende tekens. Je kunt @chars gebruiken wat zal worden vervangen door het bijbehorende aantal."
+    }
+  ]
+}

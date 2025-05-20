@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Editor de Preguntas de Puntos Chave en Imaxes",
+      "fields": [
+        {
+          "label": "Imaxe de fondo",
+          "fields": [
+            {
+              "label": "Imaxe de fondo",
+              "description": "Selecciona unha imaxe para usala como fondo da pregunta de puntos chave en imaxes."
+            }
+          ]
+        },
+        {
+          "label": "Puntos chave",
+          "description": "Arrastra e solta a figura desexada da barra de ferramentas para crear un novo punto chave. Preme dúas veces nun punto chave existente para editalo. Arrastra un punto chave para movelo. Tira da asa de redimensión na esquina inferior dereita para redimensionalo.",
+          "fields": [
+            {
+              "label": "Descrición da tarefa",
+              "description": "Instrucións para o usuario."
+            },
+            {
+              "label": "Punto chave",
+              "entity": "Punto chave",
+              "field": {
+                "label": "Punto chave",
+                "fields": [
+                  {
+                    "label": "Configuación de usuario",
+                    "fields": [
+                      {
+                        "label": "Correcto",
+                        "description": "Pode haber múltiples puntos correctos. Non obstante, o usuario recibe información sobre a corrección ou incorrección do punto inmediatemente despois de premer nel por primeira vez."
+                      },
+                      {
+                        "label": "Retroalimentación"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Configuración rexistrada"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Retroalimentación cando o usuario escolle un punto baleiro:",
+              "placeholder": "Non atopaches ningún punto chave, proba outra vez!"
+            },
+            {
+              "label": "Amosar retroalimentación como xanela emerxente"
+            },
+            {
+              "label": "Adaptación local",
+              "fields": [
+                {
+                  "label": "Texto para o botón reintentar",
+                  "default": "Reintentar"
+                },
+                {
+                  "label": "Texto para o botón pechar",
+                  "default": "Pechar"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Representación textual da barra de puntuación cando se usa un lector de pantalla",
+      "default": "Conseguiches :num puntos de :total"
+    },
+    {
+      "label": "Descrición para as tecnoloxías de asistencia do botón \"Reintentar\"",
+      "default": "Reintenta a tarefa. Borra todas as respostas e empeza a tarefa de novo."
+    }
+  ]
+}

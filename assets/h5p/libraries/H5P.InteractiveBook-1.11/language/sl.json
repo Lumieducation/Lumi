@@ -1,0 +1,205 @@
+{
+  "semantics": [
+    {
+      "label": "Omogoči naslovno stran",
+      "description": "Na strani udeleženci že pred vstopom preberejo informacije o knjigi."
+    },
+    {
+      "label": "Naslovna stran",
+      "fields": [
+        {
+          "label": "Opis naslovne strani",
+          "description": "Besedilo opisuje vsebino knjige."
+        },
+        {
+          "label": "Medij naslovne strani",
+          "description": "Neobvezen medij za dodaten opis vsebine knjige."
+        }
+      ]
+    },
+    {
+      "label": "Strani",
+      "entity": "Stran",
+      "widgets": [
+        {
+          "label": "Privzeto"
+        }
+      ],
+      "field": {
+        "label": "Element",
+        "fields": [
+          {
+            "label": "Stran"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Nastavitve interakcije",
+      "fields": [
+        {
+          "label": "Osnovna barva",
+          "description": "Določitev osnovne barve za celotno barvno shemo knjige. Zagotovite dovolj visok kontrast."
+        },
+        {
+          "label": "Kazalo vsebin prikaži privzeto",
+          "description": "Omogočena nastavitev kazalo vsebin prikaže ob odprtju knjige."
+        },
+        {
+          "label": "Prikaži indikatorje napredovanja",
+          "description": "Indikatorji udeležencu sporočijo status ogleda/zaključenosti posamezne strani."
+        },
+        {
+          "label": "Omogoči samodejno beleženje napredovanja",
+          "description": "Brez samodejnega beleženja napredovanja, morajo udeleženci napredovanje potrditi s pomočjo potrditvenega polja."
+        },
+        {
+          "label": "Prikaži stran s povzetkom",
+          "description": "Udeležencem se na dodatni strani prikaže povzetek interakcij oz. napredovanja."
+        },
+        {
+          "label": "Enable \"Restart\" button",
+          "description": "When enabled the user can initiate a restart on the summary page."
+        }
+      ]
+    },
+    {
+      "label": "Besedilo za \"Preberi\"",
+      "default": "Preberi"
+    },
+    {
+      "label": "Besedilo za \"Prikaži 'kazalo vsebine'\"",
+      "default": "Prikaži 'kazalo vsebine'"
+    },
+    {
+      "label": "Besedilo za \"Skrij 'kazalo vsebine'\"",
+      "default": "Skrij 'kazalo vsebine'"
+    },
+    {
+      "label": "Besedilo za \"Naslednja stran\"",
+      "default": "Naslednja stran"
+    },
+    {
+      "label": "Besedilo za \"Prejšnja stran\"",
+      "default": "Prejšnja stran"
+    },
+    {
+      "label": "Besedilo za \"Stran zaključena!\"",
+      "default": "Stran zaključena!"
+    },
+    {
+      "label": "Besedilo za \"Zaključeno @pages od @total\". @pages in @total sta spremenljivki.",
+      "default": "Zaključeno @pages od @total"
+    },
+    {
+      "label": "Besedilo za \"Nezaključena stran\"",
+      "default": "Nezaključena stran"
+    },
+    {
+      "label": "Besedilo za \"Na vrh\"",
+      "default": "Na vrh"
+    },
+    {
+      "label": "Besedilo za \"Stran zaključena\"",
+      "default": "Stran zaključena"
+    },
+    {
+      "label": "Besedilo za celozaslonski način",
+      "default": "Celozaslonski način"
+    },
+    {
+      "label": "Besedilo za zaključek celozaslonskega načina",
+      "default": "Zapusti celozaslonski način"
+    },
+    {
+      "label": "Napredek ogleda strani v knjigi",
+      "description": "\"@count\" in \"@total\" sta spremenljivki.",
+      "default": "Strani: @count od @total"
+    },
+    {
+      "label": "Napredek interakcij v knjigi",
+      "description": "\"@count\" in \"@total\" sta spremenljivki.",
+      "default": "Interakcije: @count od @total"
+    },
+    {
+      "label": "Besedilo za \"Oddaj poročilo\"",
+      "default": "Oddaj poročilo"
+    },
+    {
+      "label": "Besedilo za gumb \"Poskusi ponovno\"",
+      "default": "Poskusi ponovno"
+    },
+    {
+      "label": "Naslov strani s povzetkom",
+      "default": "Povzetek"
+    },
+    {
+      "label": "Besedilo za \"Vse interakcije\"",
+      "default": "Vse interakcije"
+    },
+    {
+      "label": "Besedilo za \"Nezaključene interakcije\"",
+      "default": "Nezaključene interakcije"
+    },
+    {
+      "label": "Dosežek",
+      "description": "\"@score\" in \"@maxscore\" sta spremenljivki.",
+      "default": "@score / @maxscore"
+    },
+    {
+      "label": "Napredek v interakcijah knjige po straneh",
+      "description": "\"@left\" in \"@max\" sta spremenljivki.",
+      "default": "Zaključene interakcije: @left od @max"
+    },
+    {
+      "label": "Besedilo za \"Ni interakcij\"",
+      "default": "Ni interakcij"
+    },
+    {
+      "label": "Besedilo za \"Dosežek\"",
+      "default": "Dosežek"
+    },
+    {
+      "label": "Besedilo za gumb \"Povzetek\"",
+      "default": "Povzetek"
+    },
+    {
+      "label": "Besedilo za \"Ni interakcij\"",
+      "default": "Ni interakcij"
+    },
+    {
+      "label": "Besedilo za \"Pred ogledom povzetka je treba zaključiti vsaj eno interakcijo.\"",
+      "default": "Pred ogledom povzetka je treba zaključiti vsaj eno interakcijo."
+    },
+    {
+      "label": "Besedilo za \"Odgovori so oddani v pregled!\"",
+      "default": "Odgovori so oddani v pregled!"
+    },
+    {
+      "label": "Besedilo za indikator Ogled knjige",
+      "default": "Ogled knjige"
+    },
+    {
+      "label": "Besedilo za indikator Zaključene interakcije",
+      "default": "Zaključene interakcije"
+    },
+    {
+      "label": "Besedilo za indikator Skupen dosežek",
+      "default": "Skupen dosežek"
+    },
+    {
+      "label": "Besedilo za dostopnost vsebin",
+      "fields": [
+        {
+          "label": "Besedilo za napredek ogleda strani",
+          "description": "Nadomestno besedilo za vizualizacijo napredka ogleda strani. @page in @total sta spremenljivki.",
+          "default": "Stran @page od @total."
+        },
+        {
+          "label": "Besedilo za kazalo vsebine",
+          "default": "Kazalo vsebine za navigacijo"
+        }
+      ]
+    }
+  ]
+}

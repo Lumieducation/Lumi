@@ -1,0 +1,374 @@
+{
+  "semantics": [
+    {
+      "label": "Vyombo vya habari",
+      "fields": [
+        {
+          "label": "Aina",
+          "description": "Vyombo vya habari vya hiari vya kuonyesha juu ya swali."
+        },
+        {
+          "label": "Zima ukuzaji wa picha"
+        }
+      ]
+    },
+    {
+      "label": "Maelezo ya kazi",
+      "description": "Elezea kazi yako hapa.",
+      "placeholder": "Tafadhali sikiliza kwa makini na uandike unachosikia."
+    },
+    {
+      "label": "Sentensi",
+      "widgets": [
+        {
+          "label": "Chaguo-msingi"
+        }
+      ],
+      "entity": "Sentensi",
+      "field": {
+        "label": "Sentensi",
+        "fields": [
+          {
+            "label": "Maelezo",
+            "description": "Kwa hiari unaweza kuweka maelezo rahisi juu ya eneo la ingizo la maandishi, ni muhimu kwa mfano kwa mazungumzo."
+          },
+          {
+            "label": "Sampuli ya sauti",
+            "description": "Sentensi imesemwa kwa kasi ya kawaida"
+          },
+          {
+            "label": "Sampuli ya sauti ya polepole",
+            "description": "Sentensi imesemwa kwa kasi ya polepole"
+          },
+          {
+            "label": "Maandishi",
+            "description": "Maandishi ambayo yanapaswa kuandikwa. Unaweza kuongeza tahajia mbadala kwa neno kwa kuongeza mstari wima (|) nyuma ikifuatiwa na mbadala."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Maoni ya Jumla",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Chaguo-msingi"
+            }
+          ],
+          "label": "Bainisha maoni maalum kwa masafa yoyote ya alama",
+          "description": "Bofya kitufe cha \"Ongeza masafa\" ili kuongeza masafa mengi unavyohitaji. Mfano: 0-20% Alama mbaya, 21-91% Alama ya Wastani, 91-100% Alama Nzuri!",
+          "entity": "masafa",
+          "field": {
+            "fields": [
+              {
+                "label": "Masafa ya Alama"
+              },
+              {
+                "label": "Maoni kwa masafa ya alama yaliyofafanuliwa",
+                "placeholder": "Jaza maoni"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Mipangilio ya tabia",
+      "description": "Chaguzi hizi zitakuwezesha kudhibiti jinsi kazi inavyofanya.",
+      "fields": [
+        {
+          "label": "Upeo wa juu wa majaribio",
+          "description": "Itapunguza idadi ya mara ambazo sampuli za kila sentensi zinaweza kusikilizwa."
+        },
+        {
+          "label": "Upeo wa juu wa majaribio kwa kasi ya polepole",
+          "description": "Itapunguza idadi ya mara ambazo sampuli za polepole za kila sentensi zinaweza kusikilizwa."
+        },
+        {
+          "label": "Zima chaguo la kusitisha",
+          "description": "Ikichaguliwa, kusitisha sauti wakati wa kucheza hakuwezekani."
+        },
+        {
+          "label": "Play button delay",
+          "description": "Optionally set a time period of up to three seconds that playing a button should be delayed. This is useful if you want to allow students to enter the text field before they start listening."
+        },
+        {
+          "label": "Changanya sentensi",
+          "description": "Bainisha ni lini sentensi zinafaa kuchanganywa.",
+          "options": [
+            {
+              "label": "Kamwe"
+            },
+            {
+              "label": "Mara moja wakati wa kuanza mazoezi"
+            },
+            {
+              "label": "Katika kila jaribio"
+            }
+          ]
+        },
+        {
+          "label": "Kuweka alama",
+          "fields": [
+            {
+              "label": "Puuza alama za uakifishaji",
+              "description": "Ikichaguliwa, alama za uakifishaji hazitazingatiwa kwa kupata alama."
+            },
+            {
+              "label": "Hali ya makosa sifuri",
+              "description": "Ikiwa imechaguliwa, ni majibu sahihi pekee yatazingatiwa kwa kupata alama. Makosa hayataadhibiwa."
+            },
+            {
+              "label": "Thamani ya chapa",
+              "description": "Amua ni kwa kiwango gani makosa ya kuandika (neno lenye herufi 3-9: hadi kosa 1, neno lenye herufi zaidi ya 9: hadi makosa 2) huhesabiwa kuwa kosa halisi.",
+              "options": [
+                {
+                  "label": "100 %"
+                },
+                {
+                  "label": "50 %"
+                },
+                {
+                  "label": "0 %"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Maandishi",
+          "fields": [
+            {
+              "label": "Onyesho maalum la kuchapa",
+              "description": "Ikiwa imechaguliwa, makosa ya kuchapa yataonyeshwa kwa mtindo maalum unaoyatofautisha na makosa ya wazi."
+            },
+            {
+              "label": "Mwelekeo wa kuandika",
+              "description": "Weka ikiwa lugha ya sentensi ni kulia kwenda kushoto au kushoto kwenda kulia.",
+              "options": [
+                {
+                  "label": "Utambuzi kiotomatiki"
+                },
+                {
+                  "label": "Kulia-hadi-kushoto"
+                },
+                {
+                  "label": "Kushoto-hadi-kulia"
+                }
+              ]
+            },
+            {
+              "label": "Mgawanyiko wa herufi",
+              "description": "Washa ikiwa herufi mahususi (kwa mfano herufi za Kichina za Han) zinapaswa kugawanywa katika maneno tofauti kiotomatiki."
+            }
+          ]
+        },
+        {
+          "label": "Uwasilishaji wa maoni",
+          "fields": [
+            {
+              "label": "Kitenganishi cha maneno",
+              "description": "Bainisha kitenganishi cha maneno tofauti na herufi ya nafasi ili kusaidia suluhisho mbadala zenye idadi tofauti ya maneno."
+            },
+            {
+              "label": "Uwasilishaji wa suluhisho mbadala",
+              "description": "Bainisha ni njia zipi mbadala zinazopaswa kuwasilishwa kwa maneno yasiyo sahihi au yanayokosekana kwenye suluhisho.",
+              "options": [
+                {
+                  "label": "Onyesha mbadala wa kwanza pekee"
+                },
+                {
+                  "label": "Onyesha njia mbadala zote"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Wezesha \"Jaribu tena\""
+        },
+        {
+          "label": "Wezesha kitufe cha \"Onyesha suluhisho\""
+        },
+        {
+          "label": "Onyesha suluhisho lililochaguliwa"
+        }
+      ]
+    },
+    {
+      "label": "Kiolesura cha mtumiaji",
+      "fields": [
+        {
+          "label": "Maoni ya jumla",
+          "description": "Unaweza kutumia vishikilia nafasi kadhaa ambavyo vitabadilishwa na nambari ya kutosha:@matches = idadi ya mechi, @total= makosa yote, @capped= makosa ya jumla,@wrong = maneno yasiyo sahihi, @added= maneno ya ziada, @missing= kukosa maneno,@typo = makosa ya kuandika",
+          "default": "Umefanya @totalmakosa."
+        },
+        {
+          "label": "Maoni ya jumla (hali ya makosa sifuri)",
+          "description": "Unaweza kutumia vishikilia nafasi kadhaa ambavyo vitabadilishwa na nambari ya kutosha:@matches = idadi ya mechi, @total= makosa yote, @wrong= makosa ya jumla,@added = maneno ya ziada, @missing= kukosa maneno, @typo= makosa ya kuandika",
+          "default": "Umeingiza@total neno/maneno kwa usahihi na@typo neno/maneno yenye makosa madogo."
+        },
+        {
+          "label": "Maandishi ya kitufe cha \"Weka alama\"",
+          "default": "Weka alama"
+        },
+        {
+          "label": "Maandishi ya kitufe cha \"Wasilisha\"",
+          "default": "Wasilisha"
+        },
+        {
+          "label": "Maandishi kwa kitufe cha \"Jaribu tena\"",
+          "default": "Jaribu tena"
+        },
+        {
+          "label": "Maandishi kwa kitufe cha \"Onyesha suluhisho\"",
+          "default": "Onyesha suluhisho"
+        },
+        {
+          "label": "Ujumbe wa sauti hautumiki",
+          "default": "Kivinjari chako hakiungi mkono sauti hii."
+        }
+      ]
+    },
+    {
+      "label": "Kisoma maandishi",
+      "fields": [
+        {
+          "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Weka alama\"",
+          "default": "Weka alama majibu. Majibu yatatiwa alama kuwa sahihi, siyo sahihi au haijajibiwa."
+        },
+        {
+          "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Onyesha Suluhisho\"",
+          "default": "Onyesha suluhisho hilo. Kazi hiyo itawekwa alama na suluhisho lake sahihi."
+        },
+        {
+          "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Jaribu tena\"",
+          "default": "Jaribu tena kazi hiyo. Weka upya majibu yote na uanze kazi tena."
+        },
+        {
+          "label": "Kitufe cha Cheza",
+          "default": "Cheza"
+        },
+        {
+          "label": "Kitufe cha cheza polepole",
+          "default": "Cheza polepole"
+        },
+        {
+          "label": "Inajaribu kushoto (maandishi kwa visoma maandishii na maandishi ya juu)",
+          "description": "@number itabadilishwa na nambari ya sasa ya majaribio yaliyosalia.",
+          "default": "Idadi ya majaribio yaliyosalia:@number"
+        },
+        {
+          "label": "Isiyo na kikomo (maandishi kwa visoma maandishi na maandishi ya juu)",
+          "default": "isiyo na kikomo"
+        },
+        {
+          "label": "Ingiza eneo la maandishi",
+          "default": "Ingiza kile ulichosikia."
+        },
+        {
+          "label": "Matokeo yako",
+          "description": "@score itabadilishwa na idadi ya pointi.@total itabadilishwa na pointi za juu zinazowezekana.",
+          "default": "Umepata @score kati ya alama@total"
+        },
+        {
+          "label": "Suluhisho",
+          "default": "Suluhisho"
+        },
+        {
+          "label": "Sentensi",
+          "default": "Sentensi"
+        },
+        {
+          "label": "Kipengee",
+          "default": "Kipengee"
+        },
+        {
+          "label": "Sahihi",
+          "default": "sahihi"
+        },
+        {
+          "label": "Siyo sahihi",
+          "default": "siyo sahihi"
+        },
+        {
+          "label": "Kosa dogo",
+          "default": "kosa dogo"
+        },
+        {
+          "label": "Neno au ishara haipo",
+          "default": "haipo"
+        },
+        {
+          "label": "Neno au ishara imeongezwa",
+          "default": "imeongezwa"
+        },
+        {
+          "label": "Suluhisho sahihi",
+          "default": "Lilipaswa kuwa"
+        },
+        {
+          "label": "Au",
+          "default": "au"
+        },
+        {
+          "label": "Pointi",
+          "default": "pointi"
+        },
+        {
+          "label": "Pointi",
+          "default": "pointi"
+        },
+        {
+          "label": "Kipindi",
+          "default": "kipindi"
+        },
+        {
+          "label": "Alama ya mshangao",
+          "default": "alama ya mshangao"
+        },
+        {
+          "label": "Alama ya kuuliza",
+          "default": "alama ya kuuliza"
+        },
+        {
+          "label": "Mkato",
+          "default": "mkato"
+        },
+        {
+          "label": "Nukuu moja",
+          "default": "nukuu moja"
+        },
+        {
+          "label": "Nukuu mara mbili",
+          "default": "nukuu mara mbili"
+        },
+        {
+          "label": "Koloni",
+          "default": "koloni"
+        },
+        {
+          "label": "Nusu koloni",
+          "default": "nusu koloni"
+        },
+        {
+          "label": "Jumlisha",
+          "default": "jumlisha"
+        },
+        {
+          "label": "Toa",
+          "default": "toa"
+        },
+        {
+          "label": "Nyota",
+          "default": "nyota"
+        },
+        {
+          "label": "Mkwaju mbele",
+          "default": "mkwaju mbele"
+        }
+      ]
+    }
+  ]
+}

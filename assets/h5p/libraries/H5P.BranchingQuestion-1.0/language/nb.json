@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Branching Question Editor",
+      "fields": [
+        {
+          "label": "Spørsmål"
+        },
+        {
+          "label": "Tilgjengelige alternativer",
+          "entity": "alternativ",
+          "field": {
+            "label": "Alternativ",
+            "fields": [
+              {
+                "label": "Tekst"
+              },
+              {
+                "label": "Neste innhold (-1 betyr sluttskjermen)"
+              },
+              {
+                "label": "Tilbakemelding",
+                "fields": [
+                  {
+                    "label": "Tilbakemeldingstittel"
+                  },
+                  {
+                    "label": "Tilbakemeldingstekst"
+                  },
+                  {
+                    "label": "Tilbakemeldingsbilde"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

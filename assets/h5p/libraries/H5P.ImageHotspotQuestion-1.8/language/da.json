@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Image Hotspot Question Editor",
+      "fields": [
+        {
+          "label": "Background image",
+          "fields": [
+            {
+              "label": "Background image",
+              "description": "Select an image to use as background for the image hotspot question."
+            }
+          ]
+        },
+        {
+          "label": "Hotspots",
+          "description": "Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
+          "fields": [
+            {
+              "label": "Task description",
+              "description": "Instructions to the user."
+            },
+            {
+              "label": "Hotspot",
+              "entity": "Hotspot",
+              "field": {
+                "label": "Hotspot",
+                "fields": [
+                  {
+                    "label": "userSettings",
+                    "fields": [
+                      {
+                        "label": "Correct",
+                        "description": "There can be multiple correct hotspots. However, the user gets correct/incorrect feedback immediately after first click."
+                      },
+                      {
+                        "label": "Feedback"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "computedSettings"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Feedback if the user selects an empty spot:",
+              "placeholder": "Du fandt ingen hotspots. Prøv igen."
+            },
+            {
+              "label": "Show feedback as a popup"
+            },
+            {
+              "label": "Localization",
+              "fields": [
+                {
+                  "label": "Retry button text",
+                  "default": "Retry"
+                },
+                {
+                  "label": "Close button text",
+                  "default": "Close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Textual representation of the score bar for those using a readspeaker",
+      "default": "Du fik :num ud af :total point."
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Prøv igen. Dette fjerner alle svar og starter opgaven forfra. "
+    }
+  ]
+}

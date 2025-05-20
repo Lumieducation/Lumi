@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Arka plan resmi",
+      "description": "Arka planda gösterilecek resim."
+    },
+    {
+      "label": "Arka plan resmi için alt metin.",
+      "description": "Tarayıcı resmi yükleyemezse, bunun yerine bu metin görüntülenecektir. Ayrıca yardımcı teknolojiler tarafından da kullanılır."
+    },
+    {
+      "label": "Görsel Etkin Nokta İşaretleme (Hotspot) Simgesi",
+      "options": [
+        {
+          "label": "Tanımlı simgeler"
+        },
+        {
+          "label": "Yüklenen resim"
+        }
+      ]
+    },
+    {
+      "label": "Tanımlı simgeler",
+      "description": "Etkin nokta için önceden tanımlanmış bir simge kullanma.",
+      "options": [
+        {
+          "label": "Artı"
+        },
+        {
+          "label": "Tire"
+        },
+        {
+          "label": "Zaman"
+        },
+        {
+          "label": "Kontrol"
+        },
+        {
+          "label": "Soru"
+        },
+        {
+          "label": "Bilgi"
+        },
+        {
+          "label": "Ünlem"
+        }
+      ]
+    },
+    {
+      "label": "Yüklenen resim",
+      "description": "Etkin nokta simegesi için kendiniz resim yükleyin.<br /> 75px x 75px boyutu önerilmektedir."
+    },
+    {
+      "label": "Etkin nokta rengi",
+      "description": "Etkin noktaların rengi"
+    },
+    {
+      "entity": "hotspot",
+      "label": "Hotspots",
+      "field": {
+        "label": "Hotspot",
+        "fields": [
+          {
+            "label": "Etkin nokta pozisyonu",
+            "description": "Etkin noktayı yerleştirmek için küçük noktaya tıklayın."
+          },
+          {
+            "label": "Tüm arka plan resmini örtün.",
+            "description": "Kullanıcı etkin noktayı tıkladığında açılır pencere tüm arka plan resmini kaplar."
+          },
+          {
+            "label": "Başlık",
+            "description": "Optional header for the popup. This is used by assistive technologies."
+          },
+          {
+            "label": "açılır pencere içeriği",
+            "field": {
+              "label": "İçerik Öğesi"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Yardımcı teknoloji için etkin nokta etiketi",
+      "default": "Etkin nokta #num",
+      "description": "Bir etkin nokta için başlık belirtilmemişse, hangi etkin nokta öğesine gidildiğini seslendirmeye yardımcı olur. #num, etkin nokta numarasını değiştirmek için kullanılabilir."
+    },
+    {
+      "label": "Yardımcı teknolojileri kapat butonu etiketi",
+      "default": "Kapat"
+    },
+    {
+      "label": "Label for assistive technologies denoting that hotspot contains Audio/Video",
+      "default": "Contains Audio/Video"
+    }
+  ]
+}

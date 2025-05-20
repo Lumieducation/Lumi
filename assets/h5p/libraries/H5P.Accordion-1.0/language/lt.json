@@ -1,0 +1,36 @@
+{
+  "semantics": [
+    {
+      "label": "Skydeliai",
+      "entity": "skydelis",
+      "field": {
+        "label": "Turinys",
+        "entity": "turinys",
+        "fields": [
+          {
+            "label": "Pavadinimas"
+          },
+          {
+            "label": "Turinio tipas",
+            "entity": "turinys"
+          }
+        ]
+      }
+    },
+    {
+      "label": "H antraštės dydis (neturi įtakos elementų dydžiui)",
+      "description": "Antraštė - h naudojama žymoms. Numatyta, jog yra naudojama antraštė H2, bet jei žyma priklauso H2, naudokite H3. Antraštės neturi įtakos elementų dydžiui, tai naudojama tik semantiniams tikslams.",
+      "options": [
+        {
+          "label": "H2"
+        },
+        {
+          "label": "H3"
+        },
+        {
+          "label": "H4"
+        }
+      ]
+    }
+  ]
+}

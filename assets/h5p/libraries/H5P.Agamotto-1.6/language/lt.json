@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Antraštė",
+      "placeholder": "Čia galite pridėti pasirenkamą antraštę.",
+      "description": "Antraštė, kurią norite rodyti virš paveiksliuko"
+    },
+    {
+      "label": "Elementai",
+      "entity": "elementas",
+      "widgets": [
+        {
+          "label": "Numatytasis"
+        }
+      ],
+      "field": {
+        "label": "Elementas",
+        "fields": [
+          {
+            "label": "Paveikslėlis"
+          },
+          {
+            "label": "Pavadinimas",
+            "description": "Papildoma žymeklis skirtas varnelei. Įsitikinkite, kad jis nėra per ilgas, kitaip jis bus paslėptas."
+          },
+          {
+            "label": "Aprašymas",
+            "placeholder": "Mano paveikslėlio aprašymas...",
+            "description": "Pasirenkamas paveikslėlio aprašas"
+          },
+          {
+            "label": "Garsas",
+            "description": "Pasirenkamas garso įrašas, kuris grojamas, kai rodomas vaizdas."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Veikimo nustatymai",
+      "description": "Šios parinktys leis jums valdyti, kaip veikia užduotis.",
+      "fields": [
+        {
+          "label": "Pradžios paveikslėlis",
+          "description": "Nustatykite pradinio paveikslėlio numerį."
+        },
+        {
+          "label": "Užfiksuokite slankiklį",
+          "description": "Jei įjungta, slankiklis užsifiksuos vaizdo vietoje."
+        },
+        {
+          "label": "Rodyti varnelių žymes",
+          "description": "Jei įjungta, slankiklio juosta bus rodoma kiekviename vaizde."
+        },
+        {
+          "label": "Rodyti pavadinimus",
+          "description": "Jei suaktyvinta, slankiklio juostoje bus rodoma žyma vietoj varnelės arba kartu su varnele."
+        },
+        {
+          "label": "Fono spalvos skaidrumas",
+          "description": "Nustatykite spalvą, kurią rodys skaidriame fone keičiant vaizdus."
+        },
+        {
+          "label": "Paveiksliuko erdvė viso ekrano režimu",
+          "description": "Jei be vaizdų turite ir aprašymų, nustatykite, kiek procentų vietos vaizdai turėtų užimti viso ekrano režimu."
+        }
+      ]
+    },
+    {
+      "label": "Skaitymo garsiakalbis",
+      "fields": [
+        {
+          "label": "Paveikslėlis",
+          "default": "Paveikslėlis"
+        },
+        {
+          "label": "Paveikslėlių slankiklis",
+          "default": "Paveikslėlių slankiklis"
+        },
+        {
+          "label": "„Nutildyti“ pavadinimas",
+          "default": "Nutildyti, dabar įjungta."
+        },
+        {
+          "label": "Atšaukti nutildymą pavadinimui",
+          "default": "Įjungti, dabar nutildyta."
+        },
+        {
+          "label": "Viso ekrano mygtuko pavadinimas (įveskite)",
+          "default": "Įjungti viso ekrano režimą"
+        },
+        {
+          "label": "Viso ekrano mygtuko pavadinimas (išeiti)",
+          "default": "Išeiti iš viso ekrano režimo"
+        }
+      ]
+    }
+  ]
+}

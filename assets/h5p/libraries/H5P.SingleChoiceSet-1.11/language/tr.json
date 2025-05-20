@@ -1,0 +1,155 @@
+{
+  "semantics": [
+    {
+      "label": "Soru listesi",
+      "entity": "question",
+      "widgets": [
+        {
+          "label": "Varsayılan"
+        },
+        {
+          "label": "Metinsel"
+        }
+      ],
+      "field": {
+        "label": "Soru &amp; alternatifler",
+        "fields": [
+          {
+            "label": "soru"
+          },
+          {
+            "label": "Alternatifler - ilk alternatif doğru olanıdır.",
+            "entity": "answer",
+            "field": {
+              "label": "Alternatif"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Toplam geribildirim",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Varsayılan"
+            }
+          ],
+          "label": "Herhangi bir puan aralığı için özel geri bildirim tanımlayın",
+          "description": "İstediğiniz kadar aralık eklemek için \"Aralık ekle\" düğmesini tıklayın. Örnek: %0-20 Kötü, %21-91 Ortalama, %91-100 İyi!",
+          "entity": "Aralık",
+          "field": {
+            "fields": [
+              {
+                "label": "Puan Aralığı"
+              },
+              {},
+              {
+                "label": "Tanımlanmış puan aralığı için geri bildirim",
+                "placeholder": "Geri bildirimi doldurun"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Etkinlik Ayarları",
+      "fields": [
+        {
+          "label": "Otomatik devam et",
+          "description": "Automatically go to next question when alternative is selected. This needs to be turned off to make the content fully accessible when using a screen reader."
+        },
+        {
+          "label": "Doğru cevaplarda zaman aşımı",
+          "description": "Milisaniye cinsinden değer"
+        },
+        {
+          "label": "Yanlış cevaplarda zaman aşımı",
+          "description": "Milisaniye cinsinden değer"
+        },
+        {
+          "label": "Ses efektlerini etkinleştir"
+        },
+        {
+          "label": "\"Yeniden Dene\" düğmesini etkinleştir"
+        },
+        {
+          "label": "\"Çözümü Göster\" düğmesini etkinleştir"
+        },
+        {
+          "label": "Geçiş Yüzdesi",
+          "description": "Quizi geçmek için gerekli toplam puan yüzdesi."
+        }
+      ]
+    },
+    {
+      "label": "Tek seçim soru setinin metinlerini düzenle",
+      "fields": [
+        {
+          "label": "\"Sonraki\" düğmesi için etiket",
+          "default": "Sonraki soru"
+        },
+        {
+          "label": "\"Çözümü göster\" düğmesi için etiket",
+          "default": "Çözümü göster"
+        },
+        {
+          "label": "\"Yeniden dene\" düğmesi için etiket",
+          "default": "Yeniden dene"
+        },
+        {
+          "label": "Çözüm görünümünü göster başlığı",
+          "default": "Çözüm"
+        },
+        {
+          "label": "Doğru cevap için okuyucu metni",
+          "default": "Doğru!"
+        },
+        {
+          "label": "Yanlış cevap için okuyucu metni",
+          "default": "Yanlış!"
+        },
+        {
+          "label": "Option should have been selected",
+          "default": "Should have been selected"
+        },
+        {
+          "label": "Option should not have been selected",
+          "default": "Should not have been selected"
+        },
+        {
+          "label": "Geri bildirim sesini devre dışı bırakmak için \"sessiz\" düğmesinin etiketi",
+          "default": "Geri bildirim sesini kapat"
+        },
+        {
+          "label": "\"Kapat\" düğmesi için etiket",
+          "default": "Kapat"
+        },
+        {
+          "label": "Slayt numarası metni",
+          "description": "Geçerli slaytı ve toplam slayt sayısını duyurur. :num ve :total yerine ilgili sayılar gelir.",
+          "default": "Slayt: :num / :total"
+        },
+        {
+          "label": "Bir okuyucu kullananlar için puan çubuğunun metinsel gösterimi",
+          "default": ":total puandan :num puan aldınız"
+        },
+        {
+          "label": "Çözüm listesindeki soru numarasının etiketi",
+          "description": "Çözüm listesindeki mevcut soru sırasını duyurur. :num yerine sorunun sırası gelecektir.",
+          "default": "Soru :num"
+        },
+        {
+          "label": "\"Çözüm Göster\" düğmesi için yardımcı teknoloji açıklaması",
+          "default": "Çözümü göster. Görev, doğru çözümü ile işaretlenecektir."
+        },
+        {
+          "label": "\"Yeniden Dene\" düğmesi için yardımcı teknoloji açıklaması",
+          "default": "Görevi yeniden deneyin. Tüm yanıtları sıfırlayın ve görevi yeniden başlatın."
+        }
+      ]
+    }
+  ]
+}

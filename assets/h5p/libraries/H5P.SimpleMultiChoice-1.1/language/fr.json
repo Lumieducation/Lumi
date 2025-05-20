@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Question"
+    },
+    {
+      "label": "Question � choix multiple",
+      "options": [
+        {
+          "label": "R�ponses multiples"
+        },
+        {
+          "label": "R�ponse unique"
+        }
+      ]
+    },
+    {
+      "label": "R�ponses alternatives",
+      "entity": "Alternative",
+      "field": {
+        "label": "Alternative",
+        "fields": [
+          {
+            "label": "Texte"
+          },
+          {
+            "label": "Feedback",
+            "fields": [
+              {
+                "label": "Message si la r�ponse est choisie",
+                "description": "Le message appara�t au dessous du bouton \"Continuer\" si cette r�ponse est choisie."
+              },
+              {
+                "label": "Message si la r�ponse n'est pas choisie",
+                "description": "Le message appara�t au dessous du bouton \"Continuer\" si cette r�ponse n'est pas choisie."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

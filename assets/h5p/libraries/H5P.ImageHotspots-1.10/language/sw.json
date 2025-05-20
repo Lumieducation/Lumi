@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Picha ya mandharinyuma",
+      "description": "Picha iliyoonyeshwa kwenye mandharinyuma."
+    },
+    {
+      "label": "Nakala mbadala ya picha ya mandharinyuma",
+      "description": "Ikiwa kivinjari hakiwezi kupakia picha, maandishi haya yataonyeshwa badala yake. Pia hutumiwa na teknolojia saidizi."
+    },
+    {
+      "label": "Ikoni yaeneo lenye mtandao",
+      "options": [
+        {
+          "label": "Ikoni iliyofafanuliwa mapema"
+        },
+        {
+          "label": "Picha iliyopakiwa"
+        }
+      ]
+    },
+    {
+      "label": "Ikoni iliyofafanuliwa mapema",
+      "description": "Kutumia ikoni iliyofafanuliwa mapema kwa eneo lenye mtandao.",
+      "options": [
+        {
+          "label": "Jumlisha"
+        },
+        {
+          "label": "Toa"
+        },
+        {
+          "label": "Zidisha"
+        },
+        {
+          "label": "Weka alama"
+        },
+        {
+          "label": "Swali"
+        },
+        {
+          "label": "Taarifa"
+        },
+        {
+          "label": "Mshangao"
+        }
+      ]
+    },
+    {
+      "label": "Picha iliyopakiwa",
+      "description": "Tumia picha yako mwenyewe kwa ikoni ya eneo lenye mtandao.<br />Pikseli 75 kwa pikseli 75 inapendekezwa kwa picha yako."
+    },
+    {
+      "label": "Rangi ya eneo lenye mtandao",
+      "description": "Rangi ya maeneo yenye mtandao hayo"
+    },
+    {
+      "entity": "eneo lenye mtandao",
+      "label": "Maeneo yenye mtandao",
+      "field": {
+        "label": "Eneo lenye mtandao",
+        "fields": [
+          {
+            "label": "Nafasi ya eneo lenye mtandao",
+            "description": "Bofya kwenye picha ya kijipicha ili kuweka eneo lenye mtandao"
+          },
+          {
+            "label": "Picha nzima ya sehemu ya nyuma",
+            "description": "Wakati mtumiaji anapobofya eneo lenye mtandao dukizi itafunika picha nzima ya mandharinyuma"
+          },
+          {
+            "label": "Kichwa",
+            "description": "Optional header for the popup. This is used by assistive technologies."
+          },
+          {
+            "label": "Maudhui dukizi",
+            "field": {
+              "label": "Kipengee cha Maudhui"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Lebo ya eneo lenye mtandao kwa ajili ya teknolojia ya usaidizi",
+      "default": "Eneo lenye mtandao #num",
+      "description": "Itasaidia kutangaza kipengele cha eneo lenye mtandao kilichoelekezwa mahali husika ikiwa hakuna kichwa kilichobainishwa cha tovuti ya eneo lenye mtandao. #num inaweza kutumika kuchukua nafasi ya namba ya eneo lenye mtandao."
+    },
+    {
+      "label": "Funga lebo ya kitufe kwa teknolojia saidizi",
+      "default": "Funga"
+    },
+    {
+      "label": "Label for assistive technologies denoting that hotspot contains Audio/Video",
+      "default": "Contains Audio/Video"
+    }
+  ]
+}

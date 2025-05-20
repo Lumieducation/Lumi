@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Editor de questão para Hotspot de Imagem",
+      "fields": [
+        {
+          "label": "Imagem de fundo",
+          "fields": [
+            {
+              "label": "Imagem de fundo",
+              "description": "Selecione uma imagem para usar como fundo para a pergunta do ponto de acesso de imagem."
+            }
+          ]
+        },
+        {
+          "label": "Hotspots",
+          "description": "Arraste e large a figura desejada para o novo hotspot da barra de ferramentas. Duplo-clique sobre um hotspot existente para editar. Arraste o hotspot para o posicionar. Puxe a pega no canto inferior direito para redimensionar.",
+          "fields": [
+            {
+              "label": "Descrição da atividade",
+              "description": "Instruções para o utilizador."
+            },
+            {
+              "label": "Hotspot",
+              "entity": "Hotspot",
+              "field": {
+                "label": "Hotspot",
+                "fields": [
+                  {
+                    "label": "userSettings",
+                    "fields": [
+                      {
+                        "label": "Correto",
+                        "description": "Podem existir múltiplos hotspots corretos. Posto isto, o utilizar recebe feedback correto/incorreto imediatamente após o primeiro clique."
+                      },
+                      {
+                        "label": "Feedback"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "computedSettings"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Feedback se o utilizador selecionar um ponto sem hotspot:",
+              "placeholder": "Hotspot não encontrado. Tente de novo!"
+            },
+            {
+              "label": "Mostrar feedback numa caixa popup"
+            },
+            {
+              "label": "Localização",
+              "fields": [
+                {
+                  "label": "Texto do botão de repetir",
+                  "default": "Repetir"
+                },
+                {
+                  "label": "Texto do botão de fechar",
+                  "default": "Fechar"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Representação textual da barra de pontuação para aqueles que usam leitores de ecrã",
+      "default": "Conseguiu :num pontos de um total de :total"
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Repetir a atividade. Apagar todas as respostas e reiniciar a atividade."
+    }
+  ]
+}

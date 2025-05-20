@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Įvadinis tekstas",
+      "default": "Pasirinkite teisingą teiginį.",
+      "description": "Bus rodomas virš užduoties turinio."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Numatytasis"
+        },
+        {
+          "label": "Tekstinis"
+        }
+      ],
+      "label": "Santrauka",
+      "entity": "teiginiai",
+      "field": {
+        "label": "Teiginių rinkinys",
+        "fields": [
+          {
+            "label": "Santraukos teiginių sąrašas - pirmasis teiginys yra teisingas.",
+            "entity": "teiginys",
+            "field": {
+              "label": "Teiginys"
+            }
+          },
+          {
+            "label": "Patarimas",
+            "fields": [
+              {
+                "label": "Patarimo tekstas"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Bendrieji atsiliepimai",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Numatytasis"
+            }
+          ],
+          "label": "Apibrėžti pasirinktinį atsiliepimą bet kokiam balų intervalui",
+          "description": "Spustelėkite mygtuką \"Pridėti intervalus\", kad pridėtumėte tiek intervalų, kiek reikia. Pavyzdys: 0-20% blogas rezultatas, 21-91% vidutinis rezultatas, 91-100% puikus rezultatas!",
+          "entity": "intervalas",
+          "field": {
+            "fields": [
+              {
+                "label": "Balų intervalas"
+              },
+              {},
+              {
+                "label": "Atsiliepimai apibrėžtam balų diapazonui",
+                "placeholder": "Užpildykite atsiliepimą"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tekstas, rodomas prieš santraukos uždavinio išspręstų teiginių skaičių.",
+      "default": "Progresas:",
+      "description": "Bus rodomas virš teiginių. Pavyzdys: \"Progresas: 2/5\""
+    },
+    {
+      "label": "Tekstas, rodomas prieš santraukos užduotyje pasirinktų klaidingų teiginių skaičių.",
+      "default": "Neteisingi atsakymai:",
+      "description": "Bus rodomas virš teiginių. Pavyzdys: \"Neteisingi atsakymai: 4\""
+    },
+    {
+      "label": "Santraukos atsiliepimų antraštė",
+      "default": "Jūsų rezultatas",
+      "description": "Bus rodoma virš santraukos atsiliepimų."
+    },
+    {
+      "label": "Skaitomas teisingo atsakymo tekstas",
+      "default": "Teisingai."
+    },
+    {
+      "label": "Skaitomas tekstas neteisingam atsakymui paskelbti",
+      "default": "Neteisingai! Bandykite dar kartą."
+    },
+    {
+      "label": "Skaitomas neteisingo atsakymo tekstas",
+      "default": "Neteisingai"
+    },
+    {
+      "label": "Teisingų atsakymų sąrašo etiketė",
+      "default": "Teisingi atsakymai."
+    },
+    {
+      "label": "Mygtuko \"Rodyti patarimus\" etiketė",
+      "default": "Rodyti patarimus"
+    },
+    {
+      "label": "Tekstinis rezultatų juostos atvaizdavimas tiems, kurie naudojasi skaitytuvu",
+      "description": ":num ir :total yra specialūs raktažodžiai, kurie atnaujinami programiškai",
+      "default": "Jūs surinkote :num iš :total taškų"
+    },
+    {
+      "label": "Tekstas pranešantis apie pažangą tiems, kurie naudojasi skaitytuvu",
+      "description": ":num ir :total yra specialūs raktažodžiai, kurie atnaujinami programiškai",
+      "default": "Progresas :num of :total"
+    }
+  ]
+}

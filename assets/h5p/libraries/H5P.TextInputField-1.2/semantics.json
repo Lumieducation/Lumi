@@ -1,0 +1,82 @@
+[
+  {
+    "name": "taskDescription",
+    "label": "Description of inputfield",
+    "type": "text",
+    "widget": "html",
+    "importance": "high",
+    "description": "Description of what the user should input.",
+    "enterMode": "div",
+    "tags": [
+      "strong",
+      "em",
+      "u",
+      "a",
+      "ul",
+      "ol",
+      "h2",
+      "h3",
+      "hr",
+      "pre",
+      "code"
+    ],
+    "optional": true
+  },
+  {
+    "name": "placeholderText",
+    "label": "Placeholder text",
+    "type": "text",
+    "description": "Example value or other placeholder text. Should not be used to replace the description of input-field, this value may not be available for screen-readers and also disappears when users start typing.",
+    "importance": "low",
+    "optional": true
+  },
+  {
+    "name": "maximumLength",
+    "label": "Maximum text length",
+    "type": "number",
+    "description": "Maximum number of characters for the text.",
+    "importance": "low",
+    "optional": true,
+    "min": "0"
+  },
+  {
+    "name": "inputFieldSize",
+    "label": "Input field size",
+    "type": "select",
+    "importance": "low",
+    "description": "The size of the input field in amount of lines it will cover.",
+    "options": [
+      {
+        "value": "1",
+        "label": "1 line"
+      },
+      {
+        "value": "3",
+        "label": "3 lines"
+      },
+      {
+        "value": "10",
+        "label": "10 lines"
+      }
+    ],
+    "default": "1"
+  },
+  {
+    "name": "requiredField",
+    "label": "Required field",
+    "type": "boolean",
+    "importance": "low",
+    "default": false,
+    "optional": true,
+    "description": "Check to make this field required, the user must answer all required fields to be able to export a document."
+  },
+  {
+    "name": "remainingChars",
+    "type": "text",
+    "label": "Remaining characters",
+    "importance": "low",
+    "common": true,
+    "default": "Remaining characters: @chars",
+    "description": "Message for remaining characters. You can use @chars which will be replaced by the corresponding number."
+  }
+]

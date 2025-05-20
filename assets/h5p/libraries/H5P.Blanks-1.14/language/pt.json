@@ -1,0 +1,214 @@
+{
+  "semantics": [
+    {
+      "label": "Mídia",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Mídia opcional para exibir acima da pergunta."
+        },
+        {
+          "label": "Desactivar o zoom da imagem"
+        }
+      ]
+    },
+    {
+      "label": "Descrição da tarefa",
+      "default": "Preencha as palavras em falta",
+      "description": "Um guia que informa o utilizador como completar a atividade."
+    },
+    {
+      "label": "Blocos de texto",
+      "entity": "bloco de texto",
+      "field": {
+        "label": "Linha de texto",
+        "placeholder": "Oslo é a capital da *Noruega*.",
+        "important": {
+          "description": "<ul><li>O espaços a preencher são adicionados ao colocar um asterisco (*) no início e outro no final da palavra ou frase correta.</li><li>As respostas alternativas podem ser adicionadas colocando uma barra (/) entre as palavras.</li><li>Poderá adicionar uma dica contextual utilizando os dois pontos (:) em frente do texto da dica.</li></ul>",
+          "example": "O conteúdo H5P pode ser editado utilizando um *navegador/browser:Algo que usa todos os dias para aceder à internet*."
+        }
+      }
+    },
+    {
+      "label": "Feedback global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Defina o feedback personalizado para qualquer faixa de pontuação",
+          "description": "Clique em \"Adicionar faixa\" e adicione quantas faixas forem necessárias. Exemplo: 0-20% Insuficiente, 21-91% Suficiente, 91-100% Excelente!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para determinada faixa de pontuação",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Texto para o botão \"Mostrar solução\"",
+      "default": "Mostrar solução"
+    },
+    {
+      "label": "Texto para o botão \"Tentar novamente\"",
+      "default": "Tentar novamente"
+    },
+    {
+      "label": "Texto para o botão \"Verificar\"",
+      "default": "Verificar"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Por favor, preencha todos os espaços em branco para visualizar a solução"
+    },
+    {
+      "label": "Texto para \"Espaço não preenchido\"",
+      "default": "Por favor preencha todos os espaços em branco"
+    },
+    {
+      "label": "Texto para mensagem de \"':ans' está correta\"",
+      "default": "':ans' está correta"
+    },
+    {
+      "label": "Texto para mensagem de \"':ans' está incorreta\"",
+      "default": "':ans' está incorreta"
+    },
+    {
+      "label": "Texto para mensagem de \"Respondido corretamente\"",
+      "default": "Respondido incorretamente"
+    },
+    {
+      "label": "Etiqueta de tecnologia assistiva para solução",
+      "default": "Respondido corretamente"
+    },
+    {
+      "label": "Etiqueta de tecnologia assistiva para campo de texto",
+      "default": "Espaço em branco @num de @total"
+    },
+    {
+      "label": "Etiqueta de tecnologia assistiva para indicar que uma caixa de texto tem uma dica associada",
+      "description": "Utilize @num e @total para substituir no número da questão cloze atual e o número total de questões cloze",
+      "default": "Resposta aberta @num de um total de @total"
+    },
+    {
+      "label": "Etiqueta do ícone da dica",
+      "default": "Dica disponível"
+    },
+    {
+      "label": "Configurações gerais.",
+      "default": "Dica"
+    },
+    {
+      "label": "Definições de funcionamento.",
+      "description": "Estas opções permitem controlar o comportamento da atividade.",
+      "fields": [
+        {
+          "label": "Ativar \"Repetir\""
+        },
+        {
+          "label": "Ativar o botão de \"Mostrar soluções\""
+        },
+        {
+          "label": "Etiqueta do botão Cancelar"
+        },
+        {
+          "label": "Etiqueta do botão Terminar"
+        },
+        {
+          "label": "Diferenciar entre maiúsculas e minúsculas",
+          "description": "Garante que o utilizador digita exatamente o texto da forma como for colocado na resposta."
+        },
+        {
+          "label": "Necessita que todos os campos estejam preenchidos antes que possa ver a solução"
+        },
+        {
+          "label": "Coloque os campos de texto em linhas separadas"
+        },
+        {
+          "label": "Mostrar caixa de diálogo de confirmação quando clicar em \"Verificar\"",
+          "description": "Estas opções não são compatíveis com a opção \"Verificar automaticamente as respostas após a introdução\""
+        },
+        {
+          "label": "Mostrar caixa de diálogo de confirmação quando clicar em \"Repetir\""
+        },
+        {
+          "label": "Aceitar pequenos erros de ortografia",
+          "description": "Quanto ativo, permite que uma resposta conte como correta mesmo quando esta apresenta pequenos erros de ortografia (3-9 characters: 1 spelling error, more than 9 characters: 2 spelling errors)"
+        }
+      ]
+    },
+    {
+      "label": "Caixa de diálogo de Repetir",
+      "fields": [
+        {
+          "label": "Texto do cabeçalho",
+          "default": "Tentar novamente?"
+        },
+        {
+          "label": "Texto do corpo",
+          "default": "Tem a certeza de que pretende tentar novamente?"
+        },
+        {
+          "label": "Etiqueta de botão Cancelar",
+          "default": "Cancelar"
+        },
+        {
+          "label": "Etiqueta do botão Confirmar",
+          "default": "Terminar"
+        }
+      ]
+    },
+    {
+      "label": "Representação textual da barra de pontuação para aqueles que usam leitores de ecrã",
+      "fields": [
+        {
+          "label": "Texto do cabeçalho",
+          "default": "Repetir ?"
+        },
+        {
+          "label": "Texto do corpo",
+          "default": "Tem a certeza que deseja repetir?"
+        },
+        {
+          "label": "Etiqueta de botão de cancelar",
+          "default": "Cancelar"
+        },
+        {
+          "label": "Etiqueta do botão de confirmar",
+          "default": "Confirmar"
+        }
+      ]
+    },
+    {
+      "label": "Descrição de tecnologia assistiva para o botão \"Verificar\"",
+      "default": "Conseguiu :num pontos de um total de :total"
+    },
+    {
+      "label": "Descrição de tecnologia assistida para o botão \"Mostrar Solução\"",
+      "default": "Mostrar a solução. A atividade será marcada com a respetiva solução correta."
+    },
+    {
+      "label": "Descrição de tecnologia assistida para o botão \"Tentar novamente\"",
+      "default": "Mostrar a solução. A tarefa será marcada com a sua solução correta."
+    },
+    {
+      "label": "Descrição de tecnologia assistida para iniciar atividade",
+      "default": "Tente de novo. Apagar todas as respostas e iniciar de novo."
+    },
+    {
+      "label": "Descrição para tecnologia assistida para iniciar tarefa",
+      "default": "Modo de verificação"
+    }
+  ]
+}

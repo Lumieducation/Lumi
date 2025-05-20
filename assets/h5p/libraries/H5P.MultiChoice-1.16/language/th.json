@@ -1,0 +1,258 @@
+{
+  "semantics": [
+    {
+      "label": "สื่อ",
+      "fields": [
+        {
+          "label": "ประเภท",
+          "description": "มีการแสดงสื่อเลือกได้สำหรับคำถามนี้ (ไม่บังคับ)"
+        },
+        {
+          "label": "ปิดฟังก์ชั่นซูมภาพ"
+        }
+      ]
+    },
+    {
+      "label": "คำถาม"
+    },
+    {
+      "label": "ตัวเลือกที่มีให้เลือก",
+      "entity": "option",
+      "field": {
+        "label": "ตัวเลือก",
+        "fields": [
+          {
+            "label": "ข้อความ"
+          },
+          {
+            "label": "ถูกต้อง"
+          },
+          {
+            "label": "เคล็ดลับและคำติชม",
+            "fields": [
+              {
+                "label": "ข้อความเคล็ดลับ",
+                "description": "คำแนะนำสำหรับผู้ใช้ จะปรากฏก่อนที่ผู้ใช้จะตรวจสอบคำตอบ"
+              },
+              {
+                "label": "ข้อความที่ปรากฏหากคำตอบถูกเลือก",
+                "description": "ข้อความจะปรากฏใต้คำตอบเมื่อผู้ใช้ตรวจสอบแล้วเลือกคำตอบนี้"
+              },
+              {
+                "label": "ข้อความที่ปรากฏหากคำตอบไม่ถูกเลือก",
+                "description": "ข้อความจะปรากฏใต้คำตอบเมื่อผู้ใช้ตรวจสอบแล้วไม่เลือกคำตอบนี้"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "คำตอบโดยรวม",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "ค่าเริ่มต้น"
+            }
+          ],
+          "label": "กำหนดคำติชมที่กำหนดเองสำหรับช่วงคะแนนใด ๆ",
+          "description": "คลิกปุ่ม \"เพิ่มช่วง\" เพื่อเพิ่มช่วงใหม่เท่าที่คุณต้องการ เช่น 0-20% คะแนนไม่ดี, 21-91% คะแนนเฉลี่ย, 91-100% คะแนนดีมาก!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "ช่วงคะแนน"
+              },
+              {},
+              {
+                "label": "คำติชมสำหรับช่วงคะแนนที่กำหนด",
+                "placeholder": "กรอกคำติชม"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "การแปลงอินเตอร์เฟซผู้ใช้สำหรับการตอบหลายตัวเลือก",
+      "fields": [
+        {
+          "label": "ป้ายปุ่ม \"ตรวจสอบคำตอบ\"",
+          "default": "ตรวจสอบ"
+        },
+        {
+          "label": "ป้ายปุ่ม \"ส่งคำตอบ\"",
+          "default": "ส่ง"
+        },
+        {
+          "label": "ป้ายปุ่ม \"แสดงคำตอบ\"",
+          "default": "แสดงคำตอบ"
+        },
+        {
+          "label": "ป้ายปุ่ม \"ลองใหม่\"",
+          "default": "ลองใหม่"
+        },
+        {
+          "label": "ป้ายปุ่ม \"แสดงเคล็ดลับ\"",
+          "default": "แสดงเคล็ดลับ"
+        },
+        {
+          "label": "การแสดงผลแถบคะแนนเป็นข้อความสำหรับผู้ใช้ที่ใช้ Readspeaker",
+          "description": "ตัวแปรที่ใช้ได้คือ :num และ :total",
+          "default": "คุณได้ :num จาก :total คะแนน"
+        },
+        {
+          "label": "มีเคล็ดลับที่ใช้ได้ (ไม่แสดง)",
+          "default": "มีเคล็ดลับที่ใช้ได้",
+          "description": "ข้อความเพื่อให้การเข้าถึงสำหรับ Readspeaker"
+        },
+        {
+          "label": "มีคำติชมที่ใช้ได้ (ไม่แสดง)",
+          "default": "มีคำติชมที่ใช้ได้",
+          "description": "ข้อความเพื่อให้การเข้าถึงสำหรับ Readspeaker"
+        },
+        {
+          "label": "อ่านคำติชม (ไม่แสดง)",
+          "default": "อ่านคำติชม",
+          "description": "ข้อความเพื่อให้การเข้าถึงสำหรับ Readspeaker"
+        },
+        {
+          "label": "คำตอบผิด (ไม่แสดง)",
+          "default": "คำตอบผิด",
+          "description": "ข้อความเพื่อให้การเข้าถึงสำหรับ Readspeaker"
+        },
+        {
+          "label": "คำตอบถูก (ไม่แสดง)",
+          "default": "คำตอบถูก",
+          "description": "ข้อความเพื่อให้การเข้าถึงสำหรับ Readspeaker"
+        },
+        {
+          "label": "ตัวเลือกควรถูกเลือก",
+          "default": "ควรถูกเลือก"
+        },
+        {
+          "label": "ตัวเลือกไม่ควรถูกเลือก",
+          "default": "ไม่ควรถูกเลือก"
+        },
+        {
+          "label": "ข้อความสำหรับข้อความ \"ต้องตอบคำถามก่อนที่จะดูคำตอบ\"",
+          "default": "กรุณาตอบคำถามก่อนที่จะดูคำตอบ"
+        },
+        {
+          "label": "คำอธิบายเทคโนโลยีช่วยในปุ่ม \"ตรวจสอบ\"",
+          "default": "ตรวจสอบคำตอบ ระบบจะทำเครื่องหมายว่าถูกต้อง ไม่ถูกต้อง หรือไม่ได้ตอบ"
+        },
+        {
+          "label": "คำอธิบายเทคโนโลยีช่วยในปุ่ม \"แสดงคำตอบ\"",
+          "default": "แสดงคำตอบ งานจะถูกทำเครื่องหมายด้วยคำตอบที่ถูกต้อง"
+        },
+        {
+          "label": "คำอธิบายเทคโนโลยีช่วยในปุ่ม \"ลองใหม่\"",
+          "default": "ลองทำงานใหม่ รีเซ็ตคำตอบทั้งหมดและเริ่มงานใหม่อีกครั้ง"
+        }
+      ]
+    },
+    {
+      "label": "การตั้งค่าพฤติกรรม",
+      "description": "ตัวเลือกเหล่านี้จะช่วยคุณควบคุมพฤติกรรมของงาน",
+      "fields": [
+        {
+          "label": "เปิดใช้งานปุ่ม \"ลองใหม่\""
+        },
+        {
+          "label": "เปิดใช้งานปุ่ม \"แสดงคำตอบ\""
+        },
+        {
+          "label": "เปิดใช้งานปุ่ม \"แสดงเคล็ดลับ\""
+        },
+        {
+          "label": "เปิดใช้งานปุ่ม \"ตรวจสอบคำตอบ\"",
+          "description": "Select the look and behaviour of the question.",
+          "options": [
+            {
+              "label": "Automatic"
+            },
+            {
+              "label": "Multiple Choice (Checkboxes)"
+            },
+            {
+              "label": "Single Choice (Radio Buttons)"
+            }
+          ]
+        },
+        {
+          "label": "เปิดใช้งานปุ่ม \"ส่งคำตอบ\"",
+          "description": "Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+        },
+        {
+          "label": "Randomize answers",
+          "description": "Enable to randomize the order of the answers on display."
+        },
+        {
+          "label": "Require answer before the solution can be viewed"
+        },
+        {
+          "label": "Show confirmation dialog on \"Check\""
+        },
+        {
+          "label": "Show confirmation dialog on \"Retry\""
+        },
+        {
+          "label": "Automatically check answers",
+          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
+        },
+        {
+          "label": "Pass percentage",
+          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+        },
+        {
+          "label": "Show score points",
+          "description": "Show points earned for each answer. This will not be an option in 'Single answer' mode or if 'Give one point for the whole task' option is enabled."
+        }
+      ]
+    },
+    {
+      "label": "การตั้งค่าสำหรับผู้ใช้ด้วยเอง",
+      "fields": [
+        {
+          "label": "สามารถกดปุ่ม \"ลองใหม่\" ได้",
+          "default": "Finish ?"
+        },
+        {
+          "label": "สามารถกดปุ่ม \"แสดงคำตอบ\" ได้",
+          "default": "Are you sure you wish to finish ?"
+        },
+        {
+          "label": "สามารถกดปุ่ม \"แสดงเคล็ดลับ\" ได้",
+          "default": "Cancel"
+        },
+        {
+          "label": "สามารถกดปุ่ม \"ตรวจสอบคำตอบ\" ได้",
+          "default": "Finish"
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "label": "Header text",
+          "default": "Retry ?"
+        },
+        {
+          "default": "Are you sure you wish to retry ?",
+          "label": "Body text"
+        },
+        {
+          "label": "Cancel button label",
+          "default": "Cancel"
+        },
+        {
+          "default": "Confirm",
+          "label": "Confirm button label"
+        }
+      ],
+      "label": "Retry confirmation dialog"
+    }
+  ]
+}

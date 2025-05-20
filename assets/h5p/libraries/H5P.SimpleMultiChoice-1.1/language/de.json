@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Frage"
+    },
+    {
+      "label": "Multiple Choice-Typ",
+      "options": [
+        {
+          "label": "Mehrere Antworten möglich"
+        },
+        {
+          "label": "Eine Antwort möglich"
+        }
+      ]
+    },
+    {
+      "label": "Antwortmöglichkeiten",
+      "entity": "Alternative",
+      "field": {
+        "label": "Alternative",
+        "fields": [
+          {
+            "label": "Text"
+          },
+          {
+            "label": "Rückmeldungen",
+            "fields": [
+              {
+                "label": "Benachrichtigung, die erscheinen soll, wenn die Antwort ausgewählt wurde",
+                "description": "Diese Benachrichtigung erscheint unter der Antwort, sobald auf \"Fortsetzen\" geklickt wird und die Antwort ausgewählt wurde."
+              },
+              {
+                "label": "Benachrichtigung, die erscheinen soll, wenn die Antwort nicht ausgewählt wurde",
+                "description": "Benachrichtigung, die unter der Antwort erscheinen soll, sobald auf \"Fortsetzen\" geklickt wird und die Antwort nicht ausgewählt wurde."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "semantics": [
+    {
+      "label": "Mídia",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Mídia opcional para exibir acima da pergunta."
+        },
+        {
+          "label": "Desactivar o zoom da imagem"
+        }
+      ]
+    },
+    {
+      "label": "Descrição da tarefa",
+      "placeholder": "Descreva o que seus alunos devem fazer...",
+      "description": "O que seus alunos devem saber."
+    },
+    {
+      "label": "Parágrafos",
+      "entity": "parágrafo",
+      "field": {
+        "label": "Parágrafo"
+      }
+    },
+    {
+      "label": "Feedback Geral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Definir feedback personalizado para qualquer faixa de pontuação",
+          "description": "Clique no botão \"Adicionar faixa\" para adicionar quantos intervalos precisar. Exemplo: 0-20% Pontuação Péssima, 21-91% Pontuação Média, 91-100% Pontuação Óptima!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de Pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para a faixa de pontuação definida",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Configurações comportamentais",
+      "description": "Essas opções permitem controlar como a tarefa se comportará.",
+      "fields": [
+        {
+          "label": "Modo de marcação de pontos",
+          "description": "Decidir se devem ser dados pontos para cada parágrafo colocado correctamente ou para cada parágrafo que é colocado após o parágrafo que deveria ser colocado depois (\"sequência correcta\")",
+          "options": [
+            {
+              "label": "Sequência correcta"
+            },
+            {
+              "label": "Parágrafo colocado correctamente"
+            }
+          ]
+        },
+        {
+          "label": "Aplicar penalidades",
+          "description": "Decidir se deseja deduzir um ponto para cada parágrafo que não esteja posicionado correctamente."
+        },
+        {
+          "label": "Parágrafos intercambiáveis duplicados",
+          "description": "Se definido, ao verificar a resposta, os parágrafos duplicados serão tratados como idênticos se seu texto simples for igual."
+        },
+        {
+          "label": "Adicionar botões para movimento",
+          "description": "Em dispositivos móveis, botões para mover parágrafos podem oferecer um benefício extra de acessibilidade. Se preferir, pode desactivá-los aqui."
+        },
+        {
+          "label": "Activar o botão \"Tentar Novamente\""
+        },
+        {
+          "label": "Activar o botão \"Mostrar Solução\""
+        }
+      ]
+    },
+    {
+      "label": "Interface de utilizador",
+      "fields": [
+        {
+          "label": "Texto do botão \"Verificar\"",
+          "default": "Verificar"
+        },
+        {
+          "label": "Texto do botão \"Enviar\"",
+          "default": "Enviar"
+        },
+        {
+          "label": "Texto do botão \"Tentar Novamente\"",
+          "default": "Tentar novamente"
+        },
+        {
+          "label": "Texto para o botão \"Mostrar solução\"",
+          "default": "Mostrar solução"
+        },
+        {
+          "label": "Título do botão \"Para cima\"",
+          "default": "Para cima"
+        },
+        {
+          "label": "Título para o botão \"Para Baixo\"",
+          "default": "Para baixo"
+        },
+        {
+          "label": "Título do botão que está desactivado",
+          "default": "Inactivo"
+        }
+      ]
+    },
+    {
+      "label": "ReadSpeaker",
+      "fields": [
+        {
+          "label": "Descrição da tecnologia de assistência para o botão \"Verificar\"",
+          "default": "Verifique as respostas. As respostas serão marcadas como correctas ou incorrectas."
+        },
+        {
+          "label": "Descrição da tecnologia de assistência para o botão \"Mostrar Solução\"",
+          "default": "Mostrar a solução. A solução correcta será exibida."
+        },
+        {
+          "label": "Descrição da tecnologia de assistência para o botão \"Tentar Novamente\"",
+          "default": "Tente realizar a tarefa novamente. Redefinir todos os elementos e reinicie a tarefa."
+        },
+        {
+          "label": "Seu resultado",
+          "description": "@score será substituído pelo número de pontos. @total será substituído pelo máximo de pontos possíveis.",
+          "default": "Conseguiu @score de @total pontos possíveis"
+        },
+        {
+          "label": "Descrição da lista",
+          "default": "Lista classificável de parágrafos."
+        },
+        {
+          "label": "Descrição da lista (verifique a resposta)",
+          "default": "Lista de parágrafos com resultados."
+        },
+        {
+          "label": "Descrição da lista (mostrar solução)",
+          "default": "Lista de parágrafos com soluções."
+        },
+        {
+          "label": "Parágrafo",
+          "default": "Parágrafo"
+        },
+        {
+          "label": "Correcto",
+          "default": "correcto"
+        },
+        {
+          "label": "Incorrecto",
+          "default": "incorrecto"
+        },
+        {
+          "description": "@score será substituído por 1 ou -1.",
+          "label": "Explicação da pontuação",
+          "default": "@score pontos"
+        },
+        {
+          "description": "@current será substituído pelo número do parágrafo atual. @total será substituído pelo número de parágrafos.",
+          "label": "Numeração de parágrafos",
+          "default": "@current de @total"
+        },
+        {
+          "description": "Será seguido por \"Numeração de parágrafos\".",
+          "label": "Posição atual na lista",
+          "default": "Posição atual na lista"
+        },
+        {
+          "label": "Instrução quando o parágrafo selecionado",
+          "default": "Pressione a barra de espaço para reordenar"
+        },
+        {
+          "label": "Instrução para quando parágrafo for agarrado",
+          "default": "Pressione as teclas de seta para cima e para baixo para mudar de posição, barra de espaço para soltar e escape para cancelar"
+        },
+        {
+          "label": "Agarrado",
+          "default": "Agarrado"
+        },
+        {
+          "label": "Movido",
+          "default": "Movido"
+        },
+        {
+          "label": "Caiu",
+          "default": "Caiu"
+        },
+        {
+          "label": "Reordenar cancelado",
+          "default": "Reordenar cancelado"
+        },
+        {
+          "description": "Será seguido por \"Numeração de parágrafos\".",
+          "label": "Posição final",
+          "default": "Posição final"
+        },
+        {
+          "description": "Será seguido por \"correcto\" ou \"incorrecto\".",
+          "label": "Próximo parágrafo",
+          "default": "Próximo parágrafo"
+        },
+        {
+          "description": "Será seguido por \"Numeração de parágrafos\".",
+          "label": "Parágrafo correcto",
+          "default": "Corrigir parágrafo na posição"
+        }
+      ]
+    }
+  ]
+}

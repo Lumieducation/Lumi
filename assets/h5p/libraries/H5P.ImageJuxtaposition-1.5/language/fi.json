@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Tehtävän kuvaus",
+      "description": "Put the heading/instructions you'd like to show above the before/after image here.",
+      "placeholder": "Here you can add an optional heading and/or instructions."
+    },
+    {
+      "label": "Ensimmäinen kuva",
+      "fields": [
+        {
+          "label": "Ensimmäinen kuva",
+          "description": "Ensimmäinen kuva. Ole hyvä ja varmista että kuva on samankokoinen kuin toinen kuva."
+        },
+        {
+          "label": "Teksti Ensimmäiselle kuvalle",
+          "description": "Teksti joka näytetään ensimmäisen kuvan yhteydessä"
+        }
+      ]
+    },
+    {
+      "label": "Toinen kuva",
+      "fields": [
+        {
+          "label": "Toinen kuva",
+          "description": "Toinen kuva. Ole hyvä ja varmista että kuva on samankokoinen kuin ensimmäinen kuva."
+        },
+        {
+          "label": "Teksti toiselle kuvalle",
+          "description": "Teksti joka näytetään toisen kuvan yhteydessä"
+        }
+      ]
+    },
+    {
+      "label": "Lisäasetukset",
+      "description": "Lisäasetukset",
+      "fields": [
+        {
+          "label": "Liukusäätimen aloitusprosentti %",
+          "description": "Määrittää liukusäätimen aloitusasennon"
+        },
+        {
+          "label": "Liukusäätimen orientaatio",
+          "description": "Horisontaalinen liukusäädin liikuu vasemmalle ja oikealle, vertikaalinen liukusäädin liikkuu pystysuunnassa ylös ja alas.",
+          "options": [
+            {
+              "label": "Horisontaalinen"
+            },
+            {
+              "label": "Pystysuuntainen"
+            }
+          ]
+        },
+        {
+          "label": "Slider color",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Image visible message",
+          "default": "Image @percentage % visible",
+          "description": "@percentage is a placeholder and will be replaced with the respective value."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

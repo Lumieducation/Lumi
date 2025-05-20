@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "label": "Intestazione",
+      "default": "Mastro di documentazione",
+      "description": "Titolo per il mastro di documentazione"
+    },
+    {
+      "label": "Elementi",
+      "widgets": [
+        {
+          "label": "Predefinito"
+        }
+      ],
+      "entity": "pagina",
+      "field": {
+        "label": "Tipo di pagina",
+        "description": "Libreria per questa slide"
+      }
+    },
+    {
+      "label": "Localizza pulsanti del mastro di documentazione",
+      "fields": [
+        {
+          "label": "Etichetta del pulsante Precedente",
+          "default": "Precedente documentation step"
+        },
+        {
+          "label": "Etichetta del pulsante Prossimo",
+          "default": "Prossimo documentation step"
+        },
+        {
+          "label": "Etichetta del pulsante Chiudi",
+          "default": "Chiudi"
+        }
+      ]
+    }
+  ]
+}

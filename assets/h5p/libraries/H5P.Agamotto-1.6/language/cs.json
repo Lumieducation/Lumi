@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Nadpis",
+      "placeholder": "Zde můžete přidat volitelný nadpis.",
+      "description": "Nadpis, který chcete zobrazit nad obrázkem"
+    },
+    {
+      "label": "Položky",
+      "entity": "položka",
+      "widgets": [
+        {
+          "label": "Výchozí"
+        }
+      ],
+      "field": {
+        "label": "Položka",
+        "fields": [
+          {
+            "label": "Obrázek"
+          },
+          {
+            "label": "Popisek",
+            "description": "Volitelné označení pozice obrazu. Ujistěte se, že to není příliš dlouhé, nebo bude skryté."
+          },
+          {
+            "label": "Popis",
+            "placeholder": "Můj popis obrázku ...",
+            "description": "Volitelný popis obrázku"
+          },
+          {
+            "label": "Zvuk",
+            "description": "Když se zobrazí obrázek přehraje se volitelný zvuk."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Nastavení chování",
+      "description": "Tyto možnosti vám umožní řídit, jak se bude úloha chovat.",
+      "fields": [
+        {
+          "label": "Počáteční obrázek",
+          "description": "Nastavte číslo obrázku, který má začít."
+        },
+        {
+          "label": "Posuvník snímků",
+          "description": "Pokud je aktivováno, posuvník se zachytí na pozici obrázku."
+        },
+        {
+          "label": "Zobrazit pozici obrázku",
+          "description": "Pokud je aktivována, posuvná lišta zobrazí pozici každého obrázku."
+        },
+        {
+          "label": "Zobrazit popisky",
+          "description": "Pokud je aktivována, posuvná lišta zobrazí popisek namísto/vedle pozice."
+        },
+        {
+          "label": "Barva na výměnu průhlednosti",
+          "description": "Nastavte barvu, která nahradí průhledné oblasti obrázků."
+        },
+        {
+          "label": "Prostor obrázku v režimu celé obrazovky",
+          "description": "Pokud kromě obrázků máte i popisy, nastavte procento prostoru, které mají obrázky v režimu celé obrazovky využívat."
+        }
+      ]
+    },
+    {
+      "label": "Čtecí zařízení",
+      "fields": [
+        {
+          "label": "Obrázek",
+          "default": "Obrázek"
+        },
+        {
+          "label": "Posuvník obrázku",
+          "default": "Posuvník obrázku"
+        },
+        {
+          "label": "Nadpis ztlumit",
+          "default": "Ztlumit, momentálně zapnuto"
+        },
+        {
+          "label": "Nadpis zesílit",
+          "default": "Zesílit, momentálně ztlumeno"
+        },
+        {
+          "label": "Nadpis tlačítka na celou obrazovku (zahájit)",
+          "default": "Zahájit režim celé obrazovky"
+        },
+        {
+          "label": "Název tlačítka pro celou obrazovku (ukončení)",
+          "default": "Ukončit režim celé obrazovky"
+        }
+      ]
+    }
+  ]
+}

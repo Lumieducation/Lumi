@@ -1,0 +1,219 @@
+{
+  "semantics": [
+    {
+      "label": "Heading"
+    },
+    {
+      "label": "Mode",
+      "description": "Mode of presenting the dialog cards",
+      "options": [
+        {
+          "label": "Normal"
+        },
+        {
+          "label": "Repetition"
+        }
+      ]
+    },
+    {
+      "label": "Opgavebeskrivelse"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "label": "Dialog",
+      "entity": "dialog",
+      "field": {
+        "label": "Spørgsmål",
+        "fields": [
+          {
+            "label": "Tekst",
+            "description": "Hint til første del af dialogen"
+          },
+          {
+            "label": "Svar",
+            "description": "Hint til anden del af dialogen"
+          },
+          {
+            "label": "Billede",
+            "description": "Valgfrit billede til kortet. (Kortet kan indeholde enten billede eller tekst, eller begge dele)."
+          },
+          {
+            "label": "Alternativ tekst til billedet"
+          },
+          {
+            "label": "Lydfiler"
+          },
+          {
+            "label": "Tips",
+            "fields": [
+              {
+                "label": "Tip til tekst",
+                "description": "Tip til første del af dialogen"
+              },
+              {
+                "label": "Tip for svar",
+                "description": "Tip til anden del af dialogen."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Indstillinger.",
+      "description": "Disse indstillinger vil kontrollere hvordan opgaven fremstår.",
+      "fields": [
+        {
+          "label": "Aktiver \"prøv igen\" knap."
+        },
+        {
+          "label": "Slå bagglæns navigation fra",
+          "description": "Disse indstillinger vil kun gøre det muligt at gå fremad med dialogkortene"
+        },
+        {
+          "label": "Tilpas teksten så den passer inden for kortet",
+          "description": "Vælges denne indstilling ikke vil kortet tilpasse sig størrelsen på teksten."
+        },
+        {
+          "label": "Bland kort",
+          "description": "Aktivér for at få en tilfældig rækkefølge i visningen af kortene."
+        },
+        {
+          "label": "Maksimalt færdighedsniveau"
+        },
+        {
+          "label": "Tillad spring over",
+          "description": "Hvis indstillingen er aktivieret kan bruger angive at de allerede kender svaret uden at vende kortet"
+        }
+      ]
+    },
+    {
+      "label": "Tekst på 'vend' knap",
+      "default": "Vend kortet"
+    },
+    {
+      "label": "Tekst på 'næste' knap",
+      "default": "Næste kort"
+    },
+    {
+      "label": "Tekst på 'forrige' knap.",
+      "default": "Forrige kort"
+    },
+    {
+      "label": "Tekst på 'prøv igen' knap",
+      "default": "Start forfra"
+    },
+    {
+      "label": "Tekst på \"Rigtigt svar\" knap",
+      "default": "Jeg svarede rigtigt!"
+    },
+    {
+      "label": "Tekt på  \"forkert svar\" knap",
+      "default": "Jeg svarede forkert"
+    },
+    {
+      "label": "Tekst på  \"Runde\" besked under kortene og på oversigtsvisningen",
+      "description": "@round bliver erstattet med et aktuelle rundenumemr",
+      "default": "Runde: @round"
+    },
+    {
+      "label": "Tekst på \"Kort tilbage\" beskede",
+      "description": "@number bliver erstattet med antal kort tilbage i denne runde",
+      "default": "Antal kort tilbage: @number"
+    },
+    {
+      "label": "Tekst på \"Næste runde\" knap",
+      "description": "@round bliver erstattet med rundenummer",
+      "default": "Forsæt til runde: @round"
+    },
+    {
+      "label": "Tekst på  \"Start forfra\" knap",
+      "default": "Start forfra"
+    },
+    {
+      "label": "Tekst på \"Vis oversigt\" knap",
+      "default": "Vis resultat"
+    },
+    {
+      "label": "Titeltekst på oversigtssiden",
+      "default": "Resultat"
+    },
+    {
+      "label": "Tekst på \"Kort du fik rigtigt:\"",
+      "default": "Rigtige svar:"
+    },
+    {
+      "label": "Tekst på \"Kort du fik forkert:\"",
+      "default": "Forkerte svar:"
+    },
+    {
+      "label": "Tekst på\"Kort som ikke blev vist:\"",
+      "default": "Antal kort tilbage i bunken:"
+    },
+    {
+      "label": "Tekst på \"Samlet resultat\"",
+      "default": "Dine samlet point"
+    },
+    {
+      "label": "Tekst på \"Kort gennemfør\"",
+      "default": "Antal kort du har lært:"
+    },
+    {
+      "label": "Tekst på  \"Gennemførte runder:\"",
+      "default": "Gennemførte runder:"
+    },
+    {
+      "label": "Besked når alle kort er blev lært og færdighedsniveau opnået",
+      "description": "@cards  bliver erstattet med antallet af kort i puljen. @max bliver erstattet med det maksimale færdighedsniveau.",
+      "default": "Godt klaret! Du har svaret rigtigt på alle @cards kort @max gange i træk."
+    },
+    {
+      "label": "Proces tekst",
+      "description": "Antal kort variationer @card og @total.",
+      "default": "Kort @card ud af @total"
+    },
+    {
+      "label": "Label til tekst på kort",
+      "description": "Vist for tilgængelighed ved støtte med teknologier.",
+      "default": "Forside"
+    },
+    {
+      "label": "Label til kort bagside",
+      "description": "Vist for tilgængelighed ved støtte med teknologier",
+      "default": "Bagside"
+    },
+    {
+      "label": "Tekst på Vis tip knappen",
+      "default": "Vis ledetråd"
+    },
+    {
+      "label": "Besked til ikke understøttet lyd",
+      "default": "Din browser understøtter ikke denne lyd"
+    },
+    {
+      "label": "Dialog sked til at starte forfra",
+      "fields": [
+        {
+          "label": "Overskrift",
+          "default": "Prøv igen"
+        },
+        {
+          "label": "Brødteskt",
+          "default": "Er du sikker? Alle dine svar forsvinder, hvis du prøver igen."
+        },
+        {
+          "label": "Tekst på Fortryd knap",
+          "default": "Fortryd"
+        },
+        {
+          "label": "Teskt på bekræft knap",
+          "default": "Prøv igen"
+        }
+      ]
+    }
+  ]
+}

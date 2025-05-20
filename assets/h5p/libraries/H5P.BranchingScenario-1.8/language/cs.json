@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Editor větvení scénářů",
+      "fields": [
+        {
+          "label": "Nadpis"
+        },
+        {
+          "label": "Úvodní obrazovka",
+          "fields": [
+            {
+              "label": "Název kurzu",
+              "placeholder": "Titulek vašeho kurzu"
+            },
+            {
+              "label": "Detaily kurzu",
+              "placeholder": "Podrobnosti o kurzu"
+            },
+            {
+              "label": "Obrázek kurzu"
+            },
+            {
+              "label": "Alternativní text obrázku"
+            }
+          ]
+        },
+        {
+          "label": "Seznam koncových obrazovek",
+          "field": {
+            "label": "Koncová obrazovka",
+            "fields": [
+              {
+                "label": "Nadpis"
+              },
+              {
+                "label": "Text"
+              },
+              {
+                "label": "Obrázek"
+              },
+              {
+                "label": "Skóre",
+                "description": "Skóre bude odesláno do jakéhokoli LMS, LRS nebo jakékoli jiné připojené služby, která přijímá skóre od H5P pro uživatele, kteří dosáhnou výchozího koncového scénáře."
+              },
+              {
+                "label": "ID obsahu"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Seznam obsahu scénáře větvení",
+          "entity": "obsah",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Zobrazit název obsahu",
+                "description": "Pokud je vybráno, uživatel uvidí název obsahu v horní liště nad tímto obsahem."
+              },
+              {
+                "label": "Text pro tlačítko Pokračovat (maximální délka: 50 znaků)",
+                "default": "Pokračovat"
+              },
+              {
+                "label": "Přepsání požadavku na obsah bylo dokončeno",
+                "description": "Před aktivací tlačítka „Pokračovat“ přepište jednotlivá nastavení, která vyžadují dokončení obsahu. Nebude mít žádný účinek, pokud obsah neuvádí, zda byl „dokončen“, např. obrázky nebo prezentace kurzů pouze s jedním snímkem.",
+                "options": [
+                  {
+                    "label": "Použijte nastavení chování"
+                  },
+                  {
+                    "label": "Povoleno"
+                  },
+                  {
+                    "label": "Zakázáno"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Zpětná vazba",
+                "fields": [
+                  {
+                    "label": "Nadpis zpětné vazby"
+                  },
+                  {
+                    "label": "Obsah zpětné vazby"
+                  },
+                  {
+                    "label": "Obrázek zpětné vazby"
+                  },
+                  {
+                    "label": "Body za tento scénář",
+                    "description": "Skóre bude odesláno do libovolného LMS, LRS nebo jakékoli jiné připojené služby, která obdrží skóre od H5P pro uživatele, kteří dosáhnou tento scénář."
+                  }
+                ]
+              },
+              {
+                "label": "Vrátit se zpět",
+                "description": "Toto umožní uživateli vrátit se zpět a zobrazit předchozí obsah/otázku scénáře.",
+                "options": [
+                  {
+                    "label": "Použít nastavené chování"
+                  },
+                  {
+                    "label": "Povoleno"
+                  },
+                  {
+                    "label": "Zakázáno"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Možnosti bodování",
+          "fields": [
+            {
+              "label": "Možnosti bodování",
+              "description": "Vybrat typ bodování.",
+              "options": [
+                {
+                  "label": "Staticky stanovené skóre pro každý scénář"
+                },
+                {
+                  "label": "Dynamicky vypočítat skóre z odpovědí uživatele"
+                },
+                {
+                  "label": "Žádné hodnocení"
+                }
+              ]
+            },
+            {
+              "label": "Zahrnout skóre z interakcí v rámci Větvení scénáře",
+              "description": "Pokud jsou vybrána skóre například z interaktivních videí, budou přidána k celkovému získanému skóre. Pokud je nezvolíte, budou se počítat pouze skóre specifikovaná v sekcích zpětné vazby položek obsahu, větvené otázky a konečné scénáře."
+            }
+          ]
+        },
+        {
+          "label": "Nastavení chování",
+          "fields": [
+            {
+              "label": "Přejít zpět",
+              "description": "To uživateli umožní vrátit se a zobrazit předchozí obsah/otázku ve scénáři. To lze přepsat na úrovni obsahu."
+            },
+            {
+              "label": "Povinné sledování",
+              "description": "Vyzývá diváky, aby před pokračováním ve scénáři dokončili video, interaktivní video a prezentaci kurzu. To lze přepsat na úrovni obsahu."
+            },
+            {
+              "label": "Náhodné větvení otázek",
+              "description": "Otázky větvení se zobrazí v náhodném pořadí."
+            }
+          ]
+        },
+        {
+          "label": "Lokalizace",
+          "fields": [
+            {
+              "label": "Text tlačítka na úvodní obrazovce",
+              "default": "Zahájit kurz"
+            },
+            {
+              "label": "Text tlačítka na koncové obrazovce",
+              "default": "Restartovat kurz"
+            },
+            {
+              "label": "Text pro tlačítko Zpět na každé z obrazovek knihovny a větvící otázky",
+              "default": "Pokračovat"
+            },
+            {
+              "label": "Text pro deaktivované tlačítko na obrazovkách knihovny",
+              "default": "Vyžadovat dokončení aktuálního modulu"
+            },
+            {
+              "label": "Text tlačítka použitého k přehrání videa",
+              "default": "Přehrát video"
+            },
+            {
+              "label": "Popisek pro skóre na závěrečné obrazovce",
+              "default": "Vaše skóre:"
+            },
+            {
+              "label": "Popisek pro tlačítko na celou obrazovku",
+              "default": "Celá obrazovka"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

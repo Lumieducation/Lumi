@@ -1,19 +1,17 @@
 {
-    "extends": ["config:base"],
-    "labels": ["[type] chore"],
-    "baseBranches": ["next"],
-    "automerge": true,
-    "major": {
-        "automerge": false
-    },
-    "lockFileMaintenance": {
-        "enabled": true
-    },
-    "prConcurrentLimit": 1,
-    "prHourlyLimit": 50,
-    "semanticCommits": true,
-    "semanticCommitType": "chore",
-    "encrypted": {
-        "npmToken": "qD4uoc+mF6IS2bojr5VPEMMJ9UvrIlR3bo8f0UabDdFjmuyi/jHViTcUvDpF4VrS41xTuEwIXdMJ9+V3hMfKvyXvARun4AOq6h115V3ebnB65uv8P/cNxFb8lR8Riq7VwcTTqL3bPSF8UIuRPuRzN+W90O0d5a0g2iFYGntn+ibUrXiNsY/QQUfMX+c6RmXN1OlJ5QVCLkRW/0w26ll+35r5TJEW+NmwnhJDmyfpYs6x+367FMO5/xUS4ZfPOKxHItbjtphxVrC6fNbiA4fmgsQ/ywjmJ9pEgtAka9TuuEgKg8CRvReeFo8sB4hcAxtWm/fUZANQ1NtKkzcJZkarZA=="
-    }
+  "extends": ["config:base"],
+  "baseBranches": ["next"],
+  "labels": ["[type] chore", "dependencies"],
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": "every weekday"
+  },
+  "prConcurrentLimit": 1,
+  "prHourlyLimit": 50,
+  "semanticCommits": true,
+  "semanticCommitType": "chore"
 }

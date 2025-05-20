@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Cíl",
+      "fields": [
+        {
+          "label": "Typ",
+          "options": [
+            {
+              "label": "Časový kód"
+            },
+            {
+              "label": "Další stránka (URL)"
+            }
+          ]
+        },
+        {
+          "label": "Jdi na",
+          "description": "Cílový čas, který bude uživatelem po stisknutí aktivního bodu přijat. Zadejte časový kód ve formátu M:SS."
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "Protokol",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(relativní kořen)"
+                },
+                {
+                  "label": "jiný"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Vizuální",
+      "fields": [
+        {
+          "label": "Tvar",
+          "options": [
+            {
+              "label": "Obdélník"
+            },
+            {
+              "label": "Kruh"
+            },
+            {
+              "label": "Zaoblený obdélník"
+            }
+          ]
+        },
+        {
+          "label": "Barva pozadí pro aktivní body"
+        },
+        {
+          "label": "Použít ukazatel kurzoru"
+        },
+        {
+          "label": "Přidat efekt blikání",
+          "description": "Poznámka: Blikající efekt je v editoru vždy povolen, takže můžete najít průhledné aktivní body"
+        }
+      ]
+    },
+    {
+      "label": "Texty",
+      "fields": [
+        {
+          "label": "Alternativní text",
+          "description": "Popište povrch předmětu aktivních bodů. Používá se pro čtecí zařízení",
+          "placeholder": "Jablko na stole"
+        },
+        {
+          "label": "Popisek aktivních bodů"
+        },
+        {
+          "label": "Popisek zobrazit"
+        },
+        {
+          "label": "Popisek barva"
+        }
+      ]
+    }
+  ]
+}

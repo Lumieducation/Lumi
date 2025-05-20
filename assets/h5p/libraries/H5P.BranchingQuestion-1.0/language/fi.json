@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Haarutuvan Kysymyksen Editori",
+      "fields": [
+        {
+          "label": "Kysymys"
+        },
+        {
+          "label": "Saatavilla olevat haaranpäätteet",
+          "entity": "haaranpääte",
+          "field": {
+            "label": "Haaranpääte",
+            "fields": [
+              {
+                "label": "Teksti"
+              },
+              {
+                "label": "Seuraava sisältö (-1 on lopetusruutu)"
+              },
+              {
+                "label": "Palaute",
+                "fields": [
+                  {
+                    "label": "Palautteen otsikko"
+                  },
+                  {
+                    "label": "Palautteen teksti"
+                  },
+                  {
+                    "label": "Palautteen kuva"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

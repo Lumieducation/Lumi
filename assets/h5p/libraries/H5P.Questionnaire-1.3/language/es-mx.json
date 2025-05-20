@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Elementos del Questionnaire",
+      "widgets": [
+        {
+          "label": "Predeterminado"
+        }
+      ],
+      "entity": "elemento",
+      "field": {
+        "label": "Elegir biblioteca",
+        "fields": [
+          {
+            "label": "Biblioteca",
+            "description": "Elegir una biblioteca"
+          },
+          {
+            "label": "Campo obligatorio"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Opciones pantalla éxito",
+      "fields": [
+        {
+          "label": "Habilitar pantalla éxito"
+        },
+        {
+          "label": "Añadir imagen pantalla éxito",
+          "fields": [
+            {
+              "label": "Remplazar ícono de éxito con imagen"
+            }
+          ]
+        },
+        {
+          "label": "Texto a mostrar al enviar",
+          "default": "Usted ha completado el questionnaire."
+        }
+      ]
+    },
+    {
+      "label": "Elementos de Interfaz del Usuario",
+      "fields": [
+        {
+          "label": "Etiquetas botón",
+          "fields": [
+            {
+              "label": "Etiqueta botón Anterior",
+              "default": "Regresar"
+            },
+            {
+              "label": "Etiqueta botón Continuar",
+              "default": "Continuar"
+            },
+            {
+              "label": "Etiqueta botón Siguiente",
+              "default": "Siguiente"
+            },
+            {
+              "label": "Etiqueta botón Enviar",
+              "default": "Enviar"
+            }
+          ]
+        },
+        {
+          "label": "Accesibilidad",
+          "fields": [
+            {
+              "label": "Etiqueta botón mensaje salida obligatoria",
+              "default": "Mensaje cerrar error"
+            },
+            {
+              "label": "Texto de Barra del Progreso",
+              "default": "Pregunta %current de %max",
+              "description": "Usado para decirle a tecnologías asistivas cual pregunta es. Variables: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Mensaje Obligatorio",
+          "default": "Esta pregunta requiere una respuesta",
+          "description": "Se mostrará si este campo no es contestado y es requerido por un tipo de contenido envoltorio"
+        },
+        {
+          "label": "Texto de símbolo Obligatorio",
+          "default": "obligatorio",
+          "description": "Texto que acompañará un asterisco para señalar que una pregunta es obligatoria"
+        },
+        {
+          "label": "Título para la pantalla para enviar",
+          "default": "Usted contestó exitosamente todas las preguntas"
+        },
+        {
+          "label": "Subtítulo para la pantalla para envío",
+          "default": "Hacer clic debajo para enviar sus respuestas"
+        }
+      ]
+    }
+  ]
+}

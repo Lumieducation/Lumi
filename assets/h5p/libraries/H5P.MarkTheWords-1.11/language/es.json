@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "label": "Medios",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Medios opcionales mostrados encima de la pregunta."
+        },
+        {
+          "label": "Deshabilitar acercamiento de imagen"
+        }
+      ]
+    },
+    {
+      "label": "Descripción de la tarea",
+      "description": "Describe cómo debería resolver la tarea el usuario.",
+      "placeholder": "Haz clic en todos los verbos del siguiente texto."
+    },
+    {
+      "label": "Campo de texto",
+      "placeholder": "Esta es una respuesta: *respuesta*.",
+      "important": {
+        "description": "<ul><li>Las palabras marcadas se agregan con un asterisco (*).</li><li>Pueden añadirse asteriscos dentro de las palabras marcadas aañadiendo otro asterisco, *palabracorrecta*** =&gt; palabracorrecta*.</li></ul>",
+        "example": "Las palabras correctas se marcan así: *palabracorrecta*, un asterisco se marca así: *palabracorrecta***."
+      }
+    },
+    {
+      "label": "Retroalimentación Global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Por defecto"
+            }
+          ],
+          "label": "Definir retroalimentación personalizada para cualquier rango de puntuación",
+          "description": "Haz clic en el botón \"Añadir rango\" para añadir los rangos que necesites. Ejemplo: 0-20% Mala puntuación, 21-91% Puntuación Media, 91-100% ¡Puntuación Estupenda!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango de puntuación"
+              },
+              {},
+              {
+                "label": "Retroalimentación para rango de puntuación definido",
+                "placeholder": "Escribe tu retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Texto para botón \"Comprobar\"",
+      "default": "Comprobar"
+    },
+    {
+      "label": "Texto para botón \"Enviar\"",
+      "default": "Enviar"
+    },
+    {
+      "label": "Texto para el botón \"Intentar de nuevo\"",
+      "default": "Intentar de nuevo"
+    },
+    {
+      "label": "Texto para botón \"Mostrar solución\"",
+      "default": "Mostrar solución"
+    },
+    {
+      "label": "Configuración del comportamiento.",
+      "description": "Estas opciones te permitirán controlar cómo se comporta la tarea.",
+      "fields": [
+        {
+          "label": "Habilitar \"Intentar de nuevo\""
+        },
+        {
+          "label": "Habilitar el botón \"Mostrar solución\""
+        },
+        {
+          "label": "Habilitar botón \"Comprobar\""
+        },
+        {
+          "label": "Mostrar resultados de puntuación",
+          "description": "Mostrar los puntos obtenidos por cada respuesta."
+        }
+      ]
+    },
+    {
+      "label": "Texto de respuesta correcta",
+      "default": "¡Correcto!",
+      "description": "Texto utilizado para indicar que una respuesta es correcta"
+    },
+    {
+      "label": "Texto de respuesta incorrecta",
+      "default": "¡Incorrecto!",
+      "description": "Texto utilizado para indicar que una respuesta es incorrecta"
+    },
+    {
+      "label": "Texto de respuesta ausente",
+      "default": "¡Respuesta no encontrada!",
+      "description": "Texto utilizado para indicar que falta una respuesta"
+    },
+    {
+      "label": "Descripción para Mostrar Solución",
+      "default": "La tarea se ha actualizado con la solución.",
+      "description": "Este texto le dice al usuario que las tareas se han actualizado con la solución."
+    },
+    {
+      "label": "Representación textual de la barra de puntuación cuando se usa un lector de pantalla",
+      "default": "Has obtenido :num de un total de :total puntos"
+    },
+    {
+      "label": "Etiqueta para el texto legible completo para tecnologías de asistencia",
+      "default": "Texto completo legible"
+    },
+    {
+      "label": "Etiqueta para el texto donde se pueden marcar palabras para tecnologías de asistencia",
+      "default": "Texto completo donde se pueden marcar las palabras"
+    },
+    {
+      "label": "Encabezado de modo de solución para tecnologías de asistencia",
+      "default": "Modo Solución"
+    },
+    {
+      "label": "Encabezado de modo de verificación para tecnologías de asistencia",
+      "default": "Modo de Comprobación"
+    },
+    {
+      "label": "Descripción para las tecnologías de asistencia del botón \"Comprobar\"",
+      "default": "Revisa tus respuestas. Las respuestas se marcarán como correcta, incorrecta o sin contestar."
+    },
+    {
+      "label": "Descripción para las tecnologías de asistencia del botón \"Mostrar solución\"",
+      "default": "Mostrar la solución. La tarea se calificará con su solución correcta."
+    },
+    {
+      "label": "Descripción para las tecnologías de asistencia del botón \"Intentar de nuevo\"",
+      "default": "Vuelve a intentar la tarea. Borra todas tus respuestas y empieza de nuevo."
+    }
+  ]
+}

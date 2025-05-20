@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "widgets": [
+        {
+          "label": "Pēc noklusējuma"
+        }
+      ],
+      "label": "Anketas elementi",
+      "entity": "elements",
+      "field": {
+        "label": "Izvēlieties bibliotēku",
+        "fields": [
+          {
+            "label": "Bibliotēka",
+            "description": "Izvēlieties bibliotēku"
+          },
+          {
+            "label": "Obligāts lauks"
+          }
+        ]
+      }
+    },
+    {
+      "fields": [
+        {
+          "label": "Iespējot veiksmīga rezultāta ekrānu"
+        },
+        {
+          "label": "Pievienot veiksmīga rezultāta ekrāna attēlu",
+          "fields": [
+            {
+              "label": "Aizstāt veiksmīga rezultāta ikonu ar attēlu"
+            }
+          ]
+        },
+        {
+          "label": "Teksts, kas jāparāda iesniegšanas brīdī",
+          "default": "Jūs esat aizpildījis anketu."
+        }
+      ],
+      "label": "Veiksmīga rezultāta ekrāna opcijas"
+    },
+    {
+      "label": "Lietotāja saskarnes elementi",
+      "fields": [
+        {
+          "label": "Pogu etiķetes",
+          "fields": [
+            {
+              "default": "Atpakaļ",
+              "label": "Pogas \"Atpakaļ\" etiķete"
+            },
+            {
+              "default": "Turpināt",
+              "label": "Pogas \"Turpināt\" etiķete"
+            },
+            {
+              "label": "Pogas \"Nākamais\" etiķete",
+              "default": "Nākamais"
+            },
+            {
+              "label": "Pogas \"Iesniegt\" etiķete",
+              "default": "Iesniegt"
+            }
+          ]
+        },
+        {
+          "label": "Pieejamība",
+          "fields": [
+            {
+              "label": "Obligātuma ziņas aizvēršanas pogas etiķete",
+              "default": "Aizvērt kļūdas paziņojumu"
+            },
+            {
+              "label": "Progresa joslas teksts",
+              "default": "Jautājums %current no %max",
+              "description": "Izmanto, lai asistīvās tehnoloģijas informētu par jautājumu numuru. Mainīgie: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Ziņa par obligātumu",
+          "default": "Šis jautājums jāatbild obligāti",
+          "description": "Tiks parādīts, ja šis lauks ir neatbildēts un paredzēts kā obligāts"
+        },
+        {
+          "label": "Obligātuma simbola teksts",
+          "default": "obligāts",
+          "description": "Teksts, kas tiks pievienots zvaigznītei, lai norādītu, ka jautājums ir obligāts"
+        },
+        {
+          "label": "Iesniegšanas ekrāna nosaukums",
+          "default": "Jūs veiksmīgi atbildējāt uz visiem jautājumiem"
+        },
+        {
+          "label": "Iesniegšanas ekrāna apakšvirsraksts",
+          "default": "Noklikšķiniet zemāk, lai iesniegtu atbildes"
+        }
+      ]
+    }
+  ]
+}

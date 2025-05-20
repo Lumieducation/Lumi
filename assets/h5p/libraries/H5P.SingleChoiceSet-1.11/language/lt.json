@@ -1,0 +1,155 @@
+{
+  "semantics": [
+    {
+      "label": "Klausimų sąrašas",
+      "entity": "klausimas",
+      "widgets": [
+        {
+          "label": "Numatytas"
+        },
+        {
+          "label": "Tekstinis"
+        }
+      ],
+      "field": {
+        "label": "Klausimas ir alternatyvos",
+        "fields": [
+          {
+            "label": "Klausimas"
+          },
+          {
+            "label": "Alternatyvos - pirmoji alternatyva yra teisinga.",
+            "entity": "atsakymas",
+            "field": {
+              "label": "Alternatyva"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Bendrieji atsiliepimai",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Numatytoji reikšmė"
+            }
+          ],
+          "label": "Nustatyti tinkintus atsiliepimus bet kokiam balų intervalui",
+          "description": "Spustelėkite mygtuką \"Pridėti intervalus\", kad pridėtumėte tiek intervalų, kiek reikia. Pavyzdys: 0-20% blogas rezultatas, 21-91% vidutinis rezultatas, 91-100% puikus rezultatas!",
+          "entity": "diapazonas",
+          "field": {
+            "fields": [
+              {
+                "label": "Vertinimo balų intervalas"
+              },
+              {},
+              {
+                "label": "Atsiliepimai apibrėžtam balų diapazonui",
+                "placeholder": "Užpildykite atsiliepimą"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Veikimo nustatymai",
+      "fields": [
+        {
+          "label": "Tęsti automatiškai",
+          "description": "Automatiškai pereiti prie kito klausimo, kai pasirenkama alternatyva. Šią funkciją reikia išjungti, kad turinys būtų visiškai prieinamas naudojant ekrano skaitytuvą."
+        },
+        {
+          "label": "Skirtas laikas teisingam atsakymui",
+          "description": "Reikšmė milisekundėmis"
+        },
+        {
+          "label": "Neteisingiems atsakymams skirtas laikas",
+          "description": "Reikšmė milisekundėmis"
+        },
+        {
+          "label": "Įjungti garso efektus"
+        },
+        {
+          "label": "Įjungti pakartotinio bandymo mygtuką"
+        },
+        {
+          "label": "Įjungti sprendimo rodymo mygtuką"
+        },
+        {
+          "label": "Išlaikymo procentas",
+          "description": "Procentinė dalis nuo bendro balų skaičiaus, reikalingo testui įveikti."
+        }
+      ]
+    },
+    {
+      "label": "Lokalizuoti vieno pasirinkimo rinkinį",
+      "fields": [
+        {
+          "label": "Mygtuko \"Kitas\" pavadinimas",
+          "default": "Kitas klausimas"
+        },
+        {
+          "label": "Mygtuko \"Rodyti sprendimą\" pavadinimas",
+          "default": "Rodyti sprendimą"
+        },
+        {
+          "label": "Mygtuko \"Bandyti dar kartą\" pavadinimas",
+          "default": "Bandyti dar kartą"
+        },
+        {
+          "label": "Sprendimų sąrašo rodinio pavadinimas",
+          "default": "Sprendimų sąrašas"
+        },
+        {
+          "label": "Įgarsinimo tekstas teisingam atsakymui",
+          "default": "Teisingai!"
+        },
+        {
+          "label": "Įgarsinimo tekstas neteisingam atsakymui",
+          "default": "Neteisingai!"
+        },
+        {
+          "label": "Nuostata turėjo būti pasirinkta",
+          "default": "Turėjo būti pasirinkta"
+        },
+        {
+          "label": "Nuostata neturėjo būti pasirinkta",
+          "default": "Neturėjo būti pasirinkta"
+        },
+        {
+          "label": "Mygtuko \"išjungti garsą\", skirto išjungti atsiliepimo garsą, pavadinimas",
+          "default": "Išjungti atsiliepimo garsą"
+        },
+        {
+          "label": "Mygtuko \"Uždaryti\" pavadinimas",
+          "default": "Uždaryti"
+        },
+        {
+          "label": "Skaidrės numerio tekstas",
+          "description": "Rodo dabartinės skaidrės numerį ir bendrą skaidrių skaičių, kintamieji yra :num ir :total",
+          "default": "Skaidrė :num iš :total"
+        },
+        {
+          "label": "Tekstinis rezultatų juostos atvaizdavimas tiems, kurie naudojasi skaitytuvu",
+          "default": "Jūs gavote :num iš :total balų"
+        },
+        {
+          "label": "Klausimų skaičius sprendimų sąraše",
+          "description": "Skelbia dabartinio klausimo indeksą sprendimų sąraše, kintamieji yra :num",
+          "default": "Klausimas :num"
+        },
+        {
+          "label": "Papildomas technologinis aprašymas mygtukui \"Rodyti sprendimą\"",
+          "default": "Rodyti sprendimą. Užduotis bus pažymėta teisingu sprendimu."
+        },
+        {
+          "label": "Pagalbinis technologinis aprašymas mygtukui \"Bandyti dar kartą\"",
+          "default": "Pakartoti užduotį. Išvalyti visus atsakymus ir pradėti užduotį iš naujo."
+        }
+      ]
+    }
+  ]
+}

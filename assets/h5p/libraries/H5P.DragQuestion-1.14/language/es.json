@@ -1,0 +1,271 @@
+{
+  "semantics": [
+    {
+      "label": "Botón comprobar respuesta",
+      "default": "Comprobar"
+    },
+    {
+      "label": "Botón para enviar respuesta",
+      "default": "Enviar"
+    },
+    {
+      "label": "Botón Intentar de nuevo",
+      "default": "Intentar de nuevo"
+    },
+    {
+      "label": "Texto de explicación de la puntuación",
+      "default": "Las respuestas correctas dan +1 punto. Las incorrectas dan -1 punto. La puntuación más baja posible es 0."
+    },
+    {
+      "fields": [
+        {
+          "label": "Configuración",
+          "fields": [
+            {
+              "label": "Imagen de fondo",
+              "description": "Opcional. Selecciona una imagen para usar como fondo para tu tarea de arrastrar y soltar."
+            },
+            {
+              "label": "Tamaño de la tarea",
+              "description": "Especifica las dimensiones (en px) del área de juego."
+            }
+          ]
+        },
+        {
+          "label": "Tarea",
+          "description": "Comienza colocando tus zonas de colocación.<br />Después, pon los elementos a colocar y marca las zonas de colocación apropiadas.<br />Finalmente, edita otra vez las zonas de colocación y marca las respuestas correctas.",
+          "fields": [
+            {
+              "label": "Elementos",
+              "entity": "elemento",
+              "field": {
+                "label": "Elemento",
+                "fields": [
+                  {
+                    "description": "Elije el tipo de contenido que te gustaría añadir."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Selecciona zonas de colocación"
+                  },
+                  {
+                    "label": "Opacidad del fondo",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Número infinito de instancias de elementos",
+                    "description": "Clonar este elemento para que pueda ser arrastrado a múltiples zonas de colocación."
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Zonas de colocación",
+              "entity": "Zona de colocación",
+              "field": {
+                "label": "Zona de colocación",
+                "fields": [
+                  {
+                    "label": "Etiqueta",
+                    "description": "The label is used by assistive technologies."
+                  },
+                  {
+                    "label": "Mostrar etiqueta"
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Seleccionar elementos correctos"
+                  },
+                  {
+                    "label": "Opacidad del Fondo",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Pistas y retroalimentación",
+                    "fields": [
+                      {
+                        "label": "Texto de pista"
+                      },
+                      {
+                        "label": "Mensaje mostrado en coincidencia correcta",
+                        "description": "El mensaje aparecerá debajo de la tarea en \"revisar\" si el elemento colocado es el correcto."
+                      },
+                      {
+                        "label": "Mensaje mostrado en coincidencia incorrecta",
+                        "description": "El mensaje aparecerá debajo de la tarea en \"comprobar\" si el elemento colocado es incorrecto."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Esta zona de colocación solamente puede contener un elemento",
+                    "description": "Asegúrate de que solo haya una respuesta correcta para esta zona de colocación"
+                  },
+                  {
+                    "label": "Habilitar alineación automática",
+                    "description": "Alineará automáticamente todos los elemento colocados en esta zona."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Retroalimentación Global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Por defecto"
+            }
+          ],
+          "label": "Definir retroalimentación personalizada para cualquier rango de puntuación",
+          "description": "Haz clic en el botón \"Añadir rango\" para añadir los rangos que necesites. Ejemplo: 0-20% Mala puntuación, 21-91% Puntuación Media, 91-100% ¡Puntuación Estupenda!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango del Puntuación"
+              },
+              {},
+              {
+                "label": "Realimentación para el rango de puntuación definido",
+                "placeholder": "Escribe tu retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Configuración del comportamiento",
+      "description": "Estas opciones le permitirán controlar cómo se comporta la tarea.",
+      "fields": [
+        {
+          "label": "Habilitar \"Intentar de nuevo\""
+        },
+        {
+          "label": "Habilitar el botón \"Comprobar\""
+        },
+        {
+          "label": "Da un punto para toda la tarea",
+          "description": "Deshabilitar dar un punto por cada elemento colocado correctamente."
+        },
+        {
+          "label": "Aplicar penalizaciones",
+          "description": "Aplicar penalizaciones por elementos colocados en las zonas de colocación incorrectas. Debe habilitarse cuando los mismos elementos pueden colocarse en múltiples zonas de colocación, o si solamente hay una zona. Si esto no está habilitado, los alumnos podrían hacer coincidir todos los elemento con todas las zonas de colocación y siempre recibirían la puntuación completa."
+        },
+        {
+          "label": "Habilitar explicación de puntuación",
+          "description": "Mostrar una explicación de la puntuación al usuario al comprobar sus respuestas (si se ha seleccionado la opción \"Aplicar penalizaciones\")."
+        },
+        {
+          "label": "Opacidad del fondo para elementos a colocar",
+          "description": "Si este campo está activado, anulará la opacidad configurada en todos los elementos a colocar. Debería ser un número entre 0 y 100, donde 0 significa transparencia completa y 100 significa sin transparencia"
+        },
+        {
+          "label": "Resaltado de zona de colocación",
+          "description": "Elegir cuando resaltar las zonas de colocación.",
+          "options": [
+            {
+              "label": "Al arrastrar"
+            },
+            {
+              "label": "Siempre"
+            },
+            {
+              "label": "Nunca"
+            }
+          ]
+        },
+        {
+          "label": "Espaciado para auto-alineado (en px)"
+        },
+        {
+          "label": "Habilitar Pantalla Completa",
+          "description": "Activar esta opción para habilitar el botón de pantalla completa."
+        },
+        {
+          "label": "Mostrar resultados de puntuación",
+          "description": "Mostrar puntos obtenidos por cada respuesta. No disponible cuando está habilitada la opción 'Dar un punto para todo la tarea' ."
+        },
+        {
+          "label": "Mostrar Título",
+          "description": "Desactivar esta opción si no quieres que se muestre este título. El título solamente se mostrará en resúmenes, estadísticas, etc."
+        }
+      ]
+    },
+    {
+      "label": "Localizar",
+      "fields": [
+        {
+          "label": "Etiqueta para pantalla completa",
+          "default": "Pantalla completa"
+        },
+        {
+          "label": "Etiqueta de salir de pantalla completa",
+          "default": "Salir de pantalla completa"
+        }
+      ]
+    },
+    {
+      "label": "Prefijo elemento a colocar",
+      "default": "Elemento a colocar {num} de {total}."
+    },
+    {
+      "label": "Sufijo elemento a colocar",
+      "default": "Colocado en zona de colocación {num}."
+    },
+    {
+      "label": "Prefijo zona de colocación",
+      "default": "Zona de colocación {num} de {total}."
+    },
+    {
+      "label": "Sin etiqueta de selección de zona de colocación",
+      "default": "No es zona de colocación."
+    },
+    {
+      "label": "Etiqueta para botón para mostrar pista",
+      "default": "Mostrar pista."
+    },
+    {
+      "label": "Etiqueta para pista disponible",
+      "default": "Pista disponible"
+    },
+    {
+      "label": "Etiqueta para respuesta correcta",
+      "default": "Respuesta correcta"
+    },
+    {
+      "label": "Etiqueta para respuesta incorrecta",
+      "default": "Respuesta incorrecta"
+    },
+    {
+      "label": "Encabezado para panel que contiene retroalimentación para respuestas correctas/incorrectas",
+      "default": "Retroalimentación"
+    },
+    {
+      "label": "Representación textual de la barra de puntuación cuando se usa un lector de pantalla",
+      "default": "Has obtenido :num de un total de :total puntos"
+    },
+    {
+      "label": "Representación textual del botón para explicación de la puntuación",
+      "default": "Mostrar explicación de la puntuación"
+    },
+    {
+      "label": "Etiqueta para las tecnologías de asistencia para el botón \"Comprobar\"",
+      "default": "Comprobar las respuestas. Las respuestas serán marcadas como correcta, incorrecta o sin contestar."
+    },
+    {
+      "label": "Descripción para las tecnologías de asistencia del botón \"Intentar de nuevo\"",
+      "default": "Vuelve a intentar la tarea. Borra todas tus respuestas y empieza de nuevo."
+    }
+  ]
+}

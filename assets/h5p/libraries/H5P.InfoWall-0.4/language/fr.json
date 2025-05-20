@@ -1,0 +1,156 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "En-tête",
+          "description": "En-tête facultatif pour le mur d'information."
+        },
+        {
+          "label": "Propriétés",
+          "fields": [
+            {
+              "label": "Propriétés",
+              "description": "Propriétés des entrées",
+              "entity": "propriété",
+              "widgets": [
+                {
+                  "label": "Par défaut"
+                }
+              ],
+              "field": {
+                "label": "Éléments de propriété",
+                "fields": [
+                  {
+                    "label": "Vignette",
+                    "default": "Anonyme"
+                  },
+                  {
+                    "label": "Afficher la vignette de la propriété"
+                  },
+                  {
+                    "label": "Activer la recherche dans la propriété"
+                  },
+                  {
+                    "label": "Contourner le style",
+                    "fields": [
+                      {
+                        "label": "Gras"
+                      },
+                      {
+                        "label": "Italique"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {}
+          ]
+        },
+        {
+          "label": "Panneaux",
+          "description": "Panneaux pour le mur",
+          "entity": "panneau",
+          "widgets": [
+            {
+              "label": "Par défaut"
+            }
+          ],
+          "field": {
+            "label": "Éléments d'entrée",
+            "fields": [
+              {
+                "label": "Titre pour le panneau"
+              },
+              {
+                "label": "Image"
+              },
+              {
+                "label": "Entrées",
+                "description": "Entées pour les propriétés",
+                "entity": "valeur",
+                "widgets": [
+                  {
+                    "label": "Par défaut"
+                  }
+                ],
+                "field": {
+                  "label": "Vignette à changer automatiquement"
+                }
+              },
+              {
+                "label": "Additional keywords",
+                "description": "Add additional keywords separated by a blank space that will be used for filtering but not be visible to the user."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Paramètres comportementaux",
+          "description": "Ces options vous permettront de contrôler le déroulement de la tâche.",
+          "fields": [
+            {
+              "label": "Utiliser un texte de remplacement pour les images manquantes"
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "Largeur de l’image",
+              "description": "Largeur de l’image en px."
+            },
+            {
+              "label": "Hauteur de l’image",
+              "description": "Hauteur de l’image en px."
+            },
+            {
+              "label": "Fond du panneau alternatif",
+              "description": "Si coché, chaque 2e panneau aura un fond légèrement plus foncé que les autres."
+            },
+            {
+              "label": "Champ de filtre d'offre",
+              "description": "Si cette case est cochée, les utilisateurs pourront filtrer le mur d'informations."
+            },
+            {
+              "label": "Mode for filter field",
+              "description": "Choose whether the filter should narrow down or broaden the search with every new keyword.",
+              "options": [
+                {
+                  "label": "Narrow down"
+                },
+                {
+                  "label": "Broaden"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Interface utilisateur",
+          "fields": [
+            {
+              "label": "Aucun guide pour les créateurs de contenu saisi",
+              "default": "L'auteur n'a rien saisi."
+            },
+            {
+              "label": "Aucune correspondance trouvée",
+              "description": "@query est un espace réservé et sera remplacé par la requête respective qui a été saisie.",
+              "default": "Il n'y a pas de correspondances pour @query."
+            },
+            {
+              "label": "Saisir pour filtrer",
+              "description": "Message pour la synthèse texte-parole.",
+              "default": "Saisir une requête pour filtrer le guide pour les créateurs de contenu des entrées pertinentes."
+            },
+            {
+              "label": "Liste modifiée.",
+              "description": "Message pour la synthèse texte-parole. @visible et @total sont des espaces réservés et seront pré-placés avec les valeurs respectives.",
+              "default": "Liste modifiée. Affichage de @visible sur @total éléments."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "label": "Mídia",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Mídia opcional para exibir acima da pergunta."
+        },
+        {
+          "label": "Desactivar o zoom da imagem"
+        }
+      ]
+    },
+    {
+      "label": "Descrição da tarefa",
+      "description": "Descreva a forma como o utilizador deve completar a atividade.",
+      "placeholder": "Clique em todos os verbos no texto apresentado a seguir."
+    },
+    {
+      "label": "Campo de texto",
+      "placeholder": "Isto é uma resposta: *answer*.",
+      "important": {
+        "description": "<ul><li>As palavras a assinalar são adicionadas com um asterisco(*).</li><li>Os asteriscos podem ser adicionados às palavras a assinalar adicionando outro asterisco, *palavracorreta*** =&gt; palavracorreta*.</li></ul>",
+        "example": "As palavras corretas são marcadas desta maneira: *palavra correta* e um asterisco pode ser escrito da seguinte maneira: *palavracorreta***."
+      }
+    },
+    {
+      "label": "Feedback global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Defina o feedback personalizado para qualquer faixa de pontuação",
+          "description": "Clique em \"Adicionar faixa\" e adicione quantas faixas forem necessárias. Exemplo: 0-20% Insuficiente, 21-91% Suficiente, 91-100% Excelente!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para determinada faixa de pontuação",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Texto para o botão \"Verificar resposta\"",
+      "default": "Verificar resposta"
+    },
+    {
+      "label": "Texto para o botão \"Tentar novamente\"",
+      "default": "Tentar novamente"
+    },
+    {
+      "label": "Texto para o botão \"Mostrar solução\"",
+      "default": "Mostrar solução"
+    },
+    {
+      "label": "Configurações gerais.",
+      "default": "Mostrar solução"
+    },
+    {
+      "label": "Texto para resposta correta",
+      "description": "Texto utilizado para indicar que a resposta está correta",
+      "fields": [
+        {
+          "label": "Ativar o botão \"Tentar novamente\""
+        },
+        {
+          "label": "Ativar o botão \"Mostrar solução\""
+        },
+        {
+          "label": "Ativar o botão \"Verificar resposta\""
+        },
+        {
+          "label": "Mostrar pontuação",
+          "description": "Mostra os pontos obtidos em cada pergunta."
+        }
+      ]
+    },
+    {
+      "label": "Texto para resposta incorreta",
+      "default": "Incorreta!",
+      "description": "Texto utilizado para indicar que a resposta está incorreta"
+    },
+    {
+      "label": "Texto para pergunta não respondida",
+      "default": "Pergunta não respondida!",
+      "description": "Texto utilizado para indicar que a pergunta não foi respondida"
+    },
+    {
+      "label": "Descrição para Mostrar solução",
+      "default": "A atividade foi atualizada com a solução.",
+      "description": "Texto utilizado para indicar que a atividade foi atualizada com a solução."
+    },
+    {
+      "label": "Representação textual da barra de pontuação para aqueles que usam leitores de ecrã",
+      "default": "Obteve :num de :total pontos",
+      "description": "Texto utilizado para indicar que a tarefa foi atualizada com a solução."
+    },
+    {
+      "label": "Etiqueta para o texto legível completo para tecnologias de acessibilidade",
+      "default": "Texto totalmente legível"
+    },
+    {
+      "label": "Etiqueta para o texto onde as palavras podem ser marcadas para tecnologias assistivas",
+      "default": "Texto completo onde as palavras podem ser marcadas"
+    },
+    {
+      "label": "Cabeçalho do modo de solução para tecnologias de acessibilidade",
+      "default": "Modo de solução"
+    },
+    {
+      "label": "Cabeçalho do modo de verificação para tecnologias de acessibilidade",
+      "default": "Modo de verificação"
+    },
+    {
+      "label": "Descrição de tecnologia assistiva para o botão \"Verificar\"",
+      "default": "Verifique as respostas. Estas serão marcadas como corretas, incorretas, ou não respondidas."
+    },
+    {
+      "label": "Descrição de tecnologia assistida para o botão \"Mostrar Solução\"",
+      "default": "Mostrar a solução. A atividade será marcada com a respetiva solução correta."
+    },
+    {
+      "label": "Descrição da tecnologia assistiva para o botão \"Repetir\"",
+      "default": "Repetir a atividade. Apagar todas as respostas e reiniciar a atividade."
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
+    }
+  ]
+}

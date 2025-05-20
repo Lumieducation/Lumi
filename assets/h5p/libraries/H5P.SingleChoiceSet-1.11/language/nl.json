@@ -1,0 +1,155 @@
+{
+  "semantics": [
+    {
+      "label": "Lijst met vragen",
+      "entity": "vraag",
+      "widgets": [
+        {
+          "label": "Standaard"
+        },
+        {
+          "label": "Tekstueel"
+        }
+      ],
+      "field": {
+        "label": "Vraag &amp; alternatieven",
+        "fields": [
+          {
+            "label": "Vraag"
+          },
+          {
+            "label": "Alternatieven - het eerste alternatief is het juiste antwoord.",
+            "entity": "antwoord",
+            "field": {
+              "label": "Alternatief"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Algehele feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Standaard"
+            }
+          ],
+          "label": "Definieer aangepaste feedback voor elk scorebereik",
+          "description": "Druk op de \"Voeg scorereeks\"-knop om zoveel reeksen toe te voegen als nodig. Voorbeeld: 0-20% Onvoldoende, 21-91% Gemiddelde score, 91-100% Uitstekende score!",
+          "entity": "reeks",
+          "field": {
+            "fields": [
+              {
+                "label": "Scorereeks"
+              },
+              {},
+              {
+                "label": "Feedback voor de gedefinieerde scorereeks",
+                "placeholder": "Vul de feedback in"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellingen",
+      "fields": [
+        {
+          "label": "Automatisch doorgaan",
+          "description": "Automatically go to next question when alternative is selected. This needs to be turned off to make the content fully accessible when using a screen reader."
+        },
+        {
+          "label": "Time-out bij juiste antwoorden",
+          "description": "Waarde in milliseconden"
+        },
+        {
+          "label": "Time-out bij onjuiste antwoorden",
+          "description": "Waarde in milliseconden"
+        },
+        {
+          "label": "Schakel geluidseffecten in"
+        },
+        {
+          "label": "Schakel \"Opnieuw\"-knop in"
+        },
+        {
+          "label": "Schakel \"Toon oplossing\"-knop in"
+        },
+        {
+          "label": "Slagingspercentage",
+          "description": "Percentage van de totale score die vereist is om te slagen."
+        }
+      ]
+    },
+    {
+      "label": "Lokaliseer enkele keuze set",
+      "fields": [
+        {
+          "label": "Tekst voor \"Volgende\"-knop",
+          "default": "Volgende vraag"
+        },
+        {
+          "label": "Tekst voor \"Toon oplossing\"-knop",
+          "default": "Toon oplossing"
+        },
+        {
+          "label": "Tekst voor \"Opnieuw\"-knop",
+          "default": "Opnieuw"
+        },
+        {
+          "label": "Titel voor het oplossingsoverzicht",
+          "default": "Antwoordoverzicht"
+        },
+        {
+          "label": "Schermlezer tekst voor het juiste antwoord",
+          "default": "Juist!"
+        },
+        {
+          "label": "Schermlezer tekst voor het onjuiste antwoord",
+          "default": "Onjuist!"
+        },
+        {
+          "label": "Option should have been selected",
+          "default": "Should have been selected"
+        },
+        {
+          "label": "Option should not have been selected",
+          "default": "Should not have been selected"
+        },
+        {
+          "label": "Tekst voor \"Demp\"-knop, om het feedbackgeluid uit te schakelen",
+          "default": "Demp het feedbackgeluid"
+        },
+        {
+          "label": "Tekst voor \"Afsluiten\"-knop",
+          "default": "Afsluiten"
+        },
+        {
+          "label": "Tekst voor het dianummer",
+          "description": "Geeft de huidige dia en het totale aantal dia's weer, variabelen zijn :num and :total",
+          "default": "Dia :num van :total"
+        },
+        {
+          "label": "Tekstuele weergave van de scorebalk voor de gebruikers van de schermlezer",
+          "default": "Je hebt :num van de :total punten"
+        },
+        {
+          "label": "Label voor het vraagnummer in het antwoordoverzicht",
+          "description": "Geeft het huidige vraagnummer in het antwoordoverzicht, variabele is :num",
+          "default": "Vraag :num"
+        },
+        {
+          "label": "Ondersteunende technologie beschrijving voor \"Toon oplossing\"-knop",
+          "default": "Toon de oplossing. De taak zal worden gemarkeerd met de juiste oplossing."
+        },
+        {
+          "label": "Ondersteunende technologie beschrijving voor \"Opnieuw\"-knop",
+          "default": "Probeer de taak opnieuw. Reset alle antwoorden en start de taak opnieuw."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "description": "Mídia opcional para exibir acima da pergunta.",
+          "label": "Tipo"
+        },
+        {
+          "label": "Desativar o zoom da imagem"
+        }
+      ],
+      "label": "Mídia"
+    },
+    {
+      "description": "Explique aos seus alunos o que se espera deles.",
+      "label": "Descrição da tarefa"
+    },
+    {
+      "entity": "seção",
+      "field": {
+        "fields": [
+          {
+            "label": "Título"
+          },
+          {
+            "description": "Opcionalmente, adicione dicas ou instruções específicas para esta seção.",
+            "label": "Dicas"
+          },
+          {
+            "description": "Insira o peso desta seção em relação a outras seções. O peso determina quanto tempo uma seção é esperada em comparação com outras seções.",
+            "label": "Peso"
+          },
+          {
+            "default": "#96ceb4",
+            "label": "Cor de fundo"
+          },
+          {
+            "default": "#1c1c1c",
+            "label": "Cor do texto"
+          }
+        ],
+        "label": "Parâmetros de seção"
+      },
+      "label": "Seções",
+      "widgets": [
+        {
+          "label": "Padrão"
+        }
+      ]
+    },
+    {
+      "description": "Estas opções permitem controlar como a tarefa se comporta.",
+      "fields": [
+        {
+          "label": "Ativar \"Tentar Novamente\""
+        },
+        {
+          "label": "Ativar \"Solução\""
+        },
+        {
+          "description": "Porcentagem de folga aceitável para o comprimento de uma seção.",
+          "label": "Folga"
+        },
+        {
+          "description": "Defina um comprimento total mínimo absoluto de texto. Observe que o peso de uma seção em comparação com outras seções é o principal fator para a mensagem de feedback, não esse valor mínimo.",
+          "label": "Comprimento mínimo do texto"
+        },
+        {
+          "description": "Defina um comprimento total de texto máximo absoluto. Observe que o peso de uma seção em comparação com outras seções é o principal fator para a mensagem de feedback, não esse valor máximo.",
+          "label": "Comprimento máximo do texto"
+        },
+        {
+          "description": "Decidir se deseja exibir comentários enquanto digita ou apenas quando o aluno solicita.",
+          "label": "Modo de Feedback",
+          "options": [
+            {
+              "label": "A pedido"
+            },
+            {
+              "label": "Ao digitar"
+            }
+          ]
+        }
+      ],
+      "label": "Configurações comportamentais"
+    },
+    {
+      "fields": [
+        {
+          "default": "Copiar",
+          "label": "Texto para o botão \"Copiar\""
+        },
+        {
+          "default": "Verificar",
+          "label": "Texto para o botão \"Verificar\""
+        },
+        {
+          "default": "Tentar Novamente",
+          "label": "Texto para o botão \"Tentar Novamente\""
+        },
+        {
+          "default": "Mostrar solução",
+          "label": "Texto para o botão \"Mostrar solução\""
+        },
+        {
+          "default": "Os comprimentos de suas seções estão de acordo.",
+          "description": "Texto de feedback exibido quando todas as seções têm comprimento aceitável.",
+          "label": "Todas as seções estão boas"
+        },
+        {
+          "default": "Sua seção \"@title\" é muito curta. Você precisa de pelo menos @chars mais caracteres.",
+          "description": "Texto de feedback mostrado para seções muito curtas (@title será substituído pelo título da seção, @chars será substituído pelo número de caracteres ausentes).",
+          "label": "Seção muito curta"
+        },
+        {
+          "default": "Sua seção \"@title\" é muito longa. Remova pelo menos @chars caracteres.",
+          "description": "Texto de feedback mostrado para seções muito longas (@title será substituído pelo título da seção, @chars será substituído pelo número de caracteres que precisam ser removidos).",
+          "label": "Seção muito longa"
+        },
+        {
+          "default": "@chars é uma quantidade pequena de caracteres",
+          "description": "Status mostrado ao digitar seções muito curtas (@chars será substituído pelo número de caracteres ausentes).",
+          "label": "Seção muito curta (ao digitar)"
+        },
+        {
+          "default": "@chars são muitos caracteres",
+          "description": "Status mostrado ao digitar seções muito longas (@chars será substituído pelo número de caracteres que precisam ser removidos).",
+          "label": "Seção muito longa (ao digitar)"
+        },
+        {
+          "default": "Seu texto foi copiado para a área de transferência",
+          "label": "Texto copiado para a área de transferência"
+        },
+        {
+          "default": "Seu texto não pôde ser copiado para a área de transferência",
+          "label": "Não é possível copiar para a área de transferência"
+        },
+        {
+          "default": "Seção",
+          "label": "Seção"
+        },
+        {
+          "default": "Não foi dada nenhuma seção para esta faixa de estrutura.",
+          "label": "Texto para a mensagem \"Nenhuma seção\""
+        }
+      ],
+      "label": "Interface de usuário"
+    },
+    {
+      "fields": [
+        {
+          "default": "Feedback",
+          "label": "Feedback (texto para leitores de tela)"
+        },
+        {
+          "default": "Copiar texto para a área de transferência",
+          "label": "Copie seu texto para a área de transferência (texto para leitores de tela)"
+        },
+        {
+          "default": "Fechar janela",
+          "label": "Fechar janela (texto para leitores de tela)"
+        },
+        {
+          "default": "Mostrar dicas",
+          "label": "Mostrar dicas (texto para leitores de tela)"
+        }
+      ],
+      "label": "Leitor de Tela"
+    }
+  ]
+}

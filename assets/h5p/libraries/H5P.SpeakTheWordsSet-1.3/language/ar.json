@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "المقدمة",
+      "fields": [
+        {
+          "label": "مقدمة العرض"
+        },
+        {
+          "label": "صورة المقدمة"
+        },
+        {
+          "label": "نص بديل لصورة المقدمة"
+        },
+        {
+          "label": "العنوان"
+        },
+        {
+          "label": "نص المقدمة",
+          "description": "سيتم عرض هذا العنوان أعلى نص المقدمة."
+        }
+      ]
+    },
+    {
+      "label": "الأسئلة",
+      "widgets": [
+        {
+          "label": "افتراضي"
+        }
+      ],
+      "entity": "Question",
+      "field": {
+        "label": "السؤال"
+      }
+    },
+    {
+      "label": "رد الفعل الشامل ",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "افتراضي"
+            }
+          ],
+          "label": "تحديد الملاحظات المخصصة لأي مجال نقاط",
+          "description": "انقر زر \" اضافة مجال \" لضافة اكبر عدد ممكن من المجالات ،وكمثال. : 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "مجال النقاط"
+              },
+              {},
+              {
+                "label": "ردود الفعل لمجال نقاط محددة",
+                "placeholder": "Fill in the feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Speak The Words Set labels and texts",
+      "fields": [
+        {
+          "label": "لافتة زر المقدمة",
+          "default": "Start Course!"
+        },
+        {
+          "label": "ملصق نتائج شاشة الحل",
+          "default": "Your results:"
+        },
+        {
+          "label": "لافتة زر اظهار الحلول",
+          "default": "Show solution"
+        },
+        {
+          "label": "تسمية زر اعادة المحاولة",
+          "default": "Retry"
+        },
+        {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
+          "label": "لافتة الوصول للسؤال التالي",
+          "default": "Next question"
+        },
+        {
+          "label": "لافتة الوصول للسؤال السابق",
+          "default": "Previous question"
+        },
+        {
+          "label": "عنوان شريط التصفح",
+          "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number.",
+          "default": "Slide :num"
+        },
+        {
+          "label": "لافتة الوصل الى الشريحة التي تم الوصول اليها",
+          "default": "Answered"
+        },
+        {
+          "label": "لافتة الوصول الى الشريحة النشطة",
+          "default": "Currently active"
+        }
+      ]
+    }
+  ]
+}

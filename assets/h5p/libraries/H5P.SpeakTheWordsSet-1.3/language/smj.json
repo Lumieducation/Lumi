@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Introduction",
+      "fields": [
+        {
+          "label": "Display introduction"
+        },
+        {
+          "label": "Introduction image"
+        },
+        {
+          "label": "Alternative text for introduction image"
+        },
+        {
+          "label": "Title"
+        },
+        {
+          "label": "Introduction text",
+          "description": "This title will be displayed above the introduction text."
+        }
+      ]
+    },
+    {
+      "label": "Questions",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "entity": "Question",
+      "field": {
+        "label": "Question"
+      }
+    },
+    {
+      "label": "Overall Feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Default"
+            }
+          ],
+          "label": "Define custom feedback for any score range",
+          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "Score Range"
+              },
+              {},
+              {
+                "label": "Feedback for defined score range",
+                "placeholder": "Fill in the feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Speak The Words Set labels and texts",
+      "fields": [
+        {
+          "label": "Introduction button label",
+          "default": "Start Course!"
+        },
+        {
+          "label": "Solution screen results label",
+          "default": "Your results:"
+        },
+        {
+          "label": "Show solutions button label",
+          "default": "Show solution"
+        },
+        {
+          "label": "Retry button label",
+          "default": "Retry"
+        },
+        {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
+          "label": "Next question accessibility label",
+          "default": "Next question"
+        },
+        {
+          "label": "Previous question accessibility label",
+          "default": "Previous question"
+        },
+        {
+          "label": "Navigation bar title",
+          "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number.",
+          "default": "Slide :num"
+        },
+        {
+          "label": "Answered slide accessibility label",
+          "default": "Answered"
+        },
+        {
+          "label": "Active slide accessibility label",
+          "default": "Currently active"
+        }
+      ]
+    }
+  ]
+}

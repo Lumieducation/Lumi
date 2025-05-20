@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Zdjęcie w tle",
+      "description": "Zdjęcie, które jest pokazywane w tle"
+    },
+    {
+      "label": "Tekst alternatywny dla zdjęcia w tle",
+      "description": "Gdy przeglądarka nie będzie mogła załadować zdjęcia, ten tekst zostanie wyświetlony zamiast niego."
+    },
+    {
+      "label": "Ikona znacznika",
+      "options": [
+        {
+          "label": "Dostępne ikony"
+        },
+        {
+          "label": "Wgrane zdjęcie"
+        }
+      ]
+    },
+    {
+      "label": "Dostępne ikony",
+      "description": "Użyj jednej z dostępnych ikon dla znacznika.",
+      "options": [
+        {
+          "label": "Plus"
+        },
+        {
+          "label": "Minus"
+        },
+        {
+          "label": "Czas"
+        },
+        {
+          "label": "Potwierdzenie"
+        },
+        {
+          "label": "Pytanie"
+        },
+        {
+          "label": "Informacje"
+        },
+        {
+          "label": "Wykrzyknik"
+        }
+      ]
+    },
+    {
+      "label": "Wgrane zdjęcie",
+      "description": "Użyj własnego obrazu jako ikony znacznika. <br /> Zalecane jest zdjęcie w rozdzielczości 75 na 75 pikseli."
+    },
+    {
+      "label": "Kolor znacznika",
+      "description": "Kolor, który będą mieć wszystkie znaczniki"
+    },
+    {
+      "entity": "znacznik",
+      "label": "Znaczniki",
+      "field": {
+        "label": "Znacznik",
+        "fields": [
+          {
+            "label": "Pozycja znacznika",
+            "description": "Kliknij na zdjęcie aby dodać znacznik"
+          },
+          {
+            "label": "Pokryj całe zdjęcie w tle",
+            "description": "Kiedy użytkownik kliknie na znacznik, popup pokryje całe zdjęcie w tle."
+          },
+          {
+            "label": "Nagłówek",
+            "description": "Optional header for the popup. This is used by assistive technologies."
+          },
+          {
+            "label": "Zawartość popup'u",
+            "field": {
+              "label": "Zawartość"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Etykieta znacznika dla technologii wspomagających",
+      "default": "Znacznik #num",
+      "description": "Pomoże ogłosić, do którego elementu znacznika nawigowano, jeśli nie określono nagłówka dla znacznika. #num może być użyty do zastąpienia numeru znacznika."
+    },
+    {
+      "label": "Etykieta przycisku zamykania dla technologii wspomagających",
+      "default": "Zamknij"
+    },
+    {
+      "label": "Label for assistive technologies denoting that hotspot contains Audio/Video",
+      "default": "Contains Audio/Video"
+    }
+  ]
+}

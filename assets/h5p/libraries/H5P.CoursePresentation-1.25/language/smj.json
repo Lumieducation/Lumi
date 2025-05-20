@@ -1,0 +1,411 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "field": {
+            "fields": [
+              {
+                "field": {
+                  "fields": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                      "label": "Comments",
+                      "description": "The comments are shown when the user displays the suggested answers for all slides."
+                    },
+                    {
+                      "label": "Always display comments"
+                    },
+                    {
+                      "label": "Background Opacity"
+                    },
+                    {
+                      "label": "Display as button"
+                    },
+                    {
+                      "label": "Button size",
+                      "options": [
+                        {
+                          "label": "Small"
+                        },
+                        {
+                          "label": "Big"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Title"
+                    },
+                    {
+                      "label": "Go to",
+                      "options": [
+                        {
+                          "label": "Specific slide number"
+                        },
+                        {
+                          "label": "Next slide"
+                        },
+                        {
+                          "label": "Previous slide"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Specific slide number",
+                      "description": "Only applicable when 'Specific slide number' is selected"
+                    },
+                    {
+                      "label": "Invisible",
+                      "description": "Default cursor, no title and no tab index. Warning: Users with disabilities or keyboard only users will have trouble using this element."
+                    }
+                  ]
+                }
+              },
+              {},
+              {
+                "fields": [
+                  {
+                    "label": "Image",
+                    "description": "Image background should have a 2:1 width to height ratio to avoid stretching. High resolution images will display better on larger screens."
+                  },
+                  {
+                    "label": "Pick a color"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Keyword list"
+        },
+        {
+          "label": "Always show"
+        },
+        {
+          "label": "Auto hide"
+        },
+        {
+          "label": "Opacity"
+        },
+        {
+          "fields": [
+            {
+              "label": "Image",
+              "description": "Image background should have a 2:1 width to height ratio to avoid stretching. High resolution images will display better on larger screens."
+            },
+            {
+              "label": "Pick a color"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Localize",
+      "fields": [
+        {
+          "label": "Translation for \"Slide\"",
+          "default": "Slide"
+        },
+        {
+          "label": "Translation for \"Score\"",
+          "default": "Score"
+        },
+        {
+          "label": "Translation for \"Your Score\"",
+          "default": "Your Score"
+        },
+        {
+          "label": "Translation for \"Max Score\"",
+          "default": "Max Score"
+        },
+        {
+          "label": "Translation for \"Total\"",
+          "default": "Total"
+        },
+        {
+          "label": "Translation for \"Total Score\"",
+          "default": "Total Score"
+        },
+        {
+          "label": "Title for show solutions button",
+          "default": "Show solutions"
+        },
+        {
+          "label": "Text for the retry button",
+          "default": "Retry"
+        },
+        {
+          "label": "Text for the export text button",
+          "default": "Export text"
+        },
+        {
+          "label": "Hide keywords list button title",
+          "default": "Hide keywords list"
+        },
+        {
+          "label": "Show keywords list button title",
+          "default": "Show keywords list"
+        },
+        {
+          "label": "Fullscreen label",
+          "default": "Fullscreen"
+        },
+        {
+          "label": "Exit fullscreen label",
+          "default": "Exit fullscreen"
+        },
+        {
+          "label": "Previous slide label",
+          "default": "Previous slide"
+        },
+        {
+          "label": "Next slide label",
+          "default": "Next slide"
+        },
+        {
+          "label": "Current slide label",
+          "default": "Current slide"
+        },
+        {
+          "label": "Last slide label",
+          "default": "Last slide"
+        },
+        {
+          "label": "Exit solution mode text",
+          "default": "Exit solution mode"
+        },
+        {
+          "label": "Solution mode text",
+          "default": "Solution Mode"
+        },
+        {
+          "label": "Text when multiple tasks on a page",
+          "default": "Multiple tasks"
+        },
+        {
+          "label": "Score message text",
+          "default": "You achieved:"
+        },
+        {
+          "label": "Share to Facebook text",
+          "default": "Share on Facebook"
+        },
+        {
+          "label": "Share to Twitter text",
+          "default": "Share on Twitter"
+        },
+        {
+          "label": "Share to Google text",
+          "default": "Share on Google+"
+        },
+        {
+          "label": "Title for summary slide",
+          "default": "Summary"
+        },
+        {
+          "label": "Title for the comments icon",
+          "default": "Show comments"
+        },
+        {
+          "label": "Title for print button",
+          "default": "Print"
+        },
+        {
+          "label": "Print dialog ingress",
+          "default": "How would you like to print this presentation?"
+        },
+        {
+          "label": "Label for \"Print all slides\" button",
+          "default": "Print all slides"
+        },
+        {
+          "label": "Label for \"Print current slide\" button",
+          "default": "Print current slide"
+        },
+        {
+          "label": "Label for slides without a title",
+          "default": "No title"
+        },
+        {
+          "label": "Explanation of slide navigation for assistive technologies",
+          "default": "Use left and right arrow to change slide in that direction whenever canvas is selected"
+        },
+        {
+          "label": "Canvas label for assistive technologies",
+          "default": "Presentation canvas. Use left and right arrow to move between slides."
+        },
+        {
+          "label": "Progressbar label for assistive technologies",
+          "default": "Choose slide to display"
+        },
+        {
+          "label": "Label for uncompleted interactions",
+          "default": "@slideName contains not completed interaction"
+        },
+        {
+          "label": "Label for completed interactions",
+          "default": "@slideName contains completed interaction"
+        },
+        {
+          "label": "Label for slide counter. Variables are @index, @total",
+          "default": "Slide @index of @total"
+        },
+        {
+          "label": "Label for slides that only contains correct answers",
+          "default": "@slideName only has correct answers"
+        },
+        {
+          "label": "Label for slides that has incorrect answers",
+          "default": "@slideName has incorrect answers"
+        },
+        {
+          "label": "Label for social sharing bar",
+          "default": "Share Result"
+        },
+        {
+          "label": "Total score announcement for assistive technologies",
+          "default": "You got @score of @maxScore points in total",
+          "description": "Available variables are @score and @maxScore"
+        },
+        {
+          "label": "Entered fullscreen announcement for assistive technologies",
+          "default": "Entered fullscreen"
+        },
+        {
+          "label": "Exited fullscreen announcement for assistive technologies",
+          "default": "Exited fullscreen"
+        },
+        {
+          "label": "Header of submit result confirmation dialog",
+          "default": "Submit your answers"
+        },
+        {
+          "label": "Text of submit result confirmation dialog",
+          "default": "This will submit your results, do you want to continue?"
+        },
+        {
+          "label": "Confirmation button of submit result confirmation dialog",
+          "default": "Submit and see results"
+        },
+        {
+          "label": "Slideshow navigation",
+          "default": "Slideshow navigation"
+        },
+        {
+          "label": "Confirm button label",
+          "default": "Confirm"
+        },
+        {
+          "label": "Cancel button label",
+          "default": "Cancel"
+        }
+      ]
+    },
+    {
+      "label": "Behaviour settings.",
+      "description": "These options will let you override behaviour settings.",
+      "fields": [
+        {
+          "label": "Activate Active Surface Mode",
+          "description": "Removes navigation controls for the end user. Use Go To Slide to navigate. Summary is not available in this mode."
+        },
+        {
+          "label": "Hide Summary Slide",
+          "description": "Hides the summary slide."
+        },
+        {
+          "label": "Override \"Show Solution\" button",
+          "description": "This option determines if the \"Show Solution\" button will be shown for all questions, disabled for all or configured for each question individually.",
+          "options": [
+            {
+              "label": "Enabled"
+            },
+            {
+              "label": "Disabled"
+            }
+          ]
+        },
+        {
+          "label": "Override \"Retry\" button",
+          "description": "This option determines if the \"Retry\" button will be shown for all questions, disabled for all or configured for each question individually.",
+          "options": [
+            {
+              "label": "Enabled"
+            },
+            {
+              "label": "Disabled"
+            }
+          ]
+        },
+        {
+          "label": "Show \"Show solution\" button in the summary slide",
+          "description": "If enabled, the learner will be able to show the solutions for all question when they reach the summary slide"
+        },
+        {
+          "label": "Show \"Retry\" button in the summary slide",
+          "description": "If enabled, the learner will be able to retry all questions when they reach the summary slide. Be advised that by refreshing the page the learners will be able to retry even if this button isn't showing."
+        },
+        {
+          "label": "Enable print button",
+          "description": "Enables the print button."
+        },
+        {
+          "label": "Social Settings",
+          "description": "These options will let you override social behaviour settings. Empty values will be filled in automatically if a link is provided, otherwise all values will be generated.",
+          "fields": [
+            {
+              "label": "Display Facebook share icon"
+            },
+            {
+              "label": "Facebook share settings",
+              "fields": [
+                {
+                  "label": "Share to Facebook link",
+                  "default": "@currentpageurl"
+                },
+                {
+                  "label": "Share to Facebook quote",
+                  "default": "I scored @score out of @maxScore on a task at @currentpageurl."
+                }
+              ]
+            },
+            {
+              "label": "Display Twitter share icon"
+            },
+            {
+              "label": "Twitter share settings",
+              "fields": [
+                {
+                  "label": "Share to Twitter statement",
+                  "default": "I scored @score out of @maxScore on a task at @currentpageurl."
+                },
+                {
+                  "label": "Share to Twitter link",
+                  "default": "@currentpageurl"
+                },
+                {
+                  "label": "Share to Twitter hashtags",
+                  "default": "h5p, course"
+                }
+              ]
+            },
+            {
+              "label": "Display Google+ share icon"
+            },
+            {
+              "label": "Share to Google link",
+              "default": "@currentpageurl"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

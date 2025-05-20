@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Tips",
+          "description": "Papildu multimedijs, kuru atspoguļot virs jautājuma."
+        },
+        {
+          "label": "Atspējot attēla tālummaiņu"
+        }
+      ],
+      "label": "Multivide"
+    },
+    {
+      "label": "Uzdevuma apraksts",
+      "description": "Aprakstiet kā lietotājam vajadzētu risināt uzdevumu.",
+      "placeholder": "Noklikšķiniet uz visiem darbības vārdiem nākamajā tekstā."
+    },
+    {
+      "label": "Teksta lauks",
+      "placeholder": "Šī ir atbilde: *atbilde*.",
+      "important": {
+        "example": "Pareizie vārdi tiek atzīmēti šādi: *pareizi*, zvaigznīte ir rakstīta šādi: *pareizi***.",
+        "description": "<ul><li>Atzīmētie vārdi tiek pievienoti ar zvaigznīti (*).</li><li>Atzīmētajos vārdos zvaigznītes var pievienot, pievienojot vēl vienu zvaigznīti, *pareizi*** =&gt; pareizi*.</li> </ul>"
+      }
+    },
+    {
+      "label": "Kopējā atgriezeniskā saite",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Pēc noklusējuma"
+            }
+          ],
+          "label": "Iestatiet pielāgotu atgriezenisko saiti katram rezultātu diapazonam",
+          "entity": "diapazons",
+          "field": {
+            "fields": [
+              {
+                "label": "Rezultātu diapazons"
+              },
+              {},
+              {
+                "label": "Norādītā diapazona atgriezeniskā saite",
+                "placeholder": "Aizpildiet atgriezenisko saiti"
+              }
+            ]
+          },
+          "description": "Klikšķiniet pogu \"Pievienot diapazonu\", lai pievienotu tik diapazonus cik vēlaties. Piemēram, 0-20% Slikts rezultāts, 21-91% Viduvējs rezultāts, 91-100% Lielisks rezultāts!"
+        }
+      ]
+    },
+    {
+      "label": "Pogas \"Pārbaudīt\" teksts",
+      "default": "Pārbaudīt"
+    },
+    {
+      "label": "Pogas \"Iesniegt\" teksts",
+      "default": "Iesniegt"
+    },
+    {
+      "label": "Pogas \"Mēģināt vēlreiz\" teksts",
+      "default": "Mēģināt vēlreiz"
+    },
+    {
+      "label": "Pogas \"Parādīt risinājumu\" teksts",
+      "default": "Parādīt risinājumu"
+    },
+    {
+      "label": "Uzvedības iestatījumi.",
+      "description": "Šie iestatījumi ļaus jums kontrolēt uzdevuma uzvedību.",
+      "fields": [
+        {
+          "label": "Atļaut \"Mēģināt vēlreiz\""
+        },
+        {
+          "label": "Atļaut pogu \"Rādīt risinājumu\""
+        },
+        {
+          "label": "Atļaut pogu \"Pārbaudīt\""
+        },
+        {
+          "label": "Rādīt punktus",
+          "description": "Parādīt par katru atbildi nopelnītos punktus."
+        }
+      ]
+    },
+    {
+      "label": "Pareizās atbildes teksts",
+      "default": "Pareizi!",
+      "description": "Teksts, ko izmanto, lai norādītu, ka atbilde ir pareiza"
+    },
+    {
+      "label": "Nepareizās atbildes teksts",
+      "default": "Nepareizi!",
+      "description": "Teksts, ko izmanto, lai norādītu, ka atbilde ir nepareiza"
+    },
+    {
+      "label": "Neiesniegtās atbildes teksts",
+      "default": "Atbilde nav atrasta!",
+      "description": "Teksts, ko izmanto, lai norādītu, ka trūkst atbildes"
+    },
+    {
+      "label": "Apraksts risinājuma parādīšanai",
+      "default": "Uzdevums ir atjaunināts, lai ietvertu risinājumu.",
+      "description": "Šis teksts informē lietotāju, ka uzdevumi ir atjaunināti ar risinājumu."
+    },
+    {
+      "label": "Rezultātu skalas tekstuālais atspoguļojums tiem, kas izmanto asistīvās tehnoloģijas",
+      "default": "Tu saņēmi :num no :total punktiem"
+    },
+    {
+      "label": "Etiķete pilnam lasāmam tekstam priekš asistīvajām tehnoloģijām",
+      "default": "Pilns lasāms teksts"
+    },
+    {
+      "default": "Pilns teksts, kurā var atzīmēt vārdus",
+      "label": "Asistīvo tehnoloģiju etiķete tekstam, kurā var atzīmēt vārdus"
+    },
+    {
+      "label": "Risinājuma režīma galvene asistīvajām tehnoloģijām",
+      "default": "Risinājuma režīms"
+    },
+    {
+      "label": "Pārbaudīšanas režīma galvene asistīvajām tehnoloģijām",
+      "default": "Pārbaudīšanas režīms"
+    },
+    {
+      "default": "Pārbaudīt atbildes. Atbildes tiks atzīmētas kā pareizas, nepareizas, vai neatbildētas.",
+      "label": "Pogas \"Pārbaudīt\" apraksts asistīvajām tehnoloģijām"
+    },
+    {
+      "label": "Asistīvo tehnoloģiju apraksts pogai \"Rādīt risinājumu\"",
+      "default": "Rādīt risinājumu. Uzdevums tiks atzīmēts ar tā pareizo risinājumu."
+    },
+    {
+      "label": "Pogas \"Mēģināt vēlreiz\" apraksts asistīvajām tehnoloģijām",
+      "default": "Mēģināt uzdevumu vēlreiz. Dzēst visas sniegtās atbildes un sākt uzdevumu vēlreiz."
+    }
+  ]
+}

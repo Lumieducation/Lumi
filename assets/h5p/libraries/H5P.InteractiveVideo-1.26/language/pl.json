@@ -1,0 +1,508 @@
+{
+  "semantics": [
+    {
+      "label": "Edytor interaktywnego wideo",
+      "fields": [
+        {
+          "label": "Załaduj lub podepnij wideo",
+          "fields": [
+            {
+              "label": "Dodaj wideo",
+              "description": "Kliknij przycisk poniżej, aby dodać wideo, które chcesz zmienić w wersję interaktywną. Możesz wkleić link lub załadować plik wideo z Twojego dysku. Możesz dodać kilka wersji tego wideo w różnej jakości i rozdzielczości. Zalecamy użycie formatów MP4 i WEBM, które są kompatybilne z większością przeglądarek."
+            },
+            {
+              "label": "Ustawienia ekranu startowego (niedostępne w przypadku YouTube)",
+              "fields": [
+                {
+                  "label": "Tytuł interaktywnego wideo",
+                  "default": "Interaktywne wideo",
+                  "description": "Używany w podsumowaniu, statystykach, itd."
+                },
+                {
+                  "label": "Nie pokazuj tytułu na ekranie startowym"
+                },
+                {
+                  "label": "Krótki opis (opcjonalnie)",
+                  "description": "Opcjonalne. Wyświetla krótki opis wideo na ekranie startowym. Nie działa w przypadku wideo z YouTube."
+                },
+                {
+                  "label": "Okładka",
+                  "description": "Obraz wyświetlany przed rozpoczęciem odtwarzania wideo. Nie działa w przypadku wideo z YouTube."
+                }
+              ]
+            },
+            {
+              "label": "Listy dialogowe (niedostępne w przypadku YouTube)",
+              "fields": [
+                {
+                  "label": "Dostępne ścieżki dialogowe",
+                  "entity": "Ścieżka",
+                  "field": {
+                    "label": "Ścieżka",
+                    "fields": [
+                      {
+                        "label": "Etykieta ścieżki",
+                        "description": "Wpisz, jeśli zamierzasz dodać więcej niż jedną ścieżkę dialogową, ponieważ widz będzie musiał ją wybrać. Na przykład, etykieta hiszpańskiej ścieżki dialogowej może brzmieć 'Hiszpańskie napisy'.",
+                        "default": "Napisy"
+                      },
+                      {
+                        "label": "Typ ścieżki",
+                        "options": [
+                          {
+                            "label": "Tłumaczenie"
+                          },
+                          {
+                            "label": "Oryginalna lista dialogowa"
+                          },
+                          {
+                            "label": "Opisy dla niesłyszących"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Język – musi być określony dla tłumaczenia",
+                        "default": "en",
+                        "description": "Wpisz poprawny kod języka w standarcie BCP 47. Jeśli ścieżka zawiera tłumaczenie, należy określić język."
+                      },
+                      {
+                        "label": "Plik z napisami (w formacie WebVTT)"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Domyślna ścieżka tekstowa",
+                  "description": "Jeśli pozostanie pusta lub nie pasuje do żadnej ze ścieżek tekstowych, jako domyślna zostanie użyta pierwsza ścieżka tekstowa."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Dodaj interakcje",
+          "fields": [
+            {
+              "field": {
+                "fields": [
+                  {
+                    "label": "Wyświetl czas"
+                  },
+                  {
+                    "label": "Pauzuj wideo"
+                  },
+                  {
+                    "label": "Wyświetl jako",
+                    "description": "<b>Zaproszenie</b> to interakcja, którą widz musi kliknąć, aby się otworzyła. <b>Strona</b> to interakcja, która otwiera się automatycznie na tle wideo",
+                    "options": [
+                      {
+                        "label": "Zaproszenie"
+                      },
+                      {
+                        "label": "Strona"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Na małych ekranach pokazuj jako zaproszenie"
+                  },
+                  {
+                    "label": "Etykieta",
+                    "description": "Tekst wyświetlany obok ikony zaproszenia."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Reakcje",
+                    "fields": [
+                      {
+                        "label": "Reakcja na wszystkie poprawne",
+                        "fields": [
+                          {
+                            "label": "Przeskocz do",
+                            "description": "Wpisz kod czasowy w formacie M:SS"
+                          },
+                          {
+                            "label": "Pozwól widzowi anulować przeskok i kontynuować"
+                          },
+                          {
+                            "label": "Komentarz"
+                          },
+                          {
+                            "label": "Etykieta dla przycisku Przeskocz"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Reakcja na błąd",
+                        "fields": [
+                          {
+                            "label": "Przeskocz do",
+                            "description": "Wpisz kod czasowy w formacie M:SS"
+                          },
+                          {
+                            "label": "Pozwól widzowi anulować przeskok i kontynuować"
+                          },
+                          {
+                            "label": "Komentarz"
+                          },
+                          {
+                            "label": "Etykieta dla przycisku Przeskocz"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Wymagaj w pełni poprawnie wykonanego zadania przed kontynuacją",
+                        "description": "For best functionality this option should be used in conjunction with the \"Disable navigation forward in a video\" option of Interactive Video."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Wygląd",
+                    "fields": [
+                      {
+                        "label": "Kolor tła",
+                        "default": "rgb(255, 255, 255)"
+                      },
+                      {
+                        "label": "Cień ramki",
+                        "description": "Dodaje nieznaczny cień wokół okna interakcji. Wyłącz jeśli chcesz, by interakcje były całkowicie przeźroczyste."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Odnośnik",
+                    "fields": [
+                      {
+                        "label": "Typ",
+                        "options": [
+                          {
+                            "label": "Kod czasowy"
+                          },
+                          {
+                            "label": "Link do innej strony (URL)"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Przeskocz do",
+                        "description": "Moment w wideo, do którego widz zostanie przeniesiony po kliknięciu zaproszenia. Wpisz kod czasowy w formacie M:SS."
+                      },
+                      {
+                        "label": "URL",
+                        "fields": [
+                          {
+                            "label": "Protokół",
+                            "options": [
+                              {
+                                "label": "http://"
+                              },
+                              {
+                                "label": "https://"
+                              },
+                              {
+                                "label": "(względna ścieżka na serwerze)"
+                              },
+                              {
+                                "label": "inny"
+                              }
+                            ]
+                          },
+                          {
+                            "label": "URL"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Wyeksponowanie",
+                        "description": "Pokaż, że to interakcja, dodając do niej ikonę i ramkę."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {},
+            {}
+          ]
+        },
+        {
+          "label": "Zadanie końcowe",
+          "fields": [
+            {},
+            {
+              "label": "Wyświetl przez",
+              "description": "Liczba sekund przed końcem wideo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Zachowanie",
+      "fields": [
+        {
+          "label": "Czas startu",
+          "description": "Moment, od którego ma zacząć się odtwarzanie. Wpisz kod czasowy w formacie M:SS"
+        },
+        {
+          "label": "Auto-start",
+          "description": "Automatycznie zacznij odtwarzanie"
+        },
+        {
+          "label": "Pętla",
+          "description": "Odtwarzaj wideo w pętli: gdy dojdzie do końca, zacznie się znów od początku"
+        },
+        {
+          "label": "Przycisk 'Pokaż rozwiązanie' (globalny)",
+          "description": "Wybierz, czy przycisk 'Pokaż rozwiązanie' ma być dostępny we wszystkich zadaniach, niedostępny we wszystkich zadaniach, czy dostępny lub niedostępny zależnie od ustawień każdego zadania.",
+          "options": [
+            {
+              "label": "Zawsze dostępny"
+            },
+            {
+              "label": "Zawsze niedostępny"
+            }
+          ]
+        },
+        {
+          "label": "Przycisk 'Poprawka' (globalny)",
+          "description": "Wybierz, czy przycisk 'Poprawka' ma być dostępny we wszystkich zadaniach, niedostępny we wszystkich zadaniach, czy dostępny lub niedostępny zależnie od ustawień każdego zadania.",
+          "options": [
+            {
+              "label": "Zawsze dostępny"
+            },
+            {
+              "label": "Zawsze niedostępny"
+            }
+          ]
+        },
+        {
+          "label": "Pokaż zakładki przy starcie",
+          "description": "Funkcja niedostępna w przypadku odtwarzania wideo z YouTube na iPadzie."
+        },
+        {
+          "label": "Pokaż przycisk cofania o 10 sekund"
+        },
+        {
+          "label": "Disable navigation",
+          "description": "These options will disable user video navigation as specified.",
+          "options": [
+            {
+              "label": "None"
+            },
+            {
+              "label": "Forward"
+            },
+            {
+              "label": "Forward and backward"
+            }
+          ]
+        },
+        {
+          "label": "Wyłącz dźwięk",
+          "description": "Włączenie tej opcji wyłączy ścieżkę dźwiękową i uniemożliwi jej włączenie."
+        }
+      ]
+    },
+    {
+      "label": "Opisy przycisków",
+      "fields": [
+        {
+          "label": "Tytuł interakcji",
+          "default": "Interakcja"
+        },
+        {
+          "label": "Przycisk odtwarzania",
+          "default": "Odtwórz"
+        },
+        {
+          "label": "Przycisk pauzy",
+          "default": "Pauzuj"
+        },
+        {
+          "label": "Przycisk wyciszenia",
+          "default": "Wycisz, obecnie nie wyciszony"
+        },
+        {
+          "label": "Przycisk odgłaśniania",
+          "default": "Unmute, currently muted"
+        },
+        {
+          "label": "Przycisk wyboru jakości",
+          "default": "Jakość wideo"
+        },
+        {
+          "label": "Przycisk ścieżek dialogowych",
+          "default": "Napisy"
+        },
+        {
+          "label": "Przycisk zamykania",
+          "default": "Zamknij"
+        },
+        {
+          "label": "Przycisk pełnego ekranu",
+          "default": "Pełny ekran"
+        },
+        {
+          "label": "Przycisk wyjścia z pełnego ekranu",
+          "default": "Wróć do okna"
+        },
+        {
+          "label": "Tytuł podsumowania",
+          "default": "Podsumowanie"
+        },
+        {
+          "label": "Przycisk zakładek",
+          "default": "Zakładki"
+        },
+        {
+          "label": "Przycisk wysyłania wyników",
+          "default": "Wyślij wyniki"
+        },
+        {
+          "label": "Przycisk zgody na przeskok (domyślny)",
+          "default": "Przeskocz"
+        },
+        {
+          "label": "Przycisk kontynuowania bez przeskoku",
+          "default": "Kontynuuj"
+        },
+        {
+          "label": "Default label for more player options",
+          "default": "More player options"
+        },
+        {
+          "label": "Przycisk prędkości odtwarzania",
+          "default": "Prędkość odtwarzania"
+        },
+        {
+          "label": "Przycisk cofania o 10 sekund",
+          "default": "Cofnij o 10 sekund"
+        },
+        {
+          "label": "Komunikat o wyłączeniu paska postępu",
+          "default": "Funkcja jest wyłączona"
+        },
+        {
+          "label": "Navigating forward is disabled text",
+          "default": "Navigating forward is disabled"
+        },
+        {
+          "label": "Komunikat o wyłączeniu ścieżki dźwiękowej",
+          "default": "Dźwięk jest wyłączony"
+        },
+        {
+          "label": "Komunikat o wymogu pełnej poprawności zadania",
+          "default": "Odpowiedz na wszystkie pytania, aby kontynuować."
+        },
+        {
+          "label": "Przycisk wstecz",
+          "default": "Wstecz"
+        },
+        {
+          "label": "Czas: godziny",
+          "default": "godzin"
+        },
+        {
+          "label": "Czas: minuty",
+          "default": "minut"
+        },
+        {
+          "label": "Czas: sekundy",
+          "default": "sekund"
+        },
+        {
+          "label": "Bieżący czas",
+          "default": "Bieżący czas:"
+        },
+        {
+          "label": "Łączny czas",
+          "default": "Łączny czas:"
+        },
+        {
+          "label": "Komunikat o pojawieniu się pojedynczej interakcji",
+          "default": "Pojawiło się zadanie:"
+        },
+        {
+          "label": "Komunikat o pojawieniu się wielu interakcji",
+          "default": "Pojawiły się zadania."
+        },
+        {
+          "label": "Komunikat o zatrzymaniu wideo",
+          "default": "Odtwarzanie zatrzymane"
+        },
+        {
+          "label": "Etykieta zawartości",
+          "default": "Zawartość"
+        },
+        {
+          "label": "Komunikat o wynikach (@answered zostanie zamienione na liczbę rozwiązanych zadań)",
+          "default": "@answered zadań zaliczonych"
+        },
+        {
+          "label": "Ekran wyników: tytuł",
+          "default": "@answered zadań zaliczonych",
+          "description": "@answered zostanie zamienione na liczbę rozwiązanych zadań."
+        },
+        {
+          "label": "Prześlij informacje na ekranie",
+          "default": "Udzieliłeś/aś odpowiedzi na @answered pytań.",
+          "description": "@answered zostanie zastąpiona liczbą pytań, na które udzielono odpowiedzi."
+        },
+        {
+          "label": "Ekran wyników: podsumowanie",
+          "default": "@answered zaliczonych zadań. Kliknij przycisk, aby przesłać wyniki.",
+          "description": "@answered zostanie zamienione na liczbę rozwiązanych zadań."
+        },
+        {
+          "label": "Ekran wyników: komunikat o braku odpowiedzi",
+          "default": "Żadne z zadań nie zostało rozwiązane."
+        },
+        {
+          "label": "Ekran wyników: wyjaśnienie komunikatu o braku odpowiedzi",
+          "default": "Rozwiąż przynajmniej jedno zadanie, zanim wyślesz wyniki."
+        },
+        {
+          "label": "Ekran wyników: przycisk wysyłania",
+          "default": "Wyślij wyniki"
+        },
+        {
+          "label": "Ekran wyników: potwierdzenie",
+          "default": "Twoje wyniki zostały wysłane!"
+        },
+        {
+          "label": "Ekran wyników: tytuł wiersza tabeli – odpowiedzi",
+          "default": "Zaliczone zadania"
+        },
+        {
+          "label": "Ekran wyników: tytuł wiersza tabeli – wynik",
+          "default": "Wynik"
+        },
+        {
+          "label": "Ekran wyników: wynik zadania",
+          "default": "zaliczone"
+        },
+        {
+          "label": "Prześlij podsumowanie wiersza ekranu, w tym wynik (dla czytników tekstu)",
+          "default": "Otrzymujesz @score z @total points dla @question które pojawiło się po @minutes minut i @seconds sekund."
+        },
+        {
+          "label": "Prześlij ekran podsumowania wiersza bez wyniku (dla czytników tekstu)",
+          "default": "Odpowiedziałeś/aś na @question, które pojawiło się po @minutes minutes i @seconds seconds."
+        },
+        {
+          "label": "Pasek postępu wideo",
+          "default": "Postęp wideo"
+        },
+        {
+          "label": "Text for how to create interactions",
+          "default": "Play the video to start creating interactions"
+        }
+      ]
+    }
+  ]
+}

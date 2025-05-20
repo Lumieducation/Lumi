@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Introducció",
+      "fields": [
+        {
+          "label": "Mostra la introdució"
+        },
+        {
+          "label": "Imatge de la introducció"
+        },
+        {
+          "label": "Text alternatiu per a la imatge d’introducció"
+        },
+        {
+          "label": "Títol"
+        },
+        {
+          "label": "Text d’introducció",
+          "description": "Aquest títol es mostrarà a sobre del text d’introducció."
+        }
+      ]
+    },
+    {
+      "label": "Preguntes",
+      "widgets": [
+        {
+          "label": "Opció predeterminada"
+        }
+      ],
+      "entity": "Pregunta",
+      "field": {
+        "label": "Pregunta"
+      }
+    },
+    {
+      "label": "Suggeriment general",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Opció predeterminada"
+            }
+          ],
+          "label": "Defineix una valoració per cada rang de puntuació",
+          "description": "Feu clic al botó \"Afegeix un rang\" per afegir tants rangs com necessiteu. Exemple: 0-20 % per a puntuació baixa, 21-91 % per a puntuació mitjana, 91-100 % per a puntuació excel·lent",
+          "entity": "rang",
+          "field": {
+            "fields": [
+              {
+                "label": "Rang de puntuació"
+              },
+              {},
+              {
+                "label": "Retroacció per al rang de puntuació definit",
+                "placeholder": "Introduïu el suggeriment"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Etiquetes i textos del conjunt de Respon amb la veu",
+      "fields": [
+        {
+          "label": "Etiqueta del botó \"Introducció\"",
+          "default": "Inicia el curs"
+        },
+        {
+          "label": "Etiqueta dels resultats de la pantalla de solucions",
+          "default": "Els seus resultats:"
+        },
+        {
+          "label": "Etiqueta del botó \"Mostra les solucions\"",
+          "default": "Mostra la solució"
+        },
+        {
+          "label": "Etiqueta del botó \"Torna-ho a provar\"",
+          "default": "Torna-ho a provar"
+        },
+        {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
+          "label": "Etiqueta d’accessibilitat per a la pregunta següent",
+          "default": "Pregunta següent"
+        },
+        {
+          "label": "Etiqueta d’accessibilitat per a la pregunta anterior",
+          "default": "Pregunta anterior"
+        },
+        {
+          "label": "Títol de la barra de navegació",
+          "description": "Títols per a les preguntes de la barra de navegació. \":num\" se substituirà pel número real de la diapositiva.",
+          "default": "Diapositiva :num"
+        },
+        {
+          "label": "Etiqueta d’accessibilitat de la diapositiva resposta",
+          "default": "Respost"
+        },
+        {
+          "label": "Etiqueta d’accessibilitat del control lliscant actiu",
+          "default": "Actualment actiu"
+        }
+      ]
+    }
+  ]
+}

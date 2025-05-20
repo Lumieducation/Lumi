@@ -1,0 +1,271 @@
+{
+  "semantics": [
+    {
+      "label": "Svara-knappen",
+      "default": "Svara"
+    },
+    {
+      "label": "Knapp för att skicka in svar",
+      "default": "Submit"
+    },
+    {
+      "label": "\"Försök igen\"-knapp",
+      "default": "Försök på nytt"
+    },
+    {
+      "label": "Poängförklaringstext",
+      "default": "Korrekta svar ger +1 poäng. Felaktiga svar ger -1 poäng. Lägsta möjliga poäng är 0."
+    },
+    {
+      "fields": [
+        {
+          "label": "Inställningar",
+          "fields": [
+            {
+              "label": "Bakgrundsbild",
+              "description": "Valfritt. Välj en bild att använda som bakgrund till din drag-och-släpp-uppgift."
+            },
+            {
+              "label": "Storlek på uppgift",
+              "description": "Ange hur stor (i px) ytan ska vara."
+            }
+          ]
+        },
+        {
+          "label": "Uppgift",
+          "description": "Börja med att placera dina målområden.<br />Placera sen dina drag-och-släppbara element, och markera vilka målområden de ska kunna dras till.<br />Till sist, redigera målområdena igen för att ange de korrekta svaren.",
+          "fields": [
+            {
+              "label": "Element",
+              "entity": "element",
+              "field": {
+                "label": "Element",
+                "fields": [
+                  {
+                    "description": "Välj typ av innehåll som du vill lägga till."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Välj målområden"
+                  },
+                  {
+                    "label": "Bakgrunds-opacitet",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Oändligt antal instanser av elementet",
+                    "description": "Klonar detta element så att det kan dras till flera målområden."
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Målområden",
+              "entity": "Målområde",
+              "field": {
+                "label": "Målområde",
+                "fields": [
+                  {
+                    "label": "Etikett",
+                    "description": "The label is used by assistive technologies."
+                  },
+                  {
+                    "label": "Visa etikett"
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Välj korrekta element"
+                  },
+                  {
+                    "label": "Bakgrunds-opacitet",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Tips och feedback",
+                    "fields": [
+                      {
+                        "label": "Tipstext"
+                      },
+                      {
+                        "label": "Meddelande som visas vid korrekt matchning",
+                        "description": "Meddelande kommer att visas under uppgiften när knappen \"svara\" klickas, om korrekt matchning är gjord."
+                      },
+                      {
+                        "label": "Meddelande kommer att visas när matchningen är felaktig",
+                        "description": "Meddelande kommer att visas under uppgiften när knappen \"svara\" klickas, om matchning är felaktig."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Detta målområde kan bara innehålla ett element",
+                    "description": "Säkerställ att det bara finns ett korrekt svar för detta målområde"
+                  },
+                  {
+                    "label": "Aktivera automatisk linjering",
+                    "description": "Kommer att automatiskt linjera alla drag-och-släppbara element i detta område."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Generell feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Standard"
+            }
+          ],
+          "label": "Ange anpassad feedback för valfritt poängintervall",
+          "description": "Klicka på knappen \"Lägg till intervall\" för att lägga till så många intervall du behöver. Exempel: 0-20% Inte så bra, 21-91% Medel, 91-100% Jättebra!",
+          "entity": "intervall",
+          "field": {
+            "fields": [
+              {
+                "label": "Poängintervall"
+              },
+              {},
+              {
+                "label": "Feedback för definierad poängintervall",
+                "placeholder": "Fyll i feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Beteende-inställningar",
+      "description": "Dessa val låter dig kontrollera hur uppgiften beter sig.",
+      "fields": [
+        {
+          "label": "Aktivera \"Försök igen\""
+        },
+        {
+          "label": "Aktivera \"Svara\"-knappen"
+        },
+        {
+          "label": "Ge ett poäng för hela uppgiften",
+          "description": "Inaktivera för att ge ett poäng för varje dragbart element som är korrekt placerat."
+        },
+        {
+          "label": "Tillämpa straff",
+          "description": "Tillämpa straff för element som släpps i felaktiga målområden. Detta måste vara aktiverat när samma element kan släppas i flera målområden, eller om det bara finns ett målområde. Om detta inte är aktiverat, så kan deltagare placera ut alla element i alla målområden och därmed alltid få full poäng."
+        },
+        {
+          "label": "Aktivera poängförklaring",
+          "description": "Visa en poängförklaring för användaren när denne klickar \"svara\" (om inställningen \"Tillämpa straff\" har valts)."
+        },
+        {
+          "label": "Backgrunds-opacitet för drag-och-släppbara element",
+          "description": "Om värde anges här, så kommer det att användas som opacitet på alla dragbara element. Värdet ska vara mellan 0 och 100, där 0 innebär helt genomskinligt och 100 innebär ingen genomskinlighet."
+        },
+        {
+          "label": "Framhävning av målområde",
+          "description": "Välj detta för att framhäva målområden.",
+          "options": [
+            {
+              "label": "När man drar"
+            },
+            {
+              "label": "Alltid"
+            },
+            {
+              "label": "Aldrig"
+            }
+          ]
+        },
+        {
+          "label": "Mellanrum för automatisk justering (i pixlar)"
+        },
+        {
+          "label": "Aktivera fullskärm",
+          "description": "Välj denna inställning för att aktivera fullskärmsknappen."
+        },
+        {
+          "label": "Visa poäng",
+          "description": "Visa poäng utifrån varje svar. Inte tillgängligt när inställningen \"Ge ett poäng för hela uppgiften\" är vald."
+        },
+        {
+          "label": "Visa titel",
+          "description": "Bocka ur detta om du vill att din titel inte ska visas. Titeln kommer bara visas i sammanfattningar, statistik, etc."
+        }
+      ]
+    },
+    {
+      "label": "Lokalisera",
+      "fields": [
+        {
+          "label": "Etikett för knappen \"fullskärm\"",
+          "default": "Fullskärm"
+        },
+        {
+          "label": "Etikett för knappen \"Avsluta fullskärm\"",
+          "default": "Avsluta fullskärm"
+        }
+      ]
+    },
+    {
+      "label": "Prefix för dragbar",
+      "default": "Dragbar {num} av {total}."
+    },
+    {
+      "label": "Suffix för dragbar",
+      "default": "Placerad i målområde {num}."
+    },
+    {
+      "label": "Prefix för målområde",
+      "default": "Målområde {num} av {total}."
+    },
+    {
+      "label": "Etikett för inget målområde valt",
+      "default": "Inget målområde."
+    },
+    {
+      "label": "Etikett för knappen \"Visa tips\"",
+      "default": "Visa tips."
+    },
+    {
+      "label": "Etikett för tillgängligt tips",
+      "default": "Tips tillgängligt"
+    },
+    {
+      "label": "Etikett för korrekt svar",
+      "default": "Korrekt svar"
+    },
+    {
+      "label": "Etikett för felaktigt svar",
+      "default": "Felaktigt svar"
+    },
+    {
+      "label": "Rubrik för panel som visar feedback avseende korrekta/felaktiga svar",
+      "default": "Feedback"
+    },
+    {
+      "label": "Textuell visning av poängindikator för de som använder skärmläsare",
+      "default": "Du fick :num av :total poäng"
+    },
+    {
+      "label": "Textuell visning av knappen som förklarar poäng",
+      "default": "Visa förklaring till poäng"
+    },
+    {
+      "label": "Etikett för knappen \"Svara\" som används av tillgänglighetshjälpmedel",
+      "default": "Rätta mina svar. Svaren kommer att markeras som korrekta, felaktiga eller ej besvarade."
+    },
+    {
+      "label": "Etikett för knappen \"Försök igen\" som används av tillgänglighetshjälpmedel",
+      "default": "Starta ett nytt försök. Nollställer alla svar och startar om uppgiften."
+    }
+  ]
+}

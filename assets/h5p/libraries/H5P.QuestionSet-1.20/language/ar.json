@@ -1,0 +1,278 @@
+{
+  "semantics": [
+    {
+      "label": "مقدمة المسابقة",
+      "fields": [
+        {
+          "label": "عرض المقدمة"
+        },
+        {
+          "label": "العنوان",
+          "description": "سيتم عرض هذا العنوان فوق النص المقدمة."
+        },
+        {
+          "label": "مقدمة النص",
+          "description": "سيتم عرض هذا النص قبل أن تبدأ هذه المسابقة."
+        },
+        {
+          "label": "بدء زر النص",
+          "default": "ﺏﺩﺀ ﺍﻼﺨﺘﺑﺍﺭ"
+        },
+        {
+          "label": "صورة الخلفية",
+          "description": "إدخال صورة خلفية اختيارية."
+        }
+      ]
+    },
+    {
+      "label": "صورة الخلفية",
+      "description": "صورة خلفية اختيارية لأسئلة."
+    },
+    {
+      "label": "مؤشر التقدم",
+      "description": "أسئلة لتعيين نمط مؤشر التقدم.",
+      "options": [
+        {
+          "label": "النصية"
+        },
+        {
+          "label": "النقاط"
+        }
+      ]
+    },
+    {
+      "label": "نسبة النجاح",
+      "description": "النسبة المئوية لمجموع النقاط المطلوبة لاجتياز الاختبار."
+    },
+    {
+      "label": "الأسئلة",
+      "widgets": [
+        {
+          "label": "الافتراضي"
+        },
+        {
+          "label": "النصية"
+        }
+      ],
+      "entity": "السؤال",
+      "field": {
+        "label": "نوع السؤال",
+        "description": "مكتبة لهذا السؤال."
+      }
+    },
+    {
+      "label": "واجهة النصوص لهذه المسابقة",
+      "fields": [
+        {
+          "label": "زر العودة",
+          "default": "Previous question"
+        },
+        {
+          "label": "زر التقدم",
+          "default": "Next question"
+        },
+        {
+          "label": "زر الانتهاء",
+          "default": "Finish"
+        },
+        {
+          "label": "Submit button",
+          "default": "Submit"
+        },
+        {
+          "label": "نص التقدم",
+          "description": "النص المستخدم إذا تم تحديد التقدم نصيا",
+          "default": "Question: @current of @total questions"
+        },
+        {
+          "label": "Label for jumping to a certain question",
+          "description": "يجب استخدام العنصر النائب '%d' بدلاً من رقم السؤال و%totalبدلاً من إجمالي عدد الأسئلة.",
+          "default": "Question %d of %total"
+        },
+        {
+          "label": "Copyright dialog question label",
+          "default": "السؤال"
+        },
+        {
+          "label": "Readspeaker progress",
+          "description": "مسموح استخدام @current المتغيرات و @totalالسؤال عنها",
+          "default": "Question @current of @total"
+        },
+        {
+          "label": "Unanswered question text",
+          "default": "Unanswered"
+        },
+        {
+          "label": "Answered question text",
+          "default": "Answered"
+        },
+        {
+          "label": "نص السؤال الحالي",
+          "default": "السؤال الحالي"
+        },
+        {
+          "label": "Navigation label for readspeakers",
+          "default": "Questions"
+        }
+      ]
+    },
+    {
+      "label": "Disable backwards navigation",
+      "description": "This option will only allow you to move forward in Question Set"
+    },
+    {
+      "label": "Randomize questions",
+      "description": "تمكين العرض بطريقة عشوائية وترتيب الأسئلة على الشاشة"
+    },
+    {
+      "label": "Number of questions to be shown:",
+      "description": "Create a randomized batch of questions from the total."
+    },
+    {
+      "label": "انتهاء المسابقة",
+      "fields": [
+        {
+          "label": "عرض النتائج"
+        },
+        {
+          "label": "Display solution button"
+        },
+        {
+          "label": "Display retry button"
+        },
+        {
+          "label": "No results message",
+          "description": "Text displayed on end page when \"Display results\" is disabled",
+          "default": "Finished"
+        },
+        {
+          "label": "نص راس الملاحظات",
+          "default": "Your result:",
+          "description": "سيتم عرض هذا العنوان في نهاية هذه المسابقة حيثما أجاب المستخدم على جميع الأسئلة المستعملة"
+        },
+        {
+          "label": "Score announcer",
+          "description": "سيتم استخدام هذه التسمية لإعلان النتيجة النهائية للمستخدم على الشاشة النهائية",
+          "default": "لقد حصلت على @finals من @totals"
+        },
+        {
+          "label": "شفافية خلفية العناصر",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "افتراضي"
+                }
+              ],
+              "label": "Define custom feedback for any score range",
+              "description": "مثال: يعد متوسّط العلامة من 0 - 20% علامة سيئة، في حين أن العلامة من 21 - 91% علامة متوسطة، بينما العلامة من 91 - 100% علامة رائعة!",
+              "entity": "النطاق",
+              "field": {
+                "fields": [
+                  {
+                    "label": "نطاق العلامة"
+                  },
+                  {},
+                  {
+                    "label": "ملاحظات لنطاق علامة محدد",
+                    "placeholder": "كتابة الملاحظات"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Old Feedback",
+          "fields": [
+            {
+              "label": "تعليق النجاح بالمسابقة",
+              "description": "سيتم عرض هذا النص أعلاه النتيجة إذا انقضى المستخدم بنجاح هذه المسابقة"
+            },
+            {
+              "label": "ملاحظة النجاح",
+              "description": "سيتم عرض هذه الملاحظة بعد النتيجة إذا انقضى المستخدم بنجاح هذه المسابقة"
+            },
+            {
+              "label": "تعليق الرسوب بالمسابقة",
+              "description": "سيتم عرض هذا النص أعلاه النتيجة إذا كان المستخدم قد فشلت في المسابقة"
+            },
+            {
+              "label": "ملاحظة الرسوب",
+              "description": "سيتم عرض هذه الملاحظة بعد النتيجة إذا كان المستخدم قد فشلت في المسابقة"
+            }
+          ]
+        },
+        {
+          "label": "تسمية زر اظهار الحل",
+          "default": "مشاهدة الحل",
+          "description": "نص زر الحل"
+        },
+        {
+          "label": "تسمية زر إعادة المحاولة",
+          "default": "إعادة المحاولة",
+          "description": "نص زر إعادة المحاولة"
+        },
+        {
+          "label": "نص زر الانتهاء",
+          "default": "Finish"
+        },
+        {
+          "label": "Submit button text",
+          "default": "إرسال"
+        },
+        {
+          "label": "عرض الفيديو قبل نتائج المسابقة"
+        },
+        {
+          "label": "تفعيل زر  تخطى الفيديو"
+        },
+        {
+          "label": "تسمية زر  تخطى الفيديو",
+          "default": "تخطي الفيديو"
+        },
+        {
+          "label": "فيديو النجاح بالمسابقة",
+          "description": "سيتم تشغيل هذا الفيديو إذا كان المستخدم ناجحا بهذه المسابقة"
+        },
+        {
+          "label": "فيديو الرسوب بالمسابقة",
+          "description": "سيتم تشغيل هذا الفيديو إذا كان المستخدم راسبا بهذه المسابقة"
+        }
+      ]
+    },
+    {
+      "label": "إعدادات الأزرار \"لعرض الحل\" و\"المحاولة مرة أخرى\"",
+      "fields": [
+        {
+          "label": "Show \"Check\" buttons",
+          "description": "This option determines if the \"Check\" button will be shown for all questions."
+        },
+        {
+          "label": "Override \"Show Solution\" button",
+          "description": "This option determines if the \"Show Solution\" button will be shown for all questions, disabled for all or configured for each question individually.",
+          "options": [
+            {
+              "label": "Enabled"
+            },
+            {
+              "label": "Disabled"
+            }
+          ]
+        },
+        {
+          "label": "Override \"Retry\" button",
+          "description": "This option determines if the \"Retry\" button will be shown for all questions, disabled for all or configured for each question individually.",
+          "options": [
+            {
+              "label": "Enabled"
+            },
+            {
+              "label": "Disabled"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

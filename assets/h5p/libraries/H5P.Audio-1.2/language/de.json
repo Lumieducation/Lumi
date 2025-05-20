@@ -1,0 +1,99 @@
+{
+  "semantics": [
+    {
+      "label": "Audioquellen"
+    },
+    {
+      "label": "Audioplayermodus",
+      "description": "Wählen Sie den gewünschten Audiplayermodus.",
+      "options": [
+        {
+          "label": "Minimaler Funktionsumfang"
+        },
+        {
+          "label": "Voller Funktionsumfang"
+        },
+        {
+          "label": "Transparent"
+        }
+      ]
+    },
+    {
+      "label": "Verfügbaren Platz nutzen"
+    },
+    {
+      "label": "Steuerelemente aktivieren",
+      "description": "Dies gibt den Nutzer die Möglichkeit z. B. das Audio zu pausieren."
+    },
+    {
+      "label": "Automatische Wiedergabe aktivieren",
+      "description": "Bei aktivierter, automatischer Wiedergabe wird das Audio sofort vorgespielt. Ansonsten wird das Audio erst abgespielt, wenn der Nutzer den Playbutton gedrückt hat."
+    },
+    {
+      "label": "Urheberrecht bearbeiten",
+      "fields": [
+        {
+          "label": "Titel",
+          "placeholder": "Für Elise"
+        },
+        {
+          "label": "Autor",
+          "placeholder": "Ludwig van Beethoven"
+        },
+        {
+          "label": "Quelle",
+          "placeholder": "http://en.wikipedia.org/wiki/F%C3%BCr_Elise"
+        },
+        {
+          "label": "Lizenz",
+          "options": [
+            {
+              "label": "Unbestimmt"
+            },
+            {
+              "label": "Namensnennung (CC BY)"
+            },
+            {
+              "label": "Namensnennung-Weitergabe unter gleichen Bedingungen (CC BY-SA)"
+            },
+            {
+              "label": "Namensnennung-Keine Bearbeitung (CC BY-ND)"
+            },
+            {
+              "label": "Namensnennung-Nicht Kommerziell (CC BY-NC)"
+            },
+            {
+              "label": "Namensnennung-Nicht Kommerziell-Weitergabe unter gleichen Bedingungen (CC BY-NC-SA)"
+            },
+            {
+              "label": "Namensnennung-Nicht Kommerziell-Keine Bearbeitung (CC BY-NC-ND)"
+            },
+            {
+              "label": "General Public License (GPL)"
+            },
+            {
+              "label": "Public Domain"
+            },
+            {
+              "label": "Public Domain Dedication and Licence"
+            },
+            {
+              "label": "Public Domain Mark"
+            },
+            {
+              "label": "Urheberrechtlich geschützt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Name des Audioinhalts",
+      "default": "Audio"
+    },
+    {
+      "label": "Audio not supported message",
+      "default": "Your browser does not support this audio"
+    }
+  ]
+}

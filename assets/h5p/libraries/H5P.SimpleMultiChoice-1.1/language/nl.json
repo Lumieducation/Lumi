@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Vraag"
+    },
+    {
+      "label": "Type meerkeuzevraag",
+      "options": [
+        {
+          "label": "Meerdere juiste antwoorden mogelijk"
+        },
+        {
+          "label": "1 juist antwoord"
+        }
+      ]
+    },
+    {
+      "label": "Alternatieve antwoorden",
+      "entity": "Alternatief",
+      "field": {
+        "label": "Alternatief",
+        "fields": [
+          {
+            "label": "Tekst"
+          },
+          {
+            "label": "Feedback",
+            "fields": [
+              {
+                "label": "Getoond bericht als antwoord is geselecteerd",
+                "description": "Boodschap verschijnt onder het antwoord na klikken op \"Doorgaan\" wanneer antwoord geselecteerd is."
+              },
+              {
+                "label": "Getoond bericht als het antwoord niet is geselecteerd",
+                "description": "Boodschap verschijnt onder het antwoord na klikken op \"Doorgaan\" wanneer antwoord niet geselecteerd is."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "semantics": [
+    {
+      "label": "گاه‌شمار",
+      "fields": [
+        {
+          "label": "سرخط",
+          "description": "سرخط اصلی گاه‌شمار اینجا می‌آید (صفحه اول)"
+        },
+        {
+          "label": "متن بدنه",
+          "description": "بدنه اصلی گاه‌شمار اینجا می‌آید (صفحه اول)."
+        },
+        {
+          "label": "سطح برگنمایی پیش‌فرض",
+          "description": "این سطح بزرگنمایی پیش‌فرض را بهبود خواهد داد. معادل فشردن دکمه‌های بزرگنمایی یا کوچک‌نمایی به تعداد مرتبه تعیین شده. اعداد منفی کوچک‌نمایی می‌کنند. پیش‌فرض صفر است"
+        },
+        {
+          "label": "تصور پس‌زمینه",
+          "description": "تصویری برای نمایش به عنوان پس‌زمینه."
+        },
+        {
+          "label": "ارتفاع",
+          "description": "ارتفاع برحسب پیکسل"
+        },
+        {
+          "label": "دارایی",
+          "description": "در اینجا می‌توانید یک دارایی به صفحه اول گاه‌شمار اضافه کنید",
+          "fields": [
+            {
+              "label": "رسانه",
+              "description": "پیوند به رسانه (پشتیبانی Twitter, YouTube, Flickr, Vimeo, Google Maps, SoundCloud)"
+            },
+            {
+              "label": "تیتراژ",
+              "description": "تیتراژ رسانه"
+            },
+            {
+              "label": "کپشن",
+              "description": "توصیف کپشن اینجا می‌آید"
+            }
+          ]
+        },
+        {
+          "label": "تاریخ‌ها",
+          "description": "تاریخ‌هایی را به گاه‌شمار خود بیفزایید!",
+          "field": {
+            "label": "تاریخ",
+            "description": "تاریخ",
+            "fields": [
+              {
+                "label": "تاریخ شروع",
+                "description": "YYYY,MM,DD (حداقل YYYY لازم است)"
+              },
+              {
+                "label": "تاریخ پایان",
+                "description": "YYYY,MM,DD (حداقل YYYY لازم است)"
+              },
+              {
+                "label": "سرخط",
+                "description": "سرخط برای ورودی تاریخ"
+              },
+              {
+                "label": "متن بدنه",
+                "description": "بدنه برای ورودی تاریخ"
+              },
+              {
+                "label": "برچسب‌ها",
+                "description": "برچسب‌ها را وارد کنید (دسته‌بندی‌ها)"
+              },
+              {
+                "label": "دارایی",
+                "fields": [
+                  {
+                    "label": "رسانه",
+                    "description": "آدرس رسانه (پشتیبانی Twitter, YouTube, Flickr, Vimeo, Wikipedia, Google Maps, SoundCloud)."
+                  },
+                  {
+                    "label": "تصویر بندانگشتی",
+                    "description": "افزودن یک تصویر بند انگشتی در صورت نیاز، ۳۲x۳۲"
+                  },
+                  {
+                    "label": "تیتراژ",
+                    "description": "تیتراژ رسانه"
+                  },
+                  {
+                    "label": "کپشن",
+                    "description": "متن کپشن"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "دوره‌ها",
+          "description": "یک دوره به گاه‌شمار خود اضافه کنید",
+          "field": {
+            "label": "دوره",
+            "fields": [
+              {
+                "label": "تاریخ شروع",
+                "description": "YYYY,MM,DD (حداقل YYYY لازم است)"
+              },
+              {
+                "label": "تاریخ پایان",
+                "description": "YYYY,MM,DD (حداقل YYYY لازم است)"
+              },
+              {
+                "label": "سرخط",
+                "description": "سرخط دوره"
+              },
+              {
+                "label": "متن",
+                "description": "بدنه دوره"
+              },
+              {
+                "label": "برچسب",
+                "description": "برچسب‌های دوره (دسته‌بندی‌ها)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "زبان",
+          "description": "زبان واسط کاربر",
+          "options": [
+            {
+              "label": "Afrikaans"
+            },
+            {
+              "label": "Arabic"
+            },
+            {
+              "label": "Armenian"
+            },
+            {
+              "label": "Basque"
+            },
+            {
+              "label": "Bulgarian"
+            },
+            {
+              "label": "Catalan"
+            },
+            {
+              "label": "Chinese"
+            },
+            {
+              "label": "Croatian / Hrvatski"
+            },
+            {
+              "label": "Czech"
+            },
+            {
+              "label": "Danish"
+            },
+            {
+              "label": "Dutch"
+            },
+            {
+              "label": "English"
+            },
+            {
+              "label": "English (24-hour time)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estonian"
+            },
+            {
+              "label": "Faroese"
+            },
+            {
+              "label": "فارسی"
+            },
+            {
+              "label": "Finnish"
+            },
+            {
+              "label": "French"
+            },
+            {
+              "label": "Galician"
+            },
+            {
+              "label": "Georgian"
+            },
+            {
+              "label": "German / Deutsch"
+            },
+            {
+              "label": "Greek"
+            },
+            {
+              "label": "Hebrew"
+            },
+            {
+              "label": "Hungarian"
+            },
+            {
+              "label": "Icelandic"
+            },
+            {
+              "label": "Indonesian"
+            },
+            {
+              "label": "Italian"
+            },
+            {
+              "label": "Japanese"
+            },
+            {
+              "label": "Korean"
+            },
+            {
+              "label": "Latvian"
+            },
+            {
+              "label": "Lithuanian"
+            },
+            {
+              "label": "Luxembourgish"
+            },
+            {
+              "label": "Malay"
+            },
+            {
+              "label": "Nepali"
+            },
+            {
+              "label": "Norwegian"
+            },
+            {
+              "label": "Polish"
+            },
+            {
+              "label": "Portuguese"
+            },
+            {
+              "label": "Portuguese (Brazilian)"
+            },
+            {
+              "label": "Romansh"
+            },
+            {
+              "label": "Russian"
+            },
+            {
+              "label": "Serbian - Cyrillic"
+            },
+            {
+              "label": "Serbian - Latin"
+            },
+            {
+              "label": "Sinhalese"
+            },
+            {
+              "label": "Slovak"
+            },
+            {
+              "label": "Slovenian"
+            },
+            {
+              "label": "Spanish"
+            },
+            {
+              "label": "Swedish"
+            },
+            {
+              "label": "Tagalog"
+            },
+            {
+              "label": "Tamil"
+            },
+            {
+              "label": "Taiwanese"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Turkish"
+            },
+            {
+              "label": "Ukrainian"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Typ",
+          "description": "Obraz do wyświetlenia nad pytaniem (opcjonalny)."
+        },
+        {
+          "label": "Zablokuj powiększanie obrazu"
+        }
+      ]
+    },
+    {
+      "label": "Pytanie"
+    },
+    {
+      "label": "Poprawna odpowiedź",
+      "options": [
+        {
+          "label": "Prawda"
+        },
+        {
+          "label": "Fałsz"
+        }
+      ]
+    },
+    {
+      "label": "Tłumaczenie interfejsu dla pytań Prawda/Fałsz",
+      "fields": [
+        {
+          "label": "Etykieta przycisku Prawda",
+          "default": "Prawda"
+        },
+        {
+          "label": "Etykieta przycisku Fałsz",
+          "default": "Fałsz"
+        },
+        {
+          "label": "Podsumowanie odpowiedzi",
+          "default": "Masz @score z @total punktów",
+          "description": "Umieść w tekście zmienne @score i @total. Przykład: 'Udało Ci się zdobyć @score punktów spośród @total możliwych'"
+        },
+        {
+          "label": "Etykieta przycisku Sprawdź",
+          "default": "Sprawdź"
+        },
+        {
+          "label": "Tekst dla przycisku \"Prześlij\"",
+          "default": "Prześlij"
+        },
+        {
+          "label": "Etykieta przycisku Pokaż odpowiedź",
+          "default": "Pokaż odpowiedź"
+        },
+        {
+          "label": "Etykieta przycisku Powtórz",
+          "default": "Powtórz"
+        },
+        {
+          "label": "Błędna odpowiedź",
+          "default": "Błędna odpowiedź"
+        },
+        {
+          "label": "Poprawna odpowiedź",
+          "default": "Poprawna odpowiedź"
+        },
+        {
+          "label": "Tekstowe przedstawienie punktacji dla osób korzystających z czytnika tekstu",
+          "default": "Masz :num z :total punktów"
+        },
+        {
+          "label": "Opis technologii wspomagającej dla przycisku \"Sprawdź\"",
+          "default": "Sprawdź odpowiedzi. Odpowiedzi zostaną oznaczone jako poprawne, niepoprawne lub bez odpowiedzi."
+        },
+        {
+          "label": "Opis technologii wspomagającej dla przycisku \"Pokaż rozwiązanie\"",
+          "default": "Pokaż rozwiązanie. Zadanie zostanie oznaczone poprawnym rozwiązaniem."
+        },
+        {
+          "label": "Opis technologii wspomagającej dla  przycisku \"Ponów próbę\"",
+          "default": "Ponów zadanie. Zresetuj wszystkie odpowiedzi i rozpocznij zadanie od nowa."
+        }
+      ]
+    },
+    {
+      "label": "Ustawienia zachowania",
+      "description": "Te opcje pozwalają określić, jak ma przebiegać zadanie.",
+      "fields": [
+        {
+          "label": "Wyświetl przycisk \"Powtórz\""
+        },
+        {
+          "label": "Wyświetl przycisk \"Pokaż odpowiedź\""
+        },
+        {
+          "label": "Wyświetl przycisk \"Sprawdź\""
+        },
+        {
+          "label": "Żądaj potwierdzenia akcji \"Sprawdź\""
+        },
+        {
+          "label": "Żądaj potwierdzenia akcji \"Powtórz\""
+        },
+        {
+          "label": "Automatycznie sprawdzaj wynik po wpisaniu",
+          "description": "Uwaga: włączenie tej opcji utrudni korzystanie osobom niepełnosprawnym"
+        },
+        {
+          "label": "Reakcja na poprawną odpowiedź",
+          "description": "Ten tekst zastąpi domyślny komunikat. Można użyć zmiennych @score i @total"
+        },
+        {
+          "label": "Reakcja na błędną odpowiedź",
+          "description": "Ten tekst zastąpi domyślny komunikat. Można użyć zmiennych @score i @total"
+        }
+      ]
+    },
+    {
+      "label": "Żądanie sprawdzenia wyniku",
+      "fields": [
+        {
+          "label": "Nagłówek",
+          "default": "Sprawdzić?"
+        },
+        {
+          "label": "Treść",
+          "default": "Czy na pewno chcesz sprawdzić swoje odpowiedzi i zakończyć to zadanie?"
+        },
+        {
+          "label": "Etykieta przycisku anulowania",
+          "default": "Anuluj"
+        },
+        {
+          "label": "Etykieta przycisku potwierdzenia",
+          "default": "Sprawdź"
+        }
+      ]
+    },
+    {
+      "label": "Żądanie powtórzenia testu",
+      "fields": [
+        {
+          "label": "Nagłówek",
+          "default": "Powtórzyć?"
+        },
+        {
+          "label": "Treść",
+          "default": "Czy na pewno chcesz powtórzyć to zadanie?"
+        },
+        {
+          "label": "Etykieta przycisku anulowania",
+          "default": "Anuluj"
+        },
+        {
+          "label": "Etykieta przycisku potwierdzenia",
+          "default": "Potwierdź"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Ievads",
+      "fields": [
+        {
+          "label": "Parādīt ievadu"
+        },
+        {
+          "label": "Ievada attēls"
+        },
+        {
+          "label": "Alternatīvs teksts ievada attēlam"
+        },
+        {
+          "label": "Nosaukums"
+        },
+        {
+          "label": "Ievada teksts",
+          "description": "Šis nosaukums tiks parādīts virs ievada teksta."
+        }
+      ]
+    },
+    {
+      "label": "Jautājumi",
+      "widgets": [
+        {
+          "label": "Pēc noklusējuma"
+        }
+      ],
+      "entity": "Jautājums",
+      "field": {
+        "label": "Jautājums"
+      }
+    },
+    {
+      "label": "Kopējā atgriezeniskā saite",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Pēc noklusējuma"
+            }
+          ],
+          "label": "Iestatiet pielāgotu atgriezenisko saiti katram rezultātu diapazonam",
+          "description": "Klikšķiniet pogu \"Pievienot diapazonu\", lai pievienotu tik diapazonus cik vēlaties. Piemēram, 0-20% Slikts rezultāts, 21-91% Viduvējs rezultāts, 91-100% Lielisks rezultāts!",
+          "entity": "diapazons",
+          "field": {
+            "fields": [
+              {
+                "label": "Rezultātu diapazons"
+              },
+              {},
+              {
+                "label": "Atgriezeniskā saite noteiktajam rezultātu diapazonam",
+                "placeholder": "Aizpildiet atgriezenisko saiti"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "\"Izrunājiet vārdus kopa\" etiķetes un teksti",
+      "fields": [
+        {
+          "label": "Ievada pogas etiķete",
+          "default": "Sākt kursu!"
+        },
+        {
+          "label": "Rezultātu etiķete risinājuma ekrānā",
+          "default": "Tavs rezultāts:"
+        },
+        {
+          "label": "Pogas \"Rādīt risinājumu\" etiķete",
+          "default": "Rādīt risinājumu"
+        },
+        {
+          "label": "Atkārtota mēģinājuma pogas etiķete",
+          "default": "Atkārtot"
+        },
+        {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
+          "label": "Nākamā jautājuma pieejamības etiķete",
+          "default": "Nākamais jautājums"
+        },
+        {
+          "label": "Iepriekšējā jautājuma pieejamības etiķete",
+          "default": "Iepriekšējais jautājums"
+        },
+        {
+          "label": "Navigācijas joslas nosaukums",
+          "description": "Jautājumu nosaukumi navigācijas joslā. \":num\" tiks aizstāts ar faktisko slaida numuru.",
+          "default": "Slaids :num"
+        },
+        {
+          "label": "Atbildēto slaidu pieejamības etiķete",
+          "default": "Atbildēts"
+        },
+        {
+          "label": "Aktīvā slaida pieejamības etiķete",
+          "default": "Pašlaik aktīvs"
+        }
+      ]
+    }
+  ]
+}

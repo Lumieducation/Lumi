@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Editor de Questões de Ramificação",
+      "fields": [
+        {
+          "label": "Questão"
+        },
+        {
+          "label": "Opções disponíveis",
+          "entity": "Opção",
+          "field": {
+            "label": "Opção",
+            "fields": [
+              {
+                "label": "Texto"
+              },
+              {
+                "label": "Próximo conteúdo (-1 é a tela final)"
+              },
+              {
+                "label": "Feedback (Retorno)",
+                "fields": [
+                  {
+                    "label": "Título do Feedback"
+                  },
+                  {
+                    "label": "Texto do feedback"
+                  },
+                  {
+                    "label": "Imagem do feedback"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

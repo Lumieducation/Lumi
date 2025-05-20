@@ -1,0 +1,219 @@
+{
+  "semantics": [
+    {
+      "label": "Kichwa"
+    },
+    {
+      "label": "Njia",
+      "description": "Njia ya kuwasilisha kadi za mazungumzo",
+      "options": [
+        {
+          "label": "Kawaida"
+        },
+        {
+          "label": "Marudio"
+        }
+      ]
+    },
+    {
+      "label": "Maelezo ya kazi"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Chaguo-msingi"
+        }
+      ],
+      "label": "Mazungumzo",
+      "entity": "mazungumzo",
+      "field": {
+        "label": "Swali",
+        "fields": [
+          {
+            "label": "Maandishi",
+            "description": "Kidokezo cha sehemu ya kwanza ya mazungumzo"
+          },
+          {
+            "label": "Jibu",
+            "description": "Kidokezo cha sehemu ya pili ya mazungumzo"
+          },
+          {
+            "label": "Picha",
+            "description": "Picha ya hiari ya kadi. (Kadi inaweza kutumia picha tu, maandishi tu au yote mawili)"
+          },
+          {
+            "label": "Maandishi mbadala kwa picha hiyo"
+          },
+          {
+            "label": "Faili za sauti"
+          },
+          {
+            "label": "Vidokezo",
+            "fields": [
+              {
+                "label": "Kidokezi kwa maandishi",
+                "description": "Kidokezo kwa sehemu ya kwanza ya mazungumzo"
+              },
+              {
+                "label": "Kidokezi kwa jibu",
+                "description": "Kidokezo kwa sehemu ya pili ya mazungumzo"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Mipangilio ya tabia",
+      "description": "Chaguzi hizi zitakuwezesha kudhibiti jinsi kazi inavyofanya.",
+      "fields": [
+        {
+          "label": "Washa kitufe cha \"Jaribu tena\""
+        },
+        {
+          "label": "Zima urambazaji wa kurudi nyuma",
+          "description": "Chaguo hili litakuruhusu kuhamia mbele na Kadi za Mazungumzo"
+        },
+        {
+          "label": "Pima maandishi ili yatoshe ndani ya kadi",
+          "description": "Kutoweka alama chaguo hili itafanya kadi kukabiliana na ukubwa wake na ukubwa wa maandishi"
+        },
+        {
+          "label": "Kadi za kubahatisha",
+          "description": "Wezesha kubahatisha utaratibu wa kadi juu ya kuonyesha."
+        },
+        {
+          "label": "Kiwango cha juu cha ustadi"
+        },
+        {
+          "label": "Ruhusu maendeleo ya haraka",
+          "description": "Ikiwa imeamilishwa, wanafunzi wanaweza kuamua kuonyesha kwamba wanaijua kadi bila kuigeuza"
+        }
+      ]
+    },
+    {
+      "label": "Maandishi ya kitufe cha kuwasha",
+      "default": "Geuza"
+    },
+    {
+      "label": "Maandishi kwa kitufe kinachofuata",
+      "default": "Inayofuata"
+    },
+    {
+      "label": "Maandishi kwa kitufe cha awali",
+      "default": "Ya awali"
+    },
+    {
+      "label": "Maandishi ya kitufe cha jaribu tena",
+      "default": "Jaribu tena"
+    },
+    {
+      "label": "Maandishi ya kitufe cha \"jibu sahihi\"",
+      "default": "Nimeipata sawa!"
+    },
+    {
+      "label": "Maandishi ya kitufe cha \"jibu lisilo sahihi\"",
+      "default": "Nimekosea"
+    },
+    {
+      "label": "Maandishi ya ujumbe wa \"Zunguka\" chini ya kadi na kwenye skrini ya muhtasari",
+      "description": "@round itabadilishwa na nambari ya raundi ya sasa",
+      "default": "Mzunguko @round"
+    },
+    {
+      "label": "Maandishi ya ujumbe wa \"Kadi zilizoachwa\"",
+      "description": "@number itabadilishwa na idadi ya kadi zilizobaki katika raundi hii",
+      "default": "Kadi zilizobaki: @number"
+    },
+    {
+      "label": "Maandishi kwa kitufe cha \"raundi inayofuata\"",
+      "description": "@round itabadilishwa na nambari ya raundi",
+      "default": "Endelea hadi raundi ya @round"
+    },
+    {
+      "label": "Maandishi ya kitufe cha \"Anza tena\"",
+      "default": "Anza tena"
+    },
+    {
+      "label": "Maandishi ya kitufe cha \"Onyesha muhtasari\"",
+      "default": "Inayofuata"
+    },
+    {
+      "label": "Maandishi ya kichwa ya ukurasa wa muhtasari",
+      "default": "Muhtasari"
+    },
+    {
+      "label": "Maandishi ya \"Kadi ulizopata sawa:\"",
+      "default": "Kadi ulizopata sawa:"
+    },
+    {
+      "label": "Maandishi ya \"Kadi ulizokosea:\"",
+      "default": "Kadi ulizokosea:"
+    },
+    {
+      "label": "Maandishi ya \"Kadi ambazo hazijaonyeshwa:\"",
+      "default": "Kadi katika dimbwi ambazo hazijaonyeshwi:"
+    },
+    {
+      "label": "Maandishi ya \"Alama ya Jumla\"",
+      "default": "Alama ya Jumla"
+    },
+    {
+      "label": "Maandishi ya \"Kadi zimekamilika\"",
+      "default": "Kadi ulizokamilisha kujifunza:"
+    },
+    {
+      "label": "Maandishi ya \"Raundi zilizokamilika:\"",
+      "default": "Mzunguko zilizokamilika:"
+    },
+    {
+      "label": "Ujumbe wakati kadi zote zimetumika kujifunza kwa ufanisi",
+      "description": "@cards itabadilishwa na idadi ya kadi zote kwenye dimbwi. @max itabadilishwa na kiwango cha juu cha ustadi - 1.",
+      "default": "Hongera! Umepata kadi zote @cards sahihi @max mara mfululizo!"
+    },
+    {
+      "label": "Maandishi ya maendeleo",
+      "description": "Vigezo vinavyopatikana ni @card na @total.",
+      "default": "Kadi ya @card kati ya @total"
+    },
+    {
+      "label": "Lebo ya maandishi ya kadi",
+      "description": "Inatumiwa kwa ajili ya ufikiaji na teknolojia ya usaidizi",
+      "default": "Mbele ya kadi"
+    },
+    {
+      "label": "Lebo ya nyuma ya kadi",
+      "description": "Inatumiwa kwa ajili ya ufikiaji na teknolojia ya usaidizi",
+      "default": "Nyuma ya kadi"
+    },
+    {
+      "label": "Lebo ya kitufe cha kidokezi cha onyesho",
+      "default": "Kidokezo cha onyesho"
+    },
+    {
+      "label": "Ujumbe wa sauti hautumiki",
+      "default": "Kivinjari chako hakitumii sauti hii"
+    },
+    {
+      "label": "Thibitisha kuanza kwa mazungumzo",
+      "fields": [
+        {
+          "label": "Maandishi ya kichwa",
+          "default": "Anza upya?"
+        },
+        {
+          "label": "Maandishi ya kiini",
+          "default": "Maendeleo yote yatapotea. Una uhakika unataka kuanza upya?"
+        },
+        {
+          "label": "Ghairi lebo ya kitufe",
+          "default": "Ghairi"
+        },
+        {
+          "label": "Lebo ya kitufe cha kuthibitisha",
+          "default": "Anza tena"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Tipe",
+          "description": "Opsionele media wat bo die vraag vertoon word."
+        },
+        {
+          "label": "Deaktiveer zoomfunksie by prente"
+        }
+      ]
+    },
+    {
+      "label": "Taak beskrywing",
+      "description": "Beskryf jou taak hier.",
+      "placeholder": "Luister versigtig en skryf neer wat jy hoor."
+    },
+    {
+      "label": "Sinne",
+      "widgets": [
+        {
+          "label": "Verstek"
+        }
+      ],
+      "entity": "Sin",
+      "field": {
+        "label": "Sin",
+        "fields": [
+          {
+            "label": "Beskrywing",
+            "description": "Indien verkies word, kan 'n eenvoudige beskywing bo die teksinvoerveld geplaas word, dit is veral nuttig vir dialoë."
+          },
+          {
+            "label": "Klankmonster",
+            "description": "Gesproke sin in normale spoed"
+          },
+          {
+            "label": "Klankmonster stadig",
+            "description": "Gesproke sin in stadige spoed"
+          },
+          {
+            "label": "Teks",
+            "description": "Teks wat geskryf moet word. Jy kan alternatiewe spellings van 'n woord byvoeg deur 'n vertikale lyn (|) agteraan te voeg gevolg deur die alternatief."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Algehele terugvoer",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Verstek"
+            }
+          ],
+          "label": "Bepaal verstekterugvoer vir enige reeks tellings",
+          "description": "Kliek op die \"Voeg reeks by\" knoppie om so veel as moontlik reekse by te voeg. Byvoorbeeld: 0-20% Swak Punt, 21-91% Gemiddelde Punt, 91-100% Uitstekende Punt!",
+          "entity": "reeks",
+          "field": {
+            "fields": [
+              {
+                "label": "Telling reeks"
+              },
+              {
+                "label": "Terugvoer vir gedefinieerde telling reeks",
+                "placeholder": "Vul die terugvoer in"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellings",
+      "description": "Hierdie keuses laat jou toe om te stel hoe die taak reageer.",
+      "fields": [
+        {
+          "label": "Maksimum probeerslae",
+          "description": "Beperk die aantal kere wat die klankgreep van elke sin geluister kan word."
+        },
+        {
+          "label": "Maksimum probeerslae vir die stadige spoed",
+          "description": "Beperk die aantal kere wat daar na die stadige klankgreep vir elke sin geluister kan word."
+        },
+        {
+          "label": "Disable pause option",
+          "description": "If checked, pausing the audio while playing is not possible."
+        },
+        {
+          "label": "Play button delay",
+          "description": "Optionally set a time period of up to three seconds that playing a button should be delayed. This is useful if you want to allow students to enter the text field before they start listening."
+        },
+        {
+          "label": "Shuffle sentences",
+          "description": "Define when the sentences should be shuffled.",
+          "options": [
+            {
+              "label": "Never"
+            },
+            {
+              "label": "Once when starting exercise"
+            },
+            {
+              "label": "On every try"
+            }
+          ]
+        },
+        {
+          "label": "Scoring",
+          "fields": [
+            {
+              "label": "Ignoreer leestekens",
+              "description": "Indien gemerk, sal leestekens nie in aanmerking geneem vir punte nie."
+            },
+            {
+              "label": "Geen foute modus",
+              "description": "Indien gemerk, sal net regte antwoorde vir punte in aanmerking geneem word. Foute sal nie gepenaliseer word nie."
+            },
+            {
+              "label": "Waarde van tikfoute",
+              "description": "Bepaal tot watter mate tikfoute (woorde met 3-9 karakters: tot en met 1 fout, woorde met meer as nege karakters: tot en met 2 foute) tel as egte foute.",
+              "options": [
+                {
+                  "label": "100 %"
+                },
+                {
+                  "label": "50 %"
+                },
+                {
+                  "label": "0 %"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Text",
+          "fields": [
+            {
+              "label": "Word separator",
+              "description": "Define the separator of words different than space character to support alternate solutions with different number of words."
+            },
+            {
+              "label": "Skryfrigting",
+              "description": "Bepaal of die sin se taal van regs-na-links of van links-na-regs geskryf word.",
+              "options": [
+                {
+                  "label": "Outomatiese opsporing"
+                },
+                {
+                  "label": "Regs-na-links"
+                },
+                {
+                  "label": "Links-na-regs"
+                }
+              ]
+            },
+            {
+              "label": "Skeiding van karakters",
+              "description": "Aktiveer indien spesifieke karakters (b.v. Sjinese Han karakters) outomaties in verskillende woorde verdeel moet word."
+            }
+          ]
+        },
+        {
+          "label": "Presentation of feedback",
+          "fields": [
+            {
+              "label": "Verstek tikfoutvaansig",
+              "description": "Indien gemerk, sal tikfoute in 'n verstekstyl vertoon word om dit van ander ooglopende foute te onderskei."
+            },
+            {
+              "label": "Aanbieding van alternatiewe oplossings",
+              "description": "Bepaal watter alternatiewe vir regte of verkeerde woorde in die oplossing aangebied moet word.",
+              "options": [
+                {
+                  "label": "Wys slegs eerste alternatief"
+                },
+                {
+                  "label": "Wys alle alternatiewe"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Aktiveer \"Probeer weer\""
+        },
+        {
+          "label": "Aktiveer \"Wys antwoord\" knoppie"
+        },
+        {
+          "label": "Show solution on check"
+        }
+      ]
+    },
+    {
+      "label": "Gebruikersaansig",
+      "fields": [
+        {
+          "label": "Algemene terugvoer",
+          "description": "Jy kan verskeie plekhouers gebruik wat vervang word met die geskikte getalle: @matches = aantal paartjies, @total = totale foute, @capped = beperk totale foute, @wrong = verkeerde woorde, @added = ekstra woorde, @missing = vermisde woorde, @typo = tikfoute",
+          "default": "Jy het @total fout(e) gemaak."
+        },
+        {
+          "label": "Algemene terugvoer (foutlose modus)",
+          "description": "Jy kan verskeie plekhouers gebruik wat vervang word met die geskikte getalle: @matches = aantal paartjies, @total = totale punt, @wrong = verkeerde woorde, @added = ekstra woorde, @missing = vermisde woorde, @typo = tikfoute",
+          "default": "Jy het @total woord(e) reg ingevoer en @typo woord(e) met tikfoute."
+        },
+        {
+          "label": "Teks vir \"Toets\" knoppie",
+          "default": "Toets"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "Teks vir \"Probeer weer\" knoppie",
+          "default": "Probeer weer"
+        },
+        {
+          "label": "Teks vir \"Wys antwoord\" knoppie",
+          "default": "Wys antwoord"
+        },
+        {
+          "label": "Klank word nie ondersteun nie boodskap",
+          "default": "Jou webleser ondersteun nie hierdie klankgreep nie."
+        }
+      ]
+    },
+    {
+      "label": "Spreekleser",
+      "fields": [
+        {
+          "label": "Hulptegnologieë beskrywing vir \"Toets\" knoppie",
+          "default": "Toets die antwoorde. Die antwoorde sal as reg gemerk, verkeerd of onbeantwoord gemerk word."
+        },
+        {
+          "label": "Hulptegnologieë beskrywing vir \"Wys oplossing\" knoppie",
+          "default": "Wys die antwoord. Hierdie taak sal gemerk word met die regte antwoord."
+        },
+        {
+          "label": "Hulptegnologieë beskrywing vir \"Probeer weer\" knoppie",
+          "default": "Probeer die taak weer. Herstel al die antwoorde en probeer die taak weer van die begin af."
+        },
+        {
+          "label": "Speel knoppie",
+          "default": "Speel"
+        },
+        {
+          "label": "Speel stadig knoppie",
+          "default": "Speel stadig"
+        },
+        {
+          "label": "Probeerslae oor (spreekleserteks en sweefteks)",
+          "description": "@number sal vervang word met die aantal probeerslae oor.",
+          "default": "Aantal probeerslae oor: @number"
+        },
+        {
+          "label": "Oneindig (teks vir spreekleser en sweefteks)",
+          "default": "oneindig"
+        },
+        {
+          "label": "Voer teksveld in",
+          "default": "Voer in wat jy gehoor het."
+        },
+        {
+          "label": "Jou uitslae",
+          "description": "@score sal vervang word met aantal punte. @total sal vervang word met maksimum beskikbare punte.",
+          "default": "Jy het @score uit @total punte gekry"
+        },
+        {
+          "label": "Antwoord",
+          "default": "Antwoord"
+        },
+        {
+          "label": "Sin",
+          "default": "Sin"
+        },
+        {
+          "label": "Item",
+          "default": "Item"
+        },
+        {
+          "label": "Reg",
+          "default": "reg"
+        },
+        {
+          "label": "Verkeerd",
+          "default": "verkeerd"
+        },
+        {
+          "label": "Geringe fout",
+          "default": "geringe fout"
+        },
+        {
+          "label": "Ontbrekende woord of simbool",
+          "default": "ontbreek"
+        },
+        {
+          "label": "Bygevoegde woord of simbool",
+          "default": "bygevoeg"
+        },
+        {
+          "label": "Regte antwoord",
+          "default": "Veronderstel om te wees"
+        },
+        {
+          "label": "Of",
+          "default": "of"
+        },
+        {
+          "label": "Punt",
+          "default": "punt"
+        },
+        {
+          "label": "Punte",
+          "default": "punte"
+        },
+        {
+          "label": "Tydperk",
+          "default": "tydperk"
+        },
+        {
+          "label": "Uitroepteken",
+          "default": "uitroepteken"
+        },
+        {
+          "label": "Vraagteken",
+          "default": "vraagteken"
+        },
+        {
+          "label": "Komma",
+          "default": "komma"
+        },
+        {
+          "label": "Enkel aanhalingsteken",
+          "default": "enkel aanhalingsteken"
+        },
+        {
+          "label": "Dubbele aanhalingsteken",
+          "default": "dubbele aanhalingsteken"
+        },
+        {
+          "label": "Dubbelpunt",
+          "default": "dubbelpunt"
+        },
+        {
+          "label": "Kommapunt",
+          "default": "kommapunt"
+        },
+        {
+          "label": "Plus",
+          "default": "plus"
+        },
+        {
+          "label": "Minus",
+          "default": "minus"
+        },
+        {
+          "label": "Sterretjie",
+          "default": "sterretjie"
+        },
+        {
+          "label": "Skuinsstreep",
+          "default": "skuinsstreep"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "semantics": [
+    {
+      "label": "Médiá",
+      "fields": [
+        {
+          "label": "Typ",
+          "description": "Voliteľné médiá zobrazené nad otázkou."
+        },
+        {
+          "label": "Zakázať priblíženie obrázka"
+        }
+      ]
+    },
+    {
+      "label": "Otázka"
+    },
+    {
+      "label": "Správna odpoveď",
+      "options": [
+        {
+          "label": "Pravda"
+        },
+        {
+          "label": "Nepravda"
+        }
+      ]
+    },
+    {
+      "label": "Preklady používateľského rozhrania pre otázky Pravda / Nepravda",
+      "fields": [
+        {
+          "label": "Názov pre tlačítko pravda",
+          "default": "Pravda"
+        },
+        {
+          "label": "Názov pre tlačítko nepravda",
+          "default": "Nepravda"
+        },
+        {
+          "label": "Spätná väzba - text",
+          "default": "Získali ste @score z @total celkvoých bodov",
+          "description": "Text spätnej väzby, dostupné premenné: @score a @total. Príklad: „Dostali ste @ skóre @ možných bodov“"
+        },
+        {
+          "label": "Text pre tlačítko \"Check\"",
+          "default": "Potvrdiť"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "Text pre tlačítko \"Show solution\"",
+          "default": "Zobraz riešenie"
+        },
+        {
+          "label": "Text pre tlačítko \"Retry\"",
+          "default": "Skúsiť znova"
+        },
+        {
+          "label": "Nesprávna odpoveď",
+          "default": "Nesprávna odpoveď"
+        },
+        {
+          "label": "Správna odpoveď",
+          "default": "Správna odpoveď"
+        },
+        {
+          "label": "Textové znázornenie výsledkovej lišty pre tých, ktorí používajú čítačku",
+          "default": "Získali ste :num z :total celkových bodov"
+        },
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "Show the solution. The task will be marked with its correct solution."
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry the task. Reset all responses and start the task over again."
+        }
+      ]
+    },
+    {
+      "label": "Behaviorálne nastavenia",
+      "description": "Tieto možnosti vám umožnia kontrolovať, ako sa bude úloha správať.",
+      "fields": [
+        {
+          "label": "Povoliť tlačítko \"Retry\""
+        },
+        {
+          "label": "Povoliť tlačítko \"Show Solution\""
+        },
+        {
+          "label": "Povoliť tlačítko \"Check\""
+        },
+        {
+          "label": "Zobraziť dialógové okno s potvrdením pri stlačení \"Check\""
+        },
+        {
+          "label": "Zobraziť dialógové okno s potvrdením pri stlačení \"Retry\""
+        },
+        {
+          "label": "Automaticky skontrolovať odpoveď",
+          "description": "Note that accessibility will suffer if enabling this option"
+        },
+        {
+          "label": "Spätná väzba pri správnej odpovedi",
+          "description": "Toto prepíše predvolený text spätnej väzby. Dostupné premenné: @score a @total"
+        },
+        {
+          "label": "Spätná väzba pri nesprávnej odpovedi",
+          "description": "This will override the default feedback text. Variables available: @score and @total"
+        }
+      ]
+    },
+    {
+      "label": "Potvrdzovacie okno Potvrdiť",
+      "fields": [
+        {
+          "label": "Text nadpisu",
+          "default": "Odovzdať odpoveď ?"
+        },
+        {
+          "label": "Text tela",
+          "default": "Ste si istý, že chcete odovzdať odpoveď ?"
+        },
+        {
+          "label": "Názov tlačítka zrušiť",
+          "default": "Zrušiť"
+        },
+        {
+          "label": "Názov tlačítka potvrdiť",
+          "default": "Potvrdiť"
+        }
+      ]
+    },
+    {
+      "label": "Potvrdzovacie okno Skúsiť znova",
+      "fields": [
+        {
+          "label": "Text nadpisu",
+          "default": "Skúsiť znova ?"
+        },
+        {
+          "label": "Text tela",
+          "default": "Ste si istý, že chcete otázku skúsiť znova ?"
+        },
+        {
+          "label": "Názov tlačítka zrušiť",
+          "default": "Zrušiť"
+        },
+        {
+          "label": "Názov tlačítka potvrdiť",
+          "default": "Potvrdiť"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Fono paveikslėlis",
+      "description": "Paveikslėlis rodomas fone."
+    },
+    {
+      "label": "Alternatyvus tekstas fono paveikslėliui",
+      "description": "Jei naršyklė negali įkelti paveikslėlio, vietoj jo bus rodomas šis tekstas. Taip pat naudojamos pagalbinės technologijos."
+    },
+    {
+      "label": "Aktyviosios srities piktograma",
+      "options": [
+        {
+          "label": "Iš anksto nustatyta piktograma"
+        },
+        {
+          "label": "Įkeltas paveikslėlis"
+        }
+      ]
+    },
+    {
+      "label": "Iš anksto nustatyta piktograma",
+      "description": "Iš anksto nustatytos aktyviosios srities piktogramos naudojimas.",
+      "options": [
+        {
+          "label": "Plius"
+        },
+        {
+          "label": "Minus"
+        },
+        {
+          "label": "Laikai"
+        },
+        {
+          "label": "Tikrinti"
+        },
+        {
+          "label": "Klausimas"
+        },
+        {
+          "label": "Info"
+        },
+        {
+          "label": "Šauktukas"
+        }
+      ]
+    },
+    {
+      "label": "Įkeltas paveikslėlis",
+      "description": "Kaip aktyviosios srities piktogramą naudokite savo paveikslėlį.<br />Rekomenduojama naudoti 75 x 75 piks. paveikslėlį."
+    },
+    {
+      "label": "Aktyviosios srities spalva",
+      "description": "Aktyviųjų sričių spalva"
+    },
+    {
+      "entity": "aktyvioji sritis",
+      "label": "Aktyviosios sritys",
+      "field": {
+        "label": "Aktyvioji sritis",
+        "fields": [
+          {
+            "label": "Aktyviosios srities pozicija",
+            "description": "Norėdami įdėti aktyviąją sritį, spustelėkite miniatiūros paveikslėlį"
+          },
+          {
+            "label": "Uždengti visą fono paveikslėlį",
+            "description": "Kai naudotojas spusteli aktyviąją sritį, iššokantis langas apims visą fono paveikslėlį"
+          },
+          {
+            "label": "Antraštė",
+            "description": "Optional header for the popup. This is used by assistive technologies."
+          },
+          {
+            "label": "Iššokantis turinys",
+            "field": {
+              "label": "Turinio elementas"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Aktyviosios srities pavadinimas, skirtas pagalbinėms technologijoms",
+      "default": "Aktyvioji sritis #num",
+      "description": "Padės paskelbti, į kurį aktyviosios srities elementą buvo nukreipta, jei aktyviajai sričiai nenurodyta antraštė. #num galima naudoti aktyviosios srities numeriui pakeisti."
+    },
+    {
+      "label": "Uždaryti mygtuko pavadinimas, skirtas pagalbinėms technologijoms",
+      "default": "Uždaryti"
+    },
+    {
+      "label": "Label for assistive technologies denoting that hotspot contains Audio/Video",
+      "default": "Contains Audio/Video"
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Tip",
+          "description": "Suport opțional de afișat deasupra întrebării."
+        },
+        {
+          "label": "Dezactivați mărirea imaginii"
+        }
+      ]
+    },
+    {
+      "label": "Întrebare"
+    },
+    {
+      "label": "Răspuns corect",
+      "options": [
+        {
+          "label": "Adevărat"
+        },
+        {
+          "label": "Fals"
+        }
+      ]
+    },
+    {
+      "label": "Traduceri de interfață utilizator pentru Întrebări adevărate / false",
+      "fields": [
+        {
+          "label": "Etichetă pentru butonul adevărat",
+          "default": "Adevărat"
+        },
+        {
+          "label": "Etichetă pentru buton fals",
+          "default": "Fals"
+        },
+        {
+          "label": "Text de feedback",
+          "default": "Ai obținut un scor de @din @puncte totale",
+          "description": "Text de feedback, variabile disponibile: @scor și @total. Exemplu: 'Ai obținut un scor de @ din @totalul de puncte posibile'"
+        },
+        {
+          "label": "Text pentru butonul „Verificați”",
+          "default": "Verifică"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "Text pentru butonul „Afișează soluția”",
+          "default": "Arată soluția"
+        },
+        {
+          "label": "Text pentru butonul „Reîncercați”",
+          "default": "Refă"
+        },
+        {
+          "label": "Răspuns greșit",
+          "default": "Răspuns greșit"
+        },
+        {
+          "label": "Răspuns corect",
+          "default": "Răspuns corect"
+        },
+        {
+          "label": "Reprezentare textuală a barei de scor pentru cei care utilizează un difuzor de citire",
+          "default": "Ai obținut :un număr de :total puncte"
+        },
+        {
+          "label": "Descrierea tehnologiei de asistență pentru butonul „Verificați”",
+          "default": "Verifică răspunsurile. Răspunsurile vor fi marcate ca fiind corecte, incorecte sau fără răspuns."
+        },
+        {
+          "label": "Descrierea tehnologiei de asistență pentru butonul „Afișează soluția”",
+          "default": "Arată soluția. Sarcina va fi marcată cu soluția corectă."
+        },
+        {
+          "label": "Descrierea tehnologiei de asistență pentru butonul „Reîncercați”",
+          "default": "Reîncercați sarcina. Resetați toate răspunsurile și începeți din nou sarcina."
+        }
+      ]
+    },
+    {
+      "label": "Setări comportamentale",
+      "description": "Aceste opțiuni vă vor permite să controlați cum se comportă sarcina.",
+      "fields": [
+        {
+          "label": "Activați butonul „Reîncercați”"
+        },
+        {
+          "label": "Activați butonul „Afișați soluția”"
+        },
+        {
+          "label": "Activați butonul „Verificați”"
+        },
+        {
+          "label": "Afișați dialogul de confirmare la „Verificați”"
+        },
+        {
+          "label": "Afișați dialogul de confirmare pe „Reîncercați”"
+        },
+        {
+          "label": "Verificați automat răspunsul",
+          "description": "Rețineți că accesibilitatea va avea de suferit dacă activați această opțiune"
+        },
+        {
+          "label": "Feedback despre răspunsul corect",
+          "description": "Aceasta va înlocui textul de feedback implicit. Variabile disponibile: @scor și @total"
+        },
+        {
+          "label": "Feedback la un răspuns greșit",
+          "description": "Aceasta va înlocui textul de feedback implicit. Variabile disponibile: @scor și @total"
+        }
+      ]
+    },
+    {
+      "label": "Verificați dialogul de confirmare",
+      "fields": [
+        {
+          "label": "Antet",
+          "default": "Terminat ?"
+        },
+        {
+          "label": "Corpul textului",
+          "default": "Ești sigur că vrei să termini?"
+        },
+        {
+          "label": "Eticheta butonului Anulare",
+          "default": "Anulare"
+        },
+        {
+          "label": "Confirmați eticheta butonului",
+          "default": "Terminat"
+        }
+      ]
+    },
+    {
+      "label": "Încercați din nou dialogul de confirmare",
+      "fields": [
+        {
+          "label": "Antet",
+          "default": "Reîncercați ?"
+        },
+        {
+          "label": "Corpul textului",
+          "default": "Sigur doriți să încercați din nou?"
+        },
+        {
+          "label": "Eticheta butonului Anulare",
+          "default": "Anulare"
+        },
+        {
+          "label": "Confirmați eticheta butonului",
+          "default": "Confirm"
+        }
+      ]
+    }
+  ]
+}

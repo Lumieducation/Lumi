@@ -1,0 +1,172 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "description": "Pasirenkama medija, rodoma virš klausimo.",
+          "label": "Tipas"
+        },
+        {
+          "label": "Išjungti paveikslėlio mastelio keitimą"
+        }
+      ],
+      "label": "Medija"
+    },
+    {
+      "description": "Paaiškinkite savo besimokantiesiems, ko iš jų tikimasi.",
+      "label": "Užduoties aprašymas"
+    },
+    {
+      "entity": "skyrius",
+      "field": {
+        "fields": [
+          {
+            "label": "Pavadinimas"
+          },
+          {
+            "description": "Pasirinktinai pridėkite užuominų ar konkrečių instrukcijų šiam skyriui.",
+            "label": "Užuominos"
+          },
+          {
+            "description": "Nustatykite, kokio ilgio turėtų būti kiekvienas skyrius kitų skyrių atžvilgiu. Pavyzdys: 1 skyrius = 1; 2 skyrius = 3 (trigubas 1 ilgis); 3 skyrius = 1 (toks pat ilgis kaip ir 1 dalis).",
+            "label": "Svoris"
+          },
+          {
+            "default": "#96ceb4",
+            "label": "Fono spalva"
+          },
+          {
+            "default": "#1c1c1c",
+            "label": "Teksto spalva"
+          }
+        ],
+        "label": "Skyriaus parametrai"
+      },
+      "label": "Skyriai",
+      "widgets": [
+        {
+          "label": "Numatytasis"
+        }
+      ]
+    },
+    {
+      "description": "Šios parinktys leis jums valdyti, kaip veikia užduotis.",
+      "fields": [
+        {
+          "label": "Įjungti „Bandyti dar kartą“"
+        },
+        {
+          "label": "Įjungti „Sprendimas“"
+        },
+        {
+          "description": "Slack is built-in flexibility of a section's length, calculated in percentage.",
+          "label": "Slack"
+        },
+        {
+          "description": "Define an absolute minimum total text length. Please note that a section's weight compared to other sections is the main driver for the feedback message, not this minimum value.",
+          "label": "Minimalus teksto ilgis"
+        },
+        {
+          "description": "Define an absolute maximum total text length. Please note that a section's weight compared to other sections is the main driver for the feedback message, not this maximum value.",
+          "label": "Maksimalus teksto ilgis"
+        },
+        {
+          "description": "Decide whether you want to display feedback while typing or only when the student requests it.",
+          "label": "Grįžtamojo ryšio režimas",
+          "options": [
+            {
+              "label": "On request"
+            },
+            {
+              "label": "Rašant"
+            }
+          ]
+        }
+      ],
+      "label": "Veikimo nustatymai"
+    },
+    {
+      "fields": [
+        {
+          "default": "Kopijuoti",
+          "label": "Tekstas mygtukui „Kopijuoti“."
+        },
+        {
+          "default": "Tikrinti",
+          "label": "Tekstas mygtukui „Tikrinti“."
+        },
+        {
+          "default": "Bandyti dar kartą",
+          "label": "Tekstas mygtukui „Bandyti dar kartą“"
+        },
+        {
+          "default": "Rodyti sprendimą",
+          "label": "Mygtuko „Rodyti sprendimą“ tekstas"
+        },
+        {
+          "default": "Your sections' lengths are all fine.",
+          "description": "Feedback text shown when all sections are of tolerable length.",
+          "label": "All sections good"
+        },
+        {
+          "default": "Your section \"@title\" is too short. You need at least @chars more characters.",
+          "description": "Feedback text shown for sections that are too short (@title will be replaced by the section title, @chars will be replaced by the number of characters missing).",
+          "label": "Sekcija per trumpa"
+        },
+        {
+          "default": "Your section \"@title\" is too long. Remove at least @chars characters.",
+          "description": "Feedback text shown for sections that are too long (@title will be replaced by the section title, @chars will be replaced by the number of characters needing removal).",
+          "label": "Sekcija per ilga"
+        },
+        {
+          "default": "@chars characters too short",
+          "description": "Status shown when typing for sections that are too short (@chars will be replaced by the number of characters missing).",
+          "label": "Sekcija per trumpa (kai rašoma)"
+        },
+        {
+          "default": "@chars characters too long",
+          "description": "Status shown when typing for sections that are too long (@chars will be replaced by the number of characters needing removal).",
+          "label": "Sekcija per ilga (kai rašoma)"
+        },
+        {
+          "default": "Jūsų tekstas nukopijuotas į iškarpinę",
+          "label": "Tekstas nukopijuotas į iškarpinę"
+        },
+        {
+          "default": "Jūsų teksto nebuvo galima nukopijuoti į iškarpinę",
+          "label": "Negalima nukopijuoti į iškarpinę"
+        },
+        {
+          "default": "Sekcija",
+          "label": "Sekcija"
+        },
+        {
+          "default": "There was no section given for this structure strip.",
+          "label": "Text for \"No section\" message"
+        }
+      ],
+      "label": "Naudotojo sąsaja"
+    },
+    {
+      "fields": [
+        {
+          "default": "Atsiliepimas",
+          "label": "Feedback (text for readspeakers)"
+        },
+        {
+          "default": "Nukopijuoti tekstą į iškarpinę",
+          "label": "Copy your text to the clipboard (text for readspeakers)"
+        },
+        {
+          "default": "Uždaryti langą",
+          "label": "Close window (text for readspeakers)"
+        },
+        {
+          "default": "Show hints",
+          "label": "Show hints (text for readspeakers)"
+        }
+      ],
+      "label": "Skaitytuvas"
+    }
+  ]
+}

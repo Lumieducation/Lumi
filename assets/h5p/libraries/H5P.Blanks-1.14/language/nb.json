@@ -1,0 +1,214 @@
+{
+  "semantics": [
+    {
+      "label": "Medieelement",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Valgfritt medieelement. Elementet blir plassert over spørsmålet."
+        },
+        {
+          "label": "Deaktiver zoomingfunksjon."
+        }
+      ]
+    },
+    {
+      "label": "Oppgavebeskrivelse",
+      "default": "Fyll inn orda som mangler.",
+      "description": "En tekst som forteller brukeren hvordan oppgaven skal løses"
+    },
+    {
+      "label": "Tekstlinjer",
+      "entity": "Tekstlinje",
+      "field": {
+        "label": "Tekstlinje",
+        "placeholder": "Oslo er hovedstaden i *Norge*.",
+        "important": {
+          "description": "<ul><li>Åpne felter merkes med en stjerne (*) foran og bak det korrekte ordet/uttrykket.</li><li>Alternativer angis med en skråstrek (/).</li><li>Hint angis med et kolon (:) før hintet.</li></ul>",
+          "example": "H5P-innhold kan redigeres ved å bruke en *nettleser/browser:applikasjon for å navigere på nettet*."
+        }
+      }
+    },
+    {
+      "label": "Tilbakemelding på hele oppgaven",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Forhåndsinnstilling"
+            }
+          ],
+          "label": "Opprett poengintervaller og legg inn tilbakemeldinger.",
+          "description": "Klikk på knappen \"Legg til poengintervall\" og legg til så mange poengintervaller du trenger. Eksempel: 0–40 % Svakt resultat, 41–80 % Gjennomsnittlig resultat, 81–100 % Flott resultat!",
+          "entity": "Intervall",
+          "field": {
+            "fields": [
+              {
+                "label": "Poengintervall"
+              },
+              {},
+              {
+                "label": "Tilbakemelding for definert poengintervall",
+                "placeholder": "Skriv inn tilbakemelding."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Navn på \"Vis svar\"-knapp",
+      "default": "Vis svar"
+    },
+    {
+      "label": "Navn på \"Prøv igjen\"-knapp",
+      "default": "Prøv igjen"
+    },
+    {
+      "label": "Navn på \"Sjekk\"-knapp",
+      "default": "Sjekk"
+    },
+    {
+      "label": "Navn på \"Send inn\"-knapp",
+      "default": "Send inn"
+    },
+    {
+      "label": "Tekst for \"Ikke fylt ut\"-melding",
+      "default": "Fyll ut alle felt for å se svar."
+    },
+    {
+      "label": "Tekst for \":ans er korrekt\"-melding (:ans er plassholderen for svaret fra bruker)",
+      "default": "':ans' er korrekt"
+    },
+    {
+      "label": "Tekst for \"':ans' er feil\"-melding",
+      "default": "':ans' er feil"
+    },
+    {
+      "label": "Tekst for \"Riktig svar\"-melding",
+      "default": "Riktig svar"
+    },
+    {
+      "label": "Tekst for \"Feil svar\"-melding",
+      "default": "Feil svar"
+    },
+    {
+      "label": "Merkelapp for svar (for tekniske hjelpemidler)",
+      "default": "Riktig svar:"
+    },
+    {
+      "label": "Merkelapp for inntastingsfelt (for tekniske hjelpemidler)",
+      "description": "Bruk @num og @total for å bytte ut feltnummer og totalt antall felt.",
+      "default": "Felt @num av @total"
+    },
+    {
+      "label": "Merkelapp brukt av assisterende teknologi for å si at det fins et tips",
+      "default": "Tips tilgjengelig"
+    },
+    {
+      "label": "Navn på tipsknapp",
+      "default": "Tips"
+    },
+    {
+      "label": "Oppgaveinnstillinger",
+      "description": "Disse innstillingene lar deg bestemme hvordan oppgaven oppfører seg.",
+      "fields": [
+        {
+          "label": "Aktiver \"Prøv igjen\"-knapp"
+        },
+        {
+          "label": "Aktiver \"Vis svar\"-knapp"
+        },
+        {
+          "label": "Aktiver \"Sjekk\"-knapp"
+        },
+        {
+          "label": "Gi tilbakemelding straks brukeren har svart"
+        },
+        {
+          "label": "Skill mellom store og små bokstaver",
+          "description": "Denne innstillingen sørger for at svaret må være nøyaktig likt fasit."
+        },
+        {
+          "label": "Krev at alle felt må være fylt ut før bruker får se svar"
+        },
+        {
+          "label": "Sett inntastingsfelt på egne linjer"
+        },
+        {
+          "label": "Slå på brukerbekreftelse for \"Sjekk\"",
+          "description": "Denne innstillinga er ikke forenlig med alternativet \"Gi tilbakemelding straks bruker har svart\"."
+        },
+        {
+          "label": "Slå på brukerbekreftelse for \"Prøv igjen\""
+        },
+        {
+          "label": "Godta mindre skrivefeil",
+          "description": "Hvis denne er aktivert, vil et svar telle som riktig også med mindre skrivefeil (ord på 3–9 tegn: 1 skrivefeil godtas; ord på flere enn 9 tegn: 2 skrivefeil godtas)."
+        }
+      ]
+    },
+    {
+      "label": "Brukerbekreftelse ved sjekk av svar",
+      "fields": [
+        {
+          "label": "Tittel",
+          "default": "Ferdig?"
+        },
+        {
+          "label": "Tekst",
+          "default": "Er du sikker på at du er ferdig?"
+        },
+        {
+          "label": "Navn på \"Avbryt\"-knapp",
+          "default": "Avbryt"
+        },
+        {
+          "label": "Navn på \"Bekreft\"-knapp",
+          "default": "Ferdig (bekreft?)"
+        }
+      ]
+    },
+    {
+      "label": "Brukerbekreftelse for \"Prøv igjen\"",
+      "fields": [
+        {
+          "label": "Tittel",
+          "default": "Prøve igjen?"
+        },
+        {
+          "label": "Tekst",
+          "default": "Er du sikker på at du vil prøve igjen?"
+        },
+        {
+          "label": "Navn på \"Avbryt\"-knapp",
+          "default": "Avbryt"
+        },
+        {
+          "label": "Navn på \"Bekreft\"-knapp",
+          "default": "Bekreft"
+        }
+      ]
+    },
+    {
+      "label": "Tekstalternativ til resultatlinja (for skjermleserbrukere)",
+      "default": "Du fikk :num av :total poeng."
+    },
+    {
+      "label": "Beskrivelse av \"Sjekk\"-knapp for assisterende teknologi",
+      "default": "Sjekk svar. Svara blir merket som riktig, feil eller ubesvart."
+    },
+    {
+      "label": "Beskrivelse av \"Vis svar\"-knapp for assisterende teknologi",
+      "default": "Vis svar. Oppgaven blir merket med riktige svar."
+    },
+    {
+      "label": "Beskrivelse av \"Prøv igjen\"-knapp for assisterende teknologi",
+      "default": "Prøv igjen. Alle svar blir nullstilt, og oppgaven starter på nytt."
+    },
+    {
+      "label": "Beskrivelse som leses opp av assisterende teknologi etter at \"Sjekk\"-knapp er valgt",
+      "default": "\"Sjekk\"-modus aktivert"
+    }
+  ]
+}

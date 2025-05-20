@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Editor di Branching Scenario",
+      "fields": [
+        {
+          "label": "Titolo"
+        },
+        {
+          "label": "Schermata di inizio",
+          "fields": [
+            {
+              "label": "Titolo della schermata di inizio",
+              "placeholder": "Titolo del corso"
+            },
+            {
+              "label": "Sottotitolo della schermata di inizio",
+              "placeholder": "Dettagli del corso"
+            },
+            {
+              "label": "Immagine della schermata di inizio"
+            },
+            {
+              "label": "Image alternative text"
+            }
+          ]
+        },
+        {
+          "label": "Lista delle schermate finali",
+          "field": {
+            "label": "Schermata finale",
+            "fields": [
+              {
+                "label": "Titolo"
+              },
+              {
+                "label": "Testo"
+              },
+              {
+                "label": "Immagine"
+              },
+              {
+                "label": "Punteggio",
+                "description": "Il punteggio sarà inviato a ogni LMS, LRS o a ogni altro servizio collegato che riceva punteggi da H5P per utenti che raggiungano lo scenario finale predefinito"
+              },
+              {
+                "label": "ID del contenuto"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Lista dei contenuti del Branching Scenario",
+          "entity": "contenuto",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Mostra il titolo del contenuto nella visualizzazione",
+                "description": "Se selezionato, l'utente vedrà il titolo del contenuto nella barra sopra questo contenuto"
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Proceed"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Opzioni di punteggio",
+          "fields": [
+            {
+              "label": "Opzioni di punteggio",
+              "description": "Scegli il tipo di punteggio",
+              "options": [
+                {
+                  "label": "Imposta statisticamente un punteggio per ogni finale di scenario"
+                },
+                {
+                  "label": "Calcola dinamicamente il punteggio in base alle risposte dell'utente"
+                },
+                {
+                  "label": "Nessun punteggio"
+                }
+              ]
+            },
+            {
+              "label": "Include scores from interactions within the Branching Scenario",
+              "description": "If chosen scores from for instance Interactive Videos will be added to the total score obtained. If not chosen only scores specified in the feedback sections of the content items, branching questions and end scenarios will count."
+            }
+          ]
+        },
+        {
+          "label": "Impostazioni esecuzione",
+          "fields": [
+            {
+              "label": "Override require content finished",
+              "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide."
+            },
+            {
+              "label": "Required to watch",
+              "description": "Urges viewers to complete the Video, Interactive Vdeo and Course Presentation before proceeding with the scenario. This can be overridden on a content level"
+            },
+            {
+              "label": "Randomize Branching Questions",
+              "description": "Branching questions will be displayed in random order"
+            }
+          ]
+        },
+        {
+          "label": "Localizzazione",
+          "fields": [
+            {
+              "label": "Testo per il pulsante sulla schermata di inizio",
+              "default": "Inizia il corso"
+            },
+            {
+              "label": "Testo per il pulsante sulla schermata finale",
+              "default": "Riavvia il corso"
+            },
+            {
+              "label": "Testo per il pulsante su ognuna delle schermate della libreria",
+              "default": "Procedi"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "Etichetta per il punteggio sulla schermata finale",
+              "default": "Il tuo punteggio:"
+            },
+            {
+              "label": "Label for score on the end screen",
+              "default": "Your score:"
+            },
+            {
+              "label": "Aria label for fullscreen button",
+              "default": "Fullscreen"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

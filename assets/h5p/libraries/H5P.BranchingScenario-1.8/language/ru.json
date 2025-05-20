@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Редактор Сценария Ветвления",
+      "fields": [
+        {
+          "label": "Название"
+        },
+        {
+          "label": "Начальный экран",
+          "fields": [
+            {
+              "label": "Название стартовом экрана",
+              "placeholder": "Название для Вашего курса"
+            },
+            {
+              "label": "Подзаголовок начального экрана",
+              "placeholder": "Подробности о курсе"
+            },
+            {
+              "label": "Изображение на стартовом экране"
+            },
+            {
+              "label": "Image alternative text"
+            }
+          ]
+        },
+        {
+          "label": "Список заключительных экранов",
+          "field": {
+            "label": "Заключительный экран",
+            "fields": [
+              {
+                "label": "Заголовок"
+              },
+              {
+                "label": "Текст"
+              },
+              {
+                "label": "Изображение"
+              },
+              {
+                "label": "Оценка",
+                "description": "Оценка будет отправлена в любую LMS, LRS или любую другую подключенную службу, которая получает оценки от H5P для пользователей, достигших конечного сценария по умолчанию"
+              },
+              {
+                "label": "Идентификатор контента"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Список содержимого сценария ветвления",
+          "entity": "контент",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Показать заголовок контента в просмотре",
+                "description": "Если выбрано, пользователь увидит заголовок контента в верхней панели над этим контентом."
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Proceed"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Варианты оценки",
+          "fields": [
+            {
+              "label": "Варианты оценки",
+              "description": "Выберите тип оценки",
+              "options": [
+                {
+                  "label": "Статически установленная оценка для каждого конечного сценария"
+                },
+                {
+                  "label": "Динамически рассчитывать оценку по ответам пользователя"
+                },
+                {
+                  "label": "Без оценки"
+                }
+              ]
+            },
+            {
+              "label": "Include scores from interactions within the Branching Scenario",
+              "description": "If chosen scores from for instance Interactive Videos will be added to the total score obtained. If not chosen only scores specified in the feedback sections of the content items, branching questions and end scenarios will count."
+            }
+          ]
+        },
+        {
+          "label": "Настройки поведения",
+          "fields": [
+            {
+              "label": "Override require content finished",
+              "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide."
+            },
+            {
+              "label": "Required to watch",
+              "description": "Urges viewers to complete the Video, Interactive Vdeo and Course Presentation before proceeding with the scenario. This can be overridden on a content level"
+            },
+            {
+              "label": "Randomize Branching Questions",
+              "description": "Branching questions will be displayed in random order"
+            }
+          ]
+        },
+        {
+          "label": "Локализация",
+          "fields": [
+            {
+              "label": "Текст для кнопки на стартовом экране",
+              "default": "Начать курс"
+            },
+            {
+              "label": "Текст для кнопки на конечном экране",
+              "default": "Перезапустить курс"
+            },
+            {
+              "label": "Текст для кнопки на каждом из экранов библиотеки",
+              "default": "Продолжить"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "Надпись для оценки на конечном экране",
+              "default": "Повторить видео"
+            },
+            {
+              "label": "Label for score on the end screen",
+              "default": "Your score:"
+            },
+            {
+              "label": "Aria label for fullscreen button",
+              "default": "Fullscreen"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

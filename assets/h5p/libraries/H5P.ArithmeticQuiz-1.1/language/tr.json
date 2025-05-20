@@ -1,0 +1,135 @@
+{
+  "semantics": [
+    {
+      "label": "Giriş",
+      "description": "Giriş metni (maksimum 100 karakter)"
+    },
+    {
+      "label": "Sınav tipi",
+      "options": [
+        {
+          "label": "Aritmetik İşlemler Sınavı"
+        },
+        {
+          "label": "Doğrusal Denklemler Sınavı"
+        }
+      ]
+    },
+    {
+      "label": "Aritmetik işlem",
+      "options": [
+        {
+          "label": "Toplama"
+        },
+        {
+          "label": "Çıkarma"
+        },
+        {
+          "label": "Çarpma"
+        },
+        {
+          "label": "Bölme"
+        }
+      ]
+    },
+    {
+      "label": "Denklem Türü",
+      "options": [
+        {
+          "label": "Basit [ 3x? = 12 ]"
+        },
+        {
+          "label": "Orta Seviye [ 4x - 3 = 13]"
+        },
+        {
+          "label": "Gelişmiş [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Kesirleri etkinleştir",
+      "description": "Denklemlerde kesirlere izin vermeyi etkinleştirin."
+    },
+    {
+      "label": "Maksimum soru sayısı"
+    },
+    {
+      "label": "Kullanıcı arayüzü çevirileri",
+      "fields": [
+        {
+          "label": "Sınav sırasıda puanlama",
+          "default": "Puan:"
+        },
+        {
+          "label": "Süre",
+          "default": "Süre: @time"
+        },
+        {
+          "label": "Sonuç sayfası başlığı",
+          "default": "Tamamlandı!"
+        },
+        {
+          "label": "Başla etiketi",
+          "default": "BAŞLA!"
+        },
+        {
+          "label": "Başlatma düğmesi etiketi",
+          "default": "Başlat"
+        },
+        {
+          "label": "Yeniden dene düğmesi etiketi",
+          "default": "Yeniden Dene"
+        },
+        {
+          "label": "Doğru cevap için sesli okuyucu metni (yardımcı teknolojiler)",
+          "default": "Doğru"
+        },
+        {
+          "label": "Yanlış cevap için sesli okuyucu metni (yardımcı teknolojiler)",
+          "default": "Yanlış. Doğru cevap :num"
+        },
+        {
+          "label": "Zamanlayıcı için sesli okuyucu etiketi (yardımcı teknolojiler)",
+          "default": "Saat, dakika ve saniye cinsinden süre."
+        },
+        {
+          "label": "Soru için sesli okuyucu metni (yardımcı teknolojiler)",
+          "default": ":arithmetic kaça eşittir?"
+        },
+        {
+          "label": "Denklem sorusu için seslendirme metni",
+          "default": "Equation denklemi için :eguation, öge neye eşittir?"
+        },
+        {
+          "label": "Denklem değişkeni için okuyucu metni",
+          "default": ":item neye eşittir?"
+        },
+        {
+          "label": "Toplama işlemi metni",
+          "default": "artı"
+        },
+        {
+          "label": "Çıkarma işlemi metni",
+          "default": "eksi"
+        },
+        {
+          "label": "Çarpma işlemi metni",
+          "default": "çarpı"
+        },
+        {
+          "label": "Bölme işlemi metni",
+          "default": "bölü"
+        },
+        {
+          "label": "Eşitlik işareti metni",
+          "default": "eşittir"
+        },
+        {
+          "label": "Slayt numarası metni",
+          "description": "Şimdiki slaytı ve toplam slayt sayısını bildirir, :num şimdiki slayt numarası ve :total toplam slayt sayısı ile değiştirilecektir.",
+          "default": "Toplam :total slayttan :num no'lu slayt"
+        }
+      ]
+    }
+  ]
+}

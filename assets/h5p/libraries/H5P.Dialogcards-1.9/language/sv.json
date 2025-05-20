@@ -1,0 +1,219 @@
+{
+  "semantics": [
+    {
+      "label": "Rubrik"
+    },
+    {
+      "label": "Mode",
+      "description": "Inställning för hur dialogkort presenteras",
+      "options": [
+        {
+          "label": "Normal"
+        },
+        {
+          "label": "Repetition"
+        }
+      ]
+    },
+    {
+      "label": "Beskrivning av uppgift"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "label": "Dialoger",
+      "entity": "dialog",
+      "field": {
+        "label": "Question",
+        "fields": [
+          {
+            "label": "Text",
+            "description": "Ledtråd för den första delen av dialogen"
+          },
+          {
+            "label": "Svar",
+            "description": "Ledtråd för den andra delen av dialogen"
+          },
+          {
+            "label": "Image",
+            "description": "Valfri bild för kortet. (Kortet kan bestå av enbart en bild, enbart text, eller båda två.)"
+          },
+          {
+            "label": "Alternativ text för bilden"
+          },
+          {
+            "label": "Audio files"
+          },
+          {
+            "label": "Tips",
+            "fields": [
+              {
+                "label": "Tip for text",
+                "description": "Tips för första delen av dialogen"
+              },
+              {
+                "label": "Tips för svar",
+                "description": "Tips för den andra delen av dialogen"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Beteende-inställningar",
+      "description": "Denna inställningar påverkar hur uppgiften beter sig.",
+      "fields": [
+        {
+          "label": "Aktivera knappen \"Försök igen\""
+        },
+        {
+          "label": "Inaktivera bakåt-navigering",
+          "description": "Denna inställning gör det endast möjligt att navigera framåt med dialogkorten"
+        },
+        {
+          "label": "Skala texten för att passa in inuti kortet",
+          "description": "Om du bockar ur denna inställning så kommer kortet anpassas till storleken på texten"
+        },
+        {
+          "label": "Slumpa kort",
+          "description": "Aktivera för att få slumpmässig ordning för visning av korten."
+        },
+        {
+          "label": "Maximal färdighetsnivå"
+        },
+        {
+          "label": "Tillåt snabbspolning",
+          "description": "Om aktiverat, så kan deltagare välja att ange att de redan kan ett kort, utan att vända på det"
+        }
+      ]
+    },
+    {
+      "label": "Text för vänd-knappen",
+      "default": "Vänd"
+    },
+    {
+      "label": "Text för nästa-knappen",
+      "default": "Next"
+    },
+    {
+      "label": "Text för föregående-knappen",
+      "default": "Föregående"
+    },
+    {
+      "label": "Text för knappen \"försök igen\"",
+      "default": "Försök igen"
+    },
+    {
+      "label": "Text för knappen \"korrekt svar\"",
+      "default": "Jag fick rätt!"
+    },
+    {
+      "label": "Text för knappen\"felaktigt svar\"",
+      "default": "Jag hade fel"
+    },
+    {
+      "label": "Text för meddelandet \"Runda\" under kort och på översiktsvyn",
+      "description": "@round kommer att ersättas med siffran för den aktuella rundan",
+      "default": "Runda @round"
+    },
+    {
+      "label": "Text för meddelandet \"Återstående kort\"",
+      "description": "@number kommer att ersättas med antalet återstående kort i denna runda",
+      "default": "Återstående kort: @number"
+    },
+    {
+      "label": "Text för knappen \"nästa runda\"",
+      "description": "@round kommer att ersättas med numret för rundan",
+      "default": "Fortsätt till runda @round"
+    },
+    {
+      "label": "Text för knappen \"Börja om\"",
+      "default": "Börja om"
+    },
+    {
+      "label": "Text för knappen \"visa översikt\"",
+      "default": "Next"
+    },
+    {
+      "label": "Rubriktext för översiktssidan",
+      "default": "Översikt"
+    },
+    {
+      "label": "Text för \"Kort som du svarade rätt på:\"",
+      "default": "Kort som du svarade rätt på:"
+    },
+    {
+      "label": "Text för \"Kort som du svarade fel på:\"",
+      "default": "Kort som du svarade fel på:"
+    },
+    {
+      "label": "Text för \"Kort som inte visades:\"",
+      "default": "Kort som inte visades:"
+    },
+    {
+      "label": "Text för \"Samlad poäng\"",
+      "default": "Samlad poäng"
+    },
+    {
+      "label": "Text för \"Genomförda kort\"",
+      "default": "Kort som du har genomfört:"
+    },
+    {
+      "label": "Text för \"Genomförda rundor:\"",
+      "default": "Genomförda rundor:"
+    },
+    {
+      "label": "Meddelande när alla kort har lästs och färdighetsnivå uppnåtts",
+      "description": "@cards kommer att ersättas med alla tillgängliga kort. @max kommer att ersättas med maximal färdighetsnivå.",
+      "default": "Bra jobbat! Du har svarat rätt på alla @cards kort @max gånger i rad!"
+    },
+    {
+      "label": "Progress text",
+      "description": "Tillgängliga variabler är @card och @total.",
+      "default": "Kort @card av @total"
+    },
+    {
+      "label": "Etikett för text på kort",
+      "description": "Används av tillgänglighetshjälpmedel",
+      "default": "Framsida på kort"
+    },
+    {
+      "label": "Etikett för baksida på kort",
+      "description": "Används av tillgänglighetshjälpmedel",
+      "default": "Baksida på kort"
+    },
+    {
+      "label": "Etikett för knappen visa tips",
+      "default": "Visa tips"
+    },
+    {
+      "label": "Meddelande om att ljud ej stöds",
+      "default": "Din webbläsare stödjer inte detta ljudformat"
+    },
+    {
+      "label": "Dialog för att bekräfta att börja om",
+      "fields": [
+        {
+          "label": "Rubriktext",
+          "default": "Börja om?"
+        },
+        {
+          "label": "Text",
+          "default": "Alla dina svar kommer att försvinna. Är du säker på att du vill börja om?"
+        },
+        {
+          "label": "Etikett för knappen \"avbryt\"",
+          "default": "Avbryt"
+        },
+        {
+          "label": "Etikett för knappen \"bekräfta\"",
+          "default": "Börja om"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Editor für Virtuelle Touren",
+      "fields": [
+        {
+          "label": "Szenen",
+          "entity": "Szene",
+          "field": {
+            "fields": [
+              {
+                "label": "Szenenart",
+                "options": [
+                  {
+                    "label": "360°-Bild"
+                  },
+                  {
+                    "label": "Unbewegliches Bild"
+                  }
+                ]
+              },
+              {
+                "label": "\"Zurück\"-Button anzeigen",
+                "description": "Button anzeigen, um zur vorherigen Szene zurückzukehren"
+              },
+              {},
+              {
+                "label": "Titel der Szene",
+                "description": "Hilft dabei, die Szene zu identifizieren"
+              },
+              {
+                "label": "Hintergrund der Szene"
+              },
+              {
+                "label": "Beschreibung der Szene",
+                "description": "Ein Text, der die Szene für den Benutzer beschreibt"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Label",
+                      "description": "Wenn leer, wird keine Beschriftung angezeigt und für Vorlesewerkzeuge wird der Szenentitel verwendet"
+                    },
+                    {
+                      "label": "Einstellungen der Beschriftung",
+                      "fields": [
+                        {
+                          "label": "Position der Beschriftung",
+                          "description": "Legt fest, wo die Beschriftung angezeigt werden soll",
+                          "options": [
+                            {
+                              "label": "Verhaltenseinstellungen verwenden"
+                            },
+                            {
+                              "label": "Rechts ausgerichtet"
+                            },
+                            {
+                              "label": "Links ausgerichtet"
+                            },
+                            {
+                              "label": "Oben ausgerichtet"
+                            },
+                            {
+                              "label": "Unten ausgerichtet"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Beschriftung anzeigen",
+                          "description": "Wenn verborgen, werden Beschriftungen nur beim Darüberfahren mit der Maus angezeigt",
+                          "options": [
+                            {
+                              "label": "Verhaltenseinstellungen verwenden"
+                            },
+                            {
+                              "label": "Anzeigen"
+                            },
+                            {
+                              "label": "Verbergen"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Darstellungsweise der Buttons",
+                "description": "Lege fest, wie Buttons aussehen, die auf diese Szene verweisen. Für Szenen, die unbeweglich sind und nicht zu weiteren Szenen führen, empfiehlt sich die Option \"Mehr Informationen\".",
+                "options": [
+                  {
+                    "label": "Neue Szene (Pfeil)"
+                  },
+                  {
+                    "label": "Mehr Informationen (Plus)"
+                  }
+                ]
+              },
+              {
+                "label": "Tonspur",
+                "description": "Füge eine Tonspur hinzu, die nur in dieser Szene gespielt wird."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Tonspur"
+        }
+      ]
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "description": "Diese Optionen legen fest, wie die Tour im Detail funktioniert.",
+      "fields": [
+        {
+          "label": "Tonspur für alle Szenen",
+          "description": "Füge eine Tonspur hinzu, die standardmäßig in allen Szenen gespielt wird."
+        },
+        {
+          "label": "Darstellungsqualität der Szenen",
+          "description": "Erlaubt die Anzahl der Segmente zu wählen, die bei der Darstellung der Szene verwendet werden sollen. Dies wirkt sich direkt auf die Darstellungsqualität aus. Erhöhe die Qualität, wenn eine Szene \"blockartig\" aussieht oder \"Wellen\" innerhalb der Szene auftreten. Höhere Qualitätsstufen führen zu längeren Ladezeiten.",
+          "options": [
+            {
+              "label": "Hohe Qualität (128x128)"
+            },
+            {
+              "label": "Mittlere Qualität (64x64)"
+            },
+            {
+              "label": "Niedrige Qualität (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Beschriftungseinstellungen",
+          "fields": [
+            {
+              "label": "Position der Beschriftung",
+              "description": "Die Standard-Position der Beschriftung. Sie kann pro Interaktion überschrieben werden.",
+              "options": [
+                {
+                  "label": "Rechts ausgerichtet"
+                },
+                {
+                  "label": "Links ausgerichtet"
+                },
+                {
+                  "label": "Oben ausgerichtet"
+                },
+                {
+                  "label": "Unten ausgerichtet"
+                }
+              ]
+            },
+            {
+              "label": "Beschriftungen anzeigen",
+              "description": "Wenn nicht ausgewählt, werden Beschriftungen nur beim Darüberfahren mit der Maus angezeigt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Bezeichnungen und Beschriftungen",
+      "fields": [
+        {
+          "label": "Aria-Label für den Inhaltstyp",
+          "default": "Virtuelle Tour"
+        },
+        {
+          "label": "Beschriftungen, um Ton abzuspielen",
+          "default": "Tonspur abspielen"
+        },
+        {
+          "label": "Beschriftung, um Ton zu pausieren",
+          "default": "Tonspur pausieren"
+        },
+        {
+          "label": "Titel des Szenendialogs",
+          "default": "Szenenbeschreibung"
+        },
+        {
+          "label": "Beschriftung des Buttons, die Kamera zurückzusetzen",
+          "default": "Kamera zurücksetzen"
+        },
+        {
+          "label": "Beschriftung des Buttons, um den Dialog zu senden",
+          "default": "Dialog absenden"
+        },
+        {
+          "label": "Beschriftung des Buttons, um den Dialog zu schließen",
+          "default": "Dialog schließen"
+        },
+        {
+          "label": "Aria-Label des Buttons, der Beschriftungen erweitert",
+          "default": "Die Beschriftung erweitern"
+        },
+        {
+          "label": "Beschriftung wenn der Hintergrund der 360°-Szene lädt",
+          "default": "Lade Hintergrundbild..."
+        },
+        {
+          "label": "Beschriftung, wenn kein Inhalt vorhanden ist",
+          "default": "Kein Inhalt"
+        }
+      ]
+    }
+  ]
+}

@@ -1,109 +1,120 @@
-name: Release (beta)
+name: Release Beta
 
 on:
-    push:
-        branches:
-            - beta
+  push:
+    branches:
+      - next
 
 jobs:
-    release:
-        runs-on: macos-latest
-        steps:
-            - uses: actions/checkout@v3
-            - name: Use Node.js 16.x
-              uses: actions/setup-node@v3
-              with:
-                  node-version: 16.x
-            - name: NPM Setup
-              run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-              env:
-                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-            - name: install
-              run: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
-            - name: Release
-              run: npm run semantic-release
-              env:
-                  CI: true
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-            - name: Build
-              run: npm run build
-            - name: Publish macOS
-              run: npm run publish:mac
-              env:
-                  CI: true
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  CSC_LINK: ${{ secrets.mac_certs }}
-                  CSC_KEY_PASSWORD: ${{ secrets.mac_certs_password }}
-                  APPLEID: ${{ secrets.apple_id }}
-                  APPLEIDPASSWORD: ${{ secrets.apple_id_password }}
-                  APPLE_ASCPROVIDER: ${{ secrets.apple_ascprovider }}
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 22.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22.x
+      - name: Install dependencies
+        run: npm ci
+      - name: Release
+        run: npm run semantic-release
+        env:
+          CI: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-    release-windows:
-        needs: release
-        runs-on: windows-latest
-        steps:
-            - uses: actions/checkout@v3
-              with:
-                  ref: 'beta'
-            - name: Use Node.js 16.x
-              uses: actions/setup-node@v3
-              with:
-                  node-version: 16.x
-            - name: NPM Setup
-              uses: filipstefansson/set-npm-token-action@v1
-              with:
-                  token: ${{ secrets.NPM_TOKEN }}
-            - name: install server
-              run: npm ci
-              env:
-                  NPM_TOKEN: $${ secrets.NPM_TOKEN }
-            - name: Copy NPM config
-              run: cp ./.npmrc ./client/.npmrc && cp ./.npmrc ./reporter-client/.npmrc
-            - name: install client(s)
-              run: (cd client && npm ci) && (cd ../reporter-client && npm ci)
-              env:
-                  NPM_TOKEN: $${ secrets.NPM_TOKEN }
-            - name: Build
-              run: npm run build
-            - name: Publish Windows
-              run: npm run publish:win
-              env:
-                  CI: true
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  APPX_APPLICATION_ID: ${{ secrets.APPX_APPLICATION_ID }}
-                  APPX_DISPLAY_NAME: ${{ secrets.APPX_DISPLAY_NAME }}
-                  APPX_IDENTITY_NAME: ${{ secrets.APPX_IDENTITY_NAME }}
-                  APPX_PUBLISHER: ${{ secrets.APPX_PUBLISHER }}
-                  APPX_PUBLISHER_DISPLAY_NAME: ${{ secrets.APPX_PUBLISHER_DISPLAY_NAME }}
+  publish-macos:
+    needs: release
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Ensure full git history
+      - name: Fetch latest changes
+        run: git pull origin next # Get the updated package.json
+      - name: Use Node.js 22.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22.x
+      - name: Setup Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Publish macOS
+        run: npm run publish:mac
+        env:
+          CI: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CSC_LINK: ${{ secrets.MAC_CERTS }}
+          CSC_KEY_PASSWORD: ${{ secrets.MAC_CERTS_PASSWORD }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_ID_PASSWORD }}
+          APPLE_ASCPROVIDER: ${{ secrets.APPLE_ASCPROVIDER }}
+          CSC_IDENTITY_AUTO_DISCOVERY: true
 
-    release-linux:
-        needs: release
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-              with:
-                  ref: 'beta'
-            - name: Use Node.js 16.x
-              uses: actions/setup-node@v3
-              with:
-                  node-version: 16.x
-            - name: NPM Setup
-              run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-              env:
-                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-            - name: install labarchive-tools
-              run: sudo apt install libarchive-tools
-            - name: install
-              run: npm ci && (cd client && npm ci) && (cd reporter-client && npm ci)
-            - name: Build
-              run: npm run build
-            - name: Install Snapcraft
-              uses: samuelmeuli/action-snapcraft@v1
-              with:
-                  snapcraft_token: ${{ secrets.snapcraft_token }}
-            - name: Publish Linux
-              run: npm run publish:linux
-              env:
-                  CI: true
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  publish-windows:
+    needs: release
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Fetch latest changes
+        run: git pull origin next
+      - name: Use Node.js 22.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22.x
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Publish Windows
+        run: npm run publish:win
+        env:
+          CI: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          APPX_APPLICATION_ID: ${{ secrets.APPX_APPLICATION_ID }}
+          APPX_DISPLAY_NAME: ${{ secrets.APPX_DISPLAY_NAME }}
+          APPX_IDENTITY_NAME: ${{ secrets.APPX_IDENTITY_NAME }}
+          APPX_PUBLISHER: ${{ secrets.APPX_PUBLISHER }}
+          APPX_PUBLISHER_DISPLAY_NAME: ${{ secrets.APPX_PUBLISHER_DISPLAY_NAME }}
+          CSC_IDENTITY_AUTO_DISCOVERY: true
+
+  publish-linux:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Fetch latest changes
+        run: git pull origin next
+      - name: Use Node.js 22.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22.x
+      - name: Install libarchive-tools
+        run: sudo apt install -y libarchive-tools
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Add Snapcraft repository
+        run: |
+          sudo apt update
+          sudo apt install -y snapd
+
+      - name: Install Snapcraft
+        run: sudo snap install snapcraft --classic
+      - name: Publish Linux
+        run: npm run publish:linux
+        env:
+          CI: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.snapcraft_token }}

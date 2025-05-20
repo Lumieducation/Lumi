@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Fråga"
+    },
+    {
+      "label": "Flervalsfråga",
+      "options": [
+        {
+          "label": "Flera rätta svar"
+        },
+        {
+          "label": "Ett rätt svar"
+        }
+      ]
+    },
+    {
+      "label": "Svarsalternativ",
+      "entity": "Alternativ",
+      "field": {
+        "label": "Alternativ",
+        "fields": [
+          {
+            "label": "Text"
+          },
+          {
+            "label": "Feedback",
+            "fields": [
+              {
+                "label": "Meddelande som visas när alternativet är valt",
+                "description": "Meddelandet kommer att visas under alternativet när användaren klickar \"Fortsätt\"."
+              },
+              {
+                "label": "Meddelande som visas när alternativet inte är valt",
+                "description": "Meddelandet kommer att visas under alternativet när användaren klickar \"fortsätt\" om detta svarsalternativ inte är valt."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

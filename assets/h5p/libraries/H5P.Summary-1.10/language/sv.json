@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Introduktionstext",
+      "default": "Välj det korrekta påståendet.",
+      "description": "Detta kommer visas överst i sammanfattningsuppgift."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Standard"
+        },
+        {
+          "label": "Textuell"
+        }
+      ],
+      "label": "Sammanfattning",
+      "entity": "påståenden",
+      "field": {
+        "label": "Påståenden",
+        "fields": [
+          {
+            "label": "Påståenden till sammanfattningsuppgift - första påståendet är det korrekta.",
+            "entity": "påstående",
+            "field": {
+              "label": "Påstående"
+            }
+          },
+          {
+            "label": "Tips",
+            "fields": [
+              {
+                "label": "Tipstext"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Bakgrundsopacitet på flyttbara element",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Standard"
+            }
+          ],
+          "label": "Definiera anpassad feedback för valfritt poängintervall",
+          "description": "Klicka på knappen \"Lägg till intervall\" för att lägga till så många intervall som du behöver. Exempel: 0-20% Underkänt, 21-91% Godkänt, 91-100% Mycket väl godkänt!",
+          "entity": "intervall",
+          "field": {
+            "fields": [
+              {
+                "label": "Poängintervall"
+              },
+              {},
+              {
+                "label": "Feedback för detta intervall",
+                "placeholder": "Skriv in feedback här"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Text som visas före antalet påståenden som är lösta i sammanfattningsuppgiften.",
+      "default": "Löst:",
+      "description": "Kommer visas ovanför påståendena. Exempel: 'Löst: 2/5'"
+    },
+    {
+      "label": "Text som visas före antalet påståenden med fel i sammanfattningsuppgiften.",
+      "default": "Antal fel:",
+      "description": "Kommer visas över påståendena. Exempel: 'Antal fel: 4'"
+    },
+    {
+      "label": "Rubrik över feedback",
+      "default": "Ditt resultat:",
+      "description": "Kommer visas över feedback på sammanfattningsuppgift."
+    },
+    {
+      "label": "Etikett för korrekt svar",
+      "default": "Rätt"
+    },
+    {
+      "label": "Skärmläsartext för felaktigt svar",
+      "default": "Fel. Försök igen."
+    },
+    {
+      "label": "Skärmläsaretikett för felaktigt svar",
+      "default": "Fel"
+    },
+    {
+      "label": "Etikett för lista med korrekta svar",
+      "default": "Rätta svar"
+    },
+    {
+      "label": "Etikett för knapp visa tips",
+      "default": "Visa tips"
+    },
+    {
+      "label": "Texten som läses upp när poängen presenteras för användare med skärmläsare",
+      "description": ":num och :total är variabler som uppdateras automatiskt",
+      "default": "Du fick :num av :total points"
+    },
+    {
+      "label": "Text som används av skärmläsare för att kommunicera om framsteg",
+      "description": ":num och :total är variabler som uppdateras automatiskt",
+      "default": "Framsteg :num av :total"
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "semantics": [
+    {
+      "label": "Medieelement",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Valfritt medieelement. Elementet vil bli plassert over spørsmålet."
+        },
+        {
+          "label": "Deaktiver zoomingfunksjon."
+        }
+      ]
+    },
+    {
+      "label": "Question"
+    },
+    {
+      "label": "Available options",
+      "entity": "option",
+      "field": {
+        "label": "Option",
+        "fields": [
+          {
+            "label": "Media",
+            "description": "Media to display as a choice."
+          },
+          {
+            "label": "Poster image"
+          },
+          {
+            "label": "Correct"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Tilbakemelding på heile oppgåva",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Førehandsinnstilling"
+            }
+          ],
+          "label": "Opprett poengområde og legg inn tilbakemeldingar.",
+          "description": "Klikk på knappen \"Legg til poengområde\" og legg til så mange poengområde du treng. Døme: 0–40 % Svakt resultat, 41–80 % Gjennomsnittleg resultat, 81–100 % Flott resultat!",
+          "entity": "Område",
+          "field": {
+            "fields": [
+              {
+                "label": "Poengområde"
+              },
+              {},
+              {
+                "label": "Tilbakemelding for definert poengområde",
+                "placeholder": "Skriv inn tilbakemelding."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Oppgåveinnstillingar",
+      "description": "Desse vala lar deg styre ulike funksjonar i oppgåva.",
+      "fields": [
+        {
+          "label": "Enable \"Retry\" button"
+        },
+        {
+          "label": "Enable \"Show Solution\" button"
+        },
+        {
+          "label": "Show confirmation dialog on \"Check\""
+        },
+        {
+          "label": "Show confirmation dialog on \"Retry\""
+        },
+        {
+          "label": "Give one point for the whole question",
+          "description": "Awards one point to the question if the percentage score is higher than the pass percentage"
+        },
+        {
+          "label": "Require answer before the solution can be viewed"
+        },
+        {
+          "label": "Question Type",
+          "description": "Select the look and behaviour of the question.",
+          "options": [
+            {
+              "label": "Automatic"
+            },
+            {
+              "label": "Multiple Choice (Checkboxes)"
+            },
+            {
+              "label": "Single Choice (Radio Buttons)"
+            }
+          ]
+        },
+        {
+          "label": "Aspect ratio",
+          "description": "Select the aspect ratio of the alternatives",
+          "options": [
+            {
+              "label": "Automatic"
+            },
+            {
+              "label": "16:9"
+            },
+            {
+              "label": "4:3"
+            },
+            {
+              "label": "3:2"
+            },
+            {
+              "label": "1:1"
+            }
+          ]
+        },
+        {
+          "label": "Maximum alternatives per row",
+          "description": "Set the maximum number of alternatives per row to ensure the questions look alright.",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "3"
+            },
+            {
+              "label": "4"
+            }
+          ]
+        },
+        {
+          "label": "Pass percentage",
+          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+        }
+      ]
+    },
+    {
+      "label": "Brukargrensesnitt",
+      "fields": [
+        {
+          "label": "Tekst for \"Sjekk svar\"-knapp",
+          "default": "Sjekk"
+        },
+        {
+          "label": "Tekst for \"Send inn\"-knapp",
+          "default": "Send inn"
+        },
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+        },
+        {
+          "label": "Tekst for \"Vis svar\"-knapp",
+          "default": "Vis svar"
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "Show the solution. The correct options will be marked."
+        },
+        {
+          "label": "Correct Answer (not displayed)",
+          "default": "Correct answer"
+        },
+        {
+          "label": "Wrong Answer (not displayed)",
+          "default": "Wrong answer"
+        },
+        {
+          "label": "Option should have been checked",
+          "default": "Should have been checked"
+        },
+        {
+          "label": "Option should not have been checked",
+          "default": "Should not have been checked"
+        },
+        {
+          "label": "Text for \"Requires answer\" message",
+          "default": "Please answer before viewing the solution"
+        },
+        {
+          "label": "Text for \"Retry\" button",
+          "default": "Retry"
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry the task. Reset all responses and start the task over again."
+        },
+        {
+          "label": "Your result",
+          "description": ":num and :total are variables and will be replaced by their respective values.",
+          "default": "You got :num out of :total points"
+        },
+        {
+          "label": "Check confirmation dialog",
+          "fields": [
+            {
+              "label": "Header text",
+              "default": "Finish?"
+            },
+            {
+              "label": "Body text",
+              "default": "Are you sure you want to finish?"
+            },
+            {
+              "label": "Cancel button label",
+              "default": "Cancel"
+            },
+            {
+              "label": "Confirm button label",
+              "default": "Finish"
+            }
+          ]
+        },
+        {
+          "label": "Retry confirmation dialog",
+          "fields": [
+            {
+              "label": "Header text",
+              "default": "Retry?"
+            },
+            {
+              "label": "Body text",
+              "default": "Are you sure you wish to retry?"
+            },
+            {
+              "label": "Cancel button label",
+              "default": "Cancel"
+            },
+            {
+              "label": "Confirm button label",
+              "default": "Retry"
+            }
+          ]
+        },
+        {
+          "label": "Text if alt text is missing for an image",
+          "default": "Alt text missing"
+        },
+        {
+          "label": "Close modal button label",
+          "default": "Close modal"
+        }
+      ]
+    }
+  ]
+}

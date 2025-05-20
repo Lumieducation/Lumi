@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Mídia",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Mídia opcional para exibir acima da pergunta."
+        },
+        {
+          "label": "Desativar o zoom da imagem"
+        }
+      ]
+    },
+    {
+      "label": "Descrição da tarefa",
+      "description": "Descreva como o usuário deve resolver a tarefa.",
+      "default": "Arraste as palavras para os campos corretos"
+    },
+    {
+      "label": "Texto",
+      "placeholder": "*Oslo* é a capital da Noruega, *Estocolmo* é a capital da Suécia e *Copenhague* é a capital da Dinamarca. Todas estas cidades estão localizadas na península *Escandinava:Parte norte da Europa*.",
+      "important": {
+        "description": "<ul><li>Palavras arrastáveis são adicionadas com um asterisco(*) na antes e um depois da palavra/frase correta.</li><li>Você pode adicionar uma dica textual usando dois pontos (:) antes da dica.</li><li>Para cada espaço vazio há apenas uma palavra correta.</li><li>Você pode dar feedback para ser exibido quando uma tarefa for completada. Use '\\+' para feedback correto e '\\-' para feedback incorreto.</li></ul>",
+        "example": "Conteúdo H5P pode ser editado usando um *navegador:QUe tipo de programa é o Chrome?*. <br /> Conteúdo H5P é *interativo\\+Correto! \\-Incorreto, tente novamente!*"
+      }
+    },
+    {
+      "label": "Distractors",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Enter extra solutions that are wrong as distractors. Use the same asterisk (*) scheme as for the text."
+    },
+    {
+      "label": "Feedback Geral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Definir feedback personalizado para qualquer faixa de pontuação",
+          "description": "Clique no botão \"Adicionar faixa\" para adicionar quantos intervalos você precisar. Exemplo: 0-20% Pontuação Ruim, 21-91% Pontuação Média, 91-100% Pontuação Ótima!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de Pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para a faixa de pontuação definida",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Texto do botão \"Verificar \"",
+      "default": "Verificar"
+    },
+    {
+      "label": "Texto do botão \"Enviar\"",
+      "default": "Enviar"
+    },
+    {
+      "label": "Texto para o botão \"Tentar Novamente\"",
+      "default": "Tentar Novamente"
+    },
+    {
+      "label": "Texto do botão \"Mostrar Solução\"",
+      "default": "Mostrar solução"
+    },
+    {
+      "label": "Rótulo da Zona de soltura numerada",
+      "default": "Zona de Soltura @index.",
+      "description": "Rótulo usado para acessibilidade, o leitor de tela lerá o índice da zona de soltura. Variáveis disponíveis: @index"
+    },
+    {
+      "label": "Rótulo de Zona de Soltura vazia",
+      "default": "A Zona de Soltura @index está vazia.",
+      "description": "Rótulo usado para acessibilidade, o leitor de tela lerá caso a zona de soltura esteja vazia"
+    },
+    {
+      "label": "Rótulo do Conteúdo da Zona de Soltura",
+      "default": "Zona de soltura @index contém o elemento arrastável @draggable.",
+      "description": "Rótulo usado para acessibilidade, onde leitor de tela lerá que a zona de queda contém um elemento arrastável"
+    },
+    {
+      "label": "Rótulo de elementos arrastáveis",
+      "default": "@index de @count elementos arrastáveis.",
+      "description": "Rótulo usado para acessibilidade, o leitor de tela lerá este texto se for um elemento arrastável. Variáveis disponíveis: @index, @count"
+    },
+    {
+      "label": "Rótulo para o botão de Mostrar Dica",
+      "default": "Mostrar dica",
+      "description": "Rótulo usado para acessibilidade, o leitor de tela lerá isto antes da dica ser lida"
+    },
+    {
+      "label": "Texto de resposta correta para leitores de tela",
+      "default": "Correto!"
+    },
+    {
+      "label": "Texto de resposta correta para leitores de tela",
+      "default": "Incorreto!"
+    },
+    {
+      "label": "Título do diálogo de confirmação que o usuário deseja redefinir um elemento arrastável",
+      "default": "Redefinir elemento arrastável"
+    },
+    {
+      "label": "Descrição do diálogo de confirmação que o usuário deseja redefinir um elemento arrastável",
+      "default": "Você tem certeza que deseja redefinir esta zona de soltura?"
+    },
+    {
+      "label": "Rótulo usado para acessibilidade, onde o leitor de tela indicará quando o arrastamento é iniciado",
+      "default": "O elemento arrastável foi agarrado."
+    },
+    {
+      "label": "Rótulo usado para acessibilidade, onde o leitor de tela indica que o arrastamento foi cancelado",
+      "default": "Arrastamento cancelado."
+    },
+    {
+      "label": "Rótulo usado para acessibilidade, onde o leitor de tela indica que um texto é a resposta correta",
+      "default": "Resposta correta:"
+    },
+    {
+      "label": "Cabeçalho para painel contendo feedback para respostas corretas/incorretas",
+      "default": "Feedback"
+    },
+    {
+      "label": "Configurações comportamentais.",
+      "description": "Estas opções permitirão que você controle como a tarefa se comporta.",
+      "fields": [
+        {
+          "label": "Ativar \"Tentar Novamente\""
+        },
+        {
+          "label": "Ativar o botão \"Mostrar Solução\""
+        },
+        {
+          "label": "Ativar o botão \"Verificar\""
+        },
+        {
+          "label": "Feedback instantâneo"
+        }
+      ]
+    },
+    {
+      "label": "Representação textual da barra de pontuação para aqueles que usam leitores de tela",
+      "default": "Você conseguiu :num de :total pontos possíveis"
+    },
+    {
+      "label": "Rótulo de tecnologia de assistência para botão \"Verificar\"",
+      "default": "Verifique as respostas. As respostas serão marcadas como corretas, incorretas, ou sem resposta."
+    },
+    {
+      "label": "Rótulo de tecnologia de assistência para o botão \"Mostrar Solução\"",
+      "default": "Mostrar a solução. A tarefa será marcada com sua solução correta."
+    },
+    {
+      "label": "Rótulo de tecnologia de assistência para o botão \"Tentar Novamente\"",
+      "default": "Tente realizar a tarefa novamente. Reinicialize todas as respostas e recomece."
+    }
+  ]
+}

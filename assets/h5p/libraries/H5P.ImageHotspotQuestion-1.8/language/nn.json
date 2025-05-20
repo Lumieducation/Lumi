@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Oppgaveinnstillinger.",
+      "fields": [
+        {
+          "label": "Bakgrunnsbilde",
+          "fields": [
+            {
+              "label": "Bakgrunnsbilde",
+              "description": "Velg et bilde som bakgrunn til oppgaven."
+            }
+          ]
+        },
+        {
+          "label": "Målfelt",
+          "description": "Dra og slipp en figur for å lage et nytt hotspot. Dobbel-klikk en hotspot for å velge innstillinger. Dra en hotspot for å bevege den. Dra nede til høyre på hotspoten for å endre størrelsen.",
+          "fields": [
+            {
+              "label": "Oppgavebeskrivelse",
+              "description": "Instruksjoner om hvordan man skal løse oppgaven."
+            },
+            {
+              "label": "Målfelt",
+              "entity": "Målfelt",
+              "field": {
+                "label": "Målfelt",
+                "fields": [
+                  {
+                    "label": "Brukerinnstillinger",
+                    "fields": [
+                      {
+                        "label": "Riktig",
+                        "description": "Det kan være flere riktige målfelt. Brukeren får umiddelbar tilbakemelding ved avgitt svar."
+                      },
+                      {
+                        "label": "Tilbakemelding"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Kalkulerte innstillinger"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Tilbakemelding når brukeren velger ikke treffer noen målfelt:",
+              "placeholder": "Du traff ingen målfelt, prøv igjen!"
+            },
+            {
+              "label": "Show feedback as a popup"
+            },
+            {
+              "label": "Localization",
+              "fields": [
+                {
+                  "label": "Retry button text",
+                  "default": "Prøv igjen"
+                },
+                {
+                  "label": "Close button text",
+                  "default": "Lukk"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Textual representation of the score bar for those using a readspeaker",
+      "default": "Du fekk :num av :total poeng"
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
+    }
+  ]
+}

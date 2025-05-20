@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Vertakkkingsscenario Editor",
+      "fields": [
+        {
+          "label": "Titel"
+        },
+        {
+          "label": "Startscherm",
+          "fields": [
+            {
+              "label": "Titel van startscherm",
+              "placeholder": "Titel van je cursus"
+            },
+            {
+              "label": "Ondertitel van startscherm",
+              "placeholder": "Details over de cursus"
+            },
+            {
+              "label": "Afbeelding startscherm"
+            },
+            {
+              "label": "Alternatieve tekst voor afbeelding"
+            }
+          ]
+        },
+        {
+          "label": "Lijst van eindschermen",
+          "field": {
+            "label": "Eindscherm",
+            "fields": [
+              {
+                "label": "Titel"
+              },
+              {
+                "label": "Tekst"
+              },
+              {
+                "label": "Afbeelding"
+              },
+              {
+                "label": "Score",
+                "description": "De score wordt verzonden naar een LMS, LRS of een andere aangesloten dienst die scores van H5P ontvangt voor gebruikers die het standaard eindscenario bereiken"
+              },
+              {
+                "label": "ID van de inhoud"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Lijst van de inhoud van de vertakkingsscenario's",
+          "entity": "inhoud",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Toon titel van inhoud in weergave",
+                "description": "Indien geselecteerd, ziet de gebruiker de titel van de inhoud in de balk boven deze inhoud"
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Doorgaan"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Score-opties",
+          "fields": [
+            {
+              "label": "Score-opties",
+              "description": "Selecteer het scoringstype",
+              "options": [
+                {
+                  "label": "Statistisch vastgestelde score voor elk eindscenario"
+                },
+                {
+                  "label": "Dynamisch berekende score op basis van de antwoorden van de gebruikers"
+                },
+                {
+                  "label": "Geen score"
+                }
+              ]
+            },
+            {
+              "label": "Neem de scores op van interacties binnen het Vertakkingsscenario",
+              "description": "Indien gekozen worden scores van bijvoorbeeld interactieve video's opgeteld bij de totaal behaalde score. Indien niet gekozen, tellen alleen scores mee die vermeld staan in de feedbacksecties van de inhoudelijke items, vertakkingsvragen en eindscenario's."
+            }
+          ]
+        },
+        {
+          "label": "Gedragsinstellingen",
+          "fields": [
+            {
+              "label": "Overschrijf achterwaartse navigatie",
+              "description": "Overschrijf de individuele instellingen om achterwaarts navigeren in te schakelen"
+            },
+            {
+              "label": "Overschrijf vereiste dat inhoud voltooid moet zijn",
+              "description": "Overschrijft de individuele instelling die vereist dat inhoud voltooid moet zijn voordat de \"Verder gaan\"-knop geactiveerd wordt. Heeft geen effect als de inhoud niet \"voltooid\" kan worden, bijv. afbeeldingen of cursuspresentaties met slechts één dia."
+            },
+            {
+              "label": "Willekeurige vertakkingsvragen",
+              "description": "Vertakkingsvragen worden weergegeven in willekeurige volgorde"
+            }
+          ]
+        },
+        {
+          "label": "Lokalisatie",
+          "fields": [
+            {
+              "label": "Tekst voor de knop op het startscherm",
+              "default": "Start de cursus"
+            },
+            {
+              "label": "Tekst voor de knop op het eindscherm",
+              "default": "Herstart de cursus"
+            },
+            {
+              "label": "Tekst voor de \"Terug\"-knop op elk bibliotheekscherm en bij vertakkingsvragen",
+              "default": "Terug"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "Tekst van de knop voor opnieuw afspelen video",
+              "default": "Speel de video opnieuw af"
+            },
+            {
+              "label": "Label voor score op het eindscherm",
+              "default": "Jouw score:"
+            },
+            {
+              "label": "Aria label voor volledig scherm knop",
+              "default": "Volledig scherm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

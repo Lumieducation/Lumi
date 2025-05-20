@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Editor de preguntes amb ramificacions",
+      "fields": [
+        {
+          "label": "Pregunta"
+        },
+        {
+          "label": "Alternatives disponibles",
+          "entity": "alternativa",
+          "field": {
+            "label": "Alternativa",
+            "fields": [
+              {
+                "label": "Text"
+              },
+              {
+                "label": "Contingut següent (-1 és la pantalla final)"
+              },
+              {
+                "label": "Retroacció",
+                "fields": [
+                  {
+                    "label": "Títol de la retroacció"
+                  },
+                  {
+                    "label": "Text de retroacció"
+                  },
+                  {
+                    "label": "Imatge de retroacció"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

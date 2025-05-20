@@ -1,0 +1,219 @@
+{
+  "semantics": [
+    {
+      "label": "Koptekst"
+    },
+    {
+      "label": "Modus",
+      "description": "Presentatiemodus voor de dialoogkaarten",
+      "options": [
+        {
+          "label": "Normaal"
+        },
+        {
+          "label": "Herhaling"
+        }
+      ]
+    },
+    {
+      "label": "Beschrijving taak"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Standaard"
+        }
+      ],
+      "label": "Dialogen",
+      "entity": "dialoog",
+      "field": {
+        "label": "Vraag",
+        "fields": [
+          {
+            "label": "Tekst",
+            "description": "Hint voor het eerste deel van de dialoog"
+          },
+          {
+            "label": "Antwoord",
+            "description": "Hint voor het tweede deel van de dialoog"
+          },
+          {
+            "label": "Afbeelding",
+            "description": "Optionele afbeelding voor de kaart. (De kaart mag alleen een afbeelding gebruiken, alleen een tekst of allebei)"
+          },
+          {
+            "label": "Alternatieve tekst voor de afbeelding"
+          },
+          {
+            "label": "Audiobestanden"
+          },
+          {
+            "label": "Tips",
+            "fields": [
+              {
+                "label": "Tip voor de tekst",
+                "description": "Tip voor het eerste gedeelte van de dialoog"
+              },
+              {
+                "label": "Tip voor het antwoord",
+                "description": "Tip voor het tweede gedeelte van de dialoog"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Gedragsinstelllingen",
+      "description": "Met deze opties kun je bepalen hoe de taak zich gedraagt.",
+      "fields": [
+        {
+          "label": "Schakel \"Opnieuw\"-knop in"
+        },
+        {
+          "label": "Achterwaarts navigeren uitschakelen",
+          "description": "Deze optie zorgt ervoor dat je alleen maar vooruit kunt bladeren met Dialoogkaarten"
+        },
+        {
+          "label": "De tekst passend maken in de kaart",
+          "description": "Door dit uit te vinken zullen de afmetingen van de kaart zich aanpassen aan de grootte van de tekst"
+        },
+        {
+          "label": "Kaarten in willekeurige volgorde",
+          "description": "Schakel in om de kaarten in willekeurige volgorde te tonen."
+        },
+        {
+          "label": "Maximaal bekwaamheidsniveau"
+        },
+        {
+          "label": "Snelle voortgang toestaan",
+          "description": "Indien ingeschakeld kunnen gebruikers aangeven dat ze de kaart kennen en verder gaan zonder hem om te keren"
+        }
+      ]
+    },
+    {
+      "label": "Tekst voor \"Omdraaien\"-knop",
+      "default": "Omdraaien"
+    },
+    {
+      "label": "Tekst voor \"Volgende\"-knop",
+      "default": "Volgende"
+    },
+    {
+      "label": "Tekst voor \"Vorige\"-knop",
+      "default": "Vorige"
+    },
+    {
+      "label": "Tekst voor \"Opnieuw\"-knop",
+      "default": "Opnieuw"
+    },
+    {
+      "label": "Tekst voor de \"Juist antwoord\"-knop",
+      "default": "Ik heb het goed!"
+    },
+    {
+      "label": "Tekst voor de \"Onjuist antwoord\"-knop",
+      "default": "Ik heb het fout"
+    },
+    {
+      "label": "Tekst voor \"Ronde\"-bericht onder kaarten en op het samenvattingsscherm",
+      "description": "@round zal worden vervangen door het nummer van de huidige ronde",
+      "default": "Ronde @round"
+    },
+    {
+      "label": "Tekst voor \"Kaarten resterend\"-bericht",
+      "description": "@number zal worden vervangen door het aantal kaarten dat in deze ronde resteert",
+      "default": "Kaarten resterend: @number"
+    },
+    {
+      "label": "Tekst voor de \"Volgende ronde\"-knop",
+      "description": "@round zal worden vervangen door het nummer van de ronde",
+      "default": "Doorgaan naar ronde @round"
+    },
+    {
+      "label": "Tekst voor de \"Start opnieuw\"-knop",
+      "default": "Start opnieuw"
+    },
+    {
+      "label": "Tekst voor de \"Toon samenvatting\"-knop",
+      "default": "Volgende"
+    },
+    {
+      "label": "Titeltekst voor de samenvattingspagina",
+      "default": "Samenvatting"
+    },
+    {
+      "label": "Tekst voor \"Kaarten die je goed had:\"",
+      "default": "Kaarten die je goed had:"
+    },
+    {
+      "label": "Tekst voor \"Kaarten die je fout had:\"",
+      "default": "Kaarten die je fout had:"
+    },
+    {
+      "label": "Tekst voor \"Niet getoonde kaarten:\"",
+      "default": "Niet getoonde kaarten in voorraad:"
+    },
+    {
+      "label": "Tekst voor \"Totaalscore\"",
+      "default": "Totaalscore"
+    },
+    {
+      "label": "Tekst voor \"Kaarten voltooid\"",
+      "default": "Kaarten die je hebt voltooid:"
+    },
+    {
+      "label": "Tekst voor \"Voltooide rondes:\"",
+      "default": "Voltooide rondes:"
+    },
+    {
+      "label": "Bericht als alle kaarten beheerst worden",
+      "description": "@cards zal worden vervangen door het aantal kaarten in voorraad. @max zal worden vervangen door het maximale bekwaamheidsniveau.",
+      "default": "Goed gedaan! Je hebt alle @cards kaarten juist @max keer achtereen!"
+    },
+    {
+      "label": "Tekst van voortgang",
+      "description": "Beschikbare variabelen zijn @card en @total.",
+      "default": "Kaart @card van @total"
+    },
+    {
+      "label": "Label voor kaarttekst",
+      "description": "Gebruikt voor toegankelijkheid door ondersteunende technologieën",
+      "default": "Voorkant kaart"
+    },
+    {
+      "label": "Label voor achterkant kaart",
+      "description": "Gebruikt voor toegankelijkheid door ondersteunende technologieën",
+      "default": "Achterkant kaart"
+    },
+    {
+      "label": "Label voor \"Toon tip\"-knop",
+      "default": "Toon tip"
+    },
+    {
+      "label": "Statusbericht dat de audio niet wordt ondersteund",
+      "default": "Je browser ondersteunt de audio niet"
+    },
+    {
+      "label": "Bevestigen opnieuw starten dialoog",
+      "fields": [
+        {
+          "label": "Koptekst",
+          "default": "Start opnieuw?"
+        },
+        {
+          "label": "Hoofdtekst",
+          "default": "Alle voortgang zal verloren gaan. Weet je zeker dat je opnieuw wilt starten?"
+        },
+        {
+          "label": "Label van \"Annuleer\"-knop",
+          "default": "Annuleer"
+        },
+        {
+          "label": "Tekst van \"Bevestig\"-knop",
+          "default": "Start opnieuw"
+        }
+      ]
+    }
+  ]
+}

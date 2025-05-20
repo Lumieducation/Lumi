@@ -1,0 +1,293 @@
+{
+  "semantics": [
+    {
+      "label": "Taakomschrijving",
+      "description": "Beschrijf hier je taak."
+    },
+    {
+      "label": "woorden",
+      "widgets": [
+        {
+          "label": "Standaard"
+        }
+      ],
+      "entity": "Woord",
+      "field": {
+        "label": "Woord",
+        "fields": [
+          {
+            "label": "Aanwijzing",
+            "description": "Aanwijzing die moet wijzen naar het antwoord."
+          },
+          {
+            "label": "Antwoord",
+            "description": "Antwoord op de aanwijzing."
+          },
+          {
+            "label": "Extra aanwijzing"
+          },
+          {
+            "label": "Leg het woord vast op het raster",
+            "description": "Controleer of je het woord op een bepaalde plaats op het raster wilt bevestigen. Woorden met dezelfde uitlijning mogen elkaar niet raken."
+          },
+          {
+            "label": "Rij",
+            "description": "Rij-index waar het antwoord moet beginnen."
+          },
+          {
+            "label": "Kolom",
+            "description": "Kolom-index waar het antwoord moet beginnen."
+          },
+          {
+            "label": "Oriëntatie",
+            "description": "Oriëntatie voor het antwoord.",
+            "options": [
+              {
+                "label": "Horizontaal"
+              },
+              {
+                "label": "Verticaal"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Het woord voor de totaaloplossing",
+      "description": "Voeg eventueel een oplossingswoord toe dat kan worden afgeleid uit bepaalde tekens op het raster. Het wordt alleen zichtbaar als al zijn tekens in de kruiswoord zijn gevonden. Let op: Er is nog geen toegankelijkheidsondersteuning voor deze functie."
+    },
+    {
+      "label": "Algehele feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Standaard"
+            }
+          ],
+          "label": "Definieer aangepaste feedback voor elke scorereeks",
+          "description": "Druk op de \"Voeg scorereeks\"-knop om zoveel reeksen toe te voegen als nodig. Voorbeeld: 0-20% Onvoldoende, 21-91% Gemiddelde score, 91-100% Uitstekende score!",
+          "entity": "reeks",
+          "field": {
+            "fields": [
+              {
+                "label": "Scorereeks"
+              },
+              {},
+              {
+                "label": "Feedback voor de gedefinieerde scorereeks",
+                "placeholder": "Vul de feedback in"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Thema",
+      "fields": [
+        {
+          "label": "Achtergrondafbeelding",
+          "description": "Selecteer een optionele achtergrondafbeelding. Deze zal worden geschaald om bij de achtergrond te passen zonder deze uit te rekken."
+        },
+        {
+          "label": "Achtergrondkleur",
+          "description": "Kies een achtergrondkleur. Het wordt ofwel gebruikt in plaats van een achtergrondafbeelding, ofwel als achtergrond voor transparante gebieden."
+        },
+        {
+          "label": "Rasterkleur",
+          "description": "Kies een kleur voor het raster."
+        },
+        {
+          "label": "Achtergrondkleur cel",
+          "description": "Kies de achtergrondkleur voor een rastercel."
+        },
+        {
+          "label": "Tekstkleur cel",
+          "description": "Kies de tekstkleur voor een rastercel."
+        },
+        {
+          "label": "Kleur voor nummer aanwijzing",
+          "description": "Kies de kleur van het aanwijzingsnummer in een rastercel."
+        },
+        {
+          "label": "Achtergrondkleur cel (gemarkeerd)",
+          "description": "Kies de achtergrondkleur voor een rastercel die is gemarkeerd."
+        },
+        {
+          "label": "Tekstkleur cel (gemarkeerd)",
+          "description": "Kies de tekstkleur voor een rastercel die is gemarkeerd."
+        },
+        {
+          "label": "Kleur voor aanwijzingsnummer (gemarkeerd)",
+          "description": "Kies de kleur van het aanwijzingsnummer in een rastercel die is gemarkeerd."
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellingen",
+      "description": "Met deze opties kun je bepalen hoe de taak zich gedraagt.",
+      "fields": [
+        {
+          "label": "Aantal te tonen woorden",
+          "description": "Maak een willekeurige partij woorden uit de groep. De partij zal altijd minstens alle woorden bevatten die in het raster zijn vastgelegd, ongeacht deze instelling. Een lege waarde of 0 betekent dat alle woorden worden gebruikt."
+        },
+        {
+          "label": "Schakel directe feedback in"
+        },
+        {
+          "label": "Woorden tellen",
+          "description": "Indien ingeschakeld, worden woorden geteld om de score te bepalen. Anders worden de juiste tekens geteld."
+        },
+        {
+          "label": "Strafpunten toepassen",
+          "description": "Indien ingeschakeld, leveren onjuiste antwoorden een strafscore op van -1."
+        },
+        {
+          "label": "Schakel \"Opnieuw\" in"
+        },
+        {
+          "label": "Schakel \"Toon oplossing\" in"
+        },
+        {
+          "label": "Keep correct answers on retry",
+          "description": "If this option is enabled, correct answers will be kept when the user retries the task unless full score was achieved."
+        }
+      ]
+    },
+    {
+      "label": "Gebruikersinterface",
+      "fields": [
+        {
+          "label": "Label voor horizontaal",
+          "default": "Horizontaal"
+        },
+        {
+          "label": "Label voor verticaal",
+          "default": "Verticaal"
+        },
+        {
+          "label": "Tekst voor \"Controleer\"-knop",
+          "default": "Controleer"
+        },
+        {
+          "label": "Tekst voor \"Verzend\"-knop",
+          "default": "Verzend"
+        },
+        {
+          "label": "Tekst voor \"Opnieuw\"-knop",
+          "default": "Opnieuw"
+        },
+        {
+          "label": "Tekst voor \"Toon oplossing\"-knop",
+          "default": "Toon oplossing"
+        },
+        {
+          "label": "Kan kruiswoord niet maken",
+          "default": "Er kan geen kruiswoordpuzzel met de gegeven woorden worden gemaakt. Probeer het opnieuw met minder woorden of woorden die meer tekens gemeen hebben."
+        },
+        {
+          "label": "Kan kruiswoord niet maken (te weinig woorden)",
+          "default": "Kan geen kruiswoord maken. Je hebt tenminste twee woorden nodig."
+        },
+        {
+          "label": "Problematische woorden",
+          "description": "Maak een lijst van woorden die problemen veroorzaakten bij het genereren van de kruiswoordpuzzel. @words is een variabele die zal worden vervangen door de werkelijke problematische woorden.",
+          "default": "Sommige woorden konden niet worden geplaatst. Indien je geplaatste woorden gebruikt, controleer dan of hun positie het plaatsen van andere woorden niet onmogelijk maakt. Woorden met dezelfde uitlijning mogen elkaar niet raken. Problematisch(e) woord(en): @words"
+        },
+        {
+          "label": "Extra aanwijzing",
+          "default": "Extra aanwijzing"
+        },
+        {
+          "label": "Scherm sluiten",
+          "default": "Scherm sluiten"
+        }
+      ]
+    },
+    {
+      "label": "Schermlezer",
+      "fields": [
+        {
+          "label": "Rasterbeschrijving van de kruiswoordpuzzel",
+          "default": "Kruiswoordpuzzel. Gebruik de pijltjestoetsen om te navigeren en het toetsenbord om tekens in te voeren. Je kunt ook Tab gebruiken om te navigeren en de antwoorden in te voeren in de velden van het type 'Vul de lege velden' in plaats van in het raster."
+        },
+        {
+          "label": "Kolom",
+          "default": "Kolom"
+        },
+        {
+          "label": "Rij",
+          "default": "Rij"
+        },
+        {
+          "label": "Horizontaal",
+          "default": "Horizontaal"
+        },
+        {
+          "label": "Verticaal",
+          "default": "Verticaal"
+        },
+        {
+          "label": "Leeg",
+          "default": "Leeg"
+        },
+        {
+          "description": "Resultaatmelder. @clue is een variabele en zal worden vervangen door de respectievelijke aanwijzing.",
+          "label": "Resultaat voor",
+          "default": "Resultaat voor: @clue"
+        },
+        {
+          "label": "Juist",
+          "default": "Juist"
+        },
+        {
+          "label": "Onjuist",
+          "default": "Onjuist"
+        },
+        {
+          "label": "Punt",
+          "default": "punt"
+        },
+        {
+          "description": "Oplossingsmelder. @clue en @solution zijn variabelen en zullen worden vervangen door de respectievelijke waarden.",
+          "label": "Oplossing voor",
+          "default": "Voor @clue is de oplossing: @solution"
+        },
+        {
+          "description": "Extra aanwijzingsmelder. @clue is een variabele en wordt vervangen door de betreffende waarde.",
+          "label": "Extra aanwijzing voor",
+          "default": "Open extra aanwijzing voor @clue"
+        },
+        {
+          "description": "De huidige positie aankondigen. @position en @length zijn variabelen en zullen worden vervangen door hun respectievelijke waarden.",
+          "label": "Letterteken",
+          "default": "Letter @position van @length"
+        },
+        {
+          "description": "De woordlengte aankondigen. @length is een variabele en wordt vervangen door de respectievelijke waarde.",
+          "label": "De lengte van het woord",
+          "default": "Woord met @length letters"
+        },
+        {
+          "label": "Ondersteunende technologie beschrijving voor de knop \"Controleer\"",
+          "default": "Controleer de letters. De antwoorden worden gemarkeerd als juist, onjuist of niet-beantwoord."
+        },
+        {
+          "label": "Ondersteunende technologie beschrijving voor de knop \"Toon oplossing\"",
+          "default": "Toon de oplossing. De kruiswoordpuzzel wordt gevuld met de juiste oplossing."
+        },
+        {
+          "label": "Ondersteunende technologie beschrijving voor de knop \"Opnieuw\"",
+          "default": "Probeer de taak opnieuw. Reset alle antwoorden en start de taak opnieuw."
+        },
+        {
+          "label": "Jouw resultaat",
+          "description": "@score en @total zijn variabelen en zullen worden vervangen door hun respectievelijke waarden.",
+          "default": "Je hebt @score van de @total punten."
+        }
+      ]
+    }
+  ]
+}

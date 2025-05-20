@@ -1,0 +1,293 @@
+{
+  "semantics": [
+    {
+      "label": "Maelezo ya kazi",
+      "description": "Elezea kazi yako hapa."
+    },
+    {
+      "label": "maneno",
+      "widgets": [
+        {
+          "label": "Chaguo-msingi"
+        }
+      ],
+      "entity": "Neno",
+      "field": {
+        "label": "Neno",
+        "fields": [
+          {
+            "label": "Kidokezo",
+            "description": "Kidokezo ambacho kinapaswa kuelekeza kwenye jibu."
+          },
+          {
+            "label": "Jibu",
+            "description": "Jibu kwa kidokezo."
+          },
+          {
+            "label": "Kidokezo cha ziada"
+          },
+          {
+            "label": "Rekebisha neno kwenye gridi",
+            "description": "Weka alama ikiwa unataka kurekebisha neno kwa nafasi fulani kwenye gridi."
+          },
+          {
+            "label": "Safu mlalo",
+            "description": "Faharasa ya safu mlalo ambapo jibu linapaswa kuanza."
+          },
+          {
+            "label": "Safu wima",
+            "description": "Faharasa ya safu wima ambapo jibu linapaswa kuanza."
+          },
+          {
+            "label": "Mwelekeo",
+            "description": "Mwelekeo kwa jibu.",
+            "options": [
+              {
+                "label": "Kuvuka"
+              },
+              {
+                "label": "Chini"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Neno la suluhisho la jumla",
+      "description": "Kwa hiari ongeza neno la suluhisho ambalo linaweza kutolewa kutoka kwa herufi fulani kwenye gridi. Itaonekana tu ikiwa wahusika wake wote wanaweza kupatikana katika neno mtambuka. Tafadhali kumbuka: Bado hakuna usaidizi wa ufikivu wa kipengele hiki."
+    },
+    {
+      "label": "Maoni ya Jumla",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Chaguo-msingi"
+            }
+          ],
+          "label": "Bainisha maoni maalum kwa masafa yoyote ya alama",
+          "description": "Bofya kitufe cha \"Ongeza masafa\" ili kuongeza masafa mengi unavyohitaji. Mfano: 0-20% Alama mbaya, 21-91% Alama ya Wastani, 91-100% Alama Nzuri!",
+          "entity": "masafa",
+          "field": {
+            "fields": [
+              {
+                "label": "Masafa ya Alama"
+              },
+              {},
+              {
+                "label": "Maoni kwa masafa ya alama yaliyofafanuliwa",
+                "placeholder": "Jaza maoni"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Mandhari",
+      "fields": [
+        {
+          "label": "Picha ya mandharinyuma",
+          "description": "Chagua picha ya mandharinyuma ya hiari. Itapimwa ili kutoshea mandharinyuma bila kuunyoosha."
+        },
+        {
+          "label": "Rangi ya Mandharinyuma",
+          "description": "Chagua rangi ya mandharinyuma. Itatumika badala ya picha ya mandharinyuma au kama mandharinyuma kwa maeneo yenye uwazi."
+        },
+        {
+          "label": "Rangi ya gridi",
+          "description": "Chagua rangi kwa gridi hiyo."
+        },
+        {
+          "label": "Rangi ya mandharinyuma wa seli",
+          "description": "Chagua rangi ya mandharinyuma kwa seli ya jedwali."
+        },
+        {
+          "label": "Rangi ya maandishi ya seli",
+          "description": "Chagua rangi ya maandishi kwa seli ya jedwali."
+        },
+        {
+          "label": "Rangi ya kitambulisho cha kidokezo",
+          "description": "Chagua rangi ya kitambulisho cha kidokezo ndani ya seli ya jedwali."
+        },
+        {
+          "label": "Rangi ya mandharinyuma ya seli (imeangaziwa)",
+          "description": "Chagua rangi ya mandharinyuma kwa kisanduku cha jedwali ambacho kimeangaziwa."
+        },
+        {
+          "label": "Rangi ya maandishi ya seli (iliyoangaziwa)",
+          "description": "Chagua rangi ya maandishi kwa seli ya jedwali ambayo imeangaziwa."
+        },
+        {
+          "label": "Rangi ya kitambulisho cha seli (kilichoangaziwa)",
+          "description": "Chagua rangi ya kitambulisho cha kidokezo ndani ya seli ya jedwali ambacho kimeangaziwa."
+        }
+      ]
+    },
+    {
+      "label": "Mipangilio ya tabia",
+      "description": "Chaguzi hizi zitakuwezesha kudhibiti jinsi kazi inavyofanya.",
+      "fields": [
+        {
+          "label": "Idadi ya maneno ya kuonyeshwa",
+          "description": "Unda kundi la maswali bila mpangilio kutoka kwa jumla. Kundi litakuwa na angalau maneno yote ambayo yaliwekwa kwenye gridi bila kujali mpangilio huu. Thamani tupu au 0 inamaanisha kutumia maneno yote."
+        },
+        {
+          "label": "Washa maoni ya papo hapo"
+        },
+        {
+          "label": "Maneno ya alama",
+          "description": "Chaguo hili likiwashwa, maneno yatahesabiwa ili kubainisha alama. Vinginevyo, herufi sahihi zitahesabiwa."
+        },
+        {
+          "label": "Tumia adhabu",
+          "description": "Chaguo hili likiwashwa, kila jibu lisilo sahihi litapewa alama ya adhabu ya -1."
+        },
+        {
+          "label": "Wezesha \"Jaribu tena\""
+        },
+        {
+          "label": "Washa kitufe cha \"Suluhisho\""
+        },
+        {
+          "label": "Keep correct answers on retry",
+          "description": "If this option is enabled, correct answers will be kept when the user retries the task unless full score was achieved."
+        }
+      ]
+    },
+    {
+      "label": "Kiolesura cha mtumiaji",
+      "fields": [
+        {
+          "label": "Lebo ya kuvuka",
+          "default": "Kuvuka"
+        },
+        {
+          "label": "Lebo ya chini",
+          "default": "Chini"
+        },
+        {
+          "label": "Maandishi ya kitufe cha \"Weka alama\"",
+          "default": "Weka alama"
+        },
+        {
+          "label": "Maandishi ya kitufe cha \"Wasilisha\"",
+          "default": "Wasilisha"
+        },
+        {
+          "label": "Maandishi kwa kitufe cha \"Jaribu tena\"",
+          "default": "Jaribu tena"
+        },
+        {
+          "label": "Maandishi kwa kitufe cha \"Onyesha suluhisho\"",
+          "default": "Onyesha suluhisho"
+        },
+        {
+          "label": "Haiwezi kuunda neno mtambuka",
+          "default": "Haikuweza kuzalisha neno mtambuka na maneno yaliyotolewa. Tafadhali jaribu tena kwa maneno machache au maneno ambayo yana herufi nyingi zinazofanana. Ikiwa unatumia maneno yasiyobadilika, tafadhali hakikisha kuwa msimamo wao hauzuii maneno mengine kuwekwa."
+        },
+        {
+          "label": "Haiwezi kuunda neno mtambuka (maneno machache sana)",
+          "default": "Haikuweza kuzalisha neno mtambuka. Unahitaji angalau maneno mawili."
+        },
+        {
+          "label": "Maneno yenye matatizo",
+          "description": "Orodhesha maneno ambayo yalisababisha shida wakati wa kuunda neno mtambuka. @wordsni kishikilia nafasi ambacho kitabadilishwa na maneno halisi yenye matatizo.",
+          "default": "Maneno yenye matatizo:@words"
+        },
+        {
+          "label": "Kidokezo cha ziada",
+          "default": "Kidokezo cha ziada"
+        },
+        {
+          "label": "Funga dirisha",
+          "default": "Funga dirisha"
+        }
+      ]
+    },
+    {
+      "label": "Kisoma maandishi",
+      "fields": [
+        {
+          "label": "Maelezo ya gridi ya maneno mtambuka",
+          "default": "Gridi ya maneno mtambuka. Tumia vitufe vya vishale kusogeza na kibodi ili kuingiza vibambo. Tumia kichupo kutumia sehemu za ingizo badala yake."
+        },
+        {
+          "label": "Safu wima",
+          "default": "Safu wima"
+        },
+        {
+          "label": "Safu mlalo",
+          "default": "Safu mlalo"
+        },
+        {
+          "label": "Kuvuka",
+          "default": "Kuvuka"
+        },
+        {
+          "label": "Chini",
+          "default": "Chini"
+        },
+        {
+          "label": "Tupu",
+          "default": "Tupu"
+        },
+        {
+          "description": "Mtangazaji wa matokeo. @clueni tofauti na itabadilishwa na kidokezo husika.",
+          "label": "Matokeo ya",
+          "default": "Matokeo ya:@clue"
+        },
+        {
+          "label": "Sahihi",
+          "default": "Sahihi"
+        },
+        {
+          "label": "Siyo sahihi",
+          "default": "Siyo sahihi"
+        },
+        {
+          "label": "Pointi",
+          "default": "pointi"
+        },
+        {
+          "description": "Mtangazaji wa suluhisho.@clue na@solution ni vigezo na vitabadilishwa na thamani husika.",
+          "label": "Suluhisho kwa",
+          "default": "Kwa@cluesuluhisho hilo ni:@solution"
+        },
+        {
+          "description": "Mtangazaji wa kidokezo cha ziada.@clueni kigezo na kitabadilishwa na thamani husika.",
+          "label": "Kidokezo cha ziada kwa",
+          "default": "Fungua kidokezo cha ziada kwa@clue"
+        },
+        {
+          "description": "Kutangaza nafasi ya sasa. @positionna @lengthni vigezo na vitabadilishwa na thamani zao husika.",
+          "label": "Herufi",
+          "default": "Herufi @position kati ya @length"
+        },
+        {
+          "description": "Kutangaza urefu wa neno. @lengthni kigezo na kitabadilishwa na thamani husika.",
+          "label": "Urefu wa neno",
+          "default": "@lengthherufi za neno"
+        },
+        {
+          "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Weka alama\"",
+          "default": "Weka alama herufi hizo. Majibu yatatiwa alama kuwa sahihi, siyo sahihi au haijajibiwa."
+        },
+        {
+          "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Onyesha Suluhisho\"",
+          "default": "Onyesha suluhisho hilo. Neno mtambuka litajazwa na suluhisho lake sahihi."
+        },
+        {
+          "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Jaribu tena\"",
+          "default": "Jaribu tena kazi hiyo. Weka upya majibu yote na uanze kazi tena."
+        },
+        {
+          "label": "Matokeo yako",
+          "description": "@scorena @total ni vigezo na vitabadilishwa na thamani yao husika.",
+          "default": "Umepata @score kati ya@totalpointi."
+        }
+      ]
+    }
+  ]
+}

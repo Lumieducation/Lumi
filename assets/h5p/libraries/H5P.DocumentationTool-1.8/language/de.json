@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "label": "Überschrift",
+      "default": "Dokumentationswerkzeug",
+      "description": "Titel des Dokumentationswerkzeugs."
+    },
+    {
+      "label": "Elemente",
+      "widgets": [
+        {
+          "label": "Eingabemaske"
+        }
+      ],
+      "entity": "Seite",
+      "field": {
+        "label": "Art der Seite",
+        "description": "Bibliothek, die für diese Seite verwendet wird."
+      }
+    },
+    {
+      "label": "Beschriftungen und Bezeichnungen",
+      "fields": [
+        {
+          "label": "Beschriftung des \"Zurück\"-Buttons",
+          "default": "Zurück documentation step"
+        },
+        {
+          "label": "Beschriftung des \"Weiter\"-Buttons",
+          "default": "Weiter documentation step"
+        },
+        {
+          "label": "Beschriftung des \"Schließen\"-Buttons",
+          "default": "Schließen"
+        }
+      ]
+    }
+  ]
+}

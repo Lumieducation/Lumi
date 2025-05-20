@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Optional media to display above the question."
+        },
+        {
+          "label": "Disable image zooming"
+        }
+      ]
+    },
+    {
+      "label": "Опис задатка",
+      "description": "Опишите како корисник треба да реши задатак.",
+      "default": "Превуците речи у тачна поља"
+    },
+    {
+      "label": "Текст",
+      "placeholder": "*Oslo* is the capital of Norway, *Stockholm* is the capital of Sweden and *Copenhagen* is the capital of Denmark. All cities are located in the *Scandinavian:Northern Part of Europe* peninsula.",
+      "important": {
+        "description": "<ul><li>Речи које се преносе додају се у звездици (*) испред и иза тачне речи/фразе.</li><li>Можете додати текстуални савет користећу двотачку (:) испред.</li><li>За свако празно место постоји само једна тачна реч.</li><li>Можете додати повратне информације које ће се приказивати када је задатак завршен. Користите '\\+' за тачну и '\\-' за нетачну повратну информацију.</li></ul>",
+        "example": "H5P content may be edited using a *browser:What type of program is Chrome?*. <br /> H5P content is *interactive\\+Correct! \\-Incorrect, try again!*"
+      }
+    },
+    {
+      "label": "Distractors",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Enter extra solutions that are wrong as distractors. Use the same asterisk (*) scheme as for the text."
+    },
+    {
+      "label": "Укупне повратне информације",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Default"
+            }
+          ],
+          "label": "Дефинишите прилагођене повратне информације за било који распон резултата",
+          "description": "Кликните на \"Додај опсег\" дугме како би додали опсеге. Пример: 0-20% Лош резултат, 21-91% Просечан резултат, 91-100% Одличан резултат!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "Распон резултата"
+              },
+              {},
+              {
+                "label": "Повратне информације за дефинисани опсег резултата",
+                "placeholder": "Попуните повратне информације"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Текст за \"Провери\" дугме",
+      "default": "Провери"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "Текст за \"Врати\" дугме",
+      "default": "Покушај поново"
+    },
+    {
+      "label": "Текст за  \"Прикажи решења\" дугме",
+      "default": "Прикажи решења"
+    },
+    {
+      "label": "Означена ознака зоне испуштања",
+      "default": "Зона @index.",
+      "description": "Label used for accessibility, where the Read speaker will read the index of a drop zone. Variable available: @index"
+    },
+    {
+      "label": "Empty Drop Zone label",
+      "default": "Drop Zone @index is empty.",
+      "description": "Label used for accessibility, where the Read speaker will read that the drop zone is empty"
+    },
+    {
+      "label": "Contains Drop Zone label",
+      "default": "Drop Zone @index contains draggable @draggable.",
+      "description": "Label used for accessibility, where the Read speaker will read that the drop zone contains a draggable"
+    },
+    {
+      "label": "Draggable elements label",
+      "default": "@index of @count draggables.",
+      "description": "Label used for accessibility, where the Read speaker reads that this is a draggable element. Variable available: @index, @count"
+    },
+    {
+      "label": "Label for show tip button",
+      "default": "Show tip",
+      "description": "Label used for accessibility, where the Read speaker reads it before the tip is read out"
+    },
+    {
+      "label": "Readspeaker text for correct answer",
+      "default": "Тачно!"
+    },
+    {
+      "label": "Readspeaker text for incorrect answer",
+      "default": "Погрешно!"
+    },
+    {
+      "label": "Потврда наслова дијалога за који корисник жели ресетовати зону",
+      "default": "Ресетуј зону испуштања"
+    },
+    {
+      "label": "Опис дијалога за потврду који корисник жели ресетовати",
+      "default": "Да ли сте сигурни да желите ресетовати ову зону испуштања?"
+    },
+    {
+      "label": "Label used for accessibility, where the read speaker indicates that dragging is initiated",
+      "default": "Draggable is grabbed."
+    },
+    {
+      "label": "Label used for accessibility, where the read speaker indicates that dragging is canceled",
+      "default": "Cancelled dragging."
+    },
+    {
+      "label": "Label used for accessibility, where the read speaker indicates that a text is the correct answer",
+      "default": "Тачан одговор:"
+    },
+    {
+      "label": "Заглавље панела који садржи повратне информације за тачне / нетачне одговоре",
+      "default": "Повратна информација"
+    },
+    {
+      "label": "Поставке понашања.",
+      "description": "Ове опције ће вам омогућити да контролишете понашање задатка.",
+      "fields": [
+        {
+          "label": "Омогући \"Врати\""
+        },
+        {
+          "label": "Омогући \"Прикажи решења\" дугме"
+        },
+        {
+          "label": "Омогући \"Провери\" дугме"
+        },
+        {
+          "label": "Тренутне повратне информације"
+        }
+      ]
+    },
+    {
+      "label": "Текстуални приказ бодовне траке за оне који користе читач звука",
+      "default": "Освојили сте :num од :total поена"
+    },
+    {
+      "label": "Ознака помоћне технологије за \"Провери\" дугме",
+      "default": "Проверите одговоре. Одговори ће бити означени као тачни, нетачни или без одговора."
+    },
+    {
+      "label": "Ознака помоћне технологије за \"Прикажи решења\" дугме",
+      "default": "Прикажите решења. Задатак ће бити означен својим тачним решењем."
+    },
+    {
+      "label": "Ознака помоћне технологије за \"Врати\" дугме",
+      "default": "Покушајте поново са задатком. Ресетујте све одговоре и покрените задатак поново."
+    }
+  ]
+}

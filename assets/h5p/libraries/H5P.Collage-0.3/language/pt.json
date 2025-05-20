@@ -1,0 +1,96 @@
+{
+  "semantics": [
+    {
+      "label": "Pré-visualização",
+      "description": "Pode mover (deslocar) as imagens arrastando-as. Também pode selecionar uma imagem e utilizar as teclas + ou - do seu teclado ou simplesmente manter pressionada a tecla Z enquanto gira a roda do rato para mais ou menos zoom.",
+      "fields": [
+        {
+          "label": "Estrutura",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "1-1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "2-1"
+            },
+            {
+              "label": "1-2"
+            },
+            {
+              "label": "2-2"
+            },
+            {
+              "label": "3-1"
+            },
+            {
+              "label": "1-3"
+            },
+            {
+              "label": "2-3"
+            },
+            {
+              "label": "3-2"
+            },
+            {
+              "label": "3-3"
+            }
+          ]
+        },
+        {
+          "label": "Opções de exibição",
+          "fields": [
+            {
+              "label": "Altura"
+            },
+            {
+              "label": "Espaçamento"
+            },
+            {
+              "label": "Quadro"
+            }
+          ]
+        },
+        {
+          "label": "Trechos",
+          "entity": "trecho",
+          "field": {
+            "label": "Trecho",
+            "fields": [
+              {
+                "label": "Imagem"
+              },
+              {
+                "label": "Posição",
+                "fields": [
+                  {
+                    "label": "Topo"
+                  },
+                  {
+                    "label": "Esquerda"
+                  }
+                ]
+              },
+              {
+                "label": "Texto alternativo",
+                "description": "Obrigatório. Se o navegador não for capaz de mostrar a imagem, será exibido este texto. Também utilizado por leitores de ecrã."
+              },
+              {
+                "label": "Texto ao passar o rato",
+                "description": "Opcional. Este texto será exibido se o utilizador passar o ponteiro do rato sobre a imagem."
+              },
+              {
+                "label": "Escala"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

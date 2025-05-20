@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Enquête onderdelen",
+      "widgets": [
+        {
+          "label": "Standaard"
+        }
+      ],
+      "entity": "onderdeel",
+      "field": {
+        "label": "Kies een bibliotheek",
+        "fields": [
+          {
+            "label": "Bibliotheek",
+            "description": "Kies een bibliotheek"
+          },
+          {
+            "label": "Verplicht veld"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Opties succes-scherm",
+      "fields": [
+        {
+          "label": "Schakel succes-scherm in"
+        },
+        {
+          "label": "Voeg succes-schermafbeelding toe",
+          "fields": [
+            {
+              "label": "Vervang succes-pictogram door een afbeelding"
+            }
+          ]
+        },
+        {
+          "label": "Te tonen tekst voor verzenden",
+          "default": "Je hebt de enquête voltooid."
+        }
+      ]
+    },
+    {
+      "label": "Gebruikersinterface-elementen",
+      "fields": [
+        {
+          "label": "Knoplabels",
+          "fields": [
+            {
+              "label": "Label van \"Vorige\"-knop",
+              "default": "Vorige"
+            },
+            {
+              "label": "Label van \"Doorgaan\"-knop",
+              "default": "Doorgaan"
+            },
+            {
+              "label": "Label van \"Volgende\"-knop",
+              "default": "Volgende"
+            },
+            {
+              "label": "Label van \"Verzend\"-knop",
+              "default": "Verzend"
+            }
+          ]
+        },
+        {
+          "label": "Toegankelijkheid",
+          "fields": [
+            {
+              "label": "Label van \"Foutmelding sluiten\"-knop",
+              "default": "Foutmelding sluiten"
+            },
+            {
+              "label": "Tekst voortgangsbalk",
+              "default": "Vraag %current van %max",
+              "description": "Gebruikt om ondersteunende technologieën te vertellen welke vraag het is. Variabelen: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Verplicht bericht",
+          "default": "Op deze vraag moet een antwoord worden gegeven",
+          "description": "Wordt getoond als dit veld niet-beantwoord is, maar deze wel verplicht is op basis van het inhoudstype"
+        },
+        {
+          "label": "Tekst bij verplicht-symbool",
+          "default": "verplicht",
+          "description": "De tekst die bij een asterisk hoort om aan te geven dat een vraag verplicht is"
+        },
+        {
+          "label": "Titel voor het verzendscherm",
+          "default": "Je hebt alle vragen met succes beantwoord"
+        },
+        {
+          "label": "Ondertitel voor het verzendscherm",
+          "default": "Klik hieronder om je antwoorden te verzenden"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,354 @@
+[
+  {
+    "name": "destination",
+    "label": "Destination",
+    "type": "group",
+    "importance": "high",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "type",
+        "label": "Type",
+        "type": "select",
+        "importance": "high",
+        "widget": "selectToggleFields",
+        "options": [
+          {
+            "value": "timecode",
+            "label": "Timecode",
+            "hideFields": [
+              "url"
+            ]
+          },
+          {
+            "value": "url",
+            "label": "Another page (URL)",
+            "hideFields": [
+              "time"
+            ]
+          }
+        ],
+        "default": "timecode"
+      },
+      {
+        "name": "time",
+        "type": "number",
+        "widget": "timecode",
+        "label": "Go To",
+        "importance": "high",
+        "description": "The target time the user will be taken to upon pressing the hotspot. Enter timecode in the format M:SS.",
+        "optional": true
+      },
+      {
+        "name": "url",
+        "type": "group",
+        "label": "URL",
+        "importance": "high",
+        "widget": "linkWidget",
+        "optional": true,
+        "fields": [
+          {
+            "name": "protocol",
+            "type": "select",
+            "label": "Protocol",
+            "importance": "high",
+            "options": [
+              {
+                "value": "http://",
+                "label": "http://"
+              },
+              {
+                "value": "https://",
+                "label": "https://"
+              },
+              {
+                "value": "/",
+                "label": "(root relative)"
+              },
+              {
+                "value": "other",
+                "label": "other"
+              }
+            ],
+            "optional": true,
+            "default": "http://"
+          },
+          {
+            "name": "url",
+            "type": "text",
+            "label": "URL",
+            "importance": "high",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "visuals",
+    "type": "group",
+    "label": "Visuals",
+    "importance": "low",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "shape",
+        "type": "select",
+        "label": "Shape",
+        "importance": "low",
+        "options": [
+          {
+            "value": "rectangular",
+            "label": "Rectangular"
+          },
+          {
+            "value": "circular",
+            "label": "Circular"
+          },
+          {
+            "value": "rounded-rectangle",
+            "label": "Rounded Rectangle"
+          }
+        ],
+        "default": "rectangular"
+      },
+      {
+        "name": "backgroundColor",
+        "type": "text",
+        "label": "Background color for hotspot",
+        "widget": "colorSelector",
+        "importance": "low",
+        "default": "rgba(255, 255, 255, 0)",
+        "spectrum": {
+          "showInput": true,
+          "showAlpha": true,
+          "preferredFormat": "rgb",
+          "showPalette": true,
+          "palette": [
+            [
+              "rgba(255, 255, 255, 0)"
+            ],
+            [
+              "rgb(67, 67, 67)",
+              "rgb(102, 102, 102)",
+              "rgb(204, 204, 204)",
+              "rgb(217, 217, 217)",
+              "rgb(255, 255, 255)"
+            ],
+            [
+              "rgb(152, 0, 0)",
+              "rgb(255, 0, 0)",
+              "rgb(255, 153, 0)",
+              "rgb(255, 255, 0)",
+              "rgb(0, 255, 0)",
+              "rgb(0, 255, 255)",
+              "rgb(74, 134, 232)",
+              "rgb(0, 0, 255)",
+              "rgb(153, 0, 255)",
+              "rgb(255, 0, 255)"
+            ],
+            [
+              "rgb(230, 184, 175)",
+              "rgb(244, 204, 204)",
+              "rgb(252, 229, 205)",
+              "rgb(255, 242, 204)",
+              "rgb(217, 234, 211)",
+              "rgb(208, 224, 227)",
+              "rgb(201, 218, 248)",
+              "rgb(207, 226, 243)",
+              "rgb(217, 210, 233)",
+              "rgb(234, 209, 220)",
+              "rgb(221, 126, 107)",
+              "rgb(234, 153, 153)",
+              "rgb(249, 203, 156)",
+              "rgb(255, 229, 153)",
+              "rgb(182, 215, 168)",
+              "rgb(162, 196, 201)",
+              "rgb(164, 194, 244)",
+              "rgb(159, 197, 232)",
+              "rgb(180, 167, 214)",
+              "rgb(213, 166, 189)",
+              "rgb(204, 65, 37)",
+              "rgb(224, 102, 102)",
+              "rgb(246, 178, 107)",
+              "rgb(255, 217, 102)",
+              "rgb(147, 196, 125)",
+              "rgb(118, 165, 175)",
+              "rgb(109, 158, 235)",
+              "rgb(111, 168, 220)",
+              "rgb(142, 124, 195)",
+              "rgb(194, 123, 160)",
+              "rgb(166, 28, 0)",
+              "rgb(204, 0, 0)",
+              "rgb(230, 145, 56)",
+              "rgb(241, 194, 50)",
+              "rgb(106, 168, 79)",
+              "rgb(69, 129, 142)",
+              "rgb(60, 120, 216)",
+              "rgb(61, 133, 198)",
+              "rgb(103, 78, 167)",
+              "rgb(166, 77, 121)",
+              "rgb(91, 15, 0)",
+              "rgb(102, 0, 0)",
+              "rgb(120, 63, 4)",
+              "rgb(127, 96, 0)",
+              "rgb(39, 78, 19)",
+              "rgb(12, 52, 61)",
+              "rgb(28, 69, 135)",
+              "rgb(7, 55, 99)",
+              "rgb(32, 18, 77)",
+              "rgb(76, 17, 48)"
+            ]
+          ]
+        }
+      },
+      {
+        "name": "pointerCursor",
+        "type": "boolean",
+        "label": "Use pointer cursor",
+        "importance": "low",
+        "default": true
+      },
+      {
+        "name": "animation",
+        "type": "boolean",
+        "label": "Add blinking effect",
+        "importance": "low",
+        "description": "Note: Blinking effect is always enabled in the editor so you are able to find transparent hotspots"
+      }
+    ]
+  },
+  {
+    "name": "texts",
+    "type": "group",
+    "label": "Texts",
+    "expanded": true,
+    "importance": "low",
+    "fields": [
+      {
+        "name": "alternativeText",
+        "type": "text",
+        "importance": "low",
+        "label": "Alternative Text",
+        "description": "Describe the subject the hotspot covers. Used for readspeakers",
+        "placeholder": "An apple on a table",
+        "optional": false
+      },
+      {
+        "name": "label",
+        "type": "text",
+        "importance": "low",
+        "label": "Hotspot Label",
+        "optional": true
+      },
+      {
+        "name": "showLabel",
+        "type": "boolean",
+        "label": "Show label",
+        "importance": "low",
+        "default": false
+      },
+      {
+        "name": "labelColor",
+        "type": "text",
+        "label": "Label color",
+        "widget": "showWhen",
+        "importance": "low",
+        "optional": true,
+        "default": "rgb(0, 0, 0)",
+        "showWhen": {
+          "detach": false,
+          "widget": "colorSelector",
+          "rules": [
+            {
+              "field": "showLabel",
+              "equals": true
+            }
+          ]
+        },
+        "spectrum": {
+          "showInput": true,
+          "showAlpha": true,
+          "preferredFormat": "rgb",
+          "showPalette": true,
+          "palette": [
+            [
+              "rgba(255, 255, 255, 0)"
+            ],
+            [
+              "rgb(67, 67, 67)",
+              "rgb(102, 102, 102)",
+              "rgb(204, 204, 204)",
+              "rgb(217, 217, 217)",
+              "rgb(255, 255, 255)"
+            ],
+            [
+              "rgb(152, 0, 0)",
+              "rgb(255, 0, 0)",
+              "rgb(255, 153, 0)",
+              "rgb(255, 255, 0)",
+              "rgb(0, 255, 0)",
+              "rgb(0, 255, 255)",
+              "rgb(74, 134, 232)",
+              "rgb(0, 0, 255)",
+              "rgb(153, 0, 255)",
+              "rgb(255, 0, 255)"
+            ],
+            [
+              "rgb(230, 184, 175)",
+              "rgb(244, 204, 204)",
+              "rgb(252, 229, 205)",
+              "rgb(255, 242, 204)",
+              "rgb(217, 234, 211)",
+              "rgb(208, 224, 227)",
+              "rgb(201, 218, 248)",
+              "rgb(207, 226, 243)",
+              "rgb(217, 210, 233)",
+              "rgb(234, 209, 220)",
+              "rgb(221, 126, 107)",
+              "rgb(234, 153, 153)",
+              "rgb(249, 203, 156)",
+              "rgb(255, 229, 153)",
+              "rgb(182, 215, 168)",
+              "rgb(162, 196, 201)",
+              "rgb(164, 194, 244)",
+              "rgb(159, 197, 232)",
+              "rgb(180, 167, 214)",
+              "rgb(213, 166, 189)",
+              "rgb(204, 65, 37)",
+              "rgb(224, 102, 102)",
+              "rgb(246, 178, 107)",
+              "rgb(255, 217, 102)",
+              "rgb(147, 196, 125)",
+              "rgb(118, 165, 175)",
+              "rgb(109, 158, 235)",
+              "rgb(111, 168, 220)",
+              "rgb(142, 124, 195)",
+              "rgb(194, 123, 160)",
+              "rgb(166, 28, 0)",
+              "rgb(204, 0, 0)",
+              "rgb(230, 145, 56)",
+              "rgb(241, 194, 50)",
+              "rgb(106, 168, 79)",
+              "rgb(69, 129, 142)",
+              "rgb(60, 120, 216)",
+              "rgb(61, 133, 198)",
+              "rgb(103, 78, 167)",
+              "rgb(166, 77, 121)",
+              "rgb(91, 15, 0)",
+              "rgb(102, 0, 0)",
+              "rgb(120, 63, 4)",
+              "rgb(127, 96, 0)",
+              "rgb(39, 78, 19)",
+              "rgb(12, 52, 61)",
+              "rgb(28, 69, 135)",
+              "rgb(7, 55, 99)",
+              "rgb(32, 18, 77)",
+              "rgb(76, 17, 48)"
+            ]
+          ]
+        }
+      }
+    ]
+  }
+]

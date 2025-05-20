@@ -1,0 +1,278 @@
+{
+  "semantics": [
+    {
+      "label": "Sınav (Quiz) Hakkında Bilgilendirme",
+      "fields": [
+        {
+          "label": "Bilgilendirmeyi göster"
+        },
+        {
+          "label": "Başlık",
+          "description": "Bu başlık bilgilendirme metninin başlığıdır. "
+        },
+        {
+          "label": "Bilgilendirme metni",
+          "description": "Sınav (quiz) başlamadan önce gösterlecek metin"
+        },
+        {
+          "label": "Başla butonu metni",
+          "default": "Sınavı başlat"
+        },
+        {
+          "label": "Arka plan görseli",
+          "description": "Bilgilendirme bölümü için isterseniz arka plan görseli ekleyebilirsiniz."
+        }
+      ]
+    },
+    {
+      "label": "Arka plan görseli",
+      "description": "Soru seti için isteğe bağlı arka plan görseli."
+    },
+    {
+      "label": "İlerleme göstergeleri",
+      "description": "Soru seti ilerleme göstergesi stili",
+      "options": [
+        {
+          "label": "Metinsel"
+        },
+        {
+          "label": "Noktalar"
+        }
+      ]
+    },
+    {
+      "label": "Geçme puanı (%)",
+      "description": "Sınavı (quiz) geçmek için gerekli toplam puan yüzdesi."
+    },
+    {
+      "label": "Sorular",
+      "widgets": [
+        {
+          "label": "Varsayılan"
+        },
+        {
+          "label": "Metin"
+        }
+      ],
+      "entity": "soru",
+      "field": {
+        "label": "Soru türü",
+        "description": "Soru şablonlarından seçin"
+      }
+    },
+    {
+      "label": "Test arayüz metinleri",
+      "fields": [
+        {
+          "label": "Geri butonu",
+          "default": "Önceki soru"
+        },
+        {
+          "label": "Sonraki butonu",
+          "default": "Sonraki soru"
+        },
+        {
+          "label": "Bitir butonu",
+          "default": "Bitir"
+        },
+        {
+          "label": "Submit button",
+          "default": "Submit"
+        },
+        {
+          "label": "İlerleme metni",
+          "description": "İlerleme göstergesi olarak metin seçildiyse kullanılacak metin.",
+          "default": "Soru: @current / @total"
+        },
+        {
+          "label": "Belirli bir soruya geçmek için etiket",
+          "description": "Soru numarası yerine '%d' yer tutucusunu ve toplam soru sayısı yerine de %total'ı kullanmalısınız.",
+          "default": "Soru %d / %total"
+        },
+        {
+          "label": "Telif hakkı iletişim kutusu soru etiketi",
+          "default": "Soru"
+        },
+        {
+          "label": "Okuyucu ilerleme durumu",
+          "description": "@current ve @total soru değişkenleri kullanabilir",
+          "default": "Soru @current / @total"
+        },
+        {
+          "label": "Yanıtlanmamış soru için metin",
+          "default": "Yanıtlanmadı"
+        },
+        {
+          "label": "Yanıtlanmış soru için metin",
+          "default": "Yanıtlandı"
+        },
+        {
+          "label": "Geçerli soru için metin",
+          "default": "Geçerli soru"
+        },
+        {
+          "label": "Navigation label for readspeakers",
+          "default": "Questions"
+        }
+      ]
+    },
+    {
+      "label": "Geri gelmeyi engelle",
+      "description": "Bu seçenek soru setinde sadece ileri doğru gezmeye olanak verir önceki soruya dönemez."
+    },
+    {
+      "label": "Rastgele Sorular",
+      "description": "Soruların ekranda rastgele bir şekilde (her seferinde farklı sıralamada) gelmesi için etkinleştirin."
+    },
+    {
+      "label": "Sınavda sorulacak soru sayısı:",
+      "description": "Soru havuzundan belirli sayıda rastgele soru seçmenizi sağlar."
+    },
+    {
+      "label": "Sınav (quiz) bitti",
+      "fields": [
+        {
+          "label": "Sonuçları göster"
+        },
+        {
+          "label": "Çözümü göster butonunu göster"
+        },
+        {
+          "label": "Yeniden dene butonunu göster"
+        },
+        {
+          "label": "Sonuç yok mesajı",
+          "description": " \"Sonuçları göster\" devre dışı bırakıldığında gösterilecek metin.",
+          "default": "Bitti"
+        },
+        {
+          "label": "Geri bildirim başlığı",
+          "default": "Sonucunuz:",
+          "description": "Bu başlık, kullanıcı tüm soruları yanıtladığında sınavın sonunda görüntülenecektir."
+        },
+        {
+          "label": "Score announcer",
+          "description": "This label will be used for announcing the final score to the user on the end screen",
+          "default": "You got @finals out of @totals points"
+        },
+        {
+          "label": "Genel geri bildirim",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Varsayılan"
+                }
+              ],
+              "label": "Herhangi bir puan aralığı için özel geri bildirim tanımlayabilirsiniz.",
+              "description": "Örnek: 0-44% Geliştirilmeli, 45-70% Orta, 70-100% İyi!",
+              "entity": "aralık",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Skor Aralığı"
+                  },
+                  {},
+                  {
+                    "label": "Tanımlanmış puan aralığı için geri bildirim",
+                    "placeholder": "Geri bildirim için doldurun"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Eski Geri Bildirim",
+          "fields": [
+            {
+              "label": "Sınavı geçtiniz tebrikler",
+              "description": "Kullanıcı sınavı başarıyla geçerse puanının üzerinde bu metin görüntülenecektir."
+            },
+            {
+              "label": "Geçti yorumu",
+              "description": "Kullanıcı sınavı başarıyla geçtiyse puandan sonra bu yorum görüntülenecektir."
+            },
+            {
+              "label": "Sınav başarısız başlığı",
+              "description": "Kullanıcı sınavda başarısız olursa puanının üzerinde bu metin görüntülenecektir."
+            },
+            {
+              "label": "Kaldı yorumu",
+              "description": "Kullanıcı sınavda başarısız olursa puandan sonra bu yorum görüntülenecektir."
+            }
+          ]
+        },
+        {
+          "label": "Çözümü göster butonu etiketi",
+          "default": "Çözümü göster",
+          "description": "Çözümü göster butonu için etiket"
+        },
+        {
+          "label": "Yeniden dene butonu etiketi",
+          "default": "Yeniden Dene",
+          "description": "Yeniden dene butonu için etiket"
+        },
+        {
+          "label": "Bitir butonu için etiket",
+          "default": "Bitir"
+        },
+        {
+          "label": "Submit button text",
+          "default": "Submit"
+        },
+        {
+          "label": "Sınav sonuçlarından önce videoyu göster"
+        },
+        {
+          "label": "Videoyu atla düğmesini etkinleştir"
+        },
+        {
+          "label": "Videoyu atla düğmesi etiketi",
+          "default": "Videoyu Atla"
+        },
+        {
+          "label": "Geçti videosu",
+          "description": "Bu video, kullanıcı sınavı başarıyla geçerse oynatılacaktır."
+        },
+        {
+          "label": "Kaldı videosu",
+          "description": "Bu video, kullanıcı sınavda başarısız olursa oynatılacaktır."
+        }
+      ]
+    },
+    {
+      "label": "\"Çözümü göster\" ve \"Yeniden dene\" butonları için ayarlar",
+      "fields": [
+        {
+          "label": "\"Kontrol et\" butonlarını göster",
+          "description": "Bu seçenek, tüm sorular için \"Kontrol et\" butonunun gösterilip gösterilmeyeceğini belirler."
+        },
+        {
+          "label": "\"Çözümü göster\" butonunu etkinleştir.",
+          "description": "Bu seçenek, \"Çözümü göster\" butonunun tüm sorular için gösterilip gösterilmeyeceğini, tümü için devre dışı bırakılıp bırakılmayacağını veya her soru için ayrı ayrı yapılandırılıp yapılandırılmayacağını belirler.",
+          "options": [
+            {
+              "label": "Etkinleştir"
+            },
+            {
+              "label": "Devre dışı bırak"
+            }
+          ]
+        },
+        {
+          "label": "Override \"Yeniden dene\" ",
+          "description": "Bu seçenek, \"Yeniden dene\" butonunun tüm sorular için gösterilip gösterilmeyeceğini, tümü için devre dışı bırakılıp bırakılmayacağını veya her soru için ayrı ayrı yapılandırılıp yapılandırılmayacağını belirler.",
+          "options": [
+            {
+              "label": "Etkinleştir"
+            },
+            {
+              "label": "Devre dışı bırak"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

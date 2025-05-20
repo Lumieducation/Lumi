@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Image Hotspot Question Editor",
+      "fields": [
+        {
+          "label": "Позадинска слика",
+          "fields": [
+            {
+              "label": "Позадинска слика",
+              "description": "Изаберите слику коју ћете користити као позадину за питање."
+            }
+          ]
+        },
+        {
+          "label": "Вруће тачке",
+          "description": "Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
+          "fields": [
+            {
+              "label": "Task description",
+              "description": "Instructions to the user."
+            },
+            {
+              "label": "Врућа тачка",
+              "entity": "Hotspot",
+              "field": {
+                "label": "Врућа тачка",
+                "fields": [
+                  {
+                    "label": "userSettings",
+                    "fields": [
+                      {
+                        "label": "Тачно",
+                        "description": "Може бити више тачних врућих тачака. Међутим, корисник добија тачне / нетачне повратне информације одмах након првог клика."
+                      },
+                      {
+                        "label": "Повратна информација"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "computedSettings"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Повратне информације ако корисник изабере празно место:",
+              "placeholder": "Нисте пронашли ниједну врућу тачку, покушајте поново!"
+            },
+            {
+              "label": "Прикажите повратне информације као искачући прозор"
+            },
+            {
+              "label": "Локализација",
+              "fields": [
+                {
+                  "label": "Текст за Врати дугме",
+                  "default": "Врати"
+                },
+                {
+                  "label": "Текст за Затвори дугме",
+                  "default": "Затвори"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Текстуални приказ бодовне траке за оне који користе читач звука",
+      "default": "Освојили сте :num од :total поена"
+    },
+    {
+      "label": "Опис помоћне технологије за \"Врати\" дугме",
+      "default": "Покушајте поново са задатком. Ресетујте све одговоре и покрените задатак поново."
+    }
+  ]
+}

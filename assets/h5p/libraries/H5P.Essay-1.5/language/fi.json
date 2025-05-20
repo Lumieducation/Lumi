@@ -1,0 +1,299 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Tyyppi",
+          "description": "Vapaaehtoinen, esitetään kysymyksen yläpuolella"
+        },
+        {
+          "label": "Estä kuvan zoomaaminen"
+        }
+      ]
+    },
+    {
+      "label": "Tehtävänkuvaus",
+      "description": "Kirjoita tähän tehtävänkuvaus. Tämä teksti näytetään tekstinsyöttöalueen yläpuolella.",
+      "placeholder": "Kirjoita maksimissaan 500 merkin yhteenveto kirjasta..."
+    },
+    {
+      "label": "Aputeksti",
+      "description": "Tämä teksti auttaa käyttäjän alkuun tehtävässä",
+      "placeholder": "Tämä kirja kertoo ...."
+    },
+    {
+      "label": "Yksinkertainen esimerkkivastaus",
+      "description": "Voit halutessasi kirjoittaa tähän yksinkertaisen esimerkkivastauksen joka näytetään opiskelijoille sen jälkeen kun he ovat palauttaneet tehtävän. Tämä on nimetty yksinkertaiseksi esimerkkivastaukseksi koska absoluuttisesti oikeaa vastausta ei esseekysymyksiin ole vaan ns. oikeita vastauksia voi olla useita.",
+      "fields": [
+        {
+          "label": "Esittely",
+          "description": "Voit halutessasi kirjoittaa tähän tarkemman selvityksen yksinkertaisesta esimerkkivastauksestasi. Tämä näytetään vain jos olet kirjoittanut yksinkertaisen esimerkkivastauksen.",
+          "placeholder": "Muista ettei yhtä oikeaa vastausta ole ja tehtävänlaatija ei olettanut sinun kirjoittavan täsmälleen samanlaista tekstiä kuin esimerkissä, se on vain esimerkki hyvästä vastauksesta."
+        },
+        {
+          "label": "Näytä vastaukset -painikkeen teksti",
+          "description": "Jos kirjoitat tähän tekstiä niin opiskelija näkee \"Show solution\" tehtävän palautettuaan ja näytä vastaukset -painiketta painettuaan tämän tekstin "
+        }
+      ]
+    },
+    {
+      "label": "Avainsanat",
+      "widgets": [
+        {
+          "label": "Oletus"
+        }
+      ],
+      "entity": "Avainsana",
+      "field": {
+        "label": "Avainsana",
+        "fields": [
+          {
+            "label": "Avainsana",
+            "description": "Avainsana tai virke jota järjestelmä tarkkailee/etsii automaattisesti. Käytä asteriskia '*' villinä korttina yhdelle tai usemmalle merkille esimerkiksi avainsana *ho jolloin tähän tavupariin päättyvät vastaukset kuten tarmo ja tenho hyväksytään. Käytä kenoviivaa '/' alussa tai lopussa merkitsemään säännöllistä lauseketta."
+          },
+          {
+            "label": "Variaatiot",
+            "description": "Lisää halutessasi avainsanalle erilaisia variaatioita jotka hyväksyt. Esimerkiksi avainsanalle auto voit hyväksyä variaatiot biili, kaara, menopeli ja automobiili. Kysymyksestä saa täydet pisteet tietämällä minkä tahansa avainsanavaihtoehdoista oikein.",
+            "entity": "variation",
+            "field": {
+              "label": "Avainsanan variaatio"
+            }
+          },
+          {
+            "label": "Pisteet, asetukset ja Palaute.",
+            "fields": [
+              {
+                "label": "Pisteet",
+                "description": "Pistemäärä jonka käyttäjä ansaitsee kirjoittamalla tämän avainsanan tai yhdenkään sen variaatioista esseessään."
+              },
+              {
+                "label": "Esiintymät",
+                "description": "Määritä kuinka monta kertaa tämän avainsanan on esiinnyttävä tekstissä jotta siitä myönnetään yllämääritellyt pisteet."
+              },
+              {
+                "label": "Merkkikokoriippuvainen",
+                "description": "Jos asetat tämän päälle vastauksen on oltava merkkikohtaisesti identtinen esimerkkisi kanssa jotta se hyväksytään eli suuret ja pienet kirjaimet huomioidaan."
+              },
+              {
+                "label": "Anna anteeksi kirjoitusvirheet",
+                "description": "Tämä hyväksyy pienet kirjoitusvirheet (3-9 merkkiä väärin: 1 virhe, yli 9 merkkiä väärin: 2 virhettä)"
+              },
+              {
+                "label": "Palaute jos avainsana mainitaan tekstissä.",
+                "description": "Tämä palaute näytetään opiskelijalle mikäli avainsana tai jokin sen variaatioista löytyy hänen tekstistään."
+              },
+              {
+                "label": "Palaute jos avainsana puuttuu tekstistä.",
+                "description": "Tämä palaute näytetään jos avainsana tai jokin sen variaatioista puuttuu opiskelijan tekstistä."
+              },
+              {
+                "label": "Sana joka näytetään avainsanan edessä jos avainsana löytyy opiskelijan tekstistä.",
+                "description": "Tämä asetus mahdollistaa sinun määritellä mikä sana näytetään palautteesi edessä jos määritelty avainsana löytyy opiskelijan tekstistä.",
+                "options": [
+                  {
+                    "label": "avainsana"
+                  },
+                  {
+                    "label": "variaatio löydetty"
+                  },
+                  {
+                    "label": "kirjoitettu vastaus"
+                  },
+                  {
+                    "label": "ei yhtään"
+                  }
+                ]
+              },
+              {
+                "label": "Sana joka näytetään avainsanan edessä jos avainsana puuttuu opiskelijan tekstistä.",
+                "description": "Tämä asetus mahdollistaa sinun määritellä mikä sana näytetään palautteesi edessä jos määritelty avainsana puuttuu opiskelijan tekstistä.",
+                "options": [
+                  {
+                    "label": "avainsana"
+                  },
+                  {
+                    "label": "ei yhtään"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Yleispalaute",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Oletus"
+            }
+          ],
+          "label": "Määritä prosenttimääräiset pisterajat ja tekstipalaute niille",
+          "description": "Painat \"Add range\" painiketta lisätäksesi niin monta tietuetta kuin tarvitset. Esimerkki: 0-20% Huono arvosana, 21-91% Keskinkertainen arvosana, 91-100% Hyvä arvosana!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "Pisteraja"
+              },
+              {},
+              {
+                "label": "Pisterajojen palautetekstit",
+                "placeholder": "Täytä tähän pisterajan palaute"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Lisäasetukset",
+      "description": "Nämä asetukset muuttavat miten tehtävä käyttäytyy",
+      "fields": [
+        {
+          "label": "Minimimerkkimäärä.",
+          "description": "Minimimäärä merkkejä jotka opiskelijan tulee kirjoittaa jotta hän voi palauttaa tehtävän"
+        },
+        {
+          "label": "Maksimimerkkimäärä.",
+          "description": "Maksimimerkkimäärä jonka opiskelija voi kirjoittaa"
+        },
+        {
+          "label": "Tekstinsyöttökentän koko",
+          "description": "Tekstinsyöttäkentän koko riveinä.",
+          "options": [
+            {
+              "label": "1 rivi"
+            },
+            {
+              "label": "3 riviä"
+            },
+            {
+              "label": "10 riviä"
+            }
+          ]
+        },
+        {
+          "label": "Salli \"Retry\"",
+          "description": "Jos päällä opiskelijat voivat suorittaa tehtävän uudelleen alusta"
+        },
+        {
+          "label": "Ei pisteytystä",
+          "description": "Jos valittuna opiskelija näkevät vain avansanojen sanallisen palautteen mutta eivät siitä saamiaan pisteitä."
+        },
+        {
+          "label": "Isäntäympäristön pisteet",
+          "description": "Pisteet jotka opiskelijalle myönnetään pelkästä vastauksesta (oli se mitä tahansa) (näitä pisteitä ei näytetä opiskelijoille)"
+        },
+        {
+          "label": "Hyväksymisraja",
+          "description": "Prosenttimääräinen hyväksymisraja jolla tehtävä lasketaan suoritetuksi"
+        },
+        {
+          "label": "Mastering percentage",
+          "description": "Percentage that's necessary for mastering. Setting the mastering percentage below 100 % will lower the maximum possible score accordingly. It's intended to give some leeway to students, not to \"graciously accept\" solutions that do not contain all keywords."
+        },
+        {
+          "label": "Pakota Merkkikokoriippuvainen asetus",
+          "description": "Tämä asetus pakottaa päälle tai pois päältä \"Case sensitive\" asetuksen kaikille avainsanoille. ",
+          "options": [
+            {
+              "label": "Pakota"
+            },
+            {
+              "label": "Pois päältä"
+            }
+          ]
+        },
+        {
+          "label": "Pakota kirjoitusvirheiden anteeksiantaminen",
+          "description": "Tämä asetus pakottaa päälle tai pois päältä \"Forgive mistakes\" asetuksen kaikille avainsanoille",
+          "options": [
+            {
+              "label": "Pakota"
+            },
+            {
+              "label": "Pois päältä"
+            }
+          ]
+        },
+        {
+          "label": "Replacement for line breaks",
+          "description": "By default, line breaks will be replaced with a space character. If you want to check for line breaks, e.g. in regular expressions, you can set a different replacement here.",
+          "options": [
+            {
+              "label": "space"
+            },
+            {
+              "label": "line break (\\n)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Painikkeen \"Check\" teksti",
+      "default": "Tarkista"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "Painikkeen \"Retry\" teksti",
+      "default": "Yritä uudelleen"
+    },
+    {
+      "label": "Painikkeen \"Show solution\" teksti",
+      "default": "Näytä vastaukset"
+    },
+    {
+      "label": "Palauteosion otsikko, tämä osio listaa puuttuvat tai sisältyvät avainsanat.",
+      "default": "Palaute"
+    },
+    {
+      "label": "Esimerkkiratkaisun teksti",
+      "default": "Esimerkkiratkaisu"
+    },
+    {
+      "label": "Merkkiä jäljellä",
+      "default": "Merkkiä jäljellä: @chars",
+      "description": "Teksti jäljellä oleville merkeille. Voit käyttää muuttujaa @chars merkitsemään paikkaa tekstissä johon merkkien lukumäärä merkitään."
+    },
+    {
+      "label": "Ei tarpeeksi merkkejä",
+      "default": "Sinun täytyy syöttää vähintään @chars merkkiä!",
+      "description": "Teksti joka näytetään jos essee ei sisällä tarpeksi merkkejä ja henkilö yrittää palauttaa sen. Voit käyttää muuttujaa @chars merkitsemään paikkaa tekstissä johon merkkien lukumäärä merkitään."
+    },
+    {
+      "label": "Tallennusviesti",
+      "description": "Teksti joka näytetään kun viesti on tallennettu.",
+      "default": "tallennettu"
+    },
+    {
+      "label": "Sinun tuloksesi",
+      "description": "Teksti ruudunlukijoille muuttuja @score korvataan henkilön saamalla pistemäärällä ja muuttuja @total tehtävän maksimipistemäärällä.",
+      "default": "Sait @score pistettä @total pisteestä"
+    },
+    {
+      "label": "Navigaation teksti",
+      "description": "Teksti ruudunlukijoille.",
+      "default": "Navigoitiin esimerkkivastaukseen tekstialueen jälkeen."
+    },
+    {
+      "label": "Assistive technology description for \"Check\" button",
+      "default": "Check the answers."
+    },
+    {
+      "label": "Assistive technology description for \"Show Solution\" button",
+      "default": "Show the solution. You will be provided with a sample solution."
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. You can improve your previous answer if the author allowed that."
+    }
+  ]
+}

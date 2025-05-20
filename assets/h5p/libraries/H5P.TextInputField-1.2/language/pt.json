@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Descrição do campo de entrada",
+      "description": "Descrição do que o utilizador deve inserir."
+    },
+    {
+      "label": "Texto marcador de posição",
+      "description": "Um texto de espaço reservado para o utilizador."
+    },
+    {
+      "label": "Tamanho máximo do texto",
+      "description": "Número máximo de caracteres para o texto."
+    },
+    {
+      "label": "Tamanho do campo de entrada",
+      "description": "O tamanho do campo de entrada na quantidade de linhas que ocupará.",
+      "options": [
+        {
+          "label": "1 linha"
+        },
+        {
+          "label": "3 linhas"
+        },
+        {
+          "label": "10 linhas"
+        }
+      ]
+    },
+    {
+      "label": "Campo obrigatório",
+      "description": "Marque para tornar este campo obrigatório. O utilizador deve responder a todos os campos obrigatórios para poder exportar um documento."
+    },
+    {
+      "label": "Caracteres restantes",
+      "default": "Caracteres restantes: @chars",
+      "description": "Mensagem para os caracteres restantes. Pode usar @chars que será substituído pelo número correspondente."
+    }
+  ]
+}

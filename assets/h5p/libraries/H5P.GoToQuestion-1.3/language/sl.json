@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Besedilo vprašanja",
+      "description": "Na podlagi besedila bo uporabnik izbral odgovor za nadaljevanje."
+    },
+    {
+      "label": "Odgovori",
+      "entity": "odgovor",
+      "field": {
+        "fields": [
+          {
+            "label": "Odgovor",
+            "description": "Besedilo bo zapisano kot gumb za izbiro tega odgovora."
+          },
+          {
+            "label": "Pojdi na",
+            "description": "Vnos časa za nadaljevanje ogleda posnetka (v formatu M:SS), na katerega bo udeleženca vodil klik."
+          },
+          {
+            "label": "Besedilo ob izbiri odgovora",
+            "description": "Neobvezno besedilo za potrditev odgovora ob izbiri."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Besedilo za gumb \"Nadaljuj\"",
+      "default": "Nadaljuj"
+    }
+  ]
+}

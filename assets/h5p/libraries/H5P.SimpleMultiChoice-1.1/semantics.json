@@ -1,0 +1,89 @@
+[
+  {
+    "name": "question",
+    "label": "Question",
+    "importance": "high",
+    "type": "text"
+  },
+  {
+    "name": "inputType",
+    "label": "Multiple choice type",
+    "importance": "high",
+    "type": "select",
+    "options": [
+      {
+        "label": "Multiple answers",
+        "value": "checkbox"
+      },
+      {
+        "label": "Single answer",
+        "value": "radio"
+      }
+    ],
+    "default": "checkbox"
+  },
+  {
+    "name": "alternatives",
+    "label": "Answer alternatives",
+    "type": "list",
+    "importance": "high",
+    "entity": "Alternative",
+    "min": 2,
+    "field": {
+      "type": "group",
+      "name": "alternative",
+      "label": "Alternative",
+      "fields": [
+        {
+          "name": "text",
+          "label": "Text",
+          "importance": "high",
+          "type": "text"
+        },
+        {
+          "name": "feedback",
+          "type": "group",
+          "label": "Feedback",
+          "importance": "low",
+          "optional": true,
+          "fields": [
+            {
+              "name": "chosenFeedback",
+              "type": "text",
+              "widget": "html",
+              "label": "Message displayed if answer is selected",
+              "importance": "low",
+              "description": "Message will appear below the answer on \"continue\" if this answer is selected.",
+              "optional": true,
+              "tags": [
+                "strong",
+                "em",
+                "sub",
+                "sup",
+                "a",
+                "code"
+              ]
+            },
+            {
+              "name": "notChosenFeedback",
+              "type": "text",
+              "widget": "html",
+              "label": "Message displayed if answer is not selected",
+              "importance": "low",
+              "description": "Message will appear below the answer on \"continue\" if this answer is not selected.",
+              "optional": true,
+              "tags": [
+                "strong",
+                "em",
+                "sub",
+                "sup",
+                "a",
+                "code"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

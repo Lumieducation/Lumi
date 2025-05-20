@@ -1,0 +1,156 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Kichwa",
+          "description": "Kichwa cha hiari cha ukuta wa habari."
+        },
+        {
+          "label": "Sifa",
+          "fields": [
+            {
+              "label": "Sifa",
+              "description": "Sifa za maingizo",
+              "entity": "sifa",
+              "widgets": [
+                {
+                  "label": "Chaguo-msingi"
+                }
+              ],
+              "field": {
+                "label": "Vipengee vya sifa",
+                "fields": [
+                  {
+                    "label": "Lebo",
+                    "default": "Bila jina"
+                  },
+                  {
+                    "label": "Onyesha lebo ya sifa"
+                  },
+                  {
+                    "label": "Washa utafutaji katika sifa"
+                  },
+                  {
+                    "label": "Ubatilishaji wa mitindo",
+                    "fields": [
+                      {
+                        "label": "Nzito"
+                      },
+                      {
+                        "label": "Italiki"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {}
+          ]
+        },
+        {
+          "label": "Paneli",
+          "description": "Paneli za ukuta",
+          "entity": "paneli",
+          "widgets": [
+            {
+              "label": "Chaguo-msingi"
+            }
+          ],
+          "field": {
+            "label": "Vipengee vya kuingia",
+            "fields": [
+              {
+                "label": "Mada ya paneli"
+              },
+              {
+                "label": "Picha"
+              },
+              {
+                "label": "Maingizo",
+                "description": "Sifa za maingizo",
+                "entity": "thamani",
+                "widgets": [
+                  {
+                    "label": "Chaguo-msingi"
+                  }
+                ],
+                "field": {
+                  "label": "Lebo ya kubadilishwa kiotomatiki"
+                }
+              },
+              {
+                "label": "Additional keywords",
+                "description": "Add additional keywords separated by a blank space that will be used for filtering but not be visible to the user."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Mipangilio ya tabia",
+          "description": "Chaguzi hizi zitakuwezesha kudhibiti jinsi kazi inavyofanya.",
+          "fields": [
+            {
+              "label": "Tumia maandishi ya kurudi nyuma kwa picha zinazokosekana"
+            },
+            {
+              "label": "Picha"
+            },
+            {
+              "label": "Upana wa picha",
+              "description": "Upana wa picha katika pikseli."
+            },
+            {
+              "label": "Urefu wa picha",
+              "description": "Urefu wa picha katika pikseli."
+            },
+            {
+              "label": "Badilisha mandharinyuma ya paneli",
+              "description": "Ikichaguliwa, kila paneli ya 2 itakuwa na mandharinyuma meusi kidogo kuliko mengine."
+            },
+            {
+              "label": "Weka sehemu ya kichujio",
+              "description": "Ikichaguliwa, watumiaji wataweza kuchuja ukuta wa maelezo."
+            },
+            {
+              "label": "Mode for filter field",
+              "description": "Choose whether the filter should narrow down or broaden the search with every new keyword.",
+              "options": [
+                {
+                  "label": "Narrow down"
+                },
+                {
+                  "label": "Broaden"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Kiolesura cha mtumiaji",
+          "fields": [
+            {
+              "label": "Hakuna maudhui yaliyoingizwa",
+              "default": "Mwandishi hakuingiza chochote."
+            },
+            {
+              "label": "Hakuna mechi zilizopatikana",
+              "description": "@queryni kishikilia nafasi na nafasi yake itachukuliwa na hoja husika ambayo iliwekwa.",
+              "default": "Hakuna mechi kwa @query."
+            },
+            {
+              "label": "Ingiza ili kuchuja",
+              "description": "Ujumbe kwa visoma skrini.",
+              "default": "Ingiza swali la kuchuja maudhui kwa viingilio husika."
+            },
+            {
+              "label": "Orodha imebadilishwa.",
+              "description": "Ujumbe kwa visoma skrini. @visiblena @totalni vishikilia nafasi na vitabadilishwa na thamani husika.",
+              "default": "Orodha imebadilishwa. Inaonyesha @visible kati ya vipengee@total."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Redigerare för Branching Question",
+      "fields": [
+        {
+          "label": "Fråga"
+        },
+        {
+          "label": "Tillgängliga alternativ",
+          "entity": "alternativ",
+          "field": {
+            "label": "Alternativ",
+            "fields": [
+              {
+                "label": "Text"
+              },
+              {
+                "label": "Nästa innehåll (-1 betyder slutskärmen)"
+              },
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback-titel"
+                  },
+                  {
+                    "label": "Feedback-text"
+                  },
+                  {
+                    "label": "Feedback-bild"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

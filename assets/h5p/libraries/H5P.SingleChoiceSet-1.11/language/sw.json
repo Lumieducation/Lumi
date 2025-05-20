@@ -1,0 +1,155 @@
+{
+  "semantics": [
+    {
+      "label": "Orodha ya maswali",
+      "entity": "swali",
+      "widgets": [
+        {
+          "label": "Chaguo-msingi"
+        },
+        {
+          "label": "Kimaandishi"
+        }
+      ],
+      "field": {
+        "label": "Swali na majibu mbadala",
+        "fields": [
+          {
+            "label": "Swali"
+          },
+          {
+            "label": "Majibu mbadala - mbadala ya kwanza ndiyo sahihi.",
+            "entity": "jibu",
+            "field": {
+              "label": "Mbadala"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Maoni ya Jumla",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Chaguo-msingi"
+            }
+          ],
+          "label": "Bainisha maoni maalum kwa masafa yoyote ya alama",
+          "description": "Bofya kitufe cha \"Ongeza masafa\" ili kuongeza masafa mengi unavyohitaji. Mfano: 0-20% Alama mbaya, 21-91% Alama ya Wastani, 91-100% Alama Nzuri!",
+          "entity": "masafa",
+          "field": {
+            "fields": [
+              {
+                "label": "Masafa ya Alama"
+              },
+              {},
+              {
+                "label": "Maoni kwa masafa ya alama yaliyofafanuliwa",
+                "placeholder": "Jaza maoni"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Mipangilio ya tabia",
+      "fields": [
+        {
+          "label": "Kuendelea kiotomatiki",
+          "description": "Automatically go to next question when alternative is selected. This needs to be turned off to make the content fully accessible when using a screen reader."
+        },
+        {
+          "label": "Muda umeisha wa kusubiri majibu sahihi",
+          "description": "Thamani katika milisekunde"
+        },
+        {
+          "label": "Muda umeisha wa kusubiri majibu yasiyo sahihi",
+          "description": "Thamani katika milisekunde"
+        },
+        {
+          "label": "Washa madhara ya sauti"
+        },
+        {
+          "label": "Washa kitufe cha jaribu tena"
+        },
+        {
+          "label": "Washa kitufe cha kuonyesha suluhisho"
+        },
+        {
+          "label": "Asilimia ya ufaulu",
+          "description": "Asilimia ya alama ya Jumla inayohitajika kwa kupita jaribio."
+        }
+      ]
+    },
+    {
+      "label": "Ujanabishe seti ya chaguo moja",
+      "fields": [
+        {
+          "label": "Lebo ya kitufe cha \"Inayofuata\"",
+          "default": "Swali linalofuata"
+        },
+        {
+          "label": "Lebo ya kitufe cha \"Onyesha suluhisho\"",
+          "default": "Onyesha suluhisho"
+        },
+        {
+          "label": "Lebo ya kitufe cha \"Jaribu tena\"",
+          "default": "Jaribu tena"
+        },
+        {
+          "label": "Mada ya mtazamo wa suluhisho la onyesho",
+          "default": "Orodha ya masuluhisho"
+        },
+        {
+          "label": "Maandishi ya kisoma maandishi kwa jibu sahihi",
+          "default": "Sahihi!"
+        },
+        {
+          "label": "Maandishi ya kisoma maandishi kwa jibu lisilo sahihi",
+          "default": "Siyo sahihi!"
+        },
+        {
+          "label": "Option should have been selected",
+          "default": "Should have been selected"
+        },
+        {
+          "label": "Option should not have been selected",
+          "default": "Should not have been selected"
+        },
+        {
+          "label": "Lebo ya kitufe cha \"nyamazisha\", ili kuzima sauti ya maoni",
+          "default": "Nyamazisha sauti ya maoni"
+        },
+        {
+          "label": "Lebo ya kitufe cha \"Funga\"",
+          "default": "Funga"
+        },
+        {
+          "label": "Maandishi ya nambari ya slaidi",
+          "description": "Inatangaza slaidi ya sasa na jumla ya idadi ya slaidi, vigezo ni :numna:total",
+          "default": "Slaidi :numkati ya :total"
+        },
+        {
+          "label": "Uwakilishi wa maandishi wa upau wa alama kwa wale wanaotumia kisoma maandishi",
+          "default": "Umepata :num kati ya alama :total"
+        },
+        {
+          "label": "Lebo ya nambari ya swali katika orodha ya masuluhisho",
+          "description": "Inatangaza faharasa ya sasa ya swali katika orodha ya masuluhisho:num vigezo ni",
+          "default": "Swali :num"
+        },
+        {
+          "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Onyesha Suluhisho\"",
+          "default": "Onyesha suluhisho hilo. Kazi hiyo itawekwa alama na suluhisho lake sahihi."
+        },
+        {
+          "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Jaribu tena\"",
+          "default": "Jaribu tena kazi hiyo. Weka upya majibu yote na uanze kazi tena."
+        }
+      ]
+    }
+  ]
+}

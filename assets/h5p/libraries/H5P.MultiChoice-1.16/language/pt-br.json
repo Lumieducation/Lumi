@@ -1,0 +1,258 @@
+{
+  "semantics": [
+    {
+      "label": "Mídia",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Mídia opcional para exibir acima da pergunta."
+        },
+        {
+          "label": "Desativar o zoom da imagem"
+        }
+      ]
+    },
+    {
+      "label": "Questão"
+    },
+    {
+      "label": "Opções disponíveis",
+      "entity": "opção",
+      "field": {
+        "label": "Opção",
+        "fields": [
+          {
+            "label": "Texto"
+          },
+          {
+            "label": "Correto"
+          },
+          {
+            "label": "Dicas e feedback",
+            "fields": [
+              {
+                "label": "Texto da dica",
+                "description": "Dica para o usuário. Isto aparecerá antes do usuário marcar sua(s) resposta(s)."
+              },
+              {
+                "label": "Mensagem mostrada se a resposta for selecionada",
+                "description": "A mensagem aparecerá abaixo da resposta em \"verificar\" se esta resposta for selecionada."
+              },
+              {
+                "label": "Mensagem mostrada se resposta não for selecionada",
+                "description": "A mensagem aparecerá abaixo da resposta em \"verificar\" se esta resposta não for selecionada."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback Geral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Definir feedback personalizado para qualquer faixa de pontuação",
+          "description": "Clique no botão \"Adicionar faixa\" para adicionar quantos intervalos você precisar. Exemplo: 0-20% Pontuação Ruim, 21-91% Pontuação Média, 91-100% Pontuação Ótima!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de Pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para a faixa de pontuação definida",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tradução da interface de usuário para múltipla escolha",
+      "fields": [
+        {
+          "label": "Rótulo do botão de verificar resposta",
+          "default": "Verificar"
+        },
+        {
+          "label": "Rótulo do botão Enviar resposta",
+          "default": "Enviar"
+        },
+        {
+          "label": "Rótulo do botão de mostrar solução",
+          "default": "Mostrar solução"
+        },
+        {
+          "label": "Rótulo do botão de tentar novamente",
+          "default": "Tentar Novamente"
+        },
+        {
+          "label": "Rótulo da dica",
+          "default": "Mostrar dica"
+        },
+        {
+          "label": "Representação textual da barra de pontuação para aqueles que usam leitores de telas",
+          "description": "As variáveis disponíveis são :num e :total",
+          "default": "Você conseguiu :num de :total pontos possíveis"
+        },
+        {
+          "label": "Dica disponível (não exibida)",
+          "default": "Dica disponível",
+          "description": "Texto de acessibilidade para leitores de telas"
+        },
+        {
+          "label": "Feedback disponível (não exibido)",
+          "default": "Feedback disponível",
+          "description": "Texto de acessibilidade para leitores de telas"
+        },
+        {
+          "label": "Ler Feedback (não exibido)",
+          "default": "Ler feedback",
+          "description": "Texto de acessibilidade para leitores de telas"
+        },
+        {
+          "label": "Resposta Incorreta (não exibido)",
+          "default": "Resposta incorreta",
+          "description": "Texto de acessibilidade para leitores de telas"
+        },
+        {
+          "label": "Resposta Correta (não exibido)",
+          "default": "Resposta correta",
+          "description": "Texto de acessibilidade para leitores de telas"
+        },
+        {
+          "label": "A opção deveria ter sido verificada",
+          "default": "Deveria ter sido verificado"
+        },
+        {
+          "label": "A opção não deveria ter sido marcada",
+          "default": "Não deveria ter sido marcado"
+        },
+        {
+          "label": "Texto para a mensagem \"Requer resposta\"",
+          "default": "Por favor, responda antes de visualizar a solução"
+        },
+        {
+          "label": "Descrição da tecnologia de assistência para o botão \"Verificar\"",
+          "default": "Confira as respostas. As respostas serão marcadas como corretas, incorretas ou não respondidas."
+        },
+        {
+          "label": "Descrição da tecnologia de assistência para o botão \"Mostrar solução\"",
+          "default": "Mostrar a solução. A tarefa será marcada com sua solução correta."
+        },
+        {
+          "label": "Descrição da tecnologia de assistência para o botão \"Tentar Novamente\"",
+          "default": "Repita a tarefa. Redefina todas as respostas e inicie a tarefa novamente."
+        }
+      ]
+    },
+    {
+      "label": "Configurações comportamentais",
+      "description": "Estas opções lhe permitirão controlar como a tarefa se comporta.",
+      "fields": [
+        {
+          "label": "Ativar o botão \"Tentar Novamente\""
+        },
+        {
+          "label": "Ativar o botão \"Mostrar Solução\""
+        },
+        {
+          "label": "Ativar o botão \"Verificar\""
+        },
+        {
+          "label": "Tipo de Questão",
+          "description": "Selecione a aparência e o comportanto da questão.",
+          "options": [
+            {
+              "label": "Automático"
+            },
+            {
+              "label": "Múltipla escolha (Caixas de seleção)"
+            },
+            {
+              "label": "Escolha única (Botão de opção)"
+            }
+          ]
+        },
+        {
+          "label": "Dar um ponto para toda a tarefa",
+          "description": "Ativa para dar um ponto para respostas múltiplas corretas. Isso não será uma opção no modo \"Escolha única\"."
+        },
+        {
+          "label": "Ordem aleatória das respostas",
+          "description": "Ativa a ordem aleatória das respostas exibidas."
+        },
+        {
+          "label": "Requer resposta antes da visualização da solução"
+        },
+        {
+          "label": "Mostrar diálogo de confirmação em \"Verificar\""
+        },
+        {
+          "label": "Mostrar diálogo de confirmação em \"Tentar Novamente\""
+        },
+        {
+          "label": "Verificação automática das respostas",
+          "description": "Ativar esta opção prejudicará a acessibilidade. Tenha certeza que deseja usar esta opção."
+        },
+        {
+          "label": "Porcentagem para aprovação",
+          "description": "Esta configuração frequentemente não terá nenhum efeito. Isto é a porcentagem da pontuação total requerida quando a opção de um ponto para toda a questão estiver habilitada."
+        },
+        {
+          "label": "Mostrar pontuação",
+          "description": "Mostrar pontos ganhos para cada resposta. Esta não será uma opção no modo 'Resposta única' ou se a opção 'Dar um ponto para toda a tarefa' estiver ativada."
+        }
+      ]
+    },
+    {
+      "label": "Diálogo de confirmação de verificação de resposta",
+      "fields": [
+        {
+          "label": "Texto do cabeçalho",
+          "default": "Finalizar ?"
+        },
+        {
+          "label": "Corpo do texto",
+          "default": "Você tem certeza que deseja finalizar ?"
+        },
+        {
+          "label": "Rótulo do botão Cancelar",
+          "default": "Cancelar"
+        },
+        {
+          "label": "Rótulo do botão Confirmar",
+          "default": "Finalizar"
+        }
+      ]
+    },
+    {
+      "label": "Diálogo de confirmação para nova tentativa",
+      "fields": [
+        {
+          "label": "Texto do cabeçalho",
+          "default": "Tentar Novamente ?"
+        },
+        {
+          "label": "Corpo do texto",
+          "default": "Você tem certeza que deseja tentar novamente ?"
+        },
+        {
+          "label": "Rótulo do botão Cancelar",
+          "default": "Cancelar"
+        },
+        {
+          "label": "Rótulo do botão de Confirmar",
+          "default": "Confirmar"
+        }
+      ]
+    }
+  ]
+}

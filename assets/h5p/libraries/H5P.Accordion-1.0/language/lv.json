@@ -1,0 +1,36 @@
+{
+  "semantics": [
+    {
+      "label": "Paneļi",
+      "entity": "panelis",
+      "field": {
+        "label": "Saturs",
+        "entity": "saturs",
+        "fields": [
+          {
+            "label": "Nosaukums"
+          },
+          {
+            "label": "Satura veids",
+            "entity": "saturs"
+          }
+        ]
+      }
+    },
+    {
+      "label": "H birka etiķetei (neietekmē etiķetes izmēru)",
+      "description": "H birka tiek izmantota etiķetēm. Parasti H2, taču, ja saturs jāizvieto zem H2, izmantojiet H3. Neietekmē etiķetes izmēru, tiek izmantots tikai semantiskiem mērķiem.",
+      "options": [
+        {
+          "label": "H2"
+        },
+        {
+          "label": "H3"
+        },
+        {
+          "label": "H4"
+        }
+      ]
+    }
+  ]
+}

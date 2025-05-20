@@ -1,0 +1,256 @@
+{
+  "semantics": [
+    {
+      "label": "Multimedia",
+      "fields": [
+        {
+          "label": "Mota",
+          "description": "Galderaren gainean bistaratzeko aukerako multimedia."
+        },
+        {
+          "label": "Desgaitu irudien zooma"
+        }
+      ]
+    },
+    {
+      "label": "Galdera"
+    },
+    {
+      "label": "Eskuragarri dauden aukerak",
+      "entity": "aukera",
+      "field": {
+        "label": "Aukera",
+        "fields": [
+          {
+            "label": "Multimedia",
+            "description": "Media to display as a choice."
+          },
+          {
+            "label": "Poster image"
+          },
+          {
+            "label": "Zuzena"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback Orokorra",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Lehenetsitakoa"
+            }
+          ],
+          "label": "Zehaztu ezazu edozein puntuazio-tarterako feedback pertsonalizatua",
+          "description": "Egin klik \"Gehitu tartea\" botoian behar dituzun tarte guztiak gehitzeko. Adibidez: 0-20% Puntuazio eskasa, 21-91% Batez besteko puntuazioa, 91-100% Puntuazio bikaina!",
+          "entity": "tartea",
+          "field": {
+            "fields": [
+              {
+                "label": "Puntuazio tartea"
+              },
+              {},
+              {
+                "label": "Zehaztutako tartearentzako feedbacka",
+                "placeholder": "Idatzi ezazu feedbacka"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Portaera ezarpenak",
+      "description": "Aukera hauek portaera kontrolatzea ahalbidetzen dizute.",
+      "fields": [
+        {
+          "label": "Gaitu \"Saiatu berriro\" botoia"
+        },
+        {
+          "label": "Gaitu \"Erakutsi emaitza\" botoia"
+        },
+        {
+          "label": "Erakutsi \"Egiaztatu\" botoirako baieztapen-mezua"
+        },
+        {
+          "label": "Erakutsi \"Saiatu berriro\" botoirako baieztapen-mezua"
+        },
+        {
+          "label": "Eman puntu bat galdera guztiarengatik",
+          "description": "Galdera guztiarengatik puntu bat ematen du lortutako ehunekoa gainditzeko ehunekoa baino altuagoa bada"
+        },
+        {
+          "label": "Behartu erantzutera emaitza ikusi ahal izan aurretik"
+        },
+        {
+          "label": "Galdera-mota",
+          "description": "Aukeratu ezazu galderaren itxura eta portaera.",
+          "options": [
+            {
+              "label": "Automatikoa"
+            },
+            {
+              "label": "Aukera Anitza (Laukitxoak)"
+            },
+            {
+              "label": "Aukera Bakarra (aukera bakarreko botoiak)"
+            }
+          ]
+        },
+        {
+          "label": "Itxura-proportzioa",
+          "description": "Aukeratu ezazu ordezkoen itxura-proportzioa",
+          "options": [
+            {
+              "label": "Automatikoa"
+            },
+            {
+              "label": "16:9"
+            },
+            {
+              "label": "4:3"
+            },
+            {
+              "label": "3:2"
+            },
+            {
+              "label": "1:1"
+            }
+          ]
+        },
+        {
+          "label": "Gehienezko aukerak errenkadako",
+          "description": "Errenkada bakoitzeko gehienezko aukerak zehazten ditu galderak txukun erakutsi daitezen.",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "3"
+            },
+            {
+              "label": "4"
+            }
+          ]
+        },
+        {
+          "label": "Gainditzeko ehunekoa",
+          "description": "Ezarpen honek maiz ez du inongo eraginik. Eman puntu bat galdera guztiarengatik gaituta dagoenean hau puntua eskuratzeko lortu beharreko ehunekoa da, baita xAPI eskaeretan result.success itzultzeko ere."
+        }
+      ]
+    },
+    {
+      "label": "Erabiltzaile-interfazea",
+      "fields": [
+        {
+          "label": "\"Egiaztatu\" botoiarentzako testua",
+          "default": "Egiaztatu"
+        },
+        {
+          "label": "\"Bidali\" botoiarentzako testua",
+          "default": "Submit"
+        },
+        {
+          "label": "\"Egiaztatu\" botoiaren laguntza-teknologientzako etiketa",
+          "default": "Egiaztatu erantzunak. Erantzunak zuzen, oker edo erantzun gabe gisa markatuko dira."
+        },
+        {
+          "label": "\"Erakutsi emaitza\" botoiaren testua",
+          "default": "Erakutsi emaitza"
+        },
+        {
+          "label": "\"Erakutsi emaitza\" botoiaren laguntza-teknologientzako etiketa",
+          "default": "Erakutsi emaitza. Aukera zuzenak markatuko dira."
+        },
+        {
+          "label": "Erantzun zuzena (erakutsi gabe)",
+          "default": "Erantzun zuzena"
+        },
+        {
+          "label": "Erantzun Okerra (ez da erakusten)",
+          "default": "Erantzun okerra"
+        },
+        {
+          "label": "Aukerak markatuta egon beharko litzateke",
+          "default": "Markatuta egon beharko litzateke"
+        },
+        {
+          "label": "Aukera markatu gabe egon beharko litzateke",
+          "default": "Markatu gabe egon beharko litzateke"
+        },
+        {
+          "label": "\"Erantzuna behar du\" mezuarentzako testua",
+          "default": "Erantzun ezazu mesedez erantzuna ikusi aurretik"
+        },
+        {
+          "label": "\"Saiatu berriro\" botoiarentzako testua",
+          "default": "Saiatu berriro"
+        },
+        {
+          "label": "\"Saiatu berriro\" botoiaren laguntza-teknologientzako etiketa",
+          "default": "Zeregina berriz egiten saiatu. Berrabiarazi erantzun guztiak eta hasi zeregina berriz."
+        },
+        {
+          "label": "Zure emaitza",
+          "description": ":num eta :total euren balioekin ordezkatuko diren aldagaiak dira.",
+          "default": ":total puntutik :num puntu lortu duzu"
+        },
+        {
+          "label": "Egiaztatzeko baieztapen-mezua",
+          "fields": [
+            {
+              "label": "Goiburuko testua",
+              "default": "Amaituta?"
+            },
+            {
+              "label": "Gorputzaren testua",
+              "default": "Ziur zaude amaitu nahi duzula?"
+            },
+            {
+              "label": "Utzi botoiaren etiketa",
+              "default": "Utzi"
+            },
+            {
+              "label": "Berretsi botoiaren etiketa",
+              "default": "Amaitu"
+            }
+          ]
+        },
+        {
+          "label": "Berriz saiatzeko baieztapen-testua",
+          "fields": [
+            {
+              "label": "Goiburuko testua",
+              "default": "Saiatu berriro?"
+            },
+            {
+              "label": "Gorputzaren testua",
+              "default": "Ziur zaude berriz saiatu nahi duzula?"
+            },
+            {
+              "label": "Utzi botoiaren etiketa",
+              "default": "Utzi"
+            },
+            {
+              "label": "Berretsi botoiaren etiketa",
+              "default": "Saiatu berriro"
+            }
+          ]
+        },
+        {
+          "label": "Testua irudiaren ordezko testua falta bada",
+          "default": "Ordezko testua falta da"
+        },
+        {
+          "label": "Close modal button label",
+          "default": "Close modal"
+        }
+      ]
+    }
+  ]
+}

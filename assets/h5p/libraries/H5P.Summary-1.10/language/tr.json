@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Giriş metni",
+      "default": "Doğru ifadeyi seçin.",
+      "description": "Özet aktivitesi üzerinde görüntülenecek."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Varsayılan"
+        },
+        {
+          "label": "Metin"
+        }
+      ],
+      "label": "Özet",
+      "entity": "ifadeler",
+      "field": {
+        "label": "İfadeler grubu",
+        "fields": [
+          {
+            "label": "Özet için ifadeler listesi - birinci ifade doğru.",
+            "entity": "cümle",
+            "field": {
+              "label": "İfade"
+            }
+          },
+          {
+            "label": "İpucu",
+            "fields": [
+              {
+                "label": "İpucu metni"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Overall Feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Varsayılan"
+            }
+          ],
+          "label": "Define custom feedback for any score range",
+          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "Score Range"
+              },
+              {},
+              {
+                "label": "Feedback for defined score range",
+                "placeholder": "Fill in the feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Özet aktivitesinde çözülen ifadeler sayısından önce görüntülenecek metin.",
+      "default": "İlerleme:",
+      "description": "İfadeler üzerinde görüntülenecek. Örneğin: 'İlerleme: 2/5'"
+    },
+    {
+      "label": "Özet aktivitesinde seçilen yanlış cümle sayısından önce görüntülenen metin.",
+      "default": "Yanlış cevaplar:",
+      "description": "İfadeler üzerinde görüntülenecek. Örneğin: 'Yanlış cevaplar: 4'"
+    },
+    {
+      "label": "Özet geri bildirim başlığı",
+      "default": "Sonuçlarınız",
+      "description": "Özet geri bildiriminin üzerinde görüntülenecek metin."
+    },
+    {
+      "label": "Readspeaker text for correct answer",
+      "default": "Correct."
+    },
+    {
+      "label": "Readspeaker text for announcing incorrect answer",
+      "default": "Incorrect! Please try again."
+    },
+    {
+      "label": "Readspeaker label for incorrect answer",
+      "default": "Incorrect"
+    },
+    {
+      "label": "Label list of correct answers",
+      "default": "Correct answers."
+    },
+    {
+      "label": "Label for the show tip button",
+      "default": "Show tip"
+    },
+    {
+      "label": "Textual representation of the score bar for those using a readspeaker",
+      "description": ":num and :total are special keywords which are programmatically updated",
+      "default": "You got :num out of :total points"
+    },
+    {
+      "label": "Text used for readspeakers to communicate progress",
+      "description": ":num and :total are special keywords which are programmatically updated",
+      "default": "Progress :num of :total"
+    }
+  ]
+}

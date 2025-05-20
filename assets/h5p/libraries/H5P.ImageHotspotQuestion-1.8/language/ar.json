@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Image Hotspot Question Editor",
+      "fields": [
+        {
+          "label": "صورة الخلفية",
+          "fields": [
+            {
+              "label": "صورة الخلفية",
+              "description": "اختر صورة لاستخدامها كخلفية لسؤال النقطة المركزية للصورة."
+            }
+          ]
+        },
+        {
+          "label": "نقطة ساخنة",
+          "description": "سحب وافلات الشكل المطلوب من شريط الأدوات لإنشاء نقطة فعالة جديدة. انقر نقرًا مزدوجًا لتحرير نقطة فعالة موجودة. اسحب النقطة الفعالة لتحريكها. اسحب معالج تغيير الحجم في الزاوية اليمنى السفلى لتغيير الحجم.",
+          "fields": [
+            {
+              "label": "وصف المهمة",
+              "description": "تعليمات للمستخدم."
+            },
+            {
+              "label": "نقطة فعالة",
+              "entity": "Hotspot",
+              "field": {
+                "label": "نقطة فعالة",
+                "fields": [
+                  {
+                    "label": "اعدادات المستخدم",
+                    "fields": [
+                      {
+                        "label": "صحيح",
+                        "description": "يمكن أن يكون هناك العديد من النقاط الفعالة الصحيحة. ومع ذلك ، يحصل المستخدم على تعليقات صحيحة / غير صحيحة فورًا بعد النقرة الأولى."
+                      },
+                      {
+                        "label": "تعليق"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "الإعدادات المحسوبة"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "رد الفعل إذا اختار المستخدم بقعة فارغة:",
+              "placeholder": "You didn't locate any hotspots, try again!"
+            },
+            {
+              "label": "إظهار التعليقات كقائمة منبثقة"
+            },
+            {
+              "label": "التمركز",
+              "fields": [
+                {
+                  "label": "نص زر اعادة المحاولة",
+                  "default": "Retry"
+                },
+                {
+                  "label": "نص زر الاغلاق",
+                  "default": "Close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "تمثيل نصي لشريط النتيجة لأولئك الذين يستخدمون تقنية تحويل النص الى كلام ",
+      "default": "You got :num out of :total points"
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
+    }
+  ]
+}

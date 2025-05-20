@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Eléments du questionnaire",
+      "widgets": [
+        {
+          "label": "Par défaut"
+        }
+      ],
+      "entity": "Elément",
+      "field": {
+        "label": "Choisir une bibliothèque",
+        "fields": [
+          {
+            "label": "Bibliothèque",
+            "description": "Choisir une bibliothèque"
+          },
+          {
+            "label": "Champ requis"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Ecran en cas de réussite",
+      "fields": [
+        {
+          "label": "Activer l'écran"
+        },
+        {
+          "label": "Ajouter une image à l'écran",
+          "fields": [
+            {
+              "label": "Rempacez l'icône de la réussite avec une image"
+            }
+          ]
+        },
+        {
+          "label": "Texte affiché à l'envoi des réponses",
+          "default": "Vous avez terminé le questionnaire."
+        }
+      ]
+    },
+    {
+      "label": "Apparence",
+      "fields": [
+        {
+          "label": "Etiquettes des boutons",
+          "fields": [
+            {
+              "label": "Etiquette du bouton Précédent",
+              "default": "Précédent"
+            },
+            {
+              "label": "Etiquette du bouton Continuer",
+              "default": "Continuer"
+            },
+            {
+              "label": "Etiquette du bouton Suivant",
+              "default": "Suivant"
+            },
+            {
+              "label": "Etiquette du bouton Envoyer les résultats",
+              "default": "Envoyer les résultats"
+            }
+          ]
+        },
+        {
+          "label": "Accessibilité",
+          "fields": [
+            {
+              "label": "Etiquette du bouton pour fermer le message d'erreur",
+              "default": "Fermer le message d'erreur"
+            },
+            {
+              "label": "Texte de la barre de progression",
+              "default": "Question %current de %max",
+              "description": "Utilisé pour indiquer la question courante aux technologies d'accessibilité. Variables: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Message requis",
+          "default": "Vous devez répondre à cette question",
+          "description": "Ce message s'affiche si la question est sans réponse et la réponse est requise par un conteneur."
+        },
+        {
+          "label": "Texte de symbole requis",
+          "default": "obligatoire",
+          "description": "Texte accompagnant l'astérisque pour expliquer que la question est obligatoire."
+        },
+        {
+          "label": "Titre de l'écran Envoyer les résultats",
+          "default": "Vous avez réussi à répondre à toutes les questions"
+        },
+        {
+          "label": "Sous-titre de l'écran Envoyer les résultats",
+          "default": "Cliquez ci-dessous pour envoyer les résultats"
+        }
+      ]
+    }
+  ]
+}

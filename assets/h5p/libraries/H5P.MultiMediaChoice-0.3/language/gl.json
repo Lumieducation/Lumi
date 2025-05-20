@@ -1,0 +1,256 @@
+{
+  "semantics": [
+    {
+      "label": "Medios",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Medios adicionais amosados enriba da pregunta."
+        },
+        {
+          "label": "Desactivar zoom da imaxe"
+        }
+      ]
+    },
+    {
+      "label": "Pregunta"
+    },
+    {
+      "label": "Opcións dispoñibles",
+      "entity": "opción",
+      "field": {
+        "label": "Opción",
+        "fields": [
+          {
+            "label": "Medios",
+            "description": "Media to display as a choice."
+          },
+          {
+            "label": "Poster image"
+          },
+          {
+            "label": "Correcto"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Retroalimentación xeral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Por defecto"
+            }
+          ],
+          "label": "Define a retroalimentación por defecto para calquera rango de puntuación",
+          "description": "Preme o botón \"Engadir rango\" para engadir tantos rangos como precises. Exemplo: 0-20% Mala Puntuación, 21-91% Puntuación Media, 91-100% Puntuación Xenial!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango de Puntuación"
+              },
+              {},
+              {
+                "label": "Retroalimentación para rango de puntuación definido",
+                "placeholder": "Escribe a retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Configuración de comportamento",
+      "description": "Estas opcións permitiranche controlar o comportamento da tarefa.",
+      "fields": [
+        {
+          "label": "Activar o botón \"Tentar de novo\""
+        },
+        {
+          "label": "Activar o botón \"Amosar Solución\""
+        },
+        {
+          "label": "Amosar diálogo de confirmación ao premer en \"Comprobar\""
+        },
+        {
+          "label": "Amosar diálogo de confirmación para \"Tentar de novo\""
+        },
+        {
+          "label": "Dá un punto para toda a pregunta",
+          "description": "Concede un punto á pregunta se a puntuación porcentual é superior á porcentaxe de aprobado"
+        },
+        {
+          "label": "Requirir unha resposta antes de poder ver a solución"
+        },
+        {
+          "label": "Tipo de Pregunta",
+          "description": "Selecciona o aspecto e comportamento da pregunta.",
+          "options": [
+            {
+              "label": "Automático"
+            },
+            {
+              "label": "Escolla Múltiple (Caixas de selección)"
+            },
+            {
+              "label": "Escolla Simple (Botóns de Radio)"
+            }
+          ]
+        },
+        {
+          "label": "Relación de aspecto",
+          "description": "Selecciona a relación de aspecto das alternativas",
+          "options": [
+            {
+              "label": "Automático"
+            },
+            {
+              "label": "16:9"
+            },
+            {
+              "label": "4:3"
+            },
+            {
+              "label": "3:2"
+            },
+            {
+              "label": "1:1"
+            }
+          ]
+        },
+        {
+          "label": "Máximo de alternativas por fila",
+          "description": "Establece o número máximo de alternativas por fila para garantir que as preguntas teñan a aparencia axeitada.",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "3"
+            },
+            {
+              "label": "4"
+            }
+          ]
+        },
+        {
+          "label": "Porcentaxe para aprobar",
+          "description": "Esta opción non ten efecto a miúdo. É a porcentaxe da puntuación total requirida para obter 1 punto cando se activa a opción de obter 1 punto pola tarefa completa, e para obter result.success en sentenzas xAPI."
+        }
+      ]
+    },
+    {
+      "label": "Interface de usuario",
+      "fields": [
+        {
+          "label": "Texto para o botón \"Comprobar\"",
+          "default": "Comprobar"
+        },
+        {
+          "label": "Texto para o botón \"Enviar\"",
+          "default": "Enviar"
+        },
+        {
+          "label": "Descrición do botón \"Comprobar\" para as tecnoloxías de asistencia",
+          "default": "Comproba as túas respostas. As respostas marcaranse como correctas, incorrectas ou non contestadas."
+        },
+        {
+          "label": "Texto para o botón \"Amosar solución\"",
+          "default": "Amosar Resposta"
+        },
+        {
+          "label": "Descrición para as tecnoloxías de asistencia para o botón \"Amosar solución\"",
+          "default": "Amosar a solución. Marcaranse as opcións correctas."
+        },
+        {
+          "label": "Resposta Correcta (non amosada)",
+          "default": "Resposta Correcta"
+        },
+        {
+          "label": "Resposta Incorrecta (non amosada)",
+          "default": "Resposta Incorrecta"
+        },
+        {
+          "label": "Deberíase ter marcado a opción",
+          "default": "Deberíase ter marcado"
+        },
+        {
+          "label": "A opción non se debería ter marcado",
+          "default": "Non se debería ter marcado"
+        },
+        {
+          "label": "Texto para a mensaxe \"Resposta requirida\"",
+          "default": "Por favor, responde antes de ver a solución"
+        },
+        {
+          "label": "Texto para o botón \"Tentar de novo\"",
+          "default": "Tentar de novo"
+        },
+        {
+          "label": "Descrición para as tecnoloxías de asistencia do botón \"Tentar de novo\"",
+          "default": "Tenta de novo a tarefa. Borra todas as respostas e comeza a tarefa de novo."
+        },
+        {
+          "label": "O teu resultado",
+          "description": ":num e :total son variables e serán substituídas polos seus respectivos valores.",
+          "default": "Conseguiches :num dun total de :total puntos"
+        },
+        {
+          "label": "Diálogo de confirmación de comprobación",
+          "fields": [
+            {
+              "label": "Texto de cabeceira",
+              "default": "Remataches?"
+            },
+            {
+              "label": "Texto do corpo",
+              "default": "Seguro que queres rematar?"
+            },
+            {
+              "label": "Etiqueta para o botón cancelar",
+              "default": "Cancelar"
+            },
+            {
+              "label": "Etiqueta para o botón confirmar",
+              "default": "Rematar"
+            }
+          ]
+        },
+        {
+          "label": "Diálogo de confirmación para tentar de novo",
+          "fields": [
+            {
+              "label": "Texto de cabeceira",
+              "default": "Tentar de novo?"
+            },
+            {
+              "label": "Texto do corpo",
+              "default": "Seguro que queres tentar de novo?"
+            },
+            {
+              "label": "Etiqueta para o botón cancelar",
+              "default": "Cancelar"
+            },
+            {
+              "label": "Etiqueta para o botón confirmar",
+              "default": "Tentar de novo"
+            }
+          ]
+        },
+        {
+          "label": "Texto se falta o texto alternativo para unha imaxe",
+          "default": "Falta o texto alternativo"
+        },
+        {
+          "label": "Etiqueta para pechar botón modal",
+          "default": "Pechar botón modal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Pealkiri",
+      "placeholder": "Siin saad lisada valikulise pealkirja.",
+      "description": "Pealkiri, mida sa tahaksid pildi kohal näidata"
+    },
+    {
+      "label": "Objektid",
+      "entity": "objekt",
+      "widgets": [
+        {
+          "label": "Vaikimisi"
+        }
+      ],
+      "field": {
+        "label": "Objekt",
+        "fields": [
+          {
+            "label": "Pilt"
+          },
+          {
+            "label": "Silt",
+            "description": "Valikuline silt klõpsu jaoks. Vaata üle, et see ei oleks liiga pikk, muidu pole seda näha."
+          },
+          {
+            "label": "Kirjeldus",
+            "placeholder": "Minu pildi kirjeldus ...",
+            "description": "Valikuline kirjeldus pildi kohta"
+          },
+          {
+            "label": "Audio",
+            "description": "Optional audio that plays when an image is shown."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Käitumise seaded",
+      "description": "Need seaded lasevad sul juhtida, kuidas ülesanne käitub.",
+      "fields": [
+        {
+          "label": "Alguspilt",
+          "description": "Seadista alguspildi number."
+        },
+        {
+          "label": "Klõpsuga liugur",
+          "description": "Kui aktiveeritud, siis liugur klõpsatab pildi asukohale."
+        },
+        {
+          "label": "Näita klõpsukohti",
+          "description": "Kui aktiveeritud, siis liuguri riba kuvab klõpsukoha iga pildi kohta."
+        },
+        {
+          "label": "Näita silte",
+          "description": "Kui aktiveeritud, siis liuguri riba näitab silte klõpsukohtade asemel / lisaks klõpsukohtadele."
+        },
+        {
+          "label": "Nähtamatuse asendamise värv",
+          "description": "Seadista värv, mis asendab piltide nähtamatud alad."
+        },
+        {
+          "label": "Image space in fullscreen mode",
+          "description": "If you have descriptions in addition to the images, set the the percentage of space that the images should use in fullscreen mode."
+        }
+      ]
+    },
+    {
+      "label": "Lugeja",
+      "fields": [
+        {
+          "label": "Pilt",
+          "default": "Pilt"
+        },
+        {
+          "label": "Image Slider",
+          "default": "Image Slider"
+        },
+        {
+          "label": "Mute title",
+          "default": "Vaigista, praegu heli aktiivne"
+        },
+        {
+          "label": "Unmute title",
+          "default": "Aktiveeri heli, praegu vaigistatud"
+        },
+        {
+          "label": "Title for fullscreen button (enter)",
+          "default": "Enter fullscreen mode"
+        },
+        {
+          "label": "Title for fullscreen button (exit)",
+          "default": "Exit fullscreen mode"
+        }
+      ]
+    }
+  ]
+}

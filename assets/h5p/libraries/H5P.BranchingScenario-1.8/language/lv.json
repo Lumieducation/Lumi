@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Zarošanās scenārija redaktors",
+      "fields": [
+        {
+          "label": "Nosaukums"
+        },
+        {
+          "label": "Sākuma ekrāns",
+          "fields": [
+            {
+              "label": "Kursa nosaukums",
+              "placeholder": "Jūsu kursa nosaukums"
+            },
+            {
+              "label": "Kursa rekvizīti",
+              "placeholder": "Detalizēta informācija par kursu"
+            },
+            {
+              "label": "Kursa attēls"
+            },
+            {
+              "label": "Attēla alternatīvais teksts"
+            }
+          ]
+        },
+        {
+          "label": "Beigu ekrānu saraksts",
+          "field": {
+            "label": "Beigu ekrāns",
+            "fields": [
+              {
+                "label": "Nosaukums"
+              },
+              {
+                "label": "Teksts"
+              },
+              {
+                "label": "Attēls"
+              },
+              {
+                "label": "Rezultāts",
+                "description": "Rezultāts tiks nosūtīts uz jebkuru LMS, LRS vai jebkuru citu savienotu pakalpojumu, kas saņem rezultātus no H5P lietotājiem, kuri sasniedz scenārija noklusējuma beigas"
+              },
+              {
+                "label": "Satura ID"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Zarošanās scenārija satura saraksts",
+          "entity": "saturs",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Rādīt satura nosaukumu skatā",
+                "description": "Ja atlasīts, lietotājs redzēs satura nosaukumu augšējā joslā virs šī satura"
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Turpināt"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Punktu skaitīšanas iestatījumi",
+          "fields": [
+            {
+              "label": "Punktu skaitīšanas iestatījumi",
+              "description": "Izvēlieties punktu skaitīšanas veidu",
+              "options": [
+                {
+                  "label": "Statiski iestatiet punktu skaitu katram beigu scenārijam"
+                },
+                {
+                  "label": "Dinamiski aprēķināt punktu skaitu no lietotāja atbildēm"
+                },
+                {
+                  "label": "Nav punktu"
+                }
+              ]
+            },
+            {
+              "label": "Iekļaut mijiedarbību rezultātus zarošanās scenārija punktu skaitā",
+              "description": "Ja izvēlēts, punkti, piemēram, no interaktīvajiem video, tiks pievienoti iegūtajam kopvērtējumam. Ja nav izvēlēts, tiks ņemti vērā tikai zarojošo jautājumu un scenārija beigu ekrānu atgriezeniskās saites sadaļās norādītie punkti."
+            }
+          ]
+        },
+        {
+          "label": "Uzvedības iestatījumi",
+          "fields": [
+            {
+              "label": "Atspējot navigāciju atpakaļ",
+              "description": "Ignorēt individuālos navigācijas atpakaļ iestatījumus"
+            },
+            {
+              "label": "Ignorēt pabeigšanai obligātā satura iestatījumus",
+              "description": "Ignorēt atsevišķus iestatījumus, kas nosaka obligātu satura apguvi pirms pogas \"Turpināt\" aktivizēšanas. Neietekmēs saturu, kas nenorāda, ka ir \"pabeigts\", piemēram, attēli vai kursa prezentācija ar tikai vienu slaidu."
+            },
+            {
+              "label": "Zarošanās jautājumus izkārtot nejauši",
+              "description": "Zarošanās jautājumi tiks izkārtoti nejaušā secībā"
+            }
+          ]
+        },
+        {
+          "label": "Lokalizācija",
+          "fields": [
+            {
+              "label": "Sākuma ekrāna pogas teksts",
+              "default": "Sākt kursu"
+            },
+            {
+              "label": "Beigu ekrāna pogas teksts",
+              "default": "Atsākt kursu"
+            },
+            {
+              "label": "Pogas \"Atpakaļ\" teksts katram bibliotēkas ekrānam un zarošanās jautājumam",
+              "default": "Atpakaļ"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "Teksts pogai, ko izmanto, lai atkārtotu videoklipu",
+              "default": "Atkārtot videoklipu"
+            },
+            {
+              "label": "Rezultāta etiķete beigu ekrānā",
+              "default": "Tavs rezultāts:"
+            },
+            {
+              "label": "Lauka etiķete pilnekrāna pogai",
+              "default": "Pilnekrāna režīms"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

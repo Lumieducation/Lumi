@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Texto da pergunta",
+      "description": "A pergunta na qual o utilizador se baseará para escolher uma opção."
+    },
+    {
+      "label": "Opções",
+      "entity": "opção",
+      "field": {
+        "fields": [
+          {
+            "label": "Texto da opção",
+            "description": "O título que será mostrado no botão da opção."
+          },
+          {
+            "label": "Ir para",
+            "description": "O momento alvo em que o utilizador será redirecionado quando clicar no botão da opção. Insira o tempo no formato M:SS."
+          },
+          {
+            "label": "Texto de confirmação da opção",
+            "description": "Opcional. Texto de confirmação que será mostrado após o utilizador ter clicado o botão da opção."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Título do botão \"Continuar\"",
+      "default": "Continuar"
+    }
+  ]
+}

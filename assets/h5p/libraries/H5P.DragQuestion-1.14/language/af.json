@@ -1,0 +1,271 @@
+{
+  "semantics": [
+    {
+      "label": "Toets antwoord knoppie",
+      "default": "Toets"
+    },
+    {
+      "label": "Submit answer button",
+      "default": "Submit"
+    },
+    {
+      "label": "Probeer weer knoppie",
+      "default": "Probeer weer"
+    },
+    {
+      "label": "Punte verduideliking teks",
+      "default": "Regte antwoord gee +1 punt. Verkeerde antwoord gee -1 punt. Die laagste moontlike telling is 0."
+    },
+    {
+      "fields": [
+        {
+          "label": "Instellings",
+          "fields": [
+            {
+              "label": "Agtergrondprent",
+              "description": "Opsioneel. Kies 'n prent om as agtergrond te gebruik vir jou sleep en laat val taak."
+            },
+            {
+              "label": "Taakgrote",
+              "description": "Spesifiseer hoe groot (in px) die speelarea moet wees."
+            }
+          ]
+        },
+        {
+          "label": "Taak",
+          "description": "Begin deur jou valsones te plaas .<br />Plaas volgende jou valbare elemente en merk die geskikte valsones af.<br />Laastens, redigeer jou valsones weereens en merk die regte antwoorde.",
+          "fields": [
+            {
+              "label": "Elemente",
+              "entity": "element",
+              "field": {
+                "label": "Element",
+                "fields": [
+                  {
+                    "description": "Kies die soort inhoud wat jy graag wil byvoeg."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Kies valsones"
+                  },
+                  {
+                    "label": "Deursigtigheid van agtergrond",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Oneindige aantal elementgevalle",
+                    "description": "Kloon hierdie element sodat dit na verskeie valsones gesleep kan word."
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Valsones",
+              "entity": "Valsone",
+              "field": {
+                "label": "Valsone",
+                "fields": [
+                  {
+                    "label": "Etiket",
+                    "description": "The label is used by assistive technologies."
+                  },
+                  {
+                    "label": "Wys etiket"
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Kies die regte elemente"
+                  },
+                  {
+                    "label": "Deursigtigheid van agtergrond",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Wenke en terugvoer",
+                    "fields": [
+                      {
+                        "label": "Wenkteks"
+                      },
+                      {
+                        "label": "Boodskap wat vertoon word met regte paring",
+                        "description": "Boodskap sal onder die taak op \"toets\" verskyn, indien regte valbare item gepaar is."
+                      },
+                      {
+                        "label": "Boodskap wat vertoon word met verkeerde paring",
+                        "description": "Boodskap wat onder die op \"toets\" verskyn, indien paring verkeerd is."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Hierdie valsone kan net een element bevat",
+                    "description": "Maak seker dat daar net een regte antwoord vir hierdie valsone is"
+                  },
+                  {
+                    "label": "Aktiveer selfbelyning",
+                    "description": "Sal outomaties alle valbare items in hierdie sone belyn."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Algemene terugvoer",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Verstek"
+            }
+          ],
+          "label": "Bepaal verstekterugvoer vir enige reeks tellings",
+          "description": "Kliek op die \"Voeg reeks by\" knoppie om so veel as moontlik reekse by te voeg. Byvoorbeeld: 0-20% Swak Punt, 21-91% Gemiddelde Punt, 91-100% Uitstekende Punt!",
+          "entity": "reeks",
+          "field": {
+            "fields": [
+              {
+                "label": "Telling reeks"
+              },
+              {},
+              {
+                "label": "Terugvoer vir gedefinieerde telling reeks",
+                "placeholder": "Vul die terugvoer in"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellings",
+      "description": "Hierdie keuses laat jou beheer hoe die onderskeie take uitgevoer moet word.",
+      "fields": [
+        {
+          "label": "Aktiveer \"Probeer weer\""
+        },
+        {
+          "label": "Aktiveer \"Toets\" knoppie"
+        },
+        {
+          "label": "Gee een punt vir die hele taak",
+          "description": "Deaktiveer om een punt vir elke valbare item wat reg geplaas is te gee."
+        },
+        {
+          "label": "Pas strafmaatreëls toe",
+          "description": "Pas boetes toe vir elemente wat in die verkeerde sones val. Dit moet geaktiveer word as dieselfde element(e) in meerdere valsones kan val, of as daar net een valsone is. As dit nie geaktiveer is nie, kan leerders alle items aanpas by alle valsones en altyd 'n volledige telling kry."
+        },
+        {
+          "label": "Aktiveer telling verduideliking",
+          "description": "Vertoon 'n verduideliking van telling wanneer gebruiker op antwoord klik (indien die 'Pas strawwe toe' opsie gekies is)."
+        },
+        {
+          "label": "Agtergrond deursigtigheid vir trekbares",
+          "description": "As hierdie veld ingestel is, sal dit die deursigtigheid van alle sleepbare elemente oorheers. Dit moet 'n getal tussen 0 en 100 wees, waar 0 volle deursigtigheid beteken en 100 geen deursigtigheid beteken nie"
+        },
+        {
+          "label": "Druppelsone-hoogtepunt",
+          "description": "Kies wanneer druppelsones beklemtoon word.",
+          "options": [
+            {
+              "label": "As jy sleep"
+            },
+            {
+              "label": "Altyd"
+            },
+            {
+              "label": "Nooit"
+            }
+          ]
+        },
+        {
+          "label": "Spasiëring vir selfbelyning (in px)"
+        },
+        {
+          "label": "Aktiveer Volskerm",
+          "description": "Merk hierdie opsie om die volskermknoppie te aktiveer."
+        },
+        {
+          "label": "Wys puntetelling",
+          "description": "Toon punte verdien vir elke antwoord. Nie beskikbaar as die opsie 'Gee een punt vir die hele taak' geaktiveer is nie."
+        },
+        {
+          "label": "Wys titel",
+          "description": "Ontmerk hierdie opsie as jy nie wil hê dat hierdie titel vertoon moet word nie. Die titel sal slegs in opsommings, statistieke ens. vertoon word."
+        }
+      ]
+    },
+    {
+      "label": "Lokaliseer",
+      "fields": [
+        {
+          "label": "Volskerm etiket",
+          "default": "Volskerm"
+        },
+        {
+          "label": "Verlaat volskermetiket",
+          "default": "Verlaat volskerm"
+        }
+      ]
+    },
+    {
+      "label": "Grypbare voorvoegsel",
+      "default": "Grypbare {num} van {total}."
+    },
+    {
+      "label": "Grypbare agtervoegsel",
+      "default": "Geplaas in druppelsones {num}."
+    },
+    {
+      "label": "Druppelsone voorvoegsel",
+      "default": "Druppelsone {num} van{total}."
+    },
+    {
+      "label": "Geen valsone gekies etiket",
+      "default": "Geen valsone."
+    },
+    {
+      "label": "Etiket vir die wys wenk knopppie",
+      "default": "Wys wenk."
+    },
+    {
+      "label": "Etiket vir wenk beskikbaar",
+      "default": "Wenk beskikbaar"
+    },
+    {
+      "label": "Etiket vir regte antwoord",
+      "default": "Regte antwoord"
+    },
+    {
+      "label": "Etiket vir verkeerde antwoord",
+      "default": "Verkeerde antwoord"
+    },
+    {
+      "label": "Opskrif vir paneel met terugvoer vir regte/verkeerde antwoorde",
+      "default": "Terugvoer"
+    },
+    {
+      "label": "Tekstuele tentoonstelling van die telkaart vir diegene wat 'n spreekleser gebruik",
+      "default": "Jy het :num uit :total punte gekry"
+    },
+    {
+      "label": "Tekstuele voorstelling van die telling-verduideliking-knoppie",
+      "default": "Wys verduideliking van telling"
+    },
+    {
+      "label": "Hulptegnologieetiket vir \"Toets\" knoppie",
+      "default": "Toets die antwoorde. Die antwoorde sal as reg gemerk, verkeerd of onbeantwoord gemerk word."
+    },
+    {
+      "label": "Hulptegnologieetiket vir \"Probeer weer\" knoppie",
+      "default": "Probeer die taak weer. Herstel al die antwoorde en probeer die taak weer van die begin af."
+    }
+  ]
+}

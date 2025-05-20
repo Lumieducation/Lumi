@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Spørreskjema",
+      "widgets": [
+        {
+          "label": "Normal verdi"
+        }
+      ],
+      "entity": "Element",
+      "field": {
+        "label": "Velg innholdstype",
+        "fields": [
+          {
+            "label": "Innholdstype",
+            "description": "Velg innholdstype"
+          },
+          {
+            "label": "Nødvendig felt"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Suksess-skjerm alternativer",
+      "fields": [
+        {
+          "label": "Slå på suksess-skjerm"
+        },
+        {
+          "label": "Legg til bilde for suksess-skjerm",
+          "fields": [
+            {
+              "label": "Bytt ut suksess-skjerm ikon med bilde"
+            }
+          ]
+        },
+        {
+          "label": "Tekst ved ferdig innsending",
+          "default": "Du er nå ferdig med spørreskjemaet."
+        }
+      ]
+    },
+    {
+      "label": "Oversettelser av grensesnitt",
+      "fields": [
+        {
+          "label": "Knappe-etiketter",
+          "fields": [
+            {
+              "label": "Forrige knapp etikett",
+              "default": "Forrige"
+            },
+            {
+              "label": "Fortsett knapp etikett",
+              "default": "Fortsett"
+            },
+            {
+              "label": "Neste knapp etikett",
+              "default": "Neste"
+            },
+            {
+              "label": "Send inn etikett",
+              "default": "Send inn"
+            }
+          ]
+        },
+        {
+          "label": "Oversettelser for hjelpemiddelteknologi",
+          "fields": [
+            {
+              "label": "Lukk \"nødvendig felt tekst\" knappetikett",
+              "default": "Lukk feilmelding"
+            },
+            {
+              "label": "Framgang tekst",
+              "default": "Spørsmål %current av %max",
+              "description": "Brukes for å fortelle hjelpemiddelteknologier hvilket spørsmål vi er på. Variabler: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Nødvendig spørsmål tekst",
+          "default": "Dette spørsmålet krever et svar",
+          "description": "Vises dersom dette feltet er krevet, men ikke besvart."
+        },
+        {
+          "label": "Nødvendig spørsmål symbol tekst",
+          "default": "nødvendig",
+          "description": "Tekst som vil vises ved siden av asterisk for å vise at spørsmålet er påkrevd."
+        },
+        {
+          "label": "Tittel på innsendingsskjermen",
+          "default": "Du er nå ferdig med å svare på spørsmålene."
+        },
+        {
+          "label": "Hjelpetekst for innsendingsskjermen",
+          "default": "Trykk under for å sende inn dine svar"
+        }
+      ]
+    }
+  ]
+}

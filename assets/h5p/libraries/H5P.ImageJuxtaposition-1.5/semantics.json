@@ -1,0 +1,152 @@
+[
+  {
+    "name": "taskDescription",
+    "label": "Task description",
+    "importance": "high",
+    "type": "text",
+    "widget": "html",
+    "description": "Put the heading/instructions you'd like to show above the before/after image here.",
+    "placeholder": "Here you can add an optional heading and/or instructions.",
+    "enterMode": "div",
+    "tags": [
+      "strong",
+      "em",
+      "u",
+      "a",
+      "ul",
+      "ol",
+      "h2",
+      "h3",
+      "hr",
+      "pre",
+      "code"
+    ],
+    "optional": true
+  },
+  {
+    "name": "imageBefore",
+    "type": "group",
+    "label": "First image",
+    "importance": "high",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "imageBefore",
+        "label": "First image",
+        "importance": "low",
+        "type": "library",
+        "options": [
+          "H5P.Image 1.1"
+        ],
+        "optional": false,
+        "description": "The first image. Please make sure that it has the same size as the second image."
+      },
+      {
+        "name": "labelBefore",
+        "label": "Label for first image",
+        "importance": "low",
+        "type": "text",
+        "optional": true,
+        "description": "Label to put over first image"
+      }
+    ]
+  },
+  {
+    "name": "imageAfter",
+    "type": "group",
+    "label": "Second image",
+    "importance": "high",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "imageAfter",
+        "label": "Second image",
+        "importance": "low",
+        "type": "library",
+        "options": [
+          "H5P.Image 1.1"
+        ],
+        "optional": false,
+        "description": "The second image. Please make sure that it has the same size as the first image."
+      },
+      {
+        "name": "labelAfter",
+        "label": "Label for second image",
+        "importance": "low",
+        "type": "text",
+        "optional": true,
+        "description": "Label to put over second image"
+      }
+    ]
+  },
+  {
+    "name": "behavior",
+    "type": "group",
+    "label": "Behavioral settings",
+    "importance": "low",
+    "description": "These options will let you set some details",
+    "optional": true,
+    "fields": [
+      {
+        "name": "startingPosition",
+        "type": "number",
+        "label": "Slider start position in %",
+        "description": "Sets the start position of the slider",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "optional": false
+      },
+      {
+        "name": "sliderOrientation",
+        "type": "select",
+        "label": "Slider orientation",
+        "description": "Horizontal will move left and right, vertical will move up and down.",
+        "options": [
+          {
+            "value": "horizontal",
+            "label": "Horizontal"
+          },
+          {
+            "value": "vertical",
+            "label": "Vertical"
+          }
+        ],
+        "default": "horizontal"
+      },
+      {
+        "name": "sliderColor",
+        "type": "text",
+        "label": "Slider color",
+        "importance": "medium",
+        "optional": true,
+        "default": "#f3f3f3",
+        "widget": "colorSelector",
+        "spectrum": {
+          "showInput": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "label": "Accessibility texts",
+    "common": true,
+    "fields": [
+      {
+        "name": "imageVisibleMessage",
+        "type": "text",
+        "label": "Image visible message",
+        "default": "Image @percentage % visible",
+        "description": "@percentage is a placeholder and will be replaced with the respective value."
+      },
+      {
+        "name": "Dummy",
+        "type": "text",
+        "label": "Dummy",
+        "widget": "none"
+      }
+    ]
+  }
+]

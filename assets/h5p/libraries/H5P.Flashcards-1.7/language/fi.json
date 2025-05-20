@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Tehtävänkuvaus"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Oletus"
+        }
+      ],
+      "label": "Kortit",
+      "entity": "kortti",
+      "field": {
+        "label": "Kortti",
+        "fields": [
+          {
+            "label": "Kysymys",
+            "description": "Kortin kysymysteksti, ei pakollinen kenttä. (kortti voi sisältää pelkän kuvan, pelkän tekstin tai sisältää kuvan ja tekstin)"
+          },
+          {
+            "label": "Vastaus",
+            "description": "Vastaus (ei pakollinen kenttä). Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "Kuva",
+            "description": "Kortin kuva (ei pakollinen kenttä) Kortti voi sisältää pelkän kuvan, pelkän tekstin tai sisältää kuvan ja tekstin"
+          },
+          {
+            "label": "Alternative text for image"
+          },
+          {
+            "label": "Vihje",
+            "fields": [
+              {
+                "label": "Vihjeteksti"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Etenemisteksti",
+      "default": "Kortti @card / @total",
+      "description": "Etenemisteksti, käytettävissä olevat muuttujat @card ja @total Esimerkiksi: 'Kortti @card / @total'"
+    },
+    {
+      "label": "Seuraava-painikkeen teksti",
+      "default": "Seuraava"
+    },
+    {
+      "label": "Takaisin-painikkeen teksti",
+      "default": "Takaisin"
+    },
+    {
+      "label": "Tarkista vastaukset -painikkeen teksti",
+      "default": "Tarkista vastaukset"
+    },
+    {
+      "label": "Vaadi käyttäjältä vastaus ennen kuin ratkaisu näytetään."
+    },
+    {
+      "label": "Vastauskentän teksti",
+      "default": "Vastauksesi"
+    },
+    {
+      "label": "Oikean vastauksen teksti",
+      "default": "Oikein"
+    },
+    {
+      "label": "Väärän vastauksen teksti",
+      "default": "Väärin"
+    },
+    {
+      "label": "Näytä vastaukset teksti",
+      "default": "Oikea vastaus"
+    },
+    {
+      "label": "Tulokset otsikko",
+      "default": "Tulokset"
+    },
+    {
+      "label": "Teksti oikein saaduille vastauksille",
+      "default": "@score / @total oikein",
+      "description": "tulosteksti, käytettävissä olevat muuttujat: @score ja @total. Esimerkki: '@score / @total oikein'"
+    },
+    {
+      "label": "Näytä tulokset teksti",
+      "default": "Näytä tulokset"
+    },
+    {
+      "label": "Lyhyen vastauksen teksti",
+      "default": "A:"
+    },
+    {
+      "label": "Teksti \"retry\" painikkeelle",
+      "default": "Yritä uudelleen"
+    },
+    {
+      "label": "merkkikokoriippuvainen",
+      "description": "Määrittää tuleeko vastauksen olla identtinen määritellyn vastauksen mukaisesti (eli isot ja pienet kirjaimet huomioidaan jne.)"
+    },
+    {
+      "label": "Incorrect text for assistive technologies",
+      "default": "Incorrect answer. Correct answer was @answer",
+      "description": "Text that will be announced to assistive technologies. Use @answer as variable."
+    },
+    {
+      "label": "Correct feedback text for assistive technologies",
+      "default": "@answer is correct.",
+      "description": "Text that will be announced to assistive technologies when a card is answered correctly. Use @answer as variable."
+    },
+    {
+      "label": "Card change for assistive technologies",
+      "default": "Page @current of @total",
+      "description": "Text that will be announced to assistive technologies when navigating between cards. Use @current and @total as variables."
+    },
+    {
+      "label": "Sekoita kortit",
+      "description": "Tällä valinnalla voit satunnaistaa korttien esiintymisjärjestyksen."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Kysymys"
+    },
+    {
+      "label": "Monivalinnan muoto",
+      "options": [
+        {
+          "label": "Monta vastausta"
+        },
+        {
+          "label": "Yksi vastaus"
+        }
+      ]
+    },
+    {
+      "label": "Vastausvaihtoehdot",
+      "entity": "vaihtoehto",
+      "field": {
+        "label": "Vaihtoehto",
+        "fields": [
+          {
+            "label": "Teksti"
+          },
+          {
+            "label": "Palaute",
+            "fields": [
+              {
+                "label": "Näytettävä viesti, kun vastaus valittuna",
+                "description": "Viesti näkyy vastauksen alla, kun Jatka -painiketta on klikattu, ja tämä vastaus on valittuna."
+              },
+              {
+                "label": "Näytettävä viesti, kun vastaus ei ole valittuna",
+                "description": "Viesti näkyy vastauksen alla, kun Jatka -painiketta on klikattu, ja tämä vastaus ei ole valittuna."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

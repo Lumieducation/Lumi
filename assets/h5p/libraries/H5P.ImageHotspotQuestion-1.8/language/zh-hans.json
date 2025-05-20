@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "图像问答任务编辑",
+      "fields": [
+        {
+          "label": "背景图示",
+          "fields": [
+            {
+              "label": "背景图示",
+              "description": "请挑选一张照片作为图像问答任务的背景图示."
+            }
+          ]
+        },
+        {
+          "label": "任务连接点",
+          "description": "可借由工具列功能建立任务连结。亦能对既有任务连接点 ─ 双击鼠标左键进行编辑、单击拖曳移动位置、拉动右下角变更大小.",
+          "fields": [
+            {
+              "label": "任务描述",
+              "description": "使用者操作指南."
+            },
+            {
+              "label": "任务连接点",
+              "entity": "任务连接点",
+              "field": {
+                "label": "任务连接点",
+                "fields": [
+                  {
+                    "label": "使用者设定",
+                    "fields": [
+                      {
+                        "label": "正确",
+                        "description": "可以有多个正确的任务连接点。但是，当使用者第一次点击时将立即取得正确/不正确的回馈资讯."
+                      },
+                      {
+                        "label": "回馈"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "电脑设置"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "当使用者点选到空白处回馈:",
+              "placeholder": "您没有找到任务连接点，请再试一次!"
+            },
+            {
+              "label": "显示即时回馈."
+            },
+            {
+              "label": "在地化",
+              "fields": [
+                {
+                  "label": "重试功能钮名称",
+                  "default": "重试"
+                },
+                {
+                  "label": "关闭功能钮名称",
+                  "default": "关闭"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "阅读器导读文字-评分栏",
+      "default": "您得到了:num 分，总分 :total"
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
+    }
+  ]
+}

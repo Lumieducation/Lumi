@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Opis zadania"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Domyślny"
+        }
+      ],
+      "label": "Karty",
+      "entity": "karta",
+      "field": {
+        "label": "Karta",
+        "fields": [
+          {
+            "label": "Pytanie",
+            "description": "Opcjonalne pytanie kontekstowe do karty. (Karta może zawierać sam obraz, sam tekst lub jedno i drugie)"
+          },
+          {
+            "label": "Odpowiedź",
+            "description": "Odpowiedź (rozwiązanie) dla karty. Użyj symbolu / aby podzielić alternatywne rozwiązania. Użyj \\/ jeśli rozwiązanie zawiera /."
+          },
+          {
+            "label": "Obraz",
+            "description": "Opcjonalny obraz dla karty. (Karta może zawierać sam obraz, sam tekst lub jedno i drugie)"
+          },
+          {
+            "label": "Tekst alternatywny do grafiki"
+          },
+          {
+            "label": "Podpowiedź",
+            "fields": [
+              {
+                "label": "Tekst podpowiedzi"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Tekst postępu",
+      "default": "Karta @card z @total",
+      "description": "Tekst postępu, dostępne zmienne: @card i @total. Przykład: 'Karta @card z @total'"
+    },
+    {
+      "label": "Tekst przycisku Dalej",
+      "default": "Dalej"
+    },
+    {
+      "label": "Tekst przycisku Wstecz",
+      "default": "Wstecz"
+    },
+    {
+      "label": "Tekst przycisku Sprawdź odpowiedzi",
+      "default": "Sprawdź"
+    },
+    {
+      "label": "Wymagaj wpisania odpowiedzi przez użytkownika przed wyświetleniem odpowiedzi"
+    },
+    {
+      "label": "Tekst pola wpisywania odpowiedzi",
+      "default": "Twoja odpowiedź"
+    },
+    {
+      "label": "Tekst dla prawidłowej odpowiedzi",
+      "default": "Prawidłowa odpowiedź"
+    },
+    {
+      "label": "Tekst dla nieprawidłowej odpowiedzi",
+      "default": "Błędna odpowiedź"
+    },
+    {
+      "label": "Pokaż tekst rozwiązania",
+      "default": "Prawidłowa odpowiedź/ odpowiedzi"
+    },
+    {
+      "label": "Tekst tytułu wyników",
+      "default": "Wyniki"
+    },
+    {
+      "label": "Tekst liczby poprawnych odpowiedzi",
+      "default": "@score a @total prawidłowych",
+      "description": "Wynik, dostępne zmienne: @score i @total. Przykład: '@score z @total correct'"
+    },
+    {
+      "label": "Tekst do pokazania wyników",
+      "default": "Pokaż wyniki"
+    },
+    {
+      "label": "Tekst do etykiety krótkiej odpowiedzi",
+      "default": "A:"
+    },
+    {
+      "label": "Tekst przycisku \"Jeszcze raz\"",
+      "default": "Jeszcze raz"
+    },
+    {
+      "label": "Uwzględnia wielkość liter",
+      "description": "Gwarantuje, że dane wprowadzone przez użytkownika są dokładnie takie same jak odpowiedź."
+    },
+    {
+      "label": "Tekst nieprawidłowy dla technologii wspomagających",
+      "default": "Nieprawidłowa odpowiedź. Prawidłowa odpowiedź to @answer",
+      "description": "Tekst dla technologii wspomagających. Użyj @answer jako zmiennej."
+    },
+    {
+      "label": "Prawidłowa informacja zwrotna dla technologii wspomagających",
+      "default": "@answer jest prawidłowa.",
+      "description": "Tekst dla technologii wspomagających kiedy karta otrzymała poprawną odpowiedź. Użyj @answer jako zmiennej."
+    },
+    {
+      "label": "Zmiana karty dla technologii wspomagających",
+      "default": "Strona @current z @total",
+      "description": "Tekst dla technologii wspomagających podczas nawigacji między kartami. Użyj @current i @total jako zmiennych."
+    },
+    {
+      "label": "Karty w przypadkowej kolejności",
+      "description": "Włącz aby wyświetlać karty w przypadkowej kolejności."
+    }
+  ]
+}

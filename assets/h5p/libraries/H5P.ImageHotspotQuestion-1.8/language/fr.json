@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Editeur de questions de l'image interactive",
+      "fields": [
+        {
+          "label": "Image d'arrière-plan",
+          "fields": [
+            {
+              "label": "Image d'arrière-plan",
+              "description": "Sélectionner une image à utiliser comme fond pour la question de la zone réactive de l'image."
+            }
+          ]
+        },
+        {
+          "label": "Zones sensibles",
+          "description": "Sélectionnez la forme de votre choix pour votre zone sensible, redimensionnez-la en l'étirant et placez-la au bon endroit.",
+          "fields": [
+            {
+              "label": "Consigne",
+              "description": "Consigne pour l'utilisateur."
+            },
+            {
+              "label": "Zone sensible",
+              "entity": "Zone sensible",
+              "field": {
+                "label": "Zone sensible",
+                "fields": [
+                  {
+                    "label": "Réglages manuels",
+                    "fields": [
+                      {
+                        "label": "Correct",
+                        "description": "Il peut y avoir plusieurs zones sensibles à trouver. Toutefois, l'utilisateur est averti de la justesse ou non de sa réponse immédiatement après son premier clic."
+                      },
+                      {
+                        "label": "Commentaire de retour"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Réglages calculés automatiquement"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Commentaire si l'utilisateur sélectionne une zone vide :",
+              "placeholder": "Vous n'avez rien trouvé, faîtes un nouvel essai !"
+            },
+            {
+              "label": "Afficher un feedback sur la zone"
+            },
+            {
+              "label": "Localisation",
+              "fields": [
+                {
+                  "label": "Texte du bouton Réessayez",
+                  "default": "Réessayez"
+                },
+                {
+                  "label": "Texte du bouton Fermer",
+                  "default": "Fermer"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Représentation textuelle du panneau du score pour les utilisateurs de la synthèse vocale",
+      "default": "Vous avez :num points sur un total de :total"
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
+    }
+  ]
+}

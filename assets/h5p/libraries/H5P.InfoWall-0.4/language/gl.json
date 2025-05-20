@@ -1,0 +1,156 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Cabeceira",
+          "description": "Cabeceira opcional para o muro informativo."
+        },
+        {
+          "label": "Propiedades",
+          "fields": [
+            {
+              "label": "Propiedades",
+              "description": "Propiedades para as entradas",
+              "entity": "propiedade",
+              "widgets": [
+                {
+                  "label": "Por defecto"
+                }
+              ],
+              "field": {
+                "label": "Elementos de propiedade",
+                "fields": [
+                  {
+                    "label": "Etiqueta",
+                    "default": "Sen nome"
+                  },
+                  {
+                    "label": "Amosar etiqueta de propiedade"
+                  },
+                  {
+                    "label": "Activar busca na propiedade"
+                  },
+                  {
+                    "label": "Anulación de estilo",
+                    "fields": [
+                      {
+                        "label": "Grosa"
+                      },
+                      {
+                        "label": "Cursiva"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {}
+          ]
+        },
+        {
+          "label": "Paneis",
+          "description": "Paneis para o muro",
+          "entity": "panel",
+          "widgets": [
+            {
+              "label": "Por defecto"
+            }
+          ],
+          "field": {
+            "label": "Elementos de entrada",
+            "fields": [
+              {
+                "label": "Título do panel"
+              },
+              {
+                "label": "Imaxe"
+              },
+              {
+                "label": "Entradas",
+                "description": "Entradas para as propiedades",
+                "entity": "valor",
+                "widgets": [
+                  {
+                    "label": "Por defecto"
+                  }
+                ],
+                "field": {
+                  "label": "Etiqueta para ser cambiada automaticamente"
+                }
+              },
+              {
+                "label": "Additional keywords",
+                "description": "Add additional keywords separated by a blank space that will be used for filtering but not be visible to the user."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Configuración do comportamento",
+          "description": "Estas opcións permitiranche controlar o comportamento da tarefa.",
+          "fields": [
+            {
+              "label": "Usar alternativa para imaxes que faltan"
+            },
+            {
+              "label": "Imaxe"
+            },
+            {
+              "label": "Anchura da imaxe",
+              "description": "Anchura da imaxe en px."
+            },
+            {
+              "label": "Altura da imaxe",
+              "description": "Altura da imaxe en px."
+            },
+            {
+              "label": "Fondo alternativo do panel",
+              "description": "Se está marcado, cada segundo panel terá un fondo lixeiramente máis escuro que os outros."
+            },
+            {
+              "label": "Ofrecer campo de filtrado",
+              "description": "Se está marcado, os usuarios poderán filtrar o muro informativo."
+            },
+            {
+              "label": "Mode for filter field",
+              "description": "Choose whether the filter should narrow down or broaden the search with every new keyword.",
+              "options": [
+                {
+                  "label": "Narrow down"
+                },
+                {
+                  "label": "Broaden"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Interface de usuario",
+          "fields": [
+            {
+              "label": "Non se forneceu ningún contido",
+              "default": "O autor non escribiu nada."
+            },
+            {
+              "label": "Non se atoparon coincidencias",
+              "description": "@query é un texto por defecto que será substituído pola cadea de busca fornecida.",
+              "default": "Non hai coincidencias para @query."
+            },
+            {
+              "label": "Preme Enter para filtrar",
+              "description": "Mensaxe para lectores de pantalla.",
+              "default": "Escribe unha consulta para filtrar o contido en busca de entradas relevantes."
+            },
+            {
+              "label": "A lista cambiou.",
+              "description": "Mensaxe para lectores de pantalla. @visible e @total son textos por defecto que serán substituídos polos valores respectivos.",
+              "default": "A lista cambiou. Amosando @visible dun total de @total elementos."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

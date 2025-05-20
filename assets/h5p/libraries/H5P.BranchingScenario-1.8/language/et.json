@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Hargneva stsenaariumi redaktor",
+      "fields": [
+        {
+          "label": "Pealkiri"
+        },
+        {
+          "label": "Algusvaate",
+          "fields": [
+            {
+              "label": "Algusvaate tiitel",
+              "placeholder": "Sinu kursuse tiitel"
+            },
+            {
+              "label": "Algusvaate subtiitel",
+              "placeholder": "Kursuse detailid"
+            },
+            {
+              "label": "Algusvaate pilt"
+            },
+            {
+              "label": "Image alternative text"
+            }
+          ]
+        },
+        {
+          "label": "Lõppvaadete loetelu",
+          "field": {
+            "label": "Lõppvaade",
+            "fields": [
+              {
+                "label": "Pealkiri"
+              },
+              {
+                "label": "Tekst"
+              },
+              {
+                "label": "Pilt"
+              },
+              {
+                "label": "Punktisumma",
+                "description": "Punktisumma saadetakse LMS, LRS või mõnele teisele ühendatud teenusele, mis kogub H5P keskkonnas vaikelõpustsenaariumini jõudnud kasutajate tulemusi"
+              },
+              {
+                "label": "Sisu ID"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Hargneva stsenaariumisisu loetelu",
+          "entity": "sisu",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Show content title in view",
+                "description": "If selected, the user will see the content title in the top bar above this content."
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Proceed"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Punktiarvestuse valikud",
+          "fields": [
+            {
+              "label": "Punktiarvestuse valikud",
+              "description": "Vali punktiarvestuse tüüp",
+              "options": [
+                {
+                  "label": "Määra iga stsenaariumi jaoks staatiline punktisumma"
+                },
+                {
+                  "label": "Arvuta punktisumma dünaamiliselt kasutaja vastuste alusel"
+                },
+                {
+                  "label": "Punktiarvestust ei ole"
+                }
+              ]
+            },
+            {
+              "label": "Include scores from interactions within the Branching Scenario",
+              "description": "If chosen scores from for instance Interactive Videos will be added to the total score obtained. If not chosen only scores specified in the feedback sections of the content items, branching questions and end scenarios will count."
+            }
+          ]
+        },
+        {
+          "label": "Käitumisseaded",
+          "fields": [
+            {
+              "label": "Override require content finished",
+              "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide."
+            },
+            {
+              "label": "Required to watch",
+              "description": "Urges viewers to complete the Video, Interactive Vdeo and Course Presentation before proceeding with the scenario. This can be overridden on a content level"
+            },
+            {
+              "label": "Randomize Branching Questions",
+              "description": "Branching questions will be displayed in random order"
+            }
+          ]
+        },
+        {
+          "label": "Kohandamine",
+          "fields": [
+            {
+              "label": "Algusvaate nupu tekst",
+              "default": "Alusta kursust"
+            },
+            {
+              "label": "Lõppvaate nupu tekst",
+              "default": "Taasalusta kursust"
+            },
+            {
+              "label": "Igal kogumikkuval oleva nupu tekst",
+              "default": "Jätka"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "Lõppvaatel näidatava punktisumma silt",
+              "default": "Mängi videot uuesti"
+            },
+            {
+              "label": "Label for score on the end screen",
+              "default": "Your score:"
+            },
+            {
+              "label": "Aria label for fullscreen button",
+              "default": "Täisekraan"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

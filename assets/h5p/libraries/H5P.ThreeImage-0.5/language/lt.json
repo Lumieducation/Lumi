@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Trijų vaizdų rengyklė",
+      "fields": [
+        {
+          "label": "Vaizdai",
+          "entity": "Vaizdas",
+          "field": {
+            "fields": [
+              {
+                "label": "Vaizdo tipas",
+                "options": [
+                  {
+                    "label": "360 vaizdas"
+                  },
+                  {
+                    "label": "Statinis vaizdas"
+                  }
+                ]
+              },
+              {
+                "label": "Rodyti \"Atgal\" mygtuką",
+                "description": "Rodyti mygtuką, skirtą grįžti į ankstesnį vaizdą"
+              },
+              {},
+              {
+                "label": "Vaizdo pavadinimas",
+                "description": "Naudojamas vaizdui identifikuoti"
+              },
+              {
+                "label": "Vaizdo fonas"
+              },
+              {
+                "label": "Vaizdo aprašymas",
+                "description": "Tekstas, kuris gali apibūdinti vaizdą naudotojui"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Pavadinimas",
+                      "description": "Jei paliekama tuščia, jokia etiketė nebus rodoma, o ekrano skaitytojams bus bandoma naudoti pavadinimo lauką"
+                    },
+                    {
+                      "label": "Etiketės nustatymai",
+                      "fields": [
+                        {
+                          "label": "Etiketės pozicija",
+                          "description": "Pasirinkite, kur turėtų būti rodoma etiketė",
+                          "options": [
+                            {
+                              "label": "Naudoti elgsenos nustatymą"
+                            },
+                            {
+                              "label": "Lygiuota dešinėje"
+                            },
+                            {
+                              "label": "Lygiuota kairėje"
+                            },
+                            {
+                              "label": "Lygiuota viršuje"
+                            },
+                            {
+                              "label": "Lygiuota apačioje"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Rodyti etiketę",
+                          "description": "Jei nepažymėta - etiketės bus rodomos tik užvedus pelę",
+                          "options": [
+                            {
+                              "label": "Naudoti elgsenos nustatymą"
+                            },
+                            {
+                              "label": "Rodyti"
+                            },
+                            {
+                              "label": "Slėpti"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Mygtuko stilius",
+                "description": "Nuspręskite, kaip turėtų atrodyti į šį vaizdą nukreipti mygtukai. Vaizdams, kurie yra statiški ir neveda į naujas scenas, rekomenduojame naudoti mygtuką \"Daugiau informacijos\".",
+                "options": [
+                  {
+                    "label": "Naujas vaizdas (rodyklė)"
+                  },
+                  {
+                    "label": "Daugiau informacijos (plius)"
+                  }
+                ]
+              },
+              {
+                "label": "Garso takelis",
+                "description": "Pridėti garso takelį, skirtą tik šiai scenai."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Garso takelis"
+        }
+      ]
+    },
+    {
+      "label": "Elgesio nustatymai",
+      "description": "Šios parinktys leis jums valdyti, kaip elgsis pasaulis.",
+      "fields": [
+        {
+          "label": "Globalus garso takelis",
+          "description": "Pridėti garso takelį, kuris pagal nutylėjimą prieinamas visose scenose."
+        },
+        {
+          "label": "Scenos atvaizdavimo kokybė",
+          "description": "Pasirinkite pločio ir aukščio parinkčių, naudojamų scenai atvaizduoti, tikslumą. Tai tiesiogiai veikia vaizdo kokybės lygį, pabandykite padidinti kokybę, jei scena atrodo \"blokinė\" arba scenose matomos \"bangos\". Atkreipkite dėmesį, kad aukštesnės kokybės atvaizdavimas užtrunka ilgiau.",
+          "options": [
+            {
+              "label": "Aukšta kokybė (128x128)"
+            },
+            {
+              "label": "Vidutinė kokybė (64x64)"
+            },
+            {
+              "label": "Žema kokybė (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Etiketės nustatymai",
+          "fields": [
+            {
+              "label": "Etiketės pozicija",
+              "description": "Numatytoji etiketės padėtis. Pozicija gali būti keičiama pagal sąveiką",
+              "options": [
+                {
+                  "label": "Lygiuota dešinėje"
+                },
+                {
+                  "label": "Lygiuota kairėje"
+                },
+                {
+                  "label": "Lygiuota viršuje"
+                },
+                {
+                  "label": "Lygiuota apačioje"
+                }
+              ]
+            },
+            {
+              "label": "Rodyti etiketes",
+              "description": "Jei nepažymėta - etiketės bus rodomos tik užvedus pelę"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Lokalizuoti",
+      "fields": [
+        {
+          "label": "Turinio tipo „Aria“ etiketė",
+          "default": "Virtualus turas"
+        },
+        {
+          "label": "Garso įrašo grojimo etiketė",
+          "default": "Leisti garso takelį"
+        },
+        {
+          "label": "Garso įrašo sustabdymo etiketė",
+          "default": "Sustabdyti garso takelį"
+        },
+        {
+          "label": "Vaizdo pavadinimo funkcijos langas",
+          "default": "Vaizdo aprašymas"
+        },
+        {
+          "label": "Kameros atstatymo mygtuko etiketė",
+          "default": "Kameros atstatymas"
+        },
+        {
+          "label": "Pateikimo funkcijos mygtuko etiketė",
+          "default": "Pateikti"
+        },
+        {
+          "label": "Uždarymo funkcijos mygtuko etiketė",
+          "default": "Uždaryti"
+        },
+        {
+          "label": "Etiketės išplėtimo mygtuko „Aria“ etiketė",
+          "default": "Išskleisti vaizdinę etiketę"
+        },
+        {
+          "label": "Etiketė, kai 360 scenoje įkeliamas fono vaizdas",
+          "default": "Įkeliamas fono vaizdas..."
+        },
+        {
+          "label": "Etiketė, kai nėra turinio",
+          "default": "Nėra turinio"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1028 @@
+{
+  "semantics": [
+    {
+      "label": "Afficher l'écran titre",
+      "description": "Si cette case est cochée, un écran de titre apparaîtra au démarrage."
+    },
+    {
+      "label": "Écran titre",
+      "fields": [
+        {
+          "label": "Introduction",
+          "placeholder": "Bienvenue à ..."
+        },
+        {
+          "label": "Médias de l'écran titre"
+        }
+      ]
+    },
+    {
+      "label": "En-tête",
+      "description": "Titre facultatif pour la barre de titre."
+    },
+    {
+      "label": "Éditeur de cartes de jeu",
+      "fields": [
+        {
+          "label": "Arrière-plan",
+          "fields": [
+            {
+              "label": "Image de fond",
+              "description": "Sélectionnez une image à utiliser comme arrière-plan de la carte du jeu."
+            },
+            {
+              "label": "Background color",
+              "description": "Choose a color to use as the background of the game map."
+            }
+          ]
+        },
+        {
+          "label": "Game map",
+          "fields": [
+            {},
+            {
+              "label": "Elements",
+              "entity": "Element",
+              "field": {
+                "label": "Elements",
+                "fields": [
+                  {
+                    "label": "Id"
+                  },
+                  {
+                    "label": "Type"
+                  },
+                  {
+                    "label": "Étiquette de scène",
+                    "description": "Cette étiquette sera affichée au-dessus de votre exercice et vous aidera à relier les différentes étapes entre elles."
+                  },
+                  {
+                    "label": "L'utilisateur peut commencer ici",
+                    "description": "Si cette case est cochée, cette étape sera l'étape de départ. Si aucune étape ou plusieurs étapes ne peuvent être l'étape de départ, l'étape de départ sera choisie au hasard."
+                  },
+                  {
+                    "label": "Limite de temps",
+                    "description": "Définissez les paramètres liés à la minuterie.",
+                    "fields": [
+                      {
+                        "label": "Limite de temps",
+                        "description": "Délai facultatif en secondes. Si un utilisateur dépasse ce délai, l'exercice se fermera, sera réinitialisé et l'utilisateur perdra une vie si les vies sont limitées."
+                      },
+                      {
+                        "label": "Temps d'avertissement d'expiration",
+                        "description": "Définissez éventuellement le moment où un audio d'avertissement de délai d'attente doit être joué (nombre de secondes restantes). Un audio doit être défini dans les paramètres audio."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Restrictions d'accès",
+                    "description": "Définissez les restrictions de déverrouillage.",
+                    "fields": [
+                      {
+                        "label": "All or any restriction set",
+                        "description": "Choose if all or any of the following restrictions need to be met.",
+                        "options": [
+                          {
+                            "label": "All"
+                          },
+                          {
+                            "label": "Any"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Restriction sets",
+                        "entity": "restriction set",
+                        "widgets": [
+                          {
+                            "label": "Default"
+                          }
+                        ],
+                        "field": {
+                          "label": "Restriction set",
+                          "fields": [
+                            {
+                              "label": "All or any restriction",
+                              "description": "Choose if all or any of the following restrictions need to be met.",
+                              "options": [
+                                {
+                                  "label": "All"
+                                },
+                                {
+                                  "label": "Any"
+                                }
+                              ]
+                            },
+                            {
+                              "label": "Restrictions",
+                              "entity": "restriction",
+                              "field": {
+                                "label": "Restriction",
+                                "fields": [
+                                  {
+                                    "label": "Restriction type",
+                                    "options": [
+                                      {
+                                        "label": "Total score"
+                                      },
+                                      {
+                                        "label": "Stage score"
+                                      },
+                                      {
+                                        "label": "Stage progress"
+                                      },
+                                      {
+                                        "label": "Time"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Total score",
+                                    "fields": [
+                                      {
+                                        "label": "Operator for total score",
+                                        "options": [
+                                          {
+                                            "label": "less than"
+                                          },
+                                          {
+                                            "label": "equal to"
+                                          },
+                                          {
+                                            "label": "not equal to"
+                                          },
+                                          {
+                                            "label": "greater than"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Value of total score to compare"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Stage score",
+                                    "fields": [
+                                      {
+                                        "label": "Stage to get score from"
+                                      },
+                                      {
+                                        "label": "Operator for stage score",
+                                        "options": [
+                                          {
+                                            "label": "less than"
+                                          },
+                                          {
+                                            "label": "equal to"
+                                          },
+                                          {
+                                            "label": "not equal to"
+                                          },
+                                          {
+                                            "label": "greater than"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Score score to compare to"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Stage progress",
+                                    "fields": [
+                                      {
+                                        "label": "Stage to get progress from"
+                                      },
+                                      {
+                                        "label": "Operator for stage progress",
+                                        "options": [
+                                          {
+                                            "label": "is"
+                                          },
+                                          {
+                                            "label": "is not"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Progress to compare to",
+                                        "options": [
+                                          {
+                                            "label": "not started"
+                                          },
+                                          {
+                                            "label": "started"
+                                          },
+                                          {
+                                            "label": "completed"
+                                          },
+                                          {
+                                            "label": "completed successfully"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Time",
+                                    "fields": [
+                                      {
+                                        "label": "Operator for time",
+                                        "options": [
+                                          {
+                                            "label": "before"
+                                          },
+                                          {
+                                            "label": "is"
+                                          },
+                                          {
+                                            "label": "is not"
+                                          },
+                                          {
+                                            "label": "after"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Time to compare to"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "label": "dummy"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Contents",
+                    "entity": "content",
+                    "widgets": [
+                      {
+                        "label": "Default"
+                      }
+                    ],
+                    "field": {
+                      "label": "Content",
+                      "fields": [
+                        {
+                          "label": "Contenu de la scène",
+                          "description": "Choisissez le type de contenu que vous souhaitez ajouter."
+                        },
+                        {
+                          "label": "Dummy"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Type de scène spéciale",
+                    "options": [
+                      {
+                        "label": "Fin"
+                      },
+                      {
+                        "label": "Vie supplémentaire"
+                      },
+                      {
+                        "label": "Temps supplémentaire"
+                      },
+                      {
+                        "label": "Link to external content"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Nombre de vies supplémentaires",
+                    "description": "Définissez le nombre de vies que l'utilisateur obtiendra en entrant dans cette étape."
+                  },
+                  {
+                    "label": "Nombre de secondes pour le temps supplémentaire",
+                    "description": "Définissez le nombre de secondes que l'utilisateur gagnera en entrant dans cette étape."
+                  },
+                  {
+                    "label": "URL to link to",
+                    "description": "Set where the user should be sent to when opening this stage."
+                  },
+                  {
+                    "label": "Place to open link in",
+                    "options": [
+                      {
+                        "label": "New tab"
+                      },
+                      {
+                        "label": "Same tab"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Toujours visible",
+                    "description": "Si cette case est cochée, cette étape sera toujours visible, même si les paramètres de plage de visibilité de la carte en imposent autrement."
+                  },
+                  {
+                    "label": "Remplacer le symbole de verrouillage",
+                    "description": "Si cette case est cochée, les épreuves verrouillées n'utiliseront pas le symbole du cadenas, mais le symbole du type d'épreuve spéciale."
+                  },
+                  {
+                    "label": "Scènes connectées"
+                  },
+                  {
+                    "label": "Télémétrie"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Paths",
+              "entity": "path",
+              "field": {
+                "label": "Path",
+                "fields": [
+                  {
+                    "label": "From"
+                  },
+                  {
+                    "label": "To"
+                  },
+                  {
+                    "label": "Visual settings",
+                    "options": [
+                      {
+                        "label": "Use global settings"
+                      },
+                      {
+                        "label": "Use custom settings"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Custom visual settings",
+                    "fields": [
+                      {
+                        "label": "Color path"
+                      },
+                      {
+                        "label": "Path width",
+                        "options": [
+                          {
+                            "label": "thin"
+                          },
+                          {
+                            "label": "medium"
+                          },
+                          {
+                            "label": "thick"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Path style",
+                        "options": [
+                          {
+                            "label": "Solid"
+                          },
+                          {
+                            "label": "Dotted"
+                          },
+                          {
+                            "label": "Dashed"
+                          },
+                          {
+                            "label": "Double"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Écran de fin",
+      "fields": [
+        {
+          "label": "L'utilisateur n'a pas réussi",
+          "fields": [
+            {
+              "label": "Message (l'utilisateur n'a pas réussi)",
+              "placeholder": "Vous n’y êtes pas parvenu cette fois…"
+            },
+            {
+              "label": "Support d'écran de fin (l'utilisateur n'a pas réussi)"
+            }
+          ]
+        },
+        {
+          "label": "Utilisateur réussi",
+          "fields": [
+            {
+              "label": "Message (Utilisateur réussi)",
+              "placeholder": "Tu l'as fait ..."
+            },
+            {
+              "label": "Support d'écran de fin (utilisateur réussi)"
+            }
+          ]
+        },
+        {
+          "label": "Commentaires globaux",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Défaut"
+                }
+              ],
+              "label": "Définir des commentaires personnalisés pour n’importe quelle plage de scores",
+              "description": "Clique le \"Ajouter une plage\" bouton pour ajouter autant de plages que nécessaire. Exemple: 0-20% Mauvais score, 21-91% Score moyen, 91-100% Super score !",
+              "entity": "plage",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Plage de scores"
+                  },
+                  {},
+                  {
+                    "label": "Commentaires pour une plage de scores définie",
+                    "placeholder": "Remplissez les commentaires"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Paramètres visuels",
+      "fields": [
+        {
+          "label": "Étapes",
+          "fields": [
+            {
+              "label": "Couleur étape non visitée"
+            },
+            {
+              "label": "Couleur scène verrouillée"
+            },
+            {
+              "label": "Couleur étape déverrouillées"
+            },
+            {
+              "label": "Show stars for scores",
+              "description": "Choose if and when stars will be displayed on the map for the scores of the stages. Please note that stages without scored exercises will not get the stars.",
+              "options": [
+                {
+                  "label": "Never"
+                },
+                {
+                  "label": "On hover"
+                },
+                {
+                  "label": "Always"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Chemins",
+          "fields": [
+            {
+              "label": "Afficher les chemins",
+              "description": "Choisissez si les chemins seront affichés sur la carte. Attention : Les chemins sont toujours visibles dans l'éditeur."
+            },
+            {
+              "label": "Style",
+              "fields": [
+                {
+                  "label": "Couleur chemin"
+                },
+                {
+                  "label": "Chemin de couleur effacé"
+                },
+                {
+                  "label": "Largeur du chemin",
+                  "options": [
+                    {
+                      "label": "mince"
+                    },
+                    {
+                      "label": "moyenne"
+                    },
+                    {
+                      "label": "épaisse"
+                    }
+                  ]
+                },
+                {
+                  "label": "Style de chemin",
+                  "options": [
+                    {
+                      "label": "continu"
+                    },
+                    {
+                      "label": "pointillé"
+                    },
+                    {
+                      "label": "tiret"
+                    },
+                    {
+                      "label": "Double"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Divers",
+          "fields": [
+            {
+              "label": "Animer la carte",
+              "description": "Décidez si la carte doit être animée. Même si vous définissez cette option, le type de contenu respectera les paramètres du navigateur des utilisateurs s'ils préfèrent un mouvement réduit."
+            },
+            {
+              "label": "Factice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Paramètres audio",
+      "fields": [
+        {
+          "label": "Musique de fond",
+          "fields": [
+            {
+              "label": "Musique de fond"
+            },
+            {
+              "label": "Muet lorsque vous faites des exercices"
+            }
+          ]
+        },
+        {
+          "label": "Événements",
+          "fields": [
+            {
+              "label": "Cliquez sur la scène verrouillée",
+              "description": "Sera joué sur la carte en cliquant sur une scène verrouillée."
+            },
+            {
+              "label": "Vérifier l'exercice (score non complet)",
+              "description": "Sera joué lorsqu'une réponse est vérifiée et que l'utilisateur n'a pas obtenu le score complet."
+            },
+            {
+              "label": "Vérifier l'exercice (score complet)",
+              "description": "Will be played when an answer is checked and the user did get full score."
+            },
+            {
+              "label": "Débloquer une scène",
+              "description": "Sera joué sur la carte lorsqu'une scène sera déverrouillée."
+            },
+            {
+              "label": "Exercice ouvert",
+              "description": "Sera joué lorsqu’un exercice est ouvert."
+            },
+            {
+              "label": "Exercice terminé",
+              "description": "Sera joué lorsqu’un exercice est terminé."
+            },
+            {
+              "label": "Afficher la boîte de dialogue",
+              "description": "Sera lu lorsqu'une boîte de dialogue de confirmation s'affichera."
+            },
+            {
+              "label": "Score complet",
+              "description": "Sera joué lorsque l'utilisateur atteint le score complet."
+            },
+            {
+              "label": "Vie perdue",
+              "description": "Sera joué lorsque l'utilisateur perd une vie."
+            },
+            {
+              "label": "Vie gagnée",
+              "description": "Sera joué lorsque l'utilisateur gagne une vie."
+            },
+            {
+              "label": "Jeu terminé",
+              "description": "Sera joué lorsque le jeu sera terminé et que l'utilisateur ne pourra pas continuer."
+            },
+            {
+              "label": "Gain de temps supplémentaire",
+              "description": "Sera joué lorsque l'utilisateur gagne du temps supplémentaire."
+            },
+            {
+              "label": "Avertissement d'expiration du temps",
+              "description": "Sera joué lorsque l'utilisateur manque de temps pour un exercice ou si le temps global est écoulé."
+            },
+            {
+              "label": "Écran de fin (pas de partie complète)",
+              "description": "Sera joué sur l'écran de fin si l'utilisateur n'a pas obtenu le score complet."
+            },
+            {
+              "label": "Écran de fin (partie complète)",
+              "description": "Sera joué sur l'écran de fin si l'utilisateur a obtenu le score complet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Paramètres comportementaux",
+      "fields": [
+        {
+          "label": "Vies",
+          "description": "définissez le nombre de vies d'un utilisateur ou laissez vide pour un nombre de vies illimité. Les utilisateurs perdront une vie s'ils n'obtiennent pas le score maximum et ils ne pourront pas continuer une fois que toutes les vies seront perdues."
+        },
+        {
+          "label": "Limite de temps globale",
+          "description": "Limite de temps facultative en secondes pour tout le jeu. Si un utilisateur dépasse ce délai, le jeu sera immédiatement terminé."
+        },
+        {
+          "label": "Temps d'avertissement d'expiration",
+          "description": "Définissez éventuellement le moment où un audio d'avertissement de délai d'attente doit être joué (nombre de secondes restantes). Un audio doit être défini dans les paramètres audio."
+        },
+        {
+          "label": "Terminer le score",
+          "description": "Optional score that can be lower than the summed maximum score of all exercises, so users can receive full score without completing all exercises."
+        },
+        {
+          "label": "Enable \"Retry\" button"
+        },
+        {
+          "label": "Activer \"Afficher les solutions\" bouton"
+        },
+        {
+          "label": "Carte",
+          "fields": [
+            {
+              "label": "Afficher les étiquettes d'étape",
+              "description": "Choisissez si l'étiquette d'une étape sera affichée lorsque vous survolerez une étape avec la souris. L'étiquette ne s'affichera pas sur les appareils tactiles."
+            },
+            {
+              "label": "Itinérance",
+              "description": "Choisissez si les utilisateurs peuvent parcourir librement toutes les étapes, doivent terminer une étape pour accéder aux voisins de cette étape ou doivent passer une étape pour accéder aux voisins de cette étape.",
+              "options": [
+                {
+                  "label": "Circulez à votre aise"
+                },
+                {
+                  "label": "Terminer pour terminer la scène"
+                },
+                {
+                  "label": "Réussir la scène"
+                }
+              ]
+            },
+            {
+              "label": "Plage de visibilité",
+              "description": "Sélectionnez jusqu'où l'utilisateur peut voir les étapes devant lui",
+              "options": [
+                {
+                  "label": "Voir toutes les étapes"
+                },
+                {
+                  "label": "Voir toutes les étapes, celles débloquées et leurs voisins adjacents"
+                },
+                {
+                  "label": "Voir uniquement les étapes débloquées"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Interface utilisateur",
+      "fields": [
+        {
+          "label": "Commencer",
+          "default": "Commencer"
+        },
+        {
+          "label": "Continuer",
+          "default": "Continuer"
+        },
+        {
+          "label": "Redémarrage",
+          "default": "Redémarrage"
+        },
+        {
+          "label": "Afficher les solutions",
+          "default": "Afficher les solutions"
+        },
+        {
+          "label": "Carte complétée",
+          "default": "Vous avez complété la carte !"
+        },
+        {
+          "label": "Score complet, mais plus aucune vie",
+          "default": "Vous avez atteint le score maximum, mais avez perdu toutes vos vies !"
+        },
+        {
+          "label": "Score complet, mais temps dépassé",
+          "default": "Vous avez atteint le score maximum, mais vous avez manqué de temps !"
+        },
+        {
+          "label": "Boîte de dialogue de fin",
+          "default": "Terminer la carte ?"
+        },
+        {
+          "label": "Boîte de dialogue de fin : Général",
+          "default": "Si vous terminez maintenant, vous ne pourrez plus explorer la carte."
+        },
+        {
+          "label": "Boîte de dialogue de fin : Soumission",
+          "default": "Votre score sera soumis."
+        },
+        {
+          "label": "Boîte de dialogue de fin : Question",
+          "default": "Voulez-vous vraiment terminer la carte ?"
+        },
+        {
+          "label": "Boîte de dialogue refusé",
+          "default": "Scène verrouillée"
+        },
+        {
+          "label": "Boîte de dialogue refusé : Général",
+          "default": "This stage requires you to meet some goals before it can be opened."
+        },
+        {
+          "label": "Oui",
+          "default": "Oui"
+        },
+        {
+          "label": "Non",
+          "default": "Non"
+        },
+        {
+          "label": "En-tête de dialogue jeu terminé",
+          "default": "Jeu terminé !"
+        },
+        {
+          "label": "Boîte de dialogue game over",
+          "default": "Vous avez perdu toutes vos vies. Veuillez réessayer !"
+        },
+        {
+          "label": "Boîte de dialogue game over temps dépassé",
+          "default": "Vous n'avez plus de temps. Veuillez réessayer !"
+        },
+        {
+          "label": "Expiration du délai d'attente de l'en-tête de la boîte de dialogue",
+          "default": "Temps dépassé !"
+        },
+        {
+          "label": "Expiration du texte de la boîte de dialogue",
+          "default": "Vous avez manqué de temps."
+        },
+        {
+          "label": "Expiration du texte de la boîte de dialogue (perdu une vie)",
+          "default": "Vous avez manqué de temps et perdu une vie."
+        },
+        {
+          "label": "Score d'en-tête de dialogue incomplet",
+          "default": "Score imcomplet"
+        },
+        {
+          "label": "Score du texte de dialogue incomplet (perdu une vie)",
+          "default": "Vous n'avez pas atteint le score maximum et avez perdu une vie."
+        },
+        {
+          "label": "Partition complète de l'en-tête du dialogue",
+          "default": "Vous avez atteint le score maximum !"
+        },
+        {
+          "label": "Texte du dialogue partition complète",
+          "default": "Vous avez collecté suffisamment de points pour terminer cette carte avec un score complet, mais vous êtes libre d'explorer le reste si vous le souhaitez. Your score will be submitted once you finish the map."
+        },
+        {
+          "label": "Texte du dialogue partition complète (modification, si des vies sont définies)",
+          "default": "Mais méfiez-vous! Vous risquez encore de perdre des vies !"
+        },
+        {
+          "label": "OK",
+          "default": "OK"
+        },
+        {
+          "label": "No stages were set",
+          "default": "Aucune étape n'a été fixée."
+        },
+        {
+          "label": "Settings",
+          "default": "Settings"
+        },
+        {
+          "label": "Volume of music",
+          "default": "Volume of music"
+        },
+        {
+          "label": "Volume of sound effects",
+          "default": "Volume of sound effects"
+        },
+        {
+          "label": "The stage will not be available unless",
+          "default": "The stage will not be available unless:"
+        },
+        {
+          "label": "The stage will not be available unless any of",
+          "default": "The stage will not be available unless any of:"
+        },
+        {
+          "label": "All of:",
+          "default": "All of:"
+        },
+        {
+          "label": "Any of:",
+          "default": "Any of:"
+        },
+        {
+          "label": "Total score less than",
+          "default": "You have a total score less than @value."
+        },
+        {
+          "label": "Total score equal to",
+          "default": "You have a total score equal to @value."
+        },
+        {
+          "label": "Total score not equal to",
+          "default": "You have a total score not equal to @value."
+        },
+        {
+          "label": "Total score greater than",
+          "default": "You have a total score greater than @value."
+        },
+        {
+          "label": "Stage score less than",
+          "default": "You have a score less than @value in stage @label."
+        },
+        {
+          "label": "Stage score equal to",
+          "default": "You have a score equal to @value in stage @label."
+        },
+        {
+          "label": "Stage score not equal to",
+          "default": "You have a score not equal to @value in stage @label."
+        },
+        {
+          "label": "Stage score greater than",
+          "default": "You have a score greater than @value in stage @label."
+        },
+        {
+          "label": "Stage progress is",
+          "default": "The progress of stage @label is @value."
+        },
+        {
+          "label": "Stage progress is not",
+          "default": "Ths progress of stage @label is not @value."
+        },
+        {
+          "label": "Time before",
+          "default": "The current time is before @value."
+        },
+        {
+          "label": "Time is",
+          "default": "The current time is @value."
+        },
+        {
+          "label": "Time is not",
+          "default": "The current time is not @value."
+        },
+        {
+          "label": "Time after",
+          "default": "The current time is after @value."
+        },
+        {
+          "label": "Not started",
+          "default": "not started"
+        },
+        {
+          "label": "Started",
+          "default": "started"
+        },
+        {
+          "label": "Completed",
+          "default": "completed"
+        },
+        {
+          "label": "Completed successfully",
+          "default": "completed successfully"
+        },
+        {
+          "label": "Missing content",
+          "default": "No content was set for this stage!"
+        }
+      ]
+    },
+    {
+      "label": "Textes d'accessibilité",
+      "fields": [
+        {
+          "label": "Finir la carte",
+          "default": "Terminer la carte"
+        },
+        {
+          "label": "Bouton audio (activé)",
+          "default": "Couper le son. Actuellement non muet."
+        },
+        {
+          "label": "Bouton audio (muet)",
+          "default": "Réactiver le son. Actuellement en sourdine."
+        },
+        {
+          "label": "Fermer",
+          "default": "Fermer"
+        },
+        {
+          "label": "Ton résultat",
+          "description": "@score sera remplacé par le nombre de points. @total sera remplacé par le maximum de points possible.",
+          "default": "Vous avez @score sur @total points"
+        },
+        {
+          "label": "La carte a été ouverte",
+          "default": "La carte a été ouverte."
+        },
+        {
+          "label": "La carte a été ouverte (mode solutions)",
+          "default": "La carte a été ouverte en mode solutions."
+        },
+        {
+          "label": "L'écran titre a été ouvert",
+          "default": "L'écran titre a été ouvert."
+        },
+        {
+          "label": "L'écran de fin a été ouvert",
+          "default": "L'écran de fin a été ouvert."
+        },
+        {
+          "label": "Étiquette d'exercice",
+          "description": "@stagelabel est un espace réservé et sera remplacé par l'étiquette de l'étape correspondante.",
+          "default": ". Exercice de @stagelabel"
+        },
+        {
+          "label": "Étiquette du bouton de scène",
+          "description": "@stagelabel est un espace réservé et sera remplacé par l'étiquette de l'étape correspondante.",
+          "default": "Etape : @stagelabel"
+        },
+        {
+          "label": "étiquette de scène adjacente",
+          "description": "@stagelabelOrigin et @stagelabelNeighbor sont des espaces réservés et seront remplacés par les étiquettes d’étape respectives.",
+          "default": "Étape adjacente de @stagelabelOrigin: @stagelabelNeighbor"
+        },
+        {
+          "label": "Bloquée",
+          "default": "Bloquée"
+        },
+        {
+          "label": "débloquée",
+          "default": "débloquée"
+        },
+        {
+          "label": "Description de la navigation",
+          "default": "Utilisez la barre espace ou la touche Entrée pour activer l'étape actuelle. Utilisez les flèches pour sélectionner l'étape adjacente. Utilisez la barre espace ou a touche Entrée sur la scène adjacente pour y accéder."
+        },
+        {
+          "label": "Description de la carte",
+          "default": "Carte"
+        },
+        {
+          "label": "Déplacé sur scène",
+          "description": "@stagelabel est un espace réservé et sera remplacé par l'étiquette de l'étape correspondante.",
+          "default": "Déplacé vers @stagelabel"
+        },
+        {
+          "label": "Scène débloquée",
+          "description": "@stagelabel est un espace réservé et sera remplacé par l'étiquette de l'étape correspondante.",
+          "default": "L'étape @stagelabel a été déverrouillé."
+        },
+        {
+          "label": "Libellé de secours de la barre d'outils",
+          "default": "Carte du jeu"
+        },
+        {
+          "label": "Passer en mode plein écran",
+          "default": "Passer en mode plein écran"
+        },
+        {
+          "label": "Quitter le mode plein écran",
+          "default": "Quitter le mode plein écran"
+        }
+      ]
+    }
+  ]
+}

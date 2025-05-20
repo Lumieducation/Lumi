@@ -1,0 +1,135 @@
+{
+  "semantics": [
+    {
+      "label": "紹介",
+      "description": "紹介文 (最大100語)"
+    },
+    {
+      "label": "小問タイプ",
+      "options": [
+        {
+          "label": "算術計算問題"
+        },
+        {
+          "label": "線形方程式問題"
+        }
+      ]
+    },
+    {
+      "label": "算術演算子",
+      "options": [
+        {
+          "label": "足し算"
+        },
+        {
+          "label": "引き算"
+        },
+        {
+          "label": "掛け算"
+        },
+        {
+          "label": "割り算"
+        }
+      ]
+    },
+    {
+      "label": "数式の型",
+      "options": [
+        {
+          "label": "基本 [ 3x = 12 ]"
+        },
+        {
+          "label": "中程度 [ 4x - 3 = 13 ]"
+        },
+        {
+          "label": "高度 [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "分数を含められる",
+      "description": "方程式に分数を含められる."
+    },
+    {
+      "label": "最大問題数"
+    },
+    {
+      "label": "UIの翻訳言語",
+      "fields": [
+        {
+          "label": "Scoring during quiz",
+          "default": "Score:"
+        },
+        {
+          "label": "Time",
+          "default": "Time: @time"
+        },
+        {
+          "label": "Result page header",
+          "default": "Finished!"
+        },
+        {
+          "label": "Go label",
+          "default": "GO!"
+        },
+        {
+          "label": "Start button label",
+          "default": "Start"
+        },
+        {
+          "label": "リトライボタンのラベル",
+          "default": "リトライ"
+        },
+        {
+          "label": "正解のためのリードスピーカー用テキスト",
+          "default": "正解"
+        },
+        {
+          "label": "不正解ためのリードスピーカー用テキスト",
+          "default": "Incorrect. Correct answer was :num"
+        },
+        {
+          "label": "Readspeaker label for the timer",
+          "default": "Duration in hours, minutes and seconds."
+        },
+        {
+          "label": "Readspeaker text for question",
+          "default": "What does :arithmetic equal?"
+        },
+        {
+          "label": "Readspeaker text for equation question",
+          "default": "For the equation :equation, what does :item equal?"
+        },
+        {
+          "label": "Readspeaker text for equation variable",
+          "default": "What does :item equal?"
+        },
+        {
+          "label": "Plus operator text",
+          "default": "plus"
+        },
+        {
+          "label": "Subtraction operator text",
+          "default": "minus"
+        },
+        {
+          "label": "Multiplication operator text",
+          "default": "times"
+        },
+        {
+          "label": "Division operator text",
+          "default": "divided by"
+        },
+        {
+          "label": "Equality sign text",
+          "default": "equals"
+        },
+        {
+          "label": "Slide number text",
+          "description": "Announces current slide and total number of slides, variables are :num and :total",
+          "default": "Slide :num of :total"
+        }
+      ]
+    }
+  ]
+}

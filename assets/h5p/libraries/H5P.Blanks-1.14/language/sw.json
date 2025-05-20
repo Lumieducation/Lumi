@@ -1,0 +1,214 @@
+{
+  "semantics": [
+    {
+      "label": "Vyombo vya habari",
+      "fields": [
+        {
+          "label": "Aina",
+          "description": "Vyombo vya habari vya hiari vya kuonyesha juu ya swali."
+        },
+        {
+          "label": "Zima ukuzaji wa picha"
+        }
+      ]
+    },
+    {
+      "label": "Maelezo ya kazi",
+      "default": "Jaza maneno yanayokosekana",
+      "description": "Mwongozo unaomwambia mtumiaji jinsi ya kujibu kazi hii."
+    },
+    {
+      "label": "Vizuizi vya maandishi",
+      "entity": "kizuizi cha maandishi",
+      "field": {
+        "label": "Mstari wa maandishi",
+        "placeholder": "Oslo ni mji mkuu wa *Norway*.",
+        "important": {
+          "description": "<ul><li>Nafasi tupu zimeongezwa kwa kinyota (*) mbele na nyuma ya neno/kifungu cha maneno sahihi.</li><li>Majibu mbadala yanatenganishwa kwa mkwaju mbele (/).</li><li>Unaweza kuongeza kidokezo cha maandishi, kwa kutumia koloni (:) mbele ya kidokezo.</li></ul>",
+          "example": "Maudhui ya H5P yanaweza kuhaririwa kwa kutumia *kivinjari/kivinjari-wavuti: Kitu unachotumia kila siku*."
+        }
+      }
+    },
+    {
+      "label": "Maoni ya Jumla",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Chaguo-msingi"
+            }
+          ],
+          "label": "Bainisha maoni maalum kwa masafa yoyote ya alama",
+          "description": "Bofya kitufe cha \"Ongeza masafa\" ili kuongeza masafa mengi unavyohitaji. Mfano: 0-20% Alama mbaya, 21-91% Alama ya Wastani, 91-100% Alama Nzuri!",
+          "entity": "masafa",
+          "field": {
+            "fields": [
+              {
+                "label": "Masafa ya Alama"
+              },
+              {},
+              {
+                "label": "Maoni kwa masafa ya alama yaliyofafanuliwa",
+                "placeholder": "Jaza maoni"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Maandishi ya kitufe cha \"Onyesha suluhisho\"",
+      "default": "Onyesha suluhisho"
+    },
+    {
+      "label": "Maandishi kwa kitufe cha \"Jaribu tena\"",
+      "default": "Jaribu tena"
+    },
+    {
+      "label": "Maandishi ya kitufe cha \"Weka alama\"",
+      "default": "Weka alama"
+    },
+    {
+      "label": "Maandishi ya kitufe cha \"Wasilisha\"",
+      "default": "Wasilisha"
+    },
+    {
+      "label": "Maandishi ya ujumbe \"Haujajazwa\"",
+      "default": "Tafadhali jaza sehemu zote zilizoachwa wazi ili kuona suluhisho"
+    },
+    {
+      "label": "Maandishi ya ujumbe wa ‘jibu' ni sahihi",
+      "default": "'jibu' ni sahihi"
+    },
+    {
+      "label": "Maandishi ya ujumbe wa ‘jibu' ni sahihi",
+      "default": "': jibu (ans)' siyo sahihi"
+    },
+    {
+      "label": "Maandishi ya ujumbe \"Imejibiwa kwa usahihi\"",
+      "default": "Imejibiwa kwa usahihi"
+    },
+    {
+      "label": "Maandishi ya ujumbe \"Imejibiwa kwa usahihi\"",
+      "default": "Imejibiwa isivyo sahihi"
+    },
+    {
+      "label": "Lebo ya teknolojia ya usaidizi kwa kitufe cha suluhisho",
+      "default": "Jibu ni sahihi:"
+    },
+    {
+      "label": "Lebo ya teknolojia ya usaidizi kwa kitufe cha sehemu ya ingizo",
+      "description": "Tumia@num na@total kubadilisha nambari ya sasa ya kufungwa na nambari ya jumla ya kufungwa",
+      "default": "Ingizo tupu@numkati ya@total"
+    },
+    {
+      "label": "Lebo ya teknolojia ya usaidizi kwa kusema ingizo lina kidokezo kilichounganishwa nalo",
+      "default": "Kidokezo kinapatikana"
+    },
+    {
+      "label": "Lebo ya ikoni ya kidokezo",
+      "default": "Kidokezo"
+    },
+    {
+      "label": "Mipangilio ya tabia.",
+      "description": "Chaguzi hizi zitakuwezesha kudhibiti jinsi kazi inavyofanya.",
+      "fields": [
+        {
+          "label": "Wezesha \"Jaribu tena\""
+        },
+        {
+          "label": "Wezesha kitufe cha \"Onyesha suluhisho\""
+        },
+        {
+          "label": "Wezesha kitufe cha \"Weka alama\""
+        },
+        {
+          "label": "Angalia majibu kiotomatiki baada ya kuingiza"
+        },
+        {
+          "label": "Kesi nyeti",
+          "description": "Huhakikisha kuwa ingizo la mtumiaji lazima lifanane kabisa na jibu."
+        },
+        {
+          "label": "Inahitaji sehemu zote kujibiwa kabla ya njia kutazamwa"
+        },
+        {
+          "label": "Weka sehemu za ingizo kwenye mistari tofauti"
+        },
+        {
+          "label": "Onyesha mazungumzo ya uthibitisho kwenye \"Weka alama\"",
+          "description": "Chaguo hili halioani na chaguo la \"Weka alama majibu kiotomatiki baada ya chaguo la kuingiza\""
+        },
+        {
+          "label": "Onyesha mazungumzo ya uthibitisho kwenye \"Jaribu tena\""
+        },
+        {
+          "label": "Kubali makosa madogo ya tahajia",
+          "description": "Ikiwashwa, jibu pia litahesabiwa kuwa sahihi pamoja na makosa madogo ya tahajia (herufi 3-9: Kosa 1, zaidi ya herufi 9: Makosa 2 ya tahajia)"
+        }
+      ]
+    },
+    {
+      "label": "Weka alama mazungumzo ya uthibitisho",
+      "fields": [
+        {
+          "label": "Maandishi ya kichwa",
+          "default": "Maliza?"
+        },
+        {
+          "label": "Maandishi ya kiini",
+          "default": "Una uhakika unataka kumaliza?"
+        },
+        {
+          "label": "Ghairi lebo ya kitufe",
+          "default": "Ghairi"
+        },
+        {
+          "label": "Lebo ya kitufe cha kuthibitisha",
+          "default": "Maliza"
+        }
+      ]
+    },
+    {
+      "label": "Jaribu tena mazungumzo ya uthibitisho",
+      "fields": [
+        {
+          "label": "Maandishi ya kichwa",
+          "default": "Jaribu tena?"
+        },
+        {
+          "label": "Maandishi ya kiini",
+          "default": "Una uhakika unataka kujaribu tena?"
+        },
+        {
+          "label": "Ghairi lebo ya kitufe",
+          "default": "Ghairi"
+        },
+        {
+          "label": "Lebo ya kitufe cha kuthibitisha",
+          "default": "Thibitisha"
+        }
+      ]
+    },
+    {
+      "label": "Uwakilishi wa maandishi wa upau wa alama kwa wale wanaotumia kisoma maandishi",
+      "default": "Umepata :num kati ya alama:total"
+    },
+    {
+      "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Weka alama\"",
+      "default": "Weka alama majibu. Majibu yatatiwa alama kuwa sahihi, siyo sahihi au haijajibiwa."
+    },
+    {
+      "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Onyesha Suluhisho\"",
+      "default": "Onyesha suluhisho hilo. Kazi hiyo itawekwa alama na suluhisho lake sahihi."
+    },
+    {
+      "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Jaribu tena\"",
+      "default": "Jaribu tena kazi hiyo. Weka upya majibu yote na uanze kazi tena."
+    },
+    {
+      "label": "Maelezo ya teknolojia saidizi kwa kitufe cha ‘Kuanza kazi",
+      "default": "Njia ya kuweka alama"
+    }
+  ]
+}

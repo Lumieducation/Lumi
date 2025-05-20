@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Ülesande kirjeldus"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Vaikimisi"
+        }
+      ],
+      "label": "Kaardid",
+      "entity": "kaart",
+      "field": {
+        "label": "Kaart",
+        "fields": [
+          {
+            "label": "Küsimus",
+            "description": "Valikuline tekstiküsimus kaardile. (Kaart võib kasutada vaid pilti, vaid teksti või mõlemat)"
+          },
+          {
+            "label": "Vastus",
+            "description": "Vastus (lahendus) kaardile. Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "Pilt",
+            "description": "Valikuline pilt kaardile. (Kaart võib kasutada vaid pilti, vaid teksti või mõlemat)"
+          },
+          {
+            "label": "Alternative text for image"
+          },
+          {
+            "label": "Vihje",
+            "fields": [
+              {
+                "label": "Vihje tekst"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Edasijõudmise tekst",
+      "default": "Kaart @card / @total",
+      "description": "Edasijõudmise tekst, kasutatavad muutujad on: @card ja @total. Näiteks: 'Kaart @card / @total'"
+    },
+    {
+      "label": "Järgmine nupu tekst",
+      "default": "Järgmine"
+    },
+    {
+      "label": "Eelmine nupu tekst",
+      "default": "Eelmine"
+    },
+    {
+      "label": "Vastuste kontrolli nupu tekst",
+      "default": "Kontrolli"
+    },
+    {
+      "label": "Nõua kasutaja sisendit enne, kui lahendust saab vaadata"
+    },
+    {
+      "label": "Vastuse sisestamisvälja tekst",
+      "default": "Sinu vastus"
+    },
+    {
+      "label": "Õige vastuse tekst",
+      "default": "Õige"
+    },
+    {
+      "label": "Vale vastuse tekst",
+      "default": "Vale"
+    },
+    {
+      "label": "Lahenduse näitamise tekst",
+      "default": "Õige vastus"
+    },
+    {
+      "label": "Tulemuste pealkirja tekst",
+      "default": "Tulemused"
+    },
+    {
+      "label": "Õigete vastuste arvu tekst",
+      "default": "@score / @total õiget vastust",
+      "description": "Tulemuste tekst, kasutatavad muutujad: @score ja @total. Näiteks: '@score / @total õiget'"
+    },
+    {
+      "label": "Tulemuste näitamise tekst",
+      "default": "Näita tulemusi"
+    },
+    {
+      "label": "Lühikese vastusesildi tekst",
+      "default": "A:"
+    },
+    {
+      "label": "\"Proovi uuesti\" nupu tekst",
+      "default": "Proovi uuesti"
+    },
+    {
+      "label": "Tõstutundlik",
+      "description": "Kontrollib, et kasutaja sisend oleks täpselt sama, mis vastus (suur-/väiketähed)."
+    },
+    {
+      "label": "Incorrect text for assistive technologies",
+      "default": "Incorrect answer. Correct answer was @answer",
+      "description": "Text that will be announced to assistive technologies. Use @answer as variable."
+    },
+    {
+      "label": "Correct feedback text for assistive technologies",
+      "default": "@answer is correct.",
+      "description": "Text that will be announced to assistive technologies when a card is answered correctly. Use @answer as variable."
+    },
+    {
+      "label": "Card change for assistive technologies",
+      "default": "Page @current of @total",
+      "description": "Text that will be announced to assistive technologies when navigating between cards. Use @current and @total as variables."
+    },
+    {
+      "label": "Randomize cards",
+      "description": "Enable to randomize the order of cards on display."
+    }
+  ]
+}

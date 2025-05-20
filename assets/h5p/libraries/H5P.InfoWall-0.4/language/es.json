@@ -1,0 +1,156 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Encabezado",
+          "description": "Encabezado opcional para la pared informativa."
+        },
+        {
+          "label": "Propiedades",
+          "fields": [
+            {
+              "label": "Propiedades",
+              "description": "Propiedades para las entradas",
+              "entity": "propiedad",
+              "widgets": [
+                {
+                  "label": "Por defecto"
+                }
+              ],
+              "field": {
+                "label": "Elementos de propiedad",
+                "fields": [
+                  {
+                    "label": "Etiqueta",
+                    "default": "Sin nombre"
+                  },
+                  {
+                    "label": "Mostrar etiqueta de propiedad"
+                  },
+                  {
+                    "label": "Habilitar buscar en la propiedad"
+                  },
+                  {
+                    "label": "Anulación de estilo",
+                    "fields": [
+                      {
+                        "label": "Negrita"
+                      },
+                      {
+                        "label": "Cursiva"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {}
+          ]
+        },
+        {
+          "label": "Paneles",
+          "description": "Paneles para la pared",
+          "entity": "panel",
+          "widgets": [
+            {
+              "label": "Por defecto"
+            }
+          ],
+          "field": {
+            "label": "Elementos de entrada",
+            "fields": [
+              {
+                "label": "Título del panel"
+              },
+              {
+                "label": "Imagen"
+              },
+              {
+                "label": "Entradas",
+                "description": "Entradas para las propiedades",
+                "entity": "valor",
+                "widgets": [
+                  {
+                    "label": "Por defecto"
+                  }
+                ],
+                "field": {
+                  "label": "Etiqueta a ser cambiada automáticamente"
+                }
+              },
+              {
+                "label": "Additional keywords",
+                "description": "Add additional keywords separated by a blank space that will be used for filtering but not be visible to the user."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Configuración del comportamiento",
+          "description": "Estas opciones le permitirán controlar cómo se comporta la tarea.",
+          "fields": [
+            {
+              "label": "Usar \"plan B\" para imágenes que faltan"
+            },
+            {
+              "label": "Imagen"
+            },
+            {
+              "label": "Anchura de la imagen",
+              "description": "Anchura de imagen en px."
+            },
+            {
+              "label": "Altura de imagen",
+              "description": "Altura de imagen en px."
+            },
+            {
+              "label": "Fondo alterno del panel",
+              "description": "Si se activa, cada segundo panel tendrá un fondo ligeramente más oscuro que los otros."
+            },
+            {
+              "label": "Campo de filtrado de contenido",
+              "description": "Si se activa, los usuarios podrán filtrar la pared informativa."
+            },
+            {
+              "label": "Mode for filter field",
+              "description": "Choose whether the filter should narrow down or broaden the search with every new keyword.",
+              "options": [
+                {
+                  "label": "Narrow down"
+                },
+                {
+                  "label": "Broaden"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Interfaz de usuario",
+          "fields": [
+            {
+              "label": "No se introdujo contenido",
+              "default": "El autor no ha aportado nada."
+            },
+            {
+              "label": "No se encontraron coincidencias",
+              "description": "@query es una variable y será reemplazada por la respectiva consulta proporcionada.",
+              "default": "No hay coincidencias para @query."
+            },
+            {
+              "label": "Entrar para filtrar",
+              "description": "Mensaje para lectores de pantalla.",
+              "default": "Escribe una consulta para filtrar el contenido en busca de entradas relevantes."
+            },
+            {
+              "label": "Lista cambiada.",
+              "description": "Mensaje para lectores de pantalla. @visible y @total son variables y se les antepondrán los valores respectivos.",
+              "default": "Lista cambiada. Mostrando @visible de @total elementos."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

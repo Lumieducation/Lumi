@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Editor für Hotspot-Bilder-Aufgaben",
+      "fields": [
+        {
+          "label": "Hintergrundbild",
+          "fields": [
+            {
+              "label": "Hintergrundbild",
+              "description": "Wähle ein Bild als Hintergrundbild für die Hotspot-Bilder-Aufgabe."
+            }
+          ]
+        },
+        {
+          "label": "Hotspots",
+          "description": "Ziehe die gewünschte Form aus der Werkzeugleiste, um einen Hotspot zu erstellen. Per Doppelklick kannst du existierende Hotspots bearbeiten. Hotspots können durch Ziehen verschoben werden. Die Größe lässt sich verändern, indem du an den Ecken des Rahmens ziehst.",
+          "fields": [
+            {
+              "label": "Aufgabenbeschreibung",
+              "description": "Anweisungen für den Nutzer"
+            },
+            {
+              "label": "Hotspot",
+              "entity": "Hotspot",
+              "field": {
+                "label": "Hotspot",
+                "fields": [
+                  {
+                    "label": "Nutzereinstellungen",
+                    "fields": [
+                      {
+                        "label": "Korrekt",
+                        "description": "Es kann mehrere richtige Hotspots geben. Der Nutzer bekommt jedoch unmittelbar nach dem ersten Klick die Rückmeldung, ob der Hotspot richtig oder falsch ist."
+                      },
+                      {
+                        "label": "Rückmeldung"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Berechnete Einstellungen"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Rückmeldung, wenn der Nutzer eine nicht besetzte Stelle anklickt:",
+              "placeholder": "Du hast keinen Hotspot getroffen. Versuch es noch einmal!"
+            },
+            {
+              "label": "Rückmeldung als Popup anzeigen"
+            },
+            {
+              "label": "Bezeichnungen und Beschriftungen",
+              "fields": [
+                {
+                  "label": "Beschriftung des \"Wiederholen\"-Buttons",
+                  "default": "Wiederholen"
+                },
+                {
+                  "label": "Beschriftung des \"Schließen\"-Buttons",
+                  "default": "Schließen"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Text der Punkteleiste für Vorlesewerkzeuge (Barrierefreiheit)",
+      "default": "Du hast :num von :total Punkten erreicht."
+    },
+    {
+      "label": "Beschreibung des \"Wiederholen\"-Buttons (für Hilfsmittel zur Barrierefreiheit)",
+      "default": "Die Aufgabe wiederholen. Alle Versuche werden zurückgesetzt und die Aufgabe wird erneut gestartet."
+    }
+  ]
+}

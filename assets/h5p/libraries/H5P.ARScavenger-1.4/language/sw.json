@@ -1,0 +1,300 @@
+{
+  "semantics": [
+    {
+      "label": "Onyesha skrini ya kuanza",
+      "description": "Ikiwa imechaguliwa, maudhui yataonyesha skrini ya kichwa wakati wa kuanza."
+    },
+    {
+      "label": "Anza skrini",
+      "fields": [
+        {
+          "label": "Utangulizi",
+          "placeholder": "Karibu katika..."
+        },
+        {
+          "label": "Picha ya skrini ya mada"
+        }
+      ]
+    },
+    {
+      "label": "Alama",
+      "fields": [
+        {
+          "label": "Alama",
+          "widgets": [
+            {
+              "label": "Chaguo-msingi"
+            }
+          ],
+          "entity": "alama",
+          "field": {
+            "label": "Alama",
+            "fields": [
+              {
+                "label": "Picha ya alama (ya asili)",
+                "description": "Pakia picha ambayo ungependa kuiundia alama. Inapaswa kuwa picha ya mraba au itapunguzwa. Kumbuka kwamba utahitaji picha ya kipekee ya alama kwa kila mwingiliano.",
+                "importantDescription": {
+                  "description": "Tafadhali kumbuka baadhi ya vigezo kwa ajili ya picha nzuri za alama:<ul><li>Tofauti ya rangi ya juu, haswa nyeusi na nyeupe</li><li>Kukosa ulinganifu</li><li>Azimio la ndani la alama ni saizi 16 x 16, kutumia picha kubwa kunaweza kufanya kugundua alama kuwa mbaya zaidi</li><li>Herufi moja au maneno mafupi hutoa matokeo mazuri</li></ul>"
+                }
+              },
+              {
+                "label": "Picha ya alama (muundo)",
+                "description": "Pakua picha hii ili utumie kama alama inayoonyeshwa kwenye skrini au kuchapishwa kwenye karatasi."
+              },
+              {
+                "label": "Aina ya kitendo",
+                "description": "Hatua ambayo inapaswa kusababishwa wakati alama inapatikana.",
+                "options": [
+                  {
+                    "label": "Mwingiliano wa H5P"
+                  },
+                  {
+                    "label": "Uwekeleaji wa muundo wa 3D"
+                  }
+                ]
+              },
+              {
+                "label": "Mwingiliano",
+                "fields": [
+                  {
+                    "label": "Mwingiliano"
+                  },
+                  {
+                    "label": "Sanamu"
+                  }
+                ]
+              },
+              {
+                "label": "Mfano wa 3D",
+                "fields": [
+                  {
+                    "label": "Faili la mfano wa 3D",
+                    "description": "Pakia faili la glTF (. glb/. gltf) hapa. Muundo unaopendelewa ni \"glTF 2.0 binary\" katika faili moja."
+                  },
+                  {
+                    "label": "Jiometri",
+                    "fields": [
+                      {
+                        "label": "Mizani",
+                        "description": "Weka mfano juu au chini ili kulingana na saizi ya kialamisho chako.",
+                        "fields": [
+                          {
+                            "label": "Asilimia"
+                          },
+                          {
+                            "label": "Sanamu"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Nafasi",
+                        "description": "Weka nafasi ya kukabiliana na mfano kuhusiana na alama.",
+                        "fields": [
+                          {
+                            "label": "Kukabiliana na X"
+                          },
+                          {
+                            "label": "Kukabiliana na Y"
+                          },
+                          {
+                            "label": "Kukabiliana na Z"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Mzunguko",
+                        "description": "Weka mzunguko katika digrii.",
+                        "fields": [
+                          {
+                            "label": "Mhimili wa X"
+                          },
+                          {
+                            "label": "Mhimili wa Y"
+                          },
+                          {
+                            "label": "Mhimili wa Z"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Onyesha skrini ya mwisho",
+      "description": "Ikiwa imechaguliwa, onyesha skrini ya mwisho wakati maingiliano yote yamekamilika. Skrini ya mwisho haitapatikana ikiwa utatumia mifano ya 3D tu."
+    },
+    {
+      "label": "Skrini ya mwisho",
+      "fields": [
+        {
+          "label": "picha ya skrini ya mwisho"
+        },
+        {
+          "label": "Maandishi ya skrini ya mwisho",
+          "placeholder": "Umefanya vizuri!"
+        },
+        {
+          "label": "Maoni ya Jumla",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Chaguo-msingi"
+                }
+              ],
+              "label": "Bainisha maoni maalum kwa masafa yoyote ya alama",
+              "description": "Bofya kitufe cha \"Ongeza masafa\" ili kuongeza masafa mengi unavyohitaji. Mfano: 0-20% Alama mbaya, 21-91% Alama ya Wastani, 91-100% Alama Nzuri!",
+              "entity": "masafa",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Masafa ya Alama"
+                  },
+                  {
+                    "label": "Maoni kwa masafa ya alama yaliyofafanuliwa",
+                    "placeholder": "Jaza maoni"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Mipangilio ya tabia",
+      "fields": [
+        {
+          "label": "Washa kitufe cha \"Jaribu tena\"",
+          "description": "Ikichaguliwa, wanafunzi wanaweza kujaribu tena kazi."
+        },
+        {
+          "label": "Washa kitufe cha Suluhisho",
+          "description": "Ikichaguliwa, wanafunzi wanaweza kuona suluhisho za maingiliano yote."
+        },
+        {
+          "label": "Batilisha kitufe cha Onyesha Suluhisho",
+          "description": "Chaguo hili linaruhusu kuwasha au kuzima kitufe cha \"Onyesha Suluhisho\" kwa maudhui yote au kutumia mipangilio yao ya tabia.",
+          "options": [
+            {
+              "label": "Tumia mpangilio wa tabia"
+            },
+            {
+              "label": "Onyesha kitufe kila wakati"
+            },
+            {
+              "label": "Usionyeshe kitufe kamwe"
+            }
+          ]
+        },
+        {
+          "label": "Batilisha kitufe cha Jaribu tena",
+          "description": "Chaguo hili linaruhusu kuwasha au kuzima kitufe cha \"Jaribu tena\" kwa maudhui yote au kutumia mipangilio yao ya tabia.",
+          "options": [
+            {
+              "label": "Tumia mpangilio wa tabia"
+            },
+            {
+              "label": "Onyesha kitufe kila wakati"
+            },
+            {
+              "label": "Usionyeshe kitufe kamwe"
+            }
+          ]
+        },
+        {
+          "label": "Urefu wa kurudi nyuma",
+          "description": "Weka urefu wa nyuma katika kipimo cha pikseli kwa kesi wakati kuna masuala mtambuka ya kushiriki rasilimali (CORS)."
+        }
+      ]
+    },
+    {
+      "label": "Ujanibishaji",
+      "fields": [
+        {
+          "label": "Kitufe cha kuanza",
+          "default": "Anza"
+        },
+        {
+          "label": "Kitufe cha Jaribu tena",
+          "default": "Jaribu tena"
+        },
+        {
+          "label": "Tafuta alama ili uone mwingiliano.",
+          "default": "Tafuta alama ili uone mwingiliano."
+        },
+        {
+          "label": "Hitilafu: kivinjari hakitumiki",
+          "default": "Inaonekana kivinjari chako hakiwezi kuendesha aina hii ya maudhui, kwa bahati mbaya."
+        },
+        {
+          "label": "Hitilafu: Hakuna ufikiaji wa kamera",
+          "default": "Imeshindwa kufikia kamera."
+        },
+        {
+          "label": "Hitilafu: Hakuna msaada wa kamera",
+          "default": "Kivinjari chako hakionekani kutumia kamera."
+        },
+        {
+          "label": "Hitilafu: Hakuna alama",
+          "default": "Kuna mtu aliyesahau kuongeza alama?"
+        },
+        {
+          "label": "Onyo: Kivinjari jasiri",
+          "default": "Inaonekana unatumia kivinjari Jasiri. Nzuri! Lakini mipangilio yake madhubuti ya faragha inaweza kuzuia kamera kufanya kazi."
+        },
+        {
+          "label": "Kuanzisha maudhui",
+          "default": "Kuanzisha maudhui. Tafadhali usisahau kuruhusu ufikiaji wa kamera."
+        }
+      ]
+    },
+    {
+      "label": "Kisoma maandishi",
+      "fields": [
+        {
+          "label": "Mada ya kitufe cha Skrini Kamili: ingiza",
+          "default": "Ingiza hali ya skrini kamili"
+        },
+        {
+          "label": "Mada ya kitufe cha Skrini Kamili: toka",
+          "default": "Toka kwenye njia ya skrini kamili"
+        },
+        {
+          "label": "Mada ya kitufe cha 'Badilisha mtazamo' (kitendo kinapofungwa)",
+          "default": "Badilisha hadi mazoezi"
+        },
+        {
+          "label": "Mada ya kitufe cha 'Badilisha mtazamo' (kitendo kilipofunguliwa)",
+          "default": "Badilisha hadi kamera"
+        },
+        {
+          "label": "Ujumbe wa 'Kitufe kimezimwa' kwa 'kitufe cha kutazama'",
+          "default": "Huwezi kubadilisha mwonekano sasa hivi"
+        },
+        {
+          "label": "Mada ya kitufe cha Acha",
+          "default": "Acha na onyesha tathmini"
+        },
+        {
+          "label": "Ujumbe wa 'Kitufe kimezimwa' kwa 'kuacha kitufe'",
+          "default": "Bado hujakamilisha mazoezi yote"
+        },
+        {
+          "label": "Kitendo kimefunguliwa",
+          "default": "Mtazamo huo umebadilika na kuwa zoezi."
+        },
+        {
+          "label": "Kitendo kimefungwa",
+          "default": "Mwonekano umebadilika kuwa kamera."
+        }
+      ]
+    }
+  ]
+}

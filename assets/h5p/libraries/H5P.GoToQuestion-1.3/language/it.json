@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Testo della domanda",
+      "description": "Domanda su cui l'apprendente farà la sua scelta"
+    },
+    {
+      "label": "Scelte",
+      "entity": "scelta",
+      "field": {
+        "fields": [
+          {
+            "label": "Testo della scelta",
+            "description": "Etichetta che sarà mostrata sul pulsante di scelta"
+          },
+          {
+            "label": "Vai a",
+            "description": "Il tempo a disposizione dell'apprendente dopo che avrà premuto il pulsante di scelta. Inserisci il codice di tempo nel formato M:SS"
+          },
+          {
+            "label": "Testo Se scelto",
+            "description": "Testo di conferma facoltativo, mostrato dopo che l'apprendente avrà premuto il pulsante di scelta"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Etichetta del pulsante Continua",
+      "default": "Continua"
+    }
+  ]
+}

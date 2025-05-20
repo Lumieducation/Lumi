@@ -1,0 +1,375 @@
+{
+    "editor": {
+        "default_name": "nov H5P",
+        "tab": {
+            "view": "Pogled",
+            "edit": "Uredi"
+        },
+        "sidebar": {
+            "open": "Odprite datoteko H5P",
+            "create": "Nova datoteka H5P",
+            "noOpenFiles": "Ni odprtih datotek"
+        },
+        "startPage": {
+            "title": "Urejevalnik H5P",
+            "welcomeMessage": "Lumi's H5P Editor je samostojna aplikacija, ki vam omogoča ogled, urejanje in ustvarjanje H5P.",
+            "open": "Odprite obstoječi H5P",
+            "create": "ustvarite nov H5P",
+            "start": "začetek"
+        },
+        "exportDialog": {
+            "title": "Izvozi nastavitve",
+            "format": {
+                "title": "Oblika",
+                "bundleLabel": "Datoteka HTML v enem",
+                "bundleHint": "Datoteka lahko za nekatere računalnike postane prevelika, če vključite veliko predstavnostnih datotek.",
+                "externalLabel": "Ena datoteka HTML in več predstavnostnih datotek",
+                "externalHint": "V naslednjem koraku boste morali vnesti ime datoteke HTML. Predstavnostne datoteke bodo shranjene v mape, ki se začnejo z istim imenom.",
+                "scorm": {
+                    "label": "Paket SCORM",
+                    "masteryScoreLabel": "Ocena mojstrstva"
+                }
+            },
+            "reporter": {
+                "hint": "Če dodate poročevalca, lahko študentje shranijo datoteko z napredkom in vam jo pošljejo.",
+                "switchLabel": "Vključi poročevalca",
+                "learnMoreLink": "Več o tem lahko preberete tukaj."
+            },
+            "cancelButton": "Prekliči",
+            "exportButton": "Izvozi zdaj",
+            "filePicker": {
+                "title": "Izvozi kot ...",
+                "buttonLabel": "Izvozi",
+                "formatNames": {
+                    "bundle": "Datoteka HTML vse v enem",
+                    "external": "HTML datoteka",
+                    "scorm": "Datoteka SCORM"
+                }
+            },
+            "defaults": {
+                "authorName": "H5P Avtor",
+                "title": "Vsebina H5P",
+                "filename": "Moj izvoz H5P"
+            },
+            "validationErrors": {
+                "errorNaN": "Vnesena vrednost ni številka",
+                "errorRangeMin": "Vrednost mora biti večja od {{min}}",
+                "errorRangeMax": "Vrednost mora biti manjša od {{max}}",
+                "errorRange": "Vrednost mora biti med {{min}} in {{max}}"
+            },
+            "addFunctionality": {
+                "title": "Dodajte funkcionalnost",
+                "rights": "Pokaži pravice in dovoljenja",
+                "embed": "Pokaži povezavo za vdelavo"
+            },
+            "displayOptions": {
+                "marginX": "Desni in levi rob",
+                "marginY": "Zgornji in spodnji rob",
+                "restrictWidthAndAlign": "Omejite širino in poravnajte na sredini",
+                "maximumWidth": "Največja širina",
+                "addCss": "Dodajte datoteko CSS",
+                "chooseCssFile": "izberite",
+                "title": "Možnosti prikaza"
+            },
+            "pixelsAbbreviation": "px",
+            "cssFilePicker": {
+                "formatName": "Datoteka CSS"
+            }
+        },
+        "saveAsDialog": {
+            "title": "Shrani kot",
+            "fallbackFilename": "Moja datoteka H5P"
+        },
+        "extensionName": "H5P paket"
+    },
+    "settings": {
+        "appbar": {
+            "label": "Nastavitve",
+            "save": "Shrani"
+        },
+        "enable": "Omogoči",
+        "menu": {
+            "general": "Splošno",
+            "updates": "Posodobitve",
+            "account": "račun",
+            "h5p-library-administration": "Knjižnice H5P"
+        },
+        "general": {
+            "header": "Splošno"
+        },
+        "updates": {
+            "header": "Posodobitve"
+        },
+        "account": {
+            "label": "račun",
+            "email": {
+                "title": "E-naslov",
+                "change": "Spremeni e-pošto",
+                "not-set": "E-pošta ni nastavljena"
+            }
+        },
+        "h5p-library-administration": {
+            "header": "Nameščene knjižnice H5P",
+            "notifications": {
+                "upload": {
+                    "success-no-update": "Nalaganje je bilo uspešno, vendar knjižnice niso bile nameščene ali posodobljene. Vrsta vsebine je verjetno že nameščena v sistemu.",
+                    "success-with-update": "Uspešno nameščena {{installed}} in posodobljena {{updated}} knjižnica.",
+                    "error": "Napaka pri nalaganju paketa."
+                },
+                "delete": {
+                    "success": "{{title}} ( {{version}} ) je bila uspešno izbrisana.",
+                    "error": "Napaka pri brisanju knjižnice {{title}} ( {{version}} )."
+                },
+                "get": {
+                    "error": "Napaka pri pridobivanju podrobnih informacij o knjižnici {{library.title}} ( {{version}} )."
+                }
+            },
+            "upload_and_install": "Naložite in namestite knjižnico",
+            "details": "Podrobnosti",
+            "can-not-be-deleted": "Te knjižnice ni mogoče izbrisati, ker se uporablja v {{count}} drugih knjižnicah",
+            "can-not-be-deleted_plural": "Te knjižnice ni mogoče izbrisati, ker se uporablja v {{count}} drugih knjižnicah",
+            "library-details": {
+                "header": "Podrobnosti o knjižnici",
+                "author": "Avtor",
+                "description": "Opis",
+                "license": "Licenca",
+                "standalone": "Samostojna vrsta vsebine",
+                "restricted": "Omejeno (lahko se uporablja samo s privilegiji)",
+                "fullscreen": "Podpira celozaslonski način",
+                "addon": "Addon",
+                "embedTypes": "Dovoljene vrste vdelave",
+                "dependentsCount": "Število knjižnic, ki uporabljajo knjižnico",
+                "instancesCount": "Predmeti, ustvarjeni s to knjižnico kot glavno vrsto vsebine",
+                "instancesAsDependencyCount": "Predmeti, v katerih to knjižnico uporablja druga knjižnica"
+            }
+        },
+        "links": {
+            "header": "Povezave"
+        }
+    },
+    "analytics": {
+        "startPage": {
+            "title": "Lumi Analytics",
+            "welcomeMessage": "Lumijevo orodje Analytics vam omogoča uvoz uporabniških poročil in njihovo vizualizacijo namesto vas",
+            "start": "Začni",
+            "learn_more": "nauči se več",
+            "open": "Izberite mapo z datotekami .lumi"
+        },
+        "name": "Ime",
+        "average": "Povprečno",
+        "searchPlaceholder": "Poiščite imena študentov ...",
+        "brokenFiles": "Seznam zlomljenih datotek",
+        "errors": {
+            "no-content-json": "Vsebina H5P ni bila pravilno dodana v datoteko .lumi.",
+            "json-parse-error": "Datoteka .lumi vsebuje neveljavno vsebino (JSON ni bil razčlenjen).",
+            "determine-name": "Ni bilo mogoče določiti imena študenta.",
+            "invalid-interactions": "Nekatere interakcije so prekinjene.",
+            "invalid-statements": "Nekatere posnete študentske akcije so prekinjene."
+        }
+    },
+    "bug_report": {
+        "title": "Poročila o napakah in zrušitvah",
+        "description": "Pomagajte nam izboljšati našo programsko opremo in storitve s pošiljanjem anonimnih poročil o zrušitvah in napakah.",
+        "consent": "Dovolim tej aplikaciji pošiljanje poročil o napakah in zrušitvah.",
+        "email": {
+            "subject": "Poročilo o težavi Lumi",
+            "body": "Če želite dobiti hitro rešitev za vašo težavo, pišite o:\n\n  - Različica Lumi: <izpolnite tukaj>, Operacijski sistem: <izpolnite tukaj>\n  - opišite težavo\n  - opišite, kako lahko reproduciramo težavo na naših strojih\n  - pošljite nam vzorec .h5p ali izvožene datoteke, če je težava povezana z datotekami\n\nČe nam pošljete sporočila v jeziku, ki ni angleščina ali nemščina, bomo za prevajanje vašega sporočila uporabili orodje za samodejno prevajanje."
+        }
+    },
+    "usage_statistics": {
+        "title": "Statistika uporabe",
+        "description": " Pomagajte nam izboljšati našo programsko opremo in storitve s pošiljanjem anonimnih statističnih podatkov o uporabi.",
+        "consent": "Tej aplikaciji dovoljujem pošiljanje anonimnih statistik uporabe."
+    },
+    "updates": {
+        "title": "Samodejne posodobitve",
+        "description": "Najnovejšo različico pridobite samodejno.",
+        "consent": "Dovolim tej aplikaciji, da samodejno preveri, ali so na voljo posodobitve.",
+        "checkForUpdate": {
+            "title": "Preveri za posodobitve",
+            "description": "Preveri za posodobitve",
+            "checkButton": "Preverite"
+        },
+        "restartAndInstall": "Namestite in znova zaženite",
+        "badge": "Na voljo je posodobitev"
+    },
+    "language": {
+        "title": "Jezik",
+        "description": "Spremenite jezik aplikacije.",
+        "help_translate": "Pomagajte nam pri prevajanju!"
+    },
+    "privacy_policy": {
+        "title": "Politika zasebnosti",
+        "consent": "Prebral sem in se strinjam s politiko zasebnosti."
+    },
+    "setup_dialog": {
+        "description": "Zaščita zasebnosti posameznika je za nas pomembna. Zbiramo samo podatke, ki ste jih izbrali, in jih obdelujemo z vašim soglasjem. Želimo biti čim bolj pregledni. Vendar se Lumi pri delu zanaša na nekatere povezave in prenose podatkov.",
+        "consent_warning": "Za uporabo te aplikacije se morate vsaj strinjati s politiko zasebnosti.",
+        "accept_all": "Sprejmi vse",
+        "accept_selected": "Sprejmi izbrano"
+    },
+    "menu": {
+        "quit": "Prenehati",
+        "file": {
+            "label": "mapa",
+            "open": "Odprite analitične datoteke",
+            "save": "Shrani",
+            "save_as": "Shrani kot...",
+            "export": "Izvozi ...",
+            "edit": "Uredi",
+            "undo": "Razveljavi",
+            "redo": "Pripravljen",
+            "cut": "Cut",
+            "copy": "Kopirati",
+            "paste": "Prilepi",
+            "select_all": "Izberi vse"
+        },
+        "h5peditor": {
+            "new": "Nov H5P",
+            "open": "Odprite H5P"
+        },
+        "help": {
+            "label": "Pomoč",
+            "report_issue": "Poročilo o izdaji",
+            "toggle_developer_tools": "Preklopi orodja za razvijalce",
+            "follow_us_on_twitter": "Spremljajte nas na Twitterju",
+            "about": "O tem"
+        },
+        "mac": {
+            "services": "Storitve",
+            "hide": "Skrij Lumi",
+            "hideothers": "Skrij druge",
+            "unhide": "Pokaži vse"
+        },
+        "window": {
+            "label": "Okno",
+            "show": "Pokaži",
+            "minimize": "Zmanjšajte",
+            "zoom": "Povečava",
+            "front": "Postavite vse spredaj",
+            "close": "Zapri"
+        },
+        "view": {
+            "label": "Pogled",
+            "resetZoom": "Dejanska velikost",
+            "zoomIn": "Približaj",
+            "zoomOut": "Pomanjšanje",
+            "togglefullscreen": "Preklop na celozaslonski način"
+        },
+        "run": {
+            "label": "Teči",
+            "upload": "Naloži v Lumi Run"
+        }
+    },
+    "notifications": {
+        "analytics": {
+            "import": {
+                "error": "Najdena ni nobena veljavna datoteka",
+                "success": "Uvožene datoteke poročil",
+                "brokenFiles": "Najdena je {{count}}",
+                "brokenFiles_plural": "Najdenih je {{count}}"
+            }
+        },
+        "h5peditor": {
+            "save": {
+                "success": "H5P shranjen!",
+                "error": "H5P ni bilo mogoče shraniti."
+            },
+            "open": {
+                "error": "H5P ni bilo mogoče odpreti."
+            },
+            "export_as_html": {
+                "success": "H5P je bil uspešno izvožen",
+                "error": "H5P ni bilo mogoče izvoziti"
+            }
+        },
+        "general": {
+            "econnrefused": "Zdi se, da imate težave z internetno povezavo."
+        },
+        "updater": {
+            "availableText": "Posodobitev je na voljo. Aplikacija bo namestila posodobitev in se znova zagnala.",
+            "availableTitle": "Namesti posodobitve",
+            "updateDownloaded": "Posodobitev je bila prenesena in bo nameščena, ko zapustite Lumi."
+        }
+    },
+    "auth": {
+        "set_email": "Nastavite e-pošto",
+        "email": "E-naslov",
+        "code": "Koda",
+        "verify_code": "Preveri kodo",
+        "verify_email": "preveri email",
+        "notification": {
+            "success": "{{email}} je bil uspešno potrjen",
+            "pending": "Koda za preverjanje je bila poslana na {{email}} . Prosimo, preverite svojo e-pošto.",
+            "logout": {
+                "success": "Odjavljeni ste bili."
+            }
+        },
+        "error": {
+            "no-valid-email": "{{email}} ni veljaven e-poštni naslov.",
+            "econnrefused": "Ni bilo mogoče vzpostaviti stika s strežnikom Lumi Auth. Preverite internetno povezavo."
+        },
+        "cancel": "Prekliči",
+        "logout": "Odjava"
+    },
+    "dialog": {
+        "close": "Zapri"
+    },
+    "general": {
+        "delete": "Izbriši",
+        "copyClipboard": "{{value}} kopirano v odložišče"
+    },
+    "errors": {
+        "codes": {
+            "econnrefused": "Povezava zavrnjena"
+        },
+        "messages": {
+            "econnrefused": "Povezava zavrnjena"
+        }
+    },
+    "prerelease": {
+        "title": "Funkcije predhodne izdaje",
+        "description": "Omogočite eksperimentalne funkcije, preden se izdajo"
+    },
+    "run": {
+        "description": "Lumi Run vam omogoča nalaganje in gostovanje vašega H5P z enim klikom.",
+        "legal": "Če želite uporabljati to storitev, se morate strinjati s pogoji storitve, politiko zasebnosti in nam poslati kontaktni e -poštni naslov.",
+        "tos": {
+            "header": "Pogoji storitve",
+            "description": "Prebral sem in se strinjam s pogoji storitve."
+        },
+        "link": {
+            "header": "Povezava"
+        },
+        "upload": "Naloži",
+        "list": {
+            "header": "Naložen H5P",
+            "noUploadedH5P": "H5P ni naložen",
+            "deleteDialog": {
+                "title": "Izbriši Run {{runId}}",
+                "description": "Ali res želite izbrisati zagon {{runId}}",
+                "cancel": "Prekliči",
+                "confirm": "Potrdite"
+            }
+        },
+        "uploadDialog": {
+            "success": "Vaš H5P je bil naložen na Lumi.run. Do nje lahko dostopate in jo delite na naslednji povezavi.",
+            "uploading": "Nalaganje",
+            "processing": "Obravnavati",
+            "goToRun": "Pojdite na tek",
+            "ok": "V redu"
+        },
+        "setupDialog": {
+            "close": "Zapri",
+            "start": "Začni"
+        },
+        "notifications": {
+            "delete": {
+                "success": "{{id}} uspešno izbrisan z Lumi.run"
+            },
+            "upload": {
+                "success": "H5P je bil uspešno naložen na Lumi.run"
+            }
+        }
+    }
+}

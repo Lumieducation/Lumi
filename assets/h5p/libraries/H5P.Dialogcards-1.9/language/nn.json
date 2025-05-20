@@ -1,0 +1,219 @@
+{
+  "semantics": [
+    {
+      "label": "Heading"
+    },
+    {
+      "label": "Mode",
+      "description": "Mode of presenting the dialog cards",
+      "options": [
+        {
+          "label": "Normal"
+        },
+        {
+          "label": "Repetition"
+        }
+      ]
+    },
+    {
+      "label": "Oppgåvetekst"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "label": "Dialogkort",
+      "entity": "dialogkort",
+      "field": {
+        "label": "Dialogkort",
+        "fields": [
+          {
+            "label": "Tekst",
+            "description": "Nøkkelord til første delen av dialogen"
+          },
+          {
+            "label": "Svar",
+            "description": "Nøkkelord til neste delen av dialogen"
+          },
+          {
+            "label": "Bilete",
+            "description": "Valfritt bilete for kortet.(Korta kan bruka berre bilete, berre tekst, eller begge)"
+          },
+          {
+            "label": "Alternative text for the image"
+          },
+          {
+            "label": "Audio files"
+          },
+          {
+            "label": "Tips",
+            "fields": [
+              {
+                "label": "Tip for text",
+                "description": "Tip for the first part of the dialogue"
+              },
+              {
+                "label": "Tip for answer",
+                "description": "Tip for the second part of the dialogue"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Oppgåveinnstillingar",
+      "description": "Desse vala lar deg styre ulike funksjonar i oppgåva.",
+      "fields": [
+        {
+          "label": "Enable \"Retry\" button"
+        },
+        {
+          "label": "Slå av tilbakenavigering",
+          "description": "Dette valget betyr at man bare kan navigere fremover"
+        },
+        {
+          "label": "Skaler teksten til å få pplass i kortet",
+          "description": "Når man slår av denne vil kortets størrelse endre seg iforhold til mengde tekst"
+        },
+        {
+          "label": "Randomize cards",
+          "description": "Enable to randomize the order of cards on display."
+        },
+        {
+          "label": "Maximum proficiency level"
+        },
+        {
+          "label": "Allow quick progression",
+          "description": "If activated, learners can decide to indicate that they know a card without turning it"
+        }
+      ]
+    },
+    {
+      "label": "Tekst til \"Snu\" knappen",
+      "default": "Snu"
+    },
+    {
+      "label": "Tekst til \"Neste\" knappen",
+      "default": "Neste"
+    },
+    {
+      "label": "Tekst til \"Førre\" knappen",
+      "default": "Forrige"
+    },
+    {
+      "label": "Tekst til \"Omstart\" knappen",
+      "default": "Prøv igjen"
+    },
+    {
+      "label": "Text for the \"correct answer\" button",
+      "default": "Eg fekk riktig!"
+    },
+    {
+      "label": "Text for the \"incorrect answer\" button",
+      "default": "Eg fekk feil!"
+    },
+    {
+      "label": "Text for \"Round\" message below cards and on the summary screen",
+      "description": "@round will be replaced by the number of the current round",
+      "default": "Round @round"
+    },
+    {
+      "label": "Text for \"Cards left\" message",
+      "description": "@number will be replaced by the number of cards left in this round",
+      "default": "Tal på kort igjen: @number"
+    },
+    {
+      "label": "Text for the \"next round\" button",
+      "description": "@round will be replaced by the round number",
+      "default": "Hald fram til runde @round"
+    },
+    {
+      "label": "Text for the \"Start over\" button",
+      "default": "Start på nytt"
+    },
+    {
+      "label": "Text for the \"show summary\" button",
+      "default": "Neste"
+    },
+    {
+      "label": "Title text for the summary page",
+      "default": "Oppsummering"
+    },
+    {
+      "label": "Text for \"Cards you got right:\"",
+      "default": "Kort du fekk rett:"
+    },
+    {
+      "label": "Text for \"Cards you got wrong:\"",
+      "default": "Kort du fekk feil:"
+    },
+    {
+      "label": "Text for \"Cards not shown:\"",
+      "default": "Kort som ikkje blir viste:"
+    },
+    {
+      "label": "Text for \"Overall Score\"",
+      "default": "Total score"
+    },
+    {
+      "label": "Text for \"Cards completed\"",
+      "default": "Kort du har gjennomført:"
+    },
+    {
+      "label": "Text for \"Completed rounds:\"",
+      "default": "Gjennomførte rundar:"
+    },
+    {
+      "label": "Message when all cards have been learned proficiently",
+      "description": "@cards will be replaced by the number of all cards in the pool. @max will be replaced by the maximum proficiency level.",
+      "default": "Bra jobba! Du fekk alle @cards korta rett @max gonger på rad!"
+    },
+    {
+      "label": "Fremgangstekst",
+      "description": "Tilgjengelege variablar er @card og @total.",
+      "default": "Kort @card av @total"
+    },
+    {
+      "label": "Label for card text",
+      "description": "Used for accessibility by assistive technologies",
+      "default": "Kort front"
+    },
+    {
+      "label": "Label for card back",
+      "description": "Used for accessibility by assistive technologies",
+      "default": "Kort bak"
+    },
+    {
+      "label": "Label for the show tip button",
+      "default": "Vis tips"
+    },
+    {
+      "label": "Audio not supported message",
+      "default": "Nettlesaren din støtter ikkje denne audioen"
+    },
+    {
+      "label": "Confirm starting over dialog",
+      "fields": [
+        {
+          "label": "Header text",
+          "default": "Start på nytt?"
+        },
+        {
+          "label": "Body text",
+          "default": "Alt du har gjort, vil forsvinne. Er du sikker på at du vil starte på nytt?"
+        },
+        {
+          "label": "Cancel button label",
+          "default": "Avbryt"
+        },
+        {
+          "label": "Confirm button label",
+          "default": "Start på nytt"
+        }
+      ]
+    }
+  ]
+}

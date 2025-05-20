@@ -1,0 +1,295 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Virsraksts",
+          "description": "Šeit jāievieto galvenās laika skalas virsraksts (pirmā lapa)"
+        },
+        {
+          "label": "Pamatteksts",
+          "description": "Šeit jāievieto galvenās laika skalas pamatteksts (pirmā lapa)."
+        },
+        {
+          "label": "Noklusējuma tālummaiņas līmenis",
+          "description": "Šeit tiks pielāgots noklusējuma tālummaiņas līmenis. Atbilst tuvināšanas vai tālināšanas pogas nospiešanas reižu skaitam. Negatīvie skaitļi attālina. Noklusējuma vērtība ir 0"
+        },
+        {
+          "label": "Fona attēls",
+          "description": "Attēls, kas jāparāda kā fons."
+        },
+        {
+          "label": "Augstums",
+          "description": "Augstums pikseļos"
+        },
+        {
+          "label": "Līdzeklis",
+          "fields": [
+            {
+              "label": "Multivide",
+              "description": "Multivides URL saite (pašlaik tiek atbalstīti Twitter, YouTube, Flickr, Vimeo, Google Maps un SoundCloud)"
+            },
+            {
+              "label": "Atsauce",
+              "description": "Multimedija atsauces"
+            },
+            {
+              "label": "Titri",
+              "description": "Šeit pievienojiet titru aprakstu"
+            }
+          ],
+          "description": "Šeit jūs variet savas laika skalas \"sākumlapai\" pievienot līdzekli"
+        },
+        {
+          "label": "Datumi",
+          "description": "Pievienojiet savai laika skalai dažus datumus!",
+          "field": {
+            "label": "Datums",
+            "description": "Datums",
+            "fields": [
+              {
+                "label": "Sākuma datums",
+                "description": "GGGG,MM,DD (nepieciešams vismaz GGGG)"
+              },
+              {
+                "label": "Beigu datums",
+                "description": "GGGG,MM,DD (nepieciešams vismaz GGGG)"
+              },
+              {
+                "label": "Virsraksts",
+                "description": "Datuma ieraksta virsraksts"
+              },
+              {
+                "label": "Pamatteksts",
+                "description": "Datuma ieraksta pamatteksts"
+              },
+              {
+                "label": "Tagi",
+                "description": "Ievadiet tagus (kategorijas)"
+              },
+              {
+                "label": "Līdzeklis",
+                "fields": [
+                  {
+                    "label": "Multivide",
+                    "description": "Multivides URL saite (pašlaik tiek atbalstīti Twitter, YouTube, Flickr, Vimeo, Google Maps un SoundCloud)."
+                  },
+                  {
+                    "label": "Sīktēls",
+                    "description": "Ja nepieciešams, pievienojiet sīktēlu 32x32"
+                  },
+                  {
+                    "label": "Atsauce",
+                    "description": "Multimedija atsauces"
+                  },
+                  {
+                    "label": "Titri",
+                    "description": "Titru teksts"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Laikmeti",
+          "description": "Pievienojiet savai laika skalai laikmetu",
+          "field": {
+            "label": "Laikmets",
+            "fields": [
+              {
+                "label": "Sākuma datums",
+                "description": "GGGG,MM,DD (nepieciešams vismaz GGGG)"
+              },
+              {
+                "label": "Beigu datums",
+                "description": "GGGG,MM,DD (nepieciešams vismaz GGGG)"
+              },
+              {
+                "label": "Virsraksts",
+                "description": "Laikmetu virsraksts"
+              },
+              {
+                "label": "Teksts",
+                "description": "Laikmeta pamatteksts"
+              },
+              {
+                "label": "Tags",
+                "description": "Laikmetu tagi (kategorijas)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Valoda",
+          "description": "Lietotāja saskarnes valoda",
+          "options": [
+            {
+              "label": "Afrikandu"
+            },
+            {
+              "label": "Arābu"
+            },
+            {
+              "label": "Armēņu"
+            },
+            {
+              "label": "Basku"
+            },
+            {
+              "label": "Bulgāru"
+            },
+            {
+              "label": "Katalāņu"
+            },
+            {
+              "label": "Ķīniešu"
+            },
+            {
+              "label": "Horvātu / Hrvatski"
+            },
+            {
+              "label": "Čehu"
+            },
+            {
+              "label": "Dāņu"
+            },
+            {
+              "label": "Holandiešu"
+            },
+            {
+              "label": "Angļu"
+            },
+            {
+              "label": "Angļu (24 stundas)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Igauņu"
+            },
+            {
+              "label": "Fēriešu"
+            },
+            {
+              "label": "Persiešu"
+            },
+            {
+              "label": "Somu"
+            },
+            {
+              "label": "Franču"
+            },
+            {
+              "label": "Galisiešu"
+            },
+            {
+              "label": "Gruzīnu"
+            },
+            {
+              "label": "Vācu / Deutsch"
+            },
+            {
+              "label": "Grieķu"
+            },
+            {
+              "label": "Ebreju"
+            },
+            {
+              "label": "Ungāru"
+            },
+            {
+              "label": "Islandiešu"
+            },
+            {
+              "label": "Indonēziešu"
+            },
+            {
+              "label": "Itāļu"
+            },
+            {
+              "label": "Japāņu"
+            },
+            {
+              "label": "Korejiešu"
+            },
+            {
+              "label": "Latviešu"
+            },
+            {
+              "label": "Lietuviešu"
+            },
+            {
+              "label": "Luksemburgiešu"
+            },
+            {
+              "label": "Malajiešu"
+            },
+            {
+              "label": "Nepāliešu"
+            },
+            {
+              "label": "Norvēģu"
+            },
+            {
+              "label": "Poļu"
+            },
+            {
+              "label": "Portugāļu"
+            },
+            {
+              "label": "Portugāļu (Brazīlijas)"
+            },
+            {
+              "label": "Romāņu"
+            },
+            {
+              "label": "Krievu"
+            },
+            {
+              "label": "Serbu - kirilica"
+            },
+            {
+              "label": "Serbu - latīņu"
+            },
+            {
+              "label": "Singāļu"
+            },
+            {
+              "label": "Slovāku"
+            },
+            {
+              "label": "Slovēņu"
+            },
+            {
+              "label": "Spāņu"
+            },
+            {
+              "label": "Zviedru"
+            },
+            {
+              "label": "Tagalu"
+            },
+            {
+              "label": "Tamilu"
+            },
+            {
+              "label": "Taivāniešu"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Turku"
+            },
+            {
+              "label": "Ukraiņu"
+            }
+          ]
+        }
+      ],
+      "label": "Laika skala"
+    }
+  ]
+}

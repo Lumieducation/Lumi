@@ -1,0 +1,48 @@
+[
+  {
+    "name": "title",
+    "type": "text",
+    "importance": "high",
+    "label": "Title"
+  },
+  {
+    "name": "linkWidget",
+    "type": "group",
+    "importance": "high",
+    "widget": "linkWidget",
+    "fields": [
+      {
+        "name": "protocol",
+        "type": "select",
+        "importance": "high",
+        "label": "Protocol",
+        "options": [
+          {
+            "value": "http://",
+            "label": "http://"
+          },
+          {
+            "value": "https://",
+            "label": "https://"
+          },
+          {
+            "value": "/",
+            "label": "(root relative)"
+          },
+          {
+            "value": "other",
+            "label": "other"
+          }
+        ],
+        "optional": true,
+        "default": "https://"
+      },
+      {
+        "name": "url",
+        "type": "text",
+        "importance": "high",
+        "label": "URL"
+      }
+    ]
+  }
+]

@@ -1,0 +1,163 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Tipe",
+          "description": "Opsionele media wat bo die vraag vertoon word."
+        },
+        {
+          "label": "Deaktiveer zoomfunksie by prente"
+        }
+      ]
+    },
+    {
+      "label": "Vraag"
+    },
+    {
+      "label": "Regte antwoord",
+      "options": [
+        {
+          "label": "Waar"
+        },
+        {
+          "label": "Valse"
+        }
+      ]
+    },
+    {
+      "label": "Gebruikerskoppelvlakvertalings vir ware/onwaar vrae",
+      "fields": [
+        {
+          "label": "Etiket vir waar knoppie",
+          "default": "Waar"
+        },
+        {
+          "label": "Etiket vir vals knoppie",
+          "default": "Vals"
+        },
+        {
+          "label": "Terugvoerteks",
+          "default": "Jy het @score van @total punte gekry",
+          "description": "Terugvoerteks, veranderlikes beskikbaar: @score en @total. Example: 'Jy het @score van @total moonltike punte gekry'"
+        },
+        {
+          "label": "Teks vir \"Toets\" knoppie",
+          "default": "Toets"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "Teks vir \"Wys antwoord\" knoppie",
+          "default": "Wys antwoord"
+        },
+        {
+          "label": "Teks vir \"Probeer weer\" knoppie",
+          "default": "Probeer weer"
+        },
+        {
+          "label": "Verkeerde antwoord",
+          "default": "Verkeerde antwoord"
+        },
+        {
+          "label": "Regte antwoord",
+          "default": "Regte antwoord"
+        },
+        {
+          "label": "Tekstuele tentoonstelling van die telkaart vir diegene wat 'n spreekleser gebruik",
+          "default": "Jy het :num uit :total punte gekry"
+        },
+        {
+          "label": "Hulptegnologieë beskrywing vir \"Toets\" knoppie",
+          "default": "Kyk na die antwoorde. Die antwoorde sal as korrek, verkeerd of onbeantwoord gemerk word."
+        },
+        {
+          "label": "Hulptegnologieë beskrywing vir \"Wys oplossing\" knoppie",
+          "default": "Wys die antwoord. Hierdie taak sal gemerk word met die regte antwoord."
+        },
+        {
+          "label": "Hulptegnologieë beskrywing vir \"Probeer weer\" knoppie",
+          "default": "Probeer die taak weer. Herstel alle antwoorde en begin die taak van nuuts af."
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellings",
+      "description": "Hierdie keuses laat jou toe om te stel hoe die taak reageer.",
+      "fields": [
+        {
+          "label": "Aktiveer \"Probeer weer\" knoppie"
+        },
+        {
+          "label": "Aktiveer \"Wys antwoord\" knoppie"
+        },
+        {
+          "label": "Aktiveer \"Toets\" knoppie"
+        },
+        {
+          "label": "Wys bevestigingdialoog op \"Toets\""
+        },
+        {
+          "label": "Wys bevestigingdialoog op \"Probeer weer\""
+        },
+        {
+          "label": "Toets antwoorde outomaties",
+          "description": "Let daarop dat toeganklikheid onder die volgende posisies sal ly"
+        },
+        {
+          "label": "Terugvoer op regte antwoord",
+          "description": "Hierdie sal die verstek terugvoerteks oorskry. Veranderlikes beskikbaar: @score and @total"
+        },
+        {
+          "label": "Terugvoer op verkeerde teks",
+          "description": "Hierdie sal die verstek terugvoerteks oorskry. Veranderlikes beskikbaar: @score en @total"
+        }
+      ]
+    },
+    {
+      "label": "Toets bevestigingsdialoog",
+      "fields": [
+        {
+          "label": "Hoofopskrifteks",
+          "default": "Klaar ?"
+        },
+        {
+          "label": "Lyfteks",
+          "default": "Is jy seker jy wil klaarmaak ?"
+        },
+        {
+          "label": "Kanseleer knoppie etiket",
+          "default": "Kanselleer"
+        },
+        {
+          "label": "Bevestig knoppie etiket",
+          "default": "Klaar"
+        }
+      ]
+    },
+    {
+      "label": "Probeer weer bevestigingsdialoog",
+      "fields": [
+        {
+          "label": "Hoofopskrifteks",
+          "default": "Probeer weer ?"
+        },
+        {
+          "label": "Liggaamteks",
+          "default": "Is jy seker jy wil weer probeer ?"
+        },
+        {
+          "label": "Kanseleer knoppie etiket",
+          "default": "Kanselleer"
+        },
+        {
+          "label": "Bevestig knoppie etiket",
+          "default": "Bevestig"
+        }
+      ]
+    }
+  ]
+}

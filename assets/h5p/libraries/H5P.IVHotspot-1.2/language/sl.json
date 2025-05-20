@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Cilj",
+      "fields": [
+        {
+          "label": "Tip",
+          "options": [
+            {
+              "label": "Čas"
+            },
+            {
+              "label": "Spletna stran (URL)"
+            }
+          ]
+        },
+        {
+          "label": "Pojdi na",
+          "description": "Vnos časa za nadaljevanje ogleda posnetka (v formatu M:SS), na katerega bo udeleženca vodil klik."
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "Protokol",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(korensko sorodna stran)"
+                },
+                {
+                  "label": "drugo"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Vizualna podoba",
+      "fields": [
+        {
+          "label": "Oblika",
+          "options": [
+            {
+              "label": "Pravokotnik"
+            },
+            {
+              "label": "Krog"
+            },
+            {
+              "label": "Zaobljen pravokotnik"
+            }
+          ]
+        },
+        {
+          "label": "Barva ozadja točke"
+        },
+        {
+          "label": "Uporabi miškin kazalec"
+        },
+        {
+          "label": "Dodaj učinek utripanja",
+          "description": "Opomba: učinek utripanja je vedno omogočen v urejevalnem načinu, da se lažje najde prosojne interaktivne točke."
+        }
+      ]
+    },
+    {
+      "label": "Besedilo",
+      "fields": [
+        {
+          "label": "Nadomestno besedilo",
+          "description": "Besedilo opisuje izpostavljeno s točko in služi bralnikom zaslona.",
+          "placeholder": "Interaktivna točka"
+        },
+        {
+          "label": "Besedilo za oznako točke"
+        },
+        {
+          "label": "Prikaži oznako"
+        },
+        {
+          "label": "Barva oznake"
+        }
+      ]
+    }
+  ]
+}

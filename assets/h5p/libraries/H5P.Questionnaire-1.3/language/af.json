@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Vraelys elemente",
+      "widgets": [
+        {
+          "label": "Verstek"
+        }
+      ],
+      "entity": "element",
+      "field": {
+        "label": "Kies biblioteek",
+        "fields": [
+          {
+            "label": "Biblioteek",
+            "description": "Kies 'n biblioteek"
+          },
+          {
+            "label": "Vereisde veld"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Sukses skermopsies",
+      "fields": [
+        {
+          "label": "Aktiveer suksesskerm"
+        },
+        {
+          "label": "Voeg suksesskermprent",
+          "fields": [
+            {
+              "label": "Vervang suksesikoon met prent"
+            }
+          ]
+        },
+        {
+          "label": "Teks om te vertoon by indiening",
+          "default": "Jy het die vraeslys voltooi."
+        }
+      ]
+    },
+    {
+      "label": "UI Elemente",
+      "fields": [
+        {
+          "label": "Knoppie-etikette",
+          "fields": [
+            {
+              "label": "Vorige knoppie etiket",
+              "default": "Terug"
+            },
+            {
+              "label": "Gaan voort knoppie-etiket",
+              "default": "Gaan voort"
+            },
+            {
+              "label": "Volgende knoppie etiket",
+              "default": "Volgende"
+            },
+            {
+              "label": "Beginknoppie etiket",
+              "default": "Handig in"
+            }
+          ]
+        },
+        {
+          "label": "Toeganklikheid",
+          "fields": [
+            {
+              "label": "Vereisde boodskap verlaat knoppie-etiket",
+              "default": "Geslote foutboodskap"
+            },
+            {
+              "label": "Vordering balkteks",
+              "default": "Vraag %current of %max",
+              "description": "Gebruik om vir hulptegnologieë te vertel watter vraag dit is. Veranderlikes: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Vereisde boodskap",
+          "default": "Hierdie vraag vereis 'n antwoord",
+          "description": "Word vertoon as hierdie veld onbeantwoord is en vereis word deur 'n tipe omslaginhoud"
+        },
+        {
+          "label": "Vereisde symboolteks",
+          "default": "vereis",
+          "description": "Teks wat 'n sterretjie sal vergesel om aan te dui dat 'n vraag nodig is"
+        },
+        {
+          "label": "Titel vir indienskerm",
+          "default": "Jy het al die vrae suksesvol beantwoord"
+        },
+        {
+          "label": "Onderskrif vir indienskerm",
+          "default": "Klik hieronder om jou antwoorde in te dien"
+        }
+      ]
+    }
+  ]
+}

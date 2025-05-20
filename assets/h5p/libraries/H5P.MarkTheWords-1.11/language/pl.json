@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Typ",
+          "description": "Opcjonalne zdjęcie lub wideo ponad treścią pytania."
+        },
+        {
+          "label": "Zablokuj możliwość powiększania zdjęcia"
+        }
+      ]
+    },
+    {
+      "label": "Opis zadania",
+      "description": "Opisz jak użytkownik powinien rozwiązać zadanie.",
+      "placeholder": "Kliknij wszystkie czasowniki w tekście, który zostanie wyświetlony."
+    },
+    {
+      "label": "Pole tekstowe",
+      "placeholder": "To jest odpowiedź: *odpowiedź*.",
+      "important": {
+        "description": "<ul><li>Zaznaczone słowa są dodawane za pomocą gwiazdki (*).</li><li>Gwiazdki można dodawać w zaznaczonych słowach poprzez dodanie kolejnej gwiazdki, *correctword*** =&gt; correctword*.</li></ul>",
+        "example": "Właściwe słowa są zaznaczone w ten sposób: *correctword*, gwiazdka jest zapisana w ten sposób: *correctword***."
+      }
+    },
+    {
+      "label": "Ogólna informacja zwrotna",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Domyślny"
+            }
+          ],
+          "label": "Zdefiniuj niestandardowe informacje zwrotne dla dowolnego zakresu wyników",
+          "description": "Kliknij przycisk \"Dodaj zakres\" aby dodać tyle zakresów, ile potrzebujesz. Przykład: 0-20% Zły wynik, 21-91% Przeciętny wynik, 91-100% Świetny wynik!",
+          "entity": "zakres",
+          "field": {
+            "fields": [
+              {
+                "label": "Zakres wyników"
+              },
+              {},
+              {
+                "label": "Informacja zwrotna dla zdefiniowanego zakresu wyników",
+                "placeholder": "Uzupełnij informację zwrotną"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tekst przycisku \"Sprawdź\"",
+      "default": "Sprawdź"
+    },
+    {
+      "label": "Tekst przycisku \"Wyślij\"",
+      "default": "Submit"
+    },
+    {
+      "label": "Tekst przycisku \"Spróbuj ponownie\"",
+      "default": "Spróbuj ponownie"
+    },
+    {
+      "label": "Tekst przycisku \"Pokaż rozwiązanie\"",
+      "default": "Pokaż rozwiązanie"
+    },
+    {
+      "label": "Ustawienia dotyczące zachowania.",
+      "description": "Te opcje pozwolą Ci kontrolować zachowanie zadania.",
+      "fields": [
+        {
+          "label": "Włącz opcję \"Spróbuj ponownie\""
+        },
+        {
+          "label": "Włącz przycisk \"Pokaż rozwiązanie\""
+        },
+        {
+          "label": "Włącz przycisk \"Sprawdź\""
+        },
+        {
+          "label": "Pokaż zdobyte punkty",
+          "description": "Pokaż punkty zdobyte za każdą odpowiedź."
+        }
+      ]
+    },
+    {
+      "label": "Tekst prawidłowej odpowiedzi",
+      "default": "Odpowiedź prawidłowa!",
+      "description": "Tekst wskazujący poprawność odpowiedzi"
+    },
+    {
+      "label": "Tekst odpowiedzi błędnej",
+      "default": "Odpowiedź nieprawidłowa!",
+      "description": "Tekst wskazujący nieprawidłowość odpowiedzi"
+    },
+    {
+      "label": "Tekst brakującej odpowiedzi",
+      "default": "Odpowiedź nie została znaleziona!",
+      "description": "Tekst użyty do wskazania, że brakuje odpowiedzi"
+    },
+    {
+      "label": "Opis dla wyświetlenia rozwiązania",
+      "default": "Zadanie zostało zaktualizowane o rozwiązanie.",
+      "description": "Ten tekst informuje użytkownika, że zadania zostały zaktualizowane przy użyciu rozwiązania."
+    },
+    {
+      "label": "Tekstowy odpowiednik punktacji dla osób używających syntezatora mowy",
+      "default": "Otrzymujesz :num z :total punktów"
+    },
+    {
+      "label": "Etykieta tekstu w całości do odczytu przez technologie wspomagające",
+      "default": "W całości do odczytu"
+    },
+    {
+      "label": "Etykieta tekstu w którym słowa mogą zostać zaznaczone przez technologie wspomagające",
+      "default": "Kompletny tekst w którym można zaznaczyć słowa"
+    },
+    {
+      "label": "Nagłówek trybu rozwiązania dla technologii wspomagających",
+      "default": "Tryb rozwiązania"
+    },
+    {
+      "label": "Nagłówek trybu sprawdzania dla technologii wspomagających",
+      "default": "Tryb sprawdzania"
+    },
+    {
+      "label": "Opis przycisku \"Sprawdź\" dla technologii wspomagających",
+      "default": "Sprawdź odpowiedzi. Odpowiedzi zostaną oznaczone jako prawidłowe, błędne lub bez odpowiedzi."
+    },
+    {
+      "label": "Opis technologii wspomagającej dla przycisku \"Pokaż rozwiązanie\"",
+      "default": "Pokaż rozwiązanie. Zadanie zostanie oznaczone poprawnym rozwiązaniem."
+    },
+    {
+      "label": "Opis technologii wspomagającej dla przycisku \"Spróbuj ponownie\"",
+      "default": "Spróbuj ponownie wykonać zadanie. Zresetuj wszystkie odpowiedzi i rozpocznij zadanie od nowa."
+    }
+  ]
+}

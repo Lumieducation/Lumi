@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Immagini",
+      "field": {
+        "label": "Image Slide",
+        "fields": [
+          {
+            "label": "Image Slide"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Proporzioni",
+      "description": "Automatico significa proporzioni fisse determinate automaticamente in base alle immagini",
+      "options": [
+        {
+          "label": "Automatico"
+        },
+        {
+          "label": "Personalizzato"
+        },
+        {
+          "label": "Non fisso"
+        }
+      ]
+    },
+    {
+      "label": "Impostazione delle proporzioni",
+      "fields": [
+        {
+          "label": "Larghezza delle proporzioni",
+          "description": "Se usi 4 qui e 3 per l'altezza, la proporzione sarà 4:3"
+        },
+        {
+          "label": "Altezza delle proporzioni",
+          "description": "Se usi 3 qui e 4 per la larghezza, la proporzione sarà 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibilità dello slider dell'immagine",
+      "fields": [
+        {
+          "label": "Etichetta dei pulsanti per la prossima slide",
+          "default": "Prossima immagine",
+          "description": "Questo è usato soltanto per lettori vocali. Non sarà visualizzato"
+        },
+        {
+          "label": "Etichetta dei pulsanti per la slide precedente",
+          "default": "Immagine precedente",
+          "description": "Questo è usato soltanto per lettori vocali. Non sarà visualizzato"
+        },
+        {
+          "label": "Etichetta dei pulsanti per le slide",
+          "default": "Vai all'immagine %slide",
+          "description": "Questo è usato soltanto per i lettori vocali. Non sarà visualizzato. %slide è una variabile e sarà sostituita dal numero dell'immagine"
+        }
+      ]
+    }
+  ]
+}

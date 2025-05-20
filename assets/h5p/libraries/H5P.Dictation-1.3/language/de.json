@@ -1,0 +1,374 @@
+{
+  "semantics": [
+    {
+      "label": "Medium",
+      "fields": [
+        {
+          "label": "Typ",
+          "description": "Medium, das wahlweise oberhalb der Aufgabe angezeigt wird."
+        },
+        {
+          "label": "Bild-Zoom deaktivieren"
+        }
+      ]
+    },
+    {
+      "label": "Aufgabenbeschreibung",
+      "description": "Beschreibe die Aufgabe hier.",
+      "placeholder": "Bitte höre aufmerksam zu und schreibe, was du hörst."
+    },
+    {
+      "label": "Sätze",
+      "widgets": [
+        {
+          "label": "Voreinstellung"
+        }
+      ],
+      "entity": "Satz",
+      "field": {
+        "label": "Satz",
+        "fields": [
+          {
+            "label": "Beschreibung",
+            "description": "Du kannst optional eine einfache Beschreibung für das Texteingabefeld eingeben, z. B. für Dialoge."
+          },
+          {
+            "label": "Tonaufnahme",
+            "description": "Satz im normalen Tempo gesprochen"
+          },
+          {
+            "label": "Tonaufnahme (langsam)",
+            "description": "Satz im langsamen Tempo gesprochen"
+          },
+          {
+            "label": "Text",
+            "description": "Text, der geschrieben werden sollte. Du kannst alternative Schreibweisen zu einem Wort hinzufügen, in dem du eine vertikale Linie (|) hinzufügst, gefolgt von der Alternative."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Gesamtrückmeldung",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Voreinstellung"
+            }
+          ],
+          "label": "Lege Rückmeldungen für einzelne Punktebereiche fest",
+          "description": "Klicke auf den \"Bereich hinzufügen\"-Button, um so viele Bereiche hinzuzufügen, wie du brauchst. Beispiel: 0-20% Schlechte Punktzahl, 21-91% Durchschnittliche Punktzahl, 91-100% Großartige Punktzahl!",
+          "entity": "Bereich",
+          "field": {
+            "fields": [
+              {
+                "label": "Punktebereich"
+              },
+              {
+                "label": "Rückmeldung für jeweiligen Punktebereich",
+                "placeholder": "Trage die Rückmeldung ein"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "description": "Diese Optionen kontrollieren, wie sich die Aufgabe verhält.",
+      "fields": [
+        {
+          "label": "Maximale Versuchsanzahl",
+          "description": "Begrenzt die Anzahl der Versuche, die man jeweils zum Anhören der Tonaufnahme hat."
+        },
+        {
+          "label": "Maximale Versuchsanzahl für langsames Tempo",
+          "description": "Begrenzt die Anzahl der Versuche, die man jeweils zum Anhören der langsamen Tonaufnahme hat."
+        },
+        {
+          "label": "Pause verhindern",
+          "description": "Wenn diese Option gewählt ist, können die Tondateien während des Abspielens nicht pausiert werden."
+        },
+        {
+          "label": "Verzögerung der Wiedergabe",
+          "description": "Stelle optional einen Zeitraum von bis zu drei Sekunden ein, um den die Wiedergabe verzögert werden soll. Das kann nützlich sein, wenn du Lernenden Zeit geben möchtest, in das Texteingabefeld zu wechseln."
+        },
+        {
+          "label": "Sätze mischen",
+          "description": "Lege fest, wann die Sätze gemischt werden sollten.",
+          "options": [
+            {
+              "label": "Nie"
+            },
+            {
+              "label": "Einmalig beim starten der Aufgabe"
+            },
+            {
+              "label": "Bei jedem Versuch"
+            }
+          ]
+        },
+        {
+          "label": "Bepunktung",
+          "fields": [
+            {
+              "label": "Zeichensetzung ignorieren",
+              "description": "Wenn gewählt, wird die Zeichensetzung nicht für die Bepunktung berücksichtigt."
+            },
+            {
+              "label": "Kein-Fehler-Modus",
+              "description": "Wenn gewählt, werden nur korrekte Antworten zur Bepunktung herangezogen. Fehler werden nicht bestraft."
+            },
+            {
+              "label": "Wert von kleinen Fehlern",
+              "description": "Lege fest, in welchem Maße kleine Fehler (Wort mit 3-9 Buchstaben: bis zu 1 Fehler, Wort mit mehr als 9 Buchstaben: bis zu 2 Fehler) berücksichtigt werden.",
+              "options": [
+                {
+                  "label": "100 %"
+                },
+                {
+                  "label": "50 %"
+                },
+                {
+                  "label": "0 %"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Text",
+          "fields": [
+            {
+              "label": "Zeichen zum Trennen von Wörtern",
+              "description": "Lege fest, welches Zeichen zum Trennen von Wörtern als Alternative zum Leerzeichen benutzt wird, um alternative Lösungen mit mehr als einem Wort zuzulassen."
+            },
+            {
+              "label": "Schreibrichtung",
+              "description": "Lege fest, ob die Schreibrichtung rechts-nach-links oder links-nach-rechts ist.",
+              "options": [
+                {
+                  "label": "Automatisch feststellen"
+                },
+                {
+                  "label": "Rechts-nach-links"
+                },
+                {
+                  "label": "Links-nach-rechts"
+                }
+              ]
+            },
+            {
+              "label": "Trennen von Schriftzeichen",
+              "description": "Aktiviere diese Option, falls bestimmte Zeichen (z. B. chinesische Schriftzeichen) automatisch in einzelne Wörter getrennt werden sollen."
+            }
+          ]
+        },
+        {
+          "label": "Darstellung der Rückmeldung",
+          "fields": [
+            {
+              "label": "Eigene visuelle Darstellung von kleinen Fehlern",
+              "description": "Wenn gewählt, werden kleine Fehler in einem eigenen Stil dargestellt, um sie von normalen Fehler zu differenzieren."
+            },
+            {
+              "label": "Darstellung von alternativen Antworten",
+              "description": "Lege fest, welche alternativen Antworten in der Lösung für falsche oder fehlende Wörter angezeigt werden sollen.",
+              "options": [
+                {
+                  "label": "Zeige nur die erste Alternative"
+                },
+                {
+                  "label": "Zeige alle Alternativen"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "\"Wiederholen\" aktivieren"
+        },
+        {
+          "label": "\"Lösung anzeigen\" ermöglichen"
+        },
+        {
+          "label": "Zeige Lösung beim Überprüfen"
+        }
+      ]
+    },
+    {
+      "label": "Bedienoberfläche",
+      "fields": [
+        {
+          "label": "Allgemeine Rückmeldung",
+          "description": "Du kannst mehrere Platzhalter verwenden, die durch die eigentliche Anzahl ersetzt werden: @matches = richtige Worte, @total = Fehler insgesamt, @capped = Fehler insgesamt (begrenzt auf die Anzahl der richtigen Worte), @wrong = falsche Worte, @added = hinzugefügte Worte, @missing = fehlende Worte, @typo = kleine Fehler",
+          "default": "Du hast insgesamt @total Fehler gemacht."
+        },
+        {
+          "label": "Allgemeine Rückmeldung (Kein-Fehler-Modus)",
+          "description": "Du kannst mehrere Platzhalter verwenden, die durch die eigentliche Anzahl ersetzt werden: @matches = richtige Worte, @total = Fehler insgesamt, @wrong = falsche Worte, @added = hinzugefügte Worte, @missing = fehlende Worte, @typo = kleine Fehler",
+          "default": "Du hast @total Wort/Wörter korrekt eingegeben und @typo kleinere Fehler gemacht."
+        },
+        {
+          "label": "Beschriftung des \"Überprüfen\"-Buttons",
+          "default": "Überprüfen"
+        },
+        {
+          "label": "Beschriftung des \"Absenden\"-Buttons",
+          "default": "Absenden"
+        },
+        {
+          "label": "Beschriftung des \"Wiederholen\"-Buttons",
+          "default": "Wiederholen"
+        },
+        {
+          "label": "Beschriftung des \"Lösung anzeigen\"-Buttons",
+          "default": "Lösung anzeigen"
+        },
+        {
+          "label": "Hinweis, dass keine Tonaufnahmen abgespielt werden können",
+          "default": "Dein Browser unterstützt diese Tondatei nicht."
+        }
+      ]
+    },
+    {
+      "label": "Vorlesewerkzeug",
+      "fields": [
+        {
+          "label": "Vorlesewerkzeug-Beschreibung für den \"Überprüfen\"-Button",
+          "default": "Die Antworten überprüfen. Die Eingaben werden als richtig, falsch oder unbeantwortet markiert."
+        },
+        {
+          "label": "Vorlesewerkzeug-Beschreibung für den \"Lösung anzeigen\"-Button",
+          "default": "Die Lösung anzeigen. Die richtigen Lösungen werden in der Aufgabe angezeigt."
+        },
+        {
+          "label": "Vorlesewerkzeug-Beschreibung für den \"Wiederholen\"-Button",
+          "default": "Die Aufgabe wiederholen. Alle Eingaben werden zurückgesetzt und die Aufgabe wird erneut gestartet."
+        },
+        {
+          "label": "Abspiel-Button",
+          "default": "Abspielen"
+        },
+        {
+          "label": "Langsam-Abspiel-Button",
+          "default": "Langsam abspielen"
+        },
+        {
+          "label": "Verbleibende Versuche (Text für Vorlesewerkzeuge und Tooltips)",
+          "description": "@number wird durch die aktuelle Anzahl verbleibender Versuche ersetzt.",
+          "default": "Verbleibende Versuche: @number"
+        },
+        {
+          "label": "Unendlich (Text für Vorlesewerkzeuge und Tooltips)",
+          "default": "unendlich"
+        },
+        {
+          "label": "Eingabefeld",
+          "default": "Gib ein, was du gehört hast."
+        },
+        {
+          "label": "Dein Ergebnis",
+          "description": "@score wird durch die erreichten Punkte ersetzt. @total wird durch die maximal mögliche Punktzahl ersetzt.",
+          "default": "Du hast @score von @total Punkten"
+        },
+        {
+          "label": "Lösung",
+          "default": "Lösung"
+        },
+        {
+          "label": "Satz",
+          "default": "Satz"
+        },
+        {
+          "label": "Satzteil",
+          "default": "Satzteil"
+        },
+        {
+          "label": "Richtig",
+          "default": "richtig"
+        },
+        {
+          "label": "Falsch",
+          "default": "falsch"
+        },
+        {
+          "label": "Kleiner Fehler",
+          "default": "Kleiner Fehler"
+        },
+        {
+          "label": "Fehlendes Wort oder Zeichen",
+          "default": "fehlt"
+        },
+        {
+          "label": "Hinzugefügtes Wort oder Zeichen",
+          "default": "hinzugefügt"
+        },
+        {
+          "label": "Richtige Lösung",
+          "default": "Richtig wäre gewesen"
+        },
+        {
+          "label": "Oder",
+          "default": "oder"
+        },
+        {
+          "label": "Punkt",
+          "default": "Punkt"
+        },
+        {
+          "label": "Punkte",
+          "default": "Punkte"
+        },
+        {
+          "label": "Punkt (Satzzeichen)",
+          "default": "Punkt"
+        },
+        {
+          "label": "Ausrufezeichen",
+          "default": "Ausrufezeichen"
+        },
+        {
+          "label": "Fragezeichen",
+          "default": "Fragezeichen"
+        },
+        {
+          "label": "Komma",
+          "default": "Komma"
+        },
+        {
+          "label": "Anführungszeichen einfach",
+          "default": "einfaches Anführungszeichen"
+        },
+        {
+          "label": "Anführungszeichen",
+          "default": "Anführungszeichen"
+        },
+        {
+          "label": "Doppelpunkt",
+          "default": "Doppelpunkt"
+        },
+        {
+          "label": "Semikolon",
+          "default": "Semikolon"
+        },
+        {
+          "label": "Plus",
+          "default": "Plus"
+        },
+        {
+          "label": "Minus",
+          "default": "Minus"
+        },
+        {
+          "label": "Sternchen",
+          "default": "Sternchen"
+        },
+        {
+          "label": "Schrägstrich",
+          "default": "Schrägstrich"
+        }
+      ]
+    }
+  ]
+}

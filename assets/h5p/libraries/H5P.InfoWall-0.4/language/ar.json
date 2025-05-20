@@ -1,0 +1,156 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "رأس",
+          "description": "رأس اختياري لجدار المعلومات."
+        },
+        {
+          "label": "الخصائص",
+          "fields": [
+            {
+              "label": "الخصائص",
+              "description": "خصائص الإدخالات",
+              "entity": "الخاصية",
+              "widgets": [
+                {
+                  "label": "تلقائي"
+                }
+              ],
+              "field": {
+                "label": "عناصر الخاصية",
+                "fields": [
+                  {
+                    "label": "التسمية",
+                    "default": "بدون تسمية"
+                  },
+                  {
+                    "label": "إظهار تسمية الخاصية"
+                  },
+                  {
+                    "label": "تمكين البحث في الخاصية"
+                  },
+                  {
+                    "label": "تجاوز تصميم الصياغة",
+                    "fields": [
+                      {
+                        "label": "خط عريض"
+                      },
+                      {
+                        "label": "خط مائل"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {}
+          ]
+        },
+        {
+          "label": "اللوحات",
+          "description": "لوحات الجدار",
+          "entity": "اللوحة",
+          "widgets": [
+            {
+              "label": "تلقائي"
+            }
+          ],
+          "field": {
+            "label": "عناصر الإدخال",
+            "fields": [
+              {
+                "label": "عنوان اللوحة"
+              },
+              {
+                "label": "الصورة"
+              },
+              {
+                "label": "المدخلات",
+                "description": "خصائص الإدخالات",
+                "entity": "القيمة",
+                "widgets": [
+                  {
+                    "label": "تلقائي"
+                  }
+                ],
+                "field": {
+                  "label": "سيتم تغيير التسمية تلقائياً"
+                }
+              },
+              {
+                "label": "Additional keywords",
+                "description": "Add additional keywords separated by a blank space that will be used for filtering but not be visible to the user."
+              }
+            ]
+          }
+        },
+        {
+          "label": "إعدادات العرض",
+          "description": "ستتيح لك هذه الخيارات التحكم في كيفية سلوك المهمة.",
+          "fields": [
+            {
+              "label": "استخدام الارتداد للصور المفقودة"
+            },
+            {
+              "label": "الصورة"
+            },
+            {
+              "label": "عرض الصورة",
+              "description": "عرض الصورة بالبكسل."
+            },
+            {
+              "label": "ارتفاع الصورة",
+              "description": "ارتفاع الصورة بالبكسل."
+            },
+            {
+              "label": "الخلفية البديلة للوحة",
+              "description": "إذا تم تحديده، فستحتوي كل لوحة ثانية على خلفية أغمق قليلاً من اللوحات الأخرى."
+            },
+            {
+              "label": "عرض حقل التصفية",
+              "description": "إذا تم تحديده، فسيتمكن المستخدمون من تصفية جدار المعلومات."
+            },
+            {
+              "label": "Mode for filter field",
+              "description": "Choose whether the filter should narrow down or broaden the search with every new keyword.",
+              "options": [
+                {
+                  "label": "Narrow down"
+                },
+                {
+                  "label": "Broaden"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "واجهة المستخدم",
+          "fields": [
+            {
+              "label": "لم يتم إدخال أي دليل تأليف المحتوى",
+              "default": "المحرر لم يدخل أي شيء."
+            },
+            {
+              "label": "لم يتم العثور على تطابق",
+              "description": "@query حيز مخصص وسيتم استبداله بالاستعلام ذي الصلة الذي تم إدخاله.",
+              "default": "لا توجد تطابق لـ @query."
+            },
+            {
+              "label": "أدخل للتصفية",
+              "description": "رسالة لقارئات الشاشة.",
+              "default": "أدخل استعلاماً لتصفية دليل تأليف المحتوى للإدخالات ذات الصلة."
+            },
+            {
+              "label": "تغيرت القائمة.",
+              "description": "رسالة لقارئات الشاشة. @visible وهي @total الحيز المخصص وسيتم وضعها مسبقاً مع القيم ذات الصلة.",
+              "default": "تغيرت القائمة. إظهار @visible من @total العناصر."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

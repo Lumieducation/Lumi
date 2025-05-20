@@ -1,0 +1,1077 @@
+[
+  {
+    "name": "introduction",
+    "type": "text",
+    "widget": "html",
+    "label": "Introductory text",
+    "importance": "medium",
+    "optional": true,
+    "description": "This text can optionally be presented along with your code.",
+    "enterMode": "div",
+    "tags": [
+      "sub",
+      "sup",
+      "strong",
+      "em",
+      "p",
+      "code",
+      "u",
+      "del",
+      "a",
+      "ul",
+      "ol",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "pre",
+      "hr",
+      "table"
+    ],
+    "font": {
+      "size": true,
+      "color": true,
+      "background": true
+    }
+  },
+  {
+    "name": "codeType",
+    "type": "select",
+    "label": "Code type",
+    "description": "Select what kind of code you want to generate",
+    "options": [
+      {
+        "value": "contact",
+        "label": "Contact"
+      },
+      {
+        "value": "event",
+        "label": "Event"
+      },
+      {
+        "value": "email",
+        "label": "Email address"
+      },
+      {
+        "value": "h5p",
+        "label": "H5P"
+      },
+      {
+        "value": "location",
+        "label": "Location"
+      },
+      {
+        "value": "phone",
+        "label": "Phone number"
+      },
+      {
+        "value": "sms",
+        "label": "SMS"
+      },
+      {
+        "value": "text",
+        "label": "Text"
+      },
+      {
+        "value": "url",
+        "label": "URL"
+      }
+    ],
+    "default": "url",
+    "widget": "editorKewArCode"
+  },
+  {
+    "name": "contact",
+    "type": "group",
+    "label": "Contact",
+    "importance": "high",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name",
+        "placeholder": "John Smith",
+        "maxLength": 150
+      },
+      {
+        "name": "organization",
+        "type": "text",
+        "label": "Organization",
+        "placeholder": "H5P fan club",
+        "optional": true,
+        "maxLength": 150
+      },
+      {
+        "name": "title",
+        "type": "text",
+        "label": "Title",
+        "placeholder": "Master of None",
+        "optional": true,
+        "maxLength": 100
+      },
+      {
+        "name": "number",
+        "type": "text",
+        "label": "Phone number",
+        "description": "Phone number (please use the format +12 345 67890)",
+        "placeholder": "+12 345 67890",
+        "optional": true,
+        "regexp": {
+          "pattern": "^\\+[0-9]{1,3}[\\ ]?[0-9]{1,4}[\\ ]?[0-9]{1,8}$",
+          "modifiers": ""
+        }
+      },
+      {
+        "name": "email",
+        "type": "text",
+        "label": "Email address",
+        "description": "Email address to write message to",
+        "placeholder": "john@fictional-h5p-fan-club.org",
+        "optional": true,
+        "maxLength": 150,
+        "regexp": {
+          "pattern": "^[A-Z0-9\\._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$",
+          "modifiers": "i"
+        }
+      },
+      {
+        "name": "address",
+        "type": "group",
+        "label": "Address",
+        "importance": "medium",
+        "expanded": true,
+        "fields": [
+          {
+            "name": "extended",
+            "type": "text",
+            "label": "Extended address",
+            "description": "c/o information, etc.",
+            "placeholder": "c/o H5P Fan Club",
+            "optional": true,
+            "maxLength": 150
+          },
+          {
+            "name": "street",
+            "type": "text",
+            "label": "Street",
+            "description": "Street including number",
+            "placeholder": "1308 W. Dayton Street",
+            "optional": true,
+            "maxLength": 150
+          },
+          {
+            "name": "locality",
+            "type": "text",
+            "label": "Locality",
+            "description": "City name, etc.",
+            "placeholder": "Madison",
+            "optional": true,
+            "maxLength": 100
+          },
+          {
+            "name": "region",
+            "type": "text",
+            "label": "Region",
+            "description": "Federal state, county, etc.",
+            "placeholder": "WI",
+            "optional": true,
+            "maxLength": 100
+          },
+          {
+            "name": "zip",
+            "type": "text",
+            "label": "ZIP code",
+            "description": "ZIP code",
+            "placeholder": "53715",
+            "optional": true,
+            "maxLength": 50
+          },
+          {
+            "name": "country",
+            "type": "text",
+            "label": "Country",
+            "description": "Country",
+            "placeholder": "USA",
+            "optional": true,
+            "maxLength": 100
+          }
+        ]
+      },
+      {
+        "name": "url",
+        "type": "text",
+        "label": "Website",
+        "description": "Website to link to (must start with https:// or http://)",
+        "placeholder": "https://fictional-h5p-fan-club.org",
+        "regexp": {
+          "pattern": "https?://([0-9a-z.-]+).[a-z.]{2,}([0-9a-z.-_]*)*/?",
+          "modifiers": "i"
+        },
+        "optional": true,
+        "maxLength": 300
+      },
+      {
+        "name": "note",
+        "type": "text",
+        "label": "Note",
+        "description": "Note",
+        "placeholder": "John loves H5P.",
+        "optional": true,
+        "maxLength": 500
+      }
+    ],
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "codeType",
+          "equals": "contact"
+        }
+      ]
+    }
+  },
+  {
+    "name": "event",
+    "type": "group",
+    "label": "Event",
+    "importance": "high",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "title",
+        "type": "text",
+        "label": "Title",
+        "description": "Title for the calendar event",
+        "placeholder": "H5P Conference 2020",
+        "maxLength": 200
+      },
+      {
+        "name": "allDay",
+        "type": "boolean",
+        "label": "All day event",
+        "description": "Check if event will be valid all day long"
+      },
+      {
+        "name": "dateStart",
+        "type": "text",
+        "label": "Start date",
+        "description": "Start date of the event (please use the format yyyy/mm/dd)",
+        "placeholder": "2020/05/18",
+        "regexp": {
+          "pattern": "^[0-9]{4,}/0*([1-9]|1[0-2])/0*([1-9]|[12][0-9]|3[01])$",
+          "modifiers": ""
+        }
+      },
+      {
+        "name": "timeStart",
+        "type": "text",
+        "label": "Start time",
+        "description": "Start time of the event (please use the format hh:mm)",
+        "placeholder": "09:00",
+        "regexp": {
+          "pattern": "^0*([1-9]|1[0-9]|2[0-3]):0*([0-9]|[1-4][0-9]|5[0-9])$",
+          "modifiers": ""
+        },
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "allDay",
+              "equals": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "dateEnd",
+        "type": "text",
+        "label": "End date",
+        "description": "End date of the event (please use the format yyyy/mm/dd)",
+        "placeholder": "2020/05/20",
+        "regexp": {
+          "pattern": "^[0-9]{4,}/0*([1-9]|1[0-2])/0*([1-9]|[12][0-9]|3[01])$",
+          "modifiers": ""
+        }
+      },
+      {
+        "name": "timeEnd",
+        "type": "text",
+        "label": "End time",
+        "description": "End time of the event (please use the format hh:mm)",
+        "placeholder": "16:00",
+        "regexp": {
+          "pattern": "^0*([1-9]|1[0-9]|2[0-3]):0*([0-9]|[1-4][0-9]|5[0-9])$",
+          "modifiers": ""
+        },
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "allDay",
+              "equals": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "timezone",
+        "type": "select",
+        "label": "Timezone",
+        "description": "Select the time zone the event is supposed to take place in",
+        "options": [
+          {
+            "value": "-12:00",
+            "label": "UTC-12:00"
+          },
+          {
+            "value": "-11:00",
+            "label": "UTC-11:00"
+          },
+          {
+            "value": "-10:00",
+            "label": "UTC-10:00"
+          },
+          {
+            "value": "-9:30",
+            "label": "UTC-9:30"
+          },
+          {
+            "value": "-9:00",
+            "label": "UTC-9:00"
+          },
+          {
+            "value": "-8:00",
+            "label": "UTC-8:00"
+          },
+          {
+            "value": "-7:00",
+            "label": "UTC-7:00"
+          },
+          {
+            "value": "-6:00",
+            "label": "UTC-6:00"
+          },
+          {
+            "value": "-5:00",
+            "label": "UTC-5:00"
+          },
+          {
+            "value": "-4:00",
+            "label": "UTC-4:00"
+          },
+          {
+            "value": "-3:30",
+            "label": "UTC-3:30"
+          },
+          {
+            "value": "-3:00",
+            "label": "UTC-3:00"
+          },
+          {
+            "value": "-2:00",
+            "label": "UTC-2:00"
+          },
+          {
+            "value": "-1:00",
+            "label": "UTC-1:00"
+          },
+          {
+            "value": "0:00",
+            "label": "UTC"
+          },
+          {
+            "value": "1:00",
+            "label": "UTC+1:00"
+          },
+          {
+            "value": "2:00",
+            "label": "UTC+2:00"
+          },
+          {
+            "value": "3:00",
+            "label": "UTC+3:00"
+          },
+          {
+            "value": "3:30",
+            "label": "UTC+3:30"
+          },
+          {
+            "value": "4:00",
+            "label": "UTC+4:00"
+          },
+          {
+            "value": "4:00",
+            "label": "UTC+4:30"
+          },
+          {
+            "value": "5:00",
+            "label": "UTC+5:00"
+          },
+          {
+            "value": "5:30",
+            "label": "UTC+5:30"
+          },
+          {
+            "value": "5:45",
+            "label": "UTC+5:45"
+          },
+          {
+            "value": "6:00",
+            "label": "UTC+6:00"
+          },
+          {
+            "value": "6:30",
+            "label": "UTC+6:30"
+          },
+          {
+            "value": "7:00",
+            "label": "UTC+7:00"
+          },
+          {
+            "value": "8:00",
+            "label": "UTC+8:00"
+          },
+          {
+            "value": "9:00",
+            "label": "UTC+9:00"
+          },
+          {
+            "value": "9:30",
+            "label": "UTC+9:30"
+          },
+          {
+            "value": "10:00",
+            "label": "UTC+10:00"
+          },
+          {
+            "value": "10:30",
+            "label": "UTC+10:30"
+          },
+          {
+            "value": "11:00",
+            "label": "UTC+11:00"
+          },
+          {
+            "value": "12:00",
+            "label": "UTC+12:00"
+          },
+          {
+            "value": "12:45",
+            "label": "UTC+12:45"
+          },
+          {
+            "value": "13:00",
+            "label": "UTC+13:00"
+          },
+          {
+            "value": "14:00",
+            "label": "UTC+14:00"
+          }
+        ],
+        "default": "0:00",
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "allDay",
+              "equals": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "daylightSavings",
+        "type": "boolean",
+        "label": "Daylight savings",
+        "description": "Check if location that the event is taking place in uses daylight savings time",
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "allDay",
+              "equals": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "location",
+        "type": "text",
+        "label": "Location",
+        "description": "Name the location",
+        "placeholder": "Madison, USA",
+        "optional": true,
+        "maxLength": 200
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "label": "Description",
+        "description": "Add a description for the event",
+        "placeholder": "3rd H5P conference",
+        "optional": true,
+        "maxLength": 1500
+      }
+    ],
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "codeType",
+          "equals": "event"
+        }
+      ]
+    }
+  },
+  {
+    "name": "email",
+    "type": "group",
+    "label": "Email address",
+    "importance": "high",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "email",
+        "type": "text",
+        "label": "Email address",
+        "description": "Email address to write message to",
+        "placeholder": "john@fictional-h5p-fan-club.org",
+        "maxLength": 2000,
+        "regexp": {
+          "pattern": "^[A-Z0-9\\._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$",
+          "modifiers": "i"
+        }
+      }
+    ],
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "codeType",
+          "equals": "email"
+        }
+      ]
+    }
+  },
+  {
+    "name": "h5p",
+    "type": "group",
+    "label": "H5P content",
+    "importance": "high",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "h5p",
+        "type": "library",
+        "label": "H5P content",
+        "description": "H5P content to display",
+        "options": [
+          "H5P.Accordion 1.0",
+          "H5P.AdventCalendar 0.3",
+          "H5P.Agamotto 1.5",
+          "H5P.Audio 1.5",
+          "H5P.AudioRecorder 1.0",
+          "H5P.ArithmeticQuiz 1.1",
+          "H5P.Blanks 1.14",
+          "H5P.Chart 1.2",
+          "H5P.Collage 0.3",
+          "H5P.Column 1.16",
+          "H5P.Crossword 0.4",
+          "H5P.CoursePresentation 1.25",
+          "H5P.Dialogcards 1.9",
+          "H5P.Dictation 1.3",
+          "H5P.DocumentationTool 1.8",
+          "H5P.DragQuestion 1.14",
+          "H5P.DragText 1.10",
+          "H5P.Essay 1.5",
+          "H5P.FindTheWords 1.4",
+          "H5P.Flashcards 1.6",
+          "H5P.GuessTheAnswer 1.5",
+          "H5P.Table 1.1",
+          "H5P.AdvancedText 1.1",
+          "H5P.IFrameEmbed 1.0",
+          "H5P.Image 1.1",
+          "H5P.MultiMediaChoice 0.3",
+          "H5P.ImageHotspots 1.10",
+          "H5P.ImageHotspotQuestion 1.8",
+          "H5P.ImageJuxtaposition 1.5",
+          "H5P.ImagePair 1.4",
+          "H5P.ImageSequencing 1.1",
+          "H5P.ImageSlider 1.1",
+          "H5P.InteractiveBook 1.7",
+          "H5P.InteractiveVideo 1.26",
+          "H5P.Link 1.3",
+          "H5P.MarkTheWords 1.11",
+          "H5P.MemoryGame 1.3",
+          "H5P.MultiChoice 1.16",
+          "H5P.Questionnaire 1.3",
+          "H5P.QuestionSet 1.20",
+          "H5P.SingleChoiceSet 1.11",
+          "H5P.SortParagraphs 0.11",
+          "H5P.Summary 1.10",
+          "H5P.Timeline 1.1",
+          "H5P.TrueFalse 1.8",
+          "H5P.Video 1.6",
+          "H5P.ThreeImage 0.5"
+        ]
+      }
+    ],
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "codeType",
+          "equals": "h5p"
+        }
+      ]
+    }
+  },
+  {
+    "name": "location",
+    "type": "group",
+    "label": "Location",
+    "importance": "high",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "latitude",
+        "type": "text",
+        "label": "Latitude",
+        "description": "Latitude (please use the format 53.864462)",
+        "placeholder": "69.646007",
+        "regexp": {
+          "pattern": "^((-?0*([0-9]|[1-7][0-9]|8[0-9])(\\.[0-9]{1,6})?)|(-?90))$",
+          "modifiers": ""
+        }
+      },
+      {
+        "name": "longitude",
+        "type": "text",
+        "label": "Longitude",
+        "description": "Longitude (please use the format 10.663792)",
+        "placeholder": "18.954036",
+        "regexp": {
+          "pattern": "^((-?0*([0-9]|[1-8][0-9]|9[0-9]|1[0-6][0-9]|17[0-9])(\\.[0-9]{1,6})?)|-?180)$",
+          "modifiers": ""
+        }
+      }
+    ],
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "codeType",
+          "equals": "location"
+        }
+      ]
+    }
+  },
+  {
+    "name": "phone",
+    "type": "group",
+    "label": "Phone number",
+    "importance": "high",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "number",
+        "type": "text",
+        "label": "Phone number",
+        "description": "Phone number to call (please use the format +12 345 67890)",
+        "placeholder": "+12 345 67890",
+        "regexp": {
+          "pattern": "^\\+[0-9]{1,3}[\\ ]?[0-9]{1,4}[\\ ]?[0-9]{1,8}$",
+          "modifiers": ""
+        }
+      }
+    ],
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "codeType",
+          "equals": "phone"
+        }
+      ]
+    }
+  },
+  {
+    "name": "sms",
+    "type": "group",
+    "label": "SMS",
+    "importance": "high",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "number",
+        "type": "text",
+        "label": "Phone number",
+        "description": "Phone number to send to (please use the format +12 345 67890)",
+        "placeholder": "+12 345 67890",
+        "regexp": {
+          "pattern": "^\\+[0-9]{1,3}[\\ ]?[0-9]{1,4}[\\ ]?[0-9]{1,8}$",
+          "modifiers": ""
+        }
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Message",
+        "description": "Message to send",
+        "placeholder": "Please fetch milk and bread!",
+        "maxLength": 2000
+      }
+    ],
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "codeType",
+          "equals": "sms"
+        }
+      ]
+    }
+  },
+  {
+    "name": "text",
+    "type": "group",
+    "label": "Text",
+    "importance": "high",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "text",
+        "type": "text",
+        "label": "Text",
+        "description": "Text to encode",
+        "placeholder": "Please fetch\n* milk\n* bread",
+        "widget": "textarea",
+        "maxLength": 2000
+      }
+    ],
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "codeType",
+          "equals": "text"
+        }
+      ]
+    }
+  },
+  {
+    "name": "url",
+    "type": "group",
+    "label": "URL",
+    "importance": "high",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "url",
+        "type": "text",
+        "label": "URL",
+        "description": "URL to link to (must start with https:// or http://)",
+        "placeholder": "https://fictional-h5p-fan-club.org",
+        "maxLength": 2000,
+        "regexp": {
+          "pattern": "https?://([0-9a-z.-]+).[a-z.]{2,}([0-9a-z.-_]*)*/?",
+          "modifiers": "i"
+        }
+      }
+    ],
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "codeType",
+          "equals": "url"
+        }
+      ]
+    }
+  },
+  {
+    "name": "behaviour",
+    "type": "group",
+    "label": "Behavioural settings",
+    "description": "These options will let you control how the task behaves.",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "codeColor",
+        "type": "text",
+        "label": "Code color",
+        "importance": "medium",
+        "optional": true,
+        "default": "#000000",
+        "widget": "colorSelector",
+        "spectrum": {
+          "showInput": true
+        }
+      },
+      {
+        "name": "backgroundColor",
+        "type": "text",
+        "label": "Background color",
+        "importance": "medium",
+        "optional": true,
+        "default": "#ffffff",
+        "widget": "colorSelector",
+        "spectrum": {
+          "showInput": true,
+          "showAlpha": true,
+          "preferredFormat": "rgb"
+        }
+      },
+      {
+        "name": "maxSize",
+        "type": "text",
+        "label": "Maximum size",
+        "description": "Maximum size for the code given in CSS notation (pixels by default if only a number is given)",
+        "importance": "medium",
+        "optional": true,
+        "regexp": {
+          "pattern": "^(([1-9]+.[0-9]+)|[0-9]+)(cm|mm|in|px|pt|pc|em|ex|ch|rem|vw|vh|vmin|vmax|%)?$",
+          "modifiers": "i"
+        }
+      },
+      {
+        "name": "alignment",
+        "type": "select",
+        "label": "Horizontal alignment",
+        "description": "Set horizontal alignment if you set a maximum size",
+        "options": [
+          {
+            "value": "left",
+            "label": "left"
+          },
+          {
+            "value": "center",
+            "label": "center"
+          },
+          {
+            "value": "right",
+            "label": "right"
+          }
+        ],
+        "default": "center"
+      }
+    ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "common": true,
+    "label": "User interface",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "address",
+        "type": "text",
+        "label": "Address",
+        "importance": "low",
+        "default": "Address"
+      },
+      {
+        "name": "contact",
+        "type": "text",
+        "label": "Contact",
+        "importance": "low",
+        "default": "Contact"
+      },
+      {
+        "name": "country",
+        "type": "text",
+        "label": "Country",
+        "importance": "low",
+        "default": "Country"
+      },
+      {
+        "name": "dateEnd",
+        "type": "text",
+        "label": "End date",
+        "importance": "low",
+        "default": "End date"
+      },
+      {
+        "name": "dateStart",
+        "type": "text",
+        "label": "Start date",
+        "importance": "low",
+        "default": "Start date"
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "label": "Description",
+        "importance": "low",
+        "default": "Description"
+      },
+      {
+        "name": "email",
+        "type": "text",
+        "label": "Email",
+        "importance": "low",
+        "default": "Email"
+      },
+      {
+        "name": "event",
+        "type": "text",
+        "label": "Event",
+        "importance": "low",
+        "default": "Event"
+      },
+      {
+        "name": "extended",
+        "type": "text",
+        "label": "Extended address",
+        "importance": "low",
+        "default": "Extended address"
+      },
+      {
+        "name": "latitude",
+        "type": "text",
+        "label": "Latitude",
+        "importance": "low",
+        "default": "Latitude"
+      },
+      {
+        "name": "locality",
+        "type": "text",
+        "label": "Locality",
+        "importance": "low",
+        "default": "Locality"
+      },
+      {
+        "name": "location",
+        "type": "text",
+        "label": "Location",
+        "importance": "low",
+        "default": "Location"
+      },
+      {
+        "name": "longitude",
+        "type": "text",
+        "label": "Longitude",
+        "importance": "low",
+        "default": "Longitude"
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "label": "Message",
+        "importance": "low",
+        "default": "Message"
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name",
+        "importance": "low",
+        "default": "Name"
+      },
+      {
+        "name": "note",
+        "type": "text",
+        "label": "Note",
+        "importance": "low",
+        "default": "Note"
+      },
+      {
+        "name": "organization",
+        "type": "text",
+        "label": "Organization",
+        "importance": "low",
+        "default": "Organization"
+      },
+      {
+        "name": "phone",
+        "type": "text",
+        "label": "Phone",
+        "importance": "low",
+        "default": "Phone"
+      },
+      {
+        "name": "region",
+        "type": "text",
+        "label": "Region",
+        "importance": "low",
+        "default": "Region"
+      },
+      {
+        "name": "sms",
+        "type": "text",
+        "label": "SMS",
+        "importance": "low",
+        "default": "SMS"
+      },
+      {
+        "name": "street",
+        "type": "text",
+        "label": "Street",
+        "importance": "low",
+        "default": "Street"
+      },
+      {
+        "name": "text",
+        "type": "text",
+        "label": "Text",
+        "importance": "low",
+        "default": "Text"
+      },
+      {
+        "name": "title",
+        "type": "text",
+        "label": "Title",
+        "importance": "low",
+        "default": "Title"
+      },
+      {
+        "name": "url",
+        "type": "text",
+        "label": "URL",
+        "importance": "low",
+        "default": "URL"
+      },
+      {
+        "name": "zip",
+        "type": "text",
+        "label": "ZIP code",
+        "importance": "low",
+        "default": "ZIP code"
+      }
+    ]
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "common": true,
+    "label": "Readspeaker",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "openCodeInformation",
+        "type": "text",
+        "label": "QRCode. Display information (Text for Readspeakers)",
+        "importance": "low",
+        "default": "QRCode. Display information."
+      },
+      {
+        "name": "closeCodeInformation",
+        "type": "text",
+        "label": "Hide information (Text for Readspeakers)",
+        "importance": "low",
+        "default": "Hide information."
+      },
+      {
+        "name": "codeContents",
+        "type": "text",
+        "label": "Code contents (Text for Readspeakers)",
+        "importance": "low",
+        "default": ". Code contents"
+      }
+    ]
+  }
+]

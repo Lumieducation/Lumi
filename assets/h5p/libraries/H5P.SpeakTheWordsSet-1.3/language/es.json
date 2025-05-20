@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Introducción",
+      "fields": [
+        {
+          "label": "Mostrar introducción"
+        },
+        {
+          "label": "Imagen de la introducción"
+        },
+        {
+          "label": "Texto alternativo para imagen de introducción"
+        },
+        {
+          "label": "Título"
+        },
+        {
+          "label": "Texto de introducción",
+          "description": "Este título se mostrará encima del texto de introducción."
+        }
+      ]
+    },
+    {
+      "label": "Preguntas",
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
+      "entity": "Pregunta",
+      "field": {
+        "label": "Pregunta"
+      }
+    },
+    {
+      "label": "Retroalimentación Global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Predeterminado"
+            }
+          ],
+          "label": "Definir retroalimentación personalizada para cualquier rango de puntuación",
+          "description": "Haz clic en el botón \"Añadir rango\" para añadir los rangos que necesites. Ejemplo: 0-20% Mala puntuación, 21-91% Puntuación Media, 91-100% ¡Puntuación Estupenda!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango del Puntaje"
+              },
+              {},
+              {
+                "label": "Retroalimentación para rango de puntaje definido",
+                "placeholder": "Escribe tu retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Etiquetas y textos para Conjunto de Di las Palabras",
+      "fields": [
+        {
+          "label": "Etiqueta botón Introducción",
+          "default": "¡Comenzar Curso!"
+        },
+        {
+          "label": "Etiqueta de resultados de la pantalla de solución",
+          "default": "Tus resultados:"
+        },
+        {
+          "label": "Etiqueta botón Mostrar resultados",
+          "default": "Mostrar solución"
+        },
+        {
+          "label": "Etiqueta botón Intentar de nuevo",
+          "default": "Intentar de nuevo"
+        },
+        {
+          "label": "Etiqueta botón Terminar",
+          "default": "Terminar"
+        },
+        {
+          "label": "Etiqueta de accesibilidad para Pregunta siguiente",
+          "default": "Pregunta siguiente"
+        },
+        {
+          "label": "Etiqueta de accesibilidad para Pregunta anterior",
+          "default": "Pregunta anterior"
+        },
+        {
+          "label": "Título de la barra de navegación",
+          "description": "Títulos para preguntas en la barra de navegación. Se sustituirá \":num\"por el número de diapositiva actual.",
+          "default": "Diapositiva :num"
+        },
+        {
+          "label": "Etiqueta de accesibilidad para diapositiva respondida",
+          "default": "Contestada"
+        },
+        {
+          "label": "Etiqueta de accesibilidad para diapositiva activa",
+          "default": "Actualmente activa"
+        }
+      ]
+    }
+  ]
+}

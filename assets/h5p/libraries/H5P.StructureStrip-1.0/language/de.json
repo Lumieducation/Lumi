@@ -1,0 +1,172 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "description": "Medium, das wahlweise oberhalb der Aufgabe angezeigt wird.",
+          "label": "Typ"
+        },
+        {
+          "label": "Bild-Zoom deaktivieren"
+        }
+      ],
+      "label": "Medien"
+    },
+    {
+      "description": "Beschreibe hier die Aufgabe für die Lernenden.",
+      "label": "Aufgabenbeschreibung"
+    },
+    {
+      "entity": "Abschnitt",
+      "field": {
+        "fields": [
+          {
+            "label": "Titel"
+          },
+          {
+            "description": "Füge hier wahlweise Hinweise oder besondere Anweisungen für den Abschnitt ein.",
+            "label": "Hinweise"
+          },
+          {
+            "description": "Lege fest, wie lang ein Abschnitt im Verhältnis zu den anderen Abschnitten sein soll. Beispiel: Abschnitt 1 = 1; Abschnitt 2 = 3 (dreifache Länge von 1); Abschnitt 3 = 1 (dieselbe Länge wie 1).",
+            "label": "Gewichtung"
+          },
+          {
+            "default": "#96ceb4",
+            "label": "Hintergrundfarbe"
+          },
+          {
+            "default": "#1c1c1c",
+            "label": "Textfarbe"
+          }
+        ],
+        "label": "Einstellungen für den Abschnitt"
+      },
+      "label": "Abschnitte",
+      "widgets": [
+        {
+          "label": "Voreinstellung"
+        }
+      ]
+    },
+    {
+      "description": "Diese Optionen kontrollieren, wie sich die Aufgabe verhält.",
+      "fields": [
+        {
+          "label": "\"Wiederholen\" aktivieren"
+        },
+        {
+          "label": "\"Lösung anzeigen\" ermöglichen"
+        },
+        {
+          "description": "Der Spielraum definiert eine gewisse Flexibilität bei der Länge eines Abschnitts und wird in Prozent berechnet.",
+          "label": "Spielraum"
+        },
+        {
+          "description": "Lege eine absolute Untergrenze für die Textlänge fest. Please note that a section's weight compared to other sections is the main driver for the feedback message, not this minimum value.",
+          "label": "Minimale Textlänge"
+        },
+        {
+          "description": "Lege eine absolute Obergrenze für die Textlänge fest. Please note that a section's weight compared to other sections is the main driver for the feedback message, not this maximum value.",
+          "label": "Maximale Textlänge"
+        },
+        {
+          "description": "Entscheide, ob es direkt bei der Eingabe Rückmeldung geben soll oder erst auf Wunsch.",
+          "label": "Modus der Rückmeldung",
+          "options": [
+            {
+              "label": "Auf Wunsch"
+            },
+            {
+              "label": "Bei der Eingabe"
+            }
+          ]
+        }
+      ],
+      "label": "Verhaltenseinstellungen"
+    },
+    {
+      "fields": [
+        {
+          "default": "Kopieren",
+          "label": "Beschriftung des \"Kopieren\"-Buttons"
+        },
+        {
+          "default": "Überprüfen",
+          "label": "Beschriftung des \"Überprüfen\"-Buttons"
+        },
+        {
+          "default": "Wiederholen",
+          "label": "Beschriftung des \"Wiederholen\"-Buttons"
+        },
+        {
+          "default": "Lösung anzeigen",
+          "label": "Beschriftung des \"Lösung anzeigen\"-Buttons"
+        },
+        {
+          "default": "Alle deine Abschnitte haben eine gute Länge.",
+          "description": "Rückmeldungstext, der angezeigt wird, wenn alle Abschnitte eine passende Länge haben.",
+          "label": "Alle Abschnitte in Ordnung"
+        },
+        {
+          "default": "Dein Abschnitt \"@title\" ist zu kurz. Füge mindestens @chars Zeichen hinzu.",
+          "description": "Rückmeldungstext für Abschnitte, die zu kurz sind (@title wird durch den Abschnittstitel ersetzt, @chars wird durch die Anzahl zu ergänzender Zeichen ersetzt).",
+          "label": "Abschnitt zu kurz"
+        },
+        {
+          "default": "Dein Abschnitt \"@title\" ist zu lang. Entferne mindestens @chars Zeichen.",
+          "description": "Rückmeldungstext für Abschnitte, die zu lang sind (@title wird durch den Abschnittstitel ersetzt, @chars wird durch die Anzahl überschüssiger Zeichen ersetzt).",
+          "label": "Abschnitt zu lang"
+        },
+        {
+          "default": "@chars Zeichen zu kurz",
+          "description": "Status bei Eingabe für Abschnitte, die zu kurz sind (@chars wird durch die Anzahl zu ergänzender Zeichen ersetzt).",
+          "label": "Abschnitt zu kurz (bei Eingabe)"
+        },
+        {
+          "default": "@chars Zeichen zu lang",
+          "description": "Status bei Eingabe für Abschnitte, die zu lang sind (@chars wird durch die Anzahl überschüssiger Zeichen ersetzt).",
+          "label": "Abschnitt zu lang (bei Eingabe)"
+        },
+        {
+          "default": "Dein Text wurde in die Zwischenablage kopiert",
+          "label": "Text in die Zwischenablage kopiert"
+        },
+        {
+          "default": "Dein Text konnte nicht in die Zwischenablage kopiert werden",
+          "label": "Kann nicht in die Zwischenablage kopieren"
+        },
+        {
+          "default": "Abschnitt",
+          "label": "Abschnitt"
+        },
+        {
+          "default": "Es wurde kein Abschnitt für den Strukturstreifen angegeben.",
+          "label": "Kein Abschnitt angegeben"
+        }
+      ],
+      "label": "Bedienoberfläche"
+    },
+    {
+      "fields": [
+        {
+          "default": "Rückmeldung",
+          "label": "Rückmeldung (Text für Vorlesewerkzeuge)"
+        },
+        {
+          "default": "Kopiere Text in die Zwischenablage",
+          "label": "Kopiere Text in die Zwischenablage (Text für Vorlesewerkzeuge)"
+        },
+        {
+          "default": "Fenster schließen",
+          "label": "Fenster schließen (Text für Vorlesewerkzeuge)"
+        },
+        {
+          "default": "Hinweise anzeigen",
+          "label": "Hinweise anzeigen (Text für Vorlesewerkzeuge)"
+        }
+      ],
+      "label": "Vorlesewerkzeug (Barrierefreiheit)"
+    }
+  ]
+}

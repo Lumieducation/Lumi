@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Užduoties aprašymas"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Numatytasis"
+        }
+      ],
+      "label": "Kortelės",
+      "entity": "kortelė",
+      "field": {
+        "label": "Kortelė",
+        "fields": [
+          {
+            "label": "Klausimas",
+            "description": "Neprivalomas tekstinis kortelės klausimas. (Kortelėje gali būti tik vaizdas, tik tekstas arba abu)"
+          },
+          {
+            "label": "Atsakymas",
+            "description": "Atsakymas (sprendimas) kortelei."
+          },
+          {
+            "label": "Paveikslėlis",
+            "description": "Optional image for the card. (The card may use just an image, just a text or both)"
+          },
+          {
+            "label": "Alternatyvus paveikslėlio tekstas"
+          },
+          {
+            "label": "Patarimas",
+            "fields": [
+              {
+                "label": "Patarimo tekstas"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Progress text",
+      "default": "Kortelė @card iš @total",
+      "description": "Pažangos tekstas, galimi kintamieji: @card ir @total. Pavyzdys: „Kortelė @card iš @total“"
+    },
+    {
+      "label": "Text for the next button",
+      "default": "Kitas"
+    },
+    {
+      "label": "Text for the previous button",
+      "default": "Ankstesnis"
+    },
+    {
+      "label": "Text for the check answers button",
+      "default": "Tikrinti"
+    },
+    {
+      "label": "Require user input before the solution can be viewed"
+    },
+    {
+      "label": "Text for the answer input field",
+      "default": "Jūsų atsakymas"
+    },
+    {
+      "label": "Text for correct answer",
+      "default": "Teisingai"
+    },
+    {
+      "label": "Tekstas neteisingam atsakymui",
+      "default": "Neteisingai"
+    },
+    {
+      "label": "Rodyti sprendimo tekstą",
+      "default": "Teisingas (-i) atsakymas (-ai)"
+    },
+    {
+      "label": "Text for results title",
+      "default": "Rezultatai"
+    },
+    {
+      "label": "Tekstas teisingam numeriui",
+      "default": "@score iš @total teisingai",
+      "description": "Result text, variables available: @score and @total. Example: '@score of @total correct'"
+    },
+    {
+      "label": "Text for show results",
+      "default": "Rodyti rezultatus"
+    },
+    {
+      "label": "Text for short answer label",
+      "default": "A:"
+    },
+    {
+      "label": "Tekstas mygtukui „Bandyti dar kartą“",
+      "default": "Bandyti dar kartą"
+    },
+    {
+      "label": "Skirti didžiąsias ir mažąsias raides",
+      "description": "Makes sure the user input has to be exactly the same as the answer."
+    },
+    {
+      "label": "Incorrect text for assistive technologies",
+      "default": "Incorrect answer. Correct answer was @answer",
+      "description": "Text that will be announced to assistive technologies. Use @answer as variable."
+    },
+    {
+      "label": "Correct feedback text for assistive technologies",
+      "default": "@answer yra teisingas.",
+      "description": "Text that will be announced to assistive technologies when a card is answered correctly. Use @answer as variable."
+    },
+    {
+      "label": "Card change for assistive technologies",
+      "default": "Puslapis @current iš @total",
+      "description": "Text that will be announced to assistive technologies when navigating between cards. Use @current and @total as variables."
+    },
+    {
+      "label": "Randomize cards",
+      "description": "Enable to randomize the order of cards on display."
+    }
+  ]
+}

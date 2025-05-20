@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "과제 설명"
+    },
+    {
+      "widgets": [
+        {
+          "label": "기본 설정"
+        }
+      ],
+      "label": "카드",
+      "entity": "카드",
+      "field": {
+        "label": "카드",
+        "fields": [
+          {
+            "label": "문제",
+            "description": "카드에 대한 선택적 텍스트 질문(카드는 이미지, 텍스트 또는 둘 모두를 사용할 수 있습니다.)"
+          },
+          {
+            "label": "Answer",
+            "description": "카드에 대한 선택적 해답. Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "이미지",
+            "description": "카드에 대한 선택적 이미지(카드는 이미지, 텍스트 또는 둘 모두를 사용할 수 있습니다.)"
+          },
+          {
+            "label": "이미지의 대체 텍스트"
+          },
+          {
+            "label": "힌트",
+            "fields": [
+              {
+                "label": "힌트 텍스트"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "진행 텍스트",
+      "default": "총 @total 중 @card 카드",
+      "description": "진행 텍스트, 사용 가능한 변수: 총 @total 중 @card 카드. 예: '총 @total 중 @card 카드'"
+    },
+    {
+      "label": "다음 버튼을 위한 텍스트",
+      "default": "다음"
+    },
+    {
+      "label": "이전 버튼을 위한 텍스트",
+      "default": "이전"
+    },
+    {
+      "label": "정답 확인 버튼 텍스트",
+      "default": "정답 확인"
+    },
+    {
+      "label": "해답 보기 전에 사용자 입력 필요"
+    },
+    {
+      "label": "답변 입력 필드의 텍스트",
+      "default": "답변"
+    },
+    {
+      "label": "정답 텍스트",
+      "default": "정답"
+    },
+    {
+      "label": "오답 텍스트",
+      "default": "오답"
+    },
+    {
+      "label": "해답 보이기 텍스트",
+      "default": "정답"
+    },
+    {
+      "label": "결과 제목 텍스트",
+      "default": "결과"
+    },
+    {
+      "label": "정답 수 텍스트",
+      "default": "총 @total 중 @score 점",
+      "description": "결과 텍스트, 이용가능한 변수: 총 @total 중 @score 점. 예: '총 @total 중 @score 점'"
+    },
+    {
+      "label": "결과 보기 텍스트",
+      "default": "결과 보기"
+    },
+    {
+      "label": "단답 레이블 텍스트",
+      "default": "A:"
+    },
+    {
+      "label": "재시도 단추 텍스트",
+      "default": "재시도"
+    },
+    {
+      "label": "대소문자 구분",
+      "description": "사용자 입력이 답변과 정확히 동일해야 합니다."
+    },
+    {
+      "label": "보조 기술에 대한 오답 텍스트",
+      "default": "오답입니다. 정답은 @answer 입니다.",
+      "description": "보조 기술로 말해지는 텍스트. @answer 을(를) 변수로 사용하세요."
+    },
+    {
+      "label": "보조기술을 위한 올바른 답에 대한 피드백",
+      "default": "@answer 이 올바른 답입니다.",
+      "description": "카드가 올바르게 답이 되었을 때 보조기술을 위해 사용될 텍스트. @answer 는 변수로 사용하세요."
+    },
+    {
+      "label": "보조 기술을 위한 카드 변경",
+      "default": "총 @total 중 현재 페이지 @current",
+      "description": "카드간 이동에서 보조 기술로 말해지는 텍스트. @current 와 @total 를 변수로 사용하세요."
+    },
+    {
+      "label": "Randomize cards",
+      "description": "Enable to randomize the order of cards on display."
+    }
+  ]
+}

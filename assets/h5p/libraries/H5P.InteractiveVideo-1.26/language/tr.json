@@ -1,0 +1,508 @@
+{
+  "semantics": [
+    {
+      "label": "Etkileşimli Video Düzenleme",
+      "fields": [
+        {
+          "label": "Video yükle/göm",
+          "fields": [
+            {
+              "label": "Bir video ekleyin",
+              "description": "Etkileşimli videonuzda kullanmak istediğiniz videoyu eklemek için aşağıya tıklayınız. Bir video linki ekleyebilir ya da video dosyaları yükleyebilirsiniz. Videonun farklı kalitelerde birden fazla versiyonunu eklemeniz mümkündür. Tarayıcı desteğinden emin olmak istiyorsanız webm ve mp4 formatlarını kullanabilirsiniz."
+            },
+            {
+              "label": "Başlangıç ekranı ayarları (Youtube videoları için desteklenmiyor)",
+              "fields": [
+                {
+                  "label": "Etkileşimli videonun başlığı",
+                  "default": "Etkileşimli video",
+                  "description": "Özetlerde, istatistiklerde vb kullanılır."
+                },
+                {
+                  "label": "Başlangıç ekranında başlığı gizle"
+                },
+                {
+                  "label": "Kısa açıklama (İsteğe bağlı)",
+                  "description": "İsteğe bağlı. Video başlangıç ekranında kısa bir açıklama metni gösterir. Bu özellik Youtube videolarında desteklenmemektedir."
+                },
+                {
+                  "label": "Poster resmi",
+                  "description": "Kullanıcı videoyu başlatmadan önce gösterilen resimdir. Bu özellik Youtube videolarında desteklenmemektedir."
+                }
+              ]
+            },
+            {
+              "label": "Metinden takip (Youtube videoları için desteklenmiyor)",
+              "fields": [
+                {
+                  "label": "Erişilebilir metinden takipler",
+                  "entity": "Metinden Takip",
+                  "field": {
+                    "label": "Metinden Takip",
+                    "fields": [
+                      {
+                        "label": "Metinden Takip Etiketi",
+                        "description": "Birden fazla metinden takip seçeneği sunduğunuzda kullanıcı bir tanesini seçmesi gerektiği durumda kullanılır. Örneğin 'İspanyolca altyazı' İspanyolca altyazı takibinin etiketi olabilir.",
+                        "default": "Altyazılar"
+                      },
+                      {
+                        "label": "Metinden takibin türü",
+                        "options": [
+                          {
+                            "label": "Altyazılar"
+                          },
+                          {
+                            "label": "Başlıklar"
+                          },
+                          {
+                            "label": "Açıklamalar"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Kaynak dil, altyazılar için tanımlanmak zorundadır",
+                        "default": "en",
+                        "description": "Geçerli bir BCP 47 dil etiketine sahip olmalı. Eğer 'Altyazılar' metinden takip türü olarak seçilmişse, metinden takibin kaynak dili tanımlanmalıdır."
+                      },
+                      {
+                        "label": "Takip kaynağı (WebVTT dosyası)"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Varsayılan yazı yolu",
+                  "description": "Eğer herhangi bir yazı yolu boş bırakılırsa ilk yazı yolu varsıylan olarak kullanılacktır."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Etkileşim ekle",
+          "fields": [
+            {
+              "field": {
+                "fields": [
+                  {
+                    "label": "Görüntülenme süresi"
+                  },
+                  {
+                    "label": "Videoyu duraklat"
+                  },
+                  {
+                    "label": "Bu şekilde göster",
+                    "description": "<b>Buton</b> daraltılmış etkileşimdir. Kullanıcının etkileşimi açması için üzerine tıklaması gerekir. <b>Poster</b> genişletilmiş etkileşimdir. Etkileşim doğrudan videonun üzerinde görüntülenir.",
+                    "options": [
+                      {
+                        "label": "Buton"
+                      },
+                      {
+                        "label": "Poster"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Küçük ekranlarda buton şeklinde gözüksün"
+                  },
+                  {
+                    "label": "Etiket",
+                    "description": "Etkileşim ikonunun hemen yanında gösterilecek etiket."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Uyarlama (Adaptivity)",
+                    "fields": [
+                      {
+                        "label": "Tümü doğru olduğunda yapılacak eylem",
+                        "fields": [
+                          {
+                            "label": "Videonun şu noktasına konumlan",
+                            "description": "Zamanı D:SS formatında giriniz"
+                          },
+                          {
+                            "label": "Kullanıcının vazgeçip ve devam etmesine izin ver"
+                          },
+                          {
+                            "label": "Mesaj"
+                          },
+                          {
+                            "label": "Videonun şu noktasına konumlan butonu için etiket"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Yanlış olduğnda yapılacak eylem",
+                        "fields": [
+                          {
+                            "label": "Videonun şu noktasına konumlan",
+                            "description": "Zamanı D:SS formatında giriniz"
+                          },
+                          {
+                            "label": "Kullanıcının vazgeçip ve devam etmesine izin ver"
+                          },
+                          {
+                            "label": "Mesaj"
+                          },
+                          {
+                            "label": "Videonun şu noktasına konumlan butonu için etiket"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Devam etmeden önce görev için tam puan gerekir",
+                        "description": "For best functionality this option should be used in conjunction with the \"Disable navigation forward in a video\" option of Interactive Video."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Görsellik",
+                    "fields": [
+                      {
+                        "label": "Arkaplan rengi",
+                        "default": "rgb(255, 255, 255)"
+                      },
+                      {
+                        "label": "Kutu gölgesi",
+                        "description": "Etkileşimin etrafına ince bir gölge ekler. Tamamen transparan etkileşimler için devre dışı bırakmak isteyebilirsiniz"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Tıklandığında git",
+                    "fields": [
+                      {
+                        "label": "Yazınız",
+                        "options": [
+                          {
+                            "label": "Zaman kodu"
+                          },
+                          {
+                            "label": "Diğer sayfa (URL)"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Git",
+                        "description": "Kullanıcı hotspot'a tıkladığında, videonun hedeflenen zamanına götürülecektir. Zamanı D:SS formatında giriniz."
+                      },
+                      {
+                        "label": "URL",
+                        "fields": [
+                          {
+                            "label": "Protokol",
+                            "options": [
+                              {
+                                "label": "http://"
+                              },
+                              {
+                                "label": "https://"
+                              },
+                              {
+                                "label": "(kök bağlantılı)"
+                              },
+                              {
+                                "label": "diğer"
+                              }
+                            ]
+                          },
+                          {
+                            "label": "URL"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Görselleştir",
+                        "description": "Bir çerçeve ve bir simge ekleyerek etkileşimin tıklanabilirliğini gösterin"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {},
+            {}
+          ]
+        },
+        {
+          "label": "Özetleme (Toparlama) görevi",
+          "fields": [
+            {},
+            {
+              "label": "Şu sürede göster",
+              "description": "Video bitmeden kaç saniye önce gösterileceğin yazın."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Davranış ayarları",
+      "fields": [
+        {
+          "label": "Videoyu şuradan itibaren başlat",
+          "description": "Zamanı D:SS formatında girin"
+        },
+        {
+          "label": "Videoyu otomatik oynat",
+          "description": "Videonun oynatılması otomatik olarak başlasın"
+        },
+        {
+          "label": "Video sürekli dönsün",
+          "description": "Video sürekli başa dönecekse işaretleyin"
+        },
+        {
+          "label": "\"Çözümü göster\" butonunu geçersiz kıl",
+          "description": "Bu seçenek \"Çözümü göster\" butonunun tüm sorular için gösterilip gösterilmeyeceğini belirler, varsayılan olarak tüm sorular için etkin değildir veya her bir soru için ayrı ayrı ayarlanabilir.",
+          "options": [
+            {
+              "label": "Etkin"
+            },
+            {
+              "label": "Etkin değil"
+            }
+          ]
+        },
+        {
+          "label": "\"Yeniden dene\" butonunu geçersiz kıl",
+          "description": "Bu seçenek \"Yeniden dene\" butonunun tüm sorular için gösterilip gösterilmeyeceğini belirler, varsayılan olarak tüm sorular için etkin değildir veya her bir soru için ayrı ayrı ayarlanabilir.",
+          "options": [
+            {
+              "label": "Etkin"
+            },
+            {
+              "label": "Etkin değil"
+            }
+          ]
+        },
+        {
+          "label": "Yer imleri menüsü açık şekilde başlat",
+          "description": "Bu özellik video kaynağı Youtube olduğunda iPad cihazlarda etkin değildir."
+        },
+        {
+          "label": "10 saniye geri sar butonunu göster"
+        },
+        {
+          "label": "Disable navigation",
+          "description": "These options will disable user video navigation as specified.",
+          "options": [
+            {
+              "label": "None"
+            },
+            {
+              "label": "Forward"
+            },
+            {
+              "label": "Forward and backward"
+            }
+          ]
+        },
+        {
+          "label": "Sesi devre dışı bırak",
+          "description": "Bu seçenek seçildiğinde videonun sesi devre dışı bırakılacak ve açılması önlenecektir."
+        }
+      ]
+    },
+    {
+      "label": "Yerelleştir",
+      "fields": [
+        {
+          "label": "Etkileşim başlığı",
+          "default": "Etkileşim"
+        },
+        {
+          "label": "Oynatma başlığı",
+          "default": "Oynat"
+        },
+        {
+          "label": "Duraklatma başlığı",
+          "default": "Duraklat"
+        },
+        {
+          "label": "Sesi kapat başlığı",
+          "default": "Sesi kapat, şu anda sesi açık"
+        },
+        {
+          "label": "Sesi aç başlığı",
+          "default": "Sesi aç, şu anda sesi kapalı"
+        },
+        {
+          "label": "Video kalitesi başlığı",
+          "default": "Video kalitesi"
+        },
+        {
+          "label": "Video başlığı yazısı",
+          "default": "Başlık"
+        },
+        {
+          "label": "Kapatma butonu metni",
+          "default": "Kapat"
+        },
+        {
+          "label": "Tam ekran başlığı",
+          "default": "Tam ekran"
+        },
+        {
+          "label": "Tam ekrandan çık başlığı",
+          "default": "Tam ekrandan çık"
+        },
+        {
+          "label": "Özet başlığı",
+          "default": "Özet"
+        },
+        {
+          "label": "Yer imleri başlığı",
+          "default": "Yer imleri"
+        },
+        {
+          "label": "Gönder ekranı başlığı",
+          "default": "Gönder ekranı"
+        },
+        {
+          "label": "Uyarlanabilirlik arama butonu için varsayılan etiket",
+          "default": "Devam et"
+        },
+        {
+          "label": "Videoya devam et butonu için varsayılan etiket",
+          "default": "Videoya devam et"
+        },
+        {
+          "label": "Default label for more player options",
+          "default": "More player options"
+        },
+        {
+          "label": "Oynatma hızını ayarla",
+          "default": "Oynatma hızı"
+        },
+        {
+          "label": "10 Saniye Geri Sar",
+          "default": "10 Saniye Geri Sar"
+        },
+        {
+          "label": "Gezinim etkin değildir metni",
+          "default": "Gezinim etkin değildir"
+        },
+        {
+          "label": "Navigating forward is disabled text",
+          "default": "Navigating forward is disabled"
+        },
+        {
+          "label": "Ses etkin değildir metni",
+          "default": "Ses etkin değil"
+        },
+        {
+          "label": "Kullanıcının devam etmeden önce soruyu doğru yanıtlaması gerektiğine dair uyarı",
+          "default": "Devam etmeden önce tüm soruları doğru cevaplamanız gerekmektedir."
+        },
+        {
+          "label": "Geri butonu",
+          "default": "Geri"
+        },
+        {
+          "label": "Saat türünden geçen süre",
+          "default": "Saat"
+        },
+        {
+          "label": "Dakika türünden geçen süre",
+          "default": "Dakika"
+        },
+        {
+          "label": "Saniye türünden geçen süre",
+          "default": "Saniye"
+        },
+        {
+          "label": "Şu anki zaman için etiket",
+          "default": "Şu anki süre:"
+        },
+        {
+          "label": "Toplam süre için etiket",
+          "default": "Toplam süre:"
+        },
+        {
+          "label": "Ekranda bir tekil etkileşim göründüğünü açıklayan metin",
+          "default": "Etkileşim ortaya çıktı:"
+        },
+        {
+          "label": "Ekranda çoklu etkileşimlerin göründüğünü açıklayan metin",
+          "default": "Çoklu etkileşim ortaya çıktı:"
+        },
+        {
+          "label": "Video duraklatıldı duyrusu",
+          "default": "Video duraklatıldı"
+        },
+        {
+          "label": "İçerik etiketi",
+          "default": "İçerik"
+        },
+        {
+          "label": "Cevaplandı mesajı (@answered , cevaplanan soru sayısıyla değiştirilecektir)",
+          "default": "@answered cevaplandı"
+        },
+        {
+          "label": "Gönderi ekranı başlığı",
+          "default": "@answered soru cevaplandı",
+          "description": "@answered , cevaplanan soru sayısıyla değiştirilecektir."
+        },
+        {
+          "label": "Submit screen information when submit button is disabled",
+          "default": "You have answered @answered questions.",
+          "description": "@answered will be replaced by the number of answered questions."
+        },
+        {
+          "label": "Gönderi başlığı bilgisi",
+          "default": "Şu ana kadar @answered soru cevapladınız, cevaplarınızı göndermek için aşağıya tıklayınız.",
+          "description": "@answered , cevaplanan soru sayısıyla değiştirilecektir."
+        },
+        {
+          "label": "Eksik cevaplar için gönderi ekranı bilgisi",
+          "default": "Henüz bir soru cevaplamadınız."
+        },
+        {
+          "label": "Cevaplama gerekliliği noktasında gönderi ekranı bilgisi",
+          "default": "Cevaplarınızı göndermeden önce en az bir soru cevaplamak zorundasınız."
+        },
+        {
+          "label": "Gönderi ekranı, gönder butonu",
+          "default": "Cevapları Gönder"
+        },
+        {
+          "label": "Cevapları gönderme ekranında başarılı gönderme mesajı",
+          "default": "Cevaplarınız gönderildi!"
+        },
+        {
+          "label": "Cevapları gönderme ekranında tablo satır başlığı: Cevaplanan sorular",
+          "default": "Cevaplanan sorular"
+        },
+        {
+          "label": "Cevapları gönderme ekranında tablo satır başlığı: Puan",
+          "default": "Puan"
+        },
+        {
+          "label": "Cevapları gönderme ekranında cevaplama puanı",
+          "default": "Cevaplandı"
+        },
+        {
+          "label": "Puan ile sıra özeti gönderme ekranı (sesli okuma)",
+          "default": "@minutes dakika ve @seconds saniye sonra görünen @question için @total puan üzerinden @score aldınız."
+        },
+        {
+          "label": "Puansız sıra özeti gönderme ekranı (sesli okuma)",
+          "default": "@minutes dakika ve @seconds saniyeden sonra gelen @question yanıtladınız."
+        },
+        {
+          "label": "Video Progressbar",
+          "default": "Video progress"
+        },
+        {
+          "label": "Text for how to create interactions",
+          "default": "Play the video to start creating interactions"
+        }
+      ]
+    }
+  ]
+}

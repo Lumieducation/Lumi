@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Opskrif",
+      "placeholder": "Hier kan jy 'n opsionele opskrif byvoeg.",
+      "description": "Die opskrif wat jy graag bo die prent wil vertoon"
+    },
+    {
+      "label": "Items",
+      "entity": "item",
+      "widgets": [
+        {
+          "label": "Verstek"
+        }
+      ],
+      "field": {
+        "label": "Item",
+        "fields": [
+          {
+            "label": "Beeld"
+          },
+          {
+            "label": "Etiket",
+            "description": "Optionele etiket vir 'n regmerkie. Maak asb. seker dat dit nie te lank is nie, anders sal dit versteek word."
+          },
+          {
+            "label": "Beskrywing",
+            "placeholder": "My prent beskrywing ...",
+            "description": "Optionele beskrywing vir die prent"
+          },
+          {
+            "label": "Klank",
+            "description": "Opsionele klankbaan wat speel wanneer 'n prent vertoon word."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Gedragsinstellings",
+      "description": "Hierdie opsies laat jou beheer uitoefen oor die uitvoering van die taak.",
+      "fields": [
+        {
+          "label": "Begin prent",
+          "description": "Stel die getal van die prent waarmee begin word."
+        },
+        {
+          "label": "Klik skuifbalk",
+          "description": "Indien geaktiveer, sal die skuiwer aan 'n prent se possisie vasklam."
+        },
+        {
+          "label": "Vertoon regmerkies",
+          "description": "Indien geaktiveer, sal die skuiwerbalk 'n regmerkie vir elke prent vertoon."
+        },
+        {
+          "label": "Vertoon etikette",
+          "description": "Indien geaktiveer, sal die skuiwerbalk 'n etiket in stede van/in die plek van regmerkies vertoon."
+        },
+        {
+          "label": "Deursigtigneid Vervangings Kleur",
+          "description": "Stel die kleur wat die deursigte areas van die prent sal vervang."
+        },
+        {
+          "label": "Beeld spasie in volskermmodus",
+          "description": "As jy bykomende beskrywings vir die prent het, bepaal dit die persentasie spasie wat die prente in volskermmodus moet gebruik."
+        }
+      ]
+    },
+    {
+      "label": "Spreekleser",
+      "fields": [
+        {
+          "label": "Prent",
+          "default": "Prent"
+        },
+        {
+          "label": "Prent skuiwer",
+          "default": "Prent skuiwer"
+        },
+        {
+          "label": "Demp titel",
+          "default": "Demp"
+        },
+        {
+          "label": "Ontdemp titel",
+          "default": "Ontdemp"
+        },
+        {
+          "label": "Titel vir volskerm knoppie (voer in)",
+          "default": "Gaan na volskermmodus"
+        },
+        {
+          "label": "Titel vir volskermknoppie (verlaat)",
+          "default": "Verlaat volskermmodus"
+        }
+      ]
+    }
+  ]
+}

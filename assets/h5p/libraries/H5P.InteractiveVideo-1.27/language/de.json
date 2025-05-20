@@ -1,0 +1,507 @@
+{
+  "semantics": [
+    {
+      "label": "Editor für interaktive Videos",
+      "fields": [
+        {
+          "label": "Video hochladen/einbetten",
+          "fields": [
+            {
+              "label": "Videodateien",
+              "description": "Wähle die Videodateien, die in dem interaktiven Video verwendet werden sollen. Um alle Browser bestmöglich zu unterstützen, muss zumindest eine Version des Videos im webm-Format und eine im mp4-Format hinzugefügt werden."
+            },
+            {
+              "label": "Optionen Startbildschirm (nicht unterstützt für YouTube-Videos)",
+              "fields": [
+                {
+                  "label": "Titel des interaktiven Videos",
+                  "default": "Interaktives Video",
+                  "description": "Wird in Zusammenfassungen, Statistiken usw. benutzt."
+                },
+                {
+                  "label": "Titel auf Startbildschirm ausblenden"
+                },
+                {
+                  "label": "Kurzbeschreibung (optional)",
+                  "description": "Blendet einen kurzen Beschreibungstext auf dem Startbildschirm des Videos ein."
+                },
+                {
+                  "label": "Vorschaubild",
+                  "description": "Bild, das angezeigt wird, bevor das Video abgespielt wird. Funktioniert nicht mit YouTube-Videos."
+                }
+              ]
+            },
+            {
+              "label": "Textspuren (nicht unterstützt für YouTube-Videos)",
+              "fields": [
+                {
+                  "label": "Verfügbare Textspuren",
+                  "entity": "Spur",
+                  "field": {
+                    "label": "Spur",
+                    "fields": [
+                      {
+                        "label": "Spurbeschriftung",
+                        "description": "Benutzt, wenn der Benutzer eine aus mehreren Spuren auswählen muss. \"Spanische Untertitel\" könnte z. B. die Bezeichnung einer spanischen Untertitelspur sein.",
+                        "default": "Untertitel"
+                      },
+                      {
+                        "label": "Art der Textspur",
+                        "options": [
+                          {
+                            "label": "Untertitel (subtitles)"
+                          },
+                          {
+                            "label": "Untertitel für Hörgeschädigte (captions)"
+                          },
+                          {
+                            "label": "Beschreibungen für Vorlesewerkzeuge (descriptions)"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Sprache der Spur",
+                        
+                        "description": "Muss ein gültiger BCP 47 Sprach-Tag sein. Wenn die Spurart auf \"Untertitel (subtitles)\" gestellt ist, muss die Sprache definiert werden."
+                      },
+                      {
+                        "label": "Spurdatei (WebVTT)"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Standard-Textspur",
+                  "description": "Wenn das Feld leer gelassen wird oder keiner Spurbeschriftung entspricht, wird die erste Textspur verwendet."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Interaktionen hinzufügen",
+          "fields": [
+            {
+              "field": {
+                "fields": [
+                  {
+                    "label": "Anzeigezeit"
+                  },
+                  {
+                    "label": "Video pausieren, wenn es bei der Startzeit ankommt"
+                  },
+                  {
+                    "label": "Anzeigen als",
+                    "description": "<b>Button</b> ist eine eingeklappte Interaktion, die der Benutzer anklicken muss, um sie zu öffnen. Ein <b>Popup</b> wird direkt über dem Video angezeigt",
+                    "options": [
+                      {
+                        "label": "Button"
+                      },
+                      {
+                        "label": "Popup"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Auf kleinen Bildschirmen immer als Button anzeigen"
+                  },
+                  {
+                    "label": "Beschriftung",
+                    "description": "Beschriftung neben dem Icon der Interaktion."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Reaktionen auf Nutzereingaben",
+                    "fields": [
+                      {
+                        "label": "Aktion, wenn alles richtig",
+                        "fields": [
+                          {
+                            "label": "Springe zu",
+                            "description": "Die Stelle im Format M:SS angeben"
+                          },
+                          {
+                            "label": "Dem Nutzer erlauben, nicht zu springen, sondern das Video fortzusetzen"
+                          },
+                          {
+                            "label": "Nachricht"
+                          },
+                          {
+                            "label": "Beschriftung des Sprung-Buttons"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Aktion, wenn falsch",
+                        "fields": [
+                          {
+                            "label": "Springe zu",
+                            "description": "Die Stelle im Format M:SS eingeben"
+                          },
+                          {
+                            "label": "Dem Nutzer erlauben, nicht zu springen, sondern das Video fortzusetzen"
+                          },
+                          {
+                            "label": "Nachricht"
+                          },
+                          {
+                            "label": "Beschriftung des Sprung-Buttons"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Video kann nur bei voller Punktzahl fortgesetzt werden",
+                        "description": "Um bestmöglich zu funktionieren, sollte diese Option zusammen mit der Option \"Vorwärtsspringen im Video unterbinden\" genutzt werden."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Darstellung",
+                    "fields": [
+                      {
+                        "label": "Hintergrundfarbe"
+                      },
+                      {
+                        "label": "Schatten anzeigen",
+                        "description": "Fügt dem Interaktionsfeld einen leichten Schatten hinzu. Für vollständig transparente Interaktionsfelder deaktivieren"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Gehe bei Klick zu",
+                    "fields": [
+                      {
+                        "label": "Art des Ziels",
+                        "options": [
+                          {
+                            "label": "Stelle im Video"
+                          },
+                          {
+                            "label": "Andere Webseite (URL)"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Springe zu",
+                        "description": "Die Zeit im Video, zu der bei Anklicken des Hotspots gespult wird. Stelle im Format M:SS eingeben."
+                      },
+                      {
+                        "label": "URL",
+                        "fields": [
+                          {
+                            "label": "Protokoll",
+                            "options": [
+                              {
+                                "label": "http://"
+                              },
+                              {
+                                "label": "https://"
+                              },
+                              {
+                                "label": "(relativer Pfad auf aktueller Domain)"
+                              },
+                              {
+                                "label": "anderes"
+                              }
+                            ]
+                          },
+                          {
+                            "label": "URL"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Als klickbar darstellen",
+                        "description": "Durch Hinzufügen von Rand und Icon anzeigen, dass eine Interaktion angeklickt werden kann"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {},
+            {}
+          ]
+        },
+        {
+          "label": "Zusammenfassende Aufgabe",
+          "fields": [
+            {},
+            {
+              "label": "Anzeigen bei",
+              "description": "Anzahl der Sekunden vor Ende des Videos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "fields": [
+        {
+          "label": "Starte Video bei",
+          "description": "Stelle im Format M:SS eingeben"
+        },
+        {
+          "label": "Video automatisch abspielen",
+          "description": "Das Video startet automatisch, wenn es aufgerufen wird"
+        },
+        {
+          "label": "Video als Schleife spielen",
+          "description": "Aktivieren, wenn das Video in einer Schleife abgespielt werden soll"
+        },
+        {
+          "label": "Überschreiben der Anzeigeoptionen des \"Lösungen anzeigen\"-Buttons",
+          "description": "Diese Option gibt an, ob der \"Lösung anzeigen\"-Button für alle Fragen angezeigt, ausgeblendet oder für jede Frage individuell konfiguriert wird.",
+          "options": [
+            {
+              "label": "Immer anzeigen"
+            },
+            {
+              "label": "Immer ausblenden"
+            }
+          ]
+        },
+        {
+          "label": "Überschreiben der Anzeigeoptionen des \"Wiederholen\"-Buttons",
+          "description": "Diese Option gibt an, ob der \"Wiederholen\"-Button für alle Fragen angezeigt, ausgeblendet oder für jede Frage individuell konfiguriert wird.",
+          "options": [
+            {
+              "label": "Immer anzeigen"
+            },
+            {
+              "label": "Immer ausblenden"
+            }
+          ]
+        },
+        {
+          "label": "Mit geöffnetem Lesezeichen-Menü starten",
+          "description": "Diese Funktion ist auf iPads nicht verfügbar, wenn das Video von YouTube stammt."
+        },
+        {
+          "label": "Button zeigen, um 10 Sekunden zurück zu springen"
+        },
+        {
+          "label": "Springen im Video unterbinden",
+          "description": "Diese Optionen unterbinden das Springen in die jeweilige Richtung.",
+          "options": [
+            {
+              "label": "Keine Einschränkung"
+            },
+            {
+              "label": "Vorwärts"
+            },
+            {
+              "label": "Vorwärts und rückwärts"
+            }
+          ]
+        },
+        {
+          "label": "Ton deaktivieren",
+          "description": "Auswählen, um die Audio-Ausgabe zu deaktivieren."
+        }
+      ]
+    },
+    {
+      "label": "Bezeichnungen und Beschriftungen",
+      "fields": [
+        {
+          "label": "Bezeichnung einer Interaktion",
+          "default": "Interaktion"
+        },
+        {
+          "label": "Beschriftung des \"Abspielen\"-Buttons",
+          "default": "Abspielen"
+        },
+        {
+          "label": "Beschriftung des \"Pause\"-Buttons",
+          "default": "Pause"
+        },
+        {
+          "label": "Beschriftung des \"Stummschalten\"-Buttons",
+          "default": "Stummschalten, derzeit nicht laut geschaltet"
+        },
+        {
+          "label": "Beschriftung des \"Lautschalten\"-Buttons",
+          "default": "Laut schalten, derzeit stumm geschaltet"
+        },
+        {
+          "label": "Beschriftung des \"Videoqualität\"-Buttons",
+          "default": "Videoqualität"
+        },
+        {
+          "label": "Beschriftung des Video-Untertitels",
+          "default": "Untertitel"
+        },
+        {
+          "label": "Text des \"Schließen\"-Buttons",
+          "default": "Schließen"
+        },
+        {
+          "label": "Beschriftung des \"Vollbild\"-Buttons",
+          "default": "Vollbild"
+        },
+        {
+          "label": "Beschriftung des \"Vollbild beenden\"-Buttons",
+          "default": "Vollbild beenden"
+        },
+        {
+          "label": "Titel der Zusammenfassung",
+          "default": "Zusammenfassung öffnen"
+        },
+        {
+          "label": "Beschriftung des \"Lesezeichen\"-Buttons",
+          "default": "Lesezeichen"
+        },
+        {
+          "label": "Bezeichnung des Einsendebildschirms",
+          "default": "Einsendebildschirm"
+        },
+        {
+          "label": "Beschriftung des \"Video fortsetzen\"-Buttons, wenn als Reaktion auf Nutzereingabe gesprungen wird",
+          "default": "Fortfahren"
+        },
+        {
+          "label": "Standard-Beschriftung des \"Video fortsetzen\"-Buttons",
+          "default": "Video fortsetzen"
+        },
+        {
+          "label": "Standard-Beschriftung des \\\"Mehr Abspieloptionen\\\"-Buttons",
+          "default": "Mehr Abspieloptionen"
+        },
+        {
+          "label": "Abspielgeschwindigkeit festlegen",
+          "default": "Abspielgeschwindigkeit"
+        },
+        {
+          "label": "Beschriftung von \"10 Sekunden zurückspulen\"",
+          "default": "10 Sekunden zurückspulen"
+        },
+        {
+          "label": "Beschriftung von \"Vor- und Zurückspulen ist deaktiviert\"",
+          "default": "Vor- und Zurückspulen ist deaktiviert"
+        },
+        {
+          "label": "Text für \\\"Navigation vorwärts ist deaktiviert\\\"-Meldung",
+          "default": "Navigation vorwärts ist deaktiviert"
+        },
+        {
+          "label": "Hinweis auf deaktivierten Ton",
+          "default": "Ton ist deaktiviert"
+        },
+        {
+          "label": "Warnung, dass der Benutzer die Frage richtig beantworten muss, um weitermachen zu können",
+          "default": "Es müssen alle Fragen richtig beantwortet werden, um weitermachen zu können."
+        },
+        {
+          "label": "Beschriftung des \"Zurück\"-Buttons",
+          "default": "Zurück"
+        },
+        {
+          "label": "Nutzungsdauer in Stunden",
+          "default": "Stunden"
+        },
+        {
+          "label": "Nutzungsdauer in Minuten",
+          "default": "Minuten"
+        },
+        {
+          "label": "Nutzungsdauer in Sekunden",
+          "default": "Sekunden"
+        },
+        {
+          "label": "Beschriftung der aktuellen Zeit",
+          "default": "Aktuelle Zeit:"
+        },
+        {
+          "label": "Beschriftung der Gesamtzeit",
+          "default": "Gesamtzeit:"
+        },
+        {
+          "label": "Text der erklärt, dass eine (einzige) Interaktion mit einem Titel erschienen ist",
+          "default": "Interaktion ist erschienen:"
+        },
+        {
+          "label": "Text der erklärt, dass mehrere Interaktionen erschienen sind",
+          "default": "Mehrere Interaktionen sind erschienen."
+        },
+        {
+          "label": "Meldung, dass das Video pausiert wurde",
+          "default": "Video ist angehalten"
+        },
+        {
+          "label": "Beschriftung für \"Inhalt\"",
+          "default": "Inhalt"
+        },
+        {
+          "label": "Text, der erklärt, wie viele Fragen beantwortet wurden (@answered wird durch die Anzahl der beantworteten Fragen ersetzt)",
+          "default": "@answered beantwortet"
+        },
+        {
+          "label": "Titel des Einsendebildschirms",
+          "default": "@answered Frage(n) beantwortet",
+          "description": "@answered wird durch die Anzahl der beantworteten Fragen ersetzt."
+        },
+        {
+          "label": "Submit screen information when submit button is disabled",
+          "default": "Du hast @answered Fragen beantwortet.",
+          "description": "@answered wird durch die Anzahl der beantworteten Fragen ersetzt."
+        },
+        {
+          "label": "Text auf dem Einsendebildschirm",
+          "default": "Du hast @answered Fragen beantwortet. Klicke unten, um deine Ergebnisse abzusenden.",
+          "description": "@answered wird durch die Anzahl der beantworteten Fragen ersetzt."
+        },
+        {
+          "label": "Einsendebildschirm: Hinweis bei fehlenden Antworten",
+          "default": "Du hast noch keine Fragen beantwortet."
+        },
+        {
+          "label": "Einsendebildschirm: Hinweis auf weiteres Vorgehen",
+          "default": "Du musst mindestens eine Frage beantworten, um deine Antworten absenden zu können."
+        },
+        {
+          "label": "Einsendebildschirm: \"Absenden\"-Button",
+          "default": "Antworten absenden"
+        },
+        {
+          "label": "Einsendebildschirm: Hinweis bei abgesendeten Antworten",
+          "default": "Deine Antworten wurden abgeschickt!"
+        },
+        {
+          "label": "Einsendebildschirm, Spaltentitel: Beantwortete Fragen",
+          "default": "Beantwortete Fragen"
+        },
+        {
+          "label": "Einsendebildschirm, Spaltentitel: Punkte",
+          "default": "Punkte"
+        },
+        {
+          "label": "Einsendebildschirm: Text für Aufgaben ohne Punkte",
+          "default": "beantwortet"
+        },
+        {
+          "label": "Einsendebildschirm: Zusammenfassung einer Zeile mit Punkten (für Vorlesewerkzeuge)",
+          "default": "Du hast @score von @total Punkten für die @question erhalten, die bei @minutes Minuten und @seconds Sekunden erschienen ist."
+        },
+        {
+          "label": "Einsendebildschirm: Zusammenfassung einer Zeile ohne Punkte (für Vorlesewerkzeuge)",
+          "default": "Du hast die @question beantwortet, die bei @minutes Minuten und @seconds Sekunden erschienen ist."
+        },
+        {
+          "label": "Video-Fortschrittsbalken",
+          "default": "Video-Fortschritt"
+        },
+        {
+          "label": "Beschreibung, wie man Interaktionen erstellt",
+          "default": "Spiele das Video ab, um mit dem Erstellen von Interaktionen zu beginnen"
+        }
+      ]
+    }
+  ]
+}

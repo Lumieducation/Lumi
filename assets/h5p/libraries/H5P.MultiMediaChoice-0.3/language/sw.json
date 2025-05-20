@@ -1,0 +1,256 @@
+{
+  "semantics": [
+    {
+      "label": "Vyombo vya habari",
+      "fields": [
+        {
+          "label": "Aina",
+          "description": "Vyombo vya habari vya hiari vya kuonyesha juu ya swali."
+        },
+        {
+          "label": "Zima ukuzaji wa picha"
+        }
+      ]
+    },
+    {
+      "label": "Swali"
+    },
+    {
+      "label": "Chaguzi zinazopatikana",
+      "entity": "chaguo",
+      "field": {
+        "label": "Chaguo",
+        "fields": [
+          {
+            "label": "Vyombo vya habari",
+            "description": "Media to display as a choice."
+          },
+          {
+            "label": "Poster image"
+          },
+          {
+            "label": "Sahihi"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Maoni ya Jumla",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Chaguo-msingi"
+            }
+          ],
+          "label": "Bainisha maoni maalum kwa masafa yoyote ya alama",
+          "description": "Bofya kitufe cha \"Ongeza masafa\" ili kuongeza masafa mengi unavyohitaji. Mfano: 0-20% Alama mbaya, 21-91% Alama ya Wastani, 91-100% Alama Nzuri!",
+          "entity": "masafa",
+          "field": {
+            "fields": [
+              {
+                "label": "Masafa ya Alama"
+              },
+              {},
+              {
+                "label": "Maoni kwa masafa ya alama yaliyofafanuliwa",
+                "placeholder": "Jaza maoni"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Mipangilio ya tabia",
+      "description": "Chaguzi hizi zitakuwezesha kudhibiti jinsi kazi inavyofanya.",
+      "fields": [
+        {
+          "label": "Washa kitufe cha \"Jaribu tena\""
+        },
+        {
+          "label": "Washa kitufe cha \"Onesha Suluhisho\""
+        },
+        {
+          "label": "Onyesha mazungumzo ya uthibitisho kwenye \"Weka alama\""
+        },
+        {
+          "label": "Onyesha mazungumzo ya uthibitisho kwenye \"Jaribu tena\""
+        },
+        {
+          "label": "Toa pointi moja kwa swali zima",
+          "description": "Hutoa pointi moja kwa swali ikiwa alama ya asilimia ni kubwa kuliko asilimia ya ufaulu"
+        },
+        {
+          "label": "Hitaji jibu kabla ya suluhisho kutazamwa"
+        },
+        {
+          "label": "Aina ya Swali",
+          "description": "Chagua mwonekano na tabia ya swali.",
+          "options": [
+            {
+              "label": "Otomatiki"
+            },
+            {
+              "label": "Chaguo nyingi (Visanduku vya kuteua)"
+            },
+            {
+              "label": "Chaguo Moja (Vitufe vya Redio)"
+            }
+          ]
+        },
+        {
+          "label": "Uwiano wa vipengele",
+          "description": "Chagua uwiano wa vipengele vya mbadala",
+          "options": [
+            {
+              "label": "Otomatiki"
+            },
+            {
+              "label": "16:9"
+            },
+            {
+              "label": "4:3"
+            },
+            {
+              "label": "3:2"
+            },
+            {
+              "label": "1:1"
+            }
+          ]
+        },
+        {
+          "label": "Njia mbadala za juu kwa kila safu mlalo",
+          "description": "Weka idadi ya juu ya mbadala kwa kila safu mlalo ili kuhakikisha kuwa maswali yanaonekana sawa.",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "3"
+            },
+            {
+              "label": "4"
+            }
+          ]
+        },
+        {
+          "label": "Asilimia ya ufaulu",
+          "description": "Mpangilio huu mara nyingi hautakuwa na athari yoyote. Ni asilimia ya jumla ya alama inayohitajika kwa kupata pointi 1 wakati pointi moja kwa kazi nzima imewashwa, na kwa kupata mafanikio ya matokeo katika taarifa za Kiolesura cha Programu ya Uzoefu."
+        }
+      ]
+    },
+    {
+      "label": "Kiolesura cha mtumiaji",
+      "fields": [
+        {
+          "label": "Maandishi ya kitufe cha \"Weka alama\"",
+          "default": "Weka alama"
+        },
+        {
+          "label": "Maandishi ya kitufe cha \"Wasilisha\"",
+          "default": "Wasilisha"
+        },
+        {
+          "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Weka alama\"",
+          "default": "Weka alama majibu. Majibu yatatiwa alama kuwa sahihi, siyo sahihi au haijajibiwa."
+        },
+        {
+          "label": "Maandishi kwa kitufe cha \"Onyesha suluhisho\"",
+          "default": "Onyesha suluhisho"
+        },
+        {
+          "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Onyesha Suluhisho\"",
+          "default": "Onyesha suluhisho hilo. Chaguzi sahihi zitawekwa alama."
+        },
+        {
+          "label": "Jibu Sahihi (halijaonyeshwa)",
+          "default": "Jibu sahihi"
+        },
+        {
+          "label": "Jibu lisilo sahihi (halijaonyeshwa)",
+          "default": "Jibu lisilo sahihi"
+        },
+        {
+          "label": "Chaguo lilipaswa kuwekwa alama",
+          "default": "Lilipaswa kuwekwa alama"
+        },
+        {
+          "label": "Chaguo halikupaswa kuwekwa alama",
+          "default": "Halikupaswa kuwekwa alama"
+        },
+        {
+          "label": "Maandishi ya ujumbe wa \"Inahitaji jibu\"",
+          "default": "Tafadhali jibu kabla ya kutazama suluhisho"
+        },
+        {
+          "label": "Maandishi kwa kitufe cha \"Jaribu tena\"",
+          "default": "Jaribu tena"
+        },
+        {
+          "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Jaribu tena\"",
+          "default": "Jaribu tena kazi hiyo. Weka upya majibu yote na uanze kazi tena."
+        },
+        {
+          "label": "Matokeo yako",
+          "description": ":numna :total ni vigezo na vitabadilishwa na thamani yao husika.",
+          "default": "Umepata :num kati ya alama:total"
+        },
+        {
+          "label": "Weka alama mazungumzo ya uthibitisho",
+          "fields": [
+            {
+              "label": "Maandishi ya kichwa",
+              "default": "Umemaliza?"
+            },
+            {
+              "label": "Maandishi ya kiini",
+              "default": "Una uhakika unataka kumaliza?"
+            },
+            {
+              "label": "Ghairi lebo ya kitufe",
+              "default": "Ghairi"
+            },
+            {
+              "label": "Lebo ya kitufe cha kuthibitisha",
+              "default": "Maliza"
+            }
+          ]
+        },
+        {
+          "label": "Jaribu tena mazungumzo ya uthibitisho",
+          "fields": [
+            {
+              "label": "Maandishi ya kichwa",
+              "default": "Jaribu tena?"
+            },
+            {
+              "label": "Maandishi ya kiini",
+              "default": "Una uhakika unataka kujaribu tena?"
+            },
+            {
+              "label": "Ghairi lebo ya kitufe",
+              "default": "Ghairi"
+            },
+            {
+              "label": "Lebo ya kitufe cha kuthibitisha",
+              "default": "Jaribu tena"
+            }
+          ]
+        },
+        {
+          "label": "Maandishi ikiwa maandishi mbadala hayapo kwa picha",
+          "default": "Maandishi mbadala hayapo"
+        },
+        {
+          "label": "Close modal button label",
+          "default": "Close modal"
+        }
+      ]
+    }
+  ]
+}

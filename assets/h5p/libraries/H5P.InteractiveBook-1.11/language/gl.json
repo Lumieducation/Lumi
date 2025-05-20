@@ -1,0 +1,205 @@
+{
+  "semantics": [
+    {
+      "label": "Activar a cuberta do libro",
+      "description": "Unha cuberta que amosa información sobre o libro antes de entrar nel"
+    },
+    {
+      "label": "Páxina de Cuberta",
+      "fields": [
+        {
+          "label": "Descrición da cuberta",
+          "description": "Este texto será a descrición do teu libro."
+        },
+        {
+          "label": "Medios de portada",
+          "description": "Medios opcionais para mostrar na portada."
+        }
+      ]
+    },
+    {
+      "label": "Páxinas",
+      "entity": "Páxina",
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
+      "field": {
+        "label": "Elemento",
+        "fields": [
+          {
+            "label": "Páxina"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Configuración do comportamento",
+      "fields": [
+        {
+          "label": "Cor base",
+          "description": "Establece a cor base que definirá o esquema de cores global do libro. Asegúrate de establecer un contraste suficientemente alto."
+        },
+        {
+          "label": "Amosar a táboa de contidos por defecto",
+          "description": "Amósase a táboa de contidos cando se abre o libro"
+        },
+        {
+          "label": "Amosar indicadores de progreso",
+          "description": "Activa indicadores para cada páxina que indican ao usuario se xa leu a páxina ou non."
+        },
+        {
+          "label": "Activar progreso automático",
+          "description": "Se está activado, considerarase rematada calquera páxina que non conteña tarefas ao vela e calquera páxina que conteña tarefas cando todas as tarefas estean rematadas. Se está desactivado, haberá un botón no pé de cada páxina para que usuario prema nel cando remate con ela."
+        },
+        {
+          "label": "Amosar resumo",
+          "description": "Se está activado, o ususario pode ver un resumo e enviar o seu progreso ou respostas"
+        },
+        {
+          "label": "Activa o botón \"Reiniciar\"",
+          "description": "Cando estea activado, o usuario pode iniciar un reinicio na páxina de resumo."
+        }
+      ]
+    },
+    {
+      "label": "Tradución para \"Ler\"",
+      "default": "Ler"
+    },
+    {
+      "label": "Tradución para \"Amosar 'Táboa de contidos'\"",
+      "default": "Amosar 'Táboa de contidos'"
+    },
+    {
+      "label": "Tradución para \"Agachar 'Táboa de contidos'\"",
+      "default": "Agochar 'Táboa de contidos'"
+    },
+    {
+      "label": "Tradución para \"Páxina seguinte\"",
+      "default": "Páxina seguinte"
+    },
+    {
+      "label": "Tradución para \"Páxina anterior\"",
+      "default": "Páxina anterior"
+    },
+    {
+      "label": "Tradución para \"Páxina completa!\"",
+      "default": "Páxina completa!"
+    },
+    {
+      "label": "Tradución para \"@pages de @total completadas\" (@pages e @total subsituiranse polos valores actuais)",
+      "default": "@pages de @total completadas"
+    },
+    {
+      "label": "Tradución para \"Páxina incompleta\"",
+      "default": "Páxina incompleta"
+    },
+    {
+      "label": "Tradución para \"Ir á parte superior\"",
+      "default": "Ir á parte superior"
+    },
+    {
+      "label": "Tradución para \"Rematei esta páxina\"",
+      "default": "Rematei esta páxina"
+    },
+    {
+      "label": "Etiqueta do botón pantalla completa",
+      "default": "Pantalla completa"
+    },
+    {
+      "label": "Etiqueta do botón saír de pantalla completa",
+      "default": "Saír de pantalla completa"
+    },
+    {
+      "label": "Progreso coas páxinas do libro",
+      "description": "\"@count\" substituirase polo número de páxinas visitadas e \"@total\" polo número total de páxinas",
+      "default": "@count de @total páxinas"
+    },
+    {
+      "label": "Progreso da interacción",
+      "description": "\"@count\" substituirase polo número de interaccións rexistradas e \"@total\" polo número total de interaccións",
+      "default": "@count de @total interaccións"
+    },
+    {
+      "label": "Tradución para \"enviar informe\"",
+      "default": "Enviar Informe"
+    },
+    {
+      "label": "Etiqueta para o botón \"reiniciar\"",
+      "default": "Reiniciar"
+    },
+    {
+      "label": "Cabeceira do resumo",
+      "default": "Resumo"
+    },
+    {
+      "label": "Tradución para \"Todas as interaccións\"",
+      "default": "Todas as interaccións"
+    },
+    {
+      "label": "Tradución para \"Interaccións non contestadas\"",
+      "default": "Interaccións non contestadas"
+    },
+    {
+      "label": "Puntuación",
+      "description": "\"@score\" substituirase pola puntuación actual, e \"@maxscore\" pola puntuación máxima que se poida acadar",
+      "default": "@score / @maxscore"
+    },
+    {
+      "label": "Completado de interaccións por páxina",
+      "description": "\"@left\" substituirase polo número de interaccións restantes e \"@max\" polo número total de interaccións na páxina",
+      "default": "@left de @max interaccións completadas"
+    },
+    {
+      "label": "Tradución para \"Non hai interaccións\"",
+      "default": "Non hai interaccións"
+    },
+    {
+      "label": "Tradución para \"Puntuación\"",
+      "default": "Puntuación"
+    },
+    {
+      "label": "Etiqueta para o botón \"Enviar &amp; resumo\"",
+      "default": "Enviar &amp; resumo"
+    },
+    {
+      "label": "Tradución para \"Non interaccionaches con ningunha páxina.\"",
+      "default": "Non interaccionaches con ningunha páxina."
+    },
+    {
+      "label": "Tradución para \"Tes que interaccionar cunha páxina polo menos antes de poder ver o resumo.\"",
+      "default": "Tes que interaccionar cunha páxina polo menos antes de poder ver o resumo."
+    },
+    {
+      "label": "Tradución para \"Enviáronse as túas respostas para revisión!\"",
+      "default": "Enviáronse as túas respostas para revisión!!"
+    },
+    {
+      "label": "Etiqueta do progreso do resumo",
+      "default": "Progreso no libro"
+    },
+    {
+      "label": "Etiqueta do progreso das interaccións",
+      "default": "Progreso nas interaccións"
+    },
+    {
+      "label": "Etiqueta da puntuación total",
+      "default": "Puntuación total"
+    },
+    {
+      "label": "Textos de accesibilidade",
+      "fields": [
+        {
+          "label": "Alternativa textual para o progreso de páxina",
+          "description": "Un texto alternativo para o progreso visual de páxina. Variables dispoñibles: @page e @total.",
+          "default": "Páxina @page de @total."
+        },
+        {
+          "label": "Etiqueta para expandir/colapsar o menú de navegación",
+          "default": "Alternar o menú de navegación"
+        }
+      ]
+    }
+  ]
+}

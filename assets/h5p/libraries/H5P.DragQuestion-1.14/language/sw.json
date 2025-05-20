@@ -1,0 +1,271 @@
+{
+  "semantics": [
+    {
+      "label": "Angalia kitufe cha jibu",
+      "default": "Weka alama"
+    },
+    {
+      "label": "Wasilisha kitufe cha jibu",
+      "default": "Wasilisha"
+    },
+    {
+      "label": "Kitufe cha Jaribu tena",
+      "default": "Jaribu tena"
+    },
+    {
+      "label": "Maandishi ya ufafanuzi wa alama",
+      "default": "Majibu sahihi toa pointi +1. Majibu yasiyo sahihi toa pointi -1. Alama ya chini kabisa inayowezekana ni 0."
+    },
+    {
+      "fields": [
+        {
+          "label": "Mipangilio",
+          "fields": [
+            {
+              "label": "Picha ya mandharinyuma",
+              "description": "Ya hiari. Chagua picha ya kutumia kama mandharinyuma ya kazi yako ya kuburuta na kuacha."
+            },
+            {
+              "label": "Ukubwa wa kazi",
+              "description": "Taja jinsi kubwa (katika pikseli) eneo la kucheza linapaswa kuwa kubwa."
+            }
+          ]
+        },
+        {
+          "label": "Kazi",
+          "description": "Anza kwa kuweka maeneo yako ya kushuka.<br />Ifuatayo, weka vipengele vyako vinavyoweza kushuka na utekeleze maeneo yanayofaa ya kushuka.<br />Mwisho, hariri eneo lako la kushuka tena na utekeleze majibu sahihi.",
+          "fields": [
+            {
+              "label": "Vipengele",
+              "entity": "kipengele",
+              "field": {
+                "label": "Kipengele",
+                "fields": [
+                  {
+                    "description": "Chagua aina ya maudhui ambayo ungependa kuongeza."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Chagua maeneo ya kushuka"
+                  },
+                  {
+                    "label": "Uangavu wa mandharinyuma",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Idadi isiyo na mwisho ya matukio ya vipengele",
+                    "description": "Huongeza maradufu kipengele hiki ili kiweze kuburutwa kwenye maeneo mengi ya kushuka."
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Maeneo ya Kushuka",
+              "entity": "Eneo la Kushuka",
+              "field": {
+                "label": "Eneo la Kushuka",
+                "fields": [
+                  {
+                    "label": "Lebo",
+                    "description": "The label is used by assistive technologies."
+                  },
+                  {
+                    "label": "Onyesha lebo"
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Chagua vipengele sahihi"
+                  },
+                  {
+                    "label": "Uangavu wa mandharinyuma",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Vidokezo na maoni",
+                    "fields": [
+                      {
+                        "label": "Maandishi ya kidokezo"
+                      },
+                      {
+                        "label": "Ujumbe ulioonyeshwa kwenye mechi sahihi",
+                        "description": "Ujumbe utaonekana chini ya kazi kwenye \"weka alama\" ikiwa kushuka sahihi kunalingana."
+                      },
+                      {
+                        "label": "Ujumbe ulioonyeshwa kwenye kulingana siyo sahihi",
+                        "description": "Ujumbe utaonekana chini ya kazi kwenye \"weka alama\" ikiwa kulingana huko siyo sahihi."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Eneo hili la kushuka linaweza kuwa na kipengele kimoja tu",
+                    "description": "Hakikisha kuna jibu moja tu sahihi kwa eneo hili la kushuka"
+                  },
+                  {
+                    "label": "Washa mpangilio wa kiotomatiki",
+                    "description": "Itaunganisha kiotomatiki vitu vya kuburuta vyote viilivyoshuka katika eneo hili."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Maoni ya Jumla",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Chaguo-msingi"
+            }
+          ],
+          "label": "Bainisha maoni maalum kwa masafa yoyote ya alama",
+          "description": "Bofya kitufe cha \"Ongeza masafa\" ili kuongeza masafa mengi unavyohitaji. Mfano: 0-20% Alama mbaya, 21-91% Alama ya Wastani, 91-100% Alama Nzuri!",
+          "entity": "masafa",
+          "field": {
+            "fields": [
+              {
+                "label": "Masafa ya Alama"
+              },
+              {},
+              {
+                "label": "Maoni kwa masafa ya alama yaliyofafanuliwa",
+                "placeholder": "Jaza maoni"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Mipangilio ya tabia",
+      "description": "Chaguzi hizi zitakuwezesha kudhibiti jinsi kazi inavyofanya.",
+      "fields": [
+        {
+          "label": "Wezesha \"Jaribu tena\""
+        },
+        {
+          "label": "Wezesha kitufe cha \"Weka alama\""
+        },
+        {
+          "label": "Toa pointi moja kwa kazi nzima",
+          "description": "Zima kutoa pointi moja kwa kila kitu kinachoweza kuburutwa ambacho kimewekwa kwa usahihi."
+        },
+        {
+          "label": "Tumia adhabu",
+          "description": "Tumia adhabu kwa vipengele vilivyoshushwa katika maeneo ya kushuka vibaya. Hii lazima iwashwe wakati elementi zilizo sawa zinaweza kushushwa katika maeneo mengi ya kushuka, au ikiwa kuna eneo moja tu la kushuka. Ikiwa hii haijawashwa, wanafunzi wanaweza kufananisha vitu vyote kwa maeneo yote ya kushuka na daima kupokea alama kamili."
+        },
+        {
+          "label": "Washa ufafanuzi wa alama",
+          "description": "Onyesha maelezo ya alama kwa mtumiaji wakati wa kuangalia majibu yao (ikiwa chaguo la 'Tumia adhabu' limechaguliwa)."
+        },
+        {
+          "label": "Uangavu wa mandharinyuma kwa vitu vinavyoweza kuburutwa",
+          "description": "Ikiwa eneo hili litapangwa, itabatilisha uangavu uliowekwa kwenye vipengele vyote vinavyoweza kuburutwa. Hii inapaswa kuwa namba kati ya 0 na 100, ambapo 0 inamaanisha uwazi kamili na 100 inamaanisha hakuna uwazi"
+        },
+        {
+          "label": "Eneo la Kushuka Linaloangazia",
+          "description": "Chagua wakati wa kuonyesha maeneo ya kushuka.",
+          "options": [
+            {
+              "label": "Wakati wa kuburuta"
+            },
+            {
+              "label": "Daima"
+            },
+            {
+              "label": "Kamwe"
+            }
+          ]
+        },
+        {
+          "label": "Nafasi ya Kupanga kiotomatiki (katika pikseli)"
+        },
+        {
+          "label": "Washa Skrini Kamili",
+          "description": "Weka alama chaguo hili ili kuwasha kitufe cha skrini kamili."
+        },
+        {
+          "label": "Onyesha pointi za alama",
+          "description": "Onyesha pointi zilizopatikana kwa kila jibu. Haipatikani wakati chaguo la 'Toa pointi moja kwa kazi nzima' limewashwa."
+        },
+        {
+          "label": "Onyesha Mada",
+          "description": "Futa chaguo hili ikiwa hutaki mada hii ionyeshwe. Mada itaonyeshwa tu katika muhtasari, takwimu na kadhalika."
+        }
+      ]
+    },
+    {
+      "label": "Janibisha",
+      "fields": [
+        {
+          "label": "Lebo kamili ya skrini",
+          "default": "Skrini nzima"
+        },
+        {
+          "label": "Toka lebo ya skrini kamili",
+          "default": "Toka skrini kamili"
+        }
+      ]
+    },
+    {
+      "label": "Kiambishi awali kinachoweza kunyakuliwa",
+      "default": "Kinachoweza kunyakuliwa {num} kati ya {total}."
+    },
+    {
+      "label": "kiambishi tamati kinachoweza kunyakuliwa",
+      "default": "Kimewekwa katika eneo la kushuka{num}."
+    },
+    {
+      "label": "Kiambishi awali cha Eneo la kushuka",
+      "default": "Eneo la kushuka {num} kati ya {total}."
+    },
+    {
+      "label": "Hakuna lebo ya uteuzi wa eneo la kushuka",
+      "default": "Hakuna eneo la kushuka."
+    },
+    {
+      "label": "Lebo kwa kitufe cha kidokezo cha onyesho",
+      "default": "Kidokezo cha onyesho."
+    },
+    {
+      "label": "Lebo kwa kidokezo inapatikana",
+      "default": "Kidokezo kinapatikana"
+    },
+    {
+      "label": "Lebo kwa jibu sahihi",
+      "default": "Jibu sahihi"
+    },
+    {
+      "label": "Lebo kwa jibu lisilo sahihi",
+      "default": "Jibu lisilo sahihi"
+    },
+    {
+      "label": "Kichwa cha upau wenye maoni kwa majibu sahihi/ yasiyo sahihi",
+      "default": "Maoni"
+    },
+    {
+      "label": "Uwakilishi wa maandishi wa upau wa alama kwa wale wanaotumia kisoma maandishi",
+      "default": "Umepata :num kati ya alama:total"
+    },
+    {
+      "label": "Uwakilishi wa maandishi wa kitufe cha maelezo ya alama",
+      "default": "Maandishi ya ufafanuzi wa alama"
+    },
+    {
+      "label": "Lebo ya teknolojia ya usaidizi kwa kitufe cha \"Weka alama\"",
+      "default": "Weka alama majibu. Majibu yatatiwa alama kuwa sahihi, siyo sahihi au haijajibiwa."
+    },
+    {
+      "label": "Lebo ya teknolojia ya usaidizi kwa kitufe cha \"Jaribu tena\"",
+      "default": "Jaribu tena kazi hiyo. Weka upya majibu yote na uanze kazi tena."
+    }
+  ]
+}

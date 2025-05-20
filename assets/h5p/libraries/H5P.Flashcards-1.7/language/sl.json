@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Navodilo udeležencem"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Privzeto"
+        }
+      ],
+      "label": "Kartice",
+      "entity": "kartica",
+      "field": {
+        "label": "Kartica",
+        "fields": [
+          {
+            "label": "Vprašanje",
+            "description": "Neobvezno vprašanje za kartico. Na kartici je lahko samo slika, samo besedilo ali oboje."
+          },
+          {
+            "label": "Odgovor",
+            "description": "Odgovor na vprašanje. Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "Slika",
+            "description": "Neobvezna slika za kartico. Na kartici je lahko samo slika, samo besedilo ali oboje."
+          },
+          {
+            "label": "Nadomestno besedilo za sliko"
+          },
+          {
+            "label": "Namig",
+            "fields": [
+              {
+                "label": "Besedilo namiga"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Besedilo napredka",
+      "default": "Kartica @card od @total",
+      "description": "Spremenljivki v besedilu napredka sta @card in @total."
+    },
+    {
+      "label": "Besedilo za gumb \"Naprej\"",
+      "default": "Naprej"
+    },
+    {
+      "label": "Besedilo za gumb \"Nazaj\"",
+      "default": "Nazaj"
+    },
+    {
+      "label": "Besedilo za gumb \"Preveri\"",
+      "default": "Preveri"
+    },
+    {
+      "label": "Pred ogledom rešitve je potrebno podati vse odgovore"
+    },
+    {
+      "label": "Besedilo za polje za vnos odgovorov",
+      "default": "Odgovor na vprašanje"
+    },
+    {
+      "label": "Besedilo za pravilen odgovor",
+      "default": "Pravilen odgovor"
+    },
+    {
+      "label": "Besedilo za nepravilen odgovor",
+      "default": "Nepravilen odgovor"
+    },
+    {
+      "label": "Besedilo za prikaz rešitve",
+      "default": "Prikaži rešitev"
+    },
+    {
+      "label": "Besedilo za naslov rezultatov",
+      "default": "Rezultati"
+    },
+    {
+      "label": "Besedilo za število pravilnih",
+      "default": "Pravilnih @score od @total",
+      "description": "Spremenljivki sta @score in @total."
+    },
+    {
+      "label": "Besedilo za prikaz rezultatov",
+      "default": "Prikaz rezultatov"
+    },
+    {
+      "label": "Besedilo za oznako kratkega odgovora",
+      "default": "A:"
+    },
+    {
+      "label": "Besedilo za gumb \"Poskusi ponovno\"",
+      "default": "Poskusi ponovno"
+    },
+    {
+      "label": "Loči velike/male črke",
+      "description": "Razlikuje med zapisom v velikih ali malih tiskanih črkah."
+    },
+    {
+      "label": "Besedilo za nepravilen odgovor za bralnike zaslona",
+      "default": "Nepravilen odgovor. Pravilen odgovor bi bil @answer",
+      "description": "@answer je spremenljivka."
+    },
+    {
+      "label": "Besedilo za pravilen odgovor za bralnike zaslona",
+      "default": "@answer je pravilen odgovor.",
+      "description": "@answer je spremenljivka."
+    },
+    {
+      "label": "Sprememba statusa pri obračanju kartice za bralnike zaslona",
+      "default": "Stran @current od @total",
+      "description": "@current in @total sta spremenljivki."
+    },
+    {
+      "label": "Randomize cards",
+      "description": "Enable to randomize the order of cards on display."
+    }
+  ]
+}

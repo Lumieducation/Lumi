@@ -1,0 +1,57 @@
+.arMarkerGenerator .arMarkerGenerator-spinner-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arMarkerGenerator .arMarkerGenerator-spinner-container.arMarkerGenerator-spinner-none {
+  display: none;
+}
+
+.arMarkerGenerator-spinner {
+  display: inline-block;
+  position: relative;
+  width: 4.5em;
+  height: 4.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.arMarkerGenerator-spinner div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  margin: 0.5em;
+  border: 0.5em solid #999;
+  border-radius: 50%;
+  animation: h5p-image-juxtaposition-spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #999 transparent transparent transparent;
+}
+
+.arMarkerGenerator-spinner .arMarkerGenerator-spinner-circle-head {
+  animation-delay: -0.45s;
+}
+
+.arMarkerGenerator-spinner .arMarkerGenerator-spinner-circle-neck-upper {
+  animation-delay: -0.3s;
+}
+
+.arMarkerGenerator-spinner .arMarkerGenerator-spinner-circle-neck-lower {
+  animation-delay: -0.15s;
+}
+
+.arMarkerGenerator-spinner .arMarkerGenerator-spinner-circle-body {
+  animation-delay: 0;
+}
+
+@keyframes h5p-image-juxtaposition-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

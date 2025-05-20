@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Text otázky",
+      "description": "Otázka, na základě které se uživatel rozhodne."
+    },
+    {
+      "label": "Volby",
+      "entity": "volba",
+      "field": {
+        "fields": [
+          {
+            "label": "Text volby",
+            "description": "Popisek, který se zobrazí na tlačítku volby."
+          },
+          {
+            "label": "Přejít na",
+            "description": "Cílový čas, na který přejde uživatel po stisknutí tlačítka. Zadejte časový kód ve formátu M:SS."
+          },
+          {
+            "label": "Pokud zvolený text",
+            "description": "Volitelný potvrzovací text, který se zobrazí poté, co uživatel stiskne tlačítko volby."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Popisek tlačítka Pokračovat",
+      "default": "Pokračovat"
+    }
+  ]
+}

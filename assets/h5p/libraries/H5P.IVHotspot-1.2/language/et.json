@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Sihtkoht",
+      "fields": [
+        {
+          "label": "Tüüp",
+          "options": [
+            {
+              "label": "Ajakood"
+            },
+            {
+              "label": "Teise lehe link"
+            }
+          ]
+        },
+        {
+          "label": "Mine",
+          "description": "The target time the user will be taken to upon pressing the hotspot. Sisesta ajakood formaadis M:SS."
+        },
+        {
+          "label": "Link",
+          "fields": [
+            {
+              "label": "Protokoll",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(tüvest sõltuv)"
+                },
+                {
+                  "label": "muu"
+                }
+              ]
+            },
+            {
+              "label": "Link"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Visuaalid",
+      "fields": [
+        {
+          "label": "Kujund",
+          "options": [
+            {
+              "label": "Ristkülik"
+            },
+            {
+              "label": "Ring"
+            },
+            {
+              "label": "Ümarnurkadega ristkülik"
+            }
+          ]
+        },
+        {
+          "label": "Tulipunkti taustavärv"
+        },
+        {
+          "label": "Kasuta kursorit"
+        },
+        {
+          "label": "Lisa vilkumis-efekt",
+          "description": "Pane tähele: Vilkumis-efekt on redaktoris alati lubatud selleks, et leiaksid üles läbipaistvad tulipunktid"
+        }
+      ]
+    },
+    {
+      "label": "Tekstid",
+      "fields": [
+        {
+          "label": "Alternatiivtekst",
+          "description": "Kirjelda teema, mida tulipunkt käsitleb. Kasutatakse tekstilugeritega",
+          "placeholder": "Õun laua peal"
+        },
+        {
+          "label": "Tulipunkti silt"
+        },
+        {
+          "label": "Näita silti"
+        },
+        {
+          "label": "Sildi värv"
+        }
+      ]
+    }
+  ]
+}

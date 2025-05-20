@@ -1,0 +1,123 @@
+{
+  "semantics": [
+    {
+      "label": "Headline",
+      "description": "If set, will be used for the headline of the exercise instead of the content title."
+    },
+    {
+      "label": "Instruções",
+      "description": "Os alunos verão essas instruções acima das notas."
+    },
+    {
+      "label": "Conteúdo do exercício"
+    },
+    {
+      "label": "Campos de notas",
+      "description": "Configurações para os campos de notas",
+      "fields": [
+        {
+          "label": "Título do campo de sugestão",
+          "default": "Sugestão",
+          "description": "Título para a seção de recall"
+        },
+        {
+          "label": "Espaço reservado para o campo de sugestão",
+          "default": "Insira seus comentários, perguntas, a ideia principal etc. que você traz de suas anotações",
+          "description": "Espaço reservado para a seção de sugestão como um lembrete para seus alunos"
+        },
+        {
+          "label": "Título do campo de notas",
+          "default": "Notas",
+          "description": "Título para a seção de notas"
+        },
+        {
+          "label": "Espaço reservado para o campo de notas",
+          "default": "Insira datas, detalhes, definições, fórmulas, exemplos, etc. do material de origem",
+          "description": "Espaço reservado para a seção de notas como um lembrete para seus alunos"
+        },
+        {
+          "label": "Título do campo de resumo",
+          "default": "Resumo",
+          "description": "Título para a seção de resumo"
+        },
+        {
+          "label": "Espaço reservado para o campo de resumo",
+          "default": "Resuma o que você aprendeu",
+          "description": "Espaço reservado para a seção de resumo como um lembrete para seus alunos"
+        }
+      ]
+    },
+    {
+      "label": "Localização",
+      "fields": [
+        {
+          "label": "Notas salvas",
+          "default": "Notas salvas"
+        },
+        {
+          "label": "Salvar",
+          "default": "Salvar"
+        },
+        {
+          "label": "As notas não podem ser salvas",
+          "default": "A plataforma não suporta o recurso de salvar estado do conteúdo ou não está ativado nas configurações da plataforma ou você não está logado. Suas notas não podem ser salvas!"
+        },
+        {
+          "label": "Texto para o botão \"Copiar\"",
+          "default": "Copiar"
+        },
+        {
+          "label": "Notas copiadas para a área de transferência",
+          "default": "Notas copiadas para a área de transferência"
+        },
+        {
+          "label": "As notas não puderam ser copiadas para a área de transferência",
+          "default": "As notas não puderam ser copiadas para a área de transferência"
+        }
+      ]
+    },
+    {
+      "label": "Leitor de Tela",
+      "fields": [
+        {
+          "label": "Título do botão de entrar em modo de tela cheia",
+          "default": "Entrar no modo de tela cheia"
+        },
+        {
+          "label": "Título do botão para sair do modo de tela cheia",
+          "default": "Sair do modo de tela cheia"
+        },
+        {
+          "label": "Título do botão de alternância (quando as notas são fechadas)",
+          "default": "Abrir notas"
+        },
+        {
+          "label": "Título do botão de alternância (quando as notas são abertas)",
+          "default": "Fechar notas"
+        },
+        {
+          "label": "Notas abertas",
+          "default": "A visualização mudou para suas notas."
+        },
+        {
+          "label": "Notas fechadas",
+          "default": "A visualização mudou para suas notas."
+        },
+        {
+          "label": "Notas salvas",
+          "default": "As notas foram salvas na plataforma."
+        },
+        {
+          "label": "Hide notes",
+          "default": "Hide @label notes",
+          "description": "@label is a placeholder and will be replaced with the respective label of the notes field."
+        },
+        {
+          "label": "Show notes",
+          "default": "Show @label notes",
+          "description": "@label is a placeholder and will be replaced with the respective label of the notes field."
+        }
+      ]
+    }
+  ]
+}

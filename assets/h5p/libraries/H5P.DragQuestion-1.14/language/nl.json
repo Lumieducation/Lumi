@@ -1,0 +1,271 @@
+{
+  "semantics": [
+    {
+      "label": "Tekst van \"Controleer\"-knop",
+      "default": "Controleer"
+    },
+    {
+      "label": "Tekst van \"Verzend\"-knop",
+      "default": "Verzend"
+    },
+    {
+      "label": "Tekst van \"Opnieuw\"-knop",
+      "default": "Opnieuw"
+    },
+    {
+      "label": "Uitleg van de score",
+      "default": "Juiste antwoorden geven 1 punt. Onjuiste antwoorden geven 1 punt aftrek. De laagst mogelijke score is 0."
+    },
+    {
+      "fields": [
+        {
+          "label": "Instellingen",
+          "fields": [
+            {
+              "label": "Achtergrondafbeelding",
+              "description": "Optioneel. Selecteer een afbeelding om als achtergrond te gebruiken voor je sleep en plaats taak."
+            },
+            {
+              "label": "Afmeting opgave",
+              "description": "Specificeer hoe groot (in px) het afbeeldingsgebied moet zijn."
+            }
+          ]
+        },
+        {
+          "label": "Opgave",
+          "description": "Begin met het bepalen van je neerzetgebieden.<br />Vervolgens, plaats je de sleepbare onderdelen en markeer je de juiste neerzetgebieden.<br />Tenslotte, bewerk je het element opnieuw en vink je de juiste neerzetgebieden aan.",
+          "fields": [
+            {
+              "label": "Onderdelen",
+              "entity": "onderdeel",
+              "field": {
+                "label": "Onderdeel",
+                "fields": [
+                  {
+                    "description": "Kies de soort inhoud, die je wilt toevoegen."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Selecteer de neerzetgebieden"
+                  },
+                  {
+                    "label": "Ondoorzichtigheid achtergrond",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Oneindig aantal onderdelen",
+                    "description": "Kloon dit onderdeel zodat het naar meerdere neerzetgebieden kan worden gesleept."
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Neerzetgebieden",
+              "entity": "Neerzetgebied",
+              "field": {
+                "label": "Neerzetgebied",
+                "fields": [
+                  {
+                    "label": "Label",
+                    "description": "The label is used by assistive technologies."
+                  },
+                  {
+                    "label": "Toon label"
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Selecteer de juiste onderdelen"
+                  },
+                  {
+                    "label": "Ondoorzichtigheid achtergrond",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Tips en feedback",
+                    "fields": [
+                      {
+                        "label": "Tekst voor tip"
+                      },
+                      {
+                        "label": "Getoond bericht bij een juiste koppeling",
+                        "description": "Het bericht verschijnt na het klikken van \"Controleer\" onder de opgave als er een juiste koppeling is gemaakt."
+                      },
+                      {
+                        "label": "Getoond bericht bij een onjuiste koppeling",
+                        "description": "Het bericht verschijnt na het klikken op \"Controleer\" onder de opgave als er een onjuiste koppeling is gemaakt."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Dit neerzetgebied mag maar 1 onderdeel bevatten",
+                    "description": "Zorg ervoor dat er maar 1 juist antwoord voor dit neerzetgebied is"
+                  },
+                  {
+                    "label": "Schakel automatische uitlijning in",
+                    "description": "Automatisch uitlijning is van toepassing op alle sleepbare onderdelen in het neerzetgebied."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Algehele feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Standaard"
+            }
+          ],
+          "label": "Definieer aangepaste feedback voor elke scorereeks",
+          "description": "Druk op de \"Voeg scorereeks\"-knop om zoveel reeksen toe te voegen als nodig. Voorbeeld: 0-20% Onvoldoende, 21-91% Gemiddelde score, 91-100% Uitstekende score!",
+          "entity": "reeks",
+          "field": {
+            "fields": [
+              {
+                "label": "Scorereeks"
+              },
+              {},
+              {
+                "label": "Feedback voor de gedefinieerde scorereeks",
+                "placeholder": "Vul de feedback in"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellingen",
+      "description": "Met deze opties kun je bepalen hoe de taak zich gedraagt.",
+      "fields": [
+        {
+          "label": "Schakel \"Opnieuw\" in"
+        },
+        {
+          "label": "Schakel \"Controleer\"-knop in"
+        },
+        {
+          "label": "Geef één punt voor de gehele taak",
+          "description": "Schakel de optie 1 punt voor elke juist geplaatst onderdeel uit."
+        },
+        {
+          "label": "Pas puntenaftrek toe",
+          "description": "Pas puntenaftrek toe voor onderdelen die in de verkeerde neerzetgebieden zijn geplaatst. Dit moet worden geactiveerd wanneer dezelfde onderdelen in meerdere neerzetgebieden kunnen worden geplaatst, of als er maar één neerzetgebied is. Als dit niet geactiveerd is, dan zullen de gebruikers alle onderdelen in alle neerzetgebieden kunnen plaatsen en het volledige aantal punten ontvangen."
+        },
+        {
+          "label": "Schakel score-uitleg in",
+          "description": "Toon een score-uitleg aan de gebruiker als deze de antwoorden controleert (als de 'Pas puntenaftrek toe'-optie is aangevinkt)."
+        },
+        {
+          "label": "Ondoorzichtigheid achtergrond voor onderdelen",
+          "description": "Als dit veld is ingevuld, dan zal het de doorzichtigheid van alle sleepbare onderdelen overschrijven. Dit moet een getal zijn tussen de 0 en de 100, waarbij 0 volledige doorzichtig is en 100 volledig ondoorzichtig"
+        },
+        {
+          "label": "Markering neerzetgebieden",
+          "description": "Kies wanneer de neerzetgebieden worden gemarkeerd.",
+          "options": [
+            {
+              "label": "Tijdens slepen"
+            },
+            {
+              "label": "Altijd"
+            },
+            {
+              "label": "Nooit"
+            }
+          ]
+        },
+        {
+          "label": "Ruimte voor automatisch uitlijnen (in px)"
+        },
+        {
+          "label": "Schakel volledig scherm in",
+          "description": "Vink deze optie aan om volledig scherm in te schakelen."
+        },
+        {
+          "label": "Toon gescoorde punten",
+          "description": "Toon verkregen aantal punten voor elk antwoord. Deze mogelijkheid is niet beschikbaar als de 'Geef één punt voor de gehele taak'-optie is ingeschakeld."
+        },
+        {
+          "label": "Toon titel",
+          "description": "Vink deze optie uit als je de titel niet wilt tonen. De titel wordt alleen getoond in samenvattingen, statistieken enz."
+        }
+      ]
+    },
+    {
+      "label": "Localiseren",
+      "fields": [
+        {
+          "label": "Titel voor \"Volledig scherm\"-knop",
+          "default": "Volledig scherm"
+        },
+        {
+          "label": "Titel voor \"Volledig scherm afsluiten\"-knop",
+          "default": "Volledig scherm afsluiten"
+        }
+      ]
+    },
+    {
+      "label": "Grijpbaar voorvoegsel",
+      "default": "Grijpbaar {num} van {total}."
+    },
+    {
+      "label": "Grijpbaar achtervoegsel",
+      "default": "Geplaatst in neerzetgebied {num}."
+    },
+    {
+      "label": "Neergebied voorvoegsel",
+      "default": "Neerzetgebied {num} van {total}."
+    },
+    {
+      "label": "Selectielabel geen neerzetgebied",
+      "default": "Geen neerzetgebied."
+    },
+    {
+      "label": "Schermlezer tekst voor juiste antwoord",
+      "default": "Toon tip"
+    },
+    {
+      "label": "Label voor beschikbare tip",
+      "default": "Tip beschikbaar"
+    },
+    {
+      "label": "Label voor juiste antwoord",
+      "default": "Juist antwoord"
+    },
+    {
+      "label": "Label voor onjuist antwoord",
+      "default": "Onjuist antwoord"
+    },
+    {
+      "label": "Koptekst voor het onderdeel dat feedback bevat over juiste/onjuiste antwoorden",
+      "default": "Feedback"
+    },
+    {
+      "label": "Tekstuele omschrijving van de scorebalk voor diegene die gebruik maken van een schermlezer",
+      "default": "Je hebt :num van de :total punten"
+    },
+    {
+      "label": "Tekstuele omschrijving van \"Score-uitleg\"-knop",
+      "default": "Toon score-uitleg"
+    },
+    {
+      "label": "Ondersteunende technologie label voor \"Controleer\"-knop",
+      "default": "Controleer de antwoorden. De antwoorden worden gemarkeerd als juist, onjuist, of niet-beantwoord."
+    },
+    {
+      "label": "Ondersteunende technologie label voor \"Opnieuw\"-knop",
+      "default": "Probeer de taak opnieuw. Reset alle antwoorden en start de taak opnieuw."
+    }
+  ]
+}

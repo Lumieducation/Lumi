@@ -1,0 +1,124 @@
+.h5p-goals-page {
+  padding: 0.5em 1em;
+}
+
+/* Goal container */
+.h5p-goals-page .created-goal-container {
+  position: relative;
+  border-bottom: 2px solid #ebebeb;
+  background-color: #f5f5f5;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: solid 1px #D6D6D6;
+}
+
+/* ------------------------ Main classes ----------------------------- */
+
+.h5p-goals-page .goals-title {
+  border-bottom: 1px solid #ccc;
+  padding: 0.5em 0;
+  margin-bottom: 0.5em;
+  font-size: 18px;
+  color: #555;
+}
+
+.h5p-goals-page .goals-define {
+  margin: 1em 0;
+}
+
+.h5p-goals-page .goals-description {
+  padding-top: 1em;
+}
+
+.h5p-goals-page .goals-counter .goals-counter-text {
+  color: #555;
+  opacity: 0.75;
+}
+
+.h5p-goals-page .goals-view {
+  padding-top: 0.25em;
+}
+
+/* ------------------- Goal container truncation ------------------------- */
+
+.h5p-goals-page .created-goal-container .created-goal {
+  display: block;
+  padding: 0.5em;
+  box-sizing: border-box;
+  color: #333;
+  width: 100%;
+  word-wrap: break-word;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  resize: none;
+  overflow-y: hidden;
+}
+
+/* ------------------------- Goal container colors ------------------------ */
+/* Background colors */
+.h5p-goals-page .created-goal-container.goal-type-0,
+.h5p-goals-page .created-goal-container.goal-type-1,
+.h5p-goals-page .created-goal-container.goal-type-2 {
+  background-color: #fff;
+}
+
+.h5p-goals-page button.h5p-created-goal-remove {
+  position: absolute;
+  top: -0.8em;
+  right: -0.8em;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 50%;
+  border: none;
+  padding: 3px;
+  line-height: 1;
+  color: #bd3e3e;
+
+}
+
+.h5p-goals-page .h5p-created-goal-remove:before {
+  font-family: 'H5PFontAwesome4';
+  content: '\f00d';
+  border: 1px solid  #bd3e3e;
+  text-align: center;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  line-height: 1.5;
+  transition: all 0.2s;
+}
+
+
+.h5p-goals-page .h5p-created-goal-remove:hover:before {
+  background-color: #e74041;
+  border-color: #e74041;
+  color: #fff;
+}
+
+/* ------------------------------ Buttons -------------------------------------------------- */
+/* Rounded button css in 'H5P.JoubelUI' library */
+
+.h5p-goals-page .goals-define .goals-create:before {
+  font-family: "H5PFontAwesome4";
+  content: "\f067";
+  margin-right: 0.75em;
+}
+
+.h5p-goals-page .goals-define .goals-search {
+  float: left;
+  margin-right: 1em;
+}
+
+.h5p-goals-page .goals-define .goals-search:before {
+  font-family: "H5PFontAwesome4";
+  content: "\f07c";
+  margin-right: 0.75em;
+}
+
+/* Active state positioning */
+.h5p-goals-page .goals-define .goals-search:active:before,
+.h5p-goals-page .goals-define .goals-create:active:before {
+  position: relative;
+  top: 2px;
+}

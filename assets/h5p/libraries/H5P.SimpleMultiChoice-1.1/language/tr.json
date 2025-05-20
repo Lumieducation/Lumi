@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Soru"
+    },
+    {
+      "label": "Çoktan seçmeli tipi",
+      "options": [
+        {
+          "label": "Birden çok cevap"
+        },
+        {
+          "label": "Tek cevap"
+        }
+      ]
+    },
+    {
+      "label": "Cevap alternatifleri",
+      "entity": "Alternatif",
+      "field": {
+        "label": "Alternatif",
+        "fields": [
+          {
+            "label": "Metin"
+          },
+          {
+            "label": "Geribildirim",
+            "fields": [
+              {
+                "label": "Eğer cevap seçilirse mesaj gösterilir",
+                "description": "Eğer bu cevap seçilirse \"Devam et\" düğmesine basıldığında mesaj cevabın altında gösterilir."
+              },
+              {
+                "label": "Eğer cevap seçilmezse mesaj gösterilir",
+                "description": "Eğer bu cevap seçilmezse \"Devam et\" düğmesine basıldığında mesaj cevabın altında gösterilir."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

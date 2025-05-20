@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Tutvustustekst",
+      "default": "Vali õige väide.",
+      "description": "Näidatakse kokkuvõtva ülesande kohal."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Vaikimisi"
+        },
+        {
+          "label": "Tekstiline"
+        }
+      ],
+      "label": "Kokkuvõttev",
+      "entity": "väited",
+      "field": {
+        "label": "Väitekogumik",
+        "fields": [
+          {
+            "label": "Väidete loetelu kokkuvõtte jaoks - esimene väide on õige.",
+            "entity": "väide",
+            "field": {
+              "label": "Väide"
+            }
+          },
+          {
+            "label": "Vihje",
+            "fields": [
+              {
+                "label": "Vihje tekst"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Üldine tagasiside",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Vaikimisi"
+            }
+          ],
+          "label": "Määratle kohandatud tagasiside iga punktisumma vahemiku jaoks",
+          "description": "Vajuta \"Lisa vahemik\" nupul, et lisada vajalikud vahemikud. Näide: 0-20% halb tulemus, 21-91% keskmine tulemus, 91-100% suurepärane tulemus!",
+          "entity": "vahemik",
+          "field": {
+            "fields": [
+              {
+                "label": "Punktisumma vahemik"
+              },
+              {},
+              {
+                "label": "Määratletud punktisummavahemiku tagasiside",
+                "placeholder": "Sisesta tagasiside"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tekst, mida näidatakse enne kokkuvõtvas ülesandes lahendatud väidete arvu.",
+      "default": "Progress:",
+      "description": "Näidatakse väidete ülal. Näiteks: 'Progress: 2/5'"
+    },
+    {
+      "label": "Tekst, mida näidatakse enne kokkuvõtvas ülesandes valitud valede väidete arvu.",
+      "default": "Valesid vastuseid:",
+      "description": "Näidatakse väidete ülal. Näiteks: 'Valesid vastuseid: 4'"
+    },
+    {
+      "label": "Kokkuvõtva tagasiside päis",
+      "default": "Sinu tulemus",
+      "description": "Näidatakse kokkuvõtva tagasiside kohal."
+    },
+    {
+      "label": "Õige vastuse tekstilugeri tekst",
+      "default": "Õige."
+    },
+    {
+      "label": "Readspeaker text for announcing incorrect answer",
+      "default": "Incorrect! Please try again."
+    },
+    {
+      "label": "Readspeaker label for incorrect answer",
+      "default": "Incorrect"
+    },
+    {
+      "label": "Õigete vastuste loetelu silt",
+      "default": "Õiged vastused."
+    },
+    {
+      "label": "Näita vihjet nupu silt",
+      "default": "Näita vihjet"
+    },
+    {
+      "label": "Tekstilugeri kasutajaile punktisummariba tekstiline esitamine",
+      "description": ":num ja :total on erilised võtmesõnad, mida programm ise uuendab",
+      "default": "Sa said :num punkti :total punktist"
+    },
+    {
+      "label": "Edenemise teavitustekst tekstilugeri kasutajaile",
+      "description": ":num ja  :total on erilised võtmesõnad, mida programm ise uuendab",
+      "default": "Progress :num punkti kokku :total punktist"
+    }
+  ]
+}

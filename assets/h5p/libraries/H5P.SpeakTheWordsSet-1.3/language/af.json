@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Inleiding",
+      "fields": [
+        {
+          "label": "Vertoon inleiding"
+        },
+        {
+          "label": "Inleidende beeld"
+        },
+        {
+          "label": "Alternatiewe teks vir inleidende beeld"
+        },
+        {
+          "label": "Titel"
+        },
+        {
+          "label": "Inleidende teks",
+          "description": "Hierdie titel sal bo die inleidende teks vertoon word."
+        }
+      ]
+    },
+    {
+      "label": "Vrae",
+      "widgets": [
+        {
+          "label": "Verstek"
+        }
+      ],
+      "entity": "Vraag",
+      "field": {
+        "label": "Vraag"
+      }
+    },
+    {
+      "label": "Algemene terugvoer",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Verstek"
+            }
+          ],
+          "label": "Bepaal verstekterugvoer vir enige reeks tellings",
+          "description": "Kliek op die \"Voeg reeks by\" knoppie om so veel as moontlik reekse by te voeg. Byvoorbeeld: 0-20% Swak Punt, 21-91% Gemiddelde Punt, 91-100% Uitstekende Punt!",
+          "entity": "reeks",
+          "field": {
+            "fields": [
+              {
+                "label": "Telling reeks"
+              },
+              {},
+              {
+                "label": "Terugvoer vir gedefinieerde telling reeks",
+                "placeholder": "Vul die terugvoer in"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Praat die Woorde vaste etikette en tekste",
+      "fields": [
+        {
+          "label": "Inleiding etiketknoppie",
+          "default": "Begin kursus!"
+        },
+        {
+          "label": "Antwoordskerm uitslagetiket",
+          "default": "Jou uitslae:"
+        },
+        {
+          "label": "Wys die antwoord etiketknoppie",
+          "default": "Wys antwoord"
+        },
+        {
+          "label": "Probeer weer knoppie",
+          "default": "Probeer weer"
+        },
+        {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
+          "label": "Volgende vraag toeganklikheidsetiket",
+          "default": "Volgende vraag"
+        },
+        {
+          "label": "Vorige vraag toeganklikheidsetiket",
+          "default": "Vorige vraag"
+        },
+        {
+          "label": "Navigasiebalk titel",
+          "description": "Titel vir vrae in navigasiebalk. \":num\" sal vervang word met die werklike skyfienommer.",
+          "default": "Skyfie :num"
+        },
+        {
+          "label": "Beantwoorde skyfie toeganklikheidsetiket",
+          "default": "Beantwoord"
+        },
+        {
+          "label": "Aktiewe skyfie toeganklikheidsetiket",
+          "default": "Tans aktief"
+        }
+      ]
+    }
+  ]
+}

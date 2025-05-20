@@ -1,0 +1,293 @@
+{
+  "semantics": [
+    {
+      "label": "Descrizione del compito",
+      "description": "Descrivi qui il tuo compito."
+    },
+    {
+      "label": "parole",
+      "widgets": [
+        {
+          "label": "Predefinito"
+        }
+      ],
+      "entity": "Parola",
+      "field": {
+        "label": "Parola",
+        "fields": [
+          {
+            "label": "Traccia",
+            "description": "Indizio che dovrebbe indicare la risposta."
+          },
+          {
+            "label": "Risposta",
+            "description": "Risposta all'indizio."
+          },
+          {
+            "label": "Indizio extra"
+          },
+          {
+            "label": "Correggi la parola sulla griglia",
+            "description": "Controlla se vuoi fissare la parola in una posizione particolare sulla griglia. Words with the same alignment may not be placed touching each other."
+          },
+          {
+            "label": "Riga",
+            "description": "Indice di riga in cui dovrebbe iniziare la risposta."
+          },
+          {
+            "label": "Colonna",
+            "description": "Indice di colonna dove dovrebbe iniziare la risposta."
+          },
+          {
+            "label": "Orientamento",
+            "description": "Orientamento per la risposta.",
+            "options": [
+              {
+                "label": "Attraverso"
+              },
+              {
+                "label": "Giù"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Parola di soluzione generale",
+      "description": "Facoltativamente, aggiungi una parola di soluzione che può essere derivata da caratteri particolari sulla griglia. Sarà visibile solo se tutti i suoi caratteri possono essere trovati nel cruciverba. Nota: non è ancora disponibile il supporto per l'accessibilità per questa funzione."
+    },
+    {
+      "label": "Feedback generale",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Predefinito"
+            }
+          ],
+          "label": "Definisci feedback personalizzato per qualsiasi intervallo di punteggio",
+          "description": "Fai clic sul pulsante \"Aggiungi intervallo\" per aggiungere tutti gli intervalli di cui hai bisogno. Esempio: 0-20% Punteggio negativo, 21-91% Punteggio medio, 91-100% Ottimo punteggio!",
+          "entity": "allineare",
+          "field": {
+            "fields": [
+              {
+                "label": "Intervallo di punteggio"
+              },
+              {},
+              {
+                "label": "Feedback per un intervallo di punteggio definito",
+                "placeholder": "Compila il feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tema",
+      "fields": [
+        {
+          "label": "Immagine di sfondo",
+          "description": "Seleziona un'immagine di sfondo opzionale. Verrà ridimensionato per adattarsi allo sfondo senza allungarlo."
+        },
+        {
+          "label": "Colore di sfondo",
+          "description": "Scegli un colore di sfondo. Verrà utilizzato al posto di un'immagine di sfondo o come sfondo per aree trasparenti."
+        },
+        {
+          "label": "Colore griglia",
+          "description": "Scegli un colore per la griglia."
+        },
+        {
+          "label": "Colore di sfondo della cella",
+          "description": "Scegli il colore di sfondo per una cella della tabella."
+        },
+        {
+          "label": "Colore del testo della cella",
+          "description": "Scegli il colore del testo per una cella della tabella."
+        },
+        {
+          "label": "Colore ID indizio",
+          "description": "Scegli il colore dell'ID indizio all'interno di una cella di tabella."
+        },
+        {
+          "label": "Colore di sfondo della cella (evidenziato)",
+          "description": "Scegli il colore di sfondo per una cella della tabella che viene evidenziata."
+        },
+        {
+          "label": "Colore del testo della cella (evidenziato)",
+          "description": "Scegli il colore del testo per una cella della tabella che viene evidenziata."
+        },
+        {
+          "label": "Colore ID cella (evidenziato)",
+          "description": "Scegli il colore dell'ID indizio all'interno di una cella della tabella che è evidenziata."
+        }
+      ]
+    },
+    {
+      "label": "Impostazioni comportamentali",
+      "description": "Queste opzioni ti permetteranno di controllare il comportamento dell'attività.",
+      "fields": [
+        {
+          "label": "Numero di parole da mostrare",
+          "description": "Crea un lotto casuale di parole dal pool. Il batch conterrà sempre almeno tutte le parole che sono state corrette sulla griglia indipendentemente da questa impostazione. Un valore vuoto o 0 significa utilizzare tutte le parole."
+        },
+        {
+          "label": "Abilita feedback istantaneo"
+        },
+        {
+          "label": "Punteggio parole",
+          "description": "Se questa opzione è abilitata, le parole verranno conteggiate per determinare il punteggio. In caso contrario, verranno conteggiati i caratteri corretti."
+        },
+        {
+          "label": "Applicare sanzioni",
+          "description": "Se questa opzione è abilitata, ad ogni risposta sbagliata verrà assegnato un punteggio di penalità di -1."
+        },
+        {
+          "label": "Abilita \"Riprova\""
+        },
+        {
+          "label": "Abilita \"Soluzione\""
+        },
+        {
+          "label": "Keep correct answers on retry",
+          "description": "If this option is enabled, correct answers will be kept when the user retries the task unless full score was achieved."
+        }
+      ]
+    },
+    {
+      "label": "Interfaccia utente",
+      "fields": [
+        {
+          "label": "Etichetta per attraverso",
+          "default": "Attraverso"
+        },
+        {
+          "label": "Etichetta per giu",
+          "default": "Giu"
+        },
+        {
+          "label": "Testo per il pulsante \"Verifica\".",
+          "default": "Verifica"
+        },
+        {
+          "label": "Testo per il pulsante \"Invia\".",
+          "default": "Invia"
+        },
+        {
+          "label": "Testo per il pulsante \"Riprova\".",
+          "default": "Riprova"
+        },
+        {
+          "label": "Testo per il pulsante \"Mostra soluzione\".",
+          "default": "Mostra soluzione"
+        },
+        {
+          "label": "Impossibile creare cruciverba",
+          "default": "Impossibile generare un cruciverba con le parole indicate. Riprova con meno parole o parole che hanno più caratteri in comune."
+        },
+        {
+          "label": "Impossibile creare cruciverba (troppo poche parole)",
+          "default": "Impossibile generare un cruciverba. Hai bisogno di almeno due parole."
+        },
+        {
+          "label": "Parole problematiche",
+          "description": "Elenca le parole che hanno causato problemi durante la generazione del cruciverba. @words è un segnaposto che verrà sostituito dalle parole problematiche effettive.",
+          "default": "Some words could not be placed. Se stai usando parole fisse, assicurati che la loro posizione non impedisca di inserire altre parole. Words with the same alignment may not be placed touching each other. Parole problematiche: @words"
+        },
+        {
+          "label": "Indizio extra",
+          "default": "Indizio extra"
+        },
+        {
+          "label": "Chiudi la finestra",
+          "default": "Chiudi la finestra"
+        }
+      ]
+    },
+    {
+      "label": "Lettore",
+      "fields": [
+        {
+          "label": "Descrizione griglia cruciverba",
+          "default": "Griglia dei cruciverba. Usa i tasti freccia per navigare e la tastiera per inserire i caratteri. Utilizzare invece la scheda per utilizzare i campi di input."
+        },
+        {
+          "label": "Colonna",
+          "default": "Colonna"
+        },
+        {
+          "label": "Riga",
+          "default": "Riga"
+        },
+        {
+          "label": "Attraverso",
+          "default": "Attraverso"
+        },
+        {
+          "label": "Giù",
+          "default": "Giù"
+        },
+        {
+          "label": "Vuoto",
+          "default": "Vuoto"
+        },
+        {
+          "description": "Annunciatore dei risultati. @clue è una variabile e sarà sostituita dal rispettivo indizio.",
+          "label": "Risultato per",
+          "default": "Risultato per: @indizio"
+        },
+        {
+          "label": "Corretta",
+          "default": "Corretta"
+        },
+        {
+          "label": "Sbagliata",
+          "default": "Sbagliata"
+        },
+        {
+          "label": "Punto",
+          "default": "Punto"
+        },
+        {
+          "description": "Annunciatore di soluzioni. @clue e @solution sono variabili e verranno sostituite dai rispettivi valori.",
+          "label": "Soluzione per",
+          "default": "Per @clue la soluzione è: @solution"
+        },
+        {
+          "description": "Annunciatore di indizi extra. @clue è una variabile e sarà sostituita dal rispettivo valore.",
+          "label": "Indizio extra per",
+          "default": "Apri un indizio extra per @clue"
+        },
+        {
+          "description": "Annuncio della posizione attuale. @position e @length sono variabili e verranno sostituite dai rispettivi valori.",
+          "label": "Lettera",
+          "default": "Lettera @posizione di @lunghezza"
+        },
+        {
+          "description": "Annunciando la lunghezza della parola. @length è una variabile e sarà sostituita dal rispettivo valore.",
+          "label": "Lunghezza della parola",
+          "default": "@lunghezza lettera parola"
+        },
+        {
+          "label": "Descrizione della tecnologia assistiva per il pulsante \"Verifica\".",
+          "default": "Controlla i personaggi. Le risposte verranno contrassegnate come corrette, errate o senza risposta."
+        },
+        {
+          "label": "Descrizione della tecnologia assistiva per il pulsante \"Mostra soluzione\".",
+          "default": "Mostra la soluzione. Il cruciverba sarà riempito con la sua soluzione corretta."
+        },
+        {
+          "label": "Descrizione della tecnologia assistiva per il pulsante \"Riprova\".",
+          "default": "Riprova l'attività. Reimposta tutte le risposte e ricomincia l'attività."
+        },
+        {
+          "label": "Il tuo risultato",
+          "description": "@score e @total sono variabili e verranno sostituite dai rispettivi valori.",
+          "default": "Hai ottenuto un @punteggio su @punti totali"
+        }
+      ]
+    }
+  ]
+}

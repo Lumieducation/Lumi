@@ -1,0 +1,203 @@
+{
+  "semantics": [
+    {
+      "label": "Mode for door images",
+      "description": "Select whether you want to set each custom door image yourself or let H5P do the work for you based on the calendar background image set in the behavioural settings.",
+      "options": [
+        {
+          "label": "I want to set each door image myself"
+        },
+        {
+          "label": "H5P shall set the door images based on the background image"
+        }
+      ]
+    },
+    {
+      "label": "Ateak",
+      "entity": "atea",
+      "field": {
+        "fields": [
+          {
+            "label": "Eduki-mota",
+            "description": "Atea irekitzen denean zabalduko den eduki-mota (aukerazkoa).",
+            "options": [
+              {
+                "label": "Audioa"
+              },
+              {
+                "label": "Irudia"
+              },
+              {
+                "label": "Esteka"
+              },
+              {
+                "label": "Testua"
+              },
+              {
+                "label": "Bideoa"
+              }
+            ]
+          },
+          {
+            "label": "Audioa"
+          },
+          {
+            "label": "Irudia"
+          },
+          {
+            "label": "Esteka"
+          },
+          {
+            "label": "Testua"
+          },
+          {
+            "label": "Bideoa"
+          },
+          {
+            "label": "Auto-erreproduzitu"
+          },
+          {
+            "label": "Atearen irudia",
+            "description": "Atean erabiliko den irudia. 1:1 tamaina-ratioa izan behar du ezkerreko erdiak eskuineko erdiarekin bat egitea nahi baduzu."
+          },
+          {
+            "label": "Atzeko planoko irudia",
+            "description": "Atearen barruan agertuko den irudia. Modu lehenetsian atearen zenbakia izango da."
+          }
+        ]
+      },
+      "widgets": [
+        {
+          "label": "Lehenetsitakoa"
+        }
+      ]
+    },
+    {
+      "label": "Visual settings",
+      "description": "These options will let you configure the visual appearance.",
+      "fields": [
+        {
+          "label": "Egutegiaren atzeko planoko irudia"
+        },
+        {
+          "label": "Atearen irudi-txantiloia",
+          "description": "Irudi bat zehaztuz gero, ate guztientzako erabiliko da ateren batentzat irudi zehatza konfiguratu ezean."
+        },
+        {
+          "label": "Ezkutatu ateen ertzak"
+        },
+        {
+          "label": "Ezkutatu ateen zenbakiak"
+        },
+        {
+          "label": "Ezkutatu ateen eskutokiak"
+        },
+        {
+          "label": "Ezkutatu ateen markoa"
+        },
+        {
+          "label": "Elurra ari du",
+          "description": "Egutegiaren aurrean elurra erortzen agertuko da. Inoiz ez du elurrik egiten basamortuan, ezta IE11 nabigatzailean ere."
+        }
+      ]
+    },
+    {
+      "label": "Audio settings",
+      "description": "These options will let you configure the audio appearance.",
+      "fields": [
+        {
+          "label": "Atzeko planoko musika"
+        },
+        {
+          "label": "Auto-erreproduzitu atzeko planoko musika",
+          "description": "Markatuz gero, edukia zabaltzen denean atzeko planoko musika automatikoki erreproduzituko da. Mesedez kontuan izan: Nabigatzaile batzuren multimedia politikek auto-erreprodukzioa ukatu dezakete."
+        }
+      ]
+    },
+    {
+      "label": "Portaeraren ezarpenak",
+      "description": "Aukera hauek portaeraren ezarpenak baliogabetzen ahalbidetzen dizute.",
+      "fields": [
+        {
+          "label": "Mode for door placement",
+          "description": "Select whether you want to set a fixed number of columns and rows for the doors or if H5P should decide dynamically depending on the available space. Note that the latter may interfere with the position of the background image and custom door cover images that should be at a particular position.",
+          "options": [
+            {
+              "label": "Fixed"
+            },
+            {
+              "label": "Dynamic"
+            }
+          ]
+        },
+        {
+          "label": "Row-to-column ratio",
+          "description": "Select how many columns and rows the calender should use.",
+          "options": [
+            {
+              "label": "6 × 4"
+            },
+            {
+              "label": "4 × 6"
+            }
+          ]
+        },
+        {
+          "label": "Ausazko ordena",
+          "description": "Nahastu ateen ordena. H5P ezarpenetan \"gorde edukiaren egoera\" aukera markatuta badago, orden hori mantenduko da erabiltzailea beranduago bueltatzen denean."
+        },
+        {
+          "label": "Mantendu irudien ordena",
+          "description": "Nahastu ateak, baina mantendu ateen irudiak hasierako kokapenean goiko aldeko ezkerrean 1.a eta azpiko aldeko eskuinaldean 24.a."
+        },
+        {
+          "label": "Diseinatzaile-modua",
+          "description": "Diseinatzaile-modua erabiltzean, ate guztiak zabaldu daitezke. Bestela, ateak soilik abenduan eta atearen zenbakiko egunaren ostean ireki ahalko dira."
+        }
+      ]
+    },
+    {
+      "label": "Kokapena",
+      "fields": [
+        {
+          "label": "Ez dago ezer ikusteko",
+          "default": "Hemen ez dago ezer ikusteko!\ud83c\udf84"
+        },
+        {
+          "label": "Manikia",
+          "default": "Manikia"
+        }
+      ]
+    },
+    {
+      "label": "Irisgarritasuna",
+      "fields": [
+        {
+          "label": "Atea",
+          "default": "Atea"
+        },
+        {
+          "label": "Blokeatuta",
+          "default": "Blokeatuta. Oraindik ez da ate hau irekitzeko unea."
+        },
+        {
+          "description": "Iragarri ezazu edukia. @door lotutako atearen deskribapenarekin ordezkatuko den aldagaia da.",
+          "label": "Atearen edukia",
+          "default": "@door.atearen edukia"
+        },
+        {
+          "label": "Mututu audioa",
+          "default": "Mututu audioa"
+        },
+        {
+          "label": "Gaitu audioa",
+          "default": "Gaitu audioa"
+        },
+        {
+          "label": "Itxi leihoa",
+          "default": "Itxi leihoa"
+        }
+      ]
+    }
+  ]
+}

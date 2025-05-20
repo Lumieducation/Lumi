@@ -1,0 +1,293 @@
+{
+  "semantics": [
+    {
+      "label": "Lanaren deskribapena",
+      "description": "Deskribatu ezazu hemen zure lana."
+    },
+    {
+      "label": "hitz",
+      "widgets": [
+        {
+          "label": "Lehentsitakoa"
+        }
+      ],
+      "entity": "Hitza",
+      "field": {
+        "label": "Hitza",
+        "fields": [
+          {
+            "label": "Pista",
+            "description": "Erantzunera bideratuko duen pista."
+          },
+          {
+            "label": "Erantzuna",
+            "description": "Pistarentzako erantzuna."
+          },
+          {
+            "label": "Pista gehigarria"
+          },
+          {
+            "label": "Finkatu hitza lauki-sarean",
+            "description": "Markatu ezazu hitza lauki-sareko kokapen zehatz batean finkatu nahi baduzu. Words with the same alignment may not be placed touching each other."
+          },
+          {
+            "label": "Errenkada",
+            "description": "Erantzuna hasi beharko litzatekeen errenkadaren indizea."
+          },
+          {
+            "label": "Zutabea",
+            "description": "Erantzuna hasi beharko litzatekeen zutabearen indizea."
+          },
+          {
+            "label": "Orientazioa",
+            "description": "Erantzunarentzako orientazioa.",
+            "options": [
+              {
+                "label": "Horizontala"
+              },
+              {
+                "label": "Bertikala"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Erantzun orokorreko hitza",
+      "description": "Gehitu lauki-sareko karaktere zehatzetarako erantzun egokiaren hitz bat (aukerazkoa). Soilik erakutsiko da bere karaktere guztiak gurutzegraman aurkitu ahal badira. Kontuan izan mesedez: oraindik ez dago funtzio honentzako irisgarritasun-sostengurik."
+    },
+    {
+      "label": "Feedback Orokorra",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Lehenetsitakoa"
+            }
+          ],
+          "label": "Zehaztu ezazu edozein puntuazio-tarterako feedback pertsonalizatua",
+          "description": "Egin klik \"Gehitu tartea\" botoian behar dituzun tarte guztiak gehitzeko. Adibidez: 0-20% Puntuazio eskasa, 21-91% Batez besteko puntuazioa, 91-100% Puntuazio bikaina!",
+          "entity": "tartea",
+          "field": {
+            "fields": [
+              {
+                "label": "Puntuazio tartea"
+              },
+              {},
+              {
+                "label": "Zehaztutako tartearentzako feedbacka",
+                "placeholder": "Idatzi ezazu feedbacka"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Gaia",
+      "fields": [
+        {
+          "label": "Atzeko planoko irudia",
+          "description": "Aukeratu ezazu atzeko planoko irudia (aukerazkoa). Atzeko planoan luzatu gabe egokitzeko eskalatuko da."
+        },
+        {
+          "label": "Atzeko planoko kolorea",
+          "description": "Aukeratu ezazu atzeko planorako kolore bat. Atzeko planoko irudiaren ordez edo eremu gardenetako atzeko planorako erabiliko da."
+        },
+        {
+          "label": "Lauki-sarearen kolorea",
+          "description": "Aukeratu ezazu lauki-sarearen kolorea."
+        },
+        {
+          "label": "Gelaxkaren atzeko planoaren kolorea",
+          "description": "Aukeratu ezazu taulako gelaxkaren atzeko planoaren kolorea."
+        },
+        {
+          "label": "Gelaxkaren testuaren kolorea",
+          "description": "Aukeratu ezazu taulako gelaxkaren testuaren kolorea."
+        },
+        {
+          "label": "Pistaren IDaren kolorea",
+          "description": "Aukeratu ezazu taula-gelaxkaren barruko pistaren IDaren kolorea."
+        },
+        {
+          "label": "Gelaxkaren atzeko planoko kolorea (nabarmenduta)",
+          "description": "Aukeratu ezazu taulako gelaxkaren atzeko planoko kolorea gelaxka nabarmenduta dagoenean."
+        },
+        {
+          "label": "Gelaxkaren testuaren kolorea (nabarmenduta)",
+          "description": "Aukeratu ezazu taulako gelaxkaren testuaren kolorea gelaxka nabarmenduta dagoenean."
+        },
+        {
+          "label": "Gelaxkaren IDaren kolorea (nabarmenduta)",
+          "description": "Aukeratu ezazu nabarmenduta dagoen taula-gelaxkaren barruko pistaren IDaren kolorea."
+        }
+      ]
+    },
+    {
+      "label": "Portaeraren ezarpenak",
+      "description": "Aukera hauek lanaren portaera kontrolatzea ahalbidetzen dizute.",
+      "fields": [
+        {
+          "label": "Erakutsi beharreko hitz kopurua",
+          "description": "Sortu ausazko hitz multzo bat bankutik. Multzoak beti izango ditu lauki-sarean finkatutako hitzak, ezarpen hau kontuan hartu gabe. Hutsik utziz edo 0 jarriz gero hitz guztiak erabiliko dira."
+        },
+        {
+          "label": "Gaitu berehalako feedbacka"
+        },
+        {
+          "label": "Puntuatu hitzak",
+          "description": "Aukera hau gaituz gero, puntuazioa kalkulatzeko hitzak zenbatuko dira. Bestela, zuzen dauden karaktereak zenbatuko dira."
+        },
+        {
+          "label": "Aplikatu penalizazioak",
+          "description": "Aukera hau gaituz gero, erantzun oker bakoitzak -1 puntuko penalizazioa izango du."
+        },
+        {
+          "label": "Gaitu \"Saiatu berriro\""
+        },
+        {
+          "label": "Gaitu \"Erantzuna\""
+        },
+        {
+          "label": "Mantendu erantzun zuzenak berriro saiatzen zarenean",
+          "description": "Aukera hau gaituta badago, erantzun zuzenak mantenduko dira erabiltzailea zeregina berriro saiatzen denean puntuazio osoa lortu ezean."
+        }
+      ]
+    },
+    {
+      "label": "Erabiltzaile-interfazea",
+      "fields": [
+        {
+          "label": "Horizontalentzako etiketa",
+          "default": "Horizontala"
+        },
+        {
+          "label": "Bertikalentzako etiketa",
+          "default": "Bertikala"
+        },
+        {
+          "label": "\"Egiaztatu\" botoiarentzako testua",
+          "default": "Egiaztatu"
+        },
+        {
+          "label": "Testua \"Bidali\" botiarentzat",
+          "default": "Bidali"
+        },
+        {
+          "label": "\"Saiatu berriro\" botoiarentzako testua",
+          "default": "Saiatu berriro"
+        },
+        {
+          "label": "\"Erakutsi emaitza\" botoiaren testua",
+          "default": "Erakutsi emaitza"
+        },
+        {
+          "label": "Ezin da gurutzegrama sortu",
+          "default": "Ezin izan da emandako hitzekin gurutzegrama sortu. Saiatu zaitez berriro mesedez hitz gutxiagorekin edo karaktere berdinak dituzten hitzekin."
+        },
+        {
+          "label": "Ezin da gurutzegrama sortu (hitz gutxiegi)",
+          "default": "Ezin da gurutzegrama sortu. Gutxienez bi hitz behar dituzu."
+        },
+        {
+          "label": "Hitz gatazkatsuak",
+          "description": "Gurutzegrama sortzean arazoak eman dituzten hitzen zerrenda. @words dagokion hitz gatazkatsuarekin ordezkatua izango da.",
+          "default": "Some words could not be placed. Finkatutako hitzak erabiltzen badituzu, ziurtatu ezazu euren kokapenak ez duela beste hitzak kokatzea eragozten. Words with the same alignment may not be placed touching each other. Hitz gatazkatsua(k): @words"
+        },
+        {
+          "label": "Pista gehigarria",
+          "default": "Pista gehigarria"
+        },
+        {
+          "label": "Itxi leihoa",
+          "default": "Itxi leihoa"
+        }
+      ]
+    },
+    {
+      "label": "Irakurtzen duen bozgorailua",
+      "fields": [
+        {
+          "label": "Gurutzegramako lauki-sarearen deskribapena",
+          "default": "Gurutzegramako lauki-sarea. Erabili geziak nabigatzeko eta teklatua karaktereak sartzeko. Era berea Tab tekla erabili dezakezu Bete hutsuneak jardueraren eremuetara jauzi egin eta erantzunak idazteko."
+        },
+        {
+          "label": "Zutabea",
+          "default": "Zutabea"
+        },
+        {
+          "label": "Errenkada",
+          "default": "Errenkada"
+        },
+        {
+          "label": "Horizontala",
+          "default": "Horizontala"
+        },
+        {
+          "label": "Bertikala",
+          "default": "Bertikala"
+        },
+        {
+          "label": "Hutsik",
+          "default": "Hutsik"
+        },
+        {
+          "description": "Emaitzaren iragarlea. @clue dagokion pistarekin ordezkatuko den aldagaia da.",
+          "label": "Emaitza honentzat",
+          "default": "Emaitza honentzako: @clue"
+        },
+        {
+          "label": "Zuzena",
+          "default": "Zuzena"
+        },
+        {
+          "label": "Okerra",
+          "default": "Okerra"
+        },
+        {
+          "label": "Puntu",
+          "default": "puntu"
+        },
+        {
+          "description": "Erantzunaren iragarlea. @clue eta @solution euren balioekin ordezkatuko diren aldagaiak dira.",
+          "label": "Soluzioa honentzat",
+          "default": "@clue pistaren erantzuna hau da: @solution"
+        },
+        {
+          "description": "Pista gehigarriaren iragarlea. @clue dagokion balioarekin ordezkatuko den aldagaia da.",
+          "label": "Pista gehigarria honentzat",
+          "default": "Ireki pista gehigarria @clue pistarentzat"
+        },
+        {
+          "description": "Oraingo kokapena iragartzen. @position eta @length euren balioekin ordezkatuko diren aldagaiak dira.",
+          "label": "Letra",
+          "default": "Letraren @position eta @length"
+        },
+        {
+          "description": "Hitzaren luzera iragartzen. @length dagokion balioarekin ordezkatuko den aldagaia da.",
+          "label": "Hitzaren luzera",
+          "default": "@length letrako hitza"
+        },
+        {
+          "label": "\"Egiaztatu\" botoiaren laguntza-teknologientzako etiketa",
+          "default": "Egiaztatu karaktereak. Erantzuna zuzen, oker edo erantzun gabeko gisa markatuko da."
+        },
+        {
+          "label": "\"Erakutsi emaitza\" botoiaren laguntza-teknologientzako etiketa",
+          "default": "Erakutsi emaitza. Gurutzegrama emaitza zuzenekin beteko da."
+        },
+        {
+          "label": "\"Saiatu berriro\" botoiaren laguntza-teknologientzako etiketa",
+          "default": "Zeregina berriz egiten saiatu. Berrabiarazi erantzun guztiak eta hasi zeregina berriz."
+        },
+        {
+          "label": "Zure emaitza",
+          "description": "@score eta @total euren balioekin ordezkatuko diren aldagaiak dira.",
+          "default": "@total puntutatik @score puntu lortu duzu."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Editor de Tres Imaxes",
+      "fields": [
+        {
+          "label": "Escenas",
+          "entity": "Escena",
+          "field": {
+            "fields": [
+              {
+                "label": "Tipo de escena",
+                "options": [
+                  {
+                    "label": "Imaxe 360"
+                  },
+                  {
+                    "label": "Imaxe estática"
+                  }
+                ]
+              },
+              {
+                "label": "Amosar botón \"Atrás\"",
+                "description": "Amosar botón para volver á escena anterior"
+              },
+              {},
+              {
+                "label": "Título da Escena",
+                "description": "Usado para identificar a escena"
+              },
+              {
+                "label": "Fondo da Escena"
+              },
+              {
+                "label": "Descrición da Escena",
+                "description": "Texto que pode describir a escena ao usuario"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Etiqueta",
+                      "description": "Se o deixamos en branco, non se amosará ningunha etiqueta e intentarase amosar o campo do título para os lectores de pantalla"
+                    },
+                    {
+                      "label": "Configuración de Etiquetas",
+                      "fields": [
+                        {
+                          "label": "Posición da etiqueta",
+                          "description": "Escolle onde debería aparecer a etiqueta",
+                          "options": [
+                            {
+                              "label": "Usar a configuración de comportamento"
+                            },
+                            {
+                              "label": "Aliñado á dereita"
+                            },
+                            {
+                              "label": "Aliñado á esquerda"
+                            },
+                            {
+                              "label": "Aliñado á parte superior"
+                            },
+                            {
+                              "label": "Aliñado á parte inferior"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Etiqueta amosada",
+                          "description": "Se están ocultas - as etiquetas amosaranse só ao pasar o rato por riba",
+                          "options": [
+                            {
+                              "label": "Usar configuración de comportamento"
+                            },
+                            {
+                              "label": "Amosar"
+                            },
+                            {
+                              "label": "Agachar"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Estilo do botón",
+                "description": "Decide o comportamento dos botóns que levan a esta escena. Para escenas estáticas que non levan a novas escenas, recoméndase o botón \"Máis información\".",
+                "options": [
+                  {
+                    "label": "Nova escena (frecha)"
+                  },
+                  {
+                    "label": "Máis información (máis)"
+                  }
+                ]
+              },
+              {
+                "label": "Pista de son",
+                "description": "Engade unha pista de son específica para esta escena."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Pista de son"
+        }
+      ]
+    },
+    {
+      "label": "Configuración do comportamento",
+      "description": "Estas opcións permitiranche controlar o comportamento do mundo.",
+      "fields": [
+        {
+          "label": "Son Global",
+          "description": "Engade unha pista de son dispoñible por defecto en todas as escenas."
+        },
+        {
+          "label": "Calidade de renderizado da escena",
+          "description": "Escolle a cantidade de segmentos de anchura e altura empregados para renderizar unha escena. Isto afecta directamente ao nivel de calidade da escena. Proba a aumentalo se a escena parece estar formada por bloques ou se aparecen ondas dentro das escenas. Lembra que unha calidade máis alta implica maior tempo de renderizado.",
+          "options": [
+            {
+              "label": "Calidade Alta (128x128)"
+            },
+            {
+              "label": "Calidade Media (64x64)"
+            },
+            {
+              "label": "Calidade Baixa (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Configuración da etiqueta",
+          "fields": [
+            {
+              "label": "Posición da etiqueta",
+              "description": "A posición por defecto da etiqueta. Pode anularse por medio dunha interacción",
+              "options": [
+                {
+                  "label": "Aliñada á dereita"
+                },
+                {
+                  "label": "Aliñada á esquerda"
+                },
+                {
+                  "label": "Aliñada á parte superior"
+                },
+                {
+                  "label": "Aliñada á parte inferior"
+                }
+              ]
+            },
+            {
+              "label": "Amosado de etiquetas",
+              "description": "Se non está marcada - as etiquetas amosaranse só cando pase por riba o cursor do rato"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Localizar",
+      "fields": [
+        {
+          "label": "Etiqueta Aria para tipo de contido",
+          "default": "Xira Virtual"
+        },
+        {
+          "label": "Etiqueta para reproducir son",
+          "default": "Reproducir pista de son"
+        },
+        {
+          "label": "Etiqueta para pausar a reprodución do son",
+          "default": "Pausar pista de son"
+        },
+        {
+          "label": "Título para o diálogo da escena",
+          "default": "Descrición da escena"
+        },
+        {
+          "label": "Etiqueta do botón para restablecer a cámara",
+          "default": "Restablecer Cámara"
+        },
+        {
+          "label": "Etiqueta para o botón do diálogo de envío",
+          "default": "Diálogo de Envío"
+        },
+        {
+          "label": "Etiqueta para o botón do diálogo de peche",
+          "default": "Diálogo de Peche"
+        },
+        {
+          "label": "Etiqueta Aria para o botón da etiqueta de expansión",
+          "default": "Expandir a etiqueta visual"
+        },
+        {
+          "label": "Etiqueta para cando a imaxe de fondo está a cargar nunha escena 360",
+          "default": "A cargar imaxe de fondo..."
+        },
+        {
+          "label": "Etiqueta para cando non hai contido",
+          "default": "Non hai contido"
+        }
+      ]
+    }
+  ]
+}

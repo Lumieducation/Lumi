@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "label": "Medieelement",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Valgfritt medieelement. Elementet vil bli plassert over spørsmålet."
+        },
+        {
+          "label": "Deaktiver zoomingfunksjon."
+        }
+      ]
+    },
+    {
+      "label": "Oppgavebeskrivelse",
+      "description": "Forklar hvordan brukeren skal løse oppgaven.",
+      "placeholder": "Click on all the verbs in the text that follows."
+    },
+    {
+      "label": "Tekstlinjer",
+      "placeholder": "Oslo er hovedstaden i *Norge*",
+      "important": {
+        "description": "<ul><li>Marked words are added with an asterisk (*).</li><li>Asterisks can be added within marked words by adding another asterisk, *correctword*** =&gt; correctword*.</li></ul>",
+        "example": "The correct words are marked like this: *correctword*, an asterisk is written like this: *correctword***."
+      }
+    },
+    {
+      "label": "Tilbakemelding på hele oppgava",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Forhandsinnstilling"
+            }
+          ],
+          "label": "Opprett poengområder og legg inn tilbakemeldinger.",
+          "description": "Klikk på knappen \"Legg til poengområde\" og legg til så mange poengområder du trenger. Eksempel: 0–40 % Svakt resultat, 41–80 % Gjennomsnittlig resultat, 81–100 % Flott resultat!",
+          "entity": "Område",
+          "field": {
+            "fields": [
+              {
+                "label": "Poengområde"
+              },
+              {},
+              {
+                "label": "Tilbakemelding for definert poengområde",
+                "placeholder": "Skriv inn tilbakemelding."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Etikett for \"Sjekk\"-knapp",
+      "default": "Sjekk"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "Text for \"Retry\" button",
+      "default": "Retry"
+    },
+    {
+      "label": "Etikett for \"Fasit\"-knapp",
+      "default": "Fasit"
+    },
+    {
+      "label": "Innstillinger for oppgave-oppførsel",
+      "description": "Disse instillingene lar deg bestemme hvordan oppgavetypen skal oppføre seg.",
+      "fields": [
+        {
+          "label": "Aktiver \"Prøv igjen\"-knapp"
+        },
+        {
+          "label": "Aktiver \"Fasit\" knapp"
+        },
+        {
+          "label": "Enable \"Check\" button"
+        },
+        {
+          "label": "Show score points",
+          "description": "Show points earned for each answer."
+        }
+      ]
+    },
+    {
+      "label": "Riktig svar tekst",
+      "default": "Riktig!",
+      "description": "Text used to indicate that an answer is correct"
+    },
+    {
+      "label": "Feil svar tekst",
+      "default": "Feil!",
+      "description": "Text used to indicate that an answer is incorrect"
+    },
+    {
+      "label": "Mangler svar tekst",
+      "default": "Mangler!",
+      "description": "Text used to indicate that an answer is missing"
+    },
+    {
+      "label": "Beskrivelse for Vis Løsning",
+      "default": "Oppgaven er oppdatert til å inneholde fasiten.",
+      "description": "This text tells the user that the tasks has been updated with the solution."
+    },
+    {
+      "label": "Textual representation of the score bar for those using a readspeaker",
+      "default": "You got :num out of :total points"
+    },
+    {
+      "label": "Label for the full readable text for assistive technologies",
+      "default": "Full readable text"
+    },
+    {
+      "label": "Label for the text where words can be marked for assistive technologies",
+      "default": "Full text where words can be marked"
+    },
+    {
+      "label": "Solution mode header for assistive technologies",
+      "default": "Solution mode"
+    },
+    {
+      "label": "Checking mode header for assistive technologies",
+      "default": "Checking mode"
+    },
+    {
+      "label": "Assistive technology description for \"Check\" button",
+      "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+    },
+    {
+      "label": "Assistive technology description for \"Show Solution\" button",
+      "default": "Show the solution. The task will be marked with its correct solution."
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
+    }
+  ]
+}

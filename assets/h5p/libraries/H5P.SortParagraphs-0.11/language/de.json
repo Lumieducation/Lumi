@@ -1,0 +1,224 @@
+{
+  "semantics": [
+    {
+      "label": "Medium",
+      "fields": [
+        {
+          "label": "Typ",
+          "description": "Medium, das wahlweise oberhalb der Aufgabe angezeigt wird."
+        },
+        {
+          "label": "Bild-Zoom deaktivieren"
+        }
+      ]
+    },
+    {
+      "label": "Aufgabenbeschreibung",
+      "placeholder": "Beschreibe, was die Lernenden tun sollen ...",
+      "description": "Was die Lernenden wissen sollten."
+    },
+    {
+      "label": "Absätze",
+      "entity": "Absatz",
+      "field": {
+        "label": "Absatz"
+      }
+    },
+    {
+      "label": "Gesamtrückmeldung",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Voreinstellung"
+            }
+          ],
+          "label": "Lege Rückmeldungen für einzelne Punktebereiche fest",
+          "description": "Klicke auf den \"Bereich hinzufügen\"-Button, um so viele Bereiche hinzuzufügen, wie du brauchst. Beispiel: 0-20% Schlechte Punktzahl, 21-91% Durchschnittliche Punktzahl, 91-100% Großartige Punktzahl!",
+          "entity": "Bereich",
+          "field": {
+            "fields": [
+              {
+                "label": "Punktebereich"
+              },
+              {},
+              {
+                "label": "Rückmeldung für jeweiligen Punktebereich",
+                "placeholder": "Trage die Rückmeldung ein"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "description": "Diese Optionen kontrollieren, wie sich die Aufgabe verhält.",
+      "fields": [
+        {
+          "label": "Bewertungsmodus",
+          "description": "Wähle, ob Punkte für jeden an der exakt richtigen Stelle platzierten Absatz vergeben werden oder für jeden Absatz, der nach dem Absatz platziert wird, nach dem er platziert werden soll (\"korrekte Reihenfolge\")",
+          "options": [
+            {
+              "label": "Richtige Reihenfolge"
+            },
+            {
+              "label": "Korrekt platzierter Absatz"
+            }
+          ]
+        },
+        {
+          "label": "Punktabzug verwenden",
+          "description": "Wähle, ob für jeden Absatz, der nicht richtig positioniert ist, ein Punkt abgezogen werden soll."
+        },
+        {
+          "label": "Austauschbare identische Absätze",
+          "description": "Wenn gewählt, sind beim Prüfen der Antwort Absätze mit gleichem Wortlaut untereinander austauschbar."
+        },
+        {
+          "label": "Buttons zum Bewegen anzeigen",
+          "description": "Auf Mobilgeräten können die Buttons zum Verschieben von Absätzen die Barrierefreiheit verbessern. Du kannst sie hier auch deaktivieren."
+        },
+        {
+          "label": "\"Wiederholen\"-Button anzeigen"
+        },
+        {
+          "label": "\"Lösung zeigen\"-Button anzeigen"
+        }
+      ]
+    },
+    {
+      "label": "Bedienoberfläche",
+      "fields": [
+        {
+          "label": "Beschriftung des \"Überprüfen\"-Buttons",
+          "default": "Prüfen"
+        },
+        {
+          "label": "Beschriftung des \"Absenden\"-Buttons",
+          "default": "Absenden"
+        },
+        {
+          "label": "Beschriftung des \"Wiederholen\"-Buttons",
+          "default": "Wiederholen"
+        },
+        {
+          "label": "Beschriftung des \"Lösung anzeigen\"-Buttons",
+          "default": "Lösung anzeigen"
+        },
+        {
+          "label": "Beschriftung des \"Nach oben\"-Buttons",
+          "default": "Nach oben"
+        },
+        {
+          "label": "Beschriftung des \"Nach unten\"-Buttons",
+          "default": "Nach unten"
+        },
+        {
+          "label": "Beschriftung für einen Button, der deaktiviert ist",
+          "default": "Deaktiviert"
+        }
+      ]
+    },
+    {
+      "label": "Vorlesewerkzeug",
+      "fields": [
+        {
+          "label": "Vorlesewerkzeug-Beschreibung für den \"Überprüfen\"-Button",
+          "default": "Die Antworten überprüfen. Die Antwort wird als richtig oder falsch markiert."
+        },
+        {
+          "label": "Vorlesewerkzeug-Beschreibung für den \"Lösung anzeigen\"-Button",
+          "default": "Zeige die Lösung. Die korrekte Lösung wird dann angezeigt."
+        },
+        {
+          "label": "Vorlesewerkzeug-Beschreibung für den \"Wiederholen\"-Button",
+          "default": "Wiederhole die Aufgabe. Setzt alle Eingaben zurück und fängt von vorne an."
+        },
+        {
+          "label": "Dein Ergebnis",
+          "description": "@score wird durch die erreichten Punkte ersetzt. @total wird durch die maximal mögliche Punktzahl ersetzt.",
+          "default": "Du hast @score von @total Punkten erreicht"
+        },
+        {
+          "label": "Beschreibung der Liste",
+          "default": "Sortierbare Liste von Absätzen."
+        },
+        {
+          "label": "Beschreibung der Liste (im \"Antwort prüfen\"-Modus)",
+          "default": "Liste der Absätze mit Ergebnissen."
+        },
+        {
+          "label": "Beschreibung der Liste (im \"Lösung anzeigen\"-Modus)",
+          "default": "Liste der Absätze mit Lösungen."
+        },
+        {
+          "label": "Absatz",
+          "default": "Absatz"
+        },
+        {
+          "label": "Richtig",
+          "default": "richtig"
+        },
+        {
+          "label": "Falsch",
+          "default": "falsch"
+        },
+        {
+          "description": "@score wird durch 1 oder -1 ersetzt.",
+          "label": "Erklärung der Punktevergabe",
+          "default": "@score Punkt"
+        },
+        {
+          "label": "Absatznummerierung",
+          "default": "@current von @total",
+          "description": "@current wird durch die aktuelle Absatznummer ersetzt. @total wird durch die Anzahl der Absätze ersetzt."
+        },
+        {
+          "label": "Aktuelle Position in der Liste",
+          "default": "Aktuelle Position in der Liste",
+          "description": "Wird gefolgt von \"Absatznummerierung\"."
+        },
+        {
+          "label": "Anweisung, wenn Absatz ausgewählt wird",
+          "default": "Drücke die Leertaste, um neu einzusortieren"
+        },
+        {
+          "label": "Anweisung, wenn Absatz verschoben wird",
+          "default": "Drücke die Pfeiltasten nach oben und unten, um die Position zu ändern, die Leertaste zum Ablegen, Escape zum Abbrechen"
+        },
+        {
+          "label": "Zum Verschieben ausgewählt",
+          "default": "Zum Verschieben ausgewählt"
+        },
+        {
+          "label": "Verschoben",
+          "default": "Verschoben"
+        },
+        {
+          "label": "Abgelegt",
+          "default": "Abgelegt"
+        },
+        {
+          "label": "Sortieren abgebrochen",
+          "default": "Sortieren abgebrochen"
+        },
+        {
+          "description": "Wird gefolgt von \"Absatznummerierung\".",
+          "label": "Letzte Stelle",
+          "default": "Letzte Stelle"
+        },
+        {
+          "label": "Nächster Absatz",
+          "default": "Nächster Absatz",
+          "description": "Es folgt \"richtig\" oder \"falsch\"."
+        },
+        {
+          "label": "Korrekter Absatz",
+          "description": "Wird gefolgt von \"Absatznummerierung\".",
+          "default": "Richtiger Absatz in Position"
+        }
+      ]
+    }
+  ]
+}

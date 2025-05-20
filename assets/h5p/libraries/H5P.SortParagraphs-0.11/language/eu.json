@@ -1,0 +1,224 @@
+{
+  "semantics": [
+    {
+      "label": "Multimedia",
+      "fields": [
+        {
+          "label": "Mota",
+          "description": "Galderaren gainean bistaratzeko aukerako multimedia."
+        },
+        {
+          "label": "Desgaitu irudien zooma"
+        }
+      ]
+    },
+    {
+      "label": "Atazaren deskribapena",
+      "placeholder": "Deskribatu ezazu zure ikasleek egin behar dutena...",
+      "description": "Zure ikasleek jakin beharko luketena."
+    },
+    {
+      "label": "Paragrafoak",
+      "entity": "paragrafoa",
+      "field": {
+        "label": "Paragrafoa"
+      }
+    },
+    {
+      "label": "Feedback Orokorra",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Lehenetsitakoa"
+            }
+          ],
+          "label": "Zehaztu ezazu edozein puntuazio-tarterako feedback pertsonalizatua",
+          "description": "Egin klik \"Gehitu tartea\" botoian behar dituzun tarte guztiak gehitzeko. Adibidez: 0-20% Puntuazio eskasa, 21-91% Batez besteko puntuazioa, 91-100% Puntuazio bikaina!",
+          "entity": "tartea",
+          "field": {
+            "fields": [
+              {
+                "label": "Puntazio-tartea"
+              },
+              {},
+              {
+                "label": "Zehaztutako tartearentzako feedbacka",
+                "placeholder": "Idatzi ezazu feedbacka"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Portaera ezarpenak",
+      "description": "Aukera hauek portaera kontrolatzea ahalbidetzen dizute.",
+      "fields": [
+        {
+          "label": "Puntuazio-modua",
+          "description": "Erabaki ondo kokatutako paragrafo bakoitzari puntuak ematea edo dagokion paragrafoaren ondoren ondo kokatutako paragrafo bakoitzari puntuak ematea (\"sekuentzia zuzena\")",
+          "options": [
+            {
+              "label": "Sekuentzia zuzena"
+            },
+            {
+              "label": "Ondo kokatutako paragrafoa"
+            }
+          ]
+        },
+        {
+          "label": "Aplikatu penalizazioak",
+          "description": "Erabaki gaizki kokatutako paragrafo bakoitzak puntu bat kenduko duen ala ez."
+        },
+        {
+          "label": "Bikoiztu paragrafo trukagarriak",
+          "description": "Zehaztuz gero, erantzuna egiaztatzerakoan, bikoiztutako paragrafoak berdinak balira bezala hartuko dira euren testu laua berdina bada."
+        },
+        {
+          "label": "Gehitu botoiak mugimendurako",
+          "description": "Gailu mugikorretan, paragrafoak mugitzeko botoiek irisgarritasun onura gehigarriak eskaini dezakete. Nahiago baduzu, hemen desgaitu ditzakezu."
+        },
+        {
+          "label": "Gaitu \"Saiatu berriro\" botoia"
+        },
+        {
+          "label": "Gaitu \"Erakutsi emaitza\" botoia"
+        }
+      ]
+    },
+    {
+      "label": "Erabiltzaile-interfazea",
+      "fields": [
+        {
+          "label": "\"Egiaztatu\" botoiarentzako testua",
+          "default": "Egiaztatu"
+        },
+        {
+          "label": "\"Bidali\" botoiarentzako testua",
+          "default": "Bidali"
+        },
+        {
+          "label": "\"Saiatu berriro\" botoiarentzako testua",
+          "default": "Saiatu berriro"
+        },
+        {
+          "label": "\"Erakutsi emaitza\" botoiaren testua",
+          "default": "Erakutsi emaitza"
+        },
+        {
+          "label": "\"Gora\" botoiaren izenburua",
+          "default": "Gora"
+        },
+        {
+          "label": "\"Behera\" botoiarentzako izenburua",
+          "default": "Behera"
+        },
+        {
+          "label": "Desgaituta dagoen botoiaren izenburua",
+          "default": "Desgaituta"
+        }
+      ]
+    },
+    {
+      "label": "Irakurtzen duen bozgorailua",
+      "fields": [
+        {
+          "label": "\"Egiaztatu\" botoiaren laguntza-teknologientzako deskribapena",
+          "default": "Egiaztatu erantzunak. Erantzunak zuzen edo oker gisa markatuko dira."
+        },
+        {
+          "label": "\"Erakutsi emaitza\" botoiaren laguntza-teknologientzako deskribapena",
+          "default": "Erakutsi emaitza. Emaitza zuzena erakutsiko da."
+        },
+        {
+          "label": "\"Saiatu berriro\" botoiaren laguntza-teknologientzako deskribapena",
+          "default": "Lana berriz egiten saiatu. Elementu guztiak berrabiarazten ditu eta lana berriz hasten du."
+        },
+        {
+          "label": "Zure emaitza",
+          "description": "@score lortutako puntuazioarekin ordezkatuko da. @total lortu daitezkeen gehienezko puntuekin ordezkatuko da.",
+          "default": ":total puntutik :num puntu lortu duzu"
+        },
+        {
+          "label": "Zerrenda-deskribapena",
+          "default": "Paragrafoen zerrenda ordenagarria."
+        },
+        {
+          "label": "Zerrendaren deskribapena (egiaztatu erantzuna)",
+          "default": "Paragrafoen zerrenda emaitzekin."
+        },
+        {
+          "label": "Zerrendaren deskribapena (erakutsi emaitza)",
+          "default": "Paragrafoen zerrenda emaitzekin."
+        },
+        {
+          "label": "Paragrafoa",
+          "default": "Paragrafoa"
+        },
+        {
+          "label": "Zuzena",
+          "default": "zuzena"
+        },
+        {
+          "label": "Okerra",
+          "default": "okerrra"
+        },
+        {
+          "description": "@score 1 edo -1 zenbakiarekin ordezkatuko da.",
+          "label": "Puntuazioaren azalpena",
+          "default": "@score puntu"
+        },
+        {
+          "description": "@current unean uneko paragrafo kopuruarekin ordezkatuko da. @total paragrafo kopuruarekin ordezkatuko da.",
+          "label": "Paragrafoen zenbakitzea",
+          "default": "@current guztirako @total-etik"
+        },
+        {
+          "description": "\"Paragrafoen zenbakitzea\"-k jarraituko dio.",
+          "label": "Unean uneko zerrendako posizioa",
+          "default": "Unean uneko zerrendako posizioa"
+        },
+        {
+          "label": "Paragrafoa aukeratzen denerako jarraibidea",
+          "default": "Sakatu espazio-barra berriz ordenatzeko"
+        },
+        {
+          "label": "Paragrafo bat hartzen denerako jarraibidea",
+          "default": "Sakatu gora eta beherako geziak posizioa aldatzeko, espazio-barra kentzeko, eta Esc uzteko"
+        },
+        {
+          "label": "Harrapatuta",
+          "default": "Harrapatuta"
+        },
+        {
+          "label": "Mugituta",
+          "default": "Mugituta"
+        },
+        {
+          "label": "Askatuta",
+          "default": "Askatuta"
+        },
+        {
+          "label": "Berriz ordenatzea utzi da",
+          "default": "Berriz ordenatzea utzi da"
+        },
+        {
+          "description": "\"Paragrafoen zenbakitzea\"-k jarraituko dio.",
+          "label": "Amaierako posizioa",
+          "default": "Amaierako posizioa"
+        },
+        {
+          "description": "\"zuzena\" edo \"okerra\"-k jarraituko dio.",
+          "label": "Hurrengo paragrafoa",
+          "default": "Hurrengo paragrafoa"
+        },
+        {
+          "description": "\"Paragrafoen zenbakitzea\"-k jarraituko dio.",
+          "label": "Paragrafo Zuzena",
+          "default": "Paragrafoaren kokapen zuzena"
+        }
+      ]
+    }
+  ]
+}

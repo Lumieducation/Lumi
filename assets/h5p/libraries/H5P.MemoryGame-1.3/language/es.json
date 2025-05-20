@@ -1,0 +1,138 @@
+{
+  "semantics": [
+    {
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
+      "label": "Tarjetas",
+      "entity": "tarjeta",
+      "field": {
+        "label": "Tarjeta",
+        "fields": [
+          {
+            "label": "Imagen"
+          },
+          {
+            "label": "Texto alternativo para la imagen",
+            "description": "Describe lo que se puede ver en la foto. El texto lo leen herramientas de conversión de texto a voz, necesarias para usuarios con discapacidad visual."
+          },
+          {
+            "label": "Pista de Audio",
+            "description": "Un sonido opcional que se reproduce cuando se gira la carta."
+          },
+          {
+            "label": "Imagen Coincidente",
+            "description": "Una imagen opcional para emparejar, en vez de usar dos tarjetas con la misma imagen."
+          },
+          {
+            "label": "Texto alternativo para Imagen Coincidente",
+            "description": "Describir lo que puede verse en la foto. El texto lo leen herramientas de conversión de texto a voz, necesarias para usuarios con discapacidad visual."
+          },
+          {
+            "label": "Pista de Audio para Coincidente",
+            "description": "Un sonido opcional que se reproduce cuando se gira la segunda carta."
+          },
+          {
+            "label": "Descripción",
+            "description": "Un breve texto opcional que aparecerá cuando se encuentren las dos cartas coincidentes."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Configuración del comportamiento",
+      "description": "Estas opciones le permitirán controlar cómo se comporta el juego.",
+      "fields": [
+        {
+          "label": "Colocar las tarjetas en un cuadrado",
+          "description": "Intentará igualar el número de columnas y filas al distribuir las tarjetas. Después, las tarjetas se escalarán para que se ajusten al contenedor."
+        },
+        {
+          "label": "Número de tarjetas a utilizar",
+          "description": "Si se establece un número mayor que 2, el juego seleccionará tarjetas aleatorias de la lista de tarjetas."
+        },
+        {
+          "label": "Añadir botón para volver a intentarlo cuando el juego ha terminado"
+        }
+      ]
+    },
+    {
+      "label": "Aspecto y comportamiento",
+      "description": "Controla los efectos visuales del juego.",
+      "fields": [
+        {
+          "label": "Color del Tema",
+          "description": "Elige un color para crear un tema para tu juego de tarjetas."
+        },
+        {
+          "label": "Reverso de la Tarjeta",
+          "description": "Utiliza una parte posterior personalizada para tus tarjetas."
+        }
+      ]
+    },
+    {
+      "label": "Localización",
+      "fields": [
+        {
+          "label": "Texto para los giros de tarjetas",
+          "default": "Giros de tarjeta"
+        },
+        {
+          "label": "Texto de tiempo usado",
+          "default": "Tiempo usado"
+        },
+        {
+          "label": "Texto de retroalimentación",
+          "default": "¡Buen trabajo!"
+        },
+        {
+          "label": "Texto del botón Intentar de nuevo",
+          "default": "Reiniciar"
+        },
+        {
+          "label": "Texto del botón Cerrar",
+          "default": "Cerrar"
+        },
+        {
+          "label": "Etiqueta del juego",
+          "default": "Juego de Memoria. Encuentra las cartas que coinciden."
+        },
+        {
+          "label": "Instrucciones del juego",
+          "default": "Use flechas izquierda y derecha para navegar las tarjetas. Use barra espaciadora o tecla Intro para voltear tarjeta."
+        },
+        {
+          "label": "Etiqueta de juego terminado",
+          "default": "Has encontrado todas las cartas."
+        },
+        {
+          "label": "Etiqueta de indexación de tarjeta",
+          "description": "%num y %total son reemplazables y serán reemplazados con los valores respectivos para la tarjeta.",
+          "default": "Tarjeta %num de %total:"
+        },
+        {
+          "label": "Texto de tarjetas sin girar",
+          "default": "Sin girar. Click to turn."
+        },
+        {
+          "label": "Etiqueta tarjeta volteada",
+          "default": "Volteada."
+        },
+        {
+          "label": "Texto de tarjeta coincidente",
+          "default": "Coincidencia encontrada."
+        },
+        {
+          "label": "Anuncio tarjeta coincidida",
+          "default": "¡Sus tarjetas coinciden!"
+        },
+        {
+          "label": "Anuncio tarjeta no coincide",
+          "default": "Sus tarjetas elegidas no coinciden. Voltee otras tarjetas o inténtelo de nuevo."
+        }
+      ]
+    }
+  ]
+}

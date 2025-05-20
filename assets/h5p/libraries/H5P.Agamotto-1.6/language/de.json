@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Überschrift",
+      "placeholder": "Hier kannst du optional einen Titel angeben.",
+      "description": "Der Titel, der über dem Bild angezeigt werden soll"
+    },
+    {
+      "label": "Elemente",
+      "entity": "Element",
+      "widgets": [
+        {
+          "label": "Eingabemaske"
+        }
+      ],
+      "field": {
+        "label": "Element",
+        "fields": [
+          {
+            "label": "Bild"
+          },
+          {
+            "label": "Beschriftung",
+            "description": "Optionale Beschriftung für eine Bildposition. Bitte stelle sicher, dass sie nicht zu lang ist, sonst wird sie nicht angezeigt."
+          },
+          {
+            "label": "Beschreibung",
+            "placeholder": "Meine Bildbeschreibung ...",
+            "description": "Optionale Beschreibung für das Bild"
+          },
+          {
+            "label": "Tondatei",
+            "description": "Optionale Tondatei, die abgespielt wird, wenn ein Bild angezeigt wird."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "description": "Diese Optionen kontrollieren, wie sich die Aufgabe verhält.",
+      "fields": [
+        {
+          "label": "Startbild",
+          "description": "Setzte hier die Nummer des Startbilds."
+        },
+        {
+          "label": "Schieberegler einrasten",
+          "description": "Wenn diese Option aktiviert ist, wird der Schieberegler an den Bildpositionen einrasten."
+        },
+        {
+          "label": "Bildpositionen anzeigen",
+          "description": "Wenn diese Option aktiviert ist, werden die Bildpositionen am Schieberegler markiert."
+        },
+        {
+          "label": "Beschriftungen anzeigen",
+          "description": "Wenn diese Option aktiviert ist, werden beim Schieberegler Beschriftungen zusätzlich/alternativ zu den Bildpositionen angezeigt."
+        },
+        {
+          "label": "Ersatzfarbe für Transparenz",
+          "description": "Setze hier die Farbe, durch die transparente Bereiche in den Bildern ersetzt werden."
+        },
+        {
+          "label": "Bildanteil im Vollbildmodus",
+          "description": "Falls du Beschreibungen zu den Bildern hinzugefügt hast, setze hier den Prozentsatz des Platzes, den Bilder im Vollbildmodus einnehmen sollen."
+        }
+      ]
+    },
+    {
+      "label": "Vorlesewerkzeug (Barrierefreiheit)",
+      "fields": [
+        {
+          "label": "Bild",
+          "default": "Bild"
+        },
+        {
+          "label": "Schieberegler für Bilder",
+          "default": "Schieberegler für Bilder"
+        },
+        {
+          "label": "Beschriftung des \"Stummschalten\"-Buttons",
+          "default": "Stummschalten, ist laut"
+        },
+        {
+          "label": "Beschriftung des \"Lautschalten\"-Buttons",
+          "default": "Lautschalten, ist stumm"
+        },
+        {
+          "label": "Titel des Vollbild-Buttons (aktivieren)",
+          "default": "Gehe in den Vollbildmodus"
+        },
+        {
+          "label": "Titel des Vollbild-Buttons (deaktivieren)",
+          "default": "Verlasse den Vollbildmodus"
+        }
+      ]
+    }
+  ]
+}

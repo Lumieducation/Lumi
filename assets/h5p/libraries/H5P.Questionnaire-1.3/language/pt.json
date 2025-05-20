@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Elementos do questionário",
+      "widgets": [
+        {
+          "label": "Padrão"
+        }
+      ],
+      "entity": "elemento",
+      "field": {
+        "label": "Escolher biblioteca",
+        "fields": [
+          {
+            "label": "Biblioteca",
+            "description": "Escolha uma biblioteca"
+          },
+          {
+            "label": "Campo obrigatório"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Opções do ecrã de sucesso",
+      "fields": [
+        {
+          "label": "Ativar ecrã de sucesso"
+        },
+        {
+          "label": "Adicionar imagem do ecrã de sucesso",
+          "fields": [
+            {
+              "label": "Substituir ícone de sucesso por uma imagem"
+            }
+          ]
+        },
+        {
+          "label": "Texto a ser exibido na submissão",
+          "default": "Concluiu o questionário."
+        }
+      ]
+    },
+    {
+      "label": "Elementos de interface",
+      "fields": [
+        {
+          "label": "Etiquetas dos botões",
+          "fields": [
+            {
+              "label": "Etiqueta do botão Anterior",
+              "default": "Voltar"
+            },
+            {
+              "label": "Etiqueta do botão Continuar",
+              "default": "Continuar"
+            },
+            {
+              "label": "Etiqueta do botão Seguinte",
+              "default": "Seguinte"
+            },
+            {
+              "label": "Etiqueta do botão de submissão",
+              "default": "Submeter"
+            }
+          ]
+        },
+        {
+          "label": "Acessibilidade",
+          "fields": [
+            {
+              "label": "Etiqueta do botão de saída da mensagem obrigatória",
+              "default": "Fechar mensagem de erro"
+            },
+            {
+              "label": "Texto da barra de progresso",
+              "default": "Pergunta %current de %max",
+              "description": "Usada para informar as tecnologias de apoio em que pergunta se encontra. Variáveis: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Mensagem obrigatória",
+          "default": "É obrigatório responder a esta pergunta",
+          "description": "Será exibida se o campo de uma pergunta obrigatória não for preenchido"
+        },
+        {
+          "label": "Texto do símbolo de obrigatório",
+          "default": "obrigatório",
+          "description": "Texto que acompanhará o asterisco para informar que a pergunta é obrigatória"
+        },
+        {
+          "label": "Título para o ecrã de submissão",
+          "default": "Respondeu as todas as perguntas com sucesso"
+        },
+        {
+          "label": "Sub-título para o ecrã de submissão",
+          "default": "Clique abaixo para submeter as suas respostas"
+        }
+      ]
+    }
+  ]
+}

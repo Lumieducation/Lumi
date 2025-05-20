@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Bestemming",
+      "fields": [
+        {
+          "label": "Tipe",
+          "options": [
+            {
+              "label": "Tydkode"
+            },
+            {
+              "label": "Ander bladsy (URL)"
+            }
+          ]
+        },
+        {
+          "label": "Gaan na",
+          "description": "Die teikentyd wat die gebruiker sal gebruik deur op die warmkol te druk. Voer die tydkode in die formaat M:SS in."
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "Protokol",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(wortel relatief)"
+                },
+                {
+                  "label": "ander"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Beeldmateriaal",
+      "fields": [
+        {
+          "label": "Vorm",
+          "options": [
+            {
+              "label": "Reghoekig"
+            },
+            {
+              "label": "Rond"
+            },
+            {
+              "label": "Afgeronde Reghoek"
+            }
+          ]
+        },
+        {
+          "label": "Agtergrondkleur vir brandpunt"
+        },
+        {
+          "label": "Gebruik aanwysertjie"
+        },
+        {
+          "label": "Voeg knipeffek by",
+          "description": "Opmerking: 'n Knipeffek is altyd in die redigeerder geaktiveer, sodat jy deursigtige brandpunte kan vind"
+        }
+      ]
+    },
+    {
+      "label": "Tekste",
+      "fields": [
+        {
+          "label": "Alternatiewe Teks",
+          "description": "Beskryf die ondewerp wat die brandpunt dek. Word gebruik vir spreeklesers",
+          "placeholder": "'n Appel op 'n tafel"
+        },
+        {
+          "label": "Brandpuntetiket"
+        },
+        {
+          "label": "Wys etiket"
+        },
+        {
+          "label": "Etiketkleur"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Paveikslai",
+      "field": {
+        "label": "Paveiksliuko skaidrė",
+        "fields": [
+          {
+            "label": "Paveiksliuko skaidrė"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Kraštinių santykis",
+      "description": "Automatinis reiškia fiksuotą kraštinių santykį, kuris automatiškai nustatomas pagal paveikslus",
+      "options": [
+        {
+          "label": "Automatinis"
+        },
+        {
+          "label": "Pasirenkamas"
+        },
+        {
+          "label": "Nefiksuotas"
+        }
+      ]
+    },
+    {
+      "label": "Kraštinių santykio nustatymai",
+      "fields": [
+        {
+          "label": "Plotis",
+          "description": "Jei čia naudosite 4, o aukščiui – 3, kraštinių santykis bus 4:3"
+        },
+        {
+          "label": "Aukštis",
+          "description": "Jei čia naudosite 3, o pločiui – 4, formato santykis bus 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Paveiksliukų slinktuko pritaikomumas",
+      "fields": [
+        {
+          "label": "Kitos skaidrės mygtuko pavadinimas",
+          "default": "Kitas paveikslas",
+          "description": "Tai naudojama tik įgarsinant tekstą. Tai nebus rodoma."
+        },
+        {
+          "label": "Ankstesnės skaidrės mygtuko pavadinimas",
+          "default": "Ankstesnis paveikslas",
+          "description": "Tai naudojama tik teksto įgarsinimui. Tai nebus rodoma."
+        },
+        {
+          "label": "Skaidrės mygtuko pavadinimas",
+          "default": "Pereiti prie %slide skaidrės",
+          "description": "Tai naudojama tik teksto įgarsinimui. Tai nebus rodoma. %slide yra kintamasis ir bus pakeistas paveikslo numeriu."
+        }
+      ]
+    }
+  ]
+}

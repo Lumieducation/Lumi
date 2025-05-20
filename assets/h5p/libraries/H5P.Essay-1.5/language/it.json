@@ -1,0 +1,299 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Media facoltativo da mostrare sopra la domanda"
+        },
+        {
+          "label": "Disabilita lo zoom dell'immagine"
+        }
+      ]
+    },
+    {
+      "label": "Descrizione attività",
+      "description": "Descrivi qui il tuo compito. La descrizione apparirà sopra la casella per l'immissione del testo",
+      "placeholder": "Sintetizza il libro in 500 caratteri..."
+    },
+    {
+      "label": "Testo di aiuto",
+      "description": "Questo testo dovrebbe aiutare a iniziare il lavoro",
+      "placeholder": "Questo libro parla di..."
+    },
+    {
+      "label": "Esempio di soluzione",
+      "description": "Se vuoi, puoi aggiungere una soluzione di esempio che viene mostrata dopo che lo studente ha creato un testo. È detta di esempio perché probabilmente non sarà l'unica soluzione.",
+      "fields": [
+        {
+          "label": "Introduzione",
+          "description": "Se vuoi, puoi lasciare agli studenti qualche spiegazione sul tuo esempio",
+          "placeholder": "Ricorda che non esiste un'unica soluzione. Questo è solo un esempio valido"
+        },
+        {
+          "label": "Testo della soluzione di esempio",
+          "description": "Dopo l'invio, lo studente vedrà un pulsante \"Mostra soluzione\" se qui è stato inserito del testo"
+        }
+      ]
+    },
+    {
+      "label": "Parole chiave",
+      "widgets": [
+        {
+          "label": "Predefinito"
+        }
+      ],
+      "entity": "Parole chiave",
+      "field": {
+        "label": "Parole chiave",
+        "fields": [
+          {
+            "label": "Parola chiave",
+            "description": "Parola chiave o frase da cercare. Usa un asterisco '*' come carta jolly per significare uno o più caratteri"
+          },
+          {
+            "label": "Alternative",
+            "description": "Se vuoi, puoi aggiungere delle alternative a questa parola chiave. Per esempio, per una 'nazione' puoi indicare alternative come 'stato', 'Paese' ecc. Se lo studente utilizza le alternative qui specificate riceverà il punteggio che gli spetta per la risposta giusta",
+            "entity": "alternativa",
+            "field": {
+              "label": "Parola chiave alternativa"
+            }
+          },
+          {
+            "label": "Punti, opzioni e feedback",
+            "fields": [
+              {
+                "label": "Punti",
+                "description": "Punti che lo studente otterrà se nella risposta usa questa parola chiave o una sua alternativa"
+              },
+              {
+                "label": "Occorrenze",
+                "description": "Specifica quante occorrenze della parola chiave o delle sue alternative danno diritto a ricevere punti"
+              },
+              {
+                "label": "Maiuscolo/minuscolo",
+                "description": "Assicurati che il testo inserito sia esattamente quello giusto"
+              },
+              {
+                "label": "Tralascia gli errori meno gravi",
+                "description": "Questa opzione permette di accettare errori ortografici meno gravi (da 3 a 9 caratteri: 1 errore; più di 9 characters: 2 errori)"
+              },
+              {
+                "label": "Feedback per la parola chiave",
+                "description": "Questo feedback sarà visualizzato se nella risposta lo studente usa questa parola chiave o una sua alternativa"
+              },
+              {
+                "label": "Feedback in mancanza della parola chiave",
+                "description": "Questo feedback sarà visualizzato se nella risposta lo studente non usa né questa parola chiave, né una sua alternativa"
+              },
+              {
+                "label": "Parola di feedback mostrata se c'è la parola chiave",
+                "description": "Questa opzione permette di specificare quale parola dovrebbe essere mostrata come feedback se una data parola chiave è presente nel testo",
+                "options": [
+                  {
+                    "label": "parola chiave"
+                  },
+                  {
+                    "label": "alternativa trovata"
+                  },
+                  {
+                    "label": "risposta data"
+                  },
+                  {
+                    "label": "nessuna"
+                  }
+                ]
+              },
+              {
+                "label": "Parola di feedback mostrata se manca la parola chiave",
+                "description": "Questa opzione permette di specificare quale parola dovrebbe essere mostrata come feedback se una parola chiave non è presente nel testo",
+                "options": [
+                  {
+                    "label": "parola chiave"
+                  },
+                  {
+                    "label": "nessuna"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback complessivo",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Predefinito"
+            }
+          ],
+          "label": "Specifica un feedback per ogni intervallo di punteggio",
+          "description": "Clicca sul pulsante \"Aggiungi intervallo\" per aggiungere gli intervalli che ti servono. Per esempio: 0-20%, Punteggio scarso; 21-90%, Punteggio medio; 91-100% Punteggio ottimo!",
+          "entity": "intervallo",
+          "field": {
+            "fields": [
+              {
+                "label": "Intervallo di punteggio"
+              },
+              {},
+              {
+                "label": "Feedback per l'intervallo di punteggio definito",
+                "placeholder": "Scrivi qui il feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Impostazioni di esecuzione",
+      "description": "Queste opzioni permettono di controllare il comportamento del compito",
+      "fields": [
+        {
+          "label": "Numero minimo di caratteri",
+          "description": "Specifica il numero minimo di caratteri che l'utente deve immettere"
+        },
+        {
+          "label": "Numero massimo di caratteri",
+          "description": "Specifica il numero massimo di caratteri che l'utente deve immettere"
+        },
+        {
+          "label": "Dimensione del campo di immissione",
+          "description": "La dimensione della casella di testo in numero di righe",
+          "options": [
+            {
+              "label": "1 riga"
+            },
+            {
+              "label": "3 righe"
+            },
+            {
+              "label": "10 righe"
+            }
+          ]
+        },
+        {
+          "label": "Attiva \"Riprova\"",
+          "description": "Se selezionato, gli studenti possono riprovare a fare il compito"
+        },
+        {
+          "label": "Ignora il punteggio",
+          "description": "Se selezionato, gli studenti vedranno soltanto il feedback che hai fornito per le parole chiave, ma non avranno nessun punteggio"
+        },
+        {
+          "label": "Punti assegnati in piattaforma",
+          "description": "Usato per assegnare punti in piattaforma per il solo aver dato una risposta (non mostrato allo studente)"
+        },
+        {
+          "label": "Percentuale di superamento",
+          "description": "Percentuale necessaria per superare la prova"
+        },
+        {
+          "label": "Percentuale di eccellenza",
+          "description": "Percentuale necessaria per l'eccellenza. Impostare la percentuale di eccellenza al di sotto del 100% ridurrà conseguentemente il massimo punteggio ottenibile. Lo scopo non è ammettere soluzioni che non contengano tutte le parole chiave ma offrire agli studenti un qualche margine di manovra"
+        },
+        {
+          "label": "Non considerare \"maiuscolo/minuscolo\"",
+          "description": "Consente di specificare se l'opzione \"maiuscolo/minuscolo\" debba essere attiva su tutte le parole chiave",
+          "options": [
+            {
+              "label": "Abilitata"
+            },
+            {
+              "label": "Disabilitata"
+            }
+          ]
+        },
+        {
+          "label": "Non considerare \"Tralascia gli errori meno gravi\"",
+          "description": "Consente di specificare se l'opzione \"Tralascia gli errori meno gravi\" debba essere abilitata su tutte le parole chiave",
+          "options": [
+            {
+              "label": "Abilitata"
+            },
+            {
+              "label": "Disabilitata"
+            }
+          ]
+        },
+        {
+          "label": "Replacement for line breaks",
+          "description": "By default, line breaks will be replaced with a space character. If you want to check for line breaks, e.g. in regular expressions, you can set a different replacement here.",
+          "options": [
+            {
+              "label": "space"
+            },
+            {
+              "label": "line break (\\n)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Testo per il pulsante \"Verifica\"",
+      "default": "Verifica"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "Testo per il pulsante \"Riprova\"",
+      "default": "Riprova"
+    },
+    {
+      "label": "Testo per il pulsante \"Mostra soluzione\"",
+      "default": "Mostra soluzione"
+    },
+    {
+      "label": "Intestazione della scheda con il feedback per le parole chiave",
+      "default": "Feedback"
+    },
+    {
+      "label": "Etichetta per la soluzione",
+      "default": "Esempio di soluzione"
+    },
+    {
+      "label": "Caratteri rimanenti",
+      "default": "Caratteri rimanenti: @chars",
+      "description": "Messaggio per i caratteri rimanenti. Puoi usare @chars, che sarà rimpiazzato dal numero corrispondente"
+    },
+    {
+      "label": "Caratteri insufficienti",
+      "default": "Devi inserire almeno @chars caratteri!",
+      "description": "Messaggio per indicare che il testo prodotto non è sufficientemente lungo. Puoi usare @chars, che sarà rimpiazzato dal numero corrispondente"
+    },
+    {
+      "label": "Salva messaggio",
+      "description": "Messaggio per indicare che il testo è stato salvato",
+      "default": "salvato"
+    },
+    {
+      "label": "Il tuo risultato (non visualizzato)",
+      "description": "Testo di accessibilità utilizzato per lettori vocali. @score sarà sostituito dal numero di punti. @total sarà sostituito dai punti massimi possibili",
+      "default": "Il tuo punteggio è di @score su @total"
+    },
+    {
+      "label": "Messaggio di navigazione (non visualizzato)",
+      "description": "Testo di accessibilità utilizzato per lettori vocali",
+      "default": "Passato alla soluzione di esempio appena inclusa dopo l'area di testo"
+    },
+    {
+      "label": "Assistive technology description for \"Check\" button",
+      "default": "Check the answers."
+    },
+    {
+      "label": "Assistive technology description for \"Show Solution\" button",
+      "default": "Show the solution. You will be provided with a sample solution."
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. You can improve your previous answer if the author allowed that."
+    }
+  ]
+}

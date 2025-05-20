@@ -1,0 +1,38 @@
+.h5p-text-input-field .h5p-text-input-field-textfield {
+  padding: 0.25em 0.4em;
+  width: calc(100% - 0.8em);
+  resize: none;
+  border: 1px solid #C7C7C7;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.h5p-text-input-field .h5p-text-input-field-textfield:focus {
+  background-color: #fff;
+}
+
+/* Reduce bottom and top margin of children */
+.h5p-text-input-field .h5p-text-input-field-label > * {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.h5p-text-input-field .h5p-text-input-field-textfield.required-input {
+  border-color: red;
+}
+
+.h5p-text-input-field .h5p-text-input-field-message-wrapper {
+  overflow:auto;
+}
+
+.h5p-text-input-field .h5p-text-input-field-message-char {
+  font-size: 0.8em;
+  float: left;
+}
+
+.h5p-text-input-field-label.required > :last-child:after {
+  font-size: 1.1em;
+  content: "*";
+  color: #da0001;
+  padding-left: 4px;
+}

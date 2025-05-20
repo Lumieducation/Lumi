@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Golygydd Cwestiwn Delwedd â Chlicbwyntiau",
+      "fields": [
+        {
+          "label": "Delwedd gefndir",
+          "fields": [
+            {
+              "label": "Delwedd gefndir",
+              "description": "Dewiswch ddelwedd i'w defnyddio fel cefndir ar gyfer y cwestiwn 'delwedd â chlicbwyntiau'."
+            }
+          ]
+        },
+        {
+          "label": "Clicbwyntiau",
+          "description": "Llusgwch a gollwng y ffigur oddi ar y bar offer i greu clicbwynt newydd. Clic-dwbl i olygu clicbwynt sydd eisoes yn bodoli. Llusgwch y clicbwynt i'w symud. Ailfeintiwch gan dynnu'r ddolen ailfeintio yn y cornel gwaelod ar y chwith.",
+          "fields": [
+            {
+              "label": "Disgrifiad y dasg",
+              "description": "Canllawiau i'r defnyddiwr."
+            },
+            {
+              "label": "Clicbwynt",
+              "entity": "Clicbwynt",
+              "field": {
+                "label": "Clicbwynt",
+                "fields": [
+                  {
+                    "label": "Gosodiadau (Defnyddiwr)",
+                    "fields": [
+                      {
+                        "label": "Cywir",
+                        "description": "Mae sawl clicbwynt cywir. Er, caiff y defnyddiwr adborth cywir/anghywir yn syth ar ôl y clic cyntaf."
+                      },
+                      {
+                        "label": "Adborth"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Gosodiadau (Cyfrifianedig)"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Adborth os ydy defnyddiwr yn dewis pwynt gwag:",
+              "placeholder": "Methoch chi ddarganfod unrhyw glicbwyntiau, ceisiwch eto!"
+            },
+            {
+              "label": "Dangos adborth fel popup"
+            },
+            {
+              "label": "Lleoleiddiad",
+              "fields": [
+                {
+                  "label": "Testun botwm ailgeisio",
+                  "default": "Ailgeisio"
+                },
+                {
+                  "label": "Testun botwm cau",
+                  "default": "Cau"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Cynrychioliad testun o'r bar sgorio ar gyfer y rheiny sy'n defnyddio darllenydd",
+      "default": "Enilloch chi :num allan o :total pwynt"
+    },
+    {
+      "label": "Disgrifiad technoleg cynorthwyol ar gyfer botwm \"Ailgeisio\"",
+      "default": "Ailgeisio"
+    }
+  ]
+}

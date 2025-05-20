@@ -1,0 +1,278 @@
+{
+  "semantics": [
+    {
+      "label": "Introdução do teste",
+      "fields": [
+        {
+          "label": "Mostrar introdução"
+        },
+        {
+          "label": "Título",
+          "description": "Este título vai ser mostrado acima do texto da introdução."
+        },
+        {
+          "label": "Texto da introdução",
+          "description": "Este texto vai ser mostrado antes do início do teste."
+        },
+        {
+          "label": "Texto do botão de início",
+          "default": "Iniciar"
+        },
+        {
+          "label": "Imagem de fundo",
+          "description": "Uma imagem de fundo opcional para a introdução."
+        }
+      ]
+    },
+    {
+      "label": "Imagem de fundo",
+      "description": "Uma imagem de fundo opcional para a Série de perguntas."
+    },
+    {
+      "label": "Indicador de progresso",
+      "description": "Estilo do indicador de progresso da série de perguntas.",
+      "options": [
+        {
+          "label": "Textual"
+        },
+        {
+          "label": "Pontos"
+        }
+      ]
+    },
+    {
+      "label": "Percentagem de aprovação",
+      "description": "Percentagem necessária para aprovação no teste."
+    },
+    {
+      "label": "Perguntas",
+      "widgets": [
+        {
+          "label": "Padrão"
+        },
+        {
+          "label": "Textual"
+        }
+      ],
+      "entity": "pergunta",
+      "field": {
+        "label": "Tipo de pergunta",
+        "description": "Biblioteca para esta pergunta."
+      }
+    },
+    {
+      "label": "Textos da interface do teste",
+      "fields": [
+        {
+          "label": "Botão voltar",
+          "default": "Pergunta anterior"
+        },
+        {
+          "label": "Botão seguinte",
+          "default": "Próxima pergunta"
+        },
+        {
+          "label": "Botão terminar",
+          "default": "Terminar"
+        },
+        {
+          "label": "Botão Enviar",
+          "default": "Enviar"
+        },
+        {
+          "label": "Texto do progresso",
+          "description": "Texto usado se o progresso textual for selecionado.",
+          "default": "Questão: @current de @total questões"
+        },
+        {
+          "label": "Etiqueta para saltar para um questão",
+          "description": "Tem de utilizar o espaço reservado (placeholder) '%d' em vez de o número da questão, e %total em vez do total de questões.",
+          "default": "Questão %d de %total"
+        },
+        {
+          "label": "Notificação da caixa de diálogo de direitos do autor da questão",
+          "default": "Questão"
+        },
+        {
+          "label": "Progresso do ReadSpeaker",
+          "description": "Pode utilizar @current e @total como variáveis da questão",
+          "default": "Questão @current de @total"
+        },
+        {
+          "label": "Texto da pergunta sem resposta",
+          "default": "Sem resposta"
+        },
+        {
+          "label": "Texto da pergunta respondida",
+          "default": "Respondida"
+        },
+        {
+          "label": "Texto para pergunta atual",
+          "default": "Pergunta atual"
+        },
+        {
+          "label": "Navigation label for readspeakers",
+          "default": "Questions"
+        }
+      ]
+    },
+    {
+      "label": "Desativar a opção de navegar para trás",
+      "description": "Esta opção só lhe permitirá navegar para a frente numa Série de perguntas"
+    },
+    {
+      "label": "Baralhar perguntas",
+      "description": "Ative para tornar aleatória a ordem das perguntas."
+    },
+    {
+      "label": "Número de perguntas a mostrar:",
+      "description": "Criar um grupo de perguntas aleatórias a partir do total."
+    },
+    {
+      "label": "Teste terminado",
+      "fields": [
+        {
+          "label": "Mostrar resultados"
+        },
+        {
+          "label": "Mostrar botão Solução"
+        },
+        {
+          "label": "Mostrar botão Repetir"
+        },
+        {
+          "label": "Mensagem quando não existem resultados",
+          "description": "Textos a exibir no final da página quando \"Mostrar resultados\" está desativado",
+          "default": "Terminado"
+        },
+        {
+          "label": "Cabeçalho do Feedback",
+          "default": "O seu resultado:",
+          "description": "Este cabeçalho será mostrado no final do teste assim que o utilizador tiver respondido a todas as perguntas."
+        },
+        {
+          "label": "Score announcer",
+          "description": "Esta notificação será utilizada para anunciar a pontuação final ao utilizador no ecrã final",
+          "default": "Obteve @finals de @totals pontos"
+        },
+        {
+          "label": "Feedback global",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Padrão"
+                }
+              ],
+              "label": "Defina o feedback personalizado para qualquer faixa de pontuação",
+              "description": "Exemplo: 0-20% Pontuação Péssima, 21-91% Pontuação Média, 91-100% Pontuação Óptima!",
+              "entity": "intervalo",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Faixa de pontuação"
+                  },
+                  {},
+                  {
+                    "label": "Feedback para uma determinada faixa de pontuação",
+                    "placeholder": "Preencha o feedback"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Feedback antigo",
+          "fields": [
+            {
+              "label": "Saudação por avaliação positiva",
+              "description": "Este comentário vai ser mostrado depois do resultado se o utilizador obtiver avaliação positiva no teste."
+            },
+            {
+              "label": "Comentário para avaliação positiva",
+              "description": "Este comentário vai ser mostrado depois do resultado se o utilizador obtiver avaliação positiva no teste."
+            },
+            {
+              "label": "Título para avaliação negativa",
+              "description": "Este texto será mostrado acima do resultado obtido se o utilizador obtiver avaliação negativa no teste."
+            },
+            {
+              "label": "Comentário para avaliação negativa",
+              "description": "Este comentário será mostrado depois do resultado se o utilizador obtiver avaliação negativa no teste."
+            }
+          ]
+        },
+        {
+          "label": "Etiqueta do botão Solução",
+          "default": "Mostrar solução",
+          "description": "Texto para o botão Solução."
+        },
+        {
+          "label": "Etiqueta do botão Repetir",
+          "default": "Repetir",
+          "description": "Texto para o botão Repetir."
+        },
+        {
+          "label": "Texto para o botão Terminar",
+          "default": "Terminar"
+        },
+        {
+          "label": "Submit button text",
+          "default": "Enviar"
+        },
+        {
+          "label": "Mostrar vídeo antes dos resultados do teste"
+        },
+        {
+          "label": "Etiqueta de botão de ignorar vídeo"
+        },
+        {
+          "label": "Etiqueta de botão de ignorar vídeo",
+          "default": "Ignorar vídeo"
+        },
+        {
+          "label": "Vídeo de sucesso",
+          "description": "Este vídeo vai ser apresentado se o utilizador obtiver avaliação positiva no teste."
+        },
+        {
+          "label": "Vídeo de insucesso",
+          "description": "Este vídeo vai ser apresentado se o utilizador obtiver avaliação negativa no teste."
+        }
+      ]
+    },
+    {
+      "label": "Configurações para os botões \"Mostrar solução\" e \"Tentar Novamente",
+      "fields": [
+        {
+          "label": "Mostrar botões \"Verificar\"",
+          "description": "Esta opção determina se o botão \"Verificar\" será mostrado para todas as perguntas."
+        },
+        {
+          "label": "Sobrepor botão \"Mostrar solução\"",
+          "description": "Esta opção determina se o botão \"Mostrar solução\" será mostrado para todas as perguntas, desativado para todas ou configurado individualmente para cada pergunta.",
+          "options": [
+            {
+              "label": "Ativado"
+            },
+            {
+              "label": "Desativado"
+            }
+          ]
+        },
+        {
+          "label": "Sobrepor botão \"Repetir\"",
+          "description": "Esta opção determina se o botão \"Repetir\" será mostrado para todas as perguntas, se estará desativado para todas ou configurado individualmente para cada pergunta.",
+          "options": [
+            {
+              "label": "Ativado"
+            },
+            {
+              "label": "Desativado"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

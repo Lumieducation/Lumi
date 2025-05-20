@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Giới thiệu",
+      "fields": [
+        {
+          "label": "Hiển thị giới thiệu"
+        },
+        {
+          "label": "Hình ảnh giới thiệu"
+        },
+        {
+          "label": "Văn bản thay thế cho hình ảnh giới thiệu"
+        },
+        {
+          "label": "Tiêu đề"
+        },
+        {
+          "label": "Văn bản giới thiệu",
+          "description": "Tiêu đề này sẽ được hiển thị trên văn bản giới thiệu."
+        }
+      ]
+    },
+    {
+      "label": "Câu hỏi",
+      "widgets": [
+        {
+          "label": "Mặc định"
+        }
+      ],
+      "entity": "Question",
+      "field": {
+        "label": "Câu hỏi"
+      }
+    },
+    {
+      "label": "Phản hồi chung",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Mặc định"
+            }
+          ],
+          "label": "Xác định phản hồi tùy chỉnh cho bất kỳ thang điểm nào",
+          "description": "Bấm \"Thêm thang điểm\" nút để thêm bao nhiêu thang điểm theo nhu cầu của bạn. Ví dụ: 0-20% Điểm kém, 21-91% Điểm trung bình, 91-100% Điểm xuất sắc!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "Thang điểm"
+              },
+              {},
+              {
+                "label": "Phản hồi cho thanh điểm đã được xác định",
+                "placeholder": "Điền vào phản hồi"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Nhãn và văn bản Bộ câu hỏi luyện nói",
+      "fields": [
+        {
+          "label": "Nhãn nút giới thiệu",
+          "default": "Bắt đầu chương trình!"
+        },
+        {
+          "label": "Nhãn kết quả màn hình lời giải",
+          "default": "Kết quả của bạn:"
+        },
+        {
+          "label": "Nhãn nút hiển thị lời giải",
+          "default": "Hiển thị lời giải"
+        },
+        {
+          "label": "Nhãn nút thử lại",
+          "default": "Thử lại"
+        },
+        {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
+          "label": "Nhãn truy cập câu hỏi tiếp theo",
+          "default": "Câu hỏi tiếp theo"
+        },
+        {
+          "label": "Nhãn truy cập câu hỏi trước",
+          "default": "Câu hỏi trước"
+        },
+        {
+          "label": "Tiêu đề thanh điều hướng",
+          "description": "Tiêu đề cho câu hỏi trong thanh điều hướng. \":num\" sẽ được thay thế bằng số slide thực tế.",
+          "default": "Slide :num"
+        },
+        {
+          "label": "Answered slide accessibility label",
+          "default": "Answered"
+        },
+        {
+          "label": "Nhãn truy cập slide đang hoạt động",
+          "default": "Hiện thời đang hoạt động"
+        }
+      ]
+    }
+  ]
+}

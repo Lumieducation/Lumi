@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Επεξεργαστής Branching Scenario",
+      "fields": [
+        {
+          "label": "Τίτλος"
+        },
+        {
+          "label": "Οθόνη έναρξης",
+          "fields": [
+            {
+              "label": "Τίτλος οθόνης έναρξης",
+              "placeholder": "Τίτλος"
+            },
+            {
+              "label": "Υπότιτλος οθόνης έναρξης",
+              "placeholder": "Λεπτομέρειες"
+            },
+            {
+              "label": "Εικόνα οθόνης έναρξης"
+            },
+            {
+              "label": "Εναλλακτικό κείμενο εικόνας"
+            }
+          ]
+        },
+        {
+          "label": "Οθόνες λήξης",
+          "field": {
+            "label": "Οθόνη λήξης",
+            "fields": [
+              {
+                "label": "Τίτλος"
+              },
+              {
+                "label": "Κείμενο"
+              },
+              {
+                "label": "Εικόνα"
+              },
+              {
+                "label": "Βαθμολογία",
+                "description": "Η βαθμολογία αποστέλλεται σε κάθε LMS, LRS ή οποιοδήποτε άλλο σχετικό service"
+              },
+              {
+                "label": "ID αντικειμένου"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Αντικείμενα branching scenario",
+          "entity": "αντικειμενου",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Show content title in view",
+                "description": "If selected, the user will see the content title in the top bar above this content."
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Proceed"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Επιλογές βαθμολόγησης",
+          "fields": [
+            {
+              "label": "Επιλογές βαθμολόγησης",
+              "description": "Επιλέξτε τον τύπο της βαθμολόγησης",
+              "options": [
+                {
+                  "label": "Στατική βαθμολόγηση για κάθε σενάριο"
+                },
+                {
+                  "label": "Δυναμική βαθμολόγηση από τις απαντήσεις των χρηστών"
+                },
+                {
+                  "label": "Χωρίς βαθμολόγηση"
+                }
+              ]
+            },
+            {
+              "label": "Συμπεριλάβετε βαθμολογίες από αλληλεπιδράσεις εντός του Branching Scenario",
+              "description": "Εάν επιλεγεί, βαθμολογίες από πχ. Διαδραστικά βίντεο, θα προστεθούν στη συνολική βαθμολογία που λαμβάνεται. Εάν δεν επιλεγεί, θα μετρηθούν μόνο οι βαθμολογίες που καθορίζονται στις ενότητες σχολίων των στοιχείων περιεχομένου, οι ερωτήσεις διακλάδωσης και τα τελικά σενάρια."
+            }
+          ]
+        },
+        {
+          "label": "Ρυθμίσεις Συμπεριφοράς",
+          "fields": [
+            {
+              "label": "H παράκαμψη απαιτεί ολοκληρωμένο περιεχόμενο",
+              "description": "Παρακάμπτει τις μεμονωμένες ρυθμίσεις για την απαίτηση να έχει ολοκληρωθεί το περιεχόμενο πριν από την ενεργοποίηση του κουμπιού \"Επόμενο\". Δεν θα έχει καμία επίδραση εάν το περιεχόμενο δεν υποδεικνύει εάν έχει \"Ολοκληρωθεί\", π.χ. εικόνες ή παρουσιάσεις μαθημάτων με μία μόνο διαφάνεια."
+            },
+            {
+              "label": "Υποχρεωτική παρακολούθηση",
+              "description": "Προτρέπει τους θεατές να ολοκληρώσουν το βίντεο, το διαδραστικό βίντεο και την παρουσίαση του μαθήματος πριν προχωρήσουν με το σενάριο. Αυτό μπορεί να παρακαμφθεί σε επίπεδο περιεχομένου."
+            },
+            {
+              "label": "Tυχαιοποίηση των ερωτήσεων",
+              "description": "Οι ερωτήσεις θα εμφανίζονται με τυχαία σειρά"
+            }
+          ]
+        },
+        {
+          "label": "Προσαρμογή",
+          "fields": [
+            {
+              "label": "Κείμενο για το κουμπί της οθόνης έναρξης",
+              "default": "Ξεκίνησε"
+            },
+            {
+              "label": "Κείμενο για το κουμπί της οθόνης λήξης",
+              "default": "Ξεκίνησε ξανά"
+            },
+            {
+              "label": "Κείμενο για το κουμπί των ενδιάμεσων οθονών",
+              "default": "Συνέχισε"
+            },
+            {
+              "label": "Κείμενο για το απενεργοποιημένο κουμπί στις οθόνες της βιβλιοθήκης",
+              "default": "Απαίτηση ολοκλήρωσης της τρέχουσας ενότητας"
+            },
+            {
+              "label": "Ετικέτα βαθμολογίας στην οθόνη λήξης",
+              "default": "Η βαθμολογία σου:"
+            },
+            {
+              "label": "Ετικέτα για τη βαθμολογία στην τελική οθόνη",
+              "default": "Η βαθμολογία σας:"
+            },
+            {
+              "label": "Ετικέτα Aria για κουμπί πλήρους οθόνης",
+              "default": "Πλήρης οθόνη"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

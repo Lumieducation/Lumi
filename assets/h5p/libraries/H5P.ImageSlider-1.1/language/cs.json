@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Obrázky",
+      "field": {
+        "label": "Presentace obrázků",
+        "fields": [
+          {
+            "label": "Presentace obrázků"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Poměr stran",
+      "description": "Automaticky znamená fixní poměr stran automaticky určený na základě obrázků",
+      "options": [
+        {
+          "label": "Automaticky"
+        },
+        {
+          "label": "Vlastní"
+        },
+        {
+          "label": "Nenastaveno"
+        }
+      ]
+    },
+    {
+      "label": "Nastavení poměru stran",
+      "fields": [
+        {
+          "label": "Šířka poměru stran",
+          "description": "Pokud použijete zde 4 a 3 pro výšku, bude poměr stran 4: 3"
+        },
+        {
+          "label": "Výška poměru stran",
+          "description": "Pokud zde použijete 3 a 4 pro šířku, bude poměr stran 4: 3"
+        }
+      ]
+    },
+    {
+      "label": "Přístupnost presentace obrázků",
+      "fields": [
+        {
+          "label": "Popisek tlačítka pro další snímek",
+          "default": "Další obrázek",
+          "description": "Používá se pouze pro rčtecí zařízení. Nezobrazí se."
+        },
+        {
+          "label": "Popisek tlačítka pro předchozí snímek",
+          "default": "Předchozí obrázek",
+          "description": "Používá se pouze pro rčtecí zařízení. Nezobrazí se."
+        },
+        {
+          "label": "Popisek pro posuvná tlačítka",
+          "default": "Přejdi na obrázek %slide",
+          "description": "Používá se pouze pro rčtecí zařízení. Nezobrazí se. %slide je proměnná a bude nahrazena číslem obrázku."
+        }
+      ]
+    }
+  ]
+}

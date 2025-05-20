@@ -1,0 +1,299 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Tipe",
+          "description": "Opsionele media wat bo die vraag vertoon word."
+        },
+        {
+          "label": "Deaktiveer zoomfunksie by prente"
+        }
+      ]
+    },
+    {
+      "label": "Taak beskrywing",
+      "description": "Beskryf jou taak hier. Die taakbeskrywing sal verskyn bo die teksinvoerarea.",
+      "placeholder": "Som die boek in 500 karakters op ..."
+    },
+    {
+      "label": "Hulpteks",
+      "description": "Hierdie teks moet die gebruiker help om te begin.",
+      "placeholder": "Hierdie boek handel oor ..."
+    },
+    {
+      "label": "Voorbeeld antwoord",
+      "description": "Jy kan ook 'n voorbeeld antwoord byvoeg wat vertoon word nadat die student 'n teks geskep het. Dit word 'n voorbeeld antwoord genoem, omdat daar waarskynlik meer as een regte antwoord is.",
+      "fields": [
+        {
+          "label": "Inleiding",
+          "description": "Jy kan ook 'n paar verduidelikings oor jou voorbeeld aan die studente gee. Die verduidelikings sal slegs verskyn as jy ook 'n voorbeeld byvoeg.",
+          "placeholder": "Onthou asb. dat daar nie verwag word dat jy met presies dieselfde oplossing vorendag kom nie. Dit is net 'n goeie voorbeeld."
+        },
+        {
+          "label": "Voorbeeld antwoord teks",
+          "description": "Die student sal 'n \"Wys antwoord\" -knoppie sien nadat hy dit ingedien het as jy hier teks verskaf."
+        }
+      ]
+    },
+    {
+      "label": "Sleutelwoorde",
+      "widgets": [
+        {
+          "label": "Verstek"
+        }
+      ],
+      "entity": "Sleutelwoord",
+      "field": {
+        "label": "Sleutelwoord",
+        "fields": [
+          {
+            "label": "Sleutelwoord",
+            "description": "Sleutelwoord of frase om voor uit te kyk. Gebruik 'n sterretjie '*' as 'n wisselkarakter vir een of meer karakters. Gebruik 'n flap '/' by die begin en einde om 'n gewone uitdrukking te gebruik."
+          },
+          {
+            "label": "Variasies",
+            "description": "Voeg 'n opsionele variasie vir hierdie sleutelwoord by. Byvoorbeeld: Vir 'n 'stad' voeg alternatiewe 'dorp', 'munisipaliteit' ens. by. Punte sal toegeken word indien die gebruiker enige van die gespesifiseerde alternatiewe bygevoeg het.",
+            "entity": "variasie",
+            "field": {
+              "label": "Sleutelwoord variasie"
+            }
+          },
+          {
+            "label": "Punte, opsies en terugvoer",
+            "fields": [
+              {
+                "label": "Punte",
+                "description": "Punte wat die gebruiker sal kry indien hy/sy hierdie sleutelwoord of sy alternatiewe in die antwoord insluit."
+              },
+              {
+                "label": "Voorvalle",
+                "description": "Definieer hoeveel voorkomste van die trefwoord of die variasies daarvan met punte toegeken kan word."
+              },
+              {
+                "label": "Hooflettergevoelig",
+                "description": "Maak seker dat die gebruiker se antwoord presies dieselfde as die vereisde antwoord is."
+              },
+              {
+                "label": "Vergewe geringe foute",
+                "description": "Dit sal geringe spelfoute (3-9 karakters: 1 fout, meer as 9 karakters: 2 foute) aanvaar."
+              },
+              {
+                "label": "Terugvoer indien sleutelwoord ingesluit word",
+                "description": "Hierdie terugvoer sal vertoon word indien die gebruiker hierdie sleutelwoord of alternatiewe in die antwoord insluit."
+              },
+              {
+                "label": "Terugvoer indien sleutelwoord ontbreek",
+                "description": "Hierdie terugvoer sal vertoon word as die gebruiker nie hierdie sleutelwoord of die alternatiewe daarvan in die antwoord insluit nie."
+              },
+              {
+                "label": "Terugvoerwoord wat gewys word indien sleutelwoord ingesluit is",
+                "description": "Met hierdie opsie kan jy spesifiseer watter woord voor jou terugvoer moet verskyn as 'n sleutelwoord in die teks gevind is.",
+                "options": [
+                  {
+                    "label": "sleutelwoord"
+                  },
+                  {
+                    "label": "alternatief gevind"
+                  },
+                  {
+                    "label": "antwoord gegee"
+                  },
+                  {
+                    "label": "geen"
+                  }
+                ]
+              },
+              {
+                "label": "Terugvoerwoord wat gewys word indien sleutelwoord ontbreek",
+                "description": "Met hierdie opsie kan jy spesifiseer watter woord voor jou terugvoer getoon moet word as 'n sleutelwoord nie in die teks gevind is nie.",
+                "options": [
+                  {
+                    "label": "sleutelwoord"
+                  },
+                  {
+                    "label": "geen"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Algehele terugvoer",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Verstek"
+            }
+          ],
+          "label": "Bepaal verstekterugvoer vir enige reeks tellings",
+          "description": "Kliek op die \"Voeg reeks by\" knoppie om so veel as moontlik reekse by te voeg. Byvoorbeeld: 0-20% Swak Punt, 21-91% Gemiddelde Punt, 91-100% Uitstekende Punt!",
+          "entity": "reeks",
+          "field": {
+            "fields": [
+              {
+                "label": "Telreeks"
+              },
+              {},
+              {
+                "label": "Terugvoer vir gedefinieerde telling reeks",
+                "placeholder": "Vul die terugvoer in"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellings",
+      "description": "Hierdie keuses laat jou beheer hoe die onderskeie take uitgevoer moet word.",
+      "fields": [
+        {
+          "label": "Minimum aantal karakters",
+          "description": "Spesifiseer die minimum aantal karakters wat die gebruiker moet invoer."
+        },
+        {
+          "label": "Maksimum aantal karakters",
+          "description": "Spesifiseer die maksimum aantal karakters wat die gebruiker kan invoer."
+        },
+        {
+          "label": "Invoerveld grootte",
+          "description": "Die grootte van die invoerveld in hoeveelheid lyne dit sal dek",
+          "options": [
+            {
+              "label": "1 lyn"
+            },
+            {
+              "label": "3 lyne"
+            },
+            {
+              "label": "10 lyne"
+            }
+          ]
+        },
+        {
+          "label": "Aktiveer \"Probeer weer\"",
+          "description": "Indien gemerk, kan leerlinge die taak oordoen."
+        },
+        {
+          "label": "Ignoreer telling",
+          "description": "Indien gemerk, sal leerlinge slegs die terugvoer wat jy verskaf het vir die sleutelterme sien, maar nie die telling nie."
+        },
+        {
+          "label": "Punte in gasheeromgewing",
+          "description": "Word gebruik om punte in die gasheeromgewing toe te ken slegs vir beantwoording (nie aan leerder gewys nie)."
+        },
+        {
+          "label": "Slaagpersentasie",
+          "description": "Slaagpersentasie wat nodig is om deur te kom"
+        },
+        {
+          "label": "Bemeestering persentasie",
+          "description": "Persentasie nodig vir bemeestering. Deur die bemeestering persentasie onder 100% te stel sal die maksimum moontlike telling hiervolgens aangepas word. Dit is bedoel om speling vir studente te gee, nie om \"vrylik oplossings te aanvaar\" wat nie al die sleutelterme bevat nie."
+        },
+        {
+          "label": "Oorskry hooflettergevoeligheid",
+          "description": "Hierdie opsie bepaal of die \"Hooflettergevoeligheid\" opsie vir alle sleutelwoorde aktiveer sal word.",
+          "options": [
+            {
+              "label": "Aktiveer"
+            },
+            {
+              "label": "Deaktiveer"
+            }
+          ]
+        },
+        {
+          "label": "Negeer vergewing van foute",
+          "description": "Hierdie opsie bepaal of die \"Vergewe foute\" opsie vir alle sleutelwoorde geaktiveer sal word.",
+          "options": [
+            {
+              "label": "Aktiveer"
+            },
+            {
+              "label": "Deaktiveer"
+            }
+          ]
+        },
+        {
+          "label": "Replacement for line breaks",
+          "description": "By default, line breaks will be replaced with a space character. If you want to check for line breaks, e.g. in regular expressions, you can set a different replacement here.",
+          "options": [
+            {
+              "label": "space"
+            },
+            {
+              "label": "line break (\\n)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Teks vir \"Toets\" knoppie",
+      "default": "Toets"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "Teks vir \"Probeer weer\" knoppie",
+      "default": "Probeer weer"
+    },
+    {
+      "label": "Teks vir \"Wys antwoord\" knoppie",
+      "default": "Wys antwoord"
+    },
+    {
+      "label": "Opskrif vir paneel wat terugvoer bevat vir ingeslote/ontbrekende sleutelwoorde",
+      "default": "Terugvoer"
+    },
+    {
+      "label": "Etiket vir oplossing",
+      "default": "Voorbeeld antwoord"
+    },
+    {
+      "label": "Oorblywende karakters",
+      "default": "Oorblywende karakters: @chars",
+      "description": "Boodskap vir oorblywende karakters. Jy kan @chars gebruik wat sal vervang word deur die korresponderende aantal."
+    },
+    {
+      "label": "Te min karakters",
+      "default": "Jy moet ten minste @chars karakters invoer!",
+      "description": "Boodskap om aan te dui dat die teks nie genoeg karakters bevat nie. Jy kan @chars gebruik wat vervang sal word met die korresponderende aantal."
+    },
+    {
+      "label": "Stoor boodskap",
+      "description": "Boodskap wat aandui dat die teks gestoor is",
+      "default": "gestoor"
+    },
+    {
+      "label": "Jou uitslae (word nie vertoon nie)",
+      "description": "Toeganklikheidsteks gebruik vir spreeklesers. @score sal vervang word met die aantal punte. @total sal vervang word met die maksimum aantal punte.",
+      "default": "Jy het @score uit @total punte gekry"
+    },
+    {
+      "label": "Navigasieboodskap (word nie vertoon nie)",
+      "description": "Toeganklikheidsteks om te gebruik met spreeklesers",
+      "default": "Navigeer na nuwe ingeslote voorbeeld-antwoorde na teksarea."
+    },
+    {
+      "label": "Hulptegnologie-beskrywing vir die \"Toets\" -knoppie",
+      "default": "Toets die antwoorde."
+    },
+    {
+      "label": "Hulptegnologieë beskrywing vir \"Wys oplossing\" knoppie",
+      "default": "Wys die antwoord. Jy sal voorsien word met 'n voorbeeld-antwoord."
+    },
+    {
+      "label": "Hulptegnologieë beskrywing vir \"Probeer weer\" knoppie",
+      "default": "Probeer die taak weer. Jy kan verbeter aan jou vorige antwoord indien die outeur dit toegelaat het."
+    }
+  ]
+}

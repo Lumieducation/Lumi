@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "תוכן שאלה",
+      "description": "השאלה שעל פיה המשתמש יבסס את בחירתו."
+    },
+    {
+      "label": "בחירות",
+      "entity": "בחירה",
+      "field": {
+        "fields": [
+          {
+            "label": "תוכן בחירה",
+            "description": "התווית שתוצג על כפתור הבחירה."
+          },
+          {
+            "label": "עבור אל",
+            "description": "The target time the user will be taken to upon pressing the choice button. Enter timecode in the format M:SS."
+          },
+          {
+            "label": "אם תוכן נבחר",
+            "description": "טקסט אישור חלופי שיוצג אחרי שהמשתש לחץ על כפתור הבחירה."
+          }
+        ]
+      }
+    },
+    {
+      "label": "תווית כפתור המשך",
+      "default": "המשך"
+    }
+  ]
+}

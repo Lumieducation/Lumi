@@ -1,0 +1,214 @@
+{
+  "semantics": [
+    {
+      "label": "Medya",
+      "fields": [
+        {
+          "label": "Yazınız",
+          "description": "Soru üzerinde görüntülenecek isteğe bağlı ortam."
+        },
+        {
+          "label": "Resim yakınlaştırmasını iptal et."
+        }
+      ]
+    },
+    {
+      "label": "Görev tanımlaması",
+      "default": "Boşlukları uygun kelimeler ile doldurunuz.",
+      "description": "Bu görevin nasıl yapılacağını kullanıcıya anlatın."
+    },
+    {
+      "label": "Metin blokları",
+      "entity": "text block",
+      "field": {
+        "label": "Metin gir",
+        "placeholder": "Türkiye'nin başkenti *Ankara*.",
+        "important": {
+          "description": "<ul><li>Boşlukları oluşturmak için doğru kelimenin/ifadenin önüne ve arkasına yıldız (*) koyunuz.</li><li>Alternatif cevapları birbirinden ayırmak için bölü işaretini (/) kullanınız.</li><li>İpucu eklemek için cevabın sonuna iki nokta üst üste işaretini (:) kullanınız.</li></ul>",
+          "example": "Bir ay *30/31:bazı ayların gün sayısı farklıdır*."
+        }
+      }
+    },
+    {
+      "label": "Toplam Geri bildirim",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Varsayılan"
+            }
+          ],
+          "label": "Herhangi bir puan aralığı için özel geri bildirim tanımlayın",
+          "description": "İstediğiniz kadar aralık eklemek için \"Aralık ekle\" düğmesini tıklayın. Örnek: %0-20 Kötü puan, %21-91 Ortalama Puan, %91-100 Büyük Puan!",
+          "entity": "Aralık",
+          "field": {
+            "fields": [
+              {
+                "label": "Puan Aralığı"
+              },
+              {},
+              {
+                "label": "Tanımlanmış puan aralığı için geri bildirim",
+                "placeholder": "Geri bildirimi doldurun"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "\"Çözümü göster\" düğmesi için metin",
+      "default": "Çözümü göster"
+    },
+    {
+      "label": "\"Yeniden Dene\" düğmesi için metin",
+      "default": "yeniden dene"
+    },
+    {
+      "label": "\"Kontrol et\" düğmesi için metin",
+      "default": "Kontrol et"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "\"Doldurulmadı\" mesajı için metin",
+      "default": "Çözümü görmek için lütfen tüm boşlukları doldurun"
+    },
+    {
+      "label": "\"':ans' cevabın doğru\" mesajı için metin",
+      "default": "':ans' cevabın doğru"
+    },
+    {
+      "label": "\"':ans' cevabın yanlış\" mesajı için metin",
+      "default": "':ans' cevabın yanlış"
+    },
+    {
+      "label": "\"Doğru cevaplandı\" mesajı için metin",
+      "default": "doğru cevaplandı"
+    },
+    {
+      "label": "\"Yanlış cevaplandı\" mesajı için metin",
+      "default": "yanlış cevaplandı"
+    },
+    {
+      "label": "Çözüm için yardımcı teknoloji etiketi",
+      "default": "Doğru cevap:"
+    },
+    {
+      "label": "Metin giriş alanı için yardımcı teknoloji etiketi",
+      "description": "Use @num and @total to replace current cloze number and total cloze number",
+      "default": "Blank input @num of @total"
+    },
+    {
+      "label": "Assistive technology label for saying an input has a tip tied to it",
+      "default": "Tip available"
+    },
+    {
+      "label": "İpucu simgesi etiketi",
+      "default": "İpucu"
+    },
+    {
+      "label": "Davranış ayarları",
+      "description": "Bu seçenekler, görevin nasıl davranacağını kontrol etmenizi sağlar.",
+      "fields": [
+        {
+          "label": "\"Yeniden dene\"yi etkinleştir"
+        },
+        {
+          "label": "\"Çözüm göster\" düğmesini etkinleştirin"
+        },
+        {
+          "label": "\"Kontrol Et\" düğmesini etkinleştirin"
+        },
+        {
+          "label": "Girişten sonra cevapları otomatik olarak kontrol et"
+        },
+        {
+          "label": "Harfe duyarlı",
+          "description": "Kullanıcı girişinin cevapla tam olarak aynı olmasını sağlar."
+        },
+        {
+          "label": "Çözüm gösterilmeden önce tüm boşlukların doldurulması zorunlu"
+        },
+        {
+          "label": "Giriş alanlarını ayrı satırlara koyun"
+        },
+        {
+          "label": "\"Kontrol Et\"te onay iletişim kutusunu göster",
+          "description": "Bu seçenek, \"Girişten sonra yanıtları otomatik olarak kontrol et\" seçeneğiyle uyumlu değildir."
+        },
+        {
+          "label": "\"Yeniden Dene\"de onay iletişim kutusunu göster"
+        },
+        {
+          "label": "Küçük yazım hatalarına izin ver",
+          "description": "Eğer etkinleştirilirse, küçük yazım hatalarıyla birlikte yanıt doğru sayılır (3-9 karakter arasında: 1 yazım hatası, 9 karakterden fazlaysa: 2 yazım hatası)"
+        }
+      ]
+    },
+    {
+      "label": "Onay iletişim kutusunun kontrolü",
+      "fields": [
+        {
+          "label": "Başlık metni",
+          "default": "Bitir"
+        },
+        {
+          "label": "Gövde",
+          "default": "Bitirmek istediğinize emin misiniz?"
+        },
+        {
+          "label": "İptal düğmesi etiketi",
+          "default": "Hayır"
+        },
+        {
+          "label": "Onaylama düğmesi etiketi",
+          "default": "Evet"
+        }
+      ]
+    },
+    {
+      "label": "Tekrar dene iletişim kutusunun kontrolü",
+      "fields": [
+        {
+          "label": "Başlık metni",
+          "default": "Yeniden Dene"
+        },
+        {
+          "label": "Gövde metni",
+          "default": "Yeniden denemek istediğinizden emin misiniz?"
+        },
+        {
+          "label": "İptal düğmesi etiketi",
+          "default": "Hayır"
+        },
+        {
+          "label": "Onaylama düğmesi etiketi",
+          "default": "Evet"
+        }
+      ]
+    },
+    {
+      "label": "Okuyucu kullananlar için puan çubuğunun metinsel gösterimi",
+      "default": ":total puandan :num puan aldınız"
+    },
+    {
+      "label": "\"Kontrol Et\" düğmesi için yardımcı teknoloji açıklaması",
+      "default": "Cevapları kontrol edin. Cevaplar doğru, yanlış veya cevapsız olarak işaretlenecektir."
+    },
+    {
+      "label": "\"Çözüm Göster\" düğmesi için yardımcı teknoloji açıklaması",
+      "default": "Çözümü göster. Görev, doğru çözümü ile işaretlenecektir."
+    },
+    {
+      "label": "\"Yeniden Dene\" düğmesi için yardımcı teknoloji açıklaması",
+      "default": "Görevi yeniden deneyin. Tüm yanıtları sıfırlayın ve görevi yeniden başlatın."
+    },
+    {
+      "label": "Görevi başlatmak için yardımcı teknoloji açıklaması",
+      "default": "Kontrol modu"
+    }
+  ]
+}

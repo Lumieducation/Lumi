@@ -1,0 +1,203 @@
+{
+  "semantics": [
+    {
+      "label": "Mode for door images",
+      "description": "Select whether you want to set each custom door image yourself or let H5P do the work for you based on the calendar background image set in the behavioural settings.",
+      "options": [
+        {
+          "label": "I want to set each door image myself"
+        },
+        {
+          "label": "H5P shall set the door images based on the background image"
+        }
+      ]
+    },
+    {
+      "label": "Türchen",
+      "entity": "Türchen",
+      "field": {
+        "fields": [
+          {
+            "label": "Inhaltstyp",
+            "description": "Inhaltstyp, der optional erscheinen soll, wenn das Türchen geöffnet wurde.",
+            "options": [
+              {
+                "label": "Tondatei"
+              },
+              {
+                "label": "Bild"
+              },
+              {
+                "label": "Link"
+              },
+              {
+                "label": "Text"
+              },
+              {
+                "label": "Video"
+              }
+            ]
+          },
+          {
+            "label": "Tondatei"
+          },
+          {
+            "label": "Bild"
+          },
+          {
+            "label": "Link"
+          },
+          {
+            "label": "Text"
+          },
+          {
+            "label": "Video"
+          },
+          {
+            "label": "Automatisch abspielen"
+          },
+          {
+            "label": "Bild für das Türchen",
+            "description": "Bild, das für die Tür verwendet wird. Benötigt ein Seitenverhältnis von 1:1, wenn die linke Hälfte zur rechten Hälfte passen soll."
+          },
+          {
+            "label": "Hintergrundbild",
+            "description": "Bild, das hinter dem Türchen erscheinen soll. Ohne Bild wird die Nummer des Türchens angezeigt."
+          }
+        ]
+      },
+      "widgets": [
+        {
+          "label": "Vorgabe"
+        }
+      ]
+    },
+    {
+      "label": "Visual settings",
+      "description": "These options will let you configure the visual appearance.",
+      "fields": [
+        {
+          "label": "Hintergrundbild für den Kalender"
+        },
+        {
+          "label": "Vorlagebild für Türchen",
+          "description": "Wenn ein Bild gesetzt ist, wird es als Vordergrund für jedes einzelne Türchen genutzt, für das kein spezielles Bild angegeben ist."
+        },
+        {
+          "label": "Verstecke den Rahmen der Türchen"
+        },
+        {
+          "label": "Verstecke die Nummern der Türchen"
+        },
+        {
+          "label": "Verstecke die Griffe der Türchen"
+        },
+        {
+          "label": "Verstecke Rand der Türchen"
+        },
+        {
+          "label": "Lass es schnei'n",
+          "description": "Fügt dem Kalender etwas Schnee hinzu. Es regnet nie in Südkalifornien, es schneit nicht auf dem IE11."
+        }
+      ]
+    },
+    {
+      "label": "Audio settings",
+      "description": "These options will let you configure the audio appearance.",
+      "fields": [
+        {
+          "label": "Hintergrundmusik"
+        },
+        {
+          "label": "Hintergrundmusik automatisch abspielen",
+          "description": "Wenn angewählt, wird die Hintergrundmusik automatisch abgespielt, wenn der Inhalt aufgerufen wird. Hinweis: Die Regeln einiger Browser verhindern möglicherweise das automatische Abspielen."
+        }
+      ]
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "description": "Diese Optionen legen fest, wie der Kalender im Detail funktioniert.",
+      "fields": [
+        {
+          "label": "Modus für das Platzieren der Türchen",
+          "description": "Wenn der Designmodus aktiv ist, können alle Türchen geöffnet werden. Andernfalls können die Türchen nur im Dezember an oder nach dem Tag geöffnet werden, der der Türchennummer entspricht.",
+          "options": [
+            {
+              "label": "Fixed"
+            },
+            {
+              "label": "Dynamic"
+            }
+          ]
+        },
+        {
+          "label": "Row-to-column ratio",	
+          "description": "Select how many columns and rows the calender should use.",
+          "options": [
+            {
+              "label": "6 × 4"
+            },
+            {
+              "label": "4 × 6"
+            }
+          ]
+        },
+        {
+          "label": "Zufällige Reihenfolge",
+          "description": "Mische die Reihenfolge der Türchen. Falls die \"save content state\"-Option in den H5P-Einstellungen aktiviert wurde, bleibt die Reihenfolge erhalten, wenn Nutzer:innen später zurückkehren."
+        },
+        {
+          "label": "Keep order of images",
+          "description": "Shuffle doors, but keep the door cover images at their fixed positions starting with 1 in the upper left corner down to 24 in the lower right corner."
+        },
+        {
+          "label": "Designmodus",
+          "description": "Wenn der Designmodus aktiv ist, können alle Türchen geöffnet werden. Andernfalls können die Türchen nur im Dezember an oder nach dem Tag geöffnet werden, der der Türchennummer entspricht."
+        }
+      ]
+    },
+    {
+      "label": "Bezeichnungen und Beschriftungen",
+      "fields": [
+        {
+          "label": "Nichts zu sehen!",
+          "default": "Hier gibt es nichts zu sehen!\ud83c\udf84"
+        },
+        {
+          "label": "Dummy",
+          "default": "Dummy"
+        }
+      ]
+    },
+    {
+      "label": "Barrierefreiheit",
+      "fields": [
+        {
+          "label": "Türchen",
+          "default": "Türchen"
+        },
+        {
+          "label": "Verschlossen",
+          "default": "Verschlossen. Es ist noch nicht Zeit, das Türchen zu öffnen."
+        },
+        {
+          "description": "Verkünde den Inhalt. @door ist ein Platzhalter und wird durch die Beschreibung der Tür ersetzt.",
+          "label": "Inhalt von",
+          "default": "Inhalt von @door"
+        },
+        {
+          "label": "Ton stummschalten",
+          "default": "Ton stummschalten"
+        },
+        {
+          "label": "Ton einschalten",
+          "default": "Ton einschalten"
+        },
+        {
+          "label": "Fenster schließen",
+          "default": "Fenster schließen"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "semantics": [
+    {
+      "label": "Cevapla düğmesini kontrol et",
+      "default": "Kontrol et"
+    },
+    {
+      "label": "Cevabı gönder düğmesi",
+      "default": "Gönder"
+    },
+    {
+      "label": "Tekrar dene düğmesi",
+      "default": "Yeniden dene"
+    },
+    {
+      "label": "Puan açıklama metni",
+      "default": "Doğru cevaplar+1 puan verir. Yanlış cevaplar -1 puan verir. Mümkün olan en düşük puan 0'dir."
+    },
+    {
+      "fields": [
+        {
+          "label": "Ayarlar",
+          "fields": [
+            {
+              "label": "Arkaplan görüntüsü",
+              "description": "İsteğe bağlı. Sürükle ve bırak göreviniz için arka plan olarak kullanmak üzere bir resim seçin."
+            },
+            {
+              "label": "Görev boyutu",
+              "description": "Oyun alanının ne kadar büyük (px cinsinden) olması gerektiğini belirtin."
+            }
+          ]
+        },
+        {
+          "label": "Görev",
+          "description": "Bırakma bölgelerinizi yerleştirerek başlayın. <br /> İleri, atlayabilecek öğelerinizi yerleştirin ve uygun bırakma bölgelerini kontrol edin. <br /> Son, bırakma bölgenizi tekrar düzenleyin ve doğru yanıtları kontrol edin.",
+          "fields": [
+            {
+              "label": "Ögeler",
+              "entity": "öğe",
+              "field": {
+                "label": "Öge",
+                "fields": [
+                  {
+                    "description": "Eklemek istediğiniz içerik türünü seçiniz."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Bırakma alanı seç"
+                  },
+                  {
+                    "label": "Arkaplan Şeffaflığı",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Sonsuz sayıda öğe örneği",
+                    "description": "Birden çok bırakma bölgesine sürüklenebilmesi için bu ögeyi klonlar."
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Bırakma Alanları",
+              "entity": "Bırakma Alanı",
+              "field": {
+                "label": "Bırakma Alanı",
+                "fields": [
+                  {
+                    "label": "Etiket",
+                    "description": "The label is used by assistive technologies."
+                  },
+                  {
+                    "label": "Etiketi göster"
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Doğru öğeleri seçin"
+                  },
+                  {
+                    "label": "Arkaplan Şeffaflığı",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "İpuçları ve geri bildirim",
+                    "fields": [
+                      {
+                        "label": "İpucu metni"
+                      },
+                      {
+                        "label": "Doğru cevapta gösterilecek ileti",
+                        "description": "Doğru bırakılabilir öğe eşleşirse 'kontrol et' seçeneğindeki görevin altında mesaj görünür."
+                      },
+                      {
+                        "label": "Yanlış cevapta gösterilecek ileti",
+                        "description": "Eşleşme yanlışsa, görevin altında \"kontrol et\" mesajı görünecektir."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Bu bırakma bölgesi yalnızca bir öğe içerebilir",
+                    "description": "Make sure there is only one correct answer for this dropzone"
+                  },
+                  {
+                    "label": "Enable Auto-Align",
+                    "description": "Will auto-align all draggables dropped in this zone."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Overall Feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Varsayılan"
+            }
+          ],
+          "label": "Define custom feedback for any score range",
+          "description": "İstediğiniz kadar aralık eklemek için \"Aralık ekle\" düğmesini tıklayın. Örnek: %0-20 Kötü puan, %21-91 Ortalama Puan, %91-100 Büyük Puan!",
+          "entity": "aralık",
+          "field": {
+            "fields": [
+              {
+                "label": "Score Range"
+              },
+              {},
+              {
+                "label": "Feedback for defined score range",
+                "placeholder": "Fill in the feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Davranış ayarları",
+      "description": "Bu seçenekler aktivitenin çalışma şeklini denetlemenize izin verir.",
+      "fields": [
+        {
+          "label": "Enable \"Retry\""
+        },
+        {
+          "label": "Enable \"Check\" button"
+        },
+        {
+          "label": "Bütün aktivite için bir puan verin",
+          "description": "Disable to give one point for each draggable that is placed correctly."
+        },
+        {
+          "label": "Apply penalties",
+          "description": "Apply penalties for elements dropped in the wrong drop zones. This must be enabled when the same element(s) are able to be dropped into multiple drop zones, or if there is only one drop-zone. If this is not enabled, learners may match all items to all drop-zones and always receive a full score."
+        },
+        {
+          "label": "Enable score explanation",
+          "description": "Display a score explanation to user when checking their answers (if the 'Apply penalties' option has been selected)."
+        },
+        {
+          "label": "Background opacity for draggables",
+          "description": "If this field is set, it will override opacity set on all draggable elements. This should be a number between 0 and 100, where 0 means full transparency and 100 means no transparency"
+        },
+        {
+          "label": "Drop Zone Highlighting",
+          "description": "Choose when to highlight drop zones.",
+          "options": [
+            {
+              "label": "When dragging"
+            },
+            {
+              "label": "Daima"
+            },
+            {
+              "label": "Asla"
+            }
+          ]
+        },
+        {
+          "label": "Spacing for Auto-Align (in px)"
+        },
+        {
+          "label": "Tam ekranı etkinleştir",
+          "description": "Tam ekran düğmesini etkinleştirmek için bu seçeneği işaretleyiniz."
+        },
+        {
+          "label": "Show score points",
+          "description": "Show points earned for each answer. Not available when the 'Give one point for the whole task' option is enabled."
+        },
+        {
+          "label": "Başlığı göster",
+          "description": "Başlığın gösterilmesini istemiyorsanız bu seçenekteki işareti kaldırınız. Başlık sadece özetlerde,istatistiklerde vb. yerlerde gösterilecektir."
+        }
+      ]
+    },
+    {
+      "label": "Localize",
+      "fields": [
+        {
+          "label": "Tam ekran etiketi",
+          "default": "Tam ekran"
+        },
+        {
+          "label": "Tam ekrandan çık etiketi",
+          "default": "Tam ekrandan çık"
+        }
+      ]
+    },
+    {
+      "label": "Grabbable prefix",
+      "default": "Grabbable {num} of {total}."
+    },
+    {
+      "label": "Grabbable suffix",
+      "default": "Placed in dropzone {num}."
+    },
+    {
+      "label": "Dropzone prefix",
+      "default": "Dropzone {num} of {total}."
+    },
+    {
+      "label": "No dropzone selection label",
+      "default": "No dropzone."
+    },
+    {
+      "label": "Label for show tip button",
+      "default": "Show tip."
+    },
+    {
+      "label": "Label for tip available",
+      "default": "Mevcut ipucu"
+    },
+    {
+      "label": "Label for correct answer",
+      "default": "Doğru cevap"
+    },
+    {
+      "label": "Yanlış cevap için etiket",
+      "default": "Yanlış cevap"
+    },
+    {
+      "label": "Header for panel containing feedback for correct/incorrect answers",
+      "default": "Feedback"
+    },
+    {
+      "label": "Textual representation of the score bar for those using a readspeaker",
+      "default": "You got :num out of :total points"
+    },
+    {
+      "label": "Textual representation of the score explanation button",
+      "default": "Show score explanation"
+    },
+    {
+      "label": "Assistive technology label for \"Check\" button",
+      "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+    },
+    {
+      "label": "Assistive technology label for \"Retry\" button",
+      "default": "Görevi yeniden deneyin. Tüm cevapları sıfırlayın ve görevi yeniden başlatın."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Text de la pregunta",
+      "description": "Pregunta en què l’usuari es basarà per fer la selecció."
+    },
+    {
+      "label": "Opcions",
+      "entity": "elecció",
+      "field": {
+        "fields": [
+          {
+            "label": "Text del botó de l’opció",
+            "description": "L’etiqueta que es mostrarà al botó de selecció."
+          },
+          {
+            "label": "Ves a",
+            "description": "Temps objectiu en el qual se situarà l’usuari en prémer el botó de selecció. Introduïu el codi de temps en format M:SS."
+          },
+          {
+            "label": "Text per quan es fa la selecció",
+            "description": "Un text de confirmació opcional es mostrarà després que l’usuari hagi premut el botó d’elecció."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Etiqueta del botó de continuar",
+      "default": "Continua"
+    }
+  ]
+}

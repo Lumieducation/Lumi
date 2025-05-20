@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "과제 설명",
+      "description": "Put the heading/instructions you'd like to show above the before/after image here.",
+      "placeholder": "Here you can add an optional heading and/or instructions."
+    },
+    {
+      "label": "첫 번째 이미지",
+      "fields": [
+        {
+          "label": "첫 번째 이미지",
+          "description": "첫 번째 이미지입니다. 두 번째 이미지와 크기가 동일한지 확인하십시오."
+        },
+        {
+          "label": "첫 번째 이미지에 대한 레이블",
+          "description": "첫 번째 이미지 위에 놓을 레이블"
+        }
+      ]
+    },
+    {
+      "label": "두 번째 이미지",
+      "fields": [
+        {
+          "label": "두 번째 이미지",
+          "description": "두 번째 이미지. 첫 번째 이미지와 크기가 동일한지 확인하십시오."
+        },
+        {
+          "label": "두 번째 이미지에 대한 레이블",
+          "description": "두 번째 이미지 위에 놓을 레이블"
+        }
+      ]
+    },
+    {
+      "label": "환경 설정",
+      "description": "이 옵션을 사용하면 세부 정보를 설정할 수 있습니다.",
+      "fields": [
+        {
+          "label": "슬라이드 시작 위치: 백분율(%)",
+          "description": "슬라이더의 시작 위치를 설정합니다"
+        },
+        {
+          "label": "슬라이더 방향",
+          "description": "수평은 왼쪽과 오른쪽으로, 수직은 위아래로 움직입니다.",
+          "options": [
+            {
+              "label": "수평"
+            },
+            {
+              "label": "수직"
+            }
+          ]
+        },
+        {
+          "label": "슬라이더 색깔",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Image visible message",
+          "default": "Image @percentage % visible",
+          "description": "@percentage is a placeholder and will be replaced with the respective value."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

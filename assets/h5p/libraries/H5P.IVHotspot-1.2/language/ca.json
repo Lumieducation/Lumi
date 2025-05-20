@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Destinació",
+      "fields": [
+        {
+          "label": "Tipus",
+          "options": [
+            {
+              "label": "Codi de temps"
+            },
+            {
+              "label": "Una altra pàgina (URL)"
+            }
+          ]
+        },
+        {
+          "label": "Ves a",
+          "description": "Temps objectiu en el qual se situarà l’usuari en prémer la zona sensible. Introduïu el codi de temps en format M:SS."
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "Protocol",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(root relative)"
+                },
+                {
+                  "label": "altres"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Elements visuals",
+      "fields": [
+        {
+          "label": "Forma",
+          "options": [
+            {
+              "label": "Rectangular"
+            },
+            {
+              "label": "Circular"
+            },
+            {
+              "label": "Rectangle arrodonit"
+            }
+          ]
+        },
+        {
+          "label": "Color de fons de la zona sensible"
+        },
+        {
+          "label": "Utilitzeu el cursor del punter"
+        },
+        {
+          "label": "Afegeix un efecte de parpelleig",
+          "description": "Nota: l’efecte de parpelleig sempre està activat a l’editor, perquè vegeu les zones sensibles transparents"
+        }
+      ]
+    },
+    {
+      "label": "Textos",
+      "fields": [
+        {
+          "label": "Text alternatiu",
+          "description": "Descriviu el tema de la zona sensible, perquè el puguin utilitzar els altaveus de lectura",
+          "placeholder": "Una poma sobre la taula"
+        },
+        {
+          "label": "Etiqueta de la zona sensible"
+        },
+        {
+          "label": "Mostra l’etiqueta"
+        },
+        {
+          "label": "Color de l’etiqueta"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Descrição da tarefa",
+      "description": "Coloque aqui o título/instruções que você gostaria de mostrar acima da imagem antes/depois.",
+      "placeholder": "Aqui você pode adicionar um título opcional e/ou instruções."
+    },
+    {
+      "label": "Primeira imagem",
+      "fields": [
+        {
+          "label": "Primeira imagem",
+          "description": "A primeira imagem. Garanta que é do mesmo tamanho da segunda imagem."
+        },
+        {
+          "label": "Etiqueta para a primeira imagem",
+          "description": "Etiqueta para colocar sobre a primeira imagem"
+        }
+      ]
+    },
+    {
+      "label": "Segunda imagem",
+      "fields": [
+        {
+          "label": "Segunda imagem",
+          "description": "A segunda imagem. Garanta que é do mesmo tamanho da primeira imagem."
+        },
+        {
+          "label": "Etiqueta para a segunda imagem",
+          "description": "Etiqueta para colocar sobre a segunda imagem"
+        }
+      ]
+    },
+    {
+      "label": "Definições de funcionamento",
+      "description": "Estas opções controlam como a atividade se comporta",
+      "fields": [
+        {
+          "label": "Orientação da barra de deslizamento",
+          "description": "Define a posição inicial do controle deslizante"
+        },
+        {
+          "label": "Orientação do controle deslizante",
+          "description": "A horizontal move-se para a esquerda e para a direita, a vertical move-se para cima e para baixo.",
+          "options": [
+            {
+              "label": "Horizontal"
+            },
+            {
+              "label": "Vertical"
+            }
+          ]
+        },
+        {
+          "label": "Cor do controle deslizante",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Textos de acessibilidade",
+      "fields": [
+        {
+          "label": "Mensagem de imagem visível",
+          "default": "Imagem @percentage % visível",
+          "description": "@percentage é um espaço reservado e será substituído pelo respectivo valor."
+        },
+        {
+          "label": "Fictício"
+        }
+      ]
+    }
+  ]
+}

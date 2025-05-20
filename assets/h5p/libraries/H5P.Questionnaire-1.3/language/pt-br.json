@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Elementos do questionário",
+      "widgets": [
+        {
+          "label": "Padrão"
+        }
+      ],
+      "entity": "elemento",
+      "field": {
+        "label": "Escolher biblioteca",
+        "fields": [
+          {
+            "label": "Biblioteca",
+            "description": "Escolha uma biblioteca"
+          },
+          {
+            "label": "Campo obrigatório"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Opções da tela de sucesso",
+      "fields": [
+        {
+          "label": "Ativar tela de sucesso"
+        },
+        {
+          "label": "Adicionar imagem da tela de sucesso",
+          "fields": [
+            {
+              "label": "Substituir ícone de sucesso com uma imagem"
+            }
+          ]
+        },
+        {
+          "label": "Texto a ser exibido no envio",
+          "default": "Você completou o questionário."
+        }
+      ]
+    },
+    {
+      "label": "Elementos de interface de usuário",
+      "fields": [
+        {
+          "label": "Rótulos dos botões",
+          "fields": [
+            {
+              "label": "Rótulo do botão Anterior",
+              "default": "Voltar"
+            },
+            {
+              "label": "Rótulo do botão Continuar",
+              "default": "Continuar"
+            },
+            {
+              "label": "Rótulo do botão Próximo",
+              "default": "Próximo"
+            },
+            {
+              "label": "Rótulo do botão Enviar",
+              "default": "Enviar"
+            }
+          ]
+        },
+        {
+          "label": "Acessibilidade",
+          "fields": [
+            {
+              "label": "Rótulo de mensagem obrigatória do botão de saída",
+              "default": "Fechar mensagem de erro"
+            },
+            {
+              "label": "Texto da barra de progresso",
+              "default": "Questão %current de %max",
+              "description": "Usado para dizer às tecnologias de assistência qual é a questão. Variáveis: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Mensagem obrigatória",
+          "default": "Esta questão requer uma resposta",
+          "description": "Será mostrado caso o campo de uma pergunta obrigatória não esteja preenchido"
+        },
+        {
+          "label": "Texto do símbolo de obrigatório",
+          "default": "obrigatório",
+          "description": "Texto que acompanhará o asterisco ao informar que a questão é obrigatória"
+        },
+        {
+          "label": "Título para a tela de envio",
+          "default": "Você respondeu a todas as questões com sucesso"
+        },
+        {
+          "label": "Legenda para a tela de envio",
+          "default": "Clique abaixo para enviar suas respostas"
+        }
+      ]
+    }
+  ]
+}

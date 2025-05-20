@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Medieelement",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Valfritt medieelement. Elementet vil bli plassert over spørsmålet."
+        },
+        {
+          "label": "Deaktiver zoomingfunksjon."
+        }
+      ]
+    },
+    {
+      "label": "Oppgåvebeskriving",
+      "description": "Forklar korleis brukaren skal løyse oppgåva.",
+      "default": "Dra orda inn i dei rette boksane"
+    },
+    {
+      "label": "Tekst",
+      "placeholder": "*Oslo* er hovudstaden i Noreg, *Stockholm* er hovudstaden i Sverige og *København* er hovudstaden i Danmark. Alle byane er lokaliserte i *Skandinavia:den nordlege delen av Europa*.",
+      "important": {
+        "description": "<ul><li>Flyttbare ord eller utttrykk markerer du med ein asterisk (*) føre og etter ordet/uttrykket.</li><li>Du kan også legge til eit hint ved å bruke kolon (:). Døme: *Skandinavia:den nordlege delen av Europa*.</li><li>Det finst berre eitt rett svar for kvar tekstboks.</li><li>Du kan legg til ei tilbakemelding som blir vist når oppgåva er fullført. Bruk'\\+' for positiv og '\\-' for negativ tilbakemelding.</li></ul>",
+        "example": "H5P-innhald kan redigerast med ein *nettlesar:Kva slags program er Chrome?*.<br />H5P-innhald er *interaktivt\\+Rett!\\-Feil, prøv igjen*"
+      }
+    },
+    {
+      "label": "Feil svaralternativ",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Enter extra solutions that are wrong as distractors. Use the same asterisk (*) scheme as for the text."
+    },
+    {
+      "label": "Tilbakemelding på heile oppgåva",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Førehandsinnstilling"
+            }
+          ],
+          "label": "Opprett poengområde og legg inn tilbakemeldingar.",
+          "description": "Klikk på knappen \"Legg til poengområde\" og legg til så mange poengområde du treng. Døme: 0–40 % Svakt resultat, 41–80 % Gjennomsnittleg resultat, 81–100 % Flott resultat!",
+          "entity": "Område",
+          "field": {
+            "fields": [
+              {
+                "label": "Poengområde"
+              },
+              {},
+              {
+                "label": "Tilbakemelding for definert poengområde",
+                "placeholder": "Skriv inn tilbakemelding."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tekst for \"Sjekk\"-knapp",
+      "default": "Sjekk"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "Text for \"Retry\" button",
+      "default": "Retry"
+    },
+    {
+      "label": "Tekst for \"Fasit\" knapp",
+      "default": "Fasit"
+    },
+    {
+      "label": "Nummerert slippsone merkelapp",
+      "default": "Slippsone @index.",
+      "description": "Label used for accessibility, where the Read speaker will read the index of a drop zone. Variable available: @index"
+    },
+    {
+      "label": "Tom slippsone merkelapp",
+      "default": "Slippsone @index er tom.",
+      "description": "Label used for accessibility, where the Read speaker will read that the drop zone is empty"
+    },
+    {
+      "label": "Contains Drop Zone label",
+      "default": "Slippsone @index inneheld dragbar @draggable.",
+      "description": "Label used for accessibility, where the Read speaker will read that the drop zone contains a draggable"
+    },
+    {
+      "label": "Nummerert merkelapp for element som kan dras",
+      "default": "@index av @count dragbare.",
+      "description": "Label used for accessibility, where the Read speaker reads that this is a draggable element. Variable available: @index, @count"
+    },
+    {
+      "label": "Ingen slippsone valg-merkelapp",
+      "default": "Vis tips",
+      "description": "Label used for accessibility, where the Read speaker reads it before the tip is read out"
+    },
+    {
+      "label": "Readspeaker tekst for korrekt svar",
+      "default": "Riktig"
+    },
+    {
+      "label": "Readspeaker tekst for feil svar",
+      "default": "Feil"
+    },
+    {
+      "label": "Bekreftelsesdialogtittel om at brukeren vil nullstille et flyttbart element",
+      "default": "Nullstill flyttbart element"
+    },
+    {
+      "label": "Bekreftelsesdialogbeskrivelse om at brukeren vil nullstille et flyttbart element",
+      "default": "Er du sikker på at du vil nullstille dette elementet?"
+    },
+    {
+      "label": "Merkelapp for universal utforming, når brukeren indikerer at dragning har startet",
+      "default": "Dragbar er gripe."
+    },
+    {
+      "label": "LMerkelapp for universal utforming, når brukeren indikerer at dragnig er avbrutt",
+      "default": "Dragning avbrutt."
+    },
+    {
+      "label": "Merkelapp for korrekt svar",
+      "default": "Svar:"
+    },
+    {
+      "label": "Merkelapp for feil svar",
+      "default": "Tilbakemelding"
+    },
+    {
+      "label": "Innstillinger for oppgave-åtferd",
+      "description": "Disse instillingene lar deg bestemme hvordan oppgavetypen skal oppføre seg.",
+      "fields": [
+        {
+          "label": "Aktiver \"Prøv igjen\"-knapp"
+        },
+        {
+          "label": "Aktiver \"Fasit\" knapp"
+        },
+        {
+          "label": "Enable \"Check\" button"
+        },
+        {
+          "label": "Instant feedback"
+        }
+      ]
+    },
+    {
+      "label": "Textual representation of the score bar for those using a readspeaker",
+      "default": "Du fekk :num av :total poeng"
+    },
+    {
+      "label": "Assistive technology label for \"Check\" button",
+      "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+    },
+    {
+      "label": "Assistive technology label for \"Show Solution\" button",
+      "default": "Show the solution. The task will be marked with its correct solution."
+    },
+    {
+      "label": "Assistive technology label for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
+    }
+  ]
+}

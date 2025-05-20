@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Branchig Scenario Editorea (Egoera Adarkatuak)",
+      "fields": [
+        {
+          "label": "Izenburua"
+        },
+        {
+          "label": "Hasierako pantaila",
+          "fields": [
+            {
+              "label": "Ikastaroaren izenburua",
+              "placeholder": "Zure ikastaroaren izenburua"
+            },
+            {
+              "label": "Ikastaroaren xehetasunak",
+              "placeholder": "Ikastaroaren xehetasunak"
+            },
+            {
+              "label": "Ikastaroaren irudia"
+            },
+            {
+              "label": "Irudiaren ordezko testua"
+            }
+          ]
+        },
+        {
+          "label": "Amaierako pantailen zerrenda",
+          "field": {
+            "label": "Amaierako pantaila",
+            "fields": [
+              {
+                "label": "Izenburua"
+              },
+              {
+                "label": "Testua"
+              },
+              {
+                "label": "Irudia"
+              },
+              {
+                "label": "Kalifikazioa",
+                "description": "Lehenetsitako eszenatokiaren amaierara heltzen diren erabiltzaileen kalifikazioa LMS, LRS edo H5Ptik kalifikazioak jasotzen dituen konektatuta dagoen beste edozein zerbitzura bidaliko da."
+              },
+              {
+                "label": "Edukiaren IDa"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Egoera adarkatuen edukien zerrenda",
+          "entity": "edukia",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Erakutsi edukiaren izenburua bistan",
+                "description": "Hautatzen bada, erabiltzaileak edukiaren izenburua ikusiko du eduki honen gaineko goiko barran."
+              },
+              {
+                "label": "Ekiteko botoiaren testua (gehienezko luzera: 50 karaktere)",
+                "default": "Ekin"
+              },
+              {
+                "label": "Gainidazteak behar du edukia amaituta",
+                "options": [
+                  {
+                    "label": "Erabili jokabidearen ezarpena"
+                  },
+                  {
+                    "label": "Gaituta"
+                  },
+                  {
+                    "label": "Desgaituta"
+                  }
+                ],
+                "description": "Gainidatzi ezarpen pertsonalak edukia amaitzea eskatzeko \"Ekin\" botoia aktibatu aurretik. Ez du inolako eraginik izango edukiak ez badu adierazten \"amaitu\" den ala ez, adibidez, irudiak edo ikastaroen aurkezpenak diapositiba bakarrarekin."
+              },
+              {},
+              {
+                "label": "Iritzia",
+                "fields": [
+                  {
+                    "label": "Iritziaren izenburua"
+                  },
+                  {
+                    "label": "Iritziaren testua"
+                  },
+                  {
+                    "label": "Iritziaren irudia"
+                  },
+                  {
+                    "label": "Eszenatoki honen puntuazioa",
+                    "description": "Puntuazioa eszenatoki honetara iristen diren erabiltzaileentzat H5P-ren puntuazioak jasotzen dituen edozein LMS, LRS edo konektatutako beste edozein zerbitzura bidaliko da."
+                  }
+                ]
+              },
+              {
+                "label": "Nabigatu atzera",
+                "description": "Horri esker, erabiltzaileak atzera egin eta aurreko edukia/galdera eszenatokian ikusteko aukera izango du.",
+                "options": [
+                  {
+                    "label": "Erabili jokabidearen ezarpena"
+                  },
+                  {
+                    "label": "Gaituta"
+                  },
+                  {
+                    "label": "Desgaituta"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Kalifikazioaren aukerak",
+          "fields": [
+            {
+              "label": "Kalifikazioaren aukerak",
+              "description": "Aukeratu kalifikazio-mota.",
+              "options": [
+                {
+                  "label": "Estatikoki zehaztu eszenatoki bakoitzaren amaierako kalifikazioa"
+                },
+                {
+                  "label": "Dinamikoki kalkulatu kalifikazioa erabiltzaileen erantzunen arabera"
+                },
+                {
+                  "label": "Kalifikaziorik ez"
+                }
+              ]
+            },
+            {
+              "label": "Sartu Eszenatoki Adarkatuaren interakzioen puntuazioak",
+              "description": "Aukeratuz gero, Bideo Interaktiboetako instantzien puntuazioak lortutako guztirako puntuaziora gehituko dira. Ez bada aukeratzen, soilik eduki-elementuen feedback-ataletan, galdera adarkatuen eta eszenatoki-amaieratan zehaztutako puntuazioak hartuko dira kontuan."
+            }
+          ]
+        },
+        {
+          "label": "Portaeraren ezarpenak",
+          "fields": [
+            {
+              "label": "Nabigatu atzera",
+              "description": "Honi esker, erabiltzaileak atzera egin eta aurreko edukia/galdera eszenatokian ikusteko aukera izango du. Eduki mailan baliogabetu daiteke."
+            },
+            {
+              "label": "Ikusi behar da",
+              "description": "Ikusleei bideoa, bideo interaktiboa eta ikastaroaren aurkezpena osatzeko eskatzen die eszenatokiarekin jarraitu aurretik. Eduki mailan baliogabetu daiteke."
+            },
+            {
+              "label": "Ausazkotu Adarkatze Galderak",
+              "description": "Adarkatze galderak ausazko ordenan erakutsiko dira."
+            }
+          ]
+        },
+        {
+          "label": "Kokapena",
+          "fields": [
+            {
+              "label": "Hasiera-pantailako botoiaren testua",
+              "default": "Hasi ikastaroa"
+            },
+            {
+              "label": "Amaiera-pantailako botoiaren testua",
+              "default": "Berriz hasi ikastaroa"
+            },
+            {
+              "label": "Liburutegi-pantaila bakoitzean atzera botoiaren eta adarkatutako galderen testua",
+              "default": "Atzera"
+            },
+            {
+              "label": "Liburutegiko pantailetako desgaitutako botoiaren testua",
+              "default": "Uneko modulua osatzea eskatu"
+            },
+            {
+              "label": "Bideo bat berriro erreproduzitzeko erabilitako botoiaren testua",
+              "default": "Berriz erreproduzitu bideoa"
+            },
+            {
+              "label": "Puntuazioaren etiketa pantaila amaieran",
+              "default": "Zure puntuazioa:"
+            },
+            {
+              "label": "Aria etiketa pantaila osoko botoiarentzat",
+              "default": "Pantaila osoa"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

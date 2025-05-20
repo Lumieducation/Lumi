@@ -1,0 +1,205 @@
+{
+  "semantics": [
+    {
+      "label": "Habilitar portada de libro",
+      "description": "Una portada que muestra información sobre el libro antes de acceder a él"
+    },
+    {
+      "label": "Página de Portada",
+      "fields": [
+        {
+          "label": "Descripción de la portada",
+          "description": "Este texto será la descripción de tu libro."
+        },
+        {
+          "label": "Medios de portada",
+          "description": "Medios opcionales a mostrar en la portada."
+        }
+      ]
+    },
+    {
+      "label": "Páginas",
+      "entity": "Página",
+      "widgets": [
+        {
+          "label": "Predeterminado"
+        }
+      ],
+      "field": {
+        "label": "Elemento",
+        "fields": [
+          {
+            "label": "Página"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Configuraciones del comportamiento",
+      "fields": [
+        {
+          "label": "Color base",
+          "description": "Configura el color base que definirá el esquema general de color del libro. Por favor asegúrate de usar un contraste lo suficientemente alto."
+        },
+        {
+          "label": "Mostrar tabla de contenidos como configuración predeterminada",
+          "description": "Cuando se habilita, la tabla de contenidos se muestra al abrir el libro"
+        },
+        {
+          "label": "Mostrar Indicadores del Progreso",
+          "description": "Cuando se habilita, habrá indicadores por página mostrándole al usuario si ha terminado con la página o no."
+        },
+        {
+          "label": "Habilitar progreso automático",
+          "description": "Si se habilita, se considera que se ha terminado una página sin tareas cuando el usuario la visita. Una página con tareas cuando todos los tareas están hechas. Si se deshabilita, habrá un botón al fondo de cada página para que el usuario pueda hacer clic cuando haya terminado con la página."
+        },
+        {
+          "label": "Mostrar resumen",
+          "description": "Cuando se habilita, el usuario puede ver un resumen y enviar el progreso/respuestas"
+        },
+        {
+          "label": "Habilitar botón \"Reiniciar\"",
+          "description": "Cuando se habilita, el usuario puede iniciar un reinicio en la página del resumen."
+        }
+      ]
+    },
+    {
+      "label": "Traducción para \"Leer\"",
+      "default": "Leer"
+    },
+    {
+      "label": "Traducción para \"Mostrar 'Tabla de contenidos'\"",
+      "default": "Mostrar 'Tabla de contenidos'"
+    },
+    {
+      "label": "Traducción para \"Ocultar 'Tabla de contenidos'\"",
+      "default": "Ocultar 'Tabla de contenidos'"
+    },
+    {
+      "label": "Traducción para \"Página siguiente\"",
+      "default": "Página siguiente"
+    },
+    {
+      "label": "Traducción para \"Página anterior\"",
+      "default": "Página anterior"
+    },
+    {
+      "label": "Traducción para \"¡Página completada!\"",
+      "default": "¡Página completada!"
+    },
+    {
+      "label": "Traducción para \"@pages de @total completadas\" (@pages y @total serán reemplazados por los valores actuales)",
+      "default": "@pages de @total completadas"
+    },
+    {
+      "label": "Traducción para \"Página incompleta\"",
+      "default": "Página incompleta"
+    },
+    {
+      "label": "Traducción para \"Navegar a la parte superior\"",
+      "default": "Navegar a la parte superior"
+    },
+    {
+      "label": "Traducción para \"He terminado esta página\"",
+      "default": "He terminado esta página"
+    },
+    {
+      "label": "Etiqueta botón pantalla completa",
+      "default": "Pantalla completa"
+    },
+    {
+      "label": "Etiqueta botón Salir de pantalla completa",
+      "default": "Salir de pantalla completa"
+    },
+    {
+      "label": "Progreso de páginas en libro",
+      "description": "\"@count\" será reemplazado por el número de página, y \"@total\" por el número total de páginas",
+      "default": "@count de @total páginas"
+    },
+    {
+      "label": "Progreso de interacciones",
+      "description": "\"@count\" será reemplazado por el número de interacción, y \"@total\" por el número total de interacciones",
+      "default": "@count de @total interacciones"
+    },
+    {
+      "label": "Traducción para \"Enviar Informe\"",
+      "default": "Enviar Informe"
+    },
+    {
+      "label": "Etiqueta para botón \"Reiniciar\"",
+      "default": "Reiniciar"
+    },
+    {
+      "label": "Encabezado del resumen",
+      "default": "Resumen"
+    },
+    {
+      "label": "Traducción para \"Todas las interacciones\"",
+      "default": "Todas las interacciones"
+    },
+    {
+      "label": "Traducción para \"Interacciones no respondidas\"",
+      "default": "Interacciones no respondidas"
+    },
+    {
+      "label": "Puntaje",
+      "description": "\"@score\" será remplazado por el puntaje actual, y \"@maxscore\" será remplazado por el máximo puntaje obtenible",
+      "default": "@score / @maxscore"
+    },
+    {
+      "label": "Finalización de interacciones por página",
+      "description": "\"@left\" será remplazado por las interacciones restantes, y \"@max\" será remplazado por el número total de interacciones en la página",
+      "default": "@left de @max interacciones completadas"
+    },
+    {
+      "label": "Traducción para \"Sin interacciones\"",
+      "default": "Sin interacciones"
+    },
+    {
+      "label": "Traducción para \"Puntaje\"",
+      "default": "Puntaje"
+    },
+    {
+      "label": "Etiqueta para botón \"Resumen y envío\"",
+      "default": "Resumen y envío"
+    },
+    {
+      "label": "Traducción para \"Usted no ha interactuado con ninguna página.\"",
+      "default": "No has interactuado con ninguna página."
+    },
+    {
+      "label": "Traducción para \"Tienes que interactuar con al menos una página antes de poder ver el resumen.\"",
+      "default": "Tienes que interactuar con al menos una página para poder ver el resumen."
+    },
+    {
+      "label": "Traducción para \"¡Se han enviado tus respuestas para revisión!\"",
+      "default": "¡Se han enviado tus respuestas para revisión!"
+    },
+    {
+      "label": "Etiqueta del progreso del resumen",
+      "default": "Progreso del libro"
+    },
+    {
+      "label": "Etiqueta del progreso de interacciones",
+      "default": "Progreso de interacciones"
+    },
+    {
+      "label": "Etiqueta del puntaje total",
+      "default": "Puntaje total"
+    },
+    {
+      "label": "Textos de accesibilidad",
+      "fields": [
+        {
+          "label": "Alternativa textual para progreso de páginas",
+          "description": "Un texto alternativo para el progreso visual de páginas. @page y @total son las variables disponibles.",
+          "default": "Página @page de @total."
+        },
+        {
+          "label": "Etiqueta para expandir/contraer el menú de navegación",
+          "default": "Alternar menú de navegación"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Fona attēls",
+          "fields": [
+            {
+              "label": "Fona attēls",
+              "description": "Izvēlieties attēlu, kuru izmantot kā fonu attēla karsto punktu jautājumam."
+            }
+          ]
+        },
+        {
+          "label": "Aktīvie punkti",
+          "fields": [
+            {
+              "label": "Uzdevuma apraksts",
+              "description": "Lietotāja pamācība."
+            },
+            {
+              "label": "Aktīvais punkts",
+              "field": {
+                "label": "Aktīvais punkts",
+                "fields": [
+                  {
+                    "fields": [
+                      {
+                        "label": "Pareizi",
+                        "description": "Var būt vairāki pareizie aktīvie punkti. Tomēr lietotājs saņem atgriezenisko skaiti par pareizību/nepareizību uzreiz pēc pirmā klikšķa."
+                      },
+                      {
+                        "label": "Atgriezeniskā saite"
+                      }
+                    ],
+                    "label": "lietotāja iestatījumi"
+                  },
+                  {
+                    "label": "aprēķina iestatījumi"
+                  }
+                ]
+              },
+              "entity": "Aktīvais punkts"
+            },
+            {
+              "label": "Atgriezeniskā saite ja lietotājs izvēlas tukšu vietu:",
+              "placeholder": "Tu neatradi nevienu aktīvo punktu, mēģini vēlreiz!"
+            },
+            {
+              "label": "Rādīt atgriezenisko saiti iznirstošajā logā"
+            },
+            {
+              "label": "Lokalizācija",
+              "fields": [
+                {
+                  "label": "Atkārtotas mēģināšanas pogas teksts",
+                  "default": "Mēģināt vēlreiz"
+                },
+                {
+                  "label": "Aizvēršanas pogas teksts",
+                  "default": "Aizvērt"
+                }
+              ]
+            }
+          ],
+          "description": "Pārvelciet vēlamo figūru no rīkjoslas, lai izveidotu jaunu aktīvo punktu. Sāciet rediģēt esošu aktīvo punktu ar peles dubultklikšķi. Velciet aktīvo punktu, lai to pārvietotu. Velciet izmēra pielāgošanas rāmja apakšējo labo stūri, lai mainītu izmēru."
+        }
+      ],
+      "label": "Attēla aktīvo punktu jautājuma redaktors"
+    },
+    {
+      "label": "Rezultātu skalas tekstuālais atspoguļojums tiem, kas izmanto asistīvās tehnoloģijas",
+      "default": "Tu saņēmi :num no :total punktiem"
+    },
+    {
+      "default": "Mēģiniet uzdevumu vēlreiz. Dzēst visas iesniegtās atbildes un sākt uzdevumu no sākuma.",
+      "label": "Pogas \"Mēģināt vēlreiz\" apraksts priekš asistīvajām tehnoloģijām"
+    }
+  ]
+}

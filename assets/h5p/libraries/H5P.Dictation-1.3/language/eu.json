@@ -1,0 +1,375 @@
+{
+  "semantics": [
+    {
+      "label": "Multimedia",
+      "fields": [
+        {
+          "label": "Mota",
+          "description": "Galderaren gainean bistaratzeko aukerako multimedia."
+        },
+        {
+          "label": "Desgaitu irudien zooma"
+        }
+      ]
+    },
+    {
+      "label": "Atazaren deskribapena",
+      "description": "Deskribatu ezazu hemen zure lana.",
+      "placeholder": "Adi entzun ezazu mesedez eta idatzi ezazu entzuten duzuna."
+    },
+    {
+      "label": "Esaldiak",
+      "widgets": [
+        {
+          "label": "Lehenetsitakoa"
+        }
+      ],
+      "entity": "Esaldia",
+      "field": {
+        "label": "Esaldia",
+        "fields": [
+          {
+            "label": "Deskribapena",
+            "description": "Testua idazteko eremuaren aurretik deskribapen sinple bat gehitu dezakezu, erabilgarriak adibidez elkarrizketetarako."
+          },
+          {
+            "label": "Soinu-adibidea",
+            "description": "Abiadura arruntean esandako esaldia"
+          },
+          {
+            "label": "Soinu mantsoaren lagina",
+            "description": "Esaldia mantso ahoskatuta"
+          },
+          {
+            "label": "Testua",
+            "description": "Idatzi beharreko testua. Hitz baten ordezko letreiatzeak gehitu ditzakezu aukeren artean lerro bertikal bat (|) gehituta."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback Orokorra",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Lehenetsitakoa"
+            }
+          ],
+          "label": "Zehaztu ezazu edozein puntuazio-tarterako feedback pertsonalizatua",
+          "description": "Egin klik \"Gehitu tartea\" botoian behar dituzun tarte guztiak gehitzeko. Adibidez: 0-20% Puntuazio eskasa, 21-91% Batez besteko puntuazioa, 91-100% Puntuazio bikaina!",
+          "entity": "tartea",
+          "field": {
+            "fields": [
+              {
+                "label": "Puntuazio tartea"
+              },
+              {
+                "label": "Zehaztutako tartearentzako feedbacka",
+                "placeholder": "Idatzi ezazu feedbacka"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Portaera ezarpenak",
+      "description": "Aukera hauek portaera kontrolatzea ahalbidetzen dizute.",
+      "fields": [
+        {
+          "label": "Gehienezko saiakerak",
+          "description": "Esaldi bakoitzaren laginak entzun ahalko den aldi kopurua mugatuko du."
+        },
+        {
+          "label": "Abiadura mantsoko gehieneko saiakera kopurua",
+          "description": "Esaldi bakoitzaren lagin mantsoak entzun ahalko den aldi kopurua mugatuko du."
+        },
+        {
+          "label": "Desgaitu pausatzeko aukera",
+          "description": "Markatuz gero, erreproduzitzea pausatzea ez da posiblea izango."
+        },
+        {
+          "label": "Erreproduzitzeko botoiaren atzerapena",
+          "description": "Aukeran, ezarri gehienez hiru segundoko denbora-tarte bat botoi bat sakatzean erreprodukzioa atzeratzeko. Hau erabilgarria da ikasleek testu-eremuan idazteko entzuten hasi aurretik."
+        },
+        {
+          "label": "Nahastu esaldiak",
+          "description": "Zehaztu esaldiak noiz nahastu beharko diren.",
+          "options": [
+            {
+              "label": "Inoiz ez"
+            },
+            {
+              "label": "Behin ariketa hastean"
+            },
+            {
+              "label": "Saiakera bakoitzean"
+            }
+          ]
+        },
+        {
+          "label": "Puntuazioa",
+          "fields": [
+            {
+              "label": "Ez hartu kontuan puntuazio-markak",
+              "description": "Markatuz gero, puntuazio-markak ez dira kontuan hartuko puntuaziorako."
+            },
+            {
+              "label": "Hutsunerik ez modua",
+              "description": "Markatuz gero, soilik erantzun zuzenak hartuko dira kontuan puntuaziorako. Akatsak ez dira zigortuko."
+            },
+            {
+              "label": "Akats tipografikoen balioa",
+              "description": "Zehaztu ezazu nolako akats tipografikoak (3-9 karaktere bitarteko hitzak: akats bat gehienez, 9 karaktere baino gehiagoko hitzak: bi akats gehienez) zenbatuko diren benetako akats gisa.",
+              "options": [
+                {
+                  "label": "%100"
+                },
+                {
+                  "label": "%50"
+                },
+                {
+                  "label": "%0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Testua",
+          "fields": [
+            {
+              "label": "Hitz-banatzailea",
+              "description": "Zehaztu hutsuneaz besteko hitzen banatzailea hitz kopuru ezberdinetako emaitzak onartu ahal izateko.",
+              "default": " . "
+            },
+            {
+              "label": "Idazketaren norabidea",
+              "description": "Zehaztu adierazpenen hizkuntza eskuinetik-ezkerrera edo ezkerretik-eskuinera idazten den.",
+              "options": [
+                {
+                  "label": "Antzemate automatikoa"
+                },
+                {
+                  "label": "Eskuinetik ezkerrera"
+                },
+                {
+                  "label": "Ezkerretik eskuinera"
+                }
+              ]
+            },
+            {
+              "label": "Karaktereen banaketa",
+              "description": "Gaitu ezazu karaktere zehatzak (esaterako txinerako Han karaktereak) automatikoki hitz ezberdinetan banatu behar badira."
+            }
+          ]
+        },
+        {
+          "label": "Feedbackaren aurkezpena",
+          "fields": [
+            {
+              "label": "Akats tipografikoen erakuste pertsonalizatua",
+              "description": "Markatuz gero, akats tipografikoak estilo pertsonalizatuan erakutsiko dira akatsengandik ezberdindu ahal izateko."
+            },
+            {
+              "label": "Ordezko emaitzen aurkezpena",
+              "description": "Zehaztu ezazu hitzak falta diren edo erantzun okerretako emaitzan erakutsi beharreko alternatibak.",
+              "options": [
+                {
+                  "label": "Erakutsi soilik lehen alternatiba"
+                },
+                {
+                  "label": "Erakutsi alternatiba guztiak"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Gaitu \"Saiatu berriro\""
+        },
+        {
+          "label": "Gaitu \"Erakutsi emaitza\" botoia"
+        },
+        {
+          "label": "Erakutsi emaitza egiaztatzerakoan"
+        }
+      ]
+    },
+    {
+      "label": "Erabiltzaile-interfazea",
+      "fields": [
+        {
+          "label": "Feedback orokorra",
+          "description": "Hainbat leku-marka erabili dezakezu dagozkien zenbakiarekin ordezkatuko direnak: @matches = bat-etortze kopurua, @total = akatsak guztira, @capped = mugatutako akats kopurua, @wrong = hitz okerrak, @added = hitz gehigarriak, @missing = falta diren hitzak, @typo = akats tipografikoak",
+          "default": "@total akats egin dituzu."
+        },
+        {
+          "label": "Feedback orokorra (hutsunerik ez modua)",
+          "description": "Hainbat leku-marka erabili dezakezu dagozkien zenbakiarekin ordezkatuko direnak: @matches = bat-etortze kopurua, @total = guztirako puntuazioa, @wrong = oker dauden hitzak, @added = hitz gehigarriak, @missing = falta diren hitzak, @typo = akats tipografikoak",
+          "default": "Guztira @total hitz idatzi eta @typo akats txiki egin dituzu."
+        },
+        {
+          "label": "\"Egiaztatu\" botoiarentzako testua",
+          "default": "Egiaztatu"
+        },
+        {
+          "label": "\"Bidali\" botoiarentzako testua",
+          "default": "Bidali"
+        },
+        {
+          "label": "\"Saiatu berriro\" botoiaren testua",
+          "default": "Saiatu berriro"
+        },
+        {
+          "label": "\"Erakutsi emaitza\" botoiarentzako testua",
+          "default": "Erakutsi emaitza"
+        },
+        {
+          "label": "Audioa ez da onartzen mezua",
+          "default": "Zure nabigatzaileak ez du audio hau onartzen."
+        }
+      ]
+    },
+    {
+      "label": "Irakurtzen duen bozgorailua",
+      "fields": [
+        {
+          "label": "\"Egiaztatu\" botoiaren laguntza-teknologientzako etiketa",
+          "default": "Egiaztatu erantzunak. Emandako erantzunak zuzen, oker edo erantzun-gabeko gisa markatuko dira."
+        },
+        {
+          "label": "\"Erakutsi emaitza\" botoiaren laguntza-teknologientzako deskribapena",
+          "default": "Erakutsi emaitza. Ataza bere erantzun zuzenarekin markatuko da."
+        },
+        {
+          "label": "\"Saiatu berriro\" botoiaren laguntza-teknologientzako deskribapena",
+          "default": "Zeregina berriz egiten saiatu. Berrabiarazi erantzun guztiak eta hasi zeregina berriz."
+        },
+        {
+          "label": "Erreproduzitu botoia",
+          "default": "Erreproduzitu"
+        },
+        {
+          "label": "Mantso erreproduzitu botoia",
+          "default": "Mantso erreproduzitu"
+        },
+        {
+          "label": "Geratzen diren saiakerak (irakurtzen duen bozgorailua eta gainean jartzean erakusten den testua)",
+          "description": "@number une bakoitzean geratzen diren saiakerekin ordezkatuko da.",
+          "default": "Geratzen diren saiakerak: @number"
+        },
+        {
+          "label": "Infinitua (irakurtzen duen bozgorailurako eta gainean jartzean erakusten den testua)",
+          "default": "Infinitua"
+        },
+        {
+          "label": "Idatzi testu-eremua",
+          "default": "Idatzi entzun duzuna."
+        },
+        {
+          "label": "Zure emaitza",
+          "description": "@score lortutako puntuazioarekin ordezkatuko da. @total lortu daitezkeen gehienezko puntuekin ordezkatuko da.",
+          "default": "@total puntutik @score puntu lortu duzu"
+        },
+        {
+          "label": "Emaitza",
+          "default": "Emaitza"
+        },
+        {
+          "label": "Esaldia",
+          "default": "Esaldia"
+        },
+        {
+          "label": "Elementua",
+          "default": "Elementua"
+        },
+        {
+          "label": "Zuzena",
+          "default": "zuzena"
+        },
+        {
+          "label": "Okerra",
+          "default": "okerra"
+        },
+        {
+          "label": "Akats txikia",
+          "default": "akats txikia"
+        },
+        {
+          "label": "Falta den hitz edo sinboloa",
+          "default": "falta da"
+        },
+        {
+          "label": "Gehitutako hitz edo sinboloa",
+          "default": "gehituta"
+        },
+        {
+          "label": "Erantzun zuzena",
+          "default": "Izan beharko litzateke"
+        },
+        {
+          "label": "Edo",
+          "default": "edo"
+        },
+        {
+          "label": "Puntua",
+          "default": "puntua"
+        },
+        {
+          "label": "Puntuak",
+          "default": "puntuak"
+        },
+        {
+          "label": "Puntua",
+          "default": "puntua"
+        },
+        {
+          "label": "Harridura ikurra",
+          "default": "harridura ikurra"
+        },
+        {
+          "label": "Galdera ikurra",
+          "default": "galdera ikurra"
+        },
+        {
+          "label": "Koma",
+          "default": "koma"
+        },
+        {
+          "label": "Kakotx sinplea",
+          "default": "kakotx sinplea"
+        },
+        {
+          "label": "Kakotx bikoitzak",
+          "default": "kakotx bikoitza"
+        },
+        {
+          "label": "Bi puntu",
+          "default": "bi puntu"
+        },
+        {
+          "label": "Puntu eta koma",
+          "default": "puntu eta koma"
+        },
+        {
+          "label": "Gehi",
+          "default": "gehi"
+        },
+        {
+          "label": "Ken",
+          "default": "ken"
+        },
+        {
+          "label": "Izartxoa",
+          "default": "izartxoa"
+        },
+        {
+          "label": "Zatikien barra",
+          "default": "zatikien barra"
+        }
+      ]
+    }
+  ]
+}

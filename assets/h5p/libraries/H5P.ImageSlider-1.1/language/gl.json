@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Imaxes",
+      "field": {
+        "label": "Pase de Dipositivas",
+        "fields": [
+          {
+            "label": "Pase de Diapositivas"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Relación de aspecto",
+      "description": "Automático significa relación de aspecto fixo determinado automaticamente a partir das imaxes",
+      "options": [
+        {
+          "label": "Automático"
+        },
+        {
+          "label": "Personalizado"
+        },
+        {
+          "label": "Non fixado"
+        }
+      ]
+    },
+    {
+      "label": "Configuración da relación de aspecto",
+      "fields": [
+        {
+          "label": "Anchura da relación de aspecto",
+          "description": "Se usas 4 aquí e 3 para a altura, a relación de aspecto será 4:3"
+        },
+        {
+          "label": "Altura da relación de aspecto",
+          "description": "Se usas 3 aquí e 4 para a anchura, a relación de aspecto será 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Accesibilidade do pase de diapositivas",
+      "fields": [
+        {
+          "label": "Etiqueta para os botóns de diapositiva seguinte",
+          "default": "Imaxe Seguinte",
+          "description": "Só usado para os lectores de pantalla. Non se amosará ao usuario."
+        },
+        {
+          "label": "Etiqueta para os botóns de diapositiva anterior",
+          "default": "Imaxe Anterior",
+          "description": "Só usado para os lectores de pantalla. Non se amosará ao usuario."
+        },
+        {
+          "label": "Etiqueta para os botóns de diapositiva",
+          "default": "Ir á Imaxe %slide",
+          "description": "Só usado para os lectores de pantalla. Non se amosará ao usuario. %slide é a variable e substituirase polo número da imaxe."
+        }
+      ]
+    }
+  ]
+}

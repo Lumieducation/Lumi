@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Aufgabenbeschreibung",
+      "description": "Füge hier die Überschrift/Aufgabe ein, die über dem Vorher/Nachher-Bild angezeigt soll.",
+      "placeholder": "Hier kannst du eine optionale Überschrift und/oder Hinweise einfügen."
+    },
+    {
+      "label": "Erstes Bild",
+      "fields": [
+        {
+          "label": "Erstes Bild",
+          "description": "Das erste Bild. Stelle sicher, dass es die gleiche Größe wie das Zweite hat."
+        },
+        {
+          "label": "Beschriftung des ersten Bildes",
+          "description": "Text, der über dem ersten Bild angezeigt wird"
+        }
+      ]
+    },
+    {
+      "label": "Zweites Bild",
+      "fields": [
+        {
+          "label": "Zweites Bild",
+          "description": "Das zweite Bild. Stelle sicher, dass es die gleiche Größe wie das Erste hat."
+        },
+        {
+          "label": "Beschriftung des zweiten Bildes",
+          "description": "Text, der über dem zweiten Bild angezeigt wird"
+        }
+      ]
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "description": "Hier können einige Details eingestellt werden",
+      "fields": [
+        {
+          "label": "Startposition des Schiebereglers in %",
+          "description": "Stellt die Startposition des Schiebereglers ein"
+        },
+        {
+          "label": "Richtung des Schiebereglers",
+          "description": "Horizontal für links und rechts, vertikal für hoch und runter.",
+          "options": [
+            {
+              "label": "Horizontal"
+            },
+            {
+              "label": "Vertikal"
+            }
+          ]
+        },
+        {
+          "label": "Farbe des Schiebereglers",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Texte für Barrierefreiheit",
+      "fields": [
+        {
+          "label": "Nachricht für die Sichtbarkeit des Bildes",
+          "default": "Bild zu @percentage % sichtbar",
+          "description": "@percentage ist ein Platzhalter und wird durch den jeweiligen Wert ersetzt."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

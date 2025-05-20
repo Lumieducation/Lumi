@@ -1,0 +1,299 @@
+{
+  "semantics": [
+    {
+      "label": "Meedia",
+      "fields": [
+        {
+          "label": "Tüüp",
+          "description": "Valikuline meedia pildi kohal näitamiseks."
+        },
+        {
+          "label": "Keela pildi suumimine."
+        }
+      ]
+    },
+    {
+      "label": "Ülesande kirjeldus",
+      "description": "Kirjelda oma ülesannet siin. Ülesande kirjeldus ilmub tekstisisestusala kohale.",
+      "placeholder": "Tee raamatu sisukokkuvõte 500 tähega ..."
+    },
+    {
+      "label": "Abitekst",
+      "description": "See tekst peaks kasutajat aitama alustada.",
+      "placeholder": "See raamat räägib ..."
+    },
+    {
+      "label": "Näidislahendus",
+      "description": "Sa saad valikuliselt lisada näidislahenduse, mida näidatakse pärast seda, kui õpilane on teksti loonud. See on nimetatud näidislahenduseks, kuna ilmselt ei ole ülesandel ainult üks lahendus.",
+      "fields": [
+        {
+          "label": "Sissejuhatus",
+          "description": "Sa saad valikuliselt jätta õpilastele mõned selgitused oma näite kohta. Selgitusi on näha ainult siis, kui sa lisad ka näite.",
+          "placeholder": "Palun pea meeles, et sa ei pidanud täpselt samasugust lahendust välja mõtlema. See on lihtsalt hea näide."
+        },
+        {
+          "label": "Näita lahendust tekst",
+          "description": "Kui sa siia veidi teksti paned, siis õpilane näeb \"Näita lahendust\" nuppu pärast sisestamist."
+        }
+      ]
+    },
+    {
+      "label": "Märksõnad",
+      "widgets": [
+        {
+          "label": "Vaikimisi"
+        }
+      ],
+      "entity": "Märksõna",
+      "field": {
+        "label": "Märksõna",
+        "fields": [
+          {
+            "label": "Märksõna",
+            "description": "Märksõna või fraas, mida otsida. Kasuta asteriski '*' metamärgina ühe või rohkema tähemärgi asemel. Kasuta kaldkriipsu '/' alguses ja lõpus, et kasutada regulaaravaldust."
+          },
+          {
+            "label": "Variatsioonid",
+            "description": "Lisa sellele märksõnale valikulisi variatsioone. Näiteks 'linn' jaoks lisa alternatiive 'küla', 'omavalitsus' jne. Punkte antakse, kui kasutaja kasutab ühtegi määratud alternatiividest.",
+            "entity": "variatsioon",
+            "field": {
+              "label": "Märksõna variatsioon"
+            }
+          },
+          {
+            "label": "Punktid, seaded ja tagasiside",
+            "fields": [
+              {
+                "label": "Punktid",
+                "description": "Punktid, mis kasutaja saab selle märksõna või selle asenduste vastuses kasutamise eest."
+              },
+              {
+                "label": "Esinemised",
+                "description": "Määra, kui mitme sõna või selle variatsioonide esinemise eest peaks punkte andma."
+              },
+              {
+                "label": "Tõstutundlik",
+                "description": "Teeb kindlaks, et kasutaja sisend peab olema täpselt samasugune nagu vastus."
+              },
+              {
+                "label": "Andesta pisivead",
+                "description": "See aktsepteerib väikesed kirjavead (3-9 tähte: 1 viga, rohkem kui 9 tähte: 2 viga)."
+              },
+              {
+                "label": "Tagasiside, kui märksõna on sisaldatud",
+                "description": "Seda tagasiside näidatakse, kui kasutaja kasutab seda märksõna või selle alternatiive oma vastuses."
+              },
+              {
+                "label": "Tagasiside, kui märksõna on puudu",
+                "description": "Seda tagasiside näidatakse, kui kasutaja ei kasuta seda märksõna või selle alternatiive oma vastuses."
+              },
+              {
+                "label": "Tagasiside sõna mida näidatakse, kui märksõna on sisaldatud",
+                "description": "See seade võimaldab sul määrata, millist sõna peaks su tagasiside alguses näitama, kui tekstist leiti märksõna.",
+                "options": [
+                  {
+                    "label": "märksõna"
+                  },
+                  {
+                    "label": "alternatiiv leitud"
+                  },
+                  {
+                    "label": "vastus antud"
+                  },
+                  {
+                    "label": "mitte midagi"
+                  }
+                ]
+              },
+              {
+                "label": "Tagasiside sõna mida näidatakse, kui märksõna on puudu",
+                "description": "See seade võimaldab sul määrata, millist sõna peaks su tagasiside alguses näitama, kui tekstist ei leitud märksõna.",
+                "options": [
+                  {
+                    "label": "märksõna"
+                  },
+                  {
+                    "label": "mitte midagi"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Üldine tagasiside",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Vaikimisi"
+            }
+          ],
+          "label": "Määratle kohandatud tagasiside ükskõik mis tulemusvahemiku jaoks",
+          "description": "Vajuta \"Lisa vahemik\" nuppu, et lisada nii mitu vahemikku, kui sul vaja on. Näide: 0-20% Halb tulemus, 21-91% Keskmine tulemus, 91-100% Hea tulemus!",
+          "entity": "vahemik",
+          "field": {
+            "fields": [
+              {
+                "label": "Tulemusvahemik"
+              },
+              {},
+              {
+                "label": "Tagasiside määratud tulemusvahemiku jaoks",
+                "placeholder": "Kirjuta tagasiside"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Käitumise seaded",
+      "description": "Need seaded lasevad sul juhtida, kuidas ülesanne käitub.",
+      "fields": [
+        {
+          "label": "Minimaalne karakterite arv",
+          "description": "Määra minimaalne karakterite arv, mida kasutaja peab sisestama."
+        },
+        {
+          "label": "Maksimaalne karakterite arv",
+          "description": "Määra maksimaalne karakterite arv, mida kasutaja saab sisestada."
+        },
+        {
+          "label": "Sisendivälja suurus",
+          "description": "Sisendivälja suurus ridades, mida see katab.",
+          "options": [
+            {
+              "label": "1 rida"
+            },
+            {
+              "label": "3 rida"
+            },
+            {
+              "label": "10 rida"
+            }
+          ]
+        },
+        {
+          "label": "Luba \"Proovi uuesti\"",
+          "description": "Kui valitud, siis õppijad saavad ülesannet uuesti proovida."
+        },
+        {
+          "label": "Eira punktisüsteemi",
+          "description": "Kui valitud, siis õppijad näevad ainult sinu poolt märksõnade eest antud tagasisidet, aga mitte oma tulemust."
+        },
+        {
+          "label": "Punkte peremeeskeskkonnas",
+          "description": "Kasutatud punktide andmiseks peremeeskeskkonnas ainult vastamiseks (mitte näidatud õppijale)."
+        },
+        {
+          "label": "Läbi saamise protsent.",
+          "description": "Läbi saamiseks vajalik protsendimäär."
+        },
+        {
+          "label": "Omandamise protsent",
+          "description": "Omandamiseks vajalik protsendimäär. Omandamise protsendimäära alla 100% seadmine vähendab ka vastavalt maksimaalset võimalikku tulemust. Selle eesmärk on anda õpilastele veidi liikumisruumi, mitte \"vastutulelikult vastu võtta\" lahendusi, mis ei sisalda kõiki märksõnu."
+        },
+        {
+          "label": "Kirjuta üle tõstutundlikkus",
+          "description": "See seade määrab, kas \"Tõstutundlik\" valik aktiveeritakse kõikidel märksõnadel.",
+          "options": [
+            {
+              "label": "Lubatud"
+            },
+            {
+              "label": "Keelatud"
+            }
+          ]
+        },
+        {
+          "label": "Kirjuta üle andesta pisivead",
+          "description": "See seade määrab, kas \"Andesta pisivead\" valik aktiveeritakse kõikidel märksõnadel.",
+          "options": [
+            {
+              "label": "Lubatud"
+            },
+            {
+              "label": "Keelatud"
+            }
+          ]
+        },
+        {
+          "label": "Replacement for line breaks",
+          "description": "By default, line breaks will be replaced with a space character. If you want to check for line breaks, e.g. in regular expressions, you can set a different replacement here.",
+          "options": [
+            {
+              "label": "space"
+            },
+            {
+              "label": "line break (\\n)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Tekst \"Kontrolli\" nupule",
+      "default": "Kontrolli"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "Tekst \"Proovi uuesti\" nupule",
+      "default": "Proovi uuesti"
+    },
+    {
+      "label": "Tekst \"Näita lahendust\" nupule",
+      "default": "Näita lahendust"
+    },
+    {
+      "label": "Sisaldatud/puuduvate märksõnade tagasiside sisaldava paneeli pealkiri.",
+      "default": "Pealkiri"
+    },
+    {
+      "label": "Silt lahendusele",
+      "default": "Näidislahendus"
+    },
+    {
+      "label": "Alles jäänud tähemärke",
+      "default": "Tähemärke alles: @chars",
+      "description": "Sõnum alles jäänud tähemärkide jaoks. Sa saad kasutada @chars, mis asendatakse vastava numbriga."
+    },
+    {
+      "label": "Pole piisavalt tähemärke",
+      "default": "Sa pead sisestama vähemalt @chars tähemärki!",
+      "description": "Sõnum näitamaks, et tekstis pole piisavalt tähemärke. Sa saad kasutada @chars, mis asendatakse vastava numbriga."
+    },
+    {
+      "label": "Salvestamise sõnum",
+      "description": "Sõnum näitamakas, et tekst on salvestatud.",
+      "default": "salvestatud"
+    },
+    {
+      "label": "Sinu vastus (seda ei näidata)",
+      "description": "Ligipääsetavuse tekst lugeritele kasutamiseks. @score asendatakse punktide arvuga. @total asendatakse maksimaalse võimaliku punktide arvuga.",
+      "default": "Sa said @score punkti @total-st."
+    },
+    {
+      "label": "Navigatsioonisõnum (seda ei näidata)",
+      "description": "Ligipääsetavuse tekst lugeritele kasutamiseks.",
+      "default": "Navigeeriti vastsisaldatud näidislahendusele tekstiala järel."
+    },
+    {
+      "label": "Assistive technology description for \"Check\" button",
+      "default": "Check the answers."
+    },
+    {
+      "label": "Assistive technology description for \"Show Solution\" button",
+      "default": "Show the solution. You will be provided with a sample solution."
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. You can improve your previous answer if the author allowed that."
+    }
+  ]
+}

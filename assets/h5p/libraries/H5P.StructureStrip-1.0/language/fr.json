@@ -1,0 +1,172 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "description": "Média facultatif pour afficher au-dessus de la question.",
+          "label": "Type"
+        },
+        {
+          "label": "Bloquer le zoom d’image"
+        }
+      ],
+      "label": "Média"
+    },
+    {
+      "description": "Expliquez à vos élèves ce qu'on attend d'eux.",
+      "label": "Description de la tâche"
+    },
+    {
+      "entity": "section",
+      "field": {
+        "fields": [
+          {
+            "label": "Titre"
+          },
+          {
+            "description": "Ajouter éventuellement des indices ou des instructions particulières pour cette section.",
+            "label": "Indices"
+          },
+          {
+            "description": "Saisir le poids de cette section par rapport aux autres sections. Le poids détermine la longueur qu'une section est censée avoir par rapport aux autres sections.",
+            "label": "Poids"
+          },
+          {
+            "default": "#96ceb4",
+            "label": "Couleur de fond"
+          },
+          {
+            "default": "#1c1c1c",
+            "label": "Couleur du texte"
+          }
+        ],
+        "label": "Paramètres de section"
+      },
+      "label": "Sections",
+      "widgets": [
+        {
+          "label": "Par défaut"
+        }
+      ]
+    },
+    {
+      "description": "Ces options vous permettront de contrôler le déroulement de la tâche.",
+      "fields": [
+        {
+          "label": "Activer « Réessayer »"
+        },
+        {
+          "label": "Activer « Solution »"
+        },
+        {
+          "description": "Pourcentage de jeu qui est acceptable pour la longueur d'une section.",
+          "label": "Jeu"
+        },
+        {
+          "description": "Définir une longueur du texte totale minimale absolue. Veuillez noter que le poids d'une section par rapport aux autres sections est le principal moteur du message de feedback, et non cette valeur minimale.",
+          "label": "Longueur du texte minimale"
+        },
+        {
+          "description": "Définir une longueur du texte totale maximale absolue. Veuillez noter que le poids d'une section par rapport aux autres sections est le principal moteur du message de feedback, et non cette valeur maximale.",
+          "label": "Longueur maximale du texte"
+        },
+        {
+          "description": "Décidez si vous souhaitez afficher le feedback lors de la saisie ou uniquement lorsque l'élève le demande.",
+          "label": "Mode de feedback",
+          "options": [
+            {
+              "label": "Sur demande"
+            },
+            {
+              "label": "Lors de la saisie"
+            }
+          ]
+        }
+      ],
+      "label": "Paramètres comportementaux"
+    },
+    {
+      "fields": [
+        {
+          "default": "Copier",
+          "label": "Texte pour la touche « Copier »"
+        },
+        {
+          "default": "Vérifier",
+          "label": "Texte pour la touche « Vérifier »"
+        },
+        {
+          "default": "Réessayer",
+          "label": "Texte pour la touche « Réessayer »"
+        },
+        {
+          "default": "Afficher la solution",
+          "label": "Texte pour la touche « Afficher la solution »"
+        },
+        {
+          "default": "Les longueurs de vos sections sont toutes bonnes.",
+          "description": "Texte de feedback affiché lorsque toutes les sections ont une longueur tolérable.",
+          "label": "Toutes les sections sont bonnes"
+        },
+        {
+          "default": "Votre section « @title » est trop courte. Vous avez besoin d'au moins @chars caractères additionnels.",
+          "description": "Texte de feedback affiché pour les sections trop courtes ( @title sera remplacé par le titre de la section, @chars sera remplacé par le nombre de caractères manquants).",
+          "label": "Section trop courte"
+        },
+        {
+          "default": "Votre section « @title » est trop longue. Supprimer au moins @chars caractères.",
+          "description": "Texte de feedback affiché pour les sections trop longues ( @title sera remplacé par le titre de la section, @chars sera remplacé par le nombre de caractères à supprimer).",
+          "label": "Section trop longue"
+        },
+        {
+          "default": "@chars caractères manquants",
+          "description": "Statut affiché pour les sections trop courtes ( @charssera remplacé par le nombre de caractères manquants).",
+          "label": "Section trop courte (pendant la saisie)"
+        },
+        {
+          "default": "@chars caractères à supprimer",
+          "description": "Statut affiché lors de la saisie de sections trop longues (@chars sera remplacé par le nombre de caractères à supprimer).",
+          "label": "Section trop longue (pendant la saisie)"
+        },
+        {
+          "default": "Votre texte a été copié dans le presse-papier",
+          "label": "Texte copié dans le presse-papier"
+        },
+        {
+          "default": "Votre texte n'a pas pu être copié dans le presse-papier",
+          "label": "Impossible de copier dans le presse-papier"
+        },
+        {
+          "default": "Section",
+          "label": "Section"
+        },
+        {
+          "default": "Il n'y avait pas de section donnée pour cette bande de structure.",
+          "label": "Texte du message « Aucune section »"
+        }
+      ],
+      "label": "Interface utilisateur"
+    },
+    {
+      "fields": [
+        {
+          "default": "Feedback",
+          "label": "Feedback (texte pour les synthèses vocales)"
+        },
+        {
+          "default": "Copier le texte dans le presse-papier",
+          "label": "Copiez votre texte dans le presse-papier (texte pour les synthèses vocales)"
+        },
+        {
+          "default": "Fermer la fenêtre",
+          "label": "Fermer la fenêtre (texte pour les synthèses vocales)"
+        },
+        {
+          "default": "Afficher les indices",
+          "label": "Afficher les indices (texte pour les synthèses vocales)"
+        }
+      ],
+      "label": "ReadSpeaker"
+    }
+  ]
+}

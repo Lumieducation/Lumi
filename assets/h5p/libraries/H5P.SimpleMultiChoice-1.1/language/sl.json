@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Vprašanje"
+    },
+    {
+      "label": "Tip vprašanja",
+      "options": [
+        {
+          "label": "Več odgovorov"
+        },
+        {
+          "label": "En odgovor"
+        }
+      ]
+    },
+    {
+      "label": "Možni odgovori",
+      "entity": "Odgovor",
+      "field": {
+        "label": "Odgovor",
+        "fields": [
+          {
+            "label": "Besedilo"
+          },
+          {
+            "label": "Povratna informacija",
+            "fields": [
+              {
+                "label": "Sporočilo za pravilen odgovor",
+                "description": "Sporočilo se prikaže pod odgovorom, in sicer po potrditvi z gumbom \"Nadaljuj\""
+              },
+              {
+                "label": "Sporočilo za nepravilen odgovor",
+                "description": "Sporočilo se prikaže pod odgovorom, in sicer po potrditvi z gumbom \"Nadaljuj\""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

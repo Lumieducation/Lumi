@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Koptekst",
+      "placeholder": "Hier kunt u een optionele koptekst toevoegen.",
+      "description": "De koptekst die u wilt tonen boven de afbeelding"
+    },
+    {
+      "label": "Items",
+      "entity": "item",
+      "widgets": [
+        {
+          "label": "Standaard"
+        }
+      ],
+      "field": {
+        "label": "Item",
+        "fields": [
+          {
+            "label": "Afbeelding"
+          },
+          {
+            "label": "Label",
+            "description": "Optioneel label voor een afbeeldingspositie. Let op, maak deze niet te lang, want anders wordt deze niet getoond."
+          },
+          {
+            "label": "Beschrijving",
+            "placeholder": "Mijn afbeeldingsbeschrijving ...",
+            "description": "Optionele beschrijving van de afbeelding"
+          },
+          {
+            "label": "Audio",
+            "description": "Optionele audio die speelt wanneer een afbeelding wordt getoond."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Gedragsinstellingen",
+      "description": "Met deze opties kun je bepalen hoe de opgave zich gedraagt.",
+      "fields": [
+        {
+          "label": "Startafbeelding",
+          "description": "Stel het nummer in van de afbeelding om mee te starten."
+        },
+        {
+          "label": "Uitlijnen schuifregelaar",
+          "description": "Indien geactiveerd, zal de schuifregelaar naar een afbeeldingspositie glijden."
+        },
+        {
+          "label": "Toon afbeeldingsposities",
+          "description": "Indien geactiveerd, zal de schuifregelaar voor elke afbeelding de positie markeren."
+        },
+        {
+          "label": "Toon labels",
+          "description": "Indien geactiveerd, zal de schuifregelaar de labels tonen in plaats van/of als aanvulling op de afbeeldingposities."
+        },
+        {
+          "label": "Vervangende kleur voor transparant",
+          "description": "Stel de kleur in die de transparante gebieden van de afbeeldingen vervangt."
+        },
+        {
+          "label": "Afbeeldingsruimte in volledig scherm modus",
+          "description": "Als je beschrijvingen hebt bij de afbeeldingen, stel dan het percentage van de ruimte voor de afbeeldingen in volledige scherm modus in."
+        }
+      ]
+    },
+    {
+      "label": "Schermlezer",
+      "fields": [
+        {
+          "label": "Afbeelding",
+          "default": "Afbeelding"
+        },
+        {
+          "label": "Afbeeldingsschuifregelaar",
+          "default": "Afbeeldingsschuifregelaar"
+        },
+        {
+          "label": "Titel voor \"Dempen aan\"-knop",
+          "default": "Dempen aan, is nu uit"
+        },
+        {
+          "label": "Titel voor \"Dempen uit\"-knop",
+          "default": "Dempen uit, is nu aan"
+        },
+        {
+          "label": "Titel voor volledig scherm knop (enter)",
+          "default": "Start volledig scherm modus"
+        },
+        {
+          "label": "Titel voor volledig scherm knop (afsluiten)",
+          "default": "Sluit volledig scherm modus"
+        }
+      ]
+    }
+  ]
+}

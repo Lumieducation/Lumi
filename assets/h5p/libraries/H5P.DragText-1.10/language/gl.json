@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Medios",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Medios adicionais amosados enriba da pregunta."
+        },
+        {
+          "label": "Desactivar zoom da imaxe"
+        }
+      ]
+    },
+    {
+      "label": "Descrición da tarefa",
+      "description": "Describe como debe resolver a tarefa o usuario.",
+      "default": "Arrastra as palabas ás caixas correctas"
+    },
+    {
+      "label": "Texto",
+      "placeholder": "*Oslo* é a capital de Noruega, *Estocolmo* é a capital de Suecia e *Copenhage* é a capital de Dinamarca. Todas as cidades están situadas na península *Escandinava:Parte norte de Europa*.",
+      "important": {
+        "description": "<ul><li>As palabras que se poden arrastrar indícanse cun asterisco (*) diante e detrás da palabra ou frase correcta.</li><li>Pódese engadir unha axuda contextual usando dous puntos (:) diante da axuda.</li><li>Por cada oco baleiro só hai unha palabra correcta.</li><li>Pódese engadir retroalimentación para que se amose cando a tarefa estea completa. Usa '\\+' para engadir retroalimentación para respostas correctas e '\\-' para as incorrectas.</li></ul>",
+        "example": "O contido H5P pódese editar cun *navegador:Que clase de programa é Chrome?*. <br /> O contido H5P é *interactivo\\+Correcto! \\-Incorrecto, proba outra vez!*"
+      }
+    },
+    {
+      "label": "Distractores",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Introduza solucións adicionais incorrectas como distractores. Use o mesmo esquema de asterisco (*) que para o texto."
+    },
+    {
+      "label": "Retroalimentación xeral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Por defecto"
+            }
+          ],
+          "label": "Define a retroalimentación por defecto para calquera rango de puntuación",
+          "description": "Preme o botón \"Engadir rango\" para engadir tantos rangos como precises. Exemplo: 0-20% Mala Puntuación, 21-91% Puntuación Media, 91-100% Puntuación Xenial!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango de Puntuación"
+              },
+              {},
+              {
+                "label": "Retroalimentación para rango de puntuación definido",
+                "placeholder": "Escribe a retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Texto para o botón \"Comprobar\"",
+      "default": "Comprobar"
+    },
+    {
+      "label": "Texto para o botón \"Enviar\"",
+      "default": "Submit"
+    },
+    {
+      "label": "Texto para o botón \"Tentar de novo\"",
+      "default": "Tentar de novo"
+    },
+    {
+      "label": "Texto para o botón \"Amosar Solución\"",
+      "default": "Amosar Solución"
+    },
+    {
+      "label": "Etiqueta para a zona de solta numerada",
+      "default": "Zona de solta @index.",
+      "description": "Etiqueta usada por accesibilidade, para que o lector de pantalla lea o índice dunha zona de solta. Variable dispoñible: @index"
+    },
+    {
+      "label": "Etiqueta de zona de solta baleira",
+      "default": "O @index de zonas de solta está baleiro.",
+      "description": "Etiqueta usada por accesibilidade. O lector de pantalla dirá que a zona de solta está baleira"
+    },
+    {
+      "label": "Etiqueta Contén Zona de Solta",
+      "default": "O @index de zonas de solta contén @draggable elementos arrastrables.",
+      "description": "Etiqueta usada por accesibilidade. O lector de pantalla dirá que a zona de solta contén un elemento arrastrable"
+    },
+    {
+      "label": "Etiqueta de elementos arrastrables",
+      "default": "@index de @count elementos arrastrables.",
+      "description": "Etiqueta usada por accesibilidade. O lector dirá que este é un elemento arrastrable. Variables dispoñibles: @index, @count"
+    },
+    {
+      "label": "Etiqueta para o botón amosar pista",
+      "default": "Amosar pista",
+      "description": "Etiqueta usada por accesibilidade. O lector de pantalla lerá esta etiqueta antes de ler a pista"
+    },
+    {
+      "label": "Texto do lector de pantalla para resposta correcta",
+      "default": "Correcto!"
+    },
+    {
+      "label": "Texto do lector de pantalla para resposta incorrecta",
+      "default": "Incorrecto!"
+    },
+    {
+      "label": "Título do cadro de diálogo que aparece cando o usuario quere cambiar un elemento arrastrable",
+      "default": "Cambiar solta"
+    },
+    {
+      "label": "Descrición do cadro de diálogo que aparece cando o usuario quere cambiar un elemento arrastrable",
+      "default": "Seguro que queres cambiar esta zona de solta?"
+    },
+    {
+      "label": "Etiqueta usada por accesibilidade. O lector de pantalla indicará que se iniciou o arrastre",
+      "default": "Colleuse o elemento arrastrable."
+    },
+    {
+      "label": "Etiqueta usada por accesibilidade. O lector de pantalla dirá que se cancelou o arrastre",
+      "default": "Arrastre cancelado."
+    },
+    {
+      "label": "Etiqueta usada por accesibilidade. O lector de pantalla dirá que un texto é a respota correcta",
+      "default": "Resposta correcta:"
+    },
+    {
+      "label": "Cabeceira do panel que contén a retroalimentación para respostas correctas/incorrectas",
+      "default": "Retroalimentación"
+    },
+    {
+      "label": "Configuración de comportamento.",
+      "description": "Estas opcións permiten controlar o comportamento da tarefa.",
+      "fields": [
+        {
+          "label": "Activar \"Reintentar\""
+        },
+        {
+          "label": "Activar botón \"Amosar solución\""
+        },
+        {
+          "label": "Activar botón \"Comprobar\""
+        },
+        {
+          "label": "Retroalimentación instantánea"
+        }
+      ]
+    },
+    {
+      "label": "Representación textual da barra de puntuación cando se usa un lector de pantalla",
+      "default": "Conseguiches :num puntos dun total de :total"
+    },
+    {
+      "label": "Etiqueta de tecnoloxía asistencial para o botón \"Comprobar\"",
+      "default": "Comproba as respostas. As respostas marcaranse como correctas, incorrectas ou non respondidas."
+    },
+    {
+      "label": "Etiqueta de tecnoloxía asistencial para o botón \"Amosar Solución\"",
+      "default": "Amosa a solución. A tarefa puntuarase coa súa solución correcta."
+    },
+    {
+      "label": "Etiqueta de tecnoloxía asistencial para o botón \"Reintentar\"",
+      "default": "Reintenta a tarefa. Borra todas as respostas e volver a empezar a tarefa de novo."
+    }
+  ]
+}

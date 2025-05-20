@@ -1,0 +1,508 @@
+{
+  "semantics": [
+    {
+      "label": "インタラクティブビデオエディタ",
+      "fields": [
+        {
+          "label": "アップロード / 埋め込みビデオ",
+          "fields": [
+            {
+              "label": "ビデオを追加",
+              "description": "インタラクティブビデオで使用したいビデオファイルを選択してください。ビデオリンクかアップロードしたビデオファイルを追加できます。異なる品質で様々なビデオのバージョンを追加できます。ブラウザで最大限サポートされることを確実にするには、少なくともwebmとmp4形式のバージョンを追加してください。"
+            },
+            {
+              "label": "Start screen options (unsupported for YouTube videos)",
+              "fields": [
+                {
+                  "label": "このインタラクティブビデオのタイトル",
+                  "default": "インタラクティブビデオ",
+                  "description": "概要や統計などで用いられます。"
+                },
+                {
+                  "label": "ビデオスタート画面でタイトルを非表示"
+                },
+                {
+                  "label": "簡単な説明（オプション）",
+                  "description": "省略可能です。ビデオスタート画面で簡単な説明を表示してください。YouTubeビデオでは動作しません。"
+                },
+                {
+                  "label": "ポスター画像",
+                  "description": "ユーザーがビデオを起動する前に表示される画像。YouTubeビデオでは動作しません。"
+                }
+              ]
+            },
+            {
+              "label": "Text tracks (unsupported for YouTube videos)",
+              "fields": [
+                {
+                  "label": "利用可能なテキストトラック",
+                  "entity": "Track",
+                  "field": {
+                    "label": "トラック",
+                    "fields": [
+                      {
+                        "label": "トラックラベル",
+                        "description": "もし複数のトラックを提供しユーザーがトラックを選択しなければならない場合に用いられます。例えば「スペイン語字幕」はスペイン語字幕トラックのラベルになり得ます。",
+                        "default": "字幕"
+                      },
+                      {
+                        "label": "テキストトラックのタイプ",
+                        "options": [
+                          {
+                            "label": "字幕"
+                          },
+                          {
+                            "label": "キャプション"
+                          },
+                          {
+                            "label": "説明"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "字幕のソース言語を定義する必要があります。",
+                        "default": "en",
+                        "description": "有効な BCP 47 言語タグでなければなりません。もしテキストトラックのタイプとして「字幕」 が選択されたの場合は、トラックのソース言語が定義されなければなりません。"
+                      },
+                      {
+                        "label": "トラックソース（WebVTT ファイル）"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Default text track",
+                  "description": "If left empty or not matching any of the text tracks the first text track will be used as the default."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "インタラクションを追加",
+          "fields": [
+            {
+              "field": {
+                "fields": [
+                  {
+                    "label": "表示時間"
+                  },
+                  {
+                    "label": "ビデオを一時停止"
+                  },
+                  {
+                    "label": "表示",
+                    "description": "<b>ボタン</b>は、ユーザーが開くために押す必要のある折りたたまれたインタラクションです。 <b>ポスター</b>は、ビデオ上に直接表示される拡張インタラクションです",
+                    "options": [
+                      {
+                        "label": "ボタン"
+                      },
+                      {
+                        "label": "ポスター"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "小さな画面のボタンに戻る"
+                  },
+                  {
+                    "label": "ラベル",
+                    "description": "インタラクションアイコンの次に表示されるらべる。"
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "適応性",
+                    "fields": [
+                      {
+                        "label": "全問正解に対する動作",
+                        "fields": [
+                          {
+                            "label": "検索",
+                            "description": "M:SS 形式でタイムコードを入力"
+                          },
+                          {
+                            "label": "ユーザーに取り止めと継続を許可"
+                          },
+                          {
+                            "label": "メッセージ"
+                          },
+                          {
+                            "label": "検索ボタンのラベル"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "まちがえに対する動作",
+                        "fields": [
+                          {
+                            "label": "検索",
+                            "description": "M:SS 形式でタイムコードを入力"
+                          },
+                          {
+                            "label": "ユーザーに取り止めと継続を許可"
+                          },
+                          {
+                            "label": "メッセージ"
+                          },
+                          {
+                            "label": "検索ボタンのラベル"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "続行する前にタスクの満点が必要",
+                        "description": "For best functionality this option should be used in conjunction with the \"Disable navigation forward in a video\" option of Interactive Video."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "クリックしてください",
+                    "fields": [
+                      {
+                        "label": "背景色",
+                        "default": "rgb(255, 255, 255)"
+                      },
+                      {
+                        "label": "ボックスシャドウ",
+                        "description": "インタラクションの周りにわずかな影を追加します。完全に透明なインタラクションには無効にした方がいいかもしれません。"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "クリック時の行先",
+                    "fields": [
+                      {
+                        "label": "タイプ",
+                        "options": [
+                          {
+                            "label": "タイムコード"
+                          },
+                          {
+                            "label": "別ページ (URL)"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "移動",
+                        "description": "ユーザーがホットスポットを押したときに得られるターゲット時間。タイムコードを M:SS の形式で入力してください。"
+                      },
+                      {
+                        "label": "URL",
+                        "fields": [
+                          {
+                            "label": "プロトコル",
+                            "options": [
+                              {
+                                "label": "http://"
+                              },
+                              {
+                                "label": "https://"
+                              },
+                              {
+                                "label": "（ルート相対）"
+                              },
+                              {
+                                "label": "その他"
+                              }
+                            ]
+                          },
+                          {
+                            "label": "URL"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "可視化",
+                        "description": "境界線とアイコンを追加してインタラクションがクリックできることを示します"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {},
+            {}
+          ]
+        },
+        {
+          "label": "サマリータスク",
+          "fields": [
+            {},
+            {
+              "label": "ここで表示",
+              "description": "ビデオが終了するまでの秒数"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "動作設定",
+      "fields": [
+        {
+          "label": "ここでビデオを開始",
+          "description": "M:SS 形式でタイムコードを入力"
+        },
+        {
+          "label": "Auto-play video",
+          "description": "Start playing the video automatically"
+        },
+        {
+          "label": "Loop the video",
+          "description": "Check if video should run in a loop"
+        },
+        {
+          "label": "「解を表示」ボタンを上書き",
+          "description": "このオプションは、すべての設問に対して「解を表示」ボタンが表示されるか、すべての設問に対して無効になるか、各設問ごとに個別に設定されるかを決定します。",
+          "options": [
+            {
+              "label": "有効"
+            },
+            {
+              "label": "無効"
+            }
+          ]
+        },
+        {
+          "label": "「リトライ」ボタンを上書き",
+          "description": "このオプションは、すべての設問に対して「リトライ」ボタンが表示されるか、すべての設問に対して無効になるか、各設問ごとに個別に設定されるかを決定します。",
+          "options": [
+            {
+              "label": "有効"
+            },
+            {
+              "label": "無効"
+            }
+          ]
+        },
+        {
+          "label": "10秒巻き戻すボタンを表示",
+          "description": "ビデオソースとしてYouTubeを使用している場合、この機能はiPadでは使用できません"
+        },
+        {
+          "label": "Show button for rewinding 10 seconds"
+        },
+        {
+          "label": "Disable navigation",
+          "description": "These options will disable user video navigation as specified.",
+          "options": [
+            {
+              "label": "None"
+            },
+            {
+              "label": "Forward"
+            },
+            {
+              "label": "Forward and backward"
+            }
+          ]
+        },
+        {
+          "label": "サウンド無効化",
+          "description": "Enabling this option will deactivate the video's sound and prevent it from being switched on."
+        }
+      ]
+    },
+    {
+      "label": "ローカライズ",
+      "fields": [
+        {
+          "label": "インタラクションのタイトル",
+          "default": "インタラクション"
+        },
+        {
+          "label": "再生のタイトル",
+          "default": "再生"
+        },
+        {
+          "label": "一時停止のタイトル",
+          "default": "一時停止"
+        },
+        {
+          "label": "ミュートのタイトル",
+          "default": "Mute, currently unmuted"
+        },
+        {
+          "label": "ミュートを解除のタイトル",
+          "default": "Unmute, currently muted"
+        },
+        {
+          "label": "ビデオ品質のタイトル",
+          "default": "ビデオ品質"
+        },
+        {
+          "label": "ビデオのキャプションタイトル",
+          "default": "キャプション"
+        },
+        {
+          "label": "閉じるボタンのテキスト",
+          "default": "閉じる"
+        },
+        {
+          "label": "フルスクリーンのタイトル",
+          "default": "フルスクリーン"
+        },
+        {
+          "label": "フルスクリーン解除のタイトル",
+          "default": "フルスクリーン解除"
+        },
+        {
+          "label": "サマリータイトル",
+          "default": "サマリー"
+        },
+        {
+          "label": "ブックマークのタイトル",
+          "default": "ブックマーク"
+        },
+        {
+          "label": "Submit screen title",
+          "default": "Submit screen"
+        },
+        {
+          "label": "適応検索ボタンの既定ラベル",
+          "default": "続ける"
+        },
+        {
+          "label": "ビデを続行ボタンの既定のラベル",
+          "default": "ビデオを続行"
+        },
+        {
+          "label": "Default label for more player options",
+          "default": "More player options"
+        },
+        {
+          "label": "再生速度を設定",
+          "default": "再生速度"
+        },
+        {
+          "label": "10秒巻き戻し",
+          "default": "10秒巻き戻し"
+        },
+        {
+          "label": "ナビゲーションが無効のテキスト",
+          "default": "ナビゲーションが無効"
+        },
+        {
+          "label": "Navigating forward is disabled text",
+          "default": "Navigating forward is disabled"
+        },
+        {
+          "label": "サウンドが無効のテキスト",
+          "default": "サウンドが無効"
+        },
+        {
+          "label": "続行する前にユーザーが設問に正解しなければならないことを警告",
+          "default": "続行する前に、すべての設問に正しく解答する必要があります。"
+        },
+        {
+          "label": "戻るボタン",
+          "default": "戻る"
+        },
+        {
+          "label": "合格時間　時",
+          "default": "時"
+        },
+        {
+          "label": "合格時間　分",
+          "default": "分"
+        },
+        {
+          "label": "合格時間　秒",
+          "default": "秒"
+        },
+        {
+          "label": "現在時刻のラベル",
+          "default": "現在時刻:"
+        },
+        {
+          "label": "トータル時間のラベル",
+          "default": "トータル時間:"
+        },
+        {
+          "label": "Text explaining that a single interaction with a name has come into view",
+          "default": "Interaction appeared:"
+        },
+        {
+          "label": "Text for explaining that multiple interactions have come into view",
+          "default": "Multiple interactions appeared."
+        },
+        {
+          "label": "Video is paused announcement",
+          "default": "Video is paused"
+        },
+        {
+          "label": "Content label",
+          "default": "Content"
+        },
+        {
+          "label": "Answered message (@answered will be replaced with the number of answered questions)",
+          "default": "@answered answered"
+        },
+        {
+          "label": "Submit screen title",
+          "default": "@answered Question(s) answered",
+          "description": "@answered will be replaced by the number of answered questions."
+        },
+        {
+          "label": "Submit screen information",
+          "default": "You have answered @answered questions, click below to submit your answers.",
+          "description": "@answered will be replaced by the number of answered questions."
+        },
+        {
+          "label": "Submit screen information when submit button is disabled",
+          "default": "You have answered @answered questions.",
+          "description": "@answered will be replaced by the number of answered questions."
+        },
+        {
+          "label": "Submit screen information for missing answers",
+          "default": "You have not answered any questions."
+        },
+        {
+          "label": "Submit screen information for answer needed",
+          "default": "You have to answer at least one question before you can submit your answers."
+        },
+        {
+          "label": "Submit screen submit button",
+          "default": "Submit Answers"
+        },
+        {
+          "label": "Submit screen submit message",
+          "default": "Your answers have been submitted!"
+        },
+        {
+          "label": "Submit screen table row title: Answered questions",
+          "default": "Answered questions"
+        },
+        {
+          "label": "Submit screen table row title: Score",
+          "default": "Score"
+        },
+        {
+          "label": "Submit screen answered score",
+          "default": "answered"
+        },
+        {
+          "label": "Submit screen row summary including score (for readspeakers)",
+          "default": "You got @score out of @total points for the @question that appeared after @minutes minutes and @seconds seconds."
+        },
+        {
+          "label": "Submit screen row summary for no score (for readspeakers)",
+          "default": "You have answered the @question that appeared after @minutes minutes and @seconds seconds."
+        },
+        {
+          "label": "Video Progressbar",
+          "default": "Video progress"
+        },
+        {
+          "label": "Text for how to create interactions",
+          "default": "Play the video to start creating interactions"
+        }
+      ]
+    }
+  ]
+}

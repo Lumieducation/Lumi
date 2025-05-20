@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Descripció de la tasca",
+      "description": "Put the heading/instructions you'd like to show above the before/after image here.",
+      "placeholder": "Here you can add an optional heading and/or instructions."
+    },
+    {
+      "label": "Primera imatge",
+      "fields": [
+        {
+          "label": "Primera imatge",
+          "description": "La primera imatge. Assegureu-vos que té les mateixes dimensions que la segona."
+        },
+        {
+          "label": "Etiqueta per a la primera imatge",
+          "description": "Etiqueta per posar-la sobre la primera imatge"
+        }
+      ]
+    },
+    {
+      "label": "Segona imatge",
+      "fields": [
+        {
+          "label": "Segona imatge",
+          "description": "La segona imatge. Assegureu-vos que té les mateixes dimensions que la primera."
+        },
+        {
+          "label": "Etiqueta per a la segona imatge",
+          "description": "Etiqueta per posar-la sobre la segona imatge"
+        }
+      ]
+    },
+    {
+      "label": "Paràmetres de comportament",
+      "description": "Aquestes opcions us permeten configurar alguns detalls",
+      "fields": [
+        {
+          "label": "Posició inicial del control lliscant en %",
+          "description": "Configura la posició inicial del control lliscant"
+        },
+        {
+          "label": "Orientació del control lliscant",
+          "description": "L'orientació horitzontal es mou de dreta a esquerra; la vertical, amunt i avall.",
+          "options": [
+            {
+              "label": "Horitzontal"
+            },
+            {
+              "label": "Vertical"
+            }
+          ]
+        },
+        {
+          "label": "Color del control lliscant",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Image visible message",
+          "default": "Image @percentage % visible",
+          "description": "@percentage is a placeholder and will be replaced with the respective value."
+        },
+        {
+          "label": "Dummy"
+        }
+      ]
+    }
+  ]
+}

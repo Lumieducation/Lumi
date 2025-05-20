@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Goiburua",
+      "placeholder": "Hemen aukerazko goiburua gehitu dezakezu.",
+      "description": "Irudiaren gainean erakutsi nahi duzun goiburua"
+    },
+    {
+      "label": "Elementuak",
+      "entity": "elementua",
+      "widgets": [
+        {
+          "label": "Lehentsitakoa"
+        }
+      ],
+      "field": {
+        "label": "Elementua",
+        "fields": [
+          {
+            "label": "Irudia"
+          },
+          {
+            "label": "Etiketa",
+            "description": "Markatxo batentzako hautazko etiketa. Ziurtatu ez dela oso luzea, bestela ez da erakutsiko."
+          },
+          {
+            "label": "Deskribapena",
+            "placeholder": "Nire irudiaren deskribapena...",
+            "description": "Irudiaren hautazko deskribapena"
+          },
+          {
+            "label": "Audioa",
+            "description": "Aukerazko audioa, irudia erakustean erreproduzitzen dena."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Portaeraren ezarpenak",
+      "description": "Aukera hauek lanaren portaera kontrolatzea ahalbidetzen dizute.",
+      "fields": [
+        {
+          "label": "Hasierako irudia",
+          "description": "Zehaztu hasierako irudireann zenbakia."
+        },
+        {
+          "label": "Jarri fokua diapositiban",
+          "description": "Gaituz gero, aurkezpenak fokua irudiaren kokapen batean jarriko du."
+        },
+        {
+          "label": "Erakutsi markatxoak",
+          "description": "Gaituz gero, aurkezpenak irudi bakoitzarentzako markatxo bana erakutsiko du."
+        },
+        {
+          "label": "Erakutsi etiketak",
+          "description": "Gaituz gero, aurkezpen-barrak markatxoen ordez ala markatxoekin batera etiketa bat erakutsiko du."
+        },
+        {
+          "label": "Gardentasun Ordezkapenaren Kolorea",
+          "description": "Zehaztu irudien eremu gardenak ordezkatuko dituen kolorea."
+        },
+        {
+          "label": "Irudien espazioa pantaila osoko moduan",
+          "description": "Irudiez gain deskribapenak badituzu, zehaztu ezazu pantaila osoko moduan irudiek erabili beharreko espazioaren ehunekoa."
+        }
+      ]
+    },
+    {
+      "label": "Irakurgai-bozgorailua",
+      "fields": [
+        {
+          "label": "Irudia",
+          "default": "Irudia"
+        },
+        {
+          "label": "Irudi Aurkezpena",
+          "default": "Irudi Aurkezpena"
+        },
+        {
+          "label": "Pantaila osoko moduaren botoiaren izenburua (sartu)",
+          "default": "Mututu, une honetan mikrofonoa zabalik"
+        },
+        {
+          "label": "Zabaldu mikrofonoaren izenburua",
+          "default": "Zabaldu mikrofonoa, une honetan mutututa"
+        },
+        {
+          "label": "Kendu isilarazpena izenburua",
+          "default": "Kendu isilarazpena"
+        },
+        {
+          "label": "Pantaila osoko moduaren botoiaren izenburua (irten)",
+          "default": "Irten pantaila osoko modutik"
+        }
+      ]
+    }
+  ]
+}

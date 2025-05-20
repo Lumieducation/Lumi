@@ -1,0 +1,205 @@
+{
+  "semantics": [
+    {
+      "label": "Iespējot grāmatas vāku",
+      "description": "Vāks, uz kura pirms piekļuves parādīta informācija par grāmatu"
+    },
+    {
+      "label": "Titullapa",
+      "fields": [
+        {
+          "label": "Vāka apraksts",
+          "description": "Šis teksts būs jūsu grāmatas apraksts."
+        },
+        {
+          "label": "Vāka multivide",
+          "description": "Neobligāta multivide ievadam."
+        }
+      ]
+    },
+    {
+      "label": "Lappuses",
+      "entity": "Lappuse",
+      "widgets": [
+        {
+          "label": "Pēc noklusējuma"
+        }
+      ],
+      "field": {
+        "label": "Vienums",
+        "fields": [
+          {
+            "label": "Lappuse"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Uzvedības iestatītjumi",
+      "fields": [
+        {
+          "label": "Pamata krāsa",
+          "description": "Iestatiet pamatkrāsu, kas noteiks grāmatas kopējo krāsu shēmu. Lūdzu, nodrošiniet pietiekami augstu kontrastu."
+        },
+        {
+          "label": "Pēc noklusējuma rādīt satura rādītāju",
+          "description": "Kad iespējots, atverot grāmatu, tiek parādīts satura rādītājs"
+        },
+        {
+          "label": "Parādīt progresa indikatorus",
+          "description": "Kad iespējots, katrā lappusē būs indikatori, kas lietotājam rādīs, vai viņš lappusi ir pabeidzis."
+        },
+        {
+          "label": "Iespējot automātisko progresu",
+          "description": "Ja iespējots, lappuse bez uzdevumiem tiek uzskatīta par pabeigtu, kad tiek skatīta. Lappuse ar uzdevumiem - kad visi uzdevumi ir paveikti. Ja atspējots, katras lapas apakšā būs poga, uz kuras lietotājs var noklikšķināt, kad būs pabeidzis lappusi."
+        },
+        {
+          "label": "Parādīt kopsavilkumu",
+          "description": "Kad iespējots, lietotājs var redzēt kopsavilkumu un iesniegt progresu/atbildes"
+        },
+        {
+          "label": "Enable \"Restart\" button",
+          "description": "When enabled the user can initiate a restart on the summary page."
+        }
+      ]
+    },
+    {
+      "label": "\"Lasīt\" tulkojums",
+      "default": "Lasīt"
+    },
+    {
+      "label": "\"Parādīt 'Satura rādītāju'\" tulkojums",
+      "default": "Parādīt 'Satura rādītāju'"
+    },
+    {
+      "label": "\"Paslēpt 'Satura rādītāju'\" tulkojums",
+      "default": "Paslēpt 'Satura rādītāju'"
+    },
+    {
+      "label": "\"Nākamā lappuse\" tulkojums",
+      "default": "Nākamā lappuse"
+    },
+    {
+      "label": "\"Iepriekšējā lappuse\" tulkojums",
+      "default": "Iepriekšējā lappuse"
+    },
+    {
+      "label": "\"Lappuse pabeigta!\" tulkojums",
+      "default": "Lappuse pabeigta!"
+    },
+    {
+      "label": "\"@pages no @total pabeigtas\" tulkojums (@pages un @total tiks aizstātas ar faktiskajām vērtībām)",
+      "default": "@pages no @total pabeigtas"
+    },
+    {
+      "label": "\"Nepabeigta lapa\" tulkojums",
+      "default": "Nepabeigta lapa"
+    },
+    {
+      "label": "\"Pāriet uz augšu\" tulkojums",
+      "default": "Pāriet uz augšu"
+    },
+    {
+      "label": "\"Esmu pabeidzis šo lappusi\" tulkojums",
+      "default": "Esmu pabeidzis šo lappusi"
+    },
+    {
+      "label": "Pilnekrāna pogas etiķete",
+      "default": "Pilnekrāna režīms"
+    },
+    {
+      "label": "Etiķete pogai iziešanai no pilnekrāna režīma",
+      "default": "Iziet no pilnekrāna režīma"
+    },
+    {
+      "label": "Lappušu progress grāmatā",
+      "description": "\"@count\" tiks aizstāts ar lappušu skaitu un \"@total\" ar kopējo lappušu skaitu",
+      "default": "@count no @total lappusēm"
+    },
+    {
+      "label": "Mijiedarbību progress",
+      "description": "\"@count\" tiks aizstāts ar mijiedarbību skaitu un \"@total\" ar kopējo mijiedarbību skaitu",
+      "default": "@count no @total mijiedarbībām"
+    },
+    {
+      "label": "\"Iesniegt ziņojumu\" tulkojums",
+      "default": "Iesniegt ziņojumu"
+    },
+    {
+      "label": "Pogas \"Atsākt\" etiķete",
+      "default": "Atsākt"
+    },
+    {
+      "label": "Kopsavilkuma galvene",
+      "default": "Kopsavilkums"
+    },
+    {
+      "label": "\"Visas mijiedarbības\" tulkojums",
+      "default": "Visas mijiedarbības"
+    },
+    {
+      "label": "\"Neatbildētās mijiedarbības\" tulkojums",
+      "default": "Neatbildētas mijiedarbības"
+    },
+    {
+      "label": "Rezultāts",
+      "description": "\"@score\" tiks aizstāts ar pašreizējo rezultātu, un \"@maxscore\" tiks aizstāts ar maksimālo sasniedzamo punktu skaitu",
+      "default": "@score no @maxscore"
+    },
+    {
+      "label": "Lappuses mijiedarbību pabeigšana",
+      "description": "\"@left\" tiks aizstāts ar atlikušajām mijiedarbībām, un \"@max\" tiks aizstāts ar kopējo mijiedarbību skaitu lappusē",
+      "default": "@left no @max mijiedarbībām pabeigtas"
+    },
+    {
+      "label": "\"Nav mijiedarbību\" tulkojums",
+      "default": "Nav mijiedarbību"
+    },
+    {
+      "label": "\"Rezultāts\" tulkojums",
+      "default": "Rezultāts"
+    },
+    {
+      "label": "Pogas \"Kopsavilkums un iesniegšana\" etiķete",
+      "default": "Kopsavilkums un iesniegšana"
+    },
+    {
+      "label": "\"Jūs neesat mijiedarbojies ar nevienu lappusi.\" tulkojums",
+      "default": "Jūs neesat mijiedarbojies ar nevienu lappusi."
+    },
+    {
+      "label": "\"Nepieciešama mijiedarbība ar vismaz vienu lappusi, lai redzētu kopsavilkumu.\" tulkojums",
+      "default": "Nepieciešama mijiedarbība ar vismaz vienu lappusi, lai redzētu kopsavilkumu."
+    },
+    {
+      "label": "\"Jūsu atbildes ir iesniegtas pārskatīšanai!\" tulkojums",
+      "default": "Jūsu atbildes ir iesniegtas pārskatīšanai!"
+    },
+    {
+      "label": "Kopsavilkuma progresa etiķete",
+      "default": "Grāmatas progress"
+    },
+    {
+      "label": "Mijiedarbību progresa etiķete",
+      "default": "Mijiedarbību progress"
+    },
+    {
+      "label": "Kopējā rezultāta etiķete",
+      "default": "Kopējais rezultāts"
+    },
+    {
+      "label": "Pieejamības teksti",
+      "fields": [
+        {
+          "label": "Lappuses progresa teksta alternatīva",
+          "description": "Alternatīvs teksts vizuālajam lappuses progresam. Pieejami mainīgie @page un @total.",
+          "default": "Lappuse @page no @total."
+        },
+        {
+          "label": "Etiķete navigācijas izvēlnes izvēršanai/sakļaušanai",
+          "default": "Pārslēgt navigācijas izvēlni"
+        }
+      ]
+    }
+  ]
+}

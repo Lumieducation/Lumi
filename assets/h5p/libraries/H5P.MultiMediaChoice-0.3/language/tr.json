@@ -1,0 +1,256 @@
+{
+  "semantics": [
+    {
+      "label": "Medya",
+      "fields": [
+        {
+          "label": "Tip",
+          "description": "Sorunun üzerinde görüntülenecek isteğe bağlı medya."
+        },
+        {
+          "label": "Görüntü yakınlaştırmayı devre dışı bırak"
+        }
+      ]
+    },
+    {
+      "label": "Soru"
+    },
+    {
+      "label": "Mevcut seçenekler",
+      "entity": "seçenek",
+      "field": {
+        "label": "Seçenek",
+        "fields": [
+          {
+            "label": "Medya",
+            "description": "Media to display as a choice."
+          },
+          {
+            "label": "Poster image"
+          },
+          {
+            "label": "Doğru"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Toplam Geribildirim",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Varsayılan"
+            }
+          ],
+          "label": "Herhangi bir puan aralığı için özel geri bildirim tanımlayın",
+          "description": "İstediğiniz kadar aralık eklemek için \"Aralık ekle\" düğmesini tıklayın. Örnek: %0-20 Kötü puan, %21-91 Ortalama Puan, %91-100 Büyük Puan!",
+          "entity": "aralık",
+          "field": {
+            "fields": [
+              {
+                "label": "Puan Aralığı"
+              },
+              {},
+              {
+                "label": "Tanımlanmış puan aralığı için geri bildirim",
+                "placeholder": "Geri bildirimi doldurun"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Davranış yarları",
+      "description": "Bu seçenekler görevin nasıl davranması gerektiğini kontrol etmenizi sağlar.",
+      "fields": [
+        {
+          "label": "\"Yeniden dene\" düğmesini devreye al"
+        },
+        {
+          "label": "\"Çözüm göster\" düğmesini devreye al"
+        },
+        {
+          "label": "\"Kontrol Et\" onay iletişim kutusunu göster"
+        },
+        {
+          "label": "\"Yeniden Dene\" onay iletişim kutusunu göster"
+        },
+        {
+          "label": "Tüm soru için bir puan verin",
+          "description": "Yüzde puanı, geçme yüzdesinden yüksekse soruya bir puan verir"
+        },
+        {
+          "label": "Çözümü görüntülenmesi için cevap verilmesini zorunlu tut"
+        },
+        {
+          "label": "Soru Türü",
+          "description": "Sorunun görünüş ve davranışını seçin.",
+          "options": [
+            {
+              "label": "Otomatik"
+            },
+            {
+              "label": "Çoktan Seçmeli (Onay kutuları)"
+            },
+            {
+              "label": "Tek Seçim (Radyo Düğmeleri)"
+            }
+          ]
+        },
+        {
+          "label": "En boy oranı",
+          "description": "Alternatiflerin en boy oranını seçin",
+          "options": [
+            {
+              "label": "Otomatik"
+            },
+            {
+              "label": "16:9"
+            },
+            {
+              "label": "4:3"
+            },
+            {
+              "label": "3:2"
+            },
+            {
+              "label": "1:1"
+            }
+          ]
+        },
+        {
+          "label": "Satır başına maksimum seçenek",
+          "description": "Soruların iyi görünmesini sağlamak için satır başına maksimum seçenek sayısını ayarlayın.",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "3"
+            },
+            {
+              "label": "4"
+            }
+          ]
+        },
+        {
+          "label": "Geçme notu (%)",
+          "description": "Bu ayarın çoğu zaman herhangi bir etkisi olmaz. Tüm görev için bir puan etkinleştirildiğinde 1 puan almak ve eğitim yönetim sisteminde (Ör: EBA) sonucun başarılı olması için gereken toplam puanın yüzdesidir."
+        }
+      ]
+    },
+    {
+      "label": "Kullanıcı arayüzü",
+      "fields": [
+        {
+          "label": "\"Kontrol Et\" düğmesi için metin",
+          "default": "Kontrol Et"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "\"Kontrol Et\" düğmesi için yardımcı teknoloji açıklaması",
+          "default": "Cevapları kontrol edin. Cevaplar doğru, yanlış veya cevapsız olarak işaretlenecektir."
+        },
+        {
+          "label": "\"Çözümü göster\" düğmesi için metin",
+          "default": "Çözümü göster"
+        },
+        {
+          "label": "\"Çözümü Göster\" düğmesi için yardımcı teknoloji açıklaması",
+          "default": "Çözümü göster. Doğru seçenekler işaretlenecektir."
+        },
+        {
+          "label": "Doğru Cevap (görüntülenmiyor)",
+          "default": "Doğru cevap"
+        },
+        {
+          "label": "Yanlış Cevap (görüntülenmiyor)",
+          "default": "Yanlış cevap"
+        },
+        {
+          "label": "Seçenek işaretlenmeliydi",
+          "default": "İşaretlenmeliydi"
+        },
+        {
+          "label": "Seçenek işaretlenmemeliydi",
+          "default": "İşaretlenmemeliydi"
+        },
+        {
+          "label": "\"Cevap gerekiyor\" mesajı için metin",
+          "default": "Lütfen çözümü görmeden önce cevaplayın"
+        },
+        {
+          "label": "\"Yeniden Dene\" düğmesi metni",
+          "default": "Yeniden Dene"
+        },
+        {
+          "label": "\"Yeniden Dene\" düğmesi için yardımcı teknoloji açıklaması",
+          "default": "Görevi yeniden deneyin. Tüm yanıtları sıfırlayın ve görevi yeniden başlatın."
+        },
+        {
+          "label": "Sonucun",
+          "description": ":num ve :total değişkenlerdir ve ilgili değerleriyle değiştirilecektir.",
+          "default": ":total puandan :num puan aldın"
+        },
+        {
+          "label": "Onay iletişim kutusunu kontrol edin",
+          "fields": [
+            {
+              "label": "Başlık metni",
+              "default": "Bitir"
+            },
+            {
+              "label": "Gövde metni",
+              "default": "Bitirmek istediğinize emin misiniz?"
+            },
+            {
+              "label": "İptal düğmesi etiketi",
+              "default": "Hayır"
+            },
+            {
+              "label": "Onaylama düğmesi etiketi",
+              "default": "Evet"
+            }
+          ]
+        },
+        {
+          "label": "Yeniden dene iletişim kutusunun kontrolü",
+          "fields": [
+            {
+              "label": "Başlık metni",
+              "default": "Yeniden Dene"
+            },
+            {
+              "label": "Gövde metni",
+              "default": "Yeniden denemek istediğinizden emin misiniz?"
+            },
+            {
+              "label": "İptal düğmesi etiketi",
+              "default": "Hayır"
+            },
+            {
+              "label": "Onaylama düğmesi etiketi",
+              "default": "Evet"
+            }
+          ]
+        },
+        {
+          "label": "Bir resim için alternatif metin eksikse metin",
+          "default": "Alternatif metin eksik"
+        },
+        {
+          "label": "Close modal button label",
+          "default": "Close modal"
+        }
+      ]
+    }
+  ]
+}

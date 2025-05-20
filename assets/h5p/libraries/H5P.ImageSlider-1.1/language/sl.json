@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Slike",
+      "field": {
+        "label": "Slikovni drsnik",
+        "fields": [
+          {
+            "label": "Slikovni drsnik"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Razmerje",
+      "description": "Samodejno pomeni fiksno razmerje stranic, ki se samodejno določi na podlagi slik. Po meri omogoča lasten vnos razmerja.",
+      "options": [
+        {
+          "label": "Samodejno"
+        },
+        {
+          "label": "Po meri"
+        },
+        {
+          "label": "Spremenljivo"
+        }
+      ]
+    },
+    {
+      "label": "Nastavitev razmerja po meri",
+      "fields": [
+        {
+          "label": "Širina stranice",
+          "description": "Pri razmerju stranic 4:3 se pod širino vnese 4."
+        },
+        {
+          "label": "Višina stranice",
+          "description": "Pri razmerju stranic 4:3 se pod višino vnese 3."
+        }
+      ]
+    },
+    {
+      "label": "Dostopnost slikovnega drsnika",
+      "fields": [
+        {
+          "label": "Besedilo gumba za ogled nasledje slike",
+          "default": "Naslednja slika",
+          "description": "Besedilo služi bralnikom zaslonov in ne bo prikazano."
+        },
+        {
+          "label": "Besedilo gumba za ogled prejšnje slike",
+          "default": "Prejšnja slika",
+          "description": "Besedilo služi bralnikom zaslonov in ne bo prikazano."
+        },
+        {
+          "label": "Besedilo za gumbe drsnika slik",
+          "default": "Prikaži sliko %slide",
+          "description": "Besedilo služi bralnikom zaslonov in ne bo prikazano. %slide je spremenljivka."
+        }
+      ]
+    }
+  ]
+}

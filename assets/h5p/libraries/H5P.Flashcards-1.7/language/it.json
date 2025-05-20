@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Descrizione del compito"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Predefinito"
+        }
+      ],
+      "label": "Schede",
+      "entity": "scheda",
+      "field": {
+        "label": "Scheda",
+        "fields": [
+          {
+            "label": "Domanda",
+            "description": "Domanda testuale facoltativa per la scheda (la scheda può utilizzare solo un'immagine, solo un testo o entrambi)"
+          },
+          {
+            "label": "Risposta",
+            "description": "Risposta (soluzione) facoltativa per la scheda Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "Immagine",
+            "description": "Immagine facoltativa per la scheda (la scheda può utilizzare solo un'immagine, solo un testo o entrambi)"
+          },
+          {
+            "label": "Testo alternativo per l'immagine"
+          },
+          {
+            "label": "Suggerimento",
+            "fields": [
+              {
+                "label": "Testo del suggerimento"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Testo di avanzamento",
+      "default": "Scheda @card di @total",
+      "description": "Testo di avanzamento, variabili disponibili: @card e @total. Esempio: 'Scheda @card di @total'"
+    },
+    {
+      "label": "Testo per il pulsante \"Prossima\"",
+      "default": "Prossima"
+    },
+    {
+      "label": "Testo per il pulsante \"Precedente\"",
+      "default": "Precedente"
+    },
+    {
+      "label": "Testo per il pulsante \"Verifica\"",
+      "default": "Verifica"
+    },
+    {
+      "label": "Richiedere l'immissione dei dati all'utente prima che la soluzione sia visualizzata"
+    },
+    {
+      "label": "Messaggio della casella di testo per la risposta",
+      "default": "La tua risposta"
+    },
+    {
+      "label": "Messaggio per risposta giusta",
+      "default": "Giusto"
+    },
+    {
+      "label": "Messaggio per risposta sbagliata",
+      "default": "Sbagliato"
+    },
+    {
+      "label": "Mostra il testo della soluzione",
+      "default": "Risposta giusta"
+    },
+    {
+      "label": "Titolo del messaggio per i risultati",
+      "default": "Risultati"
+    },
+    {
+      "label": "Messaggio per il numero di risposte giuste",
+      "default": "@score su @total giuste",
+      "description": "Messaggio del risultato, variabili disponibili: @score e @total. Esempio: '@score su @total giuste'"
+    },
+    {
+      "label": "Messaggio per mostrare i risultati",
+      "default": "Mostra i risultati"
+    },
+    {
+      "label": "Testo per l'etichetta della risposta breve",
+      "default": "A:"
+    },
+    {
+      "label": "Testo per il pulsante \"Riprova\"",
+      "default": "Riprova"
+    },
+    {
+      "label": "Tieni conto di maiuscole e minuscole",
+      "description": "Accertati che il testo immesso dall'utente sia identico alla risposta attesa"
+    },
+    {
+      "label": "Testo sbagliato per le tecnologie assistive",
+      "default": "Risposta sbagliata. La risposta giusta era @answer",
+      "description": "Testo per le tecnologie assistive. Usa @answer come variabile"
+    },
+    {
+      "label": "Correct feedback text for assistive technologies",
+      "default": "@answer is correct.",
+      "description": "Text that will be announced to assistive technologies when a card is answered correctly. Use @answer as variable."
+    },
+    {
+      "label": "Cambio scheda per le tecnologie assistive",
+      "default": "Pagina @current di @total",
+      "description": "Testo per le tecnologie assistive durante la navigazione tra schede. Usa @current e @total come variabili"
+    },
+    {
+      "label": "Randomize cards",
+      "description": "Enable to randomize the order of cards on display."
+    }
+  ]
+}

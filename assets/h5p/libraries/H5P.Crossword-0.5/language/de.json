@@ -1,0 +1,293 @@
+{
+  "semantics": [
+    {
+      "label": "Aufgabenbeschreibung",
+      "description": "Beschreibe deine Aufgabe hier."
+    },
+    {
+      "label": "Wörter",
+      "widgets": [
+        {
+          "label": "Eingabemaske"
+        }
+      ],
+      "entity": "Wort",
+      "field": {
+        "label": "Wort",
+        "fields": [
+          {
+            "label": "Hinweis",
+            "description": "Hinweis auf die Antwort."
+          },
+          {
+            "label": "Antwort",
+            "description": "Answer zum Hinweis."
+          },
+          {
+            "label": "Extra-Hinweis"
+          },
+          {
+            "label": "Fixiere Wort im Gitter",
+            "description": "Wähle diese Option, wenn du das Wort an einer bestimmten Stelle im Gitter fixieren möchtest. Wörter mit derselben Ausrichtung dürfen sich nicht berühren."
+          },
+          {
+            "label": "Zeile",
+            "description": "Zeilennummer, in der die Antwort starten soll."
+          },
+          {
+            "label": "Spalte",
+            "description": "Spaltennummer, in der die Antwort starten soll."
+          },
+          {
+            "label": "Ausrichtung",
+            "description": "Ausrichtung der Antwort.",
+            "options": [
+              {
+                "label": "Waagerecht"
+              },
+              {
+                "label": "Senkrecht"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Lösungswort",
+      "description": "Du kannst optional ein Lösungswort angeben, das aus den Buchstaben im Gitter abgeleitet werden kann. Es wird nur sichtbar sein, wenn es genügend passende Buchstaben im Kreuzworträtsel gibt. Hinweis: Bisher ist diese Funktion nicht barrierefrei implementiert."
+    },
+    {
+      "label": "Gesamtrückmeldung",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Voreinstellung"
+            }
+          ],
+          "label": "Lege Rückmeldungen für einzelne Punktebereiche fest",
+          "description": "Klicke auf den \"Bereich hinzufügen\"-Button, um so viele Bereiche hinzuzufügen, wie du brauchst. Beispiel: 0-20% Schlechte Punktzahl, 21-91% Durchschnittliche Punktzahl, 91-100% Großartige Punktzahl!",
+          "entity": "Bereich",
+          "field": {
+            "fields": [
+              {
+                "label": "Punktebereich"
+              },
+              {},
+              {
+                "label": "Rückmeldung für jeweiligen Punktebereich",
+                "placeholder": "Trage die Rückmeldung ein"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Theme",
+      "fields": [
+        {
+          "label": "Hintergrundbild",
+          "description": "Wähle ein optionales Hintergrundbild. Es wird ohne Verzerrung skaliert, um in den Hintergrund zu passen."
+        },
+        {
+          "label": "Hintergrundfarbe",
+          "description": "Wähle eine Hintergrundfarbe. Sie wird entweder statt eines Hintergrundbildes benutzt oder dort wo das Bild transparent ist."
+        },
+        {
+          "label": "Gitterfarbe",
+          "description": "Wähle eine Farbe für das Gitter."
+        },
+        {
+          "label": "Hintergrundfarbe für Zelle",
+          "description": "Wähle die Hintergrundfarbe einer Tabellenzelle."
+        },
+        {
+          "label": "Textfarbe für Zelle",
+          "description": "Wähle die Textfarbe einer Tabellenzelle."
+        },
+        {
+          "label": "Farbe der Hinweisnummer",
+          "description": "Wähle die Farbe der Hinweisnummer innerhalb einer Tabellenzelle."
+        },
+        {
+          "label": "Hintergrundfarbe für Zelle (ausgewählt)",
+          "description": "Wähle die Hintergrundfarbe einer ausgewählten Tabellenzelle."
+        },
+        {
+          "label": "Textfarbe für Zelle (ausgewählt)",
+          "description": "Wähle die Textfarbe einer ausgewählten Tabellenzelle."
+        },
+        {
+          "label": "Farbe der Hinweisnummer (ausgewählt)",
+          "description": "Wähle die Farbe der Hinweisnummer innerhalb einer ausgewählten Tabellenzelle."
+        }
+      ]
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "description": "Diese Optionen legen fest, wie die Aufgabe im Detail funktioniert.",
+      "fields": [
+        {
+          "label": "Anzahl der zu zeigenden Wörter",
+          "description": "Erstelle eine zufällige Auswahl der Wörter. Die Auswahl wird immer mindestens die Wörter enthalten, die im Gitter fixiert wurden. Ein leerer Wert oder 0 bedeutet alle Wörter."
+        },
+        {
+          "label": "Sofort-Rückmeldungen einschalten"
+        },
+        {
+          "label": "Wörter zählen",
+          "description": "Wenn diese Einstellung gewählt ist, werden Wörter für die Bewertung gezählt. Andernfalls werden Zeichen gezählt."
+        },
+        {
+          "label": "Strafpunkte vergeben",
+          "description": "Wenn diese Einstellung gewählt ist, wird für jede falsche Antwort ein Punkt abgezogen."
+        },
+        {
+          "label": "\"Wiederholen\"-Button anzeigen"
+        },
+        {
+          "label": "Aktiviere \"Lösung anzeigen\"-Button"
+        },
+        {
+          "label": "Behalte korrekte Antworten beim Wiederholen",
+          "description": "Wenn diese Option aktiviert ist, werden korrekte Antworten beibehalten, wenn der Benutzer/die Benutzerin die Aufgabe wiederholt - es sei denn, die volle Punktzahl wurde erreicht."
+        }
+      ]
+    },
+    {
+      "label": "Bezeichnungen und Beschriftungen",
+      "fields": [
+        {
+          "label": "Beschriftung für waagerecht",
+          "default": "Waagerecht"
+        },
+        {
+          "label": "Beschriftung für senktrecht",
+          "default": "Senkrecht"
+        },
+        {
+          "label": "Beschriftung des \"Überprüfen\"-Buttons",
+          "default": "Überprüfen"
+        },
+        {
+          "label": "Beschriftung des \"Absenden\"-Buttons",
+          "default": "Absenden"
+        },
+        {
+          "label": "Beschriftung des \"Wiederholen\"-Buttons",
+          "default": "Wiederholen"
+        },
+        {
+          "label": "Beschriftung des \"Lösung anzeigen\"-Buttons",
+          "default": "Lösung anzeigen"
+        },
+        {
+          "label": "Es kann kein Kreuzworträtsel generiert werden",
+          "default": "Es konnte kein Kreuzworträtsel aus den gegebenen Wörtern erzeugt werden. Bitte versuche es erneut mit weniger Wörtern oder mit Wörtern, die mehr Buchstaben gemein haben."
+        },
+        {
+          "label": "Kein Kreuzworträtsel möglich (zu wenig Wörter)",
+          "default": "Es konnte kein Kreuzworträtsel erzeugt werden. Du benötigst wenigstens zwei Wörter."
+        },
+        {
+          "label": "Problematische Wörter",
+          "description": "Liste Wörter auf, die beim Generieren des Kreuzworträtsels nicht gesetzt werden konnten. @words ist ein Platzhalter, der durch die tatsächlichen Problematischen Wörter ersetzt wird.",
+          "default": "Einige Wörter konnten nicht platziert werden. Wenn du Wörter im Gitter fixierst, stelle bitte sicher, dass ihre Position das Setzen von anderen Wörtern nicht verhindert. Wörter mit derselben Ausrichtung dürfen sich nicht berühren. Problematische Wörter: @words"
+        },
+        {
+          "label": "Extra-Hinweis",
+          "default": "Extra-Hinweis"
+        },
+        {
+          "label": "Fenster schließen",
+          "default": "Fenster schließen"
+        }
+      ]
+    },
+    {
+      "label": "Vorlesewerkzeug (Barrierefreiheit)",
+      "fields": [
+        {
+          "label": "Beschreibung Kreuzwortgitter",
+          "default": "Kreuzwortgitter. Benutze die Pfeiltasten und die Tastatur zum Eingeben von Zeichen. Nutze die Tabulatortaste, um stattdessen Eingabefelder zu verwenden."
+        },
+        {
+          "label": "Spalte",
+          "default": "Spalte"
+        },
+        {
+          "label": "Zeile",
+          "default": "Zeile"
+        },
+        {
+          "label": "Waagerecht",
+          "default": "Waagerecht"
+        },
+        {
+          "label": "Senkrecht",
+          "default": "Senkrecht"
+        },
+        {
+          "label": "Leer",
+          "default": "Leer"
+        },
+        {
+          "description": "Ergebnisansage. @clue ist eine Variable und wird durch den passenden Hinweis ersetzt.",
+          "label": "Ergebnis für",
+          "default": "Ergebnis für: @clue"
+        },
+        {
+          "label": "Richtig",
+          "default": "Richtig"
+        },
+        {
+          "label": "Falsch",
+          "default": "Falsch"
+        },
+        {
+          "label": "Punkt",
+          "default": "Punkt"
+        },
+        {
+          "description": "Lösungsansage. @clue und @solution sind Variablen und werden durch die entsprechenden Werte ersetzt.",
+          "label": "Lösung für",
+          "default": "Für @clue lautet die Lösung: @solution"
+        },
+        {
+          "description": "Extra-Hinweisansage. @clue ist eine Variable und wird durch den passenden Hinweis ersetzt.",
+          "label": "Extra-Hinweis für",
+          "default": "Öffne den Extra-Hinweis für @clue"
+        },
+        {
+          "description": "Positionsansage. @position und @length sind Variablen und werden durch die entsprechenden Werte ersetzt.",
+          "label": "Zeichen",
+          "default": "Zeichen @position von @length"
+        },
+        {
+          "description": "Wortlängenansage. @length ist eine Variable und wird durch den passenden Wert ersetzt.",
+          "label": "Länge des Wörtes",
+          "default": "Wort mit @length Zeichen"
+        },
+        {
+          "label": "Vorlesewerkzeug-Beschreibung für den \"Überprüfen\"-Button",
+          "default": "Überprüfe die Eingaben. Die Antworten werden als richtig, falsch oder unbeantwortet markiert."
+        },
+        {
+          "label": "Vorlesewerkzeug-Beschreibung für den \"Lösung anzeigen\"-Button",
+          "default": "Zeige die Lösung. Das Kreuzworträtsel wird mit der richtigen Lösung gefüllt."
+        },
+        {
+          "label": "Vorlesewerkzeug-Beschreibung für den \"Wiederholen\"-Button",
+          "default": "Wiederhole die Aufgabe. Setze alle Eingaben zurück und fange von vorne an."
+        },
+        {
+          "label": "Dein Ergebnis",
+          "description": "@score und @total sind Variablen und werden durch die entsprechenden Werte ersetzt.",
+          "default": "Du hast @score von @total Punkten erreicht."
+        }
+      ]
+    }
+  ]
+}

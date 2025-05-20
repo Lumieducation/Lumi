@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Úvodní text",
+      "default": "Vyberte správné tvrzení.",
+      "description": "Zobrazí se nad souhrnem úlohy."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Výchozí"
+        },
+        {
+          "label": "Textové"
+        }
+      ],
+      "label": "Souhrn",
+      "entity": "tvrzení",
+      "field": {
+        "label": "Sada tvrzení",
+        "fields": [
+          {
+            "label": "Seznam tvrzení pro shrnutí - první tvrzení je správné.",
+            "entity": "tvrzení",
+            "field": {
+              "label": "Tvrzení"
+            }
+          },
+          {
+            "label": "Nápověda",
+            "fields": [
+              {
+                "label": "Text nápovědy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Celková zpětná vazba",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Výchozí"
+            }
+          ],
+          "label": "Definujte vlastní zpětnou vazbu pro jakýkoli rozsah skóre",
+          "description": "Klikněte na tlačítko \"Přidat rozsah\" pro přidání tolika rozsahů, kolik potřebujete. Například: 0-20% špatný výsledek, 21-91% průměrný výsledek, 91-100% výborný výsledek!",
+          "entity": "rozsah",
+          "field": {
+            "fields": [
+              {
+                "label": "Rozsah skóre"
+              },
+              {},
+              {
+                "label": "Zpětná vazba pro definovaný rozsah skóre",
+                "placeholder": "Vyplňte ve zpětné vazbě"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Text zobrazený před počtem příkazů vyřešených v souhrnu úlohy.",
+      "default": "Pokrok:",
+      "description": "Zobrazí se nad výpisy. Příklad: \"Pokrok: 2/5\""
+    },
+    {
+      "label": "Text zobrazený před počtem nesprávných příkazů vybraných v souhrnu úlohy.",
+      "default": "Špatné odpovědi:",
+      "description": "Zobrazí se nad výpisy. Příklad: \"Špatné odpovědi: 4\""
+    },
+    {
+      "label": "Záhlaví souhrnu zpětné vazby",
+      "default": "Váš výsledek",
+      "description": "Zobrazí se nad souhrnnou zpětnou vazbou."
+    },
+    {
+      "label": "Text pro správnou odpověď",
+      "default": "Správně."
+    },
+    {
+      "label": "Text pro oznámení nesprávné odpovědi",
+      "default": "Chybně! Zkuste znovu."
+    },
+    {
+      "label": "Popisek textu pro nesprávnou odpověď",
+      "default": "Chybně"
+    },
+    {
+      "label": "Popisek seznamu správných odpovědí",
+      "default": "Správné odpovědi."
+    },
+    {
+      "label": "Popisek tlačítka zobrazení tipu",
+      "default": "Zobrazení nápovědy"
+    },
+    {
+      "label": "Textové znázornění výsledkové lišty pro ty, kteří používají čtecí zařízení",
+      "description": ":num a :total jsou speciální klíčová slova, která jsou programově aktualizována",
+      "default": "Získal jste :num ze :total bodů"
+    },
+    {
+      "label": "Text používaný pro čtecí zařízení ke komunikaci o pokroku",
+      "description": ":num a :total jsou speciální klíčová slova, která jsou programově aktualizována",
+      "default": "Pokrok :num z :total"
+    }
+  ]
+}

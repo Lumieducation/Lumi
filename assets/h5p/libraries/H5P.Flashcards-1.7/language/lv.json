@@ -1,0 +1,124 @@
+{
+  "semantics": [
+    {
+      "label": "Uzdevuma apraksts"
+    },
+    {
+      "label": "Kartīte",
+      "entity": "kartīte",
+      "field": {
+        "label": "Kartīte",
+        "fields": [
+          {
+            "label": "Jautājums",
+            "description": "Neobligāts kartītes teksta jautājums. (Kartītei jābūt attēlam, tikai tekstam vai abiem)"
+          },
+          {
+            "label": "Atbilde",
+            "description": "Neobligāta kartītes atbilde (risinājums). Use a forward slash / to split alternative solutions. Use \\/ if a solution should contain a /."
+          },
+          {
+            "label": "Attēls",
+            "description": "Neobligāts kartītes attēls. (Kartītei jābūt attēlam, tikai tekstam vai abiem)"
+          },
+          {
+            "label": "Alternatīvs attēla teksts"
+          },
+          {
+            "label": "Padoms",
+            "fields": [
+              {
+                "label": "Padoma teksts"
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": [
+        {
+          "label": "Pēc noklusējuma"
+        }
+      ]
+    },
+    {
+      "label": "Progresa teksts",
+      "default": "Kartīte @card no @total",
+      "description": "Progresa teksts, pieejamie mainīgie: @card un @total. Piemēram: 'Kartīte @card no @total'"
+    },
+    {
+      "label": "Pogas \"Tālāk\" teksts",
+      "default": "Tālāk"
+    },
+    {
+      "label": "Pogas \"Iepriekšējs\" teksts",
+      "default": "Iepriekšējs"
+    },
+    {
+      "default": "Pārbaudīt",
+      "label": "Pogas \"Pārbaudīt\" teksts"
+    },
+    {
+      "label": "Pieprasīt lietotāja ievadi pirms atļauts skatīt risinājumu"
+    },
+    {
+      "label": "Atbildes ievades lauka teksts",
+      "default": "Jūsu atbilde"
+    },
+    {
+      "default": "Pareizi",
+      "label": "Pareizas atbildes teksts"
+    },
+    {
+      "label": "Nepareizas atbildes teksts",
+      "default": "Nepareizi"
+    },
+    {
+      "label": "Rādīt risinājuma tekstu",
+      "default": "Pareiza atbilde"
+    },
+    {
+      "label": "Rezultātu virsraksta teksts",
+      "default": "Rezultāti"
+    },
+    {
+      "default": "@score no @total pareizi",
+      "label": "Pareizo atbilžu skaita teksts",
+      "description": "Rezultātu teksts, pieejami mainīgie: @score un @total. Piemērs: '@score no @total pareizi'"
+    },
+    {
+      "label": "Rezultātu atspoguļošanas teksts",
+      "default": "Rādīt rezultātus"
+    },
+    {
+      "label": "Īsās atbildes etiķetes teksts",
+      "default": "A:"
+    },
+    {
+      "label": "Pogas \"Mēģināt vēlreiz\" teksts",
+      "default": "Mēģināt vēlreiz"
+    },
+    {
+      "label": "Reģistrjutīgs",
+      "description": "Nodrošina, ka lietotāja ievade ir tieši tāda pati kā atbilde."
+    },
+    {
+      "label": "Nepareizās atbildes teksts asistīvajām tehnoloģijām",
+      "default": "Nepareiza atbilde. Pareizā atbilde bija @answer",
+      "description": "Teksts, kuru atskaņos asistīvās tehnoloģijas. Izmantojiet @answer kā mainīgo."
+    },
+    {
+      "label": "Pareizas kartītes atgriezeniskās saites teksts asistīvajām tehnoloģijām",
+      "default": "@answer ir pareiza.",
+      "description": "Teksts, kuru atskaņos asistīvās tehnoloģijas kad kartīte atbildēta pareizi. Izmantojiet mainīgo @answer."
+    },
+    {
+      "default": "Lapa @current no @total",
+      "label": "Kartītes maiņa asistīvajām tehnoloģijām",
+      "description": "Teksts, kuru atskaņos asistīvās tehnoloģijas kad pārvietosies starp kartītēm. Izmantojiet @current un @total kā mainīgos."
+    },
+    {
+      "label": "Randomize cards",
+      "description": "Enable to randomize the order of cards on display."
+    }
+  ]
+}

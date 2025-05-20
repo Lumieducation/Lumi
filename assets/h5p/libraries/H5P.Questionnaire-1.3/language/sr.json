@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Questionnaire elements",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "entity": "element",
+      "field": {
+        "label": "Choose library",
+        "fields": [
+          {
+            "label": "Library",
+            "description": "Choose a library"
+          },
+          {
+            "label": "Required field"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Success screen options",
+      "fields": [
+        {
+          "label": "Enable success screen"
+        },
+        {
+          "label": "Add success screen image",
+          "fields": [
+            {
+              "label": "Replace success icon with image"
+            }
+          ]
+        },
+        {
+          "label": "Text to display on submit",
+          "default": "You have completed the questionnaire."
+        }
+      ]
+    },
+    {
+      "label": "UI Elements",
+      "fields": [
+        {
+          "label": "Button labels",
+          "fields": [
+            {
+              "label": "Previous button label",
+              "default": "Back"
+            },
+            {
+              "label": "Continue button label",
+              "default": "Continue"
+            },
+            {
+              "label": "Next button label",
+              "default": "Next"
+            },
+            {
+              "label": "Submit button label",
+              "default": "Submit"
+            }
+          ]
+        },
+        {
+          "label": "Accessibility",
+          "fields": [
+            {
+              "label": "Required message exit button label",
+              "default": "Close error message"
+            },
+            {
+              "label": "Progress bar text",
+              "default": "Question %current of %max",
+              "description": "Used to tell assistive technologies what question it is. Variables: [ %current, %max ]"
+            }
+          ]
+        },
+        {
+          "label": "Required message",
+          "default": "This question requires an answer",
+          "description": "Will display if this field is unanswered and required by a wrapper content type"
+        },
+        {
+          "label": "Required symbol text",
+          "default": "required",
+          "description": "Text that will accompany an asterisk to signal that a question is required"
+        },
+        {
+          "label": "Title for the submit screen",
+          "default": "You successfully answered all of the questions"
+        },
+        {
+          "label": "Subtitle for the submit screen",
+          "default": "Click below to submit your answers"
+        }
+      ]
+    }
+  ]
+}

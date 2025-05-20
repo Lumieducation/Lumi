@@ -1,0 +1,271 @@
+{
+  "semantics": [
+    {
+      "label": "Atbilžu pārbaudes poga",
+      "default": "Pārbaudīt"
+    },
+    {
+      "label": "Atbildes iesniegšanas poga",
+      "default": "Iesniegt"
+    },
+    {
+      "label": "Poga Mēģināt vēlreiz",
+      "default": "Mēģināt vēlreiz"
+    },
+    {
+      "label": "Rezultātu skaidrojuma teksts",
+      "default": "Pareizas atbildes dod +1 punktu. Nepareizas atbildes dod -1 punktu. Zemākais iespējamais punktu skaits ir 0."
+    },
+    {
+      "fields": [
+        {
+          "label": "Iestatījumi",
+          "fields": [
+            {
+              "label": "Fona attēls",
+              "description": "Neobligāti. Atlasiet attēlu, ko izmantot kā fonu vilkšanas un nomešanas uzdevumam."
+            },
+            {
+              "label": "Uzdevuma lielums",
+              "description": "Norādiet, cik lielam (pikseļos) jābūt spēles laukumam."
+            }
+          ]
+        },
+        {
+          "label": "Uzdevums",
+          "description": "Sāciet, izvietojot nomešanas zonas.<br />Pēc tam ievietojiet velkamos elementus un atzīmējiet atbilstošās nomešanas zonas.<br />Visbeidzot vēlreiz rediģējiet savu nomešanas zonu un atzīmējiet pareizās atbildes.",
+          "fields": [
+            {
+              "label": "Elementi",
+              "entity": "elements",
+              "field": {
+                "label": "Elements",
+                "fields": [
+                  {
+                    "description": "Izvēlieties satura veidu, kuru vēlaties pievienot."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Atlasiet nomešanas zonas"
+                  },
+                  {
+                    "label": "Fona caurspīdīgums",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Bezgalīgs skaits elementu gadījumu",
+                    "description": "Klonē šo elementu, lai to varētu vilkt uz vairākām nomešanas zonām."
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Nomešanas zonas",
+              "entity": "Nomešanas zona",
+              "field": {
+                "label": "Nomešanas zona",
+                "fields": [
+                  {
+                    "label": "Etiķete",
+                    "description": "The label is used by assistive technologies."
+                  },
+                  {
+                    "label": "Rādīt etiķeti"
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Izvēlieties pareizos elementus"
+                  },
+                  {
+                    "label": "Fona caurspīdīgums",
+                    "description": "Reducing the opacity may result in an insufficient contrast and make the content not accessible."
+                  },
+                  {
+                    "label": "Padomi un atgriezeniskā saite",
+                    "fields": [
+                      {
+                        "label": "Padoma teksts"
+                      },
+                      {
+                        "label": "Ziņojums, kas tiek parādīts pareizas atbilstības gadījumā",
+                        "description": "Ziņojums tiks parādīts zem uzdevuma pēc \"pārbaudīt\", ja ievilkts pareizais elements."
+                      },
+                      {
+                        "label": "Ziņojums, kas tiek parādīts nepareizas atbilstības gadījumā",
+                        "description": "Ziņojums tiks parādīts zem uzdevuma pēc \"pārbaudīt\", ja ievilkts nepareizais elements."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Šajā nomešanas zonā var būt tikai viens elements",
+                    "description": "Pārliecinieties, vai šai nomešanas zonai ir tikai viena pareizā atbilde"
+                  },
+                  {
+                    "label": "Iespējot automātisko līdzināšanu",
+                    "description": "Automātiski izlīdzinās visus šajā zonā nomestos velkamos elementus."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Kopējā atgriezeniskā saite",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Pēc noklusējuma"
+            }
+          ],
+          "label": "Iestatiet pielāgotu atgriezenisko saiti katram rezultātu intervālam",
+          "description": "Klikšķiniet pogu \"Pievienot diapazonu\", lai pievienotu tik diapazonus cik vēlaties. Piemēram, 0-20% Slikts rezultāts, 21-91% Viduvējs rezultāts, 91-100% Lielisks rezultāts!",
+          "entity": "diapazons",
+          "field": {
+            "fields": [
+              {
+                "label": "Rezultātu diapazons"
+              },
+              {},
+              {
+                "label": "Norādītā diapazona atgriezeniskā saite",
+                "placeholder": "Aizpildiet atgriezenisko saiti"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Uzvedības iestatījumi",
+      "description": "Šie iestatījumi ļaus jums kontrolēt uzdevuma uzvedību.",
+      "fields": [
+        {
+          "label": "Atļaut \"Mēģināt vēlreiz\""
+        },
+        {
+          "label": "Atļaut pogu \"Pārbaudīt\""
+        },
+        {
+          "label": "Par visu uzdevumu piešķirt vienu punktu",
+          "description": "Atspējot, lai piešķirtu vienu punktu par katru velkamo elementu, kas ir novietots pareizi."
+        },
+        {
+          "label": "Piemērot sodus",
+          "description": "Piemērot sodus par elementiem, kas ievilkti nepareizās nomešanas zonās. Tas ir jāiespējo, ja vienu un to pašu elementu(-s) var ievilkt vairākās nomešanas zonās vai ja ir tikai viena nomešanas zona. Ja tas nav iespējots, izglītojamie var ievilkt visus elementus ar visās nomešanas zonās un vienmēr saņemt pilnu punktu skaitu."
+        },
+        {
+          "label": "Iespējot rezultātu skaidrojumu",
+          "description": "Pārbaudot atbildes, parādīt lietotājam rezultātu skaidrojumu (ja ir atlasīta opcija “Lietot sodus”)."
+        },
+        {
+          "label": "Fona caurspīdība velkamajiem elementiem",
+          "description": "Ja šis lauks ir iestatīts, tas ignorēs caurspīdīguma iestatījumu visiem velkamajiem elementiem. Tam ir jābūt skaitlim no 0 līdz 100, kur 0 nozīmē pilnīgu caurspīdīgumu un 100 nozīmē, ka nav caurspīdīguma"
+        },
+        {
+          "label": "Nomešanas zonas izcelšana",
+          "description": "Izvēlieties, kad izcelt nomešanas zonas.",
+          "options": [
+            {
+              "label": "Velkot"
+            },
+            {
+              "label": "Vienmēr"
+            },
+            {
+              "label": "Nekad"
+            }
+          ]
+        },
+        {
+          "label": "Atstarpes automātiskajai līdzināšanai (pikseļos)"
+        },
+        {
+          "label": "Iespējot pilnekrāna režīmu",
+          "description": "Atzīmējiet šo opciju, lai iespējotu pilnekrāna pogu."
+        },
+        {
+          "label": "Rādīt punktus",
+          "description": "Parādiet par katru atbildi nopelnītos punktus. Nav pieejama, ja ir iespējota opcija 'Piešķirt vienu punktu par visu uzdevumu'."
+        },
+        {
+          "label": "Rādīt virsrakstu",
+          "description": "Noņemiet šo atzīmi, ja nevēlaties, lai šis virsraksts tiktu rādīts. Virsraksts tiks parādīts tikai kopsavilkumos, statistikā utt."
+        }
+      ]
+    },
+    {
+      "label": "Lokalizēt",
+      "fields": [
+        {
+          "label": "Pilnekrāna etiķete",
+          "default": "Pilnekrāna režīms"
+        },
+        {
+          "label": "Etiķete iziešanai no pilnekrāna režīma",
+          "default": "Iziet no pilnekrāna režīma"
+        }
+      ]
+    },
+    {
+      "label": "Objektu satveršanas prefikss",
+      "default": "Satverams {num} no {total}."
+    },
+    {
+      "label": "Objektu satveršanas prefikss",
+      "default": "Ievietots nomešanas zonā {num}."
+    },
+    {
+      "label": "Nomešanas zonas prefikss",
+      "default": "Nomešanas zona {num} no {total}."
+    },
+    {
+      "label": "Nav nomešanas zonas atlases etiķetes",
+      "default": "Nav nomešanas zonas."
+    },
+    {
+      "label": "Etiķete pogai Rādīt padomu",
+      "default": "Parādīt padomu."
+    },
+    {
+      "label": "Padoma pieejamības etiķete",
+      "default": "Pieejams padoms"
+    },
+    {
+      "label": "Pareizās atbildes etiķete",
+      "default": "Pareiza atbilde"
+    },
+    {
+      "label": "Nepareizās atbildes etiķete",
+      "default": "Nepareiza atbilde"
+    },
+    {
+      "label": "Paneļa galvene, kurā ir atgriezeniskā saite par pareizām/nepareizām atbildēm",
+      "default": "Atgriezeniskā saite"
+    },
+    {
+      "label": "Rezultātu skalas tekstuālais atspoguļojums tiem, kas izmanto asistīvās tehnoloģijas",
+      "default": "Tu saņēmi :num no :total punktiem"
+    },
+    {
+      "label": "Rezultātu skaidrojuma pogas teksta attēlojums",
+      "default": "Rādīt rezultātu skaidrojumu"
+    },
+    {
+      "label": "Pogas \"Pārbaudīt\" etiķete asistīvajām tehnoloģijām",
+      "default": "Pārbaudīt atbildes. Atbildes tiks atzīmētas kā pareizas, nepareizas, vai neatbildētas."
+    },
+    {
+      "label": "Pogas \"Mēģināt vēlreiz\" etiķete asistīvajām tehnoloģijām",
+      "default": "Mēģināt uzdevumu vēlreiz. Dzēst visas sniegtās atbildes un sākt uzdevumu vēlreiz."
+    }
+  ]
+}

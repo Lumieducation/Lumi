@@ -1,0 +1,295 @@
+{
+  "semantics": [
+    {
+      "label": "연대표",
+      "fields": [
+        {
+          "label": "헤드라인",
+          "description": "주 타임라인 제목 삽입(첫 페이지)"
+        },
+        {
+          "label": "본문 글",
+          "description": "주 타임라인 본문을 여기(첫 페이지)에 수록."
+        },
+        {
+          "label": "기본 줌 레벨",
+          "description": "이 설정은 기본 줌 레벨을 변경한다. 확대 또는 축소 버튼을 지정된 횟수만큼 누르는 것과 동일하다. 음수는 축소를 의미함. 기본값은 0"
+        },
+        {
+          "label": "배경 그림",
+          "description": "배경으로 표시할 이미지."
+        },
+        {
+          "label": "높이",
+          "description": "높이(픽셀)"
+        },
+        {
+          "label": "자료(asset)",
+          "description": "여기서 자료를 연대표 \"front page\" (전면 페이지) 에 추가할 수 있다.",
+          "fields": [
+            {
+              "label": "미디어",
+              "description": "링크할 미디어 URL (트위터, 유튜브, 플리커, 비메오, 구글 지도 and 사운드클라우드가 현재 지원됩니다.)"
+            },
+            {
+              "label": "크레딧",
+              "description": "미디어에 대한 크레딧"
+            },
+            {
+              "label": "캡션",
+              "description": "캡션 설명 입력"
+            }
+          ]
+        },
+        {
+          "label": "날짜",
+          "description": "연대표에 날짜를 추가하십시오!",
+          "field": {
+            "label": "날짜",
+            "description": "날짜",
+            "fields": [
+              {
+                "label": "시작일",
+                "description": "YYYY,MM,DD (최소한 연도 네 자리 필수)"
+              },
+              {
+                "label": "마지막일",
+                "description": "YYYY,MM,DD (최소한 연도 네 자리 필수)"
+              },
+              {
+                "label": "헤드라인",
+                "description": "날짜 항목의 헤드라인"
+              },
+              {
+                "label": "본문 글자",
+                "description": "날짜 항목의 본문"
+              },
+              {
+                "label": "태그",
+                "description": "태그 (카테고리) 입력"
+              },
+              {
+                "label": "자료",
+                "fields": [
+                  {
+                    "label": "미디어",
+                    "description": "링크할 미디어 URL (트위터, 유튜브, 플리커, 비메오, 구글 지도 and 사운드클라우드가 현재 지원됩니다.)"
+                  },
+                  {
+                    "label": "썸네일",
+                    "description": "필요한 경우 축소판 그림 추가, 32x32"
+                  },
+                  {
+                    "label": "크레딧",
+                    "description": "미디어에 대한 크레딧"
+                  },
+                  {
+                    "label": "캡션",
+                    "description": "캡션 텍스트"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "시대",
+          "description": "연대표에 시대 추가",
+          "field": {
+            "label": "시대",
+            "fields": [
+              {
+                "label": "시작일",
+                "description": "YYYY,MM,DD (최소한 연도 네 자리 필수)"
+              },
+              {
+                "label": "마지막일",
+                "description": "YYYY,MM,DD (최소한 연도 네 자리 필수)"
+              },
+              {
+                "label": "헤드라인",
+                "description": "시대 헤드라인"
+              },
+              {
+                "label": "텍스트",
+                "description": "시대 본문"
+              },
+              {
+                "label": "태그",
+                "description": "시대 태그(카테고리)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "언어",
+          "description": "사용자 인터페이스 언어",
+          "options": [
+            {
+              "label": "Afrikaans"
+            },
+            {
+              "label": "Arabic"
+            },
+            {
+              "label": "Armenian"
+            },
+            {
+              "label": "Basque"
+            },
+            {
+              "label": "Bulgarian"
+            },
+            {
+              "label": "Catalan"
+            },
+            {
+              "label": "Chinese"
+            },
+            {
+              "label": "Croatian / Hrvatski"
+            },
+            {
+              "label": "Czech"
+            },
+            {
+              "label": "Danish"
+            },
+            {
+              "label": "Dutch"
+            },
+            {
+              "label": "English"
+            },
+            {
+              "label": "English (24-hour time)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estonian"
+            },
+            {
+              "label": "Faroese"
+            },
+            {
+              "label": "Farsi"
+            },
+            {
+              "label": "Finnish"
+            },
+            {
+              "label": "French"
+            },
+            {
+              "label": "Galician"
+            },
+            {
+              "label": "Georgian"
+            },
+            {
+              "label": "German / Deutsch"
+            },
+            {
+              "label": "Greek"
+            },
+            {
+              "label": "Hebrew"
+            },
+            {
+              "label": "Hungarian"
+            },
+            {
+              "label": "Icelandic"
+            },
+            {
+              "label": "Indonesian"
+            },
+            {
+              "label": "Italian"
+            },
+            {
+              "label": "Japanese"
+            },
+            {
+              "label": "Korean"
+            },
+            {
+              "label": "Latvian"
+            },
+            {
+              "label": "Lithuanian"
+            },
+            {
+              "label": "Luxembourgish"
+            },
+            {
+              "label": "Malay"
+            },
+            {
+              "label": "Nepali"
+            },
+            {
+              "label": "Norwegian"
+            },
+            {
+              "label": "Polish"
+            },
+            {
+              "label": "Portuguese"
+            },
+            {
+              "label": "Portuguese (Brazilian)"
+            },
+            {
+              "label": "Romansh"
+            },
+            {
+              "label": "Russian"
+            },
+            {
+              "label": "Serbian - Cyrillic"
+            },
+            {
+              "label": "Serbian - Latin"
+            },
+            {
+              "label": "Sinhalese"
+            },
+            {
+              "label": "Slovak"
+            },
+            {
+              "label": "Slovenian"
+            },
+            {
+              "label": "Spanish"
+            },
+            {
+              "label": "Swedish"
+            },
+            {
+              "label": "Tagalog"
+            },
+            {
+              "label": "Tamil"
+            },
+            {
+              "label": "Taiwanese"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Turkish"
+            },
+            {
+              "label": "Ukrainian"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

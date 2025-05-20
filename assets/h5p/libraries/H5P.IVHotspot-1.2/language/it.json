@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Destinazione",
+      "fields": [
+        {
+          "label": "Tipo",
+          "options": [
+            {
+              "label": "Codice di tempo"
+            },
+            {
+              "label": "Un'altra pagina (URL)"
+            }
+          ]
+        },
+        {
+          "label": "Vai a",
+          "description": "Il tempo a disposizione dell'utente dopo aver premuto sull'hotspot. Inserisci il tempo in formato M:SS"
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "Protocollo",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(root relativa)"
+                },
+                {
+                  "label": "altro"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Effetti visivi",
+      "fields": [
+        {
+          "label": "Figura",
+          "options": [
+            {
+              "label": "Rettangolare"
+            },
+            {
+              "label": "Circolare"
+            },
+            {
+              "label": "Rettangolo arrotondato"
+            }
+          ]
+        },
+        {
+          "label": "Colore di sfondo per l'hotspot"
+        },
+        {
+          "label": "Usa il cursore del puntatore"
+        },
+        {
+          "label": "Aggiungi effetto lampeggiante",
+          "description": "NB. l'effetto lampeggiante è sempre abilitato nell'editor, in modo da riuscire a trovare hotspot trasparenti"
+        }
+      ]
+    },
+    {
+      "label": "Testi",
+      "fields": [
+        {
+          "label": "Testo alternativo",
+          "description": "Descrivi l'argomento trattato dall'hotspot. Usato dai lettori vocali",
+          "placeholder": "Una mela sulla tavola"
+        },
+        {
+          "label": "Etichetta dell'hotspot"
+        },
+        {
+          "label": "Mostra etichetta"
+        },
+        {
+          "label": "Colore dell'etichetta"
+        }
+      ]
+    }
+  ]
+}

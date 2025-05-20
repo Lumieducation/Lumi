@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Medya",
+      "fields": [
+        {
+          "label": "Tipi",
+          "description": "Soru üzerinde görüntülenecek isteğe bağlı medya."
+        },
+        {
+          "label": "Görsel yakınlaştırmasını devre dışı bırakın"
+        }
+      ]
+    },
+    {
+      "label": "Görev tanımlaması",
+      "description": "Bu görevin nasıl yapılacağını kullanıcıya anlatın.",
+      "default": "Kelimeleri doğru kutulara sürükleyin."
+    },
+    {
+      "label": "Metin",
+      "placeholder": "*Ankara* Türkiye'nin başkentidir. *İstanbul* Marmara Bölgesi'nin, *Diyarbakır* Güneydoğu Anadolu Bölgesi'nin illeridir. Tüm şehirler *Anadolu:Türkiye'nin İstanbul Boğazı'yla Avrupa'dan ayrılan asya kıtasındaki topraklarıdır* yarımadasında bulunur.",
+      "important": {
+        "description": "<ul><li>Sürüklenebilir kelimeler, doğru kelime/ifadenin önüne ve arkasına yıldız işareti (*) konularak eklenir.</li><li>Önüne iki nokta üst üste (:) koyarak, doğru ifadeden sonra bir ipucu ekleyebilirsiniz.</li><li>Her boşluk için sadece bir doğru kelime vardır.</li><li>Bir görev tamamlandığında görüntülenecek geri bildirim ekleyebilirsiniz. Doğru geri bildirim için '\\+' ve yanlış geri bildirim için '\\-' kullanın.</li></ul>",
+        "example": "*Ankara:Türkiye'nin başkenti* İç Anadolu Bölgesi illerinden biridir. <br /> *Kare\\+Doğru! \\-Yanlış, lütfen tekrar dene!* dört kenarı eş uzunlukta olan bir geometrik şekildir."
+      }
+    },
+    {
+      "label": "Distractors",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Enter extra solutions that are wrong as distractors. Use the same asterisk (*) scheme as for the text."
+    },
+    {
+      "label": "Toplam Geri bildirim",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Varsayılan"
+            }
+          ],
+          "label": "Herhangi bir puan aralığı için özel geri bildirim tanımlayın",
+          "description": "İstediğiniz kadar aralık eklemek için \"Aralık ekle\" düğmesini tıklayın. Örnek: %0-20 Kötü puan, %21-91 Ortalama Puan, %91-100 Büyük Puan!",
+          "entity": "aralık",
+          "field": {
+            "fields": [
+              {
+                "label": "Puan Aralığı"
+              },
+              {},
+              {
+                "label": "Tanımlanmış puan aralığı için geri bildirim",
+                "placeholder": "Geri bildirimi doldurun"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "\"Kontrol et\" düğmesi için metin",
+      "default": "Kontrol et"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "\"Yeniden dene\" düğmesi için metin",
+      "default": "Yeniden dene"
+    },
+    {
+      "label": "\"Çözümü göster\" düğmesi için metin",
+      "default": "Çözümü göster"
+    },
+    {
+      "label": "Numaralandırılmış bırakma alanı etiketi",
+      "default": "Bırakma alanı @index.",
+      "description": "Erişilebilirlik için kullanılan ve okuyucunun bırakma alanının dizinini okuyacağı etiket. Kullanılabilir değişken: @index"
+    },
+    {
+      "label": "Boş bırakma alanı etiketi",
+      "default": "Bırakma alanı @index boş.",
+      "description": "Erişilebilirlik için kullanılan ve okuyucunun bırakma alanının boş olduğunu okuyacağı etiket."
+    },
+    {
+      "label": "Bırakma alanı içerir etiketi",
+      "default": "Bırakma alanı @index, sürüklenebilir @draggable içerir.",
+      "description": "Erişilebilirlik için kullanılan ve okuyucunun bırakma alanının sürüklenebilir bir elemanı içerdiğini okuyacağı etiket."
+    },
+    {
+      "label": "Sürüklenebilir ögeler etiketi",
+      "default": "@count sürüklenebilir ögeden @index",
+      "description": "Erişilebilirlik için kullanılan ve okuyucunun bunun sürüklenebilir bir öğe olduğunu okuduğu etiket. Kullanılabilir değişkenler: @index, @count"
+    },
+    {
+      "label": "İpucu göster düğmesi için etiket",
+      "default": "İpucu göster",
+      "description": "Erişilebilirlik için kullanılan ve okuyucunun ipucu görünmeden önce okuyacağı etiket."
+    },
+    {
+      "label": "Doğru cevap için okuyucu metni",
+      "default": "Doğru!"
+    },
+    {
+      "label": "Yanlış cevap için okuyucu metni",
+      "default": "Yanlış!"
+    },
+    {
+      "label": "Kullanıcının bir bırakma alanını sıfırlama isteği onay iletişim kutusu başlığı",
+      "default": "Bırakma alanını sıfırla"
+    },
+    {
+      "label": "Kullanıcının bir bırakma alanını sıfırlama isteği onay iletişim kutusu açıklaması",
+      "default": "Bu bırakma alanını sıfırlamak istediğinizden emin misiniz?"
+    },
+    {
+      "label": "Okuyucunun sürüklemenin başlatıldığını belirttiği erişilebilirlik için kullanılan etiket",
+      "default": "Sürüklenebilir öge tutuldu"
+    },
+    {
+      "label": "Okuyucunun sürüklemenin iptal edildiğini belirttiği erişilebilirlik için kullanılan etiket",
+      "default": "Sürükleme iptal edildi."
+    },
+    {
+      "label": "Okuyucunun metnin doğru yanıt olduğunu belirttiği erişilebilirlik için kullanılan etiket",
+      "default": "Doğru cevap:"
+    },
+    {
+      "label": "Doğru/yanlış cevaplar için geri bildirim içeren panel başlığı",
+      "default": "Geri Bildirim"
+    },
+    {
+      "label": "Etkinlik Ayarları",
+      "description": "Bu seçenekler, etkinliğin nasıl davranacağını kontrol etmenizi sağlar.",
+      "fields": [
+        {
+          "label": "\"Yeniden dene\"yi etkinleştir"
+        },
+        {
+          "label": "\"Çözüm göster\" düğmesini etkinleştirin"
+        },
+        {
+          "label": "\"Kontrol Et\" düğmesini etkinleştirin"
+        },
+        {
+          "label": "Anlık geri bildirim"
+        }
+      ]
+    },
+    {
+      "label": "Bir okuyucu kullananlar için puan çubuğunun metinsel gösterimi",
+      "default": "Toplam :total puandan, :num puan aldınız"
+    },
+    {
+      "label": "\"Kontrol Et\" düğmesi için yardımcı teknoloji etiketi",
+      "default": "Cevapları kontrol edin. Cevaplar doğru, yanlış veya cevapsız olarak işaretlenecektir."
+    },
+    {
+      "label": "\"Çözüm Göster\" düğmesi için yardımcı teknoloji etiketi",
+      "default": "Çözümü göster. Etkinlik, doğru çözümü ile işaretlenecektir."
+    },
+    {
+      "label": "\"Yeniden Dene\" düğmesi için yardımcı teknoloji etiketi",
+      "default": "Görevi yeniden deneyin. Tüm yanıtları sıfırlayın ve görevi yeniden başlatın."
+    }
+  ]
+}

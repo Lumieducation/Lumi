@@ -1,0 +1,138 @@
+{
+  "semantics": [
+    {
+      "widgets": [
+        {
+          "label": "Numatytasis"
+        }
+      ],
+      "label": "Kortelės",
+      "entity": "kortelė",
+      "field": {
+        "label": "Kortelė",
+        "fields": [
+          {
+            "label": "Paveikslėlis"
+          },
+          {
+            "label": "Alternatyvus paveikslėlio tekstas",
+            "description": "Apibūdinkite, ką galite pamatyti nuotraukoje. Tekstas skaitomas naudojant teksto į kalbą priemones, kurių reikia regėjimo negalią turintiems naudotojams."
+          },
+          {
+            "label": "Garso takelis",
+            "description": "Pasirenkamas garsas, skambantis, kai kortelė pasukama."
+          },
+          {
+            "label": "Atitinkantis paveikslėlis",
+            "description": "Pasirenkamas vaizdas, su kuriuo galima suderinti, o ne naudoti dvi korteles su tuo pačiu vaizdu."
+          },
+          {
+            "label": "Alternatyvus atitinkančio paveikslėlio tekstas",
+            "description": "Apibūdinkite, ką galite pamatyti nuotraukoje. Tekstas skaitomas naudojant teksto į kalbą priemones, kurių reikia regėjimo negalią turintiems naudotojams."
+          },
+          {
+            "label": "Atitinkantis garso takelis",
+            "description": "Pasirenkamas garsas, skambantis, kai pasukama antra kortelė."
+          },
+          {
+            "label": "Aprašymas",
+            "description": "Pasirenkamas trumpas tekstas, kuris pasirodys, kai bus rastos dvi atitinkančios kortelės."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Veikimo nustatymai",
+      "description": "Šios parinktys leis jums valdyti, kaip žaidimas elgsis.",
+      "fields": [
+        {
+          "label": "Padėti korteles į kvadratą",
+          "description": "Sėliojant korteles stengsis, kad atitiktų stulpelių ir eilučių skaičius. Vėliau kortelės bus pakeistos, kad tilptų į konteinerį."
+        },
+        {
+          "label": "Naudojamų kortelių skaičius",
+          "description": "Nustačius šį skaičių didesnį nei 2, žaidimas iš kortelių sąrašo pasirenka atsitiktines korteles."
+        },
+        {
+          "label": "Pridėti mygtuką pakartotiniam bandymui, kai žaidimas pasibaigs"
+        }
+      ]
+    },
+    {
+      "label": "Matyti ir jausti",
+      "description": "Valdyti žaidimo vaizdus.",
+      "fields": [
+        {
+          "label": "Temos spalva",
+          "description": "Pasirinkite spalvą, kad sukurtumėte savo kortelių žaidimo temą."
+        },
+        {
+          "label": "Kortelės nugarėlė",
+          "description": "Kortoms naudoti tinkintą nugarėlę."
+        }
+      ]
+    },
+    {
+      "label": "Lokalizacija",
+      "fields": [
+        {
+          "label": "Kortelės apvertimo tekstas",
+          "default": "Kortelės apvertimas"
+        },
+        {
+          "label": "Praleisto laiko tekstas",
+          "default": "Praleistas laikas"
+        },
+        {
+          "label": "Atsiliepimo tekstas",
+          "default": "Gerai padirbėta!"
+        },
+        {
+          "label": "Bandyti dar kartą mygtuko tekstas",
+          "default": "Bandyti dar kartą?"
+        },
+        {
+          "label": "Uždaryti mygtuko pavadinimas",
+          "default": "Uždaryti"
+        },
+        {
+          "label": "Žaidimo pavadinimas",
+          "default": "Atminties žaidimas. Raskite atitinkančias korteles."
+        },
+        {
+          "label": "Žaidimo instrukcijos",
+          "default": "Rodyklių klavišais į kairę ir į dešinę naršykite korteles. Norėdami pasukti kortelę, naudokite tarpo arba įvesties klavišą."
+        },
+        {
+          "label": "„Žaidimas baigtas“ pavadinimas",
+          "default": "Visos kortelės rastos."
+        },
+        {
+          "label": "Kortelių indeksavimo pavadinimas",
+          "description": "%num ir %total yra pakaitinės žymos, kurios bus pakeistos atitinkamomis kortelės reikšmėmis.",
+          "default": "%num kortelė iš %total:"
+        },
+        {
+          "label": "Neatverstos kortelės pavadinimas",
+          "default": "Neatversta. Paspauskite norėdami atversti."
+        },
+        {
+          "label": "„Kortelė apsukta“ etikete",
+          "default": "Apsukta."
+        },
+        {
+          "label": "„Kortelė sutampa“ pavadinimas",
+          "default": "Atitiktis rasta."
+        },
+        {
+          "label": "Kortelė atitiko skelbimą",
+          "default": "Jūsų kortelės sutampa!"
+        },
+        {
+          "label": "Kortelė neatitinka skelbimo",
+          "default": "Jūsų pasirinktos kortelės nesutampa. Atverskite kitas kortas ir bandykite dar kartą."
+        }
+      ]
+    }
+  ]
+}

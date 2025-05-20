@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "label": "Heading",
+      "default": "Dokumentasjonsverktøy",
+      "description": "Title for the documentation tool."
+    },
+    {
+      "label": "Innhaldselement",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "entity": "Element",
+      "field": {
+        "label": "Innhaldstype",
+        "description": "Bibliotek som vert brukt for dette elementet."
+      }
+    },
+    {
+      "label": "Localize documentation tool buttons",
+      "fields": [
+        {
+          "label": "Previous button label",
+          "default": "Førre documentation step"
+        },
+        {
+          "label": "Next button label",
+          "default": "Neste documentation step"
+        },
+        {
+          "label": "Close button label",
+          "default": "Lukk"
+        }
+      ]
+    }
+  ]
+}

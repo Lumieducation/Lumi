@@ -1,0 +1,43 @@
+{
+  "semantics": [
+    {
+      "label": "Vraag"
+    },
+    {
+      "label": "Meerkeuse tipe",
+      "options": [
+        {
+          "label": "Verskeie antwoorde"
+        },
+        {
+          "label": "Enkele antwoord"
+        }
+      ]
+    },
+    {
+      "label": "Antwoord alternatiewe",
+      "entity": "Alternatiewe",
+      "field": {
+        "label": "Alternatief",
+        "fields": [
+          {
+            "label": "Teks"
+          },
+          {
+            "label": "Terugvoer",
+            "fields": [
+              {
+                "label": "Boodskap wat vertoon as antwoorde verkies word",
+                "description": "'n Boodskap sal onder die antwoord op \"gaan voort\" verskyn as hierdie antwoord gekies word."
+              },
+              {
+                "label": "Boodskap wat vertoon word as antwoord nie gekies word nie",
+                "description": "'n Boodskap sal onder die antwoord op \"gaan voort\" verskyn as hierdie antwoord nie gekies is nie."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

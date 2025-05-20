@@ -1,0 +1,35 @@
+.h5p-open-ended-question-question {
+  position: relative;
+  background: #2880d0;
+  font-size: 1.2em;
+  padding: 0.75em;
+  color: #fff;
+}
+
+.h5p-open-ended-question-content {
+  position: relative;
+  margin: 0;
+  padding: 1em;
+  background-color: #FFF;
+}
+
+.h5p-open-ended-question-question:before {
+  width: 0.75em;
+  height: 0.75em;
+  content: " ";
+  position: absolute;
+  bottom: -0.4em;
+  left: 1em;
+  background: white;
+  transform: rotate(45deg);
+}
+
+.h5p-open-ended-question-input {
+  padding: 0.5em;
+  width: calc(100% - 1em);
+  max-width: 500px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+}
+

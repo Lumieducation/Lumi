@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Introduksjonstekst",
+      "default": "Vel riktig påstand.",
+      "description": "Vil visast øvst i oppsummeringsoppgåva."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Standard"
+        },
+        {
+          "label": "Tekstlig"
+        }
+      ],
+      "label": "Oppsummering",
+      "entity": "påstandar",
+      "field": {
+        "label": "Påstandar",
+        "fields": [
+          {
+            "label": "Påstandar til oppsummeringa - første påstand er riktig.",
+            "entity": "påstand",
+            "field": {
+              "label": "Påstand"
+            }
+          },
+          {
+            "label": "Tips",
+            "fields": [
+              {
+                "label": "Tipstekst"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Bakgrunnsopasitet på flyttbare elementer",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Standard"
+            }
+          ],
+          "label": "Define custom feedback for any score range",
+          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "Score Range"
+              },
+              {},
+              {
+                "label": "Feedback for defined score range",
+                "placeholder": "Fill in the feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tekst som vises før antall påstandar som er løst i oppsummeringsoppgåva.",
+      "default": "Løyst:",
+      "description": "Vil vises over påstandane. Eksempel: 'Løst: 2/5'"
+    },
+    {
+      "label": "Tekst som visast før antall feil påstandar som er valde i oppsummeringsoppgåva.",
+      "default": "Tal feil:",
+      "description": "Vil visast over påstandane. Eksempel: 'Antall feil: 4'"
+    },
+    {
+      "label": "Overskrift over tilbakemelding",
+      "default": "Resultatet ditt:",
+      "description": "Vil visast over tilbakemelding på oppsummeringsoppgåva."
+    },
+    {
+      "label": "Merkelapp for riktig svar",
+      "default": "Riktig"
+    },
+    {
+      "label": "Readspeaker text for announcing incorrect answer",
+      "default": "Feil! Prøv igjen."
+    },
+    {
+      "label": "Readspeaker label for incorrect answer",
+      "default": "Feil"
+    },
+    {
+      "label": "Label list of correct answers",
+      "default": "Riktig svar"
+    },
+    {
+      "label": "Label for the show tip button",
+      "default": "Vis tips"
+    },
+    {
+      "label": "Textual representation of the score bar for those using a readspeaker",
+      "description": ":num and :total are special keywords which are programmatically updated",
+      "default": "Du fekk :num av :total poeng"
+    },
+    {
+      "label": "Text used for readspeakers to communicate progress",
+      "description": ":num and :total are special keywords which are programmatically updated",
+      "default": "Framgang :num av :total"
+    }
+  ]
+}

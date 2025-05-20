@@ -1,0 +1,103 @@
+{
+  "semantics": [
+    {
+      "label": "Elementi vprašalnika",
+      "widgets": [
+        {
+          "label": "Privzeto"
+        }
+      ],
+      "entity": "element",
+      "field": {
+        "label": "Element iz knjižnice",
+        "fields": [
+          {
+            "label": "Knjižnica vprašanj",
+            "description": "Možni tipi vprašanj"
+          },
+          {
+            "label": "Zahtevano polje"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Nastavitve zaslona ob zaključku vprašalnika",
+      "fields": [
+        {
+          "label": "Omogoči zaslon ob zaključku vprašalnika"
+        },
+        {
+          "label": "Dodaj sliko za zaključni zaslon",
+          "fields": [
+            {
+              "label": "Zamenjaj ikono o uspešnem zaključku s sliko po meri"
+            }
+          ]
+        },
+        {
+          "label": "Besedilo za prikaz ob zaključku vprašalnika",
+          "default": "Hvala za sodelovanje."
+        }
+      ]
+    },
+    {
+      "label": "Elementi uporabniškega vmesnika",
+      "fields": [
+        {
+          "label": "Besedila za gumbe",
+          "fields": [
+            {
+              "label": "Besedilo za gumb \"Nazaj\"",
+              "default": "Nazaj"
+            },
+            {
+              "label": "Besedilo za gumb \"Nadaljuj\"",
+              "default": "Nadaljuj"
+            },
+            {
+              "label": "Besedilo za gumb \"Naprej\"",
+              "default": "Naprej"
+            },
+            {
+              "label": "Besedilo za gumb \"Oddaj\"",
+              "default": "Oddaj"
+            }
+          ]
+        },
+        {
+          "label": "Bralnik zaslona",
+          "fields": [
+            {
+              "label": "Besedilo za izhod iz okna z opozorilom",
+              "default": "Zapri opozorilo"
+            },
+            {
+              "label": "Besedilo za indikator napredka",
+              "default": "Vprašanje %current od %max",
+              "description": "Bralnikom zaslonov sporoča trenutno stanje ogleda vprašalnika. %current in %max sta spremenljivki."
+            }
+          ]
+        },
+        {
+          "label": "Besedilo za zahtevan odgovor",
+          "default": "To vprašanje zahteva odgovor",
+          "description": "Sporočilo se pokaže ob neodgovorjenem odgovoru, ki zahteva odziv"
+        },
+        {
+          "label": "Besedilo za oznako zahtevanega odgovora",
+          "default": "zahtevano",
+          "description": "Besedilo se prikaže ob vprašanju in ga spremlja simbol *."
+        },
+        {
+          "label": "Naslov zaslona za potrditev odgovorov in oddajo vprašalnika",
+          "default": "Vprašalnik je uspešno izpolnjen!"
+        },
+        {
+          "label": "Podnaslov zaslona za potrditev odgovorov in oddajo vprašalnika",
+          "default": "S klikom na gumb bodo odgovori oddani"
+        }
+      ]
+    }
+  ]
+}

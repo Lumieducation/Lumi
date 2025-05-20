@@ -1,0 +1,224 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Optional media to display above the question."
+        },
+        {
+          "label": "Disable image zooming"
+        }
+      ]
+    },
+    {
+      "label": "과제 설명",
+      "placeholder": "학습자들이 무엇을 해야 하는지 설명하세요.",
+      "description": "학습자들이 알아야 할 것"
+    },
+    {
+      "label": "문단",
+      "entity": "문단",
+      "field": {
+        "label": "문단"
+      }
+    },
+    {
+      "label": "전체 피드백",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "기본 설정"
+            }
+          ],
+          "label": "가능한 점수 범위에 대한 피드백 사용자 맞춤 정의",
+          "description": "\"범위 더하기\" 버튼을 눌러 필요한 범위를 추가하세요. 예: 0-20% 노력이 많이 필요함, 21-91% 노력이 필요함, 91-100% 훌륭합니다!",
+          "entity": "범위",
+          "field": {
+            "fields": [
+              {
+                "label": "점수 범위"
+              },
+              {},
+              {
+                "label": "정의된 점수 범위에 대한 피드백",
+                "placeholder": "피드백 작성하기"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "과제수행 동작 설정",
+      "description": "이들 선택사항들은 과제가 어떻게 수행되는가를 제어합니다.",
+      "fields": [
+        {
+          "label": "채점 모드",
+          "description": "정확하게 배치된 각 단락에 대해 점수를 부여할지 (\"올바른 배열\") 다음에 배치되어야 하는 각 단락에 대해 점수를 줄지 결정한다.",
+          "options": [
+            {
+              "label": "올바른 배열"
+            },
+            {
+              "label": "올바르게 배열된 문단"
+            }
+          ]
+        },
+        {
+          "label": "벌점 부과",
+          "description": "올바르게 배치되지 않은 각 문단에 대한 감점 여부"
+        },
+        {
+          "label": "상호 교환될 수 있는 문단 중복해서 쓰기",
+          "description": "설정되면 정답을 확인할 때 중복된 문단은 일반 텍스트가 동일할 경우 동일한 것으로 간주됩니다."
+        },
+        {
+          "label": "문단 이동을 위한 버튼 추가",
+          "description": "모바일 기기에서 문단 이동을 위한 버튼은 추가적인 편의성을 제공합니다. 원하지 않으면 여기에서 비활성화할 수 있습니다."
+        },
+        {
+          "label": "\"재시도\" 버튼 활성화"
+        },
+        {
+          "label": "\"해답 보이기\" 버튼 활성화"
+        }
+      ]
+    },
+    {
+      "label": "사용자 인터페이스",
+      "fields": [
+        {
+          "label": "\"Check\" (체크) 버튼에 대한 텍스트",
+          "default": "정답 확인"
+        },
+        {
+          "label": "Text for \"Submit\" button",
+          "default": "Submit"
+        },
+        {
+          "label": "\"Retry\" (재시도) 버튼에 대한 텍스트",
+          "default": "재시도"
+        },
+        {
+          "label": "\"Show solutions\" (해답 보기) 버튼",
+          "default": "해답 보기"
+        },
+        {
+          "label": "\"Up\" (위로) 버튼 제목",
+          "default": "위로"
+        },
+        {
+          "label": "\"Down\" (아래로) 버튼 제목",
+          "default": "아래로"
+        },
+        {
+          "label": "비활성화된 버튼 제목",
+          "default": "비활성화됨"
+        }
+      ]
+    },
+    {
+      "label": "읽어주기 스피커",
+      "fields": [
+        {
+          "label": "\"Check\" 버튼에 대한 보조 기술 설명",
+          "default": "정답을 확인하세요. 답변은 정답 혹은 오답으로 표기될 것입니다."
+        },
+        {
+          "label": "\"Show Solution\" 버튼에 대한 보조 기술 설명",
+          "default": "해답 표시. 올바른 해답이 표기될 것입니다."
+        },
+        {
+          "label": "\"Retry\" 버튼에 대한 보조 기술 설명",
+          "default": "재시도하세요. 모든 답변을 초기화하고 다시 시도하세요."
+        },
+        {
+          "label": "결과",
+          "description": "@score 는 점수로 대체됩니다. @total 은 최대 가능 점수로 대체됩니다.",
+          "default": "총 @total 점에서 @score 점을 획득하였습니다."
+        },
+        {
+          "label": "목록 설명",
+          "default": "배열 가능한 문단 목록"
+        },
+        {
+          "label": "목록 설명(정답 확인)",
+          "default": "결과와 함께 문단 목록 보기"
+        },
+        {
+          "label": "목록 설명(해답 보이기)",
+          "default": "해답과 함께 문단 목록 보기."
+        },
+        {
+          "label": "문단",
+          "default": "문단"
+        },
+        {
+          "label": "정답",
+          "default": "정답"
+        },
+        {
+          "label": "오답",
+          "default": "오답"
+        },
+        {
+          "description": "@score 는 1 혹은 -1 로 대체됩니다.",
+          "label": "점수 설명",
+          "default": "@score 점"
+        },
+        {
+          "description": "@current 는 현재의 문단 수로 대체됩니다. @total 는 문단의 개수로 대체됩니다.",
+          "label": "문단 번호",
+          "default": "총 @total 중 @current "
+        },
+        {
+          "description": "\"문단 번호\" 가 뒤따름",
+          "label": "목록에서 현재 위치",
+          "default": "목록에서 현재 위치"
+        },
+        {
+          "label": "문단이 선택될 때 안내 내용",
+          "default": "순서 재배열시 스페이스바를 누르세요."
+        },
+        {
+          "label": "문단이 드래그될 때 안내 내용",
+          "default": "위 아래 화살표 키를 눌러 위치를 바꾸세요. 위치에 놓기 위해 스페이스 바를 누르고 취소하기 위해서는 이스케이프(esc) 키를 누르세요."
+        },
+        {
+          "label": "드래그됨",
+          "default": "드래그됨"
+        },
+        {
+          "label": "이동됨",
+          "default": "이동됨"
+        },
+        {
+          "label": "위치됨",
+          "default": "위치됨"
+        },
+        {
+          "label": "재배치 취소됨",
+          "default": "재배치 취소됨"
+        },
+        {
+          "description": "\"문단 번호\"가 뒤따라 옵니다.",
+          "label": "최종 위치",
+          "default": "최종 위치"
+        },
+        {
+          "description": "\"정답\" or \"오답\" 이 뒤따라 옵니다.",
+          "label": "다음 문단",
+          "default": "다음 문단"
+        },
+        {
+          "description": "\"문단 번호\"가 뒤따라 옵니다.",
+          "label": "올바른 문단",
+          "default": "위치한 올바른 문단"
+        }
+      ]
+    }
+  ]
+}

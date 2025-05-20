@@ -1,0 +1,295 @@
+{
+  "semantics": [
+    {
+      "label": "Tydlyn",
+      "fields": [
+        {
+          "label": "Hoofopskrif",
+          "description": "Hooftydlynopskrif kom hier (eerste bladsy)"
+        },
+        {
+          "label": "Lyfteks",
+          "description": "Die tydlynteks kom hier (eerste bladsy)."
+        },
+        {
+          "label": "Verstek zoom vlak",
+          "description": "Dit sal die standaardzoomvlak aanpas. Gelyk aan die in- of uitzoom-knoppie om die gespesifiseerde aantal kere te druk. Negatiewe getalle vergroot default is 0"
+        },
+        {
+          "label": "Agtergrondprent",
+          "description": "'n Beeld om as agtergrond te vertoon."
+        },
+        {
+          "label": "Hoogte",
+          "description": "Die hoogte in 'pixels'"
+        },
+        {
+          "label": "Bronne",
+          "description": "Hier kan jy 'n bron by jou tydlyn voeg \"voorblad\"",
+          "fields": [
+            {
+              "label": "Media",
+              "description": "Webskakels (Twitter, YouTube, Flickr, Vimeo, Google Maps en SoundCloud word tans ondersteun)"
+            },
+            {
+              "label": "Erkenning",
+              "description": "Erkenning aan bronne"
+            },
+            {
+              "label": "Byskrif",
+              "description": "Beskrywings van byskrifte kom hier"
+            }
+          ]
+        },
+        {
+          "label": "Datums",
+          "description": "Voeg 'n paar datums by jou tydlyn!",
+          "field": {
+            "label": "Datum",
+            "description": "Datum",
+            "fields": [
+              {
+                "label": "Begindatum",
+                "description": "YYYY,MM,DD (Minimum YYYY word vereis)"
+              },
+              {
+                "label": "Einddatum",
+                "description": "YYYY,MM,DD (Minimum YYYY word vereis)"
+              },
+              {
+                "label": "Hoofopskrif",
+                "description": "Hoofopskrif vir datuminskrywing"
+              },
+              {
+                "label": "Lyfteks",
+                "description": "Lyfteks vir datuminskrywing"
+              },
+              {
+                "label": "Merkers",
+                "description": "Sleutel merker (kategorieë)"
+              },
+              {
+                "label": "Bronne",
+                "fields": [
+                  {
+                    "label": "Media",
+                    "description": "Webskakels (Twitter, YouTube, Flickr, Vimeo, Wikipedia, Google Maps en SoundCloud word tans ondersteun)."
+                  },
+                  {
+                    "label": "Kleinkiekkie",
+                    "description": "Voeg 'n kleinkiekkie indien nodig, 32x32"
+                  },
+                  {
+                    "label": "Erkenning",
+                    "description": "Erkenning aan bronne"
+                  },
+                  {
+                    "label": "Byskrifte",
+                    "description": "Byskrifteks"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Eras",
+          "description": "Voeg 'n era by jou tydlyn",
+          "field": {
+            "label": "Era",
+            "fields": [
+              {
+                "label": "Begindatum",
+                "description": "YYYY,MM,DD (Minimum YYYY word vereis)"
+              },
+              {
+                "label": "Einddatum",
+                "description": "YYYY,MM,DD (Minimum YYYY word vereis)"
+              },
+              {
+                "label": "Hoofopskrif",
+                "description": "Era hoofopskrif"
+              },
+              {
+                "label": "Teks",
+                "description": "Era teks"
+              },
+              {
+                "label": "Merker",
+                "description": "Era merker (kategorieë)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Taal",
+          "description": "Die taal van die gebruikersaansig",
+          "options": [
+            {
+              "label": "Afrikaans"
+            },
+            {
+              "label": "Arabies"
+            },
+            {
+              "label": "Armeens"
+            },
+            {
+              "label": "Baskies"
+            },
+            {
+              "label": "Bulgaars"
+            },
+            {
+              "label": "Katalaans"
+            },
+            {
+              "label": "Chinees"
+            },
+            {
+              "label": "Kroaties / Hrvatski"
+            },
+            {
+              "label": "Tsjeggies"
+            },
+            {
+              "label": "Deens"
+            },
+            {
+              "label": "Nederlands"
+            },
+            {
+              "label": "Engels"
+            },
+            {
+              "label": "Engels (24-uur tyd)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Esties"
+            },
+            {
+              "label": "Faroërs"
+            },
+            {
+              "label": "Farsi"
+            },
+            {
+              "label": "Fins"
+            },
+            {
+              "label": "Frans"
+            },
+            {
+              "label": "Galisies"
+            },
+            {
+              "label": "Georgies"
+            },
+            {
+              "label": "Duits"
+            },
+            {
+              "label": "Grieks"
+            },
+            {
+              "label": "Hebreeus"
+            },
+            {
+              "label": "Hongaars"
+            },
+            {
+              "label": "Yslands"
+            },
+            {
+              "label": "Indonesies"
+            },
+            {
+              "label": "Italiaans"
+            },
+            {
+              "label": "Japanees"
+            },
+            {
+              "label": "Koreaans"
+            },
+            {
+              "label": "Lets"
+            },
+            {
+              "label": "Litaus"
+            },
+            {
+              "label": "Luxemburgs"
+            },
+            {
+              "label": "Maleis"
+            },
+            {
+              "label": "Nepalees"
+            },
+            {
+              "label": "Noors"
+            },
+            {
+              "label": "Pools"
+            },
+            {
+              "label": "Portugees"
+            },
+            {
+              "label": "Portugees (Brasiliaans)"
+            },
+            {
+              "label": "Romeins"
+            },
+            {
+              "label": "Russies"
+            },
+            {
+              "label": "Serwies - Cyrillies"
+            },
+            {
+              "label": "Serwies - Latyn"
+            },
+            {
+              "label": "Singalees"
+            },
+            {
+              "label": "Slowaaks"
+            },
+            {
+              "label": "Sloweens"
+            },
+            {
+              "label": "Spaans"
+            },
+            {
+              "label": "Sweeds"
+            },
+            {
+              "label": "Tagalog"
+            },
+            {
+              "label": "Tamil"
+            },
+            {
+              "label": "Taiwanees"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Turks"
+            },
+            {
+              "label": "Oekraïens"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

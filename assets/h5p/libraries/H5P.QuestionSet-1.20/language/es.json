@@ -1,0 +1,278 @@
+{
+  "semantics": [
+    {
+      "label": "Introducción al cuestionario",
+      "fields": [
+        {
+          "label": "Mostrar introducción"
+        },
+        {
+          "label": "Título",
+          "description": "Este título se mostrará encima del texto de introducción."
+        },
+        {
+          "label": "Texto de introducción",
+          "description": "Este texto se mostrará antes de que comience el cuestionario."
+        },
+        {
+          "label": "Texto del botón de inicio",
+          "default": "Iniciar prueba"
+        },
+        {
+          "label": "Imagen de Fondo",
+          "description": "Una imagen de fondo opcional para la introducción."
+        }
+      ]
+    },
+    {
+      "label": "Imagen de fondo",
+      "description": "Una imagen de fondo opcional para el Conjunto de preguntas."
+    },
+    {
+      "label": "Indicador del progreso",
+      "description": "Estilo del indicador del progreso para el Conjunto de preguntas.",
+      "options": [
+        {
+          "label": "Textual"
+        },
+        {
+          "label": "Puntos"
+        }
+      ]
+    },
+    {
+      "label": "Porcentaje para aprobar",
+      "description": "Porcentaje de la puntuación total requerido para pasar el examen."
+    },
+    {
+      "label": "Preguntas",
+      "widgets": [
+        {
+          "label": "Por defecto"
+        },
+        {
+          "label": "Textual"
+        }
+      ],
+      "entity": "pregunta",
+      "field": {
+        "label": "Tipo de pregunta",
+        "description": "Biblioteca para esta pregunta."
+      }
+    },
+    {
+      "label": "Textos de interfaz en cuestionario",
+      "fields": [
+        {
+          "label": "Botón de retroceso",
+          "default": "Pregunta anterior"
+        },
+        {
+          "label": "Botón Siguiente",
+          "default": "Pregunta siguiente"
+        },
+        {
+          "label": "Botón Terminar",
+          "default": "Terminar"
+        },
+        {
+          "label": "Botón Enviar",
+          "default": "Enviar"
+        },
+        {
+          "label": "Texto del progreso",
+          "description": "Texto utilizado si se selecciona progreso textual.",
+          "default": "Pregunta: @current de @total preguntas"
+        },
+        {
+          "label": "Etiqueta para saltar a una pregunta dada",
+          "description": "Debes usar el marcador \"%d\"; en lugar del número de pregunta y %total en lugar de la cantidad total de preguntas.",
+          "default": "Pregunta %d de %total"
+        },
+        {
+          "label": "Etiqueta de diálogo de Copyright de pregunta",
+          "default": "Pregunta"
+        },
+        {
+          "label": "Progreso para lector de pantalla",
+          "description": "Puedes usar @current y @total como variables de pregunta",
+          "default": "Pregunta @current de @total"
+        },
+        {
+          "label": "Texto de pregunta no contestada",
+          "default": "No contestada"
+        },
+        {
+          "label": "Texto de pregunta contestada",
+          "default": "Contestada"
+        },
+        {
+          "label": "Texto de pregunta actual",
+          "default": "Pregunta actual"
+        },
+        {
+          "label": "Etiqueta de navegación para lectores de pantalla",
+          "default": "Preguntas"
+        }
+      ]
+    },
+    {
+      "label": "Deshabilitar navegación hacia atrás",
+      "description": "Esta opción solamente te permitirá moverte hacia adelante en conjunto de preguntas"
+    },
+    {
+      "label": "Barajar preguntas",
+      "description": "Habilitar para barajar el orden de preguntas mostradas."
+    },
+    {
+      "label": "Número de preguntas a mostrar:",
+      "description": "Crear un lote aleatorio de preguntas a partir del total."
+    },
+    {
+      "label": "Cuestionario terminado",
+      "fields": [
+        {
+          "label": "Mostrar resultados"
+        },
+        {
+          "label": "Mostrar botón Solución"
+        },
+        {
+          "label": "Mostrar botón intentar de nuevo"
+        },
+        {
+          "label": "Mensaje para Sin resultados",
+          "description": "Texto mostrado en página final cuando está deshabilitado \"Mostrar resultados\"",
+          "default": "Terminado"
+        },
+        {
+          "label": "Encabezado de Retroalimentación",
+          "default": "Tu resultado:",
+          "description": "Este encabezado se mostrará al final del cuestionario cuando el usuario haya respondido todas las preguntas."
+        },
+        {
+          "label": "Anunciador de la puntuación",
+          "description": "Esta etiqueta se utilizará para anunciar la puntuación final al usuario en la pantalla final",
+          "default": "Has conseguido @finals de @totals puntos"
+        },
+        {
+          "label": "Retroalimentación Global",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Por defecto"
+                }
+              ],
+              "label": "Definir retroalimentación personalizada para cualquier rango de puntuación",
+              "description": "Haz clic en el botón \"Agregar rango\" para agregar tantos rangos como necesites. Ejemplo: 0-20% puntuación mala, 21-91% puntuación media, 91-100% puntuación excelente!",
+              "entity": "rango",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Rango del Puntuación"
+                  },
+                  {},
+                  {
+                    "label": "Retroalimentación para rango de puntuación definido",
+                    "placeholder": "Escribe tu retroalimentación"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Retroalimentación Antigua",
+          "fields": [
+            {
+              "label": "Felicitación para cuestionario aprobado",
+              "description": "Este texto se mostrará encima de la puntuación si el usuario ha superado correctamente la prueba."
+            },
+            {
+              "label": "Comentario para Aprobado",
+              "description": "Este comentario se mostrará después de la puntuación si el usuario ha superado correctamente la prueba."
+            },
+            {
+              "label": "Título para cuestionario no aprobado",
+              "description": "Este texto se mostrará encima de la puntuación si el usuario no ha superado la prueba."
+            },
+            {
+              "label": "Comentario para no aprobado",
+              "description": "Este comentario se mostrará después de la puntuación si el usuario no ha superado la prueba."
+            }
+          ]
+        },
+        {
+          "label": "Etiqueta botón Solución",
+          "default": "Mostrar solución",
+          "description": "Texto para el botón de Solución."
+        },
+        {
+          "label": "Etiqueta botón Intentar de nuevo",
+          "default": "Intentar de nuevo",
+          "description": "Texto para el botón \"Intentar de nuevo\"."
+        },
+        {
+          "label": "Texto botón Terminar",
+          "default": "Terminar"
+        },
+        {
+          "label": "Texto del botón Enviar",
+          "default": "Enviar"
+        },
+        {
+          "label": "Mostrar vídeo antes de resultados del cuestionario"
+        },
+        {
+          "label": "Botón habilitar saltar vídeo"
+        },
+        {
+          "label": "Etiqueta botón Saltar vídeo",
+          "default": "Saltar vídeo"
+        },
+        {
+          "label": "Vídeo para aprobado",
+          "description": "Este vídeo se reproducirá si el usuario ha aprobado la prueba."
+        },
+        {
+          "label": "Vídeo para no aprobado",
+          "description": "Este vídeo se reproducirá si el usuario no ha superado la prueba."
+        }
+      ]
+    },
+    {
+      "label": "Configuración para los botones \"Comprobar\", \"Mostrar solución\" e \"Intentar de nuevo\"",
+      "fields": [
+        {
+          "label": "Mostrar botones \"Comprobar\"",
+          "description": "Esta opción determina si se mostrará un botón para \"Comprobar\" en todas las preguntas."
+        },
+        {
+          "label": "Anular el botón \"Mostrar Solución\"",
+          "description": "Esta opción determina si el botón \"Mostrar solución\" se muestra en todas las preguntas, se desactiva para todas, o se configura para cada pregunta individualmente.",
+          "options": [
+            {
+              "label": "Habilitado"
+            },
+            {
+              "label": "Deshabilitado"
+            }
+          ]
+        },
+        {
+          "label": "Anular botón \"Intentar de nuevo\"",
+          "description": "Esta opción determina si el botón \"Intentar de nuevo\" se muestra para todas las preguntas, se desactiva para todas o se configura para cada pregunta individualmente.",
+          "options": [
+            {
+              "label": "Habilitado"
+            },
+            {
+              "label": "Deshabilitado"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

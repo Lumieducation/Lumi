@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Bilder",
+      "field": {
+        "label": "Bild",
+        "fields": [
+          {
+            "label": "Bild"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Bildförhållande",
+      "description": "Automatisk innebär att bildförhållandet automatiskt sätts utifrån bilderna",
+      "options": [
+        {
+          "label": "Automatisk"
+        },
+        {
+          "label": "Anpassad"
+        },
+        {
+          "label": "Inte fast"
+        }
+      ]
+    },
+    {
+      "label": "Inställningar för bildförhållande",
+      "fields": [
+        {
+          "label": "Bredd för bildförhållande",
+          "description": "Om du använder 4 här, och 3 för höjd så kommer bildförhållandet bli 4:3"
+        },
+        {
+          "label": "Höjd för bildförhållande",
+          "description": "Om du använder 3 här, och 4 för bredd så kommer bildförhållandet bli 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Tillgänglighet för Image slider",
+      "fields": [
+        {
+          "label": "Etikett för nästa-bild-knappar",
+          "default": "Nästa bild",
+          "description": "Detta används endast för skärmläsare. Texten kommer inte visas."
+        },
+        {
+          "label": "Etikett för föregående-sida-knappar",
+          "default": "Föregående sida",
+          "description": "Detta används endast av skärmläsare. Texten kommer inte att visas."
+        },
+        {
+          "label": "Etikett för bild-knappar",
+          "default": "Gå til bild %slide",
+          "description": "Detta används endast av skärmläsare. Texten kommer inte att visas. %slide är en variabel och kommer att bytas ut till bildnumret."
+        }
+      ]
+    }
+  ]
+}

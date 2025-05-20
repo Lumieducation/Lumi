@@ -1,0 +1,163 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Optionele media, die boven de vraag wordt getoond."
+        },
+        {
+          "label": "Beeld zoomen uitschakelen"
+        }
+      ]
+    },
+    {
+      "label": "Vraag"
+    },
+    {
+      "label": "Juist antwoord",
+      "options": [
+        {
+          "label": "Waar"
+        },
+        {
+          "label": "Niet Waar"
+        }
+      ]
+    },
+    {
+      "label": "Vertalingen van de gebruikersinterface voor Juist/onjuist-vragen",
+      "fields": [
+        {
+          "label": "Label voor \"Juist\"-knop",
+          "default": "Juist"
+        },
+        {
+          "label": "Label voor \"Onjuist\"-knop",
+          "default": "Onjuist"
+        },
+        {
+          "label": "Feedbacktekst",
+          "default": "Je hebt @score van @total punten",
+          "description": "Feedbacktekst, beschikbare variabelen: @score en @total. Voorbeeld: 'Je hebt @score van @total mogelijke punten.'"
+        },
+        {
+          "label": "Tekst voor \"Controleer\"-knop",
+          "default": "Controleer"
+        },
+        {
+          "label": "Tekst voor \"Verzend\"-knop",
+          "default": "Verzend"
+        },
+        {
+          "label": "Tekst voor \"Toon oplossing\"-knop",
+          "default": "Toon oplossing"
+        },
+        {
+          "label": "Tekst voor \"Opnieuw\"-knop",
+          "default": "Opnieuw"
+        },
+        {
+          "label": "Onjuist antwoord",
+          "default": "Onjuist antwoord"
+        },
+        {
+          "label": "Juist antwoord",
+          "default": "Juist antwoord"
+        },
+        {
+          "label": "Tekstuele weergave van de scorebalk voor de gebruikers van de schermlezer",
+          "default": "Je hebt :num van de :total punten"
+        },
+        {
+          "label": "Ondersteunende technologie beschrijving voor \"Controleer\" knop",
+          "default": "Controleer de antwoorden. De antwoorden worden gemarkeerd als juist, onjuist, of niet-beantwoord."
+        },
+        {
+          "label": "Ondersteunende technologie beschrijving voor \"Toon oplossing\"-knop",
+          "default": "Toon de oplossing. De taak wordt gemarkeerd met de juiste oplossing."
+        },
+        {
+          "label": "Ondersteunende technologie beschrijving voor \"Opnieuw\"-knop",
+          "default": "Probeer de taak opnieuw. Reset alle antwoorden en start de taak opnieuw."
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstelllingen",
+      "description": "Met deze opties kun je bepalen hoe de taak zich gedraagt.",
+      "fields": [
+        {
+          "label": "Schakel \"Opnieuw\"-knop in"
+        },
+        {
+          "label": "Schakel \"Toon oplossing\"-knop in"
+        },
+        {
+          "label": "Schakel \"Controleer\"-knop in"
+        },
+        {
+          "label": "Toon bevestigingsdialoog bij \"Controleer\""
+        },
+        {
+          "label": "Toon bevestigingsdialoog bij \"Opnieuw\""
+        },
+        {
+          "label": "Antwoord automatisch controleren",
+          "description": "Als deze optie ingeschakeld wordt, zal dit de toegankelijkheid verminderen"
+        },
+        {
+          "label": "Feedback bij het juiste antwoord",
+          "description": "Deze tekst overschrijft de standaard feedbacktekst. Beschikbare variabelen zijn: @score en @total"
+        },
+        {
+          "label": "Feedback bij het onjuiste antwoord",
+          "description": "Deze tekst overschrijft de standaard feedbacktekst. Beschikbare variabelen zijn: @score en @total"
+        }
+      ]
+    },
+    {
+      "label": "Bevestigingsdialoog voor Controleer",
+      "fields": [
+        {
+          "label": "Koptekst",
+          "default": "Stoppen?"
+        },
+        {
+          "label": "Hoofdtekst",
+          "default": "Weet je zeker dat je wilt stoppen?"
+        },
+        {
+          "label": "Tekst van \"Annuleer\"-knop",
+          "default": "Annuleer"
+        },
+        {
+          "label": "Tekst van \"Bevestig\"-knop",
+          "default": "Stoppen"
+        }
+      ]
+    },
+    {
+      "label": "Bevestigingsdialoog voor \"Opnieuw\"",
+      "fields": [
+        {
+          "label": "Koptekst",
+          "default": "Opnieuw?"
+        },
+        {
+          "label": "Hoofdtekst",
+          "default": "Weet je zeker dat je het opnieuw wilt proberen?"
+        },
+        {
+          "label": "Label van \"Annuleer\"-knop",
+          "default": "Annuleer"
+        },
+        {
+          "label": "Label van \"Bevestig\"-knop",
+          "default": "Bevestig"
+        }
+      ]
+    }
+  ]
+}

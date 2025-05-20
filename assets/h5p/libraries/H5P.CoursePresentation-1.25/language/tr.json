@@ -1,0 +1,411 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "field": {
+            "fields": [
+              {
+                "field": {
+                  "fields": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                      "label": "Yorumlar",
+                      "description": "Yorumlar, kullanıcı bütün slaytlar için önerilen yanıtları görüntülediğinde gösterilir."
+                    },
+                    {
+                      "label": "Yorumları her zaman göster"
+                    },
+                    {
+                      "label": "Arkaplan Opaklığı"
+                    },
+                    {
+                      "label": "Buton olarak göster"
+                    },
+                    {
+                      "label": "Buton boyutu",
+                      "options": [
+                        {
+                          "label": "Küçük"
+                        },
+                        {
+                          "label": "Büyük"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Başlık"
+                    },
+                    {
+                      "label": "Git",
+                      "options": [
+                        {
+                          "label": "Özel slayt numarası"
+                        },
+                        {
+                          "label": "Sonraki slayt"
+                        },
+                        {
+                          "label": "Önceki slayt"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Özel slayt numarası",
+                      "description": "Gidilecek slayt numarasını yaz"
+                    },
+                    {
+                      "label": "Görünmez",
+                      "description": "Başlıksız ve sekme sıralaması olmadan varsayılan imleç. Uyarı: Engelli kullanıcılar veya sadece klavyeden kullanan kullanıcılar zorlanır."
+                    }
+                  ]
+                }
+              },
+              {},
+              {
+                "fields": [
+                  {
+                    "label": "Görsel",
+                    "description": "En boy oranının korunması için görsel arka plan genişliği, yüksekliğinin iki katı olmalıdır. Yüksek çözünürlüklü görseller daha büyük ekranlarda daha iyi görüntülenecektir."
+                  },
+                  {
+                    "label": "Bir renk seçin"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Anahtar kelime listesi"
+        },
+        {
+          "label": "Her zaman göster"
+        },
+        {
+          "label": "Otomatik olarak gizle"
+        },
+        {
+          "label": "Opaklık"
+        },
+        {
+          "fields": [
+            {
+              "label": "Görsel",
+              "description": "En boy oranının korunması için görsel arka plan genişliği, yüksekliğinin iki katı olmalıdır. Yüksek çözünürlüklü görseller daha büyük ekranlarda daha iyi görüntülenecektir."
+            },
+            {
+              "label": "Bir renk seçin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Dil Ayarları",
+      "fields": [
+        {
+          "label": "\"Slide\" çevirisi",
+          "default": "Slayt"
+        },
+        {
+          "label": "\"Score\" çevirisi",
+          "default": "Puan"
+        },
+        {
+          "label": "\"Your Score\" çevirisi",
+          "default": "Puanınız"
+        },
+        {
+          "label": "\"Max Score\" çevirisi",
+          "default": "En fazla puan"
+        },
+        {
+          "label": "\"Total\" çevirisi",
+          "default": "Toplam"
+        },
+        {
+          "label": "\"Total Score\" çevirisi",
+          "default": "Toplam Puan"
+        },
+        {
+          "label": "Çözümleri göster butonunun başlığı",
+          "default": "Çözümleri göster"
+        },
+        {
+          "label": "Yeniden dene butonunun metni",
+          "default": "Yeniden dene"
+        },
+        {
+          "label": "Metni dışarıya aktar butonunun metni",
+          "default": "Metni dışarıya aktar"
+        },
+        {
+          "label": "Anahtar kelimeler listesini gizle butonu metni",
+          "default": "Anahtar kelimeler listesini gizle"
+        },
+        {
+          "label": "Anahtar kelimeler listesini göster butonu başlığı",
+          "default": "Anahtar kelimeler listesini göster"
+        },
+        {
+          "label": "Tam ekran etiketi",
+          "default": "Tam ekran"
+        },
+        {
+          "label": "Tam ekrandan çık etiketi",
+          "default": "Tam ekrandan çık"
+        },
+        {
+          "label": "Önceki slayt etiketi",
+          "default": "Önceki slayt"
+        },
+        {
+          "label": "Sonraki slayt etiketi",
+          "default": "Sonraki slayt"
+        },
+        {
+          "label": "Şu anki slayt etiketi",
+          "default": "Şu anki slayt"
+        },
+        {
+          "label": "Son slayt etiketi",
+          "default": "Son slayt"
+        },
+        {
+          "label": "Çözüm modundan çık metni",
+          "default": "Çözüm modundan çık"
+        },
+        {
+          "label": "Çözüm modu metni",
+          "default": "Çözüm Modu"
+        },
+        {
+          "label": "Bir sayfada birden çok görev olduğu zaman gösterilecek metin",
+          "default": "Çoklu görev"
+        },
+        {
+          "label": "Skor mesaj metni",
+          "default": "Başardınız:"
+        },
+        {
+          "label": "Facebook'ta paylaş metni",
+          "default": "Facebook'ta paylaş"
+        },
+        {
+          "label": "Twitter'da paylaş metni",
+          "default": "Twitter'da paylaş"
+        },
+        {
+          "label": "Google+'ta paylaş metni",
+          "default": "Google+'ta paylaş"
+        },
+        {
+          "label": "Özet slaytının başlığı",
+          "default": "Özet"
+        },
+        {
+          "label": "Yorumları göster simgesinin başlığı",
+          "default": "Yorumları göster"
+        },
+        {
+          "label": "Yazdır butonunun başlığı",
+          "default": "Yazdır"
+        },
+        {
+          "label": "Yazdırma diyalog kutucuğunun girişi",
+          "default": "Bu sunumu nasıl yazdırmak istersiniz?"
+        },
+        {
+          "label": "\"Bütün slaytları yazdır\" butonunun etiketi",
+          "default": "Bütün slaytları yazdır"
+        },
+        {
+          "label": "\"Şu anki slaytı yazdır\" butonunun etiketi",
+          "default": "Şu anki slaytı yazdır"
+        },
+        {
+          "label": "Başlığı olmayan slaytlar için etiket",
+          "default": "Başlıksız"
+        },
+        {
+          "label": "Yardımcı teknolojiler için slayt yönlendirmelerinin açıklaması",
+          "default": "Kanvas seçili olduğunda slaytı o yönde değiştirmek için sol ve sağ yön oklarını kullanın."
+        },
+        {
+          "label": "Yardımcı teknolojiler için kanvas etiketi",
+          "default": "Sunum kanvası. Slaytlar arası geçiş yapmak için sol ve sağ yön oklarını kullanın."
+        },
+        {
+          "label": "Progressbar label for assistive technologies",
+          "default": "Choose slide to display"
+        },
+        {
+          "label": "Tamamlanmamış etkileşim olduğunda gösterilecek etiket",
+          "default": "@slideName tamamlanmamış etkinlik içeriyor"
+        },
+        {
+          "label": "Tamamlanmış etkileşim olduğunda gösterilecek etiket",
+          "default": "@slideName tamamlanmış etkileşim içeriyor"
+        },
+        {
+          "label": "Slayt sayacı etiketi. Değişkenler: @index, @total",
+          "default": "Slayt @index / @total"
+        },
+        {
+          "label": "Sadece doğru yanıt içeren slaytlar için etiket",
+          "default": "@slideName sadece doğru yanıtları içeriyor"
+        },
+        {
+          "label": "Sadece yanlış cevap içeren slaytlar için etiket",
+          "default": "@slideName sadece yanlış yanıtları içeriyor"
+        },
+        {
+          "label": "Sosyal paylaşım çubuğu etiketi",
+          "default": "Sonucu Paylaş"
+        },
+        {
+          "label": "Yardımcı teknolojiler için toplam puan duyurusu",
+          "default": "@maxScore üzerinden toplamda @score puan aldınız",
+          "description": "Mevcut değişkenler: @score ve @maxScore"
+        },
+        {
+          "label": "Yardımcı teknolojiler için tam ekrana geçildi duyurusu",
+          "default": "Tam ekran moduna geçildi"
+        },
+        {
+          "label": "Yardımcı teknolojiler için tam ekrandan çıkıldı duyurusu",
+          "default": "Tam ekran modundan çıkıldı."
+        },
+        {
+          "label": "Header of submit result confirmation dialog",
+          "default": "Submit your answers"
+        },
+        {
+          "label": "Text of submit result confirmation dialog",
+          "default": "This will submit your results, do you want to continue?"
+        },
+        {
+          "label": "Confirmation button of submit result confirmation dialog",
+          "default": "Submit and see results"
+        },
+        {
+          "label": "Slideshow navigation",
+          "default": "Slideshow navigation"
+        },
+        {
+          "label": "Confirm button label",
+          "default": "Confirm"
+        },
+        {
+          "label": "Cancel button label",
+          "default": "Cancel"
+        }
+      ]
+    },
+    {
+      "label": "Çalışma ayarları.",
+      "description": "Bu seçenekler uygulamanın çalışma ayarlarını değiştirmenize olanak sağlar.",
+      "fields": [
+        {
+          "label": "Etkin Kontrol Modunu Etkinleştirin",
+          "description": "Removes navigation controls for the end user. Use Go To Slide to navigate. Summary is not available in this mode."
+        },
+        {
+          "label": "Özet Slaytını Gizle",
+          "description": "Özet slaytını gizler."
+        },
+        {
+          "label": "\"Çözümü Göster\" butonu ayarlarını yok say.",
+          "description": "Tercihe göre \"Çözümü Göster\" butonu bütün sorular için gösterilir, devre dışı bırakılır veya her bir soru için ayrı ayrı ayarlanır.",
+          "options": [
+            {
+              "label": "Devrede"
+            },
+            {
+              "label": "Devredışı"
+            }
+          ]
+        },
+        {
+          "label": "\"Yeniden dene\"butonu ayarlarını yoksay.",
+          "description": "Tercihe göre \"Yeniden dene\" butonu bütün sorular için gösterilir, devre dışı bırakılır veya her bir soru için ayrı ayrı ayarlanır.",
+          "options": [
+            {
+              "label": "Devrede"
+            },
+            {
+              "label": "Devredışı"
+            }
+          ]
+        },
+        {
+          "label": "Özet slaytta \"Çözümü göster\" butonunu göster",
+          "description": "Etkinleştirilirse, öğrenci özet slaytına ulaştığında bütün sorular için çözümleri görüntüleyebilir."
+        },
+        {
+          "label": "Özet slaytta \"Yeniden dene\" butonunu göster",
+          "description": "Etkinleştirilirse, öğrenci özet slaytına ulaştığında tüm soruları yeniden yanıtlayabilir. Bu buton aktif olmasa bile öğrenciler sayfayı yenileyerek soruları yeniden yanıtlayabilirler."
+        },
+        {
+          "label": "Yazdırma butonunu etkinleştir",
+          "description": "Yazdırma butonunu etkinleştirir."
+        },
+        {
+          "label": "Sosyal Paylaşım Ayarları",
+          "description": "Bu seçenekler, sosyal paylaşım ayarlarını denetlemenize izin verir. Bir bağlantı sağlanırsa boş değerler otomatik olarak değiştirilir. Bir bağlantı sağlanmazsa varsayılan değerlerle oluşturulur.",
+          "fields": [
+            {
+              "label": "Facebook paylaşım simgesini göster"
+            },
+            {
+              "label": "Facebook paylaşım ayarları",
+              "fields": [
+                {
+                  "label": "Facebook'ta paylaşılacak bağlantı",
+                  "default": "@currentpageurl"
+                },
+                {
+                  "label": "Facebook'ta paylaşılacak metin",
+                  "default": "@currentpageurl sayfasındaki bir etkinlikte @maxScore üzerinden @score puan aldım."
+                }
+              ]
+            },
+            {
+              "label": "Twitter paylaşım simgesini göster"
+            },
+            {
+              "label": "Twitter paylaşım ayarları",
+              "fields": [
+                {
+                  "label": "Twitter'da paylaşılacak metin",
+                  "default": "@currentpageurl sayfasındaki bir etkinlikte @maxScore üzerinden @score puan aldım."
+                },
+                {
+                  "label": "Twitter'da paylaşılacak bağlantı",
+                  "default": "@currentpageurl"
+                },
+                {
+                  "label": "Twitter'da paylaşılacak etiketler",
+                  "default": "h5p, kurs"
+                }
+              ]
+            },
+            {
+              "label": "Google+ paylaşım simgesini göster"
+            },
+            {
+              "label": "Google'da paylaşılacak bağlantı",
+              "default": "@currentpageurl"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

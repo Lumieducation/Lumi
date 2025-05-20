@@ -1,0 +1,205 @@
+{
+  "semantics": [
+    {
+      "label": "Aktivera bokomslag",
+      "description": "Ett bokomslag som visar information om boken"
+    },
+    {
+      "label": "Omslagssida",
+      "fields": [
+        {
+          "label": "Omslagets beskrivning",
+          "description": "Denna text beskriver din bok."
+        },
+        {
+          "label": "Media på bokomslag",
+          "description": "Valfri media att visa på bokomslaget."
+        }
+      ]
+    },
+    {
+      "label": "Sidor",
+      "entity": "Sida",
+      "widgets": [
+        {
+          "label": "Standard"
+        }
+      ],
+      "field": {
+        "label": "Post",
+        "fields": [
+          {
+            "label": "Sida"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Beteende-inställningar",
+      "fields": [
+        {
+          "label": "Grundfärg",
+          "description": "Ange grundfärgen som kommer att definiera det övergripande färgschemat på boken. Försök försäkra dig om tillräckligt hög kontrast."
+        },
+        {
+          "label": "Visa innehållsförteckning som standard",
+          "description": "När aktiverat så visas innehållsförteckningen vid öppning av boken"
+        },
+        {
+          "label": "Visa framstegsindikatorer",
+          "description": "När aktiverat så visas framstegsindikatorer på varje sida, som visar användaren om sidan är färdig eller inte."
+        },
+        {
+          "label": "Aktivera automatisk framsteg",
+          "description": "När aktiverat så kommer en sida utan uppgifter att betraktas som genomförd när den är visad.En sida med uppgifter är genomförd när alla uppgifter är genomförda. När inaktiverat så kommer det finnas en knapp längst ned på varje sida där användaren kan klicka när denne är färdig med sidan."
+        },
+        {
+          "label": "Visa sammanfattning",
+          "description": "När aktiverat så kan användaren se en sammanfattning och skicka in sina framsteg/ svar."
+        },
+        {
+          "label": "Aktivera knapp för \"Starta om\"",
+          "description": "När aktiverat, så kan användaren starta om från sammanfattningssidan."
+        }
+      ]
+    },
+    {
+      "label": "Översättning för \"Läsa\"",
+      "default": "Läsa"
+    },
+    {
+      "label": "Översättning för \"Visa 'Innehållsförteckning'\"",
+      "default": "Visa 'Innehållsförteckning'"
+    },
+    {
+      "label": "Överstättning för \"Dölj 'Innehållsförteckning'\"",
+      "default": "Dölj 'Innehållsförteckning'"
+    },
+    {
+      "label": "Översättning för \"Nästa sida\"",
+      "default": "Nästa sida"
+    },
+    {
+      "label": "Översättning för \"Föregående sida\"",
+      "default": "Föregående sida"
+    },
+    {
+      "label": "Översättning för \"Sida genomförd!\"",
+      "default": "Sida genomförd!"
+    },
+    {
+      "label": "Översättning för \"@pages av @total genomförda\" (@pages och @total kommer ersättas med riktiga värden)",
+      "default": "@pages av @total genomförda"
+    },
+    {
+      "label": "Översättning för \"Ej genomförd sida\"",
+      "default": "Ej genomförd sida"
+    },
+    {
+      "label": "Översättning för \"Navigera till toppen\"",
+      "default": "Navigera till toppen"
+    },
+    {
+      "label": "Översättnin för \"Jag har genomfört denna sida\"",
+      "default": "Jag har genomfört denna sida"
+    },
+    {
+      "label": "Etikett för knapp för helskärmsläge",
+      "default": "Helskärmsläge"
+    },
+    {
+      "label": "Etikett för knapp för avsluta helskärmsläge",
+      "default": "Avsluta helskärmsläge"
+    },
+    {
+      "label": "Framsteg på sidor i bok",
+      "description": "\"@count\" kommer ersättas med antalet sidor, och \"@total\" med totala antalet sidor",
+      "default": "@count av @total sidor"
+    },
+    {
+      "label": "Framsteg i interaktiva övningar",
+      "description": "\"@count\" kommer ersättas med antalet interaktiva övningar, och \"@total\" med totala antalet interaktiva övningar",
+      "default": "@count av @total interaktiva övningar"
+    },
+    {
+      "label": "Översättning för \"Skicka in rapport\"",
+      "default": "Skicka in rapport"
+    },
+    {
+      "label": "Etikett för \"starta om\"-knapp",
+      "default": "Starta om"
+    },
+    {
+      "label": "Rubrik för sammanfattning",
+      "default": "Sammanfattning"
+    },
+    {
+      "label": "Översättning för \"Alla interaktiva övningar\"",
+      "default": "Alla interaktiva övningar"
+    },
+    {
+      "label": "Översättning för \"Obesvarade interaktiva övningar\"",
+      "default": "Obesvarade interaktiva övningar"
+    },
+    {
+      "label": "Poäng",
+      "description": "\"@score\" kommer att ersättas med aktuell poäng, och \"@maxscore\" ersättas med max poäng som kan uppnås",
+      "default": "@score / @maxscore"
+    },
+    {
+      "label": "Genomförande av interaktiva övningar per sida",
+      "description": "\"@left\" kommer att ersättas med återstående interaktiva övningar, och \"@max\" ersättas med totala antalet interaktiva övningar på sidan",
+      "default": "@left of @max interaktiva övningar genomförda"
+    },
+    {
+      "label": "Översättning för \"Inga interaktiva övningar\"",
+      "default": "Inga interaktiva övningar"
+    },
+    {
+      "label": "Översättning för \"Poäng\"",
+      "default": "Poäng"
+    },
+    {
+      "label": "Etikett för \"Sammanfattning och skicka in\"-knapp",
+      "default": "Sammanfattning och skicka in"
+    },
+    {
+      "label": "Översättning för \"Du har inte genomfört interaktiv övning på någon sida.\"",
+      "default": "Du har inte genomfört interaktiv övning på någon sida."
+    },
+    {
+      "label": "Översättning för \"Du måste genomföra åtminstone en sidas interaktiva övningar innan du kan se sammanfattningen.\"",
+      "default": "Du måste genomföra åtminstone en sidas interaktiva övningar innan du kan se sammanfattningen."
+    },
+    {
+      "label": "Översättning för \"Dina svar har skickats in för granskning!\"",
+      "default": "Dina svar har skickats in för granskning!"
+    },
+    {
+      "label": "Etikett för sammanfattning av framsteg",
+      "default": "Framsteg i bok"
+    },
+    {
+      "label": "Etikett för framsteg i interaktiva övningar",
+      "default": "Framsteg i interaktiva övningar"
+    },
+    {
+      "label": "Etikett för total poäng",
+      "default": "Total poäng"
+    },
+    {
+      "label": "Tillgänglighets-texter",
+      "fields": [
+        {
+          "label": "Text-alternativ till framsteg på sida",
+          "description": "En alternativ text för visualiseringen av framsteg på sida. @page och @total variabler finns att använda.",
+          "default": "Sida @page av @total."
+        },
+        {
+          "label": "Etikett för att expandera/komprimera navigeringsmenyn",
+          "default": "Växla läge på navigationsmeny"
+        }
+      ]
+    }
+  ]
+}

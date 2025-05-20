@@ -1,0 +1,163 @@
+{
+  "semantics": [
+    {
+      "label": "Mediji",
+      "fields": [
+        {
+          "label": "Tip",
+          "description": "Neobvezna nastavitev dodatnega medija za prikaz nad vprašanjem."
+        },
+        {
+          "label": "Onemogoči povečavo slike"
+        }
+      ]
+    },
+    {
+      "label": "Vprašanje"
+    },
+    {
+      "label": "Pravilen odgovor",
+      "options": [
+        {
+          "label": "Drži"
+        },
+        {
+          "label": "Ne drži"
+        }
+      ]
+    },
+    {
+      "label": "Prevodi uporabniškega vmesnika",
+      "fields": [
+        {
+          "label": "Oznaka gumba Drži",
+          "default": "Drži"
+        },
+        {
+          "label": "Oznaka gumba Ne drži",
+          "default": "Ne drži"
+        },
+        {
+          "label": "Besedilo za povratno informacijo",
+          "default": "Dosežene točke: @score od @total",
+          "description": "Spremenljivki v povratni informaciji sta @score in @total."
+        },
+        {
+          "label": "Besedilo za gumb \"Preveri\"",
+          "default": "Preveri"
+        },
+        {
+          "label": "Besedilo za gumb \"Oddaj\"",
+          "default": "Oddaj"
+        },
+        {
+          "label": "Besedilo za gumb \"Prikaži rešitev\"",
+          "default": "Prikaži rešitev"
+        },
+        {
+          "label": "Besedilo za gumb \"Poskusi ponovno\"",
+          "default": "Poskusi ponovno"
+        },
+        {
+          "label": "Nepravilen odgovor",
+          "default": "Nepravilen odgovor"
+        },
+        {
+          "label": "Pravilen odgovor",
+          "default": "Pravilen odgovor"
+        },
+        {
+          "label": "Besedilo vrstice z rezultati za udeležence, ki uporabljajo bralnik zaslona",
+          "default": "Dosežene točke: :num od :total"
+        },
+        {
+          "label": "Besedilo za gumb \"Preveri\"",
+          "default": "Preveri"
+        },
+        {
+          "label": "Besedilo za gumb \"Prikaži rešitev\"",
+          "default": "Prikaži rešitev"
+        },
+        {
+          "label": "Besedilo za gumb \"Poskusi ponovno\"",
+          "default": "Poskusi ponovno"
+        }
+      ]
+    },
+    {
+      "label": "Nastavitve interakcije",
+      "description": "Nastavitve omogočajo nadzor nad interakcijo aktivnosti za udeležence.",
+      "fields": [
+        {
+          "label": "Omogoči gumb \"Poskusi ponovno\""
+        },
+        {
+          "label": "Omogoči gumb \"Prikaži rešitev\""
+        },
+        {
+          "label": "Omogoči gumb \"Preveri\""
+        },
+        {
+          "label": "Pred oddajo odgovora z gumbom \"Preveri\" zahtevaj potrditev"
+        },
+        {
+          "label": "Pred ponovitvijo aktivnosti z gumbom \"Poskusi ponovno\" zahtevaj potrditev"
+        },
+        {
+          "label": "Sprotno preverjanje odgovorov",
+          "description": "Nastavitev lahko obremenjuje delovanje spletne strani."
+        },
+        {
+          "label": "Povratna informacija za pravilni odgovor",
+          "description": "Nastavitev bo prepisala splošno povratno informacijo. Možni spremenljivki: @score in @total"
+        },
+        {
+          "label": "Povratna informacija za nepravilni odgovor",
+          "description": "Nastavitev bo prepisala splošno povratno informacijo. Možni spremenljivki: @score in @total"
+        }
+      ]
+    },
+    {
+      "label": "Pogovorno okno pred oddajo odgovora",
+      "fields": [
+        {
+          "label": "Naslov",
+          "default": "Zaključi?"
+        },
+        {
+          "label": "Besedilo telesa pogovornega okna",
+          "default": "Ste prepričani, da želite zaključiti?"
+        },
+        {
+          "label": "Besedilo gumba Prekliči",
+          "default": "Prekliči"
+        },
+        {
+          "label": "Besedilo gumba Potrdi",
+          "default": "Potrdi"
+        }
+      ]
+    },
+    {
+      "label": "Pogovorno okno pred ponovitvijo aktivnosti",
+      "fields": [
+        {
+          "label": "Naslov",
+          "default": "Poskusi ponovno?"
+        },
+        {
+          "label": "Besedilo telesa pogovornega okna",
+          "default": "Ste prepričani, da želite poskusiti ponovno?"
+        },
+        {
+          "label": "Besedilo gumba Prekliči",
+          "default": "Prekliči"
+        },
+        {
+          "label": "Besedilo gumba Potrdi",
+          "default": "Potrdi"
+        }
+      ]
+    }
+  ]
+}

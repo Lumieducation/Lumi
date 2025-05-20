@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Заголовок",
+      "placeholder": "По желанию напишите сюда заголовок.",
+      "description": "Заголовок, отображающийся над изображением"
+    },
+    {
+      "label": "Пункты",
+      "entity": "пункт",
+      "widgets": [
+        {
+          "label": "По умолчанию"
+        }
+      ],
+      "field": {
+        "label": "Пункт",
+        "fields": [
+          {
+            "label": "Изображение"
+          },
+          {
+            "label": "Метка",
+            "description": "По желанию метка для галочки. Чтобы она была видна, пишите коротко"
+          },
+          {
+            "label": "Описание",
+            "placeholder": "Описание изображения...",
+            "description": "Описание изображения по желанию"
+          },
+          {
+            "label": "Audio",
+            "description": "Optional audio that plays when an image is shown."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Настройки поведения",
+      "description": "Настройте обратную связь при выполнении задания",
+      "fields": [
+        {
+          "label": "Первичное изображение",
+          "description": "Установите количество первичных изображений"
+        },
+        {
+          "label": "Кнопка слайда",
+          "description": "Если активировано, кнопка переместиться на позицию изображения"
+        },
+        {
+          "label": "Показать галочку",
+          "description": "Если активировано, кнопка слайдера будет отображать галочку у каждого изобажения."
+        },
+        {
+          "label": "Показать метки",
+          "description": "Если активировано, слайдер будет отображать метки вместо или вместе с галочкой."
+        },
+        {
+          "label": "Цвет фона при смене изображения",
+          "description": "Выберите цвет, который будет отображаться на прозрачной части фона при смене изображений."
+        },
+        {
+          "label": "Image space in fullscreen mode",
+          "description": "If you have descriptions in addition to the images, set the the percentage of space that the images should use in fullscreen mode."
+        }
+      ]
+    },
+    {
+      "label": "Ассистирующие технологии",
+      "fields": [
+        {
+          "label": "Изображение",
+          "default": "Изображение"
+        },
+        {
+          "label": "Слайдер изображения",
+          "default": "Слайдер изображения"
+        },
+        {
+          "label": "Mute title",
+          "default": "Mute"
+        },
+        {
+          "label": "Unmute title",
+          "default": "Unmute"
+        },
+        {
+          "label": "Title for fullscreen button (enter)",
+          "default": "Enter fullscreen mode"
+        },
+        {
+          "label": "Title for fullscreen button (exit)",
+          "default": "Exit fullscreen mode"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "description": "Aprašymas, ką naudotojas turi įvesti.",
+      "label": "Įvesties lauko aprašymas"
+    },
+    {
+      "description": "Vietos rezervavimo tekstas naudotojui.",
+      "label": "Vietos rezervavimo tekstas"
+    },
+    {
+      "description": "Maksimalus teksto simbolių skaičius.",
+      "label": "Maksimalus teksto ilgis"
+    },
+    {
+      "description": "Įvesties lauko dydis eilučių skaičiumi, kurį jis apims.",
+      "options": [
+        {
+          "label": "1 eilutė"
+        },
+        {
+          "label": "3 eilutės"
+        },
+        {
+          "label": "10 eilučių"
+        }
+      ],
+      "label": "Įvesties lauko dydis"
+    },
+    {
+      "label": "Privalomas laukas",
+      "description": "Pažymėkite, jei norite, kad šis laukas būtų privalomas, naudotojas turi atsakyti į visus privalomus laukus, kad galėtų eksportuoti dokumentą."
+    },
+    {
+      "label": "Likę simboliai",
+      "description": "Pranešimas likusiems simboliams. Galite naudoti @chars, kurie bus pakeisti atitinkamu skaičiumi.",
+      "default": "Likę simboliai: @chars"
+    }
+  ]
+}

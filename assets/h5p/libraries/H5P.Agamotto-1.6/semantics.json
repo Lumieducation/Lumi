@@ -1,0 +1,205 @@
+[
+  {
+    "name": "title",
+    "label": "Heading",
+    "importance": "high",
+    "type": "text",
+    "optional": true,
+    "placeholder": "Here you can add an optional heading.",
+    "description": "The heading you'd like to show above the image"
+  },
+  {
+    "name": "items",
+    "type": "list",
+    "label": "Items",
+    "entity": "item",
+    "widgets": [
+      {
+        "name": "VerticalTabs",
+        "label": "Default"
+      }
+    ],
+    "importance": "medium",
+    "min": 2,
+    "max": 50,
+    "field": {
+      "name": "item",
+      "type": "group",
+      "label": "Item",
+      "importance": "low",
+      "expanded": true,
+      "fields": [
+        {
+          "name": "image",
+          "type": "library",
+          "label": "Image",
+          "importance": "low",
+          "options": [
+            "H5P.Image 1.1"
+          ],
+          "optional": false
+        },
+        {
+          "name": "labelText",
+          "label": "Label",
+          "importance": "low",
+          "type": "text",
+          "optional": true,
+          "description": "Optional label for a tick. Please make sure it's not too long, or it will be hidden."
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "importance": "low",
+          "widget": "html",
+          "label": "Description",
+          "optional": true,
+          "placeholder": "My image description ...",
+          "description": "Optional description for the image",
+          "enterMode": "p",
+          "tags": [
+            "strong",
+            "em",
+            "sub",
+            "sup",
+            "h3",
+            "h4",
+            "ul",
+            "ol",
+            "a",
+            "pre",
+            "code"
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "audio",
+          "importance": "low",
+          "label": "Audio",
+          "description": "Optional audio that plays when an image is shown.",
+          "optional": true,
+          "widgetExtensions": [
+            "AudioRecorder"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "behaviour",
+    "type": "group",
+    "label": "Behavioural settings",
+    "importance": "low",
+    "description": "These options will let you control how the task behaves.",
+    "fields": [
+      {
+        "name": "startImage",
+        "importance": "medium",
+        "type": "number",
+        "label": "Start image",
+        "description": "Set the number of the image to start with.",
+        "default": 1,
+        "min": 1,
+        "max": 50
+      },
+      {
+        "name": "snap",
+        "importance": "medium",
+        "type": "boolean",
+        "label": "Snap slider",
+        "description": "If activated, the slider will snap to an image's position.",
+        "default": true
+      },
+      {
+        "name": "ticks",
+        "importance": "medium",
+        "type": "boolean",
+        "label": "Display tick marks",
+        "description": "If activated, the slider bar will display a tick mark for each image.",
+        "default": false
+      },
+      {
+        "name": "labels",
+        "importance": "medium",
+        "type": "boolean",
+        "label": "Display labels",
+        "description": "If activated, the slider bar will display a label instead of/in addition to tick marks.",
+        "default": false
+      },
+      {
+        "name": "transparencyReplacementColor",
+        "importance": "medium",
+        "type": "text",
+        "label": "Transparency Replacement Color",
+        "description": "Set the color that will replace transparent areas of the images.",
+        "optional": true,
+        "default": "#000000",
+        "widget": "colorSelector",
+        "spectrum": {
+          "showInput": true
+        }
+      },
+      {
+        "name": "imagesDescriptionsRatio",
+        "importance": "medium",
+        "type": "number",
+        "label": "Image space in fullscreen mode",
+        "description": "If you have descriptions in addition to the images, set the the percentage of space that the images should use in fullscreen mode.",
+        "default": 70,
+        "min": 50,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "common": true,
+    "label": "Readspeaker",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "image",
+        "type": "text",
+        "label": "Image",
+        "importance": "low",
+        "default": "Image"
+      },
+      {
+        "name": "imageSlider",
+        "type": "text",
+        "label": "Image Slider",
+        "importance": "low",
+        "default": "Image Slider"
+      },
+      {
+        "name": "mute",
+        "type": "text",
+        "label": "Mute title",
+        "importance": "low",
+        "default": "Mute, currently unmuted"
+      },
+      {
+        "name": "unmute",
+        "type": "text",
+        "label": "Unmute title",
+        "importance": "low",
+        "default": "Unmute, currently muted"
+      },
+      {
+        "name": "buttonFullscreenEnter",
+        "type": "text",
+        "label": "Title for fullscreen button (enter)",
+        "importance": "low",
+        "default": "Enter fullscreen mode"
+      },
+      {
+        "name": "buttonFullscreenExit",
+        "type": "text",
+        "label": "Title for fullscreen button (exit)",
+        "importance": "low",
+        "default": "Exit fullscreen mode"
+      }
+    ]
+  }
+]

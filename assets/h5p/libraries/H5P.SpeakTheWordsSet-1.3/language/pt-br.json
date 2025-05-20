@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Introdução",
+      "fields": [
+        {
+          "label": "Mostrar introdução"
+        },
+        {
+          "label": "Imagem de introdução"
+        },
+        {
+          "label": "Texto alternativo para imagem de introdução"
+        },
+        {
+          "label": "Título"
+        },
+        {
+          "label": "Texto de introdução",
+          "description": "Este título será exibido acima do texto de introdução."
+        }
+      ]
+    },
+    {
+      "label": "Questões",
+      "widgets": [
+        {
+          "label": "Padrão"
+        }
+      ],
+      "entity": "Questão",
+      "field": {
+        "label": "Questão"
+      }
+    },
+    {
+      "label": "Feedback Geral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Defina feedback personalizado para qualquer intervalo de pontuação",
+          "description": "Clique no botão \"Adicionar faixa\" para adicionar quantos intervalos você precisar. Exemplo: 0-20% Pontuação Ruim, 21-91% Pontuação Média, 91-100% Pontuação Ótima!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de Pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para a faixa de pontuação definida",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Diga as palavras, rótulos e textos do Conjunto de Palavras",
+      "fields": [
+        {
+          "label": "Rótulo do botão Introdução",
+          "default": "Comece o Curso!"
+        },
+        {
+          "label": "Rótulo de resultados da tela da solução",
+          "default": "Seus resultados:"
+        },
+        {
+          "label": "Mostrar rótulo do botão Mostrar Soluções",
+          "default": "Mostrar Solução"
+        },
+        {
+          "label": "Rótulo do botão Tentar Novamente",
+          "default": "Tentar Novamente"
+        },
+        {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
+          "label": "Rótulo de acessibilidade da próxima questão",
+          "default": "Próxima questão"
+        },
+        {
+          "label": "Rótulo de acessibilidade da questão anterior",
+          "default": "Questão anterior"
+        },
+        {
+          "label": "Título da barra de navegação",
+          "description": "Títulos para perguntas na barra de navegação. \":num\" será substituído pelo número real do slide.",
+          "default": "Slide :num"
+        },
+        {
+          "label": "Rótulo de acessibilidade do slide respondido",
+          "default": "Respondidas"
+        },
+        {
+          "label": "Rótulo de acessibilidade do slide ativo",
+          "default": "Atualmente ativo"
+        }
+      ]
+    }
+  ]
+}

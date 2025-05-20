@@ -1,0 +1,138 @@
+{
+  "semantics": [
+    {
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "label": "Kort",
+      "entity": "kort",
+      "field": {
+        "label": "Kort",
+        "fields": [
+          {
+            "label": "Image"
+          },
+          {
+            "label": "Alternativ text för bild",
+            "description": "Beskriv vad bilden föreställer. Texten används av tillgänglighetshjälpmedel."
+          },
+          {
+            "label": "Ljudspår",
+            "description": "Ett valfritt ljud som spelas upp när kortet vänds."
+          },
+          {
+            "label": "Matchande bild",
+            "description": "En valfri bild som matchar, istället för att använda två kort med samma bild."
+          },
+          {
+            "label": "Alternativ text för matchande bild",
+            "description": "Beskriv vad som finns i bilden. Används av tillgänglighetshjälpmedel."
+          },
+          {
+            "label": "Matchande ljudspår",
+            "description": "Ett valfritt ljud som spelas upp när det andra kortet vänds."
+          },
+          {
+            "label": "Description",
+            "description": "En valfri kort text som poppar upp när två matchande kort hittas."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Beteende-inställningar",
+      "description": "Dessa inställningar avgör hur spelet beter sig.",
+      "fields": [
+        {
+          "label": "Positionera korten kvadratiskt",
+          "description": "Kommer försöka matcha antalet kolumner och rader när korten placeras ut. Efteråt, så kommer korten att skalas för att passa in i behållaren."
+        },
+        {
+          "label": "Antal kort att använda",
+          "description": "Om du väljer ett större tal än 2, så väljs kort slumpmässigt från listan över kort."
+        },
+        {
+          "label": "Lägg till knapp för att försöka igen, när spelet är slut"
+        }
+      ]
+    },
+    {
+      "label": "Utseende",
+      "description": "Ställ in hur spelet ska se ut.",
+      "fields": [
+        {
+          "label": "Theme Color",
+          "description": "Välj en färg för att skapa ett tema för ditt kortspel."
+        },
+        {
+          "label": "Baksida på kort",
+          "description": "Använd en anpassad baksida på dina kort."
+        }
+      ]
+    },
+    {
+      "label": "Lokalisering",
+      "fields": [
+        {
+          "label": "Text när kort vänds",
+          "default": "Kort du har vänt"
+        },
+        {
+          "label": "Text för förbrukad tid",
+          "default": "Tid förbrukad"
+        },
+        {
+          "label": "Feedbacktext",
+          "default": "Bra jobbat!"
+        },
+        {
+          "label": "Knapptext för Försök igen",
+          "default": "Försök igen?"
+        },
+        {
+          "label": "Knapptext för Stäng",
+          "default": "Stäng"
+        },
+        {
+          "label": "Speletikett",
+          "default": "Memory-spel. Hitta de matchande korten."
+        },
+        {
+          "label": "Text för Spel avslutat",
+          "default": "Alla korten har hittats."
+        },
+        {
+          "label": "Text för kort-indexering",
+          "default": "Kort %num:"
+        },
+        {
+          "label": "Text för Ej vänt kort",
+          "description": "%num and %total are placeholders and will be replaced with the respective values for the card.",
+          "default": "Ej vänt."
+        },
+        {
+          "label": "Text för matchande kort",
+          "default": "Matchning hittad."
+        },
+        {
+          "label": "Card turned label",
+          "default": "Turned."
+        },
+        {
+          "label": "Card matched label",
+          "default": "Match found."
+        },
+        {
+          "label": "Card matched announcement",
+          "default": "Your cards match!"
+        },
+        {
+          "label": "Card not matched announcement",
+          "default": "Your chosen cards do not match. Turn other cards to try again."
+        }
+      ]
+    }
+  ]
+}

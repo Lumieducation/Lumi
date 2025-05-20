@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Editor van Afbeelding-Hotspot-vraag",
+      "fields": [
+        {
+          "label": "Achtergrondafbeelding",
+          "fields": [
+            {
+              "label": "Achtergrondafbeelding",
+              "description": "Selecteer een afbeelding die als achtergrond dient voor de hotspotvraag."
+            }
+          ]
+        },
+        {
+          "label": "Hotspots",
+          "description": "Plaats en sleep het gewenste figuur vanaf de werkbalk om een nieuwe hotspot te maken. Dubbelklik om een bestaande hotspot te bewerken. Sleep de hotspot om deze te verplaatsen. Trek aan de handgreep in de rechte benedenhoek van het figuur om het formaat te wijzigen.",
+          "fields": [
+            {
+              "label": "Taakomschrijving",
+              "description": "Instructies voor de gebruiker."
+            },
+            {
+              "label": "Hotspot",
+              "entity": "Hotspot",
+              "field": {
+                "label": "Hotspot",
+                "fields": [
+                  {
+                    "label": "Gebruikersinstellingen",
+                    "fields": [
+                      {
+                        "label": "Juist",
+                        "description": "Er kunnen veel juiste hotspots zijn. De gebruiker krijgt echter feedback (juist/ onjuist) direct na de eerste klik."
+                      },
+                      {
+                        "label": "Feedback"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Berekende instellingen"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Feedback als de gebruiker een lege hotspot selecteert:",
+              "placeholder": "Je hebt geen hotspot geselecteerd, probeer het opnieuw!"
+            },
+            {
+              "label": "Toon feedback als een pop-up"
+            },
+            {
+              "label": "Localisatie",
+              "fields": [
+                {
+                  "label": "Tekst \"Opnieuw\"-knop",
+                  "default": "Opnieuw"
+                },
+                {
+                  "label": "Tekst \"Afsluiten\"-knop",
+                  "default": "Afsluiten"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Tekstuele weergave van de scorebalk voor de gebruikers van de schermlezer",
+      "default": "Je hebt :num van de :total punten"
+    },
+    {
+      "label": "Ondersteunende technologie beschrijving voor \"Opnieuw\"-knop",
+      "default": "Probeer de taak opnieuw. Reset alle antwoorden en start de taak opnieuw."
+    }
+  ]
+}

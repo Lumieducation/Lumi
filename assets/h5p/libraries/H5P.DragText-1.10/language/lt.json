@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Medija",
+      "fields": [
+        {
+          "label": "Tipas",
+          "description": "Papildoma media po klausimu."
+        },
+        {
+          "label": "Išjungti vaizdo didinimą"
+        }
+      ]
+    },
+    {
+      "label": "Užduoties aprašymas",
+      "description": "Aprašykite, kaip naudotojas turėtų išspręsti užduotį.",
+      "default": "Nutempkite žodžius į teisingas langelius"
+    },
+    {
+      "label": "Tekstas",
+      "placeholder": "*Oslas* yra Norvegijos sostinė, *Stokholmas* yra Švedijos sostinė ir *Kopenhaga* yra Danijos sostinė. Visi miestai randasi *Skandinavijos pusiasalyje, Šiaurinėje Europos* dalyje.",
+      "important": {
+        "description": "<ul><li>Praleisti žodžiai žymimi žvaigždute (*) priekyje ir gale teisingo žodžio/frazės.</li><li>Jūs galite įdėti tekstinį patarimą, naudodami dvitaškį (:) priekyje patarimo.</li><li>Kiekvienai tuščiai vietai yra tik vienas teisingas atsakymas.</li><li>Jūs galite pridėti atsiliepimą, kada užduotis bus užbaigta. Naudokite '\\+' teigiamam ir '\\-' neigiamam atsiliepimui.</li></ul>",
+        "example": "H5P content may be edited using a *browser:What type of program is Chrome?*. <br /> H5P content is *interactive\\+Correct! \\-Incorrect, try again!*"
+      }
+    },
+    {
+      "label": "Distractors",
+      "placeholder": "*Reikjavikas* *Helsinkis*",
+      "description": "Enter extra solutions that are wrong as distractors. Use the same asterisk (*) scheme as for the text."
+    },
+    {
+      "label": "Bendras atsiliepimas",
+      "fields": [
+        {
+          "entity": "diapazonas",
+          "widgets": [
+            {
+              "label": "Numatytasis"
+            }
+          ],
+          "label": "Nustatykite tinkintus atsiliepimus bet kokiam balų intervalui",
+          "description": "Spustelėkite mygtuką „Pridėti diapazoną“, kad pridėtumėte tiek diapazonų, kiek jums reikia. Pavyzdys: 0–20 % blogas balas, 21–91 % vidutinis balas, 91–100 % puikus rezultatas!",
+          "field": {
+            "fields": [
+              {
+                "label": "Balų diapazonas"
+              },
+              {},
+              {
+                "label": "Atsiliepimai apibrėžtam balų diapazonui",
+                "placeholder": "Užpildykite atsiliepimą"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Mygtuko \"Tikrinti\" tekstas",
+      "default": "Tikrinti"
+    },
+    {
+      "label": "Tekstas mygtukui „Pateikti“.",
+      "default": "Pateikti"
+    },
+    {
+      "label": "Tekstas mygtukui „Bandyti dar kartą“.",
+      "default": "Bandyti dar kartą"
+    },
+    {
+      "label": "Tekstas mygtukui „Rodyti sprendimą“",
+      "default": "Rodyti sprendimą"
+    },
+    {
+      "label": "Sunumeruotos metimo zonos pavadinimas",
+      "default": "Metimo zona @index.",
+      "description": "Label used for accessibility, where the Read speaker will read the index of a drop zone. Variable available: @index"
+    },
+    {
+      "label": "Tuščios metimo zonos pavadinimas",
+      "default": "Metimo zona @index yra tuščia.",
+      "description": "Label used for accessibility, where the Read speaker will read that the drop zone is empty"
+    },
+    {
+      "label": "Contains Drop Zone label",
+      "default": "Drop Zone @index contains draggable @draggable.",
+      "description": "Label used for accessibility, where the Read speaker will read that the drop zone contains a draggable"
+    },
+    {
+      "label": "Metamų elementų pavadinimas",
+      "default": "@index iš @count metamų elementų.",
+      "description": "Label used for accessibility, where the Read speaker reads that this is a draggable element. Variable available: @index, @count"
+    },
+    {
+      "label": "Mygtuko „Rodyti patarimą“ pavadinimas",
+      "default": "Rodyti patarimą",
+      "description": "Label used for accessibility, where the Read speaker reads it before the tip is read out"
+    },
+    {
+      "label": "Readspeaker text for correct answer",
+      "default": "Teisingai!"
+    },
+    {
+      "label": "Readspeaker text for incorrect answer",
+      "default": "Neteisingai!"
+    },
+    {
+      "label": "Confirmation dialog title that user wants to reset a droppable",
+      "default": "Atstatyti metimą"
+    },
+    {
+      "label": "Confirmation dialog description that user wants to reset a droppable",
+      "default": "Ar tikrai norite iš naujo nustatyti šią metimo zoną?"
+    },
+    {
+      "label": "Label used for accessibility, where the read speaker indicates that dragging is initiated",
+      "default": "Metamas elementas yra paimtas."
+    },
+    {
+      "label": "Label used for accessibility, where the read speaker indicates that dragging is canceled",
+      "default": "Atšauktas metimas."
+    },
+    {
+      "label": "Label used for accessibility, where the read speaker indicates that a text is the correct answer",
+      "default": "Teisingas atsakymas:"
+    },
+    {
+      "label": "Header for panel containing feedback for correct/incorrect answers",
+      "default": "Atsiliepimas"
+    },
+    {
+      "label": "Veikimo nustatymai.",
+      "description": "Šios parinktys leis jums valdyti, kaip veikia užduotis.",
+      "fields": [
+        {
+          "label": "Įjungti „Bandyti dar kartą“"
+        },
+        {
+          "label": "Įjungti „Rodyti sprendimą“ mygtuką"
+        },
+        {
+          "label": "Įjungti „Tikrinti“ mygtuką"
+        },
+        {
+          "label": "Momentinis atsiliepimas"
+        }
+      ]
+    },
+    {
+      "label": "Textual representation of the score bar for those using a readspeaker",
+      "default": "Jūs gavote :num iš :total taškų"
+    },
+    {
+      "label": "Assistive technology label for \"Check\" button",
+      "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+    },
+    {
+      "label": "Assistive technology label for \"Show Solution\" button",
+      "default": "Rodyti sprendimą. Užduotis bus pažymėta teisingu jos sprendimu."
+    },
+    {
+      "label": "Assistive technology label for \"Retry\" button",
+      "default": "Bandyti atlikti užduotį dar kartą. Iš naujo nustatyti visus atsakymus ir pradėti užduotį iš naujo."
+    }
+  ]
+}

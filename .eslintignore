@@ -1,11 +1,7 @@
-test/data
-build
-reporter-client/build
-/*.js
-builder-configs
-/h5p
-/dist
-/scorm-client
-/scripts
-/test
-/server/__mocks__
+// .eslintignore
+build/*
+dist/*
+public/*
+**/out/*
+**/node_modules/*
+commitlint.config.js

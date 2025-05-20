@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Edytor pytań graficznych hotspot",
+      "fields": [
+        {
+          "label": "Grafika w tle",
+          "fields": [
+            {
+              "label": "Grafika w tle",
+              "description": "Wybierz grafikę do wykorzystania jako tło pytania."
+            }
+          ]
+        },
+        {
+          "label": "Hotspoty",
+          "description": "Przeciągnij i upuść kształt z paska narzędzi, aby utworzyć nowy hotspot. Kliknij dwa razy, aby edytować istniejący hotspot. Przeciągnij hotspot, aby zmienić jego położenie. Pociągnij uchwyt zmiany rozmiaru, aby dostosować wielkość.",
+          "fields": [
+            {
+              "label": "Opis zadania",
+              "description": "Polecenie dla użytkownika."
+            },
+            {
+              "label": "Hotspot",
+              "entity": "Hotspot",
+              "field": {
+                "label": "Hotspot",
+                "fields": [
+                  {
+                    "label": "Ustawienia użytkownika",
+                    "fields": [
+                      {
+                        "label": "Odpowiedź prawidłowa",
+                        "description": "Istnieje wiele prawidłowych hotspotów. Użytkownik otrzymuje informację zwrotną od razu po pierwszym kliknięciu."
+                      },
+                      {
+                        "label": "Informacja zwrotna"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Ustawienia obliczeń"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Informacja zwrotna, jeśli użytkownik wybierze pusty:",
+              "placeholder": "Nie wybrałeś żadnego hotspota. Spróbuj jeszcze raz!"
+            },
+            {
+              "label": "Pokaż informację zwrotną jako popup"
+            },
+            {
+              "label": "Tłumaczenie",
+              "fields": [
+                {
+                  "label": "Tekst przycisku \"Ponów\"",
+                  "default": "Ponów"
+                },
+                {
+                  "label": "Tekst przycisku \"Zamknij\"",
+                  "default": "Zamknij"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Tekstowe przedstawienie punktacji dla osób korzystających z czytnika tekstu",
+      "default": "Dostajesz :num punktów z :total points"
+    },
+    {
+      "label": "Opis dla technologii wspomagających: przycisk \"Ponów\"",
+      "default": "Zacznij od nowa. Usuń wszystkie odpowiedzi i rozpocznij zadanie od początku."
+    }
+  ]
+}

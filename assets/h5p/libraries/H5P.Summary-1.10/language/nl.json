@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Inleidende tekst",
+      "default": "Kies de juiste bewering.",
+      "description": "Wordt boven de samenvattingstaak getoond."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Standaard"
+        },
+        {
+          "label": "Tekstueel"
+        }
+      ],
+      "label": "Samenvatting",
+      "entity": "beweringen",
+      "field": {
+        "label": "Reeks van beweringen",
+        "fields": [
+          {
+            "label": "Een lijst van beweringen voor de samenvatting - de eerste bewering is juist.",
+            "entity": "bewering",
+            "field": {
+              "label": "Bewering"
+            }
+          },
+          {
+            "label": "Tip",
+            "fields": [
+              {
+                "label": "Tekst voor tip"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Algehele feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Standaard"
+            }
+          ],
+          "label": "Definieer aangepaste feedback voor elke scorereeks",
+          "description": "Druk op de \"Voeg scorereeks\"-knop om zoveel reeksen toe te voegen als nodig. Voorbeeld: 0-20% Onvoldoende, 21-91% Gemiddelde score, 91-100% Uitstekende score!",
+          "entity": "reeks",
+          "field": {
+            "fields": [
+              {
+                "label": "Scorereeks"
+              },
+              {},
+              {
+                "label": "Feedback voor de gedefinieerde scorereeks",
+                "placeholder": "Vul de feedback in"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "De getoonde tekst vóór het aantal opgeloste beweringen van de samenvattingstaak.",
+      "default": "Voortgang:",
+      "description": "Wordt getoond boven de beweringen. Voorbeeld: 'Voortgang: 2/5'"
+    },
+    {
+      "label": "Tekst getoond vóór het aantal onjuiste beweringen van de samenvattingstaak.",
+      "default": "Onjuiste antwoorden:",
+      "description": "Wordt getoond boven de beweringen. Voorbeeld: 'Onjuiste antwoorden: 4'"
+    },
+    {
+      "label": "Koptekst feedback van de samenvatting",
+      "default": "Je resultaat",
+      "description": "Wordt getoond boven de feedback van de samenvatting."
+    },
+    {
+      "label": "Schermlezer tekst voor het juiste antwoord",
+      "default": "Juist."
+    },
+    {
+      "label": "Schermlezer tekst voor informeren over onjuist antwoord",
+      "default": "Onjuist! Probeer het opnieuw."
+    },
+    {
+      "label": "Schermlezer label voor onjuist antwoord",
+      "default": "Onjuist"
+    },
+    {
+      "label": "Label van lijst met juiste antwoorden",
+      "default": "Juiste antwoorden."
+    },
+    {
+      "label": "Label voor \"Toon tip\"-knop",
+      "default": "Toon tip"
+    },
+    {
+      "label": "Tekstuele weergave van de scorebalk voor de gebruikers van de schermlezer",
+      "description": ":num en :total zijn speciale trefwoorden die worden bijgewerkt met de echte waarden",
+      "default": "Je hebt :num van de :total punten"
+    },
+    {
+      "label": "De tekst die gebruikt wordt door schermlezers om de voortgang te communiceren",
+      "description": ":num en :total zijn speciale trefwoorden die worden bijgewerkt met de echte waarden",
+      "default": "Voortgang :num van :total"
+    }
+  ]
+}

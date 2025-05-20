@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Utangulizi",
+      "fields": [
+        {
+          "label": "Onyesha utangulizi"
+        },
+        {
+          "label": "Picha ya utangulizi"
+        },
+        {
+          "label": "Maandishi mbadala ya picha ya utangulizi"
+        },
+        {
+          "label": "Mada"
+        },
+        {
+          "label": "Maandishi ya utangulizi",
+          "description": "Mada hii itaonyeshwa juu ya maandishi ya utangulizi."
+        }
+      ]
+    },
+    {
+      "label": "Maswali",
+      "widgets": [
+        {
+          "label": "Chaguo-msingi"
+        }
+      ],
+      "entity": "Swali",
+      "field": {
+        "label": "Swali"
+      }
+    },
+    {
+      "label": "Maoni ya Jumla",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Chaguo-msingi"
+            }
+          ],
+          "label": "Bainisha maoni maalum kwa masafa yoyote ya alama",
+          "description": "Bofya kitufe cha \"Ongeza masafa\" ili kuongeza masafa mengi unavyohitaji. Mfano: 0-20% Alama mbaya, 21-91% Alama ya Wastani, 91-100% Alama Nzuri!",
+          "entity": "masafa",
+          "field": {
+            "fields": [
+              {
+                "label": "Masafa ya Alama"
+              },
+              {},
+              {
+                "label": "Maoni kwa masafa ya alama yaliyofafanuliwa",
+                "placeholder": "Jaza maoni"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Ongea Maneno Weka lebo na maandishi",
+      "fields": [
+        {
+          "label": "Lebo ya kitufe cha utangulizi",
+          "default": "Anza Mafunzo!"
+        },
+        {
+          "label": "Lebo ya matokeo ya skrini ya suluhisho",
+          "default": "Matokeo yako:"
+        },
+        {
+          "label": "Onyesha lebo ya kitufe cha suluhisho",
+          "default": "Onyesha suluhisho"
+        },
+        {
+          "label": "Lebo ya kitufe cha jaribu tena",
+          "default": "Jaribu tena"
+        },
+        {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
+          "label": "Lebo ya ufikivu ya swali linalofuata",
+          "default": "Swali linalofuata"
+        },
+        {
+          "label": "Lebo ya ufikivu ya swali la awali",
+          "default": "Swali la awali"
+        },
+        {
+          "label": "Mada ya upau wa urambazaji",
+          "description": "Mada kwa maswali kwenye upau wa urambazaji. \":num\" vitabadilishwa na nambari halisi ya slaidi.",
+          "default": "Slaidi :num"
+        },
+        {
+          "label": "Lebo ya ufikiaji wa slaidi inayotumika",
+          "default": "Inatumika kwa sasa"
+        },
+        {
+          "label": "Active slide accessibility label",
+          "default": "Currently active"
+        }
+      ]
+    }
+  ]
+}

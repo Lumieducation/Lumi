@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Vyombo vya habari",
+      "fields": [
+        {
+          "label": "Aina",
+          "description": "Vyombo vya habari vya hiari vya kuonyesha juu ya swali."
+        },
+        {
+          "label": "Zima ukuzaji wa picha"
+        }
+      ]
+    },
+    {
+      "label": "Maelezo ya kazi",
+      "description": "Eleza jinsi gani mtumiaji anapaswa kutatua kazi.",
+      "default": "Buruta maneno yaingie kwenye visanduku sahihi"
+    },
+    {
+      "label": "Maandishi",
+      "placeholder": "*Oslo* ni mji mkuu wa Norway, *Stockholm* ni mji mkuu wa Uswidi na *Copenhagen* ni mji mkuu wa Denmark. Miji yote iko katika peninsula ya *Skandinavia: Kaskazini mwa Ulaya*.",
+      "important": {
+        "description": "<ul><li>Maneno yanayoweza kudondoshwa huongezwa kwa kinyota (*) mbele na nyuma ya neno/maneno sahihi.</li><li>Unaweza kuongeza kidokezo cha maandishi, kwa kutumia koloni (:) mbele ya kidokezo.</li><li>Kwa kila sehemu tupu kuna neno moja tu sahihi.</li><li>Unaweza kuongeza maoni yatakayoonyeshwa kazi inapokamilika. Tumia '\\+' kwa maoni sahihi na '\\-' kwa maoni yasiyo sahihi.</li></ul>",
+        "example": "Maudhui ya H5P yanaweza kuhaririwa kwa kutumia *kivinjari: Chrome ni aina gani ya programu?*. <br /> Maudhui ya H5P *yanaingiliana\\+Sahihi! \\-Siyo sahihi, jaribu tena!*"
+      }
+    },
+    {
+      "label": "Distractors",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Enter extra solutions that are wrong as distractors. Use the same asterisk (*) scheme as for the text."
+    },
+    {
+      "label": "Maoni ya Jumla",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Chaguo-msingi"
+            }
+          ],
+          "label": "Bainisha maoni maalum kwa masafa yoyote ya alama",
+          "description": "Bofya kitufe cha \"Ongeza masafa\" ili kuongeza masafa mengi unavyohitaji. Mfano: 0-20% Alama mbaya, 21-91% Alama ya Wastani, 91-100% Alama Nzuri!",
+          "entity": "masafa",
+          "field": {
+            "fields": [
+              {
+                "label": "Masafa ya Alama"
+              },
+              {},
+              {
+                "label": "Maoni kwa masafa ya alama yaliyofafanuliwa",
+                "placeholder": "Jaza maoni"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Text for \"Check\" button",
+      "default": "Check"
+    },
+    {
+      "label": "Maandishi ya kitufe cha \"Wasilisha\"",
+      "default": "Wasilisha"
+    },
+    {
+      "label": "Maandishi kwa kitufe cha \"Jaribu tena\"",
+      "default": "Jaribu tena"
+    },
+    {
+      "label": "Maandishi kwa kitufe cha Onyesha Suluhisho",
+      "default": "Onyesha suluhisho"
+    },
+    {
+      "label": "Lebo yenye nambari ya eneo la Kushuka",
+      "default": "Eneo la Kushuka@index.",
+      "description": "Lebo inayotumika kwa ufikivu, ambapo Kisoma maandishi kitasoma faharasa ya eneo la kushuka. Kigezo kinapatikana:@index"
+    },
+    {
+      "label": "Lebo tupu ya Eneo la Kushuka",
+      "default": "Eneo la Kushuka@index ni tupu.",
+      "description": "Lebo inayotumika kwa ufikivu, ambapo Kisoma maandishi kitasoma kwamba eneo la kushuka ni tupu"
+    },
+    {
+      "label": "Ina lebo ya Eneo la Kushuka",
+      "default": "Eneo la Kushuka@indexlina kitu kinachoweza kuburutwa @draggable.",
+      "description": "Lebo inayotumika kwa ufikivu, ambapo Kisoma maandishi kitasoma kuwa eneo la kushuka lina kitu kinachoweza kuburutwa"
+    },
+    {
+      "label": "Lebo ya vipengele vinavyoweza kuburutwa",
+      "default": "@indexya @countvitu vinavyoweza kuburutwa.",
+      "description": "Lebo inayotumika kwa ufikivu, ambapo Kisoma maandishi kinasoma kuwa hiki ni kipengele kinachoweza kuburutwa. Kigezo kinapatikana:@index,@count"
+    },
+    {
+      "label": "Lebo kwa kitufe cha kidokezo cha onyesho",
+      "default": "Kidokezo cha onyesho",
+      "description": "Lebo inayotumika kwa ufikivu, ambapo Kisoma maandishi huisoma kabla ya kidokezo kusomwa"
+    },
+    {
+      "label": "Maandishi ya kisoma maandishi kwa jibu sahihi",
+      "default": "Sahihi!"
+    },
+    {
+      "label": "Maandishi ya kisoma maandishi kwa jibu lisilo sahihi",
+      "default": "Siyo sahihi!"
+    },
+    {
+      "label": "Mada ya mazungumzo ya uthibitishaji ambayo mtumiaji anataka kuweka upya kitu kinachoweza kudondoshwa",
+      "default": "Weka upya dondosha"
+    },
+    {
+      "label": "Maelezo ya mazungumzo ya uthibitishaji ambayo mtumiaji anataka kuweka upya kitu kinachoweza kudondoshwa",
+      "default": "Una uhakika unataka kuweka upya eneo hili la kushuka?"
+    },
+    {
+      "label": "Lebo inayotumika kwa ufikivu, ambapo Kisoma maandishi kinaonyesha kuwa kuburuta kumeanzishwa",
+      "default": "Kinachoweza kukokotwa kinanyakuliwa."
+    },
+    {
+      "label": "Lebo inayotumika kwa ufikivu, ambapo kipaza sauti kinaonyesha kuwa kuburuta kumeghairiwa",
+      "default": "Kuburuta kumeghairiwa."
+    },
+    {
+      "label": "Lebo inayotumika kwa ufikivu, ambapo Kisoma maandishi kinaonyesha kuwa maandishi ndiyo jibu sahihi",
+      "default": "Jibu ni sahihi:"
+    },
+    {
+      "label": "Kichwa cha upau wenye maoni kwa majibu sahihi/ yasiyo sahihi",
+      "default": "Maoni"
+    },
+    {
+      "label": "Mipangilio ya tabia.",
+      "description": "Chaguzi hizi zitakuwezesha kudhibiti jinsi kazi inavyofanya.",
+      "fields": [
+        {
+          "label": "Wezesha \"Jaribu tena\""
+        },
+        {
+          "label": "Washa kitufe cha \"Onesha Suluhisho\""
+        },
+        {
+          "label": "Wezesha kitufe cha \"Weka alama\""
+        },
+        {
+          "label": "Maoni ya papo hapo"
+        }
+      ]
+    },
+    {
+      "label": "Lebo ya teknolojia ya usaidizi kwa kitufe cha \"Weka alama\"",
+      "default": "Weka alama majibu. Majibu yatatiwa alama kuwa sahihi, siyo sahihi au haijajibiwa."
+    },
+    {
+      "label": "Maelezo ya teknolojia ya usaidizi kwa kitufe cha \"Onyesha Suluhisho \"",
+      "default": "Onyesha suluhisho hilo. Kazi hiyo itawekwa alama na suluhisho lake sahihi."
+    },
+    {
+      "label": "Lebo ya teknolojia ya usaidizi kwa kitufe cha \"Jaribu tena\"",
+      "default": "Jaribu tena kazi hiyo. Weka upya majibu yote na uanze kazi tena."
+    },
+    {
+      "label": "Assistive technology label for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
+    }
+  ]
+}

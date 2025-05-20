@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Destination",
+      "fields": [
+        {
+          "label": "Type",
+          "options": [
+            {
+              "label": "Timecode"
+            },
+            {
+              "label": "Une autre page (URL)"
+            }
+          ]
+        },
+        {
+          "label": "Aller vers",
+          "description": "Le moment cible vers lequel l'utilisateur sera redirigé en cliquant sur la zone sensible. Entrez le timecode au format M:SS."
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "Protocole",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(relatif à la racine)"
+                },
+                {
+                  "label": "autre"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Apparence",
+      "fields": [
+        {
+          "label": "Forme",
+          "options": [
+            {
+              "label": "Rectangulaire"
+            },
+            {
+              "label": "Circulaire"
+            },
+            {
+              "label": "Rectangle arrondi"
+            }
+          ]
+        },
+        {
+          "label": "Couleur d'arrière-plan pour la zone sensible"
+        },
+        {
+          "label": "Utiliser le curseur pointeur"
+        },
+        {
+          "label": "Ajouter un effet de clignotement",
+          "description": "Note : l'effet de clignotement est toujours activé dans l'éditeur, ce qui vous permet de trouver également les zones sensibles transparentes."
+        }
+      ]
+    },
+    {
+      "label": "Textes",
+      "fields": [
+        {
+          "label": "Texte alternatif",
+          "description": "Décrit le sujet de la zone sensible. La fonction est utilisée pour la synthèse vocale",
+          "placeholder": "Une pomme est sur la table"
+        },
+        {
+          "label": "Intitulé de la zone sensible"
+        },
+        {
+          "label": "Montrer l'intitulé"
+        },
+        {
+          "label": "Couleur de l'intitulé"
+        }
+      ]
+    }
+  ]
+}

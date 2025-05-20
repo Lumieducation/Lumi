@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Text d’introducció",
+      "default": "Selecciona la frase correcta.",
+      "description": "Es mostrarà sobre el resum de la tasca."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Opció predeterminada"
+        },
+        {
+          "label": "Textual"
+        }
+      ],
+      "label": "Resum",
+      "entity": "enunciats",
+      "field": {
+        "label": "Conjunt d’enunciats",
+        "fields": [
+          {
+            "label": "Llista d’afirmacions per al resum; la primera és la correcta.",
+            "entity": "frase",
+            "field": {
+              "label": "Frase"
+            }
+          },
+          {
+            "label": "Pista",
+            "fields": [
+              {
+                "label": "Text de la pista"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Suggeriment general",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Opció predeterminada"
+            }
+          ],
+          "label": "Defineix una valoració per cada rang de puntuació",
+          "description": "Feu clic al botó \"Afegeix un rang\" per afegir tants rangs com necessiteu. Exemple: 0-20 % per a puntuació baixa, 21-91 % per a puntuació mitjana, 91-100 % per a puntuació excel·lent",
+          "entity": "rang",
+          "field": {
+            "fields": [
+              {
+                "label": "Rang de puntuació"
+              },
+              {},
+              {
+                "label": "Retroacció per al rang de puntuació definit",
+                "placeholder": "Introduïu el suggeriment"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Text que es mostra abans del nombre d’afirmacions resoltes a la tasca de resum.",
+      "default": "Progrés:",
+      "description": "Es mostrarà a sobre de les afirmacions. Exemple: \"Progrés: 2/5\""
+    },
+    {
+      "label": "Text que es mostra abans del nombre d’afirmacions incorrectes solucionades a la tasca de resum.",
+      "default": "Respostes incorrectes:",
+      "description": "Es mostrarà a sobre de les afirmacions. Exemple: \"Respostes incorrectes: 4\""
+    },
+    {
+      "label": "Títol del resum de suggeriments",
+      "default": "El seu resultat",
+      "description": "Es mostrarà a sobre dels suggeriments de resum."
+    },
+    {
+      "label": "Text de l’altaveu de lectura per a una resposta correcta",
+      "default": "Correcte."
+    },
+    {
+      "label": "Text de l’altaveu de lectura per anunciar una resposta incorrecta",
+      "default": "Incorrecte. Torna-ho a provar."
+    },
+    {
+      "label": "Etiqueta de l’altaveu de lectura per a resposta incorrecta",
+      "default": "Incorrecte"
+    },
+    {
+      "label": "Llista d’etiquetes de respostes correctes",
+      "default": "Respostes correctes."
+    },
+    {
+      "label": "Etiqueta del botó \"Mostra la pista\"",
+      "default": "Mostra la pista"
+    },
+    {
+      "label": "Representació textual de la barra de puntuació pera als que utilitzen un altaveu de lectura",
+      "description": ":num i :total són paraules clau especials que s’actualitzen automàticament",
+      "default": "Heu fet :num de :total punts"
+    },
+    {
+      "label": "Text que s’utilitza per comunicar el progrés amb altaveus de lectura",
+      "description": ":num i :total són paraules clau especials que s’actualitzen automàticament",
+      "default": "Progrés :num of :total"
+    }
+  ]
+}

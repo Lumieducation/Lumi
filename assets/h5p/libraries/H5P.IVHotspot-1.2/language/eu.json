@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Helmuga",
+      "fields": [
+        {
+          "label": "Mota",
+          "options": [
+            {
+              "label": "Denbora-kodea"
+            },
+            {
+              "label": "Beste orri bat (URLaaa)"
+            }
+          ]
+        },
+        {
+          "label": "Joan horra",
+          "description": "Erabiltzaileak leku beroa sakatzen eman behar duen denbora. Sartu denbora-kodea M:SS formatuan."
+        },
+        {
+          "label": "URLaaa",
+          "fields": [
+            {
+              "label": "Protokoloa",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(erroarekiko erlatiboa)"
+                },
+                {
+                  "label": "bestelakoa"
+                }
+              ]
+            },
+            {
+              "label": "URLaaa"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Ikusizkoak",
+      "fields": [
+        {
+          "label": "Forma",
+          "options": [
+            {
+              "label": "Laukizuzena"
+            },
+            {
+              "label": "Borobila"
+            },
+            {
+              "label": "Biribildutako laukizuzena"
+            }
+          ]
+        },
+        {
+          "label": "Leku beroaren atzeko planoaren kolorea"
+        },
+        {
+          "label": "Erabili erakusle-kurtsorea"
+        },
+        {
+          "label": "Gehitu efektu keinukaria",
+          "description": "Oharra: Efektu keinukaria beti dago erabilgarri editorean, beraz, leku bero gardenak aurkitu ditzakezu"
+        }
+      ]
+    },
+    {
+      "label": "Testuak",
+      "fields": [
+        {
+          "label": "Ordezko testua",
+          "description": "Leku beroaren azpiko objektua deskribatzen du. Irakurgailurako erabiltzen da",
+          "placeholder": "Mahai batean sagar bat"
+        },
+        {
+          "label": "Leku beroaren etiketa"
+        },
+        {
+          "label": "Erakutsi etiketa"
+        },
+        {
+          "label": "Etiketaren kolorea"
+        }
+      ]
+    }
+  ]
+}

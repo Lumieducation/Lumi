@@ -1,0 +1,258 @@
+{
+  "semantics": [
+    {
+      "label": "Medios",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Medios opcionales mostrados encima de la pregunta."
+        },
+        {
+          "label": "Deshabilitar acercamiento de imagen"
+        }
+      ]
+    },
+    {
+      "label": "Pregunta"
+    },
+    {
+      "label": "Opciones disponibles",
+      "entity": "opción",
+      "field": {
+        "label": "Opción",
+        "fields": [
+          {
+            "label": "Texto"
+          },
+          {
+            "label": "Correcto"
+          },
+          {
+            "label": "Pistas y retroalimentación",
+            "fields": [
+              {
+                "label": "Texto de pista",
+                "description": "Pista para el usuario. Esto aparecerá antes de que el usuario compruebe su respuesta/respuestas."
+              },
+              {
+                "label": "Mensaje que se muestra si se selecciona una respuesta",
+                "description": "El mensaje aparecerá debajo de la respuesta al \"comprobar\" si esta respuesta es seleccionada."
+              },
+              {
+                "label": "Mensaje mostrado si la respuesta no es seleccionada",
+                "description": "El mensaje aparecerá debajo de la respuesta al \"comprobar\" si esta respuesta no está seleccionada."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Retroalimentación Global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Predeterminado"
+            }
+          ],
+          "label": "Definir retroalimentación personalizada para cualquier rango de puntaje",
+          "description": "Haga clic en el botón \"Añadir rango\" para añadir cuantos rangos necesite. Ejemplo: 0-20% Mal puntaje, 21-91% Puntaje Promedio, 91-100% ¡Magnífico Puntaje!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango del Puntaje"
+              },
+              {},
+              {
+                "label": "Retroalimentación para rango de puntaje definido",
+                "placeholder": "Complete la retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Traducciones de interfaz de usuario para opción múltiple",
+      "fields": [
+        {
+          "label": "Etiqueta del botón Comprobar respuesta",
+          "default": "Comprobar"
+        },
+        {
+          "label": "Etiqueta para botón enviar respuesta",
+          "default": "Enviar"
+        },
+        {
+          "label": "Texto del botón de solución",
+          "default": "Mostrar solución"
+        },
+        {
+          "label": "Etiqueta del botón Reintentar",
+          "default": "Reintentar"
+        },
+        {
+          "label": "Etiqueta de la pista",
+          "default": "Mostrar pista"
+        },
+        {
+          "label": "Representación textual de la barra de puntaje para aquellos que usan un lector de texto en voz alta",
+          "description": "Las variables disponibles son :num y :total",
+          "default": "Obtuvo :num de un total de :total puntos"
+        },
+        {
+          "label": "Pista Disponible (no se muestra)",
+          "default": "Pista disponible",
+          "description": "Texto de accesibilidad utilizado para lectores de texto en voz alta"
+        },
+        {
+          "label": "Retroalimentación Disponible (no se muestra)",
+          "default": "Retroalimentación disponible",
+          "description": "Texto de accesibilidad utilizado para los lectores de texto en voz alta"
+        },
+        {
+          "label": "Leer Retroalimentación (no se muestran)",
+          "default": "Leer retroalimentación",
+          "description": "Texto de accesibilidad utilizado para los lectores en voz alta"
+        },
+        {
+          "label": "Respuesta Incorrecta (no se muestra)",
+          "default": "Respuesta incorrecta",
+          "description": "Texto de accesibilidad utilizado para los lectores en voz alta"
+        },
+        {
+          "label": "Respuesta Correcta (no se muestra)",
+          "default": "Respuesta correcta",
+          "description": "Texto de accesibilidad utilizado para los lectores en voz alta"
+        },
+        {
+          "label": "La opción debería haber sido seleccionada",
+          "default": "Debería haber sido seleccionada"
+        },
+        {
+          "label": "La opción no debería haber sido seleccionada",
+          "default": "No debería haber sido seleccionada"
+        },
+        {
+          "label": "Texto para mensaje \"Requiere respuesta\"",
+          "default": "Por favor responda antes de ver la solución"
+        },
+        {
+          "label": "Descripción de tecnología asistiva para botón \"Comprobar\"",
+          "default": "Comprobar las respuestas. Las respuestas serán marcadas como correcta, incorrecta o sin contestar."
+        },
+        {
+          "label": "Descripción de tecnología asistiva para botón \"Mostrar Solución\"",
+          "default": "Mostrar la solución. El trabajo será calificado con su solución correcta."
+        },
+        {
+          "label": "Descripción de tecnología asistiva para botón \"Reintentar\"",
+          "default": "Reintentar el trabajo. Reiniciar todas las respuestas e iniciar el trabajo de nuevo."
+        }
+      ]
+    },
+    {
+      "label": "Configuraciones del comportamiento",
+      "description": "Estas opciones le permitirán controlar como se comporta el trabajo.",
+      "fields": [
+        {
+          "label": "Habilitar botón \"Reintentar\""
+        },
+        {
+          "label": "Habilitar botón \"Mostrar Solución\""
+        },
+        {
+          "label": "Habilitar botón \"Comprobar\""
+        },
+        {
+          "label": "Tipo de Pregunta",
+          "description": "Seleccione el aspecto y comportamiento de la pregunta.",
+          "options": [
+            {
+              "label": "Automático"
+            },
+            {
+              "label": "Opción múltiple (casillas de verificación)"
+            },
+            {
+              "label": "Selección Única (Botones)"
+            }
+          ]
+        },
+        {
+          "label": "Da un punto para todo el trabajo",
+          "description": "Habilite para dar un total de un punto para múltiples respuestas correctas. Esta no será una opción en el modo \"Respuesta única\"."
+        },
+        {
+          "label": "Aleatorizar respuestas",
+          "description": "Habilitar para aleatorizar el orden de las respuestas en pantalla."
+        },
+        {
+          "label": "Requerir respuesta antes de que se pueda ver la solución"
+        },
+        {
+          "label": "Mostrar diálogo de confirmación en \"Comprobar\""
+        },
+        {
+          "label": "Mostrar el diálogo de confirmación en \"Reintentar\""
+        },
+        {
+          "label": "Comprobar automáticamente las respuestas",
+          "description": "Al activar esta opción, sufrirá la accesibilidad; asegúrese de saber lo que está haciendo."
+        },
+        {
+          "label": "Porcentaje aprobatorio",
+          "description": "Esta configuración a menudo no tendrá ningún efecto. Es el porcentaje del puntaje total requerido para obtener 1 punto cuando se habilita un punto para todo el trabajo, y para obtener un result.success en declaraciones xAPI."
+        },
+        {
+          "label": "Mostrar puntaje",
+          "description": "Mostrar los puntos obtenidos por cada respuesta. Esto no será una opción en el modo 'Respuesta única' o si estuviera habilitada la opción de 'Dar un punto para el trabajo completo'."
+        }
+      ]
+    },
+    {
+      "label": "Diálogo de confirmación para Comprobar",
+      "fields": [
+        {
+          "label": "Texto del encabezado",
+          "default": "¿Terminar?"
+        },
+        {
+          "label": "Texto del cuerpo",
+          "default": "¿Está seguro que desea terminar ?"
+        },
+        {
+          "label": "Etiqueta botón Cancelar",
+          "default": "Cancelar"
+        },
+        {
+          "label": "Etiqueta del botón Confirmar",
+          "default": "Terminar"
+        }
+      ]
+    },
+    {
+      "label": "Diálogo de confirmación de Reintentar",
+      "fields": [
+        {
+          "label": "Texto del encabezado",
+          "default": "¿Reintentar?"
+        },
+        {
+          "label": "Texto del cuerpo",
+          "default": "¿Está seguro de que desea volver a intentarlo?"
+        },
+        {
+          "label": "Etiqueta botón Cancelar",
+          "default": "Cancelar"
+        },
+        {
+          "label": "Etiqueta del botón Confirmar",
+          "default": "Confirmar"
+        }
+      ]
+    }
+  ]
+}

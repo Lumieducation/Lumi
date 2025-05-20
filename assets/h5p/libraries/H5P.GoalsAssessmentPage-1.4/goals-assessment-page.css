@@ -1,0 +1,165 @@
+.h5p-goals-assessment-page {
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+}
+
+/* Legend */
+.legend {
+  padding: 0.5em;
+  border: 0.042em solid #ccc;
+  background: #eee;
+  margin-bottom: 1em;
+}
+
+.legend-header {
+  font-size: 1em;
+  padding-left: 0.6em
+}
+
+.ratings {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+.rating {
+  display: inline-block;
+  font-size: 0.9em;
+  color: #666;
+  margin-right: 0.5em;
+}
+.legend .rating {
+  margin: 0.3em 0 0.3em 0.7em;
+}
+.legend .rating:before {
+  margin-right: 0.5em;
+}
+
+.rating:before {
+  font-family: H5PFontAwesome4;
+  width: 1.6em;
+  height: 1.6em;
+  text-align: center;
+  display: inline-block;
+
+  background-color: #dddddd;
+  color: #000000;
+  border: 0.042em solid #c6c6c6;
+  border-radius: 0.084em;
+}
+.rating.low:before {
+  content: '\f006';
+}
+.rating.mid:before {
+  content: '\f123';
+}
+.rating.high:before {
+  content: '\f005';
+}
+
+.rating-container .rating {
+  cursor: pointer;
+}
+
+.rating-container .rating:before {
+  transition: all 0.2s;
+}
+
+/* Hover effects */
+.rating-container .rating.low:hover:before {
+  background-color: #fff;
+  color: #cc3636;
+  border-color: #cc3636;
+}
+.rating-container .rating.mid:hover:before {
+  background-color: #fff;
+  color: #d48d11;
+  border-color: #d48d11;
+}
+.rating-container .rating.high:hover:before {
+  background-color: #fff;
+  color: #5bb24d;
+  border-color: #5bb24d;
+}
+
+/* Active state */
+.legend .rating.low:before,
+.rating-container .rating.low[aria-checked="true"]:before {
+  background-color: #cc3636;
+  color: #fff;
+  border-color: #cc3636;
+}
+.legend .rating.mid:before,
+.rating-container .rating.mid[aria-checked="true"]:before {
+  background-color: #d48d11;
+  color: #fff;
+  border-color: #d48d11;
+}
+.legend .rating.high:before,
+.rating-container .rating.high[aria-checked="true"]:before {
+  background-color: #5bb24d;
+  color: #fff;
+  border-color: #5bb24d;
+}
+
+.goals-assessment-view .goals-header {
+  padding: 0 0.5em 0.5em 0.5em;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  font-weight: bold;
+}
+.goals-assessment-view .goals-header .rating-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: left;
+  width: 7.2em;
+  height: 1.4em;
+  overflow: hidden;
+}
+
+.goals-assessment-view .goals {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.goals-assessment-view .goal {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding: 0.5em;
+  border-bottom: 0.042em solid #ccc;
+  color: #333;
+}
+
+.goals-assessment-view .goal:first-child {
+  padding-top: 1em;
+}
+
+.goals-assessment-view .goal-name {
+  display: inline-block;
+  width: calc(100% - 7.5em);
+}
+
+.goals-assessment-view .rating-container {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  float: right;
+  clear: both;
+}
+
+.h5p-goals-assessment-page .goals-assessment-title {
+  padding: 0.5em 0;
+  margin-bottom: 0.5em;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+}
+
+.h5p-goals-assessment-page .goals-assessment-description {
+  padding: 1em 0em;
+}

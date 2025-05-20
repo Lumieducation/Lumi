@@ -1,0 +1,256 @@
+{
+  "semantics": [
+    {
+      "label": "Medija",
+      "fields": [
+        {
+          "label": "Tipas",
+          "description": "Pasirenkama medija, rodoma virš klausimo."
+        },
+        {
+          "label": "Išjungti paveikslėlio mastelio keitimą"
+        }
+      ]
+    },
+    {
+      "label": "Klausimas"
+    },
+    {
+      "label": "Galimos parinktys",
+      "entity": "parinktis",
+      "field": {
+        "label": "Parinktis",
+        "fields": [
+          {
+            "label": "Medija",
+            "description": "Media to display as a choice."
+          },
+          {
+            "label": "Poster image"
+          },
+          {
+            "label": "Teisingai"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Bendras atsiliepimas",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Numatytasis"
+            }
+          ],
+          "label": "Define custom feedback for any score range",
+          "description": "Spustelėkite mygtuką „Pridėti diapazoną“, kad pridėtumėte tiek diapazonų, kiek jums reikia. Pavyzdys: 0–20 % blogas balas, 21–91 % vidutinis balas, 91–100 % puikus rezultatas!",
+          "entity": "diapazonas",
+          "field": {
+            "fields": [
+              {
+                "label": "Score Range"
+              },
+              {},
+              {
+                "label": "Atsiliepimas apibrėžtam balų diapazonui",
+                "placeholder": "Užpildykite atsiliepimą"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Veikimo nustatymai",
+      "description": "Šios parinktys leis jums valdyti, kaip veikia užduotis.",
+      "fields": [
+        {
+          "label": "Įjungti mygtuką „Bandyti dar kartą“"
+        },
+        {
+          "label": "Įjungti mygtuką „Rodyti sprendimą“"
+        },
+        {
+          "label": "Show confirmation dialog on \"Check\""
+        },
+        {
+          "label": "Show confirmation dialog on \"Retry\""
+        },
+        {
+          "label": "Už visą klausimą skirti vieną balą",
+          "description": "Awards one point to the question if the percentage score is higher than the pass percentage"
+        },
+        {
+          "label": "Require answer before the solution can be viewed"
+        },
+        {
+          "label": "Klausimo tipas",
+          "description": "Pasirinkite klausimo išvaizdą ir veikimą.",
+          "options": [
+            {
+              "label": "Automatinis"
+            },
+            {
+              "label": "Keli pasirinkimai (žymimieji langeliai)"
+            },
+            {
+              "label": "Vienas pasirinkimas (apvalūs mygtukai)"
+            }
+          ]
+        },
+        {
+          "label": "Kraštinių santykis",
+          "description": "Select the aspect ratio of the alternatives",
+          "options": [
+            {
+              "label": "Automatinis"
+            },
+            {
+              "label": "16:9"
+            },
+            {
+              "label": "4:3"
+            },
+            {
+              "label": "3:2"
+            },
+            {
+              "label": "1:1"
+            }
+          ]
+        },
+        {
+          "label": "Maximum alternatives per row",
+          "description": "Set the maximum number of alternatives per row to ensure the questions look alright.",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "3"
+            },
+            {
+              "label": "4"
+            }
+          ]
+        },
+        {
+          "label": "Išlaikymo procentas",
+          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+        }
+      ]
+    },
+    {
+      "label": "User interface",
+      "fields": [
+        {
+          "label": "Tekstas mygtukui „Tikrinti“",
+          "default": "Tikrinti"
+        },
+        {
+          "label": "Tekstas mygtukui „Pateikti“",
+          "default": "Pateikti"
+        },
+        {
+          "label": "Mygtuko „Tikrinti“ pagalbinės technologijos aprašymas",
+          "default": "Tikrinti atsakymus. Atsakymai bus pažymėti kaip teisingi, neteisingi arba neatsakyti."
+        },
+        {
+          "label": "Mygtuko „Rodyti sprendimą“ tekstas",
+          "default": "Rodyti sprendimą"
+        },
+        {
+          "label": "Mygtuko „Rodyti sprendimą“ pagalbinės technologijos aprašymas",
+          "default": "Show the solution. The correct options will be marked."
+        },
+        {
+          "label": "Teisingas atsakymas (nerodomas)",
+          "default": "Teisingas atsakymas"
+        },
+        {
+          "label": "Neteisingas atsakymas (nerodomas)",
+          "default": "Neteisingas atsakymas"
+        },
+        {
+          "label": "Variantas turėjo būti patikrintas",
+          "default": "Should have been checked"
+        },
+        {
+          "label": "Option should not have been checked",
+          "default": "Should not have been checked"
+        },
+        {
+          "label": "Text for \"Requires answer\" message",
+          "default": "Prieš peržiūrėdami sprendimą, atsakykite"
+        },
+        {
+          "label": "Tekstas mygtukui „Bandyti dar kartą“",
+          "default": "Bandyti dar kartą"
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry the task. Reset all responses and start the task over again."
+        },
+        {
+          "label": "Your result",
+          "description": ":num and :total are variables and will be replaced by their respective values.",
+          "default": "You got :num out of :total points"
+        },
+        {
+          "label": "Check confirmation dialog",
+          "fields": [
+            {
+              "label": "Antraštės tekstas",
+              "default": "Baigti?"
+            },
+            {
+              "label": "Turinio tekstas",
+              "default": "Are you sure you want to finish?"
+            },
+            {
+              "label": "Cancel button label",
+              "default": "Cancel"
+            },
+            {
+              "label": "Confirm button label",
+              "default": "Baigti"
+            }
+          ]
+        },
+        {
+          "label": "„Bandyti dar kartą“ patvirtinimo dialogo langas",
+          "fields": [
+            {
+              "label": "Antraštės tekstas",
+              "default": "Bandyti dar kartą?"
+            },
+            {
+              "label": "Turinio tekstas",
+              "default": "Ar tikrai norite bandyti dar kartą?"
+            },
+            {
+              "label": "Atšaukimo mygtuko pavadinimas",
+              "default": "Atšaukti"
+            },
+            {
+              "label": "Confirm button label",
+              "default": "Bandyti dar kartą"
+            }
+          ]
+        },
+        {
+          "label": "Text if alt text is missing for an image",
+          "default": "Alt text missing"
+        },
+        {
+          "label": "Close modal button label",
+          "default": "Close modal"
+        }
+      ]
+    }
+  ]
+}

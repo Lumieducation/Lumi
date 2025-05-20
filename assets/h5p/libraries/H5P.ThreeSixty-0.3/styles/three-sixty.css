@@ -1,0 +1,31 @@
+.h5p-three-sixty {
+  position: relative;
+  color: #212121;
+}
+.h5p-three-sixty-scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.h5p-three-sixty-controls {
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  user-select: none;
+  -ms-user-select: none;
+}
+.h5p-three-sixty-controls:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+.h5p-three-sixty-controls img {
+  -webkit-user-drag: none;
+}
+.h5p-three-sixty-camera {
+  pointer-events: none;
+}
+.h5p-three-sixty-camera > * {
+  pointer-events: auto;
+}

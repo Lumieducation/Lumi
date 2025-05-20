@@ -1,0 +1,454 @@
+[
+  {
+    "name": "media",
+    "type": "group",
+    "label": "Media",
+    "importance": "medium",
+    "fields": [
+      {
+        "name": "type",
+        "type": "library",
+        "label": "Type",
+        "importance": "medium",
+        "options": [
+          "H5P.Image 1.1",
+          "H5P.Video 1.6",
+          "H5P.Audio 1.5"
+        ],
+        "optional": true,
+        "description": "Optional media to display above the question."
+      },
+      {
+        "name": "disableImageZooming",
+        "type": "boolean",
+        "label": "Disable image zooming",
+        "importance": "low",
+        "default": false,
+        "optional": true,
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "type",
+              "equals": "H5P.Image 1.1"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "label": "Task description",
+    "importance": "high",
+    "name": "taskDescription",
+    "placeholder": "Describe what your students should do ...",
+    "description": "What your students should know.",
+    "type": "text",
+    "widget": "html",
+    "enterMode": "div",
+    "tags": [
+      "strong",
+      "em",
+      "u",
+      "a",
+      "ul",
+      "ol",
+      "h2",
+      "h3",
+      "hr",
+      "pre",
+      "code"
+    ]
+  },
+  {
+    "name": "paragraphs",
+    "label": "Paragraphs",
+    "type": "list",
+    "entity": "paragraph",
+    "min": 3,
+    "field": {
+      "name": "paragraph",
+      "label": "Paragraph",
+      "importance": "high",
+      "type": "text",
+      "widget": "html",
+      "enterMode": "div",
+      "tags": [
+        "strong",
+        "em",
+        "u",
+        "ul",
+        "ol",
+        "h2",
+        "h3",
+        "hr",
+        "pre",
+        "code"
+      ]
+    }
+  },
+  {
+    "name": "overallFeedback",
+    "type": "group",
+    "label": "Overall Feedback",
+    "importance": "low",
+    "expanded": true,
+    "fields": [
+      {
+        "name": "overallFeedback",
+        "type": "list",
+        "widgets": [
+          {
+            "name": "RangeList",
+            "label": "Default"
+          }
+        ],
+        "importance": "high",
+        "label": "Define custom feedback for any score range",
+        "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+        "entity": "range",
+        "min": 1,
+        "defaultNum": 1,
+        "optional": true,
+        "field": {
+          "name": "overallFeedback",
+          "type": "group",
+          "importance": "low",
+          "fields": [
+            {
+              "name": "from",
+              "type": "number",
+              "label": "Score Range",
+              "min": 0,
+              "max": 100,
+              "default": 0,
+              "unit": "%"
+            },
+            {
+              "name": "to",
+              "type": "number",
+              "min": 0,
+              "max": 100,
+              "default": 100,
+              "unit": "%"
+            },
+            {
+              "name": "feedback",
+              "type": "text",
+              "label": "Feedback for defined score range",
+              "importance": "low",
+              "placeholder": "Fill in the feedback",
+              "optional": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "behaviour",
+    "type": "group",
+    "label": "Behavioural settings",
+    "importance": "low",
+    "description": "These options will let you control how the task behaves.",
+    "fields": [
+      {
+        "name": "scoringMode",
+        "label": "Scoring mode",
+        "description": "Decide whether to give points for each correctly placed paragraph or for each paragraph that is placed after the paragraph it is supposed to be placed after (\"correct sequence\")",
+        "type": "select",
+        "importance": "low",
+        "default": "positions",
+        "options": [
+          {
+            "value": "positions",
+            "label": "Correctly placed paragraph"
+          },
+          {
+            "value": "transitions",
+            "label": "Correct sequence"
+          }
+        ]
+      },
+      {
+        "name": "applyPenalties",
+        "label": "Apply penalties",
+        "description": "Decide whether to deduce a point for each paragraph that's not positioned correctly.",
+        "type": "boolean",
+        "importance": "low",
+        "default": true,
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "scoringMode",
+              "equals": "positions"
+            }
+          ]
+        }
+      },
+      {
+        "name": "duplicatesInterchangeable",
+        "label": "Duplicate parapraphs interchangeable",
+        "description": "If set, when checking the answer, duplicate paragraphs will be treated as identical if their plain text is equal.",
+        "type": "boolean",
+        "importance": "low",
+        "default": true,
+        "optional": true
+      },
+      {
+        "name": "addButtonsForMovement",
+        "label": "Add buttons for movement",
+        "description": "On mobile devices, buttons for moving paragraphs can offer an extra accessibility benefit. If you prefer, you can deactivate them here.",
+        "type": "boolean",
+        "importance": "low",
+        "default": true,
+        "optional": true
+      },
+      {
+        "name": "enableRetry",
+        "label": "Enable \"Retry\" button",
+        "type": "boolean",
+        "importance": "low",
+        "default": true,
+        "optional": true
+      },
+      {
+        "name": "enableSolutionsButton",
+        "label": "Enable \"Show Solution\" button",
+        "type": "boolean",
+        "importance": "low",
+        "default": true,
+        "optional": true
+      }
+    ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "common": true,
+    "label": "User interface",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "checkAnswer",
+        "type": "text",
+        "label": "Text for \"Check\" button",
+        "importance": "low",
+        "default": "Check"
+      },
+      {
+        "name": "submitAnswer",
+        "type": "text",
+        "label": "Text for \"Submit\" button",
+        "importance": "low",
+        "default": "Submit"
+      },
+      {
+        "name": "tryAgain",
+        "label": "Text for \"Retry\" button",
+        "type": "text",
+        "importance": "low",
+        "default": "Retry"
+      },
+      {
+        "name": "showSolution",
+        "type": "text",
+        "label": "Text for \"Show solution\" button",
+        "importance": "low",
+        "default": "Show solution"
+      },
+      {
+        "name": "up",
+        "type": "text",
+        "label": "Title for \"Up\" button",
+        "importance": "low",
+        "default": "Up"
+      },
+      {
+        "name": "down",
+        "type": "text",
+        "label": "Title for \"Down\" button",
+        "importance": "low",
+        "default": "Down"
+      },
+      {
+        "name": "disabled",
+        "type": "text",
+        "label": "Title for button that is disabled",
+        "importance": "low",
+        "default": "Disabled"
+      }
+    ]
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "common": true,
+    "label": "Readspeaker",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "check",
+        "type": "text",
+        "label": "Assistive technology description for \"Check\" button",
+        "importance": "low",
+        "default": "Check the answers. The responses will be marked as correct or incorrect."
+      },
+      {
+        "name": "showSolution",
+        "type": "text",
+        "label": "Assistive technology description for \"Show Solution\" button",
+        "importance": "low",
+        "default": "Show the solution. The correct solution will be displayed."
+      },
+      {
+        "name": "retry",
+        "type": "text",
+        "label": "Assistive technology description for \"Retry\" button",
+        "importance": "low",
+        "default": "Retry the task. Reset all elements and start the task over again."
+      },
+      {
+        "name": "yourResult",
+        "type": "text",
+        "label": "Your result",
+        "description": "@score will be replaced by the number of points. @total will be replaced by the maximum possible points.",
+        "importance": "low",
+        "default": "You got @score out of @total points"
+      },
+      {
+        "name": "listDescription",
+        "type": "text",
+        "label": "List description",
+        "importance": "low",
+        "default": "Sortable list of paragraphs."
+      },
+      {
+        "name": "listDescriptionCheckAnswer",
+        "type": "text",
+        "label": "List description (check answer)",
+        "importance": "low",
+        "default": "List of paragraphs with results."
+      },
+      {
+        "name": "listDescriptionShowSolution",
+        "type": "text",
+        "label": "List description (show solution)",
+        "importance": "low",
+        "default": "List of paragraphs with solutions."
+      },
+      {
+        "name": "paragraph",
+        "type": "text",
+        "label": "Paragraph",
+        "importance": "low",
+        "default": "Paragraph"
+      },
+      {
+        "name": "correct",
+        "type": "text",
+        "label": "Correct",
+        "importance": "low",
+        "default": "correct"
+      },
+      {
+        "name": "wrong",
+        "type": "text",
+        "label": "Wrong",
+        "importance": "low",
+        "default": "wrong"
+      },
+      {
+        "name": "point",
+        "description": "@score will be replaced by 1 or -1.",
+        "type": "text",
+        "label": "Score explanation",
+        "importance": "low",
+        "default": "@score point"
+      },
+      {
+        "name": "sevenOfNine",
+        "description": "@current will be replaced by the current paragraph number. @total will be replaced by the number of paragraphs.",
+        "type": "text",
+        "label": "Paragraph numbering",
+        "importance": "low",
+        "default": "@current of @total"
+      },
+      {
+        "name": "currentPosition",
+        "description": "Will be followed by \"Paragraph numbering\".",
+        "type": "text",
+        "label": "Current position in list",
+        "importance": "low",
+        "default": "Current position in list"
+      },
+      {
+        "name": "instructionsSelected",
+        "type": "text",
+        "label": "Instruction when paragraph selected",
+        "importance": "low",
+        "default": "Press spacebar to reorder"
+      },
+      {
+        "name": "instructionsGrabbed",
+        "type": "text",
+        "label": "Instruction when paragraph grabbed",
+        "importance": "low",
+        "default": "Press up and down arrow keys to change position, spacebar to drop, escape to cancel"
+      },
+      {
+        "name": "grabbed",
+        "type": "text",
+        "label": "Grabbed",
+        "importance": "low",
+        "default": "Grabbed"
+      },
+      {
+        "name": "moved",
+        "type": "text",
+        "label": "Moved",
+        "importance": "low",
+        "default": "Moved"
+      },
+      {
+        "name": "dropped",
+        "type": "text",
+        "label": "Dropped",
+        "importance": "low",
+        "default": "Dropped"
+      },
+      {
+        "name": "reorderCancelled",
+        "type": "text",
+        "label": "Reorder cancelled",
+        "importance": "low",
+        "default": "Reorder cancelled"
+      },
+      {
+        "name": "finalPosition",
+        "description": "Will be followed by \"Paragraph numbering\".",
+        "type": "text",
+        "label": "Final position",
+        "importance": "low",
+        "default": "Final position"
+      },
+      {
+        "name": "nextParagraph",
+        "description": "Will be followed by \"correct\" or \"wrong\".",
+        "type": "text",
+        "label": "Next paragraph",
+        "importance": "low",
+        "default": "Next paragraph"
+      },
+      {
+        "name": "correctParagraph",
+        "description": "Will be followed by \"Paragraph numbering\".",
+        "type": "text",
+        "label": "Correct Paragraph",
+        "importance": "low",
+        "default": "Correct paragraph at position"
+      }
+    ]
+  }
+]

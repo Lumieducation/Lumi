@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "ویرایشگر سناریو منشعب",
+      "fields": [
+        {
+          "label": "عنوان"
+        },
+        {
+          "label": "صفحه شروع",
+          "fields": [
+            {
+              "label": "عنوان صفحه شروع",
+              "placeholder": "عنوان درس شما"
+            },
+            {
+              "label": "زیرعنوان صفحه شروع",
+              "placeholder": "جزئیات درباره درس"
+            },
+            {
+              "label": "تصویر صفحه شروع"
+            },
+            {
+              "label": "Image alternative text"
+            }
+          ]
+        },
+        {
+          "label": "لیست صفحات پایان",
+          "field": {
+            "label": "صفحه پایان",
+            "fields": [
+              {
+                "label": "عنوان"
+              },
+              {
+                "label": "متن"
+              },
+              {
+                "label": "تصویر"
+              },
+              {
+                "label": "نمره",
+                "description": "نمره به هر LMS، LRS یا هر خدمات متصل دیگری که نمرات را برای کاربرانی که به سناریوی پیش‌فرض پایانی می‌رسند، از H5P دریافت می‌کند، ارسال خواهد شد"
+              },
+              {
+                "label": "شناسه محتوا"
+              }
+            ]
+          }
+        },
+        {
+          "label": "لیست محتوای سناریو منشعب",
+          "entity": "محتوا",
+          "field": {
+            "fields": [
+              {},
+              {
+                "description": "If selected, the user will see the content title in the top bar above this content.",
+                "label": "Show content title in view"
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Proceed"
+              },
+              {
+                "label": "Override require content finished",
+                "description": "Override the individual settings for requiring the content to be finished before activating the \"Proceed\" button. Will not have any effect if the content doesn't indicate if it was \"finished\", e.g. images or course presentations with just one slide.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "گزینه‌های نمره‌دهی",
+          "fields": [
+            {
+              "label": "گزینه‌های نمره‌دهی",
+              "description": "انتخاب نوع نمره‌دهی",
+              "options": [
+                {
+                  "label": "تنظیم ثابت نمره برای هر سناریو پایانی"
+                },
+                {
+                  "label": "محاسبه پویای نمره برای پاسخ‌های کاربر"
+                },
+                {
+                  "label": "بدون نمره‌دهی"
+                }
+              ]
+            },
+            {
+              "label": "شامل نمره تعامل‌ها در سناریو منشعب",
+              "description": "در صورت انتخاب، به عنوان مثال نمرات ویدئوهای تعاملی به نمره کل افزوده خواهد شد. در صورت عدم انتخاب، فقط نمرات مشخص شده در بخش‌های بازخورد برای موارد محتوا، سؤالات منشعب و سناریو‌های پایانی حساب خواهد شد."
+            }
+          ]
+        },
+        {
+          "label": "تنظیمات عملکرد",
+          "fields": [
+            {
+              "label": "حذف و جایگزین کردن بازگشت به عقب",
+              "description": "حذف و جایگزین کردن تنظیمات شخصی برای فعال‌سازی بازگشت به عقب"
+            },
+            {
+              "label": "حذف و جایگزین کردن لزوم به پایان رسیدن محتوا",
+              "description": "حذف و جایگزین کردن تنظیمات شخصی برای لزوم به پایان رسیدن محتوا پیش از فعال‌سازی دکمه ادامه. اگر محتوا به پایان رسیدن را نشان ندهد، اثری نخواهد داشت، برای مثال تصاویر یا ارائه‌های درسی شامل فقط یک اسلاید."
+            },
+            {
+              "label": "Randomize Branching Questions",
+              "description": "Branching questions will be displayed in random order"
+            }
+          ]
+        },
+        {
+          "label": "بومی‌سازی",
+          "fields": [
+            {
+              "label": "متن دکمه روی صفحه شروع",
+              "default": "شروع درس"
+            },
+            {
+              "label": "متن دکمه روی صفحه پایان",
+              "default": "شروع مجدد درس"
+            },
+            {
+              "label": "متن دکمه قبلی روی هر یک از صفحات کتابخانه و سؤالات منشعب",
+              "default": "قبلی"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "متن دکمه مورد استفاده برای بازپخش یک ویدئو",
+              "default": "بازپخش ویدئو"
+            },
+            {
+              "label": "برچسب نمره روی صفحه پایان",
+              "default": "نمره شما:"
+            },
+            {
+              "label": "برچسب آریا برای دکمه تمام‌صفحه",
+              "default": "تمام‌صفحه"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "semantics": [
+    {
+      "label": "Titelseite anzeigen",
+      "description": "Auf der Titelseite werden Informationen über das Buch angezeigt bevor es geöffnet wird"
+    },
+    {
+      "label": "Titelseite",
+      "fields": [
+        {
+          "label": "Beschreibung",
+          "description": "Dieser Text wird zur Beschreibung des Buchs unter dem eigentlichen Titel angezeigt."
+        },
+        {
+          "label": "Medium für die Titelseite",
+          "description": "Optionales Medium für die Einleitung."
+        }
+      ]
+    },
+    {
+      "label": "Seiten",
+      "entity": "Seite",
+      "widgets": [
+        {
+          "label": "Voreinstellung"
+        }
+      ],
+      "field": {
+        "label": "Eintrag",
+        "fields": [
+          {
+            "label": "Seite"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "fields": [
+        {
+          "label": "Basisfarbe",
+          "description": "Setze die Basisfarbe für das Farbschema im Buch. Bitte denke an einen ausreichend hohen Kontrast."
+        },
+        {
+          "label": "Standardmäßig Inhaltsverzeichnis anzeigen",
+          "description": "Wenn gewählt, wird das Inhaltsverzeichnis beim Öffnen des Buchs angezeigt."
+        },
+        {
+          "label": "Fortschrittsanzeige anzeigen",
+          "description": "Wenn gewählt, wird bei jedem Kapitel angezeigt, ob die Lernenden es abgeschlossen haben."
+        },
+        {
+          "label": "Fortschritt automatisch erfassen",
+          "description": "Wenn gewählt, werden Kapitel ohne Aufgaben als abgeschlossen markiert, sobald sie angezeigt wurden. Kapitel mit interaktiven Aufgaben gelten als abgeschlossen, wenn alle Aufgaben gelöst wurden. Wenn abgewählt, wird am Ende eines Kapitels ein Button angezeigt, den die Lernenden anklicken müssen, wenn sie das Kapitel abgeschlossen haben."
+        },
+        {
+          "label": "Zusammenfassung anzeigen",
+          "description": "Wenn gewählt, können die Nutzenden eine Zusammenfassung sehen und ihren Fortschritt/ihre Antworten einsenden."
+        },
+        {
+          "label": "\"Neustart\"-Button anzeigen",
+          "description": "Wenn gewählt, können die Nutzenden einen Neustart auf der Zusammenfassungsseite veranlassen."
+        }
+      ]
+    },
+    {
+      "label": "Beschriftung für \"Öffnen\"",
+      "default": "Öffnen"
+    },
+    {
+      "label": "Beschriftung für \"Inhaltsverzeichnis anzeigen\"",
+      "default": "Inhaltsverzeichnis anzeigen"
+    },
+    {
+      "label": "Beschriftung für \"Inhaltsverzeichnis ausblenden\"",
+      "default": "Inhaltsverzeichnis ausblenden"
+    },
+    {
+      "label": "Beschriftung für \"Nächste Seite\"",
+      "default": "Nächste Seite"
+    },
+    {
+      "label": "Beschriftung für \"Vorherige Seite\"",
+      "default": "Vorherige Seite"
+    },
+    {
+      "label": "Beschriftung für \"Seite abgeschlossen!\"",
+      "default": "Seite abgeschlossen!"
+    },
+    {
+      "label": "Beschriftung für \"@page von @total Seiten abgeschlossen\" (@pages und @total sind Platzhalter und werden von den echten Werten ersetzt)",
+      "default": "@pages von @total Seiten abgeschlossen"
+    },
+    {
+      "label": "Beschriftung für \"Unvollständige Seite\"",
+      "default": "Unvollständige Seite"
+    },
+    {
+      "label": "Beschriftung für \"Nach oben springen\"",
+      "default": "Nach oben springen"
+    },
+    {
+      "label": "Beschriftung für \"Ich habe diese Seite abgeschlossen\"",
+      "default": "Ich habe diese Seite abgeschlossen"
+    },
+    {
+      "label": "Beschriftung des Vollbild-Buttons",
+      "default": "Vollbild"
+    },
+    {
+      "label": "Beschriftung des \"Vollbild beenden\"-Buttons",
+      "default": "Vollbild beenden"
+    },
+    {
+      "label": "Seitenfortschritt",
+      "description": "\"@count\" ist ein Platzhalter und wird durch die Seitenzahl ersetzt, und \"@total\" wird durch die Gesamtseitenzahl ersetzt",
+      "default": "@count von @total Seiten"
+    },
+    {
+      "label": "Interaktionsfortschritt",
+      "description": "\"@count\" ist ein Platzhalter und wird durch Zahl der Interaktionen ersetzt, und \"@total\" wird durch die Gesamtzahl der Interaktionen ersetzt",
+      "default": "@count von @total Interaktionen"
+    },
+    {
+      "label": "Übersetzung für \"Report absenden\"",
+      "default": "Report absenden"
+    },
+    {
+      "label": "Beschriftung für den \"Neustart\"-Button",
+      "default": "Neustart"
+    },
+    {
+      "label": "Titel für die Zusammenfassung",
+      "default": "Zusammenfassung"
+    },
+    {
+      "label": "Übersetzung für \"Alle Interaktionen\"",
+      "default": "Alle Interaktionen"
+    },
+    {
+      "label": "Übersetzung für \"Unbeantwortete Interaktionen\"",
+      "default": "Unbeantwortete Interaktionen"
+    },
+    {
+      "label": "Punkte",
+      "description": "\"@score\" ist ein Platzhalter und wird durch die aktuelle Punktzahl ersetzt, und \"@maxscore\" wird durch die maximal mögliche Punktzahl ersetzt",
+      "default": "@score / @maxscore"
+    },
+    {
+      "label": "Fortschritt bei den Interaktionen je Seite",
+      "description": "\"@left\" ist ein Platzhalter und wird durch die Anzahl der verbleibenden Interaktionen ersetzt, und \"@max\" wird durch die Gesamtzahl der Interaktionen der Seite ersetzt",
+      "default": "@left von @max Interaktionen abgeschlossen"
+    },
+    {
+      "label": "Übersetzung für \"Keine Interaktionen\"",
+      "default": "Keine Interaktionen"
+    },
+    {
+      "label": "Übersetzung für \"Punkte\"",
+      "default": "Punkte"
+    },
+    {
+      "label": "Beschriftung für den \"Zusammenfassung und Einsenden\"-Button",
+      "default": "Zusammenfassung und Einsenden"
+    },
+    {
+      "label": "Übersetzung für \"Du hast noch keine Seiten bearbeitet.\"",
+      "default": "Du hast noch keine Seiten bearbeitet."
+    },
+    {
+      "label": "Übersetzung für \"Du musst wenigstens eine Seite bearbeiten, um die Zusammenfassung zu sehen.\"",
+      "default": "Du musst wenigstens eine Seite bearbeiten, um die Zusammenfassung zu sehen."
+    },
+    {
+      "label": "Übersetzung für \"Deine Antworten wurden zur Begutachtung versendet!\"",
+      "default": "Deine Antworten wurden zur Begutachtung versendet!"
+    },
+    {
+      "label": "Beschriftung für Buchfortschritt in der Zusammenfassung",
+      "default": "Buchfortschritt"
+    },
+    {
+      "label": "Beschriftung für Interaktionsfortschritt in der Zusammenfassung",
+      "default": "Interaktionsfortschritt"
+    },
+    {
+      "label": "Beschriftung für Gesamtpunktzahl",
+      "default": "Gesamtpunktzahl"
+    },
+    {
+      "label": "Texte zur Barrierefreiheit",
+      "fields": [
+        {
+          "label": "Textalternative für die Fortschrittsanzeige",
+          "description": "Dieser Text ersetzt die grafische Fortschrittsanzeige. (Es können die Platzhalter @page und @total verwendet werden.)",
+          "default": "Seite @page von @total."
+        },
+        {
+          "label": "Beschriftung des Buttons, um das Inhaltsverzeichnis ein- und auszublenden",
+          "default": "Inhaltsverzeichnis ein- bzw. ausschalten"
+        }
+      ]
+    }
+  ]
+}

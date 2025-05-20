@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "وسائط",
+      "fields": [
+        {
+          "label": "النوع",
+          "description": "وسائط إضافية اختيارية تُعرض أعلى السؤال."
+        },
+        {
+          "label": "إيقاف ميزة تكبير الصور"
+        }
+      ]
+    },
+    {
+      "label": "وصف النشاط",
+      "description": "وصف الكيفية التي ينبغي للمستخدم حل النشاط",
+      "default": "سحب الكلمات إلى المربعات الصحيحة"
+    },
+    {
+      "label": "نص",
+      "placeholder": "*أوسلو* هي عاصمة النرويج، و*ستوكهولم* هي عاصمة السويد، و*كوبنغاهن* هي عاصمة الدنمارك. وتقع جميع المدن في شبه الجزيرة *الإسكندنافية: الجزء الشمالي من أوروبا*.",
+      "important": {
+        "description": "<ul><li>تُضاف الكلمات القابلة للإسقاط مع وضع علامة نجمة (*) قبل الكلمة/العبارة الصحيحة وبعدها*.</li><li>يمكنك إضافة تلميح نصي باستخدام علامة النقطتان (:) قبل التلميح.</li><li>وهناك كلمة واحدة صحيحة فحسب لكل مساحة فارغة.</li><li>يمكنك إضافة ملاحظات ليجري عرضها عند إكمال مهمة. استخدم ’/+‘ لملاحظات الإجابة الصحيحة و’/-‘ لملاحظات الإجابة غير الصحيحة.</li></ul>",
+        "example": "يمكن تحرير محتوى H5P باستخدام *متصفح: أي نوع من البرامج هو ”كروم“؟*. <br /> محتوى H5P *تفاعلي/+إجابة صحيحة! /-إجابة غير صحيحة، فحاول مجدداً!*"
+      }
+    },
+    {
+      "label": "Distractors",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Enter extra solutions that are wrong as distractors. Use the same asterisk (*) scheme as for the text."
+    },
+    {
+      "label": "شفافية خلفية العناصر",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "الافتراضي"
+            }
+          ],
+          "label": "تحديد الملاحظات المخصصة لأي نطاق درجة",
+          "description": "انقر على زر \"إضافة نطاق\" لإضافة ما ترغب به من نطاقات، ومثال على ذلك: 0-20٪ نتيجة سيئة، 21-91٪ نتيجة متوسطة، 91-100٪ نتيجة رائعة!",
+          "entity": "النطاق",
+          "field": {
+            "fields": [
+              {
+                "label": "نطاق الدرجة"
+              },
+              {},
+              {
+                "label": "ملاحظات لنطاق درجة محدد",
+                "placeholder": "أدخل الملاحظات"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "النص ل \"تحقق \" الزر",
+      "default": "Check"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "النص ل \"إعادة المحاولة \" الزر",
+      "default": "إعادة المحاولة"
+    },
+    {
+      "label": "النص  \"مشاهدة الحل \" الزر",
+      "default": "مشاهدة الحل"
+    },
+    {
+      "label": "Numbered Drop zone label",
+      "default": "Drop Zone @index.",
+      "description": "Label used for accessibility, where the Read speaker will read the index of a drop zone. Variable available: @index"
+    },
+    {
+      "label": "Empty Drop Zone label",
+      "default": "Drop Zone @index is empty.",
+      "description": "Label used for accessibility, where the Read speaker will read that the drop zone is empty"
+    },
+    {
+      "label": "Contains Drop Zone label",
+      "default": "Drop Zone @index contains draggable @draggable.",
+      "description": "Label used for accessibility, where the Read speaker will read that the drop zone contains a draggable"
+    },
+    {
+      "label": "Draggable elements label",
+      "default": "@index of @count draggables.",
+      "description": "تسمية مستخدمة لإمكانية الوصول، حيث يقرأ برنامج read speaker أن هذا عنصر قابل للسحب. المتغير متاح: @index، @count"
+    },
+    {
+      "label": "Label for show tip button",
+      "default": "Show tip",
+      "description": "تسمية مستخدمة لإمكانية الوصول، حيث يقرأ برنامج read speaker هذه العبارة قبل قراءة التلميح"
+    },
+    {
+      "label": "النص Readspeaker عن الإجابة الصحيحة",
+      "default": "صحيح!"
+    },
+    {
+      "label": "النص Readspeaker للإجابة غير صحيحة",
+      "default": "غير صحيح!"
+    },
+    {
+      "label": "Confirmation dialog title that user wants to reset a droppable",
+      "default": "Reset drop"
+    },
+    {
+      "label": "Confirmation dialog description that user wants to reset a droppable",
+      "default": "Are you sure you want to reset this drop?"
+    },
+    {
+      "label": "Label used for accessibility, where the read speaker indicates that dragging is initiated",
+      "default": "Draggable is grabbed."
+    },
+    {
+      "label": "Label used for accessibility, where the read speaker indicates that dragging is canceled",
+      "default": "Cancelled dragging."
+    },
+    {
+      "label": "Label used for accessibility, where the read speaker indicates that a text is the correct answer",
+      "default": "الإجابة الصحيحة:"
+    },
+    {
+      "label": "Header for panel containing feedback for correct/incorrect answers",
+      "default": "ملاحظات"
+    },
+    {
+      "label": "إعدادت النشاط",
+      "description": "وهذه الخيارات تمكنك من التحكم في كيفية سلوك هذا النشاط",
+      "fields": [
+        {
+          "label": "تمكين \"إعادة المحاولة \""
+        },
+        {
+          "label": "تمكين \"مشاهدة الحل \" الزر"
+        },
+        {
+          "label": "تمكين زر \"التحقق\""
+        },
+        {
+          "label": "تلميح"
+        }
+      ]
+    },
+    {
+      "label": "Textual representation of the score bar for those using a readspeaker",
+      "default": "You got :num out of :total points"
+    },
+    {
+      "label": "Assistive technology label for \"Check\" button",
+      "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+    },
+    {
+      "label": "تسمية التكنولوجيا المساعدة لزر ”إظهار الحلول“",
+      "default": "اعرض الحل. ستتحدد المهمة بحلها الصحيح."
+    },
+    {
+      "label": "تسمية التكنولوجيا المساعدة لزر ”إعادة المحاولة“",
+      "default": "إعادة المحاولة للمهمة. إعادة ضبط جميع الردود والبدء بالمهمة مرة أخرى."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Descrizione del campo di input",
+      "description": "Descrizione di cosa l'utente dovrebbe immettere"
+    },
+    {
+      "label": "Testo segnaposto",
+      "description": "Un testo segnaposto per l'utente"
+    },
+    {
+      "label": "Lunghezza massima del testo",
+      "description": "Numero massimo di caratteri per il testo"
+    },
+    {
+      "label": "Dimensione del campo di input",
+      "description": "Dimensione del campo di input in termini di linee su cui si estende",
+      "options": [
+        {
+          "label": "1 linea"
+        },
+        {
+          "label": "3 linee"
+        },
+        {
+          "label": "10 linee"
+        }
+      ]
+    },
+    {
+      "label": "Campo obbligatorio",
+      "description": "Metti la spunta per rendere questo campo obbligatorio. L'utente dovrà compilare tutti i campi obbligatori per poter esportare un documento"
+    },
+    {
+      "label": "Caratteri rimanenti",
+      "default": "Caratteri rimanenti: @chars",
+      "description": "Messaggio per i caratteri rimanenti. Puoi usare @chars, che sarà sostituito dal numero corrispondente"
+    }
+  ]
+}

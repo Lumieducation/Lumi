@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Beskrivning av inmatningsfält",
+      "description": "Beskrivning av vad användaren ska mata in."
+    },
+    {
+      "label": "Text för platshållare",
+      "description": "En platshållartext för användaren."
+    },
+    {
+      "label": "Max textlängd",
+      "description": "Max antal tecken för texten."
+    },
+    {
+      "label": "Storlek på fält",
+      "description": "Fältets storlek, i antal rader text.",
+      "options": [
+        {
+          "label": "1 rad"
+        },
+        {
+          "label": "3 rader"
+        },
+        {
+          "label": "10 rader"
+        }
+      ]
+    },
+    {
+      "label": "Obligatoriska fält",
+      "description": "Bocka i för att göra detta fält obligatoriskt, användaren måste svara på alla obligagoriska fält för att exportera till ett dokument."
+    },
+    {
+      "label": "Återstående tecken",
+      "default": "Återstående tecken: @chars",
+      "description": "Meddelande om återstående tecken. Du kan använda @chars som kommer att ersättas av korrekt siffra."
+    }
+  ]
+}

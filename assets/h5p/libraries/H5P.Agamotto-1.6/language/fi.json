@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Otsikko",
+      "placeholder": "Tähän voit kirjoittaa vapaaehtoisen otsikon",
+      "description": "Otsikko jonka haluat näyttää kuvan yläpuolella"
+    },
+    {
+      "label": "Osiot",
+      "entity": "osio",
+      "widgets": [
+        {
+          "label": "Oletus"
+        }
+      ],
+      "field": {
+        "label": "Osio",
+        "fields": [
+          {
+            "label": "Kuva"
+          },
+          {
+            "label": "Etiketti",
+            "description": "Vapaaehtoinen etikettiteksti aikajanan pisteille. Älä kirjoita liian pitkää tekstiä tai sitä ei näytetä"
+          },
+          {
+            "label": "Kuvaus",
+            "placeholder": "Minun kuvaukseni kuvalle...",
+            "description": "Vapaaehtoinen kuvausteksti kuvalle"
+          },
+          {
+            "label": "Audio",
+            "description": "Optional audio that plays when an image is shown."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Lisäasetukset",
+      "description": "Nämä asetukset sallivat muuttaa tehtävän lisäasetuksia.",
+      "fields": [
+        {
+          "label": "Aloituskuva",
+          "description": "Määritä sen kuvan numero josta haluat esityksen alkavan."
+        },
+        {
+          "label": "Kiinnity osion kuvauspisteeseen",
+          "description": "Jos valittuna aikajanan etenemistä kuvaava ikoni lukittuu aina kohdatessaan osion kuvauspisteen sen sijaan että liukuisi vapaasti."
+        },
+        {
+          "label": "Näytä aikajanalla osioiden kuvauspisteet",
+          "description": "Jos päällä aikajanalla esitetään jokaiselle dialle oma osion kuvaupiste."
+        },
+        {
+          "label": "Näytä etiketit",
+          "description": "Jos päällä osion kuvauspisteen päällä esitetään määrittelemäsi etikettiteksti"
+        },
+        {
+          "label": "Läpinäkyvyyden korvaava väri",
+          "description": "Määritä väri joka täyttyy kuvan läpinäkyvät alueet."
+        },
+        {
+          "label": "Image space in fullscreen mode",
+          "description": "If you have descriptions in addition to the images, set the the percentage of space that the images should use in fullscreen mode."
+        }
+      ]
+    },
+    {
+      "label": "Ruudunlukija",
+      "fields": [
+        {
+          "label": "Kuva",
+          "default": "Kuva"
+        },
+        {
+          "label": "Image Slider",
+          "default": "Image Slider"
+        },
+        {
+          "label": "Mute title",
+          "default": "Mute"
+        },
+        {
+          "label": "Unmute title",
+          "default": "Unmute"
+        },
+        {
+          "label": "Title for fullscreen button (enter)",
+          "default": "Enter fullscreen mode"
+        },
+        {
+          "label": "Title for fullscreen button (exit)",
+          "default": "Exit fullscreen mode"
+        }
+      ]
+    }
+  ]
+}

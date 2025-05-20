@@ -1,0 +1,299 @@
+{
+  "semantics": [
+    {
+      "label": "Multivide",
+      "fields": [
+        {
+          "label": "Tips",
+          "description": "Papildu multimedijs, kuru atspoguļot virs jautājuma."
+        },
+        {
+          "label": "Atspējot attēla tālummaiņu"
+        }
+      ]
+    },
+    {
+      "label": "Uzdevuma apraksts",
+      "description": "Aprakstiet savu uzdevumu šeit. Uzdevuma apraksts parādīsies virs teksta ievades apgabala.",
+      "placeholder": "Apkopojiet grāmatu 500 rakstzīmēs..."
+    },
+    {
+      "label": "Palīdzības teksts",
+      "description": "Šim tekstam vajadzētu palīdzēt lietotājam sākt darbu.",
+      "placeholder": "Šī grāmata ir par..."
+    },
+    {
+      "label": "Risinājuma paraugs",
+      "description": "Ja vēlaties variet pievienot risinājuma paraugu, kas tiks parādīts pēc tam, kad izglītojamais būs izveidojis tekstu. To sauc par risinājuma paraugu, jo, iespējams, uzdevumam nav tikai viens risinājums.",
+      "fields": [
+        {
+          "label": "Ievads",
+          "description": "Ja vēlaties variet atstāt izglītojamajiem dažus paskaidrojumus par savu piemēru. Paskaidrojumi tiks parādīti tikai tad, ja pievienosiet arī piemēru.",
+          "placeholder": "Lūdzu, atcerieties, ka jums nebija paredzēts iesniegt tieši tādu pašu risinājumu. Tas ir tikai labs piemērs."
+        },
+        {
+          "label": "Risinājuma parauga teksts",
+          "description": "Pēc iesniegšanas izglītojamais redzēs pogu \"Rādīt risinājumu\", ja šeit norādīsiet tekstu."
+        }
+      ]
+    },
+    {
+      "label": "Atslēgvārdi",
+      "widgets": [
+        {
+          "label": "Pēc noklusējuma"
+        }
+      ],
+      "entity": "Atslēgvārds",
+      "field": {
+        "label": "Atslēgvārds",
+        "fields": [
+          {
+            "label": "Atslēgvārds",
+            "description": "Atslēgvārds vai frāze, ko meklēt. Izmantojiet zvaigznīti '*' kā aizstājējzīmi vienai vai vairākām rakstzīmēm. Lai izmantotu regulāro izteiksmi, sākumā un beigās izmantojiet slīpsvītru '/'."
+          },
+          {
+            "label": "Variācijas",
+            "description": "Pievienojiet šim atslēgvārdam dažādus variantus. Piemērs: 'Lielpilsēta' pievienojiet alternatīvas 'pilsēta', 'valstspilsēta' utt. Punkti tiks piešķirti, ja lietotājs iekļauj kādu no norādītajām alternatīvām.",
+            "entity": "variācija",
+            "field": {
+              "label": "Atslēgvārda variācija"
+            }
+          },
+          {
+            "label": "Punkti, izvēles un atgriezeniskā saite",
+            "fields": [
+              {
+                "label": "Punkti",
+                "description": "Punkti, ko lietotājs iegūs, ja atbildē iekļaus šo atslēgvārdu vai tā alternatīvas."
+              },
+              {
+                "label": "Gadījumi",
+                "description": "Nosakiet, par cik atslēgvārda vai tā variantu gadījumiem ir jāpiešķir punkti."
+              },
+              {
+                "label": "Reģistrjutīgs",
+                "description": "Nodrošina, ka lietotāja ievade ir tieši tāda pati kā atbilde."
+              },
+              {
+                "label": "Atļaut nelielas kļūdas",
+                "description": "Tiks pieņemtas nelielas pareizrakstības kļūdas (3-9 rakstzīmes: 1 kļūda, vairāk nekā 9 rakstzīmes: 2 kļūdas)."
+              },
+              {
+                "label": "Atgriezeniskā saite, ja atslēgvārds ir iekļauts",
+                "description": "Šī atgriezeniskā saite tiks parādīta, ja lietotājs atbildē iekļaus šo atslēgvārdu vai tā alternatīvas."
+              },
+              {
+                "label": "Atgriezeniskā saite, ja atslēgvārds nav iekļauts",
+                "description": "Šī atgriezeniskā saite tiks parādīta, ja lietotājs atbildē neiekļaus šo atslēgvārdu vai tā alternatīvas."
+              },
+              {
+                "label": "Atgriezeniskās saites vārds ko rādīt, ja atslēgvārds ir iekļauts",
+                "description": "Šī opcija ļauj norādīt, kurš vārds ir jāparāda pirms atsauksmēm, ja tekstā tika atrasts atslēgvārds.",
+                "options": [
+                  {
+                    "label": "atslēgvārds"
+                  },
+                  {
+                    "label": "atrasta alternatīva"
+                  },
+                  {
+                    "label": "sniegta atbilde"
+                  },
+                  {
+                    "label": "neviens"
+                  }
+                ]
+              },
+              {
+                "label": "Atgriezeniskās saites vārds ko rādīt, ja atslēgvārds nav iekļauts",
+                "description": "Šī opcija ļauj norādīt, kurš vārds ir jāparāda pirms atgriezeniskās saites, ja atslēgvārds tekstā netika atrasts.",
+                "options": [
+                  {
+                    "label": "atslēgvārds"
+                  },
+                  {
+                    "label": "neviens"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Kopējā atgriezeniskā saite",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Pēc noklusējuma"
+            }
+          ],
+          "label": "Iestatiet pielāgotu atgriezenisko saiti katram rezultātu intervālam",
+          "description": "Klikšķiniet pogu \"Pievienot diapazonu\", lai pievienotu tik diapazonus cik vēlaties. Piemēram, 0-20% Slikts rezultāts, 21-91% Viduvējs rezultāts, 91-100% Lielisks rezultāts!",
+          "entity": "diapazons",
+          "field": {
+            "fields": [
+              {
+                "label": "Rezultātu diapazons"
+              },
+              {},
+              {
+                "label": "Norādītā diapazona atgriezeniskā saite",
+                "placeholder": "Aizpildiet atgriezenisko saiti"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Uzvedības iestatījumi",
+      "description": "Šie iestatījumi ļaus jums kontrolēt uzdevuma uzvedību.",
+      "fields": [
+        {
+          "label": "Minimālais rakstzīmju skaits",
+          "description": "Norādiet minimālo rakstzīmju skaitu, kas lietotājam jāievada."
+        },
+        {
+          "label": "Maksimālais rakstzīmju skaits",
+          "description": "Norādiet maksimālo rakstzīmju skaitu, ko lietotājs var ievadīt."
+        },
+        {
+          "label": "Ievades lauka lielums",
+          "description": "Ievades lauka lielums rindās",
+          "options": [
+            {
+              "label": "1 rinda"
+            },
+            {
+              "label": "3 rindas"
+            },
+            {
+              "label": "10 rindas"
+            }
+          ]
+        },
+        {
+          "label": "Atļaut \"Mēģināt vēlreiz\"",
+          "description": "Ja atzīmēts, izglītojamie var mēģināt vēlreiz izpildīt uzdevumu."
+        },
+        {
+          "label": "Ignorēt punktu skaitīšanu",
+          "description": "Ja atzīmēts, izglītojamie redzēs tikai atsauksmes, ko sniedzāt par atslēgvārdiem, bet ne rezultātu."
+        },
+        {
+          "label": "Punkti galvenajā vidē",
+          "description": "Izmanto, lai piešķirtu punktus galvenajā vidē par atbildes sniegšanas faktu (netiek rādīts izglītojamajam)."
+        },
+        {
+          "label": "Nokārtošanas procents",
+          "description": "Procentuālā daļa, kas nepieciešama pārbaudījuma nokārtošanai"
+        },
+        {
+          "label": "Lietpratības procents",
+          "description": "Procentuālā daļa, kas nepieciešama apguvei lietpratēja līmenī. Iestatot apguves procentuālo vērtību zem 100%, attiecīgi samazināsies maksimālais iespējamais punktu skaits. Tas ir paredzēts, lai sniegtu izglītojamajiem zināmu rezervi, nevis \"visžēlīgi\" pieņemtu risinājumus, kas nesatur visus atslēgvārdus."
+        },
+        {
+          "label": "Ignorēt reģistrjutību",
+          "description": "Šis iestatījums nosaka, vai opcija “Reģistrjutīgs” tiks piemērota visiem atslēgvārdiem.",
+          "options": [
+            {
+              "label": "Iespējots"
+            },
+            {
+              "label": "Atspējots"
+            }
+          ]
+        },
+        {
+          "label": "Ignorēt kļūdu piedošanu",
+          "description": "Šis iestatījums nosaka, vai opcija \"Piedod kļūdas\" tiks piemērota visiem atslēgvārdiem.",
+          "options": [
+            {
+              "label": "Iespējots"
+            },
+            {
+              "label": "Atspējots"
+            }
+          ]
+        },
+        {
+          "label": "Replacement for line breaks",
+          "description": "By default, line breaks will be replaced with a space character. If you want to check for line breaks, e.g. in regular expressions, you can set a different replacement here.",
+          "options": [
+            {
+              "label": "space"
+            },
+            {
+              "label": "line break (\\n)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Pogas \"Pārbaudīt\" teksts",
+      "default": "Pārbaudīt"
+    },
+    {
+      "label": "Pogas \"Iesniegt\" teksts",
+      "default": "Iesniegt"
+    },
+    {
+      "label": "Pogas \"Mēģināt vēlreiz\" teksts",
+      "default": "Mēģināt vēlreiz"
+    },
+    {
+      "label": "Pogas \"Parādīt risinājumu\" teksts",
+      "default": "Parādīt risinājumu"
+    },
+    {
+      "label": "Atgriezeniskās saites par iekļautajiem/trūkstošajiem atslēgvārdiem paneļa galvene",
+      "default": "Atgriezeniskā saite"
+    },
+    {
+      "label": "Risinājuma etiķete",
+      "default": "Risinājuma paraugs"
+    },
+    {
+      "label": "Atlikušās rakstzīmes",
+      "default": "Atlikušās rakstzīmes: @chars",
+      "description": "Ziņojums atlikušajām rakstzīmēm. Variet izmantot @chars, kas tiks aizstāts ar atbilstošo rakstzīmju skaitu."
+    },
+    {
+      "label": "Nepietiekams rakstzīmju skaits",
+      "default": "Jāievada vismaz @chars rakstzīmes!",
+      "description": "Ziņojums, kas norāda, ka tekstā nav pietiekami daudz rakstzīmju. Variet izmantot @chars, kas tiks aizstāts ar atbilstošo rakstzīmju skaitu."
+    },
+    {
+      "label": "Saglabāšanas ziņojums",
+      "description": "Ziņojums, kas norāda, ka teksts ir saglabāts",
+      "default": "saglabāts"
+    },
+    {
+      "label": "Jūsu rezultāts (netiek parādīts)",
+      "description": "Pieejamības teksts, ko izmanto asistīvās tehnoloģijas. @score tiks aizstāts ar punktu skaitu. @total tiks aizstāts ar maksimāli iespējamo punktu skaitu.",
+      "default": "Jūs saņēmāt @score no @total punktiem"
+    },
+    {
+      "label": "Navigācijas ziņojums (netiek parādīts)",
+      "description": "Pieejamības teksts, ko izmanto asistīvās tehnoloģijas",
+      "default": "Pāriets uz jaunveidoto parauga risinājumu pēc teksta apgabala."
+    },
+    {
+      "label": "Pogas \"Pārbaudīt\" apraksts asistīvajām tehnoloģijām",
+      "default": "Pārbaudīt atbildes."
+    },
+    {
+      "label": "Asistīvo tehnoloģiju apraksts pogai \"Rādīt risinājumu\"",
+      "default": "Parādīt risinājumu. Jums tiks nodrošināts risinājuma paraugs."
+    },
+    {
+      "label": "Pogas \"Mēģināt vēlreiz\" apraksts asistīvajām tehnoloģijām",
+      "default": "Mēģināt vēlreiz izpildīt uzdevumu. Jūs varat uzlabot savu iepriekšējo atbildi, ja autors to atļāvis."
+    }
+  ]
+}

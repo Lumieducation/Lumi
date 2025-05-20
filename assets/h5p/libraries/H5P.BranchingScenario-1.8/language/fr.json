@@ -1,0 +1,195 @@
+{
+  "semantics": [
+    {
+      "label": "Éditeur de scénario",
+      "fields": [
+        {
+          "label": "Titre"
+        },
+        {
+          "label": "Écran de départ",
+          "fields": [
+            {
+              "label": "Titre de l’écran d'accueil",
+              "placeholder": "Titre de votre cours"
+            },
+            {
+              "label": "Sous-titre de l’écran d'accueil",
+              "placeholder": "Informations sur votre cours"
+            },
+            {
+              "label": "Image de l’écran d'accueil"
+            },
+            {
+              "label": "Texte alternatif pour l'image"
+            }
+          ]
+        },
+        {
+          "label": "Liste des écrans de fin",
+          "field": {
+            "label": "Écran de fin",
+            "fields": [
+              {
+                "label": "Titre"
+              },
+              {
+                "label": "Texte"
+              },
+              {
+                "label": "Image"
+              },
+              {
+                "label": "Score",
+                "description": "Le score sera envoyé à tout LMS, LRS ou tout autre service qui reçoit des résultats depuis H5P pour des utilisateurs qui atteignent le scénario de fin par défaut"
+              },
+              {
+                "label": "Identifiant du contenu"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Liste de contenus de scénario de branchement",
+          "entity": "contenu",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Voir le titre du contenu dans la vue",
+                "description": "Si sélectionné, l'utilisateur verra le titre du contenu dans la barre supérieure en haut de ce contenu"
+              },
+              {
+                "label": "Text for the proceed button (max length: 50 characters)",
+                "default": "Proceed"
+              },
+              {
+                "label": "Identifiant de contenu suivant (les écrans de fin sont définis par des nombres négatifs)",
+                "description": "Contourner les options personnelles exigeant la complétion du contenu avant d’activer le bouton « Continuer ». N’aura aucun effet si le contenu n’indique pas de complétion (des images ou une présentation de cours comprenant une seule diapo, par exemple).",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              },
+	      {},
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Feedback title"
+                  },
+                  {
+                    "label": "Feedback text"
+                  },
+                  {
+                    "label": "Feedback image"
+                  },
+                  {
+                    "label": "Score for this scenario",
+                    "description": "The score will be sent to any LMS, LRS or any other connected service that receives scores from H5P for users who reach this scenario."
+                  }
+                ]
+              },
+              {
+                "label": "Navigate back",
+                "description": "This will allow the user to go back and see the previous content/question in the scenario.",
+                "options": [
+                  {
+                    "label": "Use behavioural setting"
+                  },
+                  {
+                    "label": "Enabled"
+                  },
+                  {
+                    "label": "Disabled"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Options de notation",
+          "fields": [
+            {
+              "label": "Options de notation",
+              "description": "Sélectionner le type de notation",
+              "options": [
+                {
+                  "label": "Définir de façon statique le score pour chaque scénario de fin"
+                },
+                {
+                  "label": "Calculer dynamiquement le score à partir des réponses de l'utilisateur"
+                },
+                {
+                  "label": "Pas de notation"
+                }
+              ]
+            },
+            {
+              "label": "Inclure la notation des interactions à l’intérieur du scénario à embranchements",
+              "description": "La notation d’autres activités  (de vidéos interactives, par exemple) sera ajoutée à la notation finale obtenue. Si cette option n’est pas sélectionnée, les notations spécifiées dans les sections de feedbacks des éléments de contenus, des questions de branchement et des scénarios finaux seront comptabilisées."
+            }
+          ]
+        },
+        {
+          "label": "Options comportementales",
+          "fields": [
+            {
+              "label": "Contourner la navigation vers l’arrière",
+              "description": "Contourner les paramètres individuels pour activer la navigation vers l'arrière"
+            },
+            {
+              "label": "Contourner la nécessité de terminer le contenu",
+              "description": "Contourner les paramètres individuels exigeant que le contenu soit complété avant d'activer la touche « Continuer ». N'aura aucun effet si le contenu n'indique pas qu'il a été « fini », p.ex. des images ou des diaporamas avec une seule diapositive."
+            },
+            {
+              "label": "Randomize Branching Questions",
+              "description": "Branching questions will be displayed in random order"
+            }
+          ]
+        },
+        {
+          "label": "Localisation",
+          "fields": [
+            {
+              "label": "Texte pour le bouton de l'écran de départ",
+              "default": "Commencer le cours"
+            },
+            {
+              "label": "Texte pour le bouton de l'écran de fin",
+              "default": "Recommencer le cours"
+            },
+            {
+              "label": "Texte pour le bouton de chaque écran de la bibliothèque",
+              "default": "Revenir en arrière"
+            },
+            {
+              "label": "Text for the disabled button on the library screens",
+              "default": "Require to complete the current module"
+            },
+            {
+              "label": "Libellé du bouton pour jouer la vidéo de nouveau",
+              "default": "Jouer la vidéo de nouveau"
+            },
+            {
+              "label": "Étiquette de la notation de l'écran de fin",
+              "default": "Votre note:"
+            },
+            {
+              "label": "Étiquette Aria pour le bouton de plein écran",
+              "default": "Plein écran"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

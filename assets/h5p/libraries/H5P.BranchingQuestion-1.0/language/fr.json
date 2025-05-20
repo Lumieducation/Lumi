@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Editeur de question de branchement",
+      "fields": [
+        {
+          "label": "Question"
+        },
+        {
+          "label": "Alternatives disponibles",
+          "entity": "Alternative",
+          "field": {
+            "label": "Alternative",
+            "fields": [
+              {
+                "label": "Texte"
+              },
+              {
+                "label": "Contenu suivant (-1 correspond à l'écran de fin)"
+              },
+              {
+                "label": "Feedback",
+                "fields": [
+                  {
+                    "label": "Titre du feedback"
+                  },
+                  {
+                    "label": "Texte du feedback"
+                  },
+                  {
+                    "label": "Image du feedback"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

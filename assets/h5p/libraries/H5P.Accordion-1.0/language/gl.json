@@ -1,0 +1,36 @@
+{
+  "semantics": [
+    {
+      "label": "Paneis",
+      "entity": "panel",
+      "field": {
+        "label": "Contido",
+        "entity": "contido",
+        "fields": [
+          {
+            "label": "Título"
+          },
+          {
+            "label": "Tipo de contido",
+            "entity": "contido"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Tags html H para as etiquetas (non afecta ao tamaño da etiqueta)",
+      "description": "O tag html H usado nas etiquetas. Normalmente H2 pero se o tag vai debaixo dun H2, usa H3. Non afecta ao tamaño das etiquetas e úsase só con finalidade semántica.",
+      "options": [
+        {
+          "label": "H2"
+        },
+        {
+          "label": "H3"
+        },
+        {
+          "label": "H4"
+        }
+      ]
+    }
+  ]
+}

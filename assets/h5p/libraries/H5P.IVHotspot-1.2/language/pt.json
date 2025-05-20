@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Destino",
+      "fields": [
+        {
+          "label": "Tipo",
+          "options": [
+            {
+              "label": "Tempo"
+            },
+            {
+              "label": "Outra página (URL)"
+            }
+          ]
+        },
+        {
+          "label": "Ir para",
+          "description": "O tempo para o qual o utilizador vai ser deslocado quando clicar no hotspot. O tempo-alvo deve ser indicado no formato M:SS."
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "Protocolo",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(relativo à raiz)"
+                },
+                {
+                  "label": "outro"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Visuais",
+      "fields": [
+        {
+          "label": "Forma",
+          "options": [
+            {
+              "label": "Retangular"
+            },
+            {
+              "label": "Circular"
+            },
+            {
+              "label": "Retângulo arredondado"
+            }
+          ]
+        },
+        {
+          "label": "Cor de fundo do hotspot"
+        },
+        {
+          "label": "Usar o cursor"
+        },
+        {
+          "label": "Adicionar efeito intermitente",
+          "description": "Nota: O efeito intermitente está sempre ativado no editor sendo assim mais fácil encontrar hotspots transparentes"
+        }
+      ]
+    },
+    {
+      "label": "Textos",
+      "fields": [
+        {
+          "label": "Texto alternativo",
+          "description": "Descrição do assunto relacionado com o hotspot. Utilizado para leitores de ecrã",
+          "placeholder": "Uma maçã em cima de uma mesa"
+        },
+        {
+          "label": "Etiqueta do Hotspot"
+        },
+        {
+          "label": "Mostrar etiqueta"
+        },
+        {
+          "label": "Cor da etiqueta"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "semantics": [
+    {
+      "label": "Média",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Média facultatif pour afficher au-dessus de la question."
+        },
+        {
+          "label": "Bloquer le zoom d’image"
+        }
+      ]
+    },
+    {
+      "label": "Description de la tâche",
+      "placeholder": "Décrivez ce que vos étudiants devraient faire...",
+      "description": "Ce que vos élèves devraient savoir."
+    },
+    {
+      "label": "Paragraphes",
+      "entity": "paragraphe",
+      "field": {
+        "label": "Paragraphe"
+      }
+    },
+    {
+      "label": "Feedback général",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Par défaut"
+            }
+          ],
+          "label": "Définir un feedback personnalisé pour n'importe quelle gamme de note",
+          "description": "Cliquez sur la touche « Ajouter une gamme » pour ajouter autant de gammes que nécessaire. Exemple : 0-20 % mauvaise note, 21-91 % note moyenne, 91-100 % excellente note !",
+          "entity": "gamme",
+          "field": {
+            "fields": [
+              {
+                "label": "Gamme de notes"
+              },
+              {},
+              {
+                "label": "Feedback pour une gamme de notes définie",
+                "placeholder": "Compléter le feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Paramètres comportementaux",
+      "description": "Ces options vous permettront de contrôler le déroulement de la tâche.",
+      "fields": [
+        {
+          "label": "Mode de notation",
+          "description": "Décider si vous attribuez des points pour chaque paragraphe correctement placé ou pour chaque paragraphe qui est placé après le paragraphe qu'il est censé suivre (« séquence correcte »)",
+          "options": [
+            {
+              "label": "Séquence correcte"
+            },
+            {
+              "label": "Paragraphe correctement placé"
+            }
+          ]
+        },
+        {
+          "label": "Appliquer les pénalités",
+          "description": "Décider si vous souhaitez déduire un point pour chaque paragraphe qui n'est pas positionné correctement."
+        },
+        {
+          "label": "Paragraphes en double interchangeables",
+          "description": "Si cette option est définie, lors de la vérification de la réponse, les paragraphes en double seront traités comme identiques si leur texte brut est égal."
+        },
+        {
+          "label": "Ajouter des touches pour le mouvement",
+          "description": "Sur les appareils mobiles, les touches permettant de déplacer des paragraphes peuvent offrir un avantage d'accessibilité supplémentaire. Si vous préférez, vous pouvez les désactiver ici."
+        },
+        {
+          "label": "Activer la touche « Réessayer »"
+        },
+        {
+          "label": "Activer la touche « Afficher la solution »"
+        }
+      ]
+    },
+    {
+      "label": "Interface utilisateur",
+      "fields": [
+        {
+          "label": "Texte pour la touche « Vérifier »",
+          "default": "Vérifier"
+        },
+        {
+          "label": "Texte pour la touche « Soumettre »",
+          "default": "Soumettre"
+        },
+        {
+          "label": "Texte pour la touche « Réessayer »",
+          "default": "Réessayer"
+        },
+        {
+          "label": "Texte pour la touche « Afficher la solution »",
+          "default": "Afficher la solution"
+        },
+        {
+          "label": "Titre de la touche « Haut »",
+          "default": "Haut"
+        },
+        {
+          "label": "Titre de la touche « Bas »",
+          "default": "Bas"
+        },
+        {
+          "label": "Titre de la touche qui est inactivée",
+          "default": "Inactivée"
+        }
+      ]
+    },
+    {
+      "label": "ReadSpeaker",
+      "fields": [
+        {
+          "label": "Description de la technologie fonctionnelle pour la touche « Vérifier »",
+          "default": "Vérifier les réponses. Les réponses seront marquées correctes ou incorrectes."
+        },
+        {
+          "label": "Description de la technologie fonctionnelle pour la touche « Afficher la solution »",
+          "default": "Afficher la solution. La solution correcte sera affichée."
+        },
+        {
+          "label": "Description de la technologie fonctionnelle pour la touche « Réessayer »",
+          "default": "Réessayer la tâche. Réinitialiser tous les éléments et redémarrer l'activité."
+        },
+        {
+          "label": "Votre résultat",
+          "description": "@scoresera remplacé par le nombre de points. @total sera remplacé par le maximum de points possible.",
+          "default": "Vous avez obtenu @score sur @total points"
+        },
+        {
+          "label": "Description de la liste",
+          "default": "Liste triable des paragraphes."
+        },
+        {
+          "label": "Description de la liste (cocher la réponse)",
+          "default": "Liste des paragraphes avec les résultats."
+        },
+        {
+          "label": "Description de la liste (afficher la solution)",
+          "default": "Liste des paragraphes avec les solutions."
+        },
+        {
+          "label": "Paragraphe",
+          "default": "Paragraphe"
+        },
+        {
+          "label": "Correcte",
+          "default": "correcte"
+        },
+        {
+          "label": "Mauvaise",
+          "default": "mauvaise"
+        },
+        {
+          "description": "@score sera remplacé par 1 ou -1.",
+          "label": "Explication de la note",
+          "default": "@score point"
+        },
+        {
+          "description": "@current sera remplacé par le numéro de paragraphe actuel. @total sera remplacé par le nombre de paragraphes.",
+          "label": "Numérotation des paragraphes",
+          "default": "@current sur @total"
+        },
+        {
+          "description": "Sera suivi de la « Numérotation des paragraphes ».",
+          "label": "Position actuelle dans la liste",
+          "default": "Position actuelle dans la liste"
+        },
+        {
+          "label": "Instruction lorsque le paragraphe est sélectionné",
+          "default": "Appuyer sur la barre d'espace pour réorganiser"
+        },
+        {
+          "label": "Instruction lors de la saisie d'un paragraphe",
+          "default": "Appuyer sur les touches fléchées haut et bas pour changer de position, la barre d'espace pour déposer, la touche échapper pour annuler"
+        },
+        {
+          "label": "Saisi",
+          "default": "Saisi"
+        },
+        {
+          "label": "Déplacé",
+          "default": "Déplacé"
+        },
+        {
+          "label": "Déposé",
+          "default": "Déposé"
+        },
+        {
+          "label": "Réorganisation annulée",
+          "default": "Réorganisation annulée"
+        },
+        {
+          "description": "Sera suivi de la « Numérotation des paragraphes ».",
+          "label": "Position finale",
+          "default": "Position finale"
+        },
+        {
+          "description": "Sera suivi par « correcte » ou « mauvaise ».",
+          "label": "Paragraphe suivant",
+          "default": "Paragraphe suivant"
+        },
+        {
+          "description": "Sera suivi de la « Numérotation des paragraphes ».",
+          "label": "Paragraphe correct",
+          "default": "Paragraphe correct à la position"
+        }
+      ]
+    }
+  ]
+}

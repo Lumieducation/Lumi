@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Three Image editor",
+      "fields": [
+        {
+          "label": "Scènes",
+          "entity": "Scène",
+          "field": {
+            "fields": [
+              {
+                "label": "Scènetype",
+                "options": [
+                  {
+                    "label": "360°-afbeelding"
+                  },
+                  {
+                    "label": "Statische afbeelding"
+                  }
+                ]
+              },
+              {
+                "label": "Toon \"Terug\"-knop",
+                "description": "Toon knop om terug te gaan naar de vorige scene"
+              },
+              {},
+              {
+                "label": "Scènetitel",
+                "description": "Deze wordt gebruikt om de scène te identificeren"
+              },
+              {
+                "label": "Scèneachtergrond"
+              },
+              {
+                "label": "Scènebeschrijving",
+                "description": "Een tekst die de scène beschrijft voor de eindgebruiker"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Label",
+                      "description": "Indien leeg gelaten wordt geen label getoond en zullen we proberen het titelveld te gebruiken voor schermlezers"
+                    },
+                    {
+                      "label": "Labelinstellingen",
+                      "fields": [
+                        {
+                          "label": "De positie van het label",
+                          "description": "Kies waar het label moet verschijnen",
+                          "options": [
+                            {
+                              "label": "Gebruik de gedragsinstelling"
+                            },
+                            {
+                              "label": "Rechts uitgelijnd"
+                            },
+                            {
+                              "label": "Links uitgelijnd"
+                            },
+                            {
+                              "label": "Boven uitgelijnd"
+                            },
+                            {
+                              "label": "Onder uitgelijnd"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Toon label",
+                          "description": "Indien verborgen worden labels alleen getoond als je de muis erover beweegt",
+                          "options": [
+                            {
+                              "label": "Gebruik gedragsinstelling"
+                            },
+                            {
+                              "label": "Tonen"
+                            },
+                            {
+                              "label": "Verberg"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Knopstijl",
+                "description": "Bepaal hoe knoppen die naar deze scène verwijzen eruit moeten zien. Voor scènes die statisch zijn en niet naar nieuwe scènes leiden, bevelen we de \"Meer informatie\" knop aan.",
+                "options": [
+                  {
+                    "label": "Nieuwe scène (pijl)"
+                  },
+                  {
+                    "label": "Meer informatie (plus)"
+                  }
+                ]
+              },
+              {
+                "label": "Geluidsbestand",
+                "description": "Voeg een geluidsbestand toe dat specifiek is voor deze scène."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Audiobestand"
+        }
+      ]
+    },
+    {
+      "label": "Gedragsinstellingen",
+      "description": "Met deze opties kun je bepalen hoe de interactie zich gedraagt.",
+      "fields": [
+        {
+          "label": "Algemene audio",
+          "description": "Voeg een audiobestand toe dat standaard beschikbaar is voor alle scènes."
+        },
+        {
+          "label": "Weergavekwaliteit van de scène",
+          "description": "Kies het aantal breedte- en hoogtesegmenten dat wordt gebruikt om een scène te renderen. Dit heeft direct invloed op het kwaliteitsniveau van de scène. Probeer de kwaliteit te verhogen als een scène er \"blokkerig\" uitziet of dat er \"golven\" te zien zijn tussen de scènes. Let op dat bij het laden van een hogere kwaliteit het renderen meer tijd in beslag neemt.",
+          "options": [
+            {
+              "label": "Hoge kwaliteit (128x128)"
+            },
+            {
+              "label": "Gemiddelde kwaliteit (64x64)"
+            },
+            {
+              "label": "Lage kwaliteit (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Labelinstellingen",
+          "fields": [
+            {
+              "label": "Labelpositie",
+              "description": "De standaard labelpositie. De positie kan per interactie worden overschreven",
+              "options": [
+                {
+                  "label": "Rechts uitgelijnd"
+                },
+                {
+                  "label": "Links uitgelijnd"
+                },
+                {
+                  "label": "Boven uitgelijnd"
+                },
+                {
+                  "label": "Onder uitgelijnd"
+                }
+              ]
+            },
+            {
+              "label": "Toon labels",
+              "description": "Indien uitgevinkt worden labels alleen getoond als je de muis erover beweegt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Lokaliseren",
+      "fields": [
+        {
+          "label": "Aria label voor inhoudstype",
+          "default": "Virtuele Tour"
+        },
+        {
+          "label": "Label om audio af te spelen",
+          "default": "Geluidsbestand afspelen"
+        },
+        {
+          "label": "Label om audio te pauzeren",
+          "default": "Geluidsbestand pauzeren"
+        },
+        {
+          "label": "Titel bij scène dialoog",
+          "default": "Scènebeschrijving"
+        },
+        {
+          "label": "Label voor knop om camera te resetten",
+          "default": "Camera resetten"
+        },
+        {
+          "label": "Label van knop om dialoog in te dienen",
+          "default": "Dialoog indienen"
+        },
+        {
+          "label": "Label van knop om dialoog te sluiten",
+          "default": "Dialoog sluiten"
+        },
+        {
+          "label": "Aria label voor de uitklapknop",
+          "default": "Vergroot het visuele label"
+        },
+        {
+          "label": "Het label voor wanneer de achtergrondafbeelding wordt geladen in de 360 scène",
+          "default": "Achtergrondafbeelding aan het laden..."
+        },
+        {
+          "label": "Label voor als er geen inhoud bestaat",
+          "default": "Geen inhoud"
+        }
+      ]
+    }
+  ]
+}

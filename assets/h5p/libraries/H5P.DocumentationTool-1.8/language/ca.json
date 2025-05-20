@@ -1,0 +1,39 @@
+{
+  "semantics": [
+    {
+      "label": "Encapçalament",
+      "default": "Eina de documentació",
+      "description": "Títol per a l’eina de documentació."
+    },
+    {
+      "label": "Elements",
+      "widgets": [
+        {
+          "label": "Opció predeterminada"
+        }
+      ],
+      "entity": "pàgina",
+      "field": {
+        "label": "Tipus de pàgina",
+        "description": "Biblioteca per a aquesta diapositiva."
+      }
+    },
+    {
+      "label": "Localitza els botons de l’eina de documentació",
+      "fields": [
+        {
+          "label": "Etiqueta del botó \"Anterior\"",
+          "default": "Anterior documentation step"
+        },
+        {
+          "label": "Etiqueta del botó següent",
+          "default": "Següent documentation step"
+        },
+        {
+          "label": "Etiqueta del botó de tancar",
+          "default": "Tanca"
+        }
+      ]
+    }
+  ]
+}

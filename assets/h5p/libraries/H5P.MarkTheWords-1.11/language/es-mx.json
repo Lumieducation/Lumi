@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "label": "Medios",
+      "fields": [
+        {
+          "label": "Tipo",
+          "description": "Medios opcionales mostrados encima de la pregunta."
+        },
+        {
+          "label": "Deshabilitar acercamiento de imagen"
+        }
+      ]
+    },
+    {
+      "label": "Descripción del trabajo",
+      "description": "Describe como el usuario debería resolver el trabajo.",
+      "placeholder": "Haga clic en todos los verbos en el texto que sigue."
+    },
+    {
+      "label": "Campodetexto",
+      "placeholder": "Esta es una respuesta: *respuesta*.",
+      "important": {
+        "description": "<ul><li>Las palabras marcadas se agregan con un asterisco (*).</li><li>Los asteriscos pueden añadirse dentro de las palabras marcadas al añadir otro asterisco, lo que resulta en *palabracorrecta*** =&gt; palabracorrecta*.</li></ul>",
+        "example": "Las palabras correctas están marcadas así: *palabracorrecta*, un asterisco está escrito así: *palabracorrecta***."
+      }
+    },
+    {
+      "label": "Retroalimentación Global",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Predeterminado"
+            }
+          ],
+          "label": "Definir retroalimentación personalizada para cualquier rango de puntaje",
+          "description": "Haga clic en el botón \"Añadir rango\" para añadir cuantos rangos necesite. Ejemplo: 0-20% Mal puntaje, 21-91% Puntaje Promedio, 91-100% ¡Magnífico Puntaje!",
+          "entity": "rango",
+          "field": {
+            "fields": [
+              {
+                "label": "Rango del Puntaje"
+              },
+              {},
+              {
+                "label": "Retroalimentación para rango de puntaje definido",
+                "placeholder": "Complete la retroalimentación"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Texto para botón \"Comprobar\"",
+      "default": "Comprobar"
+    },
+    {
+      "label": "Texto para botón \"Enviar\"",
+      "default": "Enviar"
+    },
+    {
+      "label": "Texto para el botón \"Reintentar\"",
+      "default": "Reintentar"
+    },
+    {
+      "label": "Texto para botón \"Mostrar solución\"",
+      "default": "Mostrar solución"
+    },
+    {
+      "label": "Configuraciones del comportamiento.",
+      "description": "Estas opciones le permitirán controlar como se comporta el trabajo.",
+      "fields": [
+        {
+          "label": "Habilitar \"Reintentar\""
+        },
+        {
+          "label": "Habilitar el botón \"Mostrar solución\""
+        },
+        {
+          "label": "Habilitar botón \"Comprobar\""
+        },
+        {
+          "label": "Mostrar el puntaje",
+          "description": "Mostrar los puntos obtenidos por cada respuesta."
+        }
+      ]
+    },
+    {
+      "label": "Texto de respuesta correcta",
+      "default": "¡Correcto!",
+      "description": "Texto utilizado para indicar que una respuesta es correcta"
+    },
+    {
+      "label": "Texto de respuesta incorrecta",
+      "default": "¡Incorrecto!",
+      "description": "Texto utilizado para indicar que una respuesta es incorrecta"
+    },
+    {
+      "label": "Texto de respuesta faltante",
+      "default": "¡Respuesta no encontrada!",
+      "description": "Texto utilizado para indicar que falta una respuesta"
+    },
+    {
+      "label": "Descripción para Mostrar Solución",
+      "default": "El trabajo es actualizado para contener la solución.",
+      "description": "Este texto le dice al usuario que los trabajos han sido actualizados con la solución."
+    },
+    {
+      "label": "Representación textual de la barra de puntaje para aquellos que usan un lector de texto en voz alta",
+      "default": "Obtuvo :num de un total de :total puntos"
+    },
+    {
+      "label": "Etiqueta para el texto completo legible para tecnologías asistidas",
+      "default": "Texto completo legible"
+    },
+    {
+      "label": "Etiqueta para el texto donde las palabras pueden ser marcadas para tecnologías asistivas",
+      "default": "Texto completo donde las palabras pueden ser marcadas"
+    },
+    {
+      "label": "Encabezado de modo solución para tecnologías asistivas",
+      "default": "Modo Solución"
+    },
+    {
+      "label": "Encabezado de modo comprobación para tecnologías asistivas",
+      "default": "Modo de Comprobación"
+    },
+    {
+      "label": "Descripción de tecnología asistiva para botón \"Comprobar\"",
+      "default": "Revisar las respuestas. Las respuestas serán marcadas como correcta, incorrecta o sin contestar."
+    },
+    {
+      "label": "Descripción de tecnología asistiva para botón \"Mostrar Solución\"",
+      "default": "Mostrar la solución. El trabajo será calificado con su solución correcta."
+    },
+    {
+      "label": "Descripción de tecnología asistiva para botón \"Reintentar\"",
+      "default": "Reintentar el trabajo. Reiniciar todas las respuestas e iniciar el trabajo de nuevo."
+    }
+  ]
+}

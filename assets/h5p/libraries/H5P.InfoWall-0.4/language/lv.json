@@ -1,0 +1,156 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Galvene",
+          "description": "Neobligāta galvene informācijas sienai."
+        },
+        {
+          "label": "Rekvizīti",
+          "fields": [
+            {
+              "label": "Rekvizīti",
+              "description": "Ierakstu rekvizīti",
+              "entity": "rekvizīts",
+              "widgets": [
+                {
+                  "label": "Pēc noklusējuma"
+                }
+              ],
+              "field": {
+                "label": "Rekvizītu vienumi",
+                "fields": [
+                  {
+                    "label": "Etiķete",
+                    "default": "Bez nosaukuma"
+                  },
+                  {
+                    "label": "Rādīt rekvizīta etiķeti"
+                  },
+                  {
+                    "label": "Iespējot meklēšanu rekvizītā"
+                  },
+                  {
+                    "label": "Stila ignorēšana",
+                    "fields": [
+                      {
+                        "label": "Treknraksts"
+                      },
+                      {
+                        "label": "Kursīvs"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {}
+          ]
+        },
+        {
+          "label": "Paneļi",
+          "description": "Paneļi sienai",
+          "entity": "panelis",
+          "widgets": [
+            {
+              "label": "Pēc noklusējuma"
+            }
+          ],
+          "field": {
+            "label": "Ieejas vienumi",
+            "fields": [
+              {
+                "label": "Paneļa nosaukums"
+              },
+              {
+                "label": "Attēls"
+              },
+              {
+                "label": "Ieraksti",
+                "description": "Rekvizītu ieraksti",
+                "entity": "vērtība",
+                "widgets": [
+                  {
+                    "label": "Pēc noklusējuma"
+                  }
+                ],
+                "field": {
+                  "label": "Etiķete tiks mainīta automātiski"
+                }
+              },
+              {
+                "label": "Additional keywords",
+                "description": "Add additional keywords separated by a blank space that will be used for filtering but not be visible to the user."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Uzvedības iestatījumi",
+          "description": "Šie iestatījumi ļaus jums kontrolēt uzdevuma uzvedību.",
+          "fields": [
+            {
+              "label": "Trūkstošajiem attēliem izmantojiet noklusējumu"
+            },
+            {
+              "label": "Attēls"
+            },
+            {
+              "label": "Attēla platums",
+              "description": "Attēla platums pikseļos."
+            },
+            {
+              "label": "Attēla augstums",
+              "description": "Attēla augstums pikseļos."
+            },
+            {
+              "label": "Alternatīvs paneļa fons",
+              "description": "Ja atzīmēta, katram 2. panelim fons būs nedaudz tumšāks nekā pārējiem."
+            },
+            {
+              "label": "Piedāvājuma filtra lauks",
+              "description": "Ja atzīmēta, lietotāji varēs filtrēt informācijas sienu."
+            },
+            {
+              "label": "Mode for filter field",
+              "description": "Choose whether the filter should narrow down or broaden the search with every new keyword.",
+              "options": [
+                {
+                  "label": "Narrow down"
+                },
+                {
+                  "label": "Broaden"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Lietotāja saskarne",
+          "fields": [
+            {
+              "label": "Nav ievadīts saturs",
+              "default": "Autors neko neievadīja."
+            },
+            {
+              "label": "Sakritības nav atrastas",
+              "description": "@query ir vietturis, un tas tiks aizstāts ar attiecīgo ievadīto vaicājumu.",
+              "default": "Vaicājumam @query nav atbilstības."
+            },
+            {
+              "label": "Ievadiet, lai filtrētu",
+              "description": "Ziņojums ekrāna lasītājiem.",
+              "default": "Ievadiet vaicājumu, lai atlasītu saturu ar atbilstošiem ierakstiem."
+            },
+            {
+              "label": "Saraksts mainīts.",
+              "description": "Ziņojums ekrāna lasītājiem. @visible un @total ir vietturi, un tie tiks aizstāti ar attiecīgajām vērtībām.",
+              "default": "Saraksts mainīts. Rāda @visible no @total vienumiem."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "semantics": [
+    {
+      "label": "Destino",
+      "fields": [
+        {
+          "label": "Tipo",
+          "options": [
+            {
+              "label": "Código de Tempo"
+            },
+            {
+              "label": "Outra página (URL)"
+            }
+          ]
+        },
+        {
+          "label": "Ir para",
+          "description": "O tempo alvo que em o usuário será redirecionado ao pressionar o ponto de acesso (hotspot). Insira o tempo no formato M:SS."
+        },
+        {
+          "label": "URL",
+          "fields": [
+            {
+              "label": "Protocolo",
+              "options": [
+                {
+                  "label": "http://"
+                },
+                {
+                  "label": "https://"
+                },
+                {
+                  "label": "(raiz relativa)"
+                },
+                {
+                  "label": "outro"
+                }
+              ]
+            },
+            {
+              "label": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Visuais",
+      "fields": [
+        {
+          "label": "Forma",
+          "options": [
+            {
+              "label": "Retangular"
+            },
+            {
+              "label": "Circular"
+            },
+            {
+              "label": "Retângulo arredondado"
+            }
+          ]
+        },
+        {
+          "label": "Cor do plano de fundo para o ponto de acesso"
+        },
+        {
+          "label": "Usar o cursor"
+        },
+        {
+          "label": "Adicionar efeito piscante",
+          "description": "Nota: O efeito piscante está sempre ativado no editor para que você possa encontrar pontos de acesso transparentes"
+        }
+      ]
+    },
+    {
+      "label": "Textos",
+      "fields": [
+        {
+          "label": "Texto alternativo",
+          "description": "Descreva o assunto de que trata o ponto de acesso. Usado por leitores de tela",
+          "placeholder": "Uma maçã em uma mesa"
+        },
+        {
+          "label": "Rótulo do ponto de acesso"
+        },
+        {
+          "label": "Mostrar rótulo"
+        },
+        {
+          "label": "Cor do rótulo"
+        }
+      ]
+    }
+  ]
+}

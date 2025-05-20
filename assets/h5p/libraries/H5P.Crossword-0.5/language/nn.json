@@ -1,0 +1,293 @@
+{
+  "semantics": [
+    {
+      "label": "Oppgåvebeskriving",
+      "description": "Beskriv oppgåva di her."
+    },
+    {
+      "label": "Ord",
+      "widgets": [
+        {
+          "label": "Standard"
+        }
+      ],
+      "entity": "Ord",
+      "field": {
+        "label": "Ord",
+        "fields": [
+          {
+            "label": "Hint",
+            "description": "Hint til svaret."
+          },
+          {
+            "label": "Svar",
+            "description": "Svar til hintet."
+          },
+          {
+            "label": "Ekstra hint"
+          },
+          {
+            "label": "Fest ord til rutenett",
+            "description": "Huk av dersom du vil feste ordet til ein spesifikk posisjon i rutenettet. Words with the same alignment may not be placed touching each other."
+          },
+          {
+            "label": "Rad",
+            "description": "Radnummeret svaret skal starte frå."
+          },
+          {
+            "label": "Kolonne",
+            "description": "Kolonnenummeret svaret skal starte frå."
+          },
+          {
+            "label": "Retning",
+            "description": "Retninga på svaret.",
+            "options": [
+              {
+                "label": "Vassrett"
+              },
+              {
+                "label": "Loddrett"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Løysingsord",
+      "description": "Vel om du vil leggje til eit løysingsord som er sett saman av bokstavar i rutenettet. Løysingsordet vil berre visast dersom alle dei korrekte bokstavane er på plass i kryssordet. Merk: Det finst ikkje tilgjengelegheitsstøtte for denne funksjonen endå."
+    },
+    {
+      "label": "Tilbakemelding på heile oppgåva",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Førehandsinnstilling"
+            }
+          ],
+          "label": "Opprett poengområde og legg inn tilbakemeldingar.",
+          "description": "Klikk på knappen \"Legg til poengområde\" og legg til så mange poengområde du treng. Døme: 0–40 % Svakt resultat, 41–80 % Gjennomsnittleg resultat, 81–100 % Flott resultat!",
+          "entity": "Område",
+          "field": {
+            "fields": [
+              {
+                "label": "Poengområde"
+              },
+              {},
+              {
+                "label": "Tilbakemelding for definert poengområde",
+                "placeholder": "Skriv inn tilbakemelding."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tema",
+      "fields": [
+        {
+          "label": "Bakgrunnsbilete",
+          "description": "Set inn eit valfritt bakgrunnsbilete. Biletet vil bli skalert til å passe til bakgrunnen. Det vil ikkje bli strekt."
+        },
+        {
+          "label": "Bakgrunnsfarge",
+          "description": "Vel ein bakgrunnsfarge. Fargen vil bli brukt i staden for bakgrunnsbiletet, eller som bakgrunn for transparente område."
+        },
+        {
+          "label": "Rutenettfarge",
+          "description": "Vel ein farge for rutenettet."
+        },
+        {
+          "label": "Bakgrunnsfarge for boksruter",
+          "description": "Vel ein bakgrunnsfarge for rutene som kan huse bokstavar."
+        },
+        {
+          "label": "Skriftfarge i bokstavrutene",
+          "description": "Vel ein skriftfarge for rutene som kan huse bokstavar."
+        },
+        {
+          "label": "Farge på hint-id",
+          "description": "Vel fargen på hint-id-en i bokstavrutene."
+        },
+        {
+          "label": "Bakgrunnsfarge for vald rute",
+          "description": "Vel bakgrunnsfargen for ei bokstavrute som er vald og framheva."
+        },
+        {
+          "label": "Tekstfarge for vald rute",
+          "description": "Vel skriftfargen for ei bokstavrute som er vald og framheva."
+        },
+        {
+          "label": "Id-farge ved vald og framheva rute",
+          "description": "Vel id-fargen ved ei bokstavrute som er vald og framheva."
+        }
+      ]
+    },
+    {
+      "label": "Innstillingar for oppgåveoppførsel",
+      "description": "Desse vala gir deg kontroll over korleis oppgåva oppfører seg.",
+      "fields": [
+        {
+          "label": "Antal ord som skal visast",
+          "description": "Lag ei tilfeldig samling av ord frå databasen. Samlinga vil alltid som eit minimum innehalde dei orda som er festa til rutenettet. Er dette feltet tomt eller har verdien 0, betyr det at alle orda er brukte."
+        },
+        {
+          "label": "Aktiver direkte tilbakemelding"
+        },
+        {
+          "label": "Gi poeng for ord",
+          "description": "Dersom denne funksjonen er vald, er det antal ord som gir poeng. Elles er det antal korrekte bokstavar som gir poeng."
+        },
+        {
+          "label": "Gi straff",
+          "description": "Dersom denne funksjonen er vald, vil kvart svar som er feil gi eit fråtrekk på eitt poeng."
+        },
+        {
+          "label": "Aktiver \"Prøv igjen\""
+        },
+        {
+          "label": "Aktiver \"Fasit\""
+        },
+        {
+          "label": "Keep correct answers on retry",
+          "description": "If this option is enabled, correct answers will be kept when the user retries the task unless full score was achieved."
+        }
+      ]
+    },
+    {
+      "label": "Brukargrensesnitt",
+      "fields": [
+        {
+          "label": "Etikett for vassrett",
+          "default": "Vassrett"
+        },
+        {
+          "label": "Etikett for loddrett",
+          "default": "Loddrett"
+        },
+        {
+          "label": "Tekst for \"Sjekk\"-knapp",
+          "default": "Sjekk"
+        },
+        {
+          "label": "Tekst for \"Legg inn\"-knapp",
+          "default": "Legg inn"
+        },
+        {
+          "label": "Tekst for \"Prøv igjen\"-knapp",
+          "default": "Prøv igjen"
+        },
+        {
+          "label": "Tekst for \"Vis fasit\"-knapp",
+          "default": "Vis fasit"
+        },
+        {
+          "label": "Kan ikkje opprette kryssord",
+          "default": "Det er ikkje mogleg å opprette kryssord basert på dei definerte orda. Ver derfor snill og prøv på nytt. Ta med færre ord, og vel ord som har fleire bokstavar til felles."
+        },
+        {
+          "label": "Kan ikkje opprette kryssord (for få ord)",
+          "default": "Du treng minimum to ord for å opprette eit kryssord."
+        },
+        {
+          "label": "Problematiske ord",
+          "description": "Gi opp ord som har skapt problem ved generering av kryssordet. @words er ein plasshaldar som vil bli erstatta med orda du gir opp.",
+          "default": "Some words could not be placed. Dersom du bruker ord som er festa til ein bestemd posisjon, sørg for at posisjonen til desse orda ikkje hindrar at andre ord kan finne ei plassering. Words with the same alignment may not be placed touching each other. Problematiske ord: @words"
+        },
+        {
+          "label": "Ekstra hint",
+          "default": "Ekstra hint"
+        },
+        {
+          "label": "Steng vindauge",
+          "default": "Steng vindauge"
+        }
+      ]
+    },
+    {
+      "label": "Tekstopplesar",
+      "fields": [
+        {
+          "label": "Forklaring for rutenett",
+          "default": "Kryssord-rutenett. Bruk piltastane for å navigere i rutenettet, og bruk tastaturet for å skrive inn bokstavane. Om du heller vil skrive inn orda i felta under hinta, bruk tab for å navigere og tastatur for å skrive."
+        },
+        {
+          "label": "Kolonne",
+          "default": "Kolonne"
+        },
+        {
+          "label": "Rad",
+          "default": "Rad"
+        },
+        {
+          "label": "Vassrett",
+          "default": "Vassrett"
+        },
+        {
+          "label": "Loddrett",
+          "default": "Loddrett"
+        },
+        {
+          "label": "Tom",
+          "default": "Tom"
+        },
+        {
+          "description": "Gir opp resultat. @clue er ein variabel som vil bli bytt ut med det respektive hintet.",
+          "label": "Resultat for",
+          "default": "Resultat for: @clue"
+        },
+        {
+          "label": "Rett",
+          "default": "Rett"
+        },
+        {
+          "label": "Feil",
+          "default": "Feil"
+        },
+        {
+          "label": "Poeng",
+          "default": "Poeng"
+        },
+        {
+          "description": "Gir opp løysing. @clue og @solution er variablar som vil bli bytte ut med dei respektive verdiane sine.",
+          "label": "Løysing for",
+          "default": "For @clue er løysinga: @solution"
+        },
+        {
+          "description": "Gir opp ekstra hint. @clue er ein variabel som vil bli bytt ut med den respektive verdien sin.",
+          "label": "Ekstra hint for",
+          "default": "Opn ekstra hint for @clue"
+        },
+        {
+          "description": "Gir opp noverande posisjon. @position og @length er variablar og vil bli bytte ut med dei respektive verdiane sine.",
+          "label": "Bokstav",
+          "default": "Bokstav @position av @length"
+        },
+        {
+          "description": "Gir opp kor langt ordet er. @length er ein variabel og vil bli bytt ut med den respektive verdien sin.",
+          "label": "Ordlengd",
+          "default": "Ordet har @length bokstavar"
+        },
+        {
+          "label": "Tekstalternativ for \"Sjekk\"-knapp",
+          "default": "Sjekk bokstavane. Svara vil bli merkte som rett, feil eller ubesvart."
+        },
+        {
+          "label": "Tekstalternativ for \"Vis fasit\"-knapp",
+          "default": "Vis fasiten. Kryssordet vi bli korrekt fylt ut."
+        },
+        {
+          "label": "Tekstalternativ for \"Prøv igjen\"-knapp",
+          "default": "Prøv kryssordet ein gong til. Nullstill alle svara og start på nytt."
+        },
+        {
+          "label": "Resultatet ditt",
+          "description": "@score og @total er variablar og vil bli bytte ut med dei respektive verdiane sine.",
+          "default": "Du fekk @score av @total poeng."
+        }
+      ]
+    }
+  ]
+}

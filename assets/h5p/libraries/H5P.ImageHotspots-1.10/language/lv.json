@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Fona attēls",
+      "description": "Fonā rādāmais attēls."
+    },
+    {
+      "label": "Teksta alternatīva fona attēlam",
+      "description": "Ja pārlūkprogramma nevar ielādēt attēlu, tiks atspoguļots šis teksts. Tekstu izmanto arī asistīvās tehnoloģijas."
+    },
+    {
+      "label": "Aktīvā punkta ikona",
+      "options": [
+        {
+          "label": "Sākotnējā ikona"
+        },
+        {
+          "label": "Augšupielādēts attēls"
+        }
+      ]
+    },
+    {
+      "label": "Sākotnējā ikona",
+      "description": "Izmanto sākotnējo aktīvā punkta ikonu.",
+      "options": [
+        {
+          "label": "Pluszīme"
+        },
+        {
+          "label": "Mīnuss"
+        },
+        {
+          "label": "Reizes"
+        },
+        {
+          "label": "Pārbaudīt"
+        },
+        {
+          "label": "Jautājums"
+        },
+        {
+          "label": "Info"
+        },
+        {
+          "label": "Izsaukuma zīme"
+        }
+      ]
+    },
+    {
+      "label": "Augšupielādēts attēls",
+      "description": "Aktīvā punkta ikonai izmantojiet savu attēlu.<br />Rekomendētais attēla izmērs ir 75px uz 75px."
+    },
+    {
+      "label": "Aktīvā punkta krāsa",
+      "description": "Aktīvo punktu krāsas"
+    },
+    {
+      "entity": "aktīvais punkts",
+      "label": "Aktīvie punkti",
+      "field": {
+        "label": "Aktīvais punkts",
+        "fields": [
+          {
+            "label": "Aktīvā punkta pozīcija",
+            "description": "Klikšķiniet uz sīktēla, lai ievietotu aktīvo punktu"
+          },
+          {
+            "label": "Pārklāt visu fona attēlu",
+            "description": "Kad lietotājs klikšķina aktīvo punktu, iznirstošais logs nosegs visu fona attēlu"
+          },
+          {
+            "label": "Galvene",
+            "description": "Optional header for the popup. This is used by assistive technologies."
+          },
+          {
+            "label": "Iznirstošā loga saturs",
+            "field": {
+              "label": "Satura elements"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Aktīvā punkta etiķete asistīvajām tehnoloģijām",
+      "default": "Aktīvais punkts #num",
+      "description": "Palīdzēs paziņot kurā aktīvajā punktā nonākts, ja aktīvajam punktam nav galvenes. #num var tikt izmantots, lai aizvietotu aktīvā punkta numuru."
+    },
+    {
+      "label": "Aizvēršanas pogas etiķete asistīvajām tehnoloģijām",
+      "default": "Aizvērt"
+    },
+    {
+      "label": "Label for assistive technologies denoting that hotspot contains Audio/Video",
+      "default": "Contains Audio/Video"
+    }
+  ]
+}

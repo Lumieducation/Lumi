@@ -1,0 +1,155 @@
+{
+  "semantics": [
+    {
+      "label": "Lista de questões",
+      "entity": "questão",
+      "widgets": [
+        {
+          "label": "Padrão"
+        },
+        {
+          "label": "Textual"
+        }
+      ],
+      "field": {
+        "label": "Questão &amp; alternativas",
+        "fields": [
+          {
+            "label": "Questão"
+          },
+          {
+            "label": "Alternativas - a primeira alternativa é a correta.",
+            "entity": "resposta",
+            "field": {
+              "label": "Alternativa"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback Geral",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Padrão"
+            }
+          ],
+          "label": "Defina um feedback customizado para qualquer faixa de pontuação",
+          "description": "Clique no botão \"Adicionar faixa\" para adicionar quantos intervalos de pontuação forem necessárias. Exemplo: 0-20% Pontuação ruim, 21-91% Pontuação média, 91-100% Ótima pontuação!",
+          "entity": "faixa",
+          "field": {
+            "fields": [
+              {
+                "label": "Faixa de pontuação"
+              },
+              {},
+              {
+                "label": "Feedback para uma faixa de pontuação determinada",
+                "placeholder": "Preencha o feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Configurações comportamentais",
+      "fields": [
+        {
+          "label": "Continuar automaticamente",
+          "description": "Automatically go to next question when alternative is selected. This needs to be turned off to make the content fully accessible when using a screen reader."
+        },
+        {
+          "label": "Tempo limite para respostas corretas",
+          "description": "Valor em milisegundos"
+        },
+        {
+          "label": "Tempo limite para respostas incorretas",
+          "description": "Valor em milisegundos"
+        },
+        {
+          "label": "Ativar efeitos sonoros"
+        },
+        {
+          "label": "Ativar o botão Tentar Novamente"
+        },
+        {
+          "label": "Ativar o botão Mostrar Solução"
+        },
+        {
+          "label": "Porcentagem para aprovação",
+          "description": "Porcentagem da pontuação total necessária para passar no teste."
+        }
+      ]
+    },
+    {
+      "label": "Localizar conjunto de escolha única",
+      "fields": [
+        {
+          "label": "Rótulo para o botão \"Próximo\"",
+          "default": "Próxima questão"
+        },
+        {
+          "label": "Rótulo para o botão \"Mostrar Solução\"",
+          "default": "Mostrar Solução"
+        },
+        {
+          "label": "Rótulo para o botão \"Tentar Novamente\"",
+          "default": "Tentar Novamente"
+        },
+        {
+          "label": "Título para a visualização da solução",
+          "default": "Lista de soluções"
+        },
+        {
+          "label": "Texto de resposta correta para leitores de tela",
+          "default": "Correto!"
+        },
+        {
+          "label": "Texto de resposta incorreta para leitores de tela",
+          "default": "Incorreto!"
+        },
+        {
+          "label": "Option should have been selected",
+          "default": "Should have been selected"
+        },
+        {
+          "label": "Option should not have been selected",
+          "default": "Should not have been selected"
+        },
+        {
+          "label": "Rótulo para o botão \"Mudo\" , para desativar som do feedback",
+          "default": "Desativar o som do feedback"
+        },
+        {
+          "label": "Rótulo para o botão \"Fechar\"",
+          "default": "Fechar"
+        },
+        {
+          "label": "Texto do número do slide",
+          "description": "Anuncia o número atual do slide e o número total de slides, variáveis são :num e :total",
+          "default": "Slide :num de :total"
+        },
+        {
+          "label": "Representação textual da barra de pontuação para aqueles que utilizam um leitor de tela",
+          "default": "Você conseguiu :num de :total pontos possíveis"
+        },
+        {
+          "label": "Rótulo para o número da questão na lista de soluções",
+          "description": "Anuncia o índice de questões atuais na lista de soluções, as variáveis são :num",
+          "default": "Questão :num"
+        },
+        {
+          "label": "Descrição da tecnologia de assistência para o botão \"Mostrar solução\"",
+          "default": "Mostrar a solução. A tarefa será marcada com sua solução correta."
+        },
+        {
+          "label": "Descrição da tecnologia de assistência para o botão \"Tentar Novamente\"",
+          "default": "Tente realizar a tarefa novamente. Reinicialize todas as respostas e recomece."
+        }
+      ]
+    }
+  ]
+}

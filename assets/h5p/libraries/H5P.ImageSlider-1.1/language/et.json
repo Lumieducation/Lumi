@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Pildid",
+      "field": {
+        "label": "Pildislaid",
+        "fields": [
+          {
+            "label": "Pildislaid"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Kuvasuhe",
+      "description": "Automaatne tähendab fikseeritud automaatset kuvasuhet piltide põhjal",
+      "options": [
+        {
+          "label": "Automaatne"
+        },
+        {
+          "label": "Kohandatud"
+        },
+        {
+          "label": "Pole fikseeritud"
+        }
+      ]
+    },
+    {
+      "label": "Kuvasuhte seadmed",
+      "fields": [
+        {
+          "label": "Kuvasuhte laius",
+          "description": "Kui sa paned siia 4 ja kõrguseks 3, siis kuvasuhe on 4:3"
+        },
+        {
+          "label": "Kuvasuhte kõrgus",
+          "description": "Kui sa paned siia 3 ja laiuseks 4, siis kuvasuhe on 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Pildiliuguri ligipääsetavus",
+      "fields": [
+        {
+          "label": "Silt järgmine slaid nuppudele",
+          "default": "Järgmine pilt",
+          "description": "Seda kasutavad ainult lugerid. Seda ei näidata ekraanil."
+        },
+        {
+          "label": "Silt eelmine slaid nuppudele",
+          "default": "Eelmine pilt",
+          "description": "Seda kasutavad ainult lugerid. Seda ei näidata ekraanil."
+        },
+        {
+          "label": "Silt slaidi nuppudele",
+          "default": "Mine pildile %slide",
+          "description": "Seda kasutavad ainult lugerid. Seda ei näidata ekraanil. %slide on muutuja, mis asendatakse pildi numbriga."
+        }
+      ]
+    }
+  ]
+}
