@@ -51,8 +51,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CSC_LINK: ${{ secrets.MAC_CERTS }}
           CSC_KEY_PASSWORD: ${{ secrets.MAC_CERTS_PASSWORD }}
-          APPLEID: ${{ secrets.APPLE_ID }}
-          APPLEIDPASSWORD: ${{ secrets.APPLE_ID_PASSWORD }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_ID_PASSWORD }}
           APPLE_ASCPROVIDER: ${{ secrets.APPLE_ASCPROVIDER }}
           CSC_IDENTITY_AUTO_DISCOVERY: true
 
@@ -104,8 +105,13 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Add Snapcraft repository
+        run: |
+          sudo apt update
+          sudo apt install -y snapd
+
       - name: Install Snapcraft
-        run: sudo apt-get install -y snapcraft
+        run: sudo snap install snapcraft --classic
       - name: Publish Linux
         run: npm run publish:linux
         env:
