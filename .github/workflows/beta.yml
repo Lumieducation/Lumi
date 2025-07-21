@@ -22,41 +22,6 @@ jobs:
           CI: true
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-  publish-macos:
-    needs: release
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0 # Ensure full git history
-      - name: Fetch latest changes
-        run: git pull origin next # Get the updated package.json
-      - name: Use Node.js 22.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 22.x
-      - name: Setup Python 3.9
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-      - name: Install dependencies
-        run: npm ci
-      - name: Build
-        run: npm run build
-      - name: Publish macOS
-        run: npm run publish:mac
-        env:
-          CI: true
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          CSC_LINK: ${{ secrets.MAC_CERTS }}
-          CSC_KEY_PASSWORD: ${{ secrets.MAC_CERTS_PASSWORD }}
-          APPLE_ID: ${{ secrets.APPLE_ID }}
-          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_ID_PASSWORD }}
-          APPLE_ASCPROVIDER: ${{ secrets.APPLE_ASCPROVIDER }}
-          CSC_IDENTITY_AUTO_DISCOVERY: true
-
   publish-windows:
     needs: release
     runs-on: windows-latest
@@ -85,36 +50,3 @@ jobs:
           APPX_PUBLISHER: ${{ secrets.APPX_PUBLISHER }}
           APPX_PUBLISHER_DISPLAY_NAME: ${{ secrets.APPX_PUBLISHER_DISPLAY_NAME }}
           CSC_IDENTITY_AUTO_DISCOVERY: true
-
-  publish-linux:
-    needs: release
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Fetch latest changes
-        run: git pull origin next
-      - name: Use Node.js 22.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 22.x
-      - name: Install libarchive-tools
-        run: sudo apt install -y libarchive-tools
-      - name: Install dependencies
-        run: npm ci
-      - name: Build
-        run: npm run build
-      - name: Add Snapcraft repository
-        run: |
-          sudo apt update
-          sudo apt install -y snapd
-
-      - name: Install Snapcraft
-        run: sudo snap install snapcraft --classic
-      - name: Publish Linux
-        run: npm run publish:linux
-        env:
-          CI: true
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.snapcraft_token }}
