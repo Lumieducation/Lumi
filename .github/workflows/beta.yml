@@ -20,7 +20,7 @@ jobs:
         run: npm run semantic-release
         env:
           CI: true
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   publish-macos:
@@ -48,7 +48,7 @@ jobs:
         run: npm run publish:mac
         env:
           CI: true
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           CSC_LINK: ${{ secrets.MAC_CERTS }}
           CSC_KEY_PASSWORD: ${{ secrets.MAC_CERTS_PASSWORD }}
           APPLE_ID: ${{ secrets.APPLE_ID }}
@@ -78,7 +78,7 @@ jobs:
         run: npm run publish:win
         env:
           CI: true
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           APPX_APPLICATION_ID: ${{ secrets.APPX_APPLICATION_ID }}
           APPX_DISPLAY_NAME: ${{ secrets.APPX_DISPLAY_NAME }}
           APPX_IDENTITY_NAME: ${{ secrets.APPX_IDENTITY_NAME }}
@@ -116,5 +116,5 @@ jobs:
         run: npm run publish:linux
         env:
           CI: true
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.snapcraft_token }}
