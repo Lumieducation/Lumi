@@ -23,7 +23,7 @@ router.get(
         req.lng
       );
 
-      h5pContent.integration.urlLibraries = `${process.env.CDN_BASE}/h5p/libraries`;
+      h5pContent.integration.urlLibraries = (process.env.CDN_BASE ?? '') + '/h5p/libraries';
 
       // hotfix for h5p-tooltip.js
       // TODO: Remove once https://github.com/Lumieducation/H5P-Nodejs-library/issues/3374 is fixed
