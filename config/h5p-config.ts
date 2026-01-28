@@ -88,9 +88,9 @@ export default class H5PConfig implements IH5PConfig {
   public h5pVersion: string = '1.27';
 
   public hubContentTypesEndpoint: string =
-    'https://api.h5p.org/v1/content-types/';
+    'https://hub-api.h5p.org/v1/content-types/';
 
-  public hubRegistrationEndpoint: string = 'https://api.h5p.org/v1/sites';
+  public hubRegistrationEndpoint: string = 'https://hub-api.h5p.org/v1/sites';
 
   public installLibraryLockMaxOccupationTime: number = 30000;
 
