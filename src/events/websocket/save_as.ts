@@ -14,8 +14,8 @@ export default function setup_save(
     context.log.info('events:websocket:save_as', payload);
     const { contentId, file_path } = payload;
 
-    await content_config_write(context, contentId, 'path', file_path);
     await content_save_to_file(context, contentId, file_path);
+    await content_config_write(context, contentId, 'path', file_path);
     await window_backdrop_hide(context, contentId);
     await window_snackbar_show(
       context,
