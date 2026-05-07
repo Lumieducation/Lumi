@@ -19,6 +19,13 @@ export default function setup_save(
       context.log.warn('events:websocket:save already in progress', {
         contentId
       });
+      await window_backdrop_hide(context, contentId);
+      await window_snackbar_show(
+        context,
+        contentId,
+        context.translate('Save already in progress'),
+        'info'
+      );
       return;
     }
 
