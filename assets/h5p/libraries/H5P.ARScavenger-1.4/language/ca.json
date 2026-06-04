@@ -1,0 +1,300 @@
+{
+  "semantics": [
+    {
+      "label": "Mostra pantalla inicial",
+      "description": "Si s’activa, el contingut mostrarà la pantalla del títol a l’inici."
+    },
+    {
+      "label": "Pantalla inicial",
+      "fields": [
+        {
+          "label": "Introducció",
+          "placeholder": "Benvingut a ..."
+        },
+        {
+          "label": "Imatge de pantalla del títol"
+        }
+      ]
+    },
+    {
+      "label": "Marcadors",
+      "fields": [
+        {
+          "label": "Marcadors",
+          "widgets": [
+            {
+              "label": "Predeterminat"
+            }
+          ],
+          "entity": "marcador",
+          "field": {
+            "label": "Marcador",
+            "fields": [
+              {
+                "label": "Imatge del marcador (original)",
+                "description": "Puja la imatge per a la qual vulgues crear un marcador. Hauria de ser una imatge quadrada o serà retallada. Tingues en compte que necessitaràs una imatge única de marcador per a cada interacció.",
+                "importantDescription": {
+                  "description": "Per favor, tin en compte alguns criteris per a crear bones imatges de marcadors:<ul><li>Alt contrast de color, idealment blanc i negre</li><li>Asimetria</li><li>La resolució interna d’un marcador és de 16 per 16 píxels, l’ús d’imatges més grans pot empitjorar la detecció del marcador</li><li>Un únic caràcter o paraules curtes donen bons resultats</li></ul>"
+                }
+              },
+              {
+                "label": "Imatge del marcador (patró)",
+                "description": "Baixa esta imatge per a usar-la com un marcador mostrat en una pantalla o imprés en paper."
+              },
+              {
+                "label": "Tipus d’acció",
+                "description": "Acció que s’hauria d’executar quan es troba el marcador.",
+                "options": [
+                  {
+                    "label": "Interacció H5P"
+                  },
+                  {
+                    "label": "Superposició de model 3D"
+                  }
+                ]
+              },
+              {
+                "label": "Interacció",
+                "fields": [
+                  {
+                    "label": "Interacció"
+                  },
+                  {
+                    "label": "Maniquí"
+                  }
+                ]
+              },
+              {
+                "label": "Model 3D",
+                "fields": [
+                  {
+                    "label": "Fitxer de model 3D",
+                    "description": "Puja ací un fitxer glTF (.glb / .gltf). El format preferit és \"glTF 2.0 binary\" en un sol fitxer."
+                  },
+                  {
+                    "label": "Geometria",
+                    "fields": [
+                      {
+                        "label": "Escala",
+                        "description": "Augmenta o disminueix la mida del model perquè coincidisca amb la mida del marcador.",
+                        "fields": [
+                          {
+                            "label": "Percentatge"
+                          },
+                          {
+                            "label": "Maniquí"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Posició",
+                        "description": "Configura la posició de compensació del model relativa al marcador.",
+                        "fields": [
+                          {
+                            "label": "Compensació-X"
+                          },
+                          {
+                            "label": "Compensació-Y"
+                          },
+                          {
+                            "label": "Compensació-Z"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Rotació",
+                        "description": "Configura la rotació en graus.",
+                        "fields": [
+                          {
+                            "label": "eix-X"
+                          },
+                          {
+                            "label": "eix-Y"
+                          },
+                          {
+                            "label": "eix-Z"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Mostra pantalla final",
+      "description": "Si està marcat, mostra una pantalla final quan s’hagen completat totes les interaccions. No obstant això, la pantalla final no estarà disponible si només uses models 3D."
+    },
+    {
+      "label": "Pantalla final",
+      "fields": [
+        {
+          "label": "Imatge de pantalla final"
+        },
+        {
+          "label": "Text de pantalla inicial",
+          "placeholder": "Ho has aconseguit!"
+        },
+        {
+          "label": "Retroalimentació global",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Predeterminat"
+                }
+              ],
+              "label": "Definix retroalimentació personalitzada per a qualsevol rang de puntuació",
+              "description": "Fes clic en el botó \"Afig rang\" per a afegir els rangs que necessites. Exemple: 0-20% Puntuació baixa, 21-91% Puntuació mitjana, 91-100% Puntuació excel·lent!",
+              "entity": "rang",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Rang de puntuació"
+                  },
+                  {
+                    "placeholder": "Completa la retroalimentació",
+                    "label": "Retroalimentació per a rang de puntuació definit"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Configuracions del comportament",
+      "fields": [
+        {
+          "label": "Habilita botó \"Torna a intentar\"",
+          "description": "Si s’activa, els estudiants poden intentar la tasca de nou."
+        },
+        {
+          "label": "Habilita botó \"Mostra solucions\"",
+          "description": "Si s’activa, els estudiants poden vore les solucions de totes les interaccions."
+        },
+        {
+          "label": "Oculta el botó \"Mostra solucions\"",
+          "description": "Esta opció permet habilitar o deshabilitar el botó \"Mostra solucions\" per a tots els continguts o usar les seues respectives configuracions del comportament.",
+          "options": [
+            {
+              "label": "Usa la configuració del comportament"
+            },
+            {
+              "label": "Mostra sempre botó"
+            },
+            {
+              "label": "No mostres mai botó"
+            }
+          ]
+        },
+        {
+          "label": "Anul·la botó \"Torna a intentar\"",
+          "description": "Esta opció permet habilitar o deshabilitar el botó \"Torna a intentar\" per a tots els continguts o usar les seues respectives configuracions del comportament.",
+          "options": [
+            {
+              "label": "Usa la configuració del comportament"
+            },
+            {
+              "label": "Mostra sempre botó"
+            },
+            {
+              "label": "No mostres mai botó"
+            }
+          ]
+        },
+        {
+          "label": "Alçària per defecte",
+          "description": "Configura una alçària per defecte en px per a casos en què hi haja problemes de compartició de recursos d’origen creuat (CORS)."
+        }
+      ]
+    },
+    {
+      "label": "Localització",
+      "fields": [
+        {
+          "label": "Botó Inicia",
+          "default": "Inicia"
+        },
+        {
+          "label": "Botó Torna a intentar",
+          "default": "Torna a intentar"
+        },
+        {
+          "label": "Troba un marcador per a vore una interacció.",
+          "default": "Troba un marcador per a vore una interacció."
+        },
+        {
+          "label": "Error: navegador no compatible",
+          "default": "Sembla que, malauradament, el teu navegador no pot executar este tipus de contingut."
+        },
+        {
+          "label": "Error: Sense accés a càmera",
+          "default": "No s’ha pogut accedir a la càmera."
+        },
+        {
+          "label": "Error: Sense suport de càmera",
+          "default": "El teu navegador sembla que no admet una càmera."
+        },
+        {
+          "label": "Error: Sense marcadors",
+          "default": "A algú se li ha oblidat afegir els marcadors?"
+        },
+        {
+          "label": "Avís: Navegador Brave",
+          "default": "Pareix que estàs usant el navegador Brave. Molt bé! Però les seues configuracions de privacitat estrictes poden impedir que funcione la càmera."
+        },
+        {
+          "label": "Iniciant contingut",
+          "default": "Iniciant contingut. Per favor no oblides permetre l’accés a la càmera."
+        }
+      ]
+    },
+    {
+      "label": "Lector de pantalla",
+      "fields": [
+        {
+          "label": "Títol de botó Pantalla Completa: entrar",
+          "default": "Passa a Pantalla Completa"
+        },
+        {
+          "label": "Títol de botó Pantalla Completa: eixir",
+          "default": "Ix de Pantalla Completa"
+        },
+        {
+          "label": "Títol de botó 'Canvia vista' (quan l’acció està tancada)",
+          "default": "Canvia a l’exercici"
+        },
+        {
+          "label": "Títol de botó 'Canvia vista' (quan l’acció està oberta)",
+          "default": "Canvia a càmera"
+        },
+        {
+          "label": "Missatge 'Botó deshabilitat' per a 'botó per a canviar vista'",
+          "default": "No pots canviar la vista en este moment"
+        },
+        {
+          "label": "Títol de botó 'Ix'",
+          "default": "Ix i mostra avaluació"
+        },
+        {
+          "label": "Missatge 'Botó deshabilitat' per a 'botó ix'",
+          "default": "Encara no has completat tots els exercicis"
+        },
+        {
+          "label": "Acció oberta",
+          "default": "La vista ha canviat a un exercici."
+        },
+        {
+          "label": "Acció tancada",
+          "default": "La vista ha canviat a la càmera."
+        }
+      ]
+    }
+  ]
+}
