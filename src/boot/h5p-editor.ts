@@ -26,6 +26,7 @@ export default async function bootH5PEditor(
   translationCallback?: H5P.ITranslationFunction,
   options?: {
     disableLibraryCache?: boolean;
+    skipContentTypeCacheUpdate?: boolean;
   }
 ): Promise<H5P.H5PEditor> {
   const libStorage = new H5P.fsImplementations.FileLibraryStorage(
@@ -58,7 +59,21 @@ export default async function bootH5PEditor(
 
   h5pEditor.setRenderer((model) => model);
 
-  await h5pEditor.contentTypeCache.forceUpdate();
+  if (!options?.skipContentTypeCacheUpdate) {
+    try {
+      await h5pEditor.contentTypeCache.forceUpdate();
+    } catch (error) {
+      // The content type cache update requires a connection to
+      // api.h5p.org. Boot must still succeed when that endpoint is
+      // unreachable (offline machines, CI, the CLI).
+      // eslint-disable-next-line no-console
+      console.warn(
+        `Could not update the H5P Hub content type cache: ${
+          (error as Error)?.message ?? error
+        }`
+      );
+    }
+  }
 
   return h5pEditor;
 }

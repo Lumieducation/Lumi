@@ -3,9 +3,13 @@
   "version": "1.0.3-patched",
   "private": true,
   "main": "build/src/main.js",
+  "bin": {
+    "lumi-cli": "bin/lumi-cli.js"
+  },
   "description": "A tool to create and display interactive content with H5P",
   "scripts": {
     "start": "npx electron .",
+    "cli": "node bin/lumi-cli.js",
     "build": "rm -rf build/ && npx tsc",
     "build:mac": "npm run build && npx electron-builder --config builder.config.js --mac --publish never",
     "build:linux": "npm run build && ./builder-configs/build.linux.sh --publish never",
@@ -75,8 +79,11 @@
     "i18next": "23.16.5",
     "i18next-http-middleware": "3.6.0",
     "i18next-node-fs-backend": "2.1.3",
+    "promisepipe": "3.0.0",
     "simple-scorm-packager": "0.2.7",
-    "socket.io": "4.8.1"
+    "socket.io": "4.8.1",
+    "tmp-promise": "3.0.3",
+    "yauzl-promise": "2.1.3"
   },
   "publish": {
     "provider": "github",
