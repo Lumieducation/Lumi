@@ -1,5 +1,5 @@
 diff --git a/node_modules/@lumieducation/h5p-html-exporter/build/HtmlExporter.js b/node_modules/@lumieducation/h5p-html-exporter/build/HtmlExporter.js
-index 2885343..41af5b4 100644
+index 2885343..79b27ae 100644
 --- a/node_modules/@lumieducation/h5p-html-exporter/build/HtmlExporter.js
 +++ b/node_modules/@lumieducation/h5p-html-exporter/build/HtmlExporter.js
 @@ -528,7 +528,12 @@ var HtmlExporter = /** @class */ (function () {
@@ -40,3 +40,24 @@ index 2885343..41af5b4 100644
                                              _d.label = 3;
                                          case 3:
                                              _d.trys.push([3, , 11, 12]);
+@@ -792,7 +801,19 @@ var HtmlExporter = /** @class */ (function () {
+                         _a.sent();
+                         content.jsonContent = JSON.stringify(params);
+                         content.contentUrl = '.';
+-                        content.url = '.';
++                        // content.url is consumed ONLY by H5P.XAPIEvent's
++                        // getContentXAPIId, which builds the xAPI activity id as
++                        // `url + '?subContentId=' + id`. A relative '.' makes that
++                        // id relative too, and content types that parse it with
++                        // `new URL(id)` (no base) throw "Invalid URL" -- e.g.
++                        // H5P.GameMap's getSubContentIds, called from buildDOM.
++                        // jQuery.Deferred swallows the throw as a warning, so the
++                        // export reports success at full file size while rendering
++                        // a completely empty page. An absolute placeholder keeps
++                        // the id parseable (and makes subContentId extraction work
++                        // at all). Asset paths are unaffected: they resolve via the
++                        // separate top-level H5PIntegration.url, still '.'.
++                        content.url = 'https://localhost';
+                         return [2 /*return*/];
+                 }
+             });
