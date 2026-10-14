@@ -2,7 +2,6 @@ import { Context } from '../../boot';
 import MenuItem from '../../types/MenuItem';
 import show_dialog_save_as from '../../ops/dialog_save_as';
 import window_get_active from '../../ops/window_get_active';
-import window_backdrop_show from '../../ops/window_backdrop_show';
 import window_get_content_id from '../../ops/window_get_content_id';
 
 export default function file_save_as(ctx: Context): MenuItem {
@@ -19,7 +18,6 @@ export default function file_save_as(ctx: Context): MenuItem {
       if (canceled) {
         return;
       }
-      await window_backdrop_show(ctx, content_id);
       ctx.ws.emit(content_id, { type: 'save_as', payload: { file_path } });
     }
   };
